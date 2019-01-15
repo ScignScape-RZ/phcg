@@ -1,0 +1,83 @@
+-
+Auto Generated
+.
+;lambda:2
+.
+;sigma:1
+.
+@u32::1
+.
+@ScignStage_Ling_Dialog*::2
+.
+#1
+.
+&:expand_sample
+.
+2 :: 1 :: 1 :::
+.
+1 :: 1 :: 2 :::
+.
+##
+.
+-
+Auto Generated
+.
+;lambda:2
+.
+;sigma:1
+.
+@QString::1
+.
+@ScignStage_Ling_Dialog*::2
+.
+#1
+.
+&:test_msgbox
+.
+2 :: 1 :: 1 :::
+.
+1 :: 1 :: 2 :::
+.
+##
+.
+-
+Auto Generated
+.
+;lambda:2
+.
+;sigma:1
+.
+@QString::1
+.
+@ScignStage_Ling_Dialog*::2
+.
+#1
+.
+&:launch_lexpair_dialog
+.
+2 :: 1 :: 1 :::
+.
+1 :: 1 :: 2 :::
+.
+##
+.
+-
+Auto Generated
+.
+;lambda:2
+.
+;sigma:1
+.
+@QString::1
+.
+@Lexpair_Dialog*::2
+.
+#1
+.
+&:read_sxpr
+.
+2 :: 1 :: 1 :::
+.
+1 :: 1 :: 2 :::
+.
+-

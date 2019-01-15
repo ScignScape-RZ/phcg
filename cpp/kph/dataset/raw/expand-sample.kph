@@ -1,0 +1,27 @@
+- 
+
+.
+%origin: @scripts/rz-kph
+.
+%test: This test should result in the third sample 
+   (ordered by index) being expanded, with a highlight 
+   color, and nested rows revealed.
+.
+;sigma:1
+.
+;lambda:2
+.
+@ScignStage_Ling_Dialog*::1
+.
+@int::2
+.
+#1
+.
+&:expand_sample
+.
+1 :: 1 :: 1 :::#*ScignStage_Ling_Dialog*
+.
+2 :: 1 :: 2 :::3
+.
+-
+
