@@ -8,6 +8,11 @@
 #ifndef LANGUAGE_SAMPLE__H
 #define LANGUAGE_SAMPLE__H
 
+
+#include "phaong.h"
+#include "phaong-types.h"
+
+
 #include "kans.h"
 #include "accessors.h"
 
@@ -19,7 +24,7 @@ KANS_(DSM)
 
 class Language_Sample_Group;
 
-class Language_Sample
+class Language_Sample : phaong<pg_t>::Hypernode
 {
  QString text_;
  int index_;
@@ -33,7 +38,7 @@ class Language_Sample
 
 public:
 
- Language_Sample(QString text);
+ Language_Sample(QString text, phaong<pg_t>& phg);
 
  ACCESSORS(QString ,text)
  ACCESSORS(int ,index)
@@ -43,7 +48,7 @@ public:
 
  ACCESSORS(Language_Sample_Group* ,group)
 
- static void read_samples_from_file(QString path,
+ static void read_samples_from_file(phaong<pg_t>& phg, QString path,
    QVector<Language_Sample*>& result,
   QVector<Language_Sample_Group*>& groups);
 

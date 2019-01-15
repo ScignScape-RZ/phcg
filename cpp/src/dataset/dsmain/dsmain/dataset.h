@@ -8,6 +8,11 @@
 #ifndef DATASET__H
 #define DATASET__H
 
+
+#include "phaong.h"
+#include "phaong-types.h"
+
+
 #include "kans.h"
 #include "accessors.h"
 
@@ -47,7 +52,7 @@ public:
  ACCESSORS__RGET(QStringList ,forms)
 
  void save_raw_file(QString text, int page, int num);
- void parse_to_samples(QString text, int page, int num);
+ void parse_to_samples(QString text, int page, int num, phaong<pg_t>& phg);
  int get_chapter_number_from_page(int page);
 
  void save_to_file();

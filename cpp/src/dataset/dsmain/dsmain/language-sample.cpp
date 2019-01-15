@@ -9,6 +9,8 @@
 
 #include "language-sample-group.h"
 
+#include "phaong-types.h"
+
 #include <QDebug>
 
 #include "textio.h"
@@ -17,9 +19,19 @@
 USING_KANS(DSM)
 USING_KANS(TextIO)
 
-Language_Sample::Language_Sample(QString text)
+Language_Sample::Language_Sample(QString text, phaong<pg_t>& phg)
   :  text_(text), index_(0), chapter_(0), page_(0), group_(nullptr)
 {
+ phg.new_hypernode(this, 5, {"Language_Sample", nullptr});
+
+ {
+  int phaong_data_index = 0;
+  phg.PHAONG_DATA(QString ,text);
+  phg.PHAONG_DATA(int ,index);
+  phg.PHAONG_DATA(QString ,sub_index);
+  phg.PHAONG_DATA(int ,chapter);
+  phg.PHAONG_DATA(int ,page);
+ }
 
 }
 
@@ -59,7 +71,7 @@ QString Language_Sample::get_serialization()
 }
 
 void Language_Sample::read_samples_from_file
-(QString path, QVector<Language_Sample*>& result,
+(phaong<pg_t>& phg, QString path, QVector<Language_Sample*>& result,
  QVector<Language_Sample_Group*>& groups)
 {
  QString text = load_file(path);
@@ -185,7 +197,7 @@ void Language_Sample::read_samples_from_file
   //qDebug() << "lc: " << loc_code;
   QStringList ls = loc_code.split(' ');
 
-  Language_Sample* samp = new Language_Sample(qs);
+  Language_Sample* samp = new Language_Sample(qs, phg);
 
   samp->set_index(ls[0].toInt());
   samp->set_sub_index(ls[1]);

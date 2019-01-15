@@ -61,6 +61,11 @@ public:
   {
   }
 
+  Hypernode()
+   :  first_cell_(nullptr), size_(0)
+  {
+  }
+
   numeric_index_type cell_size()
   {
    if(size_ < 0)
@@ -124,13 +129,24 @@ private:
  }
 
  Hypernode* _new_hypernode(numeric_index_type size,
-   type_descriptor_type& type_descriptor)
+   type_descriptor_type& type_descriptor, Hypernode** hn = nullptr)
  {
   numeric_index_type sz = size;
   if(sz < 0) sz = -sz;
   Hyponode* hns = new Hyponode[sz];
   Hypocell* hc = new Hypocell{hns, nullptr};
-  Hypernode* result = new Hypernode(hc, size, type_descriptor);
+  Hypernode* result;
+
+  if(hn)
+  {
+   result = *hn;
+   result->first_cell_ = hc;
+   result->size_ = size;
+   result->type_descriptor_ = type_descriptor;
+  }
+  else
+    result = new Hypernode(hc, size, type_descriptor);
+
   if(node_add_function_)
   {
    node_add_function_(*this, result);
@@ -154,6 +170,17 @@ public:
   return (T*) user_data_;
  }
 
+ void new_hypernode(Hypernode* hn, numeric_index_type size,
+   type_descriptor_type type_descriptor = type_descriptor_type())
+ {
+  _new_hypernode(size, type_descriptor, &hn);
+ }
+
+ void new_hypernode(Hypernode* hn, numeric_index_type size,
+   type_descriptor_type& type_descriptor)
+ {
+  _new_hypernode(size, type_descriptor, &hn);
+ }
 
  Hypernode* new_hypernode(numeric_index_type size,
    type_descriptor_type type_descriptor = type_descriptor_type())

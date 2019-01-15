@@ -102,7 +102,8 @@ void Dataset::save_to_file()
 
 }
 
-void Dataset::parse_to_samples(QString text, int page, int num)
+void Dataset::parse_to_samples(QString text, int page,
+  int num, phaong<pg_t>& phg)
 {
  int current_page = page;
  int current_index = num;
@@ -140,7 +141,7 @@ void Dataset::parse_to_samples(QString text, int page, int num)
    current_sub_index = qs.left(3);
    qs = qs.mid(4);
   }
-  Language_Sample* samp = new Language_Sample(qs.simplified());
+  Language_Sample* samp = new Language_Sample(qs.simplified(), phg);
   samp->set_page(current_page);
   samp->set_index(current_index);
   samp->set_sub_index(current_sub_index);
