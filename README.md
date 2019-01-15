@@ -1,8 +1,6 @@
 
-# Blackwell Handbook of Pragmatics
+# phcg
 ## Data Set and Code Base 
-
-See _The Handbook of Pragmatics_ (http://www.felsemiotica.org/site/wp-content/uploads/2014/10/Horn-Laurence-R.-and-Ward-Gregory-Ed.-The-Handbook-of-Pragmatics.pdf).
 
 There are several ways to use the code, including several "build strategies".  The quickest option is to use the "`build-quick.pro`" project file in the "`./cpp/projects/qt/qt-multiple/unibuild`" folder.  For most users the best option may be "`build-most.pro`" in the same folder (both versions can be built independently).  The "`quick`" version lacks PDF and TCP features (which is explained via a message box when trying to use these features).
 
@@ -11,9 +9,9 @@ A more complex option is "`build-all.pro`", which is only needed for users wishi
 ---
 **Downloading**
 
-If you use "`git clone`", it is recommended to provide your own name to the folder where the data set is unpacked.  For example, create a folder called "`SubjectiveSpeechQualityMeasurement`" or something smaller ("`SSQM`", say) and _inside_ that folder execute "`git clone https://github.com/scignscape/SubjectiveSpeechQualityMeasurement.git ar`" -- notice the trailing "`ar`" (for "archive") where this repository will be unpacked.  Then the parent "`SSQM`" folder can be used for other files related to the project (or follow-up research) but isolated from the actual repo.
+If you use "`git clone`", it is recommended to provide your own name to the folder where the data set is unpacked.  For example, create a folder called "`PHCG`" or something smaller ("`PHCG`", say) and _inside_ that folder execute "`git clone https://github.com/scignscape/SubjectiveSpeechQualityMeasurement.git ar`" -- notice the trailing "`ar`" (for "archive") where this repository will be unpacked.  Then the parent "`SSQM`" folder can be used for other files related to the project (or follow-up research) but isolated from the actual repo.
 
-Be aware that using long folder names, rather than succinct names like "`SSQM/ar`", may occasionally cause problems (see "`TROUBLESHOOTING`").
+Be aware that using long folder names, rather than succinct names like "`PHCG/ar`", may occasionally cause problems (see "`TROUBLESHOOTING`").
 
 ---
 **Qt**
