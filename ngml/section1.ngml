@@ -1,0 +1,128 @@
+
+`section.Cognitive and Computational Practice`
+`p.
+Any attempt to bridge Computational Linguistics and 
+Cognitive Grammar or Phenomenology must solicit one or several 
+`q.founding analogies`/, linking phenomena on the 
+formal/computational side with those on the 
+cognitive/computational side.  Here, I will start from 
+the analogy of `i.cognitive` and `i.computational` `i.process`/, 
+or generically `q.process` (of either variety).  
+Processes, per se, I will 
+leave undefined, although a `q.computational` process 
+can be considered roughly analogous to a single 
+function implemented in a computer programming language.
+Th story I want to tell goes something like this: understanding 
+language involves many cognitive processes, many of 
+which are subtly determined by each exact language artifact 
+and the context where it is created.  Properly understanding a 
+piece of language depends on correctly weaving together 
+the various processes involved in understanding its 
+component parts, and the structure of the 
+multi-process intergration is suggested by the grammar of 
+the artifact.  Grammar, in a nutshell, uses relationships 
+between words to evoke relationships between 
+cognitive processes.  
+`p`
+
+`p.
+My formal elaboration of this model will be inspired at an 
+elementary level by process `i.algebra` in the computational 
+setting, but more technically by applied `i.type theory`/.  
+Inter-process relations are the core topic of Process 
+Algebra, including sequentiality (one process followed by 
+another) and concurrency (one process executing alongside 
+another).  In practice, detailed research around Process Algebra 
+seems to focus especially on concurrency, perhaps because 
+this is the more complex area of application 
+(designing computer systems which can run multiple threads in 
+parallel).  It is likewise tempting to 
+imagine that cognitive-linguistic processes exhibit some 
+degree of parallelism, so that the various pieces of 
+understanding `q.fall into place` together as we grasp 
+the meaning of a sentence (henceforth using `i.sentence` as a 
+representative example of a mid-size lanuag artifact in general).  
+Nevertheless, I will focus more on `i.sequential` relations between 
+processes, suggesting a language model (even if rather idealized) 
+where cognitive processes unfold in a temporal order.   
+`p`
+
+`p.
+On both the cognitive and computational side, temporality is relative 
+rather than quantified: the significant detail is not 
+`q.before` and `q.after` in the sense of measuring time but rather how 
+one process logically precedes another in effects and prerequisites.  
+No theoretical importance is attached to `i.how long` it takes 
+before processes finish, or how much time elapses between 
+antecedent and subsequent processes (in contrast to subjects like 
+optimization theory, where such details are often significant).   
+We can set aside notions of a temporal continuum 
+where subsequent processes occupy disjoint, extended time-regions; 
+instead, one process follows another if anything affected by the first 
+process reflects this effect at the onset of the second process.  
+Time, in this sense, only exists as manifest in the variations 
+of any state revelant to processes %-- in the computational 
+context, in the overall state of the computer (and potentially 
+other computers on a network) where a computation is 
+carried out.  Two times are different only insofar as the 
+overall state at one time differs from the state at the second time.  
+Time is `i.discrete` because the relevant states are discrete, and 
+because beneath a certain sclae of time delta there is no 
+possibility of state change. 
+`p`
+
+`p.
+Analogously, in language, I suggest that we set aside notions of 
+an unfolding process reflecting the temporality of expression.  
+Of course, the fact that parts of a sentence are heard first 
+biases understanding somewhat; and speakers often exploit 
+temporality for rhetorical effect, elonging the pronunciation 
+of words for emphasis, or pausing before words to 
+signal an especially calculated word choice, for example.  
+These data are not irrelvant, but, for core semantic and 
+syntactic analysis, I will nonetheless treat a sentence as 
+an integrated temporal unit, with no value atributed to 
+temporal ordering amongst words except insofar as temporal 
+order establishes word order and word order has grammatical 
+significance in the relevant natural language/dialect.   
+`p`
+
+`p.
+While antecedent/subsequent inter-process relations are among those 
+formally recognized in Process Algebra, this specific genre 
+of relation is implicit to other models important 
+to computer science, such as Type Theory and Lambda Calculus.  
+If `typeT; is a type, then any computational process 
+which proceduces a value of type `typeT; has a corresponding 
+(`q.functional`/) type (for sake of discussion, assume a `q.value` 
+is anything that can be encoded in a finite sequence of numbers 
+and that `q.types` are classifications for values that introduce 
+distinctions between functions %-- e.g., the function to add two 
+integers is different than the function to add two decimals; more 
+rigorous definitions of primordial notions like `q.type` and 
+`q.value` are possible but not needed for this paper).  
+Similarly a process which takes as `i.input` a value of 
+`typeT; is its own type.  If two processes have these two 
+types respectively %-- one outputs `typeT; and the other 
+inputs `typeT; %-- then the two can be put in sequence, where 
+the output from the antecedent becomes the inut to the subsequent.  
+In this manner inter-process sequential relations become 
+subsumed into `q.type systems` can can be studied using 
+type-theoretic machinery rather than Process Algebras or 
+Process Calculii as such.  
+`p`
+
+`p.
+
+`p`
+
+`p.
+`p`
+
+
+
+
+
+
+
+

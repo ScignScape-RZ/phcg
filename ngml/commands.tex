@@ -1,0 +1,877 @@
+
+%\usepackage{sectsty}
+\usepackage{titlesec}
+\usepackage{url}
+
+\usepackage{amssymb}
+
+\usepackage{titlesec}
+
+\usepackage{transparent}
+
+\usepackage{setspace}
+%\doublespacing
+%\onehalfspacing
+
+
+\usepackage{graphicx}
+%\graphicspath{ {/ext_root/openshift-oc3/mmui-caf-local/web/mmui/public/pics/} }
+
+\newcommand{\LVersatileUX}{LVersatileUX}
+\newcommand{\LDatasetCreator}{LDatasetCreator}
+
+\newcommand{\textds}[1]{{\fontfamily{lmdh}\selectfont{%
+\raisebox{-1pt}{#1}}}}
+
+\newcommand{\ltextds}[1]{{\fontfamily{lmdh}\selectfont{#1}}}
+
+\newcommand{\dsC}{{\textds{ds}$\mathcal{C}$}}
+
+\newcommand{\ldsC}{{\Large{\ltextds{ds}$\mathcal{C}$}}}
+
+
+%\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+%
+
+\newcommand{\sectionGraphics}{
+
+\vspace{2em}\centerline{%\includegraphics[scale=0.125]{logo-deco.png}
+}\vspace{-1em}}
+
+\usepackage[flushmargin]{footmisc}
+
+\setlength{\parindent}{30pt}
+
+\newcommand{\pseudoIndent}{\vspace{1em}\hspace{30pt}}
+\newcommand{\pseudoInd}{\hspace{30pt}}
+
+%\usepackage{bigfoot}
+
+%\DeclareNewFootnote[para]{R}[Roman]
+%\DeclareNewFootnote[para]{N}
+
+\usepackage[letterpaper, left=1in,right=.85in,top=1in,bottom=.85in]{geometry}
+
+\usepackage{etoolbox}
+
+\AtBeginEnvironment{thebibliography}{\linespread{1}\selectfont}
+
+\usepackage{mathptmx}
+%\usepackage{euler}
+%\usepackage{amsmath}
+
+%\usepackage[LGRgreek]{mathastext}
+
+%\sectionfont{\fontsize{12}{15}\selectfont}
+%\subsectionfont{\fontsize{11}{12}\selectfont}
+
+\titleformat*{\subsection}{\small\bfseries}
+
+\usepackage{eufrak}
+\usepackage{wasysym}
+\usepackage{textcomp}
+\usepackage{amssymb}
+
+\usepackage{microtype}
+
+
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+%\usepackage{euler}
+
+\let\OldI\i
+
+\newcommand{\secvspace}{\vspace{-0.3em}}
+\newcommand{\asecvspace}{\vspace{-0.05em}}
+
+\newcommand{\mdash}{---}
+\newcommand{\q}[1]{{{\fontfamily{gar}\selectfont{``}}#1{\fontfamily{gar}\selectfont{''}}}}
+\newcommand{\sq}[1]{`#1'}
+\renewcommand{\i}[1]{\textit{#1}}
+
+\newcommand{\T}[1]{\raisebox{-2pt}{\ensuremath{\mathcal{T}}}\textit{\tiny #1}}
+%\newcommand{\T}{\ensuremath{\mathscr{T2}}}
+
+\newcommand{\TSupT}{\ensuremath{{\T2}\makebox[4pt][r]{\raisebox{5pt}{{\scalebox{.6}{\T1}}}}}}
+
+\let\OldFootnoteSize\footnotesize
+\renewcommand{\footnotesize}{\scriptsize}
+	
+\newcommand{\Tnoindex}{\raisebox{-2pt}{\ensuremath{\mathcal{T}}}}
+
+\newcommand{\typeAbove}{%
+\raisebox{-1pt}{\rotatebox{90}{\begin{tiny}$\diagdown$\makebox[1pt][c]{$\diagup$}\end{tiny}}}}
+
+\newcommand{\typeT}{\ensuremath{type\raisebox{.5pt}{\makebox[3pt][c]{-}}T}}
+\newcommand{\TValues}{\ensuremath{T}-values} 
+
+\newcommand{\emigres}{\'emigr\'es}
+
+\newcommand{\SExpressions}{S-Expressions}
+\newcommand{\SExpression}{S-Expression}
+
+\newcommand{\Retore}{Retor\'e}
+\newcommand{\Aurelie}{Aur\'elie}
+\newcommand{\Descles}{D\'escles}
+
+\newcommand{\SG}{\ensuremath{\mathbb{SG}}}
+\newcommand{\tLa}{\ensuremath{\mathbb{A}_\lambda}}
+
+\newcommand{\lt}{\ensuremath{\vartriangleleft}}
+\newcommand{\ancestorLt}{\ensuremath{\lll}}
+\newcommand{\aALTb}{\ensuremath{a {\lll} b}}
+\newcommand{\aLTb}{\ensuremath{a {\lt} b}}
+\newcommand{\aLTcLtb}{\ensuremath{a {\lt} b {\lt} c}}
+\newcommand{\aDLTb}{\ensuremath{a {\lessdot} b}}
+
+\newcommand{\aMath}{\ensuremath{a}}
+\newcommand{\bMath}{\ensuremath{b}}
+\newcommand{\cMath}{\ensuremath{c}}
+
+
+\newcommand{\ala}{\`a la}
+
+\newcommand{\Saarbrucken}{Saarbr\"ucken}
+
+
+\newcommand{\picalculus}{\ensuremath{\pi}-calculus}
+
+\newcommand{\qmarkdubious}{\raisebox{.2cm}{{\footnotesize ?}}}
+
+\newcommand{\TypeCat}{\ensuremath{\mathcal{T}}}
+
+
+\newcommand{\ADJplusNPeqNP}{\ensuremath{ADJ + NP = NP}}
+
+%\newcommand{\outarrow}{\ensuremath{\overset{..}{\rightarrow}}}
+
+\newcommand{\outarrow}{\makebox[-2pt][l]{%
+\raisebox{4pt}{..}}\ensuremath{\rightarrow}}
+
+\newcommand{\argarrow}{\hspace{1pt} \makebox[-2pt][l]{%
+		\raisebox{4pt}{.}}\ensuremath{\rightarrow} \hspace{1pt}}
+
+
+\newcommand{\smoutarrow}{\makebox[-1pt][l]{%
+		\raisebox{3pt}{..}}\ensuremath{\rightarrow}}
+
+\newcommand{\smargarrow}{\hspace{1pt} \makebox[-2pt][l]{%
+		\raisebox{3pt}{.}}\ensuremath{\rightarrow} \hspace{1pt}}
+
+
+
+%\newcommand{\NounToNoun}{N \outarrow N}
+%\newcommand{\VisNtoS}{V :: N \outarrow N}
+
+\newcommand{\mmbox}[1]{#1}
+
+\newcommand{\NtoN}{\mmbox{\ensuremath{N} \outarrow{} \ensuremath{N}}}
+\newcommand{\NounToNoun}{\mmbox{\ensuremath{N} \outarrow{} \ensuremath{N}}}
+\newcommand{\VisNtoS}{\mmbox{\ensuremath{V :: N} \outarrow{} \Prop}}
+\newcommand{\AdjisNtoN}{\mmbox{\hspace{2pt}\ensuremath{\mathcal{A}
+\scalebox{.7}{\ensuremath{\mathcal{DJ}}} :: N} \outarrow{} \Prop}}
+
+
+\newcommand{\thatPhrase}{\AcronymText{that}-phrase}
+\newcommand{\thatPhrases}{\AcronymText{that}-phrases}
+
+\newcommand{\Oz}{\AcronymText{Oz}}
+\newcommand{\CppFourteen}{{\Cpp}14}
+
+\usepackage{graphicx}
+
+\newcommand{\rzauthor}[3]{{
+{\vspace{-4em}}{\fontfamily{gar}\fontseries{b}\selectfont% 
+{\begin{center}\textls*[103]{#1}\\ \vspace{-2em}%
+{\scalebox{.7}{\fontfamily{phv}\fontshape{it}\selectfont\footnotesize #3}}#2\end{center}}
+
+{\vspace{-2.25em}}
+{\hfill\small\today}
+
+{\vspace{.25em}}
+}}}			 
+
+
+\newcommand{\rzauth}[3]{{
+		{\vspace{-1em}}{\fontfamily{gar}\fontseries{b}\selectfont% 
+			{\begin{center}\textls*[103]{#1}\\ \vspace{1em}%
+					{\scalebox{.7}{\fontfamily{phv}\fontshape{it}\selectfont\footnotesize #3}}#2\end{center}}
+			
+			{\vspace{-6em}}
+			{\hfill\small {\raisebox{1em}{\today}}}
+			
+			{\vspace{0em}}
+		}}}			 
+
+
+
+
+\newcommand{\rztitle}[1]{\begin{center}\fontfamily{phv}\fontseries{b}\selectfont #1\end{center}}
+
+
+\newcommand{\Jorgen}{J{\o}rgen}
+
+\newcommand{\Prop}{\ensuremath{\mathcal{P}}}
+
+\newcommand{\NN}{\ensuremath{N}\hspace{-1pt}\argarrow\hspace{-1pt}\ensuremath{N}}
+\newcommand{\Npl}{%
+\ensuremath{N}\raisebox{8pt}{\hspace{-1pt}\ensuremath{\rotatebox{180}{{\begin{footnotesize}$\dotplus$\end{footnotesize}}}}}}
+\newcommand{\NPl}{\Npl}
+\newcommand{\NtoNpl}{%
+\mmbox{\ensuremath{N} \outarrow{} \Npl}}
+\newcommand{\NpltoNpl}{\mmbox{\Npl{} \outarrow{} \Npl}}
+\newcommand{\PropToN}{\mmbox{\Prop \hspace{1pt} \outarrow{} \N}}
+
+\newcommand{\VisNNtoProp}{\mmbox{\ensuremath{V :: N} \argarrow \ensuremath{N} \outarrow{} \Prop}}
+\newcommand{\VisNProptoProp}{\mmbox{\ensuremath{V :: N} \argarrow  \Prop{} \hspace{2pt} \outarrow{} \Prop}}
+
+\newcommand{\triesNVtoProp}{tries \mmbox{\ensuremath{:: N} \argarrow  \ensuremath{V} \hspace{2pt} \outarrow{} \Prop}}
+
+\newcommand{\setHawkeyeBlake}{\{Hawkeye, Blake\}}
+
+
+\newcommand{\NNVtoProp}{\mmbox{\ensuremath{N}  \argarrow  \ensuremath{N}  \argarrow  
+   \ensuremath{V}  {} \outarrow  {} \Prop}}
+\newcommand{\VtoV}{\mmbox{\ensuremath{V}  \outarrow  \ensuremath{V}}}
+
+\newcommand{\proces}{proc\`es}
+\newcommand{\epoche}{epoch\'e}
+
+
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+
+\newcommand{\VPpNPeqS}{\ensuremath{VP + NP = S}}
+\newcommand{\NSingToNPl}{\mmbox{\NSing{} \outarrow{} \Npl}}
+
+\newcommand{\NNtoS}{\mmbox{\NN{} \outarrow{} \Prop}}
+\newcommand{\NNtoN}{\mmbox{\NN{} \outarrow{} \ensuremath{N}}}
+\newcommand{\N}{\mmbox{\ensuremath{N}}}
+\newcommand{\NtoProp}{\mmbox{\N{} \outarrow{} \Prop}}
+\newcommand{\NNtoProp}{\mmbox{\NN{} \outarrow{} \Prop{}}}
+\newcommand{\ProptoN}{\mmbox{\Prop{} \outarrow{} \N}}
+
+
+\newcommand{\PropToNYieldsN}{\PropToN{} \raisebox{1pt}{\ensuremath{\textgreater\hspace{-5pt}\raisebox{.15pt}{\ensuremath{\Rightarrow}}}}{} \N}
+
+\newcommand{\SeqNPplVP}{\mmbox{{\small\texttt{S = NP + VP}}}}
+
+\newcommand{\Arg}{\ensuremath{A}\tiny{rg}}
+\newcommand{\argsToReturn}{\mbox{\ensuremath{{\Arg}_0} \hspace{-4pt} \smargarrow 
+		\hspace{-3pt}
+\ensuremath{{\Arg}_1} 
+\hspace{-4pt} \smargarrow \hspace{-2pt} \ensuremath{\cdot\cdot\cdot} \hspace{0pt} \smoutarrow  \hspace{1pt} \textit{Result}}}
+
+\newcommand{\lowBlank}{\raisebox{-1pt}{\textthreequartersemdash\textthreequartersemdash\textthreequartersemdash}}
+
+\newcommand{\BlankAfterBlank}{\lowBlank\texttt{after}\lowBlank}
+\newcommand{\AfterNSingAndNSingToNPl}{\mbox{\texttt{after} :: %
+\NSing \argarrow \NSing \hspace{1pt} \outarrow \hspace{1pt} \Npl}}
+
+\newcommand{\archiveDate}[1]{{\footnotesize #1}}
+
+\newcommand{\sentenceExample}[1]{
+\begin{noindent}
+{{\raisebox{2pt}{{\scriptsize {\color{green!30!yellow!40!black}  
+\rotatebox{20}{\RIGHTarrow}}}}} \hspace{10pt} #1
+	
+}
+\end{noindent}
+}
+
+\newcommand{\sentenceExamples}[1]{
+	
+\vspace{1em}		
+{\setstretch{1.0}	
+#1
+}
+\vspace{.7em}		
+
+\noindent\hspace{-4pt}}
+
+\newcommand{\biarrow}{\ensuremath{\Leftrightarrow}}
+
+\newcommand{\verbSubject}{verb {\biarrow} subject}
+\newcommand{\subjectObject}{subject {\biarrow} object}
+
+\newcommand{\FeqMtimesA}{\hspace{-2pt}{\small \ensuremath{F}=\ensuremath{M}{\texttimes}\ensuremath{A}}}
+\newcommand{\piCalculus}{\ensuremath{\pi}-calculus}
+\newcommand{\threeary}{3-ary}
+\newcommand{\forSlashTo}{\textit{for}/\textit{to}}
+\newcommand{\POSwise}{\POS{}-wise}
+
+\newif\iffootnote
+\let\Footnote\footnote
+\renewcommand\footnote[1]{\begingroup\footnotetrue\Footnote{#1}\endgroup}
+
+\newcommand{\AcronymText}[1]{{\iffootnote\begin{scriptsize}{\textsc{#1}}\end{scriptsize}%
+\else\begin{OldFootnoteSize}{\textsc{#1}}\end{OldFootnoteSize}\fi}}
+
+
+\newcommand{\AcronymTextInitialCap}[1]{{\iffootnote\begin{scriptsize}{\textsc{#1}}\end{scriptsize}%
+		\else\begin{normalsize}{\textsc{#1}}\end{normalsize}\fi}}
+
+
+\newcommand{\rel}[1]{\raisebox{0.25pt}{%
+	{\iffootnote\begin{footnotesize}{\textsc{#1}}\end{footnotesize}%
+		\else\begin{OldFootnoteSize}{\textsc{#1}}\end{OldFootnoteSize}\fi}}}
+
+\newcommand{\vs}{
+
+\vspace*{0.5em}}
+
+
+\newcommand{\HTML}{\AcronymText{HTML}}
+
+\newcommand{\UX}{\AcronymText{UX}}
+
+\newcommand{\Csh}{\AcronymText{C\#}}
+
+\newcommand{\PHP}{\AcronymText{PHP}}
+\newcommand{\IDE}{\AcronymText{IDE}}
+
+\newcommand{\DX}{\AcronymText{DX}}
+
+\newcommand{\RelaeGraph}{\AcronymText{RelaeGraph}}
+\newcommand{\PDF}{\AcronymText{PDF}}
+
+\newcommand{\NDP}{\AcronymText{NDP}}
+\newcommand{\UML}{\AcronymText{UML}}
+\newcommand{\GIT}{\AcronymText{GIT}}
+\newcommand{\EHR}{\AcronymText{EHR}}
+\newcommand{\HLSeven}{\AcronymText{HL7}}
+
+\newcommand{\UI}{\AcronymText{UI}}
+\newcommand{\QML}{\AcronymText{QML}}
+
+\newcommand{\AWS}{\AcronymText{AWS}}
+\newcommand{\NaCl}{\AcronymText{NaCl}}
+
+\newcommand{\PPNAN}{\AcronymText{P2P-NAN}}
+\newcommand{\MoND}{\AcronymText{MoND}}
+\newcommand{\MoNDUI}{\AcronymText{MoND-UI}}
+
+\newcommand{\MSME}{\AcronymText{MSME}}
+\newcommand{\SPARQL}{\AcronymText{SPARQL}}
+\newcommand{\OWL}{\AcronymText{OWL}}
+\newcommand{\JSON}{\AcronymText{JSON}}
+
+\newcommand{\const}{\AcronymText{const}}
+\newcommand{\GeCODE}{\AcronymText{GeCODE}}
+
+\newcommand{\Python}{\AcronymText{Python}}
+
+\newcommand{\FAIR}{\AcronymText{FAIR}}
+\newcommand{\XLS}{\AcronymText{XLS}}
+\newcommand{\CSV}{\AcronymText{CSV}}
+\newcommand{\SQL}{\AcronymText{SQL}}
+\newcommand{\NumPy}{\AcronymText{NumPy}}
+\newcommand{\R}{\AcronymText{R}}
+\newcommand{\CAD}{\AcronymText{CAD}}
+
+\newcommand{\Minion}{\AcronymText{Minion}}
+\newcommand{\LCpp}{\AcronymText{LC++}}
+\newcommand{\Castor}{\AcronymText{Castor}}
+\newcommand{\VTK}{\AcronymText{VTK}}
+\newcommand{\GLUT}{\AcronymText{GLUT}}
+\newcommand{\CAF}{\AcronymText{CAF}}
+\newcommand{\SKE}{\AcronymText{SKE}}
+
+\newcommand{\MND}{\AcronymText{MND}}
+\newcommand{\FHIR}{\AcronymText{FHIR}}
+\newcommand{\DICOM}{\AcronymText{DICOM}}
+\newcommand{\CDA}{\AcronymText{CDA}}
+
+\newcommand{\GUI}{\AcronymText{GUI}}
+\newcommand{\BNF}{\AcronymText{BNF}}
+
+\newcommand{\ASK}{\AcronymText{ASK}}
+
+\newcommand{\quasiSectionSpace}{\vspace{1em}}
+
+
+%\newcommand{\FOmega}{F_\ensuremath{\omega}}
+
+\newcommand{\FOmega}{F\ensuremath{_\omega}}
+
+\newcommand{\Clasp}{\AcronymText{Clasp}}
+%\newcommand{\DICOM}{\AcronymText{DICOM}}
+%\newcommand{\HLSeven}{\AcronymText{HL7}}
+
+\newcommand{\ParseTalk}{\AcronymText{ParseTalk}}
+\newcommand{\TurboParser}{\AcronymText{TurboParser}}
+
+
+\newcommand{\NLP}{\AcronymText{NLP}}
+\newcommand{\POS}{\AcronymText{POS}}
+
+\newcommand{\Francois}{Fran\c{}cois}
+
+
+\newcommand{\Gardenfors}{G\"ardenfors}
+
+
+\newcommand{\Haskell}{\AcronymText{Haskell}}
+\newcommand{\C}{\AcronymText{C}}
+\newcommand{\NP}{\AcronymText{NP}}
+\newcommand{\Cpp}{\AcronymText{C++}}
+\newcommand{\RDF}{\AcronymText{RDF}}
+\newcommand{\Java}{\AcronymText{Java}}
+\newcommand{\IT}{\AcronymText{IT}}
+\newcommand{\IBMinc}{\AcronymText{IBM}}
+\newcommand{\XDG}{\AcronymText{XDG}}
+\newcommand{\AI}{\AcronymText{AI}}
+
+\newcommand{\HPSG}{\AcronymText{HPSG}}
+\newcommand{\CAG}{\AcronymText{CAG}}
+\newcommand{\Lisp}{\AcronymText{Lisp}}
+
+\newcommand{\TS}{\AcronymText{TS}}
+
+\newcommand{\ThreeD}{\AcronymText{3D}}
+
+
+\usepackage[font=small,labelfont=bf]{caption}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+
+
+
+\definecolor{blGreen}{rgb}{.2,.7,.3}
+\definecolor{darkRed}{rgb}{.2,.0,.1}
+
+%\definecolor{darkRedSemi}{rgba}{.2,.0,.1,0.5}
+
+\definecolor{darkBlGreen}{rgb}{.1,.3,.2}
+
+\definecolor{oldBlColor}{rgb}{.2,.7,.3}
+
+\definecolor{blColor}{rgb}{.1,.3,.2}
+
+\definecolor{elColor}{rgb}{.2,.1,0}
+\definecolor{flColor}{rgb}{0.7,0.3,0.3}
+
+\definecolor{logoOrange}{RGB}{108, 18, 30}
+\definecolor{logoGreen}{RGB}{85, 153, 89}
+\definecolor{logoPurple}{RGB}{200, 208, 30}
+
+\definecolor{logoBlue}{RGB}{4, 2, 25}
+\definecolor{logoPeach}{RGB}{255, 159, 102}
+\definecolor{logoCyan}{RGB}{66, 206, 244}
+\definecolor{logoRed}{rgb}{.3,0,0}
+
+
+\definecolor{Bkg}{RGB}{250,245,252}
+\newcommand{\leader}[2]{\hspace{#1}\colorbox{Bkg}{#2}}
+
+
+\newcommand{\saying}[1]{\vspace{2ex}\noindent{%%
+				\leader{2em}{\begin{minipage}{.93\textwidth}{\footnotesize #1}\end{minipage}}\vspace{2ex}}}
+
+\newcommand{\sayingsrc}[1]{\vspace{0ex}\\\hspace{2pt} --- {\footnotesize #1}}
+
+\renewcommand{\labelitemi}{{\raisebox{4pt}{{\footnotesize{$\bullet$}}}}}
+
+\newcommand{\itemmark}{\raisebox{-4pt}{\rotatebox{90}{{\Large $\bracevert$}}}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes,snakes}
+
+\newcommand{\visavis}{vis-\`a-vis}
+
+%\sectionfont{\fontsize{12}{8}\selectfont}
+
+
+\newcommand{\underlines}{{\normalsize \lowBlank\hspace{.1em}}}
+%\newcommand{\underlines}{{\normalsize \lowBlank\lowBlank\lowBlank\hspace{.5em}}}
+
+\newcommand{\XAcrossY}{\mbox{\ensuremath{x} \texttt{across} \ensuremath{y}}}
+
+\newcommand{\Rel}{\raisebox{.5pt}{\texttt{{\OldFootnoteSize r}}}}
+
+\newcommand{\XRelY}{\mbox{\ensuremath{x} \Rel{} \ensuremath{y}}}
+
+\newcommand{\tinyurl}[1]{{\raisebox{2pt}{{\scriptsize \url{#1}}}}} 
+
+%\usepackage[colorlinks=true]{hyperref}
+
+\colorlet{urlclr}{red!40!magenta!50!orange}
+
+%\hypersetup{
+% urlcolor = urlclr,
+% urlbordercolor = cyan!60!black,
+% linkcolor = red!30!black,
+% citecolor = orange!30!black,
+% citebordercolor = yellow!30!black,
+%} 
+
+
+%\makeatletter
+%\Hy@AtBeginDocument{%
+%	\def\@pdfborder{0 0 0}% Overrides border definition set with colorlinks=true
+%	\def\@pdfborderstyle{/S/U/W .25}% Overrides border style set with colorlinks=true
+	% Hyperlink border style will be underline of width 1pt
+%}%
+%\makeatother
+
+
+%\titlespacing{\section}{.25\textwidth}{*2.8}{*-.4}[5pc]
+
+\newcommand{\pn}[1]{
+	
+	\vspace{.4em}
+	\-\hspace{30pt} #1	
+}
+
+
+\newcommand{\p}[1]{
+	
+	\vspace{1em}
+	#1	
+}
+
+
+\renewenvironment{abstract}
+{\small
+	\begin{center}
+		\bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+	\end{center}
+	\list{}{%
+		\setlength{\leftmargin}{.43in}% <---------- CHANGE HERE
+		\setlength{\rightmargin}{\leftmargin}%
+	}%
+	\item\relax}
+{\endlist}
+
+
+%
+\let\OldEnumerate\enumerate
+  
+%
+%\newenvironment{colorEnumerate}{\begin{enumerate}[label=\textcolor{blue}{\arabic*}]}{\end{enumerate}}
+
+%\renewenvironment{enumerate}{\begin{OldEnumerate}[label=\color{blue}\theenumi]}{\end{OldEnumerate}}
+
+%\newcommand*{\MyCircle}{\tikz \draw [baseline, ball color=red, draw=red] circle (2pt);}
+
+\newcommand*{\MyDiamond}{%
+	\begin{tikzpicture}{baseline}
+	
+	\node [draw, shape=diamond, %shape border rotate=100,
+	line width=.2mm, left color=flColor, right color=darkRed, draw=logoPurple, aspect=1,
+	draw opacity=0.6, fill opacity=0.8, xscale=0.5, yscale=0.5,
+	minimum width=1mm, 
+	] 
+	at (2, 0) {};
+	
+	\end{tikzpicture}
+	
+}
+
+
+\newcommand*{\MyCircleT}{\begin{tikzpicture}{baseline}
+	\node [draw, shape=regular polygon, regular polygon sides = 5, shape border rotate=180,
+	line width=.2mm, left color=blGreen, right color=darkBlGreen, draw=darkRed, aspect=1,
+	draw opacity=0.6, fill opacity=0.8, xscale=0.4, yscale=0.65,
+	minimum width=1mm, 
+	] 
+	at (0, 0) {};
+	\end{tikzpicture}}
+
+\newcommand*{\MyCircle}{\raisebox{-3pt}{\MyCircleT}}
+
+\newcommand\theenumitext{}
+
+\newcommand*{\MyLabel}{%
+ %\MyBall	
+ %{\tikz \draw [baseline, ball color=red, draw=red] circle (3pt);} 	
+ \protect\MyCircle{\hspace{4pt}}\color{flColor}\LARGE{\textbf{\protect\raisebox{-3pt}{%
+ \theenumitext}}}
+}
+
+\colorlet{flcb}{flColor!50!black}
+
+\newcommand\eitext[1]{{\color{flcb!80!red}{\large\textbf{#1}}}}
+
+\newenvironment{colorEnumerate}{\vspace{1em}\begin{enumerate}[label=\MyLabel]%
+\setlength\itemsep{2em}}{\end{enumerate}}
+
+
+
+%\newenvironment{colorItemize}{\begin{itemize}[label=\color{blue}\theenumi]}{\end{enumerate}}
+
+%\newlist{coloritemize}{itemize}{1}
+%\setlist[coloritemize]{label=\textcolor{blue}{\textbullet}}
+
+%\setbeamercolor{item}{fg=green}
+
+%
+%\newcommand*{\MyBall}{\tikz \draw [baseline, fill=blue,draw=blue,circular drop shadow] circle (2pt);}
+%\newcommand*{\MyBall}{\tikz \draw [baseline, ball color=red, draw=red] diamond (2pt);}
+
+
+%\newcommand*{\MyBall}{\tikz \draw [baseline, shape=diamond, %shape border rotate=100,
+%	line width=.2mm, left color=flColor, right color=darkRed, draw=logoPurple, aspect=1,
+%	draw opacity=0.6, fill opacity=0.8, xscale=1.25, yscale=1.25,
+%	minimum width=1mm]
+%}
+
+\newenvironment{colorItemize}{\vspace{1em}\begin{itemize}[label={\MyDiamond}]%
+\setlength\itemsep{.5em}}{\end{itemize}}
+
+\colorlet{bgb}{darkBlGreen!40!blue}
+\colorlet{bgbc}{bgb!70!cyan}
+\colorlet{bgbcy}{bgbc!50!yellow}
+\colorlet{bgbcyy}{bgbc!30!yellow}
+\colorlet{bgbcyyw}{bgbcy!70}
+
+\colorlet{bgbcx}{bgbcy!70}
+\colorlet{bgbcxw}{bgbcx!70}
+
+\colorlet{bgbcxg}{bgbcxw!80!black}
+
+
+\colorlet{bgbcyw}{bgbcy!70}
+
+\colorlet{dro}{darkRed!50!orange}
+
+\let\OOldSection\section
+
+\newcommand\OldSection[1]{\OOldSection{{\protect\raisebox{-5pt}{\protect\scalebox{1.5}{#1}}}}}
+
+\newcommand\hs{\hspace{-.8em}}
+
+\renewcommand\section[1]{
+	\vspace{12pt}
+	
+	\hs\scalebox{1.3}{\colorbox{dro!80}{\hspace{1em}}}
+				
+	%			darkBlGreen!40!yellow
+	%\hspace{-1.1cm}{\protect\includegraphics[width=1cm]{e-logo.png}}	
+	{\protect\transparent{0.5}{\hs\colorbox{bgbcxg}{%
+			\hspace{.6em}\begin{minipage}{.985\linewidth}
+				    \vspace{.5em}
+				
+	\protect\transparent{1}{\OldSection{#1}}
+	    \end{minipage}}} }
+    
+    \vspace{-5em}
+    	{\protect\transparent{0.4}{\hs\colorbox{logoPeach!40!darkRed}{%
+    		\begin{minipage}{\linewidth}
+    			\hspace{\linewidth}
+    	\end{minipage}}} } 
+    
+    \vspace{5em}
+    
+	\vspace{-6pt}
+}
+
+%\subsectionfont{\Large}
+%\subsectionfont{\fontsize{12}{15}\selectfont}
+
+\titleformat*{\subsection}{\Large\bfseries}
+
+
+
+\let\OOldSubsection\subsection
+
+
+%\newcommand\OldSubsection[1]{\protect\scalebox{1.1}{\protect\OOldSubsection{\protect#1}}}
+
+\newcommand\sst[1]{{\Large #1}}
+
+\newcommand\OldSubsection[1]{\OOldSubsection{\hspace*{-12pt}#1}}
+
+
+\renewcommand\subsection[1]{
+
+	\vspace{12pt}
+	
+    %{\LARGE
+	%\colorbox{logoCyan}{%
+	%\begin{minipage}{\linewidth}
+		\OldSubsection{% 	
+			\hspace{-2.35em}
+			%\begin{minipage}{}
+			\protect\raisebox{-5pt}{%
+			\protect\transparent{0.7}\colorbox{darkRed!50!orange}{\hspace{2.1em}}}%
+			\hspace{-7pt}{\protect\transparent{0.4}
+			{\colorbox{bgbcyw}{\protect\transparent{1}{%
+						   \protect\raisebox{1pt}{\textit{{\large #1}}} }}}}
+			%\end{minipage}
+		}
+	%\end{minipage}
+    %}
+    %}
+	\vspace{-6pt}
+}
+
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+\let\section\OldSection
+\setlength{\leftmargin}{-4pt}
+\vspace{.1em}
+\OLDthebibliography{#1}
+\vspace{.7em}
+\OldFootnoteSize 
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{1pt plus 0ex}
+\raggedright
+}
+
+%\let\OLDitemize\itemize
+%\renewcommand\itemize[1]{
+%\setlength{\itemsep}{1.9pt plus 0ex}
+%\itemize{1}
+%}
+
+\makeatletter
+%\def\@biblabel#1{\hspace{-6pt}[#1]}
+\def\@biblabel#1{\hspace{-6pt}#1}
+\makeatother
+
+\newcommand{\bibtitle}[1]{{\small \textit{#1}}}
+\newcommand{\intitle}[1]{{\hspace{3pt}\textls*[-80]{\texttt{\textit{#1}}}}\hspace{-1pt}}
+
+\renewcommand{\i}[1]{\textit{#1}}
+
+\usepackage{enumitem}
+\setlist{leftmargin=1mm}
+
+
+\newcommand{\itemtitle}[1]{{\color{green!10!red!40!black} \textls*[-80]{\texttt{#1}}}}
+
+\newcommand{\acronymText}[1]{\AcronymText{#1}}
+\newcommand{\acronymTextInitialCap}[1]{\AcronymTextInitialCap{#1}}
+\newcommand{\acronymTextSS}[1]{\textsc{#1}}
+
+
+
+\newcommand{\MIT}{\AcronymText{MIT}}
+
+\newcommand{\nulltt}{\AcronymText{\texttt{null}}}
+\newcommand{\Maybe}{\AcronymText{\texttt{Maybe}}}
+\newcommand{\bind}{\AcronymText{\texttt{bind}}}
+\newcommand{\return}{\AcronymText{\texttt{return}}}
+
+\newcommand{\XML}{\AcronymText{XML}}
+\newcommand{\XQuery}{\AcronymText{XQuery}}
+\newcommand{\XQueries}{\AcronymText{XQueries}}
+\newcommand{\API}{\AcronymText{API}}
+\newcommand{\IR}{\AcronymText{IR}}
+\newcommand{\Clang}{\AcronymText{Clang}}
+\newcommand{\DAG}{\AcronymText{DAG}}
+\newcommand{\DAGs}{\AcronymText{DAG}s}
+
+\newcommand{\CAKR}{\AcronymText{CAKR}}
+
+\newcommand{\FIFO}{\AcronymText{FIFO}}
+\newcommand{\LIFO}{\AcronymText{LIFO}}
+
+\newcommand{\RGB}{\AcronymText{RGB}}
+\newcommand{\HSV}{\AcronymText{HSV}}
+
+\newcommand{\HCI}{\AcronymText{HCI}}
+\newcommand{\HTTP}{\AcronymText{HTTP}}
+\newcommand{\CSS}{\AcronymText{CSS}}
+\newcommand{\JavaScript}{\AcronymText{JavaScript}}
+
+\newcommand{\RSS}{\AcronymText{RSS}}
+\newcommand{\STL}{\AcronymText{STL}}
+
+\newcommand{\APIs}{\AcronymText{API}s}
+
+\newcommand{\NDPCloud}{\AcronymText{NDP-Cloud}}
+\newcommand{\WhiteDB}{\AcronymText{WhiteDB}}
+
+\newcommand{\Qt}{\AcronymText{Qt}}
+\newcommand{\NL}{\AcronymText{NL}}
+\newcommand{\langC}{\AcronymText{C}}
+\newcommand{\SDK}{\AcronymText{SDK}}
+
+\newcommand{\TensorFlow}{\AcronymText{TensorFlow}}
+\newcommand{\SyntaxNet}{\AcronymText{SyntaxNet}}
+
+
+\newcommand{\SOV}{\AcronymText{SOV}}
+\newcommand{\SVO}{\AcronymText{SVO}}
+
+\newcommand{\YtwoK}{\AcronymText{Y2K}}
+
+\newcommand{\qi}[1]{\q{\textit{#1}}}
+
+\newcommand{\CSharp}{\AcronymText{C\#}}
+
+\newcommand{\Tesniere}{Tesni\`ere}
+
+%\newcommand{\sentenceExample}[1]{``#1"}
+
+
+\usetikzlibrary{decorations.pathmorphing}
+
+\usepackage{frcursive}
+\usepackage{mathalfa}
+%\newcommand{\scal}[1]{{\fontfamily{frc}\selectfont#1}}
+
+%\usepackage{amsmath}
+
+%\DeclareFontFamily{U}{mathc}{}
+%\DeclareFontShape{U}{mathc}{m}{it}%
+%{<->s*[1.03] mathc10}{}
+
+%\DeclareMathAlphabet{\mathscr}{U}{mathc}{m}{it}
+
+%\makeatletter
+%\DeclareFontEncoding{LS1}{}{}
+%\DeclareFontSubstitution{LS1}{stix}{m}{n}
+%\DeclareMathAlphabet{\mathscr}{LS1}{stixscr}{m}{n}
+%\makeatother
+
+%
+%\newcommand{\scal}[1]{$\mathscr{#1}$}
+%\newcommand{\scal}[1]{{\fontfamily{mathc}\selectfont#1}}
+%\newcommand{\scal}[1]{{\usefont{U}{BOONDOX-cal}{m}{n}#1}}
+
+%\usepackage[T1]{pbsi}
+%\usepackage{calligra}
+%\usepackage{pvscript}
+%\usepackage{vicent}
+%\usepackage{aurical}
+\usepackage{emerald}
+\usepackage[T1]{fontenc}
+%
+%\newcommand{\scal}[1]{{\fontfamily{vicent}\selectfont#1}}
+%
+
+\newcommand{\scal}[1]{{{\small\ECFAugie{#1}}}}
+\newcommand{\xcal}[1]{{{\LARGE\ECFAugie{#1}}}}
+\newcommand{\lcal}[1]{{\ECFAugie{#1}}}
+\newcommand{\mcal}[1]{{{\large\ECFAugie{#1}}}}
+
+%\newcommand{\scal}[1]{#1}
+
+\newcommand{\VersatileUX}{$\mathcal{V}$\scal{ersatile}$\mathcal{UX}$}
+
+
+\renewcommand{\LVersatileUX}{{\Large{$\mathcal{V}$\scal{ersatile}$\mathcal{UX}$}}}
+\newcommand{\XLVersatileUX}{{\Huge{$\mathcal{V}$\xcal{ersatile}$\mathcal{UX}$}}}
+
+\newcommand{\mVersatileUX}{{\LARGE{$\mathcal{V}$\mcal{ersatile}$\mathcal{UX}$}}}
+
+\newcommand{\XLDatasetCreator}{{\color{red}{%
+\Huge{$\mathcal{D}$\xcal{ataset}{ }$\mathcal{C}$\xcal{reator}}}}}
+
+\renewcommand{\LDatasetCreator}{{\color{red}{%
+\Large{$\mathcal{D}$\scal{ataset}{ }$\mathcal{C}$\scal{reator}}}}}
+
+\newcommand{\mDatasetCreator}{{\color{red}{%
+\LARGE{$\mathcal{D}$\mcal{ataset}{ }$\mathcal{C}$\mcal{reator}}}}}
+
+\renewcommand{\thesection}{{\LARGE \protect\raisebox{-5pt}{Part \Roman{section}}}}
+\renewcommand{\thesubsection}{{\Large\arabic{section}.{\large\arabic{subsection}}}}
+
+
+\let\oldI\i
+
+\renewcommand{\i}[1]{\textit{#1}}

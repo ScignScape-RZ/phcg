@@ -27,6 +27,7 @@ class Language_Sample_Group;
 class Language_Sample : phaong<pg_t>::Hypernode
 {
  QString text_;
+ QString source_title_;
  int index_;
  QString sub_index_;
  int chapter_;
@@ -41,6 +42,7 @@ public:
  Language_Sample(QString text, phaong<pg_t>& phg);
 
  ACCESSORS(QString ,text)
+ ACCESSORS(QString ,source_title)
  ACCESSORS(int ,index)
  ACCESSORS(QString ,sub_index)
  ACCESSORS(int ,chapter)

@@ -22,11 +22,12 @@ USING_KANS(TextIO)
 Language_Sample::Language_Sample(QString text, phaong<pg_t>& phg)
   :  text_(text), index_(0), chapter_(0), page_(0), group_(nullptr)
 {
- phg.new_hypernode(this, 5, {"Language_Sample", nullptr});
+ phg.new_hypernode(this, 6, {"Language_Sample", nullptr});
 
  {
   int phaong_data_index = 0;
   phg.PHAONG_DATA(QString ,text);
+  phg.PHAONG_DATA(QString ,source_title);
   phg.PHAONG_DATA(int ,index);
   phg.PHAONG_DATA(QString ,sub_index);
   phg.PHAONG_DATA(int ,chapter);
