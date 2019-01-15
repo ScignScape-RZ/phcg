@@ -23,22 +23,6 @@ Language_Sample::Language_Sample(QString text)
 
 }
 
-QString Language_Sample::pre_with_mark()
-{
- if(amark_.isEmpty())
-   return precomment_;
- if(precomment_.isEmpty())
-   return amark_;
- return QString("%1 %2").arg(amark_).arg(postcomment_);
-}
-
-QString Language_Sample::alternate_or_text()
-{
- if(alternate_.isEmpty())
-   return text_;
- return alternate_;
-}
-
 int Language_Sample::get_group_id()
 {
  if(group_)
@@ -61,35 +45,13 @@ Language_Sample_Group* Language_Sample::get_ref_group()
 
 QString Language_Sample::get_serialization()
 {
- QString result = QString("%1 %2 %3 %4 <%5>%6\n").arg(index_)
-   .arg(sub_index_).arg(chapter_).arg(page_)
-   .arg(precomment_).arg(postcomment_);
-
- if(!ser_pre_.isEmpty())
- {
-  result.prepend(ser_pre_ + "\n");
- }
+ QString result = QString("%1 %2 %3 %4\n").arg(index_)
+   .arg(sub_index_).arg(chapter_).arg(page_);
 
  int gid = get_group_id();
  if(gid)
  {
   result += QString("# %1\n").arg(gid);
- }
-
- if(!speaker_.isEmpty())
- {
-  qDebug() << "speaker " << speaker_;
-  result += QString(": %1\n").arg(speaker_);
- }
-
- if(!alternate_.isEmpty())
- {
-  result += QString("/ %1\n").arg(alternate_);
- }
-
- if(!amark_.isEmpty())
- {
-  result += QString("? %1\n").arg(amark_);
  }
 
  result += text_;
@@ -103,10 +65,6 @@ void Language_Sample::read_samples_from_file
  QString text = load_file(path);
  QStringList qsl = text.split('\n');
  QString loc_code;
- QString alternate;
- QString speaker;
- QString amark;
- QString ser_pre;
 
  Language_Sample_Group* current_ref_group = nullptr;
  bool awaiting_ref_group = false;
@@ -120,45 +78,9 @@ void Language_Sample::read_samples_from_file
   if(qs.isEmpty())
     continue;
 
-  if(qs == "--")
-  {
-   ser_pre = qs;
-   current_ref_group = nullptr;
-   continue;
-  }
-  if(qs.startsWith('+'))
-  {
-   ser_pre = qs;
-   if(qs == "++")
-   {
-    current_ref_group = nullptr;
-    awaiting_ref_group = true;
-   }
-   else
-   {
-    ref_group_id = qs.mid(1).toInt();
-   }
-   continue;
-  }
-
   if(qs.startsWith('#'))
   {
    gid = qs.mid(2).simplified().toInt();
-   continue;
-  }
-  if(qs.startsWith('/'))
-  {
-   alternate = qs.mid(2).simplified();
-   continue;
-  }
-  if(qs.startsWith(':'))
-  {
-   speaker = qs.mid(2).simplified();
-   continue;
-  }
-  if(qs.startsWith('?'))
-  {
-   amark = qs.mid(2).simplified();
    continue;
   }
   if(loc_code.isEmpty())
@@ -270,12 +192,6 @@ void Language_Sample::read_samples_from_file
   samp->set_chapter(ls[2].toInt());
   samp->set_page(ls[3].toInt());
 
-  if(!ser_pre.isEmpty())
-  {
-   samp->set_ser_pre(ser_pre);
-   ser_pre.clear();
-  }
-
   if(gid)
   {
    Language_Sample_Group* g = groups[gid - 1];
@@ -318,31 +234,6 @@ void Language_Sample::read_samples_from_file
   }
 
   samp->get_ref_group()->push_back(samp);
-
-  samp->set_precomment(pre);
-  samp->set_postcomment(post);
-  if(!alternate.isEmpty())
-  {
-   samp->set_alternate(alternate);
-   alternate.clear();
-  }
-  if(!speaker.isEmpty())
-  {
-   samp->set_speaker(speaker);
-   speaker.clear();
-  }
-  if(!amark.isEmpty())
-  {
-   samp->set_amark(amark);
-   amark.clear();
-  }
-
-
-  if(!samp->speaker().isEmpty())
-  {
-   samp->get_ref_group()->check_set_form("Dialog");
-  }
-
 
   loc_code.clear();
   result.push_back(samp);

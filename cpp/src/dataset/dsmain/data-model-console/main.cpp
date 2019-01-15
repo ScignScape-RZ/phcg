@@ -20,7 +20,7 @@ USING_KANS(DSM)
 
 int main(int argc, char* argv[])
 {
- Dataset ds (DATA_FOLDER "/chapters/all.txt");
+ Dataset ds (DATA_FOLDER "all.txt");
  QVector<Language_Sample*>& samps = ds.samples();
 
 // for(int i = 1; i <= 32; ++i)
@@ -34,13 +34,13 @@ int main(int argc, char* argv[])
 
  QVector<Language_Sample_Group*>& groups = ds.groups();
  Language_Sample_Group::read_groups_from_file
-   (DATA_FOLDER "/chapters/all.g.txt", groups);
+   (DATA_FOLDER "/all.g.txt", groups);
 
 
  Language_Sample::read_samples_from_file
-   (DATA_FOLDER "/chapters/all.txt", samps, groups);
+   (DATA_FOLDER "/all.txt", samps, groups);
 
- ds.save_to_file();
+// ds.save_to_file();
 
 
 

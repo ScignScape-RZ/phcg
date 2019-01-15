@@ -107,9 +107,7 @@ void Dataset::parse_to_samples(QString text, int page, int num)
  int current_page = page;
  int current_index = num;
  QString current_sub_index;
- QString held_precomment;
- QString held_postcomment;
- QString held_alternate;
+
  QStringList qsl = text.split("\n");
  for(QString qs : qsl)
  {
@@ -123,21 +121,6 @@ void Dataset::parse_to_samples(QString text, int page, int num)
   if(qs.startsWith('#'))
   {
    current_index = qs.mid(1).toInt();
-   continue;
-  }
-  if(qs.startsWith("< "))
-  {
-   held_precomment = qs.mid(2).simplified();
-   continue;
-  }
-  if(qs.startsWith("> "))
-  {
-   held_postcomment = qs.mid(2).simplified();
-   continue;
-  }
-  if(qs.startsWith("/ "))
-  {
-   held_alternate = qs.mid(2).simplified();
    continue;
   }
   if(qs.size() < 3)
@@ -162,18 +145,6 @@ void Dataset::parse_to_samples(QString text, int page, int num)
   samp->set_index(current_index);
   samp->set_sub_index(current_sub_index);
   samp->set_chapter(get_chapter_number_from_page(current_page));
-
-  samp->set_precomment(held_precomment);
-  samp->set_postcomment(held_postcomment);
-
-  if(!held_alternate.isEmpty())
-  {
-   samp->set_alternate(held_alternate);
-   held_alternate.clear();
-  }
-
-  held_precomment.clear();
-  held_postcomment.clear();
 
   samples_.push_back(samp);
  }
