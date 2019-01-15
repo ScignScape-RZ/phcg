@@ -113,6 +113,44 @@ Process Calculii as such.
 `p`
 
 `p.
+There also exists a robust type-theoretic tradition 
+in (Natural Language) semantics, which is disjoint from 
+but not entirely irrelevant to the type systems of 
+formal and programming languages.  Semantic types are 
+recognized at several different levels of classification, 
+but some of the most interesting type-theoretic effects 
+involve medium-grained semantic criteria that are 
+more general than lexical entries but more specific than 
+Parts of Speech.  For example, the template `i.I believed 
+X` generally requires that `i.X` be a noun 
+(?`i.I believed run`/), but more narrowly a 
+certain `i.type` of noun, something that can be interpreted 
+as an idea or proposition of some kind (?`i.I believed flower`/).  
+Asher and Pustejovsky point out the anomaly in a sentenc 
+like `q.Bob's idea weighs five pounds` (ex. 2 p. 5), which 
+possesses a flavor of unacceptability that feels akin to 
+Part of Speech errors but are not in fact syntactic 
+errors.  The object of `i.weigh` is `q.five pounds` and 
+its subject is `q.Bob's idea`/, which is admissible 
+`i.syntactically` but fails to honor our semantic convention 
+that the verb `q.to weigh` should be applied to things 
+with physical mass (at least if the direct object denotes a quantity; 
+contrast with `i.Let's all weigh Bob's idea`/, where the 
+`i.idea` is object rather than subject).  These conventions are 
+analogous to Part of Speech rules but more fine-grained: 
+there is a meaning of `i.weigh` which (like any transitive 
+verb) has to be paired with a subject and object noun, but beyond 
+just being nouns the subject must be a physical body 
+(in effect a sub-type of nouns) and the object a quantitative 
+expression (another sub-type of nouns).  Potentially, type 
+restrictions on a coarse scale (e.g. that the subject of a verb 
+must be a noun) and those on a finer scale (as in this 
+sense of `i.to weigh`/) can be unified into an overarching theory, 
+which spans both grammar and semantics.  This is one way of 
+reading the type-theoretic semantic project.
+`p`
+
+`p.
 
 `p`
 
