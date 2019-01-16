@@ -42,27 +42,49 @@ public:
  struct Hypocell
  {
   Hyponode* hyponodes;
-  Hypocell* next;
+ };
+
+ struct Hypocell_Block
+ {
+  Hypocell* hypocells;
+  Hypocell_Block* next;
+ };
+
+ struct Hypocell_Block_Package
+ {
+  Hypocell_Block* first_block_;
+  numeric_index_type max_index_;
+  numeric_index_type cell_size_;
  };
 
  class Hypernode
  {
   friend class phaong;
-  Hypocell* first_cell_;
+  union {
+   Hypocell_Block_Package* block_package_;
+   Hypocell cell_;
+  };
   numeric_index_type size_;
   type_descriptor_type type_descriptor_;
 
  public:
 
-  Hypernode(Hypocell* first_cell, numeric_index_type size,
+  Hypernode(Hypocell_Block_Package* block_package, numeric_index_type size,
     type_descriptor_type type_descriptor)
-   :  first_cell_(first_cell), size_(size),
+   :  block_package_(block_package), size_(size),
+      type_descriptor_(type_descriptor)
+  {
+  }
+
+  Hypernode(Hypocell cell, numeric_index_type size,
+    type_descriptor_type type_descriptor)
+   :  cell_(cell), size_(size),
       type_descriptor_(type_descriptor)
   {
   }
 
   Hypernode()
-   :  first_cell_(nullptr), size_(0)
+   :  block_package_(nullptr), size_(0)
   {
   }
 
@@ -76,6 +98,15 @@ public:
   bool fixed_size()
   {
    return size_ > 0;
+  }
+
+  void check_max_index(numeric_index_type ind)
+  {
+   if(size_ < 0)
+   {
+    if(block_package_->max_index_ < ind)
+      block_package_->max_index_ = ind;
+   }
   }
 
  };
@@ -96,24 +127,40 @@ private:
  Hyponode* get_hyponode(Hypernode* hn, numeric_index_type ind)
  {
   int cell_index = ind % hn->cell_size();
+
   int cell_order = hn->fixed_size()? 0 :
     ind / hn->cell_size();
 
-  Hypocell* hc = hn->first_cell_;
+  Hypocell* hc = nullptr;
 
-  if(cell_order > 0)
+  if(hn->fixed_size())
+    hc = &hn->cell_;
+  else
   {
+   Hypocell_Block_Package* hbp = hn->block_package_;
+   Hypocell_Block* hb = hbp->first_block_;
+   numeric_index_type csize = hbp->cell_size_;
+   int block_cell_index = cell_order % csize;
+   int block_cell_order = cell_order / csize;
    int cc = 0;
-   while(cc < cell_order)
+   while(cc < block_cell_order)
    {
-    if(!hc->next)
+    if(!hb->next)
     {
-     Hyponode* hns = new Hyponode[hn->cell_size()];
-     Hypocell* nhc = new Hypocell{hns, nullptr};
-     hc->next = nhc;
+     Hypocell* hcs = new Hypocell[csize];
+     for(int i = 0; i < csize; ++i)
+      hcs[i] = {nullptr};
+     Hypocell_Block* nhb = new  Hypocell_Block{hcs, nullptr};
+     hb->next = nhb;
     }
-    hc = hc->next;
+    hb = hb->next;
     ++cc;
+   }
+   hc = &(hb->hypocells)[block_cell_index];
+   if(hc->hyponodes == nullptr)
+   {
+    Hyponode* hns = new Hyponode[hn->cell_size()];
+    hc->hyponodes = hns;
    }
   }
   return &(hc->hyponodes)[cell_index];
@@ -129,21 +176,48 @@ private:
  }
 
  Hypernode* _new_hypernode(numeric_index_type size,
-   type_descriptor_type& type_descriptor, Hypernode** hn = nullptr)
+   type_descriptor_type& type_descriptor, numeric_index_type csize,
+   Hypernode** hn = nullptr)
  {
   numeric_index_type sz = size;
   if(sz < 0) sz = -sz;
   Hyponode* hns = new Hyponode[sz];
-  Hypocell* hc = new Hypocell{hns, nullptr};
+
+  if(csize == -1)
+    csize = sz;
+
+  Hypocell hc{hns};
+
+  Hypocell_Block_Package* hbp;
+
+  if(size < 0)
+  {
+   Hypocell* hcs = new Hypocell[csize];
+   hcs[0] = hc;
+   for(int i = 0; i < csize; ++i)
+   {
+    hcs[i] = {nullptr};
+   }
+   Hypocell_Block* hb = new Hypocell_Block{hcs, nullptr};
+   hbp = new Hypocell_Block_Package{hb, 0, csize};
+  }
+  else
+    hbp = nullptr;
+
   Hypernode* result;
 
   if(hn)
   {
    result = *hn;
-   result->first_cell_ = hc;
+   if(hbp)
+     result->block_package_ = hbp;
+   else
+     result->cell_ = hc;
    result->size_ = size;
    result->type_descriptor_ = type_descriptor;
   }
+  else if(hbp)
+    result = new Hypernode(hbp, size, type_descriptor);
   else
     result = new Hypernode(hc, size, type_descriptor);
 
@@ -171,27 +245,29 @@ public:
  }
 
  void new_hypernode(Hypernode* hn, numeric_index_type size,
-   type_descriptor_type type_descriptor = type_descriptor_type())
+   type_descriptor_type type_descriptor = type_descriptor_type(),
+   numeric_index_type csize = -1)
  {
-  _new_hypernode(size, type_descriptor, &hn);
+  _new_hypernode(size, type_descriptor, csize, &hn);
  }
 
  void new_hypernode(Hypernode* hn, numeric_index_type size,
-   type_descriptor_type& type_descriptor)
+   type_descriptor_type& type_descriptor, numeric_index_type csize = -1)
  {
-  _new_hypernode(size, type_descriptor, &hn);
+  _new_hypernode(size, type_descriptor, csize, &hn);
  }
 
  Hypernode* new_hypernode(numeric_index_type size,
-   type_descriptor_type type_descriptor = type_descriptor_type())
+   type_descriptor_type type_descriptor = type_descriptor_type(),
+   numeric_index_type csize = -1)
  {
-  return _new_hypernode(size, type_descriptor);
+  return _new_hypernode(size, type_descriptor, csize);
  }
 
  Hypernode* new_hypernode(numeric_index_type size,
-   type_descriptor_type& type_descriptor)
+   type_descriptor_type& type_descriptor, numeric_index_type csize = -1)
  {
-  return _new_hypernode(size, type_descriptor);
+  return _new_hypernode(size, type_descriptor, csize);
  }
 
  void set_data(Hypernode* hn, numeric_index_type ind,
