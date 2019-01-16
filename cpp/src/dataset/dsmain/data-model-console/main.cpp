@@ -51,11 +51,44 @@ int main(int argc, char **argv)
  });
 
  phaong<pg_t>::Hypernode* hn = pg.new_hypernode(-8);
- pg.set_data(hn, 65, {"xx", nullptr}, {"QString", nullptr});
- pg.get_data(hn, 65, [](QPair<QString, void*>& pr)
+ pg.set_data(hn, 0, {"xx", nullptr}, {"QString", nullptr});
+ pg.get_data(hn, 0, [](QPair<QString, void*>& pr)
  {
   qDebug() << pr.first;
  });
+
+ pg.set_af(hn, 0, {"aa", nullptr}, {"QString", nullptr});
+ pg.get_af(hn, 0, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
+
+
+
+
+// pg.set_data(hn, 82, {"aa", nullptr}, {"QString", nullptr});
+// pg.get_data(hn, 82, [](QPair<QString, void*>& pr)
+// {
+//  qDebug() << pr.first;
+// });
+
+// pg.set_data(hn, 5, {"bx", nullptr}, {"QString", nullptr});
+// pg.get_data(hn, 5, [](QPair<QString, void*>& pr)
+// {
+//  qDebug() << pr.first;
+// });
+
+// pg.set_data(hn, 52, {"ax", nullptr}, {"QString", nullptr});
+// pg.get_data(hn, 52, [](QPair<QString, void*>& pr)
+// {
+//  qDebug() << pr.first;
+// });
+
+// pg.set_data(hn, 5, {"bx", nullptr}, {"QString", nullptr});
+// pg.get_data(hn, 5, [](QPair<QString, void*>& pr)
+// {
+//  qDebug() << pr.first;
+// });
 
  phaong<pg_t>::Hypernode* hn1 = pg.new_hypernode(8);
  pg.set_data(hn1, 11, {"yy", nullptr}, {"QString", nullptr});

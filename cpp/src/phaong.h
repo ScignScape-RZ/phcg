@@ -53,6 +53,7 @@ public:
  struct Hypocell_Block_Package
  {
   Hypocell_Block* first_block_;
+  numeric_index_type min_index_;
   numeric_index_type max_index_;
   numeric_index_type cell_size_;
  };
@@ -107,6 +108,25 @@ public:
     if(block_package_->max_index_ < ind)
       block_package_->max_index_ = ind;
    }
+  }
+
+  numeric_index_type get_minimum_array_index()
+  {
+   if(size_ < 0)
+    return block_package_->min_index_;
+   return 0;
+  }
+
+  numeric_index_type normalized_array_index(numeric_index_type ind)
+  {
+   if(size_ < 0)
+   {
+    numeric_index_type minin = block_package_->min_index_;
+    ind += minin;
+    if(ind > block_package_->max_index_)
+      ind = minin;
+   }
+   return ind;
   }
 
  };
@@ -176,7 +196,8 @@ private:
  }
 
  Hypernode* _new_hypernode(numeric_index_type size,
-   type_descriptor_type& type_descriptor, numeric_index_type csize,
+   type_descriptor_type& type_descriptor,
+   numeric_index_type minin, numeric_index_type csize,
    Hypernode** hn = nullptr)
  {
   numeric_index_type sz = size;
@@ -184,7 +205,13 @@ private:
   Hyponode* hns = new Hyponode[sz];
 
   if(csize == -1)
-    csize = sz;
+  {
+   csize = sz;
+   if(minin == -1)
+     minin = 1;
+  }
+  else if(minin == -1)
+    minin = 0;
 
   Hypocell hc{hns};
 
@@ -199,7 +226,7 @@ private:
     hcs[i] = {nullptr};
    }
    Hypocell_Block* hb = new Hypocell_Block{hcs, nullptr};
-   hbp = new Hypocell_Block_Package{hb, 0, csize};
+   hbp = new Hypocell_Block_Package{hb, minin, 0, csize};
   }
   else
     hbp = nullptr;
@@ -246,28 +273,32 @@ public:
 
  void new_hypernode(Hypernode* hn, numeric_index_type size,
    type_descriptor_type type_descriptor = type_descriptor_type(),
+   numeric_index_type minin = -1,
    numeric_index_type csize = -1)
  {
-  _new_hypernode(size, type_descriptor, csize, &hn);
+  _new_hypernode(size, type_descriptor, minin, csize, &hn);
  }
 
  void new_hypernode(Hypernode* hn, numeric_index_type size,
-   type_descriptor_type& type_descriptor, numeric_index_type csize = -1)
+   type_descriptor_type& type_descriptor,
+   numeric_index_type minin = -1,
+   numeric_index_type csize = -1)
  {
-  _new_hypernode(size, type_descriptor, csize, &hn);
+  _new_hypernode(size, type_descriptor, minin, csize, &hn);
  }
 
  Hypernode* new_hypernode(numeric_index_type size,
    type_descriptor_type type_descriptor = type_descriptor_type(),
-   numeric_index_type csize = -1)
+   numeric_index_type minin = -1, numeric_index_type csize = -1)
  {
-  return _new_hypernode(size, type_descriptor, csize);
+  return _new_hypernode(size, type_descriptor, minin, csize);
  }
 
  Hypernode* new_hypernode(numeric_index_type size,
-   type_descriptor_type& type_descriptor, numeric_index_type csize = -1)
+   type_descriptor_type& type_descriptor,
+   numeric_index_type minin = -1, numeric_index_type csize = -1)
  {
-  return _new_hypernode(size, type_descriptor, csize);
+  return _new_hypernode(size, type_descriptor, minin, csize);
  }
 
  void set_data(Hypernode* hn, numeric_index_type ind,
@@ -306,7 +337,103 @@ public:
   _set_data(hn, ind, val, nullptr);
  }
 
+
+ void set_sf(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type val, type_descriptor_type type_descriptor)
+ {
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void set_sf(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type val, type_descriptor_type& type_descriptor)
+ {
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void set_sf(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type& val, type_descriptor_type type_descriptor)
+ {
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void set_sf(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type& val, type_descriptor_type& type_descriptor)
+ {
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void set_sf(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type val)
+ {
+  _set_data(hn, ind, val, nullptr);
+ }
+
+ void set_sf(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type& val)
+ {
+  _set_data(hn, ind, val, nullptr);
+ }
+
+
+ void set_af(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type val, type_descriptor_type type_descriptor)
+ {
+  ind += hn->get_minimum_array_index();
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void set_af(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type val, type_descriptor_type& type_descriptor)
+ {
+  ind += hn->get_minimum_array_index();
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void set_af(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type& val, type_descriptor_type type_descriptor)
+ {
+  ind += hn->get_minimum_array_index();
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void set_af(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type& val, type_descriptor_type& type_descriptor)
+ {
+  ind += hn->get_minimum_array_index();
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void set_af(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type val)
+ {
+  ind += hn->get_minimum_array_index();
+  _set_data(hn, ind, val, nullptr);
+ }
+
+ void set_af(Hypernode* hn, numeric_index_type ind,
+   hyponode_value_type& val)
+ {
+  ind += hn->get_minimum_array_index();
+  _set_data(hn, ind, val, nullptr);
+ }
+
+
  void get_data(Hypernode* hn, numeric_index_type ind,
+   std::function<void(hyponode_value_type&)> fn)
+ {
+  Hyponode* ho = get_hyponode(hn, ind);
+  fn(ho->hypoval);
+ }
+
+ void get_af(Hypernode* hn, numeric_index_type ind,
+   std::function<void(hyponode_value_type&)> fn)
+ {
+  numeric_index_type nind = hn->normalized_array_index(ind);
+  Hyponode* ho = get_hyponode(hn, nind);
+  fn(ho->hypoval);
+ }
+
+ void get_sf(Hypernode* hn, numeric_index_type ind,
    std::function<void(hyponode_value_type&)> fn)
  {
   Hyponode* ho = get_hyponode(hn, ind);
