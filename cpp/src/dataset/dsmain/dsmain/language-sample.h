@@ -9,8 +9,8 @@
 #define LANGUAGE_SAMPLE__H
 
 
-#include "phaong.h"
-#include "phaong-types.h"
+#include "hgdm/phaon-graph/phaong.h"
+#include "hgdm/phaon-graph/phaong-types.h"
 
 
 #include "kans.h"
