@@ -18,10 +18,14 @@ DEFINES += USE_KANS
 
 HEADERS += \
   $$SRC_DIR/kernel/relae-phaon-dominion.h \
-
+  $$SRC_DIR/kernel/frame/relae-phaon-frame.h \
+ $$SRC_DIR/kernel/query/relae-phaon-query.h \
 
 SOURCES += \
   $$SRC_DIR/kernel/relae-phaon-dominion.cpp \
+  $$SRC_DIR/kernel/frame/relae-phaon-frame.cpp \
+  $$SRC_DIR/kernel/query/relae-phaon-query.cpp \
+
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

@@ -14,7 +14,8 @@
 
 
 #include "hgdm/phaon-graph/relae-phaon/kernel/graph/relae-phaon-node.h"
-
+#include "hgdm/phaon-graph/relae-phaon/kernel/frame/relae-phaon-frame.h"
+#include "hgdm/phaon-graph/relae-phaon/kernel/query/relae-phaon-query.h"
 
 #include "kans.h"
 USING_KANS(HGDMCore)
@@ -48,6 +49,7 @@ int main(int argc, char **argv)
   hv.push_back(he);
  });
 
+
  phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
  pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
 
@@ -70,13 +72,13 @@ int main(int argc, char **argv)
   qDebug() << pr.first;
  });
 
- phaong<pg_t>::Hypernode* hn4 = pg.new_hypernode(6, 0);
- pg.set_af(hn4, 0, {"bb", nullptr}, {"QString", nullptr});
- pg.get_af(hn4, 0, [](QPair<QString, void*>& pr)
- {
-  qDebug() << pr.first;
- });
 
+ RPH_Node n1(hn2);
+
+ RPH_Frame& fr = RPH_Frame::instance();
+ const RPH_Query& rq = RPH_Query::instance();
+
+ &n << fr/rq.Generic >> &n1;
 
 
  //qDebug() << *xx;
@@ -163,3 +165,20 @@ int main1(int argc, char **argv)
 
  return 0;
 }
+
+
+//phaong<pg_t>::Hypernode* hn4 = pg.new_hypernode(6, 1);
+//pg.set_af(hn4, 0, {"bb", nullptr}, {"QString", nullptr});
+//pg.get_af(hn4, 0, [](QPair<QString, void*>& pr)
+//{
+// qDebug() << pr.first;
+//});
+//pg.set_sf(hn4, 0, {"cc", nullptr}, {"QString", nullptr});
+//pg.get_sf(hn4, 0, [](QPair<QString, void*>& pr)
+//{
+// qDebug() << pr.first;
+//});
+//pg.get_data(hn4, 1, [](QPair<QString, void*>& pr)
+//{
+// qDebug() << pr.first;
+//});
