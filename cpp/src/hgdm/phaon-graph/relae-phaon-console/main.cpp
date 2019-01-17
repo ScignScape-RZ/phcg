@@ -80,6 +80,16 @@ int main(int argc, char **argv)
 
  &n << fr/rq.Generic >> &n1;
 
+ caon_ptr<RPH_Node> n2 = rq.Generic(&n);
+ caon_ptr<phaong<pg_t>::Hypernode> hn3 = n2->phhn();
+
+ pg.get_af(hn3.raw_pointer(), 0, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << "F: " << pr.first;
+ });
+
+
+
 
  //qDebug() << *xx;
 
