@@ -9,6 +9,7 @@ DOMINION_TYPE(dbl, double, Double)
 DOMINION_TYPE(integer, int, Int)
 DOMINION_TYPE(i8, char, I8)
 DOMINION_TYPE(qstring, QString, QStr)
+DOMINION_TYPE(phhn, phaong<pg_t>::Hypernode, Phaong_Hypernode)
 #endif
 
 #include "hgdm/relae-graph/dominion-macros.h"

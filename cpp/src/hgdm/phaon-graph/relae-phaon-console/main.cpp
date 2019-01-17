@@ -23,14 +23,63 @@ USING_KANS(HGDMCore)
 
 int main(int argc, char **argv)
 {
- QString x = "v";
+ phaong<pg_t> pg;
 
- RPH_Node n(&x);
+ QVector<phaong<pg_t>::Hypernode*> hypernodes;
+ QVector<phaong<pg_t>::Hyperedge*> hyperedges;
 
- //caon_ptr<QString> xx = n.as<QString>();
- caon_ptr<QString> xx = n.qstring();
+ QPair<QVector<phaong<pg_t>::Hypernode*>&,
+   QVector<phaong<pg_t>::Hyperedge*>&> graph {hypernodes, hyperedges};
 
- qDebug() << *xx;
+ typedef QPair<QVector<phaong<pg_t>::Hypernode*>&,
+   QVector<phaong<pg_t>::Hyperedge*>&> g_t;
+
+ pg.set_user_data(&graph);
+
+ pg.set_node_add_function([](phaong<pg_t>& _pg, phaong<pg_t>::Hypernode* hn)
+ {
+  QVector<phaong<pg_t>::Hypernode*>& hh = _pg.user_data_as<g_t>()->first;
+  hh.push_back(hn);
+ });
+
+ pg.set_edge_add_function([](phaong<pg_t>& _pgs, phaong<pg_t>::Hyperedge* he)
+ {
+  QVector<phaong<pg_t>::Hyperedge*>& hv = _pgs.user_data_as<g_t>()->second;
+  hv.push_back(he);
+ });
+
+ phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
+ pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
+
+
+ RPH_Node n(hn);
+
+// //caon_ptr<QString> xx = n.as<QString>();
+ caon_ptr<phaong<pg_t>::Hypernode> hn1 = n.phhn();
+
+ pg.get_data(hn1.raw_pointer(), 0, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
+
+
+ phaong<pg_t>::Hypernode* hn2 = pg.new_hypernode(-8);
+ pg.set_af(hn2, 0, {"aa", nullptr}, {"QString", nullptr});
+ pg.get_af(hn2, 0, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
+
+ phaong<pg_t>::Hypernode* hn4 = pg.new_hypernode(6, 0);
+ pg.set_af(hn4, 0, {"bb", nullptr}, {"QString", nullptr});
+ pg.get_af(hn4, 0, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
+
+
+
+ //qDebug() << *xx;
 
  return 0;
 }
@@ -70,11 +119,11 @@ int main1(int argc, char **argv)
   qDebug() << pr.first;
  });
 
- pg.set_af(hn, 0, {"aa", nullptr}, {"QString", nullptr});
- pg.get_af(hn, 0, [](QPair<QString, void*>& pr)
- {
-  qDebug() << pr.first;
- });
+// pg.set_af(hn, 0, {"aa", nullptr}, {"QString", nullptr});
+// pg.get_af(hn, 0, [](QPair<QString, void*>& pr)
+// {
+//  qDebug() << pr.first;
+// });
 
 
 

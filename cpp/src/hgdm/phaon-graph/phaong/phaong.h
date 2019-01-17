@@ -50,6 +50,13 @@ public:
   Hypocell_Block* next;
  };
 
+ struct Hypocell_Array_Package
+ {
+  Hypocell hypocell;
+  numeric_index_type size;
+  numeric_index_type min_index;
+ };
+
  struct Hypocell_Block_Package
  {
   Hypocell_Block* first_block_;
@@ -63,6 +70,7 @@ public:
   friend class phaong;
   union {
    Hypocell_Block_Package* block_package_;
+   Hypocell_Array_Package* array_package_;
    Hypocell cell_;
   };
   numeric_index_type size_;
@@ -76,6 +84,15 @@ public:
       type_descriptor_(type_descriptor)
   {
   }
+
+  Hypernode(Hypocell_Array_Package* array_package,
+    type_descriptor_type type_descriptor)
+   :  array_package_(array_package), size_(0),
+      type_descriptor_(type_descriptor)
+  {
+  }
+
+
 
   Hypernode(Hypocell cell, numeric_index_type size,
     type_descriptor_type type_descriptor)
@@ -93,12 +110,21 @@ public:
   {
    if(size_ < 0)
      return -size_;
+   if(size_ == 0)
+     return array_package_->size;
    return size_;
+  }
+
+  Hypocell* cell_ptr()
+  {
+   if(size_ == 0)
+     return &array_package_->hypocell;
+   return &cell_;
   }
 
   bool fixed_size()
   {
-   return size_ > 0;
+   return size_ >= 0;
   }
 
   void check_max_index(numeric_index_type ind)
@@ -113,7 +139,9 @@ public:
   numeric_index_type get_minimum_array_index()
   {
    if(size_ < 0)
-    return block_package_->min_index_;
+     return block_package_->min_index_;
+   if(size_ == 0)
+     return array_package_->min_index;
    return 0;
   }
 
@@ -125,6 +153,12 @@ public:
     ind += minin;
     if(ind > block_package_->max_index_)
       ind = minin;
+   }
+   else if(size_ == 0)
+   {
+    numeric_index_type minin = array_package_->min_index;
+    ind += minin;
+    ind %= array_package_->size;
    }
    return ind;
   }
@@ -154,7 +188,7 @@ private:
   Hypocell* hc = nullptr;
 
   if(hn->fixed_size())
-    hc = &hn->cell_;
+    hc = hn->cell_ptr();
   else
   {
    Hypocell_Block_Package* hbp = hn->block_package_;
@@ -202,7 +236,18 @@ private:
  {
   numeric_index_type sz = size;
   if(sz < 0) sz = -sz;
+
   Hyponode* hns = new Hyponode[sz];
+  Hypocell hc{hns};
+
+  Hypocell_Array_Package* hap;
+
+  if( (size > 0) && (minin != -1) )
+  {
+   hap = new Hypocell_Array_Package{hc, size, minin};
+  }
+  else
+    hap = nullptr;
 
   if(csize == -1)
   {
@@ -213,7 +258,6 @@ private:
   else if(minin == -1)
     minin = 0;
 
-  Hypocell hc{hns};
 
   Hypocell_Block_Package* hbp;
 
@@ -237,14 +281,26 @@ private:
   {
    result = *hn;
    if(hbp)
-     result->block_package_ = hbp;
+   {
+    result->block_package_ = hbp;
+    result->size_ = size;
+   }
+   else if(hap)
+   {
+    result->array_package_ = hap;
+    result->size_ = 0;
+   }
    else
-     result->cell_ = hc;
-   result->size_ = size;
+   {
+    result->cell_ = hc;
+    result->size_ = size;
+   }
    result->type_descriptor_ = type_descriptor;
   }
   else if(hbp)
     result = new Hypernode(hbp, size, type_descriptor);
+  else if(hap)
+    result = new Hypernode(hap, type_descriptor);
   else
     result = new Hypernode(hc, size, type_descriptor);
 
@@ -285,6 +341,13 @@ public:
    numeric_index_type csize = -1)
  {
   _new_hypernode(size, type_descriptor, minin, csize, &hn);
+ }
+
+ Hypernode* new_hypernode(numeric_index_type size,
+   numeric_index_type minin, numeric_index_type csize = -1)
+ {
+  type_descriptor_type type_descriptor;
+  return _new_hypernode(size, type_descriptor, minin, csize);
  }
 
  Hypernode* new_hypernode(numeric_index_type size,

@@ -8,6 +8,10 @@
 
 #include "kernel/frame/relae-phaon-frame.h"
 
+#include "hgdm/phaon-graph/phaong/phaong.h"
+#include "hgdm/phaon-graph/phaong/phaong-types.h"
+
+
 #include <functional>
 
 #include "kans.h"
