@@ -13,8 +13,30 @@
 #include "hgdm/phaon-graph/phaong/phaong-types.h"
 
 
+#include "hgdm/phaon-graph/relae-phaon/kernel/graph/relae-phaon-node.h"
+
+
+#include "kans.h"
+USING_KANS(HGDMCore)
+
+
 
 int main(int argc, char **argv)
+{
+ QString x = "v";
+
+ RPH_Node n(&x);
+
+ //caon_ptr<QString> xx = n.as<QString>();
+ caon_ptr<QString> xx = n.qstring();
+
+ qDebug() << *xx;
+
+ return 0;
+}
+
+
+int main1(int argc, char **argv)
 {
  phaong<pg_t> pg;
 

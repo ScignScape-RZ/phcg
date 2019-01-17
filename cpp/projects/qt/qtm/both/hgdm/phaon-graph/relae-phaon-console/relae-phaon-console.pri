@@ -13,12 +13,19 @@ TEMPLATE = app
 
 INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR $$SRC_ROOT_DIR
 
+
+INCLUDEPATH += $$SRC_ROOT_DIR/hgdm/phaon-graph/relae-phaon
+
+
 CONFIG += no_keywords
 
 DEFINES += USE_KANS
 
 SOURCES += \
   $$SRC_DIR/main.cpp \
+
+
+LIBS += -L$$TARGETSDIR -lrelae-phaon
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

@@ -7,6 +7,9 @@
 
 #include "kernel/relae-phaon-dominion.h"
 
+#include "kans.h"
+
+KANS_(HGDMCore)
 
 class RPH_Frame : public node_frame<RPH_Dominion>
 {
@@ -18,5 +21,7 @@ class RPH_Frame : public node_frame<RPH_Dominion>
 
 };
 
+
+_KANS(HGDMCore)
 
 #endif

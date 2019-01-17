@@ -13,6 +13,9 @@
 #undef DOMINION_TYPE
 #undef DOMINION_HIDE_NO_NAMESPACE
 
+#include "kans.h"
+
+KANS_(HGDMCore)
 
 struct RPH_Galaxy;
 class RPH_Node;
@@ -114,7 +117,7 @@ struct RPH_Annotated_Connectors :
 // #undef DOMINION_TYPE
 //};
 
-
+_KANS(HGDMCore)
 
 
 #endif
