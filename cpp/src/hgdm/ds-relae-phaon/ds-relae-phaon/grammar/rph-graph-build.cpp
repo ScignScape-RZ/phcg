@@ -29,7 +29,19 @@ void RPH_Graph_Build::init()
 
 }
 
+void RPH_Graph_Build::end_field()
+{
+ parse_context_.flags.multiline_field = false;
+ acc_.clear();
+}
+
+void RPH_Graph_Build::read_acc(QString s)
+{
+ acc_ += s;
+}
+
 void RPH_Graph_Build::add_read_token(QString prefix, QString field, QString suffix)
 {
-
+ if(suffix == ".")
+   parse_context_.flags.multiline_field = true;
 }

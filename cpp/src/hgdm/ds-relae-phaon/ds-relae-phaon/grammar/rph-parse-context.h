@@ -31,7 +31,7 @@ class RPH_Parse_Context
 public:
  flags_(1)
   flag_(1, inside_comment)
-  flag_(2, end_parse)
+  flag_(2, multiline_field)
  _flags_
 
 private:

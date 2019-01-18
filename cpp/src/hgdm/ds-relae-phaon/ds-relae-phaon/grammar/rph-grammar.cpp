@@ -31,12 +31,15 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 //? pre_rule( "end-of-line", "[__\\t\\S]* \\n" );
  pre_rule( "single-space", "[__\\t]" );
 
- Context read_context = add_context("read-context");
 
- track_context({&read_context});
+ Context sample_context = add_context("sample-context");
+ track_context({&sample_context});
 
-// Context run_or_print_context = add_context("run-or-print",
-// {run_context, print_context});
+ Context group_context = add_context("group-context");
+ track_context({&group_context});
+
+ Context read_context = add_context("read",
+   {sample_context, group_context});
 
 
  activate(read_context);
@@ -54,6 +57,42 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
   QString suffix = p.matched("suffix");
 
   graph_build.add_read_token(prefix, m, suffix);
+ });
+
+ add_rule(flags_all_(parse_context ,multiline_field), read_context,
+   "multiline-end-field",
+   " \\n[.]\\n ",
+   [&]
+ {
+  //QString s = p.match_text();
+  graph_build.end_field();
+ });
+
+ add_rule(flags_all_(parse_context ,multiline_field), read_context,
+   "consume-newlines",
+   " \\n+ ",
+   [&]
+ {
+  QString s = p.match_text();
+  graph_build.read_acc(s);
+ });
+
+
+ add_rule(read_context,
+   "read-acc-field",
+   " [^\\n]+ ",
+   [&]
+ {
+  QString s = p.match_text();
+  graph_build.read_acc(s);
+ });
+
+ add_rule(read_context,
+   "end-field",
+   " \\n ",
+   [&]
+ {
+  graph_build.end_field();
  });
 
 }

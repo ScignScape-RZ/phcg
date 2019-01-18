@@ -63,7 +63,8 @@ public:
  void init();
 
  void add_read_token(QString prefix, QString field, QString suffix);
-
+ void read_acc(QString s);
+ void end_field();
 };
 
 _KANS(HGDMCore)
