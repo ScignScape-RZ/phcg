@@ -16,6 +16,8 @@ INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR $$SRC_ROOT_DIR
 
 INCLUDEPATH += $$SRC_ROOT_DIR/hgdm/phaon-graph/relae-phaon
 
+DEFINES += DEFAULT_RPH_FOLDER=\\\"$$DATA_ROOT_DIR/rph\\\"
+
 
 CONFIG += no_keywords
 
@@ -25,7 +27,7 @@ SOURCES += \
   $$SRC_DIR/main.cpp \
 
 
-LIBS += -L$$TARGETSDIR -lrelae-phaon
+LIBS += -L$$TARGETSDIR  -lrelae-phaon  -lds-relae-phaon
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
