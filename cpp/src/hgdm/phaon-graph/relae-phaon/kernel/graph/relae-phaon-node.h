@@ -26,18 +26,17 @@ public:
  #include "kernel/dominion/types.h"
  #undef DOMINION_TYPE
 
-//? caon_ptr<SE_Token> se_token();
 
- void debug_connections();
+// void debug_connections();
 
- void each_connection(std::function<void(const RPH_Connectors& connector,
-  const RPH_Node&, const RPH_Connection* connection)> fn)  const;
+// void each_connection(std::function<void(const RPH_Connectors& connector,
+//  const RPH_Node&, const RPH_Connection* connection)> fn)  const;
 
- void swap_relation(const RPH_Connectors& connector,
-  caon_ptr<RPH_Node> n1, caon_ptr<RPH_Node> n2);
+// void swap_relation(const RPH_Connectors& connector,
+//  caon_ptr<RPH_Node> n1, caon_ptr<RPH_Node> n2);
 
- void delete_relation(const RPH_Connectors& connector,
-  caon_ptr<RPH_Node> n1);
+// void delete_relation(const RPH_Connectors& connector,
+//  caon_ptr<RPH_Node> n1);
 
 };
 

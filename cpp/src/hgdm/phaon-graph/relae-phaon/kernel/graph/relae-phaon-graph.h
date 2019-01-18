@@ -1,6 +1,6 @@
 
-#ifndef QY_SCRIPT_GRAPH__H
-#define QY_SCRIPT_GRAPH__H
+#ifndef RELAE_PHAON_GRAPH__H
+#define RELAE_PHAON_GRAPH__H
 
 ///#include "relae-graph/relae-node-ptr.h"
 
@@ -8,35 +8,36 @@
 
 #include <QTextStream>
 
-#include "qyns.h"
+#include "kans.h"
 
-#include "qhyp/qhyp-graph/qy-hyper-node.h"
-#include "qhyp/qhyp-graph/qy-hyper-edge.h"
-#include "qhyp/qhyp-graph/qy-ptr.h"
+//#include "qhyp/qhyp-graph/qy-hyper-node.h"
+//#include "qhyp/qhyp-graph/qy-hyper-edge.h"
+//#include "qhyp/qhyp-graph/qy-ptr.h"
+//#include "qhyp/qhyp-graph/qy-node.h"
 
-#include "qhyp/qhyp-graph/qy-node.h"
+#include "relae-phaon-node.h"
 
-USING_QYNS(Graph)
+USING_KANS(HGDMCore)
 
-#include "kernel/_dominion.h"
+#include "kernel/relae-phaon-dominion.h"
 
-QYNS_(QYSGraph)
+KANS_(HGDMCore)
 
 
-class QY_Script_Graph //: public node_graph<SY_Dominion>
+class RPH_Graph //: public node_graph<SY_Dominion>
 {
- QY_Hyper_Node root_node_;
+ RPH_Node* root_node_;
 
- public:
-  QY_Script_Graph(QY_Hyper_Node root_node = nullptr);
+public:
+ RPH_Graph(RPH_Node* root_node = nullptr);
 
- void report(QTextStream& qts);
- void report_from_node(QTextStream& qts,
-  QY_Hyper_Node node, int indent = 0);
+// void report(QTextStream& qts);
+// void report_from_node(QTextStream& qts,
+//  QY_Hyper_Node node, int indent = 0);
 
 };
 
-_QYNS(QYSGraph)
+_KANS(HGDMCore)
 
 
 #endif
