@@ -1,4 +1,10 @@
 
+//           Copyright Nathaniel Christen 2019.
+//  Distributed under the Boost Software License, Version 1.0.
+//     (See accompanying file LICENSE_1_0.txt or copy at
+//           http://www.boost.org/LICENSE_1_0.txt)
+
+
 #ifndef RPH_DOCUMENT__H
 #define RPH_DOCUMENT__H
 
@@ -58,7 +64,9 @@ public:
  void load_file(QString path);
  void report_graph(QString path);
 
- QString RPH_path_handlers();
+ QString rph_path_handlers();
+
+ void resolve_report_path(QString& path);
 
  void write_report(QString path);
 

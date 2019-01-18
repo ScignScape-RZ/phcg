@@ -1,4 +1,10 @@
 
+//           Copyright Nathaniel Christen 2019.
+//  Distributed under the Boost Software License, Version 1.0.
+//     (See accompanying file LICENSE_1_0.txt or copy at
+//           http://www.boost.org/LICENSE_1_0.txt)
+
+
 #include "rph-document.h"
 
 #include "hgdm/relae-graph/relae-parser.templates.h"
@@ -15,7 +21,7 @@ USING_KANS(HGDMCore)
 
 
 RPH_Document::RPH_Document(QString path)
- : graph_(nullptr), grammar_(nullptr), number_of_lines_(0)
+ : graph_(nullptr), grammar_(nullptr)
 {
  if(!path.isEmpty())
   load_file(path);
@@ -57,8 +63,8 @@ void RPH_Document::report_graph(QString path)
  if(file.open(QFile::WriteOnly | QIODevice::Text))
  {
   QTextStream qts(&file);
-  if(graph_)
-   graph_->report(qts);
+//  if(graph_)
+//   graph_->report(qts);
  }
 }
 
