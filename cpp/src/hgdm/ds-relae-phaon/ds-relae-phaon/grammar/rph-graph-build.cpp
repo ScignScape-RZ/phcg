@@ -29,4 +29,7 @@ void RPH_Graph_Build::init()
 
 }
 
+void RPH_Graph_Build::add_read_token(QString prefix, QString field, QString suffix)
+{
 
+}

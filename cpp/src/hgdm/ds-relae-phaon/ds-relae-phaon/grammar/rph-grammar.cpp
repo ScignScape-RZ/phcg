@@ -44,16 +44,16 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
  RPH_Parse_Context& parse_context = graph_build.parse_context();
 
  add_rule( read_context, "read-token",
-  " (?<prefix> [:,;`']* )"
-  " (?<word> .script-word.) "
-  " (?<suffix> :? ) ",
+  " (?<prefix> [@$]+ )"
+  " (?<word> .script-word.?) "
+  " (?<suffix> [:.] ) ",
    [&]
  {
   QString prefix = p.matched("prefix");
   QString m = p.matched("word");
   QString suffix = p.matched("suffix");
 
-  //graph_build.add_run_token(prefix, m, suffix); //?, RPH_Graph_Build::Token_Formations::Normal, s);
+  graph_build.add_read_token(prefix, m, suffix);
  });
 
 }
