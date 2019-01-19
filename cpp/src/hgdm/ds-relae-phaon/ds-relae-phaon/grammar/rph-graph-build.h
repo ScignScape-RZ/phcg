@@ -14,6 +14,8 @@
 
 #include "grammar/rph-parse-context.h"
 
+#include "hgdm/phaon-graph/relae-phaon/kernel/graph/relae-phaon-graph.h"
+
 #include "kans.h"
 KANS_(HGDMCore)
 
@@ -41,6 +43,11 @@ public:
   bool array_field:1;
  _flags
 
+ typedef RPH_Graph::hypernode_type hypernode_type;
+
+private:
+
+
  QString acc_;
 
  RPH_Parse_Context parse_context_;
@@ -55,6 +62,7 @@ public:
  int current_field_number_;
  QString current_field_name_;
 
+ hypernode_type* current_hypernode_;
 
 public:
 

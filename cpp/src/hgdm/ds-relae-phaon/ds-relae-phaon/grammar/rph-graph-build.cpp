@@ -21,7 +21,7 @@ RPH_Graph_Build::RPH_Graph_Build(RPH_Document* d, RPH_Parser& p, RPH_Graph& g)
    ,parser_(p)
    ,fr_(RPH_Frame::instance())
    ,current_field_number_(0)
-   //?,current_position_state_(Position_States::Root_Position)
+   ,current_hypernode_(nullptr)
 {
 
 }
@@ -131,7 +131,7 @@ void RPH_Graph_Build::add_read_token(QString text)
 
 void RPH_Graph_Build::start_sample(QString ty)
 {
- graph_.new_hypernode_by_type_name(ty);
+ current_hypernode_ = graph_.new_hypernode_by_type_name(ty);
 // phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
 // pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
 
