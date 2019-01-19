@@ -83,11 +83,13 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 
  add_rule(read_context,
    "read-acc-field",
-   " [^\\n]+ ",
+   " [^\\n]+ (?= \\n ) ",
    [&]
  {
   QString s = p.match_text();
   graph_build.read_acc(s);
+  if(!parse_context.flags.multiline_field)
+    graph_build.end_field();
  });
 
 // add_rule(read_context,
