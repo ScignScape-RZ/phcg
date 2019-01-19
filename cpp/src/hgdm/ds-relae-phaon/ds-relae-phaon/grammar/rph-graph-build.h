@@ -73,6 +73,8 @@ public:
 
  void start_sample();
  void end_sample();
+
+ void add_coda_data(QString qs);
 };
 
 _KANS(HGDMCore)

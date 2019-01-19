@@ -44,20 +44,42 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
  Context group_context = add_context("group-context");
  track_context({&group_context});
 
- Context read_context = add_context("read",
+ Context read_context = add_context("read-context",
    {sample_context, group_context});
-
 
  activate(prelude_context);
 
  RPH_Parse_Context& parse_context = graph_build.parse_context();
 
- add_rule(prelude_context,
-   "activate-read-context",
-   " \\n &/ ",
+ add_rule(flags_none_(parse_context ,multiline_field), read_context,
+   "activate-coda-context",
+   " \\n /& ",
    [&]
  {
-  activate(prelude_context);
+  activate("coda-context");
+ });
+
+ add_rule(coda_context,
+   "all-coda",
+   " .* \\Z ",
+   [&]
+ {
+  graph_build.add_coda_data(p.match_text());
+ });
+
+ add_rule(prelude_context,
+   "activate-read-context",
+   " \\n &/ (?= \\n) ",
+   [&]
+ {
+  activate("read-context");
+ });
+
+ add_rule(prelude_context,
+   "read-one-prelude-newline",
+   " \\n ",
+   [&]
+ {
  });
 
  add_rule(prelude_context,

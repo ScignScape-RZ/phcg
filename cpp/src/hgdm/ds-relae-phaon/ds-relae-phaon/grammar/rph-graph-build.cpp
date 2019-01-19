@@ -106,6 +106,11 @@ void RPH_Graph_Build::add_type(QString name, QString length)
  }
 }
 
+void RPH_Graph_Build::add_coda_data(QString qs)
+{
+
+}
+
 void RPH_Graph_Build::add_read_token(QString text)
 {
 

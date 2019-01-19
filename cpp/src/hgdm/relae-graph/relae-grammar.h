@@ -185,7 +185,8 @@ public:
 
  void activate(QString s, float weight = 1)
  {
-  activate(context_names_[s], weight);
+  activate_context(s, weight);
+  active_context_index_ = context_names_[s];
  }
 
  void activate_context(QString s, float weight = 1)
