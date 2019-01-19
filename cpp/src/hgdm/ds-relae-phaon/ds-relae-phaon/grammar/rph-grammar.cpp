@@ -76,13 +76,6 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
  });
 
  add_rule(prelude_context,
-   "read-one-prelude-newline",
-   " \\n ",
-   [&]
- {
- });
-
- add_rule(prelude_context,
    "type-decl",
    " \\n &type .single-space.+ "
    "(?<name> \\S+) .single-space.+ "
@@ -93,6 +86,13 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
   QString length = p.matched("length");
 
   graph_build.add_type(name, length);
+ });
+
+ add_rule(prelude_context,
+   "read-one-prelude-newline",
+   " \\n ",
+   [&]
+ {
  });
 
  add_rule(flags_all_(parse_context ,multiline_field), read_context,
@@ -115,10 +115,12 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 
  add_rule(read_context,
    "start-sample",
-   " \\n+!/ (?= \\n) ",
+   " \\n+!/ .single-space.* "
+   " (?: (?<ty> \\S+ ) .single-space.* ) (?= \\n) ",
    [&]
  {
-  graph_build.start_sample();
+  QString ty = p.matched("ty");
+  graph_build.start_sample(ty);
  });
 
  add_rule(read_context,

@@ -95,14 +95,27 @@ void RPH_Graph_Build::prepare_field_read(QString prefix, QString field, QString 
 
 void RPH_Graph_Build::add_type(QString name, QString length)
 {
- int l = length.mid(1, length.size() - 2).toInt();
+ QStringList ls = length.mid(1, length.size() - 2).split(';');
+
+ int l = ls[0].toInt();
+ signed int cs, offs;
+ if(ls.size() > 1)
+   cs = ls[1].toInt();
+ else
+   cs = -1;
+
+ if(ls.size() > 2)
+   offs = ls[2].toInt();
+ else
+   offs = -1;
+
  if(length.startsWith('{'))
  {
-  graph_.add_structure_type(name, l);
+  graph_.add_structure_type(name, l, offs);
  }
  else if(length.startsWith('['))
  {
-  graph_.add_array_type(name, l);
+  graph_.add_array_type(name, l, cs, offs);
  }
 }
 
@@ -116,9 +129,9 @@ void RPH_Graph_Build::add_read_token(QString text)
 
 }
 
-void RPH_Graph_Build::start_sample()
+void RPH_Graph_Build::start_sample(QString ty)
 {
-
+ graph_.new_hypernode_by_type_name(ty);
 // phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
 // pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
 

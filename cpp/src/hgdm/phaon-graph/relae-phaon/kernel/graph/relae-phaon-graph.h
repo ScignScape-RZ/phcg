@@ -34,16 +34,25 @@ class RPH_Graph : public phaong<pg_t>  //: public node_graph<SY_Dominion>
 {
  RPH_Node* root_node_;
 
- QMap<QString, QPair<signed int, unsigned int> > types_;
+ QMap<QString, QPair<signed int,
+   QPair<signed int, signed int> > > types_;
 
 public:
+
+ typedef phaong<pg_t>::Hypernode hypernode_type;
 
  RPH_Graph(RPH_Node* root_node = nullptr);
 
  void add_structure_type(QString name, unsigned int l,
-   unsigned int offset = 0);
+   signed int offset = -1);
+
  void add_array_type(QString name, unsigned int l,
-   unsigned int offset = 0);
+   unsigned int csize, signed int offset = -1);
+
+ void add_fixed_array_type(QString name, unsigned int l,
+   signed int offset = 0);
+
+ hypernode_type* new_hypernode_by_type_name(QString ty);
 
 // void report(QTextStream& qts);
 // void report_from_node(QTextStream& qts,

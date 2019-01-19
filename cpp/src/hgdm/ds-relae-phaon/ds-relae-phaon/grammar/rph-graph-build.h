@@ -71,7 +71,7 @@ public:
 
  void add_type(QString name, QString length);
 
- void start_sample();
+ void start_sample(QString ty);
  void end_sample();
 
  void add_coda_data(QString qs);
