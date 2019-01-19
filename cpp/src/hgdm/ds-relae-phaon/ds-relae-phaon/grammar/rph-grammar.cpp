@@ -32,6 +32,12 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
  pre_rule( "single-space", "[__\\t]" );
 
 
+ Context prelude_context = add_context("prelude-context");
+ track_context({&prelude_context});
+
+ Context coda_context = add_context("coda-context");
+ track_context({&coda_context});
+
  Context sample_context = add_context("sample-context");
  track_context({&sample_context});
 
@@ -42,10 +48,30 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
    {sample_context, group_context});
 
 
- activate(read_context);
+ activate(prelude_context);
 
  RPH_Parse_Context& parse_context = graph_build.parse_context();
 
+ add_rule(prelude_context,
+   "activate-read-context",
+   " \\n &/ ",
+   [&]
+ {
+  activate(prelude_context);
+ });
+
+ add_rule(prelude_context,
+   "type-decl",
+   " \\n &type .single-space.+ "
+   "(?<name> \\S+) .single-space.+ "
+   "(?<length> [[{] \\d+ [\\]}]) ",
+   [&]
+ {
+  QString name = p.matched("name");
+  QString length = p.matched("length");
+
+  graph_build.add_type(name, length);
+ });
 
  add_rule(flags_all_(parse_context ,multiline_field), read_context,
    "multiline-end-field",

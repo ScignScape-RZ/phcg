@@ -18,4 +18,16 @@ RPH_Graph::RPH_Graph(RPH_Node* root_node)
 
 }
 
+void RPH_Graph::add_structure_type(QString name, unsigned int l,
+  unsigned int offset)
+{
+ types_[name] = {l, offset};
+}
+
+void RPH_Graph::add_array_type(QString name, unsigned int l,
+  unsigned int offset)
+{
+ types_[name] = {-l, offset};
+}
+
 

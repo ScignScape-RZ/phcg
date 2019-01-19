@@ -69,6 +69,8 @@ public:
  void read_acc(QString s);
  void end_field();
 
+ void add_type(QString name, QString length);
+
  void start_sample();
  void end_sample();
 };

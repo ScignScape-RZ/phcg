@@ -9,6 +9,8 @@
 
 #include "hgdm/phaon-graph/relae-phaon/kernel/frame/relae-phaon-frame.h"
 
+#include "hgdm/phaon-graph/relae-phaon/kernel/graph/relae-phaon-graph.h"
+
 USING_KANS(HGDMCore)
 
 
@@ -91,6 +93,19 @@ void RPH_Graph_Build::prepare_field_read(QString prefix, QString field, QString 
  flags.array_field = prefix.startsWith('@');
 }
 
+void RPH_Graph_Build::add_type(QString name, QString length)
+{
+ int l = length.mid(1, length.size() - 2).toInt();
+ if(length.startsWith('{'))
+ {
+  graph_.add_structure_type(name, l);
+ }
+ else if(length.startsWith('['))
+ {
+  graph_.add_array_type(name, l);
+ }
+}
+
 void RPH_Graph_Build::add_read_token(QString text)
 {
 
@@ -98,6 +113,9 @@ void RPH_Graph_Build::add_read_token(QString text)
 
 void RPH_Graph_Build::start_sample()
 {
+
+// phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
+// pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
 
 }
 

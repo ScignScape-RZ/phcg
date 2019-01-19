@@ -30,12 +30,20 @@ USING_KANS(HGDMCore)
 KANS_(HGDMCore)
 
 
-class RPH_Graph //: public node_graph<SY_Dominion>
+class RPH_Graph : public phaong<pg_t>  //: public node_graph<SY_Dominion>
 {
  RPH_Node* root_node_;
 
+ QMap<QString, QPair<signed int, unsigned int> > types_;
+
 public:
+
  RPH_Graph(RPH_Node* root_node = nullptr);
+
+ void add_structure_type(QString name, unsigned int l,
+   unsigned int offset = 0);
+ void add_array_type(QString name, unsigned int l,
+   unsigned int offset = 0);
 
 // void report(QTextStream& qts);
 // void report_from_node(QTextStream& qts,
