@@ -68,6 +68,9 @@ public:
  void prepare_field_read(QString prefix, QString field, QString suffix);
  void read_acc(QString s);
  void end_field();
+
+ void start_sample();
+ void end_sample();
 };
 
 _KANS(HGDMCore)

@@ -95,3 +95,13 @@ void RPH_Graph_Build::add_read_token(QString text)
 {
 
 }
+
+void RPH_Graph_Build::start_sample()
+{
+
+}
+
+void RPH_Graph_Build::end_sample()
+{
+
+}

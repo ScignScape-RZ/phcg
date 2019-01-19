@@ -68,6 +68,8 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
   graph_build.end_field();
  });
 
+
+
  add_rule(flags_all_(parse_context ,multiline_field), read_context,
    "consume-newlines",
    " \\n+ ",
@@ -77,6 +79,21 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
   graph_build.read_acc(s);
  });
 
+ add_rule(read_context,
+   "start-sample",
+   " \\n+!/\\n+ ",
+   [&]
+ {
+  graph_build.start_sample();
+ });
+
+ add_rule(read_context,
+   "end-sample",
+   " /!\\n+ ",
+   [&]
+ {
+  graph_build.end_sample();
+ });
 
  add_rule(read_context,
    "read-acc-field",
