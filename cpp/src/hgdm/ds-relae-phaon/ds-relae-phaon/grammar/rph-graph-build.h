@@ -36,8 +36,9 @@ class RPH_Graph_Build
 public:
 
  flags_(1)
-  bool next_token_closes_expression:1;
-  bool inside_array_with_formation:1;
+  bool discard_acc:1;
+  bool split_acc:1;
+  bool array_field:1;
  _flags
 
  QString acc_;
@@ -51,7 +52,8 @@ public:
 
  RPH_Frame& fr_;
 
- int current_line_;
+ int current_field_number_;
+ QString current_field_name_;
 
 
 public:
@@ -62,7 +64,8 @@ public:
 
  void init();
 
- void add_read_token(QString prefix, QString field, QString suffix);
+ void add_read_token(QString text);
+ void prepare_field_read(QString prefix, QString field, QString suffix);
  void read_acc(QString s);
  void end_field();
 };
