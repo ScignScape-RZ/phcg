@@ -46,29 +46,15 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 
  RPH_Parse_Context& parse_context = graph_build.parse_context();
 
- add_rule( read_context, "read-token",
-  " (?<prefix> [@$]+ )"
-  " (?<word> .script-word.?) "
-  " (?<suffix> [:;#.] ) ",
-   [&]
- {
-  QString prefix = p.matched("prefix");
-  QString f = p.matched("word");
-  QString suffix = p.matched("suffix");
-
-  graph_build.prepare_field_read(prefix, f, suffix);
- });
 
  add_rule(flags_all_(parse_context ,multiline_field), read_context,
    "multiline-end-field",
-   " \\n[.]\\n ",
+   " \\n[.] (?= \\n) ",
    [&]
  {
   //QString s = p.match_text();
   graph_build.end_field();
  });
-
-
 
  add_rule(flags_all_(parse_context ,multiline_field), read_context,
    "consume-newlines",
@@ -81,7 +67,7 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 
  add_rule(read_context,
    "start-sample",
-   " \\n+!/\\n+ ",
+   " \\n+!/ (?= \\n) ",
    [&]
  {
   graph_build.start_sample();
@@ -89,7 +75,7 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 
  add_rule(read_context,
    "end-sample",
-   " /!\\n+ ",
+   " \\n/!\\n ",
    [&]
  {
   graph_build.end_sample();
@@ -104,13 +90,26 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
   graph_build.read_acc(s);
  });
 
- add_rule(read_context,
-   "end-field",
-   " \\n ",
+// add_rule(read_context,
+//   "end-field",
+//   " (?= \\n ) ",
+//   [&]
+// {
+//  graph_build.end_field();
+// });
+
+ add_rule( read_context, "prepare-field",
+   "\\n"
+   " (?<prefix> [@$]+ )"
+   " (?<word> .script-word.?) "
+   " (?<suffix> [:;#.] ) ",
    [&]
  {
-  graph_build.end_field();
- });
+  QString prefix = p.matched("prefix");
+  QString f = p.matched("word");
+  QString suffix = p.matched("suffix");
 
+  graph_build.prepare_field_read(prefix, f, suffix);
+ });
 }
 
