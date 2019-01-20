@@ -1,5 +1,5 @@
 
-&type LingEx {5}
+&type LingEx {5} :t:3 ;
 
 &/
 

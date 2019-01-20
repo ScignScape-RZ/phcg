@@ -37,6 +37,8 @@ class RPH_Graph : public phaong<pg_t>  //: public node_graph<SY_Dominion>
  QMap<QString, QPair<signed int,
    QPair<signed int, signed int> > > types_;
 
+ QMap<QPair<QString, QString>, int> field_indices_;
+
 public:
 
  typedef phaong<pg_t>::Hypernode hypernode_type;
@@ -51,6 +53,8 @@ public:
 
  void add_fixed_array_type(QString name, unsigned int l,
    signed int offset = 0);
+
+ void add_type_field_index(QString type_name, QString field_name, int code);
 
  hypernode_type* new_hypernode_by_type_name(QString ty);
 

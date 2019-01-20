@@ -61,6 +61,9 @@ private:
 
  int current_field_number_;
  QString current_field_name_;
+ QString current_type_name_;
+
+ int current_type_field_index_;
 
  hypernode_type* current_hypernode_;
 
@@ -78,6 +81,8 @@ public:
  void end_field();
 
  void add_type(QString name, QString length);
+
+ void add_type_field_index(QString name, int code = 0);
 
  void start_sample(QString ty);
  void end_sample();

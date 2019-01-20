@@ -75,6 +75,28 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
   activate("read-context");
  });
 
+ add_rule(flags_all_(parse_context ,active_type_decl), prelude_context,
+   "type-field",
+   " \\s* : (?<fn> [^:]+ ) \\s* (?: : \\s* (?<code> \\d+)  ) ",
+   [&]
+ {
+  QString fn = p.matched("fn");
+  QString c = p.matched("code");
+
+  if(c.isEmpty())
+    graph_build.add_type_field_index(fn);
+  else
+    graph_build.add_type_field_index(fn, c.toInt());
+ });
+
+ add_rule(prelude_context,
+   "end_active_type_decl",
+   " \\s* ; ",
+   [&]
+ {
+  parse_context.flags.active_type_decl = false;
+ });
+
  add_rule(prelude_context,
    "type-decl",
    " \\n &type .single-space.+ "

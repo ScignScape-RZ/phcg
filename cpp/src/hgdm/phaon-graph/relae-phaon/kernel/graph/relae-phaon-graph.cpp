@@ -36,6 +36,11 @@ void RPH_Graph::add_fixed_array_type(QString name, unsigned int l,
  types_[name] = {l, {offset, -1}};
 }
 
+void RPH_Graph::add_type_field_index(QString type_name, QString field_name, int code)
+{
+ field_indices_.insert({type_name, field_name}, code);
+}
+
 RPH_Graph::hypernode_type* RPH_Graph::new_hypernode_by_type_name(QString ty)
 {
  auto it = types_.find(ty);

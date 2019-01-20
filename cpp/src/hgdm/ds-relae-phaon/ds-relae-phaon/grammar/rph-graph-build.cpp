@@ -22,6 +22,7 @@ RPH_Graph_Build::RPH_Graph_Build(RPH_Document* d, RPH_Parser& p, RPH_Graph& g)
    ,fr_(RPH_Frame::instance())
    ,current_field_number_(0)
    ,current_hypernode_(nullptr)
+   ,current_type_field_index_(0)
 {
 
 }
@@ -117,6 +118,9 @@ void RPH_Graph_Build::add_type(QString name, QString length)
  {
   graph_.add_array_type(name, l, cs, offs);
  }
+ current_type_name_ = name;
+ current_type_field_index_ = 0;
+ parse_context_.flags.active_type_decl = true;
 }
 
 void RPH_Graph_Build::add_coda_data(QString qs)
@@ -129,6 +133,16 @@ void RPH_Graph_Build::add_read_token(QString text)
 
 }
 
+void RPH_Graph_Build::add_type_field_index(QString name, int code)
+{
+ if(code == 0)
+   ++current_type_field_index_;
+ else
+   current_type_field_index_ = code;
+
+ graph_.add_type_field_index(current_type_name_, name, code);
+}
+
 void RPH_Graph_Build::start_sample(QString ty)
 {
  current_hypernode_ = graph_.new_hypernode_by_type_name(ty);
@@ -139,5 +153,5 @@ void RPH_Graph_Build::start_sample(QString ty)
 
 void RPH_Graph_Build::end_sample()
 {
-
+ current_hypernode_ = nullptr;
 }
