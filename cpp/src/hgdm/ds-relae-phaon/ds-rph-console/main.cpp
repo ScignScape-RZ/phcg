@@ -17,6 +17,8 @@
 #include "hgdm/phaon-graph/relae-phaon/kernel/frame/relae-phaon-frame.h"
 #include "hgdm/phaon-graph/relae-phaon/kernel/query/relae-phaon-query.h"
 
+#include "hgdm/phaon-graph/relae-phaon/kernel/graph/relae-phaon-graph.h"
+
 #include "ds-relae-phaon/rph-document.h"
 
 #include "kans.h"
@@ -30,6 +32,13 @@ int main(int argc, char **argv)
 
  doc.parse();
  //qDebug() << *xx;
+
+ RPH_Graph::hypernode_type* hn = doc.graph()->hypernodes()[0];
+
+ doc.graph()->get_sf(hn, 3, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
 
  return 0;
 }

@@ -48,7 +48,6 @@ class RPH_Document
 
 public:
 
-
  ACCESSORS(QString ,local_path)
  ACCESSORS(QString ,raw_text)
  ACCESSORS(QString ,local_directory)

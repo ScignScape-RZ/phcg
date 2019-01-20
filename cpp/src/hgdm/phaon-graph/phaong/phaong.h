@@ -226,7 +226,8 @@ private:
   Hyponode* ho = get_hyponode(hn, ind);
 
   ho->hypoval = val;
-  ho->type_descriptor = *type_descriptor;
+  if(type_descriptor)
+    ho->type_descriptor = *type_descriptor;
  }
 
  Hypernode* _new_hypernode(numeric_index_type size,

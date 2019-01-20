@@ -15,7 +15,12 @@ USING_KANS(HGDMCore)
 RPH_Graph::RPH_Graph(RPH_Node* root_node)
   :  root_node_(root_node)
 {
-
+ set_user_data(&hypernodes_);
+ set_node_add_function([](phaong<pg_t>& _pg, phaong<pg_t>::Hypernode* hn)
+ {
+  QVector<hypernode_type*>* hh = _pg.user_data_as<QVector<hypernode_type*>>();
+  hh->push_back(hn);
+ });
 }
 
 // // here offset dfaults to -1 ...

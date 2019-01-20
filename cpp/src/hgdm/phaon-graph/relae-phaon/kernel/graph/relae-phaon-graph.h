@@ -14,6 +14,8 @@
 
 #include <QTextStream>
 
+#include "accessors.h"
+
 #include "kans.h"
 
 //#include "qhyp/qhyp-graph/qy-hyper-node.h"
@@ -40,8 +42,14 @@ class RPH_Graph : public phaong<pg_t>  //: public node_graph<SY_Dominion>
  QMap<QPair<QString, QString>, int> field_indices_;
 
 public:
-
  typedef phaong<pg_t>::Hypernode hypernode_type;
+
+private:
+ QVector<hypernode_type*> hypernodes_;
+
+public:
+
+ ACCESSORS__CONST_RGET(QVector<hypernode_type*> ,hypernodes)
 
  RPH_Graph(RPH_Node* root_node = nullptr);
 
