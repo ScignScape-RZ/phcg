@@ -61,10 +61,10 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 
  add_rule(coda_context,
    "all-coda",
-   " .* \\Z ",
+   " [^\\n]* \\n ",
    [&]
  {
-  graph_build.add_coda_data(p.match_text());
+  graph_build.add_coda_data_line(p.match_text());
  });
 
  add_rule(prelude_context,

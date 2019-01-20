@@ -123,7 +123,7 @@ void RPH_Graph_Build::add_type(QString name, QString length)
  parse_context_.flags.active_type_decl = true;
 }
 
-void RPH_Graph_Build::add_coda_data(QString qs)
+void RPH_Graph_Build::add_coda_data_line(QString qs)
 {
 
 }
