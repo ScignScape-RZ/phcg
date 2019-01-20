@@ -12,7 +12,9 @@ include(../build-group.pri)
 INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR $$SRC_ROOT_DIR
 
 
-INCLUDEPATH += $$SRC_ROOT_DIR/hgdm/phaon-graph/relae-phaon
+INCLUDEPATH += $$PHAON_GRAPH_SRC_GROUP_DIR
+INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
+INCLUDEPATH += $$PHAON_GRAPH_SRC_GROUP_DIR/relae-phaon
 
 
 CONFIG += no_keywords

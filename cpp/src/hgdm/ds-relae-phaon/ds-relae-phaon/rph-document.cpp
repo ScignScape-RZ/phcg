@@ -7,7 +7,7 @@
 
 #include "rph-document.h"
 
-#include "hgdm/relae-graph/relae-parser.templates.h"
+#include "relae-graph/relae-parser.templates.h"
 
 #include "kernel/graph/relae-phaon-graph.h"
 #include "grammar/rph-grammar.h"

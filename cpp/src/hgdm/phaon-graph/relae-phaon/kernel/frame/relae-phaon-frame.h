@@ -9,7 +9,7 @@
 #define RELAE_PHAON_FRAME__H
 
 
-#include "hgdm/relae-graph/relae-node-ptr.h"
+#include "relae-graph/relae-node-ptr.h"
 
 #include "kernel/relae-phaon-dominion.h"
 

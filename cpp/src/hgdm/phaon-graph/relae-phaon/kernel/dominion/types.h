@@ -10,7 +10,7 @@
 
 #ifndef DOMINION_HIDE_NO_NAMESPACE
 // // No namespace
-#include "hgdm/relae-graph/dominion-macros.h"
+#include "relae-graph/dominion-macros.h"
 DOMINION_TYPE(dbl, double, Double)
 DOMINION_TYPE(integer, int, Int)
 DOMINION_TYPE(i8, char, I8)
@@ -18,13 +18,13 @@ DOMINION_TYPE(qstring, QString, QStr)
 DOMINION_TYPE(phhn, phaong<pg_t>::Hypernode, Phaong_Hypernode)
 #endif
 
-#include "hgdm/relae-graph/dominion-macros.h"
+#include "relae-graph/dominion-macros.h"
 
 #define DOMINION_OUTER_NAMESPACE KA
 
 
 #define DOMINION_INNER_NAMESPACE HGDMCore
-#include "hgdm/relae-graph/dominion-macros.h"
+#include "relae-graph/dominion-macros.h"
 DOMINION_TYPE(rph_root, RPH_Root, RPH_Root)
 DOMINION_TYPE(rph_token, RPH_Token, RPH_Token)
 DOMINION_TYPE(rph_node_base, RPH_Node_Base, RPH_Node_Base)

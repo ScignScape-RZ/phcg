@@ -8,9 +8,9 @@
 #ifndef RPH_PARSER__H
 #define RPH_PARSER__H
 
-#include "hgdm/relae-graph/relae-parser.h"
+#include "relae-graph/relae-parser.h"
 
-#include "hgdm/phaon-graph/relae-phaon/kernel/relae-phaon-dominion.h"
+#include "relae-phaon/kernel/relae-phaon-dominion.h"
 
 #include "kans.h"
 KANS_(HGDMCore)

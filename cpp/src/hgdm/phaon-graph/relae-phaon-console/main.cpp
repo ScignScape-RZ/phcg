@@ -9,13 +9,13 @@
 #include <QDebug>
 
 
-#include "hgdm/phaon-graph/phaong/phaong.h"
-#include "hgdm/phaon-graph/phaong/phaong-types.h"
+#include "phaong/phaong.h"
+#include "phaong/phaong-types.h"
 
 
-#include "hgdm/phaon-graph/relae-phaon/kernel/graph/relae-phaon-node.h"
-#include "hgdm/phaon-graph/relae-phaon/kernel/frame/relae-phaon-frame.h"
-#include "hgdm/phaon-graph/relae-phaon/kernel/query/relae-phaon-query.h"
+#include "relae-phaon/kernel/graph/relae-phaon-node.h"
+#include "relae-phaon/kernel/frame/relae-phaon-frame.h"
+#include "relae-phaon/kernel/query/relae-phaon-query.h"
 
 #include "kans.h"
 USING_KANS(HGDMCore)

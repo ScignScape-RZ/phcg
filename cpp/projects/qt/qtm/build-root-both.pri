@@ -96,6 +96,10 @@ KAUVIR_KCM_SRC_GROUP_DIR = $$SRC_ROOT_DIR/kauvir/kauvir-kcm
 
 PHAON_SRC_GROUP_DIR = $$SRC_ROOT_DIR/phaon/phaon
 
+RELAE_GRAPH_SRC_GROUP_DIR = $$SRC_ROOT_DIR/hgdm/relae-graph
+PHAON_GRAPH_SRC_GROUP_DIR = $$SRC_ROOT_DIR/hgdm/phaon-graph
+DS_RELAE_PHAON_SRC_GROUP_DIR = $$SRC_ROOT_DIR/hgdm/ds-relae-phaon
+
 RZ_KAUVIR_SRC_GROUP_DIR = $$SRC_ROOT_DIR/rz/rz-kauvir
 KAUVIR_RUNTIME_SRC_GROUP_DIR = $$SRC_ROOT_DIR/kauvir/kauvir-runtime
 KCM_RUNTIME_EVAL_SRC_GROUP_DIR = $$SRC_ROOT_DIR/kauvir/kcm-runtime-eval

@@ -12,9 +12,9 @@
 //#include "rz-parser/rz-parser.h"
 //#include "accessors.h"
 
-#include "hgdm/relae-graph/relae-grammar.h"
+#include "relae-graph/relae-grammar.h"
 
-#include "hgdm/phaon-graph/relae-phaon/kernel/relae-phaon-dominion.h"
+#include "relae-phaon/kernel/relae-phaon-dominion.h"
 
 #include "kans.h"
 

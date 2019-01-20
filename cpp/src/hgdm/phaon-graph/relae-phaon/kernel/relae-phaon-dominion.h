@@ -9,8 +9,8 @@
 #define RELAE_PHAON_DOMINION__H
 
 
-#include "hgdm/relae-graph/relae-node-ptr.h"
-#include "hgdm/relae-graph/relae-caon-ptr.h"
+#include "relae-graph/relae-node-ptr.h"
+#include "relae-graph/relae-caon-ptr.h"
 
 
 #define DOMINION_HIDE_NO_NAMESPACE

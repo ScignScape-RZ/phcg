@@ -11,6 +11,10 @@ include(../build-group.pri)
 
 INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR $$SRC_ROOT_DIR
 
+INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
+
+
+
 CONFIG += no_keywords
 
 DEFINES += USE_KANS

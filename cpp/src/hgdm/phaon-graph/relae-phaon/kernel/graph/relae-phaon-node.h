@@ -8,14 +8,14 @@
 #ifndef RELAE_PHAON_NODE__H
 #define RELAE_PHAON_NODE__H
 
-#include "hgdm/relae-graph/relae-node-ptr.h"
+#include "relae-graph/relae-node-ptr.h"
 
 #include "kernel/relae-phaon-dominion.h"
 
 #include "kernel/frame/relae-phaon-frame.h"
 
-#include "hgdm/phaon-graph/phaong/phaong.h"
-#include "hgdm/phaon-graph/phaong/phaong-types.h"
+#include "phaong/phaong.h"
+#include "phaong/phaong-types.h"
 
 
 #include <functional>

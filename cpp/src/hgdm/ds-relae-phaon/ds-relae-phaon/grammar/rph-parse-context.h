@@ -8,7 +8,7 @@
 #ifndef RPH_PARSE_CONTEXT__H
 #define RPH_PARSE_CONTEXT__H
 
-#include "hgdm/relae-graph/relae-parser.h"
+#include "relae-graph/relae-parser.h"
 
 #include "flags.h"
 

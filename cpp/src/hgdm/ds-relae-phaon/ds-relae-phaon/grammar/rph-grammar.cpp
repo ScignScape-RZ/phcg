@@ -13,7 +13,7 @@
 
 #include "rph-parser.h"
 
-#include "hgdm/relae-graph/relae-parser.templates.h"
+#include "relae-graph/relae-parser.templates.h"
 
 USING_KANS(HGDMCore)
 

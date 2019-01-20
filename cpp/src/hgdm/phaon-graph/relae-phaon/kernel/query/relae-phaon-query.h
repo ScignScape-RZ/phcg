@@ -10,7 +10,7 @@
 
 #include "kernel/relae-phaon-dominion.h"
 
-#include "hgdm/relae-graph/relae-node-ptr.h"
+#include "relae-graph/relae-node-ptr.h"
 
 #include "kans.h"
 
