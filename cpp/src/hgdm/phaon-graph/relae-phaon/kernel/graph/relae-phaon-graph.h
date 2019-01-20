@@ -56,6 +56,13 @@ public:
 
  void add_type_field_index(QString type_name, QString field_name, int code);
 
+ void add_read_token(hypernode_type* hn, QString type_name,
+   QString field_name, QPair<QString, void*> val);
+
+ void add_read_token(hypernode_type* hn, QString type_name,
+   int field_index, QPair<QString, void*> val, QString field_name = QString() );
+
+
  hypernode_type* new_hypernode_by_type_name(QString ty);
 
 // void report(QTextStream& qts);

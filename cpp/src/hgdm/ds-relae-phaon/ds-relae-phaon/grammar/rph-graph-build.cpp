@@ -130,7 +130,16 @@ void RPH_Graph_Build::add_coda_data_line(QString qs)
 
 void RPH_Graph_Build::add_read_token(QString text)
 {
-
+ if(current_field_name_.isEmpty())
+ {
+  graph_.add_read_token(current_hypernode_, current_type_name_,
+    current_type_field_index_, {text, nullptr});
+ }
+ else
+ {
+  graph_.add_read_token(current_hypernode_, current_type_name_,
+    current_field_name_, {text, nullptr});
+ }
 }
 
 void RPH_Graph_Build::add_type_field_index(QString name, int code)

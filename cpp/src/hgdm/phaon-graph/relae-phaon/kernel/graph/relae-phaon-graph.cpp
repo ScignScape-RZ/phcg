@@ -18,6 +18,7 @@ RPH_Graph::RPH_Graph(RPH_Node* root_node)
 
 }
 
+// // here offset dfaults to -1 ...
 void RPH_Graph::add_structure_type(QString name, unsigned int l,
   signed int offset)
 {
@@ -30,10 +31,46 @@ void RPH_Graph::add_array_type(QString name, unsigned int l,
  types_[name] = {-l, {offset, csize}};
 }
 
+// // here offset dfaults to 0 ...
 void RPH_Graph::add_fixed_array_type(QString name, unsigned int l,
   signed int offset)
 {
  types_[name] = {l, {offset, -1}};
+}
+
+void RPH_Graph::add_read_token(hypernode_type* hn, QString type_name,
+  QString field_name, QPair<QString, void*> val)
+{
+ auto it = field_indices_.find({type_name, field_name});
+
+ if(it != field_indices_.end())
+ {
+  add_read_token(hn, type_name, *it, val, field_name);
+ }
+}
+
+void RPH_Graph::add_read_token(hypernode_type* hn, QString type_name,
+  int field_index, QPair<QString, void*> val, QString field_name)
+{
+ auto it = types_.find(type_name);
+
+ if(it != types_.end())
+ {
+  signed int sz = it->first;
+  signed int offs = it->second.first;
+  if( (offs >= 0) && !field_name.isEmpty() )
+  {
+   set_sf(hn, field_index, (hyponode_value_type) val);
+  }
+  else if( (offs >= 0) || (sz < 0) )
+  {
+   set_af(hn, field_index, (hyponode_value_type) val);
+  }
+  else
+  {
+   set_sf(hn, field_index, (hyponode_value_type) val);
+  }
+ }
 }
 
 void RPH_Graph::add_type_field_index(QString type_name, QString field_name, int code)
