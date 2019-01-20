@@ -28,7 +28,7 @@ USING_KANS(HGDMCore)
 
 int main(int argc, char **argv)
 {
- RPH_Document doc(DEFAULT_RPH_FOLDER  "/t1.txt");
+ RPH_Document doc(DEFAULT_RPH_FOLDER  "/demo.txt");
 
  doc.parse();
  //qDebug() << *xx;
