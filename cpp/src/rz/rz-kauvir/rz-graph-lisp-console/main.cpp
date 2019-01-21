@@ -76,6 +76,8 @@ void compile_rz(QString file_name)
 
  anticipate.scan([](RZ_Dynamo_Output& rzdo){rzdo.init_top_level_block();});
 
+ anticipate.write_core_pairs(doc->local_path() + ".cprs.txt");
+
  QString output;
  QTextStream qts(&output);
 

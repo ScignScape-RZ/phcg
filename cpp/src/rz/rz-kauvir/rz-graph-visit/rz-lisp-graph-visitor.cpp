@@ -1003,7 +1003,7 @@ void RZ_Lisp_Graph_Visitor::anticipate(std::function<void(RZ_Dynamo_Output&)> fn
  {
   if(dynamo_output_)
   {
-   // //  circular?
+   // //  circular dependency ...
    //dynamo_output_->init_top_level_block();
    fn(*dynamo_output_);
   }
@@ -1634,6 +1634,34 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::get_data_entry(caon_ptr<tNode> node)
  return result;
 }
 
+void RZ_Lisp_Graph_Visitor::write_core_pairs(QString& text)
+{
+ for(auto pr: valuer_->core_pairs())
+ {
+  tNode& fn = *pr.first;
+  tNode& ln = *pr.second.first;
+  if(caon_ptr<RE_Token> tfn = fn.re_token())
+  {
+   if(caon_ptr<RE_Token> tln = ln.re_token())
+   {
+    if(pr.second.second)
+    {
+     tNode& rn = *pr.second.second;
+     if(caon_ptr<RE_Token> trn = rn.re_token())
+     {
+      text += tfn->raw_text() + " -- " +
+        tln->raw_text() + " -- " + trn->raw_text() + "\n";
+     }
+    }
+    else
+    {
+     text += tfn->raw_text() + " -- "
+       + tln->raw_text() + "\n";
+    }
+   }
+  }
+ }
+}
 
 caon_ptr<tNode> RZ_Lisp_Graph_Visitor::anticipate_run_call(tNode& start_node)
 {

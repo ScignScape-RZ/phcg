@@ -4,6 +4,7 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
+
 #ifndef RZ_RE_PRERUN_ANTICIPATE__H
 #define RZ_RE_PRERUN_ANTICIPATE__H
 
@@ -54,6 +55,8 @@ public:
  RE_Prerun_Anticipate(RZ_Lisp_Graph_Visitor& visitor);
 
  void scan(std::function<void(RZ_Dynamo_Output&)> fn);
+
+ void write_core_pairs(QString path);
 
 };
 

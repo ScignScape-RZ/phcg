@@ -63,10 +63,16 @@ void RZ_Lisp_Graph_Runner::run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
  caon_ptr<RZ_Lisp_Token> lhs_token;
 
  if(left_new_node)
+ {
+  // //  indicate that the call entry is a core function ...
+  valuer_->mark_core_function_call_entry(start_node, *left_new_node);
   lhs_token = valuer_->get_token_from(*left_new_node);
-
+ }
  else
+ {
+  valuer_->mark_core_function_call_entry(start_node, *next_node);
   lhs_token = valuer_->get_token_from(*next_node);
+ }
 
  rh.hold(&start_node);
 
@@ -218,9 +224,25 @@ void RZ_Lisp_Graph_Runner::run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
  caon_ptr<RZ_Lisp_Token> lhs_token;
 
  if(left_new_node)
+ {
+  if(right_new_node)
+    valuer_->mark_core_function_call_entry(start_node,
+      *left_new_node, *right_new_node);
+  else
+    valuer_->mark_core_function_call_entry(start_node,
+      *left_new_node, *rhs_node);
   lhs_token = valuer_->get_token_from(*left_new_node);
+ }
  else
+ {
+  if(right_new_node)
+    valuer_->mark_core_function_call_entry(start_node,
+      *lhs_node, *right_new_node);
+  else
+    valuer_->mark_core_function_call_entry(start_node,
+      *lhs_node, *rhs_node);
   lhs_token = valuer_->get_token_from(*lhs_node);
+ }
 
  CAON_PTR_DEBUG(RZ_Lisp_Token ,lhs_token)
 

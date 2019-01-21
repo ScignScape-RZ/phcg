@@ -123,6 +123,12 @@ class RZ_Lisp_Graph_Valuer
 
  caon_ptr<RZ_Lisp_Graph_Block_Info> current_block_info_;
 
+ QVector<QPair<caon_ptr<tNode>,
+   QPair<caon_ptr<tNode>, caon_ptr<tNode>>>> core_pairs_;
+
+ typedef QVector<QPair<caon_ptr<tNode>,
+   QPair<caon_ptr<tNode>, caon_ptr<tNode>>>> core_pairs_type;
+
  void init_type_objects();
  void check_type_objects();
  void add_type_object(RE_Dominion::Type_Codes code, caon_ptr<RZ_Type_Object> rto);
@@ -186,6 +192,8 @@ public:
 
  ACCESSORS__RGET(RZ_Type_Variety ,type_variety)
 
+ ACCESSORS__RGET(core_pairs_type ,core_pairs)
+
  ACCESSORS(caon_ptr<RZ_Graph_Run_Embedder> ,embedder)
 
  ACCESSORS(caon_ptr<RZ_Lisp_Graph_Lexical_Scope> ,root_lexical_scope)
@@ -222,6 +230,10 @@ public:
  void init_scan_block(RZ_Lisp_Graph_Result_Holder& rh,
   caon_ptr<tNode> pre_entry_node, caon_ptr<tNode> start_node, caon_ptr<tNode> block_entry_node);
 
+ void mark_core_function_call_entry(tNode& function_node,
+   tNode& start_node);
+ void mark_core_function_call_entry(tNode& function_node,
+   tNode& start_node, tNode& second_node);
 
  void init_if_block(RZ_Lisp_Graph_Result_Holder& rh, RZ_Opaque_Type_Symbol& ots);
 

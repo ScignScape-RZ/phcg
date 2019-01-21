@@ -157,8 +157,7 @@ private:
  RZ_Lisp_Graph_Visitor_Run_State run_state_;
  caon_ptr<RZ_Lisp_Graph_Visitor_Run_Plugin> current_run_plugin_;
 
- void
- normalize_nested_data(tNode& previous_node,
+ void normalize_nested_data(tNode& previous_node,
    tNode& data_node, const RE_Connectors& qtok);
 
 
@@ -210,6 +209,8 @@ public:
  void add_initial_output_text(QString text);
 
  bool quasi_statements();
+
+ void write_core_pairs(QString& text);
 
  void deactivate_run_state_plugin();
 
