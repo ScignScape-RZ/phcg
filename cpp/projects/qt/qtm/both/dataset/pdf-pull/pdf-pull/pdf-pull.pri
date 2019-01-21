@@ -9,6 +9,8 @@ include(../build-group.pri)
 INCLUDEPATH += $$SRC_DIR
 
 INCLUDEPATH += $$DSMAIN_SRC_GROUP_DIR
+INCLUDEPATH += $$PHAON_GRAPH_SRC_GROUP_DIR
+
 
 QT += widgets
 

@@ -8,6 +8,8 @@ include(../build-group.pri)
 
 INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR
 INCLUDEPATH += $$KAUVIR_KCM_SRC_GROUP_DIR $$KAUVIR_KCM_SRC_GROUP_DIR/kcm-lisp-bridge
+INCLUDEPATH += $$PHAON_GRAPH_SRC_GROUP_DIR
+
 
 exists($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/kauvir--kauvir-kcm--kcm-lisp-bridge) \#/
 {

@@ -20,6 +20,9 @@ INCLUDEPATH += $$KCM_RUNTIME_EVAL_SRC_GROUP_DIR
 INCLUDEPATH += $$PHAON_SRC_GROUP_DIR
 INCLUDEPATH += $$QHYP_SRC_GROUP_DIR
 
+INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
+
+
 HEADERS +=  \
   $$SRC_DIR/kcm-command-runtime-router.h \
   $$SRC_DIR/kcm-command-runtime-router-qob.h \

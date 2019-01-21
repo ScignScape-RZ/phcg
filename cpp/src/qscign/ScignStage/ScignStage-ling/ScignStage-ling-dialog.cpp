@@ -319,8 +319,9 @@ ScignStage_Ling_Dialog::ScignStage_Ling_Dialog(XPDF_Bridge* xpdf_bridge,
    show_original_version_button_->setText("ON");
    show_original_version_button_->setToolTip("Set to OFF");
 
-   if(current_sample_)
-     full_sentence_plain_text_edit_->setPlainText(current_sample_->alternate_or_text());
+   //?
+//   if(current_sample_)
+//     full_sentence_plain_text_edit_->setPlainText(current_sample_->alternate_or_text());
   }
   else
   {
@@ -478,7 +479,7 @@ ScignStage_Ling_Dialog::ScignStage_Ling_Dialog(XPDF_Bridge* xpdf_bridge,
   {
    QStringList qsl; // = group->all_sample_text();
 
-   QString sp = samp->speaker();
+   QString sp;// = samp->speaker();
 
    if(sp == "I1")
       sp = "1";
@@ -840,12 +841,13 @@ void ScignStage_Ling_Dialog::show_full_sentence(Language_Sample_Group* g)
 
 void ScignStage_Ling_Dialog::show_full_sentence(Language_Sample* samp)
 {
- full_sentence_pre_label_->setText(samp->pre_with_mark());
- if(show_original_version_button_->isChecked())
-   full_sentence_plain_text_edit_->setPlainText(samp->alternate_or_text());
- else
-   full_sentence_plain_text_edit_->setPlainText(samp->text());
- full_sentence_post_label_->setText(samp->postcomment());
+//?
+// full_sentence_pre_label_->setText(samp->pre_with_mark());
+// if(show_original_version_button_->isChecked())
+//   full_sentence_plain_text_edit_->setPlainText(samp->alternate_or_text());
+// else
+//   full_sentence_plain_text_edit_->setPlainText(samp->text());
+// full_sentence_post_label_->setText(samp->postcomment());
 }
 
 void ScignStage_Ling_Dialog::expand_sample(int index)

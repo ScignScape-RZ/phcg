@@ -150,12 +150,14 @@ int main(int argc, char **argv)
  Dataset ds (DATA_FOLDER "/chapters/all.txt");
  QVector<Language_Sample*>& samps = ds.samples();
 
+ phaong<pg_t> pg;
+
  QVector<Language_Sample_Group*>& groups = ds.groups();
  Language_Sample_Group::read_groups_from_file
    (DATA_FOLDER "/chapters/all.g.txt", groups);
 
  Language_Sample::read_samples_from_file
-   (DATA_FOLDER "/chapters/all.txt", samps, groups);
+   (pg, DATA_FOLDER "/chapters/all.txt", samps, groups);
 
 
 

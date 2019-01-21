@@ -14,7 +14,7 @@ USING_KANS(KDMI)
 
 #include <QDebug>
 
-#include "phaong.h"
+#include "phaong/phaong.h"
 
 typedef phaong_galaxy<QString> pgs_t;
 

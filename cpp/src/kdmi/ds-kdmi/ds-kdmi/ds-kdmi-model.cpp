@@ -31,7 +31,7 @@ void KDMI_Model::init_from_files(QString s, QString g)
  Language_Sample_Group::read_groups_from_file
    (g, groups_);
 
- Language_Sample::read_samples_from_file
-   (s, samples_, groups_);
+// Language_Sample::read_samples_from_file
+//   (s, samples_, groups_);
 }
 

@@ -9,6 +9,13 @@ TEMPLATE = subdirs
 
 
 SUBDIRS = \
+  hgdm/phaon-graph/relae-phaon \
+  hgdm/ds-relae-phaon/ds-relae-phaon \
+  hgdm/ds-relae-phaon/ds-rph-console \
+  hgdm/ds-relae-phaon/ds-rph-demo-console \
+  hgdm/relae-phaon/relae-phaon-console \
+
+SUBDIRS = \
   dataset/dsmain/dsmain \
   dataset/dsmain/data-model-console \
   dataset/ro-info/ro-info \

@@ -3,6 +3,8 @@ TEMPLATE = subdirs
 
 
 SUBDIRS = \
+  hgdm/phaon-graph/relae-phaon \
+  hgdm/ds-relae-phaon/ds-relae-phaon \
   dataset/dsmain/dsmain \
 
 SUBDIRS += \

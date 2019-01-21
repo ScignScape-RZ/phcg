@@ -9,7 +9,7 @@
 
 #include "language-sample-group.h"
 
-#include "phaong-types.h"
+#include "phaong/phaong-types.h"
 
 #include <QDebug>
 

@@ -11,7 +11,9 @@ include(../build-group.pri)
 
 INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR
 
+
 INCLUDEPATH += $$KAUVIR_KCM_SRC_GROUP_DIR
+INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 
 
 CONFIG += no_keywords

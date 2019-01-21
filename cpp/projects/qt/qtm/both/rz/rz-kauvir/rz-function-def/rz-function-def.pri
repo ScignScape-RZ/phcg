@@ -23,6 +23,8 @@ INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR $$SRC_GROUP_DIR/rz-graph-build \
 
 INCLUDEPATH += $$QHYP_SRC_GROUP_DIR
 
+INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
+
 
 LIBS += -L$$TARGETSDIR -lrz-graph-token -lrz-graph-build \
  -lrz-graph-embed -lrz-graph-core

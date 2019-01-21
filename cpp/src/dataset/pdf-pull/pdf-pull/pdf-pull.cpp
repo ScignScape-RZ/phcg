@@ -37,7 +37,7 @@ void run_dataset_callback(Dataset* ds, QString text, const QString& cmd, int* i,
  int page = 0;
  int num = 0;
  QRegularExpression prx("@(\\d+)");
- QRegularExpression nrx("\#(\\d+)");
+ QRegularExpression nrx("\\#(\\d+)");
  QRegularExpressionMatch prxm;
  QRegularExpressionMatch nrxm;
  if(text.indexOf(prx, 0, &prxm) != -1)
@@ -59,7 +59,7 @@ void run_dataset_callback(Dataset* ds, QString text, const QString& cmd, int* i,
   break;
  case Callbacks::Parse:
   {
-   ds->parse_to_samples(text, page, num);
+   //? ds->parse_to_samples(text, page, num);
   }
   break;
  case Callbacks::Database_Save:
