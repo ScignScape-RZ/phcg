@@ -46,11 +46,11 @@ void RZ_Lisp_Graph_Runner::check_run_info(RZ_Lisp_Graph_Result_Holder& rh,
  switch(cf.arity())
  {
 
- case 0: run_from_node<0>(rh, cf, start_node); break;
+ case 0: check_run_from_node<0>(rh, cf, start_node); break;
 
- case 1: run_from_node<1>(rh, cf, start_node); break;
+ case 1: check_run_from_node<1>(rh, cf, start_node); break;
 
- case 2: run_from_node<2>(rh, cf, start_node); break;
+ case 2: check_run_from_node<2>(rh, cf, start_node); break;
  default: break;
  }
 }
@@ -90,8 +90,18 @@ void RZ_Lisp_Graph_Runner::check_core_function_info(RZ_Lisp_Graph_Core_Function&
 }
 
 template<int Arity>
-void RZ_Lisp_Graph_Runner::run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::check_run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
  RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+{
+
+}
+
+template<int Arity>
+void RZ_Lisp_Graph_Runner::prepare_run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf,
+  tNode& start_node, caon_ptr<tNode> lhs_node,
+  caon_ptr<tNode> left_new_node,
+  caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node)
 {
 
 }
@@ -124,7 +134,7 @@ void RZ_Lisp_Graph_Runner::init_run_sequence_pair(RZ_Lisp_Graph_Result_Holder& r
 
  //      lhs_node might be passed in if the current call is continuing from a prior one
  lhs_node = rh.pull_pass_node();
- rhs_node;
+ //?rhs_node;
 
  caon_ptr<RE_Connectors> lhs_premise = nullptr;
  caon_ptr<RE_Connectors> rhs_premise = nullptr;

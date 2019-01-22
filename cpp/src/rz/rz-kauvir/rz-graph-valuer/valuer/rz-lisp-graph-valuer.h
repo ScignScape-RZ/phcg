@@ -123,11 +123,21 @@ class RZ_Lisp_Graph_Valuer
 
  caon_ptr<RZ_Lisp_Graph_Block_Info> current_block_info_;
 
- QVector<QPair<caon_ptr<tNode>,
-   QPair<caon_ptr<tNode>, caon_ptr<tNode>>>> core_pairs_;
+public:
 
- typedef QVector<QPair<caon_ptr<tNode>,
-   QPair<caon_ptr<tNode>, caon_ptr<tNode>>>> core_pairs_type;
+ struct Core_Pair
+ {
+  RZ_Lisp_Graph_Core_Function* cf;
+  caon_ptr<tNode> fnode;
+  caon_ptr<tNode> lhs_node;
+  caon_ptr<tNode> left_new_node;
+  caon_ptr<tNode> rhs_node;
+  caon_ptr<tNode> right_new_node;
+ };
+
+ QVector<Core_Pair> core_pairs_;
+
+ typedef QVector<Core_Pair> core_pairs_type;
 
  void init_type_objects();
  void check_type_objects();
@@ -230,10 +240,11 @@ public:
  void init_scan_block(RZ_Lisp_Graph_Result_Holder& rh,
   caon_ptr<tNode> pre_entry_node, caon_ptr<tNode> start_node, caon_ptr<tNode> block_entry_node);
 
- void mark_core_function_call_entry(tNode& function_node,
-   tNode& start_node);
- void mark_core_function_call_entry(tNode& function_node,
-   tNode& start_node, tNode& second_node);
+ void mark_core_function_call_entry(RZ_Lisp_Graph_Core_Function& cf,
+   caon_ptr<tNode> start_node, caon_ptr<tNode> lhs_node,
+   caon_ptr<tNode> left_new_node,
+   caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node);
+
 
  void init_if_block(RZ_Lisp_Graph_Result_Holder& rh, RZ_Opaque_Type_Symbol& ots);
 

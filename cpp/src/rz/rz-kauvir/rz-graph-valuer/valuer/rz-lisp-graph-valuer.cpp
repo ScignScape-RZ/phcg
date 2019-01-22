@@ -1616,17 +1616,17 @@ void RZ_Lisp_Graph_Valuer::check_init_do_map_inner_block(tNode& n, caon_ptr<RZ_C
  }
 }
 
-void RZ_Lisp_Graph_Valuer::mark_core_function_call_entry(tNode& function_node, tNode& start_node)
+void RZ_Lisp_Graph_Valuer::mark_core_function_call_entry(
+  RZ_Lisp_Graph_Core_Function& cf,
+  caon_ptr<tNode> function_node, caon_ptr<tNode> lhs_node,
+  caon_ptr<tNode> left_new_node,
+  caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node)
 {
- core_pairs_.push_back({&function_node, {&start_node, nullptr}});
+ core_pairs_.push_back({&cf,
+   function_node,
+   lhs_node,
+   left_new_node, rhs_node, right_new_node});
 }
-
-void RZ_Lisp_Graph_Valuer::mark_core_function_call_entry(tNode& function_node,
-  tNode& start_node, tNode& second_node)
-{
- core_pairs_.push_back({&function_node, {&start_node, &second_node}});
-}
-
 
 
 caon_ptr<RZ_Clasp_Source_Element> RZ_Lisp_Graph_Valuer::init_do_map_inner_block(RZ_Function_Def_Info& rfdi, caon_ptr<RZ_Clasp_Source_Element> el)

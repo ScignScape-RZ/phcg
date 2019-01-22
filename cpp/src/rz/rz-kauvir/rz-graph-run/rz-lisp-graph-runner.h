@@ -85,8 +85,23 @@ public:
   RZ_Lisp_Graph_Core_Function& cf, tNode& start_node);
 
  template<int Arity>
- void run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
-  RZ_Lisp_Graph_Core_Function& cf, tNode& start_node);
+ void check_run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
+   RZ_Lisp_Graph_Core_Function& cf, tNode& start_node);
+
+ template<int Arity>
+ void prepare_run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
+   RZ_Lisp_Graph_Core_Function& cf,
+   tNode& start_node, caon_ptr<tNode> lhs_node,
+   caon_ptr<tNode> left_new_node,
+   caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node);
+
+
+
+// template<int Arity>
+// void proceed_run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
+//   RZ_Lisp_Graph_Core_Function& cf,
+//   caon_ptr<tNode> lhs, caon_ptr<tNode> rhs);
+
 
  void check_continue(RZ_Lisp_Graph_Result_Holder& rh);
 

@@ -1636,30 +1636,33 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::get_data_entry(caon_ptr<tNode> node)
 
 void RZ_Lisp_Graph_Visitor::write_core_pairs(QString& text)
 {
- for(auto pr: valuer_->core_pairs())
+ for(RZ_Lisp_Graph_Valuer::Core_Pair& pr: valuer_->core_pairs())
  {
-  tNode& fn = *pr.first;
-  tNode& ln = *pr.second.first;
+  tNode& fn = *pr.fnode;
+  tNode& ln = *pr.lhs_node;
+
   if(caon_ptr<RE_Token> tfn = fn.re_token())
   {
+   text += tfn->raw_text() + " == ";
    if(caon_ptr<RE_Token> tln = ln.re_token())
+     text += tln->raw_text();
+   if(pr.left_new_node)
    {
-    if(pr.second.second)
-    {
-     tNode& rn = *pr.second.second;
-     if(caon_ptr<RE_Token> trn = rn.re_token())
-     {
-      text += tfn->raw_text() + " -- " +
-        tln->raw_text() + " -- " + trn->raw_text() + "\n";
-     }
-    }
-    else
-    {
-     text += tfn->raw_text() + " -- "
-       + tln->raw_text() + "\n";
-    }
+    if(caon_ptr<RE_Token> tlnn = pr.left_new_node->re_token())
+      text +=  " >> " + tlnn->raw_text();
+   }
+   if(pr.rhs_node)
+   {
+    if(caon_ptr<RE_Token> trn = pr.rhs_node->re_token())
+      text +=  " -- " + trn->raw_text();
+   }
+   if(pr.right_new_node)
+   {
+    if(caon_ptr<RE_Token> trnn = pr.right_new_node->re_token())
+      text +=  " >> " + trnn->raw_text();
    }
   }
+  text += "\n";
  }
 }
 

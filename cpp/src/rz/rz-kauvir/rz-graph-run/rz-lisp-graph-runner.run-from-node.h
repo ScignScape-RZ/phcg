@@ -23,9 +23,13 @@ USING_RZNS(GRun)
 
 RZNS_(GRun)
 
+
 template<>
-void RZ_Lisp_Graph_Runner::run_from_node<0>(RZ_Lisp_Graph_Result_Holder& rh,
- RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+void RZ_Lisp_Graph_Runner::prepare_run_from_node<0>(RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf,
+  tNode& start_node, caon_ptr<tNode> next_node,
+  caon_ptr<tNode> left_new_node,
+  caon_ptr<tNode> second_node, caon_ptr<tNode> right_new_node)
 {
  rh.hold(&start_node);
  RZ_Lisp_Graph_Function_Code code = cf.info().Core_Function_Code;
@@ -42,18 +46,20 @@ void RZ_Lisp_Graph_Runner::run_from_node<0>(RZ_Lisp_Graph_Result_Holder& rh,
 }
 
 template<>
-void RZ_Lisp_Graph_Runner::run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
- RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+void RZ_Lisp_Graph_Runner::check_run_from_node<0>(RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
- caon_ptr<tNode> next_node;
- caon_ptr<tNode> second_node;
+ valuer_->mark_core_function_call_entry(cf, &start_node, nullptr, nullptr, nullptr, nullptr);
+ prepare_run_from_node<0>(rh, cf, start_node, nullptr, nullptr, nullptr, nullptr);
+}
 
- caon_ptr<tNode> left_new_node;
- caon_ptr<tNode> right_new_node;
-
-
- init_run_sequence_pair(rh, start_node, next_node, second_node, left_new_node, right_new_node);
-
+template<>
+void RZ_Lisp_Graph_Runner::prepare_run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf,
+  tNode& start_node, caon_ptr<tNode> next_node,
+  caon_ptr<tNode> left_new_node,
+  caon_ptr<tNode> second_node, caon_ptr<tNode> right_new_node)
+{
  CAON_PTR_DEBUG(tNode ,next_node)
  CAON_PTR_DEBUG(tNode ,second_node)
 
@@ -62,15 +68,18 @@ void RZ_Lisp_Graph_Runner::run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
 
  caon_ptr<RZ_Lisp_Token> lhs_token;
 
+ valuer_->mark_core_function_call_entry(cf, &start_node,
+   next_node, left_new_node, second_node, right_new_node);
+
  if(left_new_node)
  {
   // //  indicate that the call entry is a core function ...
-  valuer_->mark_core_function_call_entry(start_node, *left_new_node);
+  //valuer_->mark_core_function_call_entry(&cf, start_node, *left_new_node);
   lhs_token = valuer_->get_token_from(*left_new_node);
  }
  else
  {
-  valuer_->mark_core_function_call_entry(start_node, *next_node);
+  //valuer_->mark_core_function_call_entry(start_node, *next_node);
   lhs_token = valuer_->get_token_from(*next_node);
  }
 
@@ -145,18 +154,27 @@ void RZ_Lisp_Graph_Runner::run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
 }
 
 template<>
-void RZ_Lisp_Graph_Runner::run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::check_run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
  RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
- caon_ptr<tNode> rhs_node;
- caon_ptr<tNode> lhs_node;
+ caon_ptr<tNode> next_node;
+ caon_ptr<tNode> second_node;
 
- // //  New node might hold a representation of a data collection
  caon_ptr<tNode> left_new_node;
  caon_ptr<tNode> right_new_node;
 
- init_run_sequence_pair(rh, start_node, lhs_node, rhs_node, left_new_node, right_new_node);
 
+ init_run_sequence_pair(rh, start_node, next_node, second_node, left_new_node, right_new_node);
+ prepare_run_from_node<1>(rh, cf, start_node, next_node, left_new_node, second_node, right_new_node);
+}
+
+template<>
+void RZ_Lisp_Graph_Runner::prepare_run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf,
+  tNode& start_node, caon_ptr<tNode> lhs_node,
+  caon_ptr<tNode> left_new_node,
+  caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node)
+{
  if(lhs_node)
  {
   caon_ptr<RZ_Lisp_Token> lhst = lhs_node->lisp_token();
@@ -186,12 +204,9 @@ void RZ_Lisp_Graph_Runner::run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
   caon_ptr<GBuild::RZ_Lisp_Core_Function> rhs_lcf =
        rhs_token->pRestore<GBuild::RZ_Lisp_Core_Function>(valuer_->type_variety());
 
-
   CAON_PTR_DEBUG(GBuild::RZ_Lisp_Core_Function ,rhs_lcf)
   CAON_DEBUG_NOOP
-
  }
-
 
 
  if(right_new_node)
@@ -223,24 +238,27 @@ void RZ_Lisp_Graph_Runner::run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
 
  caon_ptr<RZ_Lisp_Token> lhs_token;
 
+ valuer_->mark_core_function_call_entry(cf, &start_node,
+   lhs_node, left_new_node, rhs_node, right_new_node);
+
  if(left_new_node)
  {
-  if(right_new_node)
-    valuer_->mark_core_function_call_entry(start_node,
-      *left_new_node, *right_new_node);
-  else
-    valuer_->mark_core_function_call_entry(start_node,
-      *left_new_node, *rhs_node);
+//  if(right_new_node)
+//    valuer_->mark_core_function_call_entry(start_node,
+//      *left_new_node, *right_new_node);
+//  else
+//    valuer_->mark_core_function_call_entry(start_node,
+//      *left_new_node, *rhs_node);
   lhs_token = valuer_->get_token_from(*left_new_node);
  }
  else
  {
-  if(right_new_node)
-    valuer_->mark_core_function_call_entry(start_node,
-      *lhs_node, *right_new_node);
-  else
-    valuer_->mark_core_function_call_entry(start_node,
-      *lhs_node, *rhs_node);
+//  if(right_new_node)
+//    valuer_->mark_core_function_call_entry(start_node,
+//      *lhs_node, *right_new_node);
+//  else
+//    valuer_->mark_core_function_call_entry(start_node,
+//      *lhs_node, *rhs_node);
   lhs_token = valuer_->get_token_from(*lhs_node);
  }
 
@@ -248,8 +266,13 @@ void RZ_Lisp_Graph_Runner::run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
 
  CAON_EVALUATE_DEBUG(RZ_Type_Object, t, lhs_token->vh().type_object())
 
- lhs_vh = lhs_token->vh();
+ //lhs_vh = lhs_token->vh();
+//}
 
+//template<>
+//void RZ_Lisp_Graph_Runner::proceed_run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
+// RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+//{
  switch(cf.info().Core_Function_Family)
  {
  case RZ_Graph_Call_VV:
@@ -308,6 +331,21 @@ void RZ_Lisp_Graph_Runner::run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
 
  }
  rh.unhold();
+}
+template<>
+void RZ_Lisp_Graph_Runner::check_run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
+ RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+{
+ caon_ptr<tNode> rhs_node;
+ caon_ptr<tNode> lhs_node;
+
+ // //  New node might hold a representation of a data collection
+ caon_ptr<tNode> left_new_node;
+ caon_ptr<tNode> right_new_node;
+
+ init_run_sequence_pair(rh, start_node, lhs_node, rhs_node, left_new_node, right_new_node);
+
+ prepare_run_from_node<2>(rh, cf, start_node, lhs_node, left_new_node, rhs_node, right_new_node);
 }
 
 
