@@ -215,6 +215,9 @@ public:
  void write_core_pairs(int generation, QString& text);
  void run_core_pair(RZ_Lisp_Graph_Valuer_Core_Pair& pr);
 
+ void check_anticipate(int generation, RZ_Lisp_Graph_Result_Holder& rh,
+   tNode& start_node);
+
  void deactivate_run_state_plugin();
 
  void find_block_entry();

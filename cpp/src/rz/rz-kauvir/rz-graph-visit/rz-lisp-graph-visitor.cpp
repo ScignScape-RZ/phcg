@@ -1731,9 +1731,83 @@ void RZ_Lisp_Graph_Visitor::run_core_pair(RZ_Lisp_Graph_Valuer_Core_Pair& pr)
  default:
   break;
  }
+
+ if(rh.flags.continue_proceed)
+ {
+  // //  only one layer
+  check_anticipate(pr.generation + 1, rh, *pr.fnode);
+//  if(rh.arity_node())
+//  {   caon_ptr<tNode> function_node = rh.arity_node() }
+ }
+
 }
 
+void RZ_Lisp_Graph_Visitor::check_anticipate(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh, tNode& start_node)
+{
+ caon_ptr<tNode> function_node;
+ rh.clear_continue_proceed();
 
+ if(rh.arity_node())
+   function_node = rh.arity_node();
+ else
+   //?
+   return;
+
+ if(caon_ptr<RZ_Lisp_Token> tok = function_node->lisp_token())
+ {
+  CAON_PTR_DEBUG(RZ_Lisp_Token ,tok)
+  check_token_node_type(tok, function_node);
+
+  caon_ptr<RZ_Type_Object> rto = tok->vh().type_object();
+  CAON_PTR_DEBUG(RZ_Type_Object ,rto)
+
+  RZ_Run_Types::Enum rtc = RZ_Run_Type_Code<RZ::GBuild::RZ_Lisp_Graph_Core_Function>::Value;
+
+  caon_ptr<RZ_Type_Object> vto =  valuer_->type_variety().get_type_object(RZ_Run_Type_Code<RZ_Lisp_Graph_Core_Function>::Value);
+  CAON_PTR_DEBUG(RZ_Type_Object ,vto)
+
+  if(tok->type_object() ==
+   valuer_->type_variety().get_type_object(RZ_Run_Type_Code<RZ_Lisp_Graph_Core_Function>::Value))
+  {
+   caon_ptr<RZ_Lisp_Graph_Core_Function> cf =
+    tok->pRestore<RZ_Lisp_Graph_Core_Function>();
+   CAON_PTR_DEBUG(RZ_Lisp_Graph_Core_Function ,cf)
+  }
+
+  caon_ptr<RZ_Lisp_Graph_Core_Function> cf =
+    tok->pRestore<RZ_Lisp_Graph_Core_Function>(valuer_->type_variety());
+
+  if(cf)
+  {
+   lisp_graph_runner_->check_run_info(generation, rh, *cf, *function_node);
+   check_redirect(rh, function_node);
+   if(rh.flags.proceed_anticipate_nested_run_call)
+   {
+    anticipate_nested_run_calls(start_node, rh);
+    rh.flags.proceed_anticipate_nested_run_call = false;
+   }
+   else if(cf->flags.defer)
+     anticipate_nested_run_calls(start_node, rh);
+  }
+  else if(rh.flags.continue_proceed)
+  {
+   // // This means that a series of tokens
+   //   is revealed to be a continuation function call.
+   cf = normalize_continue_run_call(rh.pass_node(), tok, function_node);
+   if(cf)
+   {
+    rh.flags.continue_proceed = false;
+    lisp_graph_runner_->check_run_info(0, rh, *cf, *function_node);
+   }
+  }
+  else
+  {
+   anticipate_nested_run_calls(start_node, rh);
+   rh.flags.continue_proceed = false;
+  }
+ }
+}
 
 caon_ptr<tNode> RZ_Lisp_Graph_Visitor::anticipate_run_call(tNode& start_node)
 {
@@ -1778,7 +1852,7 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::anticipate_run_call(tNode& start_node)
  {
   rh.clear_continue_proceed();
   if(rh.arity_node())
-   function_node = rh.arity_node();
+    function_node = rh.arity_node();
   if(caon_ptr<RZ_Lisp_Token> tok = function_node->lisp_token())
   {
    CAON_PTR_DEBUG(RZ_Lisp_Token ,tok)
