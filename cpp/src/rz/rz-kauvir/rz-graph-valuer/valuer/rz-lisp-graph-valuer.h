@@ -101,6 +101,16 @@ enum class RZ_Lisp_Graph_Basic_Type_Groups {
  Core_Function, Tuple, Function_Def_Info
 };
 
+struct RZ_Lisp_Graph_Valuer_Core_Pair
+{
+ RZ_Lisp_Graph_Core_Function* cf;
+ caon_ptr<RE_Node> fnode;
+ caon_ptr<RE_Node> lhs_node;
+ caon_ptr<RE_Node> left_new_node;
+ caon_ptr<RE_Node> rhs_node;
+ caon_ptr<RE_Node> right_new_node;
+};
+
 class RZ_Lisp_Graph_Valuer
 {
  RZ_Lisp_Graph_Visitor& rz_lisp_graph_visitor_;
@@ -125,19 +135,9 @@ class RZ_Lisp_Graph_Valuer
 
 public:
 
- struct Core_Pair
- {
-  RZ_Lisp_Graph_Core_Function* cf;
-  caon_ptr<tNode> fnode;
-  caon_ptr<tNode> lhs_node;
-  caon_ptr<tNode> left_new_node;
-  caon_ptr<tNode> rhs_node;
-  caon_ptr<tNode> right_new_node;
- };
+ QVector<caon_ptr<tNode>> core_pair_nodes_;
 
- QVector<Core_Pair> core_pairs_;
-
- typedef QVector<Core_Pair> core_pairs_type;
+ typedef QVector<caon_ptr<tNode>> core_pairs_nodes_type;
 
  void init_type_objects();
  void check_type_objects();
@@ -202,7 +202,7 @@ public:
 
  ACCESSORS__RGET(RZ_Type_Variety ,type_variety)
 
- ACCESSORS__RGET(core_pairs_type ,core_pairs)
+ ACCESSORS__RGET(core_pairs_nodes_type ,core_pair_nodes)
 
  ACCESSORS(caon_ptr<RZ_Graph_Run_Embedder> ,embedder)
 

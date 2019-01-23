@@ -80,6 +80,7 @@ DOMINION_TYPE(block_info, RZ_Lisp_Graph_Block_Info, Block_Info)
 DOMINION_TYPE(rz_function_def_info, RZ_Function_Def_Info, RZ_Function_Def_Info)
 DOMINION_TYPE(rz_code_statement, RZ_Code_Statement, RZ_Code_Statement)
 DOMINION_TYPE(rz_expression_review, RZ_Expression_Review, RZ_Expression_Review)
+DOMINION_TYPE(core_pair, RZ_Lisp_Graph_Valuer_Core_Pair, RZ_Lisp_Graph_Valuer__Core_Pair)
 #undef DOMINION_INNER_NAMESPACE
 
 #undef DOMINION_OUTER_NAMESPACE

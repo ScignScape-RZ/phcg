@@ -1622,10 +1622,14 @@ void RZ_Lisp_Graph_Valuer::mark_core_function_call_entry(
   caon_ptr<tNode> left_new_node,
   caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node)
 {
- core_pairs_.push_back({&cf,
+ RZ_Lisp_Graph_Valuer_Core_Pair* cp = new RZ_Lisp_Graph_Valuer_Core_Pair
+   {&cf,
    function_node,
    lhs_node,
-   left_new_node, rhs_node, right_new_node});
+   left_new_node, rhs_node, right_new_node};
+ caon_ptr<tNode> cpn = new tNode(cp);
+ function_node << fr_/rq_.Run_Core_Pair >> cpn;
+ core_pair_nodes_.push_back(function_node);
 }
 
 

@@ -15,6 +15,9 @@ DOMINION_CONNECTOR(Run_Call_Sequence, "run-call-sequence")
 DOMINION_CONNECTOR(Run_Cross_Sequence, "run-cross-sequence")
 DOMINION_CONNECTOR(Run_Fundef_Arrow_Sequence, "run-fundef-arrow-sequence")
 
+DOMINION_CONNECTOR(Run_Core_Pair, "run-core-pair")
+DOMINION_CONNECTOR(Run_Nested_Core_Pair, "run-nested-core-pair")
+
 DOMINION_CONNECTOR(Run_Cross_Entry, "run-cross-entry")
 DOMINION_CONNECTOR(Run_Data_Leave, "run-data-leave")
 DOMINION_CONNECTOR(Run_Cross_Data, "run-cross-data")
