@@ -1755,8 +1755,7 @@ void RZ_Lisp_Graph_Visitor::check_anticipate(int generation,
  if(rh.arity_node())
    function_node = rh.arity_node();
  else
-   //?
-   return;
+   function_node = &start_node;
 
  if(caon_ptr<RZ_Lisp_Token> tok = function_node->lisp_token())
  {
@@ -1854,6 +1853,9 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::anticipate_run_call(tNode& start_node)
  caon_ptr<tNode> function_node = &start_node;
  do
  {
+  // //  here we're only at generation 0 ...
+  check_anticipate(0, rh, start_node);
+#ifdef HIDE
   rh.clear_continue_proceed();
   if(rh.arity_node())
     function_node = rh.arity_node();
@@ -1912,6 +1914,7 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::anticipate_run_call(tNode& start_node)
     rh.flags.continue_proceed = false;
    }
   }
+#endif
  }
  while(rh.flags.continue_proceed);
  return nullptr;

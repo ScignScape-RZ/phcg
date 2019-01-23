@@ -34,7 +34,8 @@ void RE_Prerun_Anticipate::write_core_pairs(int generation)
 {
  QString text;
  visitor_.write_core_pairs(generation, text);
- save_file(QString("%1.%2.txt").arg(core_pairs_path_).arg(generation), text);
+ if(!text.isEmpty())
+   save_file(QString("%1.%2.txt").arg(core_pairs_path_).arg(generation), text);
 }
 
 int RE_Prerun_Anticipate::run_core_pairs(int generation)
