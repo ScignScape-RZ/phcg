@@ -204,6 +204,8 @@ public:
  void deactivate();
  void activate();
 
+ void run_core_pairs();
+
  caon_ptr<tNode> check_raw_lisp(caon_ptr<tNode> node);
 
  void add_initial_output_text(QString text);
@@ -211,6 +213,7 @@ public:
  bool quasi_statements();
 
  void write_core_pairs(QString& text);
+ void run_core_pair(RZ_Lisp_Graph_Valuer_Core_Pair& pr);
 
  void deactivate_run_state_plugin();
 

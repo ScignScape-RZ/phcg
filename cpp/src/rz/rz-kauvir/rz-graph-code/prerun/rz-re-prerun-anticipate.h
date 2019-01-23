@@ -57,6 +57,7 @@ public:
  void scan(std::function<void(RZ_Dynamo_Output&)> fn);
 
  void write_core_pairs(QString path);
+ void run_core_pairs();
 
 };
 

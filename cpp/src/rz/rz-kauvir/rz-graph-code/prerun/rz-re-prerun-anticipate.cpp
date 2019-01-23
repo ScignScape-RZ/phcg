@@ -35,3 +35,9 @@ void RE_Prerun_Anticipate::write_core_pairs(QString path)
  visitor_.write_core_pairs(text);
  save_file(path, text);
 }
+
+void RE_Prerun_Anticipate::run_core_pairs()
+{
+ visitor_.run_core_pairs();
+}
+
