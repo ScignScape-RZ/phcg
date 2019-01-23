@@ -650,8 +650,8 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<0>(int generation,
   caon_ptr<tNode> left_new_node,
   caon_ptr<tNode> second_node, caon_ptr<tNode> right_new_node)
 {
-// proceed_run_from_node<0>(rh, cf, start_node,
-//   next_node, left_new_node, second_node, right_new_node);
+ proceed_run_from_node<0>(generation, rh, cf, start_node,
+   next_node, left_new_node, second_node, right_new_node);
 
 // rh.hold(&start_node);
 // RZ_Lisp_Graph_Function_Code code = cf.info().Core_Function_Code;
@@ -787,8 +787,8 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<1>(int generation,
    next_node, left_new_node, second_node, right_new_node);
 
  //!
-// proceed_run_from_node<1>(rh, cf, start_node,
-//   next_node, left_new_node, second_node, right_new_node);
+ proceed_run_from_node<1>(generation, rh, cf, start_node,
+   next_node, left_new_node, second_node, right_new_node);
 
 #ifdef HIDE
  caon_ptr<RZ_Lisp_Token> lhs_token;
@@ -1128,8 +1128,8 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<2>(int generation,
    lhs_node, left_new_node, rhs_node, right_new_node);
 
  //!
-// proceed_run_from_node<2>(rh, cf, start_node,
-//   lhs_node, left_new_node, rhs_node, right_new_node);
+ proceed_run_from_node<2>(generation, rh, cf, start_node,
+   lhs_node, left_new_node, rhs_node, right_new_node);
 // caon_ptr<RZ_Lisp_Token> lhs_token;
 
 #ifdef HIDE

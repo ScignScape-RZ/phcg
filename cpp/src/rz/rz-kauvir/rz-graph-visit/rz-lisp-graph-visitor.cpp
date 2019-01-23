@@ -1636,6 +1636,8 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::get_data_entry(caon_ptr<tNode> node)
 
 int RZ_Lisp_Graph_Visitor::run_core_pairs(int generation)
 {
+ if(valuer_->core_pair_nodes().size() <= generation)
+   return valuer_->core_pair_nodes().size();
  for(caon_ptr<tNode> n: valuer_->core_pair_nodes()[generation])
  {
   caon_ptr<tNode> prn = rq_.Run_Core_Pair(n);
@@ -1656,6 +1658,8 @@ int RZ_Lisp_Graph_Visitor::run_core_pairs(int generation)
 
 void RZ_Lisp_Graph_Visitor::write_core_pairs(int generation, QString& text)
 {
+ if(valuer_->core_pair_nodes().size() <= generation)
+   return;
  for(caon_ptr<tNode> n: valuer_->core_pair_nodes()[generation])
  {
   caon_ptr<tNode> prn = rq_.Run_Core_Pair(n);
