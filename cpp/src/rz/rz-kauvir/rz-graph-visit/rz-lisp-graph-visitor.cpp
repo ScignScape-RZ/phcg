@@ -1705,7 +1705,7 @@ void RZ_Lisp_Graph_Visitor::run_core_pair(RZ_Lisp_Graph_Valuer_Core_Pair& pr)
  //?
  rh.clear_continue_proceed();
 
- return;
+ //?return;
 
  switch(pr.cf->arity())
  {
