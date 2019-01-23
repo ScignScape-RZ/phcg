@@ -1634,9 +1634,9 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::get_data_entry(caon_ptr<tNode> node)
  return result;
 }
 
-void RZ_Lisp_Graph_Visitor::run_core_pairs()
+int RZ_Lisp_Graph_Visitor::run_core_pairs(int generation)
 {
- for(caon_ptr<tNode> n: valuer_->core_pair_nodes())
+ for(caon_ptr<tNode> n: valuer_->core_pair_nodes()[generation])
  {
   caon_ptr<tNode> prn = rq_.Run_Core_Pair(n);
   if(!prn)
@@ -1651,11 +1651,12 @@ void RZ_Lisp_Graph_Visitor::run_core_pairs()
 
   run_core_pair(*ppr);
  }
+ return valuer_->core_pair_nodes().size();
 }
 
-void RZ_Lisp_Graph_Visitor::write_core_pairs(QString& text)
+void RZ_Lisp_Graph_Visitor::write_core_pairs(int generation, QString& text)
 {
- for(caon_ptr<tNode> n: valuer_->core_pair_nodes())
+ for(caon_ptr<tNode> n: valuer_->core_pair_nodes()[generation])
  {
   caon_ptr<tNode> prn = rq_.Run_Core_Pair(n);
   if(!prn)
@@ -1710,19 +1711,19 @@ void RZ_Lisp_Graph_Visitor::run_core_pair(RZ_Lisp_Graph_Valuer_Core_Pair& pr)
  switch(pr.cf->arity())
  {
  case 0:
-  lisp_graph_runner_->proceed_run_from_node<0>(rh, *pr.cf,
+  lisp_graph_runner_->proceed_run_from_node<0>(pr.generation, rh, *pr.cf,
     *pr.fnode, pr.lhs_node, pr.left_new_node,
     pr.rhs_node, pr.right_new_node);
   break;
 
  case 1:
-  lisp_graph_runner_->proceed_run_from_node<1>(rh, *pr.cf,
+  lisp_graph_runner_->proceed_run_from_node<1>(pr.generation, rh, *pr.cf,
     *pr.fnode, pr.lhs_node, pr.left_new_node,
     pr.rhs_node, pr.right_new_node);
   break;
 
  case 2:
-  lisp_graph_runner_->proceed_run_from_node<2>(rh, *pr.cf,
+  lisp_graph_runner_->proceed_run_from_node<2>(pr.generation, rh, *pr.cf,
     *pr.fnode, pr.lhs_node, pr.left_new_node,
     pr.rhs_node, pr.right_new_node);
   break;
@@ -1805,7 +1806,8 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::anticipate_run_call(tNode& start_node)
 
    if(cf)
    {
-    lisp_graph_runner_->check_run_info(rh, *cf, *function_node);
+    // //  only generation 0, right?
+    lisp_graph_runner_->check_run_info(0, rh, *cf, *function_node);
     check_redirect(rh, function_node);
     if(rh.flags.proceed_anticipate_nested_run_call)
     {
@@ -1823,7 +1825,7 @@ caon_ptr<tNode> RZ_Lisp_Graph_Visitor::anticipate_run_call(tNode& start_node)
     if(cf)
     {
      rh.flags.continue_proceed = false;
-     lisp_graph_runner_->check_run_info(rh, *cf, *function_node);
+     lisp_graph_runner_->check_run_info(0, rh, *cf, *function_node);
     }
    }
    else

@@ -103,6 +103,7 @@ enum class RZ_Lisp_Graph_Basic_Type_Groups {
 
 struct RZ_Lisp_Graph_Valuer_Core_Pair
 {
+ int generation;
  RZ_Lisp_Graph_Core_Function* cf;
  caon_ptr<RE_Node> fnode;
  caon_ptr<RE_Node> lhs_node;
@@ -133,11 +134,13 @@ class RZ_Lisp_Graph_Valuer
 
  caon_ptr<RZ_Lisp_Graph_Block_Info> current_block_info_;
 
+ int current_core_pair_nodes_generation_;
+
 public:
 
- QVector<caon_ptr<tNode>> core_pair_nodes_;
+ QList<QVector<caon_ptr<tNode>>> core_pair_nodes_;
 
- typedef QVector<caon_ptr<tNode>> core_pairs_nodes_type;
+ typedef  QList<QVector<caon_ptr<tNode>>> core_pairs_nodes_type;
 
  void init_type_objects();
  void check_type_objects();
@@ -199,9 +202,7 @@ public:
 public:
 
 
-
  ACCESSORS__RGET(RZ_Type_Variety ,type_variety)
-
  ACCESSORS__RGET(core_pairs_nodes_type ,core_pair_nodes)
 
  ACCESSORS(caon_ptr<RZ_Graph_Run_Embedder> ,embedder)
@@ -240,7 +241,8 @@ public:
  void init_scan_block(RZ_Lisp_Graph_Result_Holder& rh,
   caon_ptr<tNode> pre_entry_node, caon_ptr<tNode> start_node, caon_ptr<tNode> block_entry_node);
 
- void mark_core_function_call_entry(RZ_Lisp_Graph_Core_Function& cf,
+ void mark_core_function_call_entry(int generation,
+   RZ_Lisp_Graph_Core_Function& cf,
    caon_ptr<tNode> start_node, caon_ptr<tNode> lhs_node,
    caon_ptr<tNode> left_new_node,
    caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node);

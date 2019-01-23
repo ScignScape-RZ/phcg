@@ -55,10 +55,6 @@
 
 #include <QRegularExpression>
 
-//           Copyright Nathaniel Christen 2019.
-//  Distributed under the Boost Software License, Version 1.0.
-//     (See accompanying file LICENSE_1_0.txt or copy at
-//           http://www.boost.org/LICENSE_1_0.txt)
 
 #include "rz-graph-embed/rz-graph-run-embedder.h"
 
@@ -83,7 +79,7 @@ RZ_Lisp_Graph_Valuer::RZ_Lisp_Graph_Valuer(RZ_Lisp_Graph_Visitor& rz_lisp_graph_
  : rz_lisp_graph_visitor_(rz_lisp_graph_visitor),
    embedder_(embedder), fr_(RE_Frame::instance()),
     rq_(RE_Query::instance()),
-    current_block_info_(nullptr)
+    current_block_info_(nullptr), current_core_pair_nodes_generation_(0)
 {
  init_type_objects();
 
@@ -1617,19 +1613,25 @@ void RZ_Lisp_Graph_Valuer::check_init_do_map_inner_block(tNode& n, caon_ptr<RZ_C
 }
 
 void RZ_Lisp_Graph_Valuer::mark_core_function_call_entry(
-  RZ_Lisp_Graph_Core_Function& cf,
+  int generation, RZ_Lisp_Graph_Core_Function& cf,
   caon_ptr<tNode> function_node, caon_ptr<tNode> lhs_node,
   caon_ptr<tNode> left_new_node,
   caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node)
 {
  RZ_Lisp_Graph_Valuer_Core_Pair* cp = new RZ_Lisp_Graph_Valuer_Core_Pair
-   {&cf,
+   {generation, &cf,
    function_node,
    lhs_node,
    left_new_node, rhs_node, right_new_node};
  caon_ptr<tNode> cpn = new tNode(cp);
  function_node << fr_/rq_.Run_Core_Pair >> cpn;
- core_pair_nodes_.push_back(function_node);
+
+ while(generation >= core_pair_nodes_.size())
+ {
+  core_pair_nodes_.push_back({});
+ }
+
+ core_pair_nodes_[generation].push_back(function_node);
 }
 
 

@@ -33,8 +33,9 @@ RZ_Lisp_Graph_Runner::RZ_Lisp_Graph_Runner(caon_ptr<RZ_Lisp_Graph_Valuer>  value
 }
 
 
-void RZ_Lisp_Graph_Runner::check_run_info(RZ_Lisp_Graph_Result_Holder& rh,
- RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+void RZ_Lisp_Graph_Runner::check_run_info(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
  check_core_function_info(cf);
  if(cf.flags.valuer)
@@ -46,11 +47,11 @@ void RZ_Lisp_Graph_Runner::check_run_info(RZ_Lisp_Graph_Result_Holder& rh,
  switch(cf.arity())
  {
 
- case 0: check_run_from_node<0>(rh, cf, start_node); break;
+ case 0: check_run_from_node<0>(generation, rh, cf, start_node); break;
 
- case 1: check_run_from_node<1>(rh, cf, start_node); break;
+ case 1: check_run_from_node<1>(generation, rh, cf, start_node); break;
 
- case 2: check_run_from_node<2>(rh, cf, start_node); break;
+ case 2: check_run_from_node<2>(generation, rh, cf, start_node); break;
  default: break;
  }
 }
@@ -90,14 +91,16 @@ void RZ_Lisp_Graph_Runner::check_core_function_info(RZ_Lisp_Graph_Core_Function&
 }
 
 template<int Arity>
-void RZ_Lisp_Graph_Runner::check_run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
- RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+void RZ_Lisp_Graph_Runner::check_run_from_node(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
 
 }
 
 template<int Arity>
-void RZ_Lisp_Graph_Runner::prepare_run_from_node(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::prepare_run_from_node(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf,
   tNode& start_node, caon_ptr<tNode> lhs_node,
   caon_ptr<tNode> left_new_node,

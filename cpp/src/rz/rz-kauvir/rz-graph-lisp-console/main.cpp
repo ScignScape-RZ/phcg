@@ -72,12 +72,13 @@ void compile_rz(QString file_name)
  prenorm1.output("..prenorm1.txt");
 
 
- RE_Prerun_Anticipate anticipate(*visitor);
+ RE_Prerun_Anticipate anticipate(*visitor, doc->local_path() + ".cprs");
 
  anticipate.scan([](RZ_Dynamo_Output& rzdo){rzdo.init_top_level_block();});
 
- anticipate.write_core_pairs(doc->local_path() + ".cprs.txt");
- anticipate.run_core_pairs();
+ anticipate.run_core_pairs_generations();
+// anticipate.write_core_pairs(doc->local_path() + ".cprs.txt");
+// anticipate.run_core_pairs();
 
  QString output;
  QTextStream qts(&output);

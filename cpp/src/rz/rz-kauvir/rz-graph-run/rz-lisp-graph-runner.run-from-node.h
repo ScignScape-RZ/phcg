@@ -620,7 +620,8 @@ RZNS_(GRun)
 
 
 template<>
-void RZ_Lisp_Graph_Runner::proceed_run_from_node<0>(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::proceed_run_from_node<0>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf,
   tNode& start_node, caon_ptr<tNode> next_node,
   caon_ptr<tNode> left_new_node,
@@ -642,7 +643,8 @@ void RZ_Lisp_Graph_Runner::proceed_run_from_node<0>(RZ_Lisp_Graph_Result_Holder&
 
 
 template<>
-void RZ_Lisp_Graph_Runner::prepare_run_from_node<0>(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::prepare_run_from_node<0>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf,
   tNode& start_node, caon_ptr<tNode> next_node,
   caon_ptr<tNode> left_new_node,
@@ -667,15 +669,17 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<0>(RZ_Lisp_Graph_Result_Holder&
 }
 
 template<>
-void RZ_Lisp_Graph_Runner::check_run_from_node<0>(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::check_run_from_node<0>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
- valuer_->mark_core_function_call_entry(cf, &start_node, nullptr, nullptr, nullptr, nullptr);
- prepare_run_from_node<0>(rh, cf, start_node, nullptr, nullptr, nullptr, nullptr);
+ valuer_->mark_core_function_call_entry(generation, cf, &start_node, nullptr, nullptr, nullptr, nullptr);
+ prepare_run_from_node<0>(generation, rh, cf, start_node, nullptr, nullptr, nullptr, nullptr);
 }
 
 template<>
-void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf,
   tNode& start_node, caon_ptr<tNode> next_node,
   caon_ptr<tNode> left_new_node,
@@ -766,7 +770,8 @@ void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(RZ_Lisp_Graph_Result_Holder&
 }
 
 template<>
-void RZ_Lisp_Graph_Runner::prepare_run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::prepare_run_from_node<1>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf,
   tNode& start_node, caon_ptr<tNode> next_node,
   caon_ptr<tNode> left_new_node,
@@ -778,12 +783,12 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<1>(RZ_Lisp_Graph_Result_Holder&
  CAON_PTR_DEBUG(tNode ,left_new_node)
  CAON_PTR_DEBUG(tNode ,right_new_node)
 
- valuer_->mark_core_function_call_entry(cf, &start_node,
+ valuer_->mark_core_function_call_entry(generation, cf, &start_node,
    next_node, left_new_node, second_node, right_new_node);
 
  //!
- proceed_run_from_node<1>(rh, cf, start_node,
-   next_node, left_new_node, second_node, right_new_node);
+// proceed_run_from_node<1>(rh, cf, start_node,
+//   next_node, left_new_node, second_node, right_new_node);
 
 #ifdef HIDE
  caon_ptr<RZ_Lisp_Token> lhs_token;
@@ -873,8 +878,9 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<1>(RZ_Lisp_Graph_Result_Holder&
 
 
 template<>
-void RZ_Lisp_Graph_Runner::check_run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
- RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+void RZ_Lisp_Graph_Runner::check_run_from_node<1>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
  caon_ptr<tNode> next_node;
  caon_ptr<tNode> second_node;
@@ -884,12 +890,13 @@ void RZ_Lisp_Graph_Runner::check_run_from_node<1>(RZ_Lisp_Graph_Result_Holder& r
 
 
  init_run_sequence_pair(rh, start_node, next_node, second_node, left_new_node, right_new_node);
- prepare_run_from_node<1>(rh, cf, start_node, next_node, left_new_node, second_node, right_new_node);
+ prepare_run_from_node<1>(generation, rh, cf, start_node, next_node, left_new_node, second_node, right_new_node);
 }
 
 
 template<>
-void RZ_Lisp_Graph_Runner::proceed_run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::proceed_run_from_node<2>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf,
   tNode& start_node, caon_ptr<tNode> lhs_node,
   caon_ptr<tNode> left_new_node,
@@ -965,7 +972,7 @@ void RZ_Lisp_Graph_Runner::proceed_run_from_node<2>(RZ_Lisp_Graph_Result_Holder&
  {
   RZ_Lisp_Graph_Result_Holder rh1(*valuer_);
   //?
-  check_run_info(rh1, *rhs_cf, *rhs_node);
+  check_run_info(generation + 1, rh1, *rhs_cf, *rhs_node);
   rhs_vh = rh1.value_holder();
  }
  else if(caon_ptr<GBuild::RZ_Lisp_Core_Function> rhs_lcf =
@@ -1047,7 +1054,8 @@ void RZ_Lisp_Graph_Runner::proceed_run_from_node<2>(RZ_Lisp_Graph_Result_Holder&
 }
 
 template<>
-void RZ_Lisp_Graph_Runner::prepare_run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
+void RZ_Lisp_Graph_Runner::prepare_run_from_node<2>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf,
   tNode& start_node, caon_ptr<tNode> lhs_node,
   caon_ptr<tNode> left_new_node,
@@ -1116,7 +1124,7 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<2>(RZ_Lisp_Graph_Result_Holder&
 
  caon_ptr<RZ_Lisp_Token> lhs_token;
 
- valuer_->mark_core_function_call_entry(cf, &start_node,
+ valuer_->mark_core_function_call_entry(generation, cf, &start_node,
    lhs_node, left_new_node, rhs_node, right_new_node);
 
  //!
@@ -1276,8 +1284,9 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<2>(RZ_Lisp_Graph_Result_Holder&
 }
 
 template<>
-void RZ_Lisp_Graph_Runner::check_run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
- RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
+void RZ_Lisp_Graph_Runner::check_run_from_node<2>(int generation,
+  RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
  caon_ptr<tNode> rhs_node;
  caon_ptr<tNode> lhs_node;
@@ -1288,7 +1297,7 @@ void RZ_Lisp_Graph_Runner::check_run_from_node<2>(RZ_Lisp_Graph_Result_Holder& r
 
  init_run_sequence_pair(rh, start_node, lhs_node, rhs_node, left_new_node, right_new_node);
 
- prepare_run_from_node<2>(rh, cf, start_node, lhs_node, left_new_node, rhs_node, right_new_node);
+ prepare_run_from_node<2>(generation, rh, cf, start_node, lhs_node, left_new_node, rhs_node, right_new_node);
 
 }
 

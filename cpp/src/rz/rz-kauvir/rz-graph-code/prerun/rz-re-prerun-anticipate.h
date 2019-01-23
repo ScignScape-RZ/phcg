@@ -50,14 +50,17 @@ class RE_Prerun_Anticipate
 {
  RZ_Lisp_Graph_Visitor& visitor_;
 
+ QString core_pairs_path_;
+
 public:
 
- RE_Prerun_Anticipate(RZ_Lisp_Graph_Visitor& visitor);
+ RE_Prerun_Anticipate(RZ_Lisp_Graph_Visitor& visitor, QString core_pairs_path);
 
  void scan(std::function<void(RZ_Dynamo_Output&)> fn);
 
- void write_core_pairs(QString path);
- void run_core_pairs();
+ void write_core_pairs(int generation);
+ int run_core_pairs(int generation);
+ void run_core_pairs_generations();
 
 };
 
