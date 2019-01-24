@@ -3,6 +3,16 @@
 \usepackage{titlesec}
 \usepackage{url}
 
+\newcounter{sentenceCounter}{}
+
+\newcommand{\writeIncSentenceCounter}{\stepcounter{sentenceCounter}(\arabic{sentenceCounter})}{}
+
+
+\newcommand{\listItemMark}{\rotatebox{30}{\raisebox{2pt}{\color{gray}{\begin{tiny}$\blacktriangleright$\end{tiny}}}}}
+\newenvironment{sentenceList}{\begin{list}{\listItemMark}{\setlength{\leftmargin}{.5em}\setlength{\itemsep}{-.5em}\setlength{\topsep}{-.5em}}\begin{small}}{\end{small}\end{list}}
+
+\newcommand{\sentenceItem}{\item \writeIncSentenceCounter}{}
+
 \usepackage{amssymb}
 
 \usepackage{titlesec}
