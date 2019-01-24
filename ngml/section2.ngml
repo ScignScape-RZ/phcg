@@ -1,7 +1,111 @@
 `section.Procedures and Integration`
 `p.
+My central thesis in this paper is that language understanding 
+involves integrating diverse `q.cognitive procedures`/, 
+each associated with specific words, word morphologies (plural 
+forms, verb tense, etc) and sometimes phrases.  
+This perspective contrasts with and adds nuance to 
+a more `q.logical` or `q.truth-theoretic` paradigm which 
+tends to interpret semantic phenomena via formal logic %-- 
+for example, singular/plural in Natural Language 
+as a basically straightforward translation of the 
+individual/set distinction in formal logic.  Such 
+formal intuitions are limited in the sense that (to 
+continue this example) the conceptual mapping from 
+single to plural can reflect a wide range of 
+residual details beyond just quantity and multitudes.  
+Compare `i.I sampled some chocolates` (where the count-plural 
+suggests `i.pieces` of chocolate) and 
+`i.I sampled some coffees` (where the count-plural implies 
+distinguishing coffees by virte of grind, roast, and other 
+differences in preparation) (note that both are contrasted 
+to mass-plural forms like `i.I sampled some coffee` where 
+plural agreement points toward material continuity; there 
+is no discrete unit of coffee qua liquid).  Or compare 
+`i.People love rescued dogs` with `i.People fed the rescued dogs` 
+%-- the second, but not the first, points toward 
+an interpretation that certain `i.specific` people 
+fed the dogs (and they did so `i.before` the dogs 
+were rescued).
 `p`
 
 `p.
+The assumption that logical modeling can capture all the 
+pertinent facets of Natural-Language meaning can 
+lead us to miss the amount of situational reasoning 
+requisite for commonplace understanding.  In 
+`i.People fed the rescued dogs` thre is an exception to the 
+usual pattern of how tense and adjectival modification 
+interact: in `i.He has dated several divorced millionaires` 
+it is implied that the ladies or gentlemen in question 
+were divorced and millionaires `i.when` he dated them: that the 
+events which gave them these properties occurred `i.before` 
+the time frame implied (by tense) as the time of reference 
+for the states of affairs discussed in the sentence 
+(jokes or rhetorical flourishes can toy with thse expectations, 
+but that's why they `i.are`/, say, jokes; consider the dialog: 
+`q.He likes to date divorced women %-- I thought they were all married? 
+%-- Not after he dated them!`/). But we read `q.people fed` in 
+`i.People fed the rescued dogs` as occurring before the rescue; 
+because we assume that `i.after` being rescued the dogs would be 
+fed by veterinarians and other professionals (who would 
+probably not be designated with the generic `q.people`/), and 
+also we assume the feeding helped the dogs survive.  We also 
+hear the verb as describing a recurring event; compare 
+with `i.I fed the dog a cheeseburger`/.   
 `p`
+
+
+`p.
+To be sure, there are patterns and templates governing 
+scope/quantity/tense interactions that help us build logical models 
+of situations described in language.  Thus 
+`i.I fed the dogs a cheeseburger` can be read such that there 
+are multiple cheeseburgers %-- each dog gets one %-- 
+notwithstanding the singular form on `q.a cheeseburger`/: 
+the plural `q.dogs` creates a scope that can elevate 
+the singular `q.cheeseburger` to an implied plural: 
+the discourse creates multiple reference frames each 
+with one cheeseburger.  Likewise this morphosyntax is 
+quite correct: `i.All the rescued dogs are taken to an 
+experienced vet; in fact, they all came from the same 
+veterinary college`/: the singular `q.vet` is properly 
+alligned with the plural `q.they` because of the scope-binding 
+(from a syntactic perspective) and space-building 
+(from a semantic perspective) effects of the `q.dogs` plural.  
+Or, in the case of `i.I fed the dog a cheeseburger every day` 
+there is an implicit plural because `q.every day` builds 
+multiple spaces: we can refer via the spaces collectively 
+using a plural (`i.I fed the dog a cheeseburger every day %--  
+I made them at home with vegan cheese`/) or refer within 
+one space more narrowly, switching to the singular 
+(`i.Except Tueday, when I made it out of ground turkey and swiss`/).  
+`p`
+
+`p.
+Layers of scope, tense, and adjectives interact in comples ways that 
+leave room for common ambiguities: `i.All the rescued dogs are [/were] 
+taken to an experienced [/specialist] vet` is consistent with a reading 
+wherein there is exactly one vet, and she has or had treated every dog, as 
+well as where there are multiple vets and each dog is or was treated 
+by one or another.  Resolving such ambiguities 
+tends to call for situational reasoning and a `q.feel` for situations, 
+rather than brute-force logic.  If a large dog shelter describes 
+their operational procedures over many years, we might assume 
+there are multiple vets they work or worked with.  If instead the 
+conversation centers on one specific rescue we'd be 
+inclined to imagine just one vet.  Lexical and tense 
+variation also guides these impressions: the past-tense 
+form (`q/...the rescued dogs were taken...`/) nudges us 
+toward assuming the discourse references one rescue (though it 
+could be a past-tense retrospective of general operations).  
+Qualifying the vet as `i.specialist` rather than the vaguer 
+`i.experienced` also nudges us toward a singular interpretation. 
+
+`p`
+
+
+`p.
+`p`
+
 
