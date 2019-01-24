@@ -101,7 +101,115 @@ toward assuming the discourse references one rescue (though it
 could be a past-tense retrospective of general operations).  
 Qualifying the vet as `i.specialist` rather than the vaguer 
 `i.experienced` also nudges us toward a singular interpretation. 
+`p`
 
+`p.
+What I am calling a `q.nudge`/, however, is based on situational 
+models and arguably flows from a conceptual stratum outside 
+of both semantics and grammar proper, maybe even prelinguistic.  
+There appears to be no explicit principle either in the semantics 
+of the lexeme `q.to feed`/, or in the relevance tense agreements,  
+stipulating that the feeding in `i.People fed the rescued dogs` 
+was prior to the rescue (or conversely that 
+`i.Vets examined the rescued dogs` describes events 
+`i.after` the rescue).  Instead, we interpret the discourse through 
+a narrative framework that fills in details not provided by 
+the language artifacts explicitly (that abandoned dogs are 
+likely to be hungry; that veterinarians treat dogs in clinics, which 
+dogs have to be physically brought to).  For a similar case-study, 
+consider the sentences:   
+
+`sentenceList,
+`sentenceItem.Every singer performed two songs.`
+`sentenceItem.Everyone performed two songs.`  
+`sentenceItem.Everyone sang along to two songs.` 
+`sentenceItem.Everyone in the audience sang along to two songs.` 
+`sentenceList`
+
+The last of these examples strongly suggests that of potentially 
+many songs in a concert, exactly two of them were popular and singalbe 
+for the audience.  The first sentence, contrariwise, fairly strongly 
+implies that there were multiple pairs of songs, each pair performed 
+by a different singer.  The middle two sentences imply either 
+the first or last reading, respectively (depending on how we 
+interpret `q.everyone`/).  Technically, the 
+first two sentences imply a multi-space reading and the latter two 
+a single-space reading.  But the driving force 
+behind these implications are the prgamatics of `q.perform` versus 
+`q.sing along`/: the latter verb is bound more tightly to 
+its subject, so we hear it less likely that 
+`i.many` singers are performing `i.one` song pair, or conversely that 
+every audience member `i.sings along` to one song pair, but 
+each chooss a `i.different` song pair.
+`p`
+
+`p.
+The competing interpretations for `q.perform` compared to  
+`q.sing along`/, and `i.feed` compared to `i.treat`/, are grounded 
+in lexical differences between the verbs, but I contend 
+the contrasts are not laid out in lexical specifications 
+for any of the words, at least so that the implied readings 
+follow just mechanically, or on logical considerations 
+alone.  After all, in more exotic but not implausible 
+scenarios the readings would be reversed:
+
+`sentenceList,
+`sentenceItem.The rescued dogs had been treated by vets before 
+(but were subsequently abandoned).`
+`sentenceItem.Every singer performed (the last) two songs 
+(for the grand finale).`  
+`sentenceItem.Everyone in the audience sang along to two songs 
+(they were randomnly handed lyrics to different songs when 
+they came in, and we asked them to join in when the song being 
+performed onstage matched the lyrics they had in hand).`
+`sentenceList`
+
+In short, it's not as if dictionary entries would specify that 
+`q.to feed` applies to rescued dogs before they are rescued, 
+and so forth; these interpretations are driven by narrative 
+construals narrowly specific to given expressions.  The 
+appraisals would be very different for other uses of the verbs in 
+(lexically) similar (but situationally different) cases: 
+to `q.treat` a wound or a sickness, to `q.perform` a gesture or a 
+play.  One can assert `i.The city's largest theater company 
+will perform `q.The Flies`/` without implying that the 
+Board of Directors will actually take the stage (the President 
+as Zeus, say).  We construct an interpretive scaffolding 
+for resolving issues like scope-binding and space-building based 
+on fine-tuned narrative construals that can vary alot 
+even across small word-sense variance: 
+
+`sentenceList,
+`sentenceItem.The city's largest theater company 
+performed `q.The Flies` in French; everyone's accent 
+was flawless. 
+`sentenceItem.The city's largest theater company 
+performed `q.The Flies`/; then they invited a professor 
+to discuss Sartre's philosophy when the play was over. 
+`sentenceList`
+
+In the first sentence, the `q.space` built by the sentence is wider 
+initially but narrows to encompass only the actual actors on stage.  
+In the second, the `q.space` narrows in a different direction, since 
+we hear a programming decision like pairing a performance with a 
+lecture as made by a theater's board rather than its actors.  
+As we follow along with these sentences, we have to build a narrative 
+and situational picture which matches the speaker's intent, 
+sufficiently well.  And that requires prelinguistic background 
+knowledge which is leveraged and activated (but not mechanically 
+or logically constructed) by lexical, semantic, or grammatical 
+rules and forms: `i.rescued dogs` all alone constructs a fairly 
+detailed mental picture where we can fill in many details by 
+default, unless something in the discourse tells otherwise 
+(we can assume such dogs are in need of food medical care, 
+shelter, etc., or they would not be describd as 
+`q.rescued`/).  Likewise `q.sing along` carries a rich mental 
+picture of a performer and an audience and how they interact, one 
+which we understand based on having attended concerts rather than 
+by any rule governing `q.along` as a modifier to `q.sing` 
+%-- compare the effects of `q.along` in `q.walk along`/, 
+`q.ride along`/, `q.ppay along`/, `q.go along`/.  
+ 
 `p`
 
 
