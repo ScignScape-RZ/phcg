@@ -171,28 +171,10 @@ construals narrowly specific to given expressions.  The
 appraisals would be very different for other uses of the verbs in 
 (lexically) similar (but situationally different) cases: 
 to `q.treat` a wound or a sickness, to `q.perform` a gesture or a 
-play.  One can assert `i.The city's largest theater company 
-will perform `q.The Flies`/` without implying that the 
-Board of Directors will actually take the stage (the President 
-as Zeus, say).  We construct an interpretive scaffolding 
+play.  We construct an interpretive scaffolding 
 for resolving issues like scope-binding and space-building based 
 on fine-tuned narrative construals that can vary alot 
-even across small word-sense variance: 
-
-`sentenceList,
-`sentenceItem.The city's largest theater company 
-performed `q.The Flies` in French, but everyone's accent 
-sounded Quebecois.` 
-`sentenceItem.The city's largest theater company 
-performed `q.The Flies`/; then they invited a professor 
-to discuss Sartre's philosophy when the play was over.`
-`sentenceList`
-
-In the first sentence, the `q.space` built by the sentence is wider 
-initially but narrows to encompass only the actual actors on stage.  
-In the second, the `q.space` narrows in a different direction, since 
-we hear a programming decision like pairing a performance with a 
-lecture as made by a theater's board rather than its actors.  
+even across small word-sense variance:  
 As we follow along with these sentences, we have to build a narrative 
 and situational picture which matches the speaker's intent, 
 sufficiently well.
@@ -561,12 +543,199 @@ collections:
 `sentenceList,
 `sentenceItem.New Yorkers live in one of five boroughs.`
 `sentenceItem.New Yorkers reliably vote for Democratic presidential candidates.`
-`sentenceItem.`
+`sentenceItem.New Yorkers constantly complain about how long it takes to commute 
+to New York City.`
 `sentenceList`
 
+The first sentence is consistnt with a reading applied to 
+`i.all` New Yorkers %-- the five boroughs encompass th whol 
+extent of New York City.  The second sentence is only reasonable 
+when applied only to the city's registered voters %-- not all 
+residents %-- and moreover there is no implication that the 
+claim applies to all such voters, only a something north of one-half.  
+And the final sentence, while perfectly reasonable, uses `q.New Yorkers` 
+to name a population completely distinct from the 
+first sentence %-- only residents from the metro 
+area, but not the city itself, commute `i.to` the city.
 `p`
 
+`p.
+These examples demonstrate a point I made earlier, that mapping 
+singular to plural is not a simple logical operation.  We need 
+to invoke narrative frames, interpretive scripts, and prelinguistic 
+background knowledge to understand what `i.sort` of plurality 
+the speaker intends.  To be sure, the more subtle plurals can 
+still be read in logical terms, and we can imagine sentences that 
+hew more crisply to a logical articulation:
 
+`sentenceList,
+`sentenceItem.All New York City residents live in one of five boroughs.`
+`sentenceItem.The majority of New York voters support Democratic 
+presidential candidates.`
+`sentenceItem.Many New York metro area residents complain about how 
+long it takes to commute to New York City.`
+`sentenceList`
+
+According to truth-theoretic semantics, sentences compl addressees to believe 
+(or at least consider) logically structured propositions `i.by virtue of` 
+linguistic shape replicating the architecture of the intended propositional 
+complexes, as these would be represented in first-order logic.  This 
+view on linguistic meaning is consistent with the last three sentences, 
+which are designed to map readily to logical notations (signaled by 
+quasimathematical phrases like `q.the majority of`/).  But most sentencs 
+do not betray their logical form so readily: these latter sentences actually 
+sound less fluent, more artificial, than their prior equivalents.
+`p`
+
+`p.
+It is also true that the more `q.logical` versions are mor, we might say, 
+dialectically generalized because they do not assume the same level 
+of background knowledge.  Someone who knew little about 
+New York geography could probably make sense of the latter 
+sentences but might misinterpret, or at least have to consciously 
+think over, the former ones.  So we may grant that exceptionally 
+logically-constructed sentences can be clearer for a broad 
+audienc, less subject to potential confusion, and indeed such 
+logically cautious language is a normal stylistic feature of 
+technical, legal, and journalistic discourse.  But for this reason 
+such discours comes across as self-consciously removed from 
+day-to-day languag.  More important, the current examples show 
+that if addressees `i.have` the requisite background knowledge, 
+linguistic structure does not have to replicate logical structure very 
+closely to be understood.  The content which addressees undrstand may 
+have a logical form, and language evokes this form %-- guides 
+addressees toward considering specific propositional content %-- but 
+this does not happen because linguistic structure in any precise way mimics, 
+replicates, reconstructs, or is otherwise organized propositionally.  Instead, 
+the relation of language to predicate structures is evidently 
+oblique and indirect: language triggers interpretive processes 
+which guide us toward propositional content, but the structure 
+of language is shaped around fine-tuning the activation of 
+this background cognitive dynamics more than around any need to model 
+predicate organization architecturally.   In the case of plurals, 
+the appearance of plural forms like `q.New Yorkers` or `q.coffees` 
+compels us to find a reasonable cognitive model for the 
+signified multitude, and this modl will hav a logical form 
+%-- but the linguistic structures themselves do not in general 
+model this form for us, except to the limited degree neeeded to 
+activate prelinguistic interpertive thought-processes.
+`p`
+
+`p.
+I make this point in terms of plural `i.forms`/, and earlier made 
+similar claims in terms of lexical details.  A third group of triggers I 
+outlined involved morphosyntactic `i.agreement`/, which establishes 
+inter-word connections which themselves trigger interpretive processing.  
+Continuing the topic of plurals, how words agree with other words 
+in singular or plural forms evokes schema which guide situational 
+interpretations.  So for instance:
+
+`sentenceList,
+`sentenceItem.My favorite band gave a free concert last night.  
+They played some new songs.`
+`sentenceItem.There was some pizza earlier, but it's all gone.`
+`sentenceItem.There were some slices of pizza earlier, but it's all gone.`
+`sentenceItem.There were some slices of toast earlier, but there's none left.`
+`sentenceItem.There was some toast earlier, but they're all gone.`
+`sentenceItem.That franchise had a core of talented young players, but it  
+got eroded by trades and free agency.`
+`sentenceItem.That franchise had a cohort of talented players, but they 
+drifted away due to trades and free agency.`
+`sentenceItem.Many star players were drafted by that franchise, but it  
+has not won a title in decades.`
+`sentenceItem.Many star players were drafted by that franchise, but they   
+failed to surround them with enough depth.`
+`sentenceItem.Many star players were drafted by that franchise, but they   
+were not surrounded with enough depth.`
+`sentenceItem.Many star players were drafted by that franchise, but they   
+did not have enough depth.`
+`sentenceList`
+
+Plurality here is introduced not only by isolatd morphology (like `q.slices`/, 
+`q.players`/, `q.songs`/), but via agreements marked by 
+word-forms in syntactically significant pairings: was/were, it/they, 
+there is/there are.  Framing all of these cases is how we can usually schematize 
+collections both plurally and singularly: the same set can be cognized as a 
+collection of discrete indiciduals one moment and as an intgral whole the next.  
+This allows language some flexibility when designating plurals 
+(as extensively analyzed by Ronald Langacker: see his discussion of examples 
+like `i.Three times, students asked an interesting question`/).  A sentence 
+discussing `q.slices of pizza` can schematically shift to treating 
+the pizza as a mass aggregate in `q.it's all gone`/.  Here the antecedent 
+of `q.it` is `i.slices` (of pizza).  In the opposite-drection, the mass-plural 
+`q.toast` can be refigured as a st of individual pieces in `q.they're all gone`/.  
+The single `q.band` becomes the group of musicians in the band.  
+`p`
+
+`p.
+In the last five above cases, `q.it` binds (being singular) to `q.the franchise` 
+seen as a single unit, but also to the `q.core of young players`/.  The 
+players on a team can be figured as a unit or a multiple.  The franchise itself 
+can be treated as a multiple (the various team xecutives and decision-makers), 
+as in `q.they failed to surround the stars with enough depth`/.  The last sentence 
+is ambiguous between both readings: `q.they` could designate either the players 
+or the franchise.  Which reading we hear alters the sense of `q.have`/: asserting 
+that the star `i.players` lack enough depth implies that they cannot excute 
+plays during the game as effectively as with better supporting players; 
+asserting that the `i.franchise` lacks depth maks the subtly different point 
+that there is not enough talent over all. 
+`p`
+
+`p.
+The unifying thme across these cases is that when forming sentences we often 
+have a choic of how we figure plurality, and moreover these choices can be 
+expressed not only in individual word-forms but in patterns of agreement.  
+Choosing to pronominalize `q.slices of pizza` or `q.cohort of players` 
+as `i.it`/, or alternatively `i.they`/, draws attention to either the more 
+singular or more multitudinal aspects of the aggrgat in question.  But this effect 
+is not localized to th individual it/they choice; it depends on 
+tracing the pronoun to its antecdent and construing 
+how the antecedent refrent has both individuating and multiplicative propertis.  
+Thus both individuation and plurality ar latent in phrass like 
+`i.slics of` or `q.cohort of`/, and this singular/plural co-conceiving 
+is antecedently figured by how subsequent morphosyntax agrees 
+with the singular or, alternatively, the plural.  
+`p`
+
+`p.
+Moreover, these patterns of agreement invoke new layers of 
+interprtation to identify the propervconceptual scope of plurals.  
+In `i.The band planned a tour, where they debuted new songs` we hear 
+the scope of `q.they` as narrower than its antecedent `q.the band`/, 
+because only the band's `i.musicians` (not stage crew, managers, etc.) 
+typically actually perform.  Likewise in `q.The team flew to 
+New York and they played the Yankees`/, only the players are referenced via 
+`q.they played` but presumably many other people (trainers, coachs, staff) 
+are encompassd by `q.the team flew`/.  And in `i.The city's largest theater 
+company will perform `q.The Flies`/` we do not imply that the 
+Board of Directors will actually take the stage (the President 
+as Zeus, say).  Even in the course of one sentence, plurals 
+are reinterpreted and redirectd:
+
+`sentenceList,
+`sentenceItem.The city's largest theater company 
+performed `q.The Flies` in French, but everyone's accent 
+sounded Quebecois.` 
+`sentenceItem.The city's largest theater company 
+performed `q.The Flies`/; then they invited a professor 
+to discuss Sartre's philosophy when the play was over.`
+`sentenceList`
+
+In the first sentence, the `q.space` built by the sentence is wider 
+initially but narrows to encompass only the actual actors on stage.  
+In the second, the `q.space` narrows in a different direction, since 
+we hear a programming decision like pairing a performance with a 
+lecture as made by a theater's board rather than its actors.  
+I disucssed similar modulation in concptual schemas rlated to plurality 
+and pluralization earlier; what is distinct in ths last examples is how 
+the interprtive processes for cognizing plurality are shaped by 
+agreement-patterns (like `i.it` or `i.they` to a composit antecedent) as 
+much as by lexical choice and morphology in isolation.
+`p`
+
+`p.
+These last 
+`p`
 
 `p.
 
