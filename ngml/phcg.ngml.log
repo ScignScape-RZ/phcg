@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  25 JAN 2019 11:10
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  25 JAN 2019 16:19
 entering extended mode
 **phcg.ngml.tex
 (C:\scign\phcg\ar\ngml\phcg.ngml.tex
@@ -905,22 +905,32 @@ Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
  []
 
-[10] [11]
+[10] [11] [12] [13] [14] [15] [16]
 
 LaTeX Font Warning: Font shape `T1/gar/m/it' undefined
-(Font)              using `T1/gar/m/n' instead on input line 178.
+(Font)              using `T1/gar/m/n' instead on input line 652.
 
-[12] [13] [14]) [15] (C:\scign\phcg\ar\ngml\phcg.ngml.aux)
+) (C:\scign\phcg\ar\ngml\section3.ngml.tex [17]
+Overfull \hbox (26.7914pt too wide) in paragraph at lines 1--1
+[] [][][][][][]
+ []
+
+
+Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
+[] [][][][][][]
+ []
+
+) [18] (C:\scign\phcg\ar\ngml\phcg.ngml.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 17891 strings out of 494049
- 346742 string characters out of 3146069
+ 17904 strings out of 494049
+ 346925 string characters out of 3146069
  449606 words of memory out of 3000000
  20529 multiletter control sequences out of 15000+200000
- 49992 words of font info for 229 fonts, out of 3000000 for 9000
+ 50667 words of font info for 235 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  60i,6n,67p,789b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{
@@ -931,9 +941,9 @@ iles (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on phcg.ngml.pdf (15 pages, 153005 bytes).
+Output written on phcg.ngml.pdf (18 pages, 165582 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23053 words of extra memory for PDF output out of 24883 (max. 10000000)
 
