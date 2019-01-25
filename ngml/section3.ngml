@@ -1,5 +1,41 @@
 `section.Procedures and Integration`
 `p.
+So far I have criticized paradigms which try to account for linguistic 
+meaning via concordance between linguistic and proppositional 
+structur; the shape of predicate complexes.   This critique has two dimnsions: 
+first, although a predicate structure, a predicative specificity, does indeed 
+permeate  states of affairs insofar as we engage thm rationally, such 
+logical order is not modeled by language itself so much as by cognitive 
+pictures we develop via interprtive processes `i.triggred` by language dtails 
+but, I believe, to some not insubstantial degree pre- or xtra-linguistic.  
+Moreover, second, insofar as we `i.can` decelop formal models of 
+language, these are not going to be modls of prdicate structure 
+in any conventional sense.  Cognitive-interpretive processes may 
+have formal structure %-- structure which may even show a lot of overlap 
+with propositional forms %-- but these are not `i.linguistic` structures.   
+Insofar as language triggers but does not constitute interpretive 
+`q.scripts`/, the scripts themselves (i.e., conceptual prototypes and 
+perceptual schema we keep intelectually at hand, to interpret and 
+act constructively in all situations, linguistic and otherwise) are 
+not linguiatic as such %-- and neither is any propositional order they 
+may simulate.  Language `i.does`/, however, structure the `i.integration` 
+of `i.multiple` interpretive scripts, so the structure of this 
+integration `i.is` linguistic structure per se %-- and formally 
+modeling such integration can be an interesting tactic for 
+formally modeling linguistic phenomena.  However, 
+we should not assume that such a formal model will reemble or 
+be reducible to formal logic in any useful way %-- formalization 
+does not automatically entail some kind of de facto isomorphism 
+to a system of logic (if not first-order then second-order, modal, etc.).  
+`p`
+
+`p.
+Instead, I want to focus in on branches of computer science and 
+mathematics (such a process algebra, which I have already referenced) 
+as part of our scientific background insofar as the `i.structural 
+integration` of diverse `q.processes` (computational processes 
+in a formal sense, but perhaps analogously 
+cognitive processes in a linguistic sense) can be technically represented.  
 
 `p`
 
