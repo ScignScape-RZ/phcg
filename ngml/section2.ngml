@@ -651,7 +651,7 @@ were not surrounded with enough depth.`
 did not have enough depth.`
 `sentenceList`
 
-Plurality here is introduced not only by isolatd morphology (like `q.slices`/, 
+Plurality here is introduced not only by isolated morphology (like `q.slices`/, 
 `q.players`/, `q.songs`/), but via agreements marked by 
 word-forms in syntactically significant pairings: was/were, it/they, 
 there is/there are.  Framing all of these cases is how we can usually schematize 
@@ -665,17 +665,29 @@ the pizza as a mass aggregate in `q.it's all gone`/.  Here the antecedent
 of `q.it` is `i.slices` (of pizza).  In the opposite-drection, the mass-plural 
 `q.toast` can be refigured as a st of individual pieces in `q.they're all gone`/.  
 The single `q.band` becomes the group of musicians in the band.  
+In short, how agreements are executed invites the addressee to reconstruct 
+the speaker's concptualization of different referents discussed by 
+a sentenc, at different parts of the sentence: linking 
+`i.it` to `i.slices` or `i.cohort`/, or `i.they` to `i.the band` or 
+`i.the toast`/, evokes a conceptual interpretation shaped in 
+part by how morphosyntactic agreement overlaps with `q.semantic` 
+agreement.  Matching `q.they` to `q.the band` presents agreement 
+in terms of how we conceive the aggregat (as a collection of 
+musicians); using `q.it` would also present an agreement, but 
+one schematizing other aspect of the band concpt.
 `p`
 
 `p.
-In the last five above cases, `q.it` binds (being singular) to `q.the franchise` 
-seen as a single unit, but also to the `q.core of young players`/.  The 
+In the last five above cases, `q.it` similarly binds (being singular) to 
+`q.the franchise` seen as a single unit %-- here basic grammar and 
+conceptual schema coincide %-- but `q.it` also binds 
+to the `q.core of young players`/.  The 
 players on a team can be figured as a unit or a multiple.  The franchise itself 
 can be treated as a multiple (the various team executives and decision-makers), 
 as in `q.they failed to surround the stars with enough depth`/.  The last sentence 
 is ambiguous between both readings: `q.they` could designate either the players 
 or the franchise.  Which reading we hear alters the sense of `q.have`/: asserting 
-that the star `i.players` lack enough depth implies that they cannot excute 
+that the star `i.players` lack enough depth implies that they cannot execute 
 plays during the game as effectively as with better supporting players; 
 asserting that the `i.franchise` lacks depth maks the subtly different point 
 that there is not enough talent over all. 
@@ -690,27 +702,27 @@ as `i.it`/, or alternatively `i.they`/, draws attention to either the more
 singular or more multitudinal aspects of the aggrgat in question.  But this effect 
 is not localized to th individual it/they choice; it depends on 
 tracing the pronoun to its antecdent and construing 
-how the antecedent refrent has both individuating and multiplicative propertis.  
-Thus both individuation and plurality ar latent in phrass like 
-`i.slics of` or `q.cohort of`/, and this singular/plural co-conceiving 
+how the antecedent refrent has both individuating and multiplicative properties.  
+Thus both individuation and plurality ar latent in phrases like 
+`i.slices of` or `q.cohort of`/, and this singular/plural co-conceiving 
 is antecedently figured by how subsequent morphosyntax agrees 
 with the singular or, alternatively, the plural.  
 `p`
 
 `p.
 Moreover, these patterns of agreement invoke new layers of 
-interprtation to identify the propervconceptual scope of plurals.  
+interpretation to identify the proper conceptual scope of plurals.  
 In `i.The band planned a tour, where they debuted new songs` we hear 
 the scope of `q.they` as narrower than its antecedent `q.the band`/, 
 because only the band's `i.musicians` (not stage crew, managers, etc.) 
-typically actually perform.  Likewise in `q.The team flew to 
-New York and they played the Yankees`/, only the players are referenced via 
-`q.they played` but presumably many other people (trainers, coachs, staff) 
+typically actually perform.  Likewise in `i.The team flew to 
+New York and they played the Yankees`/, only the athletes are referenced via 
+`q.they played` but presumably many other people (trainers, coaches, staff) 
 are encompassd by `q.the team flew`/.  And in `i.The city's largest theater 
 company will perform `q.The Flies`/` we do not imply that the 
 Board of Directors will actually take the stage (the President 
 as Zeus, say).  Even in the course of one sentence, plurals 
-are reinterpreted and redirectd:
+are reinterpreted and redirected:
 
 `sentenceList,
 `sentenceItem.The city's largest theater company 
@@ -726,18 +738,18 @@ initially but narrows to encompass only the actual actors on stage.
 In the second, the `q.space` narrows in a different direction, since 
 we hear a programming decision like pairing a performance with a 
 lecture as made by a theater's board rather than its actors.  
-I disucssed similar modulation in concptual schemas rlated to plurality 
-and pluralization earlier; what is distinct in ths last examples is how 
-the interprtive processes for cognizing plurality are shaped by 
+I discussed similar modulation in conceptual schemas rlated to plurality 
+and pluralization earlier; what is distinct in these last examples is how 
+the interpretive processes for cognizing plurality are shaped by 
 agreement-patterns (like `i.it` or `i.they` to a composit antecedent) as 
 much as by lexical choice and morphology in isolation.
 `p`
 
 `p.
-I have accordingly outlind a theory where lexical, morphological, and 
+I have accordingly outlined a theory where lexical, morphological, and 
 morphosyntactic layers all introduce `q.triggers` for cognitive processes, 
 and it is these procsses which (via substantially prelinguistic perception 
-and conceptualization) ultimately deliver linguistic maning.  What is 
+and conceptualization) ultimately deliver linguistic meaning.  What is 
 `i.linguistic` about these phenomena is how specifically linguistic 
 formations %-- word choice, word forms, inter-word agreements in form %-- 
 trigger these (in no small measure pre- or extra-linguistic) interpretations.  
@@ -746,7 +758,7 @@ how multiple interpretive processes are `i.integrated`/.  Linguistic
 `i.structure` contributes the arrangements through which the 
 crossing and intersecting between interpretive 
 `q.scripts` are orchestrated.  Hence at the higher linguistic scales and 
-levels of complxity, the substance of linguistic rsearch, on this view, 
+levels of complexity, the substance of linguistic research, on this view, 
 should gravitate toward structural intgration of intrpretive 
 processes, even more than individual intrpretive triggers themslves.   
 `p`

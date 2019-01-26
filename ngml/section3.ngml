@@ -36,7 +36,104 @@ as part of our scientific background insofar as the `i.structural
 integration` of diverse `q.processes` (computational processes 
 in a formal sense, but perhaps analogously 
 cognitive processes in a linguistic sense) can be technically represented.  
+`p`
 
+`p.
+In `q.truth-theoretic` semantics, artifacts of language 
+are intuitively pictured in terms of propositional structure.  
+The guiding intuition compares word meanings to logical predicates; 
+e.g. `q.John is married` is typically said when the speaker believes 
+that, in fact, the predicate `q.married` applies to the 
+speaker `q.John`/.  Switching to a more 
+`q.procedural` perspective involves intuiting word-maning 
+more in terms of interpretive procedures than logical predicates.  
+The change in perspective may not yield substantially different 
+analyses in all cases, but I believe it does affect many cases.
+`p`
+
+`p.
+Even a simple predicate like `q.married` reveals a spectrum of 
+not-entirely-logical cases in ordinary language:
+
+`sentenceList,
+`sentenceItem.John is married to a woman from his home country, but 
+he had to get the marriag legally recognized here.` 
+`sentenceItem.John married his boyfriend in Canada, but they 
+live in a state that does not recognize same-sex marriages.`
+`sentenceItem.John has been married for five years, but in 
+many ways he's still a bachelor.`
+`sentenceItem.Every married man needs a bachelor pad somewhere, 
+and wherever yours is, you need a mini-fridge.`
+`sentenceList`
+
+We can make sense of these sentences because we do not conceptually 
+define lexemes like `q.married` or `q.bachelor` via exhaustive 
+logical rules, like `q.a bachelor is an unmarrid man`/.  Instead we 
+have some combination of prototypical images %-- familiar 
+characteristics of bachelors, say, which even married men 
+can instantiate %-- and a conceptual framework recognizing 
+(and if needed distinguishing) the various legal, societal, and 
+dispositional aspects of being married.   
+`p`
+
+`p.
+Intuitionwise, then, we should look beyond potential logical 
+glosses on meanings %-- even when these are often accurate 
+%-- and theorizee semantics as the mapping of lexical 
+(as well as morphosyntactic phenomena) to interpretive scripts 
+and conceptual or perceptual/enactive schema %-- which 
+we can collectively designate, for sake of discussion, as 
+`q.cognitive procedures`/.
+`p`
+
+`p.
+The truth-theoretic mapping of words to predicates 
+(and so phrasal and sentence units to propositional structures) 
+provides an obvious way to formalize linguistic structur by 
+borrowing the analogous structuration from 
+predicate complexes.  Substituting a procedural semantic model 
+allows a comparable formalization of linguistic structure 
+through theories exploring procedural integration, 
+for instance the interactions between computational procedures.  
+Analysis of `i.computational` produres can yield interesting 
+idas for linguistic theories of `i.cognitive` procdures 
+%-- without endorsing a reductive metaphysics of 
+cognitive procedures as `q.nothing but` computational 
+procedures implemented in some sort of mental software.
+`p`
+
+
+`p.
+The notion of computational procedures is certainly 
+not foreign to symbolic logic or to analyses oftn 
+associated with logistical models (in linguistics and philosophy, 
+say), like Typed Lambda Calculus.  In those paradigms 
+we certainly have, say, an idea of applying formulae to 
+input values (where formulae can be seen as referring to or 
+as compact notations for computational procedures).  Comparing 
+the results of two formulae yields predicates 
+(e.g., equalities or greater/less-than relations of 
+quantity) that undergirds predicate systems.  Furthermore, 
+combining formulae %-- plugging results of one formula 
+into a free variable in another %-- yields new formulae 
+that can in turn be reduced to different forms or to single 
+values, either for all inputs or for particular inputs.  
+In short, a large class of computational procedures can 
+be modeled in predicate and equational or formula-reduction 
+terms.  I point this out because shifting to 
+a `q.procedural` intuitive model does not `i.by itself` 
+take us outside of logistic and truth-thoretic paradigms.
+`p`
+
+`p.
+In computer science, theories of procedural networks 
+begin to branch out from formal logic or 
+lambda calculii when we move past the `q.mathematical` 
+picture of procedures %-- as computations that accept a 
+collection of inputs and return a collection of outputs 
+%-- and thorize procedures mor as computational 
+modules that input, output, and modify values 
+from multiple sources, in different ways.
 `p`
 
 `p.
