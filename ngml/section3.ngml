@@ -131,9 +131,18 @@ begin to branch out from formal logic or
 lambda calculii when we move past the `q.mathematical` 
 picture of procedures %-- as computations that accept a 
 collection of inputs and return a collection of outputs 
-%-- and thorize procedures mor as computational 
+%-- and theorize procedures mor as computational 
 modules that input, output, and modify values 
-from multiple sources, in different ways.
+from multiple sources, in different ways.  In practical 
+technology, this includes developments like Object-Oriented 
+computer languages and programming techniques such as 
+Exceptions and mutable references.  Likewise, 
+real-world cod can pull information from many sources %-- like 
+databases, files, and networks (including the internet) 
+%-- in addition to values input as parameters to a function.   
+Conversely functions have many ways to modify values 
+%-- many ways to manifest side-effects %-- beyond just 
+returning valuse as outputs.   
 `p`
 
 `p.
