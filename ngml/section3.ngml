@@ -244,20 +244,188 @@ proceures with multiple `q.channels of communication` and
 potentially many intermediate states.  Reducing impure 
 (e.g., Object-Oriented) code to pure-functional procedure spaces 
 is analogous to providing truth-theoretic reconstructions 
-of linguistic manings, as in (revisiting examples from last section)
-
+of linguistic meanings, as in (revisiting examples from last section):
 
 `sentenceList,
-`sentenceItem.People fed the recused dogs (i.e.: before they 
+`sentenceItem.People had fed the rescued dogs (i.e.: before they 
 were rescued).` 
 `sentenceItem.New Yorkers vote democratic (i.e.: the majority 
 of registered voters in New York do so).`
 `sentenceList`
 
+Propositional reconstructions of sentences lik thse can capture a 
+logical substrate that contributes to their meaning, but completely 
+`i.reducing` their semantics to such logical substrata jettisons, 
+I contend, interpretive and contextual schemata which ar equally 
+essential to their meaning.  Analogously %-- considered 
+in relation to data that it must curate and model (so that pople 
+may manage and aggregate data; for instance, collect biomedical data 
+to ensure proper diagnoses and implement tratments) %-- software 
+does not only represent the logical substrata undrlying information 
+systems.  It needs to capture conceptual and operational/logistical 
+phenomena as well.
 `p`
+
+`p.
+Along these lines, note that Object-Oriented techniques originally 
+emerged from scientific-computing environments, to model 
+complex systems, with multiple levels of organization, mrgent 
+structure, and so forth (in the 1990s these techniques 
+were then applied to more enterprise-style applications, 
+for User Interface design, business operations workflows, etc.).  
+The effectiveness of Object-Oriented models 
+suggests that as a form of computing environment, and a 
+framework for coding procedure-spaces, Object-Orientation 
+captures structural properties of complex systems 
+more richly than paradigms that reduce procedural implementations 
+to a purely logical substratum.  This observation 
+can then generalize to the whole range of modern-day programming 
+techniques and all the various domains where software is used 
+to monitor, simulate, and manage information about natural and 
+human phenomena.  
+`p`
+
+`p.
+Technically, the multi-dimensional structure of computational 
+procedures implmented with modern coding techniqus %-- 
+multi-dimensional in the sense of multiple forms of channels of 
+communication and functional side-effects %-- demands new 
+concptualizations of the formal architecture of computing nvironments 
+as such.  Rather than seeing computer software, for example, as a 
+complex system built architecturally from predicate logic, we 
+need to undrstand software as a procedure-space or procedural 
+network receptivvto external information.  On this account, a 
+software application internally possesses a set of capabilities, 
+and achieves this functionality by invoking different 
+procedures which are implemented in the software; the application 
+as a whole is the aggregate of its procedural building-blocks.  
+Which procedures get invoked depends on user actions 
+%-- we use a mouse, keyboard, and other input devices to 
+trigger responses from the software.  Applications are therefore built 
+around an `q.event loop`/: the software can enter a passive 
+state, performing no operations apart from monitoring 
+physical devices to detect user actions.  Onc an action does 
+occur %-- we press a letter on a keyboard, say, or press a mous button 
+%-- the application responds by invoking a specific procedure, which 
+in turn may trigger a complex cascade of other procedures, to complete 
+whatever operation we requested via our action (saving a file, 
+selecting one record to visualize from a database, etc.).  
+Via such networks of procedures and functionality, software 
+models and simulates empirical phenomea %-- at least enough so that we can 
+maintain databases, remotely operat machines, and in other ways track 
+and manipulate physical states.  
+`p`
+
+`p.
+Consequently, computer models of empirical phenomena can take the 
+form of `i.procedural networks`/, and we can designate the design and 
+theory of such models as `i.procedural modeling`/.  I have argued that 
+procedural networks are not reducible to logical predicate systems 
+even though procedure-spaces in general are (in a certain sense) 
+isomorphic to procedure-spaces which are more purely logical, 
+or employ pure-functional type systems.  The `q.isomorphism` relevant 
+here, I am arguing, eliminates semantic and simulative structures 
+that make procedural models effective constructions conveying 
+the organization and behavior patterns of complx, real-world 
+phenomena.  On this theory, procedural modeling is a more 
+effective tool for representing real-world systems than 
+are computing environments built more mchanistically from 
+predicate logic.
+`p`
+
+`p.
+Interestingly, however, the predominant contemporary 
+paradigms for modeling real-world information systems %-- 
+particularly what has come to be called the `q.Semantic Web` 
+%-- is built on a framework of description logic and 
+`q.knowledge graphs` rather than (at least except very indirectly) 
+anything that could be called `q.procedural data modeling`/.  
+There is, of course, a robust ecosystem of network-based 
+code-sharing that provides a viable infrastructure for 
+a more procedural data-sharing paradigm.  To illustrate the contrast, 
+consider the problem of biomedical data integration: of 
+merging the information known to two different mdical entrprises, 
+as when a patient moves between two different hospital systems.  
+We can assume that each hospital uses a different set of software 
+tools to store patient records and manage data from their various 
+secondary or constituent sources (diagnostic labs, specialized 
+departments, outside clinics, etc.).  Such multi-faceted data then 
+needs to be translated from formats native to the prior hospital's 
+software to formats needed by the new hospital.    
+`p`
+
+`p.
+Such data-intgration problems tend to be concptualized in one 
+of two ways.  One approach is to seek a common reprsentation, 
+or an overarching unified model, which can reconcile structural 
+differences between the two systems.  If both hospitals use the 
+same biomedical `q.Ontologies`/, for example, then those Ontologies 
+serve as a logical paradigm through which the distinct systems can 
+be bridged.  In effect, structural differences between the systems are 
+treated as superficial variations on a common or unified 
+logical `q.deep structure` %-- analogous to translating between 
+natural languages by mapping sentences to a propositional core.  
+Indeed, the field of `q.Ontology Engineering` can be seen as a 
+way of marshaling abstract logic into a form that is practically 
+useful for information storage and extraction, in open-ended 
+environments where data may be aggregated from many heterogeneous 
+sources.  The term `q.Ontology` in this context is not wholly 
+unrelated to its philosophical meaning, bcause `q.knowledge 
+engineers` assuming that the primordial structuring paradigms 
+of such `q.universal` logical systems are relations and 
+distinctions investigatd by the philosophical ontological tradition 
+%-- substance and attribute, part and whole, time-point vs. 
+time-span, spatial region vs. spatial boundary, subtype and 
+supertype, and so forth.  Abstart Ontological systems are 
+then formalized into logical rules that provide an 
+axiomatic core %-- sometims called `q.Upper` Ontologies 
+%-- which are then extended via empirical models 
+or `q.domain-specific` rules to create Domain-Specific Ontologies 
+used to integrate data in concrete enterpris/scientific fields 
+(medical information, government records, and so forth). 
+`p`
+
+`p.
+The overarchong paradigm of such Ontology-based integration 
+is the idea of a logical model that recognizes superficial 
+differencs between incompatible (or at least not fully 
+compatible) ata sources.  An alternative approach to data 
+integration problems is to treat these as issues of 
+procedural capability.  In order to import data from one 
+hospital into a second hospital system, for example, assuming 
+their respective software and databases are at least somewhat 
+incompatible, you need to perform certain procedures that translate 
+data from the first format to the second.  Insofar as this is 
+possible, the two software systems gave a certain procedural 
+synergy: the capabilities of the first system include exporting 
+data in a format the second can use, and the capabilities of the 
+second system include integrating data presented in formats that 
+the first can export.  This synergy does not need to be theorized 
+in terms of an overarching logical ur-space which both 
+systems indirectly manifest; instead, it reflcts how some 
+subset of the overall procedural network germane to each 
+respctive software system includes %-- either by 
+deliberate cooperative enginering or because the two 
+systems are guided by similar standards and technical orientations 
+%-- procedures on the two ends that can be aligned in terms 
+of the kind of data and data-formats they produce and/or consum.  
+In short, targeted (and potentially cooperatively-engineered) 
+procedural alignments %-- rather than overarching logical 
+commonalities %-- form the bedrock of data integration.
+`p`
+
+`p.
+These contrasting paradigms are not only theoretical.  
+Computer scientists hafve actually tried to promote 
+data sharing and data integration to improve governance, 
+health care, urban infrastructure (via `q.smart cities`/), 
+sustainable development, and so on.  Insofar as we see data 
+integration in terms of Ontology Engineering, these 
+practical goals can be met with the curation and publication 
+of formal Ontologies that can guid softw
+`p`
+
 
 `p.
 
 `p`
-
-
