@@ -142,7 +142,118 @@ databases, files, and networks (including the internet)
 %-- in addition to values input as parameters to a function.   
 Conversely functions have many ways to modify values 
 %-- many ways to manifest side-effects %-- beyond just 
-returning valuse as outputs.   
+returning values as outputs.  Collectively these various 
+channels of communication %-- wherein different procedures 
+can exchange values in different ways %-- are often 
+described as `q.inpure`/, by contrast 
+to `q.pure` functions which use only a single 
+input channel for (non-modifiable) input parameters 
+and a single output channel. 
+`p`
+
+`p.
+The design and implementation of computer programming languages 
+%-- sometimes called `q.Software Language Engineering` %-- 
+is partly a theoretical discipline (because programming languages 
+are based on formal systems that can be studied mathematically, 
+like Lambda Calculus), but also very pragmatic.  Computer languages 
+are judged by practical considerations, like how efficiently they 
+allow programmers to create quality software.  The impetus 
+for new programming techniques often comes from the practical 
+side: mainstream languages began to incoporate features like 
+Object-Orientation and Exceptions (which are a mechanism to 
+interrupt normal program flow when coding assumptions are violated) 
+because these features proved useful to programmers.  At the same 
+time, various `q.inpure` features can still be modeled at the theoretical 
+level %-- there are extensions to Lambda Calculus 
+with Exceptions and/or Objects, as well as `q.effect systems` that 
+systematically model functional side-effects via Type Theory.  
+In this case, though, the thoretical models are partly isolated or 
+even lag behind the evolution of practical coding techniques.
+`p`
+
+`p.
+It is also true that `q.inpure` code can always be refactored 
+into a code base that uses only `q.pure` functional-programming 
+techniques.  That is, at least if we exclude the `q.cyberphysical` 
+layer %-- the body of code that directly measures or alteres 
+physical data, like writing text to a computer screen or 
+reading the position of a mouse %-- any self-contained 
+collection of `q.inpure` functions can always be re-implemented 
+as a system of pure `q.mathematical` functions, using 
+only one-dimensional, immutable input and output channels 
+(this is not necessarily true of singl functions, but 
+abstractly true of complete code `i.bodies` encompassing many 
+functions, i.e., many implemented procedures).  Analogously, any 
+computing environment based on a type system that incorporates 
+impure function-types can be recreated on top of a different 
+type system that recognizes only pure functions.  For sake of 
+discussion, define a `i.procedure space` as a self-contained 
+network of computational procedures, where each procedure has 
+the ability to invoke other procedures in the network.  We can then 
+say that any procedure space developed with the benefit of 
+`q.impure` coding styles (like Objects, Exceptions, and 
+side-effects) is `i.computationally isomorphic` to a procdure space 
+implemented exclusively in a pur-functional paradigm.
+`p`
+
+`p.
+This principle might suggest that the pure/impure distinction 
+is superficial, and so that any computing environment is 
+actually manifesting a purely logical framework, because 
+it is (in one sense) isomorphic to a structur which 
+`i.can` be thoroughly modeled via formal logic.  However, this 
+reductionism actually reveals the limits of `q.computational` 
+isomorphism in the abstract.  Impure procedure-spaces are not 
+`i.equivalent` to their pure isomorphs.  The whole rationale for 
+`q.impure` coding techniques %-- Object-Orintation, functions 
+with side-effects, etc. %-- is that the resulting code better 
+models empirical phenomena and/or how programmers themselvs 
+reason about software design.  Any notion of 
+computational isomorphism which is `i.itself` prejudiced 
+toward formal logic will fail to model how systems 
+which are isomorphic `i.on these` (already logical) 
+`i.terms` will nevertheless vary in how 
+organically they model empirical and mental phenomena.  
+If engineers discover that Object-Oriented paradigms 
+produce more effective software for managing biomedical 
+data %-- that is, biomedical concepts are usefully 
+modeled in terms of semiautonomous computational `q.objects` 
+whose properties and functionality are enginereed via 
+many discrete, partially isolated software components %-- this 
+suggests how Object-Oriented structures may be a more natural 
+systematization of the underlying biomedical reality.  
+Object-Oriented software can `i.in principle` be redesigned 
+without Objects, but the resulting code base would thn be a weaker 
+semantic `q.fit`/, a less faithful computational encoding, 
+of the external information spaces that the software 
+needs to modl and simulate.
+`p`
+
+`p.
+I contend that this duality between Object-Oriented and 
+pure-functional programming is analogous to the paradigmatic 
+contrast between cognitiv and truth-theoretic semantics.  
+On this analogy, pure-functional programming can be associated 
+with truth-theoretic semantics in that both are founded on formal 
+systems that more or less straightforwardly operationalize 
+first-order logic %-- a logic with quantification and with sets 
+or types modeling collections, but whose foundational units are 
+boolean predicates and elementary formulae rather than 
+proceures with multiple `q.channels of communication` and 
+potentially many intermediate states.  Reducing impure 
+(e.g., Object-Oriented) code to pure-functional procedure spaces 
+is analogous to providing truth-theoretic reconstructions 
+of linguistic manings, as in (revisiting examples from last section)
+
+
+`sentenceList,
+`sentenceItem.People fed the recused dogs (i.e.: before they 
+were rescued).` 
+`sentenceItem.New Yorkers vote democratic (i.e.: the majority 
+of registered voters in New York do so).`
+`sentenceList`
+
 `p`
 
 `p.
