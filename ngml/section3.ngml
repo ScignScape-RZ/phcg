@@ -494,15 +494,73 @@ Barry Smith, who has both published sophisticated
 theoretical work on Ontologies in the Semantic Web sense 
 and also spearheaded practical initiatives like the 
 OBO (Open Biological and Biomedical Ontology) Foundry.  
-The OBO Foundry merged in the mid-2000s, on the heels 
+The OBO Foundry emerged in the mid-2000s, on the heels 
 of a renewed interest in Phenomnology as a philosophical 
-basis for Cognitiv Scienc and other practical/technical 
+basis for Cognitive Scienc and other practical/technical 
 disciplines, like knowledge engineering.  It is not 
 hard to see practical artifacts like the OBO system as 
 concrete realizations of theoretical goals articulated 
 in volumes such as 1999's `i.Naturalizing Phenomnology`/.  
-
+This association is not only at the level of scholarship 
+%-- the academic papers describing OBO, for example -- 
+but also the design and organization of Semantic Web tools like 
+the OBO Foundry, as technologies and platforms. 
 `p`
+
+`p.
+Seen in those terms %-- and if we restrict attention to work 
+done by scientists like Barry Smith and his colleagues who are 
+actively enagaged in both the phenomenological and 
+computer-science communities %-- Semantic Web technology suggests 
+a paradigm wherein `q.Naturalizing` Phenomenology involves 
+isolating logical structures which are at once essential 
+to modeling empirical data and also emerge organically from 
+phenomenological accounts of perception and cognition 
+%-- that is, capturing the logical order of our experiencing 
+the world as well as of the facts experienced.  A case in point 
+is formalizing systems of `q.mereotopology` %-- combining 
+the mereological account of part vs. whole with `q.topological` 
+models of spatial continuity, locality, and bounday %-- 
+which reflect both perceptual schema and information gestalts.  
+So one the one hand the fusion of mereological and topological 
+relations gives us a vocabulary for describing how we 
+experientially apprehend spatial forms %-- the continuity, 
+regionality, intersections, and disjunctions between 
+visual (and sometimes tactile) elements that 
+gives logical articulation to visual/tactil sense 
+data (never experienced as `q.raw` sensation sinc we fundamentally 
+experience space and visual continuity in these structured forms).  
+Meanwhile, on the other hand, Mereotopology provides a  
+semantic matrix for representing facts and relations in biological, 
+geographical, and other scientific data, so it serves a 
+practical information-management role.  In short, isolating 
+logical gestalts and then codifyung them in practically useful 
+forms serves to `q.Naturalize` Phenomenology by anchoring 
+phenomenological reflection in applied science.  
+`p`
+
+`p.
+The general implication of this `q.Naturalizing` strategy 
+is that Phenomenology becomes naturalized, or reconcild 
+with the physical sciences, insofar as structures of consciousness 
+can be aligned with logical systms.  This strategy seems to extend 
+beyond just the Semantic Web projects I have highlighted; it is 
+likewise evident for example in Kit Fine's logical 
+mereology in Barry Smith and David Woodruff Smith 
+`i.Cambirdge Companion to Husserl` (`q.Part-Whole`/, 
+pp. 463).  Indeed Husserl himself invites us to consider the 
+logical formalization of phenomenological systems in works 
+like the `i.Formal and Transcendental Logic`/, which appears 
+to suggest that human conceptual systems are an even 
+more refined manifestation of logical systems than are 
+`q.formal` logics which get entangled in model-thoretic 
+problems like the Lowenheim-Skolem thorem.  In other words, 
+systems of formal logic are codifications of a mental order 
+and therefore natural cadidates for a technical representation 
+of tg mntal realm in its structure and specificity.
+`p`
+
+
 
 
 `p.
