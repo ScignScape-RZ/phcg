@@ -422,7 +422,79 @@ health care, urban infrastructure (via `q.smart cities`/),
 sustainable development, and so on.  Insofar as we see data 
 integration in terms of Ontology Engineering, these 
 practical goals can be met with the curation and publication 
-of formal Ontologies that can guid softw
+of formal Ontologies that can guide software and database 
+development.  Data sharing is then driven by Ontological 
+alignment %-- the Semantic Web, for example, designed 
+as an open repository of raw data annotatd and structured in accord 
+with publishd Ontologies, data which can bereusedand integrated into 
+different projects more readily because it adopts these published 
+models.  On the other hand, insofar as we see data sharing in terms 
+of `i.procedural alignment`/, we prioritize th curation and 
+publication of procedure implementations, in the form of software 
+libraries, open-source code repositories, and other building-blocks 
+of modular software design.  Consider again the case of data 
+integration between two hospitals: to integrate data between the two, 
+programmers may need to implement special `q.bridge functions` that 
+reconcile their rspective formats.  This implementation is 
+simplifid insofar as the respective software systems are well-organized 
+and transparent %-- so that programmers can examine inport and 
+export functions in the two code bases and write new procedures, 
+extending thir respective capabilities, so that import functionality 
+on one end can be aligned to export functionality on the other.  
+These new procedures can then be shared so that similar 
+data integration problems %-- for instance the first 
+hospital sharing data with a third %-- can be solved 
+more readily, reusing some of the code thereby developed. 
+This approach to data integration emphasizes transparency, 
+modularity, and code-sharing.
+`p`
+
+`p.
+Rather than seeing the Semantic Web as a network of raw data 
+conforming to published Ontologies, the more procedural 
+perspective would see endeavors like a Semantic Web as driven 
+by code sharing: open repsoitories of procdural 
+implementations that can be used to reconcile 
+data incompatibilities, pull data from different sources, 
+document data structure and representation formats, etc.  
+Decentralized networks like the Semantic Web would then 
+be characterized by the free exchange of procedural 
+implementations, so that enginers can pull procdures providing 
+different capabilities togther, to assemble fully-featured 
+software platforms.  Code libraries would play 
+a homogenizing role in this paradigm analogous to  
+Ontologies in the Semantic Web.  And, indeed, there 
+exists a mature and sophisticated technical infrastructure 
+for publishing software componenrs and maintaining 
+code repositories, forming the productive underbelly 
+of the Open-Source ecosystem (`q.git` version control, the 
+GNU Compiler Collection, Linux distributions, etc.).  
+However, the Semantic Web and Open Source development 
+communities are largely separate, apart from the practical 
+given that many Semantic Web technologies are distributed 
+as Open-Source software.  Despite the `i.practical` 
+adoption of Open-Source norms, the Semantic Web community 
+has arguably not engaged the Open-Source community 
+at a deeper theoretical level, in terms of how th curation 
+of public, collaborative code libraries can promote 
+data integration analogous in effect to (but arguably 
+semantically more accurate than) Semantic Web Ontologies 
+%-- in light of critiques that the logical intuitions 
+behind the Semantic Web create a distorted and 
+oversimplified theory of what semantics is all 
+about (in the words of Peter Gardenfors, 
+`q.The Semantic Web is not very Semantic`/).
+`p`
+
+`p.
+These questions bear directly on Phenomnology, because 
+philosophers in the phenomenological tradition have directly 
+influenced the evolution of the Semantic Web %-- notably 
+Barry Smith, who has both published sophisticated 
+theoretical work on Ontologies in the Semantic Web sense 
+and also spearheaded practical initiatives like the 
+OBO (Open Biological and Biomedical Ontology) Foundry.  
+
 `p`
 
 
