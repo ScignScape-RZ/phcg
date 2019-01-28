@@ -713,12 +713,53 @@ theory of formal structures producing life-like
 computational models of linguistic structure can help 
 represent the organizing principles of our reasoning 
 toward language understanding %-- even if these formal models 
-are not proposed as direct simulations of actual 
+are not proposed as direct simulations of natural 
 linguistic cognition.
 `p`
 
 `p.
+Simultaneously, real-world applied projects 
+%-- like the Semantic Web, Virtual Reality, 
+or CGI/CAD technology %-- can be seen as practical 
+test-beds for the realism and analytic potential 
+of formal-phenomenological frameworks.  In some 
+cases, like the OBO Foundary, the link between 
+applied technology and Phenomnology is explicit; in 
+others, as with VR and CGI, this link 
+is more implicit and thematic (but still 
+addressed by interdisciplinary research grounded in 
+Phenomenology and Husserl scholarship).  But in any 
+case technological experience retroactively seems to 
+shape the direction of phenomenological research, 
+while at the same time Phenomenology has, for some 
+researchers, provided a metatheortic and 
+metaphysical guideline.
+`p`
 
+`p.
+Here the Semantic Web presents an interesting case-study, 
+because the manifestation of phenomenological themes 
+(e.g., Mereotopology) in a practically 
+useful resource like Biomedical Ontologies suggests an 
+`i.ex-post-facto` vindication of `i.logical` formalization 
+as a `q.Naturalizing Phenomenology` project.  
+On the other hand, critiques of the Semantic Web 
+%-- which have emerged, among elsewhere, from Cognitive 
+Linguistics %-- can accordingly be studied as potntial 
+indications of how classical log formalism is 
+limited in the phenomenological context.  Peter Gardenfors, 
+for example, has critiqued the Semantic Web on thoretical 
+grounds while also developing a model of Natural 
+Language semantics (via a thory of `q.Conceptual Spaces`/) 
+that we may find more phenomenologically realistic than 
+the Semantic Web's (as Gardenfors puts it) 
+`q.syllogistic` paradigms.  In this paper, I propose a 
+critiquefrom a more `q.procedural` angle.  
+From my perspective, the foundational characteristic of 
+`q.information systems` is the existence of `i.procedures` 
+(say, cognitive and/or computational procedures) which `q.act on` 
+(aggregate, interpret, reshape) the data at hand.
+  
 `p`
 
 `p.
