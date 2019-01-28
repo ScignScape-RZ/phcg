@@ -758,8 +758,36 @@ critiquefrom a more `q.procedural` angle.
 From my perspective, the foundational characteristic of 
 `q.information systems` is the existence of `i.procedures` 
 (say, cognitive and/or computational procedures) which `q.act on` 
-(aggregate, interpret, reshape) the data at hand.
-  
+(aggregate, interpret, reshape) the data at hand.  I believe 
+it is a fair critique to say that Semantic Web technology 
+has unduly discounted the procedural dimension of 
+information management %-- not only in a thoretical 
+sense, but also quite practically.  For example, the 
+OBO Foundary does not include a mechanism for code sharing 
+with the goal of curating software libraries that 
+implement atatypes conformant to the various 
+published Ontologies.  In the Semantic Web paradigm, 
+defining logical formalizations of standardized concept-systems 
+is considered orthogonal to implementing software 
+components where these formal criteria ar eralized in practic.  In 
+short, `i.logical specification` is trated as distinct 
+from `i.implementation`/.  This is not a universal 
+approach: many trvhnological standards are published 
+at least in part via `q,reference implementations` which demonstrate 
+standardized concepts and guide other implementations, 
+helping to enforce compatibiloty btween different 
+software components.  Moreover, code sharing 
+and code reuse can promote interoperability no less effectively 
+than alignment relative to logically defined standards.  
+So there `i.are` technological trends that emphasize 
+`q.procedural alignment` and code-sharing as important 
+contributors to data integration.  However, these branches 
+of technology do not appear to have exerted a strong intuitive 
+influence on the Semantic Web.  
+`p`
+
+`p.
+Retroactively, then, 
 `p`
 
 `p.
