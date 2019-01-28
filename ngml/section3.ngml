@@ -564,12 +564,120 @@ of the mental realm in its structure and specificity.
 `p.
 However, we can also observe that Husserl was writing at a time
 when abstract logic was still the preeminent phenotype for 
-systematic xposition of formal structures in general 
+systematic exposition of formal structures in general 
 %-- this was before computer programming and even before 
-mathematical developments like Category Theory.  
+mathematical developments like Category Theory.  In the 
+first half of the last century, someone hoping to 
+create a formal and systematic representation 
+of cognitive processes would gravitate toward symbolic 
+logic simply because mathematicians and philosophers 
+at the time followed the general intuition that 
+`i.any` formal structure was essentially characterized by 
+its logical/axiomatic foundations.  A century later, 
+formal logic has been displaced from the germinal origins it 
+was once assigned.  For mathematicians, logic itself is 
+revealed to be a kind of emergent system that depends on 
+Categorial definitions like limits and colimits, and can 
+vary across Categories %-- there are different logics 
+for different kinds of Categories.  As such it is not 
+logic itself but the properties and contrasts between 
+Categories which is the truly primordial foundation 
+of logico-mathematical thought.  A contemporary 
+logico-mathematical formulation of Phenomenology 
+may therefore try to establish a Category-Theoretic 
+grounding rather than a logical one as ordinarily understood.  
+A case in point would be how Jean Petitot situates 
+phenomnological analysis in certain soecific genres of Categories, 
+like sheaves and presheaves, in his `q.Morphological Eidetics` 
+chapter in `i.Naturalizing Phenomenology` and elsewhere.
 `p`
 
+`p.
+Petitot's and Barry Smith's formalizing projects were parallel 
+and collaborative to some extent.  Maxwell James Ramstead  
+in a 2015 master's thesis reviews the history elegantly: 
+`q.Now, the `q.science of salience` 
+proposed by Petitot and Smith (1997) illustrates the
+kind of formalized analysis made possible through the direct 
+mathematization of phenomenological descriptions.  
+Its aim is to account for the invariant descriptive
+structures of lived experience (what Husserl called `q.essences`/) 
+through formalization, providing a descriptive geometry of 
+macroscopic phenomena, a `q.morphological eidetics` of the 
+disclosure of objects in conscious experience (in Husserl's 
+words, the `q.constitution` of objects).  
+Petitot employs differentiai geometry and morphodynamics 
+to model phenomenal expenence, and Smith uses formai structures from
+mereotopology (the theory of parts, wholes, and their boundaries) 
+to a similar effect.`  Except, there are interesting 
+contrasts between the Cognitive-Phenomenological 
+adoption of mereotopology 
+(by Barry Smith and also Roberto Casati, Achille C. Varzi, 
+Kit Fine, Thomas Bittner, etc.) %-- which 
+stays within a more classical logical paradigm 
+%-- and Petitot's Morphological Eidtics, which 
+is more Category-Theoretic.
+`p`
 
+`p.
+Meanwhile, contemporary formalizations of phenomenological 
+analyses can also gravitate toward a more concrete and 
+computational framework %-- simulating cognitive 
+processes via software or comparing artificial 
+constructions of perceptual objects (via Virtual Reality, 
+3D graphics, 3D printing, robotics, etc.) to lived 
+exprience.  In particular, graphics engineers have a rich theory 
+about how to create realistic (albeit not truly life-like) 3D 
+models and scenes.  The mathematical and computational 
+elements in this theory %-- triangular, quadrilateral, and 
+polygonal meshes; shader algorithms; `q.NURBS` 
+(Non-Uniform Rational Basis Spline) surfaces; textures and 
+`i.uv`/-mapping; camera matrices; diffusion and stochastic 
+processes %--  create a formal model of perceptual phenomena 
+insofar as these can simulated `i.to a close approcimation`/: 
+visual phnomena artificially built with these techniques 
+can be `i.almost` realistic.  The gaps between such 
+`q.virtal` scenes and real life may suggest that there are 
+additional facets suffusing `q.ral life` perception, or 
+even that despite their realism the mathematical 
+building-blocks of CGI-like scenes  
+are fundamentally different from the formal 
+structures governing nurophenomenological perception.  
+But in any case the almost life-lik realism that 
+`i.can` be achieved via Computer Graphics is a data-point 
+that Phenomenology should acknowledge: that a 
+perceptual world built out of certain rigorously 
+mathematical constitunts can feel almost 
+lifelike when apprehended as if it were 
+a real visual-perceptual surrounding.  In 
+particular, Computer-Generated Imagery can evoke the 
+same embodied engagement and intentional patterns as 
+non-artificial, ambient perception so long as 
+we accept a certain `q.suspension of disbelief`/, or 
+mentally adjust to the phenomenological limitations 
+of seeing visual tableau on a two-dimensional screen 
+%-- analogous to watching movies or television.  
+Despite the phenomenological chiasma
+of directing visual attention to a 2D screen %-- it feels 
+`q.not quite right` %-- we can still become engaged and 
+largely immersed in the visual scenes before us; which means 
+that full phenomenological realism is not prerequisite for 
+our intentional comportment toward visual (and auditory) 
+phenomena.  We can then observe that constructed scenes 
+built entirely from mathematical carry comparable 
+potential for intentional engagement.  Moreover, Panoramic 
+Photography and Immersive Visual Reality present another 
+genre of phenomenological immersion that transcends the 
+limitations of the 2D screen %-- though still without 
+full realism, because however lifelike the visual 
+content we may perceive with, say, 3D 
+goggles, we still are not engaging tactilely and 
+kinaesthetically with the world in the usual ways.
+`p`
+
+`p.
+
+`p`
 
 
 `p.
