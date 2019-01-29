@@ -82,11 +82,92 @@ aspect of `q.head` vs `q.dependent` assymetry is that any
 inter-word pair is `q.directed`/, and one part of the relation 
 defined as dependent on another, however this 
 dependency is understood in a given case.
- 
 `p`
 
 `p.
+By contrast, Link Grammar dos not identify a head-dependent 
+assymetry within inter-word relations.  Instead, words 
+(along with other lexically signifant units, like 
+certain morphemes, or punctuation/prosodic units) are 
+seen as forming pairs based on a kind of mutual 
+incompleteness %-- each word supplying some structural 
+or signifying aspect that the other lacks.  Words, then, 
+carry with them different varieties of `q.incompleteness` 
+which primes them to link up with other modls.  Semantic 
+and grammatical models then revolve around tracing 
+the `i.gaps` in information content, or syntactic 
+acceptability, which `q.pull` words into relation 
+with other words.  This approach also integrates 
+semantic and syntactic details %-- unlike frameworks 
+such as Combinatory Categorical Grammar, which 
+also treats certain words as `q.incomplete` but 
+identifies word connctions only on 
+surface-level grammatical terms %-- Link Grammar 
+invites us to explore how semantic and 
+syntactic `q.completion` intersects and overlaps. 
+`p`
 
+`p.
+Words can be incomplete for different reasons 
+and in different ways.  Both verbs and adjectives 
+generally need to pair up with nouns to form a 
+complete idea.  On the other hand, nouns may be 
+incomplete as lexical spotlights on the 
+extra-linguistic situation: the important point 
+is not that people feed dogs in general, but that 
+`i.the rescued` dogs were fed prior to their rescue.  
+So `q.dogs` `q.needs` `i.rescue` for conceptual 
+specificity as much as `q.rescue` needs `q.dogs` 
+for anchoring %-- while also 
+`q.dogs` needs `i.the` for `i.cognitive` specificity, 
+because the discourse is about some prarticular dogs 
+(presumed known to the addressee), signald by 
+the definitive article.  In other cases, 
+incompleteness is measured in terms of syntactic 
+propriety, as in: 
+
+
+`sentenceList,
+`sentenceItem.We learned that people fed the rescued dogs.` 
+`sentenceItem.No-one seriously entertained the belief that 
+he would govern in a bipartisan manner.`
+`sentenceList`
+
+In both cases the word `q.that` is needed because 
+a verb, insofar as it forms a complete predicate with 
+the proper subject and objects, cannot 
+always be inserted into an enclosing sentence.  
+`q.People fed the rescued dogs` is complete as a 
+sentence unto itself, but is not complete as a grammatical 
+unit when the speaker wishes to reference the 
+signified predicate as an epistemic object, 
+something believed, told, disputed, etc.  A 
+connector like `q.that` transforms the 
+word or words it is paired with syntactically, 
+converting across part-of-speech boundaries 
+%-- e.g. converting a proposition to 
+a noun %-- so that the associated words can be 
+included into a larger aggregate.
+`p`
+
+
+`p.
+The interesting resonance between Link Grammar 
+and Cognitiv Grammar is that this perspective allows 
+us to analyze how syntactic incompleteness 
+mirrors semantic incompletenss, and vice-versa.  
+`q.Incompleteness` can also often be characterized 
+as `i.expectation`/: an adjective `q.expects` a noun 
+to produce a more tailored and situationally 
+refined noun (or nominal `q.idea`/); a verb expects 
+a noun, to form a proposition.  Analogously, 
+when we have in discourse an adjctive or 
+a verb we expectv a corresponding noun %-- so 
+via syntactic norms language creates certian expectations 
+in us and then communicates larger ideas by 
+how these expectations are met.  Is a noun-expectation 
+fulfilled by a single noun or a complex phrase?  
+ 
 `p`
 
 
