@@ -126,7 +126,6 @@ the definitive article.  In other cases,
 incompleteness is measured in terms of syntactic 
 propriety, as in: 
 
-
 `sentenceList,
 `sentenceItem.We learned that people fed the rescued dogs.` 
 `sentenceItem.No-one seriously entertained the belief that 
@@ -167,10 +166,93 @@ via syntactic norms language creates certian expectations
 in us and then communicates larger ideas by 
 how these expectations are met.  Is a noun-expectation 
 fulfilled by a single noun or a complex phrase?  
- 
+The notion of smantic and syntactic expectations 
+also coordinates nicely with type-theoretic 
+semantics; for example, the verb `q.believe` 
+pairs with a semantic unit that can be 
+interpreted in epistemic terms %-- not 
+any noun but a noun of a kind that can be the 
+subject of propositional attitudes (beliefs, 
+opinions, assertions, arguments, etc.).
 `p`
 
+`p.
+The syntactic incompleteness of propositional 
+phrases modified by `q.that` can therefore 
+be traced to the semantic expectations 
+raised by `q.believe`/, and analogous 
+verbs (opine, argue, claim, testify).  
+Th object of `i.testify`/, say, is a statement 
+of potential fact which we know not 
+to take as necessarily true or honestly 
+made (part of the nature of testijony is that 
+it may be deliberately or accidentally 
+fallacious).  But to properly pair with 
+`q.testify`/, then, phrases must be 
+semantically reinterpreted as nominalizations 
+of propositions, rather than as mere linguistic 
+exprssion of propositional content via 
+complete sentences.  The `q.epistemic` 
+context transforms sentential contnt into 
+nominal contnt available for further refinement: 
 
+
+
+`sentenceList,
+`sentenceItem.The Trump campaign colluded with Russia.` 
+`sentenceItem.Several witnesses testified that 
+the Trump campaign colluded with Russia.`
+`sentenceItem.Reputable newspapers have reported that 
+the Trump campaign colluded with Russia.`
+`sentenceItem.Most Democrats believe that 
+the Trump campaign colluded with Russia.`
+`sentenceList`
+
+The grammatical stipulation that a modifier like 
+`q.that` is often necessary in such formulations correlates 
+with the semantic detail that the `q.claimed`/, 
+`q.testified`/, or `q.believed` content is not being 
+directly asserted by the spaker as if in a 
+unadorned declarative expression, as in the 
+first sentence.
+`p`
+
+`p.
+Morphosyntactic transformation similarly modls 
+th corrlation btween semantic and syntactic 
+expectation %-- as can be demonstrated by a 
+variant of the `q.believe` forms, via the phrase 
+`q.believe in`/:
+
+`sentenceList,
+`sentenceItem.I believed in Father Christmas.` 
+`sentenceItem.I believed in Peace on Earth.`
+`sentenceItem.I believed in Obama.`
+`sentenceItem.I believed in lies.`
+`sentenceList`
+
+Whereas `q.that` (after `q.believe`/) 
+`q.nominalizes` propositions, `q.in` reconceives 
+(type-theoretically we would say `q.coerces`/) 
+ordinary nouns into epistemic nouns 9compatible 
+with propositional attitudes).  Obama is not an 
+`i.idea`/, but the connector `i.in` triggers an 
+interprtation where we have to read `q.Obama` as 
+something believed %-- effectively a type-theoretic 
+tension resolved by understanding `q.Obama` in this 
+context to designate either his platform or his 
+ability to implement it.  Intrpretive `i.tension` 
+is a natural correlary to a mismatch in xpectations: 
+`q.believe` expects something epistemic, but the 
+discourse gives us a proper name.  Analogously 
+`q.budge` expects a brute physical ntity in 
+its simplest meaning, but in `q.Obama wouldn't 
+budge on reproductive rights` we get a `q.sentient` 
+noun, and have to read `q.budge` metaphorically.  
+In short, `i.xpectation`/, `i.intrpretive tension`/, and 
+`i.incompleteness` are interlocking facets of the 
+discursive   
+`p`
 
 `p.
 
