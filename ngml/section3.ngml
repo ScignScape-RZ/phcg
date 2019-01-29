@@ -787,7 +787,62 @@ influence on the Semantic Web.
 `p`
 
 `p.
-Retroactively, then, 
+I argued above that technology has a retroactive influence 
+on Phenomenology, or at least on the threads of research 
+that follow the `q.Naturalizing` project and the 
+reconciliation of Phenomenology with Analytic Philosophy.  
+Even if this effect is rather modest, it still bars on 
+the topic that is my primary emphasis here, namely 
+the integration of Phenomenology with Cognitive Grammar.  
+One of the most prominent practical domains that has 
+influenced Phenomenology has been the Semantic Web, insofar 
+as Semantic Web technology (via Ontologies) show 
+some evidence that formal models influencd by Phenomenology 
+can be practically useful, which is one criteria to 
+suggest that the models have philosophical or epistemological 
+merit.  On the other hand, Cognitive Linguists have tended 
+(if anything) to be critical of the Semantic Web (in 
+contrast to other linguistics branches, which are generally 
+sympathetic to Semantic Web paradigms and incorporate 
+Ontologies into Computational Linguistics software).  
+So a potentially fertile ground for collaboration between 
+Phenomenology and Cognitive Linguists has arguably been 
+overlooked insofar as the respective communities have 
+taken competing lessons from th succsses and 
+limitations of the Semantic Web, particularly how 
+the Semantic Web leverages classical logical formalisms 
+(particularly Description Logics) rather than 
+`q.procedural` and/or Category-Theortic foundations. 
+`p`
+
+`p.
+This problem is not intrinsic to the Semantic Web as a 
+data-sharing platform, however, only to the 
+paradigms through which the current Semantic Web 
+has been conceptualized and implmntd.  There are competing 
+intellectual frameworks that embrace parallel goals but 
+present alternative technical foundations, and Phenomenology 
+would benefit from thematizing these frameworks in a role 
+analogous to the Semantic Web, both a practical application 
+and a retroactive intuition-guide.  A case in point would be 
+the OpenCog project, that presents a Hypergraph-based modeling 
+paradigm related but technically distinct from Semantic Web 
+labeled graphs (one which is also consistent with 
+procedural-network models) and which also embraces a specific 
+linguistic model (based on Link Grammar).  Philosophically, 
+OpenCog appears to celebrate a vision of `q.Artificial 
+General Intelligence` which I (and I suspect most phenomenologists 
+would) find problemmatic; underestimating the context-sensitivity 
+and empathic intersubjectivity intrinsic to human cognition 
+and intelligence (and difficult to simulate with machins).  
+Nevertheless, formal models designed to `i.replicate` intelligent 
+behavior can still be useful as structural `i.models` of cognitive 
+phenomena, even if we believe in a metaphysical gap between the 
+model and the reality.  Implementing software on the basis of 
+explanatorarily useful cognitive models does not 
+guarantee that the software will realistically approximate human 
+cognition, but articulating and fine-tuning the models 
+themselves can notwithstanding be a valuable exercise. 
 `p`
 
 `p.
