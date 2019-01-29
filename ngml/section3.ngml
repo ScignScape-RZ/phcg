@@ -846,5 +846,95 @@ themselves can notwithstanding be a valuable exercise.
 `p`
 
 `p.
+In the case of OpenCog, the impetus toward `q.Artificial 
+General Intelligence` has motivated that project to explore 
+cognitive models that coalesced around several key structures, 
+including Directed Hypergraphs, Link Grammar, and 
+(in my terms) Procedural Networks (as unerlying mols 
+for Information Spaces).  This aggregate of theories 
+can be juxtaposed to Description Logic, Directed Labeled 
+Graphs, and formal Ontologies as the groundwork for 
+the Semantic Web.  I'd also argue that the OpenCog model 
+can potentially be a technological improvement over the existing 
+Semantic Web, in the sense that semantic networks built around 
+OpenCog-like structures can be more effective `visavis; several 
+important practical concerns, like application design, 
+data integration, and Human-Computer Interaction.  
+These comments do not necesarily apply to the actual OpenCog 
+software %-- the major OpenCog component, `q.AtomSpace`/, 
+is in a practical sense harder to compile and use than most 
+Semantic Web components %-- but instead to a 
+potential standardization of the core OpenCog data structures 
+as modeling paradigms that can be adopted by heterogeneous 
+information sources and data-sharing initiatives.  In 
+this eventuality, the OpenCog model can provide a 
+test-bed for applied Phenomenology that stands on a 
+different formal foundation %-- one less inured to 
+symbolic logic.
+`p`
+
+`p.
+Along these lines, then, I contend that a circle of 
+data models analogous to the OpenCog architcture can provide 
+a formal structuration for phenomenological accounts 
+of linguistic processing and information spaces comparable  
+in analytic roles to 3D modeling primitives in a Phenomenology 
+of Perception.  On one side, mathematical elements like 
+mesh geomtry, NURBS surfaces, and texture mapping/generation 
+point toward formal theories of perceptual `i.cognition` 
+by allowing for the construction of perceptually 
+realistic `i.scenes`/.  These mathematical elements are 
+building-blocks for an (artificial) perceptual `i.content` 
+rather than (as far as we know) actual neurocognitive 
+subvenants of perceptual `i.experience`/, but their 
+formal specificity still gives us material to 
+work with when trying to consolidate a `q.scientific` 
+phenomenological research programme.  Analogously, 
+I suggest that OpenCog-like structures such as 
+Directed Hypergraphs, Procedural Network models, and 
+Link Grammar are potential building-blocks for formal 
+models of Cognitive Linguistics and `q.information 
+management` %-- for our procssing of both linguistic 
+content and the contxts and situations wherein language 
+artifacts are grounded.  In other words, these 
+procedural/hypergraph/link-grammar structures can model 
+linguistic `q.deep structure` and linguistic environments 
+by analogy to how mesh geometry, texture mapping, 
+and so forth model 3D spatial primitives and 
+visual-perceptual environments.
+`p`
+
+`p.
+This idea is still somewhat hypothetical because the 
+`q.procedural/hypergraph/link-grammar` nexus has not 
+been consolidated into a general to the same degree 
+as a common vocabulary of 3D modeling primitives has 
+been incoporated into disparate software and research 
+projects.  Having said that, Link Grammar itself does 
+have standing as a distinct and institutionally 
+circumscribed body of research, so it is a reasonable 
+starting point for integration with phenomenological 
+and cognitive-linguistic approaches, an integration 
+which can then be extended to related structures like 
+Procedural Networks and Directed Hypergraphs. 
+`p`
+
+`p.
+For such reasons, I will conclude this paper with 
+a focus on Link Grammar and on how the Link Grammar 
+perspective relates to the phenomenological and 
+cognitive-grammar positions and case studies I 
+outlined in earlier studies.  Further extensions to 
+Directed Hypergraphs and the technical foundations 
+of multidimensional `q.procedural` type theories 
+defined on Directed Hypergraphs %-- which thematically 
+complement Link Grammar to the degree that Link Grammar 
+and Directed Hypergraphs are naturally paired up as 
+in OpenCog %-- are beyond the scope of 
+this paper (though I have presented some form 
+of this anlysis in other publications).
+`p`
+
+`p.
 
 `p`
