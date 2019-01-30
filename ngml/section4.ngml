@@ -234,7 +234,7 @@ variant of the `q.believe` forms, via the phrase
 Whereas `q.that` (after `q.believe`/) 
 `q.nominalizes` propositions, `q.in` reconceives 
 (type-theoretically we would say `q.coerces`/) 
-ordinary nouns into epistemic nouns 9compatible 
+ordinary nouns into epistemic nouns (compatible 
 with propositional attitudes).  Obama is not an 
 `i.idea`/, but the connector `i.in` triggers an 
 interprtation where we have to read `q.Obama` as 
@@ -249,9 +249,68 @@ discourse gives us a proper name.  Analogously
 its simplest meaning, but in `q.Obama wouldn't 
 budge on reproductive rights` we get a `q.sentient` 
 noun, and have to read `q.budge` metaphorically.  
-In short, `i.xpectation`/, `i.intrpretive tension`/, and 
-`i.incompleteness` are interlocking facets of the 
-discursive   
+In short, `i.expectation`/, `i.interpretive tension`/, 
+and `i.incompleteness` are interlocking facets of 
+semiotic primitives that gestate into discursive 
+maneuvers via which ideas are communicated 
+economically and context-sensitively.
+`p`
+
+`p.
+Link Grammar, proper, represents only the 
+most immediate (mostly grammatical) facet of 
+word links.  For sake of discussion, 
+I will discuss links in general as markers of 
+`i.mutual dependency` between words, so a 
+`q.link grammar` is essentially a 
+`q.bi-directional` Dependency Grammar.  Mutual 
+dependencies manifest syntactic norms and 
+contextual details that make individual 
+words inadequate signifying vehicles for 
+a particular communicating content.  This overall 
+principle becomes concrete in one form via 
+grammatical relations, which is the layer 
+modeled by Link Grammar proper.  
+I have mentioned several ready examples %-- 
+the syntactic dependency of verbs and adjectives 
+on nouns for them to enter correctly into 
+discourse (correlate with a semantic dependency 
+in the other dirction, to shape noun-ideas to the 
+proper context and signifying intent); also 
+part-of-speech or `q.subtyping` dependencies 
+reflecting mandates that (in my examples) 
+propositional phrases are coerced to nouns or 
+nouns coerced to `q.epistemic` nouns.  Technical 
+Link Grammars recognize a broad spectrum of 
+`q.link relationship` %-- between 50 and 100 
+for different languages.  Parsing a sentence 
+is then a matter of identifying 
+all of the mutual dependencies %-- at least those 
+evident on a syntactic level %-- that appear as 
+inter-word links in the sentence.  Phrase 
+structure may be implicit in some links in 
+combination %-- for example verb-subject plus 
+verb-object links generate propositional phrases 
+%-- but the technical parse is a `q.graph` of 
+inter-word links rather than a `q.tree` of 
+phrases ordered heirarchically.  The parse-graph 
+itself is only a provisional rading of the 
+sentence, and linguistic understanding 
+exists only insofar as its skeletal outline 
+is filled out with semantic and situational 
+details.  But the graph layer articulated by 
+a Link Grammar still provids a useful 
+inermediat representation, showing 
+mutual dependencies in their syntactic manifestations 
+that then point toward thir deeper semantic and 
+situational origins. 
+`p`
+
+`p.
+For each `i.syntactic` bi-dependnecy, on this thory, 
+there is a concordant semantic and signifying 
+bi-dependnecy, partly conventionalized as a 
+
 `p`
 
 `p.
