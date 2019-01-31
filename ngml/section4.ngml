@@ -616,14 +616,208 @@ the head of an un-annotated hyperedge is a
 `q.head pre-annotation`/, and `q.annotative fusion` 
 is the synthesis of a head and a 
 tail pre-annotation (triggering a synthesis of 
-their incident hyperedges).  
- 
+their incident hyperedges).  Correlate to annotative 
+`i.fusion` we can define a notion of annotative 
+`i.partiality`/, referring to the `q.incompleteness` 
+of pre-annotations which leaves room for their fusion.
+`p`
 
+`p.
+It turns out that annotative fusion and partiality 
+in this sense is a non-trivial 
+model for computation in general, and can be extended 
+to a form of type theory and process calculus.  
+The idea is that computational procedures can be 
+modeled as hypergaphs (computer source code 
+can certainly be modeled as hypergraphs which 
+are productions of a certain class of parsing 
+engines).  Each `q.value` affected by a 
+procedure %-- or more technically the source code symbols 
+and memory addresses that `q.carry` a valu %-- is 
+then modeled as a hypernode that can link with 
+other hypernodes in the scenario where one procedure 
+calls a different one.  Annotative fusion is then 
+a phenomenon of values being transferred from 
+one excuction environment (associated with 
+the caller procedure) to a second one (associated with 
+the callee).  The `q.annotations` themselves 
+are then in this context the full set of type 
+coercions, type checks, synchronization 
+(e.g. resource locks or thread blocks depending on 
+whether or not the caller waits for the callee to 
+finish), and any other validations to ensure that 
+the procedure call is appropriate.  Annotative fusion 
+also provides a formal basis for developing the 
+intuition that `q.procedural networks` are rigorous 
+representations of information spaces %-- 
+annotative fusions capture the precise details 
+of procedures linking (via caller/callee relations) 
+with other procedures.   
+`p`
+
+`p.
+Type-theoretically, annotative partiality extends 
+conventional applied type theory 
+(as in the Typed Lambda Calculus) in parallel 
+to partial-labels extending labeled graph theory.  
+It is paradigmatic in the theory of typed procedures 
+and of `q.effect systems` that the type of a procedure 
+is determined (up to certain equivalences that may discard 
+overly granular type distinctions) by the types of 
+all values affected by the procedure (including but 
+not necessarily limited to the types of input 
+and output parameters).  We can then superimpose 
+on this model an account of annotative partiality.  
+Specifically, on the paradigm that procedure-calls 
+are structurally represented as annotative fusions over 
+Directed Hypergraphs, the values manipulated by 
+a procedure are pre-annotations: they are not 
+(in the `i.implementation` of a procedure, 
+as a formal object) single values but rather 
+typed spaces that can take on a spectrum of 
+possible values depending on the inhabitants of 
+their types.  When a procedur is `i.called` these values 
+become concretized, but as a formal system procedural 
+networks model software in terms of its capabilities 
+and expected behavior, rather than the state at 
+any moment when the software is actually running.  
+Partiality therefore models how precedures 
+(as formal objects) deal with potntialities 
+%-- we do not know what values will `i.actually` 
+be present at runtime (e.g. what specific 
+values passed to a procedure as arguments), 
+so procedural analysis is essentially characterized 
+by a partiality of information.  When one procedure 
+calls another, the caller must build an 
+`i.expression` %-- a gathering of values that provide all 
+the information th callee requires %-- thereby 
+creating a case of mutual-completion: the caller has 
+values but not an algorithm 
+to operate on them; the callee has an algorithm 
+(that's what it implements) but needs concrete 
+values in order to produce concrete values.  
+This dual partiality allows the caller to 
+call the callee, via an `i.expression` which is part 
+of the callee's implementation (represented as a 
+hypergraph) which must in turn match the 
+callee's signature %-- epigrammatically, we 
+can say that `q.expressions are annotative-fusional 
+duals of signatures`/.  The point here is that whereas 
+signatures are conventionally understood to be 
+type-declarations assigning types to procedures, 
+with annotative partially we can more 
+precisely recognize signatures as stipulating 
+`i.pre-annotative` types.  The values carried 
+within expressions also have pre-annotative types, 
+but there is a distinction between types in the context 
+of expressions and types in the context of signatures 
+%-- and moreover this distinction is precisely the 
+manifestation of the abstract head-pre-annotation 
+and tail-pre-annotation contrast in the specific 
+context of procedural networks.  Just as 
+signatures unify multiple types into one 
+profile, we can analogously defined 
+`q.expression types` as the aggregate of all types 
+from values affecting the expression %-- note that 
+this is different from the type of the exprssion's 
+calculated `i.result`/, just as th type of 
+a function is different than the type of its 
+return value.  Expression-types and signature-types 
+are almost exact duals (the complication being 
+default values for optional parameters, which 
+are not directly represented in exprssions 
+%-- obviously, since then they would not be 
+missing).  The `q.duality` involved here 
+derives from partitioning a type system into 
+`q.exprssion annotative partials` and 
+`q.signature annotative partials`/, a projection 
+of head/tail duality in an abstract thory 
+of Annotated Directed Hypergraphs
+(and analogous to head/dependent 
+and left/right partiality in Link Grammar). 
 `p`
 
 
 `p.
+This notion of expression/signature duality is not 
+just speculative; I believe it has rich potential 
+for new techniques in data modeling, program analysis, 
+and code verification, and is a core dimension 
+of software distributed as part of a research-sharing 
+platform, currently used in connection with 
+several publications spanning multiple publishers 
+and academic disciplines.`footnote.
+See Rodger2016, Prague2015, BHP2018, Neustein2019, 
+and the `q.ScignScape` repository on github: 
+most of these are examples where authors or 
+publishers supplemented a prior book or article 
+with a curated data set, or `q.Research Object`/, 
+where the data set is downloaded along with 
+code from which customized software can be compiled specific 
+to the data set and text being shared, 
+software I devloped in part as a prototype or 
+experimental sandbox for computational models 
+mentioned here (in the case of the 2019 volume, part 
+of Springer's `q.Advances of Ubiquitous Sensing in 
+Healthcare` series, the data sets and publication 
+are developed in consort).
+`footnote`
+The path I have sketched here from Link Grammar 
+to a theory of Procedural Networks is similar, 
+if not technically equivalent to, analogous 
+analyses associated with OpenCog, for example 
+(particularly in Ben Goertzel's two-volume 
+`i.Engineering General Intellignce`/).
+`p`
 
+`p.
+The software I just dscrribed in rlation to certain 
+published data sets certainly is narrower and 
+more nascent than OpenCog components like AtomSpace.  
+At the same time, it has been more directly 
+formulated in relation to academic and publishing 
+workflows and is more precisely sited 
+in academic and research-sharing domains (and moreover 
+remains agnostic `visavis; the more extravagant 
+`q.Artifical General Intelligence` claims).
+It is also almost entirely self-contained, 
+with few external software dependencies, which 
+arguably makes this software a more accessible 
+test-bed for refining and analyzing formal 
+properties of structures I have outlined here 
+%-- in particular a generalization 
+of Link Grammar to a working model 
+of computation, perhaps via what I have dubbed 
+`q.annotative fusion`/.  In any case, 
+both OpenCog and, I would like to believe, 
+this published software (designed to emulate some 
+of OpenCog's architectural features but on a 
+smaller-scale and mor self-contained foundation) 
+are concrete technologies that take Link Gramar 
+and Procedural Networks (in one sense or another) 
+as modeling and linguistic paradigms.  In this 
+sense they may be contrasted with Semantic Web 
+technologies, which are based on labeled directed 
+graphs and Description Logics.  Phenomenologically, 
+we can then give formal analogs to back up the 
+comparisons I intimated earlier: between the Semantic 
+Web as a formal case-study and retroactive intution for 
+Phenomenology, but one paradigmatically grounded 
+in classical logic and truth-theortic semantics, 
+and other paradigms %-- here developd via 
+Annotated Hypergraphs, annotative fusion, and 
+annotative partiality add a new structural layer to 
+lambda-calculus-style type thory %-- informed 
+via linguistic (rather than logical) methods like 
+Link Grammar and arguably more compatible 
+with Cognitive Grammar (and Cognitive Phenomenology).  
+Here I make the implicit assumption that such an 
+`q.annotative partiality` and hypergaph-based type 
+theory prsents a formal foundation fundamentally different, 
+in some philosophically interesting sense, from classical 
+formal logic.  Fully defending this claim is outsude 
+the scope of this paper, but I will offer a 
+few comments on this topic in conclusion.
 `p`
 
 
