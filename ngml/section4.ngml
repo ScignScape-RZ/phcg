@@ -494,10 +494,138 @@ accordingly be reassuring if notions like
 could be employed as foundations for a formal 
 theory of grammar and/or semantics with a 
 degree of rigor comparable to, say, Link 
-Grammar in its computational form, or ztyp-Thoretic 
-Semantics in the sense of Luo, postjovsky, etc...  
+Grammar in its computational form, or type-Thoretic 
+Semantics in the sense of Zhaohui Luo, 
+James Pustejovsky, etc... 
+Such a theory %-- and potentially concrete 
+technologies associated with it %-- would also 
+then have a reasonable ground of comparison 
+to the Semantic Web and, in the contxt of 
+Phenomnology, to the formalizing influenc 
+which Semantic Web paradigms have exerted on 
+projects to unite Phenomenology with science 
+and with Analytic Philosophy.
+`p`
+
+`p.
+Given these considerations, I propose that 
+formal grammars with the same underlying 
+structure as Natural-Language Link Grammars 
+can indeed be used as a foundation for type-theortic 
+and programming-language-design methodology.  The 
+key step here is to generalize Link Grammar's 
+notion of a `q.connector` %-- the aspect of a 
+word or lexeme that allows (or requires) compltion 
+via another word %-- to a gneric data structure 
+where connections can be made between different 
+parts of a system on the basis of double 
+potentials that must be in some sense `q.compatible` 
+for the connection to be valid.  One way to 
+visualize such a systm is via graph thory: 
+imagine a form of graps where nodes are 
+annotated with `q.potentials` or `q.half-edges`/; 
+a complete edge is then a union of two half-edges.  
+Half edges are also classified into different 
+families, and there are rules governing when a 
+hald-edge of one family may link with a half-edge 
+of another.  In the case of Link Grammar, these 
+classifications are based on surface language structure 
+%-- head/dependent and left-to-right relations %-- 
+from which a suite of links and connection rules 
+are define (for instance abstractly a head/right 
+word must link to a dependent/left word, a rule that 
+then becomes manifest in specific syntactic rules, 
+like how a verb links to its subject).  For a 
+more generic model, however, we can stipulate only 
+that there is `i.some` classification of connectors 
+governs by `i.some` linkage rules, to be specified 
+in different details for different modeling domains.
+`p`
+
+`p.  
+Such a graph model expands upon the notion 
+of `i.labeled` graphs, where edges are annotated 
+with labels that characterize the kind of relation 
+modeled via the edge itself.  A canonical example 
+is Semantic Web graphs: the edges in any 
+Semantic Web structure are labeled with `q.predicates`/, 
+defined in different Ontologies, specifying what sort 
+of relation exists between its adjacent nodes.  
+That is, in the Semantic Web, nodes are not 
+`q.abstractly` linked but rather exhibit 
+concrete relations: a person is a citizen 
+of a country, two persons are married, and so forth.  
+These structurs ar ethen concete instancs of Labeled 
+Graps as abstract mathematical structures.  Based on 
+Link Grammar, we can then refine this modle 
+be splitting labels into two parts, and 
+allowing edges to be incomplete: a fully 
+formed edge is possible when the label-parts 
+on one side are compatible with the label-parts 
+on another.  One valid class of graph transforms 
+is then a mapping where a graph is altered by unifying 
+two half-edges into a complete edge, subject to 
+the relevant linkage rules.
+`p`
+
+`p.
+Another way of modeling this kind of structure is via 
+edge-annotations and a rule for unifying two edges into 
+an edge-annotation pairing.  For sake of 
+discussion, I will express this in terms of 
+Directed Hypergraphs: assume that edges are 
+`q.hyperedges`/, connecting `i.sets` of nodes.  
+In Hypergraph theory, the nodes incident to a hyperedge 
+are divided into a `q.head set` and `q.tail set`/; 
+these sts can then aggregate as `q.hypernodes`/.  
+We can then define a kind uf unification where 
+the `q.tail hypernode` of one hyperedges joins 
+with the `q.head hypernode` of another, producing 
+a new hypredge whose head comes from the 
+first former hyperdge and whose tail comes from the 
+secon.  The merged hypernodes, in turn, form a new 
+hypernode which `q.annotates` the new hyperedge 
+(this new hypernode is not connected to the graph 
+via other nodes, but is indirectly `q.part` of 
+the graph through the hyperedge it annotates).  
+`i.Annotated` hyperedges therefore differ from 
+`q.non-annotated` hyperdges in that the former are the 
+result of a merger between two of the latter.   
+The rules governing when such merger is possible 
+%-- and how to map a pair of hypernodes into a
+single `q.annotative` hypernode (which 
+belongs to the graph through the aegis of 
+its annotated hyperdge) are not internal 
+to the graph theory, but presumed to be 
+specified by the modeling environment where 
+implemementations of such graphs are 
+technologically applied.  Annotated Directed 
+Hypergraphs are then `q.complete` in a sense 
+if every `q.un-annotated` hyperedge has been 
+subsumed into an annotated hyperedge, via a 
+fusional process we can call a  
+`q.annotative-fusional transform`/.
+`p`
+
+`p.
+Extending this model further, we can say that the 
+tail of an `i.un-annotated` hyperedge is a 
+`q.tail pre-annotation`/, since it is poised to 
+be merged into an annotation.  Analogously, 
+the head of an un-annotated hyperedge is a 
+`q.head pre-annotation`/, and `q.annotative fusion` 
+is the synthesis of a head and a 
+tail pre-annotation (triggering a synthesis of 
+their incident hyperedges).  
+ 
 
 `p`
+
+
+`p.
+
+`p`
+
 
 `p.
 
