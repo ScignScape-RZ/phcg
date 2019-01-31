@@ -1,16 +1,15 @@
-`section.Conclusion`
-`p.
-In the last section, I outlined a theory 
-of `i.annotative fusion` which generalizes 
+\section{Conclusion}
+\p{In the last section, I outlined a theory 
+of \i{annotative fusion} which generalizes 
 (and migrates from natural to formal languages) 
 Link Grammar to fields like type theory, 
 programming language design, and (suitably 
 extended) lambda calculii.  The crux of this 
 extension is taking a formulation of 
-hypergraph transforms %-- where hypergraph 
-edge-pairs map to annotatd hypredges %-- and 
-then reading `q.annotations` as general computational 
-structures, where an `q.annotative fusion` represents 
+hypergraph transforms \mdash{} where hypergraph 
+edge-pairs map to annotatd hypredges \mdash{} and 
+then reading \q{annotations} as general computational 
+structures, where an \q{annotative fusion} represents 
 the executive machinery requisite to implement 
 (sequential or concurrent) calls between 
 procedures.  As with link grammar, which recognizes 
@@ -23,42 +22,40 @@ For example, Object-Oriented code exhibits a
 particular kind of inter-procedure connection, 
 subject to special semantic and 
 syntactic conventions (notably the object 
-value in an expression is bound to a `q.this` 
-or `q.self` symbol in the callee code).  In 
-languages like `Cpp; and Java, Object-Oriented 
+value in an expression is bound to a \q{this} 
+or \q{self} symbol in the callee code).  In 
+languages like \Cpp{} and Java, Object-Oriented 
 expressions are notated by placing the object symbol 
-(or nested expression) before a `q.dot` token and 
-then a function name.  The `q.dot` then signals 
+(or nested expression) before a \q{dot} token and 
+then a function name.  The \q{dot} then signals 
 the presence of two connectors, one to its left 
 that marks a symbol or expression as an object 
-(and thus connected to a `q.this` symbol in callee code) 
+(and thus connected to a \q{this} symbol in callee code) 
 and one to its right that marks a symbol 
 as a function name (and so bound to whichever  
 procedure uniquely resolves the procdure-call 
 at runtime given the runtime type of 
 the arguments).  
-`p`
-
-`p.
-As this example shows, one could write a formal 
+}
+\p{As this example shows, one could write a formal 
 grammar for Object Oriented languages 
-%-- e.g. for a valid expression using an 
+\mdash{} e.g. for a valid expression using an 
 object and a valid signature of a function that takes an 
-object as its `q.this` argument %-- with syntax-rule 
+object as its \q{this} argument \mdash{} with syntax-rule 
 representations essentially identical to Link Grammars 
 for Natural Language.  In place of link-types 
 like verb-subject, verb-object, antecedent-pronoun, 
-etc., this `i.programming` language grammar would 
+etc., this \i{programming} language grammar would 
 have connections like object-expressions and 
-object-symbols to `q.this` tokens, thrown 
+object-symbols to \q{this} tokens, thrown 
 exception-exprssions to symbols declared in 
-`q.catch blocks`/, and so on.  Expanding this 
+\q{catch blocks}, and so on.  Expanding this 
 idea, we can say that modern programming languages 
 have multiple form of inter-procedure exchange of 
 values, and that for each such alternative 
 there is a distinct link-type and a distinct pair 
-of `q.connectors` (in established Link 
-Grammar terminology) or `q.pre-annotations` 
+of \q{connectors} (in established Link 
+Grammar terminology) or \q{pre-annotations} 
 modeling how values get passed between procdures 
 insofar as that communicative protocol is in effect.  
 Object-Oriented code uses one protocol for objects, 
@@ -70,50 +67,48 @@ these protocols correspond with specific
 compatibilities between pre-annotations and 
 specific regimes for annotative fusion.  
 Within each experession/signature match, there 
-are in general multiple `q.annotative fusion 
-regimes` which must all be properly provisioned 
+are in general multiple \q{annotative fusion 
+regimes} which must all be properly provisioned 
 by the desired procdure-call for the fusion 
 to be acceptable.  The values subject to any 
 particular regime I then collectively 
-call a `i.channel`/, and the rules for 
-validating fusions I refer to as a `q.Channel 
-Algebra`/.  Type declarations on procedures are 
+call a \i{channel}, and the rules for 
+validating fusions I refer to as a \q{Channel 
+Algebra}.  Type declarations on procedures are 
 then enriched with the added structure of 
-multiple `q.annotative fusion regimes` 
-(which can also be called `q.channel prototypes`/, 
-or `q.proto-channels`/) along with the 
+multiple \q{annotative fusion regimes} 
+(which can also be called \q{channel prototypes}, 
+or \q{proto-channels}) along with the 
 distinction between expression-pre-annotative and 
 expression-pre-annotative types I mentioned earlier.  
 These added structures add levels of dtail 
-to the basic notion of `q.functional types` in 
+to the basic notion of \q{functional types} in 
 the Typed Lambda Calculus, and we can define type 
 systems that are closed over simpler functional 
 type systems with respect to annotative-fusion,  
 annotative-partiality, and proto-channel operators.  
 In Neustein19 I describe these enriched theoris 
-as `q.Channelized Type Systems` and give a more 
+as \q{Channelized Type Systems} and give a more 
 expansive outline and explanation of their 
 formal properties.  For the moment, I will just 
-claim for sake of discussion that `q.Channelized` 
+claim for sake of discussion that \q{Channelized} 
 type theory according to these criteria is a 
 reasonable extension to clasical type theory and 
 that the published software represents a concrete 
 implementation of a prototype formal language 
 whose type system is Channelized in this sense. 
-`p`
-
-`p.
-Here I openly acknowledge that I am not 
+}
+\p{Here I openly acknowledge that I am not 
 providing a rigorous mathematical exposition of 
 these Channelized Type Systems, analogous to 
 how other extensions would be presented 
 in the type-theory community proper.  This 
-is partly be personal choice: I am both 
+is partly be personal choic: I am both 
 more interested in and more capable of 
 examining forms of type theory via their 
 concretization in implemented programming 
 languages, rather than their mathematical 
-exposition in `q.abstract` programming languages.  
+exposition in \q{abstract} programming languages.  
 It is certainly possible to formulate formal 
 languages as mathematical constructs, using 
 theorems as de facto guarantees of their behavior.  
@@ -121,15 +116,13 @@ Such hypothetical languages are still not
 actually implemented, however.  Provable 
 claims about programming languages are importamt, 
 but also valuable are specific implementations 
-of languages %-- i.e., software that reads source-code 
+of languages \mdash{} i.e., software that reads source-code 
 files conformant to the language grammar and 
-executes operations described by that code %-- 
+executes operations described by that code \mdash{} 
 partly because the code realizing the language 
 itself then becomes a concrete artifact 
 which can be studied and analyzed in turn.
-`p.
-
-`p`
+\p{}
 Concrete language implementations are 
 therefore an alternative framework for 
 developing type theory, separate from purely 
@@ -137,14 +130,11 @@ mathematical type theories and from the
 kinds of type systems central to mathematical 
 foundations research (e.g., Homotopy Type Thory).  
 I'll refer to type theory in the former 
-sense as `i.experimental`/, in comparison to 
-`q.logico-mathematical` type theories, on the basis 
+sense as \i{experimental}, in comparison to 
+\q{logico-mathematical} type theories, on the basis 
 that claims about the type systems of concrete 
 programming languages are often defended by 
 appeal to empirical observations about 
 program-behavior rather than formal proofs.  
-`p`
-
-`p.
-
-`p`
+}
+\p{}
