@@ -1,0 +1,82 @@
+`section.Conclusion`
+`p.
+In the last section, I outlined a theory 
+of `i.annotative fusion` which generalizes 
+(and migrates from natural to formal languages) 
+Link Grammar to fields like type theory, 
+programming language design, and (suitably 
+extended) lambda calculii.  The crux of this 
+extension is taking a formulation of 
+hypergraph transforms %-- where hypergraph 
+edge-pairs map to annotatd hypredges %-- and 
+then reading `q.annotations` as general computational 
+structures, where an `q.annotative fusion` represents 
+the executive machinery requisite to implement 
+(sequential or concurrent) calls between 
+procedures.  As with link grammar, which recognizes 
+many link types (or in these terms many 
+premises for tail-to-head pre-annotation fusion), 
+this rough picture allows many different kinds 
+of inter-procedure calls, coding paradigms, 
+and functional side-effects to be represented.  
+For example, Object-Oriented code exhibits a 
+particular kind of inter-procedure connection, 
+subject to special semantic and 
+syntactic conventions (notably the object 
+value in an expression is bound to a `q.this` 
+or `q.self` symbol in the callee code).  In 
+languages like `Cpp; and Java, Object-Oriented 
+expressions are notated by placing the object symbol 
+(or nested expression) before a `q.dot` token and 
+then a function name.  The `q.dot` then signals 
+the presence of two connectors, one to its left 
+that marks a symbol or expression as an object 
+(and thus connected to a `q.this` symbol in callee code) 
+and one to its right that marks a symbol 
+as a function name (and so bound to whichever  
+procedure uniquely resolves the procdure-call 
+at runtime given the runtime type of 
+the arguments).  
+`p`
+
+`p.
+As this example shows, one could write a formal 
+grammar for Object Oriented languages 
+%-- e.g. for a valid expression using an 
+object and a valid signature of a function that takes an 
+object as its `q.this` argument %-- with syntax-rule 
+representations essentially identical to Link Grammars 
+for Natural Language.  In place of link-types 
+like verb-subject, verb-object, antecedent-pronoun, 
+etc., this `i.programming` language grammar would 
+have connections like object-expressions and 
+object-symbols to `q.this` tokens, thrown 
+exception-exprssions to symbols declared in 
+`q.catch blocks`/, and so on.  Expanding this 
+idea, we can say that modern programming languages 
+have multiple form of inter-procedure exchange of 
+values, and that for each such alternative 
+there is a distinct link-type and a distinct pair 
+of `q.connectors` (in established Link 
+Grammar terminology) or `q.pre-annotations` 
+modeling how values get passed between procdures 
+insofar as that communicative protocol is in effect.  
+Object-Oriented code uses one protocol for objects, 
+a different protocol (essentially the classical 
+Lambda Calculus) for other functional arguments, 
+and a third protocol for throwing and catching 
+exceptions.  In the context of this paper, 
+these protocols correspond with specific 
+compatibilities between pre-annotations and 
+specific regimes for annotative fusion.  
+Within each experession/signature match, there 
+are in general multiple `q.annotative fusion 
+regimes` which must all be properly provisioned 
+by the desired procdure-call for the fusion 
+to be acceptable.    
+ 
+`p`
+
+`p.
+
+`p`

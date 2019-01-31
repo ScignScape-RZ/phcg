@@ -450,7 +450,311 @@ accordingly be reassuring if notions like
 could be employed as foundations for a formal 
 theory of grammar and/or semantics with a 
 degree of rigor comparable to, say, Link 
-Grammar in its computational form, or ztyp-Thoretic 
-Semantics in the sense of Luo, postjovsky, etc...  
+Grammar in its computational form, or type-Thoretic 
+Semantics in the sense of Zhaohui Luo, 
+James Pustejovsky, etc... 
+Such a theory \mdash{} and potentially concrete 
+technologies associated with it \mdash{} would also 
+then have a reasonable ground of comparison 
+to the Semantic Web and, in the contxt of 
+Phenomnology, to the formalizing influenc 
+which Semantic Web paradigms have exerted on 
+projects to unite Phenomenology with science 
+and with Analytic Philosophy.
+}
+\p{Given these considerations, I propose that 
+formal grammars with the same underlying 
+structure as Natural-Language Link Grammars 
+can indeed be used as a foundation for type-theortic 
+and programming-language-design methodology.  The 
+key step here is to generalize Link Grammar's 
+notion of a \q{connector} \mdash{} the aspect of a 
+word or lexeme that allows (or requires) compltion 
+via another word \mdash{} to a gneric data structure 
+where connections can be made between different 
+parts of a system on the basis of double 
+potentials that must be in some sense \q{compatible} 
+for the connection to be valid.  One way to 
+visualize such a systm is via graph thory: 
+imagine a form of graps where nodes are 
+annotated with \q{potentials} or \q{half-edges}; 
+a complete edge is then a union of two half-edges.  
+Half edges are also classified into different 
+families, and there are rules governing when a 
+hald-edge of one family may link with a half-edge 
+of another.  In the case of Link Grammar, these 
+classifications are based on surface language structure 
+\mdash{} head/dependent and left-to-right relations \mdash{} 
+from which a suite of links and connection rules 
+are define (for instance abstractly a head/right 
+word must link to a dependent/left word, a rule that 
+then becomes manifest in specific syntactic rules, 
+like how a verb links to its subject).  For a 
+more generic model, however, we can stipulate only 
+that there is \i{some} classification of connectors 
+governs by \i{some} linkage rules, to be specified 
+in different details for different modeling domains.
+}
+\p{Such a graph model expands upon the notion 
+of \i{labeled} graphs, where edges are annotated 
+with labels that characterize the kind of relation 
+modeled via the edge itself.  A canonical example 
+is Semantic Web graphs: the edges in any 
+Semantic Web structure are labeled with \q{predicates}, 
+defined in different Ontologies, specifying what sort 
+of relation exists between its adjacent nodes.  
+That is, in the Semantic Web, nodes are not 
+\q{abstractly} linked but rather exhibit 
+concrete relations: a person is a citizen 
+of a country, two persons are married, and so forth.  
+These structurs ar ethen concete instancs of Labeled 
+Graps as abstract mathematical structures.  Based on 
+Link Grammar, we can then refine this modle 
+be splitting labels into two parts, and 
+allowing edges to be incomplete: a fully 
+formed edge is possible when the label-parts 
+on one side are compatible with the label-parts 
+on another.  One valid class of graph transforms 
+is then a mapping where a graph is altered by unifying 
+two half-edges into a complete edge, subject to 
+the relevant linkage rules.
+}
+\p{Another way of modeling this kind of structure is via 
+edge-annotations and a rule for unifying two edges into 
+an edge-annotation pairing.  For sake of 
+discussion, I will express this in terms of 
+Directed Hypergraphs: assume that edges are 
+\q{hyperedges}, connecting \i{sets} of nodes.  
+In Hypergraph theory, the nodes incident to a hyperedge 
+are divided into a \q{head set} and \q{tail set}; 
+these sts can then aggregate as \q{hypernodes}.  
+We can then define a kind uf unification where 
+the \q{tail hypernode} of one hyperedges joins 
+with the \q{head hypernode} of another, producing 
+a new hypredge whose head comes from the 
+first former hyperdge and whose tail comes from the 
+secon.  The merged hypernodes, in turn, form a new 
+hypernode which \q{annotates} the new hyperedge 
+(this new hypernode is not connected to the graph 
+via other nodes, but is indirectly \q{part} of 
+the graph through the hyperedge it annotates).  
+\i{Annotated} hyperedges therefore differ from 
+\q{non-annotated} hyperdges in that the former are the 
+result of a merger between two of the latter.   
+The rules governing when such merger is possible 
+\mdash{} and how to map a pair of hypernodes into a
+single \q{annotative} hypernode (which 
+belongs to the graph through the aegis of 
+its annotated hyperdge) are not internal 
+to the graph theory, but presumed to be 
+specified by the modeling environment where 
+implemementations of such graphs are 
+technologically applied.  Annotated Directed 
+Hypergraphs are then \q{complete} in a sense 
+if every \q{un-annotated} hyperedge has been 
+subsumed into an annotated hyperedge, via a 
+fusional process we can call a  
+\q{annotative-fusional transform}.
+}
+\p{Extending this model further, we can say that the 
+tail of an \i{un-annotated} hyperedge is a 
+\q{tail pre-annotation}, since it is poised to 
+be merged into an annotation.  Analogously, 
+the head of an un-annotated hyperedge is a 
+\q{head pre-annotation}, and \q{annotative fusion} 
+is the synthesis of a head and a 
+tail pre-annotation (triggering a synthesis of 
+their incident hyperedges).  Correlate to annotative 
+\i{fusion} we can define a notion of annotative 
+\i{partiality}, referring to the \q{incompleteness} 
+of pre-annotations which leaves room for their fusion.
+}
+\p{It turns out that annotative fusion and partiality 
+in this sense is a non-trivial 
+model for computation in general, and can be extended 
+to a form of type theory and process calculus.  
+The idea is that computational procedures can be 
+modeled as hypergaphs (computer source code 
+can certainly be modeled as hypergraphs which 
+are productions of a certain class of parsing 
+engines).  Each \q{value} affected by a 
+procedure \mdash{} or more technically the source code symbols 
+and memory addresses that \q{carry} a valu \mdash{} is 
+then modeled as a hypernode that can link with 
+other hypernodes in the scenario where one procedure 
+calls a different one.  Annotative fusion is then 
+a phenomenon of values being transferred from 
+one excuction environment (associated with 
+the caller procedure) to a second one (associated with 
+the callee).  The \q{annotations} themselves 
+are then in this context the full set of type 
+coercions, type checks, synchronization 
+(e.g. resource locks or thread blocks depending on 
+whether or not the caller waits for the callee to 
+finish), and any other validations to ensure that 
+the procedure call is appropriate.  Annotative fusion 
+also provides a formal basis for developing the 
+intuition that \q{procedural networks} are rigorous 
+representations of information spaces \mdash{} 
+annotative fusions capture the precise details 
+of procedures linking (via caller/callee relations) 
+with other procedures.   
+}
+\p{Type-theoretically, annotative partiality extends 
+conventional applied type theory 
+(as in the Typed Lambda Calculus) in parallel 
+to partial-labels extending labeled graph theory.  
+It is paradigmatic in the theory of typed procedures 
+and of \q{effect systems} that the type of a procedure 
+is determined (up to certain equivalences that may discard 
+overly granular type distinctions) by the types of 
+all values affected by the procedure (including but 
+not necessarily limited to the types of input 
+and output parameters).  We can then superimpose 
+on this model an account of annotative partiality.  
+Specifically, on the paradigm that procedure-calls 
+are structurally represented as annotative fusions over 
+Directed Hypergraphs, the values manipulated by 
+a procedure are pre-annotations: they are not 
+(in the \i{implementation} of a procedure, 
+as a formal object) single values but rather 
+typed spaces that can take on a spectrum of 
+possible values depending on the inhabitants of 
+their types.  When a procedur is \i{called} these values 
+become concretized, but as a formal system procedural 
+networks model software in terms of its capabilities 
+and expected behavior, rather than the state at 
+any moment when the software is actually running.  
+Partiality therefore models how precedures 
+(as formal objects) deal with potntialities 
+\mdash{} we do not know what values will \i{actually} 
+be present at runtime (e.g. what specific 
+values passed to a procedure as arguments), 
+so procedural analysis is essentially characterized 
+by a partiality of information.  When one procedure 
+calls another, the caller must build an 
+\i{expression} \mdash{} a gathering of values that provide all 
+the information th callee requires \mdash{} thereby 
+creating a case of mutual-completion: the caller has 
+values but not an algorithm 
+to operate on them; the callee has an algorithm 
+(that's what it implements) but needs concrete 
+values in order to produce concrete values.  
+This dual partiality allows the caller to 
+call the callee, via an \i{expression} which is part 
+of the callee's implementation (represented as a 
+hypergraph) which must in turn match the 
+callee's signature \mdash{} epigrammatically, we 
+can say that \q{expressions are annotative-fusional 
+duals of signatures}.  The point here is that whereas 
+signatures are conventionally understood to be 
+type-declarations assigning types to procedures, 
+with annotative partially we can more 
+precisely recognize signatures as stipulating 
+\i{pre-annotative} types.  The values carried 
+within expressions also have pre-annotative types, 
+but there is a distinction between types in the context 
+of expressions and types in the context of signatures 
+\mdash{} and moreover this distinction is precisely the 
+manifestation of the abstract head-pre-annotation 
+and tail-pre-annotation contrast in the specific 
+context of procedural networks.  Just as 
+signatures unify multiple types into one 
+profile, we can analogously defined 
+\q{expression types} as the aggregate of all types 
+from values affecting the expression \mdash{} note that 
+this is different from the type of the exprssion's 
+calculated \i{result}, just as th type of 
+a function is different than the type of its 
+return value.  Expression-types and signature-types 
+are almost exact duals (the complication being 
+default values for optional parameters, which 
+are not directly represented in exprssions 
+\mdash{} obviously, since then they would not be 
+missing).  The \q{duality} involved here 
+derives from partitioning a type system into 
+\q{exprssion annotative partials} and 
+\q{signature annotative partials}, a projection 
+of head/tail duality in an abstract thory 
+of Annotated Directed Hypergraphs
+(and analogous to head/dependent 
+and left/right partiality in Link Grammar). 
+}
+\p{This notion of expression/signature duality is not 
+just speculative; I believe it has rich potential 
+for new techniques in data modeling, program analysis, 
+and code verification, and is a core dimension 
+of software distributed as part of a research-sharing 
+platform, currently used in connection with 
+several publications spanning multiple publishers 
+and academic disciplines.\footnote{See Rodger2016, Prague2015, BHP2018, Neustein2019, 
+and the \q{ScignScape} repository on github: 
+most of these are examples where authors or 
+publishers supplemented a prior book or article 
+with a curated data set, or \q{Research Object}, 
+where the data set is downloaded along with 
+code from which customized software can be compiled specific 
+to the data set and text being shared, 
+software I devloped in part as a prototype or 
+experimental sandbox for computational models 
+mentioned here (in the case of the 2019 volume, part 
+of Springer's \q{Advances of Ubiquitous Sensing in 
+Healthcare} series, the data sets and publication 
+are developed in consort).
+}
+The path I have sketched here from Link Grammar 
+to a theory of Procedural Networks is similar, 
+if not technically equivalent to, analogous 
+analyses associated with OpenCog, for example 
+(particularly in Ben Goertzel's two-volume 
+\i{Engineering General Intellignce}).
+}
+\p{The software I just dscrribed in rlation to certain 
+published data sets certainly is narrower and 
+more nascent than OpenCog components like AtomSpace.  
+At the same time, it has been more directly 
+formulated in relation to academic and publishing 
+workflows and is more precisely sited 
+in academic and research-sharing domains (and moreover 
+remains agnostic \visavis{} the more extravagant 
+\q{Artifical General Intelligence} claims).
+It is also almost entirely self-contained, 
+with few external software dependencies, which 
+arguably makes this software a more accessible 
+test-bed for refining and analyzing formal 
+properties of structures I have outlined here 
+\mdash{} in particular a generalization 
+of Link Grammar to a working model 
+of computation, perhaps via what I have dubbed 
+\q{annotative fusion}.  In any case, 
+both OpenCog and, I would like to believe, 
+this published software (designed to emulate some 
+of OpenCog's architectural features but on a 
+smaller-scale and mor self-contained foundation) 
+are concrete technologies that take Link Gramar 
+and Procedural Networks (in one sense or another) 
+as modeling and linguistic paradigms.  In this 
+sense they may be contrasted with Semantic Web 
+technologies, which are based on labeled directed 
+graphs and Description Logics.  Phenomenologically, 
+we can then give formal analogs to back up the 
+comparisons I intimated earlier: between the Semantic 
+Web as a formal case-study and retroactive intution for 
+Phenomenology, but one paradigmatically grounded 
+in classical logic and truth-theortic semantics, 
+and other paradigms \mdash{} here developd via 
+Annotated Hypergraphs, annotative fusion, and 
+annotative partiality add a new structural layer to 
+lambda-calculus-style type thory \mdash{} informed 
+via linguistic (rather than logical) methods like 
+Link Grammar and arguably more compatible 
+with Cognitive Grammar (and Cognitive Phenomenology).  
+Here I make the implicit assumption that such an 
+\q{annotative partiality} and hypergaph-based type 
+theory prsents a formal foundation fundamentally different, 
+in some philosophically interesting sense, from classical 
+formal logic.  Fully defending this claim is outsude 
+the scope of this paper, but I will offer a 
+few comments on this topic in conclusion.
 }
 \p{}
