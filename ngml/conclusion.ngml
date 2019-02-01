@@ -315,11 +315,75 @@ asymptotically toward formal precision
 %-- this is a precondition of any commitment 
 to software quality %-- but tries 
 to achieve formal guarantees through a crucible of 
-  
- 
-
+trial-and-error and test-and-failure.  
+The programmer who writes software as 
+part of a research project is suspended between 
+two different regimes of scientific rigor, 
+or communicative rationality %-- the software 
+itself is (albit in digital incarnation)  a
+`i.thing`/, which hoperfully does what it is 
+supposed to, a mechanical ventriloquist endorsing 
+th author's claims.  What software offers the research 
+ecosysem is a raw performativity that transcends 
+disciplinary boundaries.  We can dispute the author's 
+claims and how much leeway we grant the 
+author in defending these claims, but not 
+the behavior of the software itself.  The author's 
+`q.hacker` persona lifts her outside of any 
+institutional or disciplinary enclosure other than 
+the push to get `i.this` code to work, this 
+one further piece to the puzzle.  But any claim 
+that software %-- apart from its practical uses 
+%-- by its very implementation serves as a kind 
+of warrant for scientific or philosophical 
+claims brings us back to a communicative 
+and disciplinary rationality %-- the onus is 
+on the author to justify that her software's 
+behavior demonstates some principle of 
+acadmic interest, something outsid itself.  In my 
+case the relevant claim would be, for example, 
+that the code paired with this paper demonstrates how 
+Channelized Type Theory or `q.annotative fusion` is a 
+credible and practically useful model of computation.   
 `p`
 
 `p.
+But at least when evaluating these claims we're not 
+just talking about philosophical arguments and 
+the intellectual ecosystms where philosophical discussions 
+happen %-- the journals, classrooms, and conferences.  
+We're also talking about software and technology 
+%-- something that can be downloaded, experimented 
+with, improved, fully transparent.  The 
+ad-hoc rationality of this transparency is somewhat 
+different than the partial obscurity of peer review, 
+closed-access journals, monetized conferences, 
+or disciplinary exclusivity.  Software is not 
+a degree.  This transparent rationality is 
+perhaps a natural complement to Phenomenology's 
+`q.to the things themselvs`/.  Software is, 
+par excellence, expertise in the thing itself.  
+Software is intellectual cryptocurrency; the 
+intelligence of the digital challenging 
+the rigor and scientificity of the 
+brick-and-mortar and the institutional.  
+As the mortar unifying a research community 
+software is syndicalistic rather than 
+hierarchical.  But in this sense collaborative 
+software dvelopment %-- as well as the communal 
+evaluation of published software %-- is an 
+intriguing instance of Habermassian discourse 
+communitis.  Software can help lead philosophy 
+back to its Habermassian ethical wellspring. 
+`p`
 
+`p.
+Perhaps ironically, the thread developing 
+Phenomenology in its most `q.Naturalizing` 
+and scientific aspirations is also a 
+gateway to an experimental, even `q.post-modern` 
+and even political and polticized temperament.  
+The Analytic and the existential-political 
+trajectories of Phenomenology are not 
+so far apart, after all. 
 `p`
