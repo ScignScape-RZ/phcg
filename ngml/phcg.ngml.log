@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  31 JAN 2019 16:03
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  31 JAN 2019 20:45
 entering extended mode
 **phcg.ngml.tex
 (C:\scign\phcg\ar\ngml\phcg.ngml.tex
@@ -944,7 +944,7 @@ Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
  []
 
-[32]) [33] (C:\scign\phcg\ar\ngml\phcg.ngml.aux)
+[32] [33] [34]) [35] (C:\scign\phcg\ar\ngml\phcg.ngml.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -966,9 +966,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on phcg.ngml.pdf (33 pages, 269466 bytes).
+Output written on phcg.ngml.pdf (35 pages, 279050 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  34317 words of extra memory for PDF output out of 35830 (max. 10000000)
 
