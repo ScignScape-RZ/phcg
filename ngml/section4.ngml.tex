@@ -579,7 +579,7 @@ can certainly be modeled as hypergraphs which
 are productions of a certain class of parsing 
 engines).  Each \q{value} affected by a 
 procedure \mdash{} or more technically the source code symbols 
-and memory addresses that \q{carry} a valu \mdash{} is 
+and memory addresses that \q{carry} a value \mdash{} is 
 then modeled as a hypernode that can link with 
 other hypernodes in the scenario where one procedure 
 calls a different one.  Annotative fusion is then 
@@ -600,8 +600,120 @@ annotative fusions capture the precise details
 of procedures linking (via caller/callee relations) 
 with other procedures.   
 }
-\p{Type-theoretically, annotative partiality extends 
-conventional applied type theory 
+\p{The constituent units of procedural networks are 
+inter-procedure calls \mdash{} but procedural networks 
+also reveal dimensions of connectivity and 
+and clustering characteristic of large, complex 
+networks (and the graphs that represent them) in general.  
+What appears as one function-call in source code can 
+actually represent many different inter-procedure connections, 
+a phenomenon reflecting \q{overloading} and \q{genericity} 
+in programming language theory.  Functions are generic 
+in the sense that any one of their arguments can take 
+multiple types \mdash{} either because the function is 
+explicitly declared to tak a \q{typeclass} or a single type 
+for that argument, or because an instance of a given 
+type may actually be at runtime an instance of some subtype.  
+The engine which actually implements inter-procedure calls 
+\mdash{} i.e., the programming-language implementation \mdash{} 
+needs to factor this genericity into runtime decisions, so 
+a single expression in one function body can branch 
+to many different called procedures.  This is the 
+essential core of the \q{semantics} of programming 
+languages: data structures manipulated by computer code do 
+not \i{intrinsically} represent real-world, 
+non-digital phenomena, though they 
+ar enginered to model external data when used properly.  
+However a code base does \i{internally} posess a space 
+of implementd functions, and a symbol at one 
+place in source can match to some set of other 
+functions so as to effect a procedure call.  This 
+\q{matching}, and the rules governing how 
+\q{overload resolution} occurs \mdash{} \q{overload} 
+meaning that a given notated procedure call can actually 
+branch to multiple functions, so runtime 
+information is needed to select the right one \mdash{} are 
+the essential formal principles governing the 
+semantics of computer code.
+}
+\p{From this basis, all the same, computer code can model 
+a wide range of empirical phenomena.  Generic code 
+represents generic patterns of functional organization, 
+allowing models to be built from varying layers of 
+abstraction.  From this perspective, to 
+describe an empirical system it is neessary to 
+identify important behaviors and functional patterns 
+via which the system's observed behavior can be 
+notated and/or simulated.  To the degree that 
+systems take on functional organizations that can be 
+abstractly described, similar to the functional 
+dynamics of other systems, their behavior 
+can be represented and/or simulated via gneric 
+cod.  To the degree that thre are particular 
+details of a system's behavior that are more 
+idiosyncratic to that system, and need to be modeled 
+precisely, procedures can be crafted specifically 
+for obsevring and emulating that exact behavior.  
+More generic and more exact procedural implementations 
+can coexist in a single code base, with generic 
+functions calling granular functions narroed to 
+precise types, and vice-versa.  The coexistence of 
+generalization and specificty is an essential fatures 
+of code bases and, by extension, of procedural networks, 
+ensuring the flexibility of these ntworks 
+as tools to model information spaces. 
+}
+\p{Unfortunately, this kind of \q{procdural} modeling 
+is hard to intgrate with the more static techniques 
+reprsentd by the Semantic Web and the current 
+\q{Big Data} fad.  The latter paradigms tend to treat 
+data as a static repository to be mined for patterns 
+and insights, rather than a digital 
+simulation or encoding of dynamic real-world systems.  
+The Semantic Web, as a large, collaborative modeling 
+project, evolved largely apart from the technological 
+community concerned with computer simulations and 
+the programming techniques which emerged from there, 
+like Object-Orientation.  This divergnce is relevant 
+for linguistics and cognitive science, because I would 
+argue that the more \q{dynamic} paradigm is actually 
+more \q{Semantic} in a Natural Language sense.  
+In other words, our cognitive dispositions 
+when interpreting empirical phenomena \mdash{} and 
+matching these interpretations to linguistic 
+cues \mdash{} are more like procedural networks 
+capturing functional patterns and layers of genericity 
+in observed phenomena, rather than an accretion of 
+static data.  The techniques of procedural data 
+modeling may therefore be relevant for Cognitive 
+Linguistics and Cognitive Phenomenology 
+because they aspire to something which, arguably, 
+the mind does instinctively: build 
+cognitive or computational models of 
+dynamic, functionally organized phenomena.
+}
+\p{As a corrolary, the theoretical building-blocks 
+of Procedural Data Modeling \mdash{} how it leverages 
+type theory, programming language semantics, and 
+so forth \mdash{} can provide at least 
+analogs or case-studies for corresponding cognitive 
+phenomena.  Here I would argue that generalizing 
+Link Grammar from Natural Language to formal 
+languages, type systems, and lambda calculii 
+yields added structures to type thory that 
+are useful toward a more rigorous \q{theory} of 
+Procedural Data Modeling \mdash{} a thory of natural 
+linguistics generalized to a theory of gneral data 
+reprsentation which, in turn, may offer 
+insights onto the cognitive dynamics underlying 
+(prelinguistic) situational/perceptual 
+comportments and interpretation.
+}
+\p{Type-theoretically, annotative partiality \mdash{} which 
+recall is my terminology for the abstract 
+generalization of the mutual \q{incompleteness} in 
+Link Grammar connctors, driving their 
+link-fusion \mdash{} extends conventional applied type theory 
 (as in the Typed Lambda Calculus) in parallel 
 to partial-labels extending labeled graph theory.  
 It is paradigmatic in the theory of typed procedures 
@@ -620,13 +732,13 @@ a procedure are pre-annotations: they are not
 as a formal object) single values but rather 
 typed spaces that can take on a spectrum of 
 possible values depending on the inhabitants of 
-their types.  When a procedur is \i{called} these values 
+their types.  When a procedure is \i{called} these values 
 become concretized, but as a formal system procedural 
 networks model software in terms of its capabilities 
 and expected behavior, rather than the state at 
 any moment when the software is actually running.  
 Partiality therefore models how precedures 
-(as formal objects) deal with potntialities 
+(as formal objects) deal with potentialities 
 \mdash{} we do not know what values will \i{actually} 
 be present at runtime (e.g. what specific 
 values passed to a procedure as arguments), 
@@ -634,12 +746,12 @@ so procedural analysis is essentially characterized
 by a partiality of information.  When one procedure 
 calls another, the caller must build an 
 \i{expression} \mdash{} a gathering of values that provide all 
-the information th callee requires \mdash{} thereby 
+the information the callee requires \mdash{} thereby 
 creating a case of mutual-completion: the caller has 
 values but not an algorithm 
 to operate on them; the callee has an algorithm 
 (that's what it implements) but needs concrete 
-values in order to produce concrete values.  
+values so to produce concrete values.  
 This dual partiality allows the caller to 
 call the callee, via an \i{expression} which is part 
 of the callee's implementation (represented as a 
@@ -660,12 +772,12 @@ manifestation of the abstract head-pre-annotation
 and tail-pre-annotation contrast in the specific 
 context of procedural networks.  Just as 
 signatures unify multiple types into one 
-profile, we can analogously defined 
+profile, we can analogously define  
 \q{expression types} as the aggregate of all types 
 from values affecting the expression \mdash{} note that 
 this is different from the type of the exprssion's 
-calculated \i{result}, just as th type of 
-a function is different than the type of its 
+calculated \i{result}, just as the type of 
+a function is different from the type of its 
 return value.  Expression-types and signature-types 
 are almost exact duals (the complication being 
 default values for optional parameters, which 
@@ -673,9 +785,9 @@ are not directly represented in exprssions
 \mdash{} obviously, since then they would not be 
 missing).  The \q{duality} involved here 
 derives from partitioning a type system into 
-\q{exprssion annotative partials} and 
+\q{expression annotative partials} and 
 \q{signature annotative partials}, a projection 
-of head/tail duality in an abstract thory 
+of head/tail duality in an abstract theory 
 of Annotated Directed Hypergraphs
 (and analogous to head/dependent 
 and left/right partiality in Link Grammar). 
