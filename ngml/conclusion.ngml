@@ -218,7 +218,106 @@ Husserl's `i.Logical Investigations`/).
 `p`
 
 `p.
-But relative to Petitot's mathematical 
+But relative to Petitot's mathematical treatments, 
+I would argue that `q.experimental` formalisms 
+are even more significant departures from a 
+philosophical paradigm which essentially 
+reduces formalization in general to a 
+presentation of logical-axiomatic reconstructions 
+of empirical (emergent, higher-scale) phnomena.  
+The rationale behind exercising a new type theory 
+via concrete software exemplifications rather than 
+via a theorem-driven mathematical treatment 
+is that essential structural details may be 
+evident in th concrete implementation which get 
+lost in a mathematical reduction.  After all, 
+the principle of `q.Turing equivalnce` sugests 
+that at some mathematical level all programming 
+languages are behaviorally indistinguishable.  
+Insofar as grammatical or pragmatic differences 
+between programming languages are nonetheless 
+interesting as case-studies for semiotic or 
+philosophical themes %-- insofar as programming 
+languages, while `q.constructed` and constrained by 
+the need to manipulate computer operations as 
+well as express coding intent for the benefit of 
+other programmers, are still `q.languages` and 
+can suggest insights for human languages as 
+well %-- the fact that higher-level programming 
+structures get reduced away under mathematical 
+treatments of programming languages shows that 
+treating these languages as just mathematical 
+objects is not a useful theoretical maneuver 
+in this contexts.  After all, several 
+high-level features of some programming languages %-- 
+including Object-Orientation, monads, functional 
+side-effects, continuations, type coercion, and 
+lambda abstraction %-- have been studied as 
+potential formal models of Natural Language 
+features as well.  These analyses clearly 
+require and presuppose a theory of 
+programming languages where Objects, monads, 
+effect-systems, and the like are first-class 
+posits rather than epiphenomena that get 
+analytically erased under mathematical 
+reduction.      
+`p`
+
+`p.
+But such a non-reductive theory of programming languages 
+arguably needs to be `q.experimental`/, centered on 
+these languages as software artifacts, whose properties 
+and behavior are tested empirically.  If 
+progreamming languages are also case-studies for 
+Phenomenology, their status as formalizations is 
+likewise experimental %-- Phenomenology 
+grounding itself in a science that is 
+observational rather than logico-mathematical; 
+that progresses by practical tinkering 
+rather than by asserting axioms and proving theorems.
+`p`
+
+`p.
+This experimental modus operandi does not only 
+affect how research proceeds; it also alters 
+how research intersects with the txtual and 
+publishing ecosystm.  If computer code is 
+an essential part of an autgor's argumntation, 
+then the author is responsible for curating a 
+code base as well as perfecting a written 
+exposition.  The publication itself does not only 
+exist as a book or article but extends also to 
+an open-source repository which needs tobe 
+used and maintained.  The author herself 
+presents as competent in the technological and 
+computational skills associated with 
+creating and maintaining an open-source repository 
+as well as in the subject-matter covered in 
+academic text.  Disciplinary expertise is 
+complemented with literacy in practical tools 
+needed to work with repositories, like
+GitHub and the GNU Compiler Collection.
+`p`
+
+`p.  
+There is also a more subtle sense that curating a 
+complex code base demands %-- or brings forth %-- 
+an experimentalist attitude that stands 
+apart from the conventional style of philosophical 
+thought.  Software development is 
+unapologetically trial-and-error, ad-hoc, 
+intuitive, relativly informal %-- the 
+programmer is a hacker as much as a scientist.  
+In the landscape of 20th-century philosophy, 
+software development is metaphorically 
+post-modern, perhaps Deleuzian.  It reaches 
+asymptotically toward formal precision 
+%-- this is a precondition of any commitment 
+to software quality %-- but tries 
+to achieve formal guarantees through a crucible of 
+  
+ 
+
 `p`
 
 `p.
