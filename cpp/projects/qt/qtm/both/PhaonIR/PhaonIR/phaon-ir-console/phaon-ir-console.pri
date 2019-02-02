@@ -36,6 +36,7 @@ HEADERS += \
 
 SOURCES += \
   $$SRC_DIR/main.cpp \
+  $$SRC_DIR/local-program.cpp \
 
 
 LIBS += -L$$TARGETSDIR -lphaon-ir

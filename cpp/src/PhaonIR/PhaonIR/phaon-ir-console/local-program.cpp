@@ -9,11 +9,10 @@
 
 #include <QDebug>
 
-extern void local_program(PhaonIR& phr);
-
-int main(int argc, char **argv)
+void local_program(PhaonIR& phr)
 {
- PhaonIR phr;
- local_program(phr);
- qDebug() << "ok";
+ phr.init_type_system();
+ phr.init_type("u4");
+
+ phr.init_channel_group_stack();
 }

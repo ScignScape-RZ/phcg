@@ -7,15 +7,22 @@
 #ifndef PHAON_IR__H
 #define PHAON_IR__H
 
+#include <QString>
+
+
+class PHR_Type_System;
 
 class PhaonIR
 {
+ PHR_Type_System* type_system_;
 
 public:
 
  PhaonIR();
 
  void init_channel_group_stack();
+ void init_type_system();
+ void init_type(QString type_name);
 
 };
 
