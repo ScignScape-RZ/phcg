@@ -31,34 +31,27 @@ DEFINES += USE_KANS
 
 HEADERS += \
   $$SRC_DIR/phaon-ir.h \
+  $$SRC_DIR/channel/phr-channel-group.h \
+  $$SRC_DIR/channel/phr-channel-stack.h \
+  $$SRC_DIR/channel/phr-channel-semantic-protocol.h \
+  $$SRC_DIR/channel/phr-channel.h \
+  $$SRC_DIR/channel/phr-carrier-stack.h \
+  $$SRC_DIR/channel/phr-carrier.h \
+  $$SRC_DIR/types/phr-type.h \
+  $$SRC_DIR/types/phr-type-system.h \
 
 
 SOURCES += \
   $$SRC_DIR/phaon-ir.cpp \
+  $$SRC_DIR/channel/phr-channel-group.cpp \
+  $$SRC_DIR/channel/phr-channel-stack.cpp \
+  $$SRC_DIR/channel/phr-channel-semantic-protocol.cpp \
+  $$SRC_DIR/channel/phr-channel.cpp \
+  $$SRC_DIR/channel/phr-carrier-stack.cpp \
+  $$SRC_DIR/channel/phr-carrier.cpp \
+  $$SRC_DIR/types/phr-type.cpp \
+  $$SRC_DIR/types/phr-type-system.cpp \
 
-
-
-contains(CHOICE_FEATURES, "kcm_ecl") \#/
-{
- LIBS += -L$$TARGETSDIR -lkcm-lisp-bridge -lrz-dynamo-generator
- include(../../../../find-ecl-sexp.pri)
- LIBS += -L$$ECL_DIR -lecl
- LIBS += -L$$CL_CXX_DIR/install/lib64 -lcl_cxx
-}
-
-
-contains(CHOICE_FEATURES, "iso-choice") \#/
-{
- exists($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/kauvir--kauvir-kcm--kcm-lisp-bridge) \#/
- {
-  LIBS += -L$$TARGETSDIR -lkcm-lisp-bridge -lrz-dynamo-generator
-  message(DEFINE\'ing ISO__USING_ECL)
-  DEFINES += ISO__USING_ECL
-  include(../../../../find-ecl-sexp.pri)
-  LIBS += -L$$ECL_DIR -lecl
-  LIBS += -L$$CL_CXX_DIR/install/lib64 -lcl_cxx
- }
-}
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
 mkpath($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
