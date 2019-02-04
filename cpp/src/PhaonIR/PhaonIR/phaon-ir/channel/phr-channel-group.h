@@ -14,7 +14,7 @@
 class PHR_Channel_Semantic_Protocol;
 class PHR_Carrier_Stack;
 
-class PHR_Channel_Group :
+class PHR_Channel_Group : public
   QMap<PHR_Channel_Semantic_Protocol*, PHR_Carrier_Stack*>
 {
 

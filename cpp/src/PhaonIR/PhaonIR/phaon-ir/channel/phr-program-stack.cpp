@@ -12,3 +12,9 @@ PHR_Program_Stack::PHR_Program_Stack()
 
 }
 
+void PHR_Program_Stack::each_carrier_stack(std::function<
+  void(PHR_Carrier_Stack&)> fn)
+{
+ for(PHR_Carrier_Stack* pcs : *this)
+   fn(*pcs);
+}

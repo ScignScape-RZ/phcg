@@ -10,6 +10,8 @@
 
 #include <QStack>
 
+#include <functional>
+
 class PHR_Carrier_Stack;
 
 class PHR_Program_Stack : public QStack<PHR_Carrier_Stack*>
@@ -18,6 +20,9 @@ class PHR_Program_Stack : public QStack<PHR_Carrier_Stack*>
 public:
 
  PHR_Program_Stack();
+
+ void each_carrier_stack(std::function<
+   void(PHR_Carrier_Stack&)> fn);
 
 
 };

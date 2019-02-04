@@ -9,17 +9,23 @@
 
 #include <QString>
 
+#include "accessors.h"
+
 class PHR_Type;
 
 class PHR_Carrier
 {
  QString symbol_name_;
+ QString raw_value_;
  PHR_Type* phr_type_;
 
 public:
 
  PHR_Carrier();
 
+ ACCESSORS(QString ,symbol_name)
+ ACCESSORS(QString ,raw_value)
+ ACCESSORS(PHR_Type* ,phr_type)
 
 };
 

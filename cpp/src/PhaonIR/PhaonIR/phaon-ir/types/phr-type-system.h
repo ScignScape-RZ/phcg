@@ -23,6 +23,8 @@ public:
 
  void check_add_type_by_name(QString name);
 
+ PHR_Type* get_type_by_name(QString name);
+
 
 };
 

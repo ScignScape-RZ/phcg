@@ -14,6 +14,11 @@ PHR_Type_System::PHR_Type_System()
 
 }
 
+PHR_Type* PHR_Type_System::get_type_by_name(QString name)
+{
+ return types_.value(name);
+}
+
 void PHR_Type_System::check_add_type_by_name(QString name)
 {
  auto it = types_.find(name);

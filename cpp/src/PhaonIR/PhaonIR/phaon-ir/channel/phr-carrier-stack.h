@@ -10,14 +10,19 @@
 
 #include <QStack>
 
+#include "accessors.h"
+
 class PHR_Carrier;
 
-class PHR_Carrier_Stack : QStack<PHR_Carrier*>
+class PHR_Carrier_Stack : public QStack<PHR_Carrier*>
 {
+ QString sp_name_;
 
 public:
 
  PHR_Carrier_Stack();
+
+ ACCESSORS(QString ,sp_name)
 
 
 };
