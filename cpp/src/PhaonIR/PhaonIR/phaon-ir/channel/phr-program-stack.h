@@ -4,22 +4,22 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
-#ifndef PHR_CHANNEL_STACK__H
-#define PHR_CHANNEL_STACK__H
+#ifndef PHR_PROGRAM_STACK__H
+#define PHR_PROGRAM_STACK__H
 
 
 #include <QStack>
 
-class PHR_Carrier;
+class PHR_Carrier_Stack;
 
-class PHR_Channel_Stack : QStack<PHR_Carrier*>
+class PHR_Program_Stack : public QStack<PHR_Carrier_Stack*>
 {
 
 public:
 
- PHR_Channel_Stack();
+ PHR_Program_Stack();
 
 
 };
 
-#endif // PHR_CHANNEL_STACK__H
+#endif // PHR_PROGRAM_STACK__H

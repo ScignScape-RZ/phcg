@@ -14,5 +14,9 @@ void local_program(PhaonIR& phr)
  phr.init_type_system();
  phr.init_type("u4");
 
- phr.init_channel_group_stack();
+ phr.init_program_stack();
+ phr.reset_program_stack();
+
+ phr.push_carrier_stack("lambda");
+
 }

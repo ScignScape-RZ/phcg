@@ -5,9 +5,9 @@
 //           http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "phr-channel-stack.h"
+#include "phr-program-stack.h"
 
-PHR_Channel_Stack::PHR_Channel_Stack()
+PHR_Program_Stack::PHR_Program_Stack()
 {
 
 }

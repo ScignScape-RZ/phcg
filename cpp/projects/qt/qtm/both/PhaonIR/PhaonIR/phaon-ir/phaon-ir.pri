@@ -32,7 +32,7 @@ DEFINES += USE_KANS
 HEADERS += \
   $$SRC_DIR/phaon-ir.h \
   $$SRC_DIR/channel/phr-channel-group.h \
-  $$SRC_DIR/channel/phr-channel-stack.h \
+  $$SRC_DIR/channel/phr-program-stack.h \
   $$SRC_DIR/channel/phr-channel-semantic-protocol.h \
   $$SRC_DIR/channel/phr-channel.h \
   $$SRC_DIR/channel/phr-carrier-stack.h \
@@ -44,7 +44,7 @@ HEADERS += \
 SOURCES += \
   $$SRC_DIR/phaon-ir.cpp \
   $$SRC_DIR/channel/phr-channel-group.cpp \
-  $$SRC_DIR/channel/phr-channel-stack.cpp \
+  $$SRC_DIR/channel/phr-program-stack.cpp \
   $$SRC_DIR/channel/phr-channel-semantic-protocol.cpp \
   $$SRC_DIR/channel/phr-channel.cpp \
   $$SRC_DIR/channel/phr-carrier-stack.cpp \
