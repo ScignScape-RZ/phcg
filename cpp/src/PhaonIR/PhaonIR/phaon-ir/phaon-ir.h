@@ -10,12 +10,20 @@
 #include <QString>
 #include <QMap>
 
+#include <functional>
+
+#include "accessors.h"
+
+#define PASTE_EXPRESSION(...) __VA_ARGS__
+
+
 class PHR_Channel_Semantic_Protocol;
 class PHR_Type_System;
 class PHR_Program_Stack;
 class PHR_Carrier_Stack;
 class PHR_Type;
 class PHR_Channel_Group;
+class PHR_Channel_Group_Evaluator;
 
 class PhaonIR
 {
@@ -27,12 +35,18 @@ class PhaonIR
  PHR_Carrier_Stack* current_carrier_stack_;
  PHR_Channel_Group* held_channel_group_;
 
+ std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
+   PHR_Channel_Group&)> load_evaluator_fn_;
+
  PHR_Carrier_Stack* get_carrier_stack_by_sp_name(QString sp_name);
  void check_semantic_protocol(QString sp_name);
 
 public:
 
  PhaonIR();
+
+ ACCESSORS(PASTE_EXPRESSION(std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
+   PHR_Channel_Group&)>) ,load_evaluator_fn)
 
  void init_program_stack();
  void reset_program_stack();

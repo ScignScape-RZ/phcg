@@ -39,6 +39,7 @@ HEADERS += \
   $$SRC_DIR/channel/phr-carrier.h \
   $$SRC_DIR/types/phr-type.h \
   $$SRC_DIR/types/phr-type-system.h \
+  $$SRC_DIR/eval/phr-channel-group-evaluator.h \
 
 
 SOURCES += \
@@ -51,6 +52,7 @@ SOURCES += \
   $$SRC_DIR/channel/phr-carrier.cpp \
   $$SRC_DIR/types/phr-type.cpp \
   $$SRC_DIR/types/phr-type-system.cpp \
+  $$SRC_DIR/eval/phr-channel-group-evaluator.cpp \
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

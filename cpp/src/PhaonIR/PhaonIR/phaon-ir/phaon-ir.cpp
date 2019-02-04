@@ -19,7 +19,7 @@
 PhaonIR::PhaonIR() :  type_system_(nullptr),
   program_stack_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
-  held_channel_group_(nullptr)
+  held_channel_group_(nullptr), load_evaluator_fn_(nullptr)
 {
 
 }
