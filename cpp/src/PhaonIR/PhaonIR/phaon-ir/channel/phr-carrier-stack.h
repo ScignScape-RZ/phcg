@@ -24,6 +24,9 @@ public:
 
  ACCESSORS(QString ,sp_name)
 
+ void indexed_each_carrier(std::function<
+   void(int, PHR_Carrier&)> fn);
+
 
 };
 

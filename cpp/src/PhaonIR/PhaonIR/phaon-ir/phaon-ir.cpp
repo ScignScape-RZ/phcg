@@ -13,6 +13,7 @@
 #include "channel/phr-carrier-stack.h"
 #include "channel/phr-carrier.h"
 #include "channel/phr-channel-group.h"
+#include "channel/phr-channel.h"
 
 
 PhaonIR::PhaonIR() :  type_system_(nullptr),
@@ -64,12 +65,23 @@ void PhaonIR::hold_type_by_name(QString ty_name)
  held_type_ = ty;
 }
 
+void PhaonIR::evaluate_channel_group()
+{
+
+}
+
 void PhaonIR::coalesce_channel_group()
 {
  PHR_Channel_Group* pcg = new PHR_Channel_Group;
  program_stack_->each_carrier_stack([pcg, this] (PHR_Carrier_Stack& pcs)
  {
-  pcg->insert(semantic_protocols_.value(pcs.sp_name()), &pcs);
+  PHR_Channel* pch = new PHR_Channel;
+  pcs.resize(pcs.size());
+  pcs.indexed_each_carrier([pch, this] (int i, PHR_Carrier& pcr)
+  {
+   (*pch)[i] = &pcr;
+  });
+  pcg->insert(semantic_protocols_.value(pcs.sp_name()), pch);
  });
  held_channel_group_ = pcg;
 }

@@ -44,6 +44,7 @@ public:
 
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
+ void evaluate_channel_group();
 
 };
 

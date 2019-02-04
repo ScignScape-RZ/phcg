@@ -12,10 +12,10 @@
 
 
 class PHR_Channel_Semantic_Protocol;
-class PHR_Carrier_Stack;
+class PHR_Channel;
 
 class PHR_Channel_Group : public
-  QMap<PHR_Channel_Semantic_Protocol*, PHR_Carrier_Stack*>
+  QMap<PHR_Channel_Semantic_Protocol*, PHR_Channel*>
 {
 
 public:

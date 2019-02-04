@@ -31,4 +31,6 @@ void local_program(PhaonIR& phr)
 
  phr.coalesce_channel_group();
 
+ phr.evaluate_channel_group();
+
 }

@@ -12,7 +12,7 @@
 
 class PHR_Carrier;
 
-class PHR_Channel : QVector<PHR_Carrier*>
+class PHR_Channel : public QVector<PHR_Carrier*>
 {
 
 public:

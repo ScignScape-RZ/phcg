@@ -12,3 +12,10 @@ PHR_Carrier_Stack::PHR_Carrier_Stack()
 
 }
 
+void PHR_Carrier_Stack::indexed_each_carrier(std::function<
+  void(int, PHR_Carrier&)> fn)
+{
+ int i = 0;
+ for(PHR_Carrier* pcr : *this)
+   fn(i++, *pcr);
+}
