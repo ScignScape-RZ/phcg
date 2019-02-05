@@ -60,6 +60,8 @@ public:
  void coalesce_channel_group();
  void evaluate_channel_group();
 
+ QString get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg);
+
 };
 
 #endif // PHAON_IR__H

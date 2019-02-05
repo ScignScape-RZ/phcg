@@ -14,6 +14,7 @@
 #include "channel/phr-carrier.h"
 #include "channel/phr-channel-group.h"
 #include "channel/phr-channel.h"
+#include "eval/phr-channel-group-evaluator.h"
 
 
 PhaonIR::PhaonIR() :  type_system_(nullptr),
@@ -65,9 +66,15 @@ void PhaonIR::hold_type_by_name(QString ty_name)
  held_type_ = ty;
 }
 
+QString PhaonIR::get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg)
+{
+ return pcg.get_first_raw_value_string(semantic_protocols_[sp_name]);
+}
+
 void PhaonIR::evaluate_channel_group()
 {
-
+ PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
+ ev->run_eval();
 }
 
 void PhaonIR::coalesce_channel_group()

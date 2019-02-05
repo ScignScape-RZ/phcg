@@ -6,9 +6,17 @@
 
 
 #include "phr-channel.h"
+#include "phr-carrier.h"
+
 
 PHR_Channel::PHR_Channel()
 {
 
 }
 
+QString PHR_Channel::get_first_raw_value_string()
+{
+ if(isEmpty())
+   return QString();
+ return first()->raw_value();
+}

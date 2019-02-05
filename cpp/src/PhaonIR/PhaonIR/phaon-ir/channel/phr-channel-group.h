@@ -22,6 +22,11 @@ public:
 
  PHR_Channel_Group();
 
+ QString get_first_raw_value_string(PHR_Channel_Semantic_Protocol* pcsp);
+
+ void with_find(PHR_Channel_Semantic_Protocol* pcsp,
+   std::function<void(PHR_Channel&)> fn);
+
 
 };
 
