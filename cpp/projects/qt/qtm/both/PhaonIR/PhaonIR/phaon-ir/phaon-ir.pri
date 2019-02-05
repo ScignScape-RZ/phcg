@@ -40,6 +40,7 @@ HEADERS += \
   $$SRC_DIR/types/phr-type.h \
   $$SRC_DIR/types/phr-type-system.h \
   $$SRC_DIR/eval/phr-channel-group-evaluator.h \
+  $$SRC_DIR/eval/phr-minimal-evaluator.h \
 
 
 SOURCES += \
@@ -53,7 +54,7 @@ SOURCES += \
   $$SRC_DIR/types/phr-type.cpp \
   $$SRC_DIR/types/phr-type-system.cpp \
   $$SRC_DIR/eval/phr-channel-group-evaluator.cpp \
-
+  $$SRC_DIR/eval/phr-minimal-evaluator.cpp \
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
 mkpath($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

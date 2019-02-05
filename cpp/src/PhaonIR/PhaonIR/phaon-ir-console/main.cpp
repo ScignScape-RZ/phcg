@@ -8,6 +8,7 @@
 #include "phaon-ir/phaon-ir.h"
 
 #include "phaon-ir/eval/phr-channel-group-evaluator.h"
+#include "phaon-ir/eval/phr-minimal-evaluator.h"
 
 #include <QDebug>
 
@@ -20,8 +21,16 @@ PHR_Channel_Group_Evaluator* load_evaluator(PhaonIR& phr, PHR_Channel_Group& pcg
  QString fname = phr.get_first_raw_value_string("fuxe", pcg);
  if(fname.startsWith('#'))
  {
-
+  PHR_Minimal_Evaluator::Kernal_Operators kop =
+    PHR_Minimal_Evaluator::parse_kernel_operator(fname);
+  if(kop != PHR_Minimal_Evaluator::Kernal_Operators::N_A)
+  {
+   PHR_Minimal_Evaluator* result = new PHR_Minimal_Evaluator(pcg);
+   result->set_kernel_operator(kop);
+   return result;
+  }
  }
+ return nullptr;
 }
 
 int main(int argc, char **argv)
