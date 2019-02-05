@@ -39,7 +39,12 @@ void local_program(PhaonIR& phr)
  phr.push_carrier_raw_value("9");
 
  phr.push_carrier_stack("result");
+ phr.index_channel_group();
+ phr.coalesce_channel_group();
 
+ phr.pop_unwind_scope();
+ phr.hold_type_by_name("u4");
+ phr.push_carrier_expression();
  phr.coalesce_channel_group();
 
  phr.evaluate_channel_group();

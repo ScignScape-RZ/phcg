@@ -21,9 +21,25 @@ PhaonIR::PhaonIR() :  type_system_(nullptr),
   program_stack_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
   held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
-  current_unwind_scope_index_({0,0,0})
+  current_chief_unwind_scope_index_({0,0,0,0})
 {
 
+}
+
+
+void PhaonIR::check_init_program_stack()
+{
+ auto it = stashed_program_stacks_.find(current_chief_unwind_scope_index_);
+ if(it == stashed_program_stacks_.end())
+ {
+  init_program_stack();
+  stashed_program_stacks_.insert(current_chief_unwind_scope_index_, program_stack_);
+ }
+ else
+ {
+  program_stack_ = it.value();
+  program_stack_->clear();
+ }
 }
 
 void PhaonIR::init_program_stack()
@@ -83,9 +99,24 @@ QString PhaonIR::get_first_raw_value_string(QString sp_name, PHR_Channel_Group& 
 
 void PhaonIR::push_unwind_scope(int level_delta)
 {
+ Unwind_Scope_Index usi = current_chief_unwind_scope_index_;//.project();
  inc_channel_pos();
- current_unwind_scope_index_.unwind_level = 0;
- current_unwind_scope_index_.unwind_maximum_ = level_delta;
+ current_chief_unwind_scope_index_.chief_channel_pos = usi.level_channel_pos;
+ current_chief_unwind_scope_index_.unwind_level = 0;
+ current_chief_unwind_scope_index_.unwind_maximum_ = level_delta;
+ current_chief_unwind_scope_index_.level_channel_pos = 0;
+ unwind_scope_index_parents_[current_chief_unwind_scope_index_] = usi;//.project();
+ held_program_stacks_[usi] = {program_stack_, current_carrier_stack_};
+ check_init_program_stack();
+}
+
+void PhaonIR::pop_unwind_scope()
+{
+ current_chief_unwind_scope_index_ = unwind_scope_index_parents_[current_chief_unwind_scope_index_.project()];
+ program_stack_ = held_program_stacks_[current_chief_unwind_scope_index_].first;
+ current_carrier_stack_ = held_program_stacks_[current_chief_unwind_scope_index_].second;
+ held_usi_symbol_ = QString("#%1-%2").arg(current_chief_unwind_scope_index_.chief_channel_pos)
+   .arg(current_chief_unwind_scope_index_.unwind_level);
 }
 
 void PhaonIR::evaluate_channel_group()
@@ -93,6 +124,16 @@ void PhaonIR::evaluate_channel_group()
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
  ev->run_eval();
  ev->debug_report();
+}
+
+void PhaonIR::push_carrier_expression()
+{
+ push_carrier_symbol(held_usi_symbol_);
+}
+
+void PhaonIR::index_channel_group()
+{
+ indexed_channel_groups_[current_chief_unwind_scope_index_] = held_channel_group_;
 }
 
 void PhaonIR::coalesce_channel_group()
@@ -113,7 +154,7 @@ void PhaonIR::coalesce_channel_group()
 
 void PhaonIR::inc_channel_pos()
 {
- ++current_unwind_scope_index_.channel_pos;
+ ++current_chief_unwind_scope_index_.level_channel_pos;
 }
 
 void PhaonIR::push_carrier_raw_value(QString rv)
@@ -125,10 +166,19 @@ void PhaonIR::push_carrier_raw_value(QString rv)
  current_carrier_stack_->push(phc);
 }
 
+void PhaonIR::push_carrier_symbol(QString sn)
+{
+ inc_channel_pos();
+ PHR_Carrier* phc = new PHR_Carrier;
+ phc->set_symbol_name(sn);
+ phc->set_phr_type(held_type_);
+ current_carrier_stack_->push(phc);
+}
+
 void PhaonIR::push_carrier_stack(QString sp_name)
 {
  check_semantic_protocol(sp_name);
- PHR_Carrier_Stack* st = get_carrier_stack_by_sp_name(current_unwind_scope_index_,
+ PHR_Carrier_Stack* st = get_carrier_stack_by_sp_name(current_chief_unwind_scope_index_,
    sp_name);
  program_stack_->push(st);
  current_carrier_stack_ = st;

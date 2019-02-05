@@ -30,9 +30,15 @@ class PhaonIR
 {
  struct Unwind_Scope_Index
  {
-  quint8 channel_pos;
+  quint8 chief_channel_pos;
   quint8 unwind_level;
   quint8 unwind_maximum_;
+  quint8 level_channel_pos;
+
+  Unwind_Scope_Index project()
+  {
+   return {chief_channel_pos, unwind_level, 0, 0};
+  }
  };
 
  QMap<QString, PHR_Channel_Semantic_Protocol*> semantic_protocols_;
@@ -42,20 +48,27 @@ class PhaonIR
  PHR_Type* held_type_;
  PHR_Carrier_Stack* current_carrier_stack_;
  PHR_Channel_Group* held_channel_group_;
+ QString held_usi_symbol_;
 
  std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
    PHR_Channel_Group&)> load_evaluator_fn_;
 
- Unwind_Scope_Index current_unwind_scope_index_;
+ Unwind_Scope_Index current_chief_unwind_scope_index_;
+
+ QMap<Unwind_Scope_Index, Unwind_Scope_Index> unwind_scope_index_parents_;
+
+ QMap<Unwind_Scope_Index, QPair<PHR_Program_Stack*, PHR_Carrier_Stack*>> held_program_stacks_;
+ QMap<Unwind_Scope_Index, PHR_Program_Stack*> stashed_program_stacks_;
+ QMap<Unwind_Scope_Index, PHR_Channel_Group*> indexed_channel_groups_;
 
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
  {
-  if(lhs.channel_pos != rhs.channel_pos)
-    return lhs.channel_pos < rhs.channel_pos;
+  if(lhs.chief_channel_pos != rhs.chief_channel_pos)
+    return lhs.chief_channel_pos < rhs.chief_channel_pos;
   if(lhs.unwind_level != rhs.unwind_level)
     return lhs.unwind_level < rhs.unwind_level;
-//  if(lhs.channel_pos != rhs.channel_pos)
-//    return lhs.channel_pos < rhs.channel_pos;
+  if(lhs.level_channel_pos != rhs.level_channel_pos)
+    return lhs.level_channel_pos < rhs.level_channel_pos;
   return false;
  }
 
@@ -63,6 +76,8 @@ class PhaonIR
    QString sp_name);
  void check_semantic_protocol(QString sp_name);
  void inc_channel_pos();
+
+ void check_init_program_stack();
 
 public:
 
@@ -73,17 +88,23 @@ public:
 
  void init_program_stack();
  void reset_program_stack();
+ void index_channel_group();
+
  void init_type_system();
  void init_type(QString type_name);
 
  void push_carrier_stack(QString sp_name);
  void push_carrier_raw_value(QString rv);
+ void push_carrier_symbol(QString sn);
 
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
  void evaluate_channel_group();
 
  void push_unwind_scope(int level_delta);
+ void pop_unwind_scope();
+
+ void push_carrier_expression();
 
  QString get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg);
  PHR_Channel* get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg);
