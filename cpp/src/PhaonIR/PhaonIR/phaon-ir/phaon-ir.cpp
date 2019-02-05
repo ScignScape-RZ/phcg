@@ -83,7 +83,7 @@ void PhaonIR::coalesce_channel_group()
  program_stack_->each_carrier_stack([pcg, this] (PHR_Carrier_Stack& pcs)
  {
   PHR_Channel* pch = new PHR_Channel;
-  pcs.resize(pcs.size());
+  pch->resize(pcs.size());
   pcs.indexed_each_carrier([pch, this] (int i, PHR_Carrier& pcr)
   {
    (*pch)[i] = &pcr;
