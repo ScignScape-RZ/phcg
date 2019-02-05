@@ -28,8 +28,15 @@ class PHR_Channel;
 
 class PhaonIR
 {
+ struct Unwind_Scope_Index
+ {
+  quint8 channel_pos;
+  quint8 unwind_level;
+  quint8 unwind_maximum_;
+ };
+
  QMap<QString, PHR_Channel_Semantic_Protocol*> semantic_protocols_;
- QMap<PHR_Channel_Semantic_Protocol*, PHR_Carrier_Stack*> sp_map_;
+ QMap<QPair<Unwind_Scope_Index, PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*> sp_map_;
  PHR_Type_System* type_system_;
  PHR_Program_Stack* program_stack_;
  PHR_Type* held_type_;
@@ -39,8 +46,23 @@ class PhaonIR
  std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
    PHR_Channel_Group&)> load_evaluator_fn_;
 
- PHR_Carrier_Stack* get_carrier_stack_by_sp_name(QString sp_name);
+ Unwind_Scope_Index current_unwind_scope_index_;
+
+ friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
+ {
+  if(lhs.channel_pos != rhs.channel_pos)
+    return lhs.channel_pos < rhs.channel_pos;
+  if(lhs.unwind_level != rhs.unwind_level)
+    return lhs.unwind_level < rhs.unwind_level;
+//  if(lhs.channel_pos != rhs.channel_pos)
+//    return lhs.channel_pos < rhs.channel_pos;
+  return false;
+ }
+
+ PHR_Carrier_Stack* get_carrier_stack_by_sp_name(Unwind_Scope_Index usi,
+   QString sp_name);
  void check_semantic_protocol(QString sp_name);
+ void inc_channel_pos();
 
 public:
 
@@ -60,6 +82,8 @@ public:
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
  void evaluate_channel_group();
+
+ void push_unwind_scope(int level_delta);
 
  QString get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg);
  PHR_Channel* get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg);

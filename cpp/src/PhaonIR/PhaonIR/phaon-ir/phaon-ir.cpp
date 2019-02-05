@@ -20,7 +20,8 @@
 PhaonIR::PhaonIR() :  type_system_(nullptr),
   program_stack_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
-  held_channel_group_(nullptr), load_evaluator_fn_(nullptr)
+  held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
+  current_unwind_scope_index_({0,0,0})
 {
 
 }
@@ -55,14 +56,15 @@ PHR_Channel* PhaonIR::get_channel_by_sp_name(QString sp_name, PHR_Channel_Group&
  return pcg.value(it.value());
 }
 
-PHR_Carrier_Stack* PhaonIR::get_carrier_stack_by_sp_name(QString sp_name)
+PHR_Carrier_Stack* PhaonIR::get_carrier_stack_by_sp_name(Unwind_Scope_Index usi,
+  QString sp_name)
 {
- auto it = sp_map_.find(semantic_protocols_[sp_name]);
+ auto it = sp_map_.find({usi, semantic_protocols_[sp_name]});
  if(it == sp_map_.end())
  {
   PHR_Carrier_Stack* result = new PHR_Carrier_Stack;
   result->set_sp_name(sp_name);
-  sp_map_.insert(semantic_protocols_[sp_name], result);
+  sp_map_.insert({usi, semantic_protocols_[sp_name]}, result);
   return result;
  }
  return it.value();
@@ -77,6 +79,13 @@ void PhaonIR::hold_type_by_name(QString ty_name)
 QString PhaonIR::get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg)
 {
  return pcg.get_first_raw_value_string(semantic_protocols_[sp_name]);
+}
+
+void PhaonIR::push_unwind_scope(int level_delta)
+{
+ inc_channel_pos();
+ current_unwind_scope_index_.unwind_level = 0;
+ current_unwind_scope_index_.unwind_maximum_ = level_delta;
 }
 
 void PhaonIR::evaluate_channel_group()
@@ -102,8 +111,14 @@ void PhaonIR::coalesce_channel_group()
  held_channel_group_ = pcg;
 }
 
+void PhaonIR::inc_channel_pos()
+{
+ ++current_unwind_scope_index_.channel_pos;
+}
+
 void PhaonIR::push_carrier_raw_value(QString rv)
 {
+ inc_channel_pos();
  PHR_Carrier* phc = new PHR_Carrier;
  phc->set_raw_value_string(rv);
  phc->set_phr_type(held_type_);
@@ -113,7 +128,8 @@ void PhaonIR::push_carrier_raw_value(QString rv)
 void PhaonIR::push_carrier_stack(QString sp_name)
 {
  check_semantic_protocol(sp_name);
- PHR_Carrier_Stack* st = get_carrier_stack_by_sp_name(sp_name);
+ PHR_Carrier_Stack* st = get_carrier_stack_by_sp_name(current_unwind_scope_index_,
+   sp_name);
  program_stack_->push(st);
  current_carrier_stack_ = st;
 }

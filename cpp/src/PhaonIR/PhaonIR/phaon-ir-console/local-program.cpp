@@ -19,6 +19,16 @@ void local_program(PhaonIR& phr)
  phr.init_program_stack();
  phr.reset_program_stack();
 
+// phr.push_carrier_stack("fuxe");
+// phr.hold_type_by_name("fbase");
+// phr.push_carrier_raw_value("#+");
+
+// phr.push_carrier_stack("lambda");
+// phr.hold_type_by_name("u4");
+// phr.push_carrier_raw_value("2");
+
+// phr.push_unwind_scope(1);
+
  phr.push_carrier_stack("fuxe");
  phr.hold_type_by_name("fbase");
  phr.push_carrier_raw_value("#+");
