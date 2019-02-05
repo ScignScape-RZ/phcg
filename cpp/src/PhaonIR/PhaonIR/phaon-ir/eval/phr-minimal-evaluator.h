@@ -9,15 +9,17 @@
 
 #include <QMap>
 
+#include "accessors.h"
 
 #include "phr-channel-group-evaluator.h"
-
-#include "accessors.h"
+#include "phr-result-holder.h"
 
 class PHR_Channel_Group;
 
 class PHR_Minimal_Evaluator : public PHR_Channel_Group_Evaluator
 {
+ PHR_Result_Holder rh_;
+
 public:
 
  enum class Kernal_Operators {
@@ -36,7 +38,7 @@ public:
 
  static Kernal_Operators parse_kernel_operator(QString fn);
 
- void run_eval();
+ void run_eval(QVector<qint32>& args);
 
 
 

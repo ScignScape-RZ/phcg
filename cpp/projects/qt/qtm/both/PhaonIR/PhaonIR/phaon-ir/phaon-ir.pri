@@ -31,6 +31,7 @@ DEFINES += USE_KANS
 
 HEADERS += \
   $$SRC_DIR/phaon-ir.h \
+  $$SRC_DIR/phr-result-holder.h \
   $$SRC_DIR/channel/phr-channel-group.h \
   $$SRC_DIR/channel/phr-program-stack.h \
   $$SRC_DIR/channel/phr-channel-semantic-protocol.h \
@@ -41,10 +42,15 @@ HEADERS += \
   $$SRC_DIR/types/phr-type-system.h \
   $$SRC_DIR/eval/phr-channel-group-evaluator.h \
   $$SRC_DIR/eval/phr-minimal-evaluator.h \
+  $$SRC_DIR/eval/kop-base.h \
+  $$SRC_DIR/eval/kops/add.h \
+  $$SRC_DIR/eval/kops/subtract.h \
+
 
 
 SOURCES += \
   $$SRC_DIR/phaon-ir.cpp \
+  $$SRC_DIR/phr-result-holder.cpp \
   $$SRC_DIR/channel/phr-channel-group.cpp \
   $$SRC_DIR/channel/phr-program-stack.cpp \
   $$SRC_DIR/channel/phr-channel-semantic-protocol.cpp \
@@ -55,6 +61,9 @@ SOURCES += \
   $$SRC_DIR/types/phr-type-system.cpp \
   $$SRC_DIR/eval/phr-channel-group-evaluator.cpp \
   $$SRC_DIR/eval/phr-minimal-evaluator.cpp \
+  $$SRC_DIR/eval/kops/add.cpp \
+  $$SRC_DIR/eval/kops/subtract.cpp \
+
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
 mkpath($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
