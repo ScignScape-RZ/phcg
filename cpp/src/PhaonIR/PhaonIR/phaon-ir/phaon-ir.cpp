@@ -47,6 +47,14 @@ void PhaonIR::check_semantic_protocol(QString sp_name)
  }
 }
 
+PHR_Channel* PhaonIR::get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg)
+{
+ auto it = semantic_protocols_.find(sp_name);
+ if(it == semantic_protocols_.end())
+   return nullptr;
+ return pcg.value(it.value());
+}
+
 PHR_Carrier_Stack* PhaonIR::get_carrier_stack_by_sp_name(QString sp_name)
 {
  auto it = sp_map_.find(semantic_protocols_[sp_name]);
@@ -75,6 +83,7 @@ void PhaonIR::evaluate_channel_group()
 {
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
  ev->run_eval();
+ ev->debug_report();
 }
 
 void PhaonIR::coalesce_channel_group()
@@ -96,7 +105,7 @@ void PhaonIR::coalesce_channel_group()
 void PhaonIR::push_carrier_raw_value(QString rv)
 {
  PHR_Carrier* phc = new PHR_Carrier;
- phc->set_raw_value(rv);
+ phc->set_raw_value_string(rv);
  phc->set_phr_type(held_type_);
  current_carrier_stack_->push(phc);
 }

@@ -25,7 +25,7 @@ PHR_Channel_Group_Evaluator* load_evaluator(PhaonIR& phr, PHR_Channel_Group& pcg
     PHR_Minimal_Evaluator::parse_kernel_operator(fname);
   if(kop != PHR_Minimal_Evaluator::Kernal_Operators::N_A)
   {
-   PHR_Minimal_Evaluator* result = new PHR_Minimal_Evaluator(pcg);
+   PHR_Minimal_Evaluator* result = new PHR_Minimal_Evaluator(phr, pcg);
    result->set_kernel_operator(kop);
    return result;
   }

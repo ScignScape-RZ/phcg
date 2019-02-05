@@ -12,7 +12,7 @@
 #include "accessors.h"
 
 #include "phr-channel-group-evaluator.h"
-#include "phr-result-holder.h"
+#include "phaon-ir/phr-result-holder.h"
 
 class PHR_Channel_Group;
 
@@ -32,15 +32,16 @@ private:
 
 public:
 
- PHR_Minimal_Evaluator(PHR_Channel_Group& channel_group);
+ PHR_Minimal_Evaluator(PhaonIR& phr, PHR_Channel_Group& channel_group);
 
  ACCESSORS(Kernal_Operators ,kernel_operator)
 
  static Kernal_Operators parse_kernel_operator(QString fn);
 
+ void run_eval();
  void run_eval(QVector<qint32>& args);
 
-
+ void debug_report();
 
 };
 

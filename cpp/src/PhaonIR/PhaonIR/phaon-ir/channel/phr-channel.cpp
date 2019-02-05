@@ -18,5 +18,5 @@ QString PHR_Channel::get_first_raw_value_string()
 {
  if(isEmpty())
    return QString();
- return first()->raw_value();
+ return first()->raw_value_string();
 }

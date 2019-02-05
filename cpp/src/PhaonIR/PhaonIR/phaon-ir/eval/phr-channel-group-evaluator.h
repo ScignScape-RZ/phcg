@@ -11,19 +11,26 @@
 #include <QMap>
 
 class PHR_Channel_Group;
+class PhaonIR;
+class PHR_Channel;
 
 class PHR_Channel_Group_Evaluator
 {
+ PhaonIR& phr_;
+
 protected:
 
  PHR_Channel_Group& channel_group_;
 
+ PHR_Channel* get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg);
+
+
 public:
 
- PHR_Channel_Group_Evaluator(PHR_Channel_Group& channel_group);
+ PHR_Channel_Group_Evaluator(PhaonIR& phr, PHR_Channel_Group& channel_group);
 
  virtual void run_eval() = 0;
-
+ virtual void debug_report() = 0;
 
 };
 

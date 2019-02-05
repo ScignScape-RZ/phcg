@@ -7,9 +7,19 @@
 
 #include "phr-channel-group-evaluator.h"
 
-PHR_Channel_Group_Evaluator::PHR_Channel_Group_Evaluator(PHR_Channel_Group& channel_group)
-  :  channel_group_(channel_group)
+#include "phaon-ir.h"
+
+
+PHR_Channel_Group_Evaluator::PHR_Channel_Group_Evaluator(PhaonIR& phr,
+  PHR_Channel_Group& channel_group)
+  :  phr_(phr), channel_group_(channel_group)
 {
 
 }
+
+PHR_Channel* PHR_Channel_Group_Evaluator::get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg)
+{
+ return phr_.get_channel_by_sp_name(sp_name, pcg);
+}
+
 

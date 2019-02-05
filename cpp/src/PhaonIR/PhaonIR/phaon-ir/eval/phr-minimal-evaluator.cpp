@@ -12,11 +12,31 @@
 #include "kops/add.h"
 #include "kops/subtract.h"
 
+#include "channel/phr-channel-group.h"
+#include "channel/phr-channel.h"
 
-PHR_Minimal_Evaluator::PHR_Minimal_Evaluator(PHR_Channel_Group& channel_group)
-  :  PHR_Channel_Group_Evaluator(channel_group)
+#include "channel/phr-carrier.h"
+#include "phaon-ir.h"
+
+#include <QDebug>
+
+PHR_Minimal_Evaluator::PHR_Minimal_Evaluator(PhaonIR& phr,
+  PHR_Channel_Group& channel_group)
+  :  PHR_Channel_Group_Evaluator(phr, channel_group)
 {
 
+}
+
+void PHR_Minimal_Evaluator::debug_report()
+{
+ if(rh_.raw_value)
+ {
+  qDebug() << *(qint32*)rh_.raw_value;
+ }
+ else
+ {
+  qDebug() << rh_.raw_value_string;
+ }
 }
 
 PHR_Minimal_Evaluator::Kernal_Operators PHR_Minimal_Evaluator::parse_kernel_operator(QString fn)
@@ -27,6 +47,29 @@ PHR_Minimal_Evaluator::Kernal_Operators PHR_Minimal_Evaluator::parse_kernel_oper
  }};
 
  return static_map.value(fn, Kernal_Operators::N_A);
+}
+
+void PHR_Minimal_Evaluator::run_eval()
+{
+ PHR_Channel* lc = get_channel_by_sp_name("lambda", channel_group_);
+ if(!lc)
+   return;
+ int sz = lc->size();
+ QVector<qint32> args;
+ args.resize(sz);
+ for(int i = 0; i < sz; ++i)
+ {
+  PHR_Carrier* pcr = lc->at(i);
+  if(pcr->symbol_name().isEmpty())
+  {
+   args[i] = pcr->raw_value_string().toInt();
+  }
+  else
+  {
+
+  }
+ }
+ run_eval(args);
 }
 
 void PHR_Minimal_Evaluator::run_eval(QVector<qint32>& args)

@@ -16,7 +16,7 @@ class PHR_Type;
 class PHR_Carrier
 {
  QString symbol_name_;
- QString raw_value_;
+ QString raw_value_string_;
  PHR_Type* phr_type_;
 
 public:
@@ -24,7 +24,7 @@ public:
  PHR_Carrier();
 
  ACCESSORS(QString ,symbol_name)
- ACCESSORS(QString ,raw_value)
+ ACCESSORS(QString ,raw_value_string)
  ACCESSORS(PHR_Type* ,phr_type)
 
 };

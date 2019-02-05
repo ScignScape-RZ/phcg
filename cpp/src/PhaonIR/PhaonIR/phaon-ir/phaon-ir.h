@@ -24,6 +24,7 @@ class PHR_Carrier_Stack;
 class PHR_Type;
 class PHR_Channel_Group;
 class PHR_Channel_Group_Evaluator;
+class PHR_Channel;
 
 class PhaonIR
 {
@@ -61,6 +62,7 @@ public:
  void evaluate_channel_group();
 
  QString get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg);
+ PHR_Channel* get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg);
 
 };
 
