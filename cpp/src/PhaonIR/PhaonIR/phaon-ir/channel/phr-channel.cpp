@@ -14,6 +14,14 @@ PHR_Channel::PHR_Channel()
 
 }
 
+
+void* PHR_Channel::get_first_raw_value()
+{
+ if(isEmpty())
+   return nullptr;
+ return first()->raw_value();
+}
+
 QString PHR_Channel::get_first_raw_value_string()
 {
  if(isEmpty())

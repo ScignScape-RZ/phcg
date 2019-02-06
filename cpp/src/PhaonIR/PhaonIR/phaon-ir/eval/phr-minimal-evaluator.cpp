@@ -66,10 +66,20 @@ void PHR_Minimal_Evaluator::run_eval()
   }
   else
   {
-   args[i] = phr_get_u4_symbol_value(pcr->symbol_name());
+   args[i] = phr_get_s4_symbol_value(pcr->symbol_name());
   }
  }
  run_eval(args);
+}
+
+void* PHR_Minimal_Evaluator::get_result_value()
+{
+ return rh_.raw_value;
+}
+
+QString PHR_Minimal_Evaluator::get_result_string()
+{
+ return rh_.raw_value_string;
 }
 
 void PHR_Minimal_Evaluator::run_eval(QVector<qint32>& args)

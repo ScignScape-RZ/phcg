@@ -38,10 +38,13 @@ public:
 
  static Kernal_Operators parse_kernel_operator(QString fn);
 
- void run_eval();
+ void run_eval() Q_DECL_OVERRIDE;
  void run_eval(QVector<qint32>& args);
 
- void debug_report();
+ void* get_result_value() Q_DECL_OVERRIDE;
+ QString get_result_string() Q_DECL_OVERRIDE;
+
+ void debug_report() Q_DECL_OVERRIDE;
 
 };
 

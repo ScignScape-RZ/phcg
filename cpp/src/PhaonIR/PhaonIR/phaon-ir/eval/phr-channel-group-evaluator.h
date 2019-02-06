@@ -24,7 +24,7 @@ protected:
 
  PHR_Channel* get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg);
 
- qint32 phr_get_u4_symbol_value(QString sym);
+ qint32 phr_get_s4_symbol_value(QString sym);
 
 
 public:
@@ -33,6 +33,15 @@ public:
 
  virtual void run_eval() = 0;
  virtual void debug_report() = 0;
+ virtual void* get_result_value();
+ virtual QString get_result_string();
+
+ template<typename T>
+ T get_result_value_as()
+ {
+  return *(T*)get_result_value();
+ }
+
 
 };
 

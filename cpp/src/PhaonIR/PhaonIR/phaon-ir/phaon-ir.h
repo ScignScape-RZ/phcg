@@ -96,13 +96,13 @@ public:
  void init_type_system();
  void init_type(QString type_name);
 
- int get_u4_symbol_value(QString sym);
+ qint32 get_s4_symbol_value(QString sym);
 
  void push_carrier_stack(QString sp_name);
  void push_carrier_raw_value(QString rv);
  void push_carrier_symbol(QString sn);
 
- void evaluate_channel_group_by_usi_symbol(QString usi_sym);
+ PHR_Channel_Group_Evaluator* evaluate_channel_group_by_usi_symbol(QString usi_sym);
 
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
@@ -115,6 +115,7 @@ public:
 
  QString get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg);
  PHR_Channel* get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg);
+ void* get_first_raw_value(QString sp_name, PHR_Channel_Group& pcg);
 
 };
 

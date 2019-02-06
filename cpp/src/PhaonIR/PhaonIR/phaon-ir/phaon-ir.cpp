@@ -64,11 +64,18 @@ void PhaonIR::check_semantic_protocol(QString sp_name)
  }
 }
 
-int PhaonIR::get_u4_symbol_value(QString sym)
+qint32 PhaonIR::get_s4_symbol_value(QString sym)
 {
  if(sym.startsWith('#'))
  {
-  evaluate_channel_group_by_usi_symbol(sym);
+  //PHR_Channel_Group* pcg
+  PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(sym);
+  if(ev)
+  {
+   return ev->get_result_value_as<qint32>();
+  }
+  else
+    return 0;
  }
  else
  {
@@ -104,6 +111,11 @@ void PhaonIR::hold_type_by_name(QString ty_name)
  held_type_ = ty;
 }
 
+void* PhaonIR::get_first_raw_value(QString sp_name, PHR_Channel_Group& pcg)
+{
+ return pcg.get_first_raw_value(semantic_protocols_[sp_name]);
+}
+
 QString PhaonIR::get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg)
 {
  return pcg.get_first_raw_value_string(semantic_protocols_[sp_name]);
@@ -132,15 +144,15 @@ void PhaonIR::pop_unwind_scope()
 }
 
 
-PHR_Channel_Group* PhaonIR::evaluate_channel_group_by_usi_symbol(QString usi_sym)
+PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QString usi_sym)
 {
  auto it = temp_anchored_channel_groups_.find(usi_sym);
  if( it != temp_anchored_channel_groups_.end())
  {
   PHR_Channel_Group* result = it.value();
-  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *result_);
+  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *result);
   ev->run_eval();
-  return result;
+  return ev;
  }
  return nullptr;
 }

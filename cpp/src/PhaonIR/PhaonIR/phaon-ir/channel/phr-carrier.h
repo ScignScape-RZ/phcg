@@ -18,6 +18,7 @@ class PHR_Carrier
  QString symbol_name_;
  QString raw_value_string_;
  PHR_Type* phr_type_;
+ void* raw_value_;
 
 public:
 
@@ -26,6 +27,7 @@ public:
  ACCESSORS(QString ,symbol_name)
  ACCESSORS(QString ,raw_value_string)
  ACCESSORS(PHR_Type* ,phr_type)
+ ACCESSORS(void* ,raw_value)
 
 };
 

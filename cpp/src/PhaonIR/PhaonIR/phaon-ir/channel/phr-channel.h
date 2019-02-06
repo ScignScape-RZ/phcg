@@ -20,7 +20,7 @@ public:
  PHR_Channel();
 
  QString get_first_raw_value_string();
-
+ void* get_first_raw_value();
 
 };
 

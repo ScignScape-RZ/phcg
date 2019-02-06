@@ -24,6 +24,16 @@ void PHR_Channel_Group::with_find(PHR_Channel_Semantic_Protocol* pcsp,
  }
 }
 
+void* PHR_Channel_Group::get_first_raw_value(PHR_Channel_Semantic_Protocol* pcsp)
+{
+ void* result;
+ with_find(pcsp, [&result](PHR_Channel& phc)
+ {
+  result = phc.get_first_raw_value();
+ });
+ return result;
+}
+
 QString PHR_Channel_Group::get_first_raw_value_string(PHR_Channel_Semantic_Protocol* pcsp)
 {
  QString result;
