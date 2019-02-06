@@ -49,6 +49,8 @@ void local_program(PhaonIR& phr)
  phr.push_carrier_expression();
  phr.coalesce_channel_group();
 
+ phr.anchor_channel_group("x");
+
  phr.evaluate_channel_group();
 
 }

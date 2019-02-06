@@ -45,7 +45,7 @@ HEADERS += \
   $$SRC_DIR/eval/kop-base.h \
   $$SRC_DIR/eval/kops/add.h \
   $$SRC_DIR/eval/kops/subtract.h \
-
+  $$SRC_DIR/scopes/phr-scope.h \
 
 
 SOURCES += \
@@ -63,6 +63,7 @@ SOURCES += \
   $$SRC_DIR/eval/phr-minimal-evaluator.cpp \
   $$SRC_DIR/eval/kops/add.cpp \
   $$SRC_DIR/eval/kops/subtract.cpp \
+  $$SRC_DIR/scopes/phr-scope.cpp \
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

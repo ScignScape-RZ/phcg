@@ -26,6 +26,8 @@ class PHR_Channel_Group;
 class PHR_Channel_Group_Evaluator;
 class PHR_Channel;
 
+class PHR_Scope;
+
 class PhaonIR
 {
  struct Unwind_Scope_Index
@@ -62,6 +64,10 @@ class PhaonIR
  QMap<Unwind_Scope_Index, PHR_Channel_Group*> indexed_channel_groups_;
 
  QMap<QString, PHR_Channel_Group*> temp_anchored_channel_groups_;
+ QMap<QPair<PHR_Scope*, QString>, PHR_Channel_Group*> anchored_channel_groups_;
+
+ PHR_Scope* current_lexical_scope_;
+
 
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
  {
@@ -92,6 +98,7 @@ public:
  void reset_program_stack();
  void index_channel_group();
  void temp_anchor_channel_group();
+ void anchor_channel_group(QString sym);
 
  void init_type_system();
  void init_type(QString type_name);

@@ -21,7 +21,8 @@ PhaonIR::PhaonIR() :  type_system_(nullptr),
   program_stack_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
   held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
-  current_chief_unwind_scope_index_({0,0,0,0})
+  current_chief_unwind_scope_index_({0,0,0,0}),
+  current_lexical_scope_(nullptr)
 {
 
 }
@@ -172,6 +173,11 @@ void PhaonIR::push_carrier_expression()
 void PhaonIR::index_channel_group()
 {
  indexed_channel_groups_[current_chief_unwind_scope_index_] = held_channel_group_;
+}
+
+void PhaonIR::anchor_channel_group(QString sym)
+{
+ anchored_channel_groups_[{current_lexical_scope_, sym}] = held_channel_group_;
 }
 
 void PhaonIR::temp_anchor_channel_group()
