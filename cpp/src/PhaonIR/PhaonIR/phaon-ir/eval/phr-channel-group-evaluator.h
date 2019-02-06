@@ -24,6 +24,8 @@ protected:
 
  PHR_Channel* get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg);
 
+ qint32 phr_get_u4_symbol_value(QString sym);
+
 
 public:
 

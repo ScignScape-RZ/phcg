@@ -66,7 +66,7 @@ void PHR_Minimal_Evaluator::run_eval()
   }
   else
   {
-
+   args[i] = phr_get_u4_symbol_value(pcr->symbol_name());
   }
  }
  run_eval(args);

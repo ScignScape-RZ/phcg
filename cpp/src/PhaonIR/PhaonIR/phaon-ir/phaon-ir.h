@@ -61,6 +61,8 @@ class PhaonIR
  QMap<Unwind_Scope_Index, PHR_Program_Stack*> stashed_program_stacks_;
  QMap<Unwind_Scope_Index, PHR_Channel_Group*> indexed_channel_groups_;
 
+ QMap<QString, PHR_Channel_Group*> temp_anchored_channel_groups_;
+
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
  {
   if(lhs.chief_channel_pos != rhs.chief_channel_pos)
@@ -89,13 +91,18 @@ public:
  void init_program_stack();
  void reset_program_stack();
  void index_channel_group();
+ void temp_anchor_channel_group();
 
  void init_type_system();
  void init_type(QString type_name);
 
+ int get_u4_symbol_value(QString sym);
+
  void push_carrier_stack(QString sp_name);
  void push_carrier_raw_value(QString rv);
  void push_carrier_symbol(QString sn);
+
+ void evaluate_channel_group_by_usi_symbol(QString usi_sym);
 
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();

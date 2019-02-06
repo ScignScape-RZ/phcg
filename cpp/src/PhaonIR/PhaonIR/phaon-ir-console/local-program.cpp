@@ -43,6 +43,8 @@ void local_program(PhaonIR& phr)
  phr.coalesce_channel_group();
 
  phr.pop_unwind_scope();
+ phr.temp_anchor_channel_group();
+
  phr.hold_type_by_name("u4");
  phr.push_carrier_expression();
  phr.coalesce_channel_group();

@@ -68,7 +68,11 @@ int PhaonIR::get_u4_symbol_value(QString sym)
 {
  if(sym.startsWith('#'))
  {
-  evaluate_channel_group_by_usi_symbol(sym);
+  PHR_Channel_Group* pcg = evaluate_channel_group_by_usi_symbol(sym);
+  if(pcg)
+  {
+   
+  }
  }
  else
  {
