@@ -48,9 +48,22 @@ void local_program(PhaonIR& phr)
  phr.hold_type_by_name("u4");
  phr.push_carrier_expression();
  phr.coalesce_channel_group();
-
- phr.anchor_channel_group("x");
+ phr.anchor_channel_group("x", "result");
 
  phr.evaluate_channel_group();
 
+ phr.reset_program_stack();
+
+
+ phr.push_carrier_stack("fuxe");
+ phr.hold_type_by_name("fbase");
+ phr.push_carrier_raw_value("#+");
+
+ phr.push_carrier_stack("lambda");
+ phr.hold_type_by_name("u4");
+ phr.push_carrier_raw_value("22");
+ phr.push_carrier_symbol("x");
+ phr.coalesce_channel_group();
+
+ phr.evaluate_channel_group();
 }

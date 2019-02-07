@@ -9,6 +9,7 @@
 
 #include <QString>
 #include <QMap>
+#include <QMultiMap>
 
 #include <functional>
 
@@ -27,6 +28,7 @@ class PHR_Channel_Group_Evaluator;
 class PHR_Channel;
 
 class PHR_Scope;
+class PHR_Scope_Value;
 
 class PhaonIR
 {
@@ -64,7 +66,11 @@ class PhaonIR
  QMap<Unwind_Scope_Index, PHR_Channel_Group*> indexed_channel_groups_;
 
  QMap<QString, PHR_Channel_Group*> temp_anchored_channel_groups_;
- QMap<QPair<PHR_Scope*, QString>, PHR_Channel_Group*> anchored_channel_groups_;
+
+ struct anchor_channel_link { PHR_Channel_Semantic_Protocol* protocol; PHR_Scope* scope;
+    QString sym; };
+
+ QMultiMap<PHR_Channel_Group*, anchor_channel_link> anchored_channel_groups_;
 
  PHR_Scope* current_lexical_scope_;
 
@@ -98,7 +104,7 @@ public:
  void reset_program_stack();
  void index_channel_group();
  void temp_anchor_channel_group();
- void anchor_channel_group(QString sym);
+ void anchor_channel_group(QString sym, QString ch);
 
  void init_type_system();
  void init_type(QString type_name);
@@ -114,6 +120,8 @@ public:
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
  void evaluate_channel_group();
+
+ void enter_lexical_scope();
 
  void push_unwind_scope(int level_delta);
  void pop_unwind_scope();

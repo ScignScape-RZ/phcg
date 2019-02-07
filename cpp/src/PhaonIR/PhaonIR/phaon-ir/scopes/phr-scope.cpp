@@ -19,6 +19,11 @@ void PHR_Scope::add_value(QString key, PHR_Type* ty, quint64 val)
  values_[key] = {ty, val};
 }
 
+void PHR_Scope::update_value(QString key, void* pv)
+{
+ values_[key].raw_value = (quint64) pv;
+}
+
 PHR_Type* PHR_Scope::find_value(QString key, quint64& val)
 {
  auto it = values_.find(key);

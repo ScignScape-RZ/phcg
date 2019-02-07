@@ -15,6 +15,7 @@
 #include "channel/phr-channel-group.h"
 #include "channel/phr-channel.h"
 #include "eval/phr-channel-group-evaluator.h"
+#include "scopes/phr-scope.h"
 
 
 PhaonIR::PhaonIR() :  type_system_(nullptr),
@@ -163,6 +164,15 @@ void PhaonIR::evaluate_channel_group()
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
  ev->run_eval();
  ev->debug_report();
+
+ for(auto it: anchored_channel_groups_.values(held_channel_group_))
+ {
+  // //  chance to tailor for different protocols ...
+  QString sym = it.sym;
+  PHR_Scope* scope = it.scope;
+  void* pv = ev->get_result_value();
+  scope->update_value(sym, pv);
+ }
 }
 
 void PhaonIR::push_carrier_expression()
@@ -175,9 +185,10 @@ void PhaonIR::index_channel_group()
  indexed_channel_groups_[current_chief_unwind_scope_index_] = held_channel_group_;
 }
 
-void PhaonIR::anchor_channel_group(QString sym)
+void PhaonIR::anchor_channel_group(QString sym, QString ch)
 {
- anchored_channel_groups_[{current_lexical_scope_, sym}] = held_channel_group_;
+ anchored_channel_groups_.insert(held_channel_group_,
+   {semantic_protocols_[ch], current_lexical_scope_, sym});
 }
 
 void PhaonIR::temp_anchor_channel_group()
@@ -231,6 +242,11 @@ void PhaonIR::push_carrier_stack(QString sp_name)
    sp_name);
  program_stack_->push(st);
  current_carrier_stack_ = st;
+}
+
+void PhaonIR::enter_lexical_scope()
+{
+ current_lexical_scope_ = new PHR_Scope(current_lexical_scope_);
 }
 
 void PhaonIR::init_type_system()

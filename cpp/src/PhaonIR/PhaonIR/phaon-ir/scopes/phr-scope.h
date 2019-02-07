@@ -31,6 +31,8 @@ public:
  void add_value(QString key, PHR_Type* ty, quint64 val);
  PHR_Type* find_value(QString key, quint64& val);
 
+ void update_value(QString key, void* pv);
+
 
 };
 
