@@ -32,7 +32,7 @@ public:
  PHR_Type* find_value(QString key, quint64& val);
 
  void update_value(QString key, void* pv);
-
+ void update_raw_value(QString key, quint64 val);
 
 };
 

@@ -162,6 +162,13 @@ PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QStri
  return nullptr;
 }
 
+quint64 PhaonIR::default_cofinalizer(anchor_channel_link& acl, void* pv)
+{
+ qint32 result = *(qint32*)(pv);
+ delete pv;
+ return result;
+}
+
 void PhaonIR::evaluate_channel_group()
 {
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
@@ -174,7 +181,15 @@ void PhaonIR::evaluate_channel_group()
   QString sym = it.sym;
   PHR_Scope* scope = it.scope;
   void* pv = ev->get_result_value();
-  scope->update_value(sym, pv);
+  if(it.cofinalizer)
+  {
+   quint64 val = (this->*it.cofinalizer)(it, pv);
+   scope->update_raw_value(sym, val);
+  }
+  else
+  {
+   scope->update_value(sym, pv);
+  }
  }
 }
 
@@ -191,7 +206,13 @@ void PhaonIR::index_channel_group()
 void PhaonIR::anchor_channel_group(QString sym, QString ch)
 {
  anchored_channel_groups_.insert(held_channel_group_,
-   {semantic_protocols_[ch], current_lexical_scope_, sym});
+   {semantic_protocols_[ch], current_lexical_scope_, sym, nullptr});
+}
+
+void PhaonIR::copy_anchor_channel_group(QString sym, QString ch)
+{
+ anchored_channel_groups_.insert(held_channel_group_,
+   {semantic_protocols_[ch], current_lexical_scope_, sym, &default_cofinalizer});
 }
 
 void PhaonIR::temp_anchor_channel_group()

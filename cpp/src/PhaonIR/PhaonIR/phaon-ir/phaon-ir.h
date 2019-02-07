@@ -67,8 +67,15 @@ class PhaonIR
 
  QMap<QString, PHR_Channel_Group*> temp_anchored_channel_groups_;
 
- struct anchor_channel_link { PHR_Channel_Semantic_Protocol* protocol; PHR_Scope* scope;
-    QString sym; };
+ struct anchor_channel_link
+ {
+  PHR_Channel_Semantic_Protocol* protocol;
+  PHR_Scope* scope;
+  QString sym;
+  quint64 (PhaonIR::*cofinalizer)(anchor_channel_link& acl, void* pv);
+ };
+
+ quint64 default_cofinalizer(anchor_channel_link& acl, void* pv);
 
  QMultiMap<PHR_Channel_Group*, anchor_channel_link> anchored_channel_groups_;
 
@@ -105,6 +112,7 @@ public:
  void index_channel_group();
  void temp_anchor_channel_group();
  void anchor_channel_group(QString sym, QString ch);
+ void copy_anchor_channel_group(QString sym, QString ch);
 
  void init_type_system();
  void init_type(QString type_name);
