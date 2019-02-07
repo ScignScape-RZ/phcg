@@ -51,9 +51,13 @@ void local_program(PhaonIR& phr)
  phr.hold_type_by_name("u4");
  phr.push_carrier_expression();
  phr.coalesce_channel_group();
- phr.anchor_channel_group("x", "result");
+ phr.copy_anchor_channel_group("x", "result");
 
  phr.evaluate_channel_group();
+
+ phr.delete_temps();
+ phr.delete_retired();
+ phr.clear_temps();
 
  phr.reset_program_stack();
 
@@ -69,4 +73,8 @@ void local_program(PhaonIR& phr)
  phr.coalesce_channel_group();
 
  phr.evaluate_channel_group();
+ phr.delete_temps();
+ phr.delete_retired();
+ phr.delete_temps();
+ phr.clear_temps();
 }

@@ -83,8 +83,35 @@ qint32 PhaonIR::get_s4_symbol_value(QString sym)
  {
   quint64 val;
   PHR_Type* ty = current_lexical_scope_->find_value(sym, val);
-  void* pv = (void*) val;
-  return *(qint32*)pv;
+//  void* pv = (void*) val;
+//  return *(qint32*)pv;
+  return (qint32) val;
+ }
+}
+
+void PhaonIR::delete_temps()
+{
+ retired_temps_.append(temps_by_channel_group_.values());
+// QMapIterator<PHR_Channel_Group*> it(temps_by_channel_group_);
+// while(it.hasNext())
+// {
+//  it.next();
+// }
+}
+
+void PhaonIR::clear_temps()
+{
+ temp_anchored_channel_groups_.clear();
+ temps_by_channel_group_.clear();
+ indexed_channel_groups_.clear();
+ unwind_scope_index_parents_.clear();
+}
+
+void PhaonIR::delete_retired()
+{
+ for(void* pv : retired_temps_)
+ {
+  delete pv;
  }
 }
 
@@ -154,10 +181,11 @@ PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QStri
  auto it = temp_anchored_channel_groups_.find(usi_sym);
  if( it != temp_anchored_channel_groups_.end())
  {
-  PHR_Channel_Group* result = it.value();
-  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *result);
-  ev->run_eval();
-  return ev;
+  PHR_Channel_Group* pcg = it.value();
+  PHR_Channel_Group_Evaluator* result = load_evaluator_fn_(*this, *pcg);
+  result->run_eval();
+  temps_by_channel_group_.insertMulti(pcg, result->get_result_value());
+  return result;
  }
  return nullptr;
 }
@@ -165,8 +193,13 @@ PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QStri
 quint64 PhaonIR::default_cofinalizer(anchor_channel_link& acl, void* pv)
 {
  qint32 result = *(qint32*)(pv);
- delete pv;
+ push_delete(pv);
  return result;
+}
+
+void PhaonIR::push_delete(void* pv)
+{
+ retired_temps_.push_back(pv);
 }
 
 void PhaonIR::evaluate_channel_group()
@@ -191,6 +224,8 @@ void PhaonIR::evaluate_channel_group()
    scope->update_value(sym, pv);
   }
  }
+
+ // clean up anchored_channel_groups_? ...
 }
 
 void PhaonIR::push_carrier_expression()

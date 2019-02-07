@@ -67,6 +67,10 @@ class PhaonIR
 
  QMap<QString, PHR_Channel_Group*> temp_anchored_channel_groups_;
 
+ QMultiMap<PHR_Channel_Group*, void*> temps_by_channel_group_;
+
+ QList<void*> retired_temps_;
+
  struct anchor_channel_link
  {
   PHR_Channel_Semantic_Protocol* protocol;
@@ -113,6 +117,12 @@ public:
  void temp_anchor_channel_group();
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
+
+ void push_delete(void* pv);
+
+ void delete_temps();
+ void delete_retired();
+ void clear_temps();
 
  void init_type_system();
  void init_type(QString type_name);
