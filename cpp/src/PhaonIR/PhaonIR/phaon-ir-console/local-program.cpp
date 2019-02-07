@@ -17,6 +17,9 @@ void local_program(PhaonIR& phr)
  phr.init_type("u4");
 
  phr.init_program_stack();
+
+ phr.enter_lexical_scope();
+
  phr.reset_program_stack();
 
  phr.push_carrier_stack("fuxe");

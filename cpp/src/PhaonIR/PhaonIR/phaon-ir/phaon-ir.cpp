@@ -81,7 +81,10 @@ qint32 PhaonIR::get_s4_symbol_value(QString sym)
  }
  else
  {
-
+  quint64 val;
+  PHR_Type* ty = current_lexical_scope_->find_value(sym, val);
+  void* pv = (void*) val;
+  return *(qint32*)pv;
  }
 }
 
