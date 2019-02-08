@@ -313,7 +313,7 @@ void PhaonIR::init_type_system()
  type_system_ = new PHR_Type_System;
 }
 
-void PhaonIR::init_type(QString type_name)
+void PhaonIR::init_type(QString type_name, quint8 byte_code)
 {
- type_system_->check_add_type_by_name(type_name);
+ type_system_->check_add_type_by_name(type_name, byte_code);
 }

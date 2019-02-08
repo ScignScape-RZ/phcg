@@ -14,9 +14,9 @@ PHR_Carrier::PHR_Carrier()
 
 }
 
-PHR_Type_Object* PHR_Carrier::type_object()
+PHR_Type_Object* PHR_Carrier::type_object() const
 {
  if(!type_object_)
-   type_object_ = new PHR_Type_Object(phr_type);
+   type_object_ = new PHR_Type_Object(phr_type_);
  return type_object_;
 }

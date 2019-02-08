@@ -125,7 +125,7 @@ public:
  void clear_temps();
 
  void init_type_system();
- void init_type(QString type_name);
+ void init_type(QString type_name, quint8 byte_code);
 
  qint32 get_s4_symbol_value(QString sym);
 

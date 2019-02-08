@@ -21,7 +21,7 @@ class PHR_Carrier
  PHR_Type* phr_type_;
  void* raw_value_;
 
- PHR_Type_Object* type_object_;
+ mutable PHR_Type_Object* type_object_;
 
 public:
 
@@ -32,8 +32,9 @@ public:
  ACCESSORS(PHR_Type* ,phr_type)
  ACCESSORS(void* ,raw_value)
 
- ACCESSORS__GDECLARE(PHR_Type_Object* ,type_object)
+ //ACCESSORS__GDECLARE(PHR_Type_Object* ,type_object)
 
+ PHR_Type_Object* type_object() const;
 };
 
 #endif //  PHR_CARRIER__H

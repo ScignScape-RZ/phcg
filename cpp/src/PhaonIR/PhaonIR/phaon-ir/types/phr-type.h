@@ -14,13 +14,14 @@
 class PHR_Type
 {
  QString name_;
+ quint8 byte_code_;
 
 public:
 
  PHR_Type();
 
  ACCESSORS(QString ,name)
-
+ ACCESSORS(quint8 ,byte_code)
 
 };
 

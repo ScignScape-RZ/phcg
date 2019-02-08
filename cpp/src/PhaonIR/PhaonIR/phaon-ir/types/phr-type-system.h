@@ -21,7 +21,7 @@ public:
 
  PHR_Type_System();
 
- void check_add_type_by_name(QString name);
+ void check_add_type_by_name(QString name, quint8 byte_code);
 
  PHR_Type* get_type_by_name(QString name);
 

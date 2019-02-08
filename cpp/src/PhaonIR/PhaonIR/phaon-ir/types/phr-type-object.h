@@ -23,6 +23,8 @@ public:
 
  ACCESSORS(PHR_Type* ,ty)
 
+ quint8 byte_code();
+
 
 };
 
