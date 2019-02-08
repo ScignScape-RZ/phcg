@@ -4,7 +4,7 @@
 #     (See accompanying file LICENSE_1_0.txt or copy at
 #           http://www.boost.org/LICENSE_1_0.txt)
 
-PROJECT_NAME = phaon-ir-console
+PROJECT_NAME = phaon-ir
 
 include(../build-group.pri)
 
@@ -39,6 +39,8 @@ HEADERS += \
   $$SRC_DIR/channel/phr-carrier-stack.h \
   $$SRC_DIR/channel/phr-carrier.h \
   $$SRC_DIR/types/phr-type.h \
+  $$SRC_DIR/types/phr-type-object.h \
+  $$SRC_DIR/types/kcm-type-object.h \
   $$SRC_DIR/types/phr-type-system.h \
   $$SRC_DIR/eval/phr-channel-group-evaluator.h \
   $$SRC_DIR/eval/phr-minimal-evaluator.h \
@@ -60,6 +62,8 @@ SOURCES += \
   $$SRC_DIR/channel/phr-carrier-stack.cpp \
   $$SRC_DIR/channel/phr-carrier.cpp \
   $$SRC_DIR/types/phr-type.cpp \
+  $$SRC_DIR/types/phr-type-object.cpp \
+  $$SRC_DIR/types/kcm-type-object.cpp \
   $$SRC_DIR/types/phr-type-system.cpp \
   $$SRC_DIR/eval/phr-channel-group-evaluator.cpp \
   $$SRC_DIR/eval/phr-minimal-evaluator.cpp \

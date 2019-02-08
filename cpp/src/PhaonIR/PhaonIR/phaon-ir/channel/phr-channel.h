@@ -22,6 +22,11 @@ public:
  QString get_first_raw_value_string();
  void* get_first_raw_value();
 
+ friend bool operator <(const PHR_Channel& lhs, const PHR_Channel& rhs)
+ {
+  return lhs.value(0) < rhs.value(0);
+ }
+
 };
 
 #endif // PHR_CHANNEL__H

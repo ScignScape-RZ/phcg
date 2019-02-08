@@ -5,18 +5,16 @@
 //           http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "phr-carrier.h"
+#include "phr-class.h"
 
-#include "types/phr-type-object.h"
+#include "kans.h"
 
-PHR_Carrier::PHR_Carrier()
+
+//USING//_KANS(PhaonLib)
+
+
+PHR_Class::PHR_Class(QString name, PHR_Namespace* phaon_namespace)
+  :  name_(name), phaon_namespace_(phaon_namespace)
 {
 
-}
-
-PHR_Type_Object* PHR_Carrier::type_object()
-{
- if(!type_object_)
-   type_object_ = new PHR_Type_Object(phr_type);
- return type_object_;
 }

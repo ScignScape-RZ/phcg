@@ -24,7 +24,17 @@ public:
 
  ACCESSORS(QString ,name)
 
+ friend bool operator==(const PHR_Channel_Semantic_Protocol& lhs,
+   const PHR_Channel_Semantic_Protocol& rhs)
+ {
+  return lhs.name_ == rhs.name_;
+ }
 
+ friend bool operator<(const PHR_Channel_Semantic_Protocol& lhs,
+   const PHR_Channel_Semantic_Protocol& rhs)
+ {
+  return lhs.name_ < rhs.name_;
+ }
 };
 
 #endif // PHR_CHANNEL_SEMANTIC_PROTOCOL__H

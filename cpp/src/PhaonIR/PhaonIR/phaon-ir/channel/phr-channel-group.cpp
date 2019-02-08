@@ -8,6 +8,8 @@
 #include "phr-channel-group.h"
 
 #include "phr-channel.h"
+#include "phr-carrier.h"
+#include "types/phr-type-object.h"
 
 PHR_Channel_Group::PHR_Channel_Group()
 {
@@ -42,5 +44,65 @@ QString PHR_Channel_Group::get_first_raw_value_string(PHR_Channel_Semantic_Proto
   result = phc.get_first_raw_value_string();
  });
  return result;
+}
+
+int PHR_Channel_Group::get_lambda_byte_code()
+{
+ int result = 9;
+ for(const PHR_Carrier* c : *lambda_ch())
+ {
+  result *= 10;
+  result += c->type_object()->byte_code();
+ }
+ return result;
+}
+
+int PHR_Channel_Group::get_sigma_lambda_byte_code()
+{
+ int result = 9;
+ for(const PHR_Carrier* c : *sigma_ch())
+ {
+  result *= 10;
+  result += c->type_object()->byte_code();
+ }
+ for(const PHR_Carrier* c : *lambda_ch())
+ {
+  result *= 10;
+  result += c->type_object()->byte_code();
+ }
+ return result;
+}
+
+// //  this is all tmp ...
+PHR_Channel* PHR_Channel_Group::find_channel_by_name(QString n)
+{
+ QMapIterator<PHR_Channel_Semantic_Protocol*, PHR_Channel*> it(*this);
+ while(it.hasNext())
+ {
+  it.next();
+  if(it.key()->name() == n)
+    return it.value();
+ }
+ return nullptr;
+}
+
+PHR_Channel* PHR_Channel_Group::fuxe_ch()
+{
+ return find_channel_by_name("fuxe");
+}
+
+PHR_Channel*  PHR_Channel_Group::lambda_ch()
+{
+ return find_channel_by_name("lambda");
+}
+
+PHR_Channel*  PHR_Channel_Group::result_ch()
+{
+ return find_channel_by_name("result");
+}
+
+PHR_Channel*  PHR_Channel_Group::sigma_ch()
+{
+ return find_channel_by_name("sigma");
 }
 

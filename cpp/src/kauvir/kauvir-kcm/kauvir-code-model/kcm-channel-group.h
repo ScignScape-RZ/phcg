@@ -99,7 +99,7 @@ public:
      if(lit.value() < rit.value())
        return true;
      if(rit.value() < lit.value())
-       return true;
+       return false;
     }
     else if(*lit.key() < *rit.key())
       return true;

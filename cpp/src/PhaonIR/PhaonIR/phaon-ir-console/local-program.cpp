@@ -10,7 +10,40 @@
 #include <QDebug>
 
 
+
 void local_program(PhaonIR& phr)
+{
+ phr.init_type_system();
+ phr.init_type("fbase");
+ phr.init_type("u4");
+
+ phr.init_program_stack();
+
+ phr.enter_lexical_scope();
+
+ phr.reset_program_stack();
+
+ phr.push_carrier_stack("fuxe");
+ phr.hold_type_by_name("fbase");
+ phr.push_carrier_raw_value("&prn");
+
+ phr.push_carrier_stack("lambda");
+ phr.hold_type_by_name("u4");
+ phr.push_carrier_raw_value("2");
+
+ phr.coalesce_channel_group();
+ phr.evaluate_channel_group();
+
+ phr.delete_temps();
+ phr.delete_retired();
+ phr.clear_temps();
+
+ phr.reset_program_stack();
+
+}
+
+#ifdef HIDE
+void local_program1(PhaonIR& phr)
 {
  phr.init_type_system();
  phr.init_type("fbase");
@@ -78,3 +111,4 @@ void local_program(PhaonIR& phr)
  phr.delete_temps();
  phr.clear_temps();
 }
+#endif

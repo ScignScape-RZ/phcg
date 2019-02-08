@@ -5,18 +5,15 @@
 //           http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "phr-carrier.h"
+#include "kcm-type-object.h"
 
-#include "types/phr-type-object.h"
-
-PHR_Carrier::PHR_Carrier()
+KCM_Type_Object::KCM_Type_Object(PHR_Type* ty)
+  :  ty_(ty)
 {
 
 }
 
-PHR_Type_Object* PHR_Carrier::type_object()
-{
- if(!type_object_)
-   type_object_ = new PHR_Type_Object(phr_type);
- return type_object_;
-}
+//void PHR_Carrier::init_channel_group_stack()
+//{
+
+//}

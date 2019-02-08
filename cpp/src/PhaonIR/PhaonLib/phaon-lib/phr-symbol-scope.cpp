@@ -5,18 +5,16 @@
 //           http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "phr-carrier.h"
+#include "phr-symbol-scope.h"
 
-#include "types/phr-type-object.h"
+#include "kans.h"
 
-PHR_Carrier::PHR_Carrier()
+
+//USING//_KANS(PhaonLib)
+
+
+PHR_Symbol_Scope::PHR_Symbol_Scope()
+  :  QMap<QString, PHR_Function_Vector>()
 {
 
-}
-
-PHR_Type_Object* PHR_Carrier::type_object()
-{
- if(!type_object_)
-   type_object_ = new PHR_Type_Object(phr_type);
- return type_object_;
 }
