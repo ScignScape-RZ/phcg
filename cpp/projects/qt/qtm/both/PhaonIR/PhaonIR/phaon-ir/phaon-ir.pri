@@ -40,7 +40,7 @@ HEADERS += \
   $$SRC_DIR/runtime/phr-command-package.h \
   $$SRC_DIR/types/phr-type.h \
   $$SRC_DIR/types/phr-type-object.h \
-  $$SRC_DIR/types/kcm-type-object.h \
+  $$SRC_DIR/types/phr-universal-class.h \
   $$SRC_DIR/types/phr-type-system.h \
   $$SRC_DIR/eval/phr-channel-group-evaluator.h \
   $$SRC_DIR/eval/phr-minimal-evaluator.h \
@@ -66,7 +66,7 @@ SOURCES += \
   $$SRC_DIR/runtime/phr-command-package.cpp \
   $$SRC_DIR/types/phr-type.cpp \
   $$SRC_DIR/types/phr-type-object.cpp \
-  $$SRC_DIR/types/kcm-type-object.cpp \
+  $$SRC_DIR/types/phr-universal-class.cpp \
   $$SRC_DIR/types/phr-type-system.cpp \
   $$SRC_DIR/eval/phr-channel-group-evaluator.cpp \
   $$SRC_DIR/eval/phr-minimal-evaluator.cpp \
