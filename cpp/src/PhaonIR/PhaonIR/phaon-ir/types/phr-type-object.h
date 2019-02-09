@@ -25,6 +25,8 @@ public:
 
  quint8 byte_code();
 
+ bool is_string_like() const;
+
 
 };
 

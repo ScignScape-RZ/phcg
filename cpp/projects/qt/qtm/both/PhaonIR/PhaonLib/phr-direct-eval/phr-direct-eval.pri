@@ -17,6 +17,7 @@ DEFINES += USE_KANS
 #INCLUDEPATH += $$KAUVIR_PHAON_SRC_GROUP_DIR
 
 INCLUDEPATH += $$PHAONIR_SRC_GROUP_DIR
+INCLUDEPATH += $$PHAONLIB_SRC_GROUP_DIR
 
 CONFIG += no_keywords
 
@@ -27,6 +28,8 @@ HEADERS +=  \
 SOURCES +=  \
   $$SRC_DIR/phr-direct-eval.cpp \
 
+
+LIBS += -L$$TARGETSDIR -lphr-command-runtime
 
 #LIBS += -L$$TARGETSDIR -lkcm-command-package  -lkcm-scopes \
 #  -lkauvir-code-model -lkcm-command-runtime

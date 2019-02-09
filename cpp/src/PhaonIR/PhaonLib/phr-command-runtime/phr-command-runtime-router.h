@@ -234,7 +234,7 @@ class PHR_Command_Runtime_Router
 
  QString& string_result_;
 
- PHR_Expression* PHR_expression_;
+ PHR_Expression* phr_expression_;
 
  PHR_Proxy_Scope* proxy_scope_;
 
@@ -334,7 +334,7 @@ public:
  void proceed_s0_nor(QVector<quint64>& args,
    fn_type fn, int byte_code);
 
- PHR_Function_Vector* get_PHR_Function_Vector(QString fn);
+ PHR_Function_Vector* get_phr_function_vector(QString fn);
 
  void proceed_s1_0(PHR_Function_Vector* pfv, void** pResult, void* raw_value);
  void proceed_s1_1(PHR_Function_Vector* pfv, void** pResult, void* raw_value);

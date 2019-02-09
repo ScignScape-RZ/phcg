@@ -21,6 +21,11 @@ quint8 PHR_Type_Object::byte_code()
  return ty_->byte_code();
 }
 
+bool PHR_Type_Object::is_string_like() const
+{
+ return false;
+}
+
 //void PHR_Carrier::init_channel_group_stack()
 //{
 

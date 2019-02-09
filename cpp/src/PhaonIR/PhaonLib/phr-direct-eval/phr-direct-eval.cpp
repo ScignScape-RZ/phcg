@@ -6,6 +6,8 @@
 
 #include "phr-direct-eval.h"
 
+#include "phr-command-runtime/phr-command-runtime-router.h"
+
 #include "defines.h"
 
 
@@ -116,6 +118,48 @@ void phr_direct_eval(PHR_Code_Model* pcm, PHR_Command_Package* pcp)
  }
 
  QString string_result;
+
+ PHR_Command_Runtime_Router pcrr(pcm->table(), scope_system,
+   nullptr, //?pcm->current_proxy_scope(),
+   string_result);
+ //?pcrr.set_envv_fn(pcm->envv_fn());
+ pcrr.parse_command_package(pcp);
+ if(false)
+ {}
+// PHR_Source_Function* ksf = nullptr;
+// if(scope_system)
+// {
+//  ksf = scope_system->find_source_function_from_current_scope(pcrr.fuxe_name());
+// }
+// if(ksf)
+// {
+//  PHR_Lisp_Bridge::bridge_run_source_function(bridge, pcrr, *ksf);
+// }
+ else
+ {
+  pcrr.proceed();
+ }
+#ifdef HIDE
+ if(scope_system)
+ {
+  QString osn = cpkg->output_symbol_name();
+  if(!osn.isEmpty())
+  {
+   if(kcrr.string_result_code())
+   {
+    const PHR_Type_Object* rkto = kcrr.result_type_object();
+    scope_system->current_scope()->add_string_value(osn, rkto, string_result);
+   }
+   else
+   {
+    quint64 eval_result = kcrr.call_result();
+    const PHR_Type_Object* rkto = kcrr.result_type_object();
+    scope_system->current_scope()->add_value(osn, rkto, eval_result);
+   }
+  }
+ }
+#endif
+}
 #ifdef HIDE
  KCM_Command_Runtime_Router kcrr(kcm->table(), scope_system, kcm->current_proxy_scope(), string_result);
  kcrr.set_envv_fn(kcm->envv_fn());
@@ -152,4 +196,3 @@ void phr_direct_eval(PHR_Code_Model* pcm, PHR_Command_Package* pcp)
   }
  }
 #endif // HIDE
-}

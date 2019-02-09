@@ -7,6 +7,14 @@
 #include "phr-command-runtime-router.h"
 
 #include "phaon-ir/channel/phr-carrier.h"
+#include "phaon-ir/types/phr-type-object.h"
+#include "phaon-ir/types/phr-type.h"
+
+#include "phr-command-runtime-argument.h"
+
+#include "phaon-ir/runtime/phr-command-package.h"
+
+#include "phr-command-runtime-table.h"
 
 //#include "PHR-command-runtime-router-qob.h"
 
@@ -48,7 +56,7 @@
 PHR_Command_Runtime_Router::PHR_Command_Runtime_Router(PHR_Command_Runtime_Table* table,
   PHR_Scope_System* scopes, PHR_Proxy_Scope* proxy_scope,
   QString& string_result)
-  :  sigma_argument_(nullptr), PHR_expression_(nullptr),
+  :  sigma_argument_(nullptr), phr_expression_(nullptr),
      result_type_object_(nullptr), string_result_(string_result),
      table_(table), scopes_(scopes), proxy_scope_(proxy_scope), call_result_(0),
      reflection_convention_(Reflection_Conventions::N_A),
@@ -79,28 +87,33 @@ PHR_Command_Runtime_Argument* PHR_Command_Runtime_Router::parse_carrier_to_argum
 {
  PHR_Command_Runtime_Argument* result;
  QString sym = phc.symbol_name();
- const PHR_Type_Object* kto = phc.type_object();
- if(kto)
+ const PHR_Type_Object* pto = phc.type_object();
+ if(pto)
  {
   result = new PHR_Command_Runtime_Argument;
-  const Kauvir_Type_Object* kvto =  kto->kauvir_type_object();
-  result->set_type_name(kvto->name());
 
-  result->set_qmo(kvto->qmo());
-  result->set_pqmo(kvto->pqmo());
+//  const Kauvir_Type_Object* kvto =  pto->kauvir_type_object();
+//  result->set_type_name(kvto->name());
+
+//  result->set_qmo(kvto->qmo());
+//  result->set_pqmo(kvto->pqmo());
 
   void* k = phc.symbol_as_pointer();
   QString* qs = reinterpret_cast<QString*>(k);
 
-  if(phc.flags.literal_string)
+//  if(phc.flags.literal_string)
+//  {
+//   result->set_raw_value(phc.symbol_as_pointer());
+//   result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
+//  }
+//  else if(phc.flags.value_string)
+//  {
+//   result->set_raw_value(phc.symbol_as_pointer());
+//   result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
+//  }
+  if(false)
   {
-   result->set_raw_value(phc.symbol_as_pointer());
-   result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
-  }
-  else if(phc.flags.value_string)
-  {
-   result->set_raw_value(phc.symbol_as_pointer());
-   result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
+
   }
   else
   {
@@ -109,38 +122,38 @@ PHR_Command_Runtime_Argument* PHR_Command_Runtime_Router::parse_carrier_to_argum
    result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
   }
  }
- else if(phc.flags.literal_string)
- {
-  result = new PHR_Command_Runtime_Argument;
-  result->set_type_name("QString");
+// else if(phc.flags.literal_string)
+// {
+//  result = new PHR_Command_Runtime_Argument;
+//  result->set_type_name("QString");
 
-  void* k = phc.symbol_as_pointer();
-  QString* qs = reinterpret_cast<QString*>(k);
+//  void* k = phc.symbol_as_pointer();
+//  QString* qs = reinterpret_cast<QString*>(k);
 
-  result->set_raw_value(phc.symbol_as_pointer());
-  result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
- }
- else if(phc.declaration_scope())
- {
-  // //  currently declaration_scope is only used
-   //    as a signal that phc is scoped ...
-  result = new PHR_Command_Runtime_Argument;
-  const PHR_Type_Object* rkto;
+//  result->set_raw_value(phc.symbol_as_pointer());
+//  result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
+// }
+// else if(phc.declaration_scope())
+// {
+//  // //  currently declaration_scope is only used
+//   //    as a signal that phc is scoped ...
+//  result = new PHR_Command_Runtime_Argument;
+//  const PHR_Type_Object* rpto;
 
-  quint64 qv =  PHR_Lisp_Bridge::get_value_of_symbol(phc.symbol(), scopes_, &rkto);
+//  quint64 qv =  PHR_Lisp_Bridge::get_value_of_symbol(phc.symbol(), scopes_, &rpto);
 
-  if(rkto)
-  {
-   result->set_type_name(rkto->kauvir_type_object()->name());
-  }
+//  if(rpto)
+//  {
+//   result->set_type_name(rpto->kauvir_type_object()->name());
+//  }
 
-  result->set_raw_value( (void*) qv);
-  result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::QObject_Ptr);
- }
+//  result->set_raw_value( (void*) qv);
+//  result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::QObject_Ptr);
+// }
  else
  {
   result = new PHR_Command_Runtime_Argument;
-  QString qs = phc.symbol();
+  QString qs = phc.symbol_name();
   result->set_bind_code(qs);
  }
  return result;
@@ -149,18 +162,19 @@ PHR_Command_Runtime_Argument* PHR_Command_Runtime_Router::parse_carrier_to_argum
 QString PHR_Command_Runtime_Router::return_type_name()
 {
  if(result_type_object_)
-  return result_type_object_->kauvir_type_object()->name();
+  return result_type_object_->ty()->name();//kauvir_type_object()->name();
  return QString();
 }
 
 
 void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg)
 {
- PHR_expression_ = cpkg->PHR_expression();
+ //?phr_expression_ = cpkg->phr_expression();
 
- cpkg_output_symbol_name_ = cpkg->output_symbol_name();
+//? cpkg_output_symbol_name_ = cpkg->output_symbol_name();
 
- PHR_Channel& sigma = cpkg->sigma_ch();
+ PHR_Channel* sigma = cpkg->sigma_ch();
+#ifdef HIDE
  if(!sigma.carriers().isEmpty())
  {
   PHR_Carrier s1;
@@ -177,44 +191,43 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg
   }
   sigma_argument_ = s1a;
  }
- PHR_Channel& fuxe = cpkg->fuxe_ch();
- if(fuxe.carriers().isEmpty())
+#endif
+ PHR_Channel* fuxe = cpkg->fuxe_ch();
+ if(fuxe->isEmpty())
  {
   // no function name!
   return;
  }
- PHR_Channel& result = cpkg->result_ch();
- if(!result.carriers().isEmpty())
+ PHR_Channel* result = cpkg->result_ch();
+ if(!result->isEmpty())
  {
-  PHR_Carrier r1;
-  result.get_carrier_at_position(0, r1);
-  result_type_object_ = r1.type_object();
+  PHR_Carrier* r1 = result->first();
+  result_type_object_ = r1->type_object();
  }
 
- PHR_Carrier phc;
- fuxe.get_carrier_at_position(0, phc);
- fuxe_name_ = phc.symbol();
+ PHR_Carrier* phc = fuxe->first();
+ fuxe_name_ = phc->symbol_name();
 
+ PHR_Channel* lambda = cpkg->lambda_ch();
 
- PHR_Channel& lambda = cpkg->lambda_ch();
-
- int size = lambda.carriers().size();
+ int size = lambda->size();
  for(int i = 0; i < size; ++i)
  {
-  PHR_Carrier* phc = lambda.get_carrier_at_position(i);
+  PHR_Carrier* phc = lambda->at(i);
   PHR_Command_Runtime_Argument* la = parse_carrier_to_argument(*phc, i);
   lambda_arguments_.push_back(la);
  }
 }
 
-PHR_Function_Vector* PHR_Command_Runtime_Router::get_PHR_Function_Vector(QString fn)
+PHR_Function_Vector* PHR_Command_Runtime_Router::get_phr_function_vector(QString fn)
 {
- for(Phaon_Symbol_Scope* pss : scopes_->phaon_scope_queue())
- {
-  auto it = pss->find(fn);
-  if(it != pss->end())
-    return &it.value();
- }
+ //?
+// for(PHR_Symbol_Scope* pss : scopes_->phaon_scope_queue())
+// {
+//  auto it = pss->find(fn);
+//  if(it != pss->end())
+//    return &it.value();
+// }
  if(table_)
  {
   auto it = table_->find(fn);
@@ -226,7 +239,7 @@ PHR_Function_Vector* PHR_Command_Runtime_Router::get_PHR_Function_Vector(QString
 
 void PHR_Command_Runtime_Router::proceed()
 {
- PHR_Function_Vector* pfv = get_PHR_Function_Vector(fuxe_name_);
+ PHR_Function_Vector* pfv = get_phr_function_vector(fuxe_name_);
 
  if(sigma_argument_)
  {
@@ -240,9 +253,9 @@ void PHR_Command_Runtime_Router::proceed()
 
 PHR_Channel_Group* PHR_Command_Runtime_Router::get_channel_group()
 {
- if(PHR_expression_)
+ if(phr_expression_)
  {
-  return PHR_expression_->channel_group();
+ //? return phr_expression_->channel_group();
  }
 }
 
@@ -322,13 +335,13 @@ void PHR_Command_Runtime_Router::proceed_s1(PHR_Function_Vector* pfv)
 
  {
   QString code = sigma_argument_->bind_code();
-  const PHR_Type_Object* kto = nullptr;
-  const PHR_Type_Object* ckto = nullptr;
+  const PHR_Type_Object* pto = nullptr;
+  const PHR_Type_Object* cpto = nullptr;
   QString encoded_value;
 
   QPair<int, quint64> qclo_value = {0, 0};
-  void* raw_value = scopes_->find_raw_value_from_current_scope(code, envv_fn_, PHR_expression_,
-                                                               kto, ckto, encoded_value, qclo_value);
+  void* raw_value;//? = scopes_->find_raw_value_from_current_scope(code, envv_fn_, phr_expression_,
+    //?pto, cpto, encoded_value, qclo_value);
 
   switch(lambda_arguments_.size())
   {
@@ -391,7 +404,7 @@ void PHR_Command_Runtime_Router::proceed_s1_2(PHR_Function_Vector* pfv, void** p
  if(fn)
  {
   // //  raw_value is quint64* standing for void** ...
-  Kauvir_Universal_Class* uo = (Kauvir_Universal_Class*) (* (void**)raw_value) ;
+  PHR_Universal_Class* uo = (PHR_Universal_Class*) (* (void**)raw_value) ;
   void* la0 = nullptr;
   quint64 mem = 0;
   QPair<PHR_Scope_System*, QPair<int, quint64>> qclo_value = {scopes_, {0, 0}};
@@ -436,10 +449,10 @@ void PHR_Command_Runtime_Router::proceed_s1_2(PHR_Function_Vector* pfv, void** p
  }
 }
 
-void PHR_Command_Runtime_Router::run_callable_value(PHR_Callable_Value* kcv)
-{
- PHR_Lisp_Eval::run_source_function(*this, (quint64) kcv->as_pVoid() );
-}
+//void PHR_Command_Runtime_Router::run_callable_value(PHR_Callable_Value* kcv)
+//{
+// PHR_Lisp_Eval::run_source_function(*this, (quint64) kcv->as_pVoid() );
+//}
 
 QString PHR_Command_Runtime_Router::output_type_string()
 {
@@ -447,10 +460,11 @@ QString PHR_Command_Runtime_Router::output_type_string()
  {
   return QString();
  }
- if(const PHR_Type_Object* kto = scopes_->get_type_object_from_symbol_name(cpkg_output_symbol_name_))
- {
-  return kto->get_name_string();
- }
+ //?
+// if(const PHR_Type_Object* pto = scopes_->get_type_object_from_symbol_name(cpkg_output_symbol_name_))
+// {
+//  return pto->get_name_string();
+// }
  return QString();
 }
 
@@ -458,7 +472,7 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
   FN_Codes fnc, quint64& mem, QPair<PHR_Scope_System*, QPair<int, quint64>>& qclo_value,
   QString* const& qs_mem, void*& result, int& ptr_depth)
 {
- const PHR_Type_Object* kto;
+ const PHR_Type_Object* pto;
  if(kcra->bind_code().isEmpty())
  {
   QString* qs = (QString*) kcra->raw_value();
@@ -511,36 +525,39 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
    result = &mem;
   }
  }
- else if(quint64 temp = scopes_->find_temporary_bridge_value(kcra->bind_code(), kto))
+#ifdef HIDE
+ else if(quint64 temp = scopes_->find_temporary_bridge_value(kcra->bind_code(), pto))
  {
-  // // actually need to check of kto is anon fdef ...
+  // // actually need to check of pto is anon fdef ...
   PHR_Callable_Value* kcv = (PHR_Callable_Value*) temp;
   kcv->set_kcrr(this);
   mem = (quint64) kcv;
   result = &mem;
  }
+#endif
  else
  {
-  const PHR_Type_Object* kto;
-  const PHR_Type_Object* ckto;
+  const PHR_Type_Object* pto;
+  const PHR_Type_Object* cpto;
   QString encoded_value;
 
-  const PHR_Type_Object* xkto;
-  QString proxy_coords_code = proxy_scope_->find_proxy_coords_for_symbol_name(kcra->bind_code(), xkto);
+  const PHR_Type_Object* xpto;
+  QString proxy_coords_code;// = proxy_scope_->find_proxy_coords_for_symbol_name(kcra->bind_code(), xpto);
 
   if(proxy_coords_code.isEmpty())
   {
-   quint64* rv = scopes_->find_raw_value_from_current_scope(kcra->bind_code(), envv_fn_, PHR_expression_,
-     kto, ckto, encoded_value, qclo_value.second);
+   quint64* rv;//? = scopes_->find_raw_value_from_current_scope(kcra->bind_code(), envv_fn_, PHR_expression_,
+     //pto, cpto, encoded_value, qclo_value.second);
 
    if(rv == (quint64*) &encoded_value)
    {
-    if(!kto)
+    if(!pto)
     {
      // // means nested_expression_store could not find the pair ...
     }
 
-    else if(kto->is_lisp_list_like())
+#ifdef HIDE
+    else if(pto->is_lisp_list_like())
     {
      QString key = encoded_value; //? ".1.";
      quint64 lisp_val = scopes_->find_held_lisp_list_from_current_scope(key);
@@ -548,18 +565,22 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
      result = &mem;
      //mem = lisp_val;
     }
+#endif
+
     // need to parse the encoded ...
-    else if(kto->is_string_like())
+    else if(pto->is_string_like())
     {
      // // is this OK given the QString** stuff?
      *qs_mem = encoded_value;
      result = qs_mem;
     }
-    else if(kto->is_callable_lisp_deferred_value_like())
-    {
-     mem = (quint64) &qclo_value;
-     result = (void*) &mem;
-    }
+
+//    else if(pto->is_callable_lisp_deferred_value_like())
+//    {
+//     mem = (quint64) &qclo_value;
+//     result = (void*) &mem;
+//    }
+
     else
     {
      // // probably have to deal with multiple types ...
@@ -589,29 +610,29 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
   }
   else
   {
-   PHR_Channel_Bridge* bridge = proxy_scope_->PHR_channel_bridge();
-   PHR_Carrier* kcr = bridge->get_carrier_by_proxy_coords_code(proxy_coords_code);
+   //?PHR_Channel_Bridge* bridge = proxy_scope_->PHR_channel_bridge();
+   PHR_Carrier* pcr;// = bridge->get_carrier_by_proxy_coords_code(proxy_coords_code);
 
-   const PHR_Type_Object* kto = kcr->type_object();
+   const PHR_Type_Object* pto = pcr->type_object();
 
-   // // any issue of checking between kto and xkto?
-    //   ... xkto;
+   // // any issue of checking between pto and xpto?
+    //   ... xpto;
 
-   if(kto->is_string_like())
+   if(pto->is_string_like())
    {
     //    Again the QString** stuff: this only gets to QString* ...
     //    QString encoded_value = kcr->symbol();
     //    qs_mem = encoded_value;
     //    result = &qs_mem;
 
-    QString* pqs = kcr->symbol_as_pointer();
+    QString* pqs = pcr->symbol_as_pointer();
     mem = (quint64) pqs;
     result = &mem;
    }
    else
    {
     // // now this only works for ints ...
-    QString encoded_value = kcr->symbol();
+    QString encoded_value = pcr->symbol_name();
     mem = encoded_value.toInt();
     result = &mem;
    }
@@ -691,7 +712,7 @@ void PHR_Command_Runtime_Router::proceed_s1_1(PHR_Function_Vector* pfv, void** p
  if(fn)
  {
   // raw_value is quint64* standing for void** ...
-  Kauvir_Universal_Class* uo = (Kauvir_Universal_Class*) (* (void**)raw_value) ;
+  PHR_Universal_Class* uo = (PHR_Universal_Class*) (* (void**)raw_value) ;
   void* la0 = nullptr;
   quint64 mem = 0;
   QString qs_mem;
@@ -791,7 +812,7 @@ void PHR_Command_Runtime_Router::proceed_s1_0(PHR_Function_Vector* pfv, void** p
  if(fn)
  {
   // raw_value is quint64* standing for void** ...
-  Kauvir_Universal_Class* uo = (Kauvir_Universal_Class*) (* (void**)raw_value) ;
+  PHR_Universal_Class* uo = (PHR_Universal_Class*) (* (void**)raw_value) ;
   if(result_type_object_)
   {
    result = (uo->*fn)();
@@ -971,7 +992,7 @@ struct tybc_<1>
  }
 };
 
-KANS_(CMD)
+//?KANS_(CMD)
 
 template<>
 void PHR_Command_Runtime_Router::proceed_s0_r<2, s0_fn1_p_p_type>(QVector<quint64>& args, void*& result,
@@ -1081,11 +1102,7 @@ void PHR_Command_Runtime_Router::proceed_s0(QVector<quint64>& args, void** pResu
  }
 }
 
-_KANS(CMD)
-
-
-
-
+//?_KANS(CMD)
 
 
 void PHR_Command_Runtime_Router::proceed_s0_argvec(s0_fn1_p_type fn, void** pResult,
@@ -1376,12 +1393,12 @@ void PHR_Command_Runtime_Router::init_argument_info_qob(QVector<PHR_Command_Runt
   QString abc = arg->bind_code();
   if(!abc.isEmpty())
   {
-   const PHR_Type_Object* kto;
-   const PHR_Type_Object* ckto;
+   const PHR_Type_Object* pto;
+   const PHR_Type_Object* cpto;
    QString encoded_value;
    QPair<int, quint64> qclo_value = {0, 0};
-   quint64* rv = scopes_->find_raw_value_from_current_scope(abc, envv_fn_, PHR_expression_,
-     kto, ckto, encoded_value, qclo_value);
+   quint64* rv;// = scopes_->find_raw_value_from_current_scope(abc, envv_fn_, PHR_expression_,
+     //pto, cpto, encoded_value, qclo_value);
    store[i] = *rv;
    argument_info_[i + 1].qob_convention = ac;
    argument_info_[i + 1].void_argument = &store[i];
@@ -1428,12 +1445,12 @@ void PHR_Command_Runtime_Router::init_argument_info_qob(QVector<PHR_Command_Runt
  }
  else
  {
-  const PHR_Type_Object* kto;
-  const PHR_Type_Object* ckto;
+  const PHR_Type_Object* pto;
+  const PHR_Type_Object* cpto;
   QString encoded_value;
   QPair<int, quint64> qclo_value = {0, 0};
-  quint64* rv = scopes_->find_raw_value_from_current_scope(bc, envv_fn_, PHR_expression_,
-    kto, ckto, encoded_value, qclo_value);
+  quint64* rv;// = scopes_->find_raw_value_from_current_scope(bc, envv_fn_, PHR_expression_,
+    //pto, cpto, encoded_value, qclo_value);
   argument_info_[0].void_argument = (void*) *rv;
  }
 }
@@ -1449,14 +1466,14 @@ void PHR_Command_Runtime_Router::Do_Invoke_Method<Arg_Count>
  ::run(PHR_Command_Runtime_Router* this_, QVector<PHR_Command_Runtime_Argument*>& args)
 {
   switch(this_->reflection_convention_)
-  {
-  case Reflection_Conventions::Qt_Meta_Object:
-   Do_Invoke_Method__Cast_Schedule__QOB__Cast_<Arg_Count>
-     ::Type::template run<QObject*, typename Type_List__All_Cast_Needed<Arg_Count>::Type //,
-     >
-      (this_->fuxe_name(),
-      this_->this_object(), 0, *this_,
-      this_->argument_info(), args);
-   break;
+  {//?
+//  case Reflection_Conventions::Qt_Meta_Object:
+//   Do_Invoke_Method__Cast_Schedule__QOB__Cast_<Arg_Count>
+//     ::Type::template run<QObject*, typename Type_List__All_Cast_Needed<Arg_Count>::Type //,
+//     >
+//      (this_->fuxe_name(),
+//      this_->this_object(), 0, *this_,
+//      this_->argument_info(), args);
+//   break;
   }
 }

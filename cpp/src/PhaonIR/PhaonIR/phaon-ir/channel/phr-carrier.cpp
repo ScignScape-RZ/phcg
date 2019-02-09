@@ -14,6 +14,11 @@ PHR_Carrier::PHR_Carrier()
 
 }
 
+QString* PHR_Carrier::symbol_as_pointer()
+{
+ return &symbol_name_;
+}
+
 PHR_Type_Object* PHR_Carrier::type_object() const
 {
  if(!type_object_)

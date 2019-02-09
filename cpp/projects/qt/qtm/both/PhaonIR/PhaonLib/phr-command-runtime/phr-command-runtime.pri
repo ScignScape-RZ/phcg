@@ -19,14 +19,15 @@ INCLUDEPATH += $$SRC_GROUP_DIR
 #INCLUDEPATH += $$PHAON_SRC_GROUP_DIR
 #INCLUDEPATH += $$QHYP_SRC_GROUP_DIR
 
-#INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
-
+INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 
 INCLUDEPATH += $$PHAONIR_SRC_GROUP_DIR
 
 
 HEADERS +=  \
   $$SRC_DIR/phr-command-runtime-router.h \
+  $$SRC_DIR/phr-command-runtime-argument.h \
+  $$SRC_DIR/phr-command-runtime-table.h \
 
 # $$SRC_DIR/kcm-command-runtime-router-qob.h \
 #  $$SRC_DIR/kcm-command-runtime-argument.h \
@@ -36,6 +37,8 @@ HEADERS +=  \
 
 SOURCES +=  \
   $$SRC_DIR/phr-command-runtime-router.cpp \
+  $$SRC_DIR/phr-command-runtime-argument.cpp \
+  $$SRC_DIR/phr-command-runtime-table.cpp \
 
 #  $$SRC_DIR/kcm-command-runtime-argument.cpp \
 #  $$SRC_DIR/kcm-command-runtime-table.cpp \
@@ -44,6 +47,7 @@ SOURCES +=  \
 
 CONFIG += no_keywords
 
+LIBS += -L$$TARGETSDIR -lphaon-ir -lphaon-lib
 
 #LIBS += -L$$TARGETSDIR -lkcm-scopes -lkauvir-code-model \
 #  -lkcm-command-package -lPhaonLib

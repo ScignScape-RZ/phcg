@@ -32,9 +32,11 @@ public:
  ACCESSORS(PHR_Type* ,phr_type)
  ACCESSORS(void* ,raw_value)
 
- //ACCESSORS__GDECLARE(PHR_Type_Object* ,type_object)
+ ACCESSORS__GDECLARE(PHR_Type_Object* ,type_object)
 
- PHR_Type_Object* type_object() const;
+ QString* symbol_as_pointer();
+
+ //PHR_Type_Object* type_object() const;
 };
 
 #endif //  PHR_CARRIER__H
