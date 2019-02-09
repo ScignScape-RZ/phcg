@@ -14,8 +14,8 @@
 
 #include "phr-channel-group-table.h"
 
-#include "PhaonIR/PhaonIR/phaon-ir/scopes/phr-scope-system.h"
-#include "PhaonIR/PhaonIR/phaon-ir/phr-code-model.h"
+#include "phaon-ir/scopes/phr-scope-system.h"
+#include "phaon-ir/phr-code-model.h"
 
 
 //#include "kcm-command-package/kcm-command-package.h"

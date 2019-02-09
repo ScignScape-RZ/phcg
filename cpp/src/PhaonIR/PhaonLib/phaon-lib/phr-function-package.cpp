@@ -7,8 +7,8 @@
 
 #include "phr-function-package.h"
 
-#include "PhaonIR/PhaonIR/phaon-ir/channel/phr-channel-group.h"
-#include "PhaonIR/PhaonIR/phaon-ir/channel/phr-carrier.h"
+#include "phaon-ir/channel/phr-channel-group.h"
+#include "phaon-ir/channel/phr-carrier.h"
 
 //#include "kans.h"
 

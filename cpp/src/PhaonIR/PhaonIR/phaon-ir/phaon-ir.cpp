@@ -15,7 +15,7 @@
 #include "channel/phr-channel-group.h"
 #include "channel/phr-channel.h"
 #include "eval/phr-channel-group-evaluator.h"
-#include "scopes/phr-scope.h"
+#include "scopes/phr-runtime-scope.h"
 
 #include "phr-code-model.h"
 
@@ -214,7 +214,7 @@ void PhaonIR::evaluate_channel_group()
  {
   // //  chance to tailor for different protocols ...
   QString sym = it.sym;
-  PHR_Scope* scope = it.scope;
+  PHR_Runtime_Scope* scope = it.scope;
   void* pv = ev->get_result_value();
   if(it.cofinalizer)
   {
@@ -307,7 +307,7 @@ void PhaonIR::push_carrier_stack(QString sp_name)
 
 void PhaonIR::enter_lexical_scope()
 {
- current_lexical_scope_ = new PHR_Scope(current_lexical_scope_);
+ current_lexical_scope_ = new PHR_Runtime_Scope(current_lexical_scope_);
 }
 
 void PhaonIR::init_type_system()

@@ -25,7 +25,6 @@ INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 
 CONFIG += no_keywords
 
-
 DEFINES += USE_KANS
 
 
@@ -47,7 +46,7 @@ HEADERS += \
   $$SRC_DIR/eval/kop-base.h \
   $$SRC_DIR/eval/kops/add.h \
   $$SRC_DIR/eval/kops/subtract.h \
-  $$SRC_DIR/scopes/phr-scope.h \
+  $$SRC_DIR/scopes/phr-runtime-scope.h \
   $$SRC_DIR/scopes/phr-scope-value.h \
   $$SRC_DIR/scopes/phr-scope-system.h \
   $$SRC_DIR/scopes/phr-logical-scope-info.h \
@@ -71,7 +70,7 @@ SOURCES += \
   $$SRC_DIR/eval/phr-minimal-evaluator.cpp \
   $$SRC_DIR/eval/kops/add.cpp \
   $$SRC_DIR/eval/kops/subtract.cpp \
-  $$SRC_DIR/scopes/phr-scope.cpp \
+  $$SRC_DIR/scopes/phr-runtime-scope.cpp \
   $$SRC_DIR/scopes/phr-scope-value.cpp \
   $$SRC_DIR/scopes/phr-scope-system.cpp \
   $$SRC_DIR/scopes/phr-logical-scope-info.cpp \

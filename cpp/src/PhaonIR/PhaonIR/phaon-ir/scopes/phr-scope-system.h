@@ -32,11 +32,11 @@
 
 //class KCM_Runtime_Scope;
 
-class PHR_Scope;
+class PHR_Runtime_Scope;
 
 class PHR_Scope_System
 {
- PHR_Scope* current_scope_;
+ PHR_Runtime_Scope* current_scope_;
 // QQueue<Phaon_Symbol_Scope*> phaon_scope_queue_;
 
 // QMap<QString, QPair<quint64, const KCM_Type_Object*>> temporary_bridge_values_;
@@ -46,7 +46,7 @@ public:
 
  PHR_Scope_System();
 
- ACCESSORS(PHR_Scope* ,current_scope)
+ ACCESSORS(PHR_Runtime_Scope* ,current_scope)
  //ACCESSORS__RGET(QQueue<Phaon_Symbol_Scope*> ,phaon_scope_queue)
 
 };

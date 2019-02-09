@@ -6,7 +6,7 @@
 
 #include "phr-channel-group-table.h"
 
-#include "PhaonIR/PhaonIR/phaon-ir/channel/phr-channel-group.h"
+#include "phaon-ir/channel/phr-channel-group.h"
 
 //#include "kauvir-code-model/kcm-channel-group.h"
 

@@ -27,7 +27,7 @@ class PHR_Channel_Group;
 class PHR_Channel_Group_Evaluator;
 class PHR_Channel;
 
-class PHR_Scope;
+class PHR_Runtime_Scope;
 class PHR_Scope_Value;
 
 class PHR_Code_Model;
@@ -78,7 +78,7 @@ class PhaonIR
  struct anchor_channel_link
  {
   PHR_Channel_Semantic_Protocol* protocol;
-  PHR_Scope* scope;
+  PHR_Runtime_Scope* scope;
   QString sym;
   quint64 (PhaonIR::*cofinalizer)(anchor_channel_link& acl, void* pv);
  };
@@ -87,7 +87,7 @@ class PhaonIR
 
  QMultiMap<PHR_Channel_Group*, anchor_channel_link> anchored_channel_groups_;
 
- PHR_Scope* current_lexical_scope_;
+ PHR_Runtime_Scope* current_lexical_scope_;
 
 
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
