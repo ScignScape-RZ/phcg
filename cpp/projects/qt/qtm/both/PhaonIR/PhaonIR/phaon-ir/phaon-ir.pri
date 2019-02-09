@@ -37,6 +37,7 @@ HEADERS += \
   $$SRC_DIR/channel/phr-channel.h \
   $$SRC_DIR/channel/phr-carrier-stack.h \
   $$SRC_DIR/channel/phr-carrier.h \
+  $$SRC_DIR/runtime/phr-command-package.h \
   $$SRC_DIR/types/phr-type.h \
   $$SRC_DIR/types/phr-type-object.h \
   $$SRC_DIR/types/kcm-type-object.h \
@@ -62,6 +63,7 @@ SOURCES += \
   $$SRC_DIR/channel/phr-channel.cpp \
   $$SRC_DIR/channel/phr-carrier-stack.cpp \
   $$SRC_DIR/channel/phr-carrier.cpp \
+  $$SRC_DIR/runtime/phr-command-package.cpp \
   $$SRC_DIR/types/phr-type.cpp \
   $$SRC_DIR/types/phr-type-object.cpp \
   $$SRC_DIR/types/kcm-type-object.cpp \

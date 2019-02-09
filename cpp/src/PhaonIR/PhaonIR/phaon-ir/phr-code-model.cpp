@@ -14,6 +14,14 @@ PHR_Code_Model::PHR_Code_Model()
 
 }
 
+void PHR_Code_Model::direct_eval(PHR_Command_Package* pcp)
+{
+ if(direct_eval_fn_)
+ {
+  direct_eval_fn_(this, pcp);
+ }
+}
+
 void PHR_Code_Model::init_scope_system()
 {
  //scope_system_->join_lexical_scope(current_lexical_scope_);

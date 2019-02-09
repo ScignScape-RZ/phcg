@@ -17,6 +17,8 @@
 #include "phaon-ir/scopes/phr-scope-system.h"
 #include "phaon-ir/phr-code-model.h"
 
+#include "phaon-ir/runtime/phr-command-package.h"
+
 
 //#include "kcm-command-package/kcm-command-package.h"
 
@@ -45,8 +47,9 @@ void PHR_Runner::init_scope_system()
 
 void PHR_Runner::run(PHR_Channel_Group& pcg)
 {
+ PHR_Command_Package pcp(pcg);
 // KCM_Command_Package kcp(kcg);
-// kcm_->direct_eval(&kcp, nullptr);
+ pcm_->direct_eval(&pcp);
 }
 
 

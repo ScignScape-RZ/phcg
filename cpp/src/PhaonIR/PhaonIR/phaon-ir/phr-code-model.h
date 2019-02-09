@@ -13,11 +13,18 @@
 
 class PHR_Type_System;
 class PHR_Scope_System;
+class PHR_Command_Package;
 
 class PHR_Code_Model
 {
  PHR_Type_System* type_system_;
  PHR_Scope_System* scope_system_;
+
+ typedef std::function<void(PHR_Code_Model* kcm,
+   PHR_Command_Package* pcp)> direct_eval_fn_type;
+
+ direct_eval_fn_type direct_eval_fn_;
+
 
 public:
 
@@ -27,6 +34,8 @@ public:
  ACCESSORS(PHR_Scope_System* ,scope_system)
 
  void init_scope_system();
+
+ void direct_eval(PHR_Command_Package* pcp);
 
 };
 
