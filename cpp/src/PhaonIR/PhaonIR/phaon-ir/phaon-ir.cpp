@@ -17,6 +17,8 @@
 #include "eval/phr-channel-group-evaluator.h"
 #include "scopes/phr-scope.h"
 
+#include "phr-code-model.h"
+
 
 PhaonIR::PhaonIR() :  type_system_(nullptr),
   program_stack_(nullptr),
@@ -311,6 +313,12 @@ void PhaonIR::enter_lexical_scope()
 void PhaonIR::init_type_system()
 {
  type_system_ = new PHR_Type_System;
+}
+
+void PhaonIR::init_code_model()
+{
+ code_model_ = new PHR_Code_Model;
+ code_model_->set_type_system(type_system_);
 }
 
 void PhaonIR::init_type(QString type_name, quint8 byte_code)

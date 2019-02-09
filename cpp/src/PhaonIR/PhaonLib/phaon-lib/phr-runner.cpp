@@ -14,6 +14,9 @@
 
 #include "phr-channel-group-table.h"
 
+#include "PhaonIR/PhaonIR/phaon-ir/scopes/phr-scope-system.h"
+#include "PhaonIR/PhaonIR/phaon-ir/phr-code-model.h"
+
 
 //#include "kcm-command-package/kcm-command-package.h"
 
@@ -30,12 +33,12 @@ PHR_Runner::PHR_Runner()
 
 void PHR_Runner::init_scope_system()
 {
-// scopes_ = new KCM_Scope_System;
-// kcm_->set_scope_system(scopes_);
-// kcm_->init_scope_system();
+ scopes_ = new PHR_Scope_System;
+ pcm_->set_scope_system(scopes_);
+ pcm_->init_scope_system();
 
-// Kauvir_Type_System* type_system = kcm_->type_system();
-// table_ = new PHR_Channel_Group_Table(*type_system);
+ PHR_Type_System* type_system = pcm_->type_system();
+ table_ = new PHR_Channel_Group_Table(*type_system);
 
 }
 

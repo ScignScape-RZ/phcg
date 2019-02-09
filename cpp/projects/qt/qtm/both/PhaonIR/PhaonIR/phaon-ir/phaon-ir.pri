@@ -49,7 +49,9 @@ HEADERS += \
   $$SRC_DIR/eval/kops/subtract.h \
   $$SRC_DIR/scopes/phr-scope.h \
   $$SRC_DIR/scopes/phr-scope-value.h \
+  $$SRC_DIR/scopes/phr-scope-system.h \
   $$SRC_DIR/scopes/phr-logical-scope-info.h \
+  $$SRC_DIR/phr-code-model.h \
 
 
 SOURCES += \
@@ -71,7 +73,9 @@ SOURCES += \
   $$SRC_DIR/eval/kops/subtract.cpp \
   $$SRC_DIR/scopes/phr-scope.cpp \
   $$SRC_DIR/scopes/phr-scope-value.cpp \
+  $$SRC_DIR/scopes/phr-scope-system.cpp \
   $$SRC_DIR/scopes/phr-logical-scope-info.cpp \
+  $$SRC_DIR/phr-code-model.cpp \
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

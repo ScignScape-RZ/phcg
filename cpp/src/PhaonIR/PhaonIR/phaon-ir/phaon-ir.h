@@ -30,6 +30,8 @@ class PHR_Channel;
 class PHR_Scope;
 class PHR_Scope_Value;
 
+class PHR_Code_Model;
+
 class PhaonIR
 {
  struct Unwind_Scope_Index
@@ -71,6 +73,8 @@ class PhaonIR
 
  QList<void*> retired_temps_;
 
+ PHR_Code_Model* code_model_;
+
  struct anchor_channel_link
  {
   PHR_Channel_Semantic_Protocol* protocol;
@@ -111,6 +115,8 @@ public:
  ACCESSORS(PASTE_EXPRESSION(std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
    PHR_Channel_Group&)>) ,load_evaluator_fn)
 
+ ACCESSORS__GET(PHR_Code_Model* ,code_model)
+
  void init_program_stack();
  void reset_program_stack();
  void index_channel_group();
@@ -126,6 +132,7 @@ public:
 
  void init_type_system();
  void init_type(QString type_name, quint8 byte_code);
+ void init_code_model();
 
  qint32 get_s4_symbol_value(QString sym);
 

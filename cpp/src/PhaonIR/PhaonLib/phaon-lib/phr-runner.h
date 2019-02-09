@@ -31,11 +31,14 @@ class PHR_Channel_Group_Table;
 
 class PHR_Channel_Group;
 
+class PHR_Scope_System;
+class PHR_Code_Model;
 
 class PHR_Runner
 {
 // Kauvir_Code_Model* kcm_;
-// KCM_Scope_System* scopes_;
+ PHR_Code_Model* pcm_;
+ PHR_Scope_System* scopes_;
  PHR_Channel_Group_Table* table_;
 
 public:
