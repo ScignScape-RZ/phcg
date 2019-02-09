@@ -12,16 +12,21 @@
 #include "accessors.h"
 
 class PHR_Type_System;
+class PHR_Scope_System;
 
 class PHR_Code_Model
 {
  PHR_Type_System* type_system_;
+ PHR_Scope_System* scope_system_;
 
 public:
 
  PHR_Code_Model();
 
  ACCESSORS(PHR_Type_System* ,type_system)
+ ACCESSORS(PHR_Scope_System* ,scope_system)
+
+ void init_scope_system();
 
 };
 

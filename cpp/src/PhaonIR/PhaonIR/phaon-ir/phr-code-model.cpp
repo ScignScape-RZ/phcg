@@ -9,7 +9,12 @@
 
 
 PHR_Code_Model::PHR_Code_Model()
-  :  type_system_(nullptr)
+  :  type_system_(nullptr), scope_system_(nullptr)
 {
 
+}
+
+void PHR_Code_Model::init_scope_system()
+{
+ //scope_system_->join_lexical_scope(current_lexical_scope_);
 }
