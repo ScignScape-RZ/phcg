@@ -45,10 +45,10 @@ public:
 
  PHR_Runner();
 
-// Kauvir_Code_Model& get_kcm()
-// {
-//  return *kcm_;
-// }
+ PHR_Code_Model& get_pcm()
+ {
+  return *pcm_;
+ }
 
  PHR_Channel_Group_Table& get_table()
  {

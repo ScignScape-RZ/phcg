@@ -117,6 +117,11 @@ public:
 
  ACCESSORS__GET(PHR_Code_Model* ,code_model)
 
+ PHR_Channel_Group* get_select_channel_group()
+ {
+  return held_channel_group_;
+ }
+
  void init_program_stack();
  void reset_program_stack();
  void index_channel_group();
