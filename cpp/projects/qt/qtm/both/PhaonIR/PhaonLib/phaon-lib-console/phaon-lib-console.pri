@@ -42,7 +42,7 @@ SOURCES += \
  # $$SRC_DIR/local-program.cpp \
 
 
-LIBS += -L$$TARGETSDIR -lphaon-lib
+LIBS += -L$$TARGETSDIR -lphaon-lib -lphaon-ir -lphr-direct-eval
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

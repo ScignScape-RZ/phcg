@@ -23,7 +23,7 @@ class PHR_Code_Model
  PHR_Scope_System* scope_system_;
  PHR_Command_Runtime_Table* table_;
 
- typedef std::function<void(PHR_Code_Model* kcm,
+ typedef std::function<void(PHR_Code_Model* pcm,
    PHR_Command_Package* pcp)> direct_eval_fn_type;
 
  direct_eval_fn_type direct_eval_fn_;
@@ -36,6 +36,8 @@ public:
  ACCESSORS(PHR_Type_System* ,type_system)
  ACCESSORS(PHR_Scope_System* ,scope_system)
  ACCESSORS(PHR_Command_Runtime_Table* ,table)
+
+ ACCESSORS(direct_eval_fn_type ,direct_eval_fn)
 
 
  void init_scope_system();

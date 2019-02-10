@@ -38,6 +38,9 @@
 
 #include "phaon-ir/phr-code-model.h"
 
+#include "phaon-lib/phr-symbol-scope.h"
+
+#include "phr-direct-eval/phr-direct-eval.h"
 
 void local_program(PhaonIR& phr)
 {
@@ -62,6 +65,13 @@ void local_program(PhaonIR& phr)
  phr.coalesce_channel_group();
 }
 
+//void phr_direct_eval(PHR_Code_Model* pcm,
+//   PHR_Command_Package* pcp);
+//{
+
+//}
+//kcm_->direct_eval(cpkg, this);
+
 int main(int argc, char* argv[])
 {
  PHR_Runner phrn;
@@ -74,7 +84,7 @@ int main(int argc, char* argv[])
 // Phaon_Class phc("Test_Class", &phn);
 
  PHR_Code_Model& pcm = phrn.get_pcm();
- pcm.set_direct_eval_fn(&pcm_direct_eval);
+ pcm.set_direct_eval_fn(&phr_direct_eval);
 
  PHR_Symbol_Scope pss;
  init_test_functions(pcm, phrn.get_table(), pss);
@@ -93,7 +103,7 @@ int main(int argc, char* argv[])
 
 
  //khp.init_channel_group(kcm, kcg);
- phr.run(pcg);
+ phrn.run(*pcg);
 
  return 0;
 }
