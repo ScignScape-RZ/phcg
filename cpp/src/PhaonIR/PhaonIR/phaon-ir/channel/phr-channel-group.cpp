@@ -74,14 +74,19 @@ int PHR_Channel_Group::get_sigma_lambda_byte_code()
 }
 
 // //  this is all tmp ...
-PHR_Channel* PHR_Channel_Group::find_channel_by_name(QString n)
+PHR_Channel* PHR_Channel_Group::find_channel_by_name(QString n,
+  PHR_Channel_Semantic_Protocol** pr)
 {
  QMapIterator<PHR_Channel_Semantic_Protocol*, PHR_Channel*> it(*this);
  while(it.hasNext())
  {
   it.next();
   if(it.key()->name() == n)
-    return it.value();
+  {
+   if(pr)
+     *pr = it.key();
+   return it.value();
+  }
  }
  return nullptr;
 }
@@ -106,3 +111,11 @@ PHR_Channel*  PHR_Channel_Group::sigma_ch()
  return find_channel_by_name("sigma");
 }
 
+void PHR_Channel_Group::clear_all_but_sigma()
+{
+ PHR_Channel_Semantic_Protocol* pr = nullptr;
+ PHR_Channel*  ch = find_channel_by_name("sigma", &pr);
+ clear();
+ if(pr)
+   insert(pr, ch);
+}

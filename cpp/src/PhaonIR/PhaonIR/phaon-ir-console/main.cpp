@@ -10,6 +10,8 @@
 #include "phaon-ir/eval/phr-channel-group-evaluator.h"
 #include "phaon-ir/eval/phr-minimal-evaluator.h"
 
+#include "phaon-ir/channel/phr-channel-system.h"
+
 #include <QDebug>
 
 
@@ -35,7 +37,10 @@ PHR_Channel_Group_Evaluator* load_evaluator(PhaonIR& phr, PHR_Channel_Group& pcg
 
 int main(int argc, char **argv)
 {
- PhaonIR phr;
+ PHR_Channel_System pcs;
+
+ PhaonIR phr(&pcs);
+
  phr.set_load_evaluator_fn(&load_evaluator);
  local_program(phr);
  qDebug() << "ok";

@@ -28,7 +28,9 @@ class PHR_Channel_Group_Table;
 class PHR_Symbol_Scope;
 class PHR_Code_Model;
 
-void init_test_functions(PHR_Code_Model& pcm,
+class PHR_Channel_System;
+
+void init_test_functions(PHR_Channel_System& pcs, PHR_Code_Model& pcm,
   PHR_Channel_Group_Table& table, PHR_Symbol_Scope& pss);
 
 

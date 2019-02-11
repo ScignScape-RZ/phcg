@@ -29,6 +29,7 @@ class PHR_Channel;
 
 class PHR_Runtime_Scope;
 class PHR_Scope_Value;
+class PHR_Channel_System;
 
 class PHR_Code_Model;
 
@@ -47,7 +48,7 @@ class PhaonIR
   }
  };
 
- QMap<QString, PHR_Channel_Semantic_Protocol*> semantic_protocols_;
+ PHR_Channel_System* channel_system_;
  QMap<QPair<Unwind_Scope_Index, PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*> sp_map_;
  PHR_Type_System* type_system_;
  PHR_Program_Stack* program_stack_;
@@ -110,12 +111,13 @@ class PhaonIR
 
 public:
 
- PhaonIR();
+ PhaonIR(PHR_Channel_System* channel_system);
 
  ACCESSORS(PASTE_EXPRESSION(std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
    PHR_Channel_Group&)>) ,load_evaluator_fn)
 
  ACCESSORS__GET(PHR_Code_Model* ,code_model)
+ ACCESSORS__GET(PHR_Channel_System* ,channel_system)
 
  PHR_Channel_Group* get_select_channel_group()
  {

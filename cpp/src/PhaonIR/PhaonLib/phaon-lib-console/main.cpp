@@ -35,6 +35,7 @@
 #include "phaon-lib/phr-runner.h"
 
 #include "phaon-ir/phaon-ir.h"
+#include "phaon-ir/channel/phr-channel-system.h"
 
 #include "phaon-ir/phr-code-model.h"
 
@@ -78,7 +79,8 @@ int main(int argc, char* argv[])
 {
  PHR_Runner phrn;
 
- PhaonIR phr;
+ PHR_Channel_System pcs;
+ PhaonIR phr(&pcs);
 
 
 
@@ -89,7 +91,7 @@ int main(int argc, char* argv[])
  pcm.set_direct_eval_fn(&phr_direct_eval);
 
  PHR_Symbol_Scope pss;
- init_test_functions(pcm, phrn.get_table(), pss);
+ init_test_functions(pcs, pcm, phrn.get_table(), pss);
  phrn.get_phaon_scope_queue().push_front(&pss);
 
 // KPH_Command_Package khp;

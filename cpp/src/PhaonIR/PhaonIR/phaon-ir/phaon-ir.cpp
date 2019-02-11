@@ -17,11 +17,13 @@
 #include "eval/phr-channel-group-evaluator.h"
 #include "scopes/phr-runtime-scope.h"
 
+#include "channel/phr-channel-system.h"
+
 #include "phr-code-model.h"
 
 
-PhaonIR::PhaonIR() :  type_system_(nullptr),
-  program_stack_(nullptr),
+PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
+  channel_system_(channel_system), program_stack_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
   held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
   current_chief_unwind_scope_index_({0,0,0,0}),
@@ -58,13 +60,13 @@ void PhaonIR::reset_program_stack()
 
 void PhaonIR::check_semantic_protocol(QString sp_name)
 {
- auto it = semantic_protocols_.find(sp_name);
- if(it == semantic_protocols_.end())
+ auto it = channel_system_->find(sp_name);
+ if(it == channel_system_->end())
  {
   PHR_Channel_Semantic_Protocol* sp = new
     PHR_Channel_Semantic_Protocol;
   sp->set_name(sp_name);
-  semantic_protocols_.insert(sp_name, sp);
+  channel_system_->insert(sp_name, sp);
  }
 }
 
@@ -119,8 +121,8 @@ void PhaonIR::delete_retired()
 
 PHR_Channel* PhaonIR::get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg)
 {
- auto it = semantic_protocols_.find(sp_name);
- if(it == semantic_protocols_.end())
+ auto it = channel_system_->find(sp_name);
+ if(it == channel_system_->end())
    return nullptr;
  return pcg.value(it.value());
 }
@@ -128,12 +130,12 @@ PHR_Channel* PhaonIR::get_channel_by_sp_name(QString sp_name, PHR_Channel_Group&
 PHR_Carrier_Stack* PhaonIR::get_carrier_stack_by_sp_name(Unwind_Scope_Index usi,
   QString sp_name)
 {
- auto it = sp_map_.find({usi, semantic_protocols_[sp_name]});
+ auto it = sp_map_.find({usi, (*channel_system_)[sp_name]});
  if(it == sp_map_.end())
  {
   PHR_Carrier_Stack* result = new PHR_Carrier_Stack;
   result->set_sp_name(sp_name);
-  sp_map_.insert({usi, semantic_protocols_[sp_name]}, result);
+  sp_map_.insert({usi, (*channel_system_)[sp_name]}, result);
   return result;
  }
  return it.value();
@@ -147,12 +149,12 @@ void PhaonIR::hold_type_by_name(QString ty_name)
 
 void* PhaonIR::get_first_raw_value(QString sp_name, PHR_Channel_Group& pcg)
 {
- return pcg.get_first_raw_value(semantic_protocols_[sp_name]);
+ return pcg.get_first_raw_value((*channel_system_)[sp_name]);
 }
 
 QString PhaonIR::get_first_raw_value_string(QString sp_name, PHR_Channel_Group& pcg)
 {
- return pcg.get_first_raw_value_string(semantic_protocols_[sp_name]);
+ return pcg.get_first_raw_value_string((*channel_system_)[sp_name]);
 }
 
 void PhaonIR::push_unwind_scope(int level_delta)
@@ -243,13 +245,13 @@ void PhaonIR::index_channel_group()
 void PhaonIR::anchor_channel_group(QString sym, QString ch)
 {
  anchored_channel_groups_.insert(held_channel_group_,
-   {semantic_protocols_[ch], current_lexical_scope_, sym, nullptr});
+   {(*channel_system_)[ch], current_lexical_scope_, sym, nullptr});
 }
 
 void PhaonIR::copy_anchor_channel_group(QString sym, QString ch)
 {
  anchored_channel_groups_.insert(held_channel_group_,
-   {semantic_protocols_[ch], current_lexical_scope_, sym, &default_cofinalizer});
+   {(*channel_system_)[ch], current_lexical_scope_, sym, &default_cofinalizer});
 }
 
 void PhaonIR::temp_anchor_channel_group()
@@ -268,7 +270,7 @@ void PhaonIR::coalesce_channel_group()
   {
    (*pch)[i] = &pcr;
   });
-  pcg->insert(semantic_protocols_.value(pcs.sp_name()), pch);
+  pcg->insert(channel_system_->value(pcs.sp_name()), pch);
  });
  held_channel_group_ = pcg;
 }

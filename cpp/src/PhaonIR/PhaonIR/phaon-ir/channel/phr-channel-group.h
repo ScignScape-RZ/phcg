@@ -34,12 +34,20 @@ public:
  int get_lambda_byte_code();
  int get_sigma_lambda_byte_code();
 
- PHR_Channel* find_channel_by_name(QString n);
+ PHR_Channel* find_channel_by_name(QString n,
+   PHR_Channel_Semantic_Protocol** pr = nullptr);
 
  PHR_Channel* fuxe_ch();
  PHR_Channel* lambda_ch();
  PHR_Channel* result_ch();
  PHR_Channel* sigma_ch();
+
+ void clear_all()
+ {
+  clear();
+ }
+
+ void clear_all_but_sigma();
 
 
  friend bool operator<(const PHR_Channel_Group& lhs, const PHR_Channel_Group& rhs)
