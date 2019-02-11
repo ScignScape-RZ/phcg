@@ -42,6 +42,8 @@
 
 #include "phr-direct-eval/phr-direct-eval.h"
 
+#include "test-functions.h"
+
 void local_program(PhaonIR& phr)
 {
  phr.init_type_system();

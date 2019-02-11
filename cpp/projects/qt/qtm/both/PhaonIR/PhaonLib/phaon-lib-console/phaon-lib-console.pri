@@ -34,12 +34,12 @@ DEFINES += USE_KANS
 
 
 HEADERS += \
+  $$SRC_DIR/test-functions.h \
 
 
 SOURCES += \
   $$SRC_DIR/main.cpp \
-
- # $$SRC_DIR/local-program.cpp \
+  $$SRC_DIR/test-functions.cpp \
 
 
 LIBS += -L$$TARGETSDIR -lphaon-lib -lphaon-ir -lphr-direct-eval
