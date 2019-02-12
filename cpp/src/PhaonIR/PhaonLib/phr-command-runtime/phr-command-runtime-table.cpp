@@ -10,6 +10,8 @@
 #include "phaon-ir/channel/phr-channel-group.h"
 #include "phaon-ir/channel/phr-carrier.h"
 
+#include "phaon-ir/scopes/phr-runtime-scope.h"
+
 //#include "kans.h"
 
 #include <QQueue>
@@ -21,16 +23,22 @@
 
 
 PHR_Command_Runtime_Table::PHR_Command_Runtime_Table(PHR_Type_System& type_system)
-  :  type_system_(type_system)
+  :  PHR_Symbol_Scope(new PHR_Runtime_Scope(nullptr)), type_system_(type_system)
 {
 
 }
 
+PHR_Function_Vector* PHR_Command_Runtime_Table::get_phr_function_vector(QString fn)
+{
+ return runtime_scope_->get_function_vector_value_as<PHR_Function_Vector>(fn);
+}
 
 void PHR_Command_Runtime_Table::add_declared_function_package(QString name, PHR_Function phf)
 {
  strip_hyphens(name);
- (*this)[name].push_back(phf);
+ add_function(name, phf);
+ //runtime_scope_->add_function_vector_value();
+ //(*phr)[name].push_back(phf);
 }
 
 

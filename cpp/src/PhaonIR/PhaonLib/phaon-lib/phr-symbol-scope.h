@@ -26,6 +26,7 @@ class PHR_Function;
 
 class PHR_Symbol_Scope //?: public QMap<QString, PHR_Function_Vector>
 {
+protected:
  PHR_Runtime_Scope* runtime_scope_;
 
 public:

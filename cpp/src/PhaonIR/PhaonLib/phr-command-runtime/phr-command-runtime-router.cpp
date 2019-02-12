@@ -230,9 +230,10 @@ PHR_Function_Vector* PHR_Command_Runtime_Router::get_phr_function_vector(QString
 // }
  if(table_)
  {
-  auto it = table_->find(fn);
-  if(it != table_->end())
-    return &it.value();
+  return table_->get_phr_function_vector(fn);
+//  auto it = table_->find(fn);
+//  if(it != table_->end())
+//    return &it.value();
  }
  return nullptr;
 }

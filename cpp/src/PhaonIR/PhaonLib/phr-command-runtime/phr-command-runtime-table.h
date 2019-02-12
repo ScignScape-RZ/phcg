@@ -63,6 +63,8 @@ public:
 
  ACCESSORS__GET(PHR_Type_System& ,type_system)
 
+ PHR_Function_Vector* get_phr_function_vector(QString fn);
+
  void add_declared_function_package(QString name, PHR_Function phf);
 
  PHR_Channel_Group* add_s1_declared_function(QString name, const PHR_Channel_Group& channels);
