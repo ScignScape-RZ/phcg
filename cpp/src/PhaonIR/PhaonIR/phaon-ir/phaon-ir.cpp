@@ -312,6 +312,13 @@ void PhaonIR::enter_lexical_scope()
  current_lexical_scope_ = new PHR_Runtime_Scope(current_lexical_scope_);
 }
 
+void PhaonIR::create_channel_semantic_protocol(QString name)
+{
+ PHR_Channel_Semantic_Protocol* pcsp = new PHR_Channel_Semantic_Protocol;
+ pcsp->set_name(name);
+ (*channel_system_)[name] = pcsp;
+}
+
 void PhaonIR::init_type_system()
 {
  type_system_ = new PHR_Type_System;

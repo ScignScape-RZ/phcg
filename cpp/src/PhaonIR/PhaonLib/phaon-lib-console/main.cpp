@@ -82,16 +82,24 @@ int main(int argc, char* argv[])
  PHR_Channel_System pcs;
  PhaonIR phr(&pcs);
 
+ phr.init_type_system();
+ phr.init_type("fbase", DEFAULT_PTR_BYTE_CODE);
+ phr.init_type("u4", 4);
+
+ phr.create_channel_semantic_protocol("lambda");
+ phr.create_channel_semantic_protocol("result");
 
 
 // Phaon_Namespace phn("TestNS");
 // Phaon_Class phc("Test_Class", &phn);
 
  PHR_Code_Model& pcm = phrn.get_pcm();
+ pcm.set_type_system(phr.type_system());
+
  pcm.set_direct_eval_fn(&phr_direct_eval);
 
  PHR_Symbol_Scope pss;
- init_test_functions(pcs, pcm, phrn.get_table(), pss);
+ init_test_functions(phr, pcm, phrn.get_table(), pss);
  phrn.get_phaon_scope_queue().push_front(&pss);
 
 // KPH_Command_Package khp;

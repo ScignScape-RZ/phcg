@@ -118,6 +118,9 @@ public:
 
  ACCESSORS__GET(PHR_Code_Model* ,code_model)
  ACCESSORS__GET(PHR_Channel_System* ,channel_system)
+ ACCESSORS__GET(PHR_Type_System* ,type_system)
+
+ void create_channel_semantic_protocol(QString name);
 
  PHR_Channel_Group* get_select_channel_group()
  {

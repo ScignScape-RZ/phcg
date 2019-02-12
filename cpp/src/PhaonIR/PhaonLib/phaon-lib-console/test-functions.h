@@ -29,8 +29,9 @@ class PHR_Symbol_Scope;
 class PHR_Code_Model;
 
 class PHR_Channel_System;
+class PhaonIR;
 
-void init_test_functions(PHR_Channel_System& pcs, PHR_Code_Model& pcm,
+void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   PHR_Channel_Group_Table& table, PHR_Symbol_Scope& pss);
 
 

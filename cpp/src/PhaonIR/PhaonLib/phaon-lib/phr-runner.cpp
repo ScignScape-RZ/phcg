@@ -27,7 +27,7 @@
 
 
 PHR_Runner::PHR_Runner()
-  :  //kcm_(new Kauvir_Code_Model),
+  :  pcm_(new PHR_Code_Model),
     table_(nullptr)//, scopes_(nullptr)
 {
  init_scope_system();
@@ -55,6 +55,6 @@ void PHR_Runner::run(PHR_Channel_Group& pcg)
 
 QQueue<PHR_Symbol_Scope*>& PHR_Runner::get_phaon_scope_queue()
 {
- //return scopes_->phaon_scope_queue();
+ return scopes_->phr_scope_queue();
 }
 

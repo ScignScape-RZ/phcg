@@ -34,6 +34,8 @@ public:
  int get_lambda_byte_code();
  int get_sigma_lambda_byte_code();
 
+ void init_channel(PHR_Channel_Semantic_Protocol* key, int size);
+
  PHR_Channel* find_channel_by_name(QString n,
    PHR_Channel_Semantic_Protocol** pr = nullptr);
 

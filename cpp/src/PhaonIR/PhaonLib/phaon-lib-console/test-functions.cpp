@@ -82,6 +82,7 @@
 
 #include "phaon-ir/channel/phr-channel-system.h"
 #include "phaon-ir/channel/phr-carrier.h"
+#include "phaon-ir/phaon-ir.h"
 
 
 void prn(qint32 arg)
@@ -89,10 +90,12 @@ void prn(qint32 arg)
  qDebug() << arg;
 }
 
-void init_test_functions(PHR_Channel_System& pcs, PHR_Code_Model& pcm,
+void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   PHR_Channel_Group_Table& table, PHR_Symbol_Scope& pss)
 {
  PHR_Type_System* type_system = pcm.type_system();
+ PHR_Channel_System& pcs = *phr.channel_system();
+
 
  PHR_Channel_Group g1;//(pcm.channel_names());
  {
@@ -100,7 +103,7 @@ void init_test_functions(PHR_Channel_System& pcs, PHR_Code_Model& pcm,
   PHR_Carrier* phc = new PHR_Carrier;
   phc->set_phr_type(ty);
   PHR_Channel_Semantic_Protocol* pcsp = pcs["lambda"];
-  g1[pcsp]->reserve(1);
+  g1.init_channel(pcsp, 1);
   (*g1[pcsp])[0] = phc;
 
 //  g1.add_lambda_carrier(

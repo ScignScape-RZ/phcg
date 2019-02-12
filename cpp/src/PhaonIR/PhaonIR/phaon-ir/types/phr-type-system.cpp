@@ -26,6 +26,7 @@ void PHR_Type_System::check_add_type_by_name(QString name, quint8 byte_code)
  {
   PHR_Type* ty = new PHR_Type;
   ty->set_name(name);
+  ty->set_byte_code(byte_code);
   types_.insert(name, ty);
  }
 }

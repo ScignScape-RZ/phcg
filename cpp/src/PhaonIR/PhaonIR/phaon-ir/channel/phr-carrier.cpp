@@ -10,6 +10,7 @@
 #include "types/phr-type-object.h"
 
 PHR_Carrier::PHR_Carrier()
+  :  type_object_(nullptr)
 {
 
 }

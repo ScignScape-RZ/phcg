@@ -60,11 +60,21 @@ int PHR_Channel_Group::get_lambda_byte_code()
 int PHR_Channel_Group::get_sigma_lambda_byte_code()
 {
  int result = 9;
- for(const PHR_Carrier* c : *sigma_ch())
+
+ if(PHR_Channel* sc = sigma_ch())
  {
-  result *= 10;
-  result += c->type_object()->byte_code();
+  for(const PHR_Carrier* c : *sc)
+  {
+   result *= 10;
+   result += c->type_object()->byte_code();
+  }
  }
+ else
+ {
+//  result *= 10;
+//  result += 9;
+ }
+
  for(const PHR_Carrier* c : *lambda_ch())
  {
   result *= 10;
@@ -109,6 +119,13 @@ PHR_Channel*  PHR_Channel_Group::result_ch()
 PHR_Channel*  PHR_Channel_Group::sigma_ch()
 {
  return find_channel_by_name("sigma");
+}
+
+void PHR_Channel_Group::init_channel(PHR_Channel_Semantic_Protocol* key, int size)
+{
+ PHR_Channel* phc = new PHR_Channel;
+ phc->resize(size);
+ insert(key, phc);
 }
 
 void PHR_Channel_Group::clear_all_but_sigma()
