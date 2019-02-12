@@ -75,7 +75,9 @@ public:
 
   phf.augment(pfp);
 
-  pss[name].push_back(phf);
+  pss.add_function(name, phf);
+
+  //pss[name].push_back(phf);
 
  }
 

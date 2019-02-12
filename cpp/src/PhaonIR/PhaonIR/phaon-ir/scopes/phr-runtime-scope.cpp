@@ -14,26 +14,42 @@ PHR_Runtime_Scope::PHR_Runtime_Scope(PHR_Runtime_Scope* parent_scope, PHR_Logica
 
 }
 
-void PHR_Runtime_Scope::add_value(QString key, PHR_Type* ty, quint64 val)
+void PHR_Runtime_Scope::add_direct_value(QString key, PHR_Type* ty, quint64 val)
 {
- values_[key] = {ty, val};
+ values_[key] = {Storage_Options::Direct, {ty, val}};
 }
 
-void PHR_Runtime_Scope::update_raw_value(QString key, quint64 val)
+void PHR_Runtime_Scope::add_pointer_value(QString key, PHR_Type* ty, quint64 val)
 {
- values_[key].raw_value = val;
+ values_[key] = {Storage_Options::Pointer, {ty, val}};
+}
+
+void PHR_Runtime_Scope::add_function_vector_value(QString key, void* fv)
+{
+ values_[key] = {Storage_Options::Function_Vector, {nullptr, (quint64) fv}};
+}
+
+void PHR_Runtime_Scope::add_function_vector_value(QString key, PHR_Type* ty, quint64 val)
+{
+ values_[key] = {Storage_Options::Function_Vector, {ty, val}};
+}
+
+void PHR_Runtime_Scope::update_direct_value(QString key, quint64 val)
+{
+ values_[key].second.raw_value = val;
 }
 
 void PHR_Runtime_Scope::update_value(QString key, void* pv)
 {
- values_[key].raw_value = (quint64) pv;
+ values_[key].second.raw_value = (quint64) pv;
 }
 
-PHR_Type* PHR_Runtime_Scope::find_value(QString key, quint64& val)
+PHR_Type* PHR_Runtime_Scope::find_value(QString key, quint64& val, Storage_Options& so)
 {
  auto it = values_.find(key);
  if(it == values_.end())
    return nullptr;
- val = it.value().raw_value;
- return it.value().ty;
+ so = it.value().first;
+ val = it.value().second.raw_value;
+ return it.value().second.ty;
 }

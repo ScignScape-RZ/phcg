@@ -25,7 +25,7 @@
 
 //KANS_(PhaonLib)
 
-class PHR_Symbol_Scope;
+class PHR_Runtime_Scope;
 class PHR_Function_Vector;
 class PHR_Channel_Group_Table;
 
@@ -56,7 +56,9 @@ public:
  }
 
  void init_scope_system();
- QQueue<PHR_Symbol_Scope*>& get_phaon_scope_queue();
+
+// QQueue<PHR_Symbol_Scope*>& get_phaon_scope_queue();
+ QQueue<PHR_Runtime_Scope*>& get_runtime_scope_queue();
 
  void run(PHR_Channel_Group& pcg);
 

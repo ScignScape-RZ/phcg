@@ -53,7 +53,7 @@ void PHR_Runner::run(PHR_Channel_Group& pcg)
 }
 
 
-QQueue<PHR_Symbol_Scope*>& PHR_Runner::get_phaon_scope_queue()
+QQueue<PHR_Runtime_Scope*>& PHR_Runner::get_runtime_scope_queue()
 {
  return scopes_->phr_scope_queue();
 }

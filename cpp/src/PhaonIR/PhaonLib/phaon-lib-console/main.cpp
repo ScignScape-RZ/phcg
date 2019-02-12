@@ -42,6 +42,7 @@
 #include "phaon-lib/phr-symbol-scope.h"
 
 #include "phr-direct-eval/phr-direct-eval.h"
+#include "phaon-ir/scopes/phr-runtime-scope.h"
 
 #include "test-functions.h"
 
@@ -98,9 +99,12 @@ int main(int argc, char* argv[])
 
  pcm.set_direct_eval_fn(&phr_direct_eval);
 
- PHR_Symbol_Scope pss;
+ PHR_Runtime_Scope prs(nullptr);
+
+ PHR_Symbol_Scope pss(&prs);
+
  init_test_functions(phr, pcm, phrn.get_table(), pss);
- phrn.get_phaon_scope_queue().push_front(&pss);
+ phrn.get_runtime_scope_queue().push_front(&prs);
 
 // KPH_Command_Package khp;
 // khp.parse_from_file( DEFAULT_KPH_FOLDER "/test/raw/t1.kph" );

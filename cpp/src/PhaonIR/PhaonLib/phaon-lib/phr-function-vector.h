@@ -34,6 +34,8 @@ public:
 
  PHR_Function_Vector();
 
+ PHR_Function_Vector(PHR_Function& phf);
+
  void* match_against_codes(const QSet<int>& codes, int& mc, int& rbc,
    const PHR_Type_Object** ppto = nullptr);
 

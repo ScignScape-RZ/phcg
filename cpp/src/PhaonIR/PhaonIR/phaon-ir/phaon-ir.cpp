@@ -86,7 +86,8 @@ qint32 PhaonIR::get_s4_symbol_value(QString sym)
  else
  {
   quint64 val;
-  PHR_Type* ty = current_lexical_scope_->find_value(sym, val);
+  PHR_Runtime_Scope::Storage_Options so;
+  PHR_Type* ty = current_lexical_scope_->find_value(sym, val, so);
 //  void* pv = (void*) val;
 //  return *(qint32*)pv;
   return (qint32) val;
@@ -221,7 +222,7 @@ void PhaonIR::evaluate_channel_group()
   if(it.cofinalizer)
   {
    quint64 val = (this->*it.cofinalizer)(it, pv);
-   scope->update_raw_value(sym, val);
+   scope->update_direct_value(sym, val);
   }
   else
   {

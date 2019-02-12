@@ -22,17 +22,50 @@ class PHR_Runtime_Scope
  PHR_Logical_Scope_Info* info_;
  PHR_Runtime_Scope* parent_scope_;
 
- QMap<QString, PHR_Scope_Value> values_;
+public:
+
+ enum class Storage_Options {
+   N_A, Direct, Pointer, Function_Vector
+ };
+
+ QMap<QString, QPair<Storage_Options, PHR_Scope_Value>> values_;
 
 public:
 
  PHR_Runtime_Scope(PHR_Runtime_Scope* parent_scope, PHR_Logical_Scope_Info* info = nullptr);
 
- void add_value(QString key, PHR_Type* ty, quint64 val);
- PHR_Type* find_value(QString key, quint64& val);
+ void add_direct_value(QString key, PHR_Type* ty, quint64 val);
+ void add_pointer_value(QString key, PHR_Type* ty, quint64 val);
+ void add_function_vector_value(QString key, PHR_Type* ty, quint64 val);
+
+ void add_function_vector_value(QString key, void* fv);
+
+ PHR_Type* find_value(QString key, quint64& val, Storage_Options& so);
 
  void update_value(QString key, void* pv);
- void update_raw_value(QString key, quint64 val);
+ void update_direct_value(QString key, quint64 val);
+
+ template<typename T>
+ T* get_pointer_value_as(QString key)
+ {
+  auto it = values_.find(key);
+  if(it == values_.end())
+    return nullptr;
+  if(it.value().first == Storage_Options::Pointer)
+    return it.value().second.pValue_as<T>();
+  return nullptr;
+ }
+
+ template<typename T>
+ T* get_function_vector_value_as(QString key)
+ {
+  auto it = values_.find(key);
+  if(it == values_.end())
+    return nullptr;
+  if(it.value().first == Storage_Options::Function_Vector)
+    return it.value().second.pValue_as<T>();
+  return nullptr;
+ }
 
 };
 

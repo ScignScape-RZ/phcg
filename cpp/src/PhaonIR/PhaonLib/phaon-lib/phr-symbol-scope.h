@@ -21,13 +21,18 @@
 //KANS_(PhaonLib)
 
 class PHR_Namespace;
+class PHR_Runtime_Scope;
+class PHR_Function;
 
-class PHR_Symbol_Scope : public QMap<QString, PHR_Function_Vector>
+class PHR_Symbol_Scope //?: public QMap<QString, PHR_Function_Vector>
 {
+ PHR_Runtime_Scope* runtime_scope_;
 
 public:
 
- PHR_Symbol_Scope();
+ PHR_Symbol_Scope(PHR_Runtime_Scope* runtime_scope);
+
+ void add_function(QString name, PHR_Function& phf);
 
 
 

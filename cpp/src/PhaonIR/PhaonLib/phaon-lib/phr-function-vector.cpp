@@ -27,6 +27,12 @@ PHR_Function_Vector::PHR_Function_Vector()
 
 }
 
+PHR_Function_Vector::PHR_Function_Vector(PHR_Function& phf)
+ :  QVector<PHR_Function>({phf})
+{
+
+}
+
 void* PHR_Function_Vector::get_first()
 {
  PHR_Function phf = first();
