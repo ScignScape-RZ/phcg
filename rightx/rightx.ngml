@@ -157,17 +157,182 @@ to experienced internal, e.g. somatic, states).
 But I `i.will` present a theory that connects 
 these two senses of `q.external` (and likewise 
 two senses of `q.internal`/).  
+`p`
+
+`p.
+All told, my goal here is to sketch a theory of 
+cognitive linguistics which can resonate soundly 
+with Phenomenology (while not being especially 
+phenomenological on its own).  This theory 
+will be incomplete %-- deliberately, strategically 
+incomplete.  Indeed, every theory should be incomplete: 
+an essential quality of modern science is 
+our recognition that scientific explanation covers a 
+vast breath of scales and kinds of phenomena, and 
+`q.science` as a singular human institution only exists 
+insofar as there are many sciences, each with some measure of 
+theoretical autonomy but also areas of overlap, so 
+scientific explanations can brisge across scales.  Bioligists 
+take it for granted that the basic intellectual structures of 
+their disciplines can be justified by appeal to 
+chemistry (as a causative or emergent base of bioloigical 
+phenomena); and the presence of `i.parts` of biology 
+where this connection is explicit (like organic chemistry) 
+is important for our overall sense of biology as 
+something grounded in a general scientific method.  But 
+these `q.reductive` links are not typically 
+operationalized in biology as a whole %-- a biologist 
+is not `q.doing` chemistry`/, biological properties 
+are not necessarily chemical properties, biological 
+laws are not necessarily chemical laws, and 
+biological terms are not semantically (or even 
+arguably referentially) reducible to chemical terms.  
+We can consider whether biological concepts are 
+`q.in some sense` reducible to (or extensionally 
+equivalent to or `q.the same stuff as`/) chemical 
+concepts, but framing this discussion as a nuanced 
+debate implies that biology is not 
+`i.trivially` reducible to chemistry, and we may accept 
+such a reduction as a plausible optional only insofar as 
+some if us may hold philosophical commitments, which 
+`q.we` collectively do not want to dismiss out of hand, 
+that higher-scale sciences are necssarily reducible 
+to lower-scale ones that are their causal or 
+physical-constitutive base.  But even if there is a 
+sense of `q.reduction` and of `q.biology` and `q.chmistry` 
+that makes biology reducible to chemistry, this 
+dos not make biological `i.science` reducible to chemical 
+`q.science` %-- that is, a well-constructed 
+and discursively evaluable biological thory should not be 
+expected to consider in any details its own reductive 
+interprtations, or express its concepts in chemical 
+(rather than physical) terms, or attempt to `i.explain` 
+rather than just `i.presuppose` chemical laws 
+(preservation of quantities in chemical reactions, 
+acid/base qualities, solvents and solubility, 
+molecular interactions, etc.).  Ditto for chemistry 
+in relation to molecular physics, molecular physics 
+in relation to quantum physics, nurology in 
+relation to biology, and so forth.  In short, 
+whatever our philosophical intuitions about emergent 
+phenomena and the ontological duality (or monism) between 
+emergent and base scales, these philosophical points 
+are only tangentially related to the equally 
+important philosophical question about what 
+makes a good theory in a science.  
+`p`
+
+`p.
+This bears riterating: when considering a science 
+(I'll include social sciences and humanities here) 
+philosophically, there are two different sorts of questions 
+that can arise: on the one hand, what is the ontological 
+status of the entities, laws, and quantitative models 
+postulated by the science and its currently influential 
+theories?  Should we understand terms to be 
+proposed natural kinds (like `q.protons`/), structural 
+features that don't necessarily align with straightforward 
+patterns of reference (like `q.dark matter`/), referring 
+expressions into complex systems whose parts have somehow 
+fuzzy or underdetermined boundaries or criteria of 
+individuation (like `q.climate`/), or quasei-refrences 
+which have the form of concrete designations but are really 
+just shorthand for elaborate paradigms (like 
+`q.natural selection`/)?  These are various options in the 
+semantics of scientific jargon, which are clues to 
+the proper ontological status of scinces' theoretical 
+posits (so much applies to linguistics also, 
+with its theortical vocabulary of concepts, lexemes, 
+syntax rules, gnerative semantic rules, and so forth 
+%-- are these mental subsystms?  Innate cognitive 
+faculties?  Clusters of nerve cells?  Neural pathways 
+reinforced during language acquisition?).  But, on 
+the other hand, there is a different order of question 
+philosophers can ask with regard to a particular 
+science: what qualifies as a well-constructed theory for 
+that science?  What sorts of formal models hold explanatory 
+merit as, seemingly, capturing the casuative factors 
+determining the behavior of the systems that science 
+investigates: continuum-based numerical models?  
+Models in discrete mathematics?  Systems of logic?  
+State machines?  And interconnected 
+with that question is the proper scope of the science: 
+a well-constructed theory needs to honor bounaries between 
+and autonomy of different sciences.  Having a clear 
+picture of what beliefs in `i.other` sciences to take 
+as explanatory primitives in `i.this` science is an 
+essential criteria of theoretical soundness 
+%-- no less than the urge to pursue explanatory 
+closure within the proper bounds of each science.
+`p`
+
+`p.
+One of my objections to `q.logical reductive` paradigms 
+in linguistics (and computer science) is their failure to 
+distinguish these two aspects of a philosophy of science, 
+by my lights.  When discussing chemistry or biology, we can 
+make a clear distinction between metaphysical 
+commitments according to which higher-scale systems 
+reduce (via physical composition and the propagation of 
+causality across levels of organization) to lower ones 
+%-- biology to chemistry to physical %-- as a genr 
+of reduction obviously diffrent from reducing sciences 
+as collective intellectual exercise.  We do not reduce the 
+community of biologists to the community of chemists, 
+or the kinds of expertise and fluency in certain 
+mental gymanastics, or the criteria of what makes 
+good biological theories, to the concordant 
+community, conceptualizations, gymnastics, and 
+theory-criteria of chemists.  This is for me part ofv
+what makes biology a successful science %-- it 
+is incomplete in an ontologically necessary, 
+intellectual fertile way.  But if this is a 
+reasonable criterion, what can we say about 
+linguistics as a science?  Is it incompleye 
+in an ontologically necessary and intellectual 
+fertile way?  In fact, I intend to argue here 
+that some popular linguistic theories are `i.not 
+incomplete enough`/.  They are 
+(or would be, if successful) too complete 
+%-- while also, I will claim, incomplete 
+in the wrong ways, leaving too many `i.relevant` 
+phenomena, issues that `i.are` in the scientific 
+wheelhouse, incompletely explained.  
+`p`
+
+`p.
+I will make these arguments as a prelude to 
+describing the (incomplete) 
+linguistic theory I `i.am` prepared to defend.  
+Specifically, the first two sections here will 
+weigh in on Conceptual Role Semantics and 
+Truth-Theoretic Semantics and explain why I 
+believe some popular paradigms in the philosophy 
+of language are problemmatic.  While the details 
+will vary, the main thurst of my points will be 
+that philosophers of language fail to appreciate the 
+importance of sciences internalizing a map of 
+the division of labor between science %-- a science is 
+constituted in part by how it touches but remains 
+autonomouus from other (both higher- and lowe-scale) 
+sciences.  So biology is constituted in part by its 
+status as a potential reductive base for neuroscience, 
+medicine, genetics, and paleontology, while having 
+its own reductive base in chemistry and 
+physics.  Part of what it means to be biology is 
+to be the explanatory bridge between, say, 
+medicine and physics.  Analogously, I believe, 
+part of what it means to be linguistics is to be 
+the explanatory bridge between, say, sociology, 
+anthropology, and ethnolinguistics, with cognitiv 
+science (or Cognitive Phenomenology).  
+
 
 `p`
 
 `p.
 
 `p`
-
-
-
-
-
 
 
 
