@@ -1,0 +1,181 @@
+`documentclass<article>;
+`include<commands>;
+
+`document,
+`title.The Right Kind of Externalism: A Proposal`
+
+`p.
+This essay adresses topics in linguistics and the philosophy 
+of language, though (by conventional measures of expertise) 
+I am more of a Phenomenologist and a Computer 
+Programmer than a linguist.  I confess this not as biography, 
+but to introduce my metatheoretical anchor points, from 
+which derive intuitions that others might find 
+unconventional.  I am, in particular, sensitive 
+to the experiential nuances of human cognition and 
+skeptical that mechanical systems can emulate human 
+minds except for narrowly defined tasks.  At the same time, 
+I think computational systems have interesting aspects 
+that can enrich our understanding of cognition, evn if 
+we do not philosophically buy a `q.cognition is computation` 
+metaphor.  
+`p`
+
+`p.
+To be precise, I am skeptical about `q.AI`/; and I am also 
+skeptical about a kind of logical reductionism that 
+I believe exerts a definitive influenc on several interrelated 
+filds, including philosophy, linguistics, and computer 
+science.  As the paradigm seemingly goes, if we accept some 
+form of `q.mind as computer` analogy, then we 
+intrinsically accept `i.first` the idea that `q.mind` 
+encompasses as some important part a logically articulated 
+subsystem, which can be scientifically studied via formal 
+logic; and `i.second` that as a consequence of this 
+scientifically tractable logicality, AI is a good 
+model or proxy for the study of mind.  The unconscious 
+deduction here seems to be that `i.mind as computer` 
+has as a consequence that mind is (to some salient degree) 
+a logical system, following a premise that computers are 
+logical systms.  But this premise is more false 
+than it is true; so for me the whole paradigm is on shaky 
+grounds.  I will explain later why computers are 
+not as logical as non-programmers seemingly believe.  For 
+now I'll just say this: there are rigorous accounts 
+of computation that, I contend, are not grounded on 
+formal logic in any techical or reductive sense.  As a 
+result, someone's non-logical-reductive views 
+on language and consciousness do not `i.a priori` 
+preclude computational models having some intuitive, 
+explanatory, or structural-analogy place in their 
+analyses of cognition.  
+`p`
+
+`p.
+Meanwhile, as a Phenomenologist I am a committed 
+`q.realist`/.  What I mean is that, in a nutshell, we 
+should renew our commitment not to read Husserl too 
+psychologically; for instance, not to read 
+`i.intentionality` as a psychological phenomenon.  If I 
+see a red sofa, we should go ahead and accept that 
+what I see is a red sofa %-- that very object.  I do 
+not see a mental image of a red sofa or a phenomenal 
+appearance of a red sofa or a token of 
+red-sofa-appearance-ness.  We should not be led stray by the 
+sofa being a few feet away from me, so it is not 
+`q.in my brain` %-- my brain is over here, not 
+over there.  If I am suddenly distracted by something, 
+look away, and forget about the sofa, my sofa-impression 
+(but not the sofa) goes away, which seems to 
+suggest that there my sofa-impression is not 
+the same kind of thing as a sofa %-- which in turn 
+invites us to qustion whther what I am really 
+seeing is that sofa-impression, not that sofa.  
+But, without disputing that in 
+`i.some` sense the impression is not ontologically 
+identical to the thing itself, I still maintain 
+that the best gloss on the situation still starts 
+from the givenness that I do see the sofa (and 
+not the sofa-impression or any other psychologistic 
+posit).  I will have mor about to say about this 
+realism, also.  For now I'll say 
+this: the case for `q.impressions` over 
+`q.things themselves` seems stronger when talking 
+about vision (which works at a distance) rather than 
+touch %-- if I actually sit down on the sofa and 
+physically contact it, we may feel more comfortable 
+saying that my experience is directly encountering 
+that physical object (though someone could still say 
+that tactile sense-impressions are still not identical 
+to objects; for one thing, the contact point 
+between my hands/torso and the sofa %-- the locus 
+of those haptic nerve cells %-- is not in my brain 
+either, ergo a spatial gap still exists between brain and the 
+sensed object).  If we accept that our nervous 
+system is in some sense a functionally organized complex, 
+then an encounter between some external body and `i.part` of 
+that system, with suitably holistic functional 
+response, can plausibly be treated as `q.my brain` 
+(or nervous system or mind) contacting the sofa 
+%-- we don't need to rule out this gloss because my 
+`i.central` nervous system remains physically 
+isolated, any more than we would dispute that a knife 
+has punctured a sealed carton when in fact only the 
+knife-tip did so.  In short, sense-causing physical 
+contact as part of my embodied propensity to register 
+tactile contact experientially, through the medium of 
+functionally-organized processing that eventually 
+includes the brain, is %-- I would 
+say %-- a sensate manifestation of my contact with the 
+sofa (not with a tactile-sense-impression or 
+haptic-phenomenon of the sofa).  And if we accept 
+this line of reasoning for touch, we should do so for 
+vision also %-- partly because an intrinsic 
+feature of `i.seing` something is that we `i.could` with 
+proper movement touch it, and apprehension of 
+visual from includes anticipation of how 
+surfaces will respond when we kinaesthetically interact 
+with them (we might presume, for instance, that 
+we can run our hand over the wall to the right but not 
+to the left, if there's another wall there: this 
+visual disclosure is also in a sense proto-kinetic).
+`p`
+
+`p.
+So, before making claims about language, I have hereby 
+asserted two main intuitive feints guiding my subsequent 
+discussion: computer programs as useful but not 
+logically reductive analogs for cognitive processes, and 
+the virtues of a `q.realist` Phenomenology 
+which accepts language to the effect that we experience 
+`q.things themselves`/: that touching and seeing 
+(etc.) are expriential encounters with real, external, 
+non-psychological entities.  This does not have to be a 
+blunt realism %-- I don't dispute that we experience 
+appearances in some sense %-- but we need to articulate 
+the thing/apearance distinction in a way that does not 
+disallow common-sense intuitions like `q.seeing the sofa` 
+meaning that I do see some real, external sofa-thing.  
+That would make for an analysis in 
+pure Phenomenology if I just framed my arguments with 
+reference to, say, Husserl's own treatment of the 
+noemata/phenomena distinction.  Here, howevere, 
+I am going in a different direction and package 
+a loose theory of `q.realism` about intended 
+`q.expernal` objects within a treatmnt of 
+`q.externalism` (and `i.internalism`/) in 
+the philosophy of language. 
+`p`
+
+`p.
+I'm not ignoring that `q.external` in the sense 
+of `q.wide scope` mind-world relations as a 
+Semantics hypothesis is only tangentially related 
+to `q.external` in a phenomenological sense of 
+experienced external objects (as opposed 
+to experienced internal, e.g. somatic, states).  
+But I `i.will` present a theory that connects 
+these two senses of `q.external` (and likewise 
+two senses of `q.internal`/).  
+
+`p`
+
+`p.
+
+`p`
+
+
+
+
+
+
+
+
+
+%`input<section1.ngml>;
+%`input<section2.ngml>;
+%`input<section3.ngml>;
+%`input<section4.ngml>;
+%`input<conclusion.ngml>;
+
+`document`

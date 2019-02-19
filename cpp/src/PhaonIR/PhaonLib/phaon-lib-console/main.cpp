@@ -113,11 +113,6 @@ int main(int argc, char* argv[])
 
  PHR_Channel_Group* pcg = phr.get_select_channel_group();
 
-
-
-
-
-
  //khp.init_channel_group(kcm, kcg);
  phrn.run(*pcg);
 
