@@ -1,5 +1,272 @@
 
-`section.Conceptual Role Semantics`
+`section.Conceptual Role Semantics and Externalism`
+
+`p.
+Conceptual Role Semantics is often discussed together 
+with a particular internalism/externalism debate 
+which it tends to engender.  Here I want to 
+defend a kind of Conceptual Role Semantics (hereafter 
+CRS) but I will first outline an account 
+of compromise between externalism and internalism.  
+I will suggest a compromise different, I believe, 
+than Ned Block's `q.two factor` model that seems 
+considered the leading example of an 
+externalist/internalist hybrid.
+`p`
+
+`p.
+The basic CRS picture is that linguistic meanings 
+should be associatd with conceptual rols in pur 
+understanding situations more than in terms 
+of their reference to external objects.  Given 
+sentences like
+
+`sentenceList,
+`sentenceItem; He opened the wine bottle with an ornate corkscrew.
+`sentenceItem; He opened the beer bottle with a butterfly corkscrew.
+`sentenceItem; He collects antique corkscrews and just bid on one online. 
+`sentenceItem; I thought this was a screw-top but it turns out I need a corkscrew.
+`sentenceItem; This X3D file shows a very realistic corkscrew created with NURBS surfaces.
+`sentenceItem; Could you send me the corkscrew (the X3D file you just mentioned)?
+`sentenceList`
+
+we should interpret `q.corkscrew`/, first, as a concept 
+in a kind of functional organization.  In some of these sentences 
+there is also a specific corkscrew (qua phsyical object) on hand 
+as a referent, but its actual physical properties %-- or 
+even identity %-- is not decisive for the meaning of 
+the sentence.  After all, in (4) the speaker is 
+not thinking of any corkscrew in particular (probably 
+%-- more on that later) and in (5) and (6) the corkscrew is 
+not real (at least not real qua corkscrew).  
+But the conceptualization associated with `q.corkscrew` does 
+not seem markedly different in (1) or (2) versus (4), 
+at least (more on the other three later).
+`p`
+
+`p.
+Not only physical details but even lexical identity 
+seems tangential to the important conceptual 
+meanings.  Suppose I am hosting two guests, 
+one has a magnum of ale and one a bottle of Malbec.  
+They ask, respectively: 
+
+`sentenceList,
+`sentenceItem; Do you have a bottle opener?
+`sentenceItem; Could you get me a corkscrew?
+`sentenceList`
+
+and I give the first guest a butterfly corkscrew and the 
+second a folding multi-knife.  What I gave them is 
+different from their request, but they should think 
+nothing of it insofar as the winged corkscrew has a 
+gap on its handle suitable for beer bottles and the 
+multi-knife has a fold-out corkscrew spiral.  I have 
+not violated any conversational maxims, because I 
+reasonably assume that the instruments I gave them 
+are suitable for the desired goals, of opening their 
+bottles.  Semantically `q.corkscrew` really means 
+`q.something that can be used to open a wine bottle`/, 
+and in that sense the lexeme gets it principle content 
+from this operational role, not some list of attributes 
+(like spiraly and graspable) or prototypes.
+`p`
+
+`p.
+Granted, a suitably designed winged corscrew can be 
+construed as a kind of bottle opener, and a multi-knife 
+a kind of corkscrew respectively.  We are prepared to 
+accept these tools as examples ofvthe respctive 
+concpts if they are functionally designed to support 
+those tasks, even if they are not the primary function.  
+But our inclination allowing concepts to dilate 
+modulo functional criteria suggest that our grasp of 
+concepts is first and foremost functional-pragmatic: 
+we tend to internalize concepts in reference to 
+(extralinguistic) functional roles and expand concpts 
+to accommodate varigated implementers of those roles.
+`p`
+
+`p.
+We can indeed accept sentences like: 
+
+`sentenceList,
+`sentenceItem; He opened the bottle of beer with a hammer.
+`sentenceItem; He pounded the nail with a lever corkscrew.
+`sentenceList`
+
+Of course here we are inserting objects into a conceptual 
+nexus where they are not usually found.  Winged corkscrews 
+are often `i.designed` to double as bottle-openers, but 
+lever corkscrews are not designed to double 
+as hammers.  Nevertheless we have no trouble imagining 
+the scenarios being described, where someone uses 
+the thick part of a corsckrew to pound a nail, or a 
+hammer's handle-claw gap to pry off a bottle cap.  We have 
+schemata for `q.a tool to open a capped bottle` and 
+`q.a tool to pound a nail`/, and the concepts 
+of bottle-opener and hammer occupy that conceptual niche 
+insofar as they are artifacts designed for those purposes.  
+But the conceptual `q.slot` for, say, `q.a tool to 
+open a capped bottle` is more general than 
+the specific tools designed for those purposes.
+`p`
+
+`p.
+We nonetheless `i.would` be presumably violating 
+conversational maxims if we handed our friend who 
+wanted to open a beer bottle a hammer.  Even if 
+there's a way to make the hammer work for that 
+purpose, it's further outside the norm that, referring 
+back to (), proposing to use a winged corkscrew.  
+So the implicature in () is satisfied, let's say, 
+by bringing my guest a winged corkscrew, but not a 
+hammer.  But we can entertain the `i.thought` of using 
+a hammer as a bottle-opener, and even this 
+possibility presents problems for simplistic 
+thories of language acquistion as essentially learning 
+a static set of word correspondances, like 
+`q.a hammer is used to pound nails` or `q.a corkscrew 
+is used to open wine` %-- after all, you cannot conclude 
+from 
+
+`sentenceList,
+`sentenceItem; A hammer is somthing used to pound nails.
+`sentenceItem; A lever corkscrew is something used to open wine.
+`sentenceItem; A lever corkscrew can be used to pound nails.
+`sentenceList`
+
+that a hammer is a kind of lever corkscrew and can 
+therefore open wine.  What we 
+`i.do` have are conceptual slots available encapsulating 
+ideas like `q.that which can open bottles` or 
+`q.that which can pound nails`/, and we `q.fill` these 
+conceptual slots with different lexical content 
+in different situations.  The 
+`q.that which can open capped bottles` slot can be filled 
+descriptively %-- i.e., in declarative speech, 
+like in () %-- by a hammar, but not in 
+other kinds of speech acts (we cannot read the concept 
+`q.bottle opener` as satisfied by `q.hammer` in 
+the contxt of a request for a bottle opner).  Note that 
+the scope of conceptual roles can change merely 
+by switching between locutionary modalities.
+`p`
+
+`p.
+The takeaway from this discussion in the 
+internalism/externalism setting is that conceptual 
+roles have a linguistic priority over and against 
+both lexical and physical realizers, and the 
+scope for things inside and outside of language 
+to play (or not play) such roles varies with 
+context.  I have introduced these issues via 
+tool artifacts (like corkscrews) but would be 
+closer to the spirit of the CRS internalism/externalism 
+debate by discussing natural-kind concepts.  Suppose 
+I am building a sand castle on a beach and ask someone 
+one of:
+
+`sentenceList,
+`sentenceItem; Can you bring me a bucket of water?
+`sentenceItem; Can you bring me a glass of water?
+`sentenceList`
+
+For (), a reasonable reaction would be a bucket filld 
+with ocean water; but for () my addressee would probably 
+infer that I was thirsty, and %-- since salt ater is 
+non-potable %-- was requesting water I could drink.  
+But `q.`i.glass of` water` probably figures here just 
+to establish my intention to drink it: you are 
+entitled to bring me bottle of water instead.  In 
+other words, my request has implied content which 
+in some aspets loosens and in some aspects restricts 
+th conceptual scope of semantic entries in my utterance.  
+Thus oceans are composed of water, and near a beach I can 
+say: 
+
+`sentenceList,
+`sentenceItem; The ocean is over there.
+`sentenceItem; The water is over there.
+`sentenceItem; You can see the ocean from here.
+`sentenceItem; You can see the water from here.
+`sentenceList`
+
+Each pair is almost identical.  But ocean-water ceases to 
+fall under the conceptual role of `q.water` when we are in 
+the context of drinking things instead of the context 
+of geography.  This suggests that water does not `q.mean` 
+`htwoo; or eother saline or non-saline water: the meaning 
+is not fixed to any particular chmical composition but 
+adapts to the situational context, including what the 
+water is used for %-- e.g. as a drink or as a binder 
+for a sand castle.
+`p`
+
+`p.
+The most talked about `q.water` analysis in th literatur is 
+less earthly than this: Putnam's `q.twin earth` argumnt 
+that there could be a planet whose substance (with chemical 
+makeup) XYZ could be functionally indisinguishable 
+from our (`htwoo;) water.  Externalists and internalists 
+thereby express their differences as disagreements over 
+whther twin-earthers' XYZ concept is the same as our 
+`htwoo; concept.  For the latter, as the basic account 
+goes, XYZ plays the same conceptual role in their lifeworld 
+as `htwoo; poays in ours, so it is the same concept; 
+for the former, the concepts designate different 
+material substances (even if twin-earthers don't know 
+this) so they can't mean the same thing, even if 
+there is some sort of analogy or resemblance between 
+them (concepts can be analogous or similar while still 
+being different concepts).
+`p`
+
+`p.
+Before making a case for one alternative here over the 
+other, let me note the following: it is unfortunate 
+that the case-study is formulated in terms of XYZ vs. 
+`htwoo;, because at the level of molecular composition 
+it is hard for us to conceive that XYZ is 
+`i.really` indistinguishable from water.  After all, 
+our concptual understanding of water includes things 
+like electrolysis %-- if XYZ does not emit hydrogn 
+and oxygen when electricallly charged under certain 
+controlled conditions, it is not behaving like water 
+and can not be (even internalistically) construed as 
+conforming to our concpt of water.  Of course, we are 
+free to expand our water-concept, just as we contract 
+it when switching from geology/geography to drinking.  
+But here we expand it with full recognition that 
+finer-grained concptual distinctions are possible, 
+just that there are many contexts where they are 
+unnecessary.
+`p`
+
+`p.
+We do not need to contemplate far-fetched twin-earth 
+scenarios to see this in practice: here on earth 
+we have deuterium water which is chemically different 
+from normal water (but both have the `htwoo; signature, 
+although heavy water is also described as `dtwoo;).  
+We are free to let `q.X` mean normal hydrogen, 
+`q.Y` mean deuterium ions, and `q.Z` mean oxygn, so 
+XYZ becomes what chemists call HDO %-- semi-heavy water.  
+Most people would probably say that HDO is just 
+a kind of water, and so can be subsumed under the 
+concept `q.water`/, but this is not conclusive.  
+In reality, I don't think the English community has 
+needed to establish whether  `q.water` should mean 
+ordinary `htwoo; or should include variations 
+containing different hydrogen isotopes 
+%-- whether heavy and semi-heavy and other variants 
+of water should be considered `q.water` or some pth 
+concepts.
+
+`p`
+
+
+
 `p.
 
 `p`
