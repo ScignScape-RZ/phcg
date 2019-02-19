@@ -414,14 +414,284 @@ or subjective, nor physical or nanochemical.
 `p`
 
 `p.
-
+The hierarchical natur of computer architecture 
+complicates any `q.mind as computer` metaphor: computers 
+have many subsystems, with significantly different 
+structures and properties.  Using computers as 
+case-studies of artifacts ghat are in some sense 
+`q.intelligent` can take us in different directions 
+for different answers as to what scale of computers' 
+organization we propose to inform, say, 
+cognitive-linguistic research: microprocessors?  Machine 
+Language?  Programming languages?  Software systems?  
+The internet?  Of course, many instances of 
+`q.mind as computer` analogic reasoning are not explicit 
+research paradigms bing proposed forth but are more 
+like reports of intuitions: a community of linguists 
+feeling that there's something going on in how computers 
+work that usefully models or resembles how human 
+rasoning or language-processing works.  But cashing 
+these intuitions into systematic models can prove 
+challenging: even insofar as a computer may exhibit 
+intelligent behavior, it does so only 
+in an emergent manner, the whole `q.intelligence` 
+being possible only through specific kinds of 
+interaction between subsystems, in particular 
+a tightly determined transition between high-level 
+systems (like applocation source code) and 
+low-level systems (like machine code).  
 `p`
 
+`p.
+Of course, many researchers probably believe that this 
+emergent dimension is precisely why computers are a 
+plausible cognitive analogy: they suggest that 
+intelligence can be realized in structural systems whose 
+lowest-level operations are not particularly complex.  
+No-one would argue that in and of itslf a simple 
+Van Numann machine is particularly `q.intelligent`/; 
+but software evincing intllignt bhavior can be implemented 
+as emergent phenomena for which Van Numann machines are 
+their reductive base.  This may sem like a 
+useful analogy to consciousness, realized in 
+neurons and synapses even though neurons and synapses 
+are not themselves conscious.  That's an 
+acceptable intuition, but it also leads to a 
+kind of philosophical bait-and-switch: what 
+starts as a `q.mind as computer` intuition ends up 
+as a different kind of analogy, something more 
+like comparing minds to functional systems 
+`i.implemented` on a computer.  There is a 
+difference between being a system 
+realized on a computer and actually 
+being a computer. 
+`p`
 
+`p.
+In the case of language comprehension, someone may 
+find a useful analogy in database-like 
+constraint-solving applications, like Prolog: 
+language usrs maintain an internal store of 
+beliefs %-- about both language and the world %-- and a 
+record of prior steps in the current conversation.  
+This `q.database` gets updated as we hear new sentences, 
+and we are equipped to make or reject inferences based 
+on inference rules and constraints, respectively: 
+from `q.John is my younger step-brother` we can conclude 
+both that the speaker's parents are divorced and that John 
+is not female.  Of course, real-world complications 
+sometimes intrude on the kinds of tidy frames 
+linguists build around words: a brother can actually 
+be a transgender woman, and divorces can remarry each 
+other.  We can debate whether these are semantic or 
+pragmatic issus (I think they're the former, but let's 
+say they ar the latter for sake of argument).  So 
+let's say language has enough logical order that 
+conversations can be modeled rather like Prolog 
+programs.  These leads to a maybe-interesting 
+mind-as-Prolog analogy, but %-- here's the crux 
+%-- mind-as-Prolog analogies are `i.not` 
+mind-as-computer analogies.  Computers 
+`i.run` Prolog programs; it's not that 
+they `i.are` Prolog sessions.
+`p`
 
+`p.
+Indeed, I think many `q.mind-as-computer` analogies are 
+actually more like `q.mind-as-Prolog` analogies, 
+or substitute some other technology for Prolog.  
+For instance, mind-as-artifical-neural-network 
+analogies are not mind-as-computer analogies, because 
+computers are not ANNs (though thy may implement them).  
+Indeed, ANNs are designed to make computers more 
+humanlike: to transcend the mechanistic limitations 
+of Van Neumann architecture by realizing, at 
+some virtual level, a more connectionist manifestation 
+of computation.  A mind-as-ANN analogy is therefore 
+really mind picrured as a computer programmed 
+to operate like a mind (so, the analogy is 
+basically circular).  Mind-as-symbol-processing analogies 
+have similar issues: computers are 
+not symbol-processors, though they can implement 
+symbol processing systems.  As I'll defend below, 
+I think computers are basically stack machines, and 
+stack machines do not `q.process` symbols %-- what 
+they do is process stacks, and jump around to different 
+subroutines.  When people think about 
+`q.computers` in mind-as-computer analogies %-- or 
+write in ways suggestive of such an analogy %-- I often 
+get the impression that what people are really 
+thinking about is not `q.computrs` but some sort of 
+mathematically formalizable, functionally specified 
+system that can be `i.realized` on a computer.
+`p`
 
-%`input<section1.ngml>;
-%`input<section2.ngml>;
+`p.
+These other analogies are not `i.a priori` bad 
+%-- it's reassuring if we have accounts of 
+intelligence that traffic through functional 
+organizations that can be realistically embodied 
+in mundane physical artifacts, rather than needing 
+some magical mind-gunk.  But if our 
+`q.mind-as-computer` analogies are nothing more than a 
+desire to find logico-functional systems that can credibly 
+undergird cognitive behavior, computers are 
+basically irrelevant: the computational realizability of 
+such logico-functional systems is a nice reminder 
+that we're not asking non-philosophers to believe 
+in magic, but the structure of these systems are 
+sufficiently remote from how computers internally operate 
+that computer realizability should have no 
+`i.theoretical` role.  In other words, 
+mind-as-computer analogies are usually basically 
+mind-as-logico-functional-system analogies.  
+`p`
+
+`p.
+We're entitled to find these latter analogies 
+intuitive.  My problem is only with 
+mind-as-logico-functional-system analogies that 
+get defended `i.by appeal to` mind-as-logico-functional-systemies.   
+There seems to be a kind of metatheoretical pattern that 
+goes something like this: mind is 
+metaphorically a logico-functional system `i.because` 
+mind is metaphorically a computer, and 
+logico-functional systems (when not just abstract 
+mathematical territories) are realized via 
+implementation in computer architecture.  
+But mind-as-computer is not logically related 
+to mind-as-logico-functional-system %-- any apparent 
+link between these analogies is a biproduct of 
+intellectually bakgrounding the 
+distinction between `i.being` and `i.implementing`/.  
+We may or may not like a mind-as-computer 
+analogy, but even if we `i.do` accept such a 
+perspective, even if provisionally, this does 
+not then legitimize or entail that we are accepting 
+a mind-as-logico-functional-system analogy.  Of course, we 
+can judge the latter analogy on its own merits, but 
+the former analogy in no way retroactively 
+justifies the latter. 
+`p`
+
+`p.
+So, my strategy for the rmaining sections of this 
+paper is as follows: I will review some 
+language-philosophy contoveries and argue 
+that disentangling mind-as-logico-functional-system 
+from mind-as-computer analogies should change 
+our estimation of theoretical claims apparently 
+motivated by mind-as-logico-functional-system 
+paradigms.  I will then present a different 
+basic account of language processing which, 
+I believe, does not work in any logico-functional-system 
+orientation, though I will recognize some 
+fashion of functional orientation.  I will in 
+places appeal to computer architecture, though 
+the framework I propose will only absorb 
+`q.mind as computer` analogies to a limited, targeted 
+extent.  A central theme will be that 
+`i.logic` is not terribly relevant for either 
+language or computers: functionally-organized 
+systems do not have to be `i.logico-functional` systems.  
+The ambient philosophy guiding these arguments 
+is that `q.logic` in any formal, symbolic 
+sense is not the proper vehicle for understanding 
+the structured transitions and causative propagation 
+endemic to multiscale, emergent systems.
+`p`
+
+`p.
+Biology, for example, is not a `i.logical` 
+intermediary between medicine and physics.  We can 
+consider how best to describe its `q.intermediariness`/: 
+as a theory-construction maxim (in the sense  
+that intermediariness is expressed in which 
+laws/obervables are thematized and which are 
+deferred to other sciences), as a causal network 
+grounded in cross-scale physical constitutions and 
+mereologies (e.g., tissues are both phsyically 
+composed of cells and are wholes where cells are parts), 
+as an emeregnt system which both `i.is` 
+(`visavis; other sciences) and `i.has` a reductive 
+base.  Sciences are like computer programs in 
+that they have `i.inputs` (observables from 
+other sciences) and `q.outputs` (laws from 
+other sciences).  I use thse terms because they 
+track analytic trajectories: medical 
+`i.observables` (e.g. that many people 
+who are exposed to a toxin develop neurological damage) 
+are linked `i.via biological analysis` to 
+causal/material explanations (how the toxin chemically 
+damages nerve cells).  Biology neither statistically 
+models the medical observations nor physically explains 
+the causative mechanism, but it provides a theoretical 
+machinery for rigorously modeling 
+and analyzing the transition between them.  It write 
+the second act of the explanatory play, so to speak.  
+Pictured computationaly, the analysis is like a 
+computer program whose inputs are higher-scale 
+observables (saay, medical data) and whose `q.outputs`  
+are numerical models whose formulae or justifications 
+are solved by other sciences %-- by analogy 
+to programmers calling system-kernel functions.  
+In this analogy, medicine is like the end-user, 
+biology is the application developer, and physics 
+is the system kernel.  
+`p`
+
+`p.
+These are analogies informed by computers, of course, 
+but I am trying to focus in on the `q.intermediariness` 
+they evoke.  How computer software 
+bridges users and bare-metal is a useful metaphor 
+for how scientific theories bridge observations 
+and causal/mathematical microphysical models.  
+And, correlatively, how sciences bridge between 
+other sciences %-- higher sciences yielding 
+obsevrations that are `q.inputs` to intermediary 
+explanations, lower sciences defining 
+formats for `q.outputs`/.  Biology, for example, can 
+defer to chemical or physical explanation if it can 
+provide data in structures adequate to 
+chemical or physical formulae: the reference frames, 
+quantitative measures, dimensional systems.  
+Biology does not need to solve such ewuations, 
+just marshal data into their form.  So a good 
+biological analysis will take observation 
+data (e.g. from physics) and transform it 
+to equational data in some sense, wherein chemistry 
+and physics take over.  By analogy, correct computer 
+software takes obsevrations (data in computer files 
+and user actions) and translates these observations 
+to the proper system-kernal calls, whrein the 
+Operating System takes over.  
+`p`
+
+`p.
+Sometimes logical constraints come to bear on these 
+transitions, but the importance of logic per se is 
+overshadowed by the overarching phenomenon of 
+`q.intermediariness`/: how the technical and ontological 
+status of computer applications is defined by 
+their intermdiary position between input data/user actions 
+and low-level system calls.  Analogously, sciences 
+are characterized by their posits' ontological status 
+as %-- and their theories' structural criteria 
+regulated by %-- intermediariness between observational data 
+from one per science and causal/mathematical formula from 
+another.  As a philosophical gestalt, such 
+`q.intermediariness`/, I believe, should 
+take the place of `q.logic` in our intuitions.
+`p`
+
+`p.
+In the specific contexts of Concptual-Role and Truth-Thoretic 
+Semantics, I will now show what for me this means in practice.
+`p`
+
+`input<section1.ngml>;
+`input<section2.ngml>;
 %`input<section3.ngml>;
 %`input<section4.ngml>;
 %`input<conclusion.ngml>;
