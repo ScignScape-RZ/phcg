@@ -146,6 +146,7 @@ implicature analogous to interrogatives:
 `sentenceList,
 `sentenceItem; I believe you have a reservation for Jones?
 `sentenceItem; I believe this is the customer service desk?
+`sentenceItem; I believe we ordered a second basket of garlic bread?
 `sentenceItem; I believe you can help me find a find computer 
 acessories in this section?
 `sentenceList`
@@ -247,7 +248,54 @@ asked for `q.milk` I would be `i.un`/-cooprative.
 `p`
 
 `p.
+The upshot is that conversational implicatures 
+help us contextualize the conceptual negotiations 
+that guarantee our grasping the correct 
+propositional contents, and vice-versa.  This means 
+that propositionality is woven throughout both 
+assretive and all other mods of language, but it 
+also means that propositional content can be 
+indecipherable without a detailed picture 
+of the current context (including illocutionary 
+content).  The proposional content of, 
+say, `q.there is milk in this coffee` has to be 
+judged sensitive to contexts like `q.milk` 
+meaning `q.vegan milk` %-- and this 
+propagates from a direct propositional 
+to any propositional attitudes which may 
+be directed towards it, including requsts like 
+`q.plase put milk in this coffee`/.
+`p`
 
+`p.
+Suppose the grandkids close grandma's bedroom window 
+when she asks them to close the kitchen window.  
+The propositional content at the core of grandma's 
+request is that the kitchen window be closed; the 
+content attached to it is an unstated belief that 
+this window is open.  Thus, the truth-conditions 
+satisfying her implicit understanding would be 
+that the kitchen window went from being open to being 
+closed.  As it happens, that window is already 
+closed.  So the truth-conditions that would satisfy 
+grandma's initial belief-state do not obtain %-- her 
+beliefs are false %-- but the truth conditions satisfying 
+her desired result `i.do` obtain.  The window 
+`i.is` closed.  Yet the grand kids should not thereby 
+assume that her request has been properly responded to; 
+it is more polite to guess at the motivation behind 
+the request, e.g., thay she felt a draft 
+of cold air.  In short, they should look outside 
+the truth conditions of her original 
+request taken literally, and `i.interpret` 
+her requesting, finding different content 
+with different truth-conditions that are both consistent 
+with fact and address whatever pragmatic goals 
+grandma had when making her request.  They might 
+infer her goal is to prevent an uncomfortable 
+draft, and so a reasonable `q.substitute content` is 
+the proposition that `i.some` window is open, 
+and they should close `i.that` one. 
 `p`
 
 `p.
