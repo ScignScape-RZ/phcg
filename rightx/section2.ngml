@@ -69,9 +69,186 @@ the speech-act's directive nature.
 `p.
 The problem with this analysis is that sometimes 
 directive and `q.inquisitive` dimensions can 
-overlap.  
+overlap: 
+
+`sentenceList,
+`sentenceItem; Do you have almond milk?
+`sentenceItem; Can you get MsNBC on your TV?
+`sentenceList`
+
+These `i.can` be read as bare directives, and would 
+be interprted as such if the hearer believed the 
+speaker already knew that yes, he has almond milk, and yes, 
+he gets MsNBC.  They can also be read as bare 
+questions with no implicature: maybe fans of 
+almond milk and MsNBC endorsing those selections.  
+They can `i.also` be read as a mixture of the 
+two, as if people expressed themselves like this:
+
+
+`sentenceList,
+`sentenceItem; I think the window is open, can you close it?
+`sentenceItem; I see you have almond milk, can I have some?
+`sentenceItem; If you get MsNBC, can you turn on Rachl Maddow?
+`sentenceList`
+
 `p`
 
+`p.
+I think the mixed case is the most prototypical and pure 
+directives or inquiries should be treated as degenerate 
+structures whre either directive or inquisitive content 
+has dropped out.  After all, even a dictatorial 
+command includs the implicit assumption that the order 
+both makes sense and is not impossible.  On 
+the other hand, we don't ask questions for no 
+reason: `q.do you hav almond milk` may be a 
+suggestion rather than a request, but it still 
+carries an implicature (e.g., that the addressee 
+`i.should` get almond milk).   
+`p`
+
+`p.
+Ordinary requests carry the assumption that addressees 
+can follow through without undue inconvenience, 
+which includs a package of assumptions about borh 
+what is currently the case and what is possible.  
+`q.Close the window` only has literal force if the 
+window is open.  So when making a request speakers 
+have to signal that they recognize the request involves 
+certain assumptions and are rational enough to 
+accept modifications of these assumptions in 
+lieu of literal compliance.  This is why 
+interrogative forms liie `q.can you` or 
+`q.could you` are both semantically nontrivial 
+and metadiscursively polite: they leave open the 
+possibility of subsequent discourse framing the original 
+request just as a belief-assertion.  Developments 
+like `q.can you open the window` %-- `q.no, it's closed` 
+are not ruled out.  At the same time, interrogative forms 
+connote that the speaker assumes the addressees can 
+fulfill the request without great effort: an implicit 
+assumption is that they `i.can` and also `i.are 
+willing to` satisfy the directive.  This is an 
+assumption, not a prsumption: the speaker 
+would seem like a bully if he acted as if he 
+gave no thought to hid demands being too much 
+of and imposition.  This is another rason why requests 
+should be framed as question.
+`p`
+
+`p.
+Sometimes the link between directives and 
+belief assertions is made explicit.  A common 
+pattern is to use `q.I believe that` as anb
+implicature analogous to interrogatives: 
+
+`sentenceList,
+`sentenceItem; I believe you have a reservation for Jones?
+`sentenceItem; I believe this is the customer service desk?
+`sentenceItem; I believe you can help me find a find computer 
+acessories in this section?
+`sentenceList`
+
+These speakers are indirectly signaling what they want 
+someone to do by openly stating the requisite 
+assumptions %-- `i.I believe you can` in place 
+of `i.can you?`/.  The implication is that 
+such assumptions translate clearly to a 
+subsequent course of action %-- the guest who 
+`i.does` have that rservation should be checked in; 
+the cashier who `i.can` help a customer find 
+accessories should do so.  But underlying these 
+performances is recognition that 
+illocutionary force is tied to background 
+assumptions, and conversants are reacting to 
+the propositional content of thos assumptions 
+as well as the force itself.  If I `i.do` close the 
+window I am not only fulfilling 
+the request but also confirming that the window 
+`i.could` be closed (a piece of information 
+that may become relevant in the future).  
+`p`
+
+`p.
+In sum, when we engage pragmatically with other 
+language-users, we tend to do so coopratively, 
+sensitive to what they wish to achieve with 
+language as well as to the propositional 
+details of their discourse.  But this often means 
+that I have to interpret propositional 
+content in light of contexts and implicatures.  
+Note that both of these are possible:
+
+`sentenceList,
+`sentenceItem; Do you have any milk?
+`sentenceItem; Yes, we have almond milk.
+`sentenceItem; No, we have almond milk.
+`sentenceItem; Yes %-- actually, we have almond milk.
+`sentenceItem; No, we only have almond milk.
+`sentenceList`
+
+A request for milk in a vegan restaurant could plausibly be 
+interpreted as a request for a vegan milk-substitute.  
+So the concept `q.milk` in that context may actually be 
+interpreted as the concept `q.vegan milk`/.  As Luo 
+points out in [], particular concept-maps are 
+admissible as in force in specific situations even 
+if they deviate noticably from typical usage 
+(Luo does not talk about concept `q.maps` but 
+about subtyping and various inter-type relations, 
+yielding a type-theory of situations I think 
+is relevant Conceptual Role theories of situations).  
+In any case, responding to the force of speech-acts 
+compels me to treat them as not `i.wholly` 
+illourionary %-- as in part statements of 
+belief (like ordinary assertions).  One reason I need 
+to adopt an epistemic (and not just obligatory) 
+attitude to illocutionary acts is that I need to 
+clarify what meanings the speaker intends, which 
+depends on what roles she is assigning to 
+constituent concepts.
+`p`
+
+`p.
+If a diner asks for milk in a vegan restaurant, 
+a waiter may plausbily infer that the customer 
+believes the restaurant `i.only has` vegan milk, 
+so there is no ned to make that explicit; and/or 
+she assumes that everyone in the restaurant will hear 
+`q.milk` as `q.vegan milk`/.  In other words, the 
+waiter infers that `q.vegan milk` for her plays the 
+same role as `q.milk` for a non-vegan.  This inference 
+is not produced by any speech-act subtleties: a related 
+inference would be involved in 
+
+`sentenceList,
+`sentenceItem; Is there milk in this coffee?
+`sentenceItem; Yes, almond milk.
+`sentenceList`
+
+Part of reading propositional content is 
+syncing our conceptual schemas with our fellow 
+conversants.  But the illocutionary 
+dimension of a request like `q.can I have some milk?` 
+makes this interpretation especially important, 
+because the addressee wants to make a good-faoth effort 
+to cooperate with the pragmatic intent of the 
+spech-act.  But cooperation requires the 
+cooperating parties' conceptual schemas to 
+be properly aligned.  I therefore have to 
+suspend the illocutionary force of a directive 
+temporarily and treat it as locutionary 
+statement of belief, interpret its apparent 
+conceptual undrpinnings in that mode, and 
+then add the illocutionary force back in: if I 
+brought `i.real` milk to a vegan customer who 
+asked for `q.milk` I would be `i.un`/-cooprative.
+`p`
+
+`p.
+
+`p`
 
 `p.
 
