@@ -260,12 +260,203 @@ needed to establish whether  `q.water` should mean
 ordinary `htwoo; or should include variations 
 containing different hydrogen isotopes 
 %-- whether heavy and semi-heavy and other variants 
-of water should be considered `q.water` or some pth 
+of water should be considered `q.water` or some other 
 concepts.
-
 `p`
 
+`p.
+In practice, a fraction of ocean water has deuterium, 
+which might argue for `q.water` subsuming heavy water 
+%-- we don't point to the ocean and say
 
+`sentenceList,
+`sentenceItem; The water and the Deuterium Dioxide is over there.
+`sentenceList`
+
+But this can alternatively be explained by the principle 
+that referring to an impure sample of a substance is still 
+a valid use of the concept: 
+
+`sentenceList,
+`sentenceItem; Here's a glass of water (even though 
+tap water is mixed with flouride).
+`sentenceItem; Bing cherries are dark red (even though 
+the stem is brown).
+`sentenceList`
+
+In the second case, we can validly call something red 
+even if something less than its whole surface shows a red 
+color.  Applying a similar rule, we can call a solution 
+`q.water` if there are only `q.sufficintly small` 
+amounts of solutes.  Clearly we use `q.water` to dsignate 
+many substances other than pure `htwoo;.  I can 
+think of two options for explaining that semantically: 
+(1) Salt water, tap water, distilled water, (semi) 
+heavy water, etc., are all different kinds of water, but 
+our coarsr `q.waterr` concept subsumes them all (in 
+most contexts).
+(2)  There is only one water concept, pure `htwoo;, 
+but impure samples of liquid that are mostly water 
+can be called `q.water` by the same principle that a 
+mostly red-colored object can be called just `q.red`/. 
+`p`
+
+`p.
+The second option has a common-sensical appeal because 
+it fits a succinct `q.concepts as natural kinds` 
+paradigm but does not venture too far from 
+normal language use %-- that `q.red` 
+actually means `q.mostly red` is a pattern common 
+with many nouns and adjectives (someone can be 
+`i.bald` with a bit of hair; I can point 
+to a turkey burger made with bread crumbs and 
+spices and say `q.that's turkey`/; I can 
+tell someone listening to Keny Arkana's song 
+`q.Indignados` that it's in French, although some of 
+the lyrics are Spanish).   However, the `q.mostly 
+water` reading has a couple of problems: first, 
+what about cases like a `q.glass of water` where 
+`q.mostly water` is not `q.mostly` enough to drink?  
+And, second, why can't we refer to plasma, say %-- which 
+is 92\% water %-- as water?  This is not just a 
+matter of numbers: the dead sea water is much 
+less pure than plasma in the hospital (in terms of 
+percentage `htwoo; in solution) yet we are authorized 
+to call the former `q.water` but not the latter.  
+This certainly seems to be a matter of conceptual roles 
+%-- plasma occupies a certain place in our 
+conceptual systems about blood and medicine (largely 
+because it plays a specific role in biology 
+and medicine) which does not fit the profike 
+of `q.water`/, while the stuff in lakes 
+`i.does` fit that profile, even if the lakes are 
+hypersaline.  Blood fits a conceptual ecosystem where 
+we are not tempted to subsume it uner the concept 
+`i.water`/, whereas our conceptualization of 
+lakes pulls in the opposite direction %-- even 
+though by purity the water in Gaet'ale Pond in 
+Ethiopia is apparently not much more 
+watery than blood.  Our disposition to 
+either contract or dilate the sense `q.water` 
+seems to be determined by context %-- by the conceptual 
+role water plays in different context %-- rather than 
+by actual hydrological properties.  
+`p`
+
+`p.
+What about the hypothetical twin-earth XYZ that 
+Putnam imagines is indistinguishable from 
+our `htwoo;?  Well, for this hypoyhsis to 
+even make sense we have to assume that XYZ is 
+scientifically indistinguishable from water, 
+which is a matter not just of pure `htwoo; but 
+of all solutions and deuterium- or triterium-related 
+variants of water, and so forth.  As a thought experiment, 
+where we are free to conceive almost anything, this is not 
+impossible.  Let's imagine that there is an undiscovered 
+subatomic particle that on some planets clings to 
+atomic nuclei without affecting them in almost any 
+way.  We can call nuclei harboring these particles 
+`q.twin nuclei`/, so hydrogen becomes `q.twin hydrogen`/, 
+oxygen becomes `q.twin oxygn`/, and presumably 
+water becomes `q.twin water`/.  This twin water would 
+essentilly retrace the the compositional structure of 
+water %-- since it would have to form (and unform, under 
+electrolysis) just like `q.our` water.  If we plug this 
+`q.twin water` into Putnam's scnario, I can't see why 
+we don't just call this a variant kind of water, 
+water with some extra (but observationally negligible) 
+particles, just like heavy water is water with 
+extra neutrons.
+`p`
+
+`p.
+This does not do perfect justice to `q.twin earth` 
+discussions, because I am describing `q.twin` water 
+as something whose composition is almost identical to 
+`q.our` water.  In the original story, `q.twater` is 
+XYZ, which as written suggests something whose 
+physical constituents are much different than water, even 
+if all propensities that influence our `q.water` 
+conceptualizations are exactly the same as our water.  
+But something compositionally different than 
+water `i.can't` be functionally identical to water, 
+at least if any of the actions we can take that reveal 
+water's composition come out different.  In short, 
+whatever XYZ are, they must have a capability to 
+`i.become` hydrogen and oxygen, because XYZ's emulating 
+water means it emits hydrogen and oxygen under 
+electrolysis.  Meanwhile there is no action that could 
+`q.release` the `q.X` (or whatever) because 
+that would also behaviorally differ from water.  
+So XYZ would differ from water only insofar as in its 
+`q.unobserved` states it can float around as something 
+without hydrogen or oxygen but, whenever subject to 
+actions that cause water proper to emit these gasses, 
+it would somehow conjure them up in exactly the same 
+patterns as water (which actually `i.is` composed of 
+hydrogen and oxygen) does.  
+`p`
+
+`p.
+By dictum, then, XYZ is not actually composed of 
+hydrogen and oxygen, but whatever it `i.is` composed 
+of can act as `i.as if` it `i.does` contain these gasses 
+so as to emit them.  In that case I'd question the 
+argumentative force of claiming that XYZ does not 
+contain hydrogen and oxygen to begin with.  We are asked 
+to believe that XYZ is made up of some 
+ethereal non-hydrogen and non-oxygen that can 
+nevertheless become hydrogen and oxygen whenever it 
+is in the physical states wherein water that `i.is` made 
+of hydrogen and oxygen will release them.  I am inclined 
+to say that this is just another way of being made of 
+hydrogen and oxygen.  After all, atoms are not little 
+ping-pong balls: what we picture as a water molecule 
+is actually apparently muchbmore ethereal, suspended in 
+quantum indeterminacy.  I take it there is some 
+Shrodinger equation for a water molecule, and only 
+when the `q.wave function` collapses %-- say, by 
+our observing the water subject to electrolysis %-- 
+do we actually get hydrogen or oxygen atoms.  So 
+`q.our` water isn't really `q.composed` of hydrogen or 
+oxygen in its pure quantum state.  Maybe XYZ 
+`q.collapses` to hydrogen or oxygen in different 
+ways than earthly water (but with no way to 
+measure the difference), but this is still not 
+divergent enough that for me to feel compelled 
+to call XYZ anything other than some variant 
+form of water.
+`p`
+
+`p.
+Of course, I am assuming that twin earthers have 
+`i.the same` water-concept that we do, 
+`i.in all respects`/.  Maybe a more faithful 
+review would consider that twin earthers might have a 
+related but more primitive water-concept tha ours 
+%-- maybe some subset of our concept in terms of 
+the scientific knowledge embedded in our concept.  
+Before we earthers knew abput hydrogen, oxygen, 
+or electrolysis, the behavior of water under 
+electrolysis was not a factor in our concept of water.  
+So imagine if twin earther's level of scientific knowledge 
+was akin to that on earth centuries ago %-- their 
+XYZ is measurably different from our water, but 
+they have no experimental our scientific apparatus to 
+notice the difference.  But this is `i.contingent`/: 
+the twin earthers `i.could` some day discover 
+hydrogen and oxygen.  Then, if 
+XYZ really is not composed of hydrogen and oxygen 
+(or acts as if composd of them when not in a 
+nonobservable ethereal state) tgeir scientific theory 
+of water, and accordingly their conceptualization, 
+would diverge from ours. 
+`p`
+
+`p.
+
+`p`
 
 `p.
 
