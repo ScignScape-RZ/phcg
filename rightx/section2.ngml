@@ -299,6 +299,29 @@ and they should close `i.that` one.
 `p`
 
 `p.
+So the grandkids should reason as if translating 
+between these two implied meanings: 
+
+`sentenceList,
+`sentenceItem; I believe the kitchen window 
+is open %-- please close it!
+`sentenceItem; I believe some window 
+is open %-- please close it!
+`sentenceList`
+
+They have to revise the simplest reading of 
+the implicit propositional content of grandma's 
+`i.actual` request, because the actual request is 
+inconsistent with facts.  In short they 
+feel obliged to explore propositional alternatives 
+so as to find an alternative, implicit request whose 
+propositional content `i.is` consistent with 
+fact and also meets the original request's illocutionary 
+force coooratively.  
+
+`p`
+
+`p.
 
 `p`
 
