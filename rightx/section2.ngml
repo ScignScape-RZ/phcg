@@ -384,10 +384,31 @@ that is open:
 `sentenceItem; Can you close the kitchen window?
 `sentenceList`
 
-
- 
+The point of thse `q.mappings` is that they 
+preserve the possibility of 
+modeling the `i.original` propositional content 
+by identifying truth conditions 
+for that content to be satisfied.
 `p`
 
+`p.
+A `i.literal`tryth-condition model doesn't work in 
+cases like () and (): th diner's request 
+is `i.not` satisfied if it is the case 
+that there is now (real) milk in her coffee, and 
+grandma's request is not necessarily satisfied if it is 
+the case that the kitchen window is closed.  The 
+proposition `q.the kitchen window is closed` only bears on 
+grandma's utterance insofar as she believes that 
+this window is open and causing a draft.  So if we want 
+to interpret the underlying locutionary content 
+of () and () truth-theoreticaly we need to 
+map the literal concepts appearing 
+in thse sentences to an appropriate translation, 
+a kind of `q.coordinate transformation` that 
+can map concepts onto others, like milk/almond milk 
+and kitchen window/bedroom window.  
+`p`
 
 `p.
 
