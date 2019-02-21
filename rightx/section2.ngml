@@ -830,6 +830,11 @@ the Jets:
 `sentenceItem; Well, I want the Leafs to win.
 `sentenceList`
 
+The second speaker indirecly answers the first in the negative.  
+This is conversationally reasonable %-- it does not violate any 
+Naxim of Relevance %-- because the first 
+speaker has available a chain of inference like:
+
 `p`
 
 
