@@ -317,9 +317,77 @@ feel obliged to explore propositional alternatives
 so as to find an alternative, implicit request whose 
 propositional content `i.is` consistent with 
 fact and also meets the original request's illocutionary 
-force coooratively.  
-
+force cooperatively.  
 `p`
+
+`p.
+In essence, we need to express a requester's desire as 
+itslf, in its totality, a specific propositional content, 
+thinking to purselves (or even saying to others) things 
+like
+
+`sentenceList,
+`sentenceItem; Grandma wants us to close the window.
+`sentenceItem; He wants a bottle opener.
+`sentenceList`
+
+But to respond politely we need to modify 
+the parse of their requests to capture the 
+`q.essential` content:
+
+`sentenceList,
+`sentenceItem; Grandma wants us to eliminate the cold draft.
+`sentenceItem; He wants something to open that bottle.
+`sentenceList`
+
+We have to read outside the literal unterpretation 
+of what they ar saying.  This re-reading is something 
+that may be appropriate to do with respect to 
+other forms of speech also: sometimes 
+the true gist of what someone wants to communicate 
+is not stated directly:
+
+`sentenceList,
+`sentenceItem; I think you could do excellent work in 
+this class, and I think you are doing pretty well.
+`sentenceItem; I am not going to talk about the refs because 
+I don't want to get fined.
+`sentenceItem; If she wants to win the nomination she 
+needs to be as charismatic on the campaign trail as 
+she was during the debate.
+`sentenceList`
+
+But our conversational responsibilty to infer 
+some unstated content is especially pronounced 
+when we are rsponding to an explicit 
+request for something. 
+`p`
+
+`p.
+Certainly, in any case, meanings are not literal.  
+But how then do we understand what people are saying?  
+Trying to formulate a not-entirely-haphazard 
+account of this process, we can spculate 
+that interpreting what someone is `q.really` saying 
+involves systematically mapping their eapparent 
+concepts and references to some superimposed 
+inventory designed to mitigate false beliefs or 
+conceptual misalignments among language users in some 
+context.  That means, we are looking for mappings 
+like `i.milk` to `i.almond milk` in () from a 
+vegan restaurant, or `i.kitchen window` to 
+`i.bedroom window` in () if it is the latter 
+that is open:
+
+`sentenceList,
+`sentenceItem; Can I have some milk?
+`sentenceItem; Can you close the kitchen window?
+`sentenceList`
+
+
+ 
+`p`
+
 
 `p.
 
