@@ -152,7 +152,7 @@ included into a larger aggregate.
 
 `p.
 The interesting resonance between Link Grammar
-and Cognitiv Grammar is that this perspective allows
+and Cognitive Grammar is that this perspective allows
 us to analyze how syntactic incompleteness
 mirrors semantic incompletenss, and vice-versa.
 `q.Incompleteness` can also often be characterized
@@ -555,9 +555,9 @@ That is, in the Semantic Web, nodes are not
 `q.abstractly` linked but rather exhibit
 concrete relations: a person is a citizen
 of a country, two persons are married, and so forth.
-These structurs ar ethen concete instancs of Labeled
-Graps as abstract mathematical structures.  Based on
-Link Grammar, we can then refine this modle
+These structures are then concrete instancs of Labeled
+Graphs as abstract mathematical structures.  Based on
+Link Grammar, we can then refine this model
 be splitting labels into two parts, and
 allowing edges to be incomplete: a fully
 formed edge is possible when the label-parts
