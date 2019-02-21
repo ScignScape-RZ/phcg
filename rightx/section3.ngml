@@ -114,17 +114,64 @@ morphism is probably what I would nominate.
 `p.
 During the course of a conversation %-- and indeed 
 of any structured cognitive activity %-- we 
-maintain conceptual frames reprsenting relevant 
-information, what other peeple know or believe, 
-what ar egoals and plans our (individually and 
+maintain conceptual frames representing relevant 
+information, what other people know or believe, 
+what are our goals and plans (individually and 
 collectively), and so forth.  We update 
 these frames periodically, and use language to 
 compel others to modify their frams in 
-ways that we can (to som approximation) anticipate 
+ways that we can (to some approximation) anticipate 
 and encode in linguistic structure.
-
 `p`
 
+`p.
+In the simplest case, we can effectuate changes in 
+others' frames by making assertions they are likely 
+to believe to be true (assuming they deem us 
+reliable).  In general, it is impossible 
+to extricate the explicit content of the relevant 
+speech-acts from the relevant cognitive, linguistic, and 
+real-world situational contexts:
+
+`sentenceList,
+`sentenceItem; That wine was a Cabernet Franc.
+`sentenceItem; Those dogs are my neighbor's.  
+They are very sweet.
+`sentenceList`
+
+Although there is a determinate propositional content being 
+asserted and although there is no propositional attitude 
+othr than bald assertion to complicate the pragmatics, 
+still the actual words depend on addresses drawing from 
+the dialogic conext in accord with how I expect them to 
+(as manifest in open-ended expressions like `q.that wine`/, 
+`q.those dogs`/, `q.they`/).  Moreover, the  
+open-ended components can refer outward in different 
+`q.registers`/: in `q.that wine` I may be 
+referencing a concept previously established in 
+the conversation, while `q.those dogs` may refer to 
+pets we saw or heard but had not previously 
+talked about.  Of course, the scenarios 
+could be reversed: I could i troduce `q.that win` 
+into the conversation by gesturing to a bottle 
+you had not noticed before, and refer via 
+`q.those dogs` to animals you have never seen or heard but 
+had talked about, or heard talk about, in the recent past.
+`p`
+
+`p.
+Surface-level language is not always clear as to whether 
+referring expressions are to work `q.deictically` 
+(drawing content from the ambient context, 
+signified by gestures, rather than from any 
+linguistic meaning proper), `q.discursively` 
+(referring withing chains of dialog, e.g. 
+anaphora), or `q.descriptively` (using 
+purely semantic means to establish a designation, 
+like `q.my next-door neighbor's dogs` or 
+`q.Inniskillin Cabernet Franc Icewine 2015`/.  
+
+`p`
 
 `p.
 
