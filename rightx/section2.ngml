@@ -689,7 +689,37 @@ the question of `i.which` proposition is
 `p`
 
 `p.
+Underlying both these formal and natural 
+language examples is the idea that the meanings 
+of expressions are associated with changes of 
+something's state: computer statements are instructions 
+to change state and a large class of linguistic 
+expressions are requests to do so.  Whenever 
+there is a state-change there is a corresponding 
+proposition to the effect that the `q.thing` is 
+now in state `Stwo; whereas it was before in `Sone;.  
+Even if the instruction/request cannot be fulfilled there 
+is the concordant proposition that the thing is 
+still in `Sone; can can `i.not` be brought into 
+`Stwo;.  So it is trivial to read logical structures 
+onto linguistic evetualities, by leveraging 
+the idea that for any conceivable 
+state of any conceivable state-bearer there exists a 
+proposition that such bearer is in such state.  
+`p`
 
+`p.
+The problem for truth-theoretic semantics, as 
+I see it, is that these trivial state-to-proposition 
+conversions are just that %-- theoretically trivial.  
+We should not care about a `i.trivial` truth-semantic 
+theory.  If we have a semantic theory wherein, let's 
+say, `q.meanings` are really `i.initiators of 
+state-change processes`/, then we can trivially 
+convert this into a truth-theoretic theory.  But 
+that is not an intersting truth-theoretic semantics; 
+it is a trivial truth-theoretic theory grafted onto 
+an interesting `q.state change` theory.  
 `p`
 
 
