@@ -835,10 +835,129 @@ This is conversationally reasonable %-- it does not violate any
 Naxim of Relevance %-- because the first 
 speaker has available a chain of inference like:
 
-`p`
+`sentenceList,
+`sentenceItem; There is a proposition (call it `POne;) 
+whose propositional content is that the Jets win 
+and a proposition (`PTwo;) whose content is that the Leafs win.
+`sentenceItem; `PTwo; entails the negation of `POne;.
+`sentenceItem; He wants the content of `PTwo; to be true.
+`sentenceItem; His wishes are only consistent 
+with `POne; being false.
+`sentenceItem; He wants the content of `POne; to be false.
+`sentenceList`
 
+The key step here is at () and (): in these steps 
+of reasoning the predicate relation between propositions 
+is expressly thematized.  In the course of 
+understanding language, there may be occasions when we 
+need to identify logical connectives as implicit 
+to the conceptual framework which a speaker is obviously 
+assuming.  In that case we are working with 
+propositions rather than propositional content: 
+there is nothing in the idea of a Leafs victory 
+`i. apriori` that contains the idea of a Jets 
+defeat.  The negative entailment relation only arises 
+in particular situations %-- when the two teams 
+play each other (and implicitly further restrictions, 
+like there are no draws or suspended games). 
+`p`
 
 `p.
-
+It is, in short, a `i.feature` of a specific situation that 
+the idea `q.Leafs win` entails the negation of 
+`q.Jets win`/; ergo, logical connectives are 
+one facet of situational models `i.sometimes` 
+relevant to linguistic processes.  Similarly, speaker 
+sentiment is `i.sometimes` relevant.  But there 
+is a structural isolation between these `q.systems`/: 
+those `q.processing units` that can bear speaker 
+sentiment (polarity) are different 
+from those that can bear logical connectives 
+(except in unusual cases, like the mathematician 
+and the conjecture).
 `p`
 
+`p.
+When we analyze a fan's sentiment `i.wanting` the 
+Leafs to win, we are analyzing polarity `visavis; 
+propositional `i.content`/.  When we observe  
+negative entailment, we are analyzing relations 
+among `i.propositions`/.  The proposition 
+`q.encapsulates` the content so it can be part 
+of logistic structures, where connectives like 
+entailment and disjunction make sense.  In 
+computer science, the technical pattern of 
+such `q.encapsulation` is often 
+called a `q.monad`/, and monadic analysis has been 
+adopted in linguistics as well, following 
+Chung-Chieh Shan.  We can say that logical propositions 
+`i.per se` are monadic packages that `q.wrap` propositional 
+content, subject it to some logical manipulation, 
+and at some later point in processing `q.retrieve` 
+the content from the proposition.  This is not circular 
+because the content is not `i.immediately` extracted from 
+th `q.monad`/.  In (), the content wrapped in 
+`POne; is held through several processing steps before yielding 
+the final interpretation (he wants the Jets to lose).  
+The final extraction corresponds to transforming 
+`q.He wants the proposition that the Jets lose to be false` 
+to `q.He wants the Jets to lose`/.  Stated side-by-side, 
+this transform is redunant.  The difference is that 
+here the original proposition `Ptwo; is not 
+directly asserted as a linguistic meaning; it rather  
+falls out of a logical process.  
+`p`
+
+`p.
+On this analysis, there is a `i.part`/, or 
+`i.substructure`/, of linguistic processing that involves 
+wrapping propositional content into propositions.  
+But these wrappings are only meaningful 
+when there is some `q.delay` between procssing 
+steps %-- essentially, when there is some 
+explicit sense that a given idea stands in some 
+well-defined logical reoation to some other idea.  
+Computer programers can crate `q.trivial` monads 
+whose behaviors do not deviate at all from an 
+imperative style of programming, but any code 
+written with `q.trivial` monads can be refactored 
+such that the monads disappear.  This is analogous 
+to the circularity between propositional 
+content and propositions: the `i.meaning` of 
+a proposition `i.is` its content, so 
+th proposition `q.monad`has processing significance 
+only when the meaning itself needs to be `q.held` 
+awaiting th resolution of some logical nexus.  
+Of there is no processing structure that demands 
+the content to be `q.held`/, then the proposition 
+just `q.decays` to its content, and 
+essentially disappears. 
+`p`
+
+`p.
+These points suggest that while modeling linguistic 
+meanings in terms of propositions is `i.sometimes` 
+appropriate, in the egneral case it is merely 
+circular or tautological.  We certainly should not 
+put forth a theory that the `q.meaning` of an 
+idea is its proposition %-- the turth is more 
+the opposite.  The meaning of a proposition is 
+its propositional content.  So, if we want a 
+truth-theoretic semantics that is 
+applicable for general cases %-- not just especially 
+logically ordered situations, like a winner-take-all 
+sporting match %-- we need a truth-conditional 
+theory of propositional `i.content` separate and apart 
+from a theory of propositions.
+`p`
+
+`p.
+I am discinclined to believe that such a theory is possible, 
+since I think we can give a theory of propositional 
+content but I don't think logic would 
+figure strongly in it.  Having said that, I should 
+now explain what such a theory of propositional 
+content `i.should` look like, and I'll lave it as a 
+(mostly) rhetorical question whether this theory 
+does or does not leverage logic or something else.
+`p`

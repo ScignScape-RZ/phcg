@@ -686,13 +686,13 @@ take the place of `q.logic` in our intuitions.
 `p`
 
 `p.
-In the specific contexts of Concptual-Role and Truth-Thoretic 
+In the specific contexts of Conceptual-Role and Truth-Thoretic 
 Semantics, I will now show what for me this means in practice.
 `p`
 
 `input<section1.ngml>;
 `input<section2.ngml>;
-%`input<section3.ngml>;
+`input<section3.ngml>;
 %`input<section4.ngml>;
 %`input<conclusion.ngml>;
 
