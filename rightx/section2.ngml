@@ -801,10 +801,39 @@ encryption sheme she can monetize).
 One way to put this is that the mathematician 
 desires a `i.proposition` to be true, whereas the 
 Leafs or Sanders supporters 
-want certin `i.propostional content` to be true.
+want certin `i.propostional content` to be true.  
+But if wechave to bring in propositional 
+content, our analysis %-- so it 
+sems %-- becomes circular.  If the propositional 
+content of `q.the Leafs win the cup` is that th Leafs 
+win th cup, then a fans who wants the Leafs to 
+win the cup obviously wants the propositional content 
+of `q.the Leafs win the cup` to be true %-- but that's 
+becaus the idea of the Leafs winning the cup 
+`i.is` the propositional content of 
+`q.the Leafs win the cup`/. 
+`p`
+
+`p.
+Let's say that there are two inverse operators: 
+one maps an idea onto a proposition, 
+and one maps the proposition back onto the 
+idea, which is its `q.content`/.  A semantic 
+analysis would be circular if it just immediatly 
+reversed one operator with the other.  Having said that, 
+the reversal may be `i.separated` by several steps, making 
+it non-trivial.  Suppose the Leafs ar playing 
+the Jets:
+
+`sentenceList,
+`sentenceItem; Are you rooting for the Jets?
+`sentenceItem; Well, I want the Leafs to win.
+`sentenceList`
+
 `p`
 
 
 `p.
 
 `p`
+
