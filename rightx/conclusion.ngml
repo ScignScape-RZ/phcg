@@ -220,6 +220,71 @@ as logically reasonable utterances trigger
 logically guided cognitive operations.
 `p`
 
+`p.
+Even if we accept that linguistic expressions can 
+signify propositional content, this does not mean 
+that a sentence is like a djinn which conjures 
+propositions into material form.  Logical structures 
+do not float around like snowflakes: if they exist, they 
+do so as regulatoey structures or specifications 
+guiding the behavior or implementation of 
+physically realized, synamically changable systems.  A 
+computing platform can exemplify a Typed Lambda Calculus 
+or Adjoint Tensor Logic or Modal Process Algebra by 
+`i.implementing` such a system, but this 
+does not mean a software artifact can `i.be` a 
+logical system (or even can be a `i.token` of a 
+logical system).  But the implementation of the 
+system establishes an Ontological gap between the 
+system as abstract Category and its physical realization.
+`p`
+
+`p.
+Let's say, for sake of argument, that someone dvelops a `Cpp; 
+Functional-Reactive Programming 
+library (a not-too-ambitious enhancement of existing software) 
+which fully realizes Jennifer Paykin's version of Tensor Algebra.  
+It would be entirely possible for most (even expert) 
+`Cpp; programmers to use that library without understanding or 
+even being aware that their code was embodying some logical 
+structure, separate and apart from the system 
+of side-effects and function-calls that they orchestrate.  
+Similarly, developers can create `Cpp; types that are functionally 
+identical to Haskell monads, without being aware of 
+the monadic logic thereby exmplified.  To say that 
+logical systems are implemented in software is to say that 
+the totality of all function-calls %-- both actually 
+observed at runtime and theoretically possible for 
+any run of a program %-- in totality span an 
+abstract space that is fully and adequately specified by 
+the logic.  So we can say that a signal-slot connection 
+causing some function-pointer to be followed represents the 
+concrete manifestation of an abstract `q.temporal-monadic 
+modality`/.  This means that the pattern of signal-slot 
+connections does and will always conform to regulations 
+that can be modeled via Adjoint Tensor Logic.  It also means 
+that this coformance is a result of deliberate design 
+%-- the logic exerts a normative effect on the 
+software; it is not just a pattern retroactively discoverable 
+in observed function-calls.  But 
+what actually exists are the function-calls themselves, and 
+there are many ways to comport to them without 
+considering or being aware of the logic (we can enumerate 
+function calls as a debugger trace, or study them in 
+conventional `Cpp; terms without the added logical 
+details).  The logic is manifest as a regulatory and emergent 
+pattern and influence, but is also only one facet of 
+the full ontological status of the vehicles (e.g., function-calls) 
+whrein the logic is realized.
+`p`
+
+`p.
+Insofar as Natural Language is logical, I would argue that its logic 
+is manifest analogously: it is realized in the pattern 
+of whatever cognitively corresponds to `q.function calls`/; 
+e.g., the tendency of external (linguistic 
+and otherwise) stimuli to trigger cognitive processes.  
+`p`
 
 `p.
 
