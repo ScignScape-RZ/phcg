@@ -826,17 +826,24 @@ Luo's models are convincing and important, but I also
 (for what it's worth) have a slight metatheoretical 
 objection, which is that Luo's type theory is 
 (like most academic type theory) presented as a kind of 
-logical system.  The motivation seems to be that 
+logical system.  (I would be similarly curmudgeonly 
+`visavis; Shan's monadic analyses and other 
+applications of theoretical computer science to studies 
+of natural %-- actually, even programming %-- languages).
+The motivation seems to be that 
 logical type theory can define the logical 
 conditions regulating natural-language semantics, as a 
-way to lverage type-thoertic structurs to explain 
+way to leverage type-thoertic structures to explain 
 natural-language meaning.  But this 
 methodology forecloses an analysis wherein logical 
-conditions are tangential to language pr se.  
+conditions are tangential to language pr se.
+`p`
+
+`p. 
 We can equally, I believe, develop a 
 type-theoretic semantics as a theory 
-of typed instructions or types messages or 
-types side-effects: type theory works in a 
+of `i.typed instructions` or `i.typed messages` or 
+`i.typed side-effects`/: type theory works in a 
 message-passing or side-effect or instruction-network
 semantics as well as a truth-theoretic semantics.  
 The difference is that in the first case we are 
@@ -844,9 +851,14 @@ dealing with side-effects or instructions as
 phenomena to which types can be ascribed, whereas 
 in the second case we `i.define` types by fully 
 articulating their axiomatic constraints.  The latter is more 
-complete than the former, just as mathematical 
-type theory is more concrete than applied type theory 
-as in, say, the `Cpp; type system.  But this is an example 
+complete than the former, because in a mathematical type theory 
+we do not take `q.messages`/, `q.instructions`/, or `q.side effects` 
+as theoretical primitives.  Analogously, as mathematical 
+type theory is more conplete than applied type theory 
+as in, say, the `Cpp; type system, which takes the basic 
+structurs of the `Cpp; language as untheorized givens 
+(like biological analysis taken medical data as givens).  
+But this is an example 
 of where logical completeness does not necessarily confer 
 greater explanatory merit.  Mathematical completeness 
 is a desirable quality of theories about abstract systems, 
