@@ -715,8 +715,8 @@ Luo's models are convincing and important, but I also
 objection, which is that Luo's type theory is 
 (like most academic type theory) presented as a kind of 
 logical system.  (I would be similarly curmudgeonly 
-\visavis{} Shan's monadic analyses and other 
-applications of theoretical computer science to studies 
+\visavis{} Shan's monadic analyses, that I mention later, and 
+other applications of theoretical computer science to studies 
 of natural \mdash{} actually, even programming \mdash{} languages).
 The motivation seems to be that 
 logical type theory can define the logical 
@@ -724,7 +724,7 @@ conditions regulating natural-language semantics, as a
 way to leverage type-thoertic structures to explain 
 natural-language meaning.  But this 
 methodology forecloses an analysis wherein logical 
-conditions are tangential to language pr se.
+conditions are tangential to language per se.
 }
 \p{We can equally, I believe, develop a 
 type-theoretic semantics as a theory 
@@ -737,12 +737,33 @@ dealing with side-effects or instructions as
 phenomena to which types can be ascribed, whereas 
 in the second case we \i{define} types by fully 
 articulating their axiomatic constraints.  The latter is more 
-complete than the former, just as mathematical 
-type theory is more concrete than applied type theory 
-as in, say, the \Cpp{} type system.  But this is an example 
+complete than the former, because in a mathematical type theory 
+we do not take \q{messages}, \q{instructions}, or \q{side effects} 
+as theoretical primitives.  Analogously, a mathematical 
+type theory is more complete than applied type theory 
+as in, say, the \Cpp{} type system, which takes the basic 
+structures of the \Cpp{} language as untheorized givens 
+(like biological analysis taking medical data as givens).  
+But this is an example 
 of where logical completeness does not necessarily confer 
-greater explanatory merit.  Mathematical completeness 
-is a desirable quality of theories about abstract systems, 
+greater explanatory merit.
+}
+\p{Let's assume that understanding 
+language involves some sort of \q{messages} communicated between 
+different cognitive processing systems, so the \q{units} of 
+linguistic processing are embodied in whatever 
+neurological substrata realize cognitive dynamics in general.  
+A type-theoretic semantics would accordingly conceive 
+that there is an architecture of types which we can attach 
+to units of a neurologiclaly realizable cognitive system 
+\mdash{} analogous to how \Cpp{} assigns types to values 
+digitally realized in binary data structures (in practice, 
+byte-sequences).  Type theory is not a theory of the 
+substrata that \i{bear} types.  Applied type theory does 
+not \i{need} to encompass analysis of how digital or 
+cognitive processing works, because that physicalistic 
+demystification is the labor of other sciences.  Mathematical 
+completeness is a desirable quality of theories about abstract systems, 
 but both language and computer software are physically 
 realized systems (however abstract their specifications).  
 As concrete in that sense, they are best treated as vehicles 
@@ -792,16 +813,16 @@ because she does not want to be cold.
 }
 \p{By contrast, sometimes people care about propositions 
 \i{as propositions}.  A mathematician who has 
-staked her reputatuon on a conjecture may want 
-the conjuecture to be true.  But this desirre is not 
+staked her reputation on a conjecture may want 
+the conjuecture to be true.  But this desire is not 
 like the desire of a Sanders or a Toronto Maple 
 Leafs supporter to want propositions like 
 \q{Sanders has won} or \q{Toronto has won} to 
-b true.  Assume the mathematician's conjecture lies 
+be true.  Assume the mathematician's conjecture lies 
 in an obscure field where there are no 
 apparent real-world consequences with 
 benefits that can proceed from truth rather than 
-falsehoodb (it's not like, say, the conjecture 
+falsehood (it's not like, say, the conjecture 
 will allow her to prove the validity of an 
 encryption sheme she can monetize).
 }
@@ -818,7 +839,9 @@ win the cup obviously wants the propositional content
 of \q{the Leafs win the cup} to be true \mdash{} but that's 
 because the idea of the Leafs winning the cup 
 \i{is} the propositional content of 
-\q{the Leafs win the cup}, qua proposition. 
+\q{the Leafs win the cup}, reading the quoted version 
+as an operator to make the sentence into a 
+name for the relevant proposition. 
 }
 \p{Let's say that there are two inverse operators: 
 one maps an idea onto a proposition, 
@@ -827,12 +850,12 @@ idea, which is its \q{content}.  A semantic
 analysis would be circular if it just immediately 
 reversed one operator with the other.  Having said that, 
 the reversal may be \i{separated} by several steps, making 
-it non-trivial.  Suppose the Leafs ar playing 
+it non-trivial.  Suppose the Leafs are playing 
 the Jets:
 \begin{sentenceList}\sentenceItem{} Are you rooting for the Jets?
 \sentenceItem{} Well, I want the Leafs to win.
 \end{sentenceList}
-The second speaker indirecly answers the first in the negative.  
+The second speaker indirectly answers the first in the negative.  
 This is conversationally reasonable \mdash{} it does not violate any 
 Maxim of Relevance \mdash{} because the first 
 speaker has available a chain of inference like:
@@ -893,7 +916,7 @@ the content from the proposition.  This is not circular
 because the content is not \i{immediately} extracted from 
 the monad.  In (), the content wrapped in 
 \POne{} is held through several processing steps before yielding 
-the final interpretation (he wants the Jets to lose).  
+the final interpretation (vi., that he wants the Jets to lose).  
 The final extraction corresponds to transforming 
 \q{He wants the proposition that the Jets lose to be false} 
 to \q{He wants the Jets to lose}.  Stated side-by-side, 
