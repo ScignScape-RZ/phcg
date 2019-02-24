@@ -425,15 +425,15 @@ content actually plays in meaning.  One problem I
 just considered is that the right propositional content 
 does not always come from `i.literal` meaning: the 
 vegan `i.doesn't` want real milk in her coffee.  
-The idea of `q.mapping` is one away to address this: 
+The idea of `q.mapping` is one way to address this: 
 in place of `q.literal` meaning we can substitute 
 meanings undr `q.coordinate` transforms, where 
 concepts transition from their literal designation 
-to their roles: the vegan wants the product that 
+to their roles.  The vegan wants the product that 
 plays the `i.conceptual role` of `q.milk` in her 
 own frame of reference (at least in the context of, 
 say, dining, as opposed to a context like 
-checking whether a pit bull is lactating).  
+checking whether her Staffy is lactating).  
 But there are two other concerns we should have 
 about propositional content, which 
 I will discuss to close out this section.
@@ -444,8 +444,8 @@ I will discuss to close out this section.
 My analysis related to conceptual `q.transforms` 
 assumed that we can find, substituting for `i.literal` 
 propositional content, some `i.other` 
-(reprsentation of a) proposition that fulfills a 
-speaker's unstated `q.ral` meaning.  Sometimes 
+(representation of a) proposition that fulfills a 
+speaker's unstated `q.real` meaning.  Sometimes 
 this makes sense: the proposition that the 
 `i.bedroom` window is closed can neatly, 
 if the facts warrant, play the role of the 
@@ -457,7 +457,7 @@ us to put towels by the cracks).  Maybe there is
 no draft at all (if grandma is cold, we can 
 fetch her a sweater).  Instead of a single 
 transform, we need a a system of potential transforms 
-that can adapt to the facts as we discover them  
+that can adapt to the facts as we discover them.    
 Pragmatically, the underlying problem is 
 that grandma is cold.  We can address this 
 %-- if we want to faithfully respond to her request, 
@@ -478,7 +478,7 @@ ask if she wants a sweater.
 This is still a logical process: starting from an 
 acknowledged proposition (grandma is cold) we 
 entertain various other propositional possibilities, 
-trying to rationally determine that pragmas we 
+trying to rationally determine what pragmas we 
 should enact to alter that case 
 (viz., to instead make true the proposition that 
 grandma is warm).  Here we are not just testing 
@@ -489,7 +489,7 @@ acting to modify some facts in our environment.
 `p.
 The kind of reasoning involved here is not logical 
 reasoning per se: abstract logic does not tell us 
-to check th bdroom window if the kitchen window is closed, 
+to check the bedroom window if the kitchen window is closed, 
 or to check for gaps and cracks if all windows 
 are closed.  That is practical, domain-specific knowledge 
 about windows, air, weather, and houses.  
@@ -515,7 +515,11 @@ truth of any one proposition.
 
 `p.
 For all that, there is still an overarching logical 
-structure here that languages clearly marshals.  
+structure here that language clearly marshals.  We read 
+past grandma's explicit request to infer what she is 
+`q.really saying` %-- e.g., that she is cold %-- but we 
+still regard her speech act in terms of its (now indirect) 
+propositional content.
 But once we converge on the `q.language initiates 
 a process` model, we can find examples where the 
 logical scaffolding gets more tenuous.  
@@ -546,7 +550,7 @@ Or:
 `sentenceItem; Mr. Jones, were you present at a meeting where 
 the governer promised your employer 
 a contract in exchange for campaign contributions?
-`sentenceItem; After consulting with my lawyerrs, I decilne 
+`sentenceItem; After consulting with my lawyers, I decline 
 to answer that question on the grounds that it 
 may incriminate me.
 `sentenceList` 
@@ -568,10 +572,10 @@ a complete breakdown of language:
 `sentenceList`
 
 The speaker of () does not 
-provide any logical content: it neither affirms 
+provide any prima facie logical content: it neither affirms 
 nor denies Jones's presence.  Nonetheless that speaker 
 is a cooperative conversational partner 
-even if they are not being cooperative in real life): 
+(even if they are not being very cooperative in real life): 
 () responds to the implicature in () that what the 
 first speaker really wants is (for instance) 
 to interview Jones.  
@@ -586,8 +590,93 @@ conversational maxims but is still rather obtuse.
 `p`
 
 `p.
+So one problem for theories that read meanings in terms 
+of logically structured content %-- something like, the 
+meaning of an (assertorial) sentence is what the world would be 
+like if the sentence were true %-- is that the actual 
+logical content supplied by some constructions 
+(like `q.Jones is not available`/) can be pretty 
+minimal %-- but these are still valid and 
+conversationally cooperative.  To be sure, this  
+content does not appear to be `i.completely` 
+empty: `q.Jones is not available` means the 
+conjunction of several possibilities (he cannot be found 
+or does not want to talk or etc.).   
+So () does seem to evoke some 
+disjunctive predicate.  But this does not mean 
+that this disjunctive predicate is the `i.meaning` of 
+().  It does not seem as if () when uttered by a 
+bodyguard is intended first and foremost to 
+convey the disjunctive predicate.  Instead, the 
+bodyguard is responding to the implicature 
+in the original `q.Is Jones there?` query %-- the 
+speaker presumably dos not merly want 
+to know Jones's location, but to see Jones.  
+Here people are acting out social roles, and just happen 
+to be using linguistic expressions to negotiate 
+what they are able and allowed to do.         
+`p`
+
+`p.
+Performing social roles %-- including through language %-- 
+often involves incomplete information: possibly 
+the secretary or bodyguard themselves do not know 
+where Jones is or why he's not available.  
+We could argue that there is `i.enough` information to 
+still ground `i.some` propositional content.  But this 
+is merely saying that we can extract some propositional content from 
+what speakrs are supposed to say as social acts, which seems 
+to make the content (in these kinds of cases) 
+logically derivative on the enactive/performative 
+meaning of the speech-acts, whereas a truth-theoretic 
+paradigm would sm to need the derivational dependsnce 
+to run the other way.  By saying `q.Jones is unavailable` 
+the speaker is informing us that our own prior speech 
+act (asking to see or talk to him) cannot have 
+our desired effect %-- the process we initiated cannot be 
+completed, and we are being informed of that.  The 
+person saying `q.Jones is unavailable` is likewise 
+initiating a `i.new` process, one that counters our process 
+and, if we are polite and cooperative, will have its 
+own effect %-- the effect being that we do not insist on 
+seing Jones.  The goal of `q.Jones is unavailable` is to create 
+that effect, nudging our behavior in that direction.  
+Any `i.logic` here seems derivative on the practical initiatives. 
+`p`
+
+`p. 
+And moreover this practicality is explicitly maked by how 
+the chosen verbiage is deliberately vague.  The declaration 
+`q.Jones is unavailable` does not `i.need` logical precision to 
+achieve its effect.  It needs some logical content, but it exploits a 
+kind of disconnect between the play of logic and the play 
+of practical action.  I think this xample has som structural 
+analogs to the grandma window case: there we 
+play at logical substitutions to respond practically 
+to grandma's request in spirit rather than `i.de dicto`/.  Here 
+a secretary or bodyguard can engage in logical 
+substitution to formulate a linguistic performance 
+dsigned to, in effect, ask us to leave, but to do so 
+while conveying a slittle information as possible.  The logical 
+substitution in this context is a diminution in 
+logical content.  We can strip away logical dtail from 
+our speech without diminishing the potency of 
+that speech to achieve affects.  And while the remaining residue 
+of logical content suggests that some basic logicality is still 
+essential to meaning, the fact that logical content can 
+be freely subtracted without altering practical effects 
+suggests that logic's relation to meaning is something 
+other than fully terminate: effect is partially autonomous from 
+logic, so a theory of effect would seem to be 
+partially autonomous from a theory of logic.  
+I can be logically vague without being 
+conversationally vague.   This evidently means that conversational 
+clarity is not identical to logical clarity.
+`p`
+
+`p.
 This pattern of logical evasiveness might seem to be 
-endemic only to slippery human languag, but analogous 
+endemic only to slippery human language, but analogous 
 exsamples can be found even in the strict milieu of 
 computer programming.  Suppose 
 I am writing a function which counts the 
@@ -604,7 +693,7 @@ lines in a file.  My implementation might start like this
 So the first line tries to open a file with the 
 specified path, and the second line checks if the file 
 is indeed open and non-empty.  If not, it returns the 
-number zero, meaning there are no non-blank non-comment 
+number zero, meaning that there are no non-blank non-comment 
 lines in the file.
 `p`
 
@@ -621,7 +710,7 @@ either it does not exist; or it cannot be opened because
 of inadequate permissions; or it `i.can` be 
 opened but has no content.  My function is 
 noncommital and returns zero in each of these cases.  
-In particular, I gloss over someinformation: 
+In particular, I gloss over some information: 
 the zero return value is analogous to Mr. Jones 
 being `q.unavailable` for an interview.  
 `p`
@@ -630,10 +719,10 @@ being `q.unavailable` for an interview.
 In the formal computer setting, we are not allowed to 
 logicaly infer what expressions `q.really` mean: we 
 should not, for instance, if some file does not 
-exist, instead try to opn a different file 
+exist, instead try to open a different file 
 with a similar name.  Therefore the `q.meaning` of 
-code expressions should be tied explicitly to 
-individual logical conditions.  For cample, the 
+code expressions should not be tied explicitly to 
+individual logical conditions.  For example, the 
 `q.meaning` of line () should be tied to the proposition 
 that the file (whose location is specified by `i.path`/) 
 is open.  However, the code never actually enagages with 
@@ -663,7 +752,7 @@ from that file).  But what I contribite as
 code are `i.instructions`/, and instructions have 
 an effect on the state of the overall computational 
 environment where my application is hosted.  
-In the general case I am not aware of eactly what 
+In the general case I am not aware of which 
 new state obtains.  Attempting to open a file 
 may cause it to be opened, but it may also 
 cause the software reprsentation of that 
@@ -726,7 +815,7 @@ an interesting `q.state change` theory.
 So much is not to call truth-theoretic semantics 
 uninteresting.  But for us to take truth-theoretic semantics 
 seriously we need to accept the idea that this 
-paradigm can `i.motivate` analysis qhich leads to 
+paradigm can `i.motivate` analysis which leads to 
 interesting results, taking us somewhere we may not 
 arrive otherwise.  The fact that a given semantic theory 
 has some formulaic translation into truth-thoretic terms 
@@ -744,7 +833,7 @@ as rational beings our thought processes will
 be informed by logic and to some degree can be 
 retroactively modeled via logical complexes.  
 But `q.logic` appears to play a role in these 
-cognitive operations only inidrectly.  There seems 
+cognitive operations only indirectly.  There seems 
 to be some medium %-- perhaps conceptual roles, 
 or state-changes %-- that `q.carries` logic 
 into the cognitive realm.  We should reject   
@@ -772,7 +861,7 @@ window is closed` to be true.
 `q.I am cold` to be false.
 `sentenceList`
 
-My prior analysis focusd on the fact that the more relevant 
+My prior analysis focused on the fact that the more relevant 
 proposition is that in (), and we have to 
 read () from ().  But it should also be obvious 
 that grandma does not care about `i.propositions`/.  
@@ -782,7 +871,7 @@ because she does not want to be cold.
 
 `p.
 By contrast, sometimes people care about propositions 
-`i.as proposition`/.  A mathematician who has 
+`i.as propositions`/.  A mathematician who has 
 staked her reputatuon on a conjecture may want 
 the conjuecture to be true.  But this desirre is not 
 like the desire of a Sanders or a Toronto Maple 
