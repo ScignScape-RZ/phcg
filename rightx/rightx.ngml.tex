@@ -1,0 +1,654 @@
+\documentclass{article}
+\include{commands}
+\begin{document}\title{The Right Kind of Externalism: A Proposal}
+\p{This essay adresses topics in linguistics and the philosophy 
+of language, though (by conventional measures of expertise) 
+I am more of a Phenomenologist and a Computer 
+Programmer than a linguist.  I confess this not as biography, 
+but to introduce my metatheoretical anchor points, from 
+which derive intuitions that others might find 
+unconventional.  I am, in particular, sensitive 
+to the experiential nuances of human cognition and 
+skeptical that mechanical systems can emulate human 
+minds except for narrowly defined tasks.  At the same time, 
+I think computational systems have interesting aspects 
+that can enrich our understanding of cognition, evn if 
+we do not philosophically buy a \q{cognition is computation} 
+metaphor.  
+}
+\p{To be precise, I am skeptical about \q{AI}; and I am also 
+skeptical about a kind of logical reductionism that 
+I believe exerts a definitive influenc on several interrelated 
+filds, including philosophy, linguistics, and computer 
+science.  As the paradigm seemingly goes, if we accept some 
+form of \q{mind as computer} analogy, then we 
+intrinsically accept \i{first} the idea that \q{mind} 
+encompasses as some important part a logically articulated 
+subsystem, which can be scientifically studied via formal 
+logic; and \i{second} that as a consequence of this 
+scientifically tractable logicality, AI is a good 
+model or proxy for the study of mind.  The unconscious 
+deduction here seems to be that \i{mind as computer} 
+has as a consequence that mind is (to some salient degree) 
+a logical system, following a premise that computers are 
+logical systms.  But this premise is more false 
+than it is true; so for me the whole paradigm is on shaky 
+grounds.  I will explain later why computers are 
+not as logical as non-programmers seemingly believe.  For 
+now I'll just say this: there are rigorous accounts 
+of computation that, I contend, are not grounded on 
+formal logic in any techical or reductive sense.  As a 
+result, someone's non-logical-reductive views 
+on language and consciousness do not \i{a priori} 
+preclude computational models having some intuitive, 
+explanatory, or structural-analogy place in their 
+analyses of cognition.  
+}
+\p{Meanwhile, as a Phenomenologist I am a committed 
+\q{realist}.  What I mean is that, in a nutshell, we 
+should renew our commitment not to read Husserl too 
+psychologically; for instance, not to read 
+\i{intentionality} as a psychological phenomenon.  If I 
+see a red sofa, we should go ahead and accept that 
+what I see is a red sofa \mdash{} that very object.  I do 
+not see a mental image of a red sofa or a phenomenal 
+appearance of a red sofa or a token of 
+red-sofa-appearance-ness.  We should not be led stray by the 
+sofa being a few feet away from me, so it is not 
+\q{in my brain} \mdash{} my brain is over here, not 
+over there.  If I am suddenly distracted by something, 
+look away, and forget about the sofa, my sofa-impression 
+(but not the sofa) goes away, which seems to 
+suggest that there my sofa-impression is not 
+the same kind of thing as a sofa \mdash{} which in turn 
+invites us to qustion whther what I am really 
+seeing is that sofa-impression, not that sofa.  
+But, without disputing that in 
+\i{some} sense the impression is not ontologically 
+identical to the thing itself, I still maintain 
+that the best gloss on the situation still starts 
+from the givenness that I do see the sofa (and 
+not the sofa-impression or any other psychologistic 
+posit).  I will have mor about to say about this 
+realism, also.  For now I'll say 
+this: the case for \q{impressions} over 
+\q{things themselves} seems stronger when talking 
+about vision (which works at a distance) rather than 
+touch \mdash{} if I actually sit down on the sofa and 
+physically contact it, we may feel more comfortable 
+saying that my experience is directly encountering 
+that physical object (though someone could still say 
+that tactile sense-impressions are still not identical 
+to objects; for one thing, the contact point 
+between my hands/torso and the sofa \mdash{} the locus 
+of those haptic nerve cells \mdash{} is not in my brain 
+either, ergo a spatial gap still exists between brain and the 
+sensed object).  If we accept that our nervous 
+system is in some sense a functionally organized complex, 
+then an encounter between some external body and \i{part} of 
+that system, with suitably holistic functional 
+response, can plausibly be treated as \q{my brain} 
+(or nervous system or mind) contacting the sofa 
+\mdash{} we don't need to rule out this gloss because my 
+\i{central} nervous system remains physically 
+isolated, any more than we would dispute that a knife 
+has punctured a sealed carton when in fact only the 
+knife-tip did so.  In short, sense-causing physical 
+contact as part of my embodied propensity to register 
+tactile contact experientially, through the medium of 
+functionally-organized processing that eventually 
+includes the brain, is \mdash{} I would 
+say \mdash{} a sensate manifestation of my contact with the 
+sofa (not with a tactile-sense-impression or 
+haptic-phenomenon of the sofa).  And if we accept 
+this line of reasoning for touch, we should do so for 
+vision also \mdash{} partly because an intrinsic 
+feature of \i{seing} something is that we \i{could} with 
+proper movement touch it, and apprehension of 
+visual from includes anticipation of how 
+surfaces will respond when we kinaesthetically interact 
+with them (we might presume, for instance, that 
+we can run our hand over the wall to the right but not 
+to the left, if there's another wall there: this 
+visual disclosure is also in a sense proto-kinetic).
+}
+\p{So, before making claims about language, I have hereby 
+asserted two main intuitive feints guiding my subsequent 
+discussion: computer programs as useful but not 
+logically reductive analogs for cognitive processes, and 
+the virtues of a \q{realist} Phenomenology 
+which accepts language to the effect that we experience 
+\q{things themselves}: that touching and seeing 
+(etc.) are expriential encounters with real, external, 
+non-psychological entities.  This does not have to be a 
+blunt realism \mdash{} I don't dispute that we experience 
+appearances in some sense \mdash{} but we need to articulate 
+the thing/apearance distinction in a way that does not 
+disallow common-sense intuitions like \q{seeing the sofa} 
+meaning that I do see some real, external sofa-thing.  
+That would make for an analysis in 
+pure Phenomenology if I just framed my arguments with 
+reference to, say, Husserl's own treatment of the 
+noemata/phenomena distinction.  Here, howevere, 
+I am going in a different direction and package 
+a loose theory of \q{realism} about intended 
+\q{expernal} objects within a treatmnt of 
+\q{externalism} (and \i{internalism}) in 
+the philosophy of language. 
+}
+\p{I'm not ignoring that \q{external} in the sense 
+of \q{wide scope} mind-world relations as a 
+Semantics hypothesis is only tangentially related 
+to \q{external} in a phenomenological sense of 
+experienced external objects (as opposed 
+to experienced internal, e.g. somatic, states).  
+But I \i{will} present a theory that connects 
+these two senses of \q{external} (and likewise 
+two senses of \q{internal}).  
+}
+\p{All told, my goal here is to sketch a theory of 
+cognitive linguistics which can resonate soundly 
+with Phenomenology (while not being especially 
+phenomenological on its own).  This theory 
+will be incomplete \mdash{} deliberately, strategically 
+incomplete.  Indeed, every theory should be incomplete: 
+an essential quality of modern science is 
+our recognition that scientific explanation covers a 
+vast breath of scales and kinds of phenomena, and 
+\q{science} as a singular human institution only exists 
+insofar as there are many sciences, each with some measure of 
+theoretical autonomy but also areas of overlap, so 
+scientific explanations can brisge across scales.  Bioligists 
+take it for granted that the basic intellectual structures of 
+their disciplines can be justified by appeal to 
+chemistry (as a causative or emergent base of bioloigical 
+phenomena); and the presence of \i{parts} of biology 
+where this connection is explicit (like organic chemistry) 
+is important for our overall sense of biology as 
+something grounded in a general scientific method.  But 
+these \q{reductive} links are not typically 
+operationalized in biology as a whole \mdash{} a biologist 
+is not \q{doing} chemistry}
+, biological properties 
+are not necessarily chemical properties, biological 
+laws are not necessarily chemical laws, and 
+biological terms are not semantically (or even 
+arguably referentially) reducible to chemical terms.  
+We can consider whether biological concepts are 
+\q{in some sense} reducible to (or extensionally 
+equivalent to or \q{the same stuff as}) chemical 
+concepts, but framing this discussion as a nuanced 
+debate implies that biology is not 
+\i{trivially} reducible to chemistry, and we may accept 
+such a reduction as a plausible optional only insofar as 
+some if us may hold philosophical commitments, which 
+\q{we} collectively do not want to dismiss out of hand, 
+that higher-scale sciences are necssarily reducible 
+to lower-scale ones that are their causal or 
+physical-constitutive base.  But even if there is a 
+sense of \q{reduction} and of \q{biology} and \q{chmistry} 
+that makes biology reducible to chemistry, this 
+dos not make biological \i{science} reducible to chemical 
+\q{science} \mdash{} that is, a well-constructed 
+and discursively evaluable biological thory should not be 
+expected to consider in any details its own reductive 
+interprtations, or express its concepts in chemical 
+(rather than physical) terms, or attempt to \i{explain} 
+rather than just \i{presuppose} chemical laws 
+(preservation of quantities in chemical reactions, 
+acid/base qualities, solvents and solubility, 
+molecular interactions, etc.).  Ditto for chemistry 
+in relation to molecular physics, molecular physics 
+in relation to quantum physics, nurology in 
+relation to biology, and so forth.  In short, 
+whatever our philosophical intuitions about emergent 
+phenomena and the ontological duality (or monism) between 
+emergent and base scales, these philosophical points 
+are only tangentially related to the equally 
+important philosophical question about what 
+makes a good theory in a science.  
+`p`
+\p{This bears riterating: when considering a science 
+(I'll include social sciences and humanities here) 
+philosophically, there are two different sorts of questions 
+that can arise: on the one hand, what is the ontological 
+status of the entities, laws, and quantitative models 
+postulated by the science and its currently influential 
+theories?  Should we understand terms to be 
+proposed natural kinds (like \q{protons}), structural 
+features that don't necessarily align with straightforward 
+patterns of reference (like \q{dark matter}), referring 
+expressions into complex systems whose parts have somehow 
+fuzzy or underdetermined boundaries or criteria of 
+individuation (like \q{climate}), or quasei-refrences 
+which have the form of concrete designations but are really 
+just shorthand for elaborate paradigms (like 
+\q{natural selection})?  These are various options in the 
+semantics of scientific jargon, which are clues to 
+the proper ontological status of scinces' theoretical 
+posits (so much applies to linguistics also, 
+with its theortical vocabulary of concepts, lexemes, 
+syntax rules, gnerative semantic rules, and so forth 
+\mdash{} are these mental subsystms?  Innate cognitive 
+faculties?  Clusters of nerve cells?  Neural pathways 
+reinforced during language acquisition?).  But, on 
+the other hand, there is a different order of question 
+philosophers can ask with regard to a particular 
+science: what qualifies as a well-constructed theory for 
+that science?  What sorts of formal models hold explanatory 
+merit as, seemingly, capturing the casuative factors 
+determining the behavior of the systems that science 
+investigates: continuum-based numerical models?  
+Models in discrete mathematics?  Systems of logic?  
+State machines?  And interconnected 
+with that question is the proper scope of the science: 
+a well-constructed theory needs to honor bounaries between 
+and autonomy of different sciences.  Having a clear 
+picture of what beliefs in \i{other} sciences to take 
+as explanatory primitives in \i{this} science is an 
+essential criteria of theoretical soundness 
+\mdash{} no less than the urge to pursue explanatory 
+closure within the proper bounds of each science.
+}
+\p{One of my objections to \q{logical reductive} paradigms 
+in linguistics (and computer science) is their failure to 
+distinguish these two aspects of a philosophy of science, 
+by my lights.  When discussing chemistry or biology, we can 
+make a clear distinction between metaphysical 
+commitments according to which higher-scale systems 
+reduce (via physical composition and the propagation of 
+causality across levels of organization) to lower ones 
+\mdash{} biology to chemistry to physical \mdash{} as a genr 
+of reduction obviously diffrent from reducing sciences 
+as collective intellectual exercise.  We do not reduce the 
+community of biologists to the community of chemists, 
+or the kinds of expertise and fluency in certain 
+mental gymanastics, or the criteria of what makes 
+good biological theories, to the concordant 
+community, conceptualizations, gymnastics, and 
+theory-criteria of chemists.  This is for me part ofv
+what makes biology a successful science \mdash{} it 
+is incomplete in an ontologically necessary, 
+intellectual fertile way.  But if this is a 
+reasonable criterion, what can we say about 
+linguistics as a science?  Is it incompleye 
+in an ontologically necessary and intellectual 
+fertile way?  In fact, I intend to argue here 
+that some popular linguistic theories are \i{not 
+incomplete enough}.  They are 
+(or would be, if successful) too complete 
+\mdash{} while also, I will claim, incomplete 
+in the wrong ways, leaving too many \i{relevant} 
+phenomena, issues that \i{are} in the scientific 
+wheelhouse, incompletely explained.  
+}
+\p{I will make these arguments as a prelude to 
+describing the (incomplete) 
+linguistic theory I \i{am} prepared to defend.  
+Specifically, the first two sections here will 
+weigh in on Conceptual Role Semantics and 
+Truth-Theoretic Semantics and explain why I 
+believe some popular paradigms in the philosophy 
+of language are problemmatic.  While the details 
+will vary, the main thurst of my points will be 
+that philosophers of language fail to appreciate the 
+importance of sciences internalizing a map of 
+the division of labor between science \mdash{} a science is 
+constituted in part by how it touches but remains 
+autonomouus from other (both higher- and lowe-scale) 
+sciences.  So biology is constituted in part by its 
+status as a potential reductive base for neuroscience, 
+medicine, genetics, and paleontology, while having 
+its own reductive base in chemistry and 
+physics.  Part of what it means to be biology is 
+to be the explanatory bridge between, say, 
+medicine and physics.  Analogously, I believe, 
+part of what it means to be linguistics is to be 
+the explanatory bridge between, say, sociology, 
+anthropology, and ethnolinguistics, with cognitive 
+science (or Cognitive Phenomenology).  Language 
+can be intrinsically characterized as the cognitive bridge 
+between our everyday world \mdash{} of social situations 
+and kinaesthetic/pragmatic enaction and anticipation, 
+planning and memory \mdash{} with the neurophysical 
+substratum (whatver it is) of our mntal faculties.  
+Language, that is, is an important tool for our 
+negotiating the duality of our higher-scale 
+social/situational world with our lower-scale 
+neurophysical existence.  Analogously, 
+a phenomenon in language \mdash{} say, a sentence \mdash{} 
+should be analyzed as a kind of transition-system 
+between a social/situational layer of reality and a 
+cognitive/neurological layer.  Linguistics 
+is accordingly suspended between these layers \mdash{} or, 
+better, I claim that linguistics should be the 
+\i{theory of being suspended} between social/situational 
+and cognitive/neurological strata.  A linguistic 
+analysis starts with entities shooting in 
+from the first stratum (sentences we hear uttered, 
+canonicaly), and it ends with some restructured 
+representation or consummation of that sentence (parsed, 
+lexified, etc.) understood as inputs to some 
+neurophysical process belonging (ontologically, 
+and as a matter of scientific jurisdiction) to the second 
+stratum.  Such an analysis is \i{correctly} incomplete 
+because it recognizes that a basic criterion of well-formdness 
+for linguistic theories is that they \i{refrain from} 
+direct analysis of either societal/interpersonal or 
+cognitive/neurophysical processes.  Linguistic 
+analysis is incomplete because a theortical machinery 
+fine-tuned for analyzing processes of linguistic understanding 
+at the intermediate level between social/situational and 
+neurological strata cannot be the same as a theortical machinery 
+for analyzing sociological or nurophysical laws in turn \mdash{} 
+by analogy, the exprimental (and theortical) mchinery for 
+detecting Earthlike exoplanets cannot be the machinery for 
+detecting Higgs bosons (and vice-versa). 
+}
+\p{Here I find an analogy to computer software useful: 
+programs don't run themselves, so application developers 
+have to realize that they do not control, or have access 
+to much information about, when applications 
+are launched (or when users will perform actions 
+that require response from the software, like clicking a 
+mouse button or pressing a key).  Nor do programmers 
+control input/output commands like emitting colors 
+to the screen: they only influence electronic 
+devices (like displays and networking capabilities) 
+indirectly, via preimplemented system calls.  In 
+other words, the essential structure of a computer 
+application is to be poised to react to various events 
+(a mouse click, a key click, plus of course program 
+startup initially) by eventually requesting certain 
+operations (like changing the state of the screen) 
+whose exact functioning remains outside the 
+programmer's theoretical arsenal.  Application 
+developers have only a vague idea of how values and 
+types in code are marshalled to an from electrical signals 
+physically affecting (or reporting state from) devices 
+like monitors, mouses, and keyboards.  This is by design: 
+if you're too closely attuned to low-level cyberphysical 
+details, like how source code function calls map to 
+digital signals, you're no longer doing computer 
+programming (maybe you're doing chip design).  
+To the degree that programming has a theory, it's a theory 
+of how to \i{bridge} users' desired interactions with 
+the software you are building \i{to} the digital 
+structures encoded at the level of microprocessors and 
+machine language.  It is not a theory of microprocessors 
+themselves.  Theory well-formedness in the realm of 
+programming \mdash{} the field sonetimes calld 
+Software Language Enginering \mdash{} reflects the 
+transforms bridging \q{Human Computer Interaction} 
+with machine language; it is not a theory of 
+HCI or of machine languagebthemselves.  Indeed, HCI 
+methodology is subjective and statistical; and 
+the methods of physically realizing machine 
+language in microprocessors depend on physical and 
+nanochemical properties. Well-formed Software Language 
+Enginering theories \i{have} to leave both HCI 
+and microprocessors out of the frame, since 
+software programming languages are not statistical 
+or subjective, nor physical or nanochemical.   
+}
+\p{The hierarchical natur of computer architecture 
+complicates any \q{mind as computer} metaphor: computers 
+have many subsystems, with significantly different 
+structures and properties.  Using computers as 
+case-studies of artifacts ghat are in some sense 
+\q{intelligent} can take us in different directions 
+for different answers as to what scale of computers' 
+organization we propose to inform, say, 
+cognitive-linguistic research: microprocessors?  Machine 
+Language?  Programming languages?  Software systems?  
+The internet?  Of course, many instances of 
+\q{mind as computer} analogic reasoning are not explicit 
+research paradigms bing proposed forth but are more 
+like reports of intuitions: a community of linguists 
+feeling that there's something going on in how computers 
+work that usefully models or resembles how human 
+rasoning or language-processing works.  But cashing 
+these intuitions into systematic models can prove 
+challenging: even insofar as a computer may exhibit 
+intelligent behavior, it does so only 
+in an emergent manner, the whole \q{intelligence} 
+being possible only through specific kinds of 
+interaction between subsystems, in particular 
+a tightly determined transition between high-level 
+systems (like applocation source code) and 
+low-level systems (like machine code).  
+}
+\p{Of course, many researchers probably believe that this 
+emergent dimension is precisely why computers are a 
+plausible cognitive analogy: they suggest that 
+intelligence can be realized in structural systems whose 
+lowest-level operations are not particularly complex.  
+No-one would argue that in and of itslf a simple 
+Van Numann machine is particularly \q{intelligent}; 
+but software evincing intllignt bhavior can be implemented 
+as emergent phenomena for which Van Numann machines are 
+their reductive base.  This may sem like a 
+useful analogy to consciousness, realized in 
+neurons and synapses even though neurons and synapses 
+are not themselves conscious.  That's an 
+acceptable intuition, but it also leads to a 
+kind of philosophical bait-and-switch: what 
+starts as a \q{mind as computer} intuition ends up 
+as a different kind of analogy, something more 
+like comparing minds to functional systems 
+\i{implemented} on a computer.  There is a 
+difference between being a system 
+realized on a computer and actually 
+being a computer. 
+}
+\p{In the case of language comprehension, someone may 
+find a useful analogy in database-like 
+constraint-solving applications, like Prolog: 
+language usrs maintain an internal store of 
+beliefs \mdash{} about both language and the world \mdash{} and a 
+record of prior steps in the current conversation.  
+This \q{database} gets updated as we hear new sentences, 
+and we are equipped to make or reject inferences based 
+on inference rules and constraints, respectively: 
+from \q{John is my younger step-brother} we can conclude 
+both that the speaker's parents are divorced and that John 
+is not female.  Of course, real-world complications 
+sometimes intrude on the kinds of tidy frames 
+linguists build around words: a brother can actually 
+be a transgender woman, and divorces can remarry each 
+other.  We can debate whether these are semantic or 
+pragmatic issus (I think they're the former, but let's 
+say they ar the latter for sake of argument).  So 
+let's say language has enough logical order that 
+conversations can be modeled rather like Prolog 
+programs.  These leads to a maybe-interesting 
+mind-as-Prolog analogy, but \mdash{} here's the crux 
+\mdash{} mind-as-Prolog analogies are \i{not} 
+mind-as-computer analogies.  Computers 
+\i{run} Prolog programs; it's not that 
+they \i{are} Prolog sessions.
+}
+\p{Indeed, I think many \q{mind-as-computer} analogies are 
+actually more like \q{mind-as-Prolog} analogies, 
+or substitute some other technology for Prolog.  
+For instance, mind-as-artifical-neural-network 
+analogies are not mind-as-computer analogies, because 
+computers are not ANNs (though thy may implement them).  
+Indeed, ANNs are designed to make computers more 
+humanlike: to transcend the mechanistic limitations 
+of Van Neumann architecture by realizing, at 
+some virtual level, a more connectionist manifestation 
+of computation.  A mind-as-ANN analogy is therefore 
+really mind picrured as a computer programmed 
+to operate like a mind (so, the analogy is 
+basically circular).  Mind-as-symbol-processing analogies 
+have similar issues: computers are 
+not symbol-processors, though they can implement 
+symbol processing systems.  As I'll defend below, 
+I think computers are basically stack machines, and 
+stack machines do not \q{process} symbols \mdash{} what 
+they do is process stacks, and jump around to different 
+subroutines.  When people think about 
+\q{computers} in mind-as-computer analogies \mdash{} or 
+write in ways suggestive of such an analogy \mdash{} I often 
+get the impression that what people are really 
+thinking about is not \q{computrs} but some sort of 
+mathematically formalizable, functionally specified 
+system that can be \i{realized} on a computer.
+}
+\p{These other analogies are not \i{a priori} bad 
+\mdash{} it's reassuring if we have accounts of 
+intelligence that traffic through functional 
+organizations that can be realistically embodied 
+in mundane physical artifacts, rather than needing 
+some magical mind-gunk.  But if our 
+\q{mind-as-computer} analogies are nothing more than a 
+desire to find logico-functional systems that can credibly 
+undergird cognitive behavior, computers are 
+basically irrelevant: the computational realizability of 
+such logico-functional systems is a nice reminder 
+that we're not asking non-philosophers to believe 
+in magic, but the structure of these systems are 
+sufficiently remote from how computers internally operate 
+that computer realizability should have no 
+\i{theoretical} role.  In other words, 
+mind-as-computer analogies are usually basically 
+mind-as-logico-functional-system analogies.  
+}
+\p{We're entitled to find these latter analogies 
+intuitive.  My problem is only with 
+mind-as-logico-functional-system analogies that 
+get defended \i{by appeal to} mind-as-logico-functional-systemies.   
+There seems to be a kind of metatheoretical pattern that 
+goes something like this: mind is 
+metaphorically a logico-functional system \i{because} 
+mind is metaphorically a computer, and 
+logico-functional systems (when not just abstract 
+mathematical territories) are realized via 
+implementation in computer architecture.  
+But mind-as-computer is not logically related 
+to mind-as-logico-functional-system \mdash{} any apparent 
+link between these analogies is a biproduct of 
+intellectually bakgrounding the 
+distinction between \i{being} and \i{implementing}.  
+We may or may not like a mind-as-computer 
+analogy, but even if we \i{do} accept such a 
+perspective, even if provisionally, this does 
+not then legitimize or entail that we are accepting 
+a mind-as-logico-functional-system analogy.  Of course, we 
+can judge the latter analogy on its own merits, but 
+the former analogy in no way retroactively 
+justifies the latter. 
+}
+\p{So, my strategy for the rmaining sections of this 
+paper is as follows: I will review some 
+language-philosophy contoveries and argue 
+that disentangling mind-as-logico-functional-system 
+from mind-as-computer analogies should change 
+our estimation of theoretical claims apparently 
+motivated by mind-as-logico-functional-system 
+paradigms.  I will then present a different 
+basic account of language processing which, 
+I believe, does not work in any logico-functional-system 
+orientation, though I will recognize some 
+fashion of functional orientation.  I will in 
+places appeal to computer architecture, though 
+the framework I propose will only absorb 
+\q{mind as computer} analogies to a limited, targeted 
+extent.  A central theme will be that 
+\i{logic} is not terribly relevant for either 
+language or computers: functionally-organized 
+systems do not have to be \i{logico-functional} systems.  
+The ambient philosophy guiding these arguments 
+is that \q{logic} in any formal, symbolic 
+sense is not the proper vehicle for understanding 
+the structured transitions and causative propagation 
+endemic to multiscale, emergent systems.
+}
+\p{Biology, for example, is not a \i{logical} 
+intermediary between medicine and physics.  We can 
+consider how best to describe its \q{intermediariness}: 
+as a theory-construction maxim (in the sense  
+that intermediariness is expressed in which 
+laws/obervables are thematized and which are 
+deferred to other sciences), as a causal network 
+grounded in cross-scale physical constitutions and 
+mereologies (e.g., tissues are both phsyically 
+composed of cells and are wholes where cells are parts), 
+as an emeregnt system which both \i{is} 
+(\visavis{} other sciences) and \i{has} a reductive 
+base.  Sciences are like computer programs in 
+that they have \i{inputs} (observables from 
+other sciences) and \q{outputs} (laws from 
+other sciences).  I use thse terms because they 
+track analytic trajectories: medical 
+\i{observables} (e.g. that many people 
+who are exposed to a toxin develop neurological damage) 
+are linked \i{via biological analysis} to 
+causal/material explanations (how the toxin chemically 
+damages nerve cells).  Biology neither statistically 
+models the medical observations nor physically explains 
+the causative mechanism, but it provides a theoretical 
+machinery for rigorously modeling 
+and analyzing the transition between them.  It write 
+the second act of the explanatory play, so to speak.  
+Pictured computationaly, the analysis is like a 
+computer program whose inputs are higher-scale 
+observables (saay, medical data) and whose \q{outputs}  
+are numerical models whose formulae or justifications 
+are solved by other sciences \mdash{} by analogy 
+to programmers calling system-kernel functions.  
+In this analogy, medicine is like the end-user, 
+biology is the application developer, and physics 
+is the system kernel.  
+}
+\p{These are analogies informed by computers, of course, 
+but I am trying to focus in on the \q{intermediariness} 
+they evoke.  How computer software 
+bridges users and bare-metal is a useful metaphor 
+for how scientific theories bridge observations 
+and causal/mathematical microphysical models.  
+And, correlatively, how sciences bridge between 
+other sciences \mdash{} higher sciences yielding 
+obsevrations that are \q{inputs} to intermediary 
+explanations, lower sciences defining 
+formats for \q{outputs}.  Biology, for example, can 
+defer to chemical or physical explanation if it can 
+provide data in structures adequate to 
+chemical or physical formulae: the reference frames, 
+quantitative measures, dimensional systems.  
+Biology does not need to solve such ewuations, 
+just marshal data into their form.  So a good 
+biological analysis will take observation 
+data (e.g. from physics) and transform it 
+to equational data in some sense, wherein chemistry 
+and physics take over.  By analogy, correct computer 
+software takes obsevrations (data in computer files 
+and user actions) and translates these observations 
+to the proper system-kernal calls, whrein the 
+Operating System takes over.  
+}
+\p{Sometimes logical constraints come to bear on these 
+transitions, but the importance of logic per se is 
+overshadowed by the overarching phenomenon of 
+\q{intermediariness}: how the technical and ontological 
+status of computer applications is defined by 
+their intermdiary position between input data/user actions 
+and low-level system calls.  Analogously, sciences 
+are characterized by their posits' ontological status 
+as \mdash{} and their theories' structural criteria 
+regulated by \mdash{} intermediariness between observational data 
+from one per science and causal/mathematical formula from 
+another.  As a philosophical gestalt, such 
+\q{intermediariness}, I believe, should 
+take the place of \q{logic} in our intuitions.
+}
+\p{In the specific contexts of Conceptual-Role and Truth-Thoretic 
+Semantics, I will now show what for me this means in practice.
+}
+\input{section1.ngml}
+\input{section2.ngml}
+\input{section3.ngml}
+%\input{section4.ngml}
+%\input{conclusion.ngml}
+\end{document}
