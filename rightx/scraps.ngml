@@ -1,0 +1,98 @@
+
+Suppose 
+I am writing a function which counts the 
+number of non-blank, non-comment 
+lines in a file.  My implementation might start like this 
+(in pseudo-code):
+
+
+`sentenceList,
+`sentenceItem; File f = File.open(path, File.READ\_ONLY);
+`sentenceItem; if f.isEmpty() return 0;
+`sentenceList`
+
+So the first line tries to open a file with the 
+specified path, and the second line checks if the file 
+is indeed open and non-empty.  If not, it returns the 
+number zero, meaning that there are no non-blank non-comment 
+lines in the file.
+`p`
+
+`p.
+In a typical application framework a file will be 
+opened if it exists and if the current user has permission 
+to read and/or write to/from the file (here the necessary 
+permission is read-only).  For sake of presentation 
+I assume that a file is considered non-empty 
+only if it is open and has some content (i.e., you 
+can read something from the file).  So if 
+the file `i.is` empty, that can mean several things: 
+either it does not exist; or it cannot be opened because 
+of inadequate permissions; or it `i.can` be 
+opened but has no content.  My function is 
+noncommital and returns zero in each of these cases.  
+In particular, I gloss over some information: 
+the zero return value is analogous to Mr. Jones 
+being `q.unavailable` for an interview.  
+`p`
+
+`p.
+In the formal computer setting, we are not allowed to 
+logicaly infer what expressions `q.really` mean: we 
+should not, for instance, if some file does not 
+exist, instead try to open a different file 
+with a similar name.  Therefore the `q.meaning` of 
+code expressions should not be tied explicitly to 
+individual logical conditions.  For example, the 
+`q.meaning` of line () should be tied to the proposition 
+that the file (whose location is specified by `i.path`/) 
+is open.  However, the code never actually enagages with 
+that proposition.  I do not necessarily determine whether 
+the file is open, can be opened, or even whether it 
+exists. 
+`p`
+
+`p.
+On this basis, it seems as if the `q.meaning` of my 
+call to open the function is not a matter of 
+ascertaining or bringing about certain truth 
+conditions.  It is true that my instruction 
+may bring about certain truths (specifically, make it true 
+that the file is open).  But we should 
+not conclude that this potential state of affairs is 
+what the instruction `i.means`/.  As the programmer, I 
+do not `q.want` the file to be opened; I have no 
+vested interest (this is not like my wanting milk 
+for coffee or to open a beer bottle).  Instead, 
+I am an intermediary between application-users and 
+the system kernel: my role is translate what `i.users` 
+want into system instructions.  Granted, presumably the 
+`i.user` wants the file she's interested in to be opened 
+(as an intermediate step toward getting information 
+from that file).  But what I contribite as 
+code are `i.instructions`/, and instructions have 
+an effect on the state of the overall computational 
+environment where my application is hosted.  
+In the general case I am not aware of which 
+new state obtains.  Attempting to open a file 
+may cause it to be opened, but it may also 
+cause the software reprsentation of that 
+file %-- a so-called `q.handle` %-- to acquire a flag 
+indicating that the referenced file does not exist 
+(i.e., its path descrribes a nonexistent location), 
+or that it does exist but cannot be opened due to 
+insufficient permission, or that the permissions 
+are satisfactory but there is a temporary lock 
+from another application writing to the file.  
+If needed I could attempt to ascertain the file's state 
+at this level of detail, but it turns out to be 
+irrelevant to my own algorithm.  In short, 
+insofar as the `q.meaning` of computer code are the 
+instructions it emits, these meanings correspond 
+to state-changes only in coarse-grained ways.  
+There may be propositional content associated to each possible 
+state %-- there are propositions that 
+the file is open, or nonxistent, or inaccessible, 
+or temporarily locked %-- but the code does not engage 
+the question of `i.which` proposition is 
+(or becomes) true.     
