@@ -694,11 +694,11 @@ clarity is not identical to logical clarity.
 `p.
 This pattern of logical evasiveness might seem to be 
 endemic only to slippery human language, but analogous 
-exsamples can be found even in the strict milieu of 
+examples can be found even in the strict milieu of 
 computer programming.  I will discuss this further below.  
 But the gist of my analysis will be that computer 
 programming involves passing instructions around, and 
-that any one segment of code is typically daling with 
+that any one segment of code is typically dealing with 
 incomplete information, like the bodyguard who 
 does not know `i.why` Jones is unavailable.  
 Given such partiality, it is mislading 
@@ -707,10 +707,10 @@ conduits for logical content pe se.  My first
 rsponsibility as a programmer, at any point in code, 
 is to call the right functions, depending on types, ranges, 
 values, and any contingent environmental factors relevant 
-to what the local code need sto do.  Therefore, insoar as 
+to what the local code needs to do.  Therefore, insofar as 
 several functions might be candidates to call at any one 
 code-location %-- there are scenarios where one function 
-should be called, and othrswhere a different one, etc. 
+should be called, and others where a different one, etc. 
 %-- I have to ensure the correct one is called 
 in each scenario.  But, as I will argue, 
 the structures determining how this multiplicity 
@@ -729,7 +729,7 @@ or type-theoretic models to rigorously describe this kind
 of branching as a computational phenomenon.  But 
 these are not logical models, in the sense that 
 they can be fully specified in formal terms without 
-explicit appeals formal logic machinery (substitution 
+explicit appeals to formal logic machinery (substitution 
 axioms and so forth).  In short, `i.structured systems of 
 instruction-passing` are not `i.metaphysically` 
 speaking logics %-- even if one can actually 
@@ -744,14 +744,14 @@ Analogously, imagine the bodyguard and secretary as both
 part of a conversational network which 
 circulates the visitors' request to see Jones, and eventually 
 the response that Jones is unavailable (which 
-implies a counter-request that the visitor leave).  
+implies a counter-request that the visitors leave).  
 Perhaps neither bodyguard nor secretary know all 
 details about Jones's location; but they can still route 
 messages as part of the overall cycle where 
 we ask to see Jones and they ask us to leave.  
 If this `q.message-passing cycle` is, in its 
 most endemic analysis (outside of any 
-rtraoctive reductionism), `i.not` a logical 
+retraoctive reductionism), `i.not` a logical 
 system %-- but is rather some other kind of 
 structured system %-- then the (properly non-reductive) 
 semantics is a `q.message-passing semantics` or 
@@ -774,14 +774,16 @@ meanings are `q.tools` to effectuate state change or
 to initiate state-change processes.  This perspective is 
 probably incompatible with a notion 
 of `q.meanings as propositions`/, because it is hard to see 
-how propositions (or even propositional contents) could be `i.tools`/.
+how propositions (or even propositional contents) could be `i.tools`/.  
+The meaning of a hammer is not prima facie the fact that the 
+nail is now in the board.
 `p`
 
 `p.
 Granted, whenever there is a state-change there is a 
 corresponding proposition to the effect that something  
 now in state `Stwo; whereas it was before in `Sone;.  
-Even if the instruction/request cannot be fulfilled there 
+And even if an instruction/request cannot be fulfilled, there 
 is the concordant proposition that something is 
 still in `Sone; can can `i.not` be brought into 
 `Stwo;.  So it is trivial to read logical structures 
@@ -815,6 +817,49 @@ arrive otherwise.  The fact that a given semantic theory
 has some formulaic translation into truth-thoretic terms 
 does not guarantee that truth-theoretic intuitions 
 actually play an important role in that other theory.  
+`p`
+
+`p.
+Just to give a concrete example, I have mentioned Zhaohui Luo's 
+type-theoretic semantics in a couple contexts here.  I think 
+Luo's models are convincing and important, but I also 
+(for what it's worth) have a slight metatheoretical 
+objection, which is that Luo's type theory is 
+(like most academic type theory) presented as a kind of 
+logical system.  The motivation seems to be that 
+logical type theory can define the logical 
+conditions regulating natural-language semantics, as a 
+way to lverage type-thoertic structurs to explain 
+natural-language meaning.  But this 
+methodology forecloses an analysis wherein logical 
+conditions are tangential to language pr se.  
+We can equally, I believe, develop a 
+type-theoretic semantics as a theory 
+of typed instructions or types messages or 
+types side-effects: type theory works in a 
+message-passing or side-effect or instruction-network
+semantics as well as a truth-theoretic semantics.  
+The difference is that in the first case we are 
+dealing with side-effects or instructions as 
+phenomena to which types can be ascribed, whereas 
+in the second case we `i.define` types by fully 
+articulating their axiomatic constraints.  The latter is more 
+complete than the former, just as mathematical 
+type theory is more concrete than applied type theory 
+as in, say, the `Cpp; type system.  But this is an example 
+of where logical completeness does not necessarily confer 
+greater explanatory merit.  Mathematical completeness 
+is a desirable quality of theories about abstract systems, 
+but both language and computer software are physically 
+realized systems (however abstract their specifications).  
+As concrete in that sense, they are best treated as vehicles 
+of multi-scientific explanatory combinations, where 
+each theory is intermediary between others.  In that metascientific 
+sense, as I intimated earlier, completeness 
+is `i.not` a merit if it isolates a theory from 
+other theories which ontologically complete it.
+  
+
 `p`
 
 `p.
