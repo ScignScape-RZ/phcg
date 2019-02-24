@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  24 FEB 2019 00:18
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  24 FEB 2019 08:42
 entering extended mode
 **rightx.ngml.tex
 (C:\scign\phcg\ar\rightx\rightx.ngml.tex
@@ -939,11 +939,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 17980 strings out of 494049
- 348020 string characters out of 3146069
- 450731 words of memory out of 3000000
+ 17977 strings out of 494049
+ 347990 string characters out of 3146069
+ 450733 words of memory out of 3000000
  20589 multiletter control sequences out of 15000+200000
- 69934 words of font info for 267 fonts, out of 3000000 for 9000
+ 69709 words of font info for 265 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  60i,6n,67p,791b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{
@@ -955,7 +955,7 @@ s (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on rightx.ngml.pdf (25 pages, 212776 bytes).
+Output written on rightx.ngml.pdf (25 pages, 212904 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
