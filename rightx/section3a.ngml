@@ -473,5 +473,16 @@ analysis from a mathematical perspective.
 `p`
 
 `p.
+An interesting question is then which 
+language is a better metaphor for `i.human` 
+language %-- a functional language like Haskell, which 
+enforces logical rigor by design?   Or a procedural 
+language like `Cpp;, whose operational 
+dynamics is essentially concerned with properly 
+orchestrating function calls, even in the absence of 
+logical guarantees?
+`p`
+
+`p.
 
 `p`

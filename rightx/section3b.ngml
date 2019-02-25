@@ -1,7 +1,57 @@
 
 `subsection.The illogic of syntax`
 `p.
+Let us agree that %-- beneath surface-level 
+co-framing complxity %-- many language acts have a 
+transparent content as `q.doxa` that gets conveyed between 
+people with sufficiently resonant 
+cognitive frames.  This is still not enough to 
+elevate doxa to the `i.meaning` of such language-acts.  
+For a logic-driven theory, we have 
+to thematize not only `i.that` expressions refer 
+to or convey propositional content, but `i.how` they 
+do so.  It is not only the content itself but the 
+`q.how` that should be analyzed through a logical structure.  
+`p`
 
+`p.
+Since it iswidely understood that the essence of language 
+is compositionality, the clerest path to 
+a logic-based theory would be via the 
+`q.syntax of semantics`/: a theory of how 
+language designates propositional content by 
+emulating or iconifying propositional structure 
+in its own structure (i.e., in grammar).  
+This would be a theory of how linguistic 
+connectives reciprocate logical connectives, 
+phrase hierarchies reconstruct propositional 
+compounds, etc.  It would be the kind of theory motivated 
+by cases like 
+
+`sentenceList,
+`sentenceItem; This wine is a young Syrah.
+`sentenceItem; My cousin adopted one of my neighbor's dog's puppies.
+`sentenceList`
+
+where morphosyntactic form %-- possessives, adjective/noun 
+links %-- seems to transparently recapitulate predicate 
+relations.  Thus the wine is young `i.and` 
+Syrah, and the puppy if the offspring of a dog who 
+is the pet of someone who is the neighbor of the speaker.  These 
+are well-stablishd logical forms: predicate conjunction 
+and the chaining of predicate 
+operators to form new operators.  These are embedded in 
+language lexically as well as grammatically: the conjunction 
+of husband and `q.former, of a prior time` yields ex-huband; 
+a parent's sibling's daughter is a cousin.  
+`p`
+
+`p.
+The intresting question is to what extent `q.morphosyntax 
+recapitulates predicate structure` holds in general 
+cases.  This can be considered by examining the logical 
+structure of reported assertions and the structures 
+via which they are expressed in language.  
 `p`
 
 `p.
