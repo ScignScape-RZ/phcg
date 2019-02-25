@@ -243,9 +243,53 @@ like abstract/concrete and past/future.
 `p.
 Other logical implications may be more circuitous.  For instance, 
 describing students as `i.disappointed` 
-implies that the dislikes hikes have already occured, 
+implies that the disliked hikes have already occured, 
 whereas phraseology like `q.students are gearing for a fight` 
-would have the opposite effect.  
+would have the opposite effect.  The mapping from 
+propositional-content structure to surface language here 
+is less mechanical than, for instance, just 
+using the definite article on `q.the tuition increases`/.  
+Arguably `q.dissapointment` %-- rather than just, say, 
+`q.opposition` %-- implies a specific timeline 
+and concreteness, an effect analogous to the definite 
+article.  But the semantic register 
+of `q.dissapointment` bearing this implication is a 
+more speculative path of conceptual resonances, compared 
+to the brute morphosyntactic `q.the`/.  There is subtle 
+conceptual calculation behind the scenes in the former 
+case.  Nonetheless, it does seem as if via this 
+subtlety linguistic resources are expressing 
+the constituent units of logical forms, like 
+past/future and abstract/concrete.
+`p`
+
+`p.
+So, I am arguing (and conceding) that there are units of 
+logical structure that are conveyed by units of 
+linguistic structure, and this is partly how 
+language-expressions can indicate propositional 
+content.  The next question is to explore this 
+correspondance comppsitionaly %-- is there a 
+kind of aggregative, hieraarchical order in terms 
+of how `q.logical modeling elements` fit together, 
+on one side, and linguistic elements fit together?  
+There is evidence of compositional concordance 
+to a degree, examples of which I have cited.  In 
+`q.polled students`/, for 
+example, the compositional structure of 
+the phrase mimics the logical construct %-- deriving 
+a set (as a preducate base) from a type crossed with 
+some other predicte.  Another example is the 
+phraseology `q.a/the majority of`/, which directly 
+nominates a subset/superset relation and so 
+reciprocates a logical quantification (together 
+with a numeric summation of subset/superset relative 
+size; the same logical structur but with 
+different numeric implications is seen in cases 
+like `q.a minority of` or `q.only a few`/).  
+Here there is a relatively mechanical translation 
+between propositional structuring elements 
+and linguistic structuring elements.
 `p`
 
 `p.
