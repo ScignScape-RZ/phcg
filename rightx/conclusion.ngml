@@ -204,7 +204,7 @@ responding to my assertion still involves some
 activity (updating the database).  So even though 
 we have attributed power to the robot to traffic 
 in logically pure expressions of propositional content, 
-we have not shown that the robot lies putside the side-effect 
+we have not shown that the robot lies outside the side-effect 
 cycles of language. 
 `p`
 
@@ -227,19 +227,19 @@ of linguistic meaning overall.
 `p`
 
 `p.
-To put it differently, th claim of circularity that I acknowldges 
+To put it differently, th claim of circularity that I acknowledged 
 is itself circular.  Yes, a side-effect due to newly 
-believing `Pprop; would seem to depend on being xpressed 
+believing `Pprop; would seem to depend on  `Pprop; being expressed 
 as propositional content by any act initiating the side-effect.  
 And `Pprop; is a propositional content that can inspire 
-belief-change side-effectsbecause it has the form of a 
+belief-change side-effect because it has the form of a 
 trans-personal articulation: any reasonable person 
 (even a robot) should accept it.  The circularity 
 here is that the `q.work` is done by `Pprop;, not by the 
-side-effect per se.  But in order to thoretically 
+side-effect per se.  But in order to theoretically 
 posit `Pprop; outside the side-effect, we have to posit a kind 
 of decontextualized rational community: `Pprop; is 
-logically distinct from the side efect because other people 
+logically distinct from the side effect because other people 
 and robots should engage it too.  But their getting thus 
 engaged is also `i.for them` a side-effect: to believe or 
 test `Pprop; the robot has to perform certain acts %-- i.e., 
@@ -283,7 +283,7 @@ content into a public arena.  But communication
 only happens when the content thereby publicized 
 is considered and maybe deemed true, which 
 requires certain cognitive processes in a community of addressees.  
-The logicaln content of language only `q.exists` insofar 
+The logical content of language only `q.exists` insofar 
 as logically reasonable utterances trigger 
 logically guided cognitive operations.
 `p`
@@ -294,7 +294,7 @@ signify propositional content, this does not mean
 that a sentence is like a djinn which conjures 
 propositions into material form.  Logical structures 
 do not float around like snowflakes: if they exist, they 
-do so as regulatoey structures or specifications 
+do so as regulatory structures or specifications 
 guiding the behavior or implementation of 
 physically realized, synamically changable systems.  A 
 computing platform can exemplify a Typed Lambda Calculus 
@@ -308,7 +308,7 @@ system as abstract Category and its physical realization.
 `p`
 
 `p.
-Let's say, for sake of argument, that someone dvelops a `Cpp; 
+Let's say, for sake of argument, that someone develops a `Cpp; 
 Functional-Reactive Programming 
 library (a not-too-ambitious enhancement of existing software) 
 which fully realizes Jennifer Paykin's version of Tensor Algebra.  
@@ -323,7 +323,7 @@ the monadic logic thereby exmplified.  To say that
 logical systems are implemented in software is to say that 
 the totality of all function-calls %-- both actually 
 observed at runtime and theoretically possible for 
-any run of a program %-- in totality span an 
+any run of a program %-- span an 
 abstract space that is fully and adequately specified by 
 the logic.  So we can say that a signal-slot connection 
 causing some function-pointer to be followed represents the 
@@ -343,7 +343,7 @@ conventional `Cpp; terms without the added logical
 details).  The logic is manifest as a regulatory and emergent 
 pattern and influence, but is also only one facet of 
 the full ontological status of the vehicles (e.g., function-calls) 
-whrein the logic is realized.
+wherein the logic is realized.
 `p`
 
 `p.
