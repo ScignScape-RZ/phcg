@@ -710,6 +710,6 @@ Semantics, I will now show what for me this means in practice.
 `input<section2.ngml>;
 `input<section3.ngml>;
 %`input<section4.ngml>;
-%`input<conclusion.ngml>;
+`input<conclusion.ngml>;
 
 `document`
