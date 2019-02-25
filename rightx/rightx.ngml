@@ -709,7 +709,8 @@ Semantics, I will now show what for me this means in practice.
 `input<section1.ngml>;
 `input<section2.ngml>;
 `input<section3.ngml>;
-%`input<section4.ngml>;
+`input<section3a.ngml>;
+`input<section3b.ngml>;
 `input<conclusion.ngml>;
 
 `document`
