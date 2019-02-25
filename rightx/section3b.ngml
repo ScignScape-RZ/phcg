@@ -50,10 +50,55 @@ a parent's sibling's daughter is a cousin.
 The intresting question is to what extent `q.morphosyntax 
 recapitulates predicate structure` holds in general 
 cases.  This can be considered by examining the logical 
-structure of reported assertions and the structures 
-via which they are expressed in language.  
+structure of reported assertions and then the structures 
+via which they are expressed in language.  I'll 
+carry out this exercise `visavis; several sentences, 
+such as these:
+
+`sentenceList,
+`sentenceItem; The majority of students polled were 
+opposed to tuition increases.
+`sentenceItem; Most students expressed disappointment 
+about the tuition increases.
+`sentenceItem; Many students have protested the tuition increases.
+`sentenceList`
 `p`
+
+`p.
+There are several logically significant elements here that 
+seem correspondingly expressed in linguistic 
+elements %-- that is, to have some model 
+in both prelinguistic predicate structure 
+and in semantic or syntactic principles, in consort.  
+All three of ()-() have similar but not 
+identical meanings, and the differences ar e
+manifest both propositionally and 
+linguistically (aside from the very superficial 
+fact that they are not the same sentence).  
+I will review the propositional differences first, 
+then the linguistic ones.
+`p`
+
+`p.
+One obvious predicative contrast is that () 
+ascribes a certain `i.quality` to students (disappointment), 
+whereas () and () indicate `i.events`/.  As such 
+the different forms capture the contrast between `q.bearing 
+quality $Q$` and `q.doing or having done action 
+$A$`/, the former a predication and the latter an event-report.  
+There may be logics that would map one 
+to the other, but let's assume we can 
+analyze language with a logic expressive enough 
+to distinguish events from quality-instantiations.
+`p`
+
+`p.
+Other logical forms evident here involve how the 
+subject noun-phrases are constructred.  `q.S
+`p`
+
 
 `p.
 
 `p`
+
