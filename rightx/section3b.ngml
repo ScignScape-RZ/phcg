@@ -58,8 +58,8 @@ such as these:
 `sentenceList,
 `sentenceItem; The majority of students polled were 
 opposed to tuition increases.
-`sentenceItem; Most students expressed disappointment 
-about the tuition increases.
+`sentenceItem; Most of the students expressed disappointment 
+about tuition increases.
 `sentenceItem; Many students have protested the tuition increases.
 `sentenceList`
 `p`
@@ -80,12 +80,15 @@ then the linguistic ones.
 `p`
 
 `p.
-One obvious predicative contrast is that () 
-ascribes a certain `i.quality` to students (disappointment), 
+One obvious predicative contrast is that () and () 
+ascribes a certain `i.quality` to students (e.g., disappointment), 
 whereas () and () indicate `i.events`/.  As such 
 the different forms capture the contrast between `q.bearing 
 quality $Q$` and `q.doing or having done action 
 $A$`/, the former a predication and the latter an event-report.  
+In the case of (), both forms are available because we can 
+infer from their `i.expressing` disappointment 
+to their `i.having` disappointment.   
 There may be logics that would map one 
 to the other, but let's assume we can 
 analyze language with a logic expressive enough 
@@ -94,11 +97,159 @@ to distinguish events from quality-instantiations.
 
 `p.
 Other logical forms evident here involve how the 
-subject noun-phrases are constructred.  `q.S
+subject noun-phrases are constructed.  
+`q.A majority` and `q.many` imply a multiciplicity 
+which is within some second multiplicity, and 
+numerically significant there.  The sentences differ 
+in terms of how the multiciplicities are circumscribed.  
+In the case of `q.students polled`/, an extra determinant is 
+provided to construct the set of students forming the 
+predicate base: we are not talking about students in 
+general or (necessarily) students at one school, 
+but specifically students who participated in a poll.   
 `p`
 
+`p.
+Interrelated with these effects are how the 
+`q.tuition increases` are figured.  Using 
+the explicit definite article suggests that there is 
+`i.some specific` tuition hike policy 
+raising students' ire.  This would also favor a 
+reading where `q.students` refers collectively to those 
+at a particulr school, who would be directly affected by 
+hikes.  The `i.absence` of an article on 
+`q.tuition increases` in () leaves open an interpretation 
+that the students are not opining on some specific policy, but on 
+the idea of hikes in general.
+`p`
+
+`p.
+Such full details are not explicitly laid out in the sentences, 
+but it's entirely possible that they are clear in context.  
+The sentences may have a basically pristine logical 
+structure given the proper contextual framing %--  
+context-dependency, in and of itself, does not weaken 
+our sense of language's logicality.  In particular, 
+the kind of structures constituting the sentences' 
+precise content %-- the dtails that seem context-dependent 
+%-- have bona fide logical interpretations.  For 
+example, we can consider whether students are 
+responding to `i.specific`tuition hikes 
+or to hikes in general.  We can consider 
+whether the objectionable hikes have already 
+happened or are just proposed.  Context 
+presumably identifies whether `q.students` are 
+drawn from one school, one governmental 
+jurisdiction, or some other aggregating criteria 
+(lik, all those who took a poll).  
+Context can also determine whether aggregation is 
+more set- or type-based, more extensional 
+or intensional.  In ()-() the implication 
+is that we should read `q.students` more as a set or 
+collection, but variants like `i.studnts 
+hate tuition hikes` operates more at the level 
+of students as a `i.type`/.  In `q.polled students` 
+there is a familiar pattern of referencing a set by 
+marrying a type (students in general) with a descriptive 
+designation (e.g., those taking a specific 
+poll).  Tyhe wording of () does not 
+mandate that `i.only` students took the poll; it 
+does however us a type as a kind of operator on a set: 
+of those who took the poll, focus on studnts 
+in particular.
+`p`
+
+`p.
+These are all essentially logical structures and can 
+be used to model the propositional 
+content carried by the sentences %-- their `q.doxa`/.  
+We have operators and distinctions like past/future, 
+set/type, single/multiple, subset/superset, and 
+abstract/concrete comparisons like tuition hikes `i.qua` idea 
+vs. `i.fait accompli`/.  A logical system could 
+certainly model these distinctions and accordingly capture  
+the semantic differences between ()-().  So thes details 
+are all still consistnt with a truth-theoretic paradigm, although 
+we have to consider how linguistic form actually 
+conveys the propositional forms carved out via 
+these distinctions.
+`p`
+
+`p.
+Ok, then, to the linguistic side.  My first observation is that some 
+logically salient structurs have fairly clear analogs 
+in the linguistic structure.  For instance, the logical operator for 
+deriving a set from criteria of `q.student` merged with `q.taking a 
+poll` is brought forth by the verb-as-adjective 
+formulation `q.polled students`/.  Subset/superset arrangements 
+are latent as lexical norms in senses like `q.many` and 
+`q.majority`/.  Concrete/abstract and past/future distinctions 
+are alluded to by the presence or absence of a definite 
+article.  So `q.`i.the` tuition increases` connotes that 
+the hikes have already occurred, or at least been 
+approved or proposed, in the past relative to the 
+`q.enunciatory present` (as well as that they are a 
+concrete policy, not just the idea), 
+whereas articleless `q.tuition increases` can be read as 
+referring to future hikes and the idea of hikes 
+in general: past and concrete tends to 
+conterast with future and abstract.  A wider range of 
+logical structures can be considered by subtly varying 
+the discourse, like: 
+
+`sentenceList,
+`sentenceItem; Most students oppose the tuition increase.
+`sentenceItem; Most students oppose a tuition increase.
+`sentenceList`
+
+These show the possibility of `i.increase` being singular 
+(which would tend to imply it refers to a concrete 
+policy, some `i.specific` increase), although in 
+() the `i.in`/definite article `i.may` connote 
+a discussion about hikes in general.
+`p`  
+
+`p.
+But maybe not; cases like these are perfectly plausible:
+
+`sentenceList,
+`sentenceItem; Today the state university system 
+announced plans to raise tuition by 
+at least 10/%.  Most students oppose a tuition increase.
+`sentenceItem; Colleges all over the country are 
+charging more, but most students oppose a tuition increase.
+`sentenceList`
+
+In () the definite article could also be used, but saying 
+`q.`i.a` tuition increase` seems to reinforce the 
+idea that while plans were announced, the details 
+are not finalized.  And in () the plural `q.increases` 
+could be used, but the indefinite singular connotes the 
+status of tuition hikes as a general phenomenon 
+apart from individual examples %-- even though the 
+sentence also makes reference to concrete examples.  In other 
+words, these morphosyntactic cues are like 
+levers that can fine-tune the logical designation 
+more to abstract or concrete, past or future, as 
+the situation warrants.  Again, context should 
+clarify the details.  But morphosyntactic forms 
+(e.g., presence or absense of articls, definite 
+or indefinite, and singular/plural) are 
+vehicles for language, through its own 
+forms and rules, to denote propositional-content structurs 
+like abstract/concrete and past/future.
+`p`
+
+`p.
+Other logical implications may be more circuitous.  For instance, 
+describing students as `i.disappointed` 
+implies that the dislikes hikes have already occured, 
+whereas phraseology like `q.students are gearing for a fight` 
+would have the opposite effect.  
+`p`
 
 `p.
 
 `p`
+
 
