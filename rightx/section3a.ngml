@@ -355,5 +355,123 @@ and otherwise) stimuli to trigger cognitive processes.
 `p`
 
 `p.
+My point in this argument is not that linguistic abstraction is 
+wrong: after all, linguistics is not neuroscience, 
+and the theoretical arsenal of linguistics can rightly 
+neglect to target such topics as the neurophysical 
+encoding of linguistic processes.  I can accept some 
+form of truth-theoretical semantics if it provides 
+a broad abstract description of linguistic processes 
+that can be `q.handed off` to other isciplines, 
+like psycholinguistics and language-acquisition studies.  
+This would be a reasonable `q.division of labor` 
+if we believed that at the `i.abstract` level 
+language is really about propositional content, 
+and that notions like `q.message passing between 
+processing units` are attempts to introduce 
+theoretical concepts at the `q.realization` 
+level.  That is, something like truth-theoretical semantics 
+would be apropos if the `i.abstract` formulation was mostly 
+logical, even if some formally rigorous (but not in a 
+manner amenable to symbolic logic) model was a 
+better paradigm for studying the `i.concrete` implementation 
+of the logical architecture. 
+`p`
+
+`p.
+However, the de facto assumption that `q.everything abstract is logic`/,  
+and that any sub-logical details are the tangential impurities 
+of concreteness itself, is a prejudice that isn't borne out even 
+in highly formal milieus.  For xample, the digital 
+encoding of typed values are a concrete detail counterposed 
+to the mathematical abstractions of type thory, but 
+it's not as if there is a single line between `q.abstract` types 
+and `q.concrete` binary-electrical codes.  Progreamming language
+theory recognizes digital encoding as byte-sequences, and so 
+for any typed value there is a mapping of 
+that value to a string of base-256 integers (the 
+value in runtime computer memory).  Moreover, any string 
+of base-256 integers can potentially be interpreted as a 
+typed value (for example, by derefencing a 
+non-correctly-initialized pointer).  These are still 
+abstract posits: it requires some abstraction to model electrical 
+signals in disk drives or CPU  registers as `q.base-256 integers`/.  
+However, this represents a layer of abstraction which 
+stands between the more `q.mathematical` abstractions of 
+formal type theory and the bare metal of computer hardware.
+`p`
+
+`p.  
+One feature of this `q.intermediary` abstraction is that 
+the abstract posits are more likely to be mathematically 
+opaque.  In functional programming, for example, we can associate each type 
+with an algorithm that can construct every lement 
+of that type, and also often run that construction 
+`q.backward` to analyze properties of type-instances 
+(which is called `q.pattern matching`/).  
+The canonical example is a list: any list of size 
+$n$ can be derived from a list of size $n-1$ by 
+adding one element to the end of the list.  Starting 
+from an empty list we can therefore build any 
+arbitrary list by a sequence of these `q.constructors`/.  
+Working in the reverse direction, we can then calculate 
+values %-- such as, the largest element in the 
+list %-- by calling a function on every 
+smaller list in the `q.chain` of constructors: 
+the largest value is the maximum of 
+the `i.last` value and the largest value of 
+the `q.predecessor` list wherein that last 
+value is not appended; the largest value of 
+the predecessor is the maximum of `i.its` last 
+value and the largest value of `i.its` 
+predecessor, and so on.  The recursive structure here 
+is directly tied to the arithmetic encoding (influential 
+in early analytic philosophy) wherein the number 
+$1$ is the successor to $0$, $2$ is the successor to $1$, etc.  
+This gives numbers a logical form rather than 
+leaving them as a kind of prelogical Platonic given.  
+The analogous formulation in type theory is that any type 
+is isomorphic to the set of algorithms which generate 
+each of its value %-- for instance, every list 
+can be associated with the algorithm which builds 
+the list iteratively, starting from 
+the empty list.  This introduces a logical structure 
+on types amenable to logical analysis %-- we can 
+prove properties about functions on types 
+by analyzing how those functions operate on 
+values given the specific construction-chain that 
+produce them.  Continuing the example, I can 
+prove something about my impkementation of a 
+function on lists if I prove it for 
+the empty list and then prove that, 
+if I know my function works for a list of 
+length $n-1$, and I then append a value, 
+it will still work for the length-$n$ list. 
+`p`
+
+`p.
+The problem with these functional-programming 
+techniques in the context of programming language theory 
+in general is that many applied type systems 
+do not have this kind of isomorphism 
+between types and construction-chains.  In `Cpp;, 
+say, I can get a list by dereferencing a list-pointer, 
+and I have no way of knowing the provenance of the 
+pointed-to memory.  There are many ways to 
+construct `Cpp; values `i.other` than by going 
+through construction-chains.  It `i.may` be 
+that values have properties consistent with their 
+being built up by an incremental, logically 
+regulated proess.  However, a `Cpp; programmer 
+often cannot `i.assume` that types have this logical 
+orderliness.  In short, `Cpp; types are more logicallly 
+opaque than, say, Haskell types.  This does not make 
+the `Cpp; type system less `q.abstract` than Haskell's; 
+it just means that there is less information 
+embedded in `Cpp; types which would make them amenable to 
+analysis from a mathematical perspective.
+`p`
+
+`p.
 
 `p`
