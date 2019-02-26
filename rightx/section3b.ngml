@@ -577,15 +577,16 @@ logical models of propositional content directly.
 `p.
 In the absence of a compelling analysis of `i.compositionality` 
 in the structural corrspondance between narrative-framed language 
-and logically-ordred propositional content, I think we need a new 
-theory of how the former signifis the latter.  My own intuition 
-is that language works by trigering diverse cognitive 
+and logically-ordered propositional content, I consequently think we 
+need a new theory of how the former signifies the latter.  My own 
+intuition is that language works by trigering `i.several 
+different` cognitive 
 subsystems.  Some of these hew closely to predicate 
-logic; some ar emore holistic and narrative/visual.  
+logic; some are more holistic and narrative/visual.  
 Cognitive processes in the second sense may be informed 
 and refined by language, but they have an extralinguistic 
 and prelinguistic core: we can exercise faculties of narrative 
-imagination without the eplicit use of 
+imagination without explicit use of 
 language (however much language orders our imaginations 
 by entrenching some concepts more than others, via lexical 
 reinforcement).  
@@ -598,14 +599,14 @@ of any situation dscribed to us from afar.  When presented with
 linguistic reports of not-directly-obsevrable situations, 
 we need to build cognitive frames modeling the context 
 as it is discussed.  In the terms I suggested earlier, we 
-build a `q.doxa inventory` tracking beloefs and 
-assertions.  Sometimes this means i ternalizing 
+build a `q.doxa inventory` tracking beliefs and 
+assertions.  Sometimes this means internalizing 
 relatively transparent logical forms.  But sometimes 
 it means building a narative/visual account, playing 
 an imaginary version of the situation in our minds.  
 Language could not signify in its depth and 
 nuance without triggering this `i.interpretive-imaginative` 
-faculty.  Cognitively, then, languagebis an 
+faculty.  Cognitively, then, language is an 
 `i.intermediary` to this cognitive system, 
 an `i.interface`/.  To put it as a slogan, 
 `i.language is an interface to interpretive-imaginative 
@@ -614,37 +615,37 @@ cognitive capabilities`/.
 
 `p.
 If this claim about `i.language` seems plausible, it 
-has the followinf ramifications for `i.linguistics`/: 
+has some ramifications for `i.linguistics`/: 
 insofar as language has a formal articulation, it 
 is the formality of an `i.interface`/, 
-which is not neceaarilybthe same thing as 
+which is not neceaarily the same thing as 
 the formality of a `i.logical system`/.  Insofar as 
-linguistics as a science, it would then be the science 
-of the intermediate space between grammatical and lexical 
+linguistics is a science, it would then be the science 
+of the intermediate space between grammatical plus lexical 
 observations and interpretive-imaginative 
 cognition.  Framing linguistics in these 
 terms is, I believe, analogous to describing 
 Biology as the interface from medicine to chemistry and 
-physics %-- without analogous philosophical justifications 
+physics %-- with analogous philosophical justifications 
 and metatheortical consequences.  Both can be seen as a 
 larger metascientific exploration of what it means %-- 
 as a philosophical claim, on the one hand, and as a normative 
-proscription on scientific practice %-- for a 
+proscription on scientific practice, on the other %-- for a 
 `i.science` to be an `i.interface`/.   
 `p`
 
 `p.
 In the specific context of linguistics, one consequence is 
-tjat any linguistic structuring element becomes an 
+that any linguistic structuring element becomes an 
 intermediary eventually handed off to interpretive-imaginative 
 cognitive processes %-- analogous, in the 
 computational realm, to application-level function 
-implementions setting up kernet system calls.  By 
+implementions setting up kernel system calls.  On  
 this comparison, intermediate structures of language 
 understanding are like source code, and interpretive-imaginative 
 cognition corresponds to the system kernel.  Insofar 
 as intermediate linguistic structures are analyzed 
-via type theory, then we can model this 
+via type theory, we can accordingly model this 
 situation as type properties modulating how 
 language elements carry over to the interpretive-imaginative 
 cognitive `q.kernel` %-- which is a faithful analogy 
