@@ -15,7 +15,7 @@ do so.  It is not only the content itself but the
 `p`
 
 `p.
-Since it iswidely understood that the essence of language 
+Since it is widely understood that the essence of language 
 is compositionality, the clerest path to 
 a logic-based theory would be via the 
 `q.syntax of semantics`/: a theory of how 
@@ -38,16 +38,16 @@ links %-- seems to transparently recapitulate predicate
 relations.  Thus the wine is young `i.and` 
 Syrah, and the puppy if the offspring of a dog who 
 is the pet of someone who is the neighbor of the speaker.  These 
-are well-stablishd logical forms: predicate conjunction 
-and the chaining of predicate 
-operators to form new operators.  These are embedded in 
+are well-establishd logical forms: predicate conjunction, here; 
+the chaining of predicate 
+operators to form new operators, there.  Such are embedded in 
 language lexically as well as grammatically: the conjunction 
-of husband and `q.former, of a prior time` yields ex-huband; 
+of husband and `q.former, of a prior time` yields ex-husband; 
 a parent's sibling's daughter is a cousin.  
 `p`
 
 `p.
-The intresting question is to what extent `q.morphosyntax 
+The ineteresting question is to what extent `q.morphosyntax 
 recapitulates predicate structure` holds in general 
 cases.  This can be considered by examining the logical 
 structure of reported assertions and then the structures 
@@ -69,11 +69,11 @@ There are several logically significant elements here that
 seem correspondingly expressed in linguistic 
 elements %-- that is, to have some model 
 in both prelinguistic predicate structure 
-and in semantic or syntactic principles, in consort.  
+and in, in consort, semantic or syntactic principles.  
 All three of ()-() have similar but not 
-identical meanings, and the differences ar e
+identical meanings, and the differences are 
 manifest both propositionally and 
-linguistically (aside from the very superficial 
+linguistically (aside from the specific superficial 
 fact that they are not the same sentence).  
 I will review the propositional differences first, 
 then the linguistic ones.
@@ -85,10 +85,10 @@ ascribes a certain `i.quality` to students (e.g., disappointment),
 whereas () and () indicate `i.events`/.  As such 
 the different forms capture the contrast between `q.bearing 
 quality $Q$` and `q.doing or having done action 
-$A$`/, the former a predication and the latter an event-report.  
+$A$`/: the former a predication and the latter an event-report.  
 In the case of (), both forms are available because we can 
-infer from their `i.expressing` disappointment 
-to their `i.having` disappointment.   
+infer from `i.expressing` disappointment 
+to `i.having` disappointment.   
 There may be logics that would map one 
 to the other, but let's assume we can 
 analyze language with a logic expressive enough 
@@ -103,7 +103,7 @@ which is within some second multiplicity, and
 numerically significant there.  The sentences differ 
 in terms of how the multiciplicities are circumscribed.  
 In the case of `q.students polled`/, an extra determinant is 
-provided to construct the set of students forming the 
+provided, to construct the set of students forming the 
 predicate base: we are not talking about students in 
 general or (necessarily) students at one school, 
 but specifically students who participated in a poll.   
@@ -116,7 +116,7 @@ the explicit definite article suggests that there is
 `i.some specific` tuition hike policy 
 raising students' ire.  This would also favor a 
 reading where `q.students` refers collectively to those 
-at a particulr school, who would be directly affected by 
+at a particulr school, who would be directly affected by the 
 hikes.  The `i.absence` of an article on 
 `q.tuition increases` in () leaves open an interpretation 
 that the students are not opining on some specific policy, but on 
@@ -126,12 +126,13 @@ the idea of hikes in general.
 `p.
 Such full details are not explicitly laid out in the sentences, 
 but it's entirely possible that they are clear in context.  
-The sentences may have a basically pristine logical 
-structure given the proper contextual framing %--  
+Let's take as given that, in at least some cases where they would 
+occur, the sentences have a basically pristine 
+logical structure given the proper contextual framing %--  
 context-dependency, in and of itself, does not weaken 
 our sense of language's logicality.  In particular, 
 the kind of structures constituting the sentences' 
-precise content %-- the dtails that seem context-dependent 
+precise content %-- the details that seem context-dependent 
 %-- have bona fide logical interpretations.  For 
 example, we can consider whether students are 
 responding to `i.specific` tuition hikes 
@@ -154,7 +155,7 @@ marrying a type (students in general) with a descriptive
 designation (e.g., those taking a specific 
 poll).  The wording of () does not 
 mandate that `i.only` students took the poll; it 
-does however us a type as a kind of operator on a set: 
+does however employ a type as a kind of operator on a set: 
 of those who took the poll, focus on students 
 in particular.
 `p`
@@ -168,7 +169,7 @@ set/type, single/multiple, subset/superset, and
 abstract/concrete comparisons like tuition hikes `i.qua` idea 
 vs. `i.fait accompli`/.  A logical system could 
 certainly model these distinctions and accordingly capture  
-the semantic differences between ()-().  So thes details 
+the semantic differences between ()-().  So such details 
 are all still consistnt with a truth-theoretic paradigm, although 
 we have to consider how linguistic form actually 
 conveys the propositional forms carved out via 
@@ -193,7 +194,7 @@ concrete policy, not just the idea),
 whereas articleless `q.tuition increases` can be read as 
 referring to future hikes and the idea of hikes 
 in general: past and concrete tends to 
-conterast with future and abstract.  A wider range of 
+contrast with future and abstract.  A wider range of 
 logical structures can be considered by subtly varying 
 the discourse, like: 
 
@@ -216,8 +217,9 @@ But maybe not; cases like these are perfectly plausible:
 `sentenceItem; Today the state university system 
 announced plans to raise tuition by 
 at least 10\%.  Most students oppose a tuition increase.
-`sentenceItem; Colleges all over the country are 
-charging more, but most students oppose a tuition increase.
+`sentenceItem; Colleges all over the country, facing 
+rising costs, have had to raise tuition, but 
+most students oppose a tuition increase.
 `sentenceList`
 
 In () the definite article could also be used, but saying 
@@ -233,8 +235,8 @@ levers that can fine-tune the logical designation
 more to abstract or concrete, past or future, as 
 the situation warrants.  Again, context should 
 clarify the details.  But morphosyntactic forms 
-(e.g., presence or absense of articls, definite 
-or indefinite, and singular/plural) are 
+%-- e.g., presence or absence of articles (definite 
+or indefinite), and singular/plural %-- are 
 vehicles for language, through its own 
 forms and rules, to denote propositional-content structurs 
 like abstract/concrete and past/future.
@@ -247,7 +249,7 @@ implies that the disliked hikes have already occured,
 whereas phraseology like `q.students are gearing for a fight` 
 would have the opposite effect.  The mapping from 
 propositional-content structure to surface language here 
-is less mechanical than, for instance, just 
+is less mechanical than, for instance, merely 
 using the definite article on `q.the tuition increases`/.  
 Arguably `q.dissapointment` %-- rather than just, say, 
 `q.opposition` %-- implies a specific timeline 
@@ -269,23 +271,23 @@ logical structure that are conveyed by units of
 linguistic structure, and this is partly how 
 language-expressions can indicate propositional 
 content.  The next question is to explore this 
-correspondance comppsitionaly %-- is there a 
+correspondance compositionaly %-- is there a 
 kind of aggregative, hieraarchical order in terms 
 of how `q.logical modeling elements` fit together, 
-on one side, and linguistic elements fit together?  
+on one side, and linguistic elements fit 
+together, on the other?  
 There is evidence of compositional concordance 
 to a degree, examples of which I have cited.  In 
-`q.polled students`/, for 
-example, the compositional structure of 
+`q.polled students`/, the compositional structure of 
 the phrase mimics the logical construct %-- deriving 
-a set (as a preducate base) from a type crossed with 
-some other predicte.  Another example is the 
+a set (as a predicate base) from a type crossed with 
+some other predicate.  Another example is the 
 phraseology `q.a/the majority of`/, which directly 
 nominates a subset/superset relation and so 
 reciprocates a logical quantification (together 
-with a numeric summation of subset/superset relative 
-size; the same logical structure but with 
-different numeric implications is seen in cases 
+with a summary of relative 
+size; the same logical structure, but with 
+different ordinal implications, is seen in cases 
 like `q.a minority of` or `q.only a few`/).  
 Here there is a relatively mechanical translation 
 between propositional structuring elements 
@@ -301,10 +303,10 @@ propositional and linguistic composition can break down:
 `sentenceList,
 `sentenceItem; Student after student came out against the tuition hikes.
 `sentenceItem; A substantial number of students 
-haas come out against the tuition hikes.
+have come out against the tuition hikes.
 `sentenceItem; The number of students protesting the tuition hikes 
 may soon reach a critical mass.
-`sentenceItem; The number of students protesting the tuition hikes 
+`sentenceItem; Protests against the tuition hikes 
 may have reached a tipping point.
 `sentenceList`
 
@@ -349,8 +351,8 @@ in the virtual `q.lens` our our cognitively figuring
 the discourse presented to us %-- all in just 
 three or four words.  Even if `q.student after student` 
 is said just for rhetorical effect %-- which 
-is rhetorically possible %-- `i.how` it 
-stages this effect still introduce an element of subjective 
+is contextually possible %-- `i.how` it 
+stages this effect still introduces a subjective 
 coloring to the report.  
 `p`
 
@@ -361,18 +363,18 @@ read as merely expressing a negative opinion, or as a
 more public and visible posturing.  In fact, a similar 
 dual meaning holds also for `q.protesting`/.  Context, 
 again, would dictate whether `q.protesting` means 
-actual activism or merely voicing displeasure.  However 
+actual activism or merely voicing displeasure.  Nonetheless,  
 the choice of words can shade how we frame situations.  
 To `q.come out against` connotes expressing disapproval 
 in a public, performative forum, inviting 
 the contrast of inside/outside (the famous example 
 being `q.come out of the closet` to mean publicly 
-identifying as LGBT).  Studnts may not loterally 
+identifying as LGBT).  Students may not literally 
 be standing outside with a microphone, but %-- even 
 if the actual situation is just students 
 complaining rather passively %-- using `q.come out against` 
 paints the situation in an extra rhetorical hue.  The students 
-are expressing the `i.kind` of anger that can lad 
+are expressing the `i.kind` of anger that can goad 
 someone to make their sentiments known theatrically and 
 confrontationally.  Similarly, using `q.protest` in lieu 
 of, say, `q.criticize` %-- whether or not students are actually 
@@ -395,7 +397,7 @@ to `i.protest` connotes a greater shade of anger than to `i.oppose`/.
 `p`
 
 `p.
-This conceptual shading is not in itself unlogical; one 
+Such conceptual shading is not itself unlogical; one 
 can use more facilely propositional terms to evoke 
 similar shading, `q.like very angry` or `q.etremely angry`/.  
 However, consider `i.how` language like ()-() 
@@ -403,32 +405,40 @@ conveys the relevant facts of the mater: there is
 an observational, in-the-midst-of-things staging at 
 work in these latter sentences that I find missing 
 in the earlier examples.  `q.The majority of` sounds 
-statistical, or clinical; it is a kind 
-of journalistic reportage, the speaker making a 
-rhetorical effort to sound like someone reporting facts as 
-established knowledge rther than observing them close-at-hand.  
-By contrast, I find ()-() to bemore `q.novelistic` than 
+statistical, or clinical; it suggests journalistic reportage, 
+the speaker making an atmospheric effort to sound like someone 
+reporting facts as established knowledge rather than 
+observing them close-at-hand.  
+By contrast, I find ()-() to be more `q.novelistic` than 
 `q.journalistic`/.  The speaker in these cases is reporting 
 the facts by, in effect, `i.narrating` them.  She is building 
 linguistic constructions that describe propositional 
-content through a kind of `i.narrative` structure.  Saying 
+content through narrative structure %-- or, at least, cognitive structures 
+that exemplify and come to the fore in narrative understanding.  Saying 
 `q.a substantial number of students`/, for example, rather than 
 just (e.g.) `i.many` students, employs semantics  
-redolant of `q.force-dynamics`/: the weight of studnt 
-anger is dscribed as if a `q.substance`/, something with the 
-potency and efficacy of matter.  This theme is also explicit in 
+redolant of `q.force-dynamics`/: the weight of student 
+anger is described as if a `q.substance`/, something with the 
+potency and efficacy of matter.
+`p`
+
+`p.
+This theme is also explicit in 
 `q.critical mass`/, and even `i.tipping point` has material 
 connotations.  We can imagine different versions of what 
 lies one the other side of the tipping point 
 %-- protests go from complaining to activism?  The school 
-forced to reverse course?  Whateverbthe case, language 
+forced to reverse course?  Or, contrariwise, the 
+school `q.cracking down` on the students 
+(another partly imagistic, partly force-dynamic metaphor)? 
+Whatever the case, language 
 like `q.critical mass` or `q.tipping point` is language 
 that carries a structure of story-telling; 
 it tries tie facts together with a narrative coherence.  The 
 students' protests grew more and more strident until ... 
 the protests turned aggressive; or the school dropped its plans; 
-or they won publicly sympathy; or attracted media attention, tc.  
-Whatever the situatiin's details, describing the facts in 
+or they won publicly sympathy; or attracted media attention, etc.  
+Whatever the situation's details, describing the facts in 
 force-dynamic, storylike, spatialized language (e.g. `q.come `i.out` 
 against`/) represents an implicit attempt to report 
 observations or beliefs with the extra fabric and completeness 
@@ -436,7 +446,7 @@ of narrative.  It ascribes causal order to how the
 situation changes (a critical mass of anger could `i.cause` the 
 school to change its mind).  It brings a photographic or 
 cinematic immersion to accounts of events and descriptions: 
-`i.studnt after student` and `i.come out` invite us 
+`i.student after student` and `i.come out` invite us 
 to grasp the asserted facts by `i.imagining` situations. 
 `p`
 
@@ -460,8 +470,8 @@ analogy) `i.narrative structure`/.
 
 `p.
 I argued earlier that elements of propositional 
-structure %-- for ample, the 
-set/type selectiv operator on `q.students polled` %-- can 
+structure %-- for example, the 
+set/type selective operator evident in `q.students polled` %-- can 
 have relatively clean morphosyntactic manifestation in 
 structural elements in language, like the verb-to-adjective 
 mapping on `q.polled` (here denoted, in English, by unusual 
