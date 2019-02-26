@@ -134,28 +134,28 @@ the kind of structures constituting the sentences'
 precise content %-- the dtails that seem context-dependent 
 %-- have bona fide logical interpretations.  For 
 example, we can consider whether students are 
-responding to `i.specific`tuition hikes 
+responding to `i.specific` tuition hikes 
 or to hikes in general.  We can consider 
 whether the objectionable hikes have already 
 happened or are just proposed.  Context 
 presumably identifies whether `q.students` are 
 drawn from one school, one governmental 
 jurisdiction, or some other aggregating criteria 
-(lik, all those who took a poll).  
+(like, all those who took a poll).  
 Context can also determine whether aggregation is 
 more set- or type-based, more extensional 
 or intensional.  In ()-() the implication 
 is that we should read `q.students` more as a set or 
-collection, but variants like `i.studnts 
+collection, but variants like `i.students 
 hate tuition hikes` operates more at the level 
 of students as a `i.type`/.  In `q.polled students` 
 there is a familiar pattern of referencing a set by 
 marrying a type (students in general) with a descriptive 
 designation (e.g., those taking a specific 
-poll).  Tyhe wording of () does not 
+poll).  The wording of () does not 
 mandate that `i.only` students took the poll; it 
 does however us a type as a kind of operator on a set: 
-of those who took the poll, focus on studnts 
+of those who took the poll, focus on students 
 in particular.
 `p`
 
@@ -215,7 +215,7 @@ But maybe not; cases like these are perfectly plausible:
 `sentenceList,
 `sentenceItem; Today the state university system 
 announced plans to raise tuition by 
-at least 10/%.  Most students oppose a tuition increase.
+at least 10\%.  Most students oppose a tuition increase.
 `sentenceItem; Colleges all over the country are 
 charging more, but most students oppose a tuition increase.
 `sentenceList`
@@ -284,7 +284,7 @@ phraseology `q.a/the majority of`/, which directly
 nominates a subset/superset relation and so 
 reciprocates a logical quantification (together 
 with a numeric summation of subset/superset relative 
-size; the same logical structur but with 
+size; the same logical structure but with 
 different numeric implications is seen in cases 
 like `q.a minority of` or `q.only a few`/).  
 Here there is a relatively mechanical translation 
@@ -293,7 +293,31 @@ and linguistic structuring elements.
 `p`
 
 `p.
+However, varying the examples %-- for instance, 
+varying how the subject noun-phrases are conceptualized 
+%-- points to how the synchrony between 
+propositional and linguistic composition can break down: 
 
+`sentenceList,
+`sentenceItem; Student after student came out against the tuition hikes.
+`sentenceItem; There is an intimidating number of students 
+protesting the tuition hikes.
+`sentenceItem; The number of students protesting the tuition hikes 
+may soon reach a critical mass.
+`sentenceItem; The number of students protesting the tuition hikes 
+may have reached a tipping point.
+`sentenceList`
+
+Each of these sentences says something about a large number 
+of students opposing the hikes.  But in each 
+case they bring new conceptual details to the fore, and 
+I will also argue that they do so in a way that 
+deviates from how propositional structures are composed.
+`p`
+
+`p.
+First, consider `q.student after student` as a way of 
+designating `q.many students`/.  
 `p`
 
 
