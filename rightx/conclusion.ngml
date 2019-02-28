@@ -1,11 +1,106 @@
 
 `section.Conclusion`
 `p.
-
+The phraseology that language is an `q.interface` %-- to 
+some (at least partly) prelinguistic cognitive faculties 
+%-- has been explored before.  Orlin Vakarelov, in particular, 
+has developed an `q.intefrace theory of meaning` that 
+can be a valueable framework for future research.  My gut 
+instinct is to adopt something like an Interface Theory of 
+Meaning (which I'll abbreviate to `q.ITM`/), but at least 
+provisionally theorized as an extension to 
+(or perhaps a foundation for) older language-philosophy 
+paradigms, like Cognitive Grammar and Concptual Role 
+Semantics.  I'll spend this conclusion forecasting how 
+that might work.
 `p`
 
 `p.
+Interestingly, Vakarelov speaks not of `q.prelinguistic` cognition but 
+of `q.precognitive` systems.  This is partly, I belive, 
+because Vakarelov wants to understand cognition as 
+adaptation: `q.Nature, in its nomic patterns,
+offers many opportunities for data systems that can be
+given semantic significance, it offers ubiquitous potential
+datums, but it does not offer any well-defined and
+complete data sets`/.  As I read it, Vakarelov conceives 
+cognitive systems as dynamic systems that try to adapt 
+to other dynamic systms %-- these latter being the environments 
+where we (taking humans as example cognitive systems) need 
+to act purposefully and intellegently.  The `q.nomic patterns` 
+are latent in our surroundings, and not created by intellect.  
+However, `q.prcognitive` does not necessarily mean `q.extramental`/: 
+there is a difference betweeen being `i.aware` of structural 
+regularities in our environment, which we can 
+perhaps deem a form of pre-cognitive mentality, and trying 
+to `i.interpret` these regularities for practical 
+benefit (and maybe a subjective desire for knowledge).
+`p`
 
+`p.
+When distinguishing `q.cognitivee` from `q.precognitive`/, however, 
+we should also recognize the different connotations that 
+the term `q.cognitive` itself has in diffrent academic communities.  
+In the context of Cognitive Linguistics, the 
+term takes on an intrpretive and phenomenological 
+dimension which carries noticeably different implications in the 
+`q.semantics of the theory` than in, say, computer science.  
+Taking Langacker's Cognitive Grammar as canonical, 
+I think scholars in that tradition would agree 
+that we instinctively reach for cognitive 
+frames to interpret linguistically-encoded situations.  
+Research can uncover structural features of linguistic 
+understanding by idntifying 
+frequent structural primitivs of thse frames: 
+consider the landmark-trajector structure in 
+(), the force-dynamic contrast in () vs. () and 
+() vs. (), and the spatial/geometric 
+variations in ()-():
+
+`sentenceList,
+`sentenceItem; Our house is across the lake.
+`sentenceItem; I poured wine from a decanter.  
+`sentenceItem; Some wine spilled from the decanter.
+`sentenceItem; I put spackle on the wall with a knife.
+`sentenceItem; Paint spattered all over the wall after a can droppped.
+`sentenceItem; There's a purple-and-blue color pattern all over the wall.
+`sentenceItem; There are drawings all over the wall. 
+`sentenceItem; There's a plastic sheet all over the wall. 
+`sentenceList` 
+`p`
+
+`p.
+There are underlying perceptual gestalts which seem apparent 
+in these examples, and their linguistic expression seems 
+to take these as cognitive-perceptual primitives 
+rather than grist for analysis (compare to a case 
+like wanting the Leafs to win, when asked about the 
+Jets (, above)). This is consistent with the 
+phenomenological intuition that consciousness includes a 
+primordial structural awareeness, and the role of 
+intellect and attention is to focus 
+on local regions of the whole structural 
+cloth of experience, for enactive deliberareness 
+and/or information extraction at a level of precision 
+that `q.raw` exprience cannot provide.  The 
+important phenomenological contrast is not btween 
+`q.sense data`/, on the one hand, and intellectually 
+filtered or reified world-apprehension, 
+on the other; but rather behind a structured 
+cognitive-perceptual complex which we feel as 
+`i.ambient` experience and, within that, an actively 
+thematized attentional focal-region that we 
+experience ourselves to be forcefully 
+studying and interacting with.
+`p`
+
+`p.
+For phenomenology, then, ambient `q.background experience` is 
+already richly structurd and is not really 
+`q.pre-cognitive`/, because its structure evinces 
+the `q.grammar` of cognitive frames.  On the other hand, 
+there are other intellectual traditions 
+where `q.cognitive` 
 `p`
 
 `p.
