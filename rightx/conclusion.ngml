@@ -209,7 +209,102 @@ for programming a robot, hr dtstrd rcplivitly.
 `p.
 Trying to map a typical (e.g., non-technical) concept 
 to a readily-enumerated `q.fature vector` is not without 
-problems, I think.  For example, 
+problems, I think.  Conceptual Space Theory 
+is not the same as a prototype-basd semantics, but it could 
+share some of its problems when dealing with shape-shifting 
+everyday concepts like `i.house` or `i.restaurant`/.  
+prototype (or feature-vector) theory of 
+`i.house` would need to unify mansions with hovels but 
+exclude hotels, tents, apartments, apartment-buildings, 
+and historical estates that have become museums.  The criteria 
+for `q.house` and `q.restaurant` seem mostly functional, 
+although we are still aware in English of a conceptual 
+incongruity in extending the concpt on 
+purely functional terms.  We can acceptably 
+use `q.house`, really, for any place of residence %-- and 
+restaurant for anywhere to buy prepared meals:
+ 
+`sentenceList,
+`sentenceItem; I'm going to a party at my brother's house (suppose 
+he actually lives in an apartment).
+`sentenceItem; This restaurant has the best Hokkien noodles 
+(said of a stall in a Chinaatown food court).
+`sentenceList`
+
+These feel (at least to my ears) like idiomatic 
+exprssions, however, as if we know not to casually 
+overstrtch the conceps too far.  As I proposed earlier, our 
+criteria for concept-mappings seems to be `i.mostly` functional 
+but to incorporate spatial, configurational, visual, and 
+natural-kind features also as `i.secondary` criteria.  I 
+would argue that a Conceptual Space model intuitively 
+grounded on these latter features would supplement, 
+rather than displace, a Conceptual Role theory 
+(Conceptual Space Theory does account for functional 
+roles, but arguably a little awkwardly).`footnote,
+For instance, Raubal says that `q.Meanings of concepts change over time
+and depending on the context in which they are used.  
+In a conceptual vector space it is possible to account 
+for these changes by adding or deleting quality dimensions 
+and by assigning different saliencies (as weights) 
+to the existing dimensions.`  For sure, our readiness to 
+(continuing my example) accept `q.house` for any place 
+of residence varies with context: the idiomatic 
+usage in () is less proper in the contxt of 
+real estate transactions, or assessing property 
+tax (an available apartment should not be 
+called a `q.house for sale`/).  But while 
+`q.assigning different saliencies` may capture the relative 
+weight of functional vs. more 
+prototype-based classifications, attempts to 
+quantify functional dimensions themselves as if 
+they were, say, colors and spatial geometries %-- which do 
+have convincing quantitative models 
+(e.g. `q.red` on an HSV color pyramid) %-- strike 
+me as forced and unpersuasive.
+`footnote`
+`p`
+
+`p.
+But setting this objection aside, we can defer to Raubal's 
+analysis to the effect that a `q.conceptual vector space` can 
+model our disposition to actively or passively identify 
+concept-instances as such.  Standing before a building, 
+the proper synergy between properties of 
+a a facade and my own mental `q.vector` of the colors, 
+spatial arrangements, patterns, and so forth iconifying 
+the idea `q.facade` %-- if the synergy resonates enough 
+%-- primes me to know instinctively that the exterior 
+is a facade, a pasive belief which could potentially 
+be `q.activated` should that become relevant.  One way this 
+could happen is if a conversation partner 
+says something about `q.this faacde` %-- 
+entering thatbrefrent in the `q.ledger` of dialogically 
+salient things and topics.
+`p`
+
+`p.
+The efficacy of the concept lies not just in the reality 
+available for us to peceive, nor in our minds, but 
+in a synergy between reality-structures and activatable conceptual 
+models.  This kind of partial-but-not-total externalism is perhaps 
+roughly what Vakarelov considers to be `q.precognitive`/: 
+the phenomenon of our perceiving an exterior 
+as a `q.facade` depends on both mental and extramental factors.  
+G\"ardenfors Conceptual Space Theory can be seen in this 
+context as an attempt to imagine an `q.abstract geometry` to 
+quantify (or to suggestively intimate 
+tghe possibility of quantifying) the world-to-word fit that 
+predetermines (and is witnessed by) well-founded 
+conceptualizations.  G\"ardenfors's `q.geometry of thought` can 
+be seen as an attempt to capture via quantitative intuition an 
+insight Vakarelov's ITM broaches qualitatively: the idea that 
+cognition is a structural `i.correlation` between 
+the reality out there and what we're equipped to conceptualize.
+`p`
+
+`p.
+
 `p`
 
 `p.
