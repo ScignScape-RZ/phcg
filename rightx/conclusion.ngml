@@ -4,7 +4,7 @@
 The phraseology that language is an `q.interface` %-- to 
 some (at least partly) prelinguistic cognitive faculties 
 %-- has been explored before.  Orlin Vakarelov, in particular, 
-has developed an `q.intefrace theory of meaning` that 
+has developed an `q.interface theory of meaning` that 
 can be a valueable framework for future research.  My gut 
 instinct is to adopt something like an Interface Theory of 
 Meaning (which I'll abbreviate to `q.ITM`/), but at least 
@@ -27,9 +27,13 @@ complete data sets`/.  As I read it, Vakarelov conceives
 cognitive systems as dynamic systems that try to adapt 
 to other dynamic systms %-- these latter being the environments 
 where we (taking humans as example cognitive systems) need 
-to act purposefully and intellegently.  The `q.nomic patterns` 
+to act purposefully and intelligently.  The `q.nomic patterns` 
 are latent in our surroundings, and not created by intellect.  
-However, `q.prcognitive` does not necessarily mean `q.extramental`/: 
+So `i.this` kind of worldly order lies `q.outside` cognition 
+in an ontological sense; it is not an order which exists (in itself) 
+in our minds (though it may be mirrored there).  Consciousness 
+comports to an `q.extramentally` ordered world.   
+However, `q.precognitive` does not necessarily mean `q.extramental`/: 
 there is a difference betweeen being `i.aware` of structural 
 regularities in our environment, which we can 
 perhaps deem a form of pre-cognitive mentality, and trying 
@@ -50,8 +54,8 @@ I think scholars in that tradition would agree
 that we instinctively reach for cognitive 
 frames to interpret linguistically-encoded situations.  
 Research can uncover structural features of linguistic 
-understanding by idntifying 
-frequent structural primitivs of thse frames: 
+understanding by identifying 
+frequent structural primitives of these frames: 
 consider the landmark-trajector structure in 
 (), the force-dynamic contrast in () vs. () and 
 () vs. (), and the spatial/geometric 
@@ -83,10 +87,10 @@ on local regions of the whole structural
 cloth of experience, for enactive deliberareness 
 and/or information extraction at a level of precision 
 that `q.raw` exprience cannot provide.  The 
-important phenomenological contrast is not btween 
+important phenomenological contrast is not between 
 `q.sense data`/, on the one hand, and intellectually 
 filtered or reified world-apprehension, 
-on the other; but rather behind a structured 
+on the other; but rather between a structured 
 cognitive-perceptual complex which we feel as 
 `i.ambient` experience and, within that, an actively 
 thematized attentional focal-region that we 
@@ -107,17 +111,17 @@ mien, whereas the AI and formal logic community places
 greater emphasis on how cognitive `i.systems` 
 may be formally tractable.  This can yield 
 confusion in linguistics proper, where AI (at 
-east in the sense of Natural Language Procssing) 
+least in the sense of Natural Language Processing) 
 and Cognitive Linguistics co-exist.  One solution 
-is to qualify `q.cognitiv` in 
-contxts where confuin cpuld arise, 
-e.g. `q.cognitive-perceptual` as a more phnomenological 
+is to qualify `q.cognitive` in 
+contexts where confusion could arise, 
+e.g. `q.cognitive-perceptual` as a more phenomenological 
 sense and `q.cognitive-analytic` as a more computational 
 sense.
 `p`
 
 `p.
-Not, however, that the re-oocurance of `q.cognitive` 
+Not, however, that the re-occurance of `q.cognitive` 
 in both terms is accidental: as suggested by the terminological 
 pattern, I think we should see `q.cognitive-perceptual` 
 and `q.cognitive-analytic` as part of a spectrum whose 
@@ -135,10 +139,10 @@ undifferentiated red-sensation %-- but I comport to such
 content specificity in a passive manner.  Towards the other 
 (cognitive-analytic) end of the spectrum, I deliberately seek 
 out awareness of structural forms, analyzing thm 
-in relation to schemas and prototyps 
+in relation to schemas and prototypes 
 (consider a rock-climber planning how to scale a wall).  
-Within this spectrum however I think there 
-are continuous gradations; such a picture 
+Within this spectrum I think there 
+are continuous gradations; and such a picture 
 seems more phenomenologicaly 
 well-motivated than a cognitive/pre-cognitive duality.
 `p`
@@ -150,9 +154,9 @@ will experience its structure in greater detail and
 attention than a bystander who's meeting 
 a friend in front of the building.  The concept 
 `q.facade` will nonetheless shape how both people make 
-sense of their surroundings.  The bystander will have a more passive 
-acknowledgment that she is before the facade,comparedto 
-the architect (which 
+sense of their surroundings.  The bystander may have a more passive 
+acknowledgment that she is before the facade, compared to 
+the architect (but it 
 will nonetheless be part of her relatively deliberate 
 attempt to coordinate with her friend's expectation 
 that they meet in front of the building).  Moreover, a child 
@@ -178,14 +182,14 @@ the current situation.
 `p`
 
 `p.
-Insofar as knowledge of the word `q.doxa` reinforces the concept, 
+Insofar as knowledge of the word reinforces the concept, 
 we can assume the concept and our disposition to 
 name it lexically is latent in situations where the concept 
 `i.may` be relevant.  Thus the friend might 
 comment on the facade once they have met in front of the 
-building: maing explicit something that hitherto 
+building: making explicit something that hitherto 
 the parties, we assume, had just passively noticed.  
-This is an example of the kind of undertated assumptions about 
+This is an example of the kind of unstated assumptions about 
 others' beliefs that lie beneath explicit 
 linguistic content: `q.I love this building's facade` 
 presuposses both that the hearer sees the facade and 
@@ -195,7 +199,8 @@ understands the concept.
 `p.
 I use the `q.facade` example stratgically, to reference 
 Martin Raubal's analysis of this word via 
-Concptual Space Theory.  Raubsl proposes a `q.conceptual vector 
+Conceptual Space Theory `cite<MartinRaubal>;.  
+Raubal proposes a `q.conceptual vector 
 space` to  distinguish `q.facades` from other spatial 
 arrangements that (for instance) we might encounter outdoors 
 in an urban setting.  His apparent goal is to 
@@ -203,17 +208,29 @@ quantitatively model the terrain of `q.facade` in
 contrast to other, lexically related words, which would 
 yield a basically mechanical, computationally tractable 
 account of how to recognize a facade %-- perhaps 
-for programming a robot, hr dtstrd rcplivitly.  
+for programming a robot, or a navigation tool 
+for people, as he proposes.  
 `p`
 
 `p.
-Trying to map a typical (e.g., non-technical) concept 
-to a readily-enumerated `q.fature vector` is not without 
+Such potential applications trade on the possibility that we 
+can reach beneath the nuance of language and uncover 
+logically straightforward encodings of, or critriology for, 
+concepts %-- not unlike my earlier idea of a 
+genetic/vinological `q.CF` for `q.Cabernet Franc`/.  
+Obviously, finding a logical matrix beneath 
+the surface fluidity of language is an essential 
+first step toward legitimate Natural Language Processing.
+`p`
+
+`p.
+But trying to map an everyday (e.g., non-technical) concept 
+to a readily-enumerated `q.feature vector` is not without 
 problems, I think.  Conceptual Space Theory 
-is not the same as a prototype-basd semantics, but it could 
+is not the same as a prototype-based semantics, but it could 
 share some of its problems when dealing with shape-shifting 
-everyday concepts like `i.house` or `i.restaurant`/.  
-prototype (or feature-vector) theory of 
+everyday concepts; the likes of `i.house` or `i.restaurant` 
+or `i.water`/.  A prototype (or feature-vector) theory of 
 `i.house` would need to unify mansions with hovels but 
 exclude hotels, tents, apartments, apartment-buildings, 
 and historical estates that have become museums.  The criteria 
@@ -221,7 +238,7 @@ for `q.house` and `q.restaurant` seem mostly functional,
 although we are still aware in English of a conceptual 
 incongruity in extending the concpt on 
 purely functional terms.  We can acceptably 
-use `q.house`, really, for any place of residence %-- and 
+use `q.house`/, really, for any place of residence %-- and 
 restaurant for anywhere to buy prepared meals:
  
 `sentenceList,
@@ -233,7 +250,7 @@ he actually lives in an apartment).
 
 These feel (at least to my ears) like idiomatic 
 exprssions, however, as if we know not to casually 
-overstrtch the conceps too far.  As I proposed earlier, our 
+overstretch the concepts.  As I proposed earlier, our 
 criteria for concept-mappings seems to be `i.mostly` functional 
 but to incorporate spatial, configurational, visual, and 
 natural-kind features also as `i.secondary` criteria.  I 
@@ -241,7 +258,7 @@ would argue that a Conceptual Space model intuitively
 grounded on these latter features would supplement, 
 rather than displace, a Conceptual Role theory 
 (Conceptual Space Theory does account for functional 
-roles, but arguably a little awkwardly).`footnote,
+roles, but arguably a little awkwardly).`footnote.
 For instance, Raubal says that `q.Meanings of concepts change over time
 and depending on the context in which they are used.  
 In a conceptual vector space it is possible to account 
@@ -280,7 +297,7 @@ is a facade, a pasive belief which could potentially
 be `q.activated` should that become relevant.  One way this 
 could happen is if a conversation partner 
 says something about `q.this faacde` %-- 
-entering thatbrefrent in the `q.ledger` of dialogically 
+entering that referent in the `q.ledger` of dialogically 
 salient things and topics.
 `p`
 
@@ -295,10 +312,11 @@ as a `q.facade` depends on both mental and extramental factors.
 G\"ardenfors Conceptual Space Theory can be seen in this 
 context as an attempt to imagine an `q.abstract geometry` to 
 quantify (or to suggestively intimate 
-tghe possibility of quantifying) the world-to-word fit that 
+the possibility of quantifying) the world-to-word fit that 
 predetermines (and is witnessed by) well-founded 
 conceptualizations.  G\"ardenfors's `q.geometry of thought` can 
-be seen as an attempt to capture via quantitative intuition an 
+accordingly be seen as an attempt to capture 
+via quantitative intuition an 
 insight Vakarelov's ITM broaches qualitatively: the idea that 
 cognition is a structural `i.correlation` between 
 the reality out there and what we're equipped to conceptualize.
@@ -309,11 +327,11 @@ Perhaps, then, Conceptual Space Theory is (or can be
 applied for) one example of a Vakarelov-style 
 ITM.  Raubal proposes conceptual vector spaces not 
 just as theoretical explanantia but as technological 
-artifacts; he envisions software employing thse 
+artifacts; he envisions software employing these 
 vectors as assistive technologies capable of some 
 natural-language understanding.  A computational system 
 which properly activated the `q.facade` concept, let's say, given 
-sufficiently proximate fature-vectors, would 
+sufficiently proximate feature-vectors, would 
 perhaps exemplify Vakarelov's idea of an `q.information 
 system` that resembles human cognition, to some functional 
 degree.  The fact that such-and-such an environmental 
@@ -337,14 +355,14 @@ suggested by Kenneth Holmqvist's chapter on `q.conceptual
 engineering` (mentioned by Raubal's paper I've 
 cited, but also noteworthy as an unusual attempt to 
 apply computational methods to 
-Cognitive Linguistics).  Whreas Raubal skirts 
+Cognitive Linguistics).  Whereas Raubal skirts 
 around functional-role issues, Holmqvist acknowledges that 
 functionality can be the decisive factor in conceptual frames.  
 He cites the example of a knife, which 
 can on the one hand be prototyped 
 spatially and mereologically (e.g., the relative 
 sizes of blade and handle and the knife's 
-status as the sum of those pats), but also 
+status as the sum of those parts), but also 
 functionally %-- `q.Take the lexical unit 
 `i.knife` as an example ... `i.blade` and 
 `i.handle` are clearly parts of `i.knife` 
@@ -360,7 +378,7 @@ But more significant is that Holmqvist (given this generality)
 is prepared to model a broad range of relationships %-- even 
 if these can in principle be expressed mereologically 
 (like a knife as part of a silverware set), 
-we are not restricted to only visual or phyiscal 
+we are not restricted to only visual or physical 
 partonomies.  
 `p`
 
@@ -368,7 +386,7 @@ partonomies.
 The parts of Holmqvist's analyses that are more  
 perceptually grounded are also the more prototype-like.  
 He comments, for instance, that `q.saying ... `i.blade` is part of 
-`i.knife` is not sufficient.  We must characterize this par-whole 
+`i.knife` is not sufficient.  We must characterize this part-whole 
 relation closer.  For instance, the relative sizes of the 
 blade and knife must not deviate outside certain limits.  The 
 relative spatial position of the blade and knife must also be 
@@ -376,11 +394,11 @@ correct, i.e., the blade must be correctly attached`/.
 This implies the criteria for classifying something as a knife 
 can be quantified, and regions on certain peceptual axes 
 %-- say, the shape, length, and position of the 
-handle and the blade %-- carve out (no pun i tended) the 
+handle and the blade %-- carve out (no pun intended) the 
 conceptual space of `q.knife` from peer concepts like 
 `q.sword`/, `q.cleaver`/, and `q.spatula`/.  Certainly 
 such clusters of related lexemes suggest conceptual 
-`q.terrains` that can be `q.mapped` %-- as in my arlier 
+`q.terrains` that can be `q.mapped` %-- as in my earlier 
 discussion of concept-mapping for water and milk %-- and 
 Conceptual Space Theory draws on our intuition 
 that such mappings are particularly elegant when 
@@ -388,12 +406,12 @@ there is a readily quantifiable system of dimensions
 that can be identified, like blade-length distinguishing 
 knives from swords.  Again, however, functional 
 pragmatics, more than spatial form in itself, seems to 
-dictate when and how we identify concpt-instances 
+dictate when and how we identify concept-instances 
 with their concepts.  
 `p`
 
 `p.
-Holmqvist however recognizes this possibility hy talking not 
+Holmqvist however recognizes this possibility by talking not 
 only of perceptual part/wholes (like blade/knife) 
 but of mereologies with more functional inflection, like 
 a knife in a silverware set or as part of `q.cut` insofar 
@@ -409,10 +427,10 @@ linguistic expression in cases like:
 
 The implied situational picture in each case is structured, in part, 
 mereologically: a museum-piece knife potentially part of a valuable 
-cutlery set; when slicing bred with a serrated knife the 
+cutlery set; and when slicing bread with a serrated knife the 
 knife is part of an enactive process.  However, I'd say 
-the functional position of the knives in thesevarious 
-ituations is the key detail, over and 
+the functional position of the knives in these various 
+situations is the key detail, over and 
 above the partonomic significance of situational 
 wholes.  A butter knife rests in a different 
 niche in culinary situations than a bread 
@@ -420,7 +438,7 @@ knife.  Their roles are however similar
 enough that we can subsume them under a 
 common knife-concept, although we can 
 likewise distinguish them, `i.bread`/-knife 
-and `i.butter`/-knife forming two subs-concepts.
+and `i.butter`/-knife forming two sub-concepts.
 `p`
 
 `p.
@@ -433,7 +451,7 @@ and a butter knife, in particular.  Insofar as there is
 a synergy between our mind and our environment, manifest 
 in the adequacy of concepts like `q.butter knife`/, 
 this is primarily a matter of %-- in this case %-- 
-the object conceptualized as a butter knife is 
+the object conceptualized as a butter knife being 
 suited for that task.  Of course, part of the reason 
 `i.why` it is so suited is how it is shapd and 
 manufactured.  Geometric and physical details are therefore 
@@ -452,8 +470,12 @@ diners might need one, and how they are used, informs
 our conceptualizing dispositions.  It is true that perceptual 
 details like color and shape provide visual cues to the nature of 
 objects %-- partly because they need the design and material 
-composition they have to perform their intended purpose.  But 
-our receptivity to concept-instances depends on our awareness 
+composition they have to perform their intended purpose.  But we 
+don't just troll sense-data looking for cues; our 
+perceptual awareness is not a matter of decontextualized 
+equations like `q.shiny and sharp means `i.knife`/`/, 
+`q.liquid and clear means `i.water`/`/, etc.  
+Our receptivity to concept-instances depends on our awareness 
 of current situations.  It's not like we are prepared 
 to see examples of every kind of object that we are familiar with 
 in every situation.  We anticipate finding butter knives 
@@ -487,14 +509,22 @@ knife is a `q.carving knife`/; another scenario
 is someone spreading butter, wherein it is a `q.butter knife`/; etc.  
 Each situation-prototype is an architecture of roles, 
 where for instance there is a person enacting the carving 
-ritual, the instrument she uses, the food being carved, etc.  
-In practice our sensitivity to functional roles allows for ad-hoc 
+ritual, the instrument she uses, the food being carved, and so on.  
+The building-blocks of these architectures then 
+become solicited within language, for instance 
+via case-markers like benefactive, locative, patientive: 
+`q.carving `i.the turkey` for `i.grandma` with `i.the knife` at 
+`i.the counter`/`/.
+`p`
+
+`p.  
+In practice, our sensitivity to functional roles allows for ad-hoc 
 practical configurations, like using a hammer as a bottle-opener.  
 To the degree that situation-prototypes are `i.abstract` models, 
 we nonetheless have narrower appraisals of functional 
 roles: the lexeme `q.bottle opener` covers objects playing 
 that role in `i.prototype` situations, which 
-is why it dos not cover hammers.  This is one rason why we should 
+is why it does not cover hammers.  This is one reason why we should 
 accept conceptual-role talk as more parsimonious than 
 functional-role talk: conceptual roles `i.are` functional 
 roles, but tapered down by the prototypicality of 
@@ -503,13 +533,13 @@ situations abstractly conceived.
 
 `p.
 In practical affairs, of course, we comport to real 
-situations that embody situational prototyps.  This 
+situations that embody situational prototypes.  This 
 concreteness has a pair of distinct implications 
 for my current analysis.  First, we accept 
 localized expansions of conceptual roles, like 
 bottle-opener-to-corskcrew or even -to-hammer.  Second, 
-concptual roles offer templates that allow cognitive-perceptual 
-judgments to be passive or instinctively %-- we reach 
+conceptual roles offer templates that allow cognitive-perceptual 
+judgments to be passive or instinctive %-- we reach 
 for a butter knife without being aware of concluding 
 that said instrument is a butter knife, or even being 
 awate of knowing that a butter knife is there.  
@@ -533,10 +563,10 @@ up and using it.
 `p`
 
 `p.
-PErceptual details can certainly be triggers of conceptual 
+Perceptual details can certainly be triggers of conceptual 
 recognition, but a complex interleave of situational 
 awareness, situational prototypes, pre-learned conceptual roles, 
-and moment-to-momnt enactive needs and processes, all 
+and moment-to-moment enactive needs and processes, all 
 establish an infrastructure within 
 which perceptual content can actually `q.trigger` 
 determinate conceptualizations.  Most of this 
@@ -563,7 +593,7 @@ itself, in total, a cognitive system which can
 be `i.targeted` by language, however much it is itself 
 prelinguistic.  That analysis, if it holds 
 water, would make language an `i.interface` to the 
-aforementioned cognitive system.  Under that interpretation 
+aforementioned cognitive system.  Under that interpretation,  
 my reading, originating in Conceptual Space Theory and 
 then pivoting to Conceptual Roles, 
 also presents as a flavor of ITM.  I envision this hybird 
@@ -577,7 +607,7 @@ Situational awareness, and situationally-mediated
 object recognition and asociated concptualizations, 
 are highly subtle and multfacted cognitive faculties 
 %-- especially in our purposeful, socially normative, 
-often emotionaly charged human world.  Some aspects of 
+often emotionally charged human world.  Some aspects of 
 this overall architecture may be interestingly modeled 
 or emulated with computers.  Examples include 
 Raubal's and Holmqvist's implementations basd on 
