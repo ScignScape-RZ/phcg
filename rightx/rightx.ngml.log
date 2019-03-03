@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  2 MAR 2019 11:49
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  3 MAR 2019 15:14
 entering extended mode
 **rightx.ngml.tex
 (C:\scign\phcg\ar\rightx\rightx.ngml.tex
@@ -888,8 +888,18 @@ Overfull \hbox (26.7914pt too wide) in paragraph at lines 1--1
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+
 Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
@@ -901,8 +911,18 @@ Overfull \hbox (26.7914pt too wide) in paragraph at lines 1--1
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+
 Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
  []
 
 [14] [15] [16] [17]
@@ -929,8 +949,18 @@ Overfull \hbox (26.7914pt too wide) in paragraph at lines 1--1
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+
 Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
  []
 
 [23] [24] [25]) (C:\scign\phcg\ar\rightx\section3a.ngml.tex [26] [27] [28]
@@ -941,8 +971,18 @@ Overfull \hbox (26.7914pt too wide) in paragraph at lines 1--1
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+
 Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
  []
 
 [35] [36]
@@ -959,7 +999,27 @@ LaTeX Warning: Citation `MattSelway' on page 40 undefined on input line 572.
 
 LaTeX Warning: Citation `SmithDonnely' on page 40 undefined on input line 572.
 
-) [40] (C:\scign\phcg\ar\rightx\rightx.ngml.aux)
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.573 \hline
+            {}
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+LaTeX Warning: Citation `AntonioLieto' on page 40 undefined on input line 596.
+
+[40] [41]
+
+LaTeX Warning: Citation `CyberphysicalSystems' on page 42 undefined on input li
+ne 789.
+
+)
+
+Package transparent Warning: Rerun to get transparencies right.
+
+[42] (C:\scign\phcg\ar\rightx\rightx.ngml.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -968,10 +1028,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18078 strings out of 494049
- 349239 string characters out of 3146069
- 450733 words of memory out of 3000000
- 20605 multiletter control sequences out of 15000+200000
+ 18080 strings out of 494049
+ 349275 string characters out of 3146069
+ 450520 words of memory out of 3000000
+ 20607 multiletter control sequences out of 15000+200000
  89709 words of font info for 322 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  60i,8n,67p,791b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -986,9 +1046,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Program Files
 .9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on rightx.ngml.pdf (40 pages, 326272 bytes).
+Output written on rightx.ngml.pdf (42 pages, 334233 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
+ 179 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  39437 words of extra memory for PDF output out of 42996 (max. 10000000)
 
