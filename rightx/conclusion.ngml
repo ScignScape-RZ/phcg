@@ -780,6 +780,37 @@ over to linguistics of we take Vakarelov's
 ITM seriously.  
 `p`
 
+
+`p.
+An equally intrinsic aspect of interface theories, 
+however, is that the processes operative at the intermediate 
+level aree theoretically distinct from the realms which the 
+interface bridges.  For example, the theory of programming-language 
+compilers and runtimes is distinct both from 
+the theory of programming-language parsers and 
+specifications, and from the theory of CPU 
+architecture and system-kernel development.  Runtime 
+engineers can work through the medium of IR 
+models, and compiler design itself is split between 
+parsing surface-level source code `i.to` IR and 
+mapping IR structures to their proper runtime 
+paths of execution.  It would be a breach of 
+design architecture to attempt to solve 
+source-to-IR problems within modules devoted to 
+IR-to-runtime engineering.  Unfortunately, 
+I get the sense that a lot of AI research does 
+not respect a comparably disciplines Separation Of 
+Concerned, casuing particular parts of projects to be 
+unfairly judged basd on whether they contribute 
+to what are, I believe, unrealistic visions 
+of humanoid robots and conversationalists.
+`p`
+
+`p.
+
+`p`
+
+
 `p.
 
 `p`
