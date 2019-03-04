@@ -4,14 +4,14 @@
 `p.
 I contend we need to tease apart the pursuit of valuable computational 
 tools and models from an (often reductionistic) paradigm of 
-seeking artifical, computtaionally engineered replicas of 
+seeking artifical, computationally engineered replicas of 
 human cognition.  `i.Computational` does not have to equal 
 `i.AI`/.  
 `p`
 
 `p.
-Holmqvist's and Selway's research that I hav cited are good examples 
-of paradihm-overlap between cognitiv and computational 
+Holmqvist's and Selway's research that I have cited are good examples 
+of paradigm-overlap between cognitive and computational 
 linguistics.  I will cite other scholarship which 
 also finds philosophical inspiration in cognitive linguists 
 like Langacker, G\"ardensfors, George Lakoff, and 
@@ -43,10 +43,10 @@ water, wine or beer bottles, corkscrews and bottle openers %--
 identifications themselves mediated by situational 
 awareness, viz. if we are hosting or attending a dinner 
 party %-- we no longer often attend actively to 
-sense-perceptual minutiase.  Our mental map of our 
+sense-perceptual minutiae.  Our mental map of our 
 surroundings %-- there's the corkscrew, there's 
 the carving knife %-- pulls these referents 
-outside the register of thematized sensate consciousness and 
+outside the register of sensate consciousness and 
 into the pragmatic hum of worldly activity.  Insofar 
 as they nestle in our intellectual faculties in that 
 semi-abstract state, it seems fair to capture the 
@@ -73,31 +73,31 @@ simulating human intellligence at least on
 Or at least, such seems to be the intuition behind attemps 
 to model our human representations of objects and 
 concepts in terms of abstract structures.  But even a feasible 
-theory of thesesemi-abstract layersof cognitive processing 
-are only half the story.  Suppose we agree that there 
-is legitimate cognitive insights in Holmqvist's model cognitive 
+theory of these semi-abstract layers of cognitive processing 
+is only half the story.  Suppose we agree that there 
+are legitimate cognitive insights in Holmqvist's model of cognitive 
 frames, incorporating (but also extending, including in a more pragmatist 
 direction) Conceptual Space Theory %-- employing 
 a generalized mereology that renders objects and concepts 
 as `i.parts` of situations (I have suggested a 
-more conceptual-role accpunt for analogous phenomena).  
+more conceptual-role account for analogous phenomena).  
 Suppose also we find plausible cognitive-frame 
 models in Selway's intermediate representation 
 for natural language, via which 
 his proposed implementation can potentially 
 map natural language to formal specifications.  
 In these cases we hagve potentially 
-valuable Intermediate Representations which CApture 
+valuable Intermediate Representations which capture 
 cognition, in effect, mid-stream, or in-the-act: 
 neither conscious phenomenology nor neurophysical hardware. 
 `p`
 
 `p.
 Howevere, Holmqvist's and Selways' work appears to 
-operate in an environmentwhere these 
-Intermediate Representations are valuable 
+operate in an environment where these 
+Intermediate Representations are valued 
 primarily because and insofar as they allow 
-human cognition to be mechanically recoprocated.  
+human cognition to be mechanically recapitulated.  
 This of course demands not only that 
 compuers `i.represent` IR models, but also `i.create` 
 them %-- that is, when presented with an artifact of 
@@ -136,10 +136,10 @@ fsculties.  Interface theories and Intermediate
 Representations tend to go together %-- the IR is 
 the representation of some input during 
 intermediate processing yielding an 
-outpue; a structure between two other structures, 
-where the role of the interface is to bridger 
+output; a structure between two other structures, 
+where the role of the interface is to bridge 
 the structures as well as to activate the correct 
-capabilities with the output.  This is the 
+capabilities via the output.  This is the 
 architecture of an `q.interface theory`/, in 
 science or computer programming; it carries 
 over to linguistics of we take Vakarelov's 
@@ -163,10 +163,25 @@ mapping IR structures to their proper runtime
 paths of execution.  It would be a breach of 
 design architecture to attempt to solve 
 source-to-IR problems within modules devoted to 
-IR-to-runtime engineering.  Unfortunately, 
-I get the sense that a lot of AI research does 
-not respect a comparably disciplines Separation Of 
-Concerned, casuing particular parts of projects to be 
+IR-to-runtime engineering.
+`p`
+
+`p. 
+Unfortunately, I get the sense that AI research does 
+not respect a comparably disciplined Separation Of 
+Concerns.  There are multiple parts to a 
+typical AI platform %-- modules for representing information 
+(or knowledge/facts/beliefs, or the state of the system's 
+physical or digital environs, etc.); for populating 
+these reprsentations with data deliberately introduced 
+by human users or absorbed via some real-time engineering 
+from the outside world; for analyzing 
+reprsentations to glean insights or calculate a course 
+of action.  Individual parts of the overall architecture 
+can evince worthwhile 
+
+
+ causing particular parts of projects to be 
 unfairly judged basd on whether they contribute 
 to what are, I believe, unrealistic visions 
 of humanoid robots and conversationalists.
