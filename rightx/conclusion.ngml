@@ -178,43 +178,113 @@ by human users or absorbed via some real-time engineering
 from the outside world; for analyzing 
 reprsentations to glean insights or calculate a course 
 of action.  Individual parts of the overall architecture 
-can evince worthwhile 
+can evince notreworthy engineering 
+achievements, separate from the goals of 
+the overall system.  In this sense the pursuit of 
+AI can yield positive contributions in other 
+branches of computer science and other disciplines, 
+without the stated rationale of AI realizing 
+(and monetizing) systems that exhibit 
+humanlike intelligence.
+`p`
 
+`p.
+So perhaps `q.AI` is 
+best understood as shorthand for a suite of 
+research agendas across several aspects of 
+computer science, not restricted to the 
+fields %-- like Machine Learning, Robotics, 
+and Artificials Neural Networks %-- that are 
+publicly associated with the term.  This is 
+not, however, how AI seeems to be represented by 
+companies and institutions (including in academia) 
+who have a vested interest in the products AI may 
+yield.  A benevolent reading would be that 
+institutions understand the diversity of research 
+that can be loosely aggregated under the AI umbrealla, 
+but use the particularly science-fictional facets of 
+this science to excite public support: visions 
+of humanoid robots and conversationalists provide a compact 
+story to that is more meaningful to non-experts 
+than technical outlines of the intermediate machinery 
+beneath the hopefully-intelligent surface.  
+However, a more cynical interpretation 
+is that AI is valued as a cash cow, and 
+residual disciplines which contribute to the 
+engineering infrastructure that AI requires 
+%-- but are agnostic as to the AI vision 
+itself %-- are appreciated only so much as 
+needed to keep the AI project moving forward.  On that 
+interpretation support for AI-agnostic 
+research becomes lukewarm and transactional, and 
+actual innovation in such areas may not be properly 
+celebrated.
+`p`
 
- causing particular parts of projects to be 
-unfairly judged basd on whether they contribute 
-to what are, I believe, unrealistic visions 
-of humanoid robots and conversationalists.
+`p.
+This situation is not irrelevant to either linguistics or to Cognitive 
+Phenomenology.  In Computational Linguistics, 
+for example, linguistic IR models seem 
+to be valued based on their utility in AI-driven 
+Natural Language Processing.  This presents a disciplinary 
+bifurcation, where potential computational models 
+are `i.either` connoted rather informally as part of 
+a thoretical investigation among linguists 
+(or philosophers of language, etc.), `i.or` 
+concretely implemented, in some kind of software package, 
+but then measured as components in a Natural Language Processing 
+system: assessed on the basis of how the system overall 
+approximates human language understanding via artifical means.  
+Another genre of formal models, 
+such as the type- or monadic theories I have alluded to here, 
+may also have potential software incarnations but 
+tend to be developed instead in a mathematical 
+style, effectively `q.programming` in the abstract 
+space of theorems and syllogisms rather than actual 
+compuers.  Each of these methodologies skirt 
+around the potential intermediary tie: 
+concrete computational systems that are 
+designed as exemplifications of semantic, grammmatical, 
+or pragmatic theories, presented as hands-on 
+software to anchor theoretical discussion but also intended 
+as tools to advance the human study of language, rather 
+than as steps toward synthetic avatars. 
 `p`
 
 `p.
 At the same time, there is another side to the story: software 
 implementations offer a focal center for research, something 
 tangible that scholars can experiment and collaborate on.  
+The AI story provides a target goal; it helps developers understand 
+the local, technical code they are working on by 
+connecting it to a larger system.  
 Whatever philosophical objection one may have to AI 
 initiatives, we should recognize the value of 
 expanding academic and institutional practice beyond 
 just writing and reading research papers.  Insofar as 
-part of one's scholarly modus operandican inckuding 
-writingbcomputer code, and studying code 
+part of one's scholarly modus operandi can include 
+writing computer code, and studying code 
 repositories developed by others, we can benefit from a 
-hands-on, even trial-and-error kind of experimentation.  
-Software which can be given concrete tasks %-- if it 
+hands-on, even trial-and-error kind of experimentation.
+`p`
+
+`p. 
+In effect: software which can be given concrete tasks %-- if it 
 does `i.this` properly (whatever `i.this` is), 
 then there is some larger thoretical point that 
 is demonstrated %-- and then, incrementally, evolves 
 to realize those tasks, provides a distinct form 
-of intllectual engagement.  We get `i.that` to work, then 
+of intellectual engagement.  We get `i.that` to work, then 
 `i.that`/, then fix `i.that`/.  This kind of 
 `q.code-and-fix` cycle is quicker than conventional 
 research, especially in the humanities, where the 
 routines of authorship and publication and conferences can 
-seem to unfold in slow motion. 
+feel like they are unfolding in slow motion.  
 `p`
 
 `p.
-Perhaps for this rason, some of the most interesting 
-cogniitive models hacve come from 
+Perhaps for this reason, some of the most interesting 
+cognitive models hacve come from 
 computational and academic environemnts informed by 
 ambitious `q.Artificial General Intelligence` 
 programmes, like Carnegie Melon University's 
@@ -228,6 +298,28 @@ of computational processes and the representation of
 formalized information.  These are important 
 models even outside the Artificial General Intelligence 
 ideology.
+`p`
+
+`p.
+In fact, these are models which in linguistics 
+and phenomenology may deserve more attention 
+than Artificial General Intelligence `i.qua` 
+philosophy.  But we should not discredit the 
+role that Artificial General Intelligence may 
+provide as a kind of intellectual compass helping 
+scholars and engineers reason through the 
+intrestitial machinery which may in fact be 
+more real than the philosophical vision, but 
+also less effective as theoretical `i.vie ferrate`/.  
+Metaphors can triangulate research 
+whereas analogies guide transfers of theories 
+or methods between fields %-- i.e., analogies are 
+more trustworthy landmarks than metaphors 
+for surveying the envisioned future of a science 
+%-- but metaphors can still be intuitive guides; 
+maybe AI and Artificial General Intelligence can 
+stabilize into our overall science and 
+philosophy as a modest but suggestive metaphor.
 `p`
 
 `p.
@@ -247,13 +339,13 @@ linguists such as Zhaohuu Luo or
 James Pustejovsky) as well as formal-language 
 specifications for Software Language 
 Engineering and Requirements Engineering.  
-CSTX allows linguists to consider a type-thoretic 
-reprsentation of linguistic data, or language-as-interface
+CSTX allows linguists to consider a type-theoretic 
+representation of linguistic data, or language-as-interface
 `q.intermediate structures`/, `i.without` presuming 
-that automated (AI or machine-learnin) systems 
-could necessarilr generate Intermeiate Representations 
+that automated (AI/machine-learning) systems 
+could necessarily generate Intermeiate Representations 
 without human intervention.  It is not 
-s `q.practical` software systekbinbthe AI sense of 
+a `q.practical` software system in the AI sense of 
 enabling useful human-like behavior.
 `p`
 
@@ -261,7 +353,7 @@ enabling useful human-like behavior.
 On the other hand, since CSTX `i.also` provides concrete 
 software-development tools, it does have practical uses 
 outside the AI paradigm.  In this sense it 
-perhaps serve sas a case-study in 
+perhaps serves as a case-study in 
 concrete software whose practical 
 dimension spurs hands-on experimentation and decentralized, 
 extra-institutional open-source collaboration, but whose 
@@ -285,7 +377,7 @@ vision of what human mind and society are like.
 `p.
 Sophisticated but philosophically and 
 morally responsible cognitive-computational 
-paradigms ar probably more likely to 
+paradigms are probably more likely to 
 arise from adding formal methodology and 
 open-sourc experimentalism to a 
 fundamentally humanities foundation, rather 
@@ -297,7 +389,7 @@ intellectual: insofar as formal-computational
 models are still rather unfamiliar in 
 humanities contexts, practitioners in a 
 hybrid cognitive-computational-humanities 
-oreintation have a level of autonomy 
+orientation can have a level of autonomy 
 that helps us distinguish sophisticated computational 
 models from simplistic philosophical 
 (and commercial) ideologies.  
