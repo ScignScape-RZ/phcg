@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  4 MAR 2019 10:47
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  4 MAR 2019 11:29
 entering extended mode
 **rightx.ngml.tex
 (C:\scign\phcg\ar\rightx\rightx.ngml.tex
@@ -914,28 +914,23 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 386.
  [18] [19] [20] [21]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 885.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 957.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 885.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 957.
  [22])
 (C:\scign\phcg\ar\rightx\section3.ngml.tex
-Overfull \hbox (6.29494pt too wide) in paragraph at lines 1--1
- |[][]| 
- []
-
-
 Overfull \hbox (26.7914pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
  []
 
-
+[23]
 Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
  []
 
-[23] [24] [25]) (C:\scign\phcg\ar\rightx\section3a.ngml.tex [26] [27] [28]
-[29]) (C:\scign\phcg\ar\rightx\section3b.ngml.tex [30] [31] [32] [33] [34])
-(C:\scign\phcg\ar\rightx\section4.ngml.tex
+[24] [25]) (C:\scign\phcg\ar\rightx\section3a.ngml.tex [26] [27] [28] [29])
+(C:\scign\phcg\ar\rightx\section3b.ngml.tex [30] [31] [32] [33] [34])
+(C:\scign\phcg\ar\rightx\section4.ngml.tex [35]
 Overfull \hbox (40.10269pt too wide) in paragraph at lines 1--1
  |[][]| 
  []
@@ -950,7 +945,7 @@ Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
  []
 
-[35] [36]
+[36]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 193.
 
@@ -964,7 +959,7 @@ LaTeX Warning: Citation `MattSelway' on page 40 undefined on input line 574.
 
 LaTeX Warning: Citation `SmithDonnely' on page 40 undefined on input line 574.
 
-) (C:\scign\phcg\ar\rightx\conclusion.ngml.tex
+) (C:\scign\phcg\ar\rightx\conclusion.ngml.tex [40]
 Overfull \hbox (26.7914pt too wide) in paragraph at lines 1--1
 [] [][][][][][]
  []
@@ -975,14 +970,14 @@ Overfull \hbox (27.99997pt too wide) in paragraph at lines 1--1
  []
 
 
-LaTeX Warning: Citation `AntonioLieto' on page 40 undefined on input line 24.
+LaTeX Warning: Citation `AntonioLieto' on page 41 undefined on input line 24.
 
-[40] [41] [42]
+[41] [42]
 
 LaTeX Warning: Citation `CyberphysicalSystems' on page 43 undefined on input li
 ne 314.
 
-) [43] (C:\scign\phcg\ar\rightx\rightx.ngml.aux)
+[43]) [44] (C:\scign\phcg\ar\rightx\rightx.ngml.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -991,11 +986,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18084 strings out of 494049
- 349378 string characters out of 3146069
+ 18081 strings out of 494049
+ 349348 string characters out of 3146069
  450733 words of memory out of 3000000
  20607 multiletter control sequences out of 15000+200000
- 89709 words of font info for 322 fonts, out of 3000000 for 9000
+ 89484 words of font info for 320 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  60i,8n,67p,791b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{
@@ -1009,9 +1004,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Program Files
 .9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on rightx.ngml.pdf (43 pages, 343341 bytes).
+Output written on rightx.ngml.pdf (44 pages, 347732 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
+ 186 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  39437 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -597,13 +597,12 @@ clarity is not identical to logical clarity.
 \p{This pattern of logical evasiveness might seem to be 
 endemic only to slippery human language, but analogous 
 examples can be found even in the strict milieu of 
-computer programming.  I will discuss this further below.  
-But the gist of my analysis will be that computer 
+computer programming.  Computer 
 programming involves passing instructions around, and 
 that any one segment of code is typically dealing with 
 incomplete information, like the bodyguard who 
 does not know \i{why} Jones is unavailable.  
-Given such partiality, it is mislading 
+Given such partiality, it is misleading 
 to assume that \i{instruction networks} are 
 conduits for logical content pe se.  My first 
 rsponsibility as a programmer, at any point in code, 
@@ -660,6 +659,80 @@ logical axiomatics.  The analogy is again that
 Biology is not a Chemistry \i{even if} Biological 
 models have a reductive analysis as chemical models. 
 }
+\p{Suppose I am writing a function which counts the 
+number of non-blank, non-comment 
+lines in a file.  My implementation might start like this 
+(in pseudo-code):
+\begin{sentenceList}\sentenceItem{} File f = File.open(path, File.READ\_ONLY);
+\sentenceItem{} if f.isEmpty() return 0;
+\end{sentenceList}
+So the first line tries to open a file with the 
+specified path, and the second line checks if the file 
+is indeed open and non-empty.  If not, it returns the 
+number zero, meaning that there are no non-blank non-comment 
+lines in the file.
+}
+\p{In a typical application framework a file will be 
+opened if it exists and if the current user has permission 
+to read and/or write to/from the file (here the necessary 
+permission is read-only).  For sake of presentation 
+I assume that a file is considered non-empty 
+only if it is open and has some content (i.e., you 
+can read something from the file).  So if 
+the file \i{is} empty, that can mean several things: 
+either it does not exist; or it cannot be opened because 
+of inadequate permissions; or it \i{can} be 
+opened but has no content.  My function is 
+noncommital and returns zero in each of these cases.  
+In particular, I gloss over some information: 
+the zero return value is analogous to Mr. Jones 
+being \q{unavailable} for an interview.  
+}
+\p{On this basis, it seems as if the \q{meaning} of my 
+call to open the file is not a matter of 
+ascertaining or bringing about certain truth 
+conditions.  It is true that my instruction 
+may bring about certain truths (specifically, make it true 
+that the file is open).  But we should 
+not conclude that this potential state of affairs is 
+what the instruction \i{means}.  As the programmer, I 
+do not \q{want} the file to be opened; I have no 
+vested interest (this is not like my wanting milk 
+for coffee or to open a beer bottle).  Instead, 
+I am an intermediary between application-users and 
+the system kernel: my role is translate what \i{users} 
+want into system instructions.  Granted, presumably the 
+\i{user} wants the file she's interested in to be opened 
+(as an intermediate step toward getting information 
+from that file).  But what I contribite as 
+code are \i{instructions}, and instructions have 
+an effect on the state of the overall computational 
+environment where my application is hosted.  
+In the general case I am not aware of which 
+new state obtains.  Attempting to open a file 
+may cause it to be opened, but it may also 
+cause the software reprsentation of that 
+file \mdash{} a so-called \q{handle} \mdash{} to acquire a flag 
+indicating that the referenced file does not exist 
+(i.e., its path descrribes a nonexistent location), 
+or that it does exist but cannot be opened due to 
+insufficient permission, or that the permissions 
+are satisfactory but there is a temporary lock 
+from another application writing to the file.  
+If needed I could attempt to ascertain the file's state 
+at this level of detail, but it turns out to be 
+irrelevant to my own algorithm.  In short, 
+insofar as the \q{meaning} of computer code are the 
+instructions it emits, these meanings correspond 
+to state-changes only in coarse-grained ways.  
+There may be propositional content associated to each possible 
+state \mdash{} there are propositions that 
+the file is open, or nonxistent, or inaccessible, 
+or temporarily locked \mdash{} but the code does not engage 
+the question of \i{which} proposition is 
+(or becomes) true.     
+}
+\subsection{Meanings and State-Change}
 \p{Underlying both these formal and natural 
 language examples is the idea that the meanings 
 of expressions are associated with changes of 
@@ -679,7 +752,7 @@ corresponding proposition to the effect that something
 now in state \Stwo{} whereas it was before in \Sone{}.  
 And even if an instruction/request cannot be fulfilled, there 
 is the concordant proposition that something is 
-still in \Sone{} can can \i{not} be brought into 
+still in \Sone{} and can \i{not} be brought into 
 \Stwo{}.  So it is trivial to read logical structures 
 onto linguistic evetualities, by leveraging 
 the idea that for any conceivable 
@@ -708,8 +781,8 @@ has some formulaic translation into truth-thoretic terms
 does not guarantee that truth-theoretic intuitions 
 actually play an important role in that other theory.  
 }
-\p{Just to give a concrete example, I have mentioned Zhaohui Luo's 
-type-theoretic semantics in a couple contexts here.  I think 
+\p{To give a concrete example, I have mentioned Zhaohui Luo's 
+type-theoretic semantics in a couple of contexts here.  I think 
 Luo's models are convincing and important, but I also 
 (for what it's worth) have a slight metatheoretical 
 objection, which is that Luo's type theory is 
@@ -755,7 +828,7 @@ linguistic processing are embodied in whatever
 neurological substrata realize cognitive dynamics in general.  
 A type-theoretic semantics would accordingly conceive 
 that there is an architecture of types which we can attach 
-to units of a neurologiclaly realizable cognitive system 
+to units of a neurologically realizable cognitive system 
 \mdash{} analogous to how \Cpp{} assigns types to values 
 digitally realized in binary data structures (in practice, 
 byte-sequences).  Type theory is not a theory of the 
@@ -772,7 +845,6 @@ each theory is intermediary between others.  In that metascientific
 sense, as I intimated earlier, completeness 
 is \i{not} a merit if it isolates a theory from 
 other theories which ontologically complete it.
-  
 }
 \p{For truth-theoretic intuitions to be legitimately 
 consequential toward a semantic theory, we need to 
@@ -916,11 +988,11 @@ the content from the proposition.  This is not circular
 because the content is not \i{immediately} extracted from 
 the monad.  In (), the content wrapped in 
 \POne{} is held through several processing steps before yielding 
-the final interpretation (vi., that he wants the Jets to lose).  
+the final interpretation (viz., that he wants the Jets to lose).  
 The final extraction corresponds to transforming 
 \q{He wants the proposition that the Jets lose to be false} 
 to \q{He wants the Jets to lose}.  Stated side-by-side, 
-this transform is redunant.  The difference is that 
+this transform is redundant.  The difference is that 
 here the original proposition \Ptwo{} is not 
 directly asserted as a linguistic meaning; it rather  
 falls out of a logical process.  
