@@ -1,0 +1,178 @@
+
+\documentclass[12pt]{article}
+
+`include<commands>;
+
+`document,
+
+`rztitle.Cognitive State Semantics and the Condition of the Sign`
+
+\rzauthor{\[Name Witheld\]}{,}{[Affiliation Witheld]}
+
+`abstract,
+\noindent What are transcendental Conditions of Possibility for 
+linguistics and semiotics to exist, the Ontology of the sign 
+itself %-- how that spoken, written, or inscribed mark differs from any other kind 
+of being, so that it brings language into the world?  Language is a regime 
+of multiple conversation partners, an ambient surrounding where they 
+share actions, perceptions, and foci of attention, and a common posit of structured rules.  
+If communication is successful, each sign's referent is 
+isolated, collectively/phenomenologically, from a (canonically spatiotemporal) reality 
+that extends beyond it.  I will review formal ideas 
+(drawn, especially, from variants of Type Theory and Lambda Calculus) that 
+sketch this process, but keeping in sight a cognitive nuance and intersubjectivity that is 
+(thankfully) an essential, unavoidable part of human language. 
+Concluding, I propose both cases for and limits on formal theories' 
+applicability for Cognitive Linguistics/Humanities/Phenomenology, through the lens of the 
+Philosophy of Science %-- 
+arguing how Phenomenology and Cognitive Linguistics, while distinct traditions, can work powerfully in consort.
+`abstract`
+`input<top-quotes>;
+
+`vspace<1em>;
+
+`p.
+A sign demands an individuation %-- a criteriology, for anyone addressed and solicited by each sign, 
+to recognize and isolate it as such.  Signs, and their referents, 
+need an isolating, from the world around (and one another), 
+or they are not signs.  In extreme cases a sign may 
+stand alone, like the smoke fire telling a hiker's location; but by norm, 
+embedded in discourse and performance, signs require (and carry with them, internally) 
+understood inter-boundaries.  Both the recognition and the interpretation of signs therefore 
+implicates cognition-logics of part/whole (mereology), and (dis/)continuity, 
+each sign/referent disconnected in some ways, and continuous in others, 
+with larger wholes inside which they are semi-autonomous parts.
+`p`  
+
+`p.
+Ad-hoc signs can blur the boundaries 
+between conventionalized languages (verbal or not) and more impromptu social interactions 
+%-- the smoke fire is in part a conventional distress signal and in part a tool, an 
+engineered natural phenomenon designed with intended effect, like causing rescuers to see it.  
+The distress fire is also in a sense its own referent: its function as a sign is to call attention 
+to itself, and so its location.  Or, choosing to write on one's own body 
+%-- like Hamas commander Mahmoud Ishtiwi, betrayed and killed by his own movement, carving 
+into his leg the word `q.zulum` (`q.wronged`/) %-- is expression spreading beyond the  
+conventions of words; the signs are made to signify the conditions of their execution.
+These rather dramatic examples are more the provenance of semiotics than 
+linguistics.  But people in ordinary verbal communication equally rely on a mixture of 
+linguistic and other signs %-- we point, make gestures, use `q.body language` and tone of voice.  
+When conversation turns to some topic, like `q.that building over there`/, such cues help 
+speakers synchronize their attentions.  Tone and gestures clarify sentiment (honest, joking, sarcastic, anger) 
+that may be ambiguous in spoken words alone, taken `q.out of context`/.  
+The weight of linguistic meaning is 
+borne by semantics and pragmatics in fusion.  
+
+Semantics has both formal and informal dimensions 
+%-- linking first to cognitive schema, or (as I will argue) prototypes of how 
+schema are triggered; and second to pragmatics and contexts.
+Conventionalized in semantic norms, schema, part abstract and part cognitive, 
+help prime language users to manipulate formal structures 
+in language, relative to the situational aether.  (Dis/)continuity in the plane of reference 
+brings consciousness to a mereo-logic `cite<KitFine>;, `cite<BarrySmith>; that language-cognition 
+can then reshape into syntax and semantics `cite<BittnerSmithDonnelly>;.  
+Semantic layers are abstract tools, but 
+they offer a tableau of forms and combinations which users adapt, concretely, to each context.  
+The deep potential of language, I believe, comes from the perpetual combination of the formal/abstract 
+and the concrete/phenomenological.  
+`p`
+
+`p.
+For signs, the largest whole is a 
+`q.plane` of articulation; for referents, it is an overall phenomenological surround; or, 
+for more abstract signifieds, a space of concepts.  Like a footprint, whose very existence 
+depends on both material continuity and visual break, for each sign there must be a blend of 
+continuity and discontinuity, both around 
+the sign and its referent.  Attending to a mereologically ordered world, 
+we need innate theories warranting criteria for seeing things as both individuals 
+and as causally/behaviorally constrained by and from a whole.  These criteria 
+include structural consideration of the whole, and it is often in structural terms that 
+the blend of autonomy and linkage for each part is realized.  Attunement to structured organization 
+therefore warrants the perceptual and mental isolation of particular foci of attention 
+`cite<WiegandMereology>;, `cite<WiegandGestalts>;. 
+`p`
+
+`p.
+As this plays out on planes of articulation alongside general situational awareness, the 
+structures of discourse %-- its division into distinct signs and their structural 
+interrelationships %-- and that of patterns we identify in our surroundings, that 
+provide a context of discourse, play off one another.  Grammar does not iconify 
+interrelationships among referents %-- unlike  diagrams, maps, scientific simulations, 
+or scale models %-- but it ensures communicators may create structures among words that 
+suggest, in each others' minds, concordant patterns in the environing world/situation.  
+Even where there is direct sensory and perceptual evidence 
+for objects' individuation and intercontinuity, visually and experientially present 
+(which of course is only one kind of talk and reference), our preparedness to focus 
+attention here or there depends on mental models of situations which are 
+more abstract and schematic, and receptive to functional and interpersonal 
+details.  The objects around us are not just blobs of matter, but usually 
+have a constructed purpose, socially sanctioned 
+meaning, nostalgic weight, and other significance that cannot be grasped by perception alone.
+`p`
+
+`p.
+A central theme in Cognitive Linguistics is that language meaning depends on situational 
+understanding, and by extension on mental schema of spatial, temporal, and functional 
+organization %-- not only how environments are arranged, but how they are causally 
+and physically determined `cite<Pinker>;, `cite<Talmy>;.  The difference between `i.pour water` and `i.spill water`/, 
+for example, is the person's deliberate intentions in relation to natural forces and 
+tendencies (such as that of water to fall downward).  To `q.apply paint` to something, 
+compared with to `q.cover` with paint, suggests different spatial configurations; to 
+`i.fill a glass with water`/, versus `i.pour water into` the glass, suggests both 
+different spatial details and maybe rationale as well.  These are differences in 
+emphasis, not necessarily in actuality: those pairs of alternatives could describe 
+identical state of affairs. \hspace{-2pt} But they direct conversants' attention in different ways, they 
+choose one or another part of a scene as a reference frame, and suggest 
+different `q.takes`/.  These are driven by `i.semantic` variations 
+%-- the choice of verbs like `i.pour` versus `i.fill`/, `i.pour` versus `i.spill`/, 
+or `i.apply` versus `i.cover`/.  But semantic and syntactic rules work in federation, 
+relative to context: for example, different verbs take different prepositions in different 
+situations.  Pour `i.into` vs. fill `i.with`/.  To join `q.pour` 
+with `i.with` places emphasis elsewhere %-- onto the device which enables the 
+pourer to do the pouring.  So the grammatic and semantic norms of a language 
+jointly offer a terrain of options from which speakers assemble combinations 
+invoking those aspects of situations that they wish to emphasize. 
+`p`
+
+`p.
+In short, grammar is language's substitute for `i.visual` or `i.physical` resemblance-to-structure.  
+Take Ronald Langacker's `q.landmark`//`q.trajector` model as an example: one (very general) 
+manner of spatial gestalt, subject to either intuitive, reflective analysis or to formalization 
+(`cite<BergenChang>;, `cite<VisettiCadiot>;).
+`q.That boat crossing the lake`/: `i.boat` (trajector) 
+perceived against `i.lake` (landmark), which provides context; together they 
+produce a mental model; a figured spatial relationship.  This is 
+communicated, not by visual or kinaesthetic effect,`footnote.
+At least in prose %-- poetry, which can bring back a semiotics of raw visual layout and auditory effect, is an 
+exception that proves the rule.
+`footnote` but by the more abstract effects of intentions signaled, 
+via both exact words (`q.crossing` paints a different picture than would `i.across`/, `i.on`/, `i.by`/; 
+still more so, `i.at the bottom of`/), and morphosyntactic tropes 
+(like the form `XRelY;; where `q.`Rel;` here means one from many spatial relations, taking 
+`i.trajector` to the left and `i.landmark` to the right).  `i.Landmark` and `i.trajector` are anchors around which 
+both syntactic and semantic selections are organized.
+`p`
+
+`p.
+Language needs both abstract laws and cognitively-mediated construals of ambient situations.  
+The abstract laws are shaped by the situations, not directly %-- it is that extra 
+indirection which cleaves language from other sign systems %-- 
+but derivatively: language rules are optimized for conversants to 
+mold linguistic possibilities into selection-spaces, which then become 
+raw materials for representations of 
+situational context.  Each choice of word and form adds a piece to 
+a representational complex, and the sum of those pieces %-- be this a sentence, 
+a conversation turn, or an entire discourse %-- is a language act that hews 
+to the structure of a situation, as the speaker wants to emphasize it.  
+Here I take this perspective as pregiven: not as a perfected or homogenous theory, 
+but as a working hypothesis on the origins of linguistic structuration as 
+such.  The scope of this paper is then to analyze its ramifications for our understanding 
+of grammar and formal semantics.
+`p`
+
+`input<section1.ngml>;
+`input<section2.ngml>;
+`input<section3.ngml>;
+`input<biblio>;
+
+`document`

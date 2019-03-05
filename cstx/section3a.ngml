@@ -1,0 +1,502 @@
+
+`spsubsectiontwoline.The co-framing system and the doxa system`
+`p.
+It may be argued that a `q.change-initiation` semantic 
+theory such as I have laid out is, in fact, circular.  The 
+meaning of my assertion that this wine is Cabernet Franc 
+is, by that theory, the change that occurs in your 
+cognitive frame as and if you trust my claim.  But presumably the 
+only reason you do this is because you understand my 
+enunciation as presenting some proposition, which you can 
+accept to be true.  In order for my language to update 
+your beliefs (or indeed to fail to do so, 
+if you doubt me), you have to entertain 
+propositional attitudes to the content of my 
+language.  Indeed, your propositional attitudes have to 
+structurally integrate with mine: I am evoking that 
+wine's being Cabernet Franc as an assertion and 
+not a question or request.  So you have to identify 
+my attitude to some proposition and on that basis 
+formulate your own attitude to the same proposition.  
+This can only work if my language signifies some 
+proposition %-- so why can't we call 
+that proposition the `q.meaning` of my 
+utterance, rather than the effect which my declaring 
+said proposition in some attitudinal package has on you?  
+`p`
+
+`p.
+The rationale for this challenge would seem to be 
+that propositional content does not belong exclusively 
+to one or another person, or even to the participants 
+in a conversation.  Sure, many referential and conceptual 
+details `i.are` context-specific.  But our joint 
+process of cognitive framing seems intended to 
+align our respective frames so that a genuine propositional 
+content can emerge %-- as we resolve all pronouns, follow all 
+anaphora, and agree on all conceptual roles.  Hence 
+from `q.that wine is Cabernat Franc` we can arrive at a 
+content that thematizes the viniferous 
+properties of some particular liquid.  Our interpersonal 
+negotiations may be required to converge our attention on 
+`i.that particular` liquid, but %-- once we are there %-- the fact of 
+its being Cabernat Franc (and any other culinary, chemical, physical) 
+properties is independent of our collective and individaul 
+framing.
+`p`
+
+`p.
+That is, there is a nugget of propositional content that can be 
+designated in a context-neutral way.  That content is 
+expressed `i.in conversation` using `q.locally significant` 
+terms, for convenience, but those details of `i.naming` 
+the proposition involved are arguably tangential to 
+the proposition itself.  We can, for sake of discussion, 
+imagine a more neutral naming: imagine we could give 
+GPS coordinates for one glass at one stretch of time 
+and thereby refer to the wine in the glass thereby located 
+(call it W) and declare that W is Cabernet Franc.  
+(Meanwhile, let's agree that the concept `q.Cabernet Franc` refers 
+to a wine with a specific genetic profile %-- some property 
+`q.CF` %-- i.e., `i.being CF` is an unambiguous biological 
+property that exists outside of any branding or vinological 
+contingencies).  It would 
+seem as if my linguistic performance in terms like 
+`q.that wine is Cabernet Franc` works because you 
+recognize me to be claiming `q.W is CF`/.  
+And the only obvious way that can happen is if what 
+I say somehow `i.means` `q.W is CF`/.
+`p`
+
+`p.
+Here I am recognizing the intuition that the effect 
+which an asserting act has on addrssees is (skepticism 
+aside) to accept the asserted content as true.  The 
+intuition seems to be that the assertion is posed in the guise 
+of something whose truth is independent of the effect it 
+has on the addressee %-- it's not as if you `i.make` it true by 
+aggreeing to it.  An implicit assumpion is that any competent 
+person would also deem it true %-- a sommelier and a chemist 
+would confirm that W is, yes, CF.  So the idea 
+that meanings are propositional content %-- motivated by the 
+intuition that assertorial effects depend on all parties' 
+grasping a propositional content that can be lifted outside 
+the immediate context %-- seems driven by 
+the idea that parties `i.outside` the conversation would 
+be equally disposed to view the assertions as truthful.
+`p`
+
+`p.
+There is, of course, vagueness and context-sensitivity in 
+language.  But that does not preclude massaging linguistic 
+content to reduce or eliminate those contingencies %-- as if 
+there is some subset of linguistic expression that has a basically 
+pristine referential structure, one which allows a 
+certain mathematical precision at least in the areas of 
+designating natural kinds (and designating physical objects via 
+spacetime regions).  So, `q.W is CF`/, involving only 
+globally meaningful spatiotemporal and genetic designations, 
+would be an example of such `q.pristine` language.  
+And while people do not actually `i.talk` in that kind 
+of language, we can argue that when our cognitive 
+frames are correctly aligned, we communicate `i.as if` 
+we were using pristine language.
+`p`
+
+`p.
+The implication 
+of this possibility is that semantics may indeed 
+be logically transparent: the contextual complexities 
+evident in surface-level language are biproducts of 
+our cognitive autonomy, instead of intrinsic to language.  
+They are facets of the minds which are the `i.vehicles` 
+for language, and so from the perspective of linguistics 
+proper they are `q.implementation details` rather 
+than theoretical problems.  That is, we need to exert conscious 
+effort to synchronize our attentional foci and 
+conceptual mappings with others', given the private nature 
+of our perceptual observations and `q.inner thoughts`/:   
+this is why we have both linguistic and extralinguistic 
+signifiers of perceptual frame (`q.this`/, `q.that`/, 
+`q.there`/, `q.last summer`/, pointing), and a social 
+infrastructure to conventionalize lexical and natural-kind 
+meanings (why, for instance, usage like `q.corn sugar` is 
+regulated, not only even by convention, but 
+sometimes by law).  But `i.above and beyond that` we have semantic 
+faculties that trade in propositional contents once 
+we have achieved a proper alignment with our conversational 
+peers.  The `q.alignmnt process` may itself involves language, 
+but language in a different register, meta-discursive 
+more than semantic.  Linguistics proper, some can argue, 
+prioritizes the study of communication `i.after` alignment.
+`p`
+
+`p.
+One way to describe this is to posit that what we 
+call `q.language` is really two different 
+systems: one that effectuates frame-alignment to 
+compensate for the `q.centrifugal` force of cognitive 
+autonomy, and a different architecture for 
+signifying activity in the context 
+of neatly aligned cognitive frames.  For convenience 
+%-- to avoid debating whether this distinction merely 
+reciprocates, say, prgamatics vs. semantics %--  
+let's call this the `q.coframing` system and the 
+`q.doxa` system.  We could 
+also guess that the hard part of AI-driven 
+Natural Language Processing is the co-framing 
+system; the `q.doxa` system has enough logical 
+polish that computers can play the game as 
+well as people.  A robot in a testing room could geolocate some glass, 
+take a sample to a DNA analyzer, test its profile against 
+a database of cultivars, and conclude that `q.W is CF`/.  
+Sure, we need human ingenuity to communicate effectively 
+in the `i.absence` of `q.context-stripping` possibilities: 
+we do not talk in terms of GPS coordinates and 
+laboratory-testable property-ascriptions.  
+But how do we deny that our context-dense language is 
+possible only because there is a logical kernel that 
+`i.could`/, in principle, be solicited in 
+context-neutral terms?  
+`p`
+
+`p.
+If I say that `q.the meaning of `i.this wine is Cabernet Franc` is 
+its side-effect` %-- how it initiates a procss whose telos 
+is your believing `i.W is CF` %-- I can be accused of circularity 
+because I seem to presume what needs to be explained: that 
+my language contains within it a signification 
+of `i.W is CF` as propositional content.  On that objection, 
+if my language did not carry that 
+content, it would not cause the desired effect. 
+And if it `i.does` carry that content, this given would 
+seem logically prior to the side-effect, since the side-effect 
+can happen only because of the carried content.  Ergo, apparently, 
+the `i.real` meaning is the content, not the side effect 
+(or the process or initiation of the process 
+that has the side-effect).
+`p`
+
+`p.
+My rejoinder to this objection is an line of argument that 
+starts by observing the conceptualization whereby the objection can 
+be articulated.  Specifically, to formulate the objection, 
+I have tried to imagine a competent 
+language-understander who responds to `q.pure` or de-contextualized 
+propositional content.  My specific example was a robot who tests 
+a wine sample to confirm `i.W is CF`/.  In the robot's computational 
+capabilities, language only exists as logical structures: spacetime 
+references are defined as geolocations and timestamps; adjectival 
+qualities are defined as scientific properties computable 
+in the relevant metrics (a genetic profile, a 
+chemical signature, etc.).  We can imagine a cohort 
+of intelligent robots listening in on our conversations and 
+translating from our human context-sensitive language to 
+their computable context-stripped representations.  By this 
+thought experiment we can %-- or we can contemplate 
+that we can %-- imagine robots for whom language communicates 
+propositional content directly.  We can imagine sentences 
+`q.naming` propositions the same way that first and last names 
+identify people.
+`p`
+
+`p.
+But is that what is happening?  If the robot wants to 
+confirm `i.W is CF` it has to effectuate certain actions: roll 
+to the right place, take the wine sample, 
+test it, match the rsults to a database.  And even if 
+the robot taks our ascriptions on faith %-- maybe it has a database 
+that matches glasses to both GPS locations and wine styles, 
+to record facts like `q.this glass has Cabernet Franc` %-- 
+responding to my assertion still involves some 
+activity (updating the database).  So even though 
+we have attributed power to the robot to traffic 
+in logically pure expressions of propositional content, 
+we have not shown that the robot lies outside the side-effect 
+cycles of language. 
+`p`
+
+`p.
+Let's suppose that there is indeed a `q.doxa` system within 
+language, so there is a space of logically pristine meanings 
+conveyed via language.  As I proposed earlier, a `q.doxa` inventory 
+%-- a set of provisional beliefs %-- forms part of each 
+cognitive frame.  When our language-processing faculties 
+encounter linguistic artifacts which express %-- or within the 
+context of suitably constructed cognitive 
+frames can be translated to %-- the `q.doxa system`/, 
+we respond to those stimuli by (evaluating and then, 
+often) adding the `q.signified doxa` to the `q.doxa inventory`/.  
+But this is still a side-effect: the logical structure 
+of the doxa has a role to play in this overall process, 
+but this is far from authorizing us to 
+reify the doxa as the philosophical core 
+of linguistic meaning overall. 
+`p`
+
+`p.
+To put it differently, th claim of circularity that I acknowledged 
+is itself circular.  Yes, a side-effect due to newly 
+believing `Pprop; would seem to depend on  `Pprop; being expressed 
+as propositional content by any act initiating the side-effect.  
+And `Pprop; is a propositional content that can inspire 
+belief-change side-effects because it has the form of a 
+trans-personal articulation: any reasonable person 
+(even a robot) should accept it.  The circularity 
+here is that the `q.work` is done by `Pprop;, not by the 
+side-effect per se.  But in order to theoretically 
+posit `Pprop; outside the side-effect, we have to posit a kind 
+of decontextualized rational community: `Pprop; is 
+logically distinct from the side effect because other people 
+and robots should engage it too.  But their getting thus 
+engaged is also `i.for them` a side-effect: to believe or 
+test `Pprop; the robot has to perform certain acts %-- i.e., 
+whatever software runs its language-comprehension modules 
+has to call some function than run its database and/or 
+motor-location modules.  The enunication of `q.that wine is 
+Cabernet Franc` is still `i.initiating a process`/.
+`p`
+
+`p.
+Insofar as my assertive speech-acts are rationally performed, 
+their side-effects on `i.one` addressee should resemble 
+their side-effects on others, including other hypothetical or potential 
+addressees (even robots).  There is clearly then a kind 
+of `q.publicness` or `q.communalization` of side-effects, 
+and language seems logical if we get the impression that 
+its effects on different listeners will be mostly the same.  
+If there is circularity here, it seems to go two ways: 
+arguably, side-effects can be similar because there is 
+a logical nexus in language that fixes content
+across minds.  Surely `q.Sanders is a presidential candidate` 
+(stated as a simple fact, without polarity) evokes 
+similar effects because it is objectively true (he has 
+formally declared he's running).  So language can guarantee 
+effect-similarity because it has the resources 
+%-- sometimes albeit not always utilized %-- to formulate 
+assertions that are relatively transparent, logically 
+(of course, it can also produce provocations like 
+`q.Sanders is a terrible presidential candidate` or 
+`q.Sanders is an unelectable presidential candidate`/).
+`p`
+
+`p.  
+So communality of side-effects depends on 
+(sometimes, potential) logicality of language.  But 
+conversely, it is hard to define the logicality of 
+language without pointing out that logically 
+transparent language (like `q.Sanders is running`/) 
+evokes different kides of side effects than polarizing 
+language (like `q.Sanders is unelectable`/).  
+After all, the effect of some logically transparent 
+enunciation is to introduce some propositional 
+content into a public arena.  But communication 
+only happens when the content thereby publicized 
+is considered and maybe deemed true, which 
+requires certain cognitive processes in a community of addressees.  
+The logical content of language only `q.exists` insofar 
+as logically reasonable utterances trigger 
+logically guided cognitive operations.
+`p`
+
+`p.
+Even if we accept that linguistic expressions can 
+signify propositional content, this does not mean 
+that a sentence is like a djinn which conjures 
+propositions into material form.  Logical structures 
+do not float around like snowflakes: if they exist, they 
+do so as regulatory structures or specifications 
+guiding the behavior or implementation of 
+physically realized, dynamically changable systems.  A 
+computing platform can exemplify a Typed Lambda Calculus 
+or Adjoint Tensor Logic or Modal Process Algebra by 
+`i.implementing` such a system, but this 
+does not mean a software artifact can `i.be` a 
+logical system (or even can be a `i.token` of a 
+logical system).  But the implementation of the 
+system establishes an Ontological gap between the 
+system as abstract Category and its physical realization.
+`p`
+
+`p.
+Let's say, for sake of argument, that someone develops a `Cpp; 
+Functional-Reactive Programming 
+library (a not-too-ambitious enhancement of existing software) 
+which fully realizes Jennifer Paykin's version of Tensor Algebra.  
+It would be entirely possible for most (even expert) 
+`Cpp; programmers to use that library without understanding or 
+even being aware that their code was embodying some logical 
+structure, separate and apart from the system 
+of side-effects and function-calls that they orchestrate.  
+Similarly, developers can create `Cpp; types that are functionally 
+identical to Haskell monads, without being aware of 
+the monadic logic thereby exmplified.  To say that 
+logical systems are implemented in software is to say that 
+the totality of all function-calls %-- both actually 
+observed at runtime and theoretically possible for 
+any run of a program %-- span an 
+abstract space that is fully and adequately specified by 
+the logic.  So we can say that a signal-slot connection 
+causing some function-pointer to be followed represents the 
+concrete manifestation of an abstract `q.temporal-monadic 
+modality`/.  This means that the pattern of signal-slot 
+connections does and will always conform to regulations 
+that can be modeled via Adjoint Tensor Logic.  It also means 
+that this coformance is a result of deliberate design 
+%-- the logic exerts a normative effect on the 
+software; it is not just a pattern retroactively discoverable 
+in observed function-calls.  But 
+what actually exists are the function-calls themselves, and 
+there are many ways to comport to them without 
+considering or being aware of the logic (we can enumerate 
+function calls as a debugger trace, or study them in 
+conventional `Cpp; terms without the added logical 
+details).  The logic is manifest as a regulatory and emergent 
+pattern and influence, but is also only one facet of 
+the full ontological status of the vehicles (e.g., function-calls) 
+wherein the logic is realized.
+`p`
+
+`p.
+Insofar as Natural Language is logical, I would argue that its logic 
+is manifest analogously: it is realized in the pattern 
+of whatever cognitively corresponds to `q.function calls`/; 
+e.g., the tendency of external (linguistic 
+and otherwise) stimuli to trigger cognitive processes.  
+`p`
+
+`p.
+My point in this argument is not that linguistic abstraction is 
+wrong: after all, linguistics is not neuroscience, 
+and the theoretical arsenal of linguistics can rightly 
+neglect to target such topics as the neurophysical 
+encoding of linguistic processes.  I can accept some 
+form of truth-theoretical semantics if it provides 
+a broad abstract description of linguistic processes 
+that can be `q.handed off` to other disciplines, 
+like psycholinguistics and language-acquisition studies.  
+This would be a reasonable `q.division of labor` 
+if we believed that at the `i.abstract` level 
+language is really about propositional content, 
+and that notions like `q.message passing between 
+processing units` are attempts to introduce 
+theoretical concepts at the `q.realization` 
+level.  That is, something like truth-theoretical semantics 
+would be apropos if the `i.abstract` formulation was mostly 
+logical, even if some formally rigorous (but not in a 
+manner amenable to symbolic logic) model was a 
+better paradigm for studying the `i.concrete` implementation 
+of the logical architecture. 
+`p`
+
+`p.
+However, the de facto assumption that `q.everything abstract is logic`/,  
+and that any sub-logical details are the tangential impurities 
+of concreteness itself, is a prejudice that isn't borne out even 
+in highly formal milieus.  For example, the digital 
+encoding of typed values are a concrete detail counterposed 
+to the mathematical abstractions of type thory, but 
+it's not as if there is a single line between `q.abstract` types 
+and `q.concrete` binary-electrical codes.  Programming language
+theory recognizes digital encoding as byte-sequences, and so 
+for any typed value there is a mapping of 
+that value to a string of base-256 integers (the 
+value in runtime computer memory).  Moreover, any string 
+of base-256 integers can potentially be interpreted as a 
+typed value (for example, by derefencing a 
+non-correctly-initialized pointer).  These are still 
+abstract posits: it requires some abstraction to model electrical 
+signals in disk drives or CPU  registers as `q.base-256 integers`/.  
+However, this represents a layer of abstraction which 
+stands between the more `q.mathematical` abstractions of 
+formal type theory and the bare metal of computer hardware.
+`p`
+
+`p.  
+One feature of this `q.intermediary` abstraction is that 
+the abstract posits are more likely to be mathematically 
+opaque.  In functional programming, for example, we can 
+associate each type 
+with an algorithm that can construct every element 
+of that type, and also often run that construction 
+`q.backward` to analyze properties of type-instances 
+(which is called `q.pattern matching`/).  
+The canonical example is a list: any list of size 
+$n$ can be derived from a list of size $n-1$ by 
+adding one element to the end of the list.  Starting 
+from an empty list we can therefore build any 
+arbitrary list by a sequence of these `q.constructors`/.  
+Working in the reverse direction, we can then calculate 
+values %-- such as, the largest element in the 
+list %-- by calling a function on every 
+smaller list in the `q.chain` of constructors: 
+the largest value is the maximum of 
+the `i.last` value and the largest value of 
+the `q.predecessor` list wherein that last 
+value is not appended; the largest value of 
+the predecessor is the maximum of `i.its` last 
+value and the largest value of `i.its` 
+predecessor, and so on.  The recursive structure here 
+is directly tied to the arithmetic encoding (influential 
+in early analytic philosophy) wherein the number 
+$1$ is the successor to $0$, $2$ is the successor to $1$, etc.  
+This gives numbers a logical form rather than 
+leaving them as a kind of prelogical Platonic given.  
+The analogous formulation in type theory is that any type 
+is isomorphic to the set of algorithms which generate 
+each of its values %-- for instance, every list 
+can be associated with the algorithm which builds 
+the list iteratively, starting from 
+the empty list.  This introduces a logical structure 
+on types amenable to logical analysis %-- we can 
+prove properties about functions on types 
+by analyzing how those functions operate on 
+values given the specific construction-chain that 
+produce them.  Continuing the example, I can 
+prove something about my implementation of a 
+function on lists if I prove it for 
+the empty list and then prove that, 
+if I know my function works for a list of 
+length $n-1$, and I then append a value, 
+it will still work for the length-$n$ list. 
+`p`
+
+`p.
+The problem with these functional-programming 
+techniques in the context of programming language theory 
+in general is that many applied type systems 
+do not have this kind of isomorphism 
+between types and construction-chains.  In `Cpp;, 
+say, I can get a list by dereferencing a pointer, 
+and I have no way of knowing the provenance of the 
+pointed-to memory.  There are many ways to 
+construct `Cpp; values `i.other` than by going 
+through construction-chains.  It `i.may` be 
+that values have properties consistent with their 
+being built up by an incremental, logically 
+regulated proess.  However, a `Cpp; programmer 
+often cannot `i.assume` that types have this logical 
+orderliness.  In short, `Cpp; types are more logicallly 
+opaque than, say, Haskell types.  This does not make 
+the `Cpp; type system less `q.abstract` than Haskell's; 
+it just means that there is less information 
+embedded in `Cpp; types which would make them amenable to 
+analysis from a mathematical perspective.
+`p`
+
+`p.
+An interesting question is then which 
+language is a better metaphor for `i.human` 
+language %-- a functional language like Haskell, which 
+enforces logical rigor by design?   Or a procedural 
+language like `Cpp;, whose operational 
+dynamics is essentially concerned with properly 
+orchestrating function calls, even in the absence of 
+logical guarantees?  The theory I intend to dvelop here, 
+some variation on an `q.interface theory of meaning`/, 
+is probably closer in spirit to `Cpp; than Haskell.
+`p`
+
+`p.
+
+`p`
