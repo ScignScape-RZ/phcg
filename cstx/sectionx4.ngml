@@ -521,7 +521,7 @@ where connections can be made between different
 parts of a system on the basis of double
 potentials that must be in some sense `q.compatible`
 for the connection to be valid.  One way to
-visualize such a systm is via graph thory:
+visualize such a system is via graph theory:
 imagine a form of graps where nodes are
 annotated with `q.potentials` or `q.half-edges`/;
 a complete edge is then a union of two half-edges.
@@ -762,10 +762,10 @@ analogs or case-studies for corresponding cognitive
 phenomena.  Here I would argue that generalizing
 Link Grammar from Natural Language to formal
 languages, type systems, and lambda calculii
-yields added structures to type thory that
+yields added structures to type theory that
 are useful toward a more rigorous `q.theory` of
-Procedural Data Modeling %-- a thory of natural
-linguistics generalized to a theory of gneral data
+Procedural Data Modeling %-- a theory of natural
+linguistics generalized to a theory of general data
 reprsentation which, in turn, may offer
 insights onto the cognitive dynamics underlying
 (prelinguistic) situational/perceptual

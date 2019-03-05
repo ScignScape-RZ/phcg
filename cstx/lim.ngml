@@ -1,0 +1,773 @@
+`spsubsectiontwoline.Phenomenology and the Limits of Formalization`
+
+
+`p.
+This tension is not limited to consolidating 
+Analytic Philosophy's meta-logical intuition.  
+The trajectory through Algebraic Topology and Category Theory 
+has been one vector of post-1950 mathematical progress.  
+Another has been computer proofs, proof-assistants, and 
+computer-inspired approaches to mathematical foundations, like 
+Homotopy Type Theory.  Regarding `i.types` rather than 
+`i.sets` as the primordial elements of logic and mathematics 
+positions mathematics and computer science as two different 
+worlds evolving from a common type-thoretic universe.  
+In this environment, mathematics as abstract thought gets 
+mixed with mathematics as a technological discipline; 
+specialists for example debate the merits of mathematical 
+systems formalized with a priority to automated proof-checking 
+vs. presentations more aligned with mathematical precedents.  
+The proper place for technology and automation becomes 
+debated.  Computer theorem-provers after all are not oracles; 
+they need their own quality-checking, their own design theory.  
+Do we trust the theorem-prover (itself a human artifact) more 
+than the conventional deliberations validating a proof 
+in the eyes of mathematicians (and if so, why)?  Are design 
+principles of proof-assistant software and languages topics 
+for mathematics or computer science?  Does a test suite to 
+demonstrate a proof assistant's trustworthiness bear witness 
+to mathematics becoming suddenly an empirical rather than 
+eidetic science?  Does the empirical contingency of the 
+correctness of software used to provde the 4-color theorem 
+make the theorem something other than synthtic `i.a priori`/? 
+`p`
+
+`p.
+There are analogs to these questions in the realm of 
+Analytic-Philosophical logic.  For xample, the idea that cognitive 
+or linguistic meanings can be reduced to first-order predicate 
+formulae can be investigated by considering computer technology 
+which does in turn model digital content, in effect, as predicate 
+assertions together with rules of inference (that can 
+in principle be modeled via first-order logic): the Prolog 
+programming language, for instance; certain database 
+query systems; the Semantic Web and `q.formal Ontologies`/.  
+These technologies operationalize logistic paradigms, but they 
+also put an empirical face on a logico-mathematical background 
+that for Russell, Frege, and Wittgenstein would have been 
+abstract speculation, akin to how proof assistants 
+put an emprical tie on abstract mathematics.  Similarly, 
+formal linguistic approaches (like Categorial Combinatory 
+Grammar) base themselves on abstract logico-mathematical 
+paradigms (like Hindley-Milner type sysetms), but by 2019 we 
+have a panoply of linguistic schools whose models 
+are realized in computational linguistic technologies, 
+digital platforms that represent and/or automatically 
+identify semantic and grammatic patterns according to a 
+specific thory of language.  In this context, type theory 
+informs linguistic research at a theoretical level as part 
+of its logico-mathematical underpinnings, but it also belongs 
+to the technological infrastructure wherein linguistic 
+technology is implemented.  These two roles can be complimentary: 
+insofar as Classical Hindley-Milner type theory has been 
+supplanted by competing paradigms in software which proves 
+technologically advantageous for modeling natural language, 
+we can explore whether more modern type theory is 
+superior for linguistic analysis at a purely theoretical level too.  
+`p`
+
+`p.
+Insofar as Analytic Philosophy converged in the last century upon, it 
+seems, a fairly consistent nucleus of logical paradigms 
+%-- covering the various intrinsic facets of quantifier-predicate 
+logic %-- the heritage of that philosophy is similarly 
+rebased by 21st-century technology.  The persistence of first-order 
+logic as a reified example and medium of logic as such was driven by 
+the abstract reality that almost any logical system can be translated 
+first- or secod-order logic in principle (at least if we can 
+tolerate whatever metaphysical posits may be needed 
+to ground the resulting logic expressions, like Possible Worlds).  
+As long as logic belongs just to pure thought, the formal/theortical 
+isomorphism between superficially different theoretical 
+architectures can be treated as a challenge to overcoming: 
+converging on first-order predicate-quantifier logic 
+as a common ground beneath various shallower logics may seem 
+(and perhaps did seem to early Analytic Philosophers) 
+to be explanatory progress, a theoretical repositioning 
+which really does evince a situation where philosophical 
+disputation really can progress toward greater clarity.  However, 
+now that different logics are indeed manifest in a concrete sense 
+in different digital technologis, their contrasts no longer seem 
+so shallow.  It could be argued that the illusion of a `q.deep` 
+logic underlying superficial variation (like the illusion 
+of a `q.deep grammar` stabilizing the morphosyntactic surface, 
+perhaps) is itself the superficial presumption, failing 
+to duly appreciate surface contrasts which are only manifest 
+in the register of applied technology, rather 
+than abstract thought.  For example, one can make a strong 
+semi-theoretical and semi-implementational case that Graph Theory 
+or Process Calculii are a better foundation for projects like 
+programming-language compilers and database query systems than 
+conventional predicate logic %-- notwithstanding that 
+propositions in graph or process algebras can potentially be 
+reformulated in first-order logic (and vice-versa).  The 
+issue with such in-principle reductions is that they are of 
+dubious explanatory merit; the pro-forma restatement of 
+graph structures in predicate logic, for instance, has no 
+particular importance unless we are prior committed to 
+predicate logic being somehow fundamntal, in which case 
+the reducibiloty of graph theory (since this reducibility  
+can be inverted %-- we can provide graph models of 
+attribute predication, boolean operators, etc.) can't 
+justify the commitment on pain of circularity.  What 
+`i.can` be observed, however, is that graph-database 
+queries cannot be optimized in their first-order 
+translations (which is why graph databases are a different 
+technology than relational databases), which in turn suggests that 
+the structural differences btween graphs and propositions are 
+philosophically non-trivial, and consequential.  Similarly, 
+concrete technologies can point us to an intuition of 
+sentence-comprehension as a calculus of interlocking 
+cognitive processes, not the mechanical unzipping 
+of a predicate compact, seeing that there are substantial 
+implementational differences between process calculii and 
+predicate logic as paradigms for programming languages.  
+In short, technology reveals how formal systems may be 
+substantially divergent from predicate logic even if the 
+logical structures governing their operation may seem to hav 
+isomorphs in predicate logic: technology reveals that such 
+`q.in principle` isomorphs are less important, less 
+indicative of philosophical depth, than we may have believed a 
+century ago.  But this is revealed not within philosophy 
+alone, but in an interdisciplinary spirit where insights are 
+mined from fields like compiler design and database engineering; 
+and from practical experience as well as speculation.  We can 
+appreciate the substantiveness of 
+`q.surface-level` logico-structural variation when we actually 
+`i.write` compilers or database query engines.   
+`p`
+
+`p.
+The phenomenological de-centering of metaphysics does 
+not mean a complete abdication of metaphysical priorities, 
+of the need for a ledger to assess the reach and limits 
+of thought, or science or intellectual explanation; 
+to place the norms of philosophical exposition and 
+conversation on a disputable, theorizable conceptual bedrock.  
+Bracketing metaphysics does not mean suspending what 
+metaphysics is supposed to do to philosophical performance.  
+But Phenomenology seeks to bracket metaphsyics as something 
+received, habitual, or institutioanlized; something that 
+influences scholarship more than it is studied.  
+Phenomenology brackets metaphysics in the hope that it can 
+be recreated and return, but more transparent and self-aware 
+than before, like a professional athlete who returns 
+from a league suspension chastened and technically sounder.  
+Metaphysics is suspend but not expelled.  There is an 
+analogous dialectic in open-source progrommaing; 
+institutional norms for software quality are both suspended 
+and resinstated in a more transparent, technical 
+incarnation.  The de-centering of `i.institutional` controls 
+does not foreclose a re-centering of scientific 
+convergence in a shared technical understanding of the 
+project.  Similarly, the decentering of `i.institutional` 
+metaphysics %-- not just the ideas, but the academic workflows 
+and publishing conventions that support them %-- does 
+not foreclose a recovery of metaphysics in the 
+philosopher's relation to her own consciousness, in her 
+writings seen as an existential trace more 
+than a social production.
+`p`
+
+`p.
+All of this then produces the question: what should metaphysics 
+be if it is not the paradigms we have received?  Where 
+does a phenomenological analysis take us that we were not before 
+it started?  As with any writing, we have to start with 
+the question: now that the writing has finished, 
+what has changed?  Aniticpating the writings of the future: 
+what do we want to have changed?
+`p`
+
+`p.
+We have to communicate this to Analytic Philosophers 
+(and practitioners of many other branches of scholarship, 
+like cognitive science and linguistics): what changes 
+when a phenomenological study is complete?  What 
+changed when there was a `i.Thing and Space` or a 
+`i.Phenomenology of Perception` compared to before 
+there was?  Failure to understand what a writing 
+wants to change can easily yield to failure 
+to understand the writing.
+`p`
+
+`p.
+I have often felt that Analytic and Phenomenological 
+practitioners were talking past each other precisely in 
+this sense: a specialist in the philosophy of mind or 
+of science might approach a reading or conversation 
+thinking the phenomenologists is working to one kind 
+of telos, while the other is going somewhere else.  
+In apparently the most common iteration, the 
+Philosopher of Mind thinks the Phenomenologist is aiming 
+toward a kind of skeptically inflected science of 
+perception, a theory of the deep structures behind 
+perceptual experience that potentially takes us further toward 
+and unbiased and even scientific theory by bracketing 
+presupposions about how consciousness and cognition 
+are supposd to work.  The Philosopher of Mind might 
+then think that Phenomenology should, let's say, 
+uncover the synthesizing and interpretive acts that 
+constitute my raw sensate awareness as the grasping 
+and judging that Hugo is sleeping on the sofa, or that 
+it is half-past four and the sun is setting outside, or that 
+the car double-parked outside is red.  By attending 
+in a hopefully presupposionless way to the immediacy 
+of consciousness, we can see the underlying stitching 
+and unifying that normally passes beneath the threshold 
+of awareness, as if we were observing our 
+own consciousness like a shaman on ayahuasca.
+`p`
+
+`p.
+I have never in a philosophy classroom, nonetheless, felt 
+that my role was to issue oracular pronouncements as if from 
+a drug-induced trance.  Consciousness is not usually 
+extravagant and cosmic; my awareness of Hugo sleeping 
+on the couch is, really, not much more than 
+just Hugo sleeping on the couch.  Notice the structural 
+analogue to logistic philosophies of language: just as 
+adding logical symbols to `q.Hugo is sleeping on the sofa` does 
+not guarantee we are uncovering some deeper structure in the 
+language, some precious scientific insight, nor does 
+superimposing talk of a Passive Synthesis of Perception or 
+Hyletic Immediacy on the mundane episode wherein I see 
+Hugo sleeping on the sofa make that perception suddenly 
+scientifically tractable, as if we can solve the 
+mind-body problem just by concentrating hard enough.  
+It is what it is.  The things themselves are the things 
+themsevles; if we're going to them we can't assume we're 
+en route to some revelation or science, as if the 
+laws of consciousness are present in the room alongside 
+Hugo, the sofa, and the lamp.
+`p`
+
+`p.
+But a reframing of the sentence `q.Hugo is sleeping on the sofa` 
+`i.can` take us at least modestly further toward a good theory 
+of language, something beyond the disquotational 
+verity that a sentence means what it means, just as it is what 
+it is; `q.Snow is white` means that snow is white.  
+Similarly, I believe reframing perceptual episodes can 
+shed light on the formal %-- and perhaps even scientific 
+%-- structures of cognition, but we have to clarify ahead 
+of time what magnitude of clarity we are hoping for; 
+what precision of understanding landmarks a successful 
+analysis.  If a scientist reads Phenomenology 
+hoping for an `expose; of consciosuness that is both 
+first-person accurate and naturalistically revelatory 
+%-- something experientially faithful like a 
+physchological novel but clinically analyzble 
+like a Brain Simulation %-- then what is actually on 
+offer will fall short.  Both attending to consciousness 
+as it is experienced and honoring professional and 
+scientific standards of intellectual rigor are guiding 
+principles of Phenomenological research, but these 
+are principles, not minimal standards like 
+a one-drink minimum at a night club: a very good 
+phenomenological writing will `i.not` truly be 
+either stream-of-consciousness realistic like a 
+novel nor scientifically complete like a Neural Network 
+platform presented at a computer science conference.  
+The point is via phenomenology to move a little closer 
+to both experiential honesty (to accept 
+consciousness as it is experienced, not as something 
+we hypothetically transform to fit cognitive and 
+physical explanations) and scientific rigor 
+(both the science of neurophysical explanations and 
+the science of cognitive or intelligence simulations), 
+but while doing so acknowledging the incompleteness of 
+both projects and the tensions between them. 
+`p`
+
+`p.
+In the case of perceptual synthesis, we have good reseon 
+to believe that biophysiology and experimental psychology 
+gives us a well-informed acccount of perceptual phenoema, 
+in their episodic unity, at the neurological and 
+sensori-motor levels; presumably I have some brain 
+function that unifies white-sensations and brown-sensations  
+and distributes the color regions to different concepts 
+(sofa, Hugo).  Since I'm not aware of these 
+levels they are not Phenomenological subjects per se 
+(which doesn't mean we should reject them entirely, 
+since I have reasonably firm beliefs about the scientific 
+basis of perception, beliefs which I don't deliberately 
+question any more than I deliberately apply them to 
+mundane perceptions).  Perhaps our scientific training 
+casuses our actual perceptual content, at last sometimes, to be 
+subtly different in our experience of it.  I am reminded 
+of the rainbow color of a thin slick of spilled oil: 
+knowing to some approximation how we think that phenokenon 
+occurs makes me xplicitly associate the rainbow with the 
+oil, and therefore to almost unconsciously direct my 
+gaze to the border lines where the colors are brownish and 
+less pronounced.  Somone who did not impose a mental 
+explanation on what they're seeing, even if unintentionally, 
+would perhaps attend more intently to the color and 
+experience it more vigorously.  So scientific beliefs 
+are relevant in the limited sense that their trace can 
+sometimes be detected in actual experience.  
+With this qualofication, fowever, and scientific 
+story about how percption `i.works` lies outside 
+Phenomenology proper.
+`p`
+
+`p.
+Over analysis, `i.excess` clarity, `i.too much` 
+resolution distorts experience even if it aims 
+to explain it.  So Phenomenology does not neatly 
+fit within a scientific paradigm where magnification 
+often leads to elucidation and discovery: we cannot take 
+a microscope to conscious and find new candidates 
+for scientific treatmnt, the way we can advance science 
+by making more powerful telescopes.  For a scientist 
+or someone with scientific intiutions it can seem 
+hard how to go forward: you don't study cancer by staring 
+at tumors; so how can you study consciousness without some 
+analysis, some distortion and defamiliarization.  Otherwise 
+we seem fated to endless circularity: it is what it is.  
+The things themselves are what they are. 
+`p`
+
+`p.
+This point, relative to perceptual synthesis, has 
+similar forms in other aspects of cognitivity activity: 
+judging that the animal on the sofa is a cat, indeed Hugo, 
+that he's sleeping, that it's daytime becauuse it is 
+light outside, that the men in uniform skating on 
+an ice rink on television are hockey players, and so forth.  
+Phenomenology cannot ignore that many of the preceptual 
+and conceptual judgmens that we are aware of take the 
+form in consciousness of settled fact; we can't do first-person 
+analysis of chains of reasoning that we don't actually 
+experience ourselves performing.  So while 
+presumably there is a detailed story to be told about 
+how optical and inferential thought-processes leadb
+us to the conclusions that it's daytime and that Hugo 
+is sleeping, but the perceptual record shows that 
+none of this labor was special enough to warrant conscious 
+attention.  It's not like I first speculated that some 
+unfamiliar creature was on the sofa, and subsequently 
+concluded that it's just Hugo; or that I had to stand 
+and ponder who the cat is until I could assemble 
+enough visual detail to reach that conclusion.  
+I honestly don't know what I was unconsciously 
+thinking to preume passively that it's Hugo %-- honestly, 
+I usually don't know what I'm unconsciously thinking.  
+I cannot, accordingly, use unconscious or 
+too-mundane-to-experience judgments as part of 
+Phenomenology at least during argumentational stretches 
+where I'm sticking to phenomenological reports.
+`p`
+
+`p.
+Insofar as this is characeristic of Phenomenology in general, 
+we should not expect that Phenomenology will advance 
+us further to some sort of rigorous philosophy 
+or experientially faithful science by revealing things 
+about experience that we have not yetnoticed due to 
+lack of attention: we cannot magnify consciousness 
+the way a microscope enlarges different things and a 
+telescope reveals distant ones; metacognition 
+and first-person reflection don't enlarge or 
+polish the things in consciousness so that we can 
+describe them mor rigorously, or scientifically.  
+Phenomenology does take us to some new place by 
+making us aware of pieces of experiential synthesis 
+that we don't experience directly otherwise, 
+as we don't experience the molecules in 
+water; or minutiae of conceptual 
+reasoning that we would otherwise take for 
+granted, like how we figure out when an 
+animal is a cat.
+`p`
+
+`p.
+Of course, however, often we `i.are` aware of 
+preceptual synthesis and conceptual judgment.  If 
+after seeing Hugo I walk toward him, 
+with my perspecive gradually changing, I 
+consciously register a change in how Hugo appears to me 
+which produces an explicated synthsis, 
+a self-conscious accumulation of visual evidence telling 
+me about Hugo's current state, at least if I am 
+looking at him with express interest him as opposed to looking in 
+his directly and passively noticing him while attending to 
+something else, like the television.  Likewise I may passively 
+observe that he is sleeping if I previously thought he 
+was sleeping and just happened to glance at him again, 
+but there's an alternative scenario where I don't 
+specifically assume he is sleeping, but upon looking 
+at him rather attentively, with his lack 
+of movement and his relaxed posture, I reach the 
+conclusion self-consciously.  Walking outside I may 
+see a familiar stray cat and put no thought into recognizing 
+her, but I may also spot a movement in the distance 
+and look purposefully before identifying the animal as a cat.  
+In short, perceptual synthesis and conceptual 
+judgments are neither `i.intrinsically` conscious 
+or pre-conscious, active or passive; many 
+cognitive episodes that we are explicitly aware of in their 
+unfolding could, in slightly different circumstances, 
+remain below the threshold of conscious awareness.  
+Conversely, many judgements we make without 
+much conscious attention could alternately be 
+experienced with more deliberation and attention.  
+Indeed, sometimes we revise our passive judgments 
+when something goes awry in our passive estimation of 
+what's going on around us %-- we assume we hear 
+the dog barking in th back yard, but then 
+we see her watching television, so now 
+we have to account for the mysterious barking outside.  
+We all have the faculty to quickly adopt the 
+mode of conscious investigation, trying to gather specific 
+information, when the passive judgments we have just 
+assumed to be true turn out to have some incongruity, some 
+gap in their logical order.
+`p`
+
+`p.
+Now we are moving toward some insight, since although we 
+can't give a phenomenological account of preconscious 
+judgment, we can at least confirm that `i.some` 
+judgments are `q.active` and part of 
+explicit awareness, while others are passive and 
+not (in any inner details) noticed; we can also say that 
+at least some passive jugments seem similar in form 
+and outcome to active ones.  This raises several 
+avenues for further, maybe scientific continuation: 
+why do we have both active and passive judgment?  What 
+benefits accrue to us biologically as animals that depend 
+on precise judgments to survive that we make many 
+instinctive judgments and some additional deliberated ones?  
+Why are active and passive judgments often similar?  
+What triggers a decision to actively attend to specific 
+components of experience so that associated judgments in 
+that one area will, at least in the immediate aftermath, 
+be more active than passive?  What is actually 
+neurophysically different in the two cases so that, 
+in a pure subjective and first-person sense, I know when 
+a judgment is active and passive?
+`p`
+
+`p.
+Furthermore, since many judgments `i.do` rise to a level 
+of consciousness %-- and not just the minimal awareness 
+of believing such-and-such but some explicit experience of 
+how the judgment is formed, of their inner pieces and 
+intemediate stages %-- these conceptual and perceptual episodes 
+`i.are` candidates for phenomenological analysis.   We are 
+certainly aware of perceptual episodes in their 
+unfolding; how perception scans over a room, or 
+any other surrounding, like the pan of a camera;  
+while, also, different episodes piece together, 
+with shifts in attention (and, often, kinaesthtic 
+actions) %-- like looking up from a book %-- 
+juncturing disparate perceptual phases.  It seems self-evident 
+that perception unfolds according to multiple time scales, 
+where episodes measured in seconds join to become the perceptual 
+background as we engage in activities over the course of minutes, 
+within errands that stretch toward hours and engagements 
+over the course of a day (we cook, go to the store, ride 
+a subway, watch a show), and of course we plan for a future 
+and remember a past over monrhs and years.  Cognitive acts and 
+perceptual interludes can be slotted into different time 
+scales, affecting how we experience them and should analyze 
+(or even name) them: a perceptual episode, brief enough to appear 
+in consciousness as a single event, needs a different 
+theoretical registration than experiences implying lengthier 
+segments.  Practical actions, also, bridging 
+perception, conceptualization, and planning, sort into different 
+time-spans: opening a bottle vs. preparing a meal; 
+petting the dog vs. walking the dog.   
+`p`
+
+`p.
+We have, as such, I would argue, a collection of observations 
+and distinctions we can make about consciousness and 
+conscious experience, that emananate from consciousness 
+itself and not from prior scientific or 
+metaphysical commitments.  These observations 
+seem presuppositionless, or at least common-sensical.  
+We should not take that too far: the `q.suspension of 
+belief` should not commmit us to a virgin brilliance 
+exorcising millenia of thought, posturing us as priests 
+of intellectual purity that can be defrocked by the 
+smallest trace of naturalistic thinking %-- gotcha, a 
+presupposition!  Philosophy as volumes forging profound 
+insight from pure thought alone seems silly in our time, 
+more art created from ideas than rational exposition.  
+But we can make a good-faith effort to present 
+patterns in consciousness based on rather casual and 
+common-sense reflections not explicitly aligned with 
+scientific thories, or with schools of philsophy, 
+and I claim at least some of the intellectual structure 
+we can get to via that route takes the form of observations 
+I have highlighted: passive vs. active judgment; the 
+various scales of perceptual and enactive temporality; the 
+individuality, aggregation, and junctioning between 
+perceptual episodes.  
+`p`
+
+`p.
+Insofar as these initial observations 
+and distinctions form the rudimentary constructs in 
+a theory of consciousness, the explanatory value 
+of that theory will depend on how it can be 
+consistently extended.  Remaining within Phenomenology, 
+we cannnot analyze deeper into consciousness %-- 
+capturing more fine-grained layers of perception, uncovering 
+more details of passive synthesis %-- because we cannot 
+impose scientific-empirical data or philosophical speculation 
+on subjective experience.  So if we can only articulate a 
+handful of organized but commonsensical comments about 
+experience, we need to find away to make the analysis meaningful: 
+for it to make a difference.  
+`p`
+
+`p.
+One way to do this, I believe, is to make the common-sensical 
+observations more than just observations; not in the 
+sense of importing interpretive claims that don't 
+unfold from them organically, but in the sense of trying to 
+express their as a formal structure, something which can 
+be then set in relation to other structures and other 
+accounts of mental processes.  There are many formal systems 
+that have been proposed to cover various features of 
+cognition and intelligence; but only a few 
+of these, I suspect, are formal views on experientially vivid 
+acts of mind; on judgments or percpetual syntheses that 
+we can experience in their unfolding and reflect upon 
+first-personally.
+`p`
+
+`p.
+There is a considerable body of cognitive-scientific 
+literature that aspires to formalize (and sometime simulate) 
+mental activity via structures that have some blend 
+of logical, mathematical, and computational 
+specification.  There is also a considerable body of 
+literature that remains true only to the first-person 
+perspective, not explicitly trying to align with 
+scientific explanations and world-view.  But where  
+these bodies overlap I believe lays the potential for 
+overlapping theories, like a Naturalized Phenomenology. 
+`p`
+
+`spsubsectiontwoline.Phenomenology as Experiment`
+`p.
+Phenomenology has not usually attended to formal analysis of 
+cognitive models, or models of mental phenomena overall.  
+This is entirely undersandable, since exploration of formal 
+systems surely does not belong to phenomenological 
+analysis itself, at least outside the exotic sense of studying 
+what it is like to learn or think about mathematics, say, 
+from a first-person perspective.  Nevertheless, even a 
+writer committed to Phenomenology does not solely do 
+phenomenological analysis, any more than a Structuralist 
+poeticist devotes all paragraphs to close-readings.  
+Equally intrinsic to the philosophical process is 
+how intra-methodological analyses (`q.readings`  
+on consciousness or literary works, say, respectively) are 
+placed in a larger context, which can have multiple 
+dimensions: relations to other scools of philosophy, but 
+also other academic disciples and other regimes of knowledge 
+and practice.  Pursuit of formal models can help ground and 
+orient phenomenological investigations, and vice-versa.  
+`p`
+
+`p.
+As a case in point, consider how Phenomeneology was among the 
+inspirations for what computer scientists call the Semantic 
+Web and Formal Ontologies %-- protocols for sharing information 
+and aggregating `q.knowledge` across computer networks, 
+paricularly the World Wide Web.  Such information is not only 
+abstract mathematical or technical data: our world is founded 
+on communicating structured knowledge from many human and scintific 
+domains, like medicine and government.  We cannot in this 
+context construe data as just bytes and numbers, but rather 
+encodings of human concepts and judgments.  Trying to 
+map essentially informal human concepts, like `i.illness`/, 
+to a precise scientific formulation, is of course a 
+foundational concern in philosophy; but computer networks and 
+technology-enhanced knowledge sharing reveal practical applications 
+of these perhaps once purely abstract problems.  Scientists 
+use Formal Ontologies to codify conceptual systems 
+underlying human knowledge and beliefs.  This, moreover, 
+spans both fairly narrow and concrete propositions (e.g., 
+that the pericardium surrounds the heart) and deeper, more 
+abstract, more cognitively primeval concepts 
+(like what it means for one thing to surround another thing).  
+`p`
+
+`p.
+In short, part of the requiements of building knowledge 
+`q.engineering` or `q.sharing` systems was to give a technical 
+specification for apparently innate concepts or gestalts 
+like `q.part of`/, `q.inside of`/, `q.surrounding`/, and 
+so on.  At least one method for appracohing 
+this problem was via Phenomenology, meaning that 
+Phenomenology serves as one tributary among others that can 
+be followed into the technical context of data modeling and 
+data sharing protocols.  At the same time, the Semantic Web 
+community has converged on several preferred models and 
+formats %-- bearing acronyms like OWL and RDF %-- which 
+in turn have proved controversial.  Some 
+researchers, notably the linguist Peter Gardenfors, 
+have critiqued the Semantic Web of conceptual simplofication 
+that does not really capture the semantics of technical domains 
+(like science and medicine), still less of Natural Language.  
+Others from a more implementation-minded perspetive 
+can highlight technical limitations of Semantic Web models, 
+such as how data sharing `i.between` computing environments can 
+best intergrate with data managment `i.within` particular 
+databases and applications.  The Semantic Web %-- whose 
+underlying representations are based on labeled, directed graphs 
+%-- has been critiqued by advocates for modestly different 
+graph-like structurres, like Conceptual Graph Semantics and 
+Directed Hypergraphs.  These alternative models are arguably 
+more conceptually accurate and/or more practically efficacious, 
+from an engineering perspective, than the paradigms for 
+representing Formal Ontologies and Informations Spaces 
+or `q.linked data` which emerged as predominant in the 
+community of Semantic Web developers and researchers.
+`p`
+
+`p.
+These unfolding narratives are relevant to Phenomenology 
+partly because competing representational paradigms 
+can seem more or less phenomenologically faithful; 
+can intersect with phenomenological accounts in different 
+ways.  For example, suppose we judge that an 
+alternative representational model, like the Hypergraph 
+framework associated with the OpenCog project %-- itself 
+oreinted to Artificial General Intelligence %-- is a 
+more realistic model of conceptual sructures insofar as 
+these intrinsically emerge from and regulate 
+cognitive/perceptual processes as articulated 
+in Phenomenology.  That is just a claim, of course, but 
+assuming for sake of argument it is plausible, then we 
+have a case of two competing formal models %-- both 
+reflecting some measure of at least informal influence 
+frpm phenomenological ideas, as far as seeking 
+philosophically well-grounded accounts of ontology and 
+intelligence.  These models can be contrasted on 
+philosophical grounds, but also technologically.  
+Neither OoenCog nor the overall Semantic Web are academic 
+theories per se, but technology projects with their 
+own software ecosystems and engineering norms, 
+alongside academic literature and philosophical 
+attitudes or intuitions that can be evaluated 
+theoretically.
+`p`
+
+`p.
+Even though Phenomenology is `i.philosophy`/, I believe, 
+doesn't mean that considerations from other disciplines 
+as they bear on %-- to take this one specific case %-- 
+OpenCog vs. the canonical Semantic Web are not potentially 
+relevant and interesting to the phenomenological project.  
+The relevant contrast here presents two competing 
+computational frameworks, and the ecosystems 
+can be scrutinized side-by-side with an eye to 
+the merits of their technology, to how they 
+are used, extended, and integrated into practical software 
+and respond to technical requirements.  These engineering 
+comparisons can co-exist with more philosophical ones: 
+if one paradigm seems superior `i.both` practicallly 
+and philosophically, this deserves consideration %-- do 
+the two horns reinforce each other?  Conversely, 
+is the more Phenomenologically faithful theory 
+proves less implementationally useful, does this 
+shed light on philosophically interesting issues 
+%-- the weakness of `q.mind as compuer` analogies, 
+for instance?  We may not be able to specify `i.a priori` 
+what kind of significance to attach to comparisons between 
+formal models on phenomenological vs. engineering 
+grounds.  But we should recognize 
+that technical comparsions are at the least nontrivial data 
+points that should at the least be acknoedged in the background 
+while investigating formalizations that incoporate, 
+and insofar as they incorporate, phenomenological 
+intuitions.    
+`p`
+
+`p.
+If this is plausible, then the disciplinary frontier of 
+Phenomenology significantly expands.  Phenomenologists 
+can in any cases engage with the `i.academic` face 
+of, say, OpenCog and Semantic Web projects 
+%-- texts by Ben Goertzle or Gardenfosr, 
+for instance %-- read as at least tangentially philosophical 
+ouevres.  But any discipline which finds relevance in 
+these `i.writings` should also find relevance in 
+the technology they are writing `i.about`/, 
+in their concrete form as technical artifacts and 
+(products of) engineering processes.  We can therefore 
+approach technologies like AtomSpace (a database associate 
+with OpemCog) and Fact++ (a Semantic Web engine) 
+from an engineering as well as theoretical perspective 
+%-- how they are implemented, compiled, and interoperate with 
+other applications.  Or, as this one example illustrates, 
+we can incorporate within the Phenomenologica discipline an 
+interest in technical comparison between formal systems 
+which also manifest phenomenological intuitions, so the 
+phenomenological and engineering dimensions of their 
+juxtaposition can be juxtaposed in turn.  This represents 
+a new avenue for engagement with formalizations following 
+the example of, let's say, Husserl's `Formal and 
+Transcendental Logic`/, which approached from a 
+phenomenological perspective then-contemporary issues in 
+logic and mathematics.  But a key difference is that the 
+formalizations Husserl entertained were fully abstract, while 
+the formal systems that can be approached phenomenologically 
+in our century are more concrete and enmeshed in 
+social-scientific practice (health care, environmental 
+policy, etc.).  Engaging with these `q.concretized` 
+formal systems is not a matter of proving theorems, 
+or undersanding proofs of prior theorems; it 
+more involves compiling computer code, 
+or writing new code, and understanding the tchnical 
+structure of programming languages and data representations. 
+`p`
+
+`p.
+In effect, computer code %-- software and formal 
+languages (including markup and database query as well as 
+general-purpose programming languages) %-- has in many 
+contexts supplanted abstract logic as formal foundations 
+of well-structured thought.  This even applies 
+to mathematics, where type-theoretic and proof-assistant 
+methods take the place of set theory and predicate logic 
+as foundations.  This new reality should be confronted 
+by philosophers as well %-- what is the philosophical 
+analog of the Univalent Foundations project in mathematics?  
+How should Analytic Philosophers %-- or indeed 
+phenomenologists %-- re-evaluate the last century 
+with computers replacing logic as the instuitional 
+mechanization of thought?  How should Philosophy 
+be reconsidered if some founding books were reimagined 
+as, let's say, the `i.Formal and Computational 
+Computer Science` or the 
+`i.Tractatus Computational-Philosophical`/?  To speak more 
+precisely, what are the consequences propagating across 
+Philosophy if quantification is foundationally 
+conceived as over type-instances rather than sets?  What 
+changes when the domain of a quantification has to have a 
+conceptual unity at least to the level of what can be modeled via 
+a formal type theory rather than being open-ended sets?  
+What changes when our reigning paradigm of perfect 
+reasoning is not proofs as a mental exercise, but the 
+engineering of computer systems and then the engineering 
+of (formal representations of) theories and then of apparent 
+theorems so as feed theories and theorems  into the aforementioned 
+computer systems for verification?  What changes when even mathematics 
+becomes a rather empirical domain that can be experimented 
+with on a computer?  What kind of Philosophy can 
+be done by experimenting on a computer?
+`p`
+
+
+`p.
+`p`
