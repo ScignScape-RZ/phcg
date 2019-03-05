@@ -373,7 +373,7 @@ neglect to target such topics as the neurophysical
 encoding of linguistic processes.  I can accept some 
 form of truth-theoretical semantics if it provides 
 a broad abstract description of linguistic processes 
-that can be `q.handed off` to other isciplines, 
+that can be `q.handed off` to other disciplines, 
 like psycholinguistics and language-acquisition studies.  
 This would be a reasonable `q.division of labor` 
 if we believed that at the `i.abstract` level 
@@ -393,11 +393,11 @@ of the logical architecture.
 However, the de facto assumption that `q.everything abstract is logic`/,  
 and that any sub-logical details are the tangential impurities 
 of concreteness itself, is a prejudice that isn't borne out even 
-in highly formal milieus.  For xample, the digital 
+in highly formal milieus.  For example, the digital 
 encoding of typed values are a concrete detail counterposed 
 to the mathematical abstractions of type thory, but 
 it's not as if there is a single line between `q.abstract` types 
-and `q.concrete` binary-electrical codes.  Progreamming language
+and `q.concrete` binary-electrical codes.  Programming language
 theory recognizes digital encoding as byte-sequences, and so 
 for any typed value there is a mapping of 
 that value to a string of base-256 integers (the 
@@ -415,8 +415,9 @@ formal type theory and the bare metal of computer hardware.
 `p.  
 One feature of this `q.intermediary` abstraction is that 
 the abstract posits are more likely to be mathematically 
-opaque.  In functional programming, for example, we can associate each type 
-with an algorithm that can construct every lement 
+opaque.  In functional programming, for example, we can 
+associate each type 
+with an algorithm that can construct every element 
 of that type, and also often run that construction 
 `q.backward` to analyze properties of type-instances 
 (which is called `q.pattern matching`/).  
@@ -443,7 +444,7 @@ This gives numbers a logical form rather than
 leaving them as a kind of prelogical Platonic given.  
 The analogous formulation in type theory is that any type 
 is isomorphic to the set of algorithms which generate 
-each of its value %-- for instance, every list 
+each of its values %-- for instance, every list 
 can be associated with the algorithm which builds 
 the list iteratively, starting from 
 the empty list.  This introduces a logical structure 
@@ -452,7 +453,7 @@ prove properties about functions on types
 by analyzing how those functions operate on 
 values given the specific construction-chain that 
 produce them.  Continuing the example, I can 
-prove something about my impkementation of a 
+prove something about my implementation of a 
 function on lists if I prove it for 
 the empty list and then prove that, 
 if I know my function works for a list of 
@@ -466,7 +467,7 @@ techniques in the context of programming language theory
 in general is that many applied type systems 
 do not have this kind of isomorphism 
 between types and construction-chains.  In `Cpp;, 
-say, I can get a list by dereferencing a list-pointer, 
+say, I can get a list by dereferencing a pointer, 
 and I have no way of knowing the provenance of the 
 pointed-to memory.  There are many ways to 
 construct `Cpp; values `i.other` than by going 
@@ -491,7 +492,9 @@ enforces logical rigor by design?   Or a procedural
 language like `Cpp;, whose operational 
 dynamics is essentially concerned with properly 
 orchestrating function calls, even in the absence of 
-logical guarantees?
+logical guarantees?  The theory I intend to dvelop here, 
+some variation on an `q.interface theory of meaning`/, 
+is probably closer in spirit to `Cpp; than Haskell.
 `p`
 
 `p.
