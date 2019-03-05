@@ -406,7 +406,7 @@ for that content to be satisfied.
 
 `p.
 A `i.literal` truth-condition model doesn't work in 
-cases like () and (): the diner's request 
+cases like (\ref{itm:can}) and (\ref{itm:close}): the diner's request 
 is `i.not` satisfied if it is the case 
 that there is now (real) milk in her coffee, and 
 grandma's request is not necessarily satisfied if it is 
@@ -415,7 +415,7 @@ proposition `q.the kitchen window is closed` only bears on
 grandma's utterance insofar as she believes that 
 this window is open and causing a draft.  So if we want 
 to interpret the underlying locutionary content 
-of () and () truth-theoreticaly we need to 
+of (\ref{itm:can}) and (\ref{itm:close}) truth-theoreticaly we need to 
 map the literal concepts appearing 
 in these sentences to an appropriate translation, 
 a kind of `q.coordinate transformation` that 
@@ -541,7 +541,7 @@ Consider:
 `sentenceList,
 `sentenceItem; My colleague Ms. O'Shea would like to interview 
 Mr. Jones, who's an old friend of mine.  Can he take this call?
-`sentenceItem; I'm sorry, this is his secretary.  Mr. Jones 
+`sentenceItem; \label{itm:Jones} I'm sorry, this is his secretary.  Mr. Jones 
 is not available at the moment.
 `sentenceList`
 
@@ -551,7 +551,7 @@ her colleague initiates a process intended to
 culminate in Ms. O'Shea getting on the telephone 
 with Mr. Jones.  But his secretary demurs with a 
 familiar phrase, deliberately formulated to 
-foment ambiguity: () could mean that Mr. Jones 
+foment ambiguity: (\ref{itm:Jones}) could mean that Mr. Jones 
 is not in the office, or in a meeting, or 
 unwilling to talk, or even missing (like 
 the ex-governer consummating an affair in Argentina 
@@ -580,25 +580,26 @@ a complete breakdown of language:
 
 
 `sentenceList,
-`sentenceItem; Is Jones there?
-`sentenceItem; He is not available.
+`sentenceItem; \label{itm:isJones} Is Jones there?
+`sentenceItem; \label{itm:not} He is not available.
 `sentenceList`
 
-The speaker of () does not 
+The speaker of (\ef{itm:not}) does not 
 provide any prima facie logical content: it neither affirms 
 nor denies Jones's presence.  Nonetheless that speaker 
 is a cooperative conversational partner 
 (even if they are not being very cooperative in real life): 
-() responds to the implicature in () that what the 
+(\ref{itm:not}) responds to the implicature in 
+(\ref{itm:isJones}) that what the 
 first speaker really wants is (for instance) 
 to interview Jones.  
 So the second speaker conducts what I called 
 a `q.transform` and maps `q.Jones is here` to 
 `q.Jones is willing to be interviewed`/.  
 Responding to this `q.transformed` question allows 
-() to be (at least) linguistically cooperative 
+(\ref{itm:not}) to be (at least) linguistically cooperative 
 while nonetheless avoiding a response at the 
-`i.logical` level to ().  () obeys 
+`i.logical` level to (\ref{itm:isJones}).  (\ref{itm:not}) obeys 
 conversational maxims but is still rather obtuse.
 `p`
 
@@ -615,11 +616,11 @@ content does not appear to be `i.completely`
 empty: `q.Jones is not available` means the 
 conjunction of several possibilities (he cannot be found 
 or does not want to talk or etc.).   
-So () does seem to evoke some 
+So (\ref{itm:not}) does seem to evoke some 
 disjunctive predicate.  But such does not mean 
 that this disjunctive predicate is the `i.meaning` of 
-().  It does not seem as if () when uttered by a 
-bodyguard is intended first and foremost to 
+(\ref{itm:not}).  It does not seem as if (\ref{itm:not}) 
+when uttered by a bodyguard is intended first and foremost to 
 convey the disjunctive predicate.  Instead, the 
 bodyguard is responding to the implicature 
 in the original `q.Is Jones there?` query %-- the 
@@ -1005,15 +1006,16 @@ say something like:
 
 
 `sentenceList,
-`sentenceItem; Grandma wants the proposition `q.the kitchen 
+`sentenceItem; \label{itm:wants} Grandma wants the proposition `q.the kitchen 
 window is closed` to be true.
-`sentenceItem; Grandma wants the proposition 
+`sentenceItem; \label{itm:cold} Grandma wants the proposition 
 `q.I am cold` to be false.
 `sentenceList`
 
 My prior analysis focused on the fact that the more relevant 
-proposition is that in (), and we have to 
-read () from ().  But it should also be obvious 
+proposition is that in (\ref{itm:cold}), and we have to 
+read (\ref{itm:cold}) from (\ref{itm:wants}).  
+But it should also be obvious 
 that grandma does not care about `i.propositions`/.  
 She only cares about `q.I am cold` as a `i.proposition` 
 because she does not want to be cold.
@@ -1080,14 +1082,15 @@ speaker has available a chain of inference like:
 `sentenceItem; There is a proposition (call it `POne;) 
 whose propositional content is that the Jets win 
 and a proposition (`PTwo;) whose content is that the Leafs win.
-`sentenceItem; `PTwo; entails the negation of `POne;.
+`sentenceItem; \label{itm:entail} `PTwo; entails the negation of `POne;.
 `sentenceItem; He wants the content of `PTwo; to be true.
-`sentenceItem; His wishes are only consistent 
+`sentenceItem; \label{itm:false} His wishes are only consistent 
 with `POne; being false.
-`sentenceItem; He wants the content of `POne; to be false.
+`sentenceItem; \label{itm:Jets} He wants the content of `POne; to be false.
 `sentenceList`
 
-The interesting steps here are at () and (): in these steps 
+The interesting steps here are at (\ref{itm:entail}) and 
+(\ref{itm:false}): in these steps 
 of reasoning the predicate relation between propositions 
 is expressly thematized.  In the course of 
 understanding language, there may be occasions when we 
@@ -1137,7 +1140,7 @@ content, subject it to some logical manipulation,
 and at some later point in processing `q.retrieve` 
 the content from the proposition.  This is not circular 
 because the content is not `i.immediately` extracted from 
-the monad.  In (), the content wrapped in 
+the monad.  In (\ref{itm:Jets} ), the content wrapped in 
 `POne; is held through several processing steps before yielding 
 the final interpretation (viz., that he wants the Jets to lose).  
 The final extraction corresponds to transforming 

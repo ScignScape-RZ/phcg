@@ -9,10 +9,10 @@ discourse is more about establishing facts or
 syncing concepts.  Compare between:
 
 `sentenceList,
-`sentenceItem; Remember that wine we tasted on the Niagara 
+`sentenceItem; \label{itm:store} Remember that wine we tasted on the Niagara 
 Peninsula last summer?  Can you find it in our 
 local liquor store?
-`sentenceItem; Remember that wine we tasted on the Niagara 
+`sentenceItem; \label{itm:varietal} Remember that wine we tasted on the Niagara 
 Peninsula last summer?  What varietal was that again?
 `sentenceList`
 
@@ -20,11 +20,11 @@ The first sentence in each pair attempts to
 establish a common frame of reference between 
 addresser and addressee %-- it does not, in and 
 of itself, request any practical (extramental) action.  
-The second sentence in () `i.can` be read as 
+The second sentence in (\ref{itm:store}) `i.can` be read as 
 requesting the addressee buy a bottle, though an alternate 
 interpretation is to learn for `i.future reference` 
 whether someone `i.could` buy that bottle.  The 
-second sentence in () carries no directive 
+second sentence in (\ref{itm:varietal}) carries no directive 
 implicature at all, at least with any directness; 
 it asks for more information. 
 `p`
@@ -33,11 +33,11 @@ it asks for more information.
 Despite these variations, it seems reasonable to say that 
 language is always performed in an overarching setting 
 where concrete (extralinguistic) activity 
-will `i.evetually` take place.  If in () I intend 
+will `i.evetually` take place.  If in (\ref{itm:varietal}) I intend 
 to recommend that grape variety to a friend, I may not be  
 making a direct request of him, but I `i.am`  
 proposing an eventual action that he 
-might take.  If in () I am not issuing a directive, I 
+might take.  If in (\ref{itm:store}) I am not issuing a directive, I 
 am however establishing (and reserving the future possibility) 
 that such a directive would be reasonable.  As a result, some 
 extralinguistic state change seems to be lurking 
@@ -70,7 +70,8 @@ many changes which occur in the course of
 linguistic activity do not have immediate, 
 apparent physical effects %-- there are still 
 multiple kinds of changes that can occur.  Dialogs 
-themselves change: the first sentences in () and () 
+themselves change: the first sentences in 
+(\ref{itm:store}) and (\ref{itm:varietal}) 
 modify the discursive frame so that, for example, 
 a particular wine becoms available as the anaphoric 
 target for `q.that` and `q.that wine` %-- and also, 

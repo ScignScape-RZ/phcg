@@ -56,11 +56,11 @@ carry out this exercise `visavis; several sentences,
 such as these:
 
 `sentenceList,
-`sentenceItem; The majority of students polled were 
+`sentenceItem; \label{itm:maj} The majority of students polled were 
 opposed to tuition increases.
-`sentenceItem; Most of the students expressed disappointment 
+`sentenceItem; \label{itm:most} Most of the students expressed disappointment 
 about tuition increases.
-`sentenceItem; Many students have protested the tuition increases.
+`sentenceItem; \label{itm:many} Many students have protested the tuition increases.
 `sentenceList`
 `p`
 
@@ -70,7 +70,7 @@ seem correspondingly expressed in linguistic
 elements %-- that is, to have some model 
 in both prelinguistic predicate structure 
 and in, in consort, semantic or syntactic principles.  
-All three of ()-() have similar but not 
+All three of (\ref{itm:maj})-(\ref{itm:many}) have similar but not 
 identical meanings, and the differences are 
 manifest both propositionally and 
 linguistically (aside from the specific superficial 
@@ -80,13 +80,15 @@ then the linguistic ones.
 `p`
 
 `p.
-One obvious predicative contrast is that () and () 
+One obvious predicative contrast is that 
+(\ref{itm:maj}) and (\ref{itm:most}) 
 ascribes a certain `i.quality` to students (e.g., disappointment), 
-whereas () and () indicate `i.events`/.  As such 
+whereas (\ref{itm:most}) and (\ref{itm:many}) 
+indicate `i.events`/.  As such 
 the different forms capture the contrast between `q.bearing 
 quality $Q$` and `q.doing or having done action 
 $A$`/: the former a predication and the latter an event-report.  
-In the case of (), both forms are available because we can 
+In the case of (\ref{itm:most}), both forms are available because we can 
 infer from `i.expressing` disappointment 
 to `i.having` disappointment.   
 There may be logics that would map one 
@@ -118,7 +120,7 @@ raising students' ire.  This would also favor a
 reading where `q.students` refers collectively to those 
 at a particular school, who would be directly affected by the 
 hikes.  The `i.absence` of an article on 
-`q.tuition increases` in () leaves open an interpretation 
+`q.tuition increases` in (\ref{itm:most}) leaves open an interpretation 
 that the students are not opining on some specific policy, but on 
 the idea of hikes in general.
 `p`
@@ -145,7 +147,7 @@ jurisdiction, or some other aggregating criteria
 (like, all those who took a poll).  
 Context can also determine whether aggregation is 
 more set- or type-based, more extensional 
-or intensional.  In ()-() the implication 
+or intensional.  In (\ref{itm:maj})-(\ref{itm:many}) the implication 
 is that we should read `q.students` more as a set or 
 collection, but variants like `i.students 
 hate tuition hikes` operates more at the level 
@@ -153,7 +155,7 @@ of students as a `i.type`/.  In `q.polled students`
 there is a familiar pattern of referencing a set by 
 marrying a type (students in general) with a descriptive 
 designation (e.g., those taking a specific 
-poll).  The wording of () does not 
+poll).  The wording of (\ref{itm:maj}) does not 
 mandate that `i.only` students took the poll; it 
 does however employ a type as a kind of operator on a set: 
 of those who took the poll, focus on students 
@@ -169,8 +171,9 @@ set/type, single/multiple, subset/superset, and
 abstract/concrete comparisons like tuition hikes `i.qua` idea 
 vs. `i.fait accompli`/.  A logical system could 
 certainly model these distinctions and accordingly capture  
-the semantic differences between ()-().  So such details 
-are all still consistnt with a truth-theoretic paradigm, although 
+the semantic differences between (\ref{itm:maj})-(\ref{itm:many}).  
+So such details are all still consistnt 
+with a truth-theoretic paradigm, although 
 we have to consider how linguistic form actually 
 conveys the propositional forms carved out via 
 these distinctions.
@@ -204,13 +207,13 @@ the discourse, like:
 
 `sentenceList,
 `sentenceItem; Most students oppose the tuition increase.
-`sentenceItem; Most students oppose a tuition increase.
+`sentenceItem; \label{itm:indef} Most students oppose a tuition increase.
 `sentenceList`
 
 These show the possibility of `i.increase` being singular 
 (which would tend to imply it refers to a concrete 
 policy, some `i.specific` increase), although in 
-() the `i.in`/definite article `i.may` connote 
+(\ref{itm:indef}) the `i.in`/definite article `i.may` connote 
 a discussion about hikes in general.
 `p`  
 
@@ -218,18 +221,18 @@ a discussion about hikes in general.
 But maybe not; cases like these are perfectly plausible:
 
 `sentenceList,
-`sentenceItem; Today the state university system 
+`sentenceItem; \label{itm:today} Today the state university system 
 announced plans to raise tuition by 
 at least 10\%.  Most students oppose a tuition increase.
-`sentenceItem; Colleges all over the country, facing 
+`sentenceItem; \label{itm:colleges} Colleges all over the country, facing 
 rising costs, have had to raise tuition, but 
 most students oppose a tuition increase.
 `sentenceList`
 
-In () the definite article could also be used, but saying 
+In (\ref{itm:today}) the definite article could also be used, but saying 
 `q.`i.a` tuition increase` seems to reinforce the 
 idea that while plans were announced, the details 
-are not finalized.  And in () the plural `q.increases` 
+are not finalized.  And in (\ref{itm:colleges}) the plural `q.increases` 
 could be used, but the indefinite singular connotes the 
 status of tuition hikes as a general phenomenon 
 apart from individual examples %-- even though the 
@@ -305,12 +308,12 @@ varying how the subject noun-phrases are conceptualized
 propositional and linguistic composition can break down: 
 
 `sentenceList,
-`sentenceItem; Student after student came out against the tuition hikes.
-`sentenceItem; A substantial number of students 
+`sentenceItem; \label{itm:sas} Student after student came out against the tuition hikes.
+`sentenceItem; \label{itm:substantial} A substantial number of students 
 have come out against the tuition hikes.
-`sentenceItem; The number of students protesting the tuition hikes 
+`sentenceItem; \label{itm:mass} The number of students protesting the tuition hikes 
 may soon reach a critical mass.
-`sentenceItem; Protests against the tuition hikes 
+`sentenceItem; \label{itm:tipping} Protests against the tuition hikes 
 may have reached a tipping point.
 `sentenceList`
 
@@ -333,7 +336,7 @@ invokes a multiplicty a certain recurring or
 unfolding phenomenon.  One imagines the speaker, time 
 and again, hearing or encountering an angry student.  
 To be sure, there are different kinds of contexts 
-that are consistent with (): the events could 
+that are consistent with (\ref{itm:sas}): the events could 
 unfold over the course of a single hearing 
 or an entire semester.  Context would foreclose 
 some interpretations %-- but it would do so in any 
@@ -361,8 +364,9 @@ coloring to the report.
 `p`
 
 `p.
-Another factor in () and () is the various possible 
-meanings of `q.come out against`/.  This could be 
+Another factor in (\ref{itm:sas}) and (\ref{itm:substantial}) 
+is the various possible meanings of 
+`q.come out against`/.  This could be 
 read as merely expressing a negative opinion, or as a 
 more public and visible posturing.  In fact, a similar 
 dual meaning holds also for `q.protesting`/.  Context, 
@@ -389,7 +393,7 @@ of anger commensurate with policized confrontation.
 `p.
 All these sentences are of course `i.also` compatible with 
 literal rioting in the streets; but for sake of argument 
-let's imagine ()-() spoken in contexts 
+let's imagine (\ref{itm:sas})-(\ref{itm:tipping}) spoken in contexts 
 where the protesting is more like a few comments to a school 
 newspaper and hallway small-talk.  The speakers have still 
 chosen to use words whose span of meanings 
@@ -404,7 +408,8 @@ to `i.protest` connotes a greater shade of anger than to `i.oppose`/.
 Such conceptual shading is not itself unlogical; one 
 can use more facilely propositional terms to evoke 
 similar shading, `q.like very angry` or `q.etremely angry`/.  
-However, consider `i.how` language like ()-() 
+However, consider `i.how` language like 
+(\ref{itm:sas})-(\ref{itm:tipping}) 
 conveys the relevant facts of the mater: there is 
 an observational, in-the-midst-of-things staging at 
 work in these latter sentences that I find missing 
@@ -413,7 +418,8 @@ statistical, or clinical; it suggests journalistic reportage,
 the speaker making an atmospheric effort to sound like someone 
 reporting facts as established knowledge rather than 
 observing them close-at-hand.  
-By contrast, I find ()-() to be more `q.novelistic` than 
+By contrast, I find (\ref{itm:sas})-(\ref{itm:tipping}) 
+to be more `q.novelistic` than 
 `q.journalistic`/.  The speaker in these cases is reporting 
 the facts by, in effect, `i.narrating` them.  She is building 
 linguistic constructions that describe propositional 
@@ -463,9 +469,11 @@ propositional content, even while they
 `i.do` (with sufficient contextual grounding) carry 
 propositional content through the folds of the narrative.  
 I don't dispute that hearers understand logical forms 
-via ()-() similar to those more `q.journaslistically` 
-captured in ()-().  Nor do I 
-deny that the richer rhetoric of ()-() play a logical 
+via (\ref{itm:sas})-(\ref{itm:tipping}) 
+similar to those more `q.journaslistically` 
+captured in (\ref{itm:maj})-(\ref{itm:many}).  Nor do I 
+deny that the richer rhetoric of 
+(\ref{itm:sas})-(\ref{itm:tipping}) play a logical 
 role, capturing granular shades of meaning.  My 
 point is rather that the logical picture painted by the latter 
 sentences is drawn via (I'll say as a kind of suggestive 
@@ -492,7 +500,8 @@ details which have reasonable logical bases, like
 degrees of students' anger, or the causative 
 interpretation implied in such phrases as `q.critical mass`/.  
 The rhetorical dimension does not prohibit a reading 
-of ()-() as expressing propositional content %-- and using 
+of (\ref{itm:sas})-(\ref{itm:tipping}) 
+as expressing propositional content %-- and using 
 rhetorical flourishes to do so. 
 `p`
 

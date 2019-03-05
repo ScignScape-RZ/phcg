@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  5 MAR 2019 00:22
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  5 MAR 2019 00:36
 entering extended mode
 **rightx.ngml.tex
 (C:\scign\phcg\ar\rightx\rightx.ngml.tex
@@ -1067,11 +1067,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17785 strings out of 494049
- 345469 string characters out of 3146069
- 455448 words of memory out of 3000000
- 20431 multiletter control sequences out of 15000+200000
- 36382 words of font info for 184 fonts, out of 3000000 for 9000
+ 17801 strings out of 494049
+ 345661 string characters out of 3146069
+ 455517 words of memory out of 3000000
+ 20440 multiletter control sequences out of 15000+200000
+ 37425 words of font info for 188 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  60i,8n,67p,791b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
@@ -1093,10 +1093,11 @@ ts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/cm-super/sfrm1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 public/cm-super/sfrm1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/cm-super/sfti1095.pfb>
-Output written on rightx.ngml.pdf (48 pages, 587124 bytes).
+lic/cm-super/sfti1000.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/cm-super/sfti1095.pfb>
+Output written on rightx.ngml.pdf (48 pages, 589991 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
+ 241 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 27149 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 29197 words of extra memory for PDF output out of 29859 (max. 10000000)
 
