@@ -1069,7 +1069,7 @@ it non-trivial.  Suppose the Leafs are playing
 the Jets:
 
 `sentenceList,
-`sentenceItem; Are you rooting for the Jets?
+`sentenceItem; \label{itm:rooting} Are you rooting for the Jets?
 `sentenceItem; Well, I want the Leafs to win.
 `sentenceList`
 
