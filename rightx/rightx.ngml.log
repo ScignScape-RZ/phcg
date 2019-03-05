@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  5 MAR 2019 00:36
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  5 MAR 2019 01:12
 entering extended mode
 **rightx.ngml.tex
 (C:\scign\phcg\ar\rightx\rightx.ngml.tex
@@ -905,10 +905,10 @@ Underfull \hbox (badness 1325) in paragraph at lines 1--1
 Underfull \vbox (badness 2253) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2538) has occurred while \output is active []
 
  [21]
-Underfull \vbox (badness 2538) has occurred while \output is active []
+Underfull \vbox (badness 2253) has occurred while \output is active []
 
  [22]
 Underfull \vbox (badness 2165) has occurred while \output is active []
@@ -923,7 +923,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
  []
 
 
-Underfull \vbox (badness 2253) has occurred while \output is active []
+Underfull \vbox (badness 2165) has occurred while \output is active []
 
  [26]
 Underfull \vbox (badness 2165) has occurred while \output is active []
@@ -933,7 +933,7 @@ Underfull \vbox (badness 2253) has occurred while \output is active []
 
  [28])
 (C:\scign\phcg\ar\rightx\section3a.ngml.tex
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
 Underfull \hbox (badness 1442) in paragraph at lines 94--120
@@ -947,7 +947,7 @@ Underfull \vbox (badness 2253) has occurred while \output is active []
 Underfull \vbox (badness 2165) has occurred while \output is active []
 
  [30]
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 2253) has occurred while \output is active []
@@ -969,10 +969,10 @@ Underfull \hbox (badness 1270) in paragraph at lines 40--54
  []
 
 
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 2119) has occurred while \output is active []
 
  [34]
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 2253) has occurred while \output is active []
 
  [35]
 Underfull \vbox (badness 2538) has occurred while \output is active []
@@ -984,10 +984,10 @@ Underfull \vbox (badness 2165) has occurred while \output is active []
 Underfull \vbox (badness 2253) has occurred while \output is active []
 
  [37]
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 2253) has occurred while \output is active []
 
 
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 2119) has occurred while \output is active []
 
  [38])
 (C:\scign\phcg\ar\rightx\section3c.ngml.tex
@@ -998,7 +998,7 @@ Underfull \vbox (badness 2253) has occurred while \output is active []
 
  [40]
 
-LaTeX Warning: Citation `MartinRaubal' on page 41 undefined on input line 193.
+LaTeX Warning: Citation `MartinRaubal' on page 41 undefined on input line 195.
 
 
 Underfull \vbox (badness 2165) has occurred while \output is active []
@@ -1006,26 +1006,23 @@ Underfull \vbox (badness 2165) has occurred while \output is active []
  [41]
 Underfull \vbox (badness 2253) has occurred while \output is active []
 
-
-Underfull \vbox (badness 2253) has occurred while \output is active []
-
  [42]
-Underfull \hbox (badness 1067) in paragraph at lines 400--400
+Underfull \hbox (badness 1067) in paragraph at lines 402--402
 []\T1/cmr/m/n/10.95 (+20) Holmqvist how-ever rec-og-nizes this pos-si-bil-ity
  []
 
 
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43]
 Underfull \vbox (badness 2165) has occurred while \output is active []
 
 
 
-LaTeX Warning: Citation `MattSelway' on page 44 undefined on input line 574.
+LaTeX Warning: Citation `MattSelway' on page 44 undefined on input line 576.
 
 
-LaTeX Warning: Citation `SmithDonnely' on page 44 undefined on input line 574.
+LaTeX Warning: Citation `SmithDonnely' on page 44 undefined on input line 576.
 
 ) (C:\scign\phcg\ar\rightx\conclusion.ngml.tex
 Underfull \vbox (badness 2165) has occurred while \output is active []
@@ -1035,16 +1032,16 @@ Underfull \vbox (badness 2165) has occurred while \output is active []
 LaTeX Warning: Citation `AntonioLieto' on page 45 undefined on input line 24.
 
 
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 2253) has occurred while \output is active []
 
  [45]
 Underfull \vbox (badness 2165) has occurred while \output is active []
 
 
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 2253) has occurred while \output is active []
 
  [46]
-Underfull \vbox (badness 2253) has occurred while \output is active []
+Underfull \vbox (badness 2165) has occurred while \output is active []
 
 
 
@@ -1052,10 +1049,10 @@ LaTeX Warning: Citation `CyberphysicalSystems' on page 47 undefined on input li
 ne 314.
 
 
-Underfull \vbox (badness 2253) has occurred while \output is active []
+Underfull \vbox (badness 2165) has occurred while \output is active []
 
  [47]
-Underfull \vbox (badness 2165) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ) [48]
 (C:\scign\phcg\ar\rightx\rightx.ngml.aux)
@@ -1067,10 +1064,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17801 strings out of 494049
- 345661 string characters out of 3146069
- 455517 words of memory out of 3000000
- 20440 multiletter control sequences out of 15000+200000
+ 17829 strings out of 494049
+ 345995 string characters out of 3146069
+ 456799 words of memory out of 3000000
+ 20468 multiletter control sequences out of 15000+200000
  37425 words of font info for 188 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  60i,8n,67p,791b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1095,7 +1092,7 @@ e1/public/cm-super/sfrm1200.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 public/cm-super/sfrm1728.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/cm-super/sfti1000.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /cm-super/sfti1095.pfb>
-Output written on rightx.ngml.pdf (48 pages, 589991 bytes).
+Output written on rightx.ngml.pdf (48 pages, 590336 bytes).
 PDF statistics:
  241 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
