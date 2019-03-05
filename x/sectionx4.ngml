@@ -5,7 +5,7 @@ a phenomenological and Cognitive Grammar perspective, more
 than to offer a neutral exposition of Link Grammar theory.
 Therefore I will accept some terminology and exposition
 not necessarily originating from the initial
-Link Grammar projects (though influenced by
+Link Grammar projcts (though influenced by
 subsequnt research, e.g. [expectation]).  I also
 want to wed Link Grammar to my own semantic intuitions,
 set forth earlier, that word-meanings and morphosyntactic
@@ -856,6 +856,90 @@ of Annotated Directed Hypergraphs
 (and analogous to head/dependent
 and left/right partiality in Link Grammar).
 `p`
+
+
+`p.
+This notion of expression/signature duality is not
+just speculative; I believe it has rich potential
+for new techniques in data modeling, program analysis,
+and code verification, and is a core dimension
+of software distributed as part of a research-sharing
+platform, currently used in connection with
+several publications spanning multiple publishers
+and academic disciplines.`footnote.
+See Rodger2016, Prague2015, BHP2018, Neustein2019,
+and the `q.ScignScape` repository on github:
+most of these are examples where authors or
+publishers supplemented a prior book or article
+with a curated data set, or `q.Research Object`/,
+where the data set is downloaded along with
+code from which customized software can be compiled specific
+to the data set and text being shared,
+software I devloped in part as a prototype or
+experimental sandbox for computational models
+mentioned here (in the case of the 2019 volume, part
+of Springer's `q.Advances of Ubiquitous Sensing in
+Healthcare` series, the data sets and publication
+are developed in consort).
+`footnote`
+The path I have sketched here from Link Grammar
+to a theory of Procedural Networks is similar,
+if not technically equivalent to, analogous
+analyses associated with OpenCog, for example
+(particularly in Ben Goertzel's two-volume
+`i.Engineering General Intellignce`/).
+`p`
+
+`p.
+The software I just dscrribed in rlation to certain
+published data sets certainly is narrower and
+more nascent than OpenCog components like AtomSpace.
+At the same time, it has been more directly
+formulated in relation to academic and publishing
+workflows and is more precisely sited
+in academic and research-sharing domains (and moreover
+remains agnostic `visavis; the more extravagant
+`q.Artifical General Intelligence` claims).
+It is also almost entirely self-contained,
+with few external software dependencies, which
+arguably makes this software a more accessible
+test-bed for refining and analyzing formal
+properties of structures I have outlined here
+%-- in particular a generalization
+of Link Grammar to a working model
+of computation, perhaps via what I have dubbed
+`q.annotative fusion`/.  In any case,
+both OpenCog and, I would like to believe,
+this published software (designed to emulate some
+of OpenCog's architectural features but on a
+smaller-scale and mor self-contained foundation)
+are concrete technologies that take Link Gramar
+and Procedural Networks (in one sense or another)
+as modeling and linguistic paradigms.  In this
+sense they may be contrasted with Semantic Web
+technologies, which are based on labeled directed
+graphs and Description Logics.  Phenomenologically,
+we can then give formal analogs to back up the
+comparisons I intimated earlier: between the Semantic
+Web as a formal case-study and retroactive intution for
+Phenomenology, but one paradigmatically grounded
+in classical logic and truth-theortic semantics,
+and other paradigms %-- here developd via
+Annotated Hypergraphs, annotative fusion, and
+annotative partiality add a new structural layer to
+lambda-calculus-style type thory %-- informed
+via linguistic (rather than logical) methods like
+Link Grammar and arguably more compatible
+with Cognitive Grammar (and Cognitive Phenomenology).
+Here I make the implicit assumption that such an
+`q.annotative partiality` and hypergaph-based type
+theory prsents a formal foundation fundamentally different,
+in some philosophically interesting sense, from classical
+formal logic.  Fully defending this claim is outsude
+the scope of this paper, but I will offer a
+few comments on this topic in conclusion.
+`p`
+
 
 `p.
 
