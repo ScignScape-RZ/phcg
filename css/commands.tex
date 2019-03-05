@@ -5,7 +5,10 @@
 
 \usepackage{setspace}
 %\doublespacing
-\onehalfspacing
+%\onehalfspacing
+
+
+
 
 
 \usepackage[flushmargin]{footmisc}
@@ -22,7 +25,7 @@
 %?\usepackage{mathptmx}
 
 
-\titleformat*{\subsection}{\small\bfseries}
+%?\titleformat*{\subsection}{\small\bfseries}
 
 %?\usepackage{eufrak}
 \usepackage{wasysym}
@@ -264,7 +267,7 @@
 
 
 \newcommand{\saying}[1]{\vspace{2ex}\noindent{%%
-				\leader{2em}{\begin{minipage}{.93\textwidth}{\footnotesize #1}\end{minipage}}\vspace{2ex}}}
+				\leader{2em}{\begin{minipage}{.38\textwidth}{\footnotesize #1}\end{minipage}}\vspace{2ex}}}
 
 \newcommand{\sayingsrc}[1]{\vspace{0ex}\\\hspace{2pt} --- {\footnotesize #1}}
 
@@ -343,11 +346,63 @@
 	\vspace{-4pt}
 }
 
+%?\let\OldSubsection\subsection
+
+%?\renewcommand\subsection[1]{
+%?	\vspace{-5pt}
+%?	\OldSubsection{#1}
+%?	\vspace{-16pt}
+%?}
+
+\usepackage{transparent}
+
+\definecolor{logoCyan}{RGB}{66, 206, 244}
+\definecolor{logoBlue}{RGB}{4, 2, 25}
+
+\titleformat*{\subsection}{\Large\bfseries}
+
 \let\OldSubsection\subsection
 \renewcommand\subsection[1]{
-	\vspace{-5pt}
-	\OldSubsection{#1}
-	\vspace{-16pt}
+
+	\vspace{12pt}
+	
+    %{\LARGE
+	%\colorbox{logoCyan}{%
+	%\begin{minipage}{\linewidth}
+		\OldSubsection{% 	
+			\hspace{-2.75em}
+			%\begin{minipage}{}
+			\protect\raisebox{-5pt}{%
+			\colorbox{logoCyan!50}{\hspace{2.1em}}}%
+			\hspace{-5pt}{\protect\transparent{0.3}{\colorbox{logoBlue!80}{\protect\transparent{1}{%
+						   \protect\raisebox{1pt}{\textit{{\large #1}}} }}}}
+			%\end{minipage}
+		}
+	%\end{minipage}
+    %}
+    %}
+	\vspace{-6pt}
+}
+
+
+\newsavebox{\twolinebox}
+
+\newcommand{\stwoline}[1]{%
+\sbox{\twolinebox}{\raisebox{-3pt}%
+{\parbox{7.4cm}{\linespread{1.25}\selectfont\raggedleft{\textit{\textbf{{\large #1}}}}}}}}
+
+\newcommand{\twoline}{\usebox{\twolinebox}}
+
+\newcommand{\subsectiontwoline}[1]{\stwoline{#1}\subsection{\twoline}}
+
+\newcommand{\spsubsection}[1]{%
+\vspace{-.25em}
+\subsection{#1}
+\vspace{.3em}
+}
+\newcommand{\spsubsectiontwoline}[1]{%
+\subsectiontwoline{#1}
+\vspace{-1.3em}
 }
 
 

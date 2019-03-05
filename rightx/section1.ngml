@@ -22,12 +22,12 @@ of their reference to external objects.  Given
 sentences like
 
 `sentenceList,
-`sentenceItem; He opened the wine bottle with an ornate corkscrew.
-`sentenceItem; He opened the beer bottle with a butterfly corkscrew.
+`sentenceItem; \label{itm:ornate} He opened the wine bottle with an ornate corkscrew.
+`sentenceItem; \label{itm:butterfly} He opened the beer bottle with a butterfly corkscrew.
 `sentenceItem; He collects antique corkscrews and just bid on one online. 
-`sentenceItem; I thought this was a screw-top but it turns out I need a corkscrew.
-`sentenceItem; This X3D file shows a very realistic corkscrew created with NURBS surfaces.
-`sentenceItem; Could you send me the corkscrew (the X3D file you just mentioned)?
+`sentenceItem; \label{itm:screwtop} I thought this was a screw-top but it turns out I need a corkscrew.
+`sentenceItem; \label{itm:x3d} This X3D file shows a very realistic corkscrew created with NURBS surfaces.
+`sentenceItem; \label{itm:sendx3d} Could you send me the corkscrew (the X3D file you just mentioned)?
 `sentenceList`
 
 we should interpret `q.corkscrew`/, first, as a concept 
@@ -35,12 +35,14 @@ in a kind of functional organization.  In some of these sentences
 there is also a specific corkscrew (qua phsyical object) on hand 
 as a referent, but its actual physical properties %-- or 
 even identity %-- is not decisive for the meaning of 
-the sentence.  After all, in (4) the speaker is 
+the sentence.  After all, in (\ref{itm:screwtop}) the speaker is 
 not thinking of any corkscrew in particular (probably 
-%-- more on that later) and in (5) and (6) the corkscrew is 
+%-- more on that later) and in (\ref{itm:x3d}) and 
+(\ref{itm:sendx3d}) the corkscrew is 
 not real (at least not real qua corkscrew).  
 But the conceptualization associated with `q.corkscrew` does 
-not seem markedly different in (1) or (2) versus (4), 
+not seem markedly different in (\ref{itm:ornate}) or 
+(\ref{itm:butterfly}) versus (\ref{itm:screwtop}), 
 at least (more on the other three later).
 `p`
 
@@ -91,7 +93,7 @@ to accommodate varigated implementers of those roles.
 We can indeed accept sentences like: 
 
 `sentenceList,
-`sentenceItem; He opened the bottle of beer with a hammer.
+`sentenceItem; \label{itm:hammer} He opened the bottle of beer with a hammer.
 `sentenceItem; He pounded the nail with a lever corkscrew.
 `sentenceList`
 
@@ -118,8 +120,8 @@ conversational maxims if we handed our friend who
 wanted to open a beer bottle a hammer.  Even if 
 there's a way to make the hammer work for that 
 purpose, it's further outside the norm than, referring 
-back to (), proposing to use a winged corkscrew.  
-So the implicature in () is satisfied, let's say, 
+back to (\ref{itm:butterfly}), proposing to use a winged corkscrew.  
+So the implicature in (\ref{itm:butterfly}) is satisfied, let's say, 
 by bringing my guest a winged corkscrew, but not a 
 hammer.  But we can entertain the `i.thought` of using 
 a hammer as a bottle-opener, and even this 
@@ -131,8 +133,8 @@ is used to open wine` %-- after all, you cannot conclude
 from 
 
 `sentenceList,
-`sentenceItem; A hammer is somthing used to pound nails, and
-`sentenceItem; A lever corkscrew is something used to open wine, and
+`sentenceItem; A hammer is somthing used to pound nails, `i.and`
+`sentenceItem; A lever corkscrew is something used to open wine, `i.and`
 `sentenceItem; A lever corkscrew can be used to pound nails 
 `sentenceList`
 
@@ -145,7 +147,7 @@ conceptual slots with different lexical content
 in different situations.  The 
 `q.that which can open capped bottles` slot can be filled 
 descriptively %-- i.e., in declarative speech, 
-like in () %-- by a hammer, but not in 
+like in (\ref{itm:hammer}) %-- by a hammer, but not in 
 other kinds of speech acts (we cannot read the concept 
 `q.bottle opener` as satisfied by `q.hammer` in 
 the context of a request for a bottle opner).  Note that 
@@ -168,12 +170,12 @@ I am building a sand castle on a beach and ask someone
 one of:
 
 `sentenceList,
-`sentenceItem; Can you bring me a bucket of water?
-`sentenceItem; Can you bring me a glass of water?
+`sentenceItem; \label{itm:bucket} Can you bring me a bucket of water?
+`sentenceItem; \label{itm:glass} Can you bring me a glass of water?
 `sentenceList`
 
-For (), a reasonable reaction would be a bucket filld 
-with ocean water; but for () my addressee would probably 
+For (\ref{itm:bucket}), a reasonable reaction would be a bucket filld 
+with ocean water; but for (\ref{itm:glass}) my addressee would probably 
 infer that I was thirsty, and %-- since salt ater is 
 non-potable %-- was requesting water I could drink.  
 But `q.`i.glass of` water` probably figures here just 
