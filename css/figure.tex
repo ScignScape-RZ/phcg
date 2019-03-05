@@ -1,0 +1,148 @@
+\begin{figure}
+\caption{Dependency-style graph with type annotations}	
+\label{fig:Iknow}
+\vspace{1em}
+\hspace{0.15\textwidth}	
+\begin{minipage}{0.7\textwidth}	
+\begin{tikzpicture}
+
+%\draw
+
+%\node [s1] at (0,0) {Student};
+
+\node (I) at (1,1) {\textbf{I}};
+\node (know) [right=9mm of I] {\textbf{know}};
+\node (that) [right=9mm of know] {\textbf{that}};
+\node (he) [right=12mm of that] {\textbf{he}};
+\node (is) [right=10mm of he] {\textbf{is}};
+\node (at) [right=10mm of is] {\textbf{at}};
+\node (school) [right=5mm of at] {\textbf{school}};
+
+
+\node (IRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=2cm of I] {};
+\node (knowRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=1.5cm of know] {};
+\node (thatRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=2cm of that] {};
+\node (heRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=2.6cm of he] {};
+\node (isRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=2.1cm of is] {};
+\node (atRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=2.6cm of at] {};
+\node (schoolRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=3cm of school] {};
+
+\node (knowRepType) [below right = .2cm and -1.2cm of knowRep] 
+ {\colorbox{yellow!20!red!30}{\scalebox{.7}{\NNtoProp}}}; 
+
+\node (thatType) [below right = .2cm and -.8cm of thatRep] 
+{\colorbox{yellow!20!red!30}{\scalebox{.7}{\PropToN}}}; 
+
+\node (isRepType) [below right = .1cm and -1.4cm of isRep] 
+{\colorbox{yellow!20!red!30}{\scalebox{.7}{\NNtoProp}}}; 
+
+\node (atRepType) [below right = .15cm and -.9cm of atRep] 
+{\colorbox{yellow!20!red!30}{\scalebox{.7}{\NtoN}}
+}; 
+
+\node (atRepTypeNote) [below right = .5cm and .1cm of atRep] {
+	\footnotesize{(location)}
+}; 
+
+
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70, 
+ dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+ (I) to (IRep);
+
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70, 
+ dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(know) to (knowRep);
+ 
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70,  
+ dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(that) to (thatRep);
+
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70, 
+ dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(he) to (heRep);
+ 
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70, 
+dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(is) to (isRep);
+
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70,  
+dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(at) to (atRep);
+
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70, 
+dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(school) to (schoolRep);
+ 
+ 
+\draw [shorten <= .25cm, shorten >= .25cm ] 
+(knowRep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm, above] {1} (IRep);
+
+\draw [shorten <= .25cm, shorten >= .25cm ] 
+(knowRep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm,above] {2} (thatRep);
+
+\draw [shorten <= .05cm, shorten >= .05cm, bend left=60] 
+(thatRep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm,above, 
+near start] {3} (isRep);
+
+
+\draw [shorten <= .15cm, shorten >= .15cm ] 
+(isRep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm,
+ above, pos=0.4] {1} (heRep);
+
+\draw [shorten <= .15cm, shorten >= .15cm ] 
+(isRep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm,above, 
+ pos=0.4] {2} (atRep);
+
+\draw [shorten <= .15cm, shorten >= .15cm ] 
+(atRep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm,above] {4} (schoolRep);
+
+
+%\draw [shorten <= .25cm, shorten >= .25cm ] 
+%(s1Rep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm, below] {2} (s2Rep);
+
+%\draw [shorten <= .5cm, shorten >= .5cm ] 
+%(afterRep) edge [bend left=20,looseness=1] node [draw=black,shape = star,star points=4,thick,inner sep = 0mm, 
+% above, near end ] {3} (complainedRep);
+
+%\node (frameTopLeft) [below left = 1.5cm and -.65 cm of s1] {};
+%\node (frameBottomLeft) [below = 2.5cm of frameTopLeft] {};
+%\node (frameBottomRight) [right = 3.95cm of frameBottomLeft] {};
+%\node (frameTopRight) [above = 2.5cm of frameBottomRight] {};
+
+%\draw [shorten <= 0.15cm, shorten >= 0.15cm ] 
+%(frameTopLeft) edge [bend right=30,looseness=1] (frameBottomLeft);
+
+%\draw [shorten <= 0.15cm, shorten >= 0.15cm ] 
+%(frameBottomLeft) edge [bend right=30,looseness=1] (frameBottomRight);
+
+%\draw [shorten <= 0.15cm, shorten >= 0.15cm ] 
+%(frameBottomRight) edge [bend right=30,looseness=1] (frameTopRight);
+
+%\draw [shorten <= 0.15cm, shorten >= 0.15cm ] 
+%(frameTopRight) edge [bend right=30,looseness=1]
+%node [draw=black,shape = regular polygon,regular polygon sides=3,thick,inner sep = .2mm, 
+%above, near start, shape border rotate = 180] {4} (frameTopLeft);
+
+
+%node [draw=black,shape = star,star points=4,thick,inner sep = 0mm, above, 
+%bend left=100,looseness=3] {3}
+
+%;
+
+
+\end{tikzpicture}
+\end{minipage}
+
+\hspace{0.1\textwidth}
+\begin{minipage}{0.8\textwidth}
+		\renewcommand{\labelitemi}{$\blacklozenge$}
+	
+\begin{itemize}\setlength\itemsep{-.3em}
+\item 1 \hspace{12pt}  Verb's subject argument
+\item 2 \hspace{12pt}  Verb's direct object argument
+\item 3 \hspace{12pt}  Propositional \q{packaging} (\q{typed} as {}\PropToN{})
+\item 4 \hspace{12pt}  Locative auxiliary link \\
+(may be typed as converting nouns to place-designations) 
+\end{itemize}
+\end{minipage}
+\end{figure}

@@ -1,0 +1,352 @@
+\documentclass[11pt,twocolumn]{article}
+\include{commands}
+\begin{document}\title{Cognitive State Semantics and the Condition of the Sign}
+\maketitle{}
+\begin{abstract}\singlespacing\noindent Start with the question of conditions of possibility for 
+language to exist: how spoken, written, or inscribed signs 
+differ from other kinds of things, enough to establish language as 
+something that exists in the world.  Language is a regime of 
+multiple conversation partners, an ambient surrounding where they 
+share actions, perceptions, and foci of attention, and a common posit of structured rules.  
+If communication is successful, each sign's referent is 
+isolated, collectively/phenomenologically, from a (canonically spatiotemporal) reality 
+that extends beyond it.  My goal here is to sketch this process 
+with the help of formal and Computational linguistic theories, 
+but keeping in sight a cognitive nuance and intersubjectivity that is 
+(thankfully) an essential, unavoidable part of human language.
+I will incorporate technical models mostly from Link Grammar 
+and Type-Theoretic Semantics, understanding the latter as possibly 
+layering on the former to complete a syntax/semantic pairing.  
+I propose both cases for and limits on formal theories' 
+applicability for Cognitive Linguistics/Humanities/Phenomenology, through the lens of the 
+Philosophy of Science \mdash{} 
+arguing how Phenomenology and Cognitive Linguistics, while distinct traditions, can work powerfully in consort.
+\end{abstract}
+\input{top-quotes}
+\vspace{1em}
+\p{One of the well-recognized questions in semiotics 
+and philosophy is the relation of language to other sign-systems \mdash{} whether the \q{structural laws} 
+of Natural Language are different in kind from the norms of other sign-systems, and whether we possess 
+truly innate language faculties.  There should be no question that people are instinctively 
+communicative; but a generally Chomskyan linguistics holds that we separately have cognitive 
+abilities primed for language's unique structures.  Cognitive Linguists, by contrast, 
+dispute the syntax/semantics distinction and therefore undermine suppositions of a distinct 
+faculty of (or modeled by) grammar, referring instead to general communicative and cognitive-enactive 
+patterns which coalesce into language competence, insofar as children are raised in environments 
+where language and the social interactions it enables are crucial parts of their world.  
+A priority for this cognitive viewpoint is then to model how this adaptation may 
+occur: how language ability can evolve out of communicative and interactive needs, 
+emerging from prelinguistic dialogic and perceptual experience \cite{AlexanderKravchenko}.  
+Preliminary to such a theory are representations of language structures which can be 
+defended based on their reflecting general cognitive (situational, perceptual) 
+construals, but also have a degree of formality comparable to models based 
+on abstract, logico-mathematic structures \mdash{} including computational-linguistic 
+frameworks, if these can be persuasively associated with cognitive-linguistic analyses.
+}
+\p{Here I will consider Dependency Grammar (more precisely Link Grammar 
+\cite{HongEisner}, \cite{AkbikBross}), 
+as one branch of computational model, precise enough to guide concrete 
+Natural Langauge Processing implementations, 
+but (I will argue) potentially encapsulating some cognitive themes.  Dependency 
+Grammars employ syntactic formalisms that emphasize word-to-word relations; 
+they are often contrasted with Phrase Structure Grammars, which put more emphasis on the 
+nested, hierarchical structure of phrases \cite{Schneider}, \cite{Kohn}.
+Dependency Grammar has several variants, including Link Grammar, and 
+Extensible Dependency Grammar, which differ in the precise graph structures 
+used to analyze word-to-word links \cite{DebusmannDuchierRossberg},
+\cite{DebusmannThesis}, \cite{Nivre}.  Phrase-Structure approaches also 
+have many offshoots, like Head-Driven Phrase Structure
+Grammar (\HPSG{}), Lexical-Functional Grammar, and Sign-Based Construction Grammar
+\cite{MartinPollard}, \cite{KepserMonnich}; \cite{MaryDalrymple}; \cite{BoasSag}.
+These various methods often address the same language phenomena; in particular, 
+phrase structure can be implicit in word-to-word linkage, and vice-versa 
+\cite{KongRushSmith}; \cite{XiaPalmer}.
+So one question is whether inter-word \q{links} or phrase \q{hierarchies} are 
+\q{better} for revealing linguistic structure in the sense that they produce 
+more compelling notations, computational implementations, and/or theoretical expositions. 
+I will not explore this controversy in depth, but I will 
+make some brief arguments for the relative merit of 
+the link-grammar methodology.
+}
+\p{My larger concerns are with the limits and ramifications of formal models that 
+suggest cognitive patterns.  I want to avoid both an eliminative metaphysics that 
+reduces cognition to a computational metaphor \mdash{} mind as computer, or perhaps 
+a decentralized network of computer-like facilities \mdash{} and also a disciplinary 
+prejudice to reject formal models \i{a priori}.  From a humanistic perspective, 
+it can seem reductionistic \mdash{} even dehumanizing \mdash{} to ignore emotion, ethics, 
+society, subjective experience, and personal identity, in any worldview about 
+reason and consciousness.  On the other hand, many areas of academia and (especially) 
+industry evince a sincere faith in Artificial Intellience simulating progressively 
+more human-like behavior.  This has led to useful technologies \mdash{} better 
+search engines, Optical Character Recognition (to automatically deposit checks, 
+for example) \mdash{} but it also offers up the question of whether real human behavior 
+is just a totality of narrow mental abilities, or something more holistic.  
+Meanwhile, technology need not \i{reproduce} cognition to be a window 
+on cognitive-perceptual processes: \ThreeD{} and Virtual Reality, for example, 
+employ geometric calculations to represent shape, contour, color, texture, opacity, 
+transparency, and lighting; the experiential realism of the resulting graphics implies 
+retroactively that the mathematics built in to Computer Generated Imagery resonates 
+with conscious experience \mdash{} as a formal model of the world as encountered 
+by the senses if not as a reproduction of how sense-data is intellected into 
+consciousness.\footnote{\label{footnoteVision}
+Relatedly, reconstructing three-dimensional geometry, for instance from photographs, 
+can be a valuable technology and shed light on mechanisms of human vision, without 
+any presumption that computers have phenomenological \q{sight-experiences}.  
+I think this suggests how a mathematical and/or algorithmic process which takes givens in one form 
+(like a photographic bitmap) and creates a (by some theory) equivalent representation 
+in another form (like a \ThreeD{} mesh or richer \ThreeD{} scene notation), 
+shows intelligent behavior, with useful affordances for human ends that are 
+worth pursuing even apart from any clues to cognitive process \mdash{} but that 
+systems exhibiting the appropriate intelligent \i{behavior} also need not be deemed 
+\i{intelligent} per se, or sentient or conscious.
+}
+At the same time, we are still aware that computer graphics are not
+fully real; the further experiential gap to bridge, the failure of this mathematical system to
+create \i{entirely} virtual reality, may also hold lessons about mind and consciousness
+\cite{GiuseppeRiva}.
+}
+\p{Whether in vision and graphics, or in language and search engines, technology gives us solutions 
+which are useful but imperfect.  I believe therefore that we should neither reduce consciousness and 
+cognition as \q{nothing but} computational activity (\q{implemented} in the brain somehow), 
+but nor accept a disciplinary programme where formal/computational methods are pro-forma 
+jettisoned.  Even granting that a \q{human} layer of meaning saturates language and thought 
+and is beyond the realm of mechanical processing \mdash{} not as a practical 
+limitation on software (not enough memory, not enough parallelism) but something more 
+entrenched and Ontological \mdash{} this dualistic partition of the realm of (for example) 
+language and meaning, into the functional and tractable and the emotive and expressive, 
+can have the ironic effect of reaffirming a fairly reductionistic status 
+quo (in the marketplace of ideas as well as services).  
+}
+\p{Cultural topics like art and 
+literature are the most obvious examples where faith in the explanatory completeness of 
+\AI{} strains credulity, but they are also (with some justification) deemed tangential to 
+the important research interests of those who do science or create products 
+under the \AI{} umbrella.  It is more productive to apply both humanistic and 
+formal/computational perspectives to the same phenomena; and there is a rich humanities 
+tradition \mdash{} including braches of linguistics, or Philosophy in the 
+\q{Naturalizing Phenomenology} tradition (taking this term from the 
+collection edited by Jean Petitot, Barry Smith, and David Woodruff Smith, who 
+are also leading examples of the kind of hybrid scholarship I'm denoting) 
+\mdash{} which is sensitive to interpretive and experiential nuance but also 
+accepts the occasional role for formal, mathematical models \cite{NaturalizingPhenomenology}.  
+It is fascinating to explore \q{gendered} spatial experience in the context of 
+Impressionistic painting, for example \cite{GriseldaPollock}; but approaching an arguably 
+similar topic from the perspective of sentence-construction 
+\cite{MelChen} allows greater comparison with mathematical grammars: at what level of 
+formal description can issues of gender and of first-person spatial experience become 
+causally relevant, or expressible in the terms of the theory?  
+How should we think about computational and/or neuroscientific understandings of 
+human reason, relative to the social, experienced world?  Is 
+consciousness (with all its personal and collective layers, its 
+forming \q{a} world) an emergent property of microscale cognitive activity, 
+by analogy to how electricity is an emergent property of electrons?  Or 
+is first-person reality fundamentally different from, if perhaps informed by, 
+the world disclosed to us through rational cognitive-perceptual 
+syntheses of sense-data and of situations?   
+}
+\p{The human mind is such an everpresent topic in almost any intellectual pursuit 
+\mdash{} since after all mind is the very medium of science and philosophy \mdash{} that no 
+one single cognitive, humanities, or neuroscience discipline can be realistically expected to 
+exhaust its subject matter.  So there is nothing intrinsically wrong with humanists
+seeing mind through its manifestation in culture and politics, or 
+personal and collective identity, while cognitive scientists see mind through its 
+manifestation in intelligent behaviors, functionalities, neural network architecture, 
+and other formally analyzable organizations.  The problem has emerged 
+as the mind-as-computer motif migrates from a useful fiction in a specific academic 
+community to a powerful cultural and industrial meme, and the scholarship best 
+positioned to know its limitations \mdash{} general humanitistic and 
+cultural studies, for example \mdash{} have limited counterbalancing theoretical resources, 
+acquiescing to a disciplinary core which in \q{science of mind} marginalizes, 
+rather than engages with, those same humanities.  Responding to \q{mind as computer} calls 
+for extending cultural perspectives from macroscale to microscale, from art and politics 
+to \q{everyday speech} and the single sentences, single speech-act, single moment of 
+cognition \mdash{} which is not necessarily discouraged in humanities scholarship 
+but is not prioritized either, outside perhaps of relatively low-profile 
+fields like Sociolinguistics.
+}
+\p{More to the point, the terminology and 
+theoretical instincts which would allow humanists to approach cognitive-scientific 
+questions from a social or cultural (or even political) perspective does not 
+seem to typically emerge in the humanities culture \mdash{} one can criticize 
+the use of quasi-mathematical models for mental processes on the grounds that 
+a mind/computer metaphor is mostly an illusion, but a consequence of this 
+outright disengagement is a gap in methodology that prevents the more 
+formal and more interpretive perspectives from ever being set in contrast.  
+More practically, the same scholarship community which 
+rightly questions an uncritical faith in computation and its industry, 
+also must operate in the world the faith has created.  So while promoting a 
+philosophy which challenges both the goals and actions of \q{the} \IT{} industry, 
+this community still falls back on Facebook and other social networking sites, on 
+Apple or Microsoft and other hardware and software providers, on Google and other 
+search engines and cloud architectures \mdash{} in other words, \i{using} these 
+products and services rather than critically \i{engaging} them.  By separating (say) 
+Computational Linguistics from the kind of interpretive language study which is the norm in the 
+humanities, these disciplines fail to encircle in their interdisciplinary reach 
+the expertise relevant to engaging the \IT{} world critically, neither accepting their 
+paradigms nor just ignoring them.  There are few critiques of the commercial and societal 
+norms of the internet, for example, which also propose solutions with enough 
+engineering specificity to outline practical implementations.
+}
+\p{In fact, the most quotidian language, visual perception, and premeditated activity, 
+reflects both formal and social/personal structures 
+and so provides a foundation for the humanistic and scientific attitudes to cooperate \mdash{} but 
+a simplistic rejection of scientific reductionism, as does reductionism itself, forecloses rather 
+than solicits such collaboration.  It is against this backdrop that scholarship like 
+Jean Petitot's, embracing both detailed mathematical models and complex Husserlian 
+phenomenology, speaks to our larger intellectual institutions.  All science joins theories 
+with a measure of explanatory autonomy, differentiated from other theories by virtue of 
+scale or topic.  But these differences need not be antagonistic \mdash{} Analytic or 
+\q{Continental} Philosophy; Science or Humanities; Formal or Informal Logic; literary studies 
+and \q{philosophy of language} or formal/computational linguistics.  More formal and more interpretive 
+analyses can co-exist, expanding our understanding of their target phenomena because, not in spite of,  
+differences in method, just as analyses from multiple scales of resolution can supplement rather 
+than undermine one another.  
+Semantics has both formal and informal dimensions: conventionalized in semantic norms, 
+schema prime users to manipulate linguistic structures against a situational background, 
+a situationality that may demand introspective/interpretive ways of study but a 
+manipulation which, to be communicatively effective, needs a clarity and repeatability 
+that can be formalized.  Semantic layers are abstract tools, but 
+they offer a tableau of forms and combinations which users adapt, concretely, to each context.  
+The deep potential of language, I believe, comes from the 
+perpetual combination of the abstract/formal
+and the concrete/phenomenological.  
+}
+\p{The phenomenological dimension of language is the experiential
+surround that provides an ambient context for all communication; it
+has an analogous background in the \q{plane} of articulation, from which
+individual signifiers must be cognized.  So on a plane of language and
+of reality words and referents must be intended apart, partially, from
+these two notions of surrounding.  (Dis/)continuity in the plane of reference 
+brings consciousness to a mereo-logic \cite{KitFine}, \cite{BarrySmith} that language-cognition 
+can then reshape into syntax and semantics \cite{BittnerSmithDonnelly}.  Like a footprint, whose very existence 
+depends on both material continuity and visual break, for each sign there must be a blend of 
+continuity and discontinuity, both around 
+the sign and its referent.  Attending to a mereologically ordered world, 
+we need innate theories warranting criteria for seeing things as both individuals 
+and as causally/behaviorally constrained by and from a whole.  These criteria 
+include structural consideration of the whole, and it is often in structural terms that 
+the blend of autonomy and linkage for each part is realized (using the word \q{linkage} 
+suggests Link Grammar here, but I also believe such partonomic balance is a 
+primordial structuring principle of almost any organized system).  
+Attunement to structured organization therefore warrants the perceptual and mental isolation 
+of particular foci of attention 
+\cite{WiegandMereology}, \cite{WiegandGestalts}.  
+As this plays out on planes of articulation alongside general situation awareness, the 
+structures of discourse \mdash{} its division into distinct signs and their structural 
+interrelationships \mdash{} and that of patterns we identify in our surroundings, that 
+provide a context of discourse, play off one another.  
+}
+\p{A central theme in Cognitive Linguistics is that language meaning depends on situational 
+understanding, and by extension on mental schema of spatial, temporal, and functional 
+organization \mdash{} not only how environments are arranged, but how they are causally 
+and physically determined \cite{Pinker}, \cite{Talmy}.  
+The objects around us are not just blobs of matter, but usually 
+have a constructed purpose, socially sanctioned 
+meaning, nostalgic weight, and other aspects of non-perceptual significance.
+The difference between \i{pour water} and \i{spill water} is the person's deliberate 
+intentions in relation to natural forces and 
+tendencies (such as that of water to fall downward).  To \q{apply paint} to something, 
+compared with to \q{cover} with paint, suggests different spatial configurations; to 
+\i{fill a glass with water}, versus \i{pour water into} the glass, suggests both 
+different spatial details and maybe different rationales.  These are alternatives in 
+emphasis, not necessarily in actuality: those pairs of alternatives could describe 
+identical state of affairs. 
+But they direct conversants' attention in different ways, they 
+choose one or another part of a scene as a reference frame, and suggest 
+different \q{takes}.  These are driven by \i{semantic} variations 
+\mdash{} the choice of verbs like \i{pour} versus \i{fill}, \i{pour} versus \i{spill}, 
+or \i{apply} versus \i{cover}.  But semantic and syntactic rules work in federation, 
+relative to context: for example, different verbs take different prepositions in different 
+situations.  Pour \i{into} vs. fill \i{with}.  To join \q{pour} 
+with \i{with} places emphasis elsewhere \mdash{} onto the device which enables the 
+pourer to do the pouring.  So the grammatic and semantic norms of a language 
+jointly offer a terrain of options from which speakers assemble combinations 
+invoking those aspects of situations that they wish to emphasize. 
+}
+\p{In short, grammar is language's substitute for \i{visual} or \i{physical} resemblance-to-structure.  
+Take Ronald Langacker's \q{landmark}/\q{trajector} model: one (very general) 
+manner of spatial gestalt, subject to either intuitive, reflective analysis or to formalization 
+(\cite{BergenChang}, \cite{VisettiCadiot}).
+\q{That boat crossing the lake}: \i{boat} (trajector) 
+perceived against \i{lake} (landmark), which provides context; together they 
+produce a mental model; a figured spatial relationship.  This is 
+communicated, not by visual or kinaesthetic effect,\footnote{At least in prose \mdash{} poetry, which can bring back a semiotics of raw visual layout and auditory effect, is an 
+exception that proves the rule.
+} but by the more abstract effects of intentions signaled, 
+both via exact words (\q{crossing} paints a different picture than would \i{across}, \i{on}, \i{by}; 
+still more so, \i{at the bottom of}), and morphosyntactic tropes 
+(like the form \XRelY{}; where \q{\Rel{}} here means one from many spatial relations, taking 
+\i{trajector} to the left and \i{landmark} to the right).  \i{Landmark} and \i{trajector} are anchors around which 
+both syntactic and semantic selections are organized.
+}
+\p{Language needs both abstract laws and cognitively-mediated construals of ambient situations.  
+The abstract laws are shaped by the situations, not directly \mdash{} it is that extra 
+indirection which cleaves language from other sign systems \mdash{} 
+but derivatively: language rules are optimized for conversants to 
+mold linguistic possibilities into selection-spaces, which then become 
+raw materials for representations of 
+situational context.  Each choice of word and form adds a piece to 
+a representational complex, and the sum of those pieces \mdash{} be this a sentence, 
+a conversation turn, or an entire discourse \mdash{} is a language act that hews 
+to the structure of a situation, as the speaker wants to emphasize it.  
+Here I take this perspective as a working hypothesis on the origins of linguistic 
+structuration as such.  It is a philosophical claim on the nature of signs 
+and signification, not a specifically linguistic claim.  Over the next two sections I will
+try to sustain this theory as a paradigmatic sketch and fill in some
+details, building up a picture of first syntax and then semantics
+which can meet formal criteria but culminate in a picture of language
+consistent with this cognitive starting-point.
+}
+\p{There is also another level where questions of the degree of formalizability proper to Cognitive Linguistics 
+take on a \q{semiotic} dimension, one where explanatory strategies investigated by a Philosophy of Science 
+become relevant.  In its connotations, the very term \q{Cognitive} suggests both a scientific dimension and 
+also a level or focus of analysis which is more high-scale, more experience-focused, in contrast to neuroscience 
+or an experimental psychology.  Cognitive Grammar, Cognitive Linguistics, Cognitive Phenomenology all imply a 
+telos of analysis which is neither as physically oriented as the biological study of mind nor as 
+speculative as a Philosophy of Mind.  Our intuition of this \q{spectrum} of 
+disciplines, from the more natural-scientific to the more philosophical, can hopefully be made more precise 
+by treating them rigorously as different modes of \q{science} broadly understood \mdash{} clarifying their methodologies, 
+their understanding of what are disputable claims and what are claims' warrants, of what kind of empirical or 
+interpersonal observations or discussions serve as support (or refutation) for theories.  In many such analyses, 
+the nature of \q{scientific language}, or \q{theory} languages, has intrinsic importance \mdash{} the metaphysical 
+commitments of a theory being expressed in the kind of language it develops and how technical terms are understood 
+to abstractly or empirically refer.
+}
+\p{Philosophy of Science has a semiotic dimension: how do theory languages 
+internally propose a word-to-world correspondence, so that the symbols of an equation, the extension of a 
+natural-kind term, or the diagram of a system, can be given a meaningful interpretation in terms of the world we 
+experience?  The reference of the term \q{Natural Selection}, for example, in rigorous biological science, 
+is very different from the reference of the term \q{electron} or \q{electromagnetism} in physics.  
+Much of the complex Ontological position of Cognitive Science \visavis{} both science and consciousness 
+can be explored through the lens of semiotics \mdash{} when a Cognitive Linguist (for example) writes of 
+\q{cognitions}, or \q{Understanding}, or conversants' mutual play of \i{attention}, or speaker's 
+\i{framing} of situations, or \i{dispositions} to accept or reject a grammatic construction, the lurking 
+metatheoretical question is what \i{cognition}, \i{understanding}, \i{attention}, \i{framing}, and \i{disposition} 
+actually \i{are}, and how specific or hypothetical tokens of these phenomena are believed to refer to something 
+(a \q{thing} or process or something more ephemeral) in the world.  Cognitive Science can develop 
+a rigorous methodology without implying that there is a realm of \q{cognitions} that may be paired 
+one-off against brain states or any other physical correlate (even if in a more global sense there is a 
+mental/physical causal determinism or supervenience).  Metatheoretic principles like the supervening of 
+one class of properties on another (property-identity in the subvening class necessarily propagating to 
+identity in the supervening class \mdash{} no mental difference without physical difference) are actually, 
+I believe, the \q{semiotic} principles of disciplines' theory-language media, often stipulated and 
+curated by decentralized consensus rather than explicit construction.  
+}
+\p{So, with this in mind, I will use Dependency Grammar as a case study in Cognitive Grammar, and then use 
+Cognitive Grammar as a case-study in a theory-language which is neither wholly physical/scientific 
+nor wholly interpretive/humanistic.  I will start by outlining Dependency Grammar in contrast to 
+phrase-structure approaches; then try to generalize from grammar to semantics and suggest how link-grammar 
+formalisms capture some Cognitive-Linguistic semantic principles; and then explore how the mixture of 
+cognitive and formal analysis reveals an overlap (neither total nor vacuous) between the range of 
+relevant cognitive phenomena which have some fashion of \q{reductive} analysis.  To put it very briefly, 
+some cognitive processes have formal/systematic reductions and some do not, or at least not obviously 
+and tractably \mdash{} which makes reductionism neither wholly right nor wholly wrong.  I will speculate on the 
+implications of this partiality in conclusion.
+}
+\input{sectionOne.ngml}
+\input{sectionTwo.ngml}
+\input{sectionTwoFollow.ngml}
+%\input{section2.ngml}
+\input{sectionThree.ngml}
+\input{biblio}
+\end{document}

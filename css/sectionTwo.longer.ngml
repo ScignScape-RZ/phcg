@@ -1,0 +1,1335 @@
+
+`section.Link Grammar and Type Theoretic Semantics`
+
+`p.
+From one perspective, grammar is just a 
+most top-level semantics, the primordial Ontological division of language into designations of 
+things or substances (nouns), events or processes (verbs), qualities and attributes (adjectives), 
+and so forth.  Further distinctions like count, mass, and plural nouns add 
+semantic precision but arguably remain in the orbit of grammar (singular/plural 
+agreement rules, for example); the question is whether semantic detail gets 
+increasingly fine-grained and somewhere therein lies a `q.boundary` between syntax and 
+semantics.  The mass/count distinction is perhaps a topic in grammar more so than 
+semantics, because its primary manifestation in language is via agreement 
+(`i.some` wine in a glass; `i.a` wine that won a prize; `i.many` wines 
+from Bordeaux).  But are the distinctions between natural and constructed objects, 
+or animate and inanimate kinds, or social institutions and natural 
+systems, matters more of grammar or of lexicon?  Certainly they engender 
+agreements and propriety which appear similar to 
+grammatic rules.  `q.The tree wants to run away from the dog` sounds wrong %-- because 
+the verb `q.want`/, suggestive of propositional attitudes, seems incompatible with 
+the nonsentient `q.tree`/.  Structurally, the problem with this sentence seems analogous 
+to the flawed `q.The trees wants to run away`/: the latter has incorrect singular/plural linkage, 
+the former has incorrect sentient/nonsentient linkage, so to speak.  But does this 
+structural resemblance imply that singular/plural is as much part of semantics as grammar, or 
+sentient/nonsentient as much part of grammar as semantics?  It is true that there are no 
+morphological markers for `q.sentience` or its absence, at least in English %-- except 
+perhaps for `q.it` vs. `q.him/her` %-- but is this an accident of English or revealing 
+something deeper?
+`p`
+
+`p.
+To explore these quesitons it is first necessary to consider how a grammar theory can be 
+extended to and/or connected with a formal or, to some measure, informal semantics.  
+Here I will present one approach to make this extension `visavis; Link Grammar.
+`p`
+
+`p.
+Insofar as grammatic categories do provide a very basic `q.Ontological` viewpoint, 
+it is reasonable to build semantic formalization on top of grammar theories.  
+Link Grammar, for example, explicitly derives `q.link types` %-- species of word-to-word 
+relations %-- by appeal to `q.Categorial` grammars which define parts of 
+speech in terms of their manner of composition with other, more `q.fundamental` parts 
+of speech `cite<Kiselyov>;, `cite<Rossi>;, `cite<MartinPollard>;.  The most primordial 
+grammatic categories are generally seen to be nouns and 
+`q.propositions` (self-contained sentences or sentence-parts which assert individual states of 
+affairs), and categories like verbs and adjectives derived on their basis.  For example, a 
+verb `q.combines` with a noun to produce a proposition.  `i.Students` is an abstract 
+concept; `q.Students complained`/, tieing the noun to a verb, tethers the concept to an 
+assertorial flesh, yielding something that expresses a belief or observation.  
+Meanwhile, Categorial Grammar models not only the semantic transition from abstract to concrete, but 
+surface-level composition: in English and other `SVO; language for example the verb should 
+immediately follow the noun; in German and all `SVO; languages the verb tends the come 
+last in a sentence, and can be well apart from its subject.  The semantic pattern in the 
+link is how the verb/noun pair yields a new semantic category (propositional) whereas the 
+grammatic component lies in how the link is established relative to other words 
+(to the left and not the right, for example, and whether or not the words are adjacent).  
+`p`
+
+`p.
+Assuming that surface-level details can be treated as grammar rules and abstracted from 
+the semantics, we can set aside Categorial Grammar notions like connecting 
+`q.left` vs. `q.right` or `q.adjacent` (near) vs. `q.nonadjacent` (far).  
+With this abstracting, Categorial Grammar becomes similar 
+to a Type-Theoretic Semantics which recognizes, in Natural Language, operational 
+patterns that are formally studied in mathematics and computer science
+`cite<ZhaohuiLuo>;, `cite<MaillardClarkGrefenstette>;, 
+`cite<MeryMootRetore>;.
+A verb, for example, 
+`i.transforms` a noun into a sentence or proposition (at least an intransitive verb; 
+other kinds of verbs may require two, or even three nouns).  In some schematic sense a 
+verb is analogous to a mathematical `q.function`/, which `q.takes` one or more nouns 
+and `q.yields` propositions, much like the `q.square` function takes a real number and 
+yields a non-negative real number.  To make this analogy useful, however, 
+it is necessary to clarify how `q.types` in a mathematical or computational 
+context may serve as appropriate metaphors for syntactic and/or semantic groupings in language.
+`p`
+
+`subsection.Types, Sets, and Concepts`
+`p.
+Most Computer Science rests on types rather than (for example) sets, 
+because abstract reasoning about data types 
+requires some abstraction from practical limitations about how particular values may be 
+digitally encoded.  
+Types can be defined as sets of both values and 
+`q.expectations` `cite<MathieuBouchard>; (meaning assumptions which may be made about 
+all values covered by the type); alternatively, we can (perhaps better) consider types as 
+`i.spaces` of values.  Types' extensions have internal structure; there 
+can be `q.null` or `q.invalid` values, default-constructed values, and 
+so forth, which are `q.regions` of type-space and can 
+be the basis of topological or Category-Theoretic rather than 
+set-based analyses of type-extension.  Also, expectations intrinsically include 
+functions which may be `q.called on` types.  There is definitional interdependence 
+between types and functions: a function is defined in terms of the types it accepts as parameters and 
+returns %-- rather than its entire set of possible inputs and outputs, which can 
+vary across computing environments.  These are some reasons why in theoretical 
+Computer Science types are not `q.reduced` to underlying sets; instead, extensions 
+are sometimes complex spaces that model states of, or internal organization of comparisons 
+among, type instances.
+`p`
+
+`p.
+An obvious paradigm is organizing type-extensions around prototype/borderline
+cases %-- there are instances which are clear examples of types and
+ones whose classification is dubious.  I will 
+briefly argue later, however, that common resemblance is not always a good marker
+for types being well-conceived %-- many useful concepts are common
+precisely because they cover many cases, which makes defining
+`q.prototypes` or `q.common properties` misleading; this reasoning
+arguably carries over to types as well.  Also, sometimes the clearest
+`q.representative` example of a type or concept is actually not a
+`i.typical` example: a sample latter or model home is actually not (in
+many cases) a real letter or home.  So resemblance-to-prototype is at
+best one kind of `q.inner organization` of concepts' and types' spaces
+of extension.  Computer Science develops other 
+pictures of types' `q.state space`/, reflecting the trajectory of symbols 
+or channels which hold type instances, which at different moments in time 
+become initialized %-- acquiring a value obtanied from a `i.constructor` 
+function (one `q.type space region` is then demarcated by which values 
+can be direct results of constructors) %-- then possibly subject to change in the value they hold, and finally 
+(often) transitioning to a state where the held value is not longer `q.valid`/.`footnote.
+Managing the `q.lifetime` of values from many types, especially `q.pointer` types 
+(that hold a numeric value representing the current memory address of some other value),
+has been a notorious source of programming errors, especially in older computer 
+languages.  Of late, also, data types often need to be designed to minimize the 
+risk of data corruption, theft, and malicious code.  For these reasons, 
+Cybersecurity takes particularly interest in studying types' extensions and transitions 
+between different values (morphisms within a type space) to formally describe 
+states or state-transitions which are security vulnerable.
+`footnote`  Type `i.spaces` have potentially complex patterns of regions and equivalence classes of 
+inter-value mappings (in the sense of behavioral equivalence relative to 
+code analysis, testing, or security) 
+%-- the `i.conceptual` properties of types are expressed in the 
+`i.internal structuration` of their associated state-space.  In mathematical 
+language, an in-depth treatment of types cannot work `q.in the Category` of 
+sets, even for basic type-extension, but rather (for instance) the 
+Category of Topological Spaces.
+`p`
+
+`p.
+Moreover, expectations in a particular case 
+may be more precise than what is implied by the type itself %-- it is erroneous 
+to assume that a proper type system will allow a correct `q.set of values` to 
+be stipulated for each point in a computation (the kind of contract enforced via 
+by documentation and unit testing).  A value representing someone's age may be assigned 
+a type for which a legal value is, say, 1000 years, which is obviously unreasonable 
+%-- the conceptual role served by the `i.particular` use of a type in some context can 
+be distinct from the entire space of values exhibited by the type.  It is possible to 
+construct types which are narrowed down to more precise ranges, but in many cases this is 
+unnecessary or poorly motivated: while 1000 years is clearly too large for an age, 
+it would be arbitrary to specify a `q.maximum allowed` age (recall that assuming a 
+`q.maximum allowed` year of 1999 %-- so that the year in decimal only required two digits 
+%-- led to costly reprogramming of archaic legacy code during `YtwoK;).  
+In this kind of situation programmers 
+usually assign types based on properties of binary representation %-- what number of 
+binary digits is optimal for memory and/or speed, even if this allows `q.absurd` values 
+like 1000 years old.  Run-time checks (not type restrictions) may be used to 
+flag nonsensical data and prevent data corruption.  In these scenarios, types represent a 
+compromise between `i.concepts`/, which can be fuzzy and open-ended, and 
+`i.sets`/, which conceptually are nothing more than the totality of their extension.`footnote.
+Nevertheless, there is interesting (and potentially practically useful) research in 
+how formal type-constructions model conceptual organization: for example, 
+`Gardenfors; Conceptual Space Theory has seen formal implementations 
+`cite<RaubalAdams>;, and it is very interesting to juztapose 
+scientific and mathematical treatments of Conceptual Spaces (as in `cite<Strle>; or 
+`cite<Zenker>;) with mathematical (e.g., topological) thoeries of 
+data types `cite<Escardo>;, `cite<StellConvexivity>;.
+`footnote`
+`p`
+
+
+`p.
+Sets, concepts, and types represent three different primordial thought-vehicles for 
+grounding notions of logic and meaning.  To organize systems around `i.sets` is 
+to forefront notions of inclusion, exclusion, extension, and intersection, 
+which are also formally essential to mathematical logic and undergird the 
+classical interdependence of sets, logic, and mathematics.`footnote.
+Recent work in mathematics, however (partly 
+under the influence of computational proof engines and foundations research 
+like Homotopy Type Theory) shows that type and/or Category theory 
+may replace sets as a groundlevel for logico-mathematical reasoning (if 
+not notation) in the future `cite<HOTT>; (It is worth pointing out that 
+despite their similar ordinary meanings, mathematically `i.type` is much different 
+from `i.Category` even though these respective theories can be usefully integrated).
+`footnote`
+
+To organize systems around `i.concepts` is to forefront practical engagement 
+and how we mold conceptual profiles, as collections of ideas and pragmas, 
+to empirical situations.  To organize systems around `i.types` is to forefront 
+`q.functions` or transformations which operate on typed values, the interrelationships 
+between different types (like subtypes and inclusion %-- a type can itself 
+encompass multiple values of other types), and the conceptual abstraction 
+of types themselves from the actual sets of values they may exhibit 
+in different environments.  Sets and types are 
+formal, abstract phenomena; whereas concepts are characterized by 
+gradations of applicability, and play flexible roles in thought and language.  
+The cognitive role of concepts can be discussed with some rigor, but there is a 
+complex interplay of cognitive schema and practical engagements which 
+would have to be meticulously sketched in many real-world scenarios, if 
+our goal were to translate conceptual reasoning to formal structures 
+on a case-by-case basis.  We can, however, consider in general 
+terms how type-theoretic semantics can capture conceptual structures 
+as part of the overall transitioning of thoughts to langauge.
+`p`
+
+`p.
+A concept does not merely package up a definition, like `q.restaurant` as 
+`q.a place to order food`/; instead concepts link up with other concepts 
+as tools for describing and participating in situations.  Concepts are 
+associated with `q.scripts` of discourse and action, and find their 
+range of application through a variegated pragmatic scope.  
+We should be careful not to overlook these pragmatics, and 
+assume that conceptual structures can be simplistically 
+translated to formal models.  
+Cognitive Linguistics critiques 
+Set-Theoretic or Modal Logic reductionism (where a concept is just a set 
+of instances, or an extension across different possible worlds) %-- George Lakoff and Mark Johnson, 
+prominently, argue for concepts' organization around 
+prototypes (\cite[p. 18]{LakoffJohnson}; \cite[p. 171, or p. \textit{xi}]{Johnson}) 
+and embodied/enactive patterns of interaction (\cite[p. 90]{LakoffJohnson}; 
+\cite[p. 208]{Johnson}).  
+
+Types, by contrast, at least in linguistic applications of type theory, are abstractions 
+defined in large part by quasi-functional notions of phrase struture.  
+Nevertheless, the `i.patterns` of how types may inter-relate 
+(mass-noun or count-noun, sentient or non-sentient, and so forth) 
+provide an infrastructure for conceptual understandings to be 
+encoded in language %-- specifically, to be signaled by which typed 
+articulations conversants choose to use.  A concept like 
+`i.restaurant` enters language with a collection of understood 
+qualities (social phenomena, with some notion of spatial location and 
+being a `q.place`/, etc.) that in turn can be marshaled by sets of 
+allowed or disallowed phrasal combinations, whose parameters 
+can be given type-like descriptions.  Types, in this sense, 
+are not direct expressions of concepts but vehicles for 
+introducing concepts into language.
+`p`
+
+`p.
+Concepts (and types also) are not cognitively the same as their 
+extension %-- the concept `i.restaurant`/, I believe, is distinct from  
+concepts like `i.all restaurants` or `i.the set of all restaurants`/.
+Concepts can be pairwise different 
+not only through their instances, but because they highlight different 
+sets of attributes or indicators.  The concepts `q.American President` and `q.Commander in Chief` 
+refer to the same person, but the latter foregrounds a military role.  
+Formal Concept Analysis considers `i.extensions` and `q.properties` 
+%-- suggestive indicators that inhere in each 
+instance %-- as jointly (and codependently) determinate: concepts 
+are formally a synthesis of instance-sets and property-sets `cite<YiyuYao>;, 
+`cite<Belohlavek>;, `cite<Wille>;.  In language, clear evidence for the contrast between `i.intension` and 
+`i.extension` comes from phrase structure: certain constructions specifically 
+refer to concept-extension, triggering a mental shift from thinking of the 
+concept as a schema or prototype to thinking of its extension (maybe in some context).  
+Compare these sentences: 
+
+`sentenceexamples.
+`sentenceexample.Tigers in that park are threatened by poachers.`
+`sentenceexample.Young tigers are threatened by poachers.`
+`sentenceexamples`
+
+Both sentences focus a conceptual lens in greater detail than `i.tiger` in general, but 
+the second does so more intensionally, by adding an extra indicative criterion; while 
+the former does so extensionally, using a phrase-structure designed to operate on 
+and narrow our mental construal of `q.the set of all tigers`/, in the sense of 
+`i.existing` tigers, their physical place and habitat, as opposed to 
+the `q.abstract` (or `q.universal`/) type.  So there is a familiar semantic 
+pattern which mentally transitions from a lexical type to its extension and 
+then extension-narrowing %-- an interpretation that, if accepted, clearly 
+shows a different mental role for concepts of concepts' `i.extension` than the 
+concepts themselves.
+`p`
+
+`p.
+There is a type-theoretic correspondence between intension and 
+extension %-- for a type `Tnoindex; there is a corresponding `q.higher-order` type 
+of `i.sets` whose members are `Tnoindex;.`footnote.
+Related constructions are the type of `i.ordered sequences` of `Tnoindex;; 
+unordered collections of `Tnoindex; allowing repetition; and stacks, queus, and 
+deques (double-ended queues) as `Tnoindex;-lists that can grow or shrink 
+at their beginning and/or end.
+`footnote`  If we take this (higher-order) 
+type gloss seriously, the extension of a concept is not its `i.meaning`/, but a  
+different, albeit interrelated concept.  Extension is not definition.  
+`q.Tiger` does not mean `i.all tigers` (or `i.all possible tigers`/) %-- though arguably 
+there are concepts `i.all tigers` and `i.all restaurants` (etc.) along with the concepts 
+`i.tiger` and `i.restaurant`/.  Concepts, in short, do not mentally signify sets, or 
+extensions, or sets-of-shared-properties.  Concepts, rather, are cognitive/dialogic tools.  
+Each concept-choice, as presentation device, 
+invites its own follow-up.  `i.Restaurant` or `i.house` have meaning not via  
+idealized mental pictures, or proto-schema, but via kinds of things 
+we do (eat, live), of conversations we have, of qualities we deem relevant.  Concepts do not 
+have to paint a complete picture, because we use concepts as part of ongoing situations 
+%-- in language, ongoing conversations.  Narrow concepts %-- which may best exemplify 
+`q.logical` models of concepts as resemblance-spaces or as rigid designators to 
+natural kinds %-- have, in practice, fewer use-cases `i.because` there 
+are fewer chances for elaboration.  Very broad concepts, on the other hand, can have, 
+in context, too `i.little` built-in `i.a priori` detail.  
+(We say `q.restaurant` more often than `i.eatery`/, and 
+more often than `i.diner`/, `i.steakhouse`/, or `i.taqueria`/).  Concepts dynamically play 
+against each other, making `q.spaces` where different niches of meaning, including 
+levels of precision, converge as site for one or another.  Speakers need freedom to choose 
+finer or coarser grain, so concepts are profligate, but the most oft-used trend toward middle 
+ground, neither too narrow nor too broad.  `i.Restaurant` or `i.house` are useful because they are noncommittal, inviting more detail.  
+These dynamics govern the flow of inter-concept relations (disjointness, subtypes, partonymy, etc.). 
+`p`
+
+`p.
+Concepts are not rigid formulae (like instance-sets or even attributes fixing when 
+they apply); they are mental gadgets to initiate and 
+guide dialog.  Importantly, this 
+contradicts the idea that concepts are unified around instances' similarity (to each other or 
+to some hypothetical prototype): concepts have avenues for contrasting 
+different examples, invoking a `q.script` for further elaboration, or for building temporary filters 
+(`q.Let's find a restaurant that's family-friendly`/; allowing such one-off narrowing is a feature 
+of the concept's flexibility).
+No less important, than acknowledged similarities across all instances, are well-rehearsed ways 
+`visavis; each concept to narrow scope by marshaling lines of `i.contrast`/, of `i.dissimilarity`/.  
+A `i.house` is obviously different from a `i.skyscraper` 
+or a `i.tent`/, and better resembles other houses; but there are also more nontrivial `i.comparisons` 
+between houses, than between a house and a skyscraper 
+or a tent.  Concepts are not only spaces of similarity, but of `i.meaningful kinds of differences`/.
+`p`
+
+`p.
+To this account of conceptual spaces we can add the conceptual matrix spanned by 
+various (maybe overlapping) word-senses: to `i.fly`/, for example, names 
+not a single concept, but a family of concepts all related to airborn 
+travel.  Variations highlight different conceptual 
+features: the path of flight (`i.fly to Korea`/, `i.fly over the mountain`/); 
+the means (`i.fly Korean air`/, `i.that model flew during World War II`/); 
+the cause (`i.sent flying (by an explosion)`/, `i.the bird flew away (after a loud noise)`/, 
+`i.leaves flying in the wind`/).  Words allow different use-contexts 
+to the degree that their various `i.senses` offer an inventory of aspects for 
+highlighting by `i.morphosyntactic` convention.  Someone who says `i.I hate to fly` is not 
+heard to dislike hand-gliding or jumping off mountains.`footnote.
+People, unlike birds, do not fly %-- so the verb, used intransitively 
+(not flying `i.to` somewhere in particular or `i.in` something in particular), 
+is understood to refer less to the physical motion and more to the socially 
+sanctioned phenomenon of buying a seat on a scheduled flight on an airplane. The construction 
+highlights the procedural and commercial dimension, not the physical mechanism and 
+spatial path.  But it does so `i.because` we know human flight is 
+unnatural: we can poetically describe how the sky is filled with flying leaves or birds, 
+but not `q.flying people`/, even if we are nearby an airport.  Compare Pinker 
+`cite<Pinker>; on page 119, perhaps alongside Langacker's `q.Nouns and Verbs` `cite<Langacker87>; on page 67.
+`footnote`  Accordant variations 
+of cognitive construal (attending more to mode of action, or path, or motives, etc.), 
+which are elsewhere signaled by grammatic choices, are also spanned by a conceptual 
+space innate to a given word: senses are finer-grained meanings availing themselves to one construal or another.    
+`p`
+
+`p.
+So situational construals can be signaled by word- and/or 
+syntactic form choice (locative, benefactive, direct and indirect 
+object constructions, and so forth).  Whereas conceptual organization 
+often functions by establishing classifications, and/or invoking 
+`q.scripts` of dialogic elaboration, cognitive structure tends to apply more 
+to our attention focusing on particular objects, sets of objects, events, or 
+aspects of events or situations.  `i.Conceptual` is more abstract and belief-oriented; 
+`i.Cognitive` is more concrete and phenomenological.  Concepts organize our 
+`q.background knowledge` `cite<SmithMcIntyre>;; cognitions allow it to be latent 
+against the disclosures of material consciousness 
+`cite<DavidWoodruffSmith>;, `cite<DavidWoodruffSmithChapter>;, 
+`cite<JordanZlatev>;, `cite<SeanDorranceKelley>;. 
+So the contrast between singular, mass-multiples, and count-multiples, 
+among nouns, depends on cognitive 
+construal of the behavior of the referent in question (if singular, its 
+propensity to act or be conceived as an integral whole; if multiple, its 
+disposition to either be divisible into discrete units, or not).  
+Or, events can be construed in terms of their causes 
+(their conditions at the outset), or their goals (their conditions at 
+the conclusion), or their means (their conditions in the interim).  
+Compare `i.attaching` something to a wall (means-focused) to 
+`i.hanging` something on a wall (ends-focused); `i.baking` a cake 
+(cause-focus: putting a cake in the oven with deliberate intent to cook it) 
+to `i.burning` a cake (accidentally overcooking it).`footnote.
+We can express 
+an intent to bake someone a cake, but not (well, maybe comedically) to 
+`i.burn` someone a cake (`q.burn`/, at least in this context, implies 
+something not intended); however, we `i.can` say 
+`q.I burnt your cake`/, while it is a little jarring to say 
+`q.I baked your cake`/ %-- the possessive implies that some 
+specific cake is being talked about, and there is less apparent reason 
+to focus on one particular stage of its preparation (the baking) once 
+it is done.  I `i.will` bake a cake, in the future, uses 
+`q.bake` to mean also other steps in preparation (like `q.make`/), while, 
+in the present, `q.the cake `i.is` baking` emphasizes more its 
+actual time in the oven.  I `i.baked your cake` seems to focus 
+(rather unexpectedly) on this specific stage even after it is completed, 
+whereas `i.I baked you a cake`/, which is worded as if the recipient 
+did not know about the cake ahead of time, apparently uses `q.bake` in 
+the broader sense of `q.made`/, not just `q.cooked in an oven`/.  
+Words' senses mutate in relation to the kinds of situations where they are used 
+%-- why else would `i.bake` mean `q.make`//`q.prepare` in the past or future tense but 
+`q.cook`//`q.heat` in the present?  
+`footnote`
+These variations are not random assortments of polysemous words' senses: 
+they are, instead, rather predictably distributed according 
+to speakers' context-specific knowledge and motives.  
+`p`
+
+
+`p.
+I claim therefore that `i.concepts` enter language complexly, influenced by 
+conceptual `i.spaces` and multiered semantic and syntactic selection-spaces.  
+Concepts are not simplistically `q.encoded` by types, as if for 
+each concept there is a linguistic or lexical type that just 
+disquotationally references it %-- that the type `q.tiger` means the concept 
+`i.tiger` (`q.type` in the sense that type-theoretic semantics would model lexical 
+data according to type-theoretic rules, such as `i.tiger` as subtype of `i.animal` or 
+`i.living thing`/).  
+Cognitive schema, at least in the terms I just laid out, select particularly 
+important gestalt principles (force dynamics, spatial frames, action-intention) 
+and isolate these from a conceptual matrix.  On this basis, we can argue that 
+these schema form a precondition for concept-to-type association; or, 
+in the opposite logical direction, that language users' choices to employ 
+particular type articulations follow forth from their prelinguistic 
+cognizing of practical scenarios as this emerges out of collections 
+of concepts used to form a basic understanding of and self-positioning within them.
+`p`
+
+`p.
+In this sense I called types `q.vehicles` for concepts: not that types `i.denote` 
+concepts but that they (metaphorically) `q.carry` concepts into language, as a bus 
+carries people into a city.  `q.Carrying` is enabled by types' semi-formal rule-bound 
+interactions with other types, which are positioned to capture concepts' variations and 
+relations with other concepts.  
+To express a noun in the benefactive case, for example, which can be seen as attributing to 
+it a linguistic type consistent with being the target of a benefactive, 
+is to capture the concept in a type-theoretic gloss.  A 
+concept-to-type `q.map`/, as I just
+suggested, is mediated (in experience and practical reasoning) by
+cognitive organizations; when (social, embodied) enactions take
+linguistic form, these organizing principles can be encoded in how
+speakers apply morphosyntactic rules.  So the linguistic structures,
+which I propose can be formally modeled by a kind of type theory, work
+communicatively as carriers and thereby signifiers of cognitive
+attitudes. The type is a vehicle for the concept because it takes part in constructions 
+which express conceptual details %-- the details 
+don't emerge merely by virtue of the type itself.
+I am not arguing for a neat concept-to-type correspondence; instead, a type system provides a 
+`q.formal substrate` that models (with some abstraction and simplification) how 
+properties of individual concepts translate 
+(via cognitive-schematic intermediaries) to their 
+manifestation in both semantics and syntax.
+`p`
+
+`p.
+Continuing with benefactive case as a `q.case study` (no pun intended), 
+consider how an ontology of word senses (which could plausibly be
+expressed by types and subtypes) can interrelate with the benefactive.  
+A noun as a benefactive target most often is a person or some other
+sentient/animate being; an inanimate benefactive is most likely
+something artificial and constructed (cf., `i.I got the car new tires`/).  
+How readily hearers accept a sentence -- and the path they
+take to construing its meaning so as to make it grammatically acceptable
+-- involves interlocking morphological and type-related considerations;
+in the current example, the mixture of benefactive case and which noun
+`q.type` (assuming a basic division of nouns into e.g.
+animate/constructed/natural) forces a broader or narrower
+interpretation.  A benefactive with an `q.artifact` noun, for example, 
+almost forces the thing to be heard as somehow disrepaired:
+
+`sentence-examples.
+`sentence-example.I got glue for your daughter.`
+`sentence-example.I got glue for your coffee mug.`
+`sentence-examples`
+
+We gather (in the second case) that the mug is broken %-- but this is never spelled out 
+by any lexical choice.  It is implied indirectly by benefactive case along with 
+notions of classification, on the grammar/semantic border, that have a potential 
+type-theoretic treatment.  It's easy to design similar examples with other cases: 
+a locative construction rarely targets `q.sentient` nouns, so in 
+
+`sentence-examples.
+`sentence-example.We're going to Grandma!`
+`sentence-example.Let's go to him right now.`
+`sentence-example.Let's go to the lawyers.`
+`sentence-example.Let's go to the press.`
+`sentence-examples`
+
+we mentally substitute the person with the place where they live or work.  Morphosyntactic 
+considerations are also at play: `i.to the lawyers` makes `q.go` sound more like `q.consult with`/, 
+partly because of the definite article (`i.the` lawyers implies conversants have some prior involvement 
+with specific lawyers or else are using the phrase metonymically, as in `q.go to court` or 
+`q.to the courts`/, for 
+legal institutions generally; either reading draws attention away from literal spatial implications of 
+`q.go`/). `q.Go to him` implies that `q.he` needs 
+some kind of help, because if the speaker just meant going to wherever he's at, she probably would 
+have said that instead.  Similarly, the locative in `i.to the press` forces the mind to 
+reconfigure the landmark/trajector structure, where `q.going` is thought not as a literal 
+spatial path and `q.press` not a literal destination %-- in other words, the phrase must be 
+read as a metaphor.  But the `q.metaphor` here is not `q.idiomatic` or removed from linguistic rules 
+(based on mental resemblance, not language structure); here it 
+clearly works off of formal language patterns: the landmark/trajector 
+relation is read abstracted from literal spatial movement because the locative is applied 
+to an expression (`i.the press`/) which does not (simplistically) meet 
+the expected interpretation as `q.designation of place`/.  
+We need to analyze syntactic details like noun case and 
+forms of articles, but also finer-grained (though not purely lexicosemantic) classifications 
+like sentient/nonsentient or spatial/institutional.  
+`p`
+
+`p.
+One way to engage in classification in this kind of example is just to consider subtyping: 
+divide nouns into sentient and non-sentient, the former into human and animal and the latter 
+into artifacts and natural things, and so forth.  But other options are less blunt.  
+For example, notions like sentient/nonsentient can be construed as `q.higher-order types`/, 
+meaning that for broadly-hewed types like nouns or verbs, there are sentient (and non-sentient) variants, 
+just as for a type `TypeCat; there are mass-plural and count-plural collections of `TypeCat;, 
+ordered and unordered `TypeCat; collections, and so on.  Subtyping, higher-order types, inter-type 
+associations and various other formal combinations are options for encoding grammatic and 
+semantic classification in something like a formal type theory.  The key properties of 
+type systems are not only meanings atttached to individual types but notions of functionality 
+(according to the central notion that a type system includes `q.function` 
+types which are mappings between other types; in Category Theory, any 
+formal type system is `q.Cartesian Closed`/, meaning that if `T1; and `T2; are 
+types, there is necessarily a type `TSupT; of functions between them).  
+So if adjectives, say, are most basically `NtoN; (they modify nouns and yield noun-role phrases), 
+we can then consider how adjectives should be modeled when their modified nouns 
+are associated with or attributed sentience, mass-plural, or any other variation (whether 
+via subtyping or some other association).  How these `q.variations` are modeled in accord 
+with one single type is less important than how they `q.propagate` via applicative 
+structures, where `q.function-like` types apply transformations and produce phrases.
+`p`
+
+`p.
+To build up a linguistic type theory, I assume, then, a framework of
+types and type associations with a few underlying properties, such as
+these:
+
+\renewcommand{\labelitemi}{$\bullet$}
+
+`itemize,
+`item; Types have a spectrum of granularity, from the very broad (Parts
+of Speech) to the much narrower, including where they incorporate lexical data
+(types can potentially include `i.tiger`/, `i.house`/, and so on).
+
+`item; Types are neither strictly grammatic nor strictly semantic, but
+their gradations of precision cross between grammar and semantics.
+
+`item;  Types have associated qualities like sentient/nonsentient;
+spatially (and/or temporally) extended, pointwise, or non-spatial
+(/non-temporal); caused, self-causing, self-determining, affected by
+other things, affecting other things; objects, events, processes, or 
+institutions; abstracta or spatetime present things; observables 
+or subjectives like emotions or sensations, which are temporally present 
+for someone but not (directly) encountered by others.  These are qualities 
+pertaining to the manner of referents' appearing, causing, and extending 
+in the world and in consciousness, and to a `q.classification` of kinds 
+of entities (like a metaphysical Ontology, though the point is not 
+to reproduce Medieval philosophy but, more modestly, to catalog word senses).  
+I will refer to these qualities generically as `q.associations`/.  They may be 
+introduced via subtyping or more complex type operators.
+
+`item;  Some types are `q.function like`/: this means that they are
+`i.applied` to senses which have their own types.  This introduces one
+form of head/dependent relation, where a head word instances a
+function-like type and is applied to one or more `q.dependents`/.
+
+`item;  Type information `q.distributes over` Link Grammar pairs.  For
+any pair of words which have a meaningful inter-word relation, we can
+consider types which may be applicable to both words, and how these
+types affect and are affected by the significance of the particular
+kind of link.  Some kinds of links mandate particular type
+interpretations of the links elements: `TS; links,`footnote.
+http://www.link.cs.cmu.edu/link/dict/section-TS.html
+`footnote` to cite a narrow
+example, would only be formed between verb and `Prop; types (at least
+this is a plausible interpretation of the relevant Link Grammar rules
+in a `q.type` context).  Other type/link combinations are more
+open-ended.
+
+`item;  Type information similarly `q.distributes` over clusters of
+link-pairs, where the presence of one such link influences how a
+connected link is understood (or whether it is allowed).  Type-related
+qualifications can propagate from one link-pair to connected
+link-pairs.`footnote.
+For example, we can say that the linkage structure in
+`q.Three times students asked an interesting question` alters the
+normal type-attribution of `q.students` as just a plural noun;
+relative to the connected structure linking `q.three times` through
+`q.students` to `q.a question`/, we can say that `i.three times`
+modifies `q.students` so that it may function, as subject of
+`q.asked`/, as if typed as singular, because `i.three times` acts as a
+`q.space builder` and creates a mental frame wherein the students are
+singular, even if the word is plural.  Because of this frame
+phenomenon, the singular/plural status of students does not propagate
+to `q.a question`/; collectively they presumably did  not all ask just
+one question.  Type annotation for `q.students` has to be defined, 
+in this case, relative to multiple `q.cognitive frames`/.
+`footnote`
+
+`item;  Type information also `q.distributes over` applicative
+structures.  Given a function-like type we can consider how
+associations for the head and dependent elements propagate to
+associations on the resulting phrase %-- again, via subtyping or some
+other mechanism.
+`itemize`
+
+Such a `q.linguistic type theory` needs to model (at the least) these
+aforementioned associations, the `q.distribution` of type details over
+link and applicative structures, and the `q.propagation` of
+associations and other type details.  While informal analyses in any 
+single case may be clear, integrating many case-studies into a unified 
+theory can be advanced by drawing ideas from rigorous, quasi-mathematical 
+type theories %-- relevant research has adopted technical
+formations like `q.dot-types`/, higher-order types, dependent types,
+Monoidal Categories, Tensors, Continuations, `q.Linguistic Side Effects`/, 
+Monads, Combinatory Logic, and (Mereo)Topology/Geometry.`footnote.
+Monoids: `cite<DelpeuchPreller>;; 
+Tensors: `cite<MaillardClarkGrefenstette>;;  
+Continuations: `cite<BarkerShan>;; 
+Combinators: `cite<Villadsen>;; 
+Side Effects: `cite<ShanThesis>;; 
+Monads: `cite<GiorgoloAsudeh>;, `cite<ShanMonads>;, `cite<Kiselyov>;; 
+Topology: `cite<Petitot>;, `cite<CasatiVarzi>;.
+`footnote`  Such techniques can marshal type-theoretic ideas without 
+falling back on simplistic type notions that can end up collapsing a type-system into a 
+one-dimensional `q.Ontological` classification, rather than exploring more advanced formulations 
+like higher-order types and (what I am callling) `q.associations`/.
+`p`
+
+`p.
+With respect to Type Theory related to Link Grammar, consider again the `TS; links 
+(there are dozens of potential link-grammar pairs, of which `TS; are among the 
+less common, but they provide a useful example).  First, note that `Prop; provides a 
+type attribution for sentences, but also for sentence parts: `i.he is at school`/, 
+for example, presents a complete idea, either as its own sentence or part of a 
+larger one.  In the latter case, a `Prop; phrase would often be preceded with a 
+word like `i.that`/; in the case of Link Grammar, we can define words relative 
+to their semantic and/or syntactic role, which often lies primarily in linking 
+with other parts of a sentence or helping those parts link with each other.  
+Type-theoretically, however, we may want to assign types to every word, even those 
+which seem auxiliary and lacking much or any semantic content of their own.
+Arguably, `q.that` serves to `q.package` an assertion, encapsulating 
+a proposition as a presumed fact designated as 
+one idea, for the sake of making further comments, as if `q.making a noun` out 
+of it: `PropToN;.  Perhaps our intuitions are more as if `i.that he is at school` 
+is also a proposition, maybe a subtly different kind, by analogy to how 
+questions and commands are also potentially `Prop; variants.  Since `thatPhrases; are `q.arguments` for verbs, 
+the choice then becomes whether it is useful to expand our type picture of verbs 
+so that they may act on propositions as well as nouns, 
+or rather type `q.encapsulated` propositions as just nouns 
+(maybe special kinds of nouns).
+`p`
+
+`p.
+In either case, `i.I know that ...` clearly involves a verb with subject and direct 
+object: so either `VisNNtoProp; or `VisNProptoProp;.  Consider the role of a `TS;-link here: 
+specifically, `TS; connects the verb to the assertorial direct object (most 
+directly, to `i.that`/).  The purely formal consideration is ensuring that 
+types are consistent: either the `TS; target is `Prop;, as I suggested 
+above, with the verb type modified accordingly; or the `TS; target is a noun, 
+though here it is fair to narrow scope.  For this particular kind of 
+link, the target must express a proposition: either typed directly as 
+such or typed as, say, a noun `q.packaging` a proposition, which would then 
+be a higher-order type relation (just as `q.redness` is a noun `q.packaging` 
+an adjective, or `q.running` is an adjective packaging a verb).  In other words, 
+it is difficult to state the type restrictions on the link-pair without employing 
+more complex or higher-order type formations.
+`p`
+
+`p.
+On the other hand, this is 
+another example of the fuzzy boundary between syntax and semantics: given a sentence 
+which seems to link a verb calling for a belief or assertion (like `q.know`/, 
+`q.think`/, `q.suggest`/, `q.to be glad`/) to something that is not proposition-like, is such a 
+configuration ungrammatical, or just hard to understand?  Clearly, the 
+`i.semantic` norms around verbs like `q.know` is that their `i.subject` 
+has some quality of sentience (or can be meaningfully attributed 
+belief-states, even if speakers know not to take it literally: `q.The function 
+doesn't know that this number will never be zero`/); and their `i.object` should 
+be somehow propositional.  But applying type theory (or type theory in conjunction 
+with Dependency Grammar) leaves open various analytic preferences: these 
+requirements can be presented as rigid grammatic rules or as `q.post-parsing` 
+semantic regulations.  How to model the qualities of sentience (or at least of having 
+propositional attitudes broadly conceived), for the noun, and of propositionality, 
+for the direct object, are again at the discretion 
+of the analysis (subtypes, quality-associations, or etc.) %-- Figure ~`ref<fig:Iknow>; shows one potential, 
+rather simplified unpacking of the sentence; from this structure details 
+can be added perhaps as extra syntax constraints or perhaps more as cues 
+to interpretation.`input<figure.tex>;  If these 
+requirements are seen as more syntactic, so qualities are incorporated into 
+data like Part of Speech (say, a noun designating something with propositional attidudes 
+being a subtype of noun), then we are more likely to analyze 
+violations as simply incorrect (recall `q.The tree wants to run away from the dog`
+%-- ungrammatical or just somehow `q.exotic`/?).  
+Some examples suggest less incorrectness as clever or poetic usage %-- so a 
+richer analysis may recognize expressions as type- and link-wise acceptable, but 
+showing incongruities (which is not the same as impropriety) 
+at a more fine-grained type level.  That `i.to want` takes a subject 
+`i.associated` with sentience does not force type annotations to inscribe this 
+in grammatic or lexical laws; instead, these association can be 
+introduced as potential `q.side effects`/, `i.triggering` re-associations 
+such as forcing hearers to ascribe sentience to something (like a tree) where 
+such ascription is not instinctive.  The type effect in this case lies more 
+at the conceptual level, the language-user sifting conceptual 
+backgrounds to find a configuration proper to the type requirements (in what 
+sense can a tree `q.want` something?).  In this `q.tree` case we probably 
+appeal to concepts of `q.as if`/: if the tree `i.were` sentient, it 
+would be nervous of the dog sniffing around %-- a humorous way of calling 
+attention to the dog's actions (obliquely maybe alluding to people's background 
+knowledge that dogs sometimes do things, like pee, in inconvenient 
+places, from humans' perspectives).  
+`p`
+
+`p.
+In brief, it is certainly possible %-- though by no means mandatory %-- to model 
+type requirements with greater flexibility at a provisional grammatical layer, 
+and then narrow in on subtypes or extra accumulations of qualifications on 
+type-instances in a transition from grammar to semantics.  Perhaps cognitive 
+schema occupy an intermediary role: progressing from basic recognition of 
+grammaticality, through cognitive schema, to conceptual framing, with type 
+machinery capturing some of the thought-processes at each `q.step` 
+(not that such `q.steps` are necessarily in a temporal sequence).  The basic 
+verb-subject-direct object articulation sets up an underlying cognitive 
+attitude (represented by a basic type-framing of verb, noun, and proposition, 
+like the `VisNNtoProp; signature).  Cognitive ascriptions fill this out 
+by adding detail to the broader-hewed typing, associating sentience with the 
+subject and propositionality with the object (sub- or higher-order typing 
+modeling this stage).  And how the actual lexical choices fit these cognitive 
+expectations %-- I call them cognitive because they are intrinsically tied 
+to structurational schema in the type, morphology, and word-order givens 
+in the encountered language %-- compels conversants to dip into background 
+beliefs, finding concepts for the signified meanings that hew to the 
+intermediary cognitive manipulations (finding ways to conceptualize the 
+subject as sentient, for example).  This also has a potential type model, 
+perhaps as forcing a type conversion from a lexical element which does 
+not ordinarily fit the required framing (such as giving inanimate things 
+some fashion of sentience).  Type theory 
+can give a window onto unfolding intellection at these multiple stages, 
+although we need not conclude that the mind subconsciously doing this thinking 
+mimics a computer that churns through type transformations mechanically and exactly.
+`p`
+
+`p.
+The previous analysis focused on individual word-senses, but 
+quasi-functional treatment of grammar classes (like `VisNtoS;) also 
+embrace type-theoretic notions on a higher 
+scale.  The `q.head` of a phrase is typically associated with these 
+`q.functional` parts of speech (which, as I will discuss below, 
+presents a sometimes counterintuitive theory of head/dependent relations, 
+but one which helps organize analyses of complex expressions).
+Phrase structure is then encoded, type-theoretically, via 
+`i.applicative structures`/; the simplest applications take 
+a head and its dependents and yield a phrase.
+Analogously, in computational type theory, types and functions are interdependent: 
+the semantics of `q.function resolution` is the predominant example 
+of `i.formal` semantics in a computational setting.  
+Functions are individuated by the types on which they are defined, and types
+are individuated by the functions that can be called on them.  
+This interdependence is particularly relevant for the `i.formal` semantics of 
+types, and I will revisit its implications when briefly reconsidering formal 
+type theory in general at the end of this section.  
+First, though, I will try to bring concrete examples to illustrate 
+how `q.higher order` type theory can shed light on the more nuanced range of 
+linguistic phenomena, which I will generically introduce 
+in terms of `i.microclassification`/. 
+`p`
+
+
+`subsection.Type Theory and Semantic Microclassification`
+`p.
+By `q.microclassification` I mean 
+gathering nouns and verbs by the auxiliary prepositions they allow and 
+constructions they participate in (such as, different cases), and 
+especially how through this they compel various spatial and 
+force-dynamic readings; their morphosyntactic resources for describing states 
+of affairs; and, within semantics, when we look toward even more fine-grained classifications 
+of particular word-senses, to reason through contrasts in usage.`footnote.
+So, conceiving microclasses similar in spirit to Steven Pinker in 
+Chapter 2 of `cite<Pinker>;, though I'm not committing to using the 
+term only in the way Pinker uses it.  Cf. also `cite<AnneVilnat>;, which 
+combines a microclass theory I find reminiscent of `i.The Stuff of Thought` with 
+formal strategies like Unification Grammar.
+`footnote`  The microclasses, which group together words with similar morphosyntactic
+behavior, can be seen as intermediary types more general than lexical entries 
+but more specific than top-level parts of speech %-- the level of
+detail where cognitive schema operate.  Microclasses can point out similarities 
+in mental `q.pictures` that explain words' similar behaviors (like which nouns, or 
+verb+noun subject+direct object pairs, work well followed by `i.all over`/), or 
+study why different senses of one word succeed or fail in different phrases.  
+There are `i.stains all over the tablecloth` and `i.paint splattered all over the tablecloth`/, 
+but not (or not as readily) `i.dishes all over the tablecloth`/.  While `q.stains` is count-plural and
+`q.paint` is mass-aggregate, they work in similar phrase-structures because both
+imply extended but not rigid spatial presence; whereas `q.dishes` can work for
+this schema only by mentally adjusting to that perspective, spatial construal shifting
+from visual/perceptual to practical/operational.  Such observations support 
+microclassification of nouns (and verbs, etc.) via `q.Ontological` criteria, like 
+`q.spatially (and/or) temporally extended (or pointwise)`/, `q.rigid/non-rigid`/,
+`q.caused/self-causing`/, and so forth.
+`p`
+
+`p.
+At still finer grain %-- lexical rather than cognitive/schematic %-- type-theoretic semantics 
+applies related Ontological tropes to unpack the overlapping mesh of word-senses, 
+like `i.material object` or `i.place` or `i.institution`/.   
+Sometimes these collide in the same sentence.  Slightly modifying two examples:`footnote.
+\cite[p. 40]{ChatzikyriakidisLuo} (former) and  
+\cite[p. 4]{MeryMootRetore} (latter).
+`footnote` 
+
+`sentence-examples.
+`sentence-example.The newspaper you are reading is being sued`
+`sentence-example.Liverpool, an important harbor, built new docks`
+`sentence-examples`
+
+Both have a mid-sentence shift between senses, which is analyzed 
+in terms of `q.type coercions`/.  The interesting detail of this treatment 
+is how it correctly predicts that such coercions are not guaranteed to 
+be accepted %-- `i.the newspaper fired the reporter and fell off
+the table`/; `i.Liverpool beat Chelesea and built new docks` 
+(again, slightly modifying the counter-examples).  Type coercions are 
+`i.possible` but not `i.inevitable`/.  Certain senses `q.block` certain coercions 
+%-- that is, certain sense combinations, or juxtapositions, are disallowed.  
+These preliminary, motivating analyses carry to more 
+complex and higher-scale types, like plurals (the plural of a type-coercion 
+works as a type-coercion of the plural, so to speak).  
+As it becomes structurally established that type rules at the 
+simpler levels have correspondents at more complex levels, the use of 
+type notions `i.per se` (rather than just `q.word senses` or other 
+classifications) becomes more well-motivated.
+`p`
+
+`p.
+Clearly, for example, 
+only certain kinds of agents may have beliefs or desires, so 
+attributing mental states forces us to conceive of their referents 
+in those terms (`i.Liverpool wants to sign a talented young striker`/).  
+This `i.can` be analyzed as `q.type coercions`/; but the type-theoretic machinery should contribute
+more than just obliquely stating linguistic wisdom, such as
+maintaining consistent conceptual frames or joining only suitably
+related word senses.  The sense of `i.sign` as in `q.employ to play on
+a sports team` can only be linked to a sense of Liverpool as the
+Football Club; or `i.fire` as in
+`q.relieve from duty` is only compatible with newspapers as an 
+institution.  These dicta can be expressed in multiple ways, 
+like compatibility of senses or conceptualizations.   
+But the propagation of classifications 
+(like `q.inanimate objects` compared to 
+`q.mental agents`/) through complex type structures lends credence to the 
+notion that type-theoretic perspectives are more than just an expository tool; 
+they provide an analytic framework which integrates grammar and semantics, and 
+various scales of linguistic structuration.  
+For instance, we are prepared to accept some examples of dual-framing 
+or frame-switching, like thinking of a newspaper as a physical object and a city government 
+(but we reject other cases, like `q.Liverpool voted in a new city government and signed a 
+new striker` %-- purporting to switch from the city to the Football Club).  The rules for 
+such juxtapositions appear to reveal a system of types with some parallels to 
+those in formal settings, like computer languages.  
+`p`
+
+`p.
+As I pointed out, Categorial Grammar can be generalized to Type-Theoretic Semantics so 
+as to initiate the transition to semantic analysis in a variety of grammar theories, 
+including Dependency and Link grammars.  Parts of speech have `q.type signatures` 
+notionally similar to the signatures of function types in programming languages: a verb
+needing a direct object, for example, `q.transforms` two nouns (Subject and Object) 
+to a proposition, which I have been notatating with something like `NNtoS;.  
+At the most basic level, the relation of Parts of Speech to `q.type signatures`
+seems little more than notational variants of conventional linguistic
+wisdom like a sentence requiring a noun and a verb (`SeqNPplVP;).  
+Even at this level, however, type-theoretic intuitions
+offer techniques for making sense of more complex, layered sentences,
+where integrating link and phrase structures can be complex.
+`p`
+
+`p.
+A tendency in both dependency and phrase-oriented perspectives is to define 
+structures around the most `q.semantically significant` words %-- so that a phrase
+like `q.many students` becomes in some sense collapsible to its semantic
+core, `q.students`/.  Examples in the previous section, however, argued that
+phrases cannot just be studied as replacements for semantic units.  Incorporating  
+type theory, we can instead model phrases through the perspective of 
+type signatures: given Part of Speech annotations for phrasal units and then for 
+some of their parts, the signatures of other parts, like verbs or adjectives 
+linked to nouns, or adverbs linked to verbs, tend to follow automatically.  
+A successful analysis yields a formal tree, where if (in an act of semantic 
+abstraction) words are replaced by their types, the `q.root` type is something like 
+`Prop; and the rest of a tree is formally a reducible structure in 
+Typed Lambda Calculus: `NNtoN; `q.collapses` to `N;, `NtoProp; collapses 
+to `Prop;, and so forth, with the tree `q.folding inward` like a 
+fan until only the root remains %-- though a more subtle analysis would 
+replace the single `Prop; type with variants that recognize different 
+forms of speech acts, like questions and commands.  In Figure ~`ref<fig:Iknow>;, 
+this can be seen via the type annotations: from right to left `NtoN; yields the 
+`N; as second argument for `i.is`/, which in turn yields a `Prop; that is mapped 
+(by `i.that`/) to `N;, finally becoming the second argument to `i.know`/.  This calculation 
+only considers the most coarse-grained classification (noun, verb, proposition) %-- as I 
+have emphasized, a purely formal reduction can introduce finer-grained grammatical or 
+lexico-semantic classes (like `i.at` needing an `q.argument` which is somehow an expression 
+of place %-- or time, as in `i.at noon`/).  Just as useful, however, may be analyses 
+which leave the formal type scaffolding at a very basic level and introduce 
+finer type or type-instance qualifications at a separate stage.
+`p`
+
+`p.
+In either case, Parts of Speech are modeled as (somehow analogous to) functions, but the important 
+analogy is that they have `i.type signatures` which formally resemble functions'.
+Phrases are modeled via a `q.function-like` Part of Speech along with one or more 
+additional words whose own types match its signature; the type calculations 
+`q.collapsing` these phrases can mimic semantic simplifications 
+like `q.many students` to `q.students`/, but here the theory is explicit 
+that the simplification is grammatic and not semantic: the collapse here 
+is recognized at the level of `i.types`/, not `i.meanings`/.  In addition, 
+tree structures can be modeled purely in terms of inter-word relations 
+(this is an example of embedding lambda calculii in process algebras), 
+so a type-summary of a sentence's phrase structure can be notated and 
+analyzed without leaving the Link Grammar paradigm.
+`p`
+
+`p.
+As a concrete example, in the case of `q.many students`/, 
+both `q.students` and the semantic role of
+the phrase are nouns (count-plural nouns, for where that's relevant).  Accordingly,
+`q.many` has a signature `NtoN; (or `NpltoNpl;, dependending on how 
+narrowly we want to notate the types in context).  
+Once we assign types and signatures to all words in a sentence, we can also see a 
+natural hierarchy resembling an expression in typed lambda calculus, where some words
+appear as `q.functions` and others as `q.arguments`/.  Often the less
+semantically significant words appear as `q.higher` in the structure,
+because they serve to modify and lend detail to more significant words.
+The kind of structure or `q.Charpente` which falls out of a sentence %--
+adopting a term from `Tesniere; (cf. \cite[p. 181]{ElkeTeich}) %-- is typically different from a link-grammar
+`q.linkage`/, although the two structures can be usefully combined.  
+`p`
+
+`p.
+In the example of `q.Student after student`/, where as earlier mentioned designating 
+one word to `q.represent` the phrase seemed arbitrary, we can analyze the 
+situation via type-signatures.  Insofar as `i.after` is the only non-noun, 
+the natural conclusion is that `q.after` should be typed `NNtoN; 
+(which implies that `q.after` is analogous to the `q.functional` position, and 
+in a lambda-calculus style reconstruction would be considered the `q.head` 
+%-- Figure ~`ref<fig:ESA>; is an example of how 
+the sentence could be annotated, for sake of discussion).`input<figure2.tex>;  
+This particular idiom depends however 
+on the two constituent nouns being the same word (a pattern I've also alluded to with 
+idioms like `i.time after time`/), which can be accommodated by invoking the (computationally rather complex 
+and topical) concept of `i.dependent types` `cite<BernardyEtAl>;, `cite<TanakaEtAl>; 
+%-- in other words the parameters 
+for `i.after` are a dependent type pair satisfied by an identity comparison between 
+the two nouns.  The signature for `q.after` has this added complication, but 
+the nuances of this example can still be accommodated within the overall 
+architecture of type theory.  I would pair this argument with my earlier 
+analysis of `q.many` variations which suggested how apparent complications 
+can be accommodated largely within the extant theoretical resources of 
+Link Grammar, and in combination suggest that the union of Link Grammar 
+with Type-Theoretic Semantics seems poised to accommodate many 
+complex real-world linguistic cases with a coherent abstract perspective.
+`p`
+
+`p.
+The concept of `q.type signature` applies to
+the most coarse-grained categorization which recognizes only basic
+traits like singular and plural, noun and proposition, etc., but it can be
+extended to incorporate more nuanced givens, like case-inflection agreement, 
+`q.associations`/, and `q.linguistic side effects`/.`footnote.
+I am currently working on a project which extends one of the most popular
+Link Grammar engines to recognize an enhanced set of link-types that
+incorporate these type-oriented and `q.lambda calculus` connections, and
+provides one form of phrase-structure encoding in link structures, modeled as
+a form of semantic graphs.  In principle, this extension is one way to draw
+further analysis and observation after the initial parse of a sentence into its
+link-grammar representation.  
+`footnote`  For example, 
+acceptability comparisons like `i.many students`//`i.much wine`//`i.a lot 
+of (wine/students)` can be explained, or at least represented, in terms 
+of finer-grained signatures applying to `i.much` vs. `i.many` and `i.a lot of` 
+that incorporate mass/count as different noun subtypes or quality associations.  Agreements 
+enforced in link-pairs are then mirrored by type signatures for the word in the pair 
+with a more `q.derivative` part of speech %-- again, this would be the `q.head` in a 
+paradigm that views phrases as applicative structures %-- and this motivates a shift 
+in analytic focus from grammar to meaning, in that contrasts like 
+mass/count involve cognitive schema as well as morphosyntactic (e.g., agreement) rules.
+If Part of Speech signatures are analogous to 
+function-types, we can explore how microclasses are analogous to finer-grained
+signatures which recognize phenomena like side-effects and type coercions.  
+Since `q.signatures` show how function-like types `q.take` argument types, 
+microclassification applies particularly to function-like types because these 
+add connotations and specificity to other types.
+We can then consider whether this richer formal semantics remains purely
+formal or also reveals dimensions of cognitive schema, situational
+understanding, and other aspects of meaning which are considered to be mental and
+pragmatic, enactive, and operational, rather than abstractly logical or mechanical.
+`p`
+
+`p.
+For concrete examples, consider alternatives for `q.many students`/.  The phrase as 
+written suggests a type signature (with `q.many` as the `q.function-like` or 
+derivative type) `NpltoNpl;, yielding a syntactic interpretation of the phrase; this 
+interpretation also suggests a semantic progression, an accretion of intended detail.  
+From `i.students` to `i.many students` is a conversion between two plural nouns 
+(at the level of concepts and semantic roles); but it also implies relative size, 
+so it implies some `i.other` plural, some still larger group of students from which 
+`q.many` are selected.  While rather abstract and formal, the `NpltoNpl; representation 
+points toward a more cognitive grounding which considers this `q.function` as a form 
+of thought-operation; a refinement of a situational model, descriptive resolution, 
+and so forth.  If we are prepared to accept a cognitive underpinning to semantic 
+classification, we can make the intuition of part of speech signatures as `q.functions` 
+more concrete: in response to what `q.many` (for example) is a function `i.of`/, 
+we can say a function of propositional attitude, cognitive schema, or attentional 
+focus.  The schema which usefully captures the sense and picture of `q.students` is 
+distinct (but arguably a variation on) that for `q.many students`/, and there is a 
+`q.mental operation` triggered by the `q.many students` construction which 
+`q.maps` the first to the second.  Similarly, `q.student after student` triggers a 
+`q.scheme evolution` which involves a more explicit temporal unfolding 
+(in contrast to how `q.many students` instead involves a more explicit 
+quantitative `i.many/all` relation).  What these examples show is that 
+associating parts of speech with type signatures is not just a formal 
+fiat, which `q.works` representationally but does not necessarily capture 
+deeper patterns of meaning.  Instead, I would argue, type signatures 
+and their resonance into linkage acceptability structures 
+(like singular/plural and mass/count agreement) `i.point toward` the 
+effects of cognitive schema on what we consider meaningful.
+`p`
+
+`p.
+Dependency Grammars, like Link Grammar, and Type-Theoretic Semantics, are all 
+based on quasi-mathematical data structures (potentially circumscribed 
+via Category Theory %-- a Category of labeled 
+graphs observing Link Grammar restrictions; a Category of 
+type hierarchies; and in combination a Category of link graphs whose vertices are mapped 
+to types thus modeled).  If these theories can lend illuminating analyses of 
+real linguistic phenomena, like Zhaohui Luo's approach to polysemy or Chung-Chieh Shan's 
+way of dealing with side effects, this suggests 
+that considering their formal foundations (and perhaps limitations) is also 
+relevant for natural linguistics %-- and so, by extension, are subjects like 
+Natural Language Processing and programing language engineering.  Computer 
+languages can be seen both as semiotic systems (artifically constructed sign systems) 
+and as engineered software, because it takes considerable effort to bridge 
+`q.human-readable` code with the underlying capabilities of computer processors.  
+Computer languages are relevant 
+case-studies for human languages, even though the primary task for these 
+languages is to notate unambiguous instructions for computers %-- since 
+compilers and interpreters translate high-level computer code to machine instructions, 
+there is some leeway in high-level language design for choosing notations which are 
+easiest for human programmers to create and understand.  Programming language semantics, 
+accordingly, is an offshoot of formal semantics, less tied 
+to logical-symbolic abstractions and grounded particularly on type theory and 
+the `q.semantics` of function resolution.
+`p`
+
+`p.
+Formal semantics tends to be a difficult match 
+for Natural Language, because the rigidly 
+of logic and sets poorly captures the flexibility of human concepts: those committed 
+to the set- and model-theoretic paradigm may appeal to more nuanced logics 
+%-- temporal logic for linguistic phenomena like tenses, or modal logics to break 
+the concept/extension impasse (the enumerative identity of two meaningfully different 
+sets which by circumstance have the same extension) by appeal to extensions in 
+`q.other possible worlds` %-- but in the spectrum of formal methods, computer languages 
+are a step closer to human cognition.  In this sense, formal properties of 
+computational systems %-- including computational type theory %-- is arguably 
+intermediary between logico-mathematical semantics and human language.  
+`p`
+ 
+`p.
+In computational type theory, two types can be `q.structurally identical`/, formed 
+from the same simpler types and/or sharing the same set of binary representations, but 
+`q.nominally distinct`/: a value with one type cannot (in general) be passed to a 
+function expecting a different (even if only nominally different) type.  At the same 
+time, a function can accept a spectrum of different types for its arguments; and 
+distinct functions (with different `q.signatures`/) can have the same name or 
+in some other way be designated by the same symbol.  
+Because a function's implementation may in turn call other functions, the 
+collection of types accepted by the containing function means that a 
+contained function call, notated one time in computer code, actually 
+may involve a multitude of possible functions, with different signatures.  
+At some point the notated 
+call must `q.resolve`/, meaning that enough information is available 
+to map the designated function to a specific implementation 
+(this resolution may only happen milliseconds before the contained function 
+is actually called, or it may be possible sometime earlier).  
+Function resolution is a crucial element of `q.formal semantics` for disciplines like software 
+engineering and compiler design, and in a sense is the only `q.pure` semantics 
+which can be recognized in this context, since computer data only refers obliquely 
+and by convention to things in the world, and only imperfectly to purely mathematical 
+types.  By contrast, the correspondence between function symbols and function implementations 
+is internal to computing systems, involves neither convention nor approximation, and 
+can be formally defined and algorithmically calculated.
+`p`
+
+`p.
+A `q.pure` function type, as would be recognized in mathematics, is fully defined 
+by a list of types which its instances take as arguments, and a list of types 
+it returns as values.  But programming languages have added many variations 
+(or `q.impurities`/) to the basic function-call-and-return scenario: mutable arguments 
+and `q.side effects`/, object-oriented methods, exceptions and exception handlers, 
+closures.  A function is understood less as `i.taking` and `i.returning` arguments, but rather as 
+`i.communicating` with other code (or other `q.resources`/, like sensors measuring 
+some emprical quantity, like something's temperature), via `q.channels`/.  Channels 
+send and/or receive data; values held in channels can be read and/or modified, with 
+various restrictions and permissions enforced (`q.pure` functions enforce the 
+restriction that input channels cannot be modified, and output channels cannot 
+be used except to represent return values).  The theory of pure functions 
+(represented by various forms of `i.typed lambda calculus`/, according to different 
+kinds of type systems with different levels of sophistication) is extended 
+(and `q.embedded` inside) a `q.process algebra` or `q.process calculii` which 
+treats function implementations as mini-programs that run like `q.processes` (sometimes 
+in parallel with other functions %-- there are two different function-combination 
+operators, one for operations run in parallel and one for their running sequentially).`footnote.
+More rigorously, function calls can run in sequnece in different ways: in a `q.lazy evaluation` 
+context, for example, calls may occur `q.out of sequence` relative to what is written 
+in computer code, because a computation is not carried out until its results are 
+needed (potentially never).
+`footnote`
+Computation is then a complex space of (often concurrent)
+process `q.capsules`/, whose rules of interaction are governed by formalisms like the `picalculus;
+`cite<Allam>;, `cite<Toninho>;.  Type theory expands accordingly, with the `q.signature` of 
+function types reflecting not only input and output types but also `q.capabilities` exercised on values 
+(readonly, read-write, etc.).  Object-oriented languages distinguish 
+two different kinds of `q.input` channels, sometimes called `i.lambda` and `i.sigma` 
+\cite[for example]{SmithGibbons} with results returned from one function being 
+bound to another's sigma channel 
+for `q.method chaining`/.  In short, type-theoretic semantics in the formal 
+setting of practical computer languages is more expressive and complex than 
+a formal semantics based on mathematics or mathematical type theory alone.
+`p`
+
+`p.
+Computer languages are a good case-study in what I might call `q.semiotic computability`/.  
+This designates the question of whether the 
+operations of sign-systems %-- how sign-users express intentions by forming or modifying 
+structured networks of signs that explicitly exhibit or are understood to have been 
+formed according to collectively recognized signifying rules %-- can be modeled, 
+at least to some substantial degree, by computable algorithms.  Our 
+notion of computation can be based on modern computer code, not just academic 
+topics like pure functions: the behavior of computing systems 
+where many functions run concurrently, with possible side-effects, is often 
+non-computable via static analysis; such systems can only be understood by 
+actually running them.  Nevertheless the capabilities of software programmed 
+in modern languages certainly deserve to be characterized as `q.computable` 
+behaviors.  A single function, which embodies a computable 
+calculation, may be part of a process space whose evolution through 
+time is nondeterministic, and computing environments which employ 
+functional side-effects are difficult or impossible to evaluate in the abstract. 
+I use `q.computability` therefore in this wider sense: operationally implementable 
+according to theories underlying mainstream programming languages, which is 
+conceptually (if perhaps not mathematically) distinct from `q.computability` in 
+subjects like algorithm analysis.
+`p`
+
+`p.
+Natural Langauge Processing, working with human languages from a computing platform, 
+is then a step further, continuing beyond logico-mathematic abstractions and toward 
+empirical language-use.  We can consider at what point formal and computational methods reach a limit, 
+beyond which they fail to capture 
+the richess and expressiveness of Natural Language, or whether this limit itself 
+is an illusion %-- whether even fully human 
+language competence is (perhaps in principle if not in practice) no less reducible 
+to formalizable patterns.  Using the wording I just proposed, we can speculate on 
+whether all language is `q.semiotically computable` or whether language merely 
+depends on faculties which in some neurological and/or presentational sense are 
+`q.computable` in those terms %-- faculties that, measured against linguistic fluency, 
+are necessary but not sufficient.  
+Whatever one's beliefs on this last question, 
+a progression of subdisciplines %-- from formal-logical semantics through programming 
+langauges and computational Natural Langauge Processing %-- is a reasonable 
+scaffolding for a universe of formal methods that can build up, by progressive theoretical 
+sophistication or assembly of distinct analyses which piece together jigsaw-like, to model 
+real-world language understanding.  Perhaps real language is an `q.emergent property` of 
+many distinct algorithms that run and combine in the mind; or perhaps the relevant 
+algorithms are a precondition, presenting cognition with essential signifying givens 
+but fleshed out in other, more holistic ways, as we become conscious of language not 
+just as a formal system but an interactive social reality.
+`p`
+
+`p.
+I have sketched a similar theoretical progression, starting with a theory of 
+grammar (Link Grammar), transitioning to a form of semantics (a type-theoretic semantics 
+defining type hierarchies and signatures over linkage graphs), and finally proposing a 
+cognitive interpretation of the resulting semantics.  I will refer to this 
+`i.interpretation` as  `q.Cognitive State Semantics`/, meaning that such a theory 
+adopts its `i.formal` structures from Link Grammar and type-theory but also attempts 
+to `i.motivate` these structures by appeal to cognitive considerations.  Both Link Grammar 
+(through its specific Category of labeled graphs modeling sentence linkage-structures) and 
+Type-Theoretic Semantics work with rigorous, algebraically formal models satisfying criteria 
+I referenced at the end of the last section: translation of language content into these 
+formats and subsequent review or transformation of the target structures can be programmed 
+as a purely mechnical space of operations.
+`p`
+
+`p.
+By itself, the superposition of 
+type-theoretic semantics on link-grammar graphs does not cross a hypothetical `q.barrier` between 
+the formal and the cognitive.  But I intend here to suggest a cognitive `i.interpretation` 
+for the formal structures; that they represent an outline of cognitive schema, or progressions, 
+or represent linguistic `q.triggers` that a cognitive language ability (taking language 
+as part of an environing world and produced by others, in rule-bound social situations, 
+to communicate ideas and sentiments) responds to.  This range of interpretations is 
+deliberately open-ended: we can say that a formal infrastructure grounds the cognitive 
+reception of language givens, without arguing specifically that formal structures identified 
+in language therefore model cognitive operations directly, or that these are instead 
+patterns identified in language that trigger a cognitive response, or any other 
+paradigm for mapping cognition as process and activity to language structure as model and 
+prototype.  Leaving these options open, however, I will focus in the remainder of this 
+paper on one interpretation, considering formal structures as `q.triggers` which 
+get absorbed into language understanding via observatory propensities: as language 
+users (on this proposal) we are disposed to identify certain formal structurations 
+operating in language as we encounter it, and respond to these observations by building 
+or refining mental models of the situations and signifying intentions we believe have been 
+implied by the discourse, in evolving and intersubjective dialogic settings that involve 
+joint practical activity as well as communication.  
+`p`
+
+`p.
+In this sense, I believe natural language reveals mutually-modifying juxtapositions 
+of concepts whose full semantic effects 
+are probably non-computable: I would work on the assumption that language 
+`i.as a whole` and as human social phenomena is not `q.computable` in a 
+semiotic sense, or any related practical sense (although 
+I make no metaphysical claims about the `q.abstract` computability of mental 
+processes merely by virtue of their neurophysical materiality).  
+The aforementioned `q.linguistic side effects` can be `i.modeled` by tracing our reception 
+of linguistic meaning through syntactic and semantic formations, like Link Grammar 
+and Type Theory, but I argue for such models not as models `i.of` cognitive processes, 
+but rather models of `i.observations` which trigger cognitive follow-up.  Even if we 
+believe in and practice a rigorous formalization of morphosyntactic structure, 
+where the `i.pattern` of conceptual `q.side-effects` can be seen as 
+unfolding in algorithmic ways, the cognitive `i.details` of these 
+effects are too situational, and phenomenologically rich, for 
+computability as ordinarily understood.  But the formal structure is 
+not wholly irrelevant: to call up nuanced cognitive schema 
+%-- or so I submit for consideration %-- may not be possible without 
+algorithmically reproducible lexicosemantic and morphosyntactic triggers, 
+at least modulo some approximation.  A (perhaps non-computable) space 
+of cognitive schema may be projected onto a (perhaps computable) 
+set of affiliated morphological patterns, using notations like 
+link-grammar pairs and type signatures to catalog them.  For example, there may be a non-computable 
+expanse of possible construals of pluralization; but any such construal, 
+in context, is called into focus in conversants' minds by morphosyntactic 
+invitations, by speakers' choices of, say, `mbox.`NSingToNPl;`/-pattern 
+phrases.  The important balance is to take formalization as far as is reasonable 
+without being seduced into logico-symbolic reductionism %-- a 
+methodological pas de deux I will explore further in the next, concluding section. 
+`p` 
+
+`p.
+Any word or usage invites various facets to either 
+emphasize or deemphasize, and these subsumed concepts or foci are 
+latent in potential meanings, brought into linguistic space 
+by the play of differentiation `footnote.
+Alluding, in part, to Sausurrean `q.system of differences` 
+\cite[p. 15]{EfePeker} %-- to choose a reference which introduces 
+Sausurre in a rather unexpected context.
+`footnote`: `i.baked`/, not `i.made`/; `i.flew`/, not `i.traveled`/; 
+`i.spill`/, not `i.pour`/.  
+These under-currents of subsidiary concepts and foci are selectively hooked onto by 
+morphosyntactic selection, so in analyzing phrase 
+structure we also have to consider how using syntax 
+which constructs a given structure also brings to the forefront certain 
+nested concepts and construals, which are latent in word-sense options; 
+in the topos of lexicosemantic possibilia.
+`p`
+
+`p.
+So, any talk about `q.side effects` of morphosyntactic functions 
+%-- mapping verb-space to adjective-space, noun-space to 
+proposition-space, singularity to plurality, and so forth %-- should consider 
+a type-theoretic gloss like `NtoN; as sketching just the motivating 
+scaffold around an act of cognitive refocusing.  The interesting semantics 
+lies with `i.how` a sense crosses over, in conversants' minds, 
+to some other sense or concept, wherein other aspects are foregrounded 
+%-- for example, within temporal event plurality: multiplicity as 
+frequency, or episodic distribution relative to some time span; 
+or suggesting something that is typical 
+or predominant; or relative count against some other 
+totality %-- each such refocusing triggered by a phrasal construction 
+of the form `NtoNpl; or `mbox.`NpltoNpl;`/.  
+Or we can map singulars, or count plurals, to mass nouns, and vice-versa (`i.shrubs` become `i.foliage`/; 
+`i.water` becomes `i.a glass of water`/).   
+The plural and the singular are a coarse-grained semantic that has not yet arrived as `i.meaning`/.  
+Conceptual spaces guide attention to classes and properties, defining a path of ascending 
+precision as speakers add descriptive detail; 
+cognitive construals negotiate relations between different kinds 
+of aggregates/individuals; individuality, aggregation and multiplicity as phenomena and 
+disposition.  These construals are practical and embodied, `i.and` 
+phenomenological %-- they direct attention (`i.qua` transcendental universal of 
+mentality, if we like), to and fro, but in the course of intersubjective and 
+goal-driven practical action (and in that sense particular, world-bound, historicized).
+`p`
+
+`p.
+`i.Student after student came out against the proposal`/.  
+To `i.come out`/, for/against, lies in the semantic frame of attitude and expression 
+(it requires a mental agent, for example), but its reception 
+carries a trace of spatial form: to come out `i.to` a public place, to 
+go on record with an opinion (a similar dynamic applies to the idiomatic 
+`q.come out` to mean, for someone gay or lesbian, `q.come out of the closet` 
+%-- in that idiom the spatial figure is explicit but metaphorical).  Usually
+`q.come out [for/against]`/, in the context of a policy or idea, is similarly
+metaphorical.  But the concrete spatial interpretation remains latent, as a kind
+of residue on even this abstract rendition, and there sustains a chance that this
+undercurrent will actually figure in conversants' mutual understanding %-- if 
+there were not just columns being written and opinions voiced but demonstrations
+on the quad.  The spatial undercurrent is poised to emerge
+as more literal, should the context warrant.  However literally or metaphorically 
+the `q.space` of the cognitive `q.coming out` is
+understood, however explicit or latent its cogitative figuration, 
+is not something internal to the language; it is a potentiality which
+will present in different ways in different circumstances.  This is not to say that
+it is something apart from linguistic meaning, but it shows how linguistic meaning
+lies neither in abstract structure alone, nor contextual pragmatics, but in their cross-reference.   
+`p`
+
+`p.
+Given these considerations, I propose a `q.Cognitive State Semantics` 
+%-- understanding phrase structure in terms of (or analogous to) functional effects 
+(like `cite<ShanThesis>;), but cognitive: word and syntax choice effectually 
+steering cognitive appraisals of jointly experienced situations 
+in specific directions.  Cognitive State Semantics also has formal implications: 
+the inner structuration of data `q.spaces`/,  
+including unknown and undefined values, and including (side-effects-bearing) function types, 
+can be understood as dynamic `i.states of knowledge` and their changes, grounding datatype semantics in human 
+use/interactions.`footnote.
+While beyond the scope of this paper, these ideas have 
+been applied in real-world settings, e.g., for code analysis and generation, 
+targeting languages like `Lisp; and `Cpp; as well as special-purpose programming, query, and markup dialects.  
+The motivating principle has been that, instead of resting programming language semantics on abstract, algebraic 
+spaces, this semantics should emerge from types' inner organization, insofar as they in turn are designed to 
+human knowledge and communication practices %-- especially at the application level, concerning 
+to model external-world objects (or external world-objects).  `q.Inner Organization` means  
+patterns of both extensional and intensional variation, as these evince forms characteristic 
+of Conceptual Spaces.  Foregrounding this conceptuality  
+allows testing and interface declarations to be foregrounded in code, rather than 
+parceled off to test suites, documentation, and other mid-stream development assets.
+`footnote`
+Linguistically, the `q.effects` of language `q.functions` are 
+mutations/modifications in cognitive state, respondant to concrete 
+or abstract scenarios which are topics of dialog.  Sometimes, effects may  
+tolerate mathematical analysis; but such analytical thematics tend to peter out into the 
+ambient, chaotic worldliness of human consciousness. 
+`p`
+

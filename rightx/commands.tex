@@ -3,6 +3,91 @@
 \usepackage{titlesec}
 \usepackage{url}
 
+
+\let\OldSection\section
+
+\renewcommand\section[1]{
+	\vspace{12pt}
+	
+	\scalebox{1.3}{\colorbox{logoPurple!50}{\hspace{1em}}}
+				
+	%\hspace{-1.1cm}{\protect\includegraphics[width=1cm]{e-logo.png}}	
+	{\protect\transparent{0.5}{\colorbox{logoPeach}{%
+			\begin{minipage}{\linewidth}
+				    \vspace{.5em}
+				
+	\protect\transparent{1}{\OldSection{#1%
+		%{\transparent{0.5}{
+		%	\protect\includegraphics[width=1cm]{e-logo.png}
+		%}
+	    %}
+     }}
+	    \end{minipage}}} }
+    
+    \vspace{-5em}
+    	{\protect\transparent{0.3}{\colorbox{logoPeach}{%
+    		\begin{minipage}{\linewidth}
+    			\hspace{\linewidth}
+    	\end{minipage}}} } 
+    
+    \vspace{5em}
+    
+	\vspace{-6pt}
+}
+
+
+\newcommand\tabltxt[1]{\footnotesize{#1}}
+\renewcommand\section[1]{\OldSection{#1}}
+
+%\subsectionfont{\Large}
+%\subsectionfont{\fontsize{12}{15}\selectfont}
+
+\titleformat*{\subsection}{\Large\bfseries}
+
+\let\OldSubsection\subsection
+\renewcommand\subsection[1]{
+
+	\vspace{12pt}
+	
+    %{\LARGE
+	%\colorbox{logoCyan}{%
+	%\begin{minipage}{\linewidth}
+		\OldSubsection{% 	
+			\hspace{-2.75em}
+			%\begin{minipage}{}
+			\protect\raisebox{-5pt}{%
+			\colorbox{logoCyan!50}{\hspace{2.1em}}}%
+			\hspace{-5pt}{\protect\transparent{0.3}{\colorbox{logoBlue!80}{\protect\transparent{1}{%
+						   \protect\raisebox{1pt}{\textit{{\large #1}}} }}}}
+			%\end{minipage}
+		}
+	%\end{minipage}
+    %}
+    %}
+	\vspace{-6pt}
+}
+
+
+\newsavebox{\twolinebox}
+
+\newcommand{\stwoline}[1]{%
+\sbox{\twolinebox}{\raisebox{-3pt}%
+{\parbox{7.4cm}{\linespread{1.25}\selectfont\raggedleft{\textit{\textbf{{\large #1}}}}}}}}
+
+\newcommand{\twoline}{\usebox{\twolinebox}}
+
+\newcommand{\subsectiontwoline}[1]{\stwoline{#1}\subsection{\twoline}}
+
+\newcommand{\spsubsection}[1]{%
+\vspace{-.25em}
+\subsection{#1}
+\vspace{.3em}
+}
+\newcommand{\spsubsectiontwoline}[1]{%
+\subsectiontwoline{#1}
+\vspace{-1.3em}
+}
+
 \newcounter{sentenceCounter}{}
 
 \newcommand{\writeIncSentenceCounter}{\stepcounter{sentenceCounter}(\arabic{sentenceCounter})}{}
@@ -62,22 +147,14 @@
 %\DeclareNewFootnote[para]{R}[Roman]
 %\DeclareNewFootnote[para]{N}
 
-\usepackage[letterpaper, left=1in,right=.85in,top=1in,bottom=.85in]{geometry}
+\usepackage[letterpaper, left=.45in,right=.45in,top=1in,bottom=1in]{geometry}
+
+\setlength{\columnsep}{7mm}
 
 \usepackage{etoolbox}
 
 \AtBeginEnvironment{thebibliography}{\linespread{1}\selectfont}
 
-\usepackage{mathptmx}
-%\usepackage{euler}
-%\usepackage{amsmath}
-
-%\usepackage[LGRgreek]{mathastext}
-
-%\sectionfont{\fontsize{12}{15}\selectfont}
-%\subsectionfont{\fontsize{11}{12}\selectfont}
-
-\titleformat*{\subsection}{\small\bfseries}
 
 \usepackage{eufrak}
 \usepackage{wasysym}
@@ -659,76 +736,8 @@
 
 \colorlet{dro}{darkRed!50!orange}
 
-\let\OOldSection\section
-
-\newcommand\OldSection[1]{\OOldSection{{\protect\raisebox{-5pt}{\protect\scalebox{1.5}{#1}}}}}
 
 \newcommand\hs{\hspace{-.8em}}
-
-\renewcommand\section[1]{
-	\vspace{12pt}
-	
-	\hs\scalebox{1.3}{\colorbox{dro!80}{\hspace{1em}}}
-				
-	%			darkBlGreen!40!yellow
-	%\hspace{-1.1cm}{\protect\includegraphics[width=1cm]{e-logo.png}}	
-	{\protect\transparent{0.5}{\hs\colorbox{bgbcxg}{%
-			\hspace{.6em}\begin{minipage}{.985\linewidth}
-				    \vspace{.5em}
-				
-	\protect\transparent{1}{\OldSection{#1}}
-	    \end{minipage}}} }
-    
-    \vspace{-5em}
-    	{\protect\transparent{0.4}{\hs\colorbox{logoPeach!40!darkRed}{%
-    		\begin{minipage}{\linewidth}
-    			\hspace{\linewidth}
-    	\end{minipage}}} } 
-    
-    \vspace{5em}
-    
-	\vspace{-6pt}
-}
-
-%\subsectionfont{\Large}
-%\subsectionfont{\fontsize{12}{15}\selectfont}
-
-\titleformat*{\subsection}{\Large\bfseries}
-
-
-
-\let\OOldSubsection\subsection
-
-
-%\newcommand\OldSubsection[1]{\protect\scalebox{1.1}{\protect\OOldSubsection{\protect#1}}}
-
-\newcommand\sst[1]{{\Large #1}}
-
-\newcommand\OldSubsection[1]{\OOldSubsection{\hspace*{-12pt}#1}}
-
-
-\renewcommand\subsection[1]{
-
-	\vspace{12pt}
-	
-    %{\LARGE
-	%\colorbox{logoCyan}{%
-	%\begin{minipage}{\linewidth}
-		\OldSubsection{% 	
-			\hspace{-2.35em}
-			%\begin{minipage}{}
-			\protect\raisebox{-5pt}{%
-			\protect\transparent{0.7}\colorbox{darkRed!50!orange}{\hspace{2.1em}}}%
-			\hspace{-7pt}{\protect\transparent{0.4}
-			{\colorbox{bgbcyw}{\protect\transparent{1}{%
-						   \protect\raisebox{1pt}{\textit{{\large #1}}} }}}}
-			%\end{minipage}
-		}
-	%\end{minipage}
-    %}
-    %}
-	\vspace{-6pt}
-}
 
 
 \let\OLDthebibliography\thebibliography
