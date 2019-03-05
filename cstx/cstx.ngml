@@ -47,10 +47,10 @@ arguing how Phenomenology and Cognitive Linguistics, while distinct traditions, 
 
 `input<rightxconclusion.ngml>;
 
-`input<sectionOne.ngml>;
-`input<sectionTwo.ngml>;
-`input<sectionTwoFollow.ngml>;
-`input<sectionThree.ngml>;
+`input<section4.ngml>;
+`input<section4a.ngml>;
+`input<section4b.ngml>;
+`input<conclusion.ngml>;
 
 
 `input<biblio>;

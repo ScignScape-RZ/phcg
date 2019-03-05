@@ -8,6 +8,48 @@
 %\onehalfspacing
 
 
+% line
+\usepackage[object=vectorian]{pgfornament} %%  http://altermundus.com/pages/tkz/ornament/index.html
+
+\definecolor{darkRed}{rgb}{.2,.0,.1}
+
+\newcommand{\decoline}{%
+
+\vspace{-2em}
+{\color{darkRed!60!cyan}\noindent\hfil{\EnglischeLinie}\hfil}
+%{\color{darkRed!60!cyan}\noindent\hfil\rule{0.5\textwidth}{.8pt}\hfil}
+\vspace{-2.25em}}
+
+
+\newcommand{\whdecoline}{%
+
+\vspace{-2em}
+{\color{white}\noindent\hfil{\whEnglischeLinie}\hfil}
+%{\color{darkRed!60!cyan}\noindent\hfil\rule{0.5\textwidth}{.8pt}\hfil}
+\vspace{-2.25em}}
+
+\newcommand{\sectionline}[1]{%
+  \noindent
+  \begin{center}
+  {\color{#1}
+    \resizebox{0.5\linewidth}{1ex}
+    {{%
+    {\begin{tikzpicture}
+    \node  (C) at (0,0) {};
+    \node (D) at (9,0) {};
+    \path (C) to [ornament=84] (D);
+    \end{tikzpicture}}}}}%
+    \end{center}
+  }
+  
+\newcommand{\EnglischeLinie}{
+\sectionline{darkRed!60!cyan}
+}
+
+\newcommand{\whEnglischeLinie}{
+\sectionline{white}
+}
+% ///
 
 \usepackage[flushmargin]{footmisc}
 
@@ -283,7 +325,8 @@
 
 \usepackage[font=small,labelfont=bf]{caption}
 
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xcolor}
+
 \definecolor{Bkg}{RGB}{250,245,252}
 \newcommand{\leader}[2]{\hspace{#1}\colorbox{Bkg}{#2}}
 
@@ -424,7 +467,7 @@
 }
 \newcommand{\spsubsectiontwoline}[1]{%
 \subsectiontwoline{#1}
-\vspace{-1.3em}
+\vspace{.3em}
 }
 
 
