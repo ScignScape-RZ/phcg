@@ -14,7 +14,7 @@ the central) dimension of meaning, and
 \i{two} that language is composition.  But 
 while language expresses propositional content 
 \mdash{} i.e., in many cases language \q{means} the 
-way that propositions \begin{q}mean\end{q} \mdash{} language 
+way that propositions \q{mean} \mdash{} language 
 is not \i{compositional}, in general, 
 the way that propositions are compositional.  
 So compositionality and logicality have to be 
@@ -31,30 +31,33 @@ collaboration with formal logic.
 first, although a predicate structure, a predicative specificity, does indeed
 permeate  states of affairs insofar as we engage thm rationally, such
 logical order is not modeled by language itself so much as by cognitive
-pictures we develop via interprtive processes \i{triggred} by language dtails
+pictures we develop via interprtive processes 
+\mdash{} processes \i{triggered} by language details
 but, I believe, to some not insubstantial degree pre- or extra-linguistic.
-Moreover, second, insofar as we \i{can} decelop formal models of
+Moreover, second, insofar as we \i{can} develop formal models of
 language, these are not going to be models of prdicate structure
-in any conventional sense.  Cognitive-interpretive processes may
+in any conventional sense.
+}
+\p{Cognitive-interpretive processes may
 have formal structure \mdash{} structure which may even show a lot of overlap
 with propositional forms \mdash{} but these are not \i{linguistic} structures.
 Insofar as language triggers but does not constitute interpretive
 \q{scripts}, the scripts themselves (i.e., conceptual prototypes and
-perceptual schema we keep intelectually at hand, to interpret and
+perceptual schema we keep intellectually at hand, to interpret and
 act constructively in all situations, linguistic and otherwise) are
-not linguiatic as such \mdash{} and neither is any propositional order they
+not linguistic as such \mdash{} and neither is any propositional order they
 may simulate.  Language \i{does}, however, structure the \i{integration}
 of \i{multiple} interpretive scripts, so the structure of this
 integration \i{is} linguistic structure per se \mdash{} and formally
 modeling such integration can be an interesting tactic for
 formally modeling linguistic phenomena.  However,
-we should not assume that such a formal model will reemble or
+we should not assume that such a formal model will resemble or
 be reducible to formal logic in any useful way \mdash{} formalization
 does not automatically entail some kind of de facto isomorphism
 to a system of logic (if not first-order then second-order, modal, etc.).
 }
 \p{Instead, I want to focus in on branches of computer science and
-mathematics (such a process algebra, which I have already referenced)
+mathematics (such as process algebra, which I have already referenced)
 as part of our scientific background insofar as the \i{structural
 integration} of diverse \q{processes} (computational processes
 in a formal sense, but perhaps analogously
@@ -66,7 +69,7 @@ The guiding intuition compares word meanings to logical predicates;
 e.g. \q{John is married} is typically said when the speaker believes
 that, in fact, the predicate \q{married} applies to the
 speaker \q{John}.  Switching to a more
-\q{procedural} perspective involves intuiting word-maning
+\q{procedural} perspective involves intuiting word-meaning
 more in terms of interpretive procedures than logical predicates.
 The change in perspective may not yield substantially different
 analyses in all cases, but I believe it does affect many cases.
@@ -74,9 +77,9 @@ analyses in all cases, but I believe it does affect many cases.
 \p{Even a simple predicate like \q{married} reveals a spectrum of
 not-entirely-logical cases in ordinary language:
 \begin{sentenceList}\sentenceItem{} John is married to a woman from his home country, but
-he had to get the marriag legally recognized here.
+he had to get the marriage legally recognized here.
 \sentenceItem{} John married his boyfriend in Canada, but they
-live in a state that does not recognize same-sex marriages.
+lived in a state that does not recognize same-sex marriages.
 \sentenceItem{} John has been married for five years, but in
 many ways he's still a bachelor.
 \sentenceItem{} Every married man needs a bachelor pad somewhere,
@@ -84,7 +87,7 @@ and wherever yours is, you need a mini-fridge.
 \end{sentenceList}
 We can make sense of these sentences because we do not conceptually
 define lexemes like \q{married} or \q{bachelor} via exhaustive
-logical rules, like \q{a bachelor is an unmarrid man}.  Instead we
+logical rules, like \q{a bachelor is an unmarried man}.  Instead we
 have some combination of prototypical images \mdash{} familiar
 characteristics of bachelors, say, which even married men
 can instantiate \mdash{} and a conceptual framework recognizing
@@ -101,20 +104,47 @@ we can collectively designate, for sake of discussion, as
 }
 \p{The truth-theoretic mapping of words to predicates
 (and so phrasal and sentence units to propositional structures)
-provides an obvious way to formalize linguistic structur by
+provides an obvious way to formalize linguistic structure by
 borrowing the analogous structuration from
 predicate complexes.  Substituting a procedural semantic model
 allows a comparable formalization of linguistic structure
 through theories exploring procedural integration,
 for instance the interactions between computational procedures.
 Analysis of \i{computational} produres can yield interesting
-idas for linguistic theories of \i{cognitive} procdures
+ideas for linguistic theories of \i{cognitive} procedures
 \mdash{} without endorsing a reductive metaphysics of
 cognitive procedures as \q{nothing but} computational
-procedures implemented in some sort of mental software.
+procedures implemented in some sort of mental software.   
 }
+\p{I earlier used computing procedures roughly 
+sketched \mdash{} like code which may open a file 
+(\ref{itm:file}) \mdash{} as loose metaphors for 
+cognitive processes; my point earlier 
+was that both cognitive and computational 
+processes can be hard to gloss logically 
+because they are often dealing 
+with incomplete logical information.  
+More seriously \mdash{} because \i{incomplete} 
+logical information is not necessarily 
+outside of logic; there are logical systems which 
+can model information partiality in 
+systematic ways \mdash{} processes which 
+occur in the midst of logically incomplete 
+spaces (in the context of message-passing, 
+function-routing, etc.) do not 
+nessarily \i{operate} logically.  That is, 
+local rules for message-passing or function-routing systems 
+do not seem to be (in their \q{native} semantics) 
+logical rules.  In the current context, I want 
+to consider in greater detail the interoperation 
+\i{between} computational procedures, to consider 
+how procedures form \q{networks} and whther this is a 
+useful analogy for cognitive/linguistic processes.
+}
+\spsubsectiontwoline{Procedural Networks as a 
+Cognitive/Linguistic Metaphor}
 \p{The notion of computational procedures is certainly
-not foreign to symbolic logic or to analyses oftn
+not foreign to symbolic logic or to analyses often
 associated with logistical models (in linguistics and philosophy,
 say), like Typed Lambda Calculus.  In those paradigms
 we certainly have, say, an idea of applying formulae to
@@ -133,21 +163,21 @@ terms.  I point this out because shifting to
 a \q{procedural} intuitive model does not \i{by itself}
 take us outside of logistic and truth-thoretic paradigms.
 }
-\p{In computer science, theories of procedural networks
+\p{And yet, in computer science, theories of procedural networks
 begin to branch out from formal logic or
 lambda calculii when we move past the \q{mathematical}
 picture of procedures \mdash{} as computations that accept a
 collection of inputs and return a collection of outputs
-\mdash{} and theorize procedures mor as computational
+\mdash{} and theorize procedures more as computational
 modules that input, output, and modify values
 from multiple sources, in different ways.  In practical
 technology, this includes developments like Object-Oriented
 computer languages and programming techniques such as
 Exceptions and mutable references.  Likewise,
-real-world cod can pull information from many sources \mdash{} like
+real-world code can pull information from many sources \mdash{} like
 databases, files, and networks (including the internet)
 \mdash{} in addition to values input as parameters to a function.
-Conversely functions have many ways to modify values
+Conversely, functions have many ways to modify values
 \mdash{} many ways to manifest side-effects \mdash{} beyond just
 returning values as outputs.  Collectively these various
 channels of communication \mdash{} wherein different procedures
@@ -185,7 +215,7 @@ reading the position of a mouse \mdash{} any self-contained
 collection of \q{inpure} functions can always be re-implemented
 as a system of pure \q{mathematical} functions, using
 only one-dimensional, immutable input and output channels
-(this is not necessarily true of singl functions, but
+(this is not necessarily true of single functions, but
 abstractly true of complete code \i{bodies} encompassing many
 functions, i.e., many implemented procedures).  Analogously, any
 computing environment based on a type system that incorporates
@@ -197,7 +227,7 @@ the ability to invoke other procedures in the network.  We can then
 say that any procedure space developed with the benefit of
 \q{impure} coding styles (like Objects, Exceptions, and
 side-effects) is \i{computationally isomorphic} to a procdure space
-implemented exclusively in a pur-functional paradigm.
+implemented exclusively in a pure-functional paradigm.
 }
 \p{This principle might suggest that the pure/impure distinction
 is superficial, and so that any computing environment is
@@ -232,7 +262,7 @@ needs to modl and simulate.
 }
 \p{I contend that this duality between Object-Oriented and
 pure-functional programming is analogous to the paradigmatic
-contrast between cognitiv and truth-theoretic semantics.
+contrast between cognitive and truth-theoretic semantics.
 On this analogy, pure-functional programming can be associated
 with truth-theoretic semantics in that both are founded on formal
 systems that more or less straightforwardly operationalize
@@ -243,16 +273,20 @@ proceures with multiple \q{channels of communication} and
 potentially many intermediate states.  Reducing impure
 (e.g., Object-Oriented) code to pure-functional procedure spaces
 is analogous to providing truth-theoretic reconstructions
-of linguistic meanings, as in (revisiting examples from last section):
+of linguistic meanings, as in (revisiting examples from prior section):
 \begin{sentenceList}\sentenceItem{} People had fed the rescued dogs (i.e.: before they
 were rescued).
 \sentenceItem{} New Yorkers vote democratic (i.e.: the majority
 of registered voters in New York do so).
+\sentenceItem{} There is milk in that coffee (i.e.: almond milk).
+\sentenceItem{} I handed him a bottle opener (i.e.: a butterfly 
+corskscrew).
+\sentenceItem{} That wine is Fabernet Franc (i.e.: \q{W is CF}).
 \end{sentenceList}
-Propositional reconstructions of sentences lik thse can capture a
+Propositional reconstructions of sentences like these can capture a
 logical substrate that contributes to their meaning, but completely
 \i{reducing} their semantics to such logical substrata jettisons,
-I contend, interpretive and contextual schemata which ar equally
+I have argued, interpretive and contextual schemata which ar equally
 essential to their meaning.  Analogously \mdash{} considered
 in relation to data that it must curate and model (so that pople
 may manage and aggregate data; for instance, collect biomedical data
@@ -296,7 +330,7 @@ Which procedures get invoked depends on user actions
 trigger responses from the software.  Applications are therefore built
 around an \q{event loop}: the software can enter a passive
 state, performing no operations apart from monitoring
-physical devices to detect user actions.  Onc an action does
+physical devices to detect user actions.  Once an action does
 occur \mdash{} we press a letter on a keyboard, say, or press a mous button
 \mdash{} the application responds by invoking a specific procedure, which
 in turn may trigger a complex cascade of other procedures, to complete
