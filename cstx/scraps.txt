@@ -1,0 +1,17 @@
+
+
+`p.
+For such reasons, I will conclude this paper with
+a focus on Link Grammar and on how the Link Grammar
+perspective relates to the phenomenological and
+cognitive-grammar positions and case studies I
+outlined in earlier studies.  Further extensions to
+Directed Hypergraphs and the technical foundations
+of multidimensional `q.procedural` type theories
+defined on Directed Hypergraphs %-- which thematically
+complement Link Grammar to the degree that Link Grammar
+and Directed Hypergraphs are naturally paired up as
+in OpenCog %-- are beyond the scope of
+this paper (though I have presented some form
+of this anlysis in other publications).
+`p`

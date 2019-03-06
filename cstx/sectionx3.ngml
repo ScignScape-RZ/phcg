@@ -307,7 +307,8 @@ proceures with multiple `q.channels of communication` and
 potentially many intermediate states.  Reducing impure
 (e.g., Object-Oriented) code to pure-functional procedure spaces
 is analogous to providing truth-theoretic reconstructions
-of linguistic meanings, as in (revisiting examples from prior section):
+of linguistic meanings, as in (revisiting 
+examples from prior sections):
 
 `sentenceList,
 `sentenceItem; People had fed the rescued dogs (i.e.: before they
@@ -323,7 +324,7 @@ corskscrew).
 Propositional reconstructions of sentences like these can capture a
 logical substrate that contributes to their meaning, but completely
 `i.reducing` their semantics to such logical substrata jettisons,
-I have argued, interpretive and contextual schemata which ar equally
+I have argued, interpretive and contextual schemata which are equally
 essential to their meaning.  Analogously %-- considered
 in relation to data that it must curate and model (so that pople
 may manage and aggregate data; for instance, collect biomedical data
@@ -378,8 +379,8 @@ in turn may trigger a complex cascade of other procedures, to complete
 whatever operation we requested via our action (saving a file,
 selecting one record to visualize from a database, etc.).
 Via such networks of procedures and functionality, software
-models and simulates empirical phenomea %-- at least enough so that we can
-maintain databases, remotely operat machines, and in other ways track
+models and simulates empirical phenomena %-- at least enough so that we can
+maintain databases, remotely operate machines, and in other ways track
 and manipulate physical states.
 `p`
 
@@ -443,7 +444,7 @@ of such `q.universal` logical systems are relations and
 distinctions investigatd by the philosophical ontological tradition
 %-- substance and attribute, part and whole, time-point vs.
 time-span, spatial region vs. spatial boundary, subtype and
-supertype, and so forth.  Abstart Ontological systems are
+supertype, and so forth.  Abstract Ontological systems are
 then formalized into logical rules that provide an
 axiomatic core %-- sometims called `q.Upper` Ontologies
 %-- which are then extended via empirical models
@@ -456,7 +457,7 @@ used to integrate data in concrete enterpris/scientific fields
 The overarchong paradigm of such Ontology-based integration
 is the idea of a logical model that recognizes superficial
 differencs between incompatible (or at least not fully
-compatible) ata sources.  An alternative approach to data
+compatible) data sources.  An alternative approach to data
 integration problems is to treat these as issues of
 procedural capability.  In order to import data from one
 hospital into a second hospital system, for example, assuming
@@ -475,7 +476,7 @@ respctive software system includes %-- either by
 deliberate cooperative enginering or because the two
 systems are guided by similar standards and technical orientations
 %-- procedures on the two ends that can be aligned in terms
-of the kind of data and data-formats they produce and/or consum.
+of the kind of data and data-formats they produce and/or consume.
 In short, targeted (and potentially cooperatively-engineered)
 procedural alignments %-- rather than overarching logical
 commonalities %-- form the bedrock of data integration.
@@ -549,11 +550,11 @@ semantically more accurate than) Semantic Web Ontologies
 %-- in light of critiques that the logical intuitions
 behind the Semantic Web create a distorted and
 oversimplified theory of what semantics is all
-about (in the words of Peter Gardenfors,
+about (in the words of Peter G\"ardenfors,
 `q.The Semantic Web is not very Semantic`/).
 `p`
 
-`subsection.Phenomnology and th Semantic Web`
+`subsection.Phenomnology and the Semantic Web`
 `p.
 These questions bear directly on Phenomnology, because
 philosophers in the phenomenological tradition have directly
@@ -664,7 +665,9 @@ chapter in `i.Naturalizing Phenomenology` and elsewhere.
 Petitot's and Barry Smith's formalizing projects were parallel
 and collaborative to some extent.  Maxwell James Ramstead
 in a 2015 master's thesis reviews the history elegantly:
-`q.Now, the `q.science of salience`
+
+`quote,
+Now, the `q.science of salience`
 proposed by Petitot and Smith (1997) illustrates the
 kind of formalized analysis made possible through the direct
 mathematization of phenomenological descriptions.
@@ -677,13 +680,14 @@ words, the `q.constitution` of objects).
 Petitot employs differentiai geometry and morphodynamics
 to model phenomenal expenence, and Smith uses formai structures from
 mereotopology (the theory of parts, wholes, and their boundaries)
-to a similar effect.`  Except, there are interesting
-contrasts between the Cognitive-phenomenological
+to a similar effect.
+`quote`  Except, there are interesting
+contrasts between the Cognitive-Phenomenological
 adoption of mereotopology
 (by Barry Smith and also Roberto Casati, Achille C. Varzi,
-Kit Fine, Thomas Bittner, etc.) %-- which
+Kit Fine, Maureen Donnelly, etc.) %-- which
 stays within a more classical logical paradigm
-%-- and Petitot's Morphological Eidtics, which
+%-- and Petitot's Morphological Eidetics, which
 is more Category-Theoretic.
 `p`
 
@@ -704,18 +708,22 @@ polygonal meshes; shader algorithms; `q.NURBS`
 processes %--  create a formal model of perceptual phenomena
 insofar as these can simulated `i.to a close approcimation`/:
 visual phnomena artificially built with these techniques
-can be `i.almost` realistic.  The gaps between such
+can be `i.almost` realistic.
+`p`
+
+`p.
+The gaps between such
 `q.virtal` scenes and real life may suggest that there are
-additional facets suffusing `q.ral life` perception, or
+additional facets suffusing `q.real life` perception, or
 even that despite their realism the mathematical
 building-blocks of CGI-like scenes
 are fundamentally different from the formal
 structures governing nurophenomenological perception.
-But in any case the almost life-lik realism that
+But nevertheless the almost life-like realism that
 `i.can` be achieved via Computer Graphics is a data-point
 that phenomenology should acknowledge: that a
 perceptual world built out of certain rigorously
-mathematical constitunts can feel almost
+mathematical constituents can feel almost
 lifelike when apprehended as if it were
 a real visual-perceptual surrounding.  In
 particular, Computer-Generated Imagery can evoke the
@@ -731,7 +739,11 @@ of directing visual attention to a 2D screen %-- it feels
 largely immersed in the visual scenes before us; which means
 that full phenomenological realism is not prerequisite for
 our intentional comportment toward visual (and auditory)
-phenomena.  We can then observe that constructed scenes
+phenomena.  
+`p`
+
+`p.
+We can then observe that constructed scenes
 built entirely from mathematical carry comparable
 potential for intentional engagement.  Moreover, Panoramic
 Photography and Immersive Visual Reality present another
@@ -814,13 +826,13 @@ as a `q.Naturalizing phenomenology` project.
 On the other hand, critiques of the Semantic Web
 %-- which have emerged, among elsewhere, from Cognitive
 Linguistics %-- can accordingly be studied as potntial
-indications of how classical log formalism is
-limited in the phenomenological context.  Peter Gardenfors,
+indications of how classical logical formalism is
+limited in the phenomenological context.  Peter G\"ardenfors,
 for example, has critiqued the Semantic Web on thoretical
 grounds while also developing a model of Natural
 Language semantics (via Conceptual Space Theory)
 that we may find more phenomenologically realistic than
-the Semantic Web's (as Gardenfors puts it)
+the Semantic Web's (as G\"ardenfors puts it)
 `q.syllogistic` paradigms.  In this paper, I propose a
 critiquefrom a more `q.procedural` angle.
 From my perspective, the foundational characteristic of
@@ -859,7 +871,7 @@ I argued above that technology has a retroactive influence
 on phenomenology, or at least on the threads of research
 that follow the `q.Naturalizing` project and the
 reconciliation of phenomenology with Analytic Philosophy.
-Even if this effect is rather modest, it still bars on
+Even if this effect is rather modest, it still bears on
 the topic that is my primary emphasis here, namely
 the integration of phenomenology with Cognitive Grammar.
 One of the most prominent practical domains that has
@@ -892,15 +904,19 @@ intellectual frameworks that embrace parallel goals but
 present alternative technical foundations, and phenomenology
 would benefit from thematizing these frameworks in a role
 analogous to the Semantic Web, both a practical application
-and a retroactive intuition-guide.  A case in point would be
+and a retroactive intuition-guide.
+`p`
+
+`p.
+A case in point would be
 the OpenCog project, that presents a Hypergraph-based modeling
 paradigm related but technically distinct from Semantic Web
 labeled graphs (one which is also consistent with
 procedural-network models) and which also embraces a specific
 linguistic model (based on Link Grammar).  Philosophically,
-OpenCog appears to celebrate a vision of `q.Artificial
-General Intelligence` which I (and I suspect most phenomenologists
-would) find problemmatic; underestimating the context-sensitivity
+OpenCog appears to celebrate a vision of Artificial
+General Intelligence which I have already flagged as problemmatic; 
+underestimating the context-sensitivity
 and empathic intersubjectivity intrinsic to human cognition
 and intelligence (and difficult to simulate with machins).
 Nevertheless, formal models designed to `i.replicate` intelligent
@@ -985,22 +1001,6 @@ starting point for integration with phenomenological
 and cognitive-linguistic approaches, an integration
 which can then be extended to related structures like
 Procedural Networks and Directed Hypergraphs.
-`p`
-
-`p.
-For such reasons, I will conclude this paper with
-a focus on Link Grammar and on how the Link Grammar
-perspective relates to the phenomenological and
-cognitive-grammar positions and case studies I
-outlined in earlier studies.  Further extensions to
-Directed Hypergraphs and the technical foundations
-of multidimensional `q.procedural` type theories
-defined on Directed Hypergraphs %-- which thematically
-complement Link Grammar to the degree that Link Grammar
-and Directed Hypergraphs are naturally paired up as
-in OpenCog %-- are beyond the scope of
-this paper (though I have presented some form
-of this anlysis in other publications).
 `p`
 
 `p.
