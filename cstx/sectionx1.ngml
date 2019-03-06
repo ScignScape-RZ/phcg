@@ -2,9 +2,9 @@
 While the first half of this paper was built around a 
 review of semantic theories, this part will 
 attend equally to grammar.  As I argued at the end of 
-Part I,  we can fins logical form in language 
+Section 3,  we can find logical form in language 
 %-- even subtle, visual, `q.narrative` language %-- but 
-`i.how` languag oftn evokes its logical form reveals 
+`i.how` language often evokes its logical form reveals 
 the limitations and the reductionist effect of semantic 
 theories that reify logical form over against the 
 full cognitive spectrum of linguistic processes.  
@@ -14,7 +14,7 @@ tied together to create aggregate comprehension
 (of sentences, for example), a natural 
 `i.syntax` paradigm to ground such a 
 `q.procedural` or `q.interface` semantics would 
-be like a link or dependnecy grammar: syntax as 
+be Link or Dependency grammar: syntax as 
 a graph of associations between language elements 
 rather than a compositional hierarchy of words and 
 phrases.  This is the conception of the syntax/semantics 
@@ -280,7 +280,7 @@ iconic, repeatable lexical units.
 `p.
 On that theory, tieing specific word-senses to stereotyped
 cognitiv processes is a matter of semantics, not grammar per se.
-Grammar, I contend, come into play when multiple processes need to
+Grammar, I contend, comes into play when multiple processes need to
 be integrated.  The concept `q.buttered toast`/, for example, seems
 to start from a more generic concept (toast) and then add
 extra detail (the buttering, with all that implies conceptually,
