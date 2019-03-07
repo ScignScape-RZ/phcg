@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  7 MAR 2019 10:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  7 MAR 2019 10:47
 entering extended mode
 **cstx.ngml.tex
 (C:\scign\phcg\ar\cstx\cstx.ngml.tex
@@ -5421,7 +5421,7 @@ Underfull \vbox (badness 6808) has occurred while \output is active []
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
  [57])
-(C:\scign\phcg\ar\cstx\sectionx1.ngml.tex
+(C:\scign\phcg\ar\cstx\section5.ngml.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -5455,7 +5455,7 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [63])
-(C:\scign\phcg\ar\cstx\sectionx2.ngml.tex
+(C:\scign\phcg\ar\cstx\section5a.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -6010,7 +6010,7 @@ Overfull \hbox (2.26959pt too wide) in paragraph at lines 695--695
  city's largest theater company
  []
 
-[71]) (C:\scign\phcg\ar\cstx\sectionsw1.ngml.tex
+[71]) (C:\scign\phcg\ar\cstx\section6.ngml.tex
 Underfull \vbox (badness 6063) has occurred while \output is active []
 
  [72]
@@ -7129,7 +7129,7 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [81])
-(C:\scign\phcg\ar\cstx\sectionsw2.ngml.tex
+(C:\scign\phcg\ar\cstx\section6a.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -7681,7 +7681,7 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
 )
-(C:\scign\phcg\ar\cstx\sectionpnlg.ngml.tex
+(C:\scign\phcg\ar\cstx\section7.ngml.tex
 Underfull \hbox (badness 2080) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Procedural Net-works and Link
  []
@@ -8265,7 +8265,7 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [92])
-(C:\scign\phcg\ar\cstx\section5.ngml.tex
+(C:\scign\phcg\ar\cstx\section8.ngml.tex
 Underfull \hbox (badness 3179) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Cognitive Gram-mar and Type
  []
@@ -9358,7 +9358,7 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [101])
-(C:\scign\phcg\ar\cstx\section6.ngml.tex
+(C:\scign\phcg\ar\cstx\section9.ngml.tex
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [102]
@@ -9911,7 +9911,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [110])
-(C:\scign\phcg\ar\cstx\section6a.ngml.tex
+(C:\scign\phcg\ar\cstx\section9a.ngml.tex
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
 
@@ -11090,7 +11090,7 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  21742 strings out of 494049
- 409680 string characters out of 3146069
+ 409652 string characters out of 3146069
  556468 words of memory out of 3000000
  23794 multiletter control sequences out of 15000+200000
  30510 words of font info for 222 fonts, out of 3000000 for 9000
