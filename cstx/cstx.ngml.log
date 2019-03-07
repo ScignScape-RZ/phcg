@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  6 MAR 2019 14:40
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  7 MAR 2019 10:26
 entering extended mode
 **cstx.ngml.tex
 (C:\scign\phcg\ar\cstx\cstx.ngml.tex
@@ -4846,555 +4846,24 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
  [50]
-Underfull \vbox (badness 6808) has occurred while \output is active []
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [51]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6063) has occurred while \output is active []
 
 
-Underfull \vbox (badness 6808) has occurred while \output is active []
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [52]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6808) has occurred while \output is active []
 
-)
-(C:\scign\phcg\ar\cstx\lim.ngml.tex
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 1.
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\setbox' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                \kern 3.0pt
-(hyperref)                removed on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\main@pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\main@pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                \kern 3.0pt
-(hyperref)                removed on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ht' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\advance' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\fboxsep' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ht' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dp' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\advance' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\fboxsep' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dp' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\main@pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\main@pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\vrule' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\wd' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ht' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dp' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hss' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\box' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\p@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\p@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\immediate' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\write' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@auxout' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\setbox' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                \kern 3.0pt
-(hyperref)                removed on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\main@pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\main@pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\p@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\p@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\immediate' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\write' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@auxout' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\x' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\copy' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\twolinebox' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                \kern 3.0pt
-(hyperref)                removed on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ht' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\advance' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\fboxsep' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ht' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dp' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\advance' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\fboxsep' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dp' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dimen@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\main@pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\main@pdfcolorstack' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\vrule' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\wd' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ht' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\dp' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hss' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\box' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1.
-
-[53]
+ [53]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
 
@@ -5404,27 +4873,6 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
-Underfull \vbox (badness 6063) has occurred while \output is active []
-
- [55]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6808) has occurred while \output is active []
-
- [56]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6808) has occurred while \output is active []
-
- [57]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
- [58]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 521.
@@ -5957,11 +5405,8 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 521.
 
-
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
- [59]
-Underfull \hbox (badness 1406) in paragraph at lines 619--648
+[55]
+Underfull \hbox (badness 1406) in paragraph at lines 656--685
 []\OT1/cmr/m/n/10.95 (+20) These un-fold-ing nar-ra-tives are rel-e-vant to phe
 -
  []
@@ -5969,44 +5414,47 @@ Underfull \hbox (badness 1406) in paragraph at lines 619--648
 
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
+ [56]
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
 
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [60])
+ [57])
 (C:\scign\phcg\ar\cstx\sectionx1.ngml.tex
-Underfull \vbox (badness 5231) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 3219) has occurred while \output is active []
+
+ [58]
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
+ [59]
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
+ [60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [61]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
-Underfull \vbox (badness 6808) has occurred while \output is active []
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [62]
-Underfull \vbox (badness 6808) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
- [63]
-Underfull \vbox (badness 1024) has occurred while \output is active []
-
- [64]
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
- [65]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
- [66]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
-)
+ [63])
 (C:\scign\phcg\ar\cstx\sectionx2.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -6540,33 +5988,32 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-[67]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
- [68]
+ [65]
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
- [69]
+ [66]
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
- [70]
-[71]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
- [72]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
- [73]
+ [67]
+[68] [69] [70]
 Overfull \hbox (2.26959pt too wide) in paragraph at lines 695--695
 \OT1/cmr/m/n/10.95 (-20) ``the team flew". And in \OT1/cmr/m/it/10.95 (-20) The
  city's largest theater company
  []
 
-
+[71]) (C:\scign\phcg\ar\cstx\sectionsw1.ngml.tex
 Underfull \vbox (badness 6063) has occurred while \output is active []
 
- [74])
-(C:\scign\phcg\ar\cstx\sectionx3.ngml.tex [75]
+ [72]
 Overfull \hbox (1.10547pt too wide) in paragraph at lines 143--145
 []\OT1/cmr/m/n/10.95 (-20) I ear-lier used com-put-ing pro-ce-dures roughly ske
 tched ---
@@ -7104,28 +6551,25 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 145.
 
+[73]
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+ [74]
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+ [75]
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [76]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
- [77]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [78]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
- [79]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
 
-Underfull \vbox (badness 6808) has occurred while \output is active []
-
- [80]
 Overfull \hbox (8.12332pt too wide) in paragraph at lines 503--503
  |[]  [] [][][][][][][][]
  []
@@ -7655,9 +7099,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 503.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+Underfull \vbox (badness 5022) has occurred while \output is active []
+
+
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
- [81]
+ [78]
 Underfull \hbox (badness 1603) in paragraph at lines 644--673
 []\OT1/cmr/m/n/10.95 (+20) Meanwhile, con-tem-po-rary for-mal-iza-tions of phe-
 
@@ -7666,20 +7116,20 @@ Underfull \hbox (badness 1603) in paragraph at lines 644--673
 
 Underfull \vbox (badness 6063) has occurred while \output is active []
 
- [82]
-Underfull \vbox (badness 6236) has occurred while \output is active []
+ [79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [83]
-Underfull \vbox (badness 6063) has occurred while \output is active []
+ [80]
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
- [84])
-(C:\scign\phcg\ar\cstx\sectionx4.ngml.tex
+ [81])
+(C:\scign\phcg\ar\cstx\sectionsw2.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -8213,20 +7663,44 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
 
-Underfull \vbox (badness 6063) has occurred while \output is active []
+Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [85]
+ [82]
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
+
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+ [83]
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
-LaTeX Warning: Citation `HolmqvistDiss' on page 86 undefined on input line 169.
-
-
-[86]
+ [84]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [87]
+)
+(C:\scign\phcg\ar\cstx\sectionpnlg.ngml.tex
+Underfull \hbox (badness 2080) in paragraph at lines 1--1
+ |[]\OT1/cmr/bx/n/14.4 Procedural Net-works and Link
+ []
+
+[85]
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+
+LaTeX Warning: Citation `HolmqvistDiss' on page 87 undefined on input line 169.
+
+
+[87]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (0.55748pt too wide) in paragraph at lines 374--390
 \OT1/cmr/m/n/10.95 (-20) ``\OT1/cmr/m/it/10.95 (-20) some \OT1/cmr/m/n/10.95 (-
 20) dogs") \OT1/cmr/m/it/10.95 (-20) and also \OT1/cmr/m/n/10.95 (-20) that the
@@ -8234,12 +7708,12 @@ Overfull \hbox (0.55748pt too wide) in paragraph at lines 374--390
  []
 
 
-Underfull \vbox (badness 6063) has occurred while \output is active []
-
-
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [88]
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 439.
@@ -8772,31 +8246,31 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 439.
 
-
-Underfull \vbox (badness 6808) has occurred while \output is active []
-
- [89]
-Underfull \vbox (badness 6808) has occurred while \output is active []
+[89]
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
-Underfull \vbox (badness 6063) has occurred while \output is active []
-
- [90]
-Underfull \vbox (badness 6808) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6063) has occurred while \output is active []
-
- [91]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+ [90]
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91]
+Underfull \vbox (badness 6236) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [92])
 (C:\scign\phcg\ar\cstx\section5.ngml.tex
 Underfull \hbox (badness 3179) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Cognitive Gram-mar and Type
  []
 
-[92] [93]
+[93]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
  [94]
@@ -9324,17 +8798,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 171.
 
-
+[95]
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
- [95]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [96]
 Underfull \vbox (badness 6236) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6808) has occurred while \output is active []
 
  [97]
 Underfull \vbox (badness 6808) has occurred while \output is active []
@@ -9346,7 +8817,13 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
 
-(C:\scign\phcg\ar\cstx\figure2.tex) [98] [99]
+(C:\scign\phcg\ar\cstx\figure2.tex)
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
+ [98]
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+ [99]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 492.
@@ -9872,16 +9349,19 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 492.
 
 
-Underfull \vbox (badness 6236) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [100]
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
-)
-(C:\scign\phcg\ar\cstx\section6.ngml.tex [101]
+
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
+ [101])
+(C:\scign\phcg\ar\cstx\section6.ngml.tex
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
+ [102]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 68.
@@ -10406,17 +9886,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 68.
 
-[102] [103]
+[103] [104]
 Underfull \vbox (badness 3168) has occurred while \output is active []
 
- [104]
-[105]
-Underfull \vbox (badness 6808) has occurred while \output is active []
-
- [106]
+ [105]
+[106]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
  [107]
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
+
 Underfull \hbox (badness 1515) in paragraph at lines 562--562
 []\OT1/cmr/m/n/10.95 (+20) Returning to ``On-tol-ogy": types have as-so-ci-
  []
@@ -10424,17 +9904,17 @@ Underfull \hbox (badness 1515) in paragraph at lines 562--562
 [108] (C:\scign\phcg\ar\cstx\figure.tex)
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [109]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
-(C:\scign\phcg\ar\cstx\section6a.ngml.tex
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [110]
+ [110])
+(C:\scign\phcg\ar\cstx\section6a.ngml.tex
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -10967,7 +10447,7 @@ Underfull \hbox (badness 1688) in paragraph at lines 135--153
 
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
-
+ [112]
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 153.
 
@@ -10985,9 +10465,6 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 153.
 
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [112]
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
 
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
@@ -10995,9 +10472,12 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
-Underfull \vbox (badness 6808) has occurred while \output is active []
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [114]
+Underfull \vbox (badness 6808) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 297.
@@ -11522,10 +11002,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 297.
 
-
+[115]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [115]
+
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
  [116])
@@ -11541,37 +11021,39 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
  [117]
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
-
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
  [118]
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
 
+Underfull \vbox (badness 6236) has occurred while \output is active []
 
-LaTeX Warning: Reference `footnoteVision' on page 119 undefined on input line 2
+ [119]
+
+LaTeX Warning: Reference `footnoteVision' on page 120 undefined on input line 2
 22.
 
 
 Underfull \vbox (badness 6625) has occurred while \output is active []
 
- [119]
+ [120]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [120]
+
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
-
+ [121]
 (C:\scign\phcg\ar\cstx\vectorian84.pgf)
 
-LaTeX Warning: Citation `CyberphysicalSystems' on page 121 undefined on input l
+LaTeX Warning: Citation `CyberphysicalSystems' on page 122 undefined on input l
 ine 368.
 
-[121]
+
 Underfull \vbox (badness 6236) has occurred while \output is active []
 
- [122])
-(C:\scign\phcg\ar\cstx\biblio.tex [123]
+ [122]
+[123]) (C:\scign\phcg\ar\cstx\biblio.tex [124
+
+]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
@@ -11581,7 +11063,7 @@ Missing character: There is no “ in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
- [124
+ [125
 
 ]
 Overfull \hbox (26.93068pt too wide) in paragraph at lines 255--258
@@ -11591,25 +11073,25 @@ Overfull \hbox (26.93068pt too wide) in paragraph at lines 255--258
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [125])
+ [126])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
 
-[126]
+[127]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (C:\scign\phcg\ar\cstx\cstx.ngml.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `cstx.ngml.out' has not changed.
-(rerunfilecheck)             Checksum: 8E9146E576C7DD63422C1659E7E3BEFA;4986.
+(rerunfilecheck)             Checksum: E0E0DBE0E196F69DE547EE6EE97D5CEB;4857.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21740 strings out of 494049
- 409637 string characters out of 3146069
- 551061 words of memory out of 3000000
+ 21742 strings out of 494049
+ 409680 string characters out of 3146069
+ 556468 words of memory out of 3000000
  23794 multiletter control sequences out of 15000+200000
  30510 words of font info for 222 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -11642,9 +11124,9 @@ ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msam7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/c
 m-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/wasy
 /wasy8.pfb>
-Output written on cstx.ngml.pdf (126 pages, 1182845 bytes).
+Output written on cstx.ngml.pdf (127 pages, 1185620 bytes).
 PDF statistics:
- 1396 PDF objects out of 1440 (max. 8388607)
- 450 named destinations out of 1000 (max. 500000)
+ 1402 PDF objects out of 1440 (max. 8388607)
+ 451 named destinations out of 1000 (max. 500000)
  29949 words of extra memory for PDF output out of 35830 (max. 10000000)
 

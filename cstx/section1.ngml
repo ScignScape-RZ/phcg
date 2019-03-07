@@ -1,187 +1,187 @@
 `part;
-In this first half of the paper, I will consider 
-several semantic paraigms: Conceptual Role Semantics, 
-Conceptual Space Theory, Truth-Theoretic Semantics, 
-and ultimately Interface Theory of Maning (a term due to 
-Olin Vakarelov).  I approach this 
-material as, hopefully, a mediator: I'd like to 
-negotiate the differences and aggregate the 
-best parts of these analyses, while avoiding 
-reductionism and remaining true to phenomenology.  
-I will eventually tie the peices together into 
-a `q.Cognitive State` Semantics %-- but in this 
-case semantic analysis overlaps with theories of 
-syntax, so I will develop this aggregative perspective more 
+In this first half of the paper, I will consider
+several semantic paraigms: Conceptual Role Semantics,
+Conceptual Space Theory, Truth-Theoretic Semantics,
+and ultimately Interface Theory of Maning (a term due to
+Olin Vakarelov).  I approach this
+material as, hopefully, a mediator: I'd like to
+negotiate the differences and aggregate the
+best parts of these analyses, while avoiding
+reductionism and remaining true to phenomenology.
+I will eventually tie the peices together into
+a `q.Cognitive State` Semantics %-- but in this
+case semantic analysis overlaps with theories of
+syntax, so I will develop this aggregative perspective more
 in Part II, that addresses syntax more head-on.
 
 `section.Conceptual Role Semantics and Externalism`
 
 `p.
-Conceptual Role Semantics is often discussed together 
-with a particular internalism/externalism debate 
-which it tends to engender.  Here I want to 
-defend a kind of Conceptual Role Semantics (hereafter 
-CRS) but I will first outline an account 
-of compromise between externalism and internalism.  
-I will suggest a compromise different, I believe, 
-than Ned Block's `q.two factor` model that seems 
-considered the leading example of an 
+Conceptual Role Semantics is often discussed together
+with a particular internalism/externalism debate
+which it tends to engender.  Here I want to
+defend a kind of Conceptual Role Semantics (hereafter
+CRS) but I will first outline an account
+of compromise between externalism and internalism.
+I will suggest a compromise different, I believe,
+than Ned Block's `q.two factor` model that seems
+considered the leading example of an
 externalist/internalist hybrid.
 `p`
 
 `p.
-The basic CRS picture is that linguistic meanings 
-should be associatd with conceptual rols in pur 
-understanding situations more than in terms 
-of their reference to external objects.  Given 
+The basic CRS picture is that linguistic meanings
+should be associatd with conceptual rols in pur
+understanding situations more than in terms
+of their reference to external objects.  Given
 sentences like
 
 `sentenceList,
 `sentenceItem; \label{itm:ornate} He opened the wine bottle with an ornate corkscrew.
 `sentenceItem; \label{itm:butterfly} He opened the beer bottle with a butterfly corkscrew.
-`sentenceItem; He collects antique corkscrews and just bid on one online. 
+`sentenceItem; He collects antique corkscrews and just bid on one online.
 `sentenceItem; \label{itm:screwtop} I thought this was a screw-top but it turns out I need a corkscrew.
 `sentenceItem; \label{itm:x3d} This X3D file shows a very realistic corkscrew created with NURBS surfaces.
 `sentenceItem; \label{itm:sendx3d} Could you send me the corkscrew (the X3D file you just mentioned)?
 `sentenceList`
 
-we should interpret `q.corkscrew`/, first, as a concept 
-in a kind of functional organization.  In some of these sentences 
-there is also a specific corkscrew (qua phsyical object) on hand 
-as a referent, but its actual physical properties %-- or 
-even identity %-- is not decisive for the meaning of 
-the sentence.  After all, in (\ref{itm:screwtop}) the speaker is 
-not thinking of any corkscrew in particular (probably 
-%-- more on that later) and in (\ref{itm:x3d}) and 
-(\ref{itm:sendx3d}) the corkscrew is 
-not real (at least not real qua corkscrew).  
-But the conceptualization associated with `q.corkscrew` does 
-not seem markedly different in (\ref{itm:ornate}) or 
-(\ref{itm:butterfly}) versus (\ref{itm:screwtop}), 
+we should interpret `q.corkscrew`/, first, as a concept
+in a kind of functional organization.  In some of these sentences
+there is also a specific corkscrew (qua phsyical object) on hand
+as a referent, but its actual physical properties %-- or
+even identity %-- is not decisive for the meaning of
+the sentence.  After all, in (\ref{itm:screwtop}) the speaker is
+not thinking of any corkscrew in particular (probably
+%-- more on that later) and in (\ref{itm:x3d}) and
+(\ref{itm:sendx3d}) the corkscrew is
+not real (at least not real qua corkscrew).
+But the conceptualization associated with `q.corkscrew` does
+not seem markedly different in (\ref{itm:ornate}) or
+(\ref{itm:butterfly}) versus (\ref{itm:screwtop}),
 at least (more on the other three later).
 `p`
 
 `p.
-Not only physical details but even lexical identity 
-seems tangential to the important conceptual 
-meanings.  Suppose I am hosting two guests, 
-one has a magnum of ale and one a bottle of Malbec.  
-They ask, respectively: 
+Not only physical details but even lexical identity
+seems tangential to the important conceptual
+meanings.  Suppose I am hosting two guests,
+one has a magnum of ale and one a bottle of Malbec.
+They ask, respectively:
 
 `sentenceList,
 `sentenceItem; Do you have a bottle opener?
 `sentenceItem; Could you get me a corkscrew?
 `sentenceList`
 
-and I give the first guest a butterfly corkscrew and the 
-second a folding multi-knife.  What I gave them is 
-different from their request, but they should think 
-nothing of it insofar as the winged corkscrew has a 
-gap on its handle suitable for beer bottles and the 
-multi-knife has a fold-out corkscrew helix.  I have 
-not violated any conversational maxims, because I 
-reasonably assume that the instruments I gave them 
-are suitable for the desired goals, of opening their 
-bottles.  Semantically `q.corkscrew` really means 
-`q.something that can be used to open a wine bottle`/, 
-and in that sense the lexeme gets it principle content 
-from this operational role, not some list of attributes 
+and I give the first guest a butterfly corkscrew and the
+second a folding multi-knife.  What I gave them is
+different from their request, but they should think
+nothing of it insofar as the winged corkscrew has a
+gap on its handle suitable for beer bottles and the
+multi-knife has a fold-out corkscrew helix.  I have
+not violated any conversational maxims, because I
+reasonably assume that the instruments I gave them
+are suitable for the desired goals, of opening their
+bottles.  Semantically `q.corkscrew` really means
+`q.something that can be used to open a wine bottle`/,
+and in that sense the lexeme gets it principle content
+from this operational role, not some list of attributes
 (like spiraly and graspable) or prototypes.
 `p`
 
 `p.
-Granted, a suitably designed winged corscrew can be 
-construed as a kind of bottle opener, and a multi-knife 
-a kind of corkscrew respectively.  We are prepared to 
-accept these tools as examples of the respctive 
-concepts if they are functionally designed to support 
-those tasks, even if they are not the primary function.  
-But our inclination allowing concepts to dilate 
-modulo functional criteria suggest that our grasp of 
-concepts is first and foremost functional-pragmatic: 
-we tend to internalize concepts in reference to 
-(extralinguistic) functional roles and expand concpts 
+Granted, a suitably designed winged corscrew can be
+construed as a kind of bottle opener, and a multi-knife
+a kind of corkscrew respectively.  We are prepared to
+accept these tools as examples of the respctive
+concepts if they are functionally designed to support
+those tasks, even if they are not the primary function.
+But our inclination allowing concepts to dilate
+modulo functional criteria suggest that our grasp of
+concepts is first and foremost functional-pragmatic:
+we tend to internalize concepts in reference to
+(extralinguistic) functional roles and expand concpts
 to accommodate varigated implementers of those roles.
 `p`
 
 `p.
-We can indeed accept sentences like: 
+We can indeed accept sentences like:
 
 `sentenceList,
 `sentenceItem; \label{itm:hammer} He opened the bottle of beer with a hammer.
 `sentenceItem; He pounded the nail with a lever corkscrew.
 `sentenceList`
 
-Of course here we are inserting objects into a conceptual 
-nexus where they are not usually found.  Winged corkscrews 
-are often `i.designed` to double as bottle-openers, but 
-lever corkscrews are not designed to double 
-as hammers.  Nevertheless we have no trouble imagining 
-the scenarios being described, where someone uses 
-the thick part of a corkscrew to pound a nail, or a 
-hammer's handle-claw gap to pry off a bottle cap.  We have 
-schemata for `q.a tool to open a capped bottle` and 
-`q.a tool to pound a nail`/, and the concepts 
-of bottle-opener and hammer occupy that conceptual niche 
-insofar as they are artifacts designed for those purposes.  
-But the conceptual `q.slot` for, say, `q.a tool to 
-open a capped bottle` is more general than 
+Of course here we are inserting objects into a conceptual
+nexus where they are not usually found.  Winged corkscrews
+are often `i.designed` to double as bottle-openers, but
+lever corkscrews are not designed to double
+as hammers.  Nevertheless we have no trouble imagining
+the scenarios being described, where someone uses
+the thick part of a corkscrew to pound a nail, or a
+hammer's handle-claw gap to pry off a bottle cap.  We have
+schemata for `q.a tool to open a capped bottle` and
+`q.a tool to pound a nail`/, and the concepts
+of bottle-opener and hammer occupy that conceptual niche
+insofar as they are artifacts designed for those purposes.
+But the conceptual `q.slot` for, say, `q.a tool to
+open a capped bottle` is more general than
 the specific tools designed for those purposes.
 `p`
 
 `p.
-We nonetheless `i.would` be presumably violating 
-conversational maxims if we handed our friend who 
-wanted to open a beer bottle a hammer.  Even if 
-there's a way to make the hammer work for that 
-purpose, it's further outside the norm than, referring 
-back to (\ref{itm:butterfly}), proposing to use a winged corkscrew.  
-So the implicature in (\ref{itm:butterfly}) is satisfied, let's say, 
-by bringing my guest a winged corkscrew, but not a 
-hammer.  But we can entertain the `i.thought` of using 
-a hammer as a bottle-opener, and even this 
-possibility presents problems for simplistic 
-thories of language acquistion as essentially learning 
-a static set of word correspondances, like 
-`q.a hammer is used to pound nails` or `q.a corkscrew 
-is used to open wine` %-- after all, you cannot conclude 
-from 
+We nonetheless `i.would` be presumably violating
+conversational maxims if we handed our friend who
+wanted to open a beer bottle a hammer.  Even if
+there's a way to make the hammer work for that
+purpose, it's further outside the norm than, referring
+back to (\ref{itm:butterfly}), proposing to use a winged corkscrew.
+So the implicature in (\ref{itm:butterfly}) is satisfied, let's say,
+by bringing my guest a winged corkscrew, but not a
+hammer.  But we can entertain the `i.thought` of using
+a hammer as a bottle-opener, and even this
+possibility presents problems for simplistic
+thories of language acquistion as essentially learning
+a static set of word correspondances, like
+`q.a hammer is used to pound nails` or `q.a corkscrew
+is used to open wine` %-- after all, you cannot conclude
+from
 
 `sentenceList,
 `sentenceItem; A hammer is somthing used to pound nails, `i.and`
 `sentenceItem; A lever corkscrew is something used to open wine, `i.and`
-`sentenceItem; A lever corkscrew can be used to pound nails 
+`sentenceItem; A lever corkscrew can be used to pound nails
 `sentenceList`
 
-that a hammer is a kind of lever corkscrew and can 
-therefore open wine.  What we 
-`i.do` have are conceptual slots available encapsulating 
-ideas like `q.that which can open bottles` or 
-`q.that which can pound nails`/, and we `q.fill` these 
-conceptual slots with different lexical content 
-in different situations.  The 
-`q.that which can open capped bottles` slot can be filled 
-descriptively %-- i.e., in declarative speech, 
-like in (\ref{itm:hammer}) %-- by a hammer, but not in 
-other kinds of speech acts (we cannot read the concept 
-`q.bottle opener` as satisfied by `q.hammer` in 
-the context of a request for a bottle opner).  Note that 
-the scope of conceptual roles can change merely 
+that a hammer is a kind of lever corkscrew and can
+therefore open wine.  What we
+`i.do` have are conceptual slots available encapsulating
+ideas like `q.that which can open bottles` or
+`q.that which can pound nails`/, and we `q.fill` these
+conceptual slots with different lexical content
+in different situations.  The
+`q.that which can open capped bottles` slot can be filled
+descriptively %-- i.e., in declarative speech,
+like in (\ref{itm:hammer}) %-- by a hammer, but not in
+other kinds of speech acts (we cannot read the concept
+`q.bottle opener` as satisfied by `q.hammer` in
+the context of a request for a bottle opner).  Note that
+the scope of conceptual roles can change merely
 by switching between locutionary modalities.
 `p`
 
 `p.
-The takeaway from this discussion in the 
-internalism/externalism setting is that conceptual 
-roles have a linguistic priority over and against 
-both lexical and physical realizers, and the 
-scope for things inside and outside of language 
-to play (or not play) such roles varies with 
-context.  I have introduced these issues via 
-tool artifacts (like corkscrews) but would be 
-closer to the spirit of the CRS internalism/externalism 
-debate by discussing natural-kind concepts.  Suppose 
-I am building a sand castle on a beach and ask someone 
+The takeaway from this discussion in the
+internalism/externalism setting is that conceptual
+roles have a linguistic priority over and against
+both lexical and physical realizers, and the
+scope for things inside and outside of language
+to play (or not play) such roles varies with
+context.  I have introduced these issues via
+tool artifacts (like corkscrews) but would be
+closer to the spirit of the CRS internalism/externalism
+debate by discussing natural-kind concepts.  Suppose
+I am building a sand castle on a beach and ask someone
 one of:
 
 `sentenceList,
@@ -189,18 +189,18 @@ one of:
 `sentenceItem; \label{itm:glass} Can you bring me a glass of water?
 `sentenceList`
 
-For (\ref{itm:bucket}), a reasonable reaction would be a bucket filld 
-with ocean water; but for (\ref{itm:glass}) my addressee would probably 
-infer that I was thirsty, and %-- since salt ater is 
-non-potable %-- was requesting water I could drink.  
-But `q.`i.glass of` water` probably figures here just 
-to establish my intention to drink it: you are 
-entitled to bring me bottle of water instead.  In 
-other words, my request has implied content which 
-in some aspects loosens and in some aspects restricts 
-the conceptual scope of semantic entries in my utterance.  
-Thus oceans are composed of water, and near a beach I can 
-say: 
+For (\ref{itm:bucket}), a reasonable reaction would be a bucket filld
+with ocean water; but for (\ref{itm:glass}) my addressee would probably
+infer that I was thirsty, and %-- since salt ater is
+non-potable %-- was requesting water I could drink.
+But `q.`i.glass of` water` probably figures here just
+to establish my intention to drink it: you are
+entitled to bring me bottle of water instead.  In
+other words, my request has implied content which
+in some aspects loosens and in some aspects restricts
+the conceptual scope of semantic entries in my utterance.
+Thus oceans are composed of water, and near a beach I can
+say:
 
 `sentenceList,
 `sentenceItem; The ocean is over there.
@@ -209,840 +209,840 @@ say:
 `sentenceItem; You can see the water from here.
 `sentenceList`
 
-Each pair is almost identical.  But ocean-water ceases to 
-fall under the conceptual role of `q.water` when we are in 
-the context of drinking things instead of the context 
-of geography.  This suggests that water does not `q.mean` 
-`htwoo; or other saline or non-saline water: the meaning 
-is not fixed to any particular chmical composition but 
-adapts to the situational context, including what the 
-water is used for %-- e.g. as a drink or as a binder 
+Each pair is almost identical.  But ocean-water ceases to
+fall under the conceptual role of `q.water` when we are in
+the context of drinking things instead of the context
+of geography.  This suggests that water does not `q.mean`
+`htwoo; or other saline or non-saline water: the meaning
+is not fixed to any particular chmical composition but
+adapts to the situational context, including what the
+water is used for %-- e.g. as a drink or as a binder
 for a sand castle.
 `p`
 
 `p.
-The most-discussed `q.water` analysis in the literature is 
-less earthly than this: Putnam's `q.twin earth` argument 
-about a planet whose substance (with chemical 
-makeup) XYZ functionally indisinguishable 
-from our (`htwoo;) water.  Externalists and internalists 
-use this thought-experiment to express their 
-differences as disagreements over 
-whther twin-earthers' XYZ concept is the same as our 
-`htwoo; concept.  For the latter, as the basic account 
-goes, XYZ plays the same conceptual role in their lifeworld 
-as `htwoo; plays in ours, so it is the same concept; 
-for the former, the concepts designate different 
-material substances (even if twin-earthers don't know 
-this) so they can't mean the same thing, even if 
-there is some sort of analogy or resemblance between 
-them (concepts can be analogous or similar while still 
+The most-discussed `q.water` analysis in the literature is
+less earthly than this: Putnam's `q.twin earth` argument
+about a planet whose substance (with chemical
+makeup) XYZ functionally indisinguishable
+from our (`htwoo;) water.  Externalists and internalists
+use this thought-experiment to express their
+differences as disagreements over
+whther twin-earthers' XYZ concept is the same as our
+`htwoo; concept.  For the latter, as the basic account
+goes, XYZ plays the same conceptual role in their lifeworld
+as `htwoo; plays in ours, so it is the same concept;
+for the former, the concepts designate different
+material substances (even if twin-earthers don't know
+this) so they can't mean the same thing, even if
+there is some sort of analogy or resemblance between
+them (concepts can be analogous or similar while still
 being different concepts).
 `p`
 
 `p.
-Before making a case for one alternative here over the 
-other, let me note the following: it is unfortunate 
-that the case-study is formulated in terms of XYZ vs. 
-`htwoo;, because at the level of molecular composition 
-it is hard for us to conceive that XYZ is 
-`i.really` indistinguishable from water.  After all, 
-our concptual understanding of water includes things 
-like electrolysis %-- if XYZ does not emit hydrogn 
-and oxygen when electricallly charged under certain 
-controlled conditions, it is not behaving like water 
-and can not be (even internalistically) construed as 
-conforming to our concpt of water.  Of course, we are 
-free to expand our water-concept, just as we contract 
-it when switching from geology/geography to drinking.  
-But here we expand it with full recognition that 
-finer-grained concptual distinctions are possible, 
-just that there are many contexts where they are 
+Before making a case for one alternative here over the
+other, let me note the following: it is unfortunate
+that the case-study is formulated in terms of XYZ vs.
+`htwoo;, because at the level of molecular composition
+it is hard for us to conceive that XYZ is
+`i.really` indistinguishable from water.  After all,
+our concptual understanding of water includes things
+like electrolysis %-- if XYZ does not emit hydrogn
+and oxygen when electricallly charged under certain
+controlled conditions, it is not behaving like water
+and can not be (even internalistically) construed as
+conforming to our concpt of water.  Of course, we are
+free to expand our water-concept, just as we contract
+it when switching from geology/geography to drinking.
+But here we expand it with full recognition that
+finer-grained concptual distinctions are possible,
+just that there are many contexts where they are
 unnecessary.
 `p`
 
 `p.
-We do not need to contemplate far-fetched twin-earth 
-scenarios to see this in practice: here on earth 
-we have deuterium water which is chemically different 
-from normal water (but both have the `htwoo; signature, 
-although heavy water is also described as `dtwoo;).  
-We are free to let `q.X` mean normal hydrogen, 
-`q.Y` mean deuterium ions, and `q.Z` mean oxygn, so 
-XYZ becomes what chemists call HDO %-- semi-heavy water.  
-Most people would probably say that HDO is just 
-a kind of water, and so can be subsumed under the 
-concept `q.water`/, but this is not conclusive.  
-In reality, I don't think the English community has 
-needed to establish whether  `q.water` should mean 
-ordinary `htwoo; or should include variations 
-containing different hydrogen isotopes 
-%-- whether heavy and semi-heavy and other variants 
-of water should be considered `q.water` or some other 
+We do not need to contemplate far-fetched twin-earth
+scenarios to see this in practice: here on earth
+we have deuterium water which is chemically different
+from normal water (but both have the `htwoo; signature,
+although heavy water is also described as `dtwoo;).
+We are free to let `q.X` mean normal hydrogen,
+`q.Y` mean deuterium ions, and `q.Z` mean oxygn, so
+XYZ becomes what chemists call HDO %-- semi-heavy water.
+Most people would probably say that HDO is just
+a kind of water, and so can be subsumed under the
+concept `q.water`/, but this is not conclusive.
+In reality, I don't think the English community has
+needed to establish whether  `q.water` should mean
+ordinary `htwoo; or should include variations
+containing different hydrogen isotopes
+%-- whether heavy and semi-heavy and other variants
+of water should be considered `q.water` or some other
 concepts.
 `p`
 
 `p.
-In practice, a fraction of ocean water has deuterium, 
-which might argue for `q.water` subsuming heavy water 
+In practice, a fraction of ocean water has deuterium,
+which might argue for `q.water` subsuming heavy water
 %-- we don't point to the ocean and say
 
 `sentenceList,
 `sentenceItem; The water and the Deuterium Dioxide is over there.
 `sentenceList`
 
-But this can alternatively be explained by the principle 
-that referring to an impure sample of a substance is still 
-a valid use of the concept: 
+But this can alternatively be explained by the principle
+that referring to an impure sample of a substance is still
+a valid use of the concept:
 
 `sentenceList,
-`sentenceItem; Here's a glass of water (even though 
+`sentenceItem; Here's a glass of water (even though
 tap water is mixed with flouride).
-`sentenceItem; Bing cherries are dark red (even though 
+`sentenceItem; Bing cherries are dark red (even though
 the stem is brown).
 `sentenceList`
 
-In the second case, we can validly call something red 
-even if something less than its whole surface shows a red 
-color.  Applying a similar rule, we can call a solution 
-`q.water` if there are only `q.sufficintly small` 
-amounts of solutes.  Clearly we use `q.water` to dsignate 
-many substances other than pure `htwoo;.  I can 
-think of two options for explaining that semantically: 
-(1) Salt water, tap water, distilled water, (semi) 
-heavy water, etc., are all different kinds of water, but 
-our coarser `q.water` concept subsumes them all (in 
+In the second case, we can validly call something red
+even if something less than its whole surface shows a red
+color.  Applying a similar rule, we can call a solution
+`q.water` if there are only `q.sufficintly small`
+amounts of solutes.  Clearly we use `q.water` to dsignate
+many substances other than pure `htwoo;.  I can
+think of two options for explaining that semantically:
+(1) Salt water, tap water, distilled water, (semi)
+heavy water, etc., are all different kinds of water, but
+our coarser `q.water` concept subsumes them all (in
 most contexts).
-(2)  There is only one water concept, pure `htwoo;, 
-but impure samples of liquid that are mostly water 
-can be called `q.water` by the same principle that a 
-mostly red-colored object can be called just `q.red`/. 
+(2)  There is only one water concept, pure `htwoo;,
+but impure samples of liquid that are mostly water
+can be called `q.water` by the same principle that a
+mostly red-colored object can be called just `q.red`/.
 `p`
 
 `p.
-The second option has a common-sensical appeal because 
-it fits a succinct `q.concepts as natural kinds` 
-paradigm but does not venture too far from 
-normal language use %-- that `q.red` 
-actually means `q.mostly red` is a pattern common 
-with many nouns and adjectives (someone can be 
-`i.bald` with a bit of hair; I can point 
-to a turkey burger made with bread crumbs and 
-spices and say `q.that's turkey`/; I can 
-tell someone listening to Keny Arkana's song 
-`q.Indignados` `q.that's French`/, although some of 
-the lyrics are Spanish).   However, the `q.mostly 
-water` reading has a couple of problems: first, 
-what about cases like a `q.glass of water` where 
-`q.mostly water` is not `q.mostly` enough to drink?  
-And, second, why can't we refer to plasma, say %-- which 
-is 92\% water %-- as water?  This is not just a 
-matter of numbers: the dead sea water is much 
-less pure than plasma in the hospital (in terms of 
-percentage `htwoo; in solution) yet we are authorized 
-to call the former `q.water` but not the latter.  
-This certainly seems to be a matter of conceptual roles 
-%-- plasma occupies a certain place in our 
-conceptual systems about blood and medicine (largely 
-because it plays a specific role in biology 
-and medicine) which does not fit the profike 
-of `q.water`/, while the stuff in lakes 
-`i.does` fit that profile, even if the lakes are 
-hypersaline.  Blood fits a conceptual ecosystem where 
-we are not tempted to subsume it uner the concept 
-`i.water`/, whereas our conceptualization of 
-lakes pulls in the opposite direction %-- even 
-though by purity the water in Gaet'ale Pond in 
-Ethiopia is apparently not much more 
-watery than blood.  Our disposition to 
-either contract or dilate the sense `q.water` 
-seems to be determined by context %-- by the conceptual 
-role water plays in different context %-- rather than 
-by actual hydrological properties.  
+The second option has a common-sensical appeal because
+it fits a succinct `q.concepts as natural kinds`
+paradigm but does not venture too far from
+normal language use %-- that `q.red`
+actually means `q.mostly red` is a pattern common
+with many nouns and adjectives (someone can be
+`i.bald` with a bit of hair; I can point
+to a turkey burger made with bread crumbs and
+spices and say `q.that's turkey`/; I can
+tell someone listening to Keny Arkana's song
+`q.Indignados` `q.that's French`/, although some of
+the lyrics are Spanish).   However, the `q.mostly
+water` reading has a couple of problems: first,
+what about cases like a `q.glass of water` where
+`q.mostly water` is not `q.mostly` enough to drink?
+And, second, why can't we refer to plasma, say %-- which
+is 92\% water %-- as water?  This is not just a
+matter of numbers: the dead sea water is much
+less pure than plasma in the hospital (in terms of
+percentage `htwoo; in solution) yet we are authorized
+to call the former `q.water` but not the latter.
+This certainly seems to be a matter of conceptual roles
+%-- plasma occupies a certain place in our
+conceptual systems about blood and medicine (largely
+because it plays a specific role in biology
+and medicine) which does not fit the profike
+of `q.water`/, while the stuff in lakes
+`i.does` fit that profile, even if the lakes are
+hypersaline.  Blood fits a conceptual ecosystem where
+we are not tempted to subsume it uner the concept
+`i.water`/, whereas our conceptualization of
+lakes pulls in the opposite direction %-- even
+though by purity the water in Gaet'ale Pond in
+Ethiopia is apparently not much more
+watery than blood.  Our disposition to
+either contract or dilate the sense `q.water`
+seems to be determined by context %-- by the conceptual
+role water plays in different context %-- rather than
+by actual hydrological properties.
 `p`
 
 `p.
-What about the hypothetical twin-earth XYZ that 
-Putnam imagines is indistinguishable from 
-our `htwoo;?  Well, for this hypoyhsis to 
-even make sense we have to assume that XYZ is 
-scientifically indistinguishable from water, 
-which is a matter not just of pure `htwoo; but 
-of all solutions and deuterium- or triterium-related 
-variants of water, and so forth.  As a thought experiment, 
-where we are free to conceive almost anything, this is not 
-impossible.  Let's imagine that there is an undiscovered 
-subatomic particle that on some planets clings to 
-atomic nuclei without affecting them in almost any 
-way.  We can call nuclei harboring these particles 
-`q.twin nuclei`/, so hydrogen becomes `q.twin hydrogen`/, 
-oxygen becomes `q.twin oxygn`/, and presumably 
-water becomes `q.twin water`/.  This twin water would 
-essentilly retrace the the compositional structure of 
-water %-- since it would have to form (and unform, under 
-electrolysis) just like `q.our` water.  If we plug this 
-`q.twin water` into Putnam's scnario, I can't see why 
-we don't just call this a variant kind of water, 
-water with some extra (but observationally negligible) 
-particles, just like heavy water is water with 
+What about the hypothetical twin-earth XYZ that
+Putnam imagines is indistinguishable from
+our `htwoo;?  Well, for this hypoyhsis to
+even make sense we have to assume that XYZ is
+scientifically indistinguishable from water,
+which is a matter not just of pure `htwoo; but
+of all solutions and deuterium- or triterium-related
+variants of water, and so forth.  As a thought experiment,
+where we are free to conceive almost anything, this is not
+impossible.  Let's imagine that there is an undiscovered
+subatomic particle that on some planets clings to
+atomic nuclei without affecting them in almost any
+way.  We can call nuclei harboring these particles
+`q.twin nuclei`/, so hydrogen becomes `q.twin hydrogen`/,
+oxygen becomes `q.twin oxygn`/, and presumably
+water becomes `q.twin water`/.  This twin water would
+essentilly retrace the the compositional structure of
+water %-- since it would have to form (and unform, under
+electrolysis) just like `q.our` water.  If we plug this
+`q.twin water` into Putnam's scnario, I can't see why
+we don't just call this a variant kind of water,
+water with some extra (but observationally negligible)
+particles, just like heavy water is water with
 extra neutrons.
 `p`
 
 `p.
-This does not do perfect justice to `q.twin earth` 
-discussions, because I am describing `q.twin` water 
-as something whose composition is almost identical to 
-`q.our` water.  In the original story, `q.twater` is 
-XYZ, which as written suggests something whose 
-physical constituents are much different than water, even 
-if all propensities that influence our `q.water` 
-conceptualizations are exactly the same as our water.  
-But something compositionally different than 
-water `i.can't` be functionally identical to water, 
-at least if any of the actions we can take that reveal 
-water's composition come out different.  In short, 
-whatever XYZ are, they must have a capability to 
-`i.become` hydrogen and oxygen, because XYZ's emulating 
-water means it emits hydrogen and oxygen under 
-electrolysis.  Meanwhile there is no action that could 
-`q.release` the `q.X` (or whatever) because 
-that would also behaviorally differ from water.  
-So XYZ would differ from water only insofar as in its 
-`q.unobserved` states it can float around as something 
-without hydrogen or oxygen but, whenever subject to 
-actions that cause water proper to emit these gasses, 
-it would somehow conjure them up in exactly the same 
-patterns as water (which actually `i.is` composed of 
-hydrogen and oxygen) does.  
+This does not do perfect justice to `q.twin earth`
+discussions, because I am describing `q.twin` water
+as something whose composition is almost identical to
+`q.our` water.  In the original story, `q.twater` is
+XYZ, which as written suggests something whose
+physical constituents are much different than water, even
+if all propensities that influence our `q.water`
+conceptualizations are exactly the same as our water.
+But something compositionally different than
+water `i.can't` be functionally identical to water,
+at least if any of the actions we can take that reveal
+water's composition come out different.  In short,
+whatever XYZ are, they must have a capability to
+`i.become` hydrogen and oxygen, because XYZ's emulating
+water means it emits hydrogen and oxygen under
+electrolysis.  Meanwhile there is no action that could
+`q.release` the `q.X` (or whatever) because
+that would also behaviorally differ from water.
+So XYZ would differ from water only insofar as in its
+`q.unobserved` states it can float around as something
+without hydrogen or oxygen but, whenever subject to
+actions that cause water proper to emit these gasses,
+it would somehow conjure them up in exactly the same
+patterns as water (which actually `i.is` composed of
+hydrogen and oxygen) does.
 `p`
 
 `p.
-By dictum, then, XYZ is not actually composed of 
-hydrogen and oxygen, but whatever it `i.is` composed 
-of can act as `i.as if` it `i.does` contain these gasses 
-so as to emit them.  In that case I'd question the 
-argumentative force of claiming that XYZ does not 
-contain hydrogen and oxygen to begin with.  We are asked 
-to believe that XYZ is made up of some 
-ethereal non-hydrogen and non-oxygen that can 
-nevertheless become hydrogen and oxygen whenever it 
-is in the physical states wherein water that `i.is` made 
-of hydrogen and oxygen will release them.  I am inclined 
-to say that this is just another way of being made of 
-hydrogen and oxygen.  After all, atoms are not little 
-ping-pong balls: what we picture as a water molecule 
-is actually apparently much more ethereal, suspended in 
-quantum indeterminacy.  I take it there is some 
-Shrodinger equation for a water molecule, and only 
-when the `q.wave function` collapses %-- say, by 
-our observing the water subject to electrolysis %-- 
-do we actually get hydrogen or oxygen atoms.  So 
-`q.our` water isn't really `q.composed` of hydrogen or 
-oxygen in its pure quantum state.  Maybe XYZ 
-`q.collapses` to hydrogen or oxygen in different 
-ways than earthly water (but with no way to 
-measure the difference), but this is still not 
-divergent enough that for me to feel compelled 
-to call XYZ anything other than some variant 
+By dictum, then, XYZ is not actually composed of
+hydrogen and oxygen, but whatever it `i.is` composed
+of can act as `i.as if` it `i.does` contain these gasses
+so as to emit them.  In that case I'd question the
+argumentative force of claiming that XYZ does not
+contain hydrogen and oxygen to begin with.  We are asked
+to believe that XYZ is made up of some
+ethereal non-hydrogen and non-oxygen that can
+nevertheless become hydrogen and oxygen whenever it
+is in the physical states wherein water that `i.is` made
+of hydrogen and oxygen will release them.  I am inclined
+to say that this is just another way of being made of
+hydrogen and oxygen.  After all, atoms are not little
+ping-pong balls: what we picture as a water molecule
+is actually apparently much more ethereal, suspended in
+quantum indeterminacy.  I take it there is some
+Shrodinger equation for a water molecule, and only
+when the `q.wave function` collapses %-- say, by
+our observing the water subject to electrolysis %--
+do we actually get hydrogen or oxygen atoms.  So
+`q.our` water isn't really `q.composed` of hydrogen or
+oxygen in its pure quantum state.  Maybe XYZ
+`q.collapses` to hydrogen or oxygen in different
+ways than earthly water (but with no way to
+measure the difference), but this is still not
+divergent enough that for me to feel compelled
+to call XYZ anything other than some variant
 form of water.
 `p`
 
 `p.
-Of course, I am assuming that twin earthers have 
-`i.the same` water-concept that we do, 
-`i.in all respects`/.  Maybe a more faithful 
-review would consider that twin earthers might have a 
-related but more primitive water-concept than ours 
-%-- maybe some subset of our concept in terms of 
-the scientific knowledge embedded in our concept.  
-Before we earthers knew about hydrogen, oxygen, 
-or electrolysis, the behavior of water under 
-electrolysis was not a factor in our concept of water.  
-So imagine if twin earthers' level of scientific knowledge 
-was akin to that on earth centuries ago %-- their 
-XYZ is measurably different from our water, but 
-they have no experimental our scientific apparatus to 
-notice the difference.  But this is `i.contingent`/: 
-the twin earthers `i.could` some day discover 
-hydrogen and oxygen.  Then, if 
-XYZ really is not composed of hydrogen and oxygen 
-(or acts as if composed of them when not in a 
-nonobservable ethereal state) their scientific theory 
-of water, and accordingly their conceptualization, 
-would diverge from ours. 
+Of course, I am assuming that twin earthers have
+`i.the same` water-concept that we do,
+`i.in all respects`/.  Maybe a more faithful
+review would consider that twin earthers might have a
+related but more primitive water-concept than ours
+%-- maybe some subset of our concept in terms of
+the scientific knowledge embedded in our concept.
+Before we earthers knew about hydrogen, oxygen,
+or electrolysis, the behavior of water under
+electrolysis was not a factor in our concept of water.
+So imagine if twin earthers' level of scientific knowledge
+was akin to that on earth centuries ago %-- their
+XYZ is measurably different from our water, but
+they have no experimental our scientific apparatus to
+notice the difference.  But this is `i.contingent`/:
+the twin earthers `i.could` some day discover
+hydrogen and oxygen.  Then, if
+XYZ really is not composed of hydrogen and oxygen
+(or acts as if composed of them when not in a
+nonobservable ethereal state) their scientific theory
+of water, and accordingly their conceptualization,
+would diverge from ours.
 `p`
 
 `p.
-We can imagine a non-water XYZ that is water-like enough 
-to play an identical rooe to (our) water, but this story 
-can go in two directions: either XYZ is `i.absolutely` 
-identical to water, its differences from water so obscure 
-as to be observationally and causally maningless; or it 
-has legitimate differences from water that `i.could` be 
-conceptually significant but in some context are not 
-(at least not yet).  These are two different thought 
-experiments.  If some substance is in alll respects and 
-under any conceivable science identical to water, yet 
-somehow compositionally different from it, I 
-think the plausible respone among normal language communities 
-would be to extend the concept of water %-- subsuming 
-XYZ under the concept, analogous to heavy water when it 
-was discovered.  We are generally prepared to expand the 
-reach of concepts when there is no compelling reason 
-not to do so.  Whether a potential expansion takes 
-hold probably varies by context.  We are %-- a point 
-that generally fits on the externalist side of the ledger 
-%-- more willing to accept expansion when the revised 
-conceptualization would not deviate too far from 
-a basic alignment of natural kind concepts to 
-scientifically reasonable classifications.  We can readily 
-extend `q.water` to `dtwoo; because the two substances are 
-compositionally very similar.  We are less likely 
-to accept conceptual mergers when they seem to violate 
-our natural-kind pictures, even if they 
-are functionally plausible: we do not accept `q.agave` 
-as a subconcept of `q.honey`/, even though the two are 
-physically rather similar and functionally very similar.  
-Nor does physical form alone drive conceptual 
-boundaries: we know full well that water vapor 
-and ice are the same stuff as liquid water, but we 
-recognize a conceptual distinction between them. 
-`p`
-
-`p. 
-But these are not hard and fast rules: we may be 
-inclined in many contexts to treat frozen-concntate 
-juice as conceptually subsumed under `q.juice` 
-(as in `q.juice on sale`/), and we will often 
-accept almond milk or cashew milk as `q.milk`/, 
-despite physical differences which we certainly 
-acknowledge.  In short, concptual boundaries 
-tend to be drawn to honor, albeit without 
-excess granularity, both physical and functional 
-factors %-- neither physical/compositional similitude 
-alone, in the absent of functionalv resemblance 
-(see water/ice) tends to earn concept dilation, nor 
-vice-versa, but a mixture of functional and physical 
-similarity even with `i.some` differences in both 
-aspects tend to be likelier drivers of concept-expansion 
-(see water vs. chlorinated water, or red 
-wine vs. white wine).  By these rules, expanding 
-`q.water` to include XYZ %-- if XYZ is functionaly 
-identical to `i.but` compositionally different from 
-water %-- would be abnormal, like 
-expanding `q.milk` to %-- without any qualification %-- 
-include almond milk.  But 
-these rules are approximate, and on the idiosyncratic 
-case where XYZ is `i.completely` functionally like 
-water but (stipulated to be) physically different 
-(though by functional identity we could not detect 
-as much), I think the normal `q.conceptual dilation` 
-rules would side with the functional identity and 
-ignore the physical differences.  
+We can imagine a non-water XYZ that is water-like enough
+to play an identical rooe to (our) water, but this story
+can go in two directions: either XYZ is `i.absolutely`
+identical to water, its differences from water so obscure
+as to be observationally and causally maningless; or it
+has legitimate differences from water that `i.could` be
+conceptually significant but in some context are not
+(at least not yet).  These are two different thought
+experiments.  If some substance is in alll respects and
+under any conceivable science identical to water, yet
+somehow compositionally different from it, I
+think the plausible respone among normal language communities
+would be to extend the concept of water %-- subsuming
+XYZ under the concept, analogous to heavy water when it
+was discovered.  We are generally prepared to expand the
+reach of concepts when there is no compelling reason
+not to do so.  Whether a potential expansion takes
+hold probably varies by context.  We are %-- a point
+that generally fits on the externalist side of the ledger
+%-- more willing to accept expansion when the revised
+conceptualization would not deviate too far from
+a basic alignment of natural kind concepts to
+scientifically reasonable classifications.  We can readily
+extend `q.water` to `dtwoo; because the two substances are
+compositionally very similar.  We are less likely
+to accept conceptual mergers when they seem to violate
+our natural-kind pictures, even if they
+are functionally plausible: we do not accept `q.agave`
+as a subconcept of `q.honey`/, even though the two are
+physically rather similar and functionally very similar.
+Nor does physical form alone drive conceptual
+boundaries: we know full well that water vapor
+and ice are the same stuff as liquid water, but we
+recognize a conceptual distinction between them.
 `p`
 
 `p.
-On the other hand, if XYZ has real discoverable 
-differences from water, then the potential exists 
-for twin earthers' concept of water to 
-divrge from our own, even if at any point 
-in time the concepts are identical.  The time 
-`q.points` don't need to be simultaneous: we can 
-compare one country's concept of water in the year 
-1800 with a diferent county's in the 16th century.  
-It is plausible that different people at different 
-times have effectively the same conceptual 
-attitudes toward concepts that, with the benefit of 
-hindsight and more science, we know have potential 
-for differentiation.  I think the mere potential for 
-differentiation warrants our identifying 
-conceptual differences even if the parties involved are 
-not aware of this potential.  I am prepared, 
-for example, to accept that a child's water-concept 
-in our time can be different from a medieval 
-child's water-concept merely by virtue of the modern 
-child potentially learning about deuterium, 
-hypersalinity, and other scientific nuances that 
-complicate the modern conception of water relative 
+But these are not hard and fast rules: we may be
+inclined in many contexts to treat frozen-concntate
+juice as conceptually subsumed under `q.juice`
+(as in `q.juice on sale`/), and we will often
+accept almond milk or cashew milk as `q.milk`/,
+despite physical differences which we certainly
+acknowledge.  In short, concptual boundaries
+tend to be drawn to honor, albeit without
+excess granularity, both physical and functional
+factors %-- neither physical/compositional similitude
+alone, in the absent of functionalv resemblance
+(see water/ice) tends to earn concept dilation, nor
+vice-versa, but a mixture of functional and physical
+similarity even with `i.some` differences in both
+aspects tend to be likelier drivers of concept-expansion
+(see water vs. chlorinated water, or red
+wine vs. white wine).  By these rules, expanding
+`q.water` to include XYZ %-- if XYZ is functionaly
+identical to `i.but` compositionally different from
+water %-- would be abnormal, like
+expanding `q.milk` to %-- without any qualification %--
+include almond milk.  But
+these rules are approximate, and on the idiosyncratic
+case where XYZ is `i.completely` functionally like
+water but (stipulated to be) physically different
+(though by functional identity we could not detect
+as much), I think the normal `q.conceptual dilation`
+rules would side with the functional identity and
+ignore the physical differences.
+`p`
+
+`p.
+On the other hand, if XYZ has real discoverable
+differences from water, then the potential exists
+for twin earthers' concept of water to
+divrge from our own, even if at any point
+in time the concepts are identical.  The time
+`q.points` don't need to be simultaneous: we can
+compare one country's concept of water in the year
+1800 with a diferent county's in the 16th century.
+It is plausible that different people at different
+times have effectively the same conceptual
+attitudes toward concepts that, with the benefit of
+hindsight and more science, we know have potential
+for differentiation.  I think the mere potential for
+differentiation warrants our identifying
+conceptual differences even if the parties involved are
+not aware of this potential.  I am prepared,
+for example, to accept that a child's water-concept
+in our time can be different from a medieval
+child's water-concept merely by virtue of the modern
+child potentially learning about deuterium,
+hypersalinity, and other scientific nuances that
+complicate the modern conception of water relative
 to our forebearers.
 `p`
 
 `p.
-We certainly accept that people may have different 
-understandings of a concept and, on that basis, 
-may judge that what two people are entertaining are 
-two different concepts %-- though we may also feel 
-that they entertain two variations of `i.the same` 
-concepts.  There's room for most concepts to 
-`q.diversify`/, subsuming subconcepts and 
-variations; hence there's roon for a concept to 
-expand (see water to heavy water) without fragmenting.  
-But sometims we `i.do` insist on splitting concepts 
-%-- or, eqivalently, refuse to accept a concept-enlargement 
-%-- and `i.the reasons for this refusal may be external 
-to some peoples' use of the concepts`/.  Current 
-political discourse in the United Stats, for example, is 
-driven by turns of phrase that are rather haphazardly 
-defined: `q.Climate Change`/, `q.Border Wall`/, `q.Green New Deal`/, 
-`q.Free Tuition`/, etc.  Suppose a health policy 
-expert observes that Bernie Sanders's use of the term 
-`q.Medicare for All` is different from Kamala Harris's.  
-She may conclude that Sanders's concept 
-`q.Medicare for All` is different from Harris's 
-concept %-- and the rationale for this conclusion ned 
-not take into account whether the two candidates are 
-aware of the differences.  Suppose, as an expert, 
-she has to mentally track the differences %-- she 
-has a well-informed judgment that each of the 
-`q.Medicare for All` plans have different 
-ramifications due to policy differences; 
-as a result when discussing `q.Medicare for All` she 
-needs to note in her own mind which version of that 
-idea is under discussion at any moment in a discourse.  
-That is to say, she needs to subsume them 
-under different concepts.  Moreover, we endorse that she 
-`i.should` do so, even if she thereby makes a distinction 
-that the politicans or their supporters themselves 
-do not realize.  In this kind of case we may defer 
-to expert opinion when adjudicating a potential 
-conceptual divorce, even if there is only 
-minimal differences in the role of the concepts 
-`visavis; the conceptual systems 
-of many relevant parties. 
+We certainly accept that people may have different
+understandings of a concept and, on that basis,
+may judge that what two people are entertaining are
+two different concepts %-- though we may also feel
+that they entertain two variations of `i.the same`
+concepts.  There's room for most concepts to
+`q.diversify`/, subsuming subconcepts and
+variations; hence there's roon for a concept to
+expand (see water to heavy water) without fragmenting.
+But sometims we `i.do` insist on splitting concepts
+%-- or, eqivalently, refuse to accept a concept-enlargement
+%-- and `i.the reasons for this refusal may be external
+to some peoples' use of the concepts`/.  Current
+political discourse in the United Stats, for example, is
+driven by turns of phrase that are rather haphazardly
+defined: `i.Border Wall`/, `i.Green New Deal`/,
+`i.Free Tuition`/, etc.  Suppose a health policy
+expert observes that Bernie Sanders's use of the term
+`q.Medicare for All` is different from Kamala Harris's.
+She may conclude that Sanders's concept
+`q.Medicare for All` is different from Harris's
+concept %-- and the rationale for this conclusion ned
+not take into account whether the two candidates are
+aware of the differences.  Suppose, as an expert,
+she has to mentally track the differences %-- she
+has a well-informed judgment that each of the
+`q.Medicare for All` plans have different
+ramifications due to policy differences;
+as a result when discussing `q.Medicare for All` she
+needs to note in her own mind which version of that
+idea is under discussion at any moment in a discourse.
+That is to say, she needs to subsume them
+under different concepts.  Moreover, we endorse that she
+`i.should` do so, even if she thereby makes a distinction
+that the politicans or their supporters themselves
+do not realize.  In this kind of case we may defer
+to expert opinion when adjudicating a potential
+conceptual divorce, even if there is only
+minimal differences in the role of the concepts
+`visavis; the conceptual systems
+of many relevant parties.
 `p`
 
 `p.
-The possibility that `q.Medicare for All` 
-may play the same `i.role` in a Sanders supporter's and 
-a Harris supporter's conceptualizations does 
-not preclude our judging that they are nonetheless 
-different concepts %-- if by virtue of 
-more information and more access to expert 
-counsel we can understand that there are potential 
-differences in their conceptualizations that `i.could` 
-drive the conceptual roles to diverge.  I think this 
-is analogous to a `q.twin earth XYZ` scenario in that the 
-thought experiment is set up as if we have access to 
-expert confirmation that twin earth's 
-XYZ is not physically the same substance as water.  
-Projecting from earthly practice, we accordingly 
-accept that `q.externalist` considerations may need to come 
-to bear, and `q.XYZ` may need to be classifid as a different 
-concept that water `i.notwithstanding` the lack 
-of any concptual role difference between XYZ for 
-twin earthers as compared to water for us.  This is 
-consistent with our tolerance for including 
-factors beyond just concptual roles in more mundane 
-circumstances: we accept that sufficiently divergent 
-notions of `q.Medicare for All` `i.could` be 
-most appropriately classified as two different concepts.  
-Such is not mandated %-- we could certainly 
-describe the Sanders and Harris platform as 
-`q.two different Medicare for All plans`/, subsuming 
-them under one concept but acknowldging their 
-differences %-- as token differences, like the conceptual 
-difference between this apple and that apple, rather 
-than concept-differencs like apple vs. cherry.  
-Analogously, we `i.could` subsume XYZ under the concept 
-`i.water` %-- XYZ being a kind of water insofar as 
-samples of XYZ (tokens of the XYZ-concept) bear some 
-physical differences to tokens of ordinary water (like 
-heavy-water samples do), but we can handle this variation 
-on a token-token level (analogous to comparing 
-two apples).  But we can `i.also` split rather than 
-expand the conceps %-- `i.divorce` rather 
-than `i.dilate` %-- making XYZ a different concept than 
-water, just as we can make Sanders supporters' Medicare 
-for All a different concept that Harris supporters.  
-The key point is that our choice of `q.divorce or dilate` 
-may be driven by factors wholly external to 
-some concept-bearers' internal concept-uses.  
-Two different concepts %-- recognized by us as different 
-%-- may play identical conceptual roles for some people.  
+The possibility that `q.Medicare for All`
+may play the same `i.role` in a Sanders supporter's and
+a Harris supporter's conceptualizations does
+not preclude our judging that they are nonetheless
+different concepts %-- if by virtue of
+more information and more access to expert
+counsel we can understand that there are potential
+differences in their conceptualizations that `i.could`
+drive the conceptual roles to diverge.  I think this
+is analogous to a `q.twin earth XYZ` scenario in that the
+thought experiment is set up as if we have access to
+expert confirmation that twin earth's
+XYZ is not physically the same substance as water.
+Projecting from earthly practice, we accordingly
+accept that `q.externalist` considerations may need to come
+to bear, and `q.XYZ` may need to be classifid as a different
+concept that water `i.notwithstanding` the lack
+of any concptual role difference between XYZ for
+twin earthers as compared to water for us.  This is
+consistent with our tolerance for including
+factors beyond just concptual roles in more mundane
+circumstances: we accept that sufficiently divergent
+notions of `q.Medicare for All` `i.could` be
+most appropriately classified as two different concepts.
+Such is not mandated %-- we could certainly
+describe the Sanders and Harris platform as
+`q.two different Medicare for All plans`/, subsuming
+them under one concept but acknowldging their
+differences %-- as token differences, like the conceptual
+difference between this apple and that apple, rather
+than concept-differencs like apple vs. cherry.
+Analogously, we `i.could` subsume XYZ under the concept
+`i.water` %-- XYZ being a kind of water insofar as
+samples of XYZ (tokens of the XYZ-concept) bear some
+physical differences to tokens of ordinary water (like
+heavy-water samples do), but we can handle this variation
+on a token-token level (analogous to comparing
+two apples).  But we can `i.also` split rather than
+expand the conceps %-- `i.divorce` rather
+than `i.dilate` %-- making XYZ a different concept than
+water, just as we can make Sanders supporters' Medicare
+for All a different concept that Harris supporters.
+The key point is that our choice of `q.divorce or dilate`
+may be driven by factors wholly external to
+some concept-bearers' internal concept-uses.
+Two different concepts %-- recognized by us as different
+%-- may play identical conceptual roles for some people.
 `p`
 
 `p.
-This stance is at least minimally Externalist in that 
-I don't insist on internal conceptual-role 
-similitude being an immovable criteria selecting 
-`q.dilate` over `q.divorce`/.  We as a language 
-community can and sometimes should override the tendency 
-for concepts to expand under role considerations.  
-As I pointed out earlier, a corkscrew and even a 
-hammer can sometimes satisfy the role 
-`q.bottle opener` in specific contexts.  Usually 
-we distinguish context-specific 
-concptual role-playing from general concept dilation 
-%-- I think this is the gist of Zhaohui Luo's 
-analysis of `q.situations` and `q.Manifest entries`/.  
-We can adopt a temporary frame of reference wherein, say, 
-hammers are bottle openers %-- or in Luo's example 
-(in a single zoo exhibit) all animals are snakes 
-%-- without mutating the concepts so 
-wildly that `q.hammers` become expanded to including 
-anything that may open a capped bottle, or 
-`q.snakes` become all animals.  Yet such situational 
-dilations can recur and eventually spill beyond 
-their situational guard rails.  In a 
-vegan cafe I can imagine the staff converging on a 
-usage that soy, almond, and cashew milks are 
-collectively called just `q.milk`/.  If veganism becomes 
-entrenched in some English-speaking community I can similarly 
-imagine that in their dialect `q.milk` will mean anything 
-that can be used like milk in a culinary context.  
-The warrants for such expansions sem to be drivn by concptual 
-roles %-- situations present `q.slots`/, 
-like `i.that which opens this bottle` or `i.that which 
-I pour on cereal`/, and existing concepts tend to 
-expand to fit these slots.  
+This stance is at least minimally Externalist in that
+I don't insist on internal conceptual-role
+similitude being an immovable criteria selecting
+`q.dilate` over `q.divorce`/.  We as a language
+community can and sometimes should override the tendency
+for concepts to expand under role considerations.
+As I pointed out earlier, a corkscrew and even a
+hammer can sometimes satisfy the role
+`q.bottle opener` in specific contexts.  Usually
+we distinguish context-specific
+concptual role-playing from general concept dilation
+%-- I think this is the gist of Zhaohui Luo's
+analysis of `q.situations` and `q.Manifest entries`/.
+We can adopt a temporary frame of reference wherein, say,
+hammers are bottle openers %-- or in Luo's example
+(in a single zoo exhibit) all animals are snakes
+%-- without mutating the concepts so
+wildly that `q.hammers` become expanded to including
+anything that may open a capped bottle, or
+`q.snakes` become all animals.  Yet such situational
+dilations can recur and eventually spill beyond
+their situational guard rails.  In a
+vegan cafe I can imagine the staff converging on a
+usage that soy, almond, and cashew milks are
+collectively called just `q.milk`/.  If veganism becomes
+entrenched in some English-speaking community I can similarly
+imagine that in their dialect `q.milk` will mean anything
+that can be used like milk in a culinary context.
+The warrants for such expansions sem to be drivn by concptual
+roles %-- situations present `q.slots`/,
+like `i.that which opens this bottle` or `i.that which
+I pour on cereal`/, and existing concepts tend to
+expand to fit these slots.
 `p`
 
 `p.
-These considerations follow the `i.internalist` 
-line: we take attitudes based on conceptual role 
-more than external natural-kinds when adjudicating 
-conceptual boundaries.  Thus situationally we may 
-present almond milk and agave to satisfy a request for 
-milk and honey.  But superimposed on `q.centrigual` 
-tendency for concepts to expand into `q.under-lexified` 
-concptual niches we have a counter tendency to 
-question conceptual uses where functional 
-resemblance strays `i.too far` from common sense.  
-Someone may accept agave in lieu of honey, or a hammer 
-as a bottle opener, in the context of how one 
-situation plays out; but they are less likly 
-to accept these uses becoming entrenched, compared to, 
-say, refiguring `q.milk` to include almond and 
-cashew milk.  And our hesitation to 
-accept concept-expansion in these latter kinds 
-of cases seems to implicitly look beyond 
-concptual roles %-- we may insist on limiting 
-concept dilations even if there are many people for 
-whom there will never be situations where the 
-differences between concept referents, over and 
-above functional resemblance, would be important.  
-In short, even if a community could do 
-just fine with some dialect idiosyncracy that 
-ignores a conceptual distinction we would ordinarily 
-make, we don't tend to take this as evidence 
-that our multiple concepts can be merged into one more 
+These considerations follow the `i.internalist`
+line: we take attitudes based on conceptual role
+more than external natural-kinds when adjudicating
+conceptual boundaries.  Thus situationally we may
+present almond milk and agave to satisfy a request for
+milk and honey.  But superimposed on `q.centrigual`
+tendency for concepts to expand into `q.under-lexified`
+concptual niches we have a counter tendency to
+question conceptual uses where functional
+resemblance strays `i.too far` from common sense.
+Someone may accept agave in lieu of honey, or a hammer
+as a bottle opener, in the context of how one
+situation plays out; but they are less likly
+to accept these uses becoming entrenched, compared to,
+say, refiguring `q.milk` to include almond and
+cashew milk.  And our hesitation to
+accept concept-expansion in these latter kinds
+of cases seems to implicitly look beyond
+concptual roles %-- we may insist on limiting
+concept dilations even if there are many people for
+whom there will never be situations where the
+differences between concept referents, over and
+above functional resemblance, would be important.
+In short, even if a community could do
+just fine with some dialect idiosyncracy that
+ignores a conceptual distinction we would ordinarily
+make, we don't tend to take this as evidence
+that our multiple concepts can be merged into one more
 diverse concept.
 `p`
 
 `p.
-Of course we `i.can` merge concepts, and the fact that 
-many people can live their lives without a conceptual 
-coarsening may render such merger likelier, but 
-it seems we evaluate potential mergers more by 
-reference to entire speech-communities, not 
-isolated parts.  Note that I am speifically talking here 
-about merging or splitting concepts, not word-senses or 
-lexemes or any purely linguistic artifacts.  
-Certainly we have variegated `q.water` concepts 
-%-- salt, tap, distilled, heavy %-- but we have an 
-overarching water concept that includes these as 
-subconcepts.  We can make a conscious decision to modify 
-concept/subconcept relations %-- which is 
-different from changing how concepts are mappped to 
-lexemes.  So I take it that Conceptual Role Semantics 
-prioritizes role factors in drawing concept/subconcept 
-relations and boundaries, and the consequence is a 
-mostly Internalist intuitive model: we should 
-accept concept maps where concepts are mostly 
-drawn together when there is a functional resemblance 
-between their roles: our concept/subconcept renderings 
+Of course we `i.can` merge concepts, and the fact that
+many people can live their lives without a conceptual
+coarsening may render such merger likelier, but
+it seems we evaluate potential mergers more by
+reference to entire speech-communities, not
+isolated parts.  Note that I am speifically talking here
+about merging or splitting concepts, not word-senses or
+lexemes or any purely linguistic artifacts.
+Certainly we have variegated `q.water` concepts
+%-- salt, tap, distilled, heavy %-- but we have an
+overarching water concept that includes these as
+subconcepts.  We can make a conscious decision to modify
+concept/subconcept relations %-- which is
+different from changing how concepts are mappped to
+lexemes.  So I take it that Conceptual Role Semantics
+prioritizes role factors in drawing concept/subconcept
+relations and boundaries, and the consequence is a
+mostly Internalist intuitive model: we should
+accept concept maps where concepts are mostly
+drawn together when there is a functional resemblance
+between their roles: our concept/subconcept renderings
 should witness and help us exploit functional analogies.
 `p`
 
 `p.
-At the same time, however, I think we instinctively 
-project notions of conceptual role outward from 
-individual perople or subcommunities to the social 
-totality.  Even if technically distinct Medicare for 
-All plans play similar conceptual roles in different 
-voters' conceptions, we understand that such similarity 
-may break down as we expand the community outward.  Sanders 
-and Haris supporters don't live on thier own islands.  
-There are factors outside their own minds that weigh 
-on whether their functionally similar Medicare for 
-All concepts are indeed `i.the same concept` from the 
-larger communiy's point of view.  But these external 
-factors are not necessarily `i.extramental`/: we 
-can zoom outside the concptual patterns of one 
-subcommunity and argue that concptual differences 
-appear in the overall speech community that supercede 
-functional resemblance in some subcommunity.  
-Conceptual roles are not solipsistic: the role of 
-the concept Medicare for All for a Sandrs supporter 
-is not just a role in `i.his` mind, but it bcomes a role 
-in `i.our` minds if we dialogically interact 
+At the same time, however, I think we instinctively
+project notions of conceptual role outward from
+individual perople or subcommunities to the social
+totality.  Even if technically distinct Medicare for
+All plans play similar conceptual roles in different
+voters' conceptions, we understand that such similarity
+may break down as we expand the community outward.  Sanders
+and Haris supporters don't live on thier own islands.
+There are factors outside their own minds that weigh
+on whether their functionally similar Medicare for
+All concepts are indeed `i.the same concept` from the
+larger communiy's point of view.  But these external
+factors are not necessarily `i.extramental`/: we
+can zoom outside the concptual patterns of one
+subcommunity and argue that concptual differences
+appear in the overall speech community that supercede
+functional resemblance in some subcommunity.
+Conceptual roles are not solipsistic: the role of
+the concept Medicare for All for a Sandrs supporter
+is not just a role in `i.his` mind, but it bcomes a role
+in `i.our` minds if we dialogically interact
 with him.
 `p`
 
 `p.
-Insofar as people can make inferences about other peoples' 
-conceptual role `q.system` %-- we can figure out 
-the role which a concept plays in somone else's 
-mind, to some approximation, even if analogous 
-concepts play a different role in our own minds 
-%-- conceptual roles are not private affairs; the 
-have some public manifestation and there is a need 
-for collective reconciliation of role differences, 
-just as we need to identify when different people 
-are using the same words in different ways and 
-use lexical conventions to diminish the 
-chance of confusion.  To the extent that they have this public 
-dimension, conceptual roles are 
-not `i.internal`/.  But `q.externalism` in this sense is 
-waranted because we want to look philosophically 
-at entire speech or cognitive communities %-- it is not 
-automatically a philosophy of conceptual content 
-being external to `q.mind in general`/.  Conceptual 
-differences that could `i.potentially` become 
-publicly observable from the vantage point 
-of the `i.entire` cognitive community warrant 
-consideration for conceptual divorce over dilation 
-%-- overriding similar roles in some `i.part` 
-of the community. 
+Insofar as people can make inferences about other peoples'
+conceptual role `q.system` %-- we can figure out
+the role which a concept plays in somone else's
+mind, to some approximation, even if analogous
+concepts play a different role in our own minds
+%-- conceptual roles are not private affairs; the
+have some public manifestation and there is a need
+for collective reconciliation of role differences,
+just as we need to identify when different people
+are using the same words in different ways and
+use lexical conventions to diminish the
+chance of confusion.  To the extent that they have this public
+dimension, conceptual roles are
+not `i.internal`/.  But `q.externalism` in this sense is
+waranted because we want to look philosophically
+at entire speech or cognitive communities %-- it is not
+automatically a philosophy of conceptual content
+being external to `q.mind in general`/.  Conceptual
+differences that could `i.potentially` become
+publicly observable from the vantage point
+of the `i.entire` cognitive community warrant
+consideration for conceptual divorce over dilation
+%-- overriding similar roles in some `i.part`
+of the community.
 `p`
 
 `p.
-In the case of XYZ, insofar as the twin earth cognitive 
-community and our own could `i.potentially` become part 
-of a single overarching cognitive community, we have 
-potential grounds for drawing comparisons 
-between water and XYZ.  Merely by contemplating 
-their planet here on earth we are performatively 
-drawing twin earthers into our cognitive community.   
-By postulating that twin earthers 
-think about XYZ the same way we think about water %-- 
-and that we know this %-- we implicitly assume 
-that their conceptual role patterns are public observables 
-in the context of our own community.  If conceptual 
-roles are observable, then there is a concept 
-of a conceptual role: pundits can 
-conceptually analyze how `q.Medicare for All` plays 
-identical conceptual roles for Sanders and Harris 
-supporters even if the candidates' plans are 
-consequentially different.  But this merely says 
-that there are latent differences in two people's 
-conceptual roles that they themselves may not actually 
-experience.  The public facet of conceptual roles 
-complicates the notion of conceptual role similarity 
-%-- two persons' patterns of conceptual rols may 
-be observably different as public phenoemena 
-even if the people lack resources to realize the 
-difference.  Conceptual roles are therefore external 
-to individual minds %-- but this is by scoping 
-outside individual minds to holistic cognitive 
-communities who can publicly observe our 
-cognitive tendencies.  We are still reasoning 
-`q.internalistically` in the sense of considering 
-cognitive patterns at the scale of an overall 
-cognitive community. 
+In the case of XYZ, insofar as the twin earth cognitive
+community and our own could `i.potentially` become part
+of a single overarching cognitive community, we have
+potential grounds for drawing comparisons
+between water and XYZ.  Merely by contemplating
+their planet here on earth we are performatively
+drawing twin earthers into our cognitive community.
+By postulating that twin earthers
+think about XYZ the same way we think about water %--
+and that we know this %-- we implicitly assume
+that their conceptual role patterns are public observables
+in the context of our own community.  If conceptual
+roles are observable, then there is a concept
+of a conceptual role: pundits can
+conceptually analyze how `q.Medicare for All` plays
+identical conceptual roles for Sanders and Harris
+supporters even if the candidates' plans are
+consequentially different.  But this merely says
+that there are latent differences in two people's
+conceptual roles that they themselves may not actually
+experience.  The public facet of conceptual roles
+complicates the notion of conceptual role similarity
+%-- two persons' patterns of conceptual rols may
+be observably different as public phenoemena
+even if the people lack resources to realize the
+difference.  Conceptual roles are therefore external
+to individual minds %-- but this is by scoping
+outside individual minds to holistic cognitive
+communities who can publicly observe our
+cognitive tendencies.  We are still reasoning
+`q.internalistically` in the sense of considering
+cognitive patterns at the scale of an overall
+cognitive community.
 `p`
 
 `p.
-In short, I will take the mantra of an `q.Externalist` 
-when passing from individual minds and subcommunities 
-to the public nature of conceptual roles and 
-overaching cognitive communities.  Once we get 
-to the maximal possible community, however, 
-I am inclined to revert to Internalism: if there 
-is no broadening of communal scope that could 
-make putative external diffrences meaningful to 
-`i.anyone's` concptual roles, I see no reason to 
+In short, I will take the mantra of an `q.Externalist`
+when passing from individual minds and subcommunities
+to the public nature of conceptual roles and
+overaching cognitive communities.  Once we get
+to the maximal possible community, however,
+I am inclined to revert to Internalism: if there
+is no broadening of communal scope that could
+make putative external diffrences meaningful to
+`i.anyone's` concptual roles, I see no reason to
 account for `i.these` erstwhile externalities in  a
-theory of concepts.  If XYZ has `i.some` 
-not-water-like qualities that a sufficiently large 
-cognitive community could confront %-- even if 
-XYZ-conceptual-role and earthly-water-concptual-role 
-is identical for the two isolated communities %-- 
-I am happy to accept that twin earthers' XYZ-concept 
-is a different concept than earthers' water-concept.  
-Similarly, I accept that Sanders supporters' 
-Medicare for All concept may be a different concept 
-than Harris supporters'.  But in both cases I accept 
-concept splitting to ovrride role-similarity because 
-I believe in an overarching cognitive community 
-which has an interest in detecting differences or 
-potential differences in conceptual roles qua 
-public obsrvables, which transcendes our own internal 
-awareness of what our conceptual roles entail. 
-The fact that earthers and twin-earthers might never 
-`q.discover` a water/XYZ difference is a contingent 
-fact, not an essential structure in policing 
-conceptual maps.   When establishing how 
-we should consider redrawing thse maps, we should 
-work from the picture of an overarching comunity that 
-can subsume isolated communities as an abstract 
-posit; the parts of the twin earth story that imply 
-earthers and twin earthers could never actually discover 
-their differences are not, I think, compelling as 
-intrinsic features of the analysis.  In short, if 
-water and XYZ have some potentially observable 
-differences, then we need to proceed as the community which is 
-aware that these differences exist and that therefore, for us, 
-water and XYZ need different conceptual slots.   
-The only analysis then is how to reconcile the fact 
-that we have multiple conceptual slots whereas twin earthers 
+theory of concepts.  If XYZ has `i.some`
+not-water-like qualities that a sufficiently large
+cognitive community could confront %-- even if
+XYZ-conceptual-role and earthly-water-concptual-role
+is identical for the two isolated communities %--
+I am happy to accept that twin earthers' XYZ-concept
+is a different concept than earthers' water-concept.
+Similarly, I accept that Sanders supporters'
+Medicare for All concept may be a different concept
+than Harris supporters'.  But in both cases I accept
+concept splitting to ovrride role-similarity because
+I believe in an overarching cognitive community
+which has an interest in detecting differences or
+potential differences in conceptual roles qua
+public obsrvables, which transcendes our own internal
+awareness of what our conceptual roles entail.
+The fact that earthers and twin-earthers might never
+`q.discover` a water/XYZ difference is a contingent
+fact, not an essential structure in policing
+conceptual maps.   When establishing how
+we should consider redrawing thse maps, we should
+work from the picture of an overarching comunity that
+can subsume isolated communities as an abstract
+posit; the parts of the twin earth story that imply
+earthers and twin earthers could never actually discover
+their differences are not, I think, compelling as
+intrinsic features of the analysis.  In short, if
+water and XYZ have some potentially observable
+differences, then we need to proceed as the community which is
+aware that these differences exist and that therefore, for us,
+water and XYZ need different conceptual slots.
+The only analysis then is how to reconcile the fact
+that we have multiple conceptual slots whereas twin earthers
 (and earthers who have not read Hillary Putnam) have just one.
 `p`
 
-`p.  
-But if we take a `i.maximal` cognitive community 
-%-- the sum total of earthers and twin 
-earthers and philosophers %-- this community `i.does` 
-distinguish XYZ from water (surrely XYZ plays a different 
-role in Putnam's mind than water).  And we should 
-scope to the maximal community when determining whether 
-smaller communities' conceptual roles are 
-truly identical, because conceptual roles are, in part, 
+`p.
+But if we take a `i.maximal` cognitive community
+%-- the sum total of earthers and twin
+earthers and philosophers %-- this community `i.does`
+distinguish XYZ from water (surrely XYZ plays a different
+role in Putnam's mind than water).  And we should
+scope to the maximal community when determining whether
+smaller communities' conceptual roles are
+truly identical, because conceptual roles are, in part,
 potential public obervables for any possible supercommunity.
 `p`
 
 `p.
-On the other hand, if XYZ is so much like 
-water that `i.no` community would 
-`i.ever` have reason to contrast twin-earthers's 
-XYZ-conceptual-role with our water-concptual-role, then 
-I think these roles are not just 
-`i.internally` identical for each (twin-) earther, but 
-`i.publicly` identical for any conceivable 
-cognitive community for whom public observations 
-of (twin-) earthers' conceptualizations are 
-consequential givens.  And in `i.that` case 
-I think XYZ is the same concept as water 
-notwithstanding putative compositional differences.  
+On the other hand, if XYZ is so much like
+water that `i.no` community would
+`i.ever` have reason to contrast twin-earthers's
+XYZ-conceptual-role with our water-concptual-role, then
+I think these roles are not just
+`i.internally` identical for each (twin-) earther, but
+`i.publicly` identical for any conceivable
+cognitive community for whom public observations
+of (twin-) earthers' conceptualizations are
+consequential givens.  And in `i.that` case
+I think XYZ is the same concept as water
+notwithstanding putative compositional differences.
 `p`
 
 `p.
-The whole idea that conceptual roles can be 
-`i.public` complicates the Internalist/Externalist 
-distinction, because each person's conceptual 
-patterns can be evaluated from a vantage point 
-external to `i.their` mind but still within 
-the proclivities of a `q.maximal` cognitive community.  
-Concptual roles are not private to each person, but 
-are private inclinations that get reshaped, 
-corrected, influenced, or reinterpreted by a 
-larger community.  If we understand conceptual 
-roles to include the totality not just of each 
-person's conceptual role attitudes but the totality 
-of how these attituds are observed by others, 
-then we should consider that concepts are not 
-`q.external` to the `i.maximal` cognitive comunity.  
-Externalism about `i.individual` minds can be 
-wrapped inside Internalism at the `i.maximal` 
-inter-cognitive level. 
+The whole idea that conceptual roles can be
+`i.public` complicates the Internalist/Externalist
+distinction, because each person's conceptual
+patterns can be evaluated from a vantage point
+external to `i.their` mind but still within
+the proclivities of a `q.maximal` cognitive community.
+Concptual roles are not private to each person, but
+are private inclinations that get reshaped,
+corrected, influenced, or reinterpreted by a
+larger community.  If we understand conceptual
+roles to include the totality not just of each
+person's conceptual role attitudes but the totality
+of how these attituds are observed by others,
+then we should consider that concepts are not
+`q.external` to the `i.maximal` cognitive comunity.
+Externalism about `i.individual` minds can be
+wrapped inside Internalism at the `i.maximal`
+inter-cognitive level.
 `p`
 
 `p.
-But, complicating matters further, the maximal 
-community's observations of conceptual-role attitudes 
-is often driven by at least our `i.belifs` about 
-external (i.e., extramental, natural-kind) 
-criteria.  For example, some companies 
-want to rechristen `q.corn syrup` as `q.corn sugar`/, 
-to make it seem more like a sugar-subconcept.  Meanwhile, 
-some dairy companis want laws restricting the use of 
-`q.milk` for vegan products.  In both cases our larger 
-community has a chance to weigh the proper conventions 
-for how our conceptual maps should be drawn.  
-As I argued earlier, both functional and naturalistic 
-criteria play a role in such deliberations.  We are 
-poised to distinguish transient situation-specific 
-roles %-- that one time someone used a hammer 
-as a bottle opener %-- from functional 
-parallels that stretch across many contexts.  
-Within the parameters of that contrast, we are 
-receptive to redrawing maps on role 
-criteria %-- allowing milk to subsume 
-vegan milk-substitutes, for instance.  But this 
-tendency is balanced by a respect for some 
-notion of coherent natural kinds %-- the 
-distinct biological properties of vegan milks 
-work against a `i.maximal` community subsuming 
-them under `q.milk` outside of special contexts. 
+But, complicating matters further, the maximal
+community's observations of conceptual-role attitudes
+is often driven by at least our `i.belifs` about
+external (i.e., extramental, natural-kind)
+criteria.  For example, some companies
+want to rechristen `q.corn syrup` as `q.corn sugar`/,
+to make it seem more like a sugar-subconcept.  Meanwhile,
+some dairy companis want laws restricting the use of
+`q.milk` for vegan products.  In both cases our larger
+community has a chance to weigh the proper conventions
+for how our conceptual maps should be drawn.
+As I argued earlier, both functional and naturalistic
+criteria play a role in such deliberations.  We are
+poised to distinguish transient situation-specific
+roles %-- that one time someone used a hammer
+as a bottle opener %-- from functional
+parallels that stretch across many contexts.
+Within the parameters of that contrast, we are
+receptive to redrawing maps on role
+criteria %-- allowing milk to subsume
+vegan milk-substitutes, for instance.  But this
+tendency is balanced by a respect for some
+notion of coherent natural kinds %-- the
+distinct biological properties of vegan milks
+work against a `i.maximal` community subsuming
+them under `q.milk` outside of special contexts.
 `p`
 
 `p.
-Both the Externalist and Internalist points of 
-view have some traffic in the considerations that 
-cognitive communities bring to bear on 
-which concptual maps should be enorsed by convention.  
-Because ad-hoc conceptual roles 
-can be established for particular situations, 
-we can be conservative about `i.conventionalizing` 
-concept maps driven by functional correspondancs 
-too far removed from (what we think 
-to be) scintifically endorsed, natural-kind 
-boundaries.  In other words, I think we `i.do` and 
-`i.should` allow `q.naturalistic` considerations 
-to be a factor in what concept maps we endorse.  
-But this is not a claim about Externalism as 
-a philosophical paradigm shaping how we 
-should construe the triangulation between 
-mind, world, and language, as a matter of 
-metaphysical ideology.  Rather I believe 
-that `q.externalist` factors should and do come 
-to bear on the deliberations `i.internal` 
-to cognitive communities' (sometimes but 
-not always explicit) evaluations of how to draw 
-concept and subconcept boundaries and relations 
-%-- when to split concepts and when to dilate them.  
-Dilate-or-divorce options are are pulled by 
-both externalist and internalist considerations, 
-sometimes in competing ways.  
+Both the Externalist and Internalist points of
+view have some traffic in the considerations that
+cognitive communities bring to bear on
+which concptual maps should be enorsed by convention.
+Because ad-hoc conceptual roles
+can be established for particular situations,
+we can be conservative about `i.conventionalizing`
+concept maps driven by functional correspondancs
+too far removed from (what we think
+to be) scintifically endorsed, natural-kind
+boundaries.  In other words, I think we `i.do` and
+`i.should` allow `q.naturalistic` considerations
+to be a factor in what concept maps we endorse.
+But this is not a claim about Externalism as
+a philosophical paradigm shaping how we
+should construe the triangulation between
+mind, world, and language, as a matter of
+metaphysical ideology.  Rather I believe
+that `q.externalist` factors should and do come
+to bear on the deliberations `i.internal`
+to cognitive communities' (sometimes but
+not always explicit) evaluations of how to draw
+concept and subconcept boundaries and relations
+%-- when to split concepts and when to dilate them.
+Dilate-or-divorce options are are pulled by
+both externalist and internalist considerations,
+sometimes in competing ways.
 `p`
 
 `p.
-As as case-study, the wording `q.corn sugar` %-- which implies a 
-`q.redistricting` wherein the concept `q.corn syrup` becomes 
-part of the territory `q.sugar` %-- may be credible 
-on purly biochemical grounds.  But our community may feel 
-that there is enough functional difference between sugar 
-and corn syrup from a commercial and nutritional sense to 
-reject a proposed merger %-- here functional considerations 
-trump natural-kind ones.  Conversely, the community may be 
-sympathetic to claims that milk substitutes should be labeled 
-to clearly indicate how they are are not `i.literally` milk 
+As as case-study, the wording `q.corn sugar` %-- which implies a
+`q.redistricting` wherein the concept `q.corn syrup` becomes
+part of the territory `q.sugar` %-- may be credible
+on purly biochemical grounds.  But our community may feel
+that there is enough functional difference between sugar
+and corn syrup from a commercial and nutritional sense to
+reject a proposed merger %-- here functional considerations
+trump natural-kind ones.  Conversely, the community may be
+sympathetic to claims that milk substitutes should be labeled
+to clearly indicate how they are are not `i.literally` milk
 %-- here natural-kind considerations trump functional ones.
 `p`
 
 `p.
-If we consider language %-- and communally-endorsed 
-conceptualizations %-- evolving in practice, then 
-by light of my claims until here there is material 
-for both Externalist and Internalist readings.  
-This perhaps leaves room for a theory which 
-accepts that both are partially true %-- each 
-being logically founded under consideration of two 
-different aspects of how concepts evolve.  I will 
-explore this possibility further, but first I 
-want to shore up my account of conceptual roles 
-themselves.  One complication I have 
-glossed so far is that `i.functional` roles in an 
-enactive and `q.pragmatic` (in the everyday-world 
-sense) spheres are not `i.ipso facto` the 
-same as either conceptualizations 
-(conceptual-role-attitudes) or lexicosemantic 
-conventions.  Thse three are interrelated, but we 
-need social and cognitive practices to get 
-situational understandings entrenched in 
-language and in communal concept-maps.  
-Without a theory of this process, to speak of 
-functional roles like `i.hammer` for 
-`i.bottle opener` is not a substitute for 
-speaking of conceptual roles `i.per se`/.  
-How to properly link `q.functionality` in an 
-enactive quotidian sense %-- the data that 
-various narural and man-made artifacts are 
-used by people for cocrete tasks, and 
-we often talk about this %-- to the cognitive 
-realm of concepts (and their boundaries and 
-subconcept relations)?  This is the main theme 
-of my next section. 
+If we consider language %-- and communally-endorsed
+conceptualizations %-- evolving in practice, then
+by light of my claims until here there is material
+for both Externalist and Internalist readings.
+This perhaps leaves room for a theory which
+accepts that both are partially true %-- each
+being logically founded under consideration of two
+different aspects of how concepts evolve.  I will
+explore this possibility further, but first I
+want to shore up my account of conceptual roles
+themselves.  One complication I have
+glossed so far is that `i.functional` roles in an
+enactive and `q.pragmatic` (in the everyday-world
+sense) spheres are not `i.ipso facto` the
+same as either conceptualizations
+(conceptual-role-attitudes) or lexicosemantic
+conventions.  Thse three are interrelated, but we
+need social and cognitive practices to get
+situational understandings entrenched in
+language and in communal concept-maps.
+Without a theory of this process, to speak of
+functional roles like `i.hammer` for
+`i.bottle opener` is not a substitute for
+speaking of conceptual roles `i.per se`/.
+How to properly link `q.functionality` in an
+enactive quotidian sense %-- the data that
+various narural and man-made artifacts are
+used by people for cocrete tasks, and
+we often talk about this %-- to the cognitive
+realm of concepts (and their boundaries and
+subconcept relations)?  This is the main theme
+of my next section.
 `p`
 
 `p.
