@@ -216,7 +216,7 @@ On course, it is possible to logically restate a sentence like
 which seems to be arriving at a formal exposition of the predicate
 informally intended by the sentence %-- the noema to the
 sentence's phenomena.  But formal machinery
-only papers over the logical incompleteness of concpts like
+only papers over the logical incompleteness of concepts like
 `q.set` and `q.predicate`/: a logical denotation of the sentence
 `i.seems` to refer to the state of affairs that the sentence
 tokens (and not just the sentence itself) via quantifier

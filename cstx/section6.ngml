@@ -358,7 +358,7 @@ Technically, the multi-dimensional structure of computational
 procedures implemented with modern coding techniques %--
 multi-dimensional in the sense of multiple forms of channels of
 communication and functional side-effects %-- demands new
-concptualizations of the formal architecture of computing nvironments
+conceptualizations of the formal architecture of computing nvironments
 as such.  Rather than seeing computer software, for example, as a
 complex system built architecturally from predicate logic, we
 need to undrstand software as a procedure-space or procedural
@@ -423,7 +423,7 @@ software to formats needed by the new hospital.
 `p`
 
 `p.
-Such data-intgration problems tend to be concptualized in one
+Such data-intgration problems tend to be conceptualized in one
 of two ways.  One approach is to seek a common reprsentation,
 or an overarching unified model, which can reconcile structural
 differences between the two systems.  If both hospitals use the
