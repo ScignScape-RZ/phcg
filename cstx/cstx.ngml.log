@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  7 MAR 2019 18:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  8 MAR 2019 08:30
 entering extended mode
 **cstx.ngml.tex
 (C:\scign\phcg\ar\cstx\cstx.ngml.tex
@@ -2006,13 +2006,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
 [19]
-Overfull \hbox (2.30391pt too wide) in paragraph at lines 1180--1241
+Overfull \hbox (2.30391pt too wide) in paragraph at lines 1180--1240
 \OT1/cmr/m/n/10.95 (-20) ``cog-ni-tive frames", which call for a dis-tinct pat-
 tern of anal-
  []
 
 [20]
-Underfull \hbox (badness 6141) in paragraph at lines 1241--1241
+Underfull \hbox (badness 6141) in paragraph at lines 1240--1240
 []\OT1/cmr/m/n/10.95 (+20) We un-der-stand sit-u-a-
  []
 
@@ -11894,7 +11894,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `cstx.ngml.out' has not changed.
-(rerunfilecheck)             Checksum: F268093BF5C349ECCC75B3E20B8C87F4;5275.
+(rerunfilecheck)             Checksum: D1DE75A9A098B1553EB2B56C7816733D;5285.
 
 
 LaTeX Warning: There were undefined references.
@@ -11903,7 +11903,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  21753 strings out of 494049
  409823 string characters out of 3146069
- 551378 words of memory out of 3000000
+ 552458 words of memory out of 3000000
  23799 multiletter control sequences out of 15000+200000
  30510 words of font info for 222 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -11936,7 +11936,7 @@ ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msam7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/c
 m-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/wasy
 /wasy8.pfb>
-Output written on cstx.ngml.pdf (129 pages, 1213263 bytes).
+Output written on cstx.ngml.pdf (129 pages, 1213309 bytes).
 PDF statistics:
  1430 PDF objects out of 1440 (max. 8388607)
  457 named destinations out of 1000 (max. 500000)
