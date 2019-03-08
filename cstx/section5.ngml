@@ -100,13 +100,73 @@ where we would be focused on motor-operational geastures
 to do thinks like drink from a glass; not intersubjective, 
 where we would attend to sow functional affordances of 
 chairs and glasses intersect with others' wishes.  Nor 
-linguistic, 
-
-
+linguistic, because conversation about chairs and glasss 
+can touch on any of these registers (even raw perceptual; 
+consider discussions about a glass's artistic coloring).
+In short, at no one `i.local` system as the glass- or chair-concpt 
+traverss different cognitive registers does the `q.logical`/, 
+or `i.semantic frame` model of the concepts actually 
+operate as a local structure.  This, I have argued, is analogous 
+to the partiality of information during th implementation 
+of software systms, especially at the intermediate level; 
+for example, the ambiguity as to whether a call to 
+open a file has suceeded or failed (see \ref{itm:file}). 
 `p`
 
+`p.
+At most, a logical, semantic-frame-like account of everyday  
+concept emerges from the interplay of different subsystems: 
+I don't dispute that at some holistic level we comport 
+to a chair or a glass of water as if we have some 
+structured, and mostly logically sound, 
+background beliefs and dispositions which 
+which acts in effect like a `i.logical frame`/, 
+encapsulating the logical coherence of the 
+respective concpts.  However, to the degree that this 
+frame has explanatory place in analyses of cognition, 
+it is not directly thematized in any concrete, operational 
+register where cognitive processes actually 
+occur.  It is more like a phantom hovering behind local 
+structures, like drunkeness is a phenomenal gestalt 
+hovering behind biochemical events whose macro-scale 
+existence is what we would call someone being drunk.  
+There is nothing wrong with pursuing 
+logical semantic-frame models in this sense, or 
+appreciating them as emrgent rationalities binding 
+the fabric of consciousness, but at that holistic 
+level we are treating thse rationalities as 
+philosophical doxa, not as computable or 
+logico-mathematical systems.  An Interface Theory would 
+instead compel us to analyze the `i.formal` and 
+`i.computational` structures in cognition 
+as `q.local` subsystem structures, where emergent 
+ratioanlity is only on the philosophical 
+horizon.  These may be on reason why 
+ITM-like paradigms may conflict with 
+AI-influenced %-- or even 
+Analytic Philosophy influenced %-- 
+linguistic or cognitive-scientific intuitions.
+`p`
 
-
+`p.
+The second possible intuition conflict is the 
+`q.Artificial General Intelligence` paradigm 
+where AI formalisms are projected from local subsystem 
+structures to the holistic, integrative terrain 
+of consciousness or intelligence on the 
+highest, most lived scales.  On this intuition, 
+as I claijd at the end of last section, `q.local` 
+subsystem models become valued primarily in terms of 
+how they enable overall systems %-- like language-processing 
+engines designed to mimic human behavior.  Taking 
+such a stance toward localized models can potentially 
+both overestimate the prospects of holistic AI and 
+underestimate the value of localized 
+models which have emerged in AI contexts 
+(some of which, like Link Grammar and hypergraph 
+data representations, I will mention 
+later in this section).
+`p`
 
 `p.
 This situation is not irrelevant to either linguistics or to Cognitive
