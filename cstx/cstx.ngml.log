@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  8 MAR 2019 14:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  8 MAR 2019 15:33
 entering extended mode
 **cstx.ngml.tex
 (C:\scign\phcg\ar\cstx\cstx.ngml.tex
@@ -903,7 +903,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 (C:\scign\phcg\ar\cstx\vectorian84.pgf) [3]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -913,13 +913,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
 [7]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8])
-(C:\scign\phcg\ar\cstx\section1.ngml.tex [9] [10] [11] [12]
+(C:\scign\phcg\ar\cstx\section1.ngml.tex
+Underfull \vbox (badness 1360) has occurred while \output is active []
+
+ [9]
+[10] [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
@@ -1463,7 +1470,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
-[17]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 963.
@@ -2554,16 +2563,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 387.
 
-
-Underfull \vbox (badness 7963) has occurred while \output is active []
-
- [26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27]
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
- [28]
+[26] [27] [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 737.
@@ -3089,6 +3089,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 737.
 
 [29]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 871.
@@ -3618,8 +3621,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Cognitive and En-vi-ron-men-tal
  []
 
-[32] [33] [34]) (C:\scign\phcg\ar\cstx\section3a.ngml.tex
-Underfull \vbox (badness 4927) has occurred while \output is active []
+[32]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [33]
+[34]) (C:\scign\phcg\ar\cstx\section3a.ngml.tex
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
 
@@ -4155,27 +4162,18 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
 [35]
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
-
 Overfull \hbox (1.83365pt too wide) in paragraph at lines 147--162
 \OT1/cmr/m/n/10.95 (-20) ``lan-guage" is re-ally two dif-fer-ent sys-tems: one 
 that ef-fec-tu-
  []
 
 [36]
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
- [37]
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
-
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
- [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+ [37]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [38])
 (C:\scign\phcg\ar\cstx\section3b.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -4701,41 +4699,45 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-[39]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
 Underfull \hbox (badness 1014) in paragraph at lines 40--54
 \OT1/cmr/m/n/10.95 (+20) where mor-phosyn-tac-tic form --- pos-ses-sives, ad-je
 c-
  []
 
-[40] [41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 2165) has occurred while \output is active []
+
+ [40]
+[41] [42]
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [43]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [44])
-(C:\scign\phcg\ar\cstx\section4.ngml.tex [45]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+(C:\scign\phcg\ar\cstx\section4.ngml.tex
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
+ [45]
 Underfull \hbox (badness 1472) in paragraph at lines 117--133
 []\OT1/cmr/m/n/10.95 (+20) This lat-ter model ac-tu-ally in-te-grates well with
 
  []
 
-[46]
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [46]
 Underfull \hbox (badness 1097) in paragraph at lines 214--231
 []\OT1/cmr/m/n/10.95 (+20) I be-lieve this bi-ol-ogy/chemistry case is a good
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
 
@@ -5270,17 +5272,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 232.
 
-[47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
+[47] [48]
 
 LaTeX Warning: Citation `MartinRaubal' on page 49 undefined on input line 404.
 
-[49] [50]
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
- [51]
+[49] [50] [51]
 
 LaTeX Warning: Citation `MattSelway' on page 52 undefined on input line 784.
 
@@ -5820,30 +5816,24 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-
-LaTeX Warning: Citation `AntonioLieto' on page 52 undefined on input line 24.
-
 [52]
-Underfull \vbox (badness 4927) has occurred while \output is active []
 
- [53])
-(C:\scign\phcg\ar\cstx\section5.ngml.tex
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
- [54]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+LaTeX Warning: Citation `AntonioLieto' on page 53 undefined on input line 24.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
- [55]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+ [53]
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
+)
+(C:\scign\phcg\ar\cstx\section5.ngml.tex [54] [55] [56]
+Overfull \hbox (1.1438pt too wide) in paragraph at lines 270--271
+\OT1/cmr/m/n/10.95 (-20) ``Con-ti-nen-tal" thought --- in-clud-ing phe-nomenol-
+ogy --- the
+ []
 
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
- [56])
-(C:\scign\phcg\ar\cstx\section5a.ngml.tex
+) (C:\scign\phcg\ar\cstx\section5a.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -6380,10 +6370,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+[58]
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
- [58]
-[59] [60] [61]
+ [59]
+[60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 521.
@@ -6916,29 +6913,39 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 521.
 
+[62]
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
-Underfull \vbox (badness 4927) has occurred while \output is active []
 
- [62]
 Underfull \hbox (badness 1406) in paragraph at lines 656--685
 []\OT1/cmr/m/n/10.95 (+20) These un-fold-ing nar-ra-tives are rel-e-vant to phe
 -
  []
 
-[63]) (C:\scign\phcg\ar\cstx\section6.ngml.tex
+[63]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+ [64])
+(C:\scign\phcg\ar\cstx\section6.ngml.tex [65]
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
- [65]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
-[68] [69]) (C:\scign\phcg\ar\cstx\section6a.ngml.tex
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+[70]) (C:\scign\phcg\ar\cstx\section6a.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -7471,26 +7478,39 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-[70] [71] [72] [73] [74] [75]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+[71]
+Underfull \vbox (badness 1127) has occurred while \output is active []
 
- [76]
-[77]
+ [72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
+[75] [76] [77]
 Overfull \hbox (2.26959pt too wide) in paragraph at lines 695--695
 \OT1/cmr/m/n/10.95 (-20) ``the team flew". And in \OT1/cmr/m/it/10.95 (-20) The
  city's largest theater company
  []
 
-) (C:\scign\phcg\ar\cstx\section7.ngml.tex [78]
-Underfull \vbox (badness 4927) has occurred while \output is active []
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [78])
+(C:\scign\phcg\ar\cstx\section7.ngml.tex [79]
 Overfull \hbox (1.10547pt too wide) in paragraph at lines 143--145
 []\OT1/cmr/m/n/10.95 (-20) I ear-lier used com-put-ing pro-ce-dures roughly ske
 tched ---
  []
 
-[79]
+
+Underfull \vbox (badness 3291) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 145.
@@ -8027,6 +8047,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (8.12332pt too wide) in paragraph at lines 503--503
  |[]  [] [][][][][][][][]
  []
@@ -8562,13 +8585,13 @@ Underfull \hbox (badness 1603) in paragraph at lines 644--673
  []
 
 [85]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [86]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [87])
 (C:\scign\phcg\ar\cstx\section7a.ngml.tex
@@ -9104,43 +9127,41 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-
+[88]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [88]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [89]
+[90]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [90])
+ [91])
 (C:\scign\phcg\ar\cstx\section8.ngml.tex
 Underfull \hbox (badness 2080) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Procedural Net-works and Link
  []
 
-[91]
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [92]
+[92]
 
 LaTeX Warning: Citation `HolmqvistDiss' on page 93 undefined on input line 169.
 
 
-[93]
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [93]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [94]
 Overfull \hbox (0.55748pt too wide) in paragraph at lines 374--390
 \OT1/cmr/m/n/10.95 (-20) ``\OT1/cmr/m/it/10.95 (-20) some \OT1/cmr/m/n/10.95 (-
 20) dogs") \OT1/cmr/m/it/10.95 (-20) and also \OT1/cmr/m/n/10.95 (-20) that the
  speaker and lis-ten-ers share
  []
 
-[94]
+[95]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 439.
@@ -9673,16 +9694,25 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 439.
 
-[95] [96] [97]
+[96]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [98])
-(C:\scign\phcg\ar\cstx\section9.ngml.tex
+ [97]
+[98]) (C:\scign\phcg\ar\cstx\section9.ngml.tex
 Underfull \hbox (badness 3179) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Cognitive Gram-mar and Type
  []
 
-[99] [100]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99]
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+ [100]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 171.
@@ -10207,23 +10237,32 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 171.
 
-[101] [102]
-Underfull \vbox (badness 2351) has occurred while \output is active []
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [101]
+Underfull \vbox (badness 3009) has occurred while \output is active []
+
+ [102]
+Underfull \vbox (badness 1478) has occurred while \output is active []
 
  [103]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [104]
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
 
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
 
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
-
-(C:\scign\phcg\ar\cstx\figure2.tex) [104]
+(C:\scign\phcg\ar\cstx\figure2.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [105]
+Underfull \vbox (badness 8075) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 492.
@@ -10753,9 +10792,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [107])
 (C:\scign\phcg\ar\cstx\section10.ngml.tex
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [108]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 68.
@@ -11285,14 +11327,14 @@ Underfull \hbox (badness 1515) in paragraph at lines 562--562
 []\OT1/cmr/m/n/10.95 (+20) Returning to ``On-tol-ogy": types have as-so-ci-
  []
 
-[114] (C:\scign\phcg\ar\cstx\figure.tex) [115]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[114] [115] (C:\scign\phcg\ar\cstx\figure.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [116])
 (C:\scign\phcg\ar\cstx\section10a.ngml.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (1.20703pt too wide) in paragraph at lines 1--1
  |[]  [] [][][][][][][][]
  []
@@ -11821,7 +11863,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-[117]
+[117] [118]
 Underfull \hbox (badness 1688) in paragraph at lines 135--153
 \OT1/cmr/m/n/10.95 (+20) frame-shifts; but other ex-am-ples sug-gest a more
  []
@@ -11829,7 +11871,7 @@ Underfull \hbox (badness 1688) in paragraph at lines 135--153
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [118]
+
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 153.
 
@@ -11844,10 +11886,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 153.
 
-[119]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [120]
+[119] [120]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 297.
@@ -12372,41 +12411,45 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 297.
 
-[121]
+[121] [122]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [122])
+ [123])
 (C:\scign\phcg\ar\cstx\conclusion.ngml.tex
 Overfull \hbox (1.94017pt too wide) in paragraph at lines 476--1
 \OT1/cmr/m/n/10.95 (-20) ``func-tions" are mu-ta-tions/modifications in cog-ni-
 tive state,
  []
 
-[123]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [124]
-[125]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [125]
 
 LaTeX Warning: Reference `footnoteVision' on page 126 undefined on input line 2
 22.
 
-[126] (C:\scign\phcg\ar\cstx\vectorian84.pgf) [127]
+[126] [127] (C:\scign\phcg\ar\cstx\vectorian84.pgf)
 
 LaTeX Warning: Citation `CyberphysicalSystems' on page 128 undefined on input l
 ine 368.
 
 
-Underfull \vbox (badness 4927) has occurred while \output is active []
-
-
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [128]
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 2302) has occurred while \output is active []
 
-)
-(C:\scign\phcg\ar\cstx\biblio.tex [129]
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [129])
+(C:\scign\phcg\ar\cstx\biblio.tex [130
+
+]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
@@ -12416,7 +12459,7 @@ Missing character: There is no “ in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
- [130
+ [131
 
 ]
 Overfull \hbox (26.93068pt too wide) in paragraph at lines 255--258
@@ -12426,10 +12469,10 @@ Overfull \hbox (26.93068pt too wide) in paragraph at lines 255--258
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [131])
+ [132])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
 
-[132]
+[133]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
  (C:\scign\phcg\ar\cstx\cstx.ngml.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
@@ -12442,9 +12485,9 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21764 strings out of 494049
- 410012 string characters out of 3146069
- 554231 words of memory out of 3000000
+ 21765 strings out of 494049
+ 410020 string characters out of 3146069
+ 551823 words of memory out of 3000000
  23801 multiletter control sequences out of 15000+200000
  30510 words of font info for 222 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -12477,9 +12520,9 @@ ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msam7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/c
 m-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/wasy
 /wasy8.pfb>
-Output written on cstx.ngml.pdf (132 pages, 1234824 bytes).
+Output written on cstx.ngml.pdf (133 pages, 1237250 bytes).
 PDF statistics:
- 1451 PDF objects out of 1728 (max. 8388607)
- 462 named destinations out of 1000 (max. 500000)
+ 1457 PDF objects out of 1728 (max. 8388607)
+ 463 named destinations out of 1000 (max. 500000)
  29981 words of extra memory for PDF output out of 35830 (max. 10000000)
 
