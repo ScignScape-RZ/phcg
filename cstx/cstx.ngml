@@ -46,7 +46,6 @@ arguing how Phenomenology and Cognitive Linguistics, while distinct traditions, 
 
 `input<section4.ngml>;
 `input<section4a.ngml>;
-`input<section4b.ngml>;
 
 `input<section5.ngml>;
 `input<section5a.ngml>;
@@ -55,10 +54,13 @@ arguing how Phenomenology and Cognitive Linguistics, while distinct traditions, 
 `input<section6a.ngml>;
 
 `input<section7.ngml>;
+`input<section7a.ngml>;
 
 `input<section8.ngml>;
+
 `input<section9.ngml>;
-`input<section9a.ngml>;
+`input<section10.ngml>;
+`input<section10a.ngml>;
 
 `input<conclusion.ngml>;
 

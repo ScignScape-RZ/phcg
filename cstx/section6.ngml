@@ -1,1008 +1,642 @@
-`section.Procedures and Integration`
+`part;
+While the first half of this paper was built around a 
+review of semantic theories, this part will 
+attend equally to grammar.  As I argued at the end of 
+Section 3,  we can find logical form in language 
+%-- even subtle, visual, `q.narrative` language %-- but 
+`i.how` language often evokes its logical form reveals 
+the limitations and the reductionist effect of semantic 
+theories that reify logical form over against the 
+full cognitive spectrum of linguistic processes.  
+Insofar as our semantic theory is shaped by 
+a vision of cognitive-linguistic processes, 
+tied together to create aggregate comprehension 
+(of sentences, for example), a natural 
+`i.syntax` paradigm to ground such a 
+`q.procedural` or `q.interface` semantics would 
+be Link or Dependency grammar: syntax as 
+a graph of associations between language elements 
+rather than a compositional hierarchy of words and 
+phrases.  This is the conception of the syntax/semantics 
+interface that I will examine in following 
+several sections.
+
+
+`section.Cognitive and Computational Process`
 `p.
-So far I have criticized paradigms which try to account for linguistic
-meaning via concordance between linguistic and proppositional
-structure.  The logical dimension to language is real, but
-it is not neatly ordered in the syntax/semantics
-interface.  My slogan is that `i.syntactic comppsition does not
-recapitulate logical form`/.
+Any attempt to bridge Computational Linguistics and
+Cognitive Grammar or Phenomenology must solicit one or several
+`q.founding analogies`/, linking phenomena on the
+formal/computational side with those on the
+cognitive/computational side.  Here, I will start from
+the analogy of `i.cognitive` and `i.computational` `i.process`/,
+or generically `q.process` (of either variety).
+Processes, per se, I will
+leave undefined, although a `q.computational` process
+can be considered roughly analogous to a single
+function implemented in a computer programming language.
+Th story I want to tell goes something like this: understanding
+language involves many cognitive processes, many of
+which are subtly determined by each exact language artifact
+and the context where it is created.  Properly understanding a
+piece of language depends on correctly weaving together
+the various processes involved in understanding its
+component parts, and the structure of the
+multi-process intergration is suggested by the grammar of
+the artifact.  Grammar, in a nutshell, uses relationships
+between words to evoke relationships between
+cognitive processes.
 `p`
 
 `p.
-I believe that a lot of linguistics and philosophies of
-language obscure this point by virtue
-of commitments to two reasonable theses: `i.one`/,
-that logical form is an important (and often
-the central) dimension of meaning, and
-`i.two` that language is composition.  But
-while language expresses propositional content
-%-- i.e., in many cases language `q.means` the
-way that propositions `q.mean` %-- language
-is not `i.compositional`/, in general,
-the way that propositions are compositional.
-So compositionality and logicality have to be
-disentangled, and I contend linguistics and
-philosophies of language have failed to do so.
-Moreover, as I argued in Section 4,
-I think this can be explained by the historical roots
-of philosophy of language %-- and by extension
-linguistics %-- in Analytic Philosophy,
-which in turn has a specific history and
-collaboration with formal logic.
+My formal elaboration of this model will be inspired at an
+elementary level by process `i.algebra` in the computational
+setting, but more technically by applied `i.type theory`/.
+Inter-process relations are the core topic of Process
+Algebra, including sequentiality (one process followed by
+another) and concurrency (one process executing alongside
+another).  In practice, detailed research around Process Algebra
+seems to focus especially on concurrency, perhaps because
+this is the more complex area of application
+(designing computer systems which can run multiple threads in
+parallel).  It is likewise tempting to
+imagine that cognitive-linguistic processes exhibit some
+degree of parallelism, so that the various pieces of
+understanding `q.fall into place` together as we grasp
+the meaning of a sentence (henceforth using `i.sentence` as a
+representative example of a mid-size lanuag artifact in general).
+Nevertheless, I will focus more on `i.sequential` relations between
+processes, suggesting a language model (even if rather idealized)
+where cognitive processes unfold in a temporal order.
 `p`
 
 `p.
-This critique has two dimensions:
-first, although a predicate structure, a predicative specificity, does indeed
-permeate  states of affairs insofar as we engage them rationally, such
-logical order is not modeled by language itself so much as by cognitive
-pictures we develop via interprtive processes
-%-- processes `i.triggered` by language details
-but, I believe, to some not insubstantial degree pre- or extra-linguistic.
-Moreover, second, insofar as we `i.can` develop formal models of
-language, these are not going to be models of prdicate structure
-in any conventional sense.
+On both the cognitive and computational side, temporality is relative
+rather than quantified: the significant detail is not
+`q.before` and `q.after` in the sense of measuring time but rather how
+one process logically precedes another in effects and prerequisites.
+No theoretical importance is attached to `i.how long` it takes
+before processes finish, or how much time elapses between
+antecedent and subsequent processes (in contrast to subjects like
+optimization theory, where such details are often significant).
+We can set aside notions of a temporal continuum
+where subsequent processes occupy disjoint, extended time-regions;
+instead, one process follows another if anything affected by the first
+process reflects this effect at the onset of the second process.
+Time, in this sense, only exists as manifest in the variations
+of any state revelant to processes %-- in the computational
+context, in the overall state of the computer (and potentially
+other computers on a network) where a computation is
+carried out.  Two times are different only insofar as the
+overall state at one time differs from the state at the second time.
+Time is `i.discrete` because the relevant states are discrete, and
+because beneath a certain sclae of time delta there is no
+possibility of state change.
 `p`
 
 `p.
-Cognitive-interpretive processes may
-have formal structure %-- structure which may even show a lot of overlap
-with propositional forms %-- but these are not `i.linguistic` structures.
-Insofar as language triggers but does not constitute interpretive
-`q.scripts`/, the scripts themselves (i.e., conceptual prototypes and
-perceptual schema we keep intellectually at hand, to interpret and
-act constructively in all situations, linguistic and otherwise) are
-not linguistic as such %-- and neither is any propositional order they
-may simulate.  Language `i.does`/, however, structure the `i.integration`
-of `i.multiple` interpretive scripts, so the structure of this
-integration `i.is` linguistic structure per se %-- and formally
-modeling such integration can be an interesting tactic for
-formally modeling linguistic phenomena.  However,
-we should not assume that such a formal model will resemble or
-be reducible to formal logic in any useful way %-- formalization
-does not automatically entail some kind of de facto isomorphism
-to a system of logic (if not first-order then second-order, modal, etc.).
+Analogously, in language, I suggest that we set aside notions of
+an unfolding process reflecting the temporality of expression.
+Of course, the fact that parts of a sentence are heard first
+biases understanding somewhat; and speakers often exploit
+temporality for rhetorical effect, elonging the pronunciation
+of words for emphasis, or pausing before words to
+signal an especially calculated word choice, for example.
+These data are not irrelvant, but, for core semantic and
+syntactic analysis, I will nonetheless treat a sentence as
+an integrated temporal unit, with no value atributed to
+temporal ordering amongst words except insofar as temporal
+order establishes word order and word order has grammatical
+significance in the relevant natural language/dialect.
 `p`
 
 `p.
-Instead, I want to focus in on branches of computer science and
-mathematics (such as process algebra, which I have already referenced)
-as part of our scientific background insofar as the `i.structural
-integration` of diverse `q.processes` (computational processes
-in a formal sense, but perhaps analogously
-cognitive processes in a linguistic sense) can be technically represented.
+While antecedent/subsequent inter-process relations are among those
+formally recognized in Process Algebra, this specific genre
+of relation is implicit to other models important
+to computer science, such as Type Theory and Lambda Calculus.
+If `typeT; is a type, then any computational process
+which proceduces a value of type `typeT; has a corresponding
+(`q.functional`/) type (for sake of discussion, assume a `q.value`
+is anything that can be encoded in a finite sequence of numbers
+and that `q.types` are classifications for values that introduce
+distinctions between functions %-- e.g., the function to add two
+integers is different than the function to add two decimals; more
+rigorous definitions of primordial notions like `q.type` and
+`q.value` are possible but not needed for this paper).
+Similarly a process which takes as `i.input` a value of
+`typeT; is its own type.  If two processes have these two
+types respectively %-- one outputs `typeT; and the other
+inputs `typeT; %-- then the two can be put in sequence, where
+the output from the antecedent becomes the inut to the subsequent.
+In this manner inter-process sequential relations become
+subsumed into `q.type systems` can can be studied using
+type-theoretic machinery rather than Process Algebras or
+Process Calculii as such.
 `p`
 
 `p.
-In `q.truth-theoretic` semantics, artifacts of language
-are intuitively pictured in terms of propositional structure.
-The guiding intuition compares word meanings to logical predicates;
-e.g. `q.John is married` is typically said when the speaker believes
-that, in fact, the predicate `q.married` applies to the
-speaker `q.John`/.  Switching to a more
-`q.procedural` perspective involves intuiting word-meaning
-more in terms of interpretive procedures than logical predicates.
-The change in perspective may not yield substantially different
-analyses in all cases, but I believe it does affect many cases.
+There also exists a robust type-theoretic tradition
+in (Natural Language) semantics, which is disjoint from
+but not entirely irrelevant to the type systems of
+formal and programming languages.  Semantic types are
+recognized at several different levels of classification,
+but some of the most interesting type-theoretic effects
+involve medium-grained semantic criteria that are
+more general than lexical entries but more specific than
+Parts of Speech.  For example, the template `i.I believed
+X` generally requires that `i.X` be a noun
+(?`i.I believed run`/), but more narrowly a
+certain `i.type` of noun, something that can be interpreted
+as an idea or proposition of some kind (?`i.I believed flower`/).
+Asher and Pustejovsky point out the anomaly in a sentenc
+like `q.Bob's idea weighs five pounds` (ex. 2 p. 5), which
+possesses a flavor of unacceptability that feels akin to
+Part of Speech errors but are not in fact syntactic
+errors.  The object of `i.weigh` is `q.five pounds` and
+its subject is `q.Bob's idea`/, which is admissible
+`i.syntactically` but fails to honor our semantic convention
+that the verb `q.to weigh` should be applied to things
+with physical mass (at least if the direct object denotes a quantity;
+contrast with `i.Let's all weigh Bob's idea`/, where the
+`i.idea` is object rather than subject).  These conventions are
+analogous to Part of Speech rules but more fine-grained:
+there is a meaning of `i.weigh` which has (like any transitive
+verb) to be paired with a subject and object noun, but beyond
+just being nouns the subject must be a physical body
+(in effect a sub-type of nouns) and the object a quantitative
+expression (another sub-type of nouns).  Potentially, type
+restrictions on a coarse scale (e.g. that the subject of a verb
+must be a noun) and those on a finer scale (as in this
+sense of `i.to weigh`/) can be unified into an overarching theory,
+which spans both grammar and semantics %-- for instance,
+both Part of Speech rules and usage conventions of the
+kind often subtly or cleverly subverted in metaphor and
+idioms (see `q.flowers want sunshine`/, `q.my computer died`/,
+`q.neutrinos are sneaky`/, as rather elegantly compactified
+by assigning sentient states to inert things).  This is one way of
+reading the type-theoretic semantic project.
 `p`
 
 `p.
-Even a simple predicate like `q.married` reveals a spectrum of
-not-entirely-logical cases in ordinary language:
+Along with Process Algebra, my take on linguistic
+understanding is informed by type theory
+(in both computational and linguistic contexts),
+but particularly by the merged notion of `i.typed`
+processes.  So if we say that something has the `i.type`
+of a physical-body noun %-- that `q.Physical Body` is
+a type in the overall semantics of language %-- then
+I propose a corresponding type of cognitive
+(perceptual and conceptual) processes characteristic
+of perceiving and reasoning about physical things.  A particular
+designatum %-- a bag of rice, say %-- is subsumed under
+the semantic type insofar as our perceptual encounters with that
+thing %-- and/or our concepual exercises pertaining to
+its properties and proclivities (like being difficult to carry)
+%-- are roughly prototyped by a certain generic kind of
+cognitive process.  This assumes that there is a similitude among
+processes of perceiving and thinking about physical bodies
+(at least the mid-sized, quotidian physical things that tend
+to enter nonspecialist language) sufficient to subsume them under
+a common prototype, which I then argue forms the cognitive
+substratum for the semantic type `q.Physical Object`/.
+Moreover, I contend a similar cognitive substratum
+can be found for other mid-scale semantic types that underlie analyses
+of semantic acceptability and metaphoricality, like
+`q.Living Thing`/, `q.Sentient Living Thing` (`q.flowers want
+sunshine` is metaphorical because it ascribes propositional
+attitudes to something whose type does not literally support them),
+and `q.Social Institutions` (`q.The newspaper you're reading
+fired its editor` exhibits a `q.type coercion` where `i.newspaper` is read
+first as an object and then as a company).  One feature of semantic
+types is the lexical superposition of different types to produce what
+(in a slightly different context) Gilles Fauconnier calls a `q.blend`/:
+in `q.Liverpool, which is near the ocean, built new docks`/, the
+city is treated as both a geographic region and a body politic.
+`p`
+
+`p.
+`q.Weighs`/, too, as a verb, can be given a typed-process
+interpretation.  In its least metaphoric sense, `q.to weigh`
+connotes a practical action of measuring some object's weight by
+using something like a scale; as `i.cognitive` process the
+verb embodies are ability to plan, reflect upon, or contemplate
+this practice.  So an `q.idea weighing 5 pounds` is anomalous because
+it is hard to play out in our minds a form of this practical act
+where the thing being weighed is mental.  Howevere, there are plenty
+of more figurative uses related to `q.weighing ideas`/, `q.heavy ideas`/,
+and so forth, so we are able to isolate the dimension of
+`q.judging` and `q.measuring` which is explicit in literal
+`q.weighing`/, and abstracting from the physical details use
+`q.weigh` to mean `q.measure` or `q.assess` in general.
+The phrase `q.weigh an idea` therefore connotes its own cognitive
+process %-- imagining someone thinking about the idea in an
+evaluative way %-- but this figurative `q.script` is closed off by
+`q.5 pounds` which forces us to conceive the weighing literally
+with a scale, not figuratively as a kind of mental assessment.
+Once again, the type anomaly can be seen as a failure to
+map the linguistic senses evident in a sentence to an internally
+consistent set of cognitive procedures for dilating the semantic
+content seeded within each word.
+`p`
+
+`p.
+Notice that I am treating cognitive processes, in themselves,
+as semantic more than grammatical phenomena.  Literally,
+weighing something is a multi-stp act
+(lifting it on the sale, reading the measurement), and even in
+our mental replay of hypothetical weighing-acts it seems impossible
+not to imagine distinct phases (just as it is impossible not
+to picture left and right sides of an imaginary cow).
+Howevere, I assume that the cognitive script is figured by the
+lexeme `q.weighs` as a connotative unit: whatever internal structure
+our mental script of `q.weighing something` has,
+this structure is not a `i.linguistic` structur that must be
+encoded grammatically.  Similar, the concept
+`i.buttered toast` suggests a confluence of
+perceptual, physical-operational, and conceptual aspects
+%-- we are inclijed to regard toast as `i.buttered` if it
+looks a certain way and also if we have seen someone apply
+butter to it (or have done so ourselves) and also if
+we are in a context where we expect to find toast that may be
+buttered (we are not disposed to call a piece of bread in a
+grocery store `q.buttered toast` even if it has that appearence).
+So the adjective `q.buttered` introduces multiple cross-modal
+parameters in addition to the underlying concept `q.toast`/; but I feel
+that the lexeme aggregates these parameters into a
+single `i.linguistic` unit.  In Langacker's terms, the various
+elements of `q.buttered` do not suggest `i.constructive effort`/,
+as if deliberate `i.linguistic` processing were needed to unpack the
+linguistic entity to its constituent parts.  Instead, `q.buttered`
+functions `i.semantically` as a unit (and likewise syntactically
+as the unit entering relations with other words %-- e.g. buttered-toast
+is an adjective/noun pair, not the noun `q.butter` at the root of the
+adjective) %-- even if its cognitive process
+is multi-faceted.  Indeed, this is precisely the signifying economy
+of language: it captures complex cognitive procedures by
+iconic, repeatable lexical units.
+`p`
+
+`p.
+On that theory, tieing specific word-senses to stereotyped
+cognitiv processes is a matter of semantics, not grammar per se.
+Grammar, I contend, comes into play when multiple processes need to
+be integrated.  The concept `q.buttered toast`/, for example, seems
+to start from a more generic concept (toast) and then add
+extra detail (the buttering, with all that implies conceptually,
+pragmatically, and sensorially).  This is suggested by the
+substitutability of just `q.toast` for `q.buttered toast`/:
 
 `sentenceList,
-`sentenceItem; John is married to a woman from his home country, but
-he had to get the marriage legally recognized here.
-`sentenceItem; John married his boyfriend in Canada, but they
-lived in a state that does not recognize same-sex marriages.
-`sentenceItem; John has been married for five years, but in
-many ways he's still a bachelor.
-`sentenceItem; Every married man needs a bachelor pad somewhere,
-and wherever yours is, you need a mini-fridge.
+`sentenceItem; I snacked on toast and coffee.
+`sentenceItem; I snacked on buttered toast and iced coffee.
 `sentenceList`
 
-We can make sense of these sentences because we do not conceptually
-define lexemes like `q.married` or `q.bachelor` via exhaustive
-logical rules, like `q.a bachelor is an unmarried man`/.  Instead we
-have some combination of prototypical images %-- familiar
-characteristics of bachelors, say, which even married men
-can instantiate %-- and a conceptual framework recognizing
-(and if needed distinguishing) the various legal, societal, and
-dispositional aspects of being married.
+Because the first sentence is perfectly clear, it seems
+that the ideas expressed (at least in this context) by
+`i.toast` and `i.coffee` are reasonably complete
+in themselves, so the adjectives have the effect of starting
+with a complete idea and adding on extra detail.  Procedurally,
+then, it seems like we have some process which takes us to
+`q.toast` and `q.coffee` and then, subsequent to that
+(logically if not temporally) we add the wrinkle of
+re-conceiving the toast as buttered and the coffee as iced.
+In short, the adjective-noun pairing is compelling us to
+run a pair of cognitive processes in sequence, one
+establishing the noun-concept as a baseline and one adding
+descriptive detail by an `q.adjectival`/, a specificational
+process.
 `p`
 
 `p.
-Intuitionwise, then, we should look beyond potential logical
-glosses on meanings %-- even when these are often accurate
-%-- and theorizee semantics as the mapping of lexical
-(as well as morphosyntactic phenomena) to interpretive scripts
-and conceptual or perceptual/enactive schema %-- which
-we can collectively designate, for sake of discussion, as
-`q.cognitive procedures`/.
-`p`
-
-`p.
-The truth-theoretic mapping of words to predicates
-(and so phrasal and sentence units to propositional structures)
-provides an obvious way to formalize linguistic structure by
-borrowing the analogous structuration from
-predicate complexes.  Substituting a procedural semantic model
-allows a comparable formalization of linguistic structure
-through theories exploring procedural integration,
-for instance the interactions between computational procedures.
-Analysis of `i.computational` produres can yield interesting
-ideas for linguistic theories of `i.cognitive` procedures
-%-- without endorsing a reductive metaphysics of
-cognitive procedures as `q.nothing but` computational
-procedures implemented in some sort of mental software.
-`p`
-
-`p.
-I earlier used computing procedures roughly
-sketched %-- like code which may open a file
-(\ref{itm:file}) %-- as loose metaphors for
-cognitive processes; my point before
-was that both cognitive and computational
-processes can be hard to gloss logically
-because they are often dealing
-with incomplete logical information.
-More seriously %-- because `i.incomplete`
-logical information is not necessarily
-outside of logic; there are logical systems which
-can model information partiality in
-systematic ways %-- processes which
-occur in the midst of logically incomplete
-spaces (in the context of message-passing,
-function-routing, etc.) do not
-nessarily `i.operate` logically.  That is,
-local rules for message-passing or function-routing systems
-do not seem to be (in their `q.native` semantics)
-logical rules.  In the current context, I want
-to consider in greater detail the interoperation
-`i.between` computational procedures, to consider
-how procedures form `q.networks` and whether this is a
-useful analogy for cognitive/linguistic processes.
-`p`
-
-`spsubsectiontwoline.Procedural Networks as a
-Cognitive/Linguistic Metaphor`
-`p.
-The notion of computational procedures is certainly
-not foreign to symbolic logic or to analyses often
-associated with logistical models (in linguistics and philosophy,
-say), like Typed Lambda Calculus.  In those paradigms
-we certainly have, say, an idea of applying formulae to
-input values (where formulae can be seen as referring to or
-as compact notations for computational procedures).  Comparing
-the results of two formulae yields predicates
-(e.g., equalities or greater/less-than relations of
-quantity) that undergirds predicate systems.  Furthermore,
-combining formulae %-- plugging results of one formula
-into a free variable in another %-- yields new formulae
-that can in turn be reduced to different forms or to single
-values, either for all inputs or for particular inputs.
-In short, a large class of computational procedures can
-be modeled in predicate and equational or formula-reduction
-terms.  I point this out because shifting to
-a `q.procedural` intuitive model does not `i.by itself`
-take us outside of logistic and truth-thoretic paradigms.
-`p`
-
-`p.
-And yet, in computer science, theories of procedural networks
-begin to branch out from formal logic or
-lambda calculii when we move past the `q.mathematical`
-picture of procedures %-- as computations that accept a
-collection of inputs and return a collection of outputs
-%-- and theorize procedures more as computational
-modules that input, output, and modify values
-from multiple sources, in different ways.  In practical
-technology, this includes developments like Object-Oriented
-computer languages and programming techniques such as
-Exceptions and mutable references.  Likewise,
-real-world code can pull information from many sources %-- like
-databases, files, and networks (including the internet)
-%-- in addition to values input as parameters to a function.
-Conversely, functions have many ways to modify values
-%-- many ways to manifest side-effects %-- beyond just
-returning values as outputs.  Collectively these various
-channels of communication %-- wherein different procedures
-can exchange values in different ways %-- are often
-described as `q.inpure`/, by contrast
-to `q.pure` functions which use only a single
-input channel for (non-modifiable) input parameters
-and a single output channel.
-`p`
-
-`p.
-The design and implementation of computer programming languages
-%-- sometimes called `q.Software Language Engineering` %--
-is partly a theoretical discipline (because programming languages
-are based on formal systems that can be studied mathematically,
-like Lambda Calculus), but also very pragmatic.  Computer languages
-are judged by practical considerations, like how efficiently they
-allow programmers to create quality software.  The impetus
-for new programming techniques often comes from the practical
-side: mainstream languages began to incoporate features like
-Object-Orientation and Exceptions (which are a mechanism to
-interrupt normal program flow when coding assumptions are violated)
-because these features proved useful to programmers.  At the same
-time, various `q.inpure` features can still be modeled at the theoretical
-level %-- there are extensions to Lambda Calculus
-with Exceptions and/or Objects, as well as `q.effect systems` that
-systematically model functional side-effects via Type Theory.
-In this case, though, the thoretical models are partly isolated or
-even lag behind the evolution of practical coding techniques.
-`p`
-
-`p.
-It is also true that `q.inpure` code can always be refactored
-into a code base that uses only `q.pure` functional-programming
-techniques.  That is, at least if we exclude the `q.cyberphysical`
-layer %-- the body of code that directly measures or alteres
-physical data, like writing text to a computer screen or
-reading the position of a mouse %-- any self-contained
-collection of `q.inpure` functions can always be re-implemented
-as a system of pure `q.mathematical` functions, using
-only one-dimensional, immutable input and output channels
-(this is not necessarily true of single functions, but
-abstractly true of complete code `i.bodies` encompassing many
-functions, i.e., many implemented procedures).  Analogously, any
-computing environment based on a type system that incorporates
-impure function-types can be recreated on top of a different
-type system that recognizes only pure functions.  For sake of
-discussion, define a `i.procedure space` as a self-contained
-network of computational procedures, where each procedure has
-the ability to invoke other procedures in the network.  We can then
-say that any procedure space developed with the benefit of
-`q.impure` coding styles (like Objects, Exceptions, and
-side-effects) is `i.computationally isomorphic` to a procdure space
-implemented exclusively in a pure-functional paradigm.
-`p`
-
-`p.
-This principle might suggest that the pure/impure distinction
-is superficial, and so that any computing environment is
-actually manifesting a purely logical framework, because
-it is (in one sense) isomorphic to a structur which
-`i.can` be thoroughly modeled via formal logic.  However, this
-reductionism actually reveals the limits of `q.computational`
-isomorphism in the abstract.  Impure procedure-spaces are not
-`i.equivalent` to their pure isomorphs.  The whole rationale for
-`q.impure` coding techniques %-- Object-Orintation, functions
-with side-effects, etc. %-- is that the resulting code better
-models empirical phenomena and/or how programmers themselvs
-reason about software design.  Any notion of
-computational isomorphism which is `i.itself` prejudiced
-toward formal logic will fail to model how systems
-which are isomorphic `i.on these` (already logical)
-`i.terms` will nevertheless vary in how
-organically they model empirical and mental phenomena.
-If engineers discover that Object-Oriented paradigms
-produce more effective software for managing biomedical
-data %-- that is, biomedical concepts are usefully
-modeled in terms of semiautonomous computational `q.objects`
-whose properties and functionality are enginereed via
-many discrete, partially isolated software components %-- this
-suggests how Object-Oriented structures may be a more natural
-systematization of the underlying biomedical reality.
-Object-Oriented software can `i.in principle` be redesigned
-without Objects, but the resulting code base would thn be a weaker
-semantic `q.fit`/, a less faithful computational encoding,
-of the external information spaces that the software
-needs to modl and simulate.
-`p`
-
-`p.
-I contend that this duality between Object-Oriented and
-pure-functional programming is analogous to the paradigmatic
-contrast between cognitive and truth-theoretic semantics.
-On this analogy, pure-functional programming can be associated
-with truth-theoretic semantics in that both are founded on formal
-systems that more or less straightforwardly operationalize
-first-order logic %-- a logic with quantification and with sets
-or types modeling collections, but whose foundational units are
-boolean predicates and elementary formulae rather than
-proceures with multiple `q.channels of communication` and
-potentially many intermediate states.  Reducing impure
-(e.g., Object-Oriented) code to pure-functional procedure spaces
-is analogous to providing truth-theoretic reconstructions
-of linguistic meanings, as in (revisiting
-examples from prior sections):
+Counter to that analysis, someone might judge that
+phrases like `q.buttered toast` and `q.iced coffee` are
+conventional enough that we don't interpret them through
+two meaningfully disjoint processes.  This is entirely possible,
+given how erstwhile aggregate expressions bcome established units
+%-- what Langacker calls `i.entrenchment`/.  Different
+phrases ehibit different levels of entrenchment:
 
 `sentenceList,
-`sentenceItem; People had fed the rescued dogs (i.e.: before they
-were rescued).
-`sentenceItem; New Yorkers vote democratic (i.e.: the majority
-of registered voters in New York do so).
-`sentenceItem; There is milk in that coffee (i.e.: almond milk).
-`sentenceItem; I handed him a bottle opener (i.e.: a butterfly
-corskscrew).
-`sentenceItem; That wine is Fabernet Franc (i.e.: `q.W is CF`/).
+`sentenceItem; I snacked on toast and instant coffee.
+`sentenceItem; I snacked on toast and Eritrean coffee.
 `sentenceList`
 
-Propositional reconstructions of sentences like these can capture a
-logical substrate that contributes to their meaning, but completely
-`i.reducing` their semantics to such logical substrata jettisons,
-I have argued, interpretive and contextual schemata which are equally
-essential to their meaning.  Analogously %-- considered
-in relation to data that it must curate and model (so that pople
-may manage and aggregate data; for instance, collect biomedical data
-to ensure proper diagnoses and implement tratments) %-- software
-does not only represent the logical substrata undrlying information
-systems.  It needs to capture conceptual and operational/logistical
-phenomena as well.
+Arguably `q.instant coffee` is a de facto lexical unit, partly
+because reading it in terms of constituent parts is rather
+nonsensical (there's no non-oblique way to understand
+`q.coffee` being qualified as `q.instant`/).  Surely, however,
+`q.Eritrean coffee` is heard as a compound phrase
+(at least in 2019 %-- it is unlikely, but not
+impossible, that future Eritrean coffee growers will be so
+successful that we hear the phrase as a brand name
+or culinary term of art, like `q.Hershey's kisses`
+or `q.French toast`/).  The status of `q.iced coffee` is probably
+somewhere between those two.  But to the degree that
+a language element (whether word oe phrase) is entrenched and
+generally processed linguistically as a unit, I maintain,
+it tends to be governed by an integrally complete cognitive
+process %-- not necessarily one without inner structure, but where the
+elements of this structure piece togther perceptually and
+situationally, rather than seeming to be
+`i.linguistically` disjoint conceptualizations that are brought together
+by the shape of linguistic phrases.  Conversely, where a cognitive
+process has this integral character, discursive pressures nudge
+the language toward entrenching some descriptive phrase as a
+quasi-lexeme; what starts being heard as a compound designation
+evolves to the point where language users don't attend to
+constituent parts.
 `p`
 
 `p.
-Along these lines, note that Object-Oriented techniques originally
-emerged from scientific-computing environments, to model
-complex systems, with multiple levels of organization, mrgent
-structure, and so forth (in the 1990s these techniques
-were then applied to more enterprise-style applications,
-for User Interface design, business operations workflows, etc.).
-The effectiveness of Object-Oriented models
-suggests that as a form of computing environment, and a
-framework for coding procedure-spaces, Object-Orientation
-captures structural properties of complex systems
-more richly than paradigms that reduce procedural implementations
-to a purely logical substratum.  This observation
-can then generalize to the whole range of modern-day programming
-techniques and all the various domains where software is used
-to monitor, simulate, and manage information about natural and
-human phenomena.
+Obviously, this theory presupposes that there is an available
+distinction to be drawn between a `q.procedural` synthsis of
+disparate cognitive processes and a perceotual and/or conceptual
+synthesis constitutive of individual cognitive episodes.
+Phenomonology seems to back this up %-- there are some
+conceptual compounds that seem more episodically fused than
+others.  Buttered toast may evoke a temporally
+not-quite-instantaneous conceptualization %-- at the core of
+the concept is a practical activity that takes a few seconds to
+complete %-- but we also can imagine the buttering-act
+apprehended in one sole episode.  On the other hand,
+`q.Eritrean coffee` ties together concepts of much more scattered
+provenance; the perceptual unity of `i.coffee` (in the sense
+of a spcific liquid in a specific container) along with
+the geopolitical `q.background knowledge`
+implicit in the adjective `q.Eritrean`/.  As a cognitive
+synthesis `q.Eritrean coffee` is conceptual rather than
+perceptual.  Provisionally we can treat this in the context of
+`q.buttered toast` being a partially-entrenched phraseology
+while `q.Eritrean coffee` is undeniably a phrasal compound,
+something whose constructive form must be parsed linguistically
+rather than figuratively.
 `p`
 
 `p.
-Technically, the multi-dimensional structure of computational
-procedures implemented with modern coding techniques %--
-multi-dimensional in the sense of multiple forms of channels of
-communication and functional side-effects %-- demands new
-conceptualizations of the formal architecture of computing nvironments
-as such.  Rather than seeing computer software, for example, as a
-complex system built architecturally from predicate logic, we
-need to undrstand software as a procedure-space or procedural
-network receptive to external information.  On this account, a
-software application internally possesses a set of capabilities,
-and achieves this functionality by invoking different
-procedures which are implemented in the software; the application
-as a whole is the aggregate of its procedural building-blocks.
-Which procedures get invoked depends on user actions
-%-- we use a mouse, keyboard, and other input devices to
-trigger responses from the software.  Applications are therefore built
-around an `q.event loop`/: the software can enter a passive
-state, performing no operations apart from monitoring
-physical devices to detect user actions.  Once an action does
-occur %-- we press a letter on a keyboard, say, or press a mous button
-%-- the application responds by invoking a specific procedure, which
-in turn may trigger a complex cascade of other procedures, to complete
-whatever operation we requested via our action (saving a file,
-selecting one record to visualize from a database, etc.).
-Via such networks of procedures and functionality, software
-models and simulates empirical phenomena %-- at least enough so that we can
-maintain databases, remotely operate machines, and in other ways track
-and manipulate physical states.
+This analysis, though, needs many caveats.  After all, many
+bonafide `i.phrases` (not `q.quasi-lexemes`/) nevertheless
+exhibit significant phenomenological unity %-- i.e., they
+evoke integral perceptual complexes: `i.big dog`/;
+`i.hot coffee`/; `i.speeding car`/; `i.red foliage`/.
+Linguistically these seem like an underlying concept
+acquiring perceptual specificity via adjectival
+modification: `q.hot` was how the coffee came to my
+exprience because I experienced it as hot (it wasn't like
+I experienced the coffee and then had to contemplate
+whether it is hot or cold).  Coffee can't `i.not` be
+experienced as hot, cold, or lukewarm; it cannot be experienced
+without temperature (assuming I am coming into contact
+with it and not just looking at it).  Similarly a car must be
+seen as at rest, moving slowly, or speeding along; 
+foliage must be
+seen as having some color(s).
 `p`
 
 `p.
-Consequently, computer models of empirical phenomena can take the
-form of `i.procedural networks`/, and we can designate the design and
-theory of such models as `i.procedural modeling`/.  I have argued that
-procedural networks are not reducible to logical predicate systems
-even though procedure-spaces in general are (in a certain sense)
-isomorphic to procedure-spaces which are more purely logical,
-or employ pure-functional type systems.  The `q.isomorphism` relevant
-here, I am arguing, eliminates semantic and simulative structures
-that make procedural models effective constructions conveying
-the organization and behavior patterns of complx, real-world
-phenomena.  On this theory, procedural modeling is a more
-effective tool for representing real-world systems than
-are computing environments built more mchanistically from
-predicate logic.
+I have argued, however, that
+unless entrenched as idiomatic phrases adjective-noun pairs
+like `i.hot coffee` or `i.buttered toast` should be read
+as grammatical complxes and accordingly (in my theory) as junctures
+between distinct cognitive processes.  On the other hand, I argued
+that `q.instant coffee` was effectively entrenched `i.because`
+there is no simplistic concepual unity between `q.instant` and
+`q.coffee`/, which makes it harder to hear the phrase as descriptive.
+Instead, the semantics of that particular adjective-noun
+connection are circuitous and a little hyperbolic: `q.instant`
+coffee is coffee as a substance (not a drink, in that state)
+from which coffee the drink can be quickly (but not
+instantaneously) prepared.  There is a lot going on the semingly
+simple `q.instant coffee`/: the shift from coffee-as-substance
+to coffee-as-drink; the `q.instant` exaggeration.  In this
+case, the adjectival modification has `i.so many` moving
+parts that, I'm inclined to argue, it is hard to cover the
+whole scenario with a dscriptive phrase; which in turn
+creates selective pressures for some pseudo-lexical unit
+to emerge (which turned out to be `q.instant coffee`/)
+as a mnemonic for the whole conceptual multiplex.  Indeed
+conceptually intricate wholes tend to quickly acquire
+pithy conventional nominalizations simply
+for rhetorical convenience (`q.Brexit Negotiations`/;
+`q.Quantum Gravity`/; `q.International Transfer
+Window`/; `q.\#metoo`/).
 `p`
 
 `p.
-Interestingly, however, the predominant contemporary
-paradigms for modeling real-world information systems %--
-particularly what has come to be called the `q.Semantic Web`
-%-- is built on a framework of description logic and
-`q.knowledge graphs` rather than (at least except very indirectly)
-anything that could be called `q.procedural data modeling`/.
-There is, of course, a robust ecosystem of network-based
-code-sharing that provides a viable infrastructure for
-a more procedural data-sharing paradigm.  To illustrate the contrast,
-consider the problem of biomedical data integration: of
-merging the information known to two different mdical entrprises,
-as when a patient moves between two different hospital systems.
-We can assume that each hospital uses a different set of software
-tools to store patient records and manage data from their various
-secondary or constituent sources (diagnostic labs, specialized
-departments, outside clinics, etc.).  Such multi-faceted data then
-needs to be translated from formats native to the prior hospital's
-software to formats needed by the new hospital.
+Notwithstanding these variations, I still find a certain logic
+in the relation between phenomenological unity and semantic
+entrenchment.  Perceptually integrated wholes may correlate
+with linguistically aggregate constructions insofar as there
+is a transparent logical destructuring in the perceptual
+unity: in the case of substance-attribute pairs (like
+`q.hot coffee`/) %-- deferring in the phenomenological
+context to Husserl's account of dependent moments %-- there
+is a basically unsubtle distinction between an underlying
+concept (like coffee) and the qualities which are its
+mode of appearance as well as conceptual predicates (like
+hot, cold,  black, or light, describing sensory properties
+innate to the experience of a coffee-token as well as
+state-reports that can be propositionally attributed to it).
+Although the minimal sensate intention of the coffee and
+the predicative disposition toward ascriptions like `i.black`
+and `i.hot` are consciously intertwined, surely I am aware of
+a logicality in experience that gives the sensate and predicative
+dimensions different epistemic status.  I don't think of
+my experience of the coffee's being hot as just a hot sensation
+qua medium of my sensorily apprehending the coffee, but rather as
+the sensate mechanism by which I observe the apparent fact that
+the coffee is hot, as a state of affairs and not just as
+subjective impression.  We are constantly extrapolating our perceptual
+encounters to propositional content along these lines.
 `p`
 
 `p.
-Such data-intgration problems tend to be conceptualized in one
-of two ways.  One approach is to seek a common reprsentation,
-or an overarching unified model, which can reconcile structural
-differences between the two systems.  If both hospitals use the
-same biomedical `q.Ontologies`/, for example, then those Ontologies
-serve as a logical paradigm through which the distinct systems can
-be bridged.  In effect, structural differences between the systems are
-treated as superficial variations on a common or unified
-logical `q.deep structure` %-- analogous to translating between
-natural languages by mapping sentences to a propositional core.
-Indeed, the field of `q.Ontology Engineering` can be seen as a
-way of marshaling abstract logic into a form that is practically
-useful for information storage and extraction, in open-ended
-environments where data may be aggregated from many heterogeneous
-sources.  The term `q.Ontology` in this context is not wholly
-unrelated to its philosophical meaning, bcause `q.knowledge
-engineers` assuming that the primordial structuring paradigms
-of such `q.universal` logical systems are relations and
-distinctions investigatd by the philosophical ontological tradition
-%-- substance and attribute, part and whole, time-point vs.
-time-span, spatial region vs. spatial boundary, subtype and
-supertype, and so forth.  Abstract Ontological systems are
-then formalized into logical rules that provide an
-axiomatic core %-- sometims called `q.Upper` Ontologies
-%-- which are then extended via empirical models
-or `q.domain-specific` rules to create Domain-Specific Ontologies
-used to integrate data in concrete enterpris/scientific fields
-(medical information, government records, and so forth).
+As such, I contend such an (in some sense) innate
+perception-to-predication instinct grounds the procedural
+slicing of linguistic processes: `i.hot coffee` retraces in a 
+linguistic construction the logical order of a coffee perception
+which on one level is a raw perceptual encounter but is simultaneously
+a predicative attribution.  `q.Hot coffee` denotes a substancs that
+can be experienced in the mode of a base concept (coffee)
+which is given predicative qualification (the coffee `i.is` hot).
+The fact that there may not be a noticed temporal gap
+in `i.experience` between the sensate perception and the
+epistemic posture does not preclude a certain logical
+antecedent-subsequent ordering: the concept `q.coffee` is the
+predicative base for my propositional attitude that what I
+am dealing with here is hot coffee, not
+hot-sensations-disclosing-coffee or coffee-I-experience-as-hot
+(but who knows, maybe I'm hallucinating) or any other artificial
+skeptifying of my actual experience, which is of raw perception
+pregnant with propositional content.
 `p`
 
 `p.
-The overarchong paradigm of such Ontology-based integration
-is the idea of a logical model that recognizes superficial
-differencs between incompatible (or at least not fully
-compatible) data sources.  An alternative approach to data
-integration problems is to treat these as issues of
-procedural capability.  In order to import data from one
-hospital into a second hospital system, for example, assuming
-their respective software and databases are at least somewhat
-incompatible, you need to perform certain procedures that translate
-data from the first format to the second.  Insofar as this is
-possible, the two software systems gave a certain procedural
-synergy: the capabilities of the first system include exporting
-data in a format the second can use, and the capabilities of the
-second system include integrating data presented in formats that
-the first can export.  This synergy does not need to be theorized
-in terms of an overarching logical ur-space which both
-systems indirectly manifest; instead, it reflcts how some
-subset of the overall procedural network germane to each
-respctive software system includes %-- either by
-deliberate cooperative enginering or because the two
-systems are guided by similar standards and technical orientations
-%-- procedures on the two ends that can be aligned in terms
-of the kind of data and data-formats they produce and/or consume.
-In short, targeted (and potentially cooperatively-engineered)
-procedural alignments %-- rather than overarching logical
-commonalities %-- form the bedrock of data integration.
+So I wish to justify claims that (non-entrenched) phrase 
+complexes like `q.hot coffee` are unions of disjoint cognitive
+processes by noting that while such phrases evoke a certain perceptual
+unity, they evoke a `i.kind` of unity
+which we habitually regard `i.conceptually` as divided into
+sensate givenness founding epistemic attitudes.  Cognitive
+processes are not exclusively perceptual; they are
+some mixture of perceptual and conceptual (and
+enactive/kinaesthetic/operational).  A perceptual unity can
+cover two conceptual aspects, like a sheet covering two
+mattresses.  So the perceptual unity of hot coffee can
+become the conceptual two-step of coffee as substance
+and hot as attribute; committing this unity to
+cognition as an overarching lifelong faculty involves registering
+a thought-process of coffee as a substance which can, in acts of
+logical predication, be believed to be hot or cold, black or
+light, etc.  The apprehension of the substance is a different
+cognitive process than the predication of the attribute, in terms of
+how these mental acts fit within our epistemic models, even if
+these two processes are experientially fused.  Typically we see the
+coffee before we touch or taste it, so already the coffee has a logical
+status apart from the heat we predicate in it.
 `p`
 
 `p.
-These contrasting paradigms are not only theoretical.
-Computer scientists hafve actually tried to promote
-data sharing and data integration to improve governance,
-health care, urban infrastructure (via `q.smart cities`/),
-sustainable development, and so on.  Insofar as we see data
-integration in terms of Ontology Engineering, these
-practical goals can be met with the curation and publication
-of formal Ontologies that can guide software and database
-development.  Data sharing is then driven by Ontological
-alignment %-- the Semantic Web, for example, designed
-as an open repository of raw data annotatd and structured in accord
-with publishd Ontologies, data which can bereusedand integrated into
-different projects more readily because it adopts these published
-models.  On the other hand, insofar as we see data sharing in terms
-of `i.procedural alignment`/, we prioritize th curation and
-publication of procedure implementations, in the form of software
-libraries, open-source code repositories, and other building-blocks
-of modular software design.  Consider again the case of data
-integration between two hospitals: to integrate data between the two,
-programmers may need to implement special `q.bridge functions` that
-reconcile their rspective formats.  This implementation is
-simplified insofar as the respective software systems are well-organized
-and transparent %-- so that programmers can examine inport and
-export functions in the two code bases and write new procedures,
-extending thir respective capabilities, so that import functionality
-on one end can be aligned to export functionality on the other.
-These new procedures can then be shared so that similar
-data integration problems %-- for instance the first
-hospital sharing data with a third %-- can be solved
-more readily, reusing some of the code thereby developed.
-This approach to data integration emphasizes transparency,
-modularity, and code-sharing.
+Likewise, even if the black color is inxtricable 
+from our perceiving (apart from
+odd situations where we drink the coffee without looking at it),
+we know the color will change if we add milk (even if just in
+principle because, preferring black coffee, we don't actually do so);
+so we know the coffee has a logical substrate apart from its color
+too.  All of this ideation is latent in the coffee-perceptions
+notwithstanding whatever perceptual unities we experience that
+cloak logical forms like substance/attribute under the inexorable
+togetherness of disclosure (the phenomenological impossibility of
+spatial expanse without color, say).  In short, disjoint
+cognitive processes can be required to reconstruct a perceptually
+unified situation or episode, insofar as wec are not just living
+through the episode but prototyping, logically reconstructing,
+signifying it %-- the perceptual unity in the moment does not
+propagate to procedural atomicity in absorbing the episode into
+rational exercises.
 `p`
 
 `p.
-Rather than seeing the Semantic Web as a network of raw data
-conforming to published Ontologies, the more procedural
-perspective would see endeavors like a Semantic Web as driven
-by code sharing: open repsoitories of procdural
-implementations that can be used to reconcile
-data incompatibilities, pull data from different sources,
-document data structure and representation formats, etc.
-Decentralized networks like the Semantic Web would then
-be characterized by the free exchange of procedural
-implementations, so that enginers can pull procdures providing
-different capabilities togther, to assemble fully-featured
-software platforms.  Code libraries would play
-a homogenizing role in this paradigm analogous to
-Ontologies in the Semantic Web.  And, indeed, there
-exists a mature and sophisticated technical infrastructure
-for publishing software componenrs and maintaining
-code repositories, forming the productive underbelly
-of the Open-Source ecosystem (`q.git` version control, the
-GNU Compiler Collection, Linux distributions, etc.).
-However, the Semantic Web and Open Source development
-communities are largely separate, apart from the practical
-given that many Semantic Web technologies are distributed
-as Open-Source software.  Despite the `i.practical`
-adoption of Open-Source norms, the Semantic Web community
-has arguably not engaged the Open-Source community
-at a deeper theoretical level, in terms of how th curation
-of public, collaborative code libraries can promote
-data integration analogous in effect to (but arguably
-semantically more accurate than) Semantic Web Ontologies
-%-- in light of critiques that the logical intuitions
-behind the Semantic Web create a distorted and
-oversimplified theory of what semantics is all
-about (in the words of Peter G\"ardenfors,
-`q.The Semantic Web is not very Semantic`/).
-`p`
-
-`subsection.Phenomnology and the Semantic Web`
-`p.
-These questions bear directly on Phenomnology, because
-philosophers in the phenomenological tradition have directly
-influenced the evolution of the Semantic Web %-- notably
-Barry Smith, who has both published sophisticated
-theoretical work on Ontologies in the Semantic Web sense
-and also spearheaded practical initiatives like the
-OBO (Open Biological and Biomedical Ontology) Foundry.
-The OBO Foundry emerged in the mid-2000s, on the heels
-of a renewed interest in Phenomnology as a philosophical
-basis for Cognitive Scienc and other practical/technical
-disciplines, like knowledge engineering.  It is not
-hard to see practical artifacts like the OBO system as
-concrete realizations of theoretical goals articulated
-in volumes such as 1999's `i.Naturalizing Phenomnology`/.
-This association is not only at the level of scholarship
-%-- the academic papers describing OBO, for example --
-but also the design and organization of Semantic Web tools like
-the OBO Foundry, as technologies and platforms.
+Experience, then prsents `i.both` perceptual unities and
+cognitive-propositional multiplicity; language can inherit
+both holism on the perceptual side and compositionality
+on the rational side, even in a single enactive/perceptual
+episode.  Depending on how we via language want to
+figure and express experience, we can bring either unity
+or compositionality to the fore.  Our linguistic choices
+will evoke perceptual unity if they select entrenched word-senses
+or quasi-lexical forms; they will evoke compositionality
+if they gravitate toward compound phrases and complex,
+relatively rare lexicalizations and modes of expression.
+To the degree that we are interested in a
+cognitive-phenomenological `i.semantics`/, we can attend
+to the first part of this equation, to how the understood
+atomicity of a word sense or a conventionalized phrase often
+suggests an object or phenomenon consciously apprehended as
+an integral whole; we can trace phenomenologically the
+apperceptive unity that seems to drive the linguistic
+community's accepting lexical atoms in this sense.
+Conversely, to the degree that we are interested in a
+cognitive-phenomenological `i.grammar`/, we can attend to how
+logically composite predication emerges even within
+perceptual unity, because our encounter with phenomena is
+not (save for exotic artistic or meditative pursuits) the
+`q.dasein` of irreflective sensory beings immersed in a
+world of pure experience but the deliberate action of
+epistemic beings carrying (modifiable but not random)
+propositional attitudes to perceptual encounters.
 `p`
 
 `p.
-Seen in those terms %-- and if we restrict attention to work
-done by scientists like Barry Smith and his colleagues who are
-actively enagaged in both the phenomenological and
-computer-science communities %-- Semantic Web technology suggests
-a paradigm wherein `q.Naturalizing` Phenomenology involves
-isolating logical structures which are at once essential
-to modeling empirical data and also emerge organically from
-phenomenological accounts of perception and cognition
-%-- that is, capturing the logical order of our experiencing
-the world as well as of the facts experienced.  A case in point
-is formalizing systems of `q.mereotopology` %-- combining
-the mereological account of part vs. whole with `q.topological`
-models of spatial continuity, locality, and bounday %--
-which reflect both perceptual schema and information gestalts.
-So one the one hand the fusion of mereological and topological
-relations gives us a vocabulary for describing how we
-experientially apprehend spatial forms %-- the continuity,
-regionality, intersections, and disjunctions between
-visual (and sometimes tactile) elements that
-gives logical articulation to visual/tactil sense
-data (never experienced as `q.raw` sensation sinc we fundamentally
-experience space and visual continuity in these structured forms).
-Meanwhile, on the other hand, Mereotopology provides a
-semantic matrix for representing facts and relations in biological,
-geographical, and other scientific data, so it serves a
-practical information-management role.  In short, isolating
-logical gestalts and then codifyung them in practically useful
-forms serves to `q.Naturalize` phenomenology by anchoring
-phenomenological reflection in applied science.
+Modeling grammar as a coordination between cognitive processes may
+be an idealization, precisely becaue the compositive and integrative
+faces of consciousness are two sides of the same
+coin: it's not as if we work through a thought of
+`q.coffee` or `q.toast`/, abstract and without sensory
+specificity, noticeably prelude to conceived/perceived
+attributes like `q.hot`/, `q.cold`/, or `q.buttered`/.
+But we can still ascribe to linguistic-understanding
+processes an idealized, `q.as if` temporality, treating the
+elucidating of a sentence as a sequence of procedures leading from
+bare concepts to well-rendered logical tableau,
+suffused with some level of descriptive and situational
+particularity.  So we go from `i.coffee` to `i.iced coffee` to
+`i.butterred toast and iced coffee` to `i.snacking on
+butterred toast and iced coffee`/; each link in the chain
+stepping up toward propositional totality.
 `p`
 
 `p.
-The general implication of this `q.Naturalizing` strategy
-is that phenomenology becomes naturalized, or reconcild
-with the physical sciences, insofar as structures of consciousness
-can be aligned with logical systms.  This strategy seems to extend
-beyond just the Semantic Web projects I have highlighted; it is
-likewise evident for example in Kit Fine's logical
-mereology in Barry Smith and David Woodruff Smith
-`i.Cambirdge Companion to Husserl` (`q.Part-Whole`/,
-pp. 463).  Indeed Husserl himself invites us to consider the
-logical formalization of phenomenological systems in works
-like the `i.Formal and Transcendental Logic`/, which appears
-to suggest that human conceptual systems are an even
-more refined manifestation of logical systems than are
-`q.formal` logics which get entangled in model-thoretic
-problems like the Lowenheim-Skolem thorem.  In other words,
-systems of formal logic are codifications of a mental order
-and therefore natural cadidates for a technical representation
-of the mental realm in its structure and specificity.
+My point is not that the logical form of the 
+sentence is composed from
+logically primitive and abstract parts, which is fairly trite;
+my point is that such logical composition is only apparent
+after a pattern of cognitive integration
+that is more subtle and exceptional.  Extra-mentally, buttered
+toast is just toast with butter on it, a fairly simplistic
+logical conjunction.  Read as a baton passed between
+two acts of mind, however %-- conciving toast and then conciving
+it buttered %-- the conjunction is more elaborate;
+the cognitive resources of `q.buttered` are not just
+`q.something with butter on it` but the implication of a sensory
+summation (the flavor, color, scent) and operational narrative
+(we have seen or performed the deliberate act of applying the
+butter).  Similarly a person dressed up is not just
+someone whose torso is encircled by articles of clothing; a
+barking dog is not just an animal making random noises;
+a stray cat is different from a lost cat.  In their
+interpenetration, cognitive processes develop (in the
+photographer's sense) narrative
+and causative threads that are latent in worldly situations
+but reduced out of logical glosses; that is why it
+seems incomplete, lacking nuance, or
+beside the point to explicate semantic meanings in logical
+terms, like `q.bachelor` as `q.unmarried man` (we can
+certainly imagine a sentence like `q.My best friend
+has been married for years but he's still a bachlor`/,
+meaning he still has the habits and
+attitudes of his single days).
 `p`
 
 
 `p.
-However, we can also observe that Husserl was writing at a time
-when abstract logic was still the preeminent phenotype for
-systematic exposition of formal structures in general
-%-- this was before computer programming and even before
-mathematical developments like Category Theory.  In the
-first half of the last century, someone hoping to
-create a formal and systematic representation
-of cognitive processes would gravitate toward symbolic
-logic simply because mathematicians and philosophers
-at the time followed the general intuition that
-`i.any` formal structure was essentially characterized by
-its logical/axiomatic foundations.  A century later,
-formal logic has been displaced from the germinal origins it
-was once assigned.  For mathematicians, logic itself is
-revealed to be a kind of emergent system that depends on
-Categorial definitions like limits and colimits, and can
-vary across Categories %-- there are different logics
-for different kinds of Categories.  As such it is not
-logic itself but the properties and contrasts between
-Categories which is the truly primordial foundation
-of logico-mathematical thought.  A contemporary
-logico-mathematical formulation of phenomenology
-may therefore try to establish a Category-Theoretic
-grounding rather than a logical one as ordinarily understood.
-A case in point would be how Jean Petitot situates
-phenomnological analysis in certain soecific genres of Categories,
-like sheaves and presheaves, in his `q.Morphological Eidetics`
-chapter in `i.Naturalizing Phenomenology` and elsewhere.
+A theory of sentences building from conceptual
+underspecification to logical concreteness does
+not preclude there being different scales
+of specificity.  `q.I snacked on toast and coffee`
+is just as acceptable as `q.I snacked on buttered toast
+and iced coffee`/.  The communication conveys as much
+situational detail as warranted in the conversational,
+pragmatic context.  Language always has the `i.capability` to
+push further and further into specificty; how
+exhaustively the language user avails of this
+capability is a matter of choice.  As theorists of language we
+must then analyze how language possesses the `i.latent` capacity
+to draw ever finer pictures; the adjectival `i.buttered` toast and
+`i.iced` coffee takes the granularity of signifying at one
+level (the level of the `q.I snacked on toast and coffee` sentence)
+and layers on (or really layers `i.within`/) a yet more
+specific level.  The architecture how this happens is
+well addressed by type-theoretic mehods (both coarse and mid-grained).
 `p`
 
-`p.
-Petitot's and Barry Smith's formalizing projects were parallel
-and collaborative to some extent.  Maxwell James Ramstead
-in a 2015 master's thesis reviews the history elegantly:
-
-`quote,
-Now, the `q.science of salience`
-proposed by Petitot and Smith (1997) illustrates the
-kind of formalized analysis made possible through the direct
-mathematization of phenomenological descriptions.
-Its aim is to account for the invariant descriptive
-structures of lived experience (what Husserl called `q.essences`/)
-through formalization, providing a descriptive geometry of
-macroscopic phenomena, a `q.morphological eidetics` of the
-disclosure of objects in conscious experience (in Husserl's
-words, the `q.constitution` of objects).
-Petitot employs differentiai geometry and morphodynamics
-to model phenomenal expenence, and Smith uses formal structures from
-mereotopology (the theory of parts, wholes, and their boundaries)
-to a similar effect.
-`quote`  Except, there are interesting
-contrasts between the Cognitive-Phenomenological
-adoption of mereotopology
-(by Barry Smith and also Roberto Casati, Achille C. Varzi,
-Kit Fine, Maureen Donnelly, etc.) %-- which
-stays within a more classical logical paradigm
-%-- and Petitot's Morphological Eidetics, which
-is more Category-Theoretic.
-`p`
 
 `p.
-Meanwhile, contemporary formalizations of phenomenological
-analyses can also gravitate toward a more concrete and
-computational framework %-- simulating cognitive
-processes via software or comparing artificial
-constructions of perceptual objects (via Virtual Reality,
-3D graphics, 3D printing, robotics, etc.) to lived
-exprience.  In particular, graphics engineers have a rich theory
-about how to create realistic (albeit not truly life-like) 3D
-models and scenes.  The mathematical and computational
-elements in this theory %-- triangular, quadrilateral, and
-polygonal meshes; shader algorithms; `q.NURBS`
-(Non-Uniform Rational Basis Spline) surfaces; textures and
-`i.uv`/-mapping; camera matrices; diffusion and stochastic
-processes %--  create a formal model of perceptual phenomena
-insofar as these can simulated `i.to a close approcimation`/:
-visual phnomena artificially built with these techniques
-can be `i.almost` realistic.
-`p`
-
-`p.
-The gaps between such
-`q.virtal` scenes and real life may suggest that there are
-additional facets suffusing `q.real life` perception, or
-even that despite their realism the mathematical
-building-blocks of CGI-like scenes
-are fundamentally different from the formal
-structures governing nurophenomenological perception.
-But nevertheless the almost life-like realism that
-`i.can` be achieved via Computer Graphics is a data-point
-that phenomenology should acknowledge: that a
-perceptual world built out of certain rigorously
-mathematical constituents can feel almost
-lifelike when apprehended as if it were
-a real visual-perceptual surrounding.  In
-particular, Computer-Generated Imagery can evoke the
-same embodied engagement and intentional patterns as
-non-artificial, ambient perception so long as
-we accept a certain `q.suspension of disbelief`/, or
-mentally adjust to the phenomenological limitations
-of seeing visual tableau on a two-dimensional screen
-%-- analogous to watching movies or television.
-Despite the phenomenological chiasma
-of directing visual attention to a 2D screen %-- it feels
-`q.not quite right` %-- we can still become engaged and
-largely immersed in the visual scenes before us; which means
-that full phenomenological realism is not prerequisite for
-our intentional comportment toward visual (and auditory)
-phenomena.
-`p`
-
-`p.
-We can then observe that constructed scenes
-built entirely from mathematical carry comparable
-potential for intentional engagement.  Moreover, Panoramic
-Photography and Immersive Visual Reality present another
-genre of phenomenological immersion that transcends the
-limitations of the 2D screen %-- though still without
-full realism, because however lifelike the visual
-content we may perceive with, say, 3D
-goggles, we still are not engaging tactilely and
-kinaesthetically with the world in the usual ways.
-`p`
-
-`p.
-In short, one route toward a formal framework for
-elucidating perceptual-phenomenological content is to
-examine realistic simulations of visual contents as
-computational artifacts %-- not in terms of abstract
-formulations (logical or otherwise) but in
-terms of concrete computer code and software.  With
-reference to Merotopology, for example, we can
-contrast the logical groundwork set out by
-Barry Smith (for example) with the differential-geometric
-and category-theoretic landscape considered by
-Jean Petitot `i.and also` a more `q.experimental`/,
-software-driven intuition associated with,
-for example, Virtual Reality research.  Looking at
-mereotopology in particular, this more computational
-approach can examine how part-whole relations
-are created within CGI and Computer Aided Design
-by mesh alignment or texture mapping, or how
-texture and diffusion algorthms create effects of material
-continuity and locality.  In this case mereotopological
-notions are not embedded in logical systems %-- or
-even, from a computational perspective, in formal
-Ontologies %-- but rather latent in graphics code.
-`p`
-
-`p.
-For scholars pursuing a `q.Naturalized` phenomenology, then, we
-(in the 2010s and 2020s) have several avenues to choose from,
-including logical formalism (including as practically leveraged
-in the Semantic Web) but also mathematical
-formalization (as with Category Theory and Differential
-Geomtry) and, also, computationally.  Computer
-Aided Design and Computer Generatd Design point to a
-theory of formal structures producing life-like
-(if not perfectly realistic) perceptual content.  Analogously,
-computational models of linguistic structure can help
-represent the organizing principles of our reasoning
-toward language understanding %-- even if these formal models
-are not proposed as direct simulations of natural
-linguistic cognition.
-`p`
-
-`p.
-Simultaneously, real-world applied projects
-%-- like the Semantic Web, Virtual Reality,
-or CGI/CAD technology %-- can be seen as practical
-test-beds for the realism and analytic potential
-of formal-phenomenological frameworks.  In some
-cases, like the OBO Foundary, the link between
-applied technology and Phenomnology is explicit; in
-others, as with VR and CGI, this link
-is more implicit and thematic (but still
-addressed by interdisciplinary research grounded in
-phenomenology and Husserl scholarship).  But in any
-case technological experience retroactively seems to
-shape the direction of phenomenological research,
-while at the same time phenomenology has, for some
-researchers, provided a metatheortic and
-metaphysical guideline.
-`p`
-
-`p.
-Here the Semantic Web presents an interesting case-study,
-because the manifestation of phenomenological themes
-(e.g., Mereotopology) in a practically
-useful resource like Biomedical Ontologies suggests an
-`i.ex-post-facto` vindication of `i.logical` formalization
-as a `q.Naturalizing phenomenology` project.
-On the other hand, critiques of the Semantic Web
-%-- which have emerged, among elsewhere, from Cognitive
-Linguistics %-- can accordingly be studied as potntial
-indications of how classical logical formalism is
-limited in the phenomenological context.  Peter G\"ardenfors,
-for example, has critiqued the Semantic Web on thoretical
-grounds while also developing a model of Natural
-Language semantics (via Conceptual Space Theory)
-that we may find more phenomenologically realistic than
-the Semantic Web's (as G\"ardenfors puts it)
-`q.syllogistic` paradigms.  In this paper, I propose a
-critiquefrom a more `q.procedural` angle.
-From my perspective, the foundational characteristic of
-`q.information systems` is the existence of `i.procedures`
-(say, cognitive and/or computational procedures) which `q.act on`
-(aggregate, interpret, reshape) the data at hand.  I believe
-it is a fair critique to say that Semantic Web technology
-has unduly discounted the procedural dimension of
-information management %-- not only in a thoretical
-sense, but also quite practically.  For example, the
-OBO Foundary does not include a mechanism for code sharing
-with the goal of curating software libraries that
-implement atatypes conformant to the various
-published Ontologies.  In the Semantic Web paradigm,
-defining logical formalizations of standardized concept-systems
-is considered orthogonal to implementing software
-components where these formal criteria ar eralized in practic.  In
-short, `i.logical specification` is trated as distinct
-from `i.implementation`/.  This is not a universal
-approach: many trvhnological standards are published
-at least in part via `q,reference implementations` which demonstrate
-standardized concepts and guide other implementations,
-helping to enforce compatibiloty btween different
-software components.  Moreover, code sharing
-and code reuse can promote interoperability no less effectively
-than alignment relative to logically defined standards.
-So there `i.are` technological trends that emphasize
-`q.procedural alignment` and code-sharing as important
-contributors to data integration.  However, these branches
-of technology do not appear to have exerted a strong intuitive
-influence on the Semantic Web.
-`p`
-
-`p.
-I argued above that technology has a retroactive influence
-on phenomenology, or at least on the threads of research
-that follow the `q.Naturalizing` project and the
-reconciliation of phenomenology with Analytic Philosophy.
-Even if this effect is rather modest, it still bears on
-the topic that is my primary emphasis here, namely
-the integration of phenomenology with Cognitive Grammar.
-One of the most prominent practical domains that has
-influenced phenomenology has been the Semantic Web, insofar
-as Semantic Web technology (via Ontologies) show
-some evidence that formal models influencd by phenomenology
-can be practically useful, which is one criteria to
-suggest that the models have philosophical or epistemological
-merit.  On the other hand, Cognitive Linguists have tended
-(if anything) to be critical of the Semantic Web (in
-contrast to other linguistics branches, which are generally
-sympathetic to Semantic Web paradigms and incorporate
-Ontologies into Computational Linguistics software).
-So a potentially fertile ground for collaboration between
-phenomenology and Cognitive Linguists has arguably been
-overlooked insofar as the respective communities have
-taken competing lessons from th succsses and
-limitations of the Semantic Web, particularly how
-the Semantic Web leverages classical logical formalisms
-(particularly Description Logics) rather than
-`q.procedural` and/or Category-Theortic foundations.
-`p`
-
-`p.
-This problem is not intrinsic to the Semantic Web as a
-data-sharing platform, however, only to the
-paradigms through which the current Semantic Web
-has been conceptualized and implmntd.  There are competing
-intellectual frameworks that embrace parallel goals but
-present alternative technical foundations, and phenomenology
-would benefit from thematizing these frameworks in a role
-analogous to the Semantic Web, both a practical application
-and a retroactive intuition-guide.
-`p`
-
-`p.
-A case in point would be
-the OpenCog project, that presents a Hypergraph-based modeling
-paradigm related but technically distinct from Semantic Web
-labeled graphs (one which is also consistent with
-procedural-network models) and which also embraces a specific
-linguistic model (based on Link Grammar).  Philosophically,
-OpenCog appears to celebrate a vision of Artificial
-General Intelligence which I have already flagged as problemmatic;
-underestimating the context-sensitivity
-and empathic intersubjectivity intrinsic to human cognition
-and intelligence (and difficult to simulate with machins).
-Nevertheless, formal models designed to `i.replicate` intelligent
-behavior can still be useful as structural `i.models` of cognitive
-phenomena, even if we believe in a metaphysical gap between the
-model and the reality.  Implementing software on the basis of
-explanatorarily useful cognitive models does not
-guarantee that the software will realistically approximate human
-cognition, but articulating and fine-tuning the models
-themselves can notwithstanding be a valuable exercise.
-`p`
-
-`p.
-In the case of OpenCog, the impetus toward `q.Artificial
-General Intelligence` has motivated that project to explore
-cognitive models that coalesced around several key structures,
-including Directed Hypergraphs, Link Grammar, and
-(in my terms) Procedural Networks (as unerlying mols
-for Information Spaces).  This aggregate of theories
-can be juxtaposed to Description Logic, Directed Labeled
-Graphs, and formal Ontologies as the groundwork for
-the Semantic Web.  I'd also argue that the OpenCog model
-can potentially be a technological improvement over the existing
-Semantic Web, in the sense that semantic networks built around
-OpenCog-like structures can be more effective `visavis; several
-important practical concerns, like application design,
-data integration, and Human-Computer Interaction.
-These comments do not necesarily apply to the actual OpenCog
-software %-- the major OpenCog component, `q.AtomSpace`/,
-is in a practical sense harder to compile and use than most
-Semantic Web components %-- but instead to a
-potential standardization of the core OpenCog data structures
-as modeling paradigms that can be adopted by heterogeneous
-information sources and data-sharing initiatives.  In
-this eventuality, the OpenCog model can provide a
-test-bed for applied phenomenology that stands on a
-different formal foundation %-- one less inured to
-symbolic logic.
-`p`
-
-`p.
-Along these lines, then, I contend that a circle of
-data models analogous to the OpenCog architcture can provide
-a formal structuration for phenomenological accounts
-of linguistic processing and information spaces comparable
-in analytic roles to 3D modeling primitives in a phenomenology
-of Perception.  On one side, mathematical elements like
-mesh geomtry, NURBS surfaces, and texture mapping/generation
-point toward formal theories of perceptual `i.cognition`
-by allowing for the construction of perceptually
-realistic `i.scenes`/.  These mathematical elements are
-building-blocks for an (artificial) perceptual `i.content`
-rather than (as far as we know) actual neurocognitive
-subvenants of perceptual `i.experience`/, but their
-formal specificity still gives us material to
-work with when trying to consolidate a `q.scientific`
-phenomenological research programme.  Analogously,
-I suggest that OpenCog-like structures such as
-Directed Hypergraphs, Procedural Network models, and
-Link Grammar are potential building-blocks for formal
-models of Cognitive Linguistics and `q.information
-management` %-- for our procssing of both linguistic
-content and the contxts and situations wherein language
-artifacts are grounded.  In other words, these
-procedural/hypergraph/link-grammar structures can model
-linguistic `q.deep structure` and linguistic environments
-by analogy to how mesh geometry, texture mapping,
-and so forth model 3D spatial primitives and
-visual-perceptual environments.
-`p`
-
-`p.
-This idea is still somewhat hypothetical because the
-`q.procedural/hypergraph/link-grammar` nexus has not
-been consolidated into a general to the same degree
-as a common vocabulary of 3D modeling primitives has
-been incoporated into disparate software and research
-projects.  Having said that, Link Grammar itself does
-have standing as a distinct and institutionally
-circumscribed body of research, so it is a reasonable
-starting point for integration with phenomenological
-and cognitive-linguistic approaches, an integration
-which can then be extended to related structures like
-Procedural Networks and Directed Hypergraphs.
+Note that `q.buttered` in `q.buttered toast` is in the current
+examples not absolutely essential; the sentences
+without this qualification are similar
+in meaning to the sentenes with it.  This suggests that if the
+adjectives designate (or solicit) cognitive processes that
+build upon some other (logically) prior process, the anterior
+process can also suffice on its own, at least in the context of
+these example sentences.
 `p`
 
 `p.
 
 `p`
+
+
+
+
+

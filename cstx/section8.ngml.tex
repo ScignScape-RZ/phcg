@@ -1,610 +1,808 @@
-\section{Cognitive Grammar and Type Theoretic Semantics}
-\p{The emergence of Dependency Grammar as a \i{computational} approach has some broad
-implications.  The historical preference for phrase-structure foundations  \mdash{} among
-those who actually build Natural Language Processing code libraries, in disciplines
-related to Artifical Intelligence \mdash{} arguably reflects how phrase structure more
-cleanly models a theory of linguistic meaning and signification based on
-\q{symbolic logic} \mdash{} a theory that the \i{meaning} of a complete and self-contained
-linguistic expression is the logical state of affairs which it asserts or in other
-ways connotes.  Correlated with this assumption is the idea that phrase structure
-logically transforms its constituent parts; so from the word \q{students} we
-can form the phrase \q{many students} to designate a kind of plurality \mdash{} a plural
-set but also, more specifically, a set which is reasonably large relative to some context.
-In the hierarchical model presented by these norms, phrases subsume the roles of
-individual words and represent discrete semantic units with respect to still larger phrases.
+\section{Procedural Networks and Link Grammar}
+\p{My goal in this section is to incorporate Link Grammar into
+a phenomenological and Cognitive Grammar perspective, more
+than to offer a neutral exposition of Link Grammar theory.
+Therefore I will accept some terminology and exposition
+not necessarily originating from the initial
+Link Grammar projects (though influenced by
+subsequnt research, e.g. [expectation]).  I also
+want to wed Link Grammar to my own semantic intuitions,
+set forth earlier, that word-meanings and morphosyntactic
+interpretations should be grounded on pre- or para-linguistic
+cognitive \q{scripts} that are activated (but not
+structurally replicated, the way that according
+to truth-thoretic semantics linguistic form
+evokes-by-simulating propositional form) by linguistic
+phenomena.
 }
-\p{It is certainly true that one role for phrases is to satisfy a semantic niche \mdash{} often
-a place occupied in other (or even the same) language with single words, or vice-versa.
-The French \q{laisse tomber} translates the English \q{drop}, for example; and
-\q{parliamentarian} is a more exotic version of \q{Member of Parliament}.  There is no
-evident pattern for when a single concept is conveyed, in one language or another,
-by a single word or a multi-word phrase.  Moreover, the meanings of phrases are influenced
-by semantic conventions no less than are individual words, and they are not solely a product
-of phrase constituents.  Semantics is guided by what people need to talk and write about often; when
-events in a linguistic community call for some fairly rigid and repeatable designation for
-an important concept, the resources of language adjust to provide that role, either through a
-complete neologism, or a lexical variant \mdash{} a new usage; or the entrenchment of a phrase.
-In current events, the expression \q{Syrian Refugees} recurs when discussing people
-displaced by the Syrian civil war, and potentially other interrelated conflicts also;
-convention seems to allow that nominal \q{Syrian} Refugees don't have to be Syrian nationals.
-The meaning of the phrase is fixed by its niche in familiar discourse more than
-by its literal form.  Phrases
-exhibit conventionalization and usage pressures analogous to single words; which lends
-credance to the notion that phrases subsume the role of single words, and that the semantic
-contribution of words to sentences is determined through the phrases where they occur.
+\p{Link Grammar is, depending on one's perspective, either related
+to or a variant of Dependency Grammar, which in turn is contrasted
+with \q{phrase structure} grammars (linguists tnd to designate
+competing schools with acronyms, like \q{DG} for Dependency Grammar
+and \q{HPSG} for Head-Driven Phrase Structure Grammar).
+Link and Dependency Grammars define syntactic structures in
+terms of word-pairs; phrase structure may be implicit to
+inter-word relations but is not explicitly modeled by
+DG formalisms \mdash{} there is typically no representation
+of \q{noun phrass} or \q{verb phrases}, for example.
+Phrase structure is instead connoted via how relations
+fit together \mdash{} in \q{rescued dogs were fed}, for instance,
+the adjectival \i{rescued}-\i{dogs} relation interacts
+with the \i{dogs}-\i{fed} (or \i{dogs}-\i{were} plus
+\i{were}-\i{fed}) predication, an interaction that in a
+phrase-structure paradigm is analyed as the noun-phrase
+\q{rescued dogs} subsuming the noun \q{dogs}.  Dependency
+analyses often seem more faithful to real-world semantics
+because, in practice, phrases do not \i{entirely} subsume
+their constitunt parts.  Linguistic structure is
+actually multi-layered, where semantic and morphosyntactic
+connections resonate between units within phrases separate and
+apart from how linguistic structure is organized into
+phrasal units themselves.
 }
-\p{On the other hand, it is well established that words' contributions are not \i{wholly}
-subsumed by their surrounding phrase-structure.  The famous joke about the Holy Roman
-Empire \mdash{} or its reprise in the current line that the Islamic State is neither Islamic
-nor a State \mdash{} point to evidence that as language-users we still hear the individual
-words outside their phrase context.  To subsume a word into a phrase is also to suggest a
-particular semantic (and pragmatic, real world) interpretation, one which conversants
-may challenge.\footnote{How literally to take phrases is a notorious source of political controversy:
-recall debates about the relevance of Afghanistan for Iraq, in US policy, and
-Rudy Giuliani saying \q{There \i{is} Al Qaeda in Iraq \mdash{} it's called, \sq{Al Qaeda in Iraq}}.
+\p{Except for phrases that coalesce into pseudo-lexemes
+or proper names (like \q{United Nations} or \q{Member
+pf Parliament}), or indeed become shortened to single
+words (like \q{waterfall}), we perceive phrases both
+as signifying units and as aggregate structures
+whose detailed combinative rationale needs contectualization
+and interpretation.  In short, phrases are not \q{canned}
+semantic units but instead are context-sensitive performances
+that require interpretive understanding.  This interpretive
+dimension is arguably better conveyed by DG-style models
+whose consituent units are word-relations, as opposed
+to phrase-structure grammars which (even if only by notational
+practice) give the impression that phrases conform
+to predetermined, conventionalized gestalts.
 }
+\p{While Link and Dependency Grammars are both contrastd
+with phrase-structure grammars, Link Grammar is also
+distinguished than mainstream DG in terms of how
+inter-word relations are conceived.  Standard DG
+recognizes an assymetry between the elements in word-relations
+\mdash{} one element (typically but not exclusively a word) is
+treated as \q{dependent} on another.  The most common case is where
+one word carries greater information than a second, which
+in turn adds nuance or detail \mdash{} say, in \q{rescued dogs}
+the second word is more essential to the sentence's meaning.
+This potentially raises questions about how we
+can actually quantify the centrality of one word or another
+\mdash{} in many cases, for instance, the conceptual
+significance of an adjctive is just as trenchant as the
+noun which it modifies.  In practice, however, the salient
+aspect of \q{head} vs \q{dependent} assymetry is that any
+inter-word pair is \q{directed}, and one part of the relation
+defined as dependent on another, however this
+dependency is understood in a given case.
 }
-\p{Arguably, joking or titular cases like \q{Holy Roman Empire} can be
-relegated to thematic margins, especially if we accept formal-logical construals of
-what semantics is all about, with an \i{a priori} contrast between Semantics and
-Pragmatics, the former rooted in \i{states of affairs} and only the latter addressing
-rhetoric and usage.
-Counter to this counter-argument, however, we can observe that different phrases imply
-different degrees of \q{autonomy} to their constituents, and different degrees of
-coherence or unification into a single idea.  Some phrases act as direct substitutes
-for single concepts (like \q{Member of Parliament}) where it seems mostly historical
-accident that a phrase rather than a word emerged as the most popular; but many other
-phrases have more complex usage scanarios, including everyday expressions that don't have
-special rhetorical or sociolinguistic conventions that would make them tangential to
-semantic or syntactic analysis proper.  Moreover, many of these examples are similar to
-those used by Cognitive Grammar to challenge the syntax/semantic distinction and argue for
-\q{morphosyntactic} models as reciprocating cognitive formations, not abstract language-rules.
+\p{By contrast, Link Grammar dos not identify a head-dependent
+assymetry within inter-word relations.  Instead, words
+(along with other lexically signifant units, like
+certain morphemes, or punctuation/prosodic units) are
+seen as forming pairs based on a kind of mutual
+incompleteness \mdash{} each word supplying some structural
+or signifying aspect that the other lacks.  Words, then,
+carry with them different varieties of \q{incompleteness}
+which primes them to link up with other modls.  Semantic
+and grammatical models then revolve around tracing
+the \i{gaps} in information content, or syntactic
+acceptability, which \q{pull} words into relation
+with other words.  This approach also integrates
+semantic and syntactic details \mdash{} unlike frameworks
+such as Combinatory Categorical Grammar, which
+also treats certain words as \q{incomplete} but
+identifies word connctions only on
+surface-level grammatical terms \mdash{} Link Grammar
+invites us to explore how semantic and
+syntactic \q{completion} intersects and overlaps.
 }
-\p{For example, in Ronald Langacker's \i{Foundations of Cognitive Grammar}, the sentence
-\begin{sentenceList}\sentenceItem{} Three times, students asked an interesting question
+\p{Words can be incomplete for different reasons
+and in different ways.  Both verbs and adjectives
+generally need to pair up with nouns to form a
+complete idea.  On the other hand, nouns may be
+incomplete as lexical spotlights on the
+extra-linguistic situation: the important point
+is not that people feed dogs in general, but that
+\i{the rescued} dogs were fed prior to their rescue.
+So \i{dogs} \q{needs} \i{rescue} for conceptual
+specificity as much as \i{rescue} needs \i{dogs}
+for anchoring \mdash{} while also
+\i{dogs} needs \i{the} for \i{cognitive} specificity,
+because the discourse is about some particular dogs
+(presumed known to the addressee), signaled by
+the definitive article.  In other cases,
+incompleteness is measured in terms of syntactic
+propriety, as in:
+\begin{sentenceList}\sentenceItem{} We learned that people fed the rescued dogs.
+\sentenceItem{} No-one seriously entertained the belief that
+he would govern in a bipartisan manner.
 \end{sentenceList}
-is used to demonstrate how
-grammatical principles follow from cognitive \q{construals} of the relevant situations,
-those which language seeks to describe or takes as presupposed context.\footnote{For example, \cite[pp. 119 and 128]{LangackerFoundations},
-discussed by \cite[p. 189]{LineBrandt}, and \cite[p. 9]{EstherPascual}.
+In both cases the word \q{that} is needed because
+a verb, insofar as it forms a complete predicate with
+the proper subject and objects, cannot
+always be inserted into an enclosing sentence.
+\q{People fed the rescued dogs} is complete as a
+sentence unto itself, but is not complete as a grammatical
+unit when the speaker wishes to reference the
+signified predicate as an epistemic object,
+something believed, told, disputed, etc.  A
+connector like \q{that} transforms the
+word or words it is paired with syntactically,
+converting across part-of-speech boundaries
+\mdash{} e.g. converting a proposition to
+a noun \mdash{} so that the associated words can be
+included into a larger aggregate.
 }
-In particular, Langacker argues that \q{students} and \q{question} can both be either singular or
-plural: syntax is open-ended here, with neither form more evidently correct.  Langacker uses this
-example to make the Cognitive-Linguistic point that
-we assess syntactic propriety relative to cognitive frames and conversational context.  In this
-specific case, we are actually working with two different cognitive frames which are interlinked
-\mdash{} on the one hand, we recognize distinct events consisting of a student asking a question, but
-the speaker calls attention, too, to their recurrence, so the events can also be understood
-as part of a single, larger pattern.  There are therefore two different cognitive foci, at two
-different scales of time and attention, a \q{split focus} which makes both singular and plural
-invocations of \q{student} and \q{question} acceptable.
+\p{The interesting resonance between Link Grammar
+and Cognitive Grammar is that this perspective allows
+us to analyze how syntactic incompleteness
+mirrors semantic incompletenss, and vice-versa.
+\q{Incompleteness} can also often be characterized
+as \i{expectation}: an adjective \q{expects} a noun
+to produce a more tailored and situationally
+refined noun (or nominal \q{idea}); a verb expects
+a noun, to form a proposition.
+Analogously,when we have in discourse an adjctive or
+a verb we expect a corresponding noun \mdash{} so
+via syntactic norms language creates certain expectations
+in us and then communicates larger ideas by
+how these expectations are met.  Is a noun-expectation
+fulfilled by a single noun or a complex phrase?
+The notion of semantic and syntactic expectations
+also coordinates nicely with type-theoretic
+semantics; for example, the verb \q{believe}
+pairs with a semantic unit that can be
+interpreted in epistemic terms \mdash{} not
+any noun but a noun of a kind that can be the
+subject of propositional attitudes (beliefs,
+opinions, assertions, arguments, etc.).
 }
-\p{Supplementing this analysis, however, we can additionally focus attention directly on
-grammatical relations.  The words \q{student} and \q{question} are clearly linked as the subject and
-object of the verb \q{asked}; yet, contrary to any simple presentation of rules,
-no agreement of singular or plural is required between them (they can be singular and/or plural in
-any combination),  Moreover, this anomaly is only in force due to the context established
-by an initial phrase like \q{Three times}; absent some such framing, the singular/plural
-relation would be more rigid.  For example, \q{A student asked interesting questions} would
-(in isolation) strongly imply \i{one} student asking \i{several} questions.  So the initial
-\q{Three times} phrase alters how the subsequent phrase-structure is understood while remaining
-structurally isolated from the rest of the sentence.  Semantically, it suggests a
-\q{space builder} in the manner of Gilles Fauconnier or Per Aage Brandt
-\cite{Fauconnier}; \cite{PerAageBrandt}, but we
-need to append Mental Space analysis with theory of how these spaces
-influence syntactic acceptability, which would seem to be logically prior to the stage where Mental Spaces
-would come in play.  This complex interplay of phrase-structures
-is hard to accommodate from the grammar-hierarchy perspective.  There seems to be
-no way to break down this example sentence into a tree-like phrase hierarchy wherein each
-phrase, considering the semantic concept which it is apparently tasked to put into words,
-can be seen to function in isolation.  The mapping of the sentence to a logical
-substratum would be more transparent with a sentence like \q{Three students asked
-interesting questions}; that sentence is a more direct translation of the facts
-which the original sentence conveys.  But this \q{more logical} sentence has different
-connotations than the sentence Langacker cites; the original sentence places the emphasis
-elsewhere, calling attention more to the idea of something temporally drawn-out,
-of a recurrence of events and a sense of time-scale.  The \q{more logical} sentence
-lacks this direct invocation of time scale and temporal progression.
+\p{Kenneth Holmqvist,
+whom I discussed earlier as integrating Conceptual Space Theory
+with Cognitive Grammar, made a study of \q{expectation}
+in this or a similar sense a central feature of his
+doctoral dissertation \cite{HolmqvistDiss}; I'll point
+out that there is an implicit resonance between \i{expectations}
+and link grammar; so Holmqvist research actually potentially
+triangulates between Conceptual Space Theory, Cognitive Grammar,
+and Link Grammar.
 }
-\p{We can say that the \q{Three students} version is a more direct statement of fact, whereas
-Langacker's version is more speaker-relative, in the sense that it elaborates more
-on the speaker's own acknowledgment of belief.  The speaker retraces the steps of her
-coming to appreciate the fact \mdash{} of coming to realize that the \q{interesting questions}
-were a recurrent phenomenon and therefore worthy of mention.  By situating expression
-relative to cognitive process rather than to the facts themselves, the sentence
-takes on a structure which models the cognition rather than the states of affairs.
-But this shift of semantic grounding from the factual to the cognitive also apparently
-breaks down the logical orderliness of the phrase structure.  \q{Three times}, compared
-to \q{three students}, leads to a morphosyntactic choice-space which is
-\q{underdetermined} and leaves room for speakers' shades of emphasis.
-}
-\p{This is not an isolated example.  Many sentences can be provided with similar
-phrase-structure complications, particularly with respect to singular/plural agreement.
-\begin{sentenceList}\sentenceItem{} Time after time, tourists (a tourist) walk(s) by this building
-with no idea of its history.
-\sentenceItem{} The streets around here are confusing; often people (someone)
-will ask me for directions.
-\sentenceItem{} Student after student came with their (his/her)
-paper to compain about my grade(s).
-\sentenceItem{} Student after student \mdash{} and their (his/her) parents
-\mdash{} complained about the tuition increase.
+\p{Continuing analysis of \q{that} qua subordinator:
+the syntactic incompleteness of propositional
+phrases modified by \q{that} can therefore
+be traced to the semantic expectations
+raised by \q{believe}, and analogous
+verbs (opine, argue, claim, testify).
+The object of \i{testify}, say, is a statement
+of potential fact which we know not
+to take as necessarily true or honestly
+made (part of the nature of testimony is that
+it may be deliberately or accidentally
+fallacious).  But to properly pair with
+\q{testify}, then, phrases must be
+semantically reinterpreted as nominalizations
+of propositions, rather than as mere linguistic
+exprssion of propositional content via
+complete sentences.  The \q{epistemic}
+context transforms sentential contnt into
+nominal contnt available for further refinement:
+\begin{sentenceList}\sentenceItem{} The Trump campaign colluded with Russia.
+\sentenceItem{} Several witnesses testified that
+the Trump campaign colluded with Russia.
+\sentenceItem{} Reputable newspapers have reported that
+the Trump campaign colluded with Russia.
+\sentenceItem{} Most Democrats believe that
+the Trump campaign colluded with Russia.
 \end{sentenceList}
-On a straightforward phrase-structure reading, \q{Student after student} reduces to an
-elegant equivalent of \q{Many students}, with the rhetorical flourish abstracted away
-to a logical form.  But our willingness to accept both singular and plural agreements
-(his/her/their parents, grades, papers) shows that clearly we don't simply substitute
-\q{Many students}; we recognize the plural as a logical gloss on the situation but
-engage the sentence in a more cogntively complex way, recognizing connotions of temporal
-unfolding and juxtapositions of cognitive frames.  The singular/plural underdeterminism
-is actually a signification in its own right, a signal to the listener that the
-sentence in question demands a layered cognitive attitude.  Here again, syntactic
-structure (morphosyntactic, in that syntactic allowances are linked with
-variations in the morphology of individual words, such as singular or plural form)
-serves to corroborate conversants' cognitive frames rather than to model logical
-form.
+The grammatical stipulation that a modifier like
+\i{that} is often necessary in such formulations correlates
+with the semantic detail that the \q{claimed},
+\q{testified}, or \q{believed} content is not being
+directly asserted by the spaker as if in a
+unadorned declarative expression, as in the
+first sentence.
 }
-\p{This is not to say that phrase-structure paradigms are refuted by these examples.  Cases
-like these can be accommodated by layering new structural rules, such as
-allowing exceptions for singular/plural agreement in the presence of certain
-\q{lead-in} phrases like \q{Three times}.  It is not even accepted that these
-examples clearly favor inter-word relations (as language formalization, in preference over
-phrase-structure trees) \mdash{} cases like \q{Student after student} have
-also been used \i{against} Dependency Grammar on the argument
-that there is not a clear \q{single} word, in that phrase,
-which should be seen as linking with words elsewhere in the sentence
-\cite[pp. 400-401]{MullerBook}, \cite[p. 2]{MullerPDF}.  It
-seems arbitrary to select either \q{student}, or \q{after}, as \q{the}
-representative of the phrase to link with \mdash{} for example \mdash{} the verb
-\q{complained}; on that argument, the least arbitrary analysis is to
-treat the phrase as a whole as a single unit for purposes of grammatic
-linkage.  In short, both paradigms have potential problems with these example.
-Considering \q{Student after student} as an encapsulated phrase leaves
-the singular/plural flexibility in the continuation of the sentence unexplained
-(\q{Many students compained about \qmarkdubious{}his grade} is clearly dubious, so
-\q{Many students} is not a direct substitution). But bracketing the phrase
-when decribing the sentences' \q{linkage} leads
-to an apparently arbitrary choice when it comes time to notate the subject/verb
-linkage for \q{complained}.  I will address this particular ambiguity later;
-but for now I'll just point out that a simplistic reading of
-both Dependency and Phrase-Structure ideas seems to run aground.
-}
-\subsection{Comparing paradigms}
-\p{Since Computational-Linguistic paradigms find practical expression in code
-libraries, there are some options to assess competing theories empirically
-\mdash{} comparing libraries' speed, accuracy, ease of use, and how readily can they be
-modified in light of new research.  Arguably, however, the
-quality of a code library does not automatically reflect the accuracy of
-its underlying linguistic paradigms (as opposed to the skill, foresight, and
-resources of its programmers); not to mention that more complex analyses of
-human language may be both more correct and also harder to express in code.
-There is, in any case, no apparent consensus amongst linguists and programmers that one
-or another language theory has proven computationally preferable.  Another approach to
-theory-comparison involves considering the range of linguistic phenomena which different methods can explain, without resorting to ad-hoc compilations of exceptions and
-special cases.  Arguably, here, Dependency Grammar provides more
-straghtforward explanations.  For example, the internal structure of phrases seems to
-lend specificity and nuance to their meaning in ways that get lost when
-trying to replace phrases with logico-semantic equivalents.
-\q{Student after student} is not losslessly substitutable with \q{Many students},
-and the former phrase has a temporal and multi-tier cognitive implication which
-the latter discards.  The second phrase is compatible with \q{Many students}
-complaining \i{at one time}, as well as drawn out over time; the former phrase
-appears to clarify that the second kind of situation is the intended meaning,
-Of course, in context, the two phrases may be understood to have similar meanings;
-but this is a product of how the linguistic structure relates to its presumptive
-conversational context, not to an intrinsic semantic equivalence.  I will
-now consider these and other examples to discuss the dependency/phrase-structure
-contrast in a little more detail.
-}
-\p{The contrast between the phrases \q{Student after student} and \q{Many students}
-cannot be based on \q{abstract} semantics alone \mdash{} how the evident temporal implications of the
-first form, for example, are concretely understood, depends on conversants' mutual recognition
-of a relevant time frame.  The dialog may concern a single day, a school year, many
-years.  We assume that the speakers share a similar choice of time \q{scale}
-(or can converge on one through subsequent conversation).  \i{Some} time-frame
-is therefore presupposed in the discursive context, and the first phrase invokes
-this presumed but unstated framing.  The semantics of the phrase are therefore somewhat open-ended:
-the phrase \q{hooks into} shared understanding of a temporal cognitive framing without referring
-to it directly.  By contrast, the second phrase is less open-ended: it is consistent with both
-a more and less temporally protracted understanding of \q{many}, but leaves such details (whatever
-they may be) unsignified.  The factual circumstance is designated with a level of abstraction that sets
-temporal considerations outside the focus of concern.  The second phrase is therefore both
-less open-ended and also less expressive: it carries less detail but accordingly also relies
-less on speaker's contextual understanding to fill in detail.
-}
-\p{Clearly the two phrases are therefore semantically different; but notice also that the
-semantic properties of the first phrase are due explicitly to its internal structure.
-The temporality implicatures could be expressed in a more \q{purely} semantic
-fasion with a choice of wording, like \q{a procession of students complained}.  This
-would rely on the conventional meaning of \q{procession} (or \q{stream}, \q{sequence},
-etc.) to provide the expressive \q{time} dimension.  But the \q{Student after student}
-phraseology achieves this effect more economically and with more \q{oomph} because the
-internal repetition in the phrase itself effectively models the recurrence it
-seeks to feature semantically.  Here linguistic form actually does reproduce
-factual structure, like a syntactic version of onomatopoeia.  This fact of internal structure
-clearly can only be fully modeled by taking seriously the exact composition of the phrase, not
-treating the phrase-structure as a convention fully subsumed by a semantic role.
-}
-\p{In addition, aside from the expressive detail which depends on the actual phrase
-structure (which therefore cannot be summarized away), this inner structure also
-governs morphosyntactic possibilities over all.  \q{A procession of students}
-captures a similar temporal progression but also fully absorbs \q{student} in a plural
-guise, and \q{A procession of students complained about \qmarkdubious{}his grade} is straightforwardly
-ungrammatical.  In Langacker's \q{Three times} example, the inter-word
-\q{linkage} captures the aforementioned complexities in a reasonably non-arbitrary
-way, I believe.  \q{Student} is linked as subject-to-verb with \q{asked}, and as
-subject-to-object with \q{question}.  It is true that these link-pairs seem to
-violate agreement norms, but there is nothing in the Link Grammar paradigm \mdash{} which
-practices Dependency Grammar with a rather detailed and intricate
-inventory of inter-word relations, or \q{links} \mdash{} mandating that
-\i{all} link-pairs exhibit forced agreement (like singular/plural).  Agreement, when it
-applies, is a property \i{of} link pairs.  There is also an implicit
-(cross-phrasal) link between \q{student} and \q{Three} \mdash{} clarifying that, considered
-in its entirely, the sentence is about three students precisely \mdash{} and the presence of
-this kind of link alters how the other links connecting to the word \q{student} are
-assessed.  In particular, this latter link stipulates that the word \q{student} is being
-simultaneously understood in both a plural and a singular sense, so it permits
-singular \i{and} plural link forms which, more commonly, could only be
-singular \i{or} plural.  So link grammar can offer an elegant analysis of
-singular/plural \q{underdeterminism}, expressed in the
-same underlying graph-context terminology as most other link-grammar theorizing.
-It would be unfair to use this as a case against Phrase Structure grammars without a
-detailed presentation of how these grammars would handle such a case in turn, but
-I'd argue that link grammar accommodates this complex example with relatively little
-departure from its underlying theoretical and notational or presentational commitments.
-}
-\p{While my previous examples contrasted Phrase Structure and Dependency
-Grammars in terms of their resources for explaining sentences with
-unusual semantic patterns but relatively clear meanings (in context),
-another form of comparison can address actual ambiguity.  Consider
-\begin{sentenceList}\sentenceItem{} The Maple Leafs failed to win in overtime for the
-first time this year.
-\sentenceItem{} The Maple Leafs failed for the first time this year
-to win in overtime.
+\p{Morphosyntactic transformation similarly models
+the correlation between semantic and syntactic
+expectation \mdash{} as can be demonstrated by a
+variant of the \q{believe} forms, via the phrase
+\q{believe in}:
+\begin{sentenceList}\sentenceItem{} I believed in Father Christmas.
+\sentenceItem{} I believed in Peace on Earth.
+\sentenceItem{} I believed in Obama.
+\sentenceItem{} I believed in lies.
 \end{sentenceList}
-The first can mean either that the Leafs had won \i{all} or \i{none}
-of their prior overtime games.  From a phrase-structure perspective,
-we have to image that \q{to win in overtime} can \q{migrate} so we
-hear it as in the second version of the sentence.  For more inter-word
-grammars, the alternation is simpler: \q{for}, initiating the phrase
-\q{for the first time}, can be linked with either \i{failed} or
-\i{win} \mdash{} notationally, it amounts to the presence or absence of one
-graph-edge, when the syntax is represented as a graph with
-inter-word labels for link kinds.  This could be a distinction without
-a real difference, since choosing which inter-word link to recognize
-triggers linking in the rest of the phrase along with it.
-But perhaps reflecting on how we process the ambiguity \mdash{} realizing
-that there are two competing parses and deciding which is the one
-intended \mdash{} we picture the alternatives more as \q{horizontal}
-options for connecting threads across the sentence,
-more so than a \q{vertical} organization where
-we hear \q{for the first time} as \q{contained} in a larger phrase.
-My own feeling is of exploring competing relational patterns more than
-exploring different ways that the phrases can be nested inside each
-other.
+Whereas \i{that} (after \i{believe})
+\q{nominalizes} propositions, \i{in} reconceives
+(type-theoretically we would say \q{coerces})
+ordinary nouns into epistemic nouns (compatible
+with propositional attitudes).  Obama is not an
+\i{idea}, but the connector \i{in} triggers an
+interprtation where we have to read \q{Obama} as
+something believed \mdash{} effectively a type-theoretic
+tension resolved by understanding \i{Obama} in this
+context to designate either his platform or his
+ability to implement it.  Interpretive \i{tension}
+is a natural correlary to a mismatch in expectations:
+\i{believe} expects something epistemic, but the
+discourse gives us a proper name.  Analogously
+\i{budge} expects a brute physical entity in
+its simplest meaning, but in \i{Obama wouldn't
+budge on reproductive rights} we get a \q{sentient}
+noun, and have to read \i{budge} metaphorically.
+In short, \i{expectation}, \i{interpretive tension},
+and \i{incompleteness} are interlocking facets of
+semiotic primitives that gestate into discursive
+maneuvers via which ideas are communicated
+economically and context-sensitively.
 }
-\p{That being said, how much of our sense of ambiguity (or clarity, for
-that matter) is driven by meaning, not form?  The \q{double parse}
-just examined does not always generalize to similar cases:
-\begin{sentenceList}\sentenceItem{} The Maple Leafs failed to win two consecutive games
-for the first time this year.
-\end{sentenceList}
-The reading as in \q{this is the first time they failed to win two
-consecutive games} makes no sense \mdash{} unless you've won every game,
-but perhaps the first, you've at some point lost after a win.  Is this
-case anomalous, where a syntactic ambiguity idiosyncratically fails to
-yield logically plausible readings?
-The ambiguity is found in \i{failed to make the playoffs
-for the first time since 2013}, and many \i{for the first time this
-season} cases, like \i{beat the Habs}, \i{sell out the arena},
-\i{score a goal in the first period}.  But \q{failed to score a goal}
-is almost surely read that they \i{did} score in every prior game.
-Do we hear the construction as intrinsically ambiguous, and reject one
-reading only when it is clearly flawed pragmatically?
+\p{Link Grammar, proper, represents only the
+most immediate (mostly grammatical) facet of
+word links.  For sake of discussion,
+I will discuss links in general as markers of
+\i{mutual dependency} between words, so a
+\q{link grammar} is essentially a
+\q{bi-directional} Dependency Grammar.  Mutual
+dependencies manifest syntactic norms and
+contextual details that make individual
+words inadequate signifying vehicles for
+a particular communicating content.  This overall
+principle becomes concrete in one form via
+grammatical relations, which is the layer
+modeled by Link Grammar proper.
+I have mentioned several ready examples \mdash{}
+the syntactic dependency of verbs and adjectives
+on nouns for them to enter correctly into
+discourse (correlate with a semantic dependency
+in the other dirction, to shape noun-ideas to the
+proper context and signifying intent); also
+part-of-speech or \q{subtyping} dependencies
+reflecting mandates that (in my examples)
+propositional phrases are coerced to nouns or
+nouns coerced to \q{epistemic} nouns.  Technical
+Link Grammars recognize a broad spectrum of
+\q{link relationship} \mdash{} between 50 and 100
+for different languages.  Parsing a sentence
+is then a matter of identifying
+all of the mutual dependencies \mdash{} at least those
+evident on a syntactic level \mdash{} that appear as
+inter-word links in the sentence.  Phrase
+structure may be implicit in some links in
+combination \mdash{} for example verb-subject plus
+verb-object links generate propositional phrases
+\mdash{} but the technical parse is a \q{graph} of
+inter-word links rather than a \q{tree} of
+phrases ordered heirarchically.  The parse-graph
+itself is only a provisional rading of the
+sentence, and linguistic understanding
+exists only insofar as its skeletal outline
+is filled out with semantic and situational
+details.  But the graph layer articulated by
+a Link Grammar still provids a useful
+inermediat representation, showing
+mutual dependencies in their syntactic manifestations
+that then point toward thir deeper semantic and
+situational origins.
 }
-\p{If we believe that language understanding unfolds in a predictable
-operational sequence, then we should assume that both parses are
-deemed plausible, and semantic considerations only retroactively
-eschew one reading (if they do so at all).  This would explain why in
-many cases the ambiguity persists enough to cast the practically
-intended meaning in doubt.  But that account does not consider the
-temporality of language itself; the hearer does not know in advance
-that a trailing phrase like \q{for the first time this season} is coming,
-and starts to make sense of the sentence up to there; once then hearing or
-reading the addendum, the audience instinctively has to interpret the
-final phrase as deliberately inserted to modify an already-complete
-idea.  On this analysis, the addendum is initially approached as a
-performative detail, something said for a reason to be determined \mdash{}
-it is not structurally necessary to make the sentence well-formed.
-Perhaps we then try to fit the last phrase into the sentence both
-syntactically and semantically, together, triggered by a pragmatic
-phenomenon (the speaker's choice to add on to a seemingly complete
-thought) which then becomes logically prior to both syntax and
-semantics.  If this is plausible, it supports an inter-word relational
-model because we are forming a picture of language structure
-relationally, assimilating new words and phrases to those already
-heard by linkings referring back in time, rather than waiting until we
-are sure we have a complete sentence and then treating it as a static
-structure to vertically reconstruct.
+\p{For each \i{syntactic} bi-dependnecy, on this theory,
+there is a concordant semantic and signifying
+bi-dependency, partly conventionalized as a feature
+of the language and partly hewn to the current
+discourse context.  To leverage Link Grammar
+in an overall Cognitive Linguistic environment,
+then, we need to examine the semantic relations
+that drive syntactic bi-dependency: how the
+grammatical structure of one word completing another
+is a codification of of \i{semantic} mutual dependency.
+The \i{semantic} bi-dependencies operate on both
+abstract and concrete levels.  Abstractly,
+it is obvious that an adjective or a verb depends
+on a linked noun to complete an idea.  This
+abstract prototype of bi-dependency then takes
+concrete forms in each specific discourse,
+acquiring detail and specificity from
+situational contexts.
 }
-\p{The examples I have used so far may also imply that a choice of phrase structure is
-always driven by semantic connotations of one structure or another;
-but seemingly the reverse can happen as
-well \mdash{} speakers choose a semantic variant because its grammatic realization lends a useful
-organization to the larger expression.  There are many ways to say \q{many},
-for example: \i{a lot of},
-\i{quite a few}, not to mention \q{time after time} style constructions.  Whatever their
-subtle semantic variations, these phrases also have different syntactic properties:
-\i{Quite a few} is legitimate as standalone (like an answer to a question);
-\i{A lot of} is not, and \i{A lot} on its own is awkward.  On the other hand the \q{of} in
-\i{A lot of} can \q{float} to be replicated further on: \q{A lot of students, of citizens,
-believe education must be our top priority} sounds more decorous than the equivalent sentence with the
-second \q{of} replaced by \q{and}.  If the cadence of that sentence appeals to the speaker, then
-such stylistic preference will influence taking \q{A lot of} as the \q{many} variant of choice.
-So speakers have leeway in choosing grammatic forms that highlight one or another aspect of
-situations; but they also have leeway in choosing rhetorical and stylistic pitch.  Both cognitive
-framings and stylistic performance can be factored when reconstructing what compels the
-choice of one sentence over alternatives.
+\p{The crucial dimension in this theory is
+neither abstract nor concrete bi-dependency
+but the intersection of the two.  The
+conventionalized lexical, syntactic, and
+morphosyntactic norms of a language present
+abstract prototypes of mutual word
+dependencies.  The concrete instantiation of
+these forms \mdash{} via word-pairs whose
+surface presentation indicates the
+presence of specific link relations
+(often with the aid of morphology, agreement,
+spoken inflection, and other
+morphosyntactic cues) \mdash{} invites us
+to consider how an abstract bi-dependency
+becomes situationally concretized in the
+present, momentary context.  In essence,
+abstract mutual dependencies are the raw
+materials from which situational appraisals
+are creates.  A pairing like \q{rescued dogs} uses
+a certain abstract-bidependent prototype
+\mdash{} here the double-refinement of a noun and adjective
+grounding each other \mdash{} to trigger
+the listener's awareness that the spakr's
+discourse is centered on one specific aspect of the
+dogs (that they were at some point rescued)
+with its conceptual corrolaries and unstated assumptions
+(that, being in need of rescue, they were abandoned,
+in danger, and so on).  Similarly
+the further link to the definit article
+\mdash{} \q{\i{the} dogs} \mdash{} evokes the prototype of a
+definite article grounding a noun, which
+in turn communicates the speaker's beliefs
+about the current state of the discourse.
 }
-\p{One consequence of these analyses, should they be accepted, is that grammar
-needs to be approached holistically: the grammatic structure of phrases cannot,
-except when deliberate oversimplification is warranted, be isolated from
-surrounded sentences and still larger discourse units.  Semantic roles
-of phrases have some effect on their syntax, but phrases are nonetheless chosen
-from sets of options, whose variations reflect subtle semantic and syntactic
-maneuvers manifest at super-phrasal scales.  The constituent words of phrases retain some
-autonomy, and can enter into inter-word and phrasal structures with other words outside their
-immediate phrase-context.  We can still apply formal models to phrase
-structure \mdash{} for example, Cognitive and Applicative Grammar (\CAG{}) considers phrases
-as \q{applications} of (something like) linguistic or cognitive \q{functions},
-in the sense that (say) an adjective is like a \i{function} applied to a noun,
-to yield a different noun (viz., something playing a noun's conceptual role)
-\cite{Descles2010}.
-I will consider related \q{functional} and (by extension) Type-Theoretic
-approaches in the next section.  But we should not read these transformations
-\mdash{} like \i{Syrian refugee} from \i{refugee} \mdash{}
-too hastily as a purely semantic correlation within a space of denotable concepts
-\mdash{} \i{such that} the new concept wholly replaces the
-contained parts, which then cease to have further linguistic role and effect.
-Instead, applicative structures represent shifts or evolutions in
-mental construal, which proceed in stages as conversants form
-cognitive models of each others' discourse.  Even if phrase structure
-sets landmarks in this unfolding, phrases do not wholly subsume their
-constituents; the parts within phrases do not \q{vanish} on the higher scale,
-but remain latent and may be \q{hooked} by other, overlapping phrases.
-This argument rests on a vantage point from semantics as well as syntax;
-therefore, I will discuss it briefly at present (I return to
-this analysis at greater length in the next section).
+\p{This last \q{bi-dependency} deserves further comments,
+because nouns more often than not reveal some
+dependency on an article: \i{some dog(s)},
+\i{the dog(s)}, \i{a dog}, \i{many dogs}.
+These pairings paint a picture both through the
+choice of article and the presence or absence of a
+plural.  This picture is partly situational
+\mdash{} obviously whether the speaker is talking
+about one or multiple dogs is situationally
+important \mdash{} but it is also meta-discursive:
+selecting the definite article indicates the
+speaker's belief that the listeners know which
+dogs are on topic.  The lexeme \q{the} thereby
+signifies a meta-discursive stance as well
+as a cognitive framing \mdash{} both that the
+collection has enough coherence to function as
+a conceptual unit in context, as \i{the} dogs
+(and not something less specific like
+\q{\i{some} dogs}) \i{and also} that the
+speaker and listeners share compatible
+cognitive pictures as a result of prior
+course of the discourse.  This also introduces
+several avenues for future discursive evolution
+\mdash{} the listeners can respond to the
+speaker on both cognitive and meta-discursive
+levels.  A direct question like \i{which dogs?}
+signifies that the first speaker's meta-discursive
+were flawed \mdash{} the referent of \q{the dogs} has
+not been properly settled by the discourse to that
+point.  Or questions for clarification
+\mdash{} like \i{how many dogs are there?} \mdash{} indicate
+the listeners' sense that all parties' respectiv
+construal of the situation needs to be more neatly
+aligned for the discourse to proceed optimally.
 }
-\p{Consider the effect of \q{Many students complained}.  Propositionally, this appears
-to say essentially that \i{students} complained; but, on hermeneutic charity, the
-speaker had \i{some} reason to say \q{many}.  The familiar analysis is that
-\q{many} suggests relative size; but this
-is only half the story.  If the speaker chose merely \i{students complained}, we would hear an assertion
-that more than one student did, but we would also understand that there were several
-occasions when complaints happened.  Adding \q{many} does not just
-imply \q{more} students, but suggests a mental shift away from the particular episodes.
-In the other direction, saying \i{a student complained} is not just
-asserting how at least one student did so, but
-apparently reports one specific occasion (which perhaps the speaker wishes to
-elaborate on).  In other words, we cannot really capture the singular/plural semantics,
-or different varieties of plural, just by looking at the relative size of implied
-sets; we need to track how representations of singleness or multitude imply
-temporal and event-situational details.  So \i{a student complained} focuses not
-on the numeric count of one, but on a singular event (unlike
-\q{\i{only one} student complained}); \i{students complained} focuses not on the
-plural measure of students involved, but on the fact that a certain type
-of event happened several times.  \i{Many students complained}
-focuses not on sheer number (unlike \i{a large number of students complained}),
-but rather on the implication that complaints were widespread enough to represent
-a significant sample, perhaps a majority sentiment, among the student body.
-The semantics of the former two forms seems to focus attention
-on the \i{events} of complaining, while the \i{many students} construction seems
-to focus more on their suggesting a prevailing attitude.  \q{Students complained}
-seems to single out each event as distinct, even though there are several of
-them; whereas \i{Many students complained} seems to construe the
-events as each resembling the other, to the point where they partly
-lose their individuality.  \q{Isolated events},
-in the English idiom, are those which are atypical; as we cognitively
-shift from the events as discrete to recurring patterns, they become
-suggestive of a larger state of affairs.  By implication, if many students
-complained, many other students may be unhappy; the extent of students'
-unrest is no longer measurable by the multiplicity of the complaining-events.
+\p{The point I particularly want to emphasize here,
+though, is that these discursive/cognitive effects
+inhere not only in the word \q{the} but in its pairing
+with other words, like \i{the dogs}.  We tend to see
+the lexical substratum of a language as the ground
+level of its signifying potential, but we should
+perhaps recognize bidependent prototypes as
+equally originating.  Th communicative
+content of \q{the dogs} is ultimate;y
+traced not only to the lexical potentialities
+of \q{the} and \q{dogs} as word-senses, but to the
+abstract prototype of the definite-article
+bidependence, which becomes concretized in the
+\q{the dogs} pairing at the same time as the
+individual words do.
 }
-\p{Against this backdrop, \i{Student after student complained} captures both dimensions,
-implying both a widespread unrest among the student body and also
-temporal recurrence of complainings.
-Formal models of syntax and semantics often borrow notation from formal
-language theory; for example, notations for Parts of Speech lifted
-from functional programming languages.\footnote{A note on notation: I adopt the Haskell convention (referring to the Haskell
-programming language and other functional languages) of using arrows both between
-parameters and before output notation, but for visual cue I add one dot above the
-arrow in the former case, and two dots in the latter: \argsToReturn{}.
-I use \N{} for the broadest designation of nouns (the broadest
-noun type, assuming we are using type-theoretic principles),
-with extra markings for more specific types (in principle
-similar notation could be adopted for verbs, propositions, and so on).
+\p{In order to bring this account full-circle, I
+would then add that lexical units mutually
+completed by an instantiated bidependence
+can also be seen as a tie-in between
+interpretive procedures.  Lexical interpretive
+scripts \mdash{} the cognitive processing solicited
+by \q{the} and \q{dogs} in isolation
+\mdash{} are themselves open-ended and un- or
+incompletely grounded.  We can speak metaphorically
+of \q{words} being incomplete, or carrying expectations,
+but it is really the cognitive scripts associated
+with words that are lacking in detail.  The resolution
+of a merely schematic cognitive outline to a
+reasonably complete situational construal
+can be likned to a rough sketch filled out in color
+\mdash{} but we have to imagine that a sketch can be
+completed by pairing it with a second sketch, and
+the content in each one, crossing over, allows a
+completed picture to coalesce.  \q{The} in itself
+evokes an interpretive process that in itslf
+cannot be completed, and likewise \q{dogs}; but
+each script supplies the content missing from
+the other.  In this sense the bidependent form
+concretized by the pair is actualy evoking
+an interpretive phenomenon of mutual completion
+\mdash{} the language structure here is guiding us
+toward an interpretive interpenetration where
+the two scripts tie each other's open ends.
+Whereas lexical items can be associated with
+single \q{scripts}, prototypes of mutual
+dependency model patterns in how script-pairs
+can become mutually complete.  But unlike
+lexemes, which are notated directly by
+language, the instantiation of
+bidependnet script-pairs occurs indirectly.
+Some paired-up words are of course adjacent,
+but adjacency between words does not have the same
+binding determinacy as sequencing among morphemes
+in \i{one} word.  Instead, word adjaceny
+is only one signal among many others suggesting
+that some prototypical inter-word relation
+applies between two words (which might be
+widely separated in a sentence).  Morphology
+and syntax also point towards the pairings operative
+in a sentence \mdash{} they are to bidependency prototypes
+what word-choice is to the lexicon.
 }
-This notation can help us picture the \q{flow} of ideas building up
-to a complete sentence, formally represented via type theory
-(where sentences reveal a type hierarchy culminating in a self-contained idea,
-that is, a proposition); more informally we can picture a similar
-\q{conceptual} flow tracing how listeners come to make sense of the
-language they encounter enunciated by speakers.  By way
-of illustration, Figure ~\ref{fig:ESA} shows a
-Depency-style descructuring, with implicit type annotations.  \input{figure2.tex}
-As this shows, the \q{Student after Student} idiom can be notated as, say,
-\AfterNSingAndNSingToNPl{} (using \NSing{} and \NPl{} to mean singular
-and count-plural nouns, respectively), but with the special case that the \q{argument} to
-\i{after} is repeated in both positions, suggesting an unusual degree of repetition,
-something frustratingly recurrent: \i{He went on and on}; \i{Car after car passed
-us by}; \i{Time after time I got turned down}.
-Although I have no problem
-treating these constructions as idiomatic plurals, I also contend (on the
-premise of phrase-overlap) that the dependent constituents in the \BlankAfterBlank{}
-construction can be hooked to other phrases as well (which is why
-\q{and [their/his/her] parents} can also be singular, in this case).  I dwell on
-this example because it shows how type/functional accounts of phrase structure
-can be useful even if we treat phrases more as frames which overlay linguistic
-structure, not as rigid compositional isolates.  Each \q{students} variation uses
-morphology to nudge cognitive attention in one direction or another, toward events or the
-degree to which events are representative of some global property (here of
-a student body), or both.  The \NSingToNPl{} transformation is not \i{the}
-morphosyntactic meaning, but instead the skeleton on which the full meaning
-(via cognitive schema) is designed, its hints solicited.
+\spsubsectiontwoline{Link Grammar as the Syntax of
+Procedural-Network Semantics}
+\p{Thus far I have made an admittedly
+\i{philosophical} and speculative case for
+\q{interpretive mutual dependence} as
+a constituent building block of linguistic
+understanding.  This theory will remain troublingly
+incomplete if the more philosophical presentation
+cannot be wed to a more rigorous formal
+methodology.  True, an essential core of this theory
+is that interpretive \q{scripts} are largely
+prelinguistic and so not covered by linguistic
+formalisms in themselves.  However, I have also
+argued that formal linguistic structures \i{do}
+govern how we identify which links apply to
+which word-pairs and the gneral outlines of
+how word-pairing coordinats cognitiv processes associated
+with single words \mdash{} the fully contextualized
+synthesis of lexically triggered cognitive procedures
+may involve extra-linguistic grounding, but
+abstract prototyps of bidependnet relations
+are also prototypes of a synthesis between
+cognitive/interpretive functions.  It would
+accordingly be reassuring if notions like
+\q{bidependency} and \q{mutual completion}
+could be employed as foundations for a formal
+theory of grammar and/or semantics with a
+degree of rigor comparable to, say, Link
+Grammar in its computational form, or type-Thoretic
+Semantics in the sense of Zhaohui Luo,
+James Pustejovsky, etc...
+Such a theory \mdash{} and potentially concrete
+technologies associated with it \mdash{} would also
+then have a reasonable ground of comparison
+to the Semantic Web and, in the contxt of
+Phenomnology, to the formalizing influenc
+which Semantic Web paradigms have exerted on
+projects to unite phenomenology with science
+and with Analytic Philosophy.
 }
-\p{If this analysis has merit, it suggests that a \CAG{}
-approach to phrases like \i{many students} or \i{student after student}
-(singular-to-plural or plural-to-plural mappings) should be understood not just
-as functions among Part of Speech (\POS{}) types but as adding cognitive shading, foregrounding
-or backgrounding cognitive elements like events or typicality in some context.
-In other words, \i{many students} is type-theoretically \NtoN{} or \NpltoNpl{};
-but, in more detail, it adds a kind of cognitive rider attached to the mapping which focuses
-cognition in the subsequent discourse onto events (their recurrence and temporal distribution);
-similarly \q{student after student} has a \q{rider} suggesting more of a temporal
-unfolding.  The second form implies not only that many students complained, but that
-the events of these complainings were spread out over some stretch of time.
-Each such functional application (mappings between \POS{} understood as linguistic types)
-produces not only a resulting \POS{} \q{type}, but also a reconfiguration of cognitive
-attitudes toward the relevant situation and context.
-Language users have many ways to craft a sentence with similar meanings, and arguably one
-task for linguistic analysis is to model the space of choices which are available in a
-given situation and represent what specific ideas and effects are invoked by one
-choice over others.  It would be an argument in favor of Dependency Grammar if
-Dependency-oriented representational models, like Link Grammar, prove to be
-especially adept in this modeling.
+\p{Given these considerations, I propose that
+formal grammars with the same underlying
+structure as Natural-Language Link Grammars
+can indeed be used as a foundation for type-theortic
+and programming-language-design methodology.  The
+key step here is to generalize Link Grammar's
+notion of a \q{connector} \mdash{} the aspect of a
+word or lexeme that allows (or requires) compltion
+via another word \mdash{} to a gneric data structure
+where connections can be made between different
+parts of a system on the basis of double
+potentials that must be in some sense \q{compatible}
+for the connection to be valid.  One way to
+visualize such a system is via graph theory:
+imagine a form of graps where nodes are
+annotated with \q{potentials} or \q{half-edges};
+a complete edge is then a union of two half-edges.
+Half edges are also classified into different
+families, and there are rules governing when a
+hald-edge of one family may link with a half-edge
+of another.  In the case of Link Grammar, these
+classifications are based on surface language structure
+\mdash{} head/dependent and left-to-right relations \mdash{}
+from which a suite of links and connection rules
+are define (for instance abstractly a head/right
+word must link to a dependent/left word, a rule that
+then becomes manifest in specific syntactic rules,
+like how a verb links to its subject).  For a
+more generic model, however, we can stipulate only
+that there is \i{some} classification of connectors
+governs by \i{some} linkage rules, to be specified
+in different details for different modeling domains.
 }
-\p{In this analysis, I am already switching to functional and type notions that will be
-discussed in greater detail below; my current emphasis is on link grammar as a syntactic
-conception, although I have also tried to argue that separating syntax from semantics
-can be at most provisional.  Inter-word \q{link pairs} are vehicles for expressing
-syntactic rules (like singular/plural agreement) but are also a ground level for
-semantic analysis, since we can explain how semantic nuances are carried, in
-specific sentences, by the actual link-pairs in evidence (violations to
-agreement norms, for example).  These semantic nuances in turn can be given
-cognitive interpretations, revealing the syntax-semantics-cognition pattern
-which I am sketching here through specific perspectives like Link Grammar and
-Type Theory.  Returning to the initial grammatic stage of analysis, however,
-my tactics for contrasting overall Dependency and Phrase-Structure paradigms
-rest on an implicit picture of how theories should be evaluated.
-While such a picture is probably fairly consistent across perspectives, it is still worth
-making a little more explicit.
+\p{Such a graph model expands upon the notion
+of \i{labeled} graphs, where edges are annotated
+with labels that characterize the kind of relation
+modeled via the edge itself.  A canonical example
+is Semantic Web graphs: the edges in any
+Semantic Web structure are labeled with \q{predicates},
+defined in different Ontologies, specifying what sort
+of relation exists between its adjacent nodes.
+That is, in the Semantic Web, nodes are not
+\q{abstractly} linked but rather exhibit
+concrete relations: a person is a citizen
+of a country, two persons are married, and so forth.
+These structures are then concrete instancs of Labeled
+Graphs as abstract mathematical structures.  Based on
+Link Grammar, we can then refine this model
+be splitting labels into two parts, and
+allowing edges to be incomplete: a fully
+formed edge is possible when the label-parts
+on one side are compatible with the label-parts
+on another.  One valid class of graph transforms
+is then a mapping where a graph is altered by unifying
+two half-edges into a complete edge, subject to
+the relevant linkage rules.
 }
-\subsection{Explanation and Formality}
-\p{Both Dependency and Phrase Structure grammars
-presuppose that the fundamental exposition and achievement of their theory involves
-formal transformation of linguistic givens, resulting in a more complex data structure
-which, to the extent that the theory is correct and useful, models something
-of the inner structure of language (\i{qua} abstract formal system and/or cognitive phenomenon).
-The \q{data structure} might be a phrase-structure \q{tree} or a graph-like dependency
-\q{linkage}, but while these representations have different form they share certain
-criteria: they are formally describable systems which allow some structures but reject others;
-they are rigorous enough to be given a mathematical (e.g., algebraic) definition;
-and they can be expressed in computer code which builds these structures out of
-Natural Language artifacts, can verify that an instance of the relevant data structures
-satisfies the system rules, and can execute operations which modify the structures.
-The phrase trees or word-link graphs are \q{formal substrata} which encapsulate Natural Language
-patterns but also are rigidly mathematical and computational.  How thoroughly these substrata
-capture linguistic meaning, is therefore directly relevant to questions of whether and
-in what degree natural language itself, as social and cognitive, is also formal and computational.
+\p{Another way of modeling this kind of structure is via
+edge-annotations and a rule for unifying two edges into
+an edge-annotation pairing.  For sake of
+discussion, I will express this in terms of
+Directed Hypergraphs: assume that edges are
+\q{hyperedges}, connecting \i{sets} of nodes.
+In Hypergraph theory, the nodes incident to a hyperedge
+are divided into a \q{head set} and \q{tail set};
+these sts can then aggregate as \q{hypernodes}.
+We can then define a kind uf unification where
+the \q{tail hypernode} of one hyperedges joins
+with the \q{head hypernode} of another, producing
+a new hypredge whose head comes from the
+first former hyperdge and whose tail comes from the
+secon.  The merged hypernodes, in turn, form a new
+hypernode which \q{annotates} the new hyperedge
+(this new hypernode is not connected to the graph
+via other nodes, but is indirectly \q{part} of
+the graph through the hyperedge it annotates).
+\i{Annotated} hyperedges therefore differ from
+\q{non-annotated} hyperdges in that the former are the
+result of a merger between two of the latter.
+The rules governing when such merger is possible
+\mdash{} and how to map a pair of hypernodes into a
+single \q{annotative} hypernode (which
+belongs to the graph through the aegis of
+its annotated hyperdge) are not internal
+to the graph theory, but presumed to be
+specified by the modeling environment where
+implemementations of such graphs are
+technologically applied.  Annotated Directed
+Hypergraphs are then \q{complete} in a sense
+if every \q{un-annotated} hyperedge has been
+subsumed into an annotated hyperedge, via a
+fusional process we can call a
+\q{annotative-fusional transform}.
 }
-\p{Translating NL content into (say) a linked-grammar graph does not make software capable
-of \q{understanding} language.  If Dependency Grammar is a reasonable foundation
-for linguistics in general, then properly parsing sentences into their
-auxiliary graphs is, at most, a step in the direction toward \q{understanding}.
-Even this may beg the question of what constitutes a \q{correct} parse: when writing
-real-world code, language engineers appear to rely principally on their own intuitions, based
-on their familiarity with the underlying theory, the idea they have of what a
-\i{correct} \q{re-presentation} looks like (for link grammar, of the correct collection of
-link types between the various words).  They then add code to ensure that this representation
-is indeed identified by the software in specific examples, and try to do so in such a way
-as to generalize to other examples.  This methodology can be gleaned from observing internet chat
-sites and other informal research venues; one can witness developers painstakingly constructing
-systems which \q{work right} in the sense of producing the interpretation for each sentence
-which corresponds with what the human linguists perceive, even for sentences which the
-software has never encountered before.  The code is considered reliable the more that
-new sentences are \q{correctly} parsed.  Again, \q{correctly} here means, conformant to
-linguists' own interpretations; insofar as these are subjective, such conformance is not
-conclusive evidence that the transformational algorithms are \q{correct}.
+\p{Extending this model further, we can say that the
+tail of an \i{un-annotated} hyperedge is a
+\q{tail pre-annotation}, since it is poised to
+be merged into an annotation.  Analogously,
+the head of an un-annotated hyperedge is a
+\q{head pre-annotation}, and \q{annotative fusion}
+is the synthesis of a head and a
+tail pre-annotation (triggering a synthesis of
+their incident hyperedges).  Correlate to annotative
+\i{fusion} we can define a notion of annotative
+\i{partiality}, referring to the \q{incompleteness}
+of pre-annotations which leaves room for their fusion.
 }
-\p{In order to assess linguistic \q{competence} (or whatever computational ability may simulate it),
-it is needed to check specific \q{behavior} and compare it to some expectation.  The gold standard
-for linguistic behavior is just participating in a linguistic community, judged by the community
-at large as fully competent and included.  Unfortunately, however \mdash{} at least for those who
-want to profit from Artificial Intelligence \mdash{} achieving true \q{language-like behavior} may be
-impossible.  Scholarship therefore has to turn toward more limited notions of
-competence, such as representational transformation of sentences \mdash{} but since
-each theory has its own picture of what sentences should be transformed \i{into},
-the justification of competence measures can be circular.  It is the theory which
-dictates how the software should act, and the software is deemed \q{intelligent} if it
-acts accordingly.  We can be skeptical of such non-theory-neutral conceptions of
-\q{intelligence}.  Nonetheless it does count
-in theories' favor if they both propose accounts of language structure which
-are independently defensible and also can produce computing systems that
-reliably and without external direction map language onto those structures.
-Language-like behavior then involves producing a transformed representation of
-language embodying a particular theoretical conception of
-linguistic \q{deep structure}.
+\p{It turns out that annotative fusion and partiality
+in this sense is a non-trivial
+model for computation in general, and can be extended
+to a form of type theory and process calculus.
+The idea is that computational procedures can be
+modeled as hypergaphs (computer source code
+can certainly be modeled as hypergraphs which
+are productions of a certain class of parsing
+engines).  Each \q{value} affected by a
+procedure \mdash{} or more technically the source code symbols
+and memory addresses that \q{carry} a value \mdash{} is
+then modeled as a hypernode that can link with
+other hypernodes in the scenario where one procedure
+calls a different one.  Annotative fusion is then
+a phenomenon of values being transferred from
+one excuction environment (associated with
+the caller procedure) to a second one (associated with
+the callee).  The \q{annotations} themselves
+are then in this context the full set of type
+coercions, type checks, synchronization
+(e.g. resource locks or thread blocks depending on
+whether or not the caller waits for the callee to
+finish), and any other validations to ensure that
+the procedure call is appropriate.  Annotative fusion
+also provides a formal basis for developing the
+intuition that \q{procedural networks} are rigorous
+representations of information spaces \mdash{}
+annotative fusions capture the precise details
+of procedures linking (via caller/callee relations)
+with other procedures.
 }
-\p{It would serve Computational-Linguistic theories still further to create systems
-that demonstrate behavior which is \q{language-like} on terms less wedded to their
-own hypotheses.  More satisfying definitions of linguistic behavior would involve intuitions
-of language users in general, not just language experts.  For example, document classifiers
-\mdash{} which typically use statistical analysis to predict which topic will be deemed most
-relevant for documents like news stories and technical articles \mdash{} again illustate a kind
-of transformational representation, converting Natural Language to a formal data structure
-(in this case a relatively simple one, naming one or multiple topics from a predefined list).
-In this case however a broad user public can provide feedback on how well the system performs.
-For another example, artificial translators map language onto formal structures but then
-attempt an opposite map, translating the formalized representation into natural-seeming
-expressions in a different language.  This case is different in that formal representation is
-an intermediary rather than end point of the transformation, but like document classifiers it
-is a kind of behavior whose effectiveness can be judged by a large community of speakers.
-People who interact with text \q{chat} bots, or talking robots, and feel that the experience
-is similar to talking with another person, are also providing evidence of more complete and
-larger-scale language-like behavior.  Again, though, it is not now and may never be possible
-to engineer intelligent behavior to this level of perfection.  Existing language \AI{} platforms
-are flawed but useful, which suggests both that formal re-presentation is an important
-step toward language understanding but also that attempts to use these formalisms as a springboard
-to more holistic behavior \mdash{} like automated translation, but also extracting practical
-information, or gleaning emotion and sentiment \mdash{} are missing something essential.
-Doing useful things with or gleaning useful insight from the re-presentational target structures
-appears to be a separate problem from that of generating them \mdash{} which calls into question the
-degree to which the target structures sufficiently encapsulate linguistic meaning,
-even if they reveal structures which are essential to linguistic meaning.
+\p{The constituent units of procedural networks are
+inter-procedure calls \mdash{} but procedural networks
+also reveal dimensions of connectivity and
+and clustering characteristic of large, complex
+networks (and the graphs that represent them) in general.
+What appears as one function-call in source code can
+actually represent many different inter-procedure connections,
+a phenomenon reflecting \q{overloading} and \q{genericity}
+in programming language theory.  Functions are generic
+in the sense that any one of their arguments can take
+multiple types \mdash{} either because the function is
+explicitly declared to tak a \q{typeclass} or a single type
+for that argument, or because an instance of a given
+type may actually be at runtime an instance of some subtype.
+The engine which actually implements inter-procedure calls
+\mdash{} i.e., the programming-language implementation \mdash{}
+needs to factor this genericity into runtime decisions, so
+a single expression in one function body can branch
+to many different called procedures.  This is the
+essential core of the \q{semantics} of programming
+languages: data structures manipulated by computer code do
+not \i{intrinsically} represent real-world,
+non-digital phenomena, though they
+ar enginered to model external data when used properly.
+However a code base does \i{internally} posess a space
+of implementd functions, and a symbol at one
+place in source can match to some set of other
+functions so as to effect a procedure call.  This
+\q{matching}, and the rules governing how
+\q{overload resolution} occurs \mdash{} \q{overload}
+meaning that a given notated procedure call can actually
+branch to multiple functions, so runtime
+information is needed to select the right one \mdash{} are
+the essential formal principles governing the
+semantics of computer code.
 }
-\p{This does not have to mean that Natural Language Processing is basically impossible, only
-that more modest criteria of \q{correct} \NLP{} systems need to be adopted.  This is complicated
-by the fact that artifical language behavior can be flawed but meaningful: \q{Urine shift one
-step forward} is an awkward English sentence but its meaning seems clear enough
-(this real example comes from a shopping center in New York's Flushing, Queens Chinatown).
-We have an intuition that some expressions are \q{incorrect} but not so completely
-off-base that they fail to signify anything at all \mdash{} but in this case we need
-criteria for how a linguistic performance can be both incorrect \i{and} nonetheless coherent.
+\p{From this basis, all the same, computer code can model
+a wide range of empirical phenomena.  Generic code
+represents generic patterns of functional organization,
+allowing models to be built from varying layers of
+abstraction.  From this perspective, to
+describe an empirical system it is neessary to
+identify important behaviors and functional patterns
+via which the system's observed behavior can be
+notated and/or simulated.  To the degree that
+systems take on functional organizations that can be
+abstractly described, similar to the functional
+dynamics of other systems, their behavior
+can be represented and/or simulated via gneric
+cod.  To the degree that thre are particular
+details of a system's behavior that are more
+idiosyncratic to that system, and need to be modeled
+precisely, procedures can be crafted specifically
+for obsevring and emulating that exact behavior.
+More generic and more exact procedural implementations
+can coexist in a single code base, with generic
+functions calling granular functions narroed to
+precise types, and vice-versa.  The coexistence of
+generalization and specificty is an essential fatures
+of code bases and, by extension, of procedural networks,
+ensuring the flexibility of these ntworks
+as tools to model information spaces.
 }
-\p{These issues influence any theory which approaches linguistic competence from the
-viewpoint of formal re-presentations, and therefore effectively all branches of
-Computational Linguistics.  The reigning assumption appears to be that transformational
-representation which converts language to theory-regulated data structures, for which
-in many cases the transformation achieved by mechanical algorithms matches that
-intuited as most accurate by human experts, serves as \i{prima facie} evidence of
-something like computationally-engineered  \q{intelligent (language) behavior}.
-This leaves room for language-like behavior to productively replicate dimensions
-of language understanding while also being very incomplete: language-like relative
-to experts' opinions on deep linguistic structure, not real-world communication.
-Structures like link grammar graphs can be essential formal substrata that linguistic expression
-relies on to achieve communication, without being the sole medium of this expression.
+\p{Unfortunately, this kind of \q{procedural} modeling
+is hard to intgrate with the more static techniques
+reprsentd by the Semantic Web and the current
+\q{Big Data} fad.  The latter paradigms tend to treat
+data as a static repository to be mined for patterns
+and insights, rather than a digital
+simulation or encoding of dynamic real-world systems.
+The Semantic Web, as a large, collaborative modeling
+project, evolved largely apart from the technological
+community concerned with computer simulations and
+the programming techniques which emerged from there,
+like Object-Orientation.  This divergnce is relevant
+for linguistics and cognitive science, because I would
+argue that the more \q{dynamic} paradigm is actually
+more \q{Semantic} in a Natural Language sense.
+In other words, our cognitive dispositions
+when interpreting empirical phenomena \mdash{} and
+matching these interpretations to linguistic
+cues \mdash{} are more like procedural networks
+capturing functional patterns and layers of genericity
+in observed phenomena, rather than an accretion of
+static data.  The techniques of procedural data
+modeling may therefore be relevant for Cognitive
+Linguistics and Cognitive Phenomenology
+because they aspire to something which, arguably,
+the mind does instinctively: build
+cognitive or computational models of
+dynamic, functionally organized phenomena.
 }
-\p{My arguments so far have used Link Grammar as a representative example
-of \q{transformational representation} where a computational system
-can be judged to reveal some level of language competence, some
-kind of \q{language like behavior}, insofar as it translates natural
-language expressions to data structures conformant to Dependency
-Grammar (and particularly Link Grammar) theory.
-As I also just argued, performance \visavis{} structural transformation
-may be only tangential to human language, so whatever theory is
-built up needs a separate, more philosophical or metatheoretical analysis
-to consider how the theory is purported to engage with its phenomena.
-But I now take this as a starting point for pivoting the discussion from
-grammar to semantics; and will defer until after that speculating
-on philosophical implications of the theory thus extended.
+\p{As a corrolary, the theoretical building-blocks
+of Procedural Data Modeling \mdash{} how it leverages
+type theory, programming language semantics, and
+so forth \mdash{} can provide at least
+analogs or case-studies for corresponding cognitive
+phenomena.  Here I would argue that generalizing
+Link Grammar from Natural Language to formal
+languages, type systems, and lambda calculii
+yields added structures to type theory that
+are useful toward a more rigorous \q{theory} of
+Procedural Data Modeling \mdash{} a theory of natural
+linguistics generalized to a theory of general data
+reprsentation which, in turn, may offer
+insights onto the cognitive dynamics underlying
+(prelinguistic) situational/perceptual
+comportments and interpretation.
 }
+\p{Type-theoretically, annotative partiality \mdash{} which
+recall is my terminology for the abstract
+generalization of the mutual \q{incompleteness} in
+Link Grammar connctors, driving their
+link-fusion \mdash{} extends conventional applied type theory
+(as in the Typed Lambda Calculus) in parallel
+to partial-labels extending labeled graph theory.
+It is paradigmatic in the theory of typed procedures
+and of \q{effect systems} that the type of a procedure
+is determined (up to certain equivalences that may discard
+overly granular type distinctions) by the types of
+all values affected by the procedure (including but
+not necessarily limited to the types of input
+and output parameters).  We can then superimpose
+on this model an account of annotative partiality.
+Specifically, on the paradigm that procedure-calls
+are structurally represented as annotative fusions over
+Directed Hypergraphs, the values manipulated by
+a procedure are pre-annotations: they are not
+(in the \i{implementation} of a procedure,
+as a formal object) single values but rather
+typed spaces that can take on a spectrum of
+possible values depending on the inhabitants of
+their types.  When a procedure is \i{called} these values
+become concretized, but as a formal system procedural
+networks model software in terms of its capabilities
+and expected behavior, rather than the state at
+any moment when the software is actually running.
+Partiality therefore models how precedures
+(as formal objects) deal with potentialities
+\mdash{} we do not know what values will \i{actually}
+be present at runtime (e.g. what specific
+values passed to a procedure as arguments),
+so procedural analysis is essentially characterized
+by a partiality of information.  When one procedure
+calls another, the caller must build an
+\i{expression} \mdash{} a gathering of values that provide all
+the information the callee requires \mdash{} thereby
+creating a case of mutual-completion: the caller has
+values but not an algorithm
+to operate on them; the callee has an algorithm
+(that's what it implements) but needs concrete
+values so to produce concrete values.
+This dual partiality allows the caller to
+call the callee, via an \i{expression} which is part
+of the callee's implementation (represented as a
+hypergraph) which must in turn match the
+callee's signature \mdash{} epigrammatically, we
+can say that \q{expressions are annotative-fusional
+duals of signatures}.  The point here is that whereas
+signatures are conventionally understood to be
+type-declarations assigning types to procedures,
+with annotative partially we can more
+precisely recognize signatures as stipulating
+\i{pre-annotative} types.  The values carried
+within expressions also have pre-annotative types,
+but there is a distinction between types in the context
+of expressions and types in the context of signatures
+\mdash{} and moreover this distinction is precisely the
+manifestation of the abstract head-pre-annotation
+and tail-pre-annotation contrast in the specific
+context of procedural networks.  Just as
+signatures unify multiple types into one
+profile, we can analogously define
+\q{expression types} as the aggregate of all types
+from values affecting the expression \mdash{} note that
+this is different from the type of the exprssion's
+calculated \i{result}, just as the type of
+a function is different from the type of its
+return value.  Expression-types and signature-types
+are almost exact duals (the complication being
+default values for optional parameters, which
+are not directly represented in exprssions
+\mdash{} obviously, since then they would not be
+missing).  The \q{duality} involved here
+derives from partitioning a type system into
+\q{expression annotative partials} and
+\q{signature annotative partials}, a projection
+of head/tail duality in an abstract theory
+of Annotated Directed Hypergraphs
+(and analogous to head/dependent
+and left/right partiality in Link Grammar).
+}
+\p{}
