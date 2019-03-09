@@ -279,15 +279,27 @@ projects either or both of these analogy/paradigms.
 `p`
 
 `p.
-I believe that both analogies ar flawed, although they 
+I believe that both analogies are flawed, although they 
 may have value as indirect, theortically productive 
 models for `i.parts` of language and human intelligence.  
-But there is a lack of adequate tooling which embraces 
+I think there are several theoretical frameworks, with 
+at least partial realization in computational 
+settings, that `i.do` avoid the reductive ideologies of 
+bpth formalism and computationalism which yielding rigorous 
+technological models: Barry Smith and colleagues' Granular 
+Partition models `cite<BittnerSmithDonnelly>;, 
+David Spivak's `q.Ologs` (`q.Ontology Logs`/) 
+`cite<SpivakKent>;, Conceptual Space 
+Markup Language `cite<RaubalAdamsCSML>;, 
+or the `q.Image-Schema Language` described 
+in `cite<StAmant>;.  But in general there is a lack of 
+adequate tooling which embraces 
 `i.computational` representations of 
 cognitive processes %-- for example, models of 
 Intermediate Representations and Interface Theories %-- 
 while simultaneously, mostly, rejecting both 
-the formal and the computational metaphors. How this absence 
+the formal and the computational metaphors.  
+How this absence 
 of `q.non-AI computational` projects may be explained, and 
 what such projects might look like, 
 is a question that will inform my discussions in the 
