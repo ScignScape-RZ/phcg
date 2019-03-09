@@ -3,12 +3,22 @@
 As I suggested last section, we need to distinguish 
 computational models of `i.aspects` of cognitive 
 systems from AI-driven paradigms about intelligence 
-as a holistic reality.  The most plausible 
-role, I would argue, for cognitive-computational thories  
+as a holistic reality.  I 
+called for `q.non-AI computational platforms`/: 
+theories or concrete tools to study, in a 
+computational spirit, `i.parts` of 
+intelligent (e.g., linguistic) behavior 
+while rejecting formal or computational 
+metaphors for `i.holistic` cognition.  
+The proper role for cognitive-computational theories, I would argue,   
 is as `i.local` analyses, targeting subsystems 
 or parts thereof, remaining agnostic to overarching 
 claims about the AI tractability or realizability 
-of `q.mind` in total.  This is indeed how alot of 
+of `q.mind` in total.
+`p`  
+
+`p.
+This is indeed how a lot of 
 practical AI works: developers do not try to emulate 
 all of human intelligence, but to implement 
 practical tools with intelligent behavior in 

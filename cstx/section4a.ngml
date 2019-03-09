@@ -237,10 +237,10 @@ classification, judging similarity, optimizing
 problem-solving, and so on %-- to various degrees; 
 simulative success or failure then becomes a litmus 
 test for warranting or revising the implemented 
-`q.thory of intlligence`/.  In the domain of 
+theory of intlligence.  In the domain of 
 linguistics, these projects serve as a paradigmatic 
-complement (and sometimes tsting-ground) for 
-thories of how many linguistic processes are 
+complement (and sometimes testing-ground) for 
+thories of how linguistic processes are 
 computationally tractable.
 `p`
 
@@ -251,11 +251,11 @@ which allow programmers to specify data structures
 with mathematical precision and potentially prove 
 structural properties.  Such technologies have 
 computational models and type theories which overlap 
-with gneral-purpose programming languages, 
+with general-purpose programming languages, 
 like Haskell and Idris, and in that guise serve 
 as linguistic research tools.  That is, linguists 
 have used tools like Coq directly or have achieved 
-comparably rigorous analayses by developing 
+comparably rigorous analyses by developing 
 linguistic models in rigorous languages like Haskell 
 (representative are `cite<AnounEtAl>; and 
 `cite<KiselyovShan>;, respectively).  These applications 
@@ -267,6 +267,29 @@ like mathematics and systems engineering.
 `p`
 
 `p.
-
+In the specific context of linguistics, these two groups of 
+technologies %-- AI platforms, and proof-assistants 
+(or modeling frameworks in mathematically inspired 
+programming languages) %-- reflect `i.computational` 
+and `i.formal` analogies respectively: language `i.qua` 
+computational or formal system.  This generalizes to other 
+applications buttressing cognitive science: most concrete 
+technology deployed in a research-oriented context 
+projects either or both of these analogy/paradigms. 
 `p`
 
+`p.
+I believe that both analogies ar flawed, although they 
+may have value as indirect, theortically productive 
+models for `i.parts` of language and human intelligence.  
+But there is a lack of adequate tooling which embraces 
+`i.computational` representations of 
+cognitive processes %-- for example, models of 
+Intermediate Representations and Interface Theories %-- 
+while simultaneously, mostly, rejecting both 
+the formal and the computational metaphors. How this absence 
+of `q.non-AI computational` projects may be explained, and 
+what such projects might look like, 
+is a question that will inform my discussions in the 
+next section and then Section 7.  
+`p`
