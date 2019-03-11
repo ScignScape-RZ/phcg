@@ -146,7 +146,7 @@ which enact these computational processes.
 `p.
 On this basis, then, I will develop a Type Theory that operationalizes 
 this intuition about `q.Ambient Procedural Ontologies`/.  
-The main outlines of this type theory are first that procdures 
+The main outlines of this type theory are first that procedures 
 have types; and second that procedures are `q.ambient` or 
 logically prior to (or at least equiprimordial with) the 
 type system itself.  This is not a mathematical type system 
@@ -156,10 +156,113 @@ mathematically described in the theory.
 Instead, we can always take certain types and procedures as 
 `q.primitive` or (at least in their inner workings) 
 external to the type theory.  For any type system `tSys;, 
-whose structure is regulated by a type theory we ijyend 
-to prsent or assess, we can say that `tSys` is built 
-around a `i.kernal` `kErn; or `q.primitive` 
+whose structure is regulated by a type theory we intend 
+to prsent or assess, we can say that `tSys; is built 
+around a `i.kernal` `kErn; of `q.primitive` 
 types and functions.
+`p`
+
+`p.
+In general, an assumption of Channel Algebra is that a significant 
+portion of information, present in some structured system,  
+can be extracted by identifying elements in 
+the system with types in a suitably developd 
+type system `tSys;.  In the case of Natural Language 
+%-- specifically Cognitiv Grammar %-- this means that 
+many syntactic and semantic details for each word 
+in a sentence can be provided by mapping words to types.  
+As I have mentioned, linguists like Luo and Pustejovsky 
+have given persuasive analyses of certain type systems 
+for `i.semantics`/, but I intend to apply 
+type theory also to `i.syntax`/.  
+Later in this section I will demonstrate 
+this in practice, but for now 
+I will hust note that such analysis requires 
+a sufficiently complex type system.  For example, 
+semantic notions like dot-typs and dependent-product 
+typs, which have proven to be effective in shedding 
+light on common lexico-semantic phenomena, may need to be 
+expressible in a `tSys;, `i.along with` link- or cognitive-grammatic 
+notions like `i.connectors` and `i.expectations`/.  
+`p`
+
+`p.
+Similar comments apply to modeling and sharing 
+scientific data.  Here, I have in mind projects 
+like Conceptual Space Markup Language, and 
+applications of Conceptual Spaces to study the nature 
+and evolution of scientific theories, as reflected in 
+research by (notably) Frank Zenker and Gregor Strle 
+`cite<Zenker>;, `cite<Strle>;.  
+Implicit in this research is the philosophy 
+that scientific data models are not just electronic 
+specifications for transmitting raw data, but embody 
+scientific theories in terms of how data is structured and 
+constrained.  CSML, for example, 
+defines criteria on data parameters such as ranges, 
+dimensions (called `q.units` in CSML), and structural 
+protocols (including CSML `q.scales`/) \cite[p. 6]{RaubalAdamsCSML}.  
+As a concrete example, the biomedical concept `q.blood pressure` 
+is usually understood as a pair of numbers whose dimnsions ar 
+each in kilopascals (kPa) and whose first number 
+(systolic pressure) is necessarily greater than 
+the second (diastolic) %-- technically, the pair 
+is `i.monotone decreasing`/.  In conventional Biomedical 
+Ontology, cf. SNOMED-CT or the Vital 
+Signs Ontology, these conditions might be stipulated by 
+defining a `q.blood pressure measurement` concept subject 
+to the relevant dimensional and range criteria (e.g. 
+diastolic pressure must be greater than zero but 
+less than systolic pressure), and/or by classifying 
+systolic and diastolic pressure as subconcepts of 
+blood pressure (see `cite<BarrySmithBlood>; and 
+`cite<AlbertGoldfain>;).  In a kind of Ontology 
+paradigm incoporating type theory, the same conceptual 
+structure can be represented concisely by defining 
+a type whose structure conforms to the 
+semantic requirements on the `i.blood pressure` concept 
+as it is scientifically understood: i.e., a 
+monotone-decreasing integer pair whose 
+dimensional units are labeled `q.kPa` or `q.kilopascals`/.  
+Note also that the `q.monotone decreasing` 
+criterion is an example of the structure of 
+dependent-product types (in this case because the valid range for 
+the second number depends on the value of the first), 
+a construction which elsewhere is used for Natural 
+Language semanticcs, e.g. \cite[p. ?]{Luo}.
+`p`
+
+`p.
+Th point of this example is that many scientific concepts 
+%-- the semantic norms embedded in how scientific terms are defined 
+and understood and how the concepts ar used in scintific theories 
+and research %-- can be rigorously specified with a suitably 
+expressive type system.  Therefore, a sophisticated 
+system `tSys; is both a practical tool for scientific data 
+sharing and scientific computing, but also an expository 
+vehicle capturing theories' conceptual underpinnings.  
+Developing scientifically useful type theories can 
+then serve as a kind of formalized philosophy 
+of science %-- type theory as metascientific analysis.
+`p`
+
+`p.
+So in the past several paragraphs I have discussed the 
+idea of using type attributions to represent semantic and 
+syntactic details in natural language, and also 
+metascientific concepts in scientific theories and data 
+sharing.  A suitably developed type-system can, in light 
+of these possibilities, act as a kind of multi-purpose 
+tool capturing semantic principles in a broad array 
+of formal and informal cotexts.  This is possible insofar as 
+type theory is developed on a flexible basis so that 
+type systems can expand in different directions for 
+different intellectual environments %-- dependent 
+sum and product types for Natural Language semantics; 
+`q.connectors` for Link Grammar; CSML-style 
+units, ranges, and scales for scientific data; etc.  
+The overarching goal of Channel Algebra is to 
+enable these flexible, multi-purpose type systems.
 `p`
 
 `p.
