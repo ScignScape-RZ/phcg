@@ -266,6 +266,45 @@ enable these flexible, multi-purpose type systems.
 `p`
 
 `p.
+Another way of expressing this idea is that type systems 
+should be `i.multi-paradigm`/.  Suppose we are using a 
+collection of types to model the semantics of some linguistic 
+or scientific model.  We may realize that ther are some 
+crucial semantic formulations that need to be recognized 
+within the type system itself, if this 
+type-oriented modeling is to be comprehensive.  For 
+esample, in a link-grammar context, we may recognize 
+that, in addition to assigning semantic and/or 
+Part-of-Speech types to individual words, we need to 
+represent the `q.potentialities` latent in words 
+allowing them to link up (a pair of 
+`q.compatible` potentials produces what Link Grammar 
+calls a `q.connector`/).  Or, in a metascientific context, 
+we may rcognize that we need to annotate type-attributions 
+with CSML notions like range, scale, and units.  
+The multi-paradigm criteria means that there would be 
+a mchanism in place to enrich a type system 
+`tSys; so that such semantic details can be seen as
+structural parts of types modeled via `tSys;.`footnote.
+I refer to `q.semantic details` even in theories of 
+Natural Language `i.syntax`/, like Link Grammr, 
+because many ideas about language `i.grammar` are 
+relevant tobthe `i.semantics` of the linguistic 
+`i.theory`/, which is different than 
+the Semantics of Natural Language which linguistic 
+theories have as their subject matter.
+`footnote` 
+`p`
+
+`p.
+One virtue of organizing a type system `tSys; around 
+`i.procedures` is that this `q.multi-paradigm` 
+flexibility becomes easier to achieve when we can directly 
+model requirements on procedures, and how procedurs 
+interact with types (for instance, each type needs 
+one or more procedures to construct elements 
+of that type).  
 
 `p`
+
 
