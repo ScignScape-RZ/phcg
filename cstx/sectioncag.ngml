@@ -277,9 +277,10 @@ esample, in a link-grammar context, we may recognize
 that, in addition to assigning semantic and/or 
 Part-of-Speech types to individual words, we need to 
 represent the `q.potentialities` latent in words 
-allowing them to link up (a pair of 
-`q.compatible` potentials produces what Link Grammar 
-calls a `q.connector`/).  Or, in a metascientific context, 
+allowing them to link up (each word has a `i.connectors` 
+such that a pair of 
+`q.compatible` connectors can produce a `q.link`/).  
+Or, in a metascientific context, 
 we may rcognize that we need to annotate type-attributions 
 with CSML notions like range, scale, and units.  
 The multi-paradigm criteria means that there would be 
@@ -425,6 +426,7 @@ might have pseudo-code like this:
 `sentenceItem; `hspace<1em>; if ($x$ > 10) break;
 `sentenceItem; `hspace<1em>; ++$x$;
 `sentenceItem; \} // end the loop
+`sentenceList`
 
 If we want to analyze the inner code-block as a distinct 
 (but nested) procedure, we would identify how 
@@ -459,7 +461,105 @@ In a formal model, an adjective is therefore a kind of
 `q.procedure` which inputs a noun and outputs a noun.  
 In my terminology, a bread-and-butter input 
 channel is called `i.lambda`/, and a bread-and-butter 
-output channel is called `i.return`/.  
+output channel is called `i.return`/.  However, Link Grammar 
+also recognizes various link kinds, each driven by connector-pairs.  
+For example, consider a simple link-grammatic analysis 
+of adjectives in the spirit of \cite[p. 16]{SleatorTamperley}.  
+Note that most nouns take adjectives, but some words we 
+might want to classify as nouns don't seem to:
+
+`sentenceList,
+`sentenceItem; Today is Tuesday.
+`sentenceItem; The big departmental meeting is Tuesday.
+`sentenceItem; It is very windy. 
+`sentenceItem; The lousy weather is very windy.
+`sentenceItem; They are forecasting snow.
+`sentenceItem; The latest reports are forecasting snow.
+`sentenceList`
+
+We might want to consider `i.today`/, `i.it`/, 
+and `i.they` as de-facto nouns, but notic the adjctival 
+constructions do not carry over: we can't say 
+`q.big today`/, `q.lousy it`/, or `q.latest they`/. 
+`p`
+
+`p. 
+In other words, some restriction on the `q.adjective` 
+and `q.noun` types must be identified which 
+blocks constructions like `q.big today` being parsed as valid 
+exampls of `i.big` as an adjective type-instance.  
+One option might be to define the adjective and noun 
+`q.types` more narrowly, which is more in the spirit of 
+type-theoretic semantics.  In that case, we 
+don't take adjectives, say, as `q.functions` 
+which input and output `i.any` noun, but rather 
+model a suite of adjectival types operating 
+on different noun types.  For example, the adjectives 
+`i.salaried` and `i.elected` in 
+
+`sentenceList,
+`sentenceItem; She is a salaried employee.
+`sentenceItem; He is an elected official. 
+`sentenceList`
+
+can only be attributed to persons, so qua functions 
+these adjectives only `q.input` persons, as a subtype 
+of nouns in gneral.  Via Link Grammmar, on the other hand, 
+the basic theory involves adding extra conditions on 
+the adjectives and nouns involved, which are required 
+(along with the underlying type-compatibility) 
+to permit the function (the adjective) to input 
+the argument (the noun).   Then `i.today`/, `i.it`/, 
+and `i.they` cannot take adjectivs because they do not have 
+the proper `q.connectors`/.  Of course, both idas 
+can be combined, so we can define 
+nouns and adjectives restricted to 
+narrower subtypes (like person, living 
+thing, physical object, etc.) and also marked with 
+connectors, so adjective-noun pairings depend on 
+compatibility both at the subtype level and the 
+connector level.
+`p`
+
+`p.
+The important point for the current context is that 
+connectors essentially extend any type system 
+compatible with Link Grammar, so we need to imagine 
+an extra kind of input and output channel representing 
+`i.connectors` as orthogonal to underlying 
+Part of Speech or lexical types.  In 
+`i.big departmental meeting` we have to treat 
+`i.departmental` as a kind of cognitive procedure 
+modifying the concept `i.meeting`/, and then `i.big` 
+as a procedure modifying the `q.output` of the first 
+procedure.  Then we `i.also` have to represent a 
+`i.connector` on `i.meeting` establishing that 
+this conecpt/lexeme can be modified by an adjective, 
+and similarly a related connector inheres to 
+the `i.output` of the `q.departmental` 
+procedure.  So there is a kind of output-channel 
+establishing which connectors ar eavailable on procedural 
+outputs (connectors of the same varieties as 
+would be available on individual words), and 
+special input-channels which similarly model 
+connectors which must be available on 
+procedural inputs.  I'll call these input-connector 
+and output-connector channels.  Type-thoretic semanticists 
+like Luo and Pustejovsky might prefer to 
+model connectors as aspects of types themselves, but we come 
+closer to capturing the Link Grammar model if we 
+reprsent the connector channels as distinct from 
+the regular input and output channels, whose parameter-types 
+are orthogonal to the language's connector-system.  
+`p`
+
+`p.
+I have, in any case, hereby prsented eight different kinds 
+of channels applicable to different programming- or 
+natural-language constructions: `i.lambda`/, `i.sigma`/, 
+`i.capture`/, and `i.input-connector` on the input 
+side; `i.return`/, `i.error`/, `i.control`/, 
+and `i.output-connector` on the output side.  
 `p`
 
 
