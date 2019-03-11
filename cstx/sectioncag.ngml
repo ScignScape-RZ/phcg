@@ -115,7 +115,51 @@ possible.  Without the proper network of procedures,
 the data can never be transformed into the views 
 where non-local semantics are relevant.  
 This motivates my choosing the term `q.`i.ambient` procedures`/, 
+because a certain collection of procedures must be in place 
+on the receiver end of a data-sharing event.  This also implies 
+that one important role of data modeling is to indicate 
+which procures a potential receiver needs to have 
+available %-- i.e., needs to implement %-- to qualify as a 
+capable recipient of data conforming to the model.  
+Data models should describe what procedural 
+capabilities must be afforded by software libraries in 
+order for the human-level, conceptual semantics of 
+the data can actually emerge from humans' 
+interactions with the system.  
+`p`
 
+`p.
+Analogous to Ontologies as data model specifications 
+for the Semantic Web, I'll use the term `q.Ambient-Procedural 
+Ontologies` to express the paradigm that implememting data-sharing 
+protocols involves crafting software libraries around 
+procedural requirements.  This has two implications for 
+how we theorize software systems.  First, we need to characterize 
+procedures in a manner that expresses the proceural 
+capabilities that a system offers, or must have to satisfy a 
+data-sharing protocol.  Second, we can assume that 
+whenever data is sent, received, manipulated, or visualized, 
+there is a collection of procedures available in the system 
+which enact these computational processes.  
+`p`
+
+`p.
+On this basis, then, I will develop a Type Theory that operationalizes 
+this intuition about `q.Ambient Procedural Ontologies`/.  
+The main outlines of this type theory are first that procdures 
+have types; and second that procedures are `q.ambient` or 
+logically prior to (or at least equiprimordial with) the 
+type system itself.  This is not a mathematical type system 
+where every underlying type (like Natural Numbers) and 
+every operation (like arithmetic operators) have to be 
+mathematically described in the theory.  
+Instead, we can always take certain types and procedures as 
+`q.primitive` or (at least in their inner workings) 
+external to the type theory.  For any type system `tSys;, 
+whose structure is regulated by a type theory we ijyend 
+to prsent or assess, we can say that `tSys` is built 
+around a `i.kernal` `kErn; or `q.primitive` 
+types and functions.
 `p`
 
 `p.
