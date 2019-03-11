@@ -681,7 +681,15 @@ does have a numeric manifestation in computer memory %--
 essentially an encoding as a sequence of bytes, that is,  
 8-bit unsigned integers %-- but it is not obvious that such 
 encodings (sometimes called a `q.bit pattern`/) actually 
-are `q.values` of typs.  
+are `q.values` of types.  In reality, computer code almost never 
+deals with `q.values` per se, but rather deals with types 
+represented symbolically in function signatures: passing 
+`q.values` around from procedure to procdure.  One exception to this 
+rule is that some values are written directly into computer 
+code %-- the numeric literal `q.10` represents a specific 
+value (usually in some intger type).  However, even here some 
+procedure is needed to interpret the character strings in 
+source code to the actual typed value.
 `p`
 
 
