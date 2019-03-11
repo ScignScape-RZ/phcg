@@ -303,7 +303,69 @@ flexibility becomes easier to achieve when we can directly
 model requirements on procedures, and how procedurs 
 interact with types (for instance, each type needs 
 one or more procedures to construct elements 
-of that type).  
+of that type).  As I said earlier in this section, we 
+can start from any `q.kernel` of types and procedures 
+and build new types by describing procedures which 
+create, and/or operate on, values of 
+`kErn;-types.  However, there ar many different ways that 
+procedures can act on values and call other procedures.  
+This means there is a lot of room for extending 
+type systems to represent different kinds of inter-procedural 
+relations.  For example, in Link Grammar a Part of 
+Speech type is not just a `q.function` acting on 
+other types %-- e.g., adjectives act on nouns; 
+`q.red apple` modifies the image we have when we 
+conceptualize `q.apple`/.  The adjective/noun pair also 
+needs the right potentials to create a connector.  
+A type-thoretic model of this idea can involve stipulating that, 
+in some cases, a function-type `fFunT; is not only 
+defined by the type of its argument(s), but 
+by some added `q.connector` structure which must math between 
+`fFunT;-instances and the instances of its argument types.
+`p`
+
+`p.
+Channel Algebra, as I will now argue, 
+givs us a way to encode `q.extra information` 
+along these lins in type descriptions.
+`p`
+
+`subsection.Channels and Carriers`
+`p.
+In concvtional type theory, every type system has `i.some` notion 
+of functional types, but these are often treated in a 
+simple form based on Typed Lambda Calculus.  
+Canonically, a function `i.inputs` 
+one or more values, and `i.outputs` on or more values 
+(in many concrete type systems, only on output 
+value).  We can (still rather informally) 
+talk of these input and output collections as 
+`q.channels`/.  So, a procedure 
+has an `i.input` channel %-- that's where it vgets 
+its arguments from %-- and an `i.output`  
+channel, where it provides a result.  The term 
+`q.channel` is usually usd in the context of 
+`q.process algebras` where procedurs can run concurrently, 
+and channels may be two-way means of communication between 
+concurrent procedures.  For this paper, I will only 
+consider `i.sequential` procedurs %-- where two 
+procedurs follow each other in time; no 
+parallelism %-- and `i.one way` channels, which 
+carry information from one procedure to another but have a fixed 
+direction.  Intuitively, if `procOne; sends a value 
+to `procTwo; via one channel, `procTwo; cannot send a value 
+back via the same channel (although it can `i.modify` the 
+value in the channel).
+`p`
+
+`p.
+While type theory may conceive functions as (in effect) 
+a combination of input and ouput channels, actually programming practice 
+reveals multiple distinct `i.kinds` of input and output 
+channels.  
+`p`
+
+`p.
 
 `p`
 
