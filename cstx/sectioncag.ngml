@@ -331,7 +331,7 @@ givs us a way to encode `q.extra information`
 along these lins in type descriptions.
 `p`
 
-`subsection.Channels and Carriers`
+`spsubsectiontwoline.Channels as Type-System Extensions`
 `p.
 In concvtional type theory, every type system has `i.some` notion 
 of functional types, but these are often treated in a 
@@ -560,13 +560,134 @@ natural-language constructions: `i.lambda`/, `i.sigma`/,
 `i.capture`/, and `i.input-connector` on the input 
 side; `i.return`/, `i.error`/, `i.control`/, 
 and `i.output-connector` on the output side.  
+Later I will introduce a few other channels.  
+Notice though that the range of different channels, 
+each with distinct semantics and theoretical 
+roles, extends far beyond the basic intuition 
+that every procesure has some inputs and some outputs.  
+Instead, type theories can evolve to capture theoretical 
+structures in diverse domains, because many theoretical 
+concepts can be systematically represented by describing 
+special kinds of channels applicable to certain procedures.  
+One way to capture data models and theoretical 
+commitments is to envision scientific models as 
+organized %-- implicitly or explicitly %-- around 
+some sort of `q.procedures` and then analyze the various 
+protocols by which information is 
+mapped into and out of procedures, with the `i.semantics` of 
+these protocols described by stating requirements 
+on specialized `q.channels`/.
 `p`
 
+`p.
+The notion of `i.channel` is therefore closely tied to the notion 
+of `i.procedure`/, and `i.types` are similarly specified 
+via both procedures and channels.  That is, most of 
+th complex typs in a type system are functional 
+types, which in turn are characterized in 
+part by the kind of channels used by instantiating procedures.  
+In principle, function-types are differentiated by the `i.kinds` 
+of channels they use as well as the `i.types` of their 
+arguments.  For example, in Object-Oriented 
+programming, a `i.method` in a string class might 
+take a string `i.object` (representing a string of 
+textual characters) as the nethod `q.receiver`/, 
+aside from `i.arguments`/: e.g., a `q.substring` 
+method would take a pair of intgers.  This procedure 
+would be considered to have a different type than an 
+equivalent non-method function taking `i.three` arguments 
+(one string and two integers) %-- even if both versions had 
+the same number and types of input parameters.  In `Cpp;, 
+`q.pointer-to-member-function` types are never equated to 
+function-pointer types.`footnote.
+Note that `Cpp; terminology is confusing in 
+that pointer-to-member-functions can never point at 
+`i.static` member functions (i.e., the fact that 
+such functions are members has no bearing on their 
+pointer-types), even though member functions themselves 
+`i.can` be static.
+`footnote`  The explanation for 
+such distinctions in Channel Algebra is that a 
+procedure which takes all inputs from a lambda channel 
+has a different type than an (even if otherwise identical) 
+procedure which takes one input from a `i.sigma` channel 
+(equivalnt to the `Cpp; `i.this` keyword).
+`p`
 
+`p.
+In Object-Oriented environments, non-static member-functions 
+(aka `q.methods`/) are distinguished from non-methods 
+in part because there are different rules for resolving method-calls 
+when a given function name refers to several different 
+procedural implementations (such as a base-class function and 
+a derived-class function which overrides it).  
+This is one example of how `q.sigma` and `q.lambda` channels 
+have different semantics: the types carried within 
+sigma channels are more consequential for overload-resolution than 
+those in lambda channels.  Conversely, sometimes channels are 
+not semantically significant enough to decisively 
+differentiate types.  In `Cpp;, a function which 
+`i.does` throw an exception cannot be overloaded 
+with a function which `i.does not` throw 
+an exception (assuming the rest of the functions' signatures 
+are identical).  This means that %-- if we model type systems like 
+that of `Cpp; via Channel Algebra %-- procedurs 
+with and without error channels can gbe the same type.  But it 
+is always possible `i.in principle` to differentiate function-types 
+based on the kinds of channels their associated procedures use; 
+just that somethimes this results in fine-grained distinctions 
+not recognized by a particular type system.
+`p`
+
+`p.
+The larger point is that function-types are specified 
+via channels (`q.modulo` potential coarsening that equates types 
+that could potentially be distinguished).  Therefore, the 
+fundamental fabric of the type system is dependent on 
+modeling channels, because this determines how 
+function-types themselves are miodeled; and, as I will now 
+explicate, function-types ar ethe logical core of 
+almost any practical type system
+`p`
+
+`subsection.Channels and Carriers`
+`p.
+Most type systems take it as self-evident that any type 
+is associated with `i.values` of that type, and usually 
+`i.sets` of values.  That is, intuitively, for any 
+type (say, 16-bit signed integers) there is a 
+set of values whichba are the `q.inhabitants` of 
+that type.  One weakness of this picture is that 
+many types vary in terms of `i.what` set of values is actually 
+representable in a given computational context.  The 
+case of 16-bit signed integers carries no such ambiguity; 
+this type always has an extension equivalent to the 
+interval -32768 to 32767 in $\mathbb{Z}$.  However, 
+consider the type of `i.lists` of 16-bit signed integers; 
+depending on a program's available memory, some relatively 
+long lists which can be represented on one computer will 
+exceed the capacity of a different computer.  Since computer 
+code in general is not tied to a specific environment, 
+we have to accept that for many types we 
+do not know `i.a priori` what set of values 
+conformant to that type can actually be used.
+`p`
+
+`p.
+In addition to this practical problem, it is also difficult to 
+describe exatly what a value `i.is`/.  Any instance of any type 
+(at least in the software ecosystem) 
+does have a numeric manifestation in computer memory %-- 
+essentially an encoding as a sequence of bytes, that is,  
+8-bit unsigned integers %-- but it is not obvious that such 
+encodings (sometimes called a `q.bit pattern`/) actually 
+are `q.values` of typs.  
+`p`
 
 
 `p.
 
 `p`
+
 
 
