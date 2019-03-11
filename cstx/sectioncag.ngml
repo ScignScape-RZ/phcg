@@ -362,8 +362,108 @@ value in the channel).
 While type theory may conceive functions as (in effect) 
 a combination of input and ouput channels, actually programming practice 
 reveals multiple distinct `i.kinds` of input and output 
-channels.  
+channels.  In Object-Oriented programming, Objects are 
+passed to functions (i.e., `q.methods`/) using a 
+different protocol than ordinary parameters.  Also, many 
+Object-Oriented languages support Exceptions, which are like 
+non-standard return values that disrupt the 
+normal program flow.  This suggests two different 
+`i.input` channels %-- I'll call them 
+`i.lambda` and `i.sigma` for the calculii which 
+can model their semantics %-- and two different 
+`i.output` channeos, which I'll call `i.result` and 
+`i.error`/, for normal and exceptional return values, 
+respectively.  
 `p`
+
+`p.
+Furthermore, many languages support `q.lambda` or `q.inline` 
+functions which can be `q.closures`/, enabling a proceure 
+to modify values in its `q.surrounding lexical scope`/.  In 
+other words, a `i.closure` is a procedure implemented 
+inside the implementation of an enclosing procedure, and 
+it has the ability to read and maybe modify data used by 
+the enclosing procedure.  We can consider this 
+`q.handing down` of values from outer to inner 
+procedures to be a kind of input channel, which 
+I will call a `q.capture` channel.  Some programming languages 
+make this value-sharing explicit: in the case of 
+modern-day `Cpp; (since the 2011 standard) lambda 
+functions have, as part of their definition, an 
+explicit documentation of which symbols are 
+`q.captured` from an enclosing lexical scope 
+%-- these symbols are listed in square brackets, just as 
+regular arguments are listed in parentheses, which 
+helps reinforce the idea that inputs via 
+symboo-capture are similar to inputs via argument-passing 
+(which I say in Channel Alegebr as `i.lambda` and 
+`i.capture` being both input channels).
+`p`
+
+`p.
+Nested procedures can also be used to represent branching and 
+control-flow, like `i.loop` and `i.if-then-else` 
+formations.  For instance, `i.if-then-else` can be 
+represented as a structure which involves two nested 
+procedures: if some condition (in the outer, 
+enclosing procedure) is true, then the first nested procedure 
+is calld; if not, the second is called.  Similarly, a 
+`i.loop` takes some nested procedure and calls it repeatedly.  
+In the simplest case, the nested procedure is called again and 
+again until the nested procedure returns in a manner 
+that signals the loop should be brocken off (a common keyword 
+for this condition, e.g. in `Cpp;, is `q.break`/).
+`p`
+
+`p.  
+To demonstrate with a trivial concrete example, we 
+might have pseudo-code like this:
+
+`sentenceList,
+`sentenceItem; int $x$ = 0;
+`sentenceItem; loop \{
+`sentenceItem; `hspace<1em>; if ($x$ > 10) break;
+`sentenceItem; `hspace<1em>; ++$x$;
+`sentenceItem; \} // end the loop
+
+If we want to analyze the inner code-block as a distinct 
+(but nested) procedure, we would identify how 
+the nested implementation `q.captures` the $x$ value.  
+We also have to identify how `i.break` causes the nested 
+procedure to terminate %-- like `i.return` 
+in an ordinary channel %-- but does so as a signal 
+for `i.loop` (in the outer procedure) to break off.  
+In effect, a nested procedure used as a loop block 
+has a spcial kind of output channel which can represent two 
+possible states: `i.continue` the loop or 
+`i.break` the loop.  I will call this hypothetical 
+channel a `i.control` channel after Chung-Chieh Shan 
+`cite<ShanControl>; and Oleg Kiselyov `cite<KiselyovControl>; 
+(although they work in a different underlying context).  
+Most programming language runtimes don't actually 
+support the more `q.exotic` channels I discuss here, 
+and without runtime implementations they can 
+remain as just theortical descriptions of 
+programming phenomena implemented or analyzed via 
+some theortical framework quite different from 
+what I am calling `q.Channel Algebra`/.  
+However, the data set accompanying this text 
+demonstrates a runtine engine where the channel 
+structures I describe here can be directly implemented.
+`p`
+
+`p.
+I'll also mention the Link Grammar example, say 
+an adjective as a function modifying a noun.  
+In a formal model, an adjective is therefore a kind of 
+`q.procedure` which inputs a noun and outputs a noun.  
+In my terminology, a bread-and-butter input 
+channel is called `i.lambda`/, and a bread-and-butter 
+output channel is called `i.return`/.  
+`p`
+
+
+
 
 `p.
 
