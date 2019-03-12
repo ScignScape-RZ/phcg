@@ -825,6 +825,17 @@ two different source-code graphs.
 `p`
 
 `p.
+Each of these operators represent a step in a computational 
+process whereby channel packages are constructed and then 
+evaluated, which overbthe course of several stages 
+(in general) provides implementation of procedures.  
+A single operator is associated with a `i.microstage`/, 
+for example, appending one carrier to one channel.  
+A sequence of microstages is than an `i.intermediate 
+representation` used to translate high-level source code 
+to data structures that can be executed direcly 
+(or more or less directly, by interfacing to 
+`q.ambient procedures`/, e.g. via `Cpp; reflection).  
 
 `p`
 
