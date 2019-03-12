@@ -1190,7 +1190,40 @@ affirmative, use the preconstructor.
 `p`
 
 `p.
+The key point here is that many conceptual details or 
+programming requirements that concern interrelationships 
+between values can be modeled within a 
+type system %-- even without full-fledged 
+dependent types %-- via preconstructros used as 
+signal values.  For a given requirement, such as 
+`q.is $y$ greater than $x$?`/, we can identify a type 
+that `i.could` be constructed if (and only if) 
+the requirement is satisfied.  For instance, 
+`i.$y$ is greater than $x$` is true iff we can form an 
+instance of a monotone-increasing pair type out 
+of $x$ and $y$ %-- and so, the preconstructor 
+for this type becomes a convnient signaling value 
+for the affirmation of $y > x$.  Conceptual requirements 
+can be defined by modeling types whose values 
+necessarily exhibit some significant property, and 
+then using preconstructors to those types as 
+certificates that the property is true (in some context).  
+A `q.`i.rider`/` channel can then be populated with 
+one (or possibly several) preconstructors affirming 
+facts about the values carried in other channels.  For instance, 
+a `i.lambda` channel holding $x$ and $y$ can be paired with 
+a `i.rider` channel holding a monotone-increasing-pair 
+preconstructor, certifying that $y$ has been checked to be 
+greater than $x$.
+`p`
 
+`p.
+The laerger point of this whole subsection is that 
+details about the nature and existence of type-constructors 
+can provide useful concptual information about types 
+themselves.  Often this information dovetails 
+with the metadata pertinent to Conceptual Space Theory 
+ahnd CSML.  
 `p`
 
 `p.
