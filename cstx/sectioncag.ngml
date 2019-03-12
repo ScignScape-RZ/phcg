@@ -1014,12 +1014,185 @@ overload-resolution: each constructor has to have a different
 signature than any other constructor of the same type.  
 However, the rationale for this restriction seems to be 
 syntactic more than semantic.
-`footnote` 
+`footnote`  In Channel Algebra, one option is to 
+define a special `q.`i.construct`/` channel for values 
+output from constructors.`footnote.
+It is useful to pair this channel with a semantically 
+similar channel I'll call `i.placement` (after 
+`q.placment new` in `Cpp;) for scenarios where the 
+constructed result should be written to a buffer 
+provided by the calling procedure rather than returned. 
+`footnote`  Consider the case of appending values to 
+a list of numbers: should a function which 
+maps `LappendX; to `Lprime; %-- where `Lprime; is 
+the same as `LpreX; except it has $x$ at the end 
+%-- be considered a constructor?  
+In most functional programming languages this 
+is actually a classical case (along 
+with trivial ones) of constructors, because they 
+provide the basic mechanism wherein instances 
+of list types are defined.  In other words, 
+this `i.append` function seems logically anterior 
+to other functions which may create a list 
+%-- for instance, by `i.removing` the last 
+element from a (non-empty) list. 
+`p`
+
+`p.
+Such a notion of `q.anteriority` can sometimes be made 
+rigorous.  If we build up a list of numbers by appending 
+values to smaller lists, we can eventually construct 
+any list whatsoever.  We can also run this process 
+in reverse: for non-empty `Lprime; there is only 
+one way to construct `Lprime; from a pair 
+`LappendX;.  In other words, an `i.append` 
+constructor is `q.reversible`/.  Moreover, we 
+can repeatedly reverse constructors like 
+thse to get shorter and shorter (and eventually 
+empty) lists.  This means that algorithms can 
+traverse a chain of constructors `q.backward` and 
+will be guaranteed to terminate.  For example, 
+to dtermine if a list of numbers contains 
+the number $n$, it is easy to check if it `i.ends` 
+with $n$.  If not, `q.reverse` the construction, and 
+see if each smaller list ends with $n$.  Eventually we 
+would reach the mpty list, meaning that the 
+original list did `i.not` have $n$. 
+`p`
+
+`p.
+The possibility of `q.reversing` constructors is a familiar 
+pattern in functional programming, where it is often called 
+`q.pattern matching`/.  It allows algorithms to be 
+implemented in a functional style, with heavy use of recursive 
+functions and sparing use of side-effects and mutable state.  
+On the other hand, pattern matching relies on some 
+simplifying assumptions that may not be consistent with 
+all type systems.  For example, `Cpp; is laxer about how 
+valus are constructed; I can obtain a list of numbers by 
+dereferencing a pointer to a list, with no information 
+about the provenance of the referenced data.  Data types in 
+`Cpp; do not usually carry around details about their 
+`q.history`/, and it is not always easy to 
+reconstruct that history the way we can 
+`q.obviously` reverse the construction of a list.  
+`p`
+
+`p.
+In any case, these variations present some potentially 
+informative characteristics about individual types.  
+Given type `tTyp;, we can ask questions like: 
+
+`enumerate,
+`item; Which instances of `tTyp;, if any, can be the result of 
+a trivial constructor?
+`item; Does `tTyp; have a `i.default value` whish is the result of 
+a trivial constructor? 
+`item; Which instances of `tTyp; can be the result of a 
+literal constructor?
+`item; Which instances of `tTyp;, if any, can be the result of 
+a reversible constructor?
+`item; If we have values which `i.are` the result of 
+a reversible constructor, is there an efficient way 
+to `q.un-construct` the value to support pattern matching?
+`item; Does `tTyp; have co-constructors (i.e., they 
+are not literal) which also are neither trivial nor reversible?
+`enumerate`  
+
+Notice that a trivial constructor does not necessarily produce 
+a defaukt value.  For example, a type meant to represent 
+days of the week could default to whichever day is current 
+when a constructor is called: if an application is run on 
+Tuesday, the day-of-week trivial constructor would return 
+the value for Tuesday.  So a type may have `i.more 
+than one` trivial-constructed values.  But 
+if a type has `i.exactly one` trivial-constructed value, 
+this is `i.usually` a `q.default` value.
+`p`
+
+`p.
+However, a type can have a default value without a trivial 
+constructor.  A defalt value plays the 
+conceptusl role of a `q.fallback`/: 0 is a reasonable 
+default for most numeric types.  However, some numeric types 
+don't have trivial constructors at all.  Meanwhile, types 
+representing calendar dates sometimes default to a 
+standardized `q.day zero`/, like January 1, 1970.  
+But a trivial constructor for such a type may instead 
+return today's date (when the function is called).  When a type has 
+a default value, a (co-)constructor which returns that value 
+can be called a `i.default` constructor.`footnote.
+For an example of a non-trivial default constructor, consider a 
+literal constructor for a ratio type that returns 
+0/1 given a malformed character string.
+`footnote`  As the Calendar Date example shows, 
+types can have default and trivial constructors 
+that return different values.
+`p`
+
+`p.
+Sometimes (co-)constructors are significant even if they are 
+not actually used.  To demonstrate how this may occur, consider 
+the problem of enforcing dependent-type constraints without 
+using dependent types explicitly.  A canonical example is 
+a function which must take a (maybe monotone) 
+increasing or decreasing pair of numbes (I used the 
+monotone-decreasing example for systolic and diastolic 
+blood pressure).  Suppose we implement a procedure to 
+highlight a selection of characters in a screeen display, 
+whose inputs are the start and end character indices in 
+some displayed text.  We want to indicate that the second number 
+(call it $y$) must be greater than the first ($x$).  
+Via unrestricted dependent types, we could just define 
+the type of $y$ as `q.numbers greater than $x$`/).  
+The problem with this type-declaration is 
+that we therefore do not know what type $y$ has until 
+the function is called (and $x$ has a 
+value).  This could violate the principle that 
+every argument to a function must have a type which 
+is known in advance.  Alternatively, we can 
+say that $y$'s type `q.provisionally` is, say, 
+a 32-bit integer the same as $x$, but it's `q.real` type 
+once $x$ is known is a dependent type that depends on 
+$x$'s value.  Not every type system however allows 
+for this kind of distinction between `q.real` and 
+`q.provisional` types.
+`p`
+
+`p.
+One way to assert the dependent-type restriction while avoiding 
+these problems is to note that $x$ and $y$ must form a 
+monotone-increasing pair.  That is, the procedure 
+mandates the `i.possibility` to create the monotone-increasing pair 
+`xy; from $x$ and $y$, even though the procedure 
+does not use this pair-value directly.  As a construct 
+in Channel Algebra, we can introduce the idea of 
+a `i.rider` channel which asserts the `i.possibility` 
+of creating certain values without actually creating them  
+The simplest case is suggested by this number-pair 
+example.  Let's assume we have an implemented type 
+modeling monotone-increasing pairs, with a co-constructor 
+that creates such a pair from two numbers 
+(verifying that the two numbers are indeed monotone-increasing).  
+We can then form a pointer to this co-constructor 
+function, or obtain some other unique identifier for it.  
+I call a function-pointer or similar value a `i.preconstructor` 
+if it references a co-constructor.  In addition to 
+being an indirect way of calling the co-constructor, 
+a preconstructor serves as a `i.certification` that the 
+co-constructor `i.could` be called.  For example, one 
+way to indicate that $y$ has been checked and 
+is indeed greater that $x$ is to use the 
+monotone-increasing pair preconstructor as a kind of 
+signal value: test for $y > x$, but if so, 
+instead of using boolean `i.true` for an 
+affirmative, use the preconstructor.   
 `p`
 
 `p.
 
 `p`
 
+`p.
 
-
+`p`
