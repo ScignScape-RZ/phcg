@@ -926,9 +926,96 @@ I will return to this possibility at the end of the section.
 
 `subsection.Channels and Constructors`
 `p.
-
+As I indicated, Channel Algebra downplays 
+the notion of typed `i.values` except in a 
+derivative sense (e.g. a `q.handoff` means an 
+alignment between carriers which we can picture as a 
+value being copied).  However, carriers do 
+become initialized, and even if this initialization 
+results from a handoff originating with 
+another carrier, that carrier in turn had to be initialized.  
+At some point these chains of initialization 
+have to be grounded on some underlying data.  
+This data may come from outside the software 
+itself: for example, a program emulating a 
+calculator relies on human users to type numbers 
+on a kyboard or by pushing buttons on a User Interface.   
+Other times values are literally written 
+in computer code, or 8btained from files, databases, 
+or over a network.  
 `p`
 
+`p.
+For sake of discussion, we can limit attention to 
+values read literally from source code.  Even external 
+data tends to depend on some numeric or string literal: 
+reading data from a file requires specifying a file name, and 
+obtaining data from a network location requires a 
+URL.  So computer code itself provides the 
+primordial values from which other values 
+circulating through the software are derived.
+`p`
+
+`p.
+In a typical type system, then, at least some types 
+should have procdures which construct values directly 
+from source code literals.  I'll call these 
+`i.literal-constructors`/.`footnote. 
+In `Cpp;, similar constructor-functions are called `i.literal 
+operators`/.  This terminology only applies to `q.user-defined` 
+constructors; the compiler itself handles initialization 
+for built-in typs like integer and floats.  However th 
+overarching term `q.literal-constructors` is helpful for 
+theory-focused languag-agnostic discussion about types and 
+constructors.
+`footnote`  In addition to literal-constructors, 
+there are some procedures to create type values from 
+other values (or from no values at 
+all); I will call these `i.co-constructors`/.`footnote.
+This terminology has the benefit of distinguishing 
+the property of functions I call `i.co-constructors` from 
+what existing programming languages 
+call `q.constructors`/, which itself has different meanings for 
+different languages.  For example, in `Cpp; one 
+cannot take the address of a constructor function; 
+however, co-constructors are implemented such that 
+you `i.can` have co-constructor pointers, which is essential 
+to the idea of `q.preconstructors` that I will address below.
+`footnote`
+`p`
+
+`p.
+There is no strict rule separating constructors for a type 
+`tTyp; from other procedures that may return values of 
+`tTyp;.  Intuitively, they play different roles: constructors 
+are about creating new values, while other functions 
+analyze or modify existing valus.  The canonical examples 
+are so-called `i.trivial` constructors, which 
+take no arguments %-- for instance, the constructor for a 
+list of numbers returns an empty list.  Such a 
+function surely qualifies as a constructor.  
+On the other hand, consider a function which takes a 
+list of numbers and returns a new list 
+with duplicate numbers removed %-- such a procedure 
+acts more as a utility function and probably 
+would not be classified as a constructor. 
+`p`
+
+`p.
+The constructor/non-constructor distinction is anyhow 
+typically left open by the programming language 
+environment, so coders have to signal their 
+intention to treat a given function as a constructor by 
+some extra syntax.`footnote.
+E.g. in `Cpp; a constructor is given the same name as the 
+type it constructs for.  One consequence is that 
+two different constructors cannot be declared without 
+overload-resolution: each constructor has to have a different 
+signature than any other constructor of the same type.  
+However, the rationale for this restriction seems to be 
+syntactic more than semantic.
+`footnote` 
+`p`
 
 `p.
 
