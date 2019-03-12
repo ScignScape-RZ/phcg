@@ -882,6 +882,50 @@ involve stack machines at their most primitive level.
 `p`
 
 `p.
+We are, in any case, operating here on several different 
+semantic levels.  The Channel Algebra operators define 
+one, intermediate level whose main theme is building channel 
+packages.  At a `q.lower` level each package must be evaluated 
+at runtim, for instance by converting it to a 
+`Cpp; function-call, so the semantic issues there are 
+identifying the proper `Cpp; function (or function-pointer) and 
+marshaling the channels to mimic the `Cpp; ABI (Application 
+Binary Interface).  Conversely, at a higher level, 
+source-code formations are interprted in terms of the channel 
+products they imply: so in code like `i.x = y->f(z)` the 
+implicit channels are likely populated as follows: $z$ goes 
+into $f$'s `i.lambda`/, channel, $y$ into its `i.sigma`/, 
+and $x$ becoms bound to its `i.return` (of course whether this 
+is the actual meaning of the code depends on the 
+high-level language's formal grammar).  This implies 
+that grammars can be organized around the channel structures 
+indicated by conformant code.  To the degree that 
+grammar engines adopt this paradigm they can be 
+called `i.Channel Algebraic Grammars`/.
+`p`
+
+`p.
+This paper's data set includes one example of an 
+implmented Channel Algebraic Grammar insofar as code 
+written in a special high-level language is translated to 
+a Channel Algebraic Intermediate Representation 
+(and then evaluated).  The syntax and semantics of 
+this spcial-purpose language is, of course, 
+only distantly related to `i.natural` language; 
+I won't address whether a comparable architecture could 
+yield a workable Natural Language Processing engine.  
+However, the design and role of this Channel Algebraic 
+Grammar in the `i.Software Language Engineering` 
+problem-space can perhaps serve as at least an 
+analogy for how `i.natural` language 
+orchstrates the `q.flow` of information, 
+and the ordering of operations, across the cognitive 
+proceures which underly linguistic understanding.  
+I will return to this possibility at the end of the section. 
+`p`
+
+`subsection.Channels and Constructors`
+`p.
 
 `p`
 
