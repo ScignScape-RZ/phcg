@@ -836,6 +836,52 @@ representation` used to translate high-level source code
 to data structures that can be executed direcly 
 (or more or less directly, by interfacing to 
 `q.ambient procedures`/, e.g. via `Cpp; reflection).  
+This strategy is concretely put into practice 
+in the sample code distributed with this paper.  In effect, 
+high-level source code is `q.compiled` into an 
+intermediate representation, and this IR is a more or less 
+direct translation of Channel Algebra oprations.  
+`p`
+
+`p.
+One of the technical challenges of using this strategy for 
+practical software developments involves mapping 
+sophisticated Channl semantics to ordinary 
+type systems.  Since a language like `Cpp; does not 
+support the full range of channels I have or will presented 
+here, the more detailed channel-complees have to be mapped to 
+function-call semantics which  `Cpp; will actually 
+recognize.  In practice, alot of this work involves 
+manipulating function pointers and casting carriers 
+to generic binary representations, like arrays of 
+`voidP;-pointers.  These techniques are not especially 
+relevant to the philosophical issues I am focused on in 
+this paper, so I'll leave them to the published 
+data set (interested readers will find a relatively 
+complete `Cpp; development environment, intended to be 
+used with the `Qt; platform, that operationalizes the 
+theory I am developing in this section).
+`p`
+
+`p. 
+At this point however I `i.will` comment 
+on the overall architecture of building and then evaluating 
+channel packages.  Supporting `q.Digamma Reduction` 
+in a runtime encironment requires reasonably complex 
+`Cpp; libraries (assuming `Cpp; is the language 
+of the runtime itself); but most of 
+the Intermediate Representation is concerned with 
+asserting carrier properties and then adding carriers 
+to channels.  Channels themselves act as stack machines, 
+in that they can be built up like machine 
+stacks and then cleared in the passage from one 
+stage to the next.  This is an example of a 
+point I made much earlier, in the introduction, that 
+computing environments ultimately 
+involve stack machines at their most primitive level.  
+`p`
+
+`p.
 
 `p`
 
