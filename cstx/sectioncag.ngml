@@ -692,6 +692,142 @@ procedure is needed to interpret the character strings in
 source code to the actual typed value.
 `p`
 
+`p.
+Given these considerations, while I will informally talk about 
+`q.values` I try to minimize the use of `q.value` as a technical 
+construct in Channel Algbra.  With this foundation we 
+can consider a kind of `q.value free` type theory by 
+rough analogy to `q.point-free` topology 
+(and therefore distantly to mereotopology).  More central than 
+the notion of `i.value` is the idea of a `i.carrier`/.  
+A carrier is a computational construct %-- symbolically 
+represented by a source-code token %-- which represents an 
+instance of a type.  Each carrier is asspociatd 
+with on canonical type (though carriers may be indirectly 
+associatd with supertypes of its canonical type).  
+When we talk about procedures calling other 
+procedures, we really mean that the value of symbols in one 
+body of code (whre the calling procedure 
+is implemented) is sychronized with tge value of symbols in 
+anothr stretch of code (where the callee is implemented).  
+In short, at any stage of program execution, we can form 
+groups of source-code symbols across the code base unified by 
+the guarantee that these symbols carry `q.the same` value.  
+But rather than talking of values directly we can 
+take this syncronization between symbols as the deeper notion: 
+the notion `i.value` is itself defined as the correlation exhibited 
+by synchronized `q.symbols`/.  The notion of 
+`q.carrir` is then a more rigorous extension of the 
+notion of source-code symbols or tokens.
+`p`
+
+`p.
+The difference between a `i.carrier` and a `i.type` is that 
+carrier have aditional states.  Some carriers are defind in 
+function signatures, but others are introduced as lexical 
+symbols in a procedure implementation.  In many programming 
+languags, lexical symbols can be `i.declared` before being 
+`i.defined`/.  We can represent this scenario via a `i.carrier` 
+which is in a particular `i.state` (I'll call it 
+`i.preinitialized`/).  When a carrier is initialized, it takes on 
+a sftate of holding a specific typed value %-- `i.values` are 
+defined indirectly as characteristics of carriers in initialized 
+states.  At some point (consider a pointer to deleted memory) carriers 
+no long hold meaningful values, and they enter a 
+state I'll call `i.retired`/.  Introducing `i.preinitialized` 
+and `i.retired` as carrier-states allows these to be separated from 
+the type-system: we do not have to assume a `q.preinitialized` 
+`i.value` which can be an `i.instance` of some types.  In some cases, 
+type systems `i.will` reognize values which play 
+similar semantic roles to these carrier-states: for example, 
+Haskell's `q.bottom` value is an instane of ervery typ and represents a 
+`q.null` or `q.missing` value.  However, using semenatics of carrier-states 
+rather than type-instancs means that we do not have to introduce extra 
+structure to type systems which we may want to model via Channel Algebra.
+`p`
+
+`p.
+Carrier which can be in preinitialized, retired, or initialized states 
+are called `i.tropes` (there may be only one, or multiple, 
+initialized states for tropes).  A different class of carriers ar e
+called `i.emblems`/, and represent abstract (`q.emblematic`/) 
+specfications on 
+carriers rather than carriers which hold concrete values: 
+in effect, emblems are carriers present in function 
+signatures.  One or more carriers in an ordered list then 
+form `i.channels` (though a channel can also be `i.empty`/, 
+with no carriers).  I distinguish an `i.empty` channel, 
+which exists but has no carriers, from a 
+`i.vacant` channel which does jot exist at all.  For instance, 
+a function that `i.can` throw exceptions but, at some point, 
+has returned a normal value instead, has an `i.empty` 
+error channel; a function which can `i.never` throw 
+an exception (e.g. the `Cpp; `i.nothrow` keyword) has 
+a `i.vacant` error channel.  Channels cannot include both 
+tropes and emblems; those taking tropes 
+are called `i.staged` channels, and those taking emblems are 
+called `i.abstract` channels.
+`p`
+
+`p.
+Carriers and channels interoperate according to several 
+operators, which give Channel Algebra its `q.algebraic` character.  
+To present these oprators I'll also intoduce the notion 
+of `i.stages`/.  Briefly, any procedure is broken down 
+into a sequence of stages, each of which involves 
+constructing som aggregate of chanels.  The basic 
+outline is as follows:
+
+`description,
+\item[Carrier Append]  Any staged channel can append 
+a trope, and any abstract channel can append an 
+emblem (represented as `ChaAppendCar;).
+\item[Channel Product]  Any collection of abstract 
+channels can combine to a `q.product`/, called a 
+`i.channel complex`/.  Similarly, any collection of staged  
+channels can become a channel `i.package`/.  
+A channel complex or package is generically called a 
+channel `i.product`/.  A channel product is considered 
+`q.complex` if any of its chanels are abstract.  
+The basic channel-to-channel operator `ChaProductCha; 
+represents a channel product formed by combining 
+`ChaOne; and `ChaTwo;.
+\item[Carrier Handoff]  Given carriers `CarOne; and 
+`CarTwo;, a `i.carrier handoff` `CarHandoffCar; means 
+that the value carried by `CarOne; is (at last temporarily) 
+carried to `CarTwo;.  This means that there is some phase 
+of program execution when `CarOne; and 
+`CarTwo; are synchronized, or `q.aligned`/; exhibiting the same state 
+(or sufficiently related) states.  Alignment allows for 
+imperfect handoffs, like coercing a floating-point 
+number to an integer.
+\item[Digamma Reduction]  A channel `i.package` 
+can be `i.allied with` a channel `i.complex` 
+(written `ChpAlliedChx;) if carriers in `Chp; and `Chx; 
+are `q.alignable`/.  The actual description of such 
+alignment is non-trivial; in `cite<Neustein>; I address this 
+in terms of hyoergraph models of computer code.  But in 
+general alignment means that handoffs are possible between 
+tropes and emblems, and if there is enough alignment 
+the chanel `i.package` `Chp; can be interpreted as a call 
+to a `i.procedure`/, whose `i.signature` is modeled by the channel 
+`i.complex` `Chx;.  In this case we have a `q.Digamma Reduction` 
+operator `DigammaR;, meaning that the package `Chp; is 
+`q.evaluated` and then control passes to the stage 
+labeled `stageLbl;.`footnote.
+The motivation for the term `q.digamma` is first that the `q.sigma` in 
+`sigmaCalc; looksblike a smaller version of th Greek letter Digamma, 
+and second that `q.gamma` is often used to represent graphs, and 
+`q.digamma reduction` can be sen as a relationship between 
+two different source-code graphs.
+`footnote` 
+`description`
+`p`
+
+`p.
+
+`p`
+
 
 `p.
 
