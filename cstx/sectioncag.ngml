@@ -1366,7 +1366,10 @@ these `i.macrotypes`/.
 
 `p.
 On the other hand, at a much finer level, individual 
-lexical classes %-- the concept or extension or intensional 
+lexical `q.cliques`/`footnote.
+Borrowing this term from `cite<GaumeVenantVictorri>; though I'm 
+not using it exactly the same way
+`footnote` %-- the concept or extension or intensional 
 property-set associatd with particular word-meanings 
 %-- often seem to behave as `i.types` as well.  In `q.Formal 
 Concept Analysis`/, `i.concepts` are (statistically) 
@@ -1418,10 +1421,79 @@ expression that seems to designate the extension of some concept
 (`i.rhinos`/) and then narrow it based on 
 extensional criteria (`i.in that park`/).  This suggests 
 a type/set interface similar to my analysis earlier of 
-`q.students polled` (\ref{itm:maj}).     
-  
+`q.students polled` (\ref{itm:maj}).  And (\ref{itm:elephant}) 
+suggests an `i.intensional` filter, narrowing a type 
+for contxtual purposes into a subtype that is 
+concptually meaningful but not ntrenched: 
+there is no common word (peer to `q.kitten` 
+or `q.puppy`/) for `q.baby elephant`/.  
+`p`
+
+`p.
+All of these operations %-- fine-tuning 
+concepts to the specific ideas salient in a 
+specific signifying act %-- have plausible 
+representations based on a concepts-as-typs 
+analogy, and suggest another level where 
+type theory could be an effective formalizing 
+tool.  But in this case, we are discussing 
+the almost minimal groupings of 
+a linguistic hierarchy, individual word-senses 
+%-- I'll call these `i.microtypes`/. 
+`p`
+
+`p.
+Meanwhile, in between coarse Part of Speech types and 
+fine lexical `q.cliques` are the kinds of 
+Ontologically-characterized categories or 
+`q.lexical sorts` `cite<MeryRetore>; associated with 
+linguists working in a formal type-thoretic 
+vein, like Zhaohui Luo and Bruno Mery.  I 
+will call types in this vein `i.mesotypes`/, 
+being intermediate in generality between individual 
+lexemes and syntactic categoires (Parts of 
+Speech and their refinements, like plural nouns).  
+The broad philosophical implications of mesotypes 
+is that they give some formal traction to 
+what happens cognitive-procedurally 
+when we negotiate between different 
+word senses and/or use language in seemingly 
+metaphoric (but not unrestricted) ways.
+`p`
+
+`p.
+Consider these exmples:
+
+`sentenceList,
+`sentenceItem; \label{itm:koreanstop} My favorite Korean restaurant is at the next stop.
+`sentenceItem; \label{itm:koreanclosed} My favorite Korean restaurant is closed today.
+`sentenceItem; \label{itm:koreanstarted} My favorite Korean restaurant started out in a food court.
+`sentenceItem; \label{itm:koreanloyal} My favorite Korean restaurant said I'm their most loyal customer.
+`sentenceItem; \label{itm:bark} She's constantly barking at her employees.
+`sentenceItem; \label{itm:back} He's not playing well because his back is barking at him.
+`sentenceItem; \label{itm:actup} He's not playing well because his sore back is acting up.
+`sentenceItem; \label{itm:kitten} The kitten barked at the dog.
+`sentenceList`
+
+The first three profile (using Langacker's term) 
+a restaurant as a `i.location`/, a 
+commercial enterprise, or an 
+institution/organization.  Note that we can distinguish 
+the commercial sense from the institutional sense: 
+to `i.close` can be temporary (as in \label{itm:koreanclosed}), 
+which we hear in conjunction with the former sense, or 
+more permanent as in `q.cease operations`/, i.e., close 
+`q.qua institution`/.  The former sense seems to mix 
+the institutional and location sense: while location 
+is not explicit as in \label{itm:koreanstop}, an asserion 
+that some chain rstaurant is closed today would usually be 
+heard as referring to one location, not the 
+entire chain.  
+ 
 
 `p`
+
+
 
 
 `p.
