@@ -1,0 +1,123 @@
+\section{Interface Theories: The Chinese Room Revisited}
+\p{}
+\p{To take a simple 
+example, the fact that data about a person includes the 
+field \i{full name} and, say, the value \i{Jane Doe} 
+does not \i{per se} mean that this person is named 
+\q{Jane Doe}.  Rather, it means that the \q{full-name} 
+value is available for a \i{procedure} which extracts the 
+full-name from all information in the data set about Jane Doe.
+}
+\p{In short, data has semantic meaning only in the context of 
+procedures using the data.  This maxim suggests that we should 
+revisit our conceptualization of knowledge-representation 
+methods such as the Semantic Web.  In the conventional Web Ontology 
+picture, information (or knowledge or facts) 
+is presented as a labeled graph, where edge labels 
+represent kinds of relationships.  So, one node 
+may represent a person and another node a string representing her 
+name; the edge-label \q{full-name} identifies the specific 
+relationship assrted by that graph-edge, as compared to 
+any other information that may be asserted about 
+Jane Doe (her age, where she lives, her employer, etc.).  
+}
+\p{In Channel Algebra, this \i{relational} picture is 
+revised in favor of a \q{procedural} intuition.\footnote{The rationale at this point is similar to Spivak's 
+comments in the context of Ologs (which I briefly 
+mentioned earlier): \q{On the surface, ologs look the most like 
+semantic networks, or concept webs, but there are important 
+differences between the two notions.  First, 
+arrows in a semantic network need not indicate functions; 
+they can be relations.  So, [although] there is
+a nice category of sets and relations [such that] 
+semantic networks are categorifiable ... 
+this underlying formalism does not appear to 
+play a part in the study or use of semantic networks} 
+\cite[p. 6]{DavidSpivak>
+}  
+To the degree that we do picture information as a graph, a 
+label like \i{full-name} indicates that a specific 
+\i{procedure} \mdash{} whose role we can 
+informally say is to tell us a person's 
+full name, if we have some data structure representing 
+that person \mdash{} should be able to use the information 
+in the graph (in any edge so labeled and maybe 
+other edges) to fulfill its role.  So an 
+edge with any given label, such as \i{full-name}, 
+actually carries two pieces of information: 
+first, assuming the information in the 
+graph can be properly decoded, information about 
+actual attributes like a specific person's 
+name; but also, information about the 
+\i{requirements} for any software system to 
+properly use the data in the graph.  
+For examle, a \i{full-name} edge mandates 
+the existence of a full-name \i{procedure} which 
+can give a person's full name once we 
+have a computational designation of that person.   
+}
+\p{A related concept in Object-Oriented programmings is 
+called \i{accessor} functions.  The idea of 
+accessors is that, although Objects are aggregates of data 
+\mdash{} essentially, each Object is a \i{record} with multiple 
+\i{fields} \mdash{} most procedures should avoid manipulating 
+Object data directly.  Instead, the class interface provides 
+\q{accessor functions} which \q{wrap} access to raw data 
+in function-calls.  So a \q{full-name} field might be 
+wrapped in accessors called \i{getFullName} and 
+\i{setFullName}.  The basic rationale for 
+this practice is that sometimes extra functionality 
+should be added to examine data before it is shared 
+or modified.  For example, a software library might 
+be changed to represent first and last names 
+separately, eliminating the \q{full-name} field.  
+But the \i{getFullName} and \i{setFullName} functions could 
+still be used, so long as they are re-implemented to 
+transform first/last-name pairs to full names 
+and vice-versa.  Software that uses the 
+library will then need to \i{upgrade} the library, but 
+none of \i{its own} code needs to be changed.
+}
+\p{For these kinds of scenarioes, the basic building-blocks of 
+Object-Oriented modeling tend to be \i{methods} 
+\mdash{} i.e., procedures using Objects \mdash{} rather than raw data.  
+To model information in an Object-Oriented context you 
+ned to model the \i{interface} \mdash{} the set 
+of functions \mdash{} which each class makes available.  Instead of 
+\q{full name} as raw data, there are rather \i{functions} 
+which get, or change, someone's full name 
+(whether or not there is raw data specifically 
+identifying someone's full name is considered an implementation 
+detail which is deemed irrelevant to the \i{knowledge} 
+provided via software using the functions).
+}
+\p{Channel Algebra is not especially similar to 
+Object-Oriented modeling, but the \q{accessor function} practice 
+is a useful insight.  Effective software systems don't 
+usually work by serving users accss to lots of 
+raw data.  Instead, they present \i{views} 
+on data, either routing data between different places or 
+showing vissual (or occasionally audio) representations of data.  
+So a software system dealing with someone's full name will either 
+send it to some other system or visually represent it, 
+for example by printing the name on a computer screen.  
+In either case the software has to execute procedures: when we 
+see a name printed on the screen we are not seeing 
+\q{raw data}, but rather a visual rendereing 
+influenced by the language and alphabetic characters 
+specific to the name, the font used to render these 
+characters, the text size and color, etc.  
+}
+\p{In sum, with this example, for most of the software 
+dealing with \q{full name} data there is no actual semantic 
+representation of the fact that this data represents (what we 
+conceptualize as) someone's \i{full name}.  To the degree 
+that a software system includes identification of someone's 
+full name, there are only a few procedures which actually 
+create a view of full names that we human users would 
+recognize as such.  Even seen from the extra-system, 
+user-centruc, birds-eye view, it is only these procedures 
+which \q{participate} in our pragmatic interpretation that 
+}
+\p{}
+\p{}
