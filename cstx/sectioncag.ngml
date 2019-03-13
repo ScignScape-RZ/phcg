@@ -1683,12 +1683,59 @@ casts `i.would` be possible.
 I think this may be a useful analogy to how 
 type-cases work in practice in Natural Languages, 
 especially in complex cases where multipl word-senss are 
-involved.  
+involved.  Not every type associated with a word 
+makes sense in every conceptualization.  When for instance we 
+attend to the concptual properties of a book as an 
+intellectual object there may be physical details which 
+are conceptually incompatibl with this attitude.  It would be 
+simpler if there were a neat partition among senses, and 
+some overarching cognitive order %-- Ok, now we're figuring 
+the book as physical; now it's an intellectual 
+artifact; now it's a commodity %-- supervises the 
+coercions back and forth.  Neither semantic nor syntactic 
+evidence warrants this simpler picture: it seems more as 
+if conceptualization across types is a matter of 
+nerworked cognitive procedures taking turns operating 
+on one conceptual package, where latent type atttributions 
+are available to each procedure whether or not they are 
+`q.usable` in the sense of involving type structures 
+that logically fit each procedure's purpose.
+`p`
+
+`p.
+I will give concrete of word-senses that I think 
+substantiate this picture in the next section.  
+Here, though, I'l conclude as follows: 
+Channel Algebra can perhaps model what is going 
+on insofar as procedures can take `q.rider` channels 
+that can add detail to procedural inputs.  In a 
+cognitive-linguistic setting, we can imagine these riders as 
+multifaceted and complex.  Because riders are not part 
+of procedures' actual inputs, they do not necessarily need 
+to use types that the procedure recognizes or knows about; 
+the riders may only come into plays as values are 
+passed among procedures.  The analogous computational 
+case would be some extra data associated with a value that 
+is only relevant for certain scurity-oriented 
+validations; i.e., permissions to modify a file.  Functions 
+can pass around such values without considering the security-related 
+data, except for a few procdures where scurity-sensitive 
+operations are attempted.  So the security details are 
+`q.part` of the data carried by a value, but only 
+become semantically salient parts in certain procedural contexts.  
+Rider channels are a way to represent this kind of 
+extra information within a type system directly.  
+I think they are a plausible analogy for 
+cognitive re-inscriptions thatboccur 
+in the evolving significations in a sentence, 
+according to analyses like I will entertain 
+in the next section.
 `p`
 
 `p.
 
 `p`
+
 
 
 
