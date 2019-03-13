@@ -1218,12 +1218,78 @@ greater than $x$.
 `p`
 
 `p.
-The laerger point of this whole subsection is that 
-details about the nature and existence of type-constructors 
+The larger point of this whole subsection is that 
+details about the nature and existence of types' constructors 
 can provide useful concptual information about types 
 themselves.  Often this information dovetails 
 with the metadata pertinent to Conceptual Space Theory 
-ahnd CSML.  
+and CSML.  Consider a simple but representative example of 
+an object exhibiting core Conceptual Space 
+`q.quality dimensions`/: a colored rectangle in a computer 
+graphics environment.  This object could have some 13 dimensions: 
+colors for the shape's interior and border (including 3-dimensional 
+color vectors plus transparency factors); the top-left position,  
+width, and height of the rectangle; and the width of th border.  
+A software engineer has numerous constructor options for 
+this type of object: should there be one `q.pod-tuple` constructor 
+that takes all 13 values in a flat list?`footnote.
+`q.POD` is a 
+common coder's parlance for `q.plain old data`/, and it generally 
+describes data structures conformant to `i.struct`/s in the 
+C languag, rather than `Cpp; classes.  A typical feature 
+of `i.struct`/s is that they are initialized by listing all of 
+their fields in one tuple.
+`footnote`  Should there be distinct data types for 3-vector 
+colors or 4-vector colors (including transparency)?  Should the 
+top-left point be merged into one 2-vector point type?  
+The rectangle-constructor could potentially have its 13 fields 
+folded into 5: two color 4-vectors, one top-left point, 
+width, height, and border-width.  Or border width and color can 
+be merged into one `q.border` type.  On top of that there is the 
+question of default values: should pure black, or maybe pure 
+white, be a default color for the interior?  Should the 
+border default to width-one black, or width-zero (i.e., 
+no border), or something else?  However the types are 
+designed, there is a mutual dependency between simpler types 
+like colors and points and the constructors for complex objects 
+like rectangles: since complex objects are built from simpler 
+ones, a type interface should be designed with consideration of 
+how to assemble the whole from the parts, or retrieve the 
+parts from the whole.
+`p`
+
+`p.
+Some compound objects are conceptually analogous to basic pairs or 
+tuples of values: 2D graphics points are 2-vectors, say, and 
+solid colors are RGB 3-vectors.  One way to signal that a 
+compound type is like a tuple `q.product` of its 
+component fields is to allow instancs of that type 
+to be constructed just by listing each field separately.  
+In `Cpp;, this is often implemented by defining a 
+constructor which takes an `q.initializer list`/.  
+Analogously, in Channel Algebra we can define a `i.pod-tuple` 
+channel that serves as the `i.lambda` channel 
+for pod-tuple co-constructors.  A `i.pod-tuple` channel 
+indicates that a given type behaves essentially like a tuple, 
+with a sequence of values that, in most cases, vary 
+independently of one another.  These kinds of types 
+hew closely to the Conceptual Space idea of 
+multi-dimensional quality spacs.  However, 
+other kinds of types have more complex, interdependent 
+internal structuration.  I think Channel Algebra is a 
+way to make Conceptual Space theory relevant for these more 
+complex types also, using different Channel Semantics 
+and the modeling roles of different forms of 
+types' constructors; how these rooes reveal types' conceptual 
+foundations.   
+`p`
+
+`p.
+Having argued for Channel Algebra as a formalization 
+potentially relevant to Conceptual Space models, I 
+want to conclude this section by considering 
+how Channel Algebra msy be intuitively applicable to 
+Cognitive Grammar.  
 `p`
 
 `p.
