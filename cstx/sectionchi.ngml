@@ -62,10 +62,52 @@ The more practical questions raised by Searle's
 Chinese Room come into play to the 
 degree that the philosophical trail I just sketched 
 turns many analyses into a non-starter.  
+Consider these two questions to a hypothetical 
+automated telephone service:
+
+`sentenceList,
+`sentenceItem; What time does the office open?
+`sentenceItem; \label{itm:phone} What time does train 100 depart from Newark?
+`sentenceList`
+
+While we can see a template holding canned responses for both 
+cases, (\ref{itm:phone}) needs to do more than just 
+fit the input to the nearest pattern; it has 
+to pull out the dynamically variant details 
+(train `i.100` from `i.Newark`/) and use those to 
+fill in details in the response.  This is something 
+like `i.parsing` the original question.  So we can add 
+bits and pieces of genuine linguistic processing 
+to a minimal response-template system %-- a real version of 
+what Searle appeared to imagine in the Room.  With enough 
+added features the primitive template-driven 
+kernel can evolve into a complex AI-powered 
+Natural Language Processor.  
 `p`
 
 `p.
+In that case we may imagine that `q.language 
+understanding` exists on a spectrum.  The primitive 
+telephone service and an erudite bard may lie on 
+opposite ends of a spectrum, but they share a spectrum 
+between them.  In this case, their differences are 
+quantitative more than qualitative.  The bard just 
+has more `i.features` we associate with total 
+linguistic behavior.
+`p`
 
+`p.
+However, this quantitative view still leaves open the question 
+of where among the `q.features` do we have something 
+that actually drives language competence?  Searle's 
+Chinese Room helps point out these questions: 
+it's reasonable to say that the simplest template-response 
+system does not really understand language at all, since it 
+is a pattern-matching system that does not 
+have any structural relation to language itself.  
+Analogous capabilities can be developed for a system 
+which matches any kind of input to a pattern directing 
+an output based on any 
 `p`
 
 

@@ -1607,7 +1607,7 @@ weave different senses and coercions into one
 sentence: 
 
 `sentenceList,
-`sentenceItem; This book, which costs \$40, has a lot of crazy ideas inside.
+`sentenceItem; This book, which costs \$40, has some crazy ideas inside.
 `sentenceItem; This book, which the library classifies as young adult 
 nonfiction, has some dude's phone number scrawled inside.
 `sentenceItem; My boss barks louder than his dog does.
