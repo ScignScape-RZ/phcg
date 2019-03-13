@@ -1292,6 +1292,131 @@ how Channel Algebra msy be intuitively applicable to
 Cognitive Grammar.  
 `p`
 
+`spsubsectiontwoline.Rider Channels and Deferred Coercions`
+`p.
+Earlier in this section I described how Channel Algebra can 
+represent dependent types and coercions, both of which 
+are essential ingredients in type-theoretic semantics.  
+I am not proposing Channel Algebra as a `i.literal` 
+theory for natural language, particularly 
+in its implemented form as a runtime and parsing 
+environment for programming languages.  However, some 
+of its formal details for processing programming languages 
+could be at last suggestive of procedural patterns factoring 
+in to natural-language understanding.
+`p`
+
+`p.
+Before going into detail, I think it's worth 
+distinguish different aspects of natural language 
+where type theory may play a role.  
+On one level, very general Part of Speech classifications 
+can be approached type-theoretically.  This helps 
+reinforce the intuitive idea that syntactic categories like 
+verbs, adjectives, and adverbs corresponds to 
+concptual, cognitive processes which effectuat changes 
+in beliefs, conceptualizations, or situational 
+records.  A noun by itself is an abstract concept; 
+during the course of a sentence, it is 
+subject to concretization and preicatization, 
+ending up in an idea that has some degree of 
+concrete propositional content.
+`p`
+
+`p.
+For example, we might go from `i.dog` to `i.dogs` to 
+`i.those dogs` to the sentence `i.Those 
+dogs are barking`/.  Logically we can see this as 
+building up a propositional structure from sub-propositional 
+parts.  But cognitively the process is more like 
+migrating from a cognitive register dealing in conceptual 
+abstractions (like `q.dog`/) to a register for propositional 
+attitudes and situational understanding.  Logical 
+constituents are more like stages in a 
+concept-to-belief evolution than mereological units.  
+That is, the relation between the signifying whole and 
+its semantic or morphosyntactic parts is more 
+the relationship between a process's ending 
+to its intermediaries than a mereological hierarhy.  
+If this picture seems compelling it can be 
+conveyed by figuring the majority 
+of Part of Spech types as function-like: 
+the nature of verbs, for example, is to 
+functionally transform (in our 
+cognitive frames) nouns to 
+propositions.  Analogously, adjectives 
+transform nouns to other nouns %-- in 
+the sense that `q.red apples`/, say, can 
+substitute as a noun-concept in most places 
+that `q.apples` alone can; `i.red` being like a 
+procedure that produces a modified `i.apples` concept 
+which substitute for just `i.apples` in 
+subsequent processes.  Likewise, adverbs produce 
+new verbs from other verbs; subordinators like 
+`i.that` transform propositions back to 
+nouns (as I argued in the last section), and 
+so forth.  So Parts of Speech can be usefully analyzed 
+as `q.function-like` types (I will discuss 
+specific language examples arguing for this prespective 
+in the next section).  Thse are, however, very general 
+types, which would be the `q.uppermost` types 
+in a natural language semantcs; I will call 
+these `i.macrotypes`/.
+`p`
+
+`p.
+On the other hand, at a much finer level, individual 
+lexical classes %-- the concept or extension or intensional 
+property-set associatd with particular word-meanings 
+%-- often seem to behave as `i.types` as well.  In `q.Formal 
+Concept Analysis`/, `i.concepts` are (statistically) 
+defined as a combination of extensional and intensional 
+criteria: neither extension nor attributes alone 
+fully characterizes a concept, either cognitively 
+or extra-mentally.  In particular, practical fluency 
+in a concept involves knowing canonical examples 
+(like seing many of the medium-size, traditionally 
+architected dwellings that would be prototypical 
+`i.houses`/) and also the prototypical features 
+that characterize the concept (houses are 
+three-dimensional, enclosed, divided into rooms, function 
+as a place of residence, etc.).  A combination of 
+exemplars and attribute-prototypes define 
+the `q.core` or `q.center` of a concept: insofar as 
+some example is `q.peripheral`/, an outlier which 
+is somehow not representative of the concept (but 
+still can be classified to it), it must have some 
+`i.featural` difference from examplars; but we can 
+also compare it as an individual to more 
+exemplary individuals.  That is, we understand outliers 
+both intensionally %-- we can articulate the features 
+which make both a log cabin and a gated mansion atypical 
+as houses %-- and extensionally: we can mentally 
+juxtapose cabins and mansions with ordinary houses.
+`p`
+
+`p.
+If this gloss on the nature of concepts is accurate, 
+it helps explain why the lexical entrenchment of 
+concepts often has a type-theortic feel.  In the 
+more logical aspects of semantics, lexicalized 
+concepts do present operationally as types: 
+
+`sentenceList,
+`sentenceItem; A penguin id s flightless bird.
+`sentenceItem; loop \{
+`sentenceItem; `hspace<1em>; if ($x$ > 10) break;
+`sentenceItem; `hspace<1em>; ++$x$;
+`sentenceItem; \} // end the loop
+`sentenceList`
+
+`p`
+
+
 `p.
 
 `p`
+
+
+
+
