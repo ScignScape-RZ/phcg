@@ -1465,7 +1465,7 @@ metaphoric (but not unrestricted) ways.
 Consider these exmples:
 
 `sentenceList,
-`sentenceItem; \label{itm:koreanstop} My favorite Korean restaurant is at the next stop.
+`sentenceItem; \label{itm:koreanstore} My favorite Korean restaurant is adjacent to the bookstore.
 `sentenceItem; \label{itm:koreanclosed} My favorite Korean restaurant is closed today.
 `sentenceItem; \label{itm:koreanposter} My favorite Korean restaurant is decorated with posters from the 2002 World Cup.
 `sentenceItem; \label{itm:koreanstarted} My favorite Korean restaurant started out in a food court.
@@ -1486,7 +1486,7 @@ which we hear in conjunction with the former sense, or
 more permanent as in `q.cease operations`/, i.e., close 
 `q.qua institution`/.  The former sense seems to mix 
 the institutional and location sense: while location 
-is not explicit as in \label{itm:koreanstop}, an asserion 
+is not explicit as in \label{itm:koreanstore}, an asserion 
 that some `i.chain` restaurant is closed today would usually be 
 heard as referring to one location, not the 
 entire chain.  In (\ref{itm:bark}) through (\ref{itm:kitten}), 
@@ -1546,7 +1546,7 @@ person/physical thing)  But semantically and
 syntacticallly (\ref{itm:actup}) seems a lot 
 like (\label{itm:bark}), even though the ploy 
 in that cast is to compare things to a lexical 
-`q.clique` (dogs).  And in (\ref{koreanloyal}) 
+`q.clique` (dogs).  And in (\ref{itm:koreanloyal}) 
 we infer some `i.person` complimnted the speaker, but 
 this is more of a synecdoche than a cross-type 
 cast like (\ref{itm:koreanstarted})-(\ref{itm:koreanstarted}): 
@@ -1566,11 +1566,15 @@ ambiguity between word-senses and coercing
 `sentenceItem; \label{itm:teaduck} Tea-smoked duck is a Sichuan delicacy.
 `sentenceItem; \label{itm:rubberduck} The baby's favorite toy is a rubber duck.
 `sentenceItem; \label{itm:weddingduck} Wedding ducks are traditional Korean gifts.
+`sentenceList`
 
 If the prototypical duck sense is an animal, these 
 cases disrupt the basic type hierarchy: 
-Wedding ducks are made of wood; rubber ducks are 
-toys; tea-smoked duck is a kind of food.  This translation 
+Wedding ducks are made of wood; 
+tea-smoked duck is a kind of food; 
+rubber ducks are toys (is the phrase descriptive 
+%-- ducks which happen to be rubber %-- or 
+a distinct noun-concept, like `q.decoy duck`/?).  This translation 
 from one branch of sub/supertype relations to another is 
 what we would expect of type-cases, but 
 we can also see these cases as distinct lexemes, or 
@@ -1578,15 +1582,114 @@ word-senses, or entrenched phrases with de facto lxical
 status.  The overall picture which seems to 
 emerge is that type-coercions remain relatively 
 metaphorical or metonymic in cases like 
-(\ref{itm:})
+(\ref{itm:bark}) or (\ref{itm:koreanloyal}); 
+become idiomatically entrenched in cases like 
+(\ref{itm:koreanstore}) and (\ref{itm:koreanstarted})
+%-- especially where there is a similar sccale of 
+granularity btween mesotypes in a coercion %-- and can 
+become `i.lexically` entrenched in cases like 
+(\ref{itm:rubberduck})-(\ref{itm:weddingduck}).
+`p`
+
+`p.
+Let's assume in any case we can give a thorough 
+analysis of type-coercions as semantic devices.  
+This is still working on the level of generalized 
+lexical use-patterns; we are not arefully studying the 
+`i.cognitive` steps involved in actuallly 
+making whatever imagistic, situational, or 
+conceptual modifications are directed by a type-case.  
+In other words, there is a cognitive process of 
+thinking of a restaurant (say) and 
+then revising this framing to accommoate senses like 
+spatial points or social institutions.  We can 
+weave different senses and coercions into one 
+sentence: 
 
 `sentenceList,
+`sentenceItem; This book, which costs \$40, has a lot of crazy ideas inside.
+`sentenceItem; This book, which the library classifies as young adult 
+nonfiction, has some dude's phone number scrawled inside.
+`sentenceItem; My boss barks louder than his dog does.
+`sentenceList`
 
+In short, we can't assume that type-coercions 
+simply replace an image forged according to one micro- or 
+mesotype with one shaped by an alternative type.  
+Instead, signifying elements seem to carry 
+a package of type attributions around, and different 
+types are `q.activated` to different extents, and in different 
+ways, at different stages of linguistic processing.
+`p`
+
+`p.
+Another complication is that types of different scales 
+seem to coexist and yet in other respects macrotypes, 
+mesotypes, and microtypes seem to be distinct hierarchies.  
+A microtype like `i.dog` acts sometimes as a subtype 
+for a mesotype like `i.animal`/, but also 
+mesotype concepts like `i.animal` and `i.person` are 
+sometimes microtypes themselves: after all, 
+these are lexical entries as well as Ontological 
+categories.  So on the one hand we may say that words 
+have three different types %-- even excluding 
+cross-mesotype or cross-microtype 
+(`q.bosses barking` cases) casts %-- and that 
+macro-, meso-, and microtypes are distinct thoretical 
+posits with different analytic mthodology; 
+but sometimes the boundaries between micro- and 
+meso, and thir analyses, seem to plur.  Analogous comments 
+can apply to the meso/macro boundary as 
+evinced by issues like classifying forms 
+of pluarality, as in `cite<MeryMootRetore>;'s 
+analysis of noun plurals. 
+`p`
+
+`p.
+This metathoretic hemming and hawing may be 
+acceptable %-- even desirable %-- at the philosophical 
+level.  But it causes problems if wecwant to se 
+typ thory as a formalizing (albit simplifying) 
+window onto cognitive-linguistic processes.  
+In a computational context values have one canonical 
+type; they can be cast to other types but 
+do not maintain a kind of superposition 
+`q.history` over multiple types.  
+These kinds of phenomena can be technically modeld 
+in various ways (e.g. Luo's `q.dot-product` types), 
+but in that case we want a formalization that seems 
+appropriate for how the corresponding cognitive procedures 
+might unfold.
+`p`
+
+`p.
+In the case of Channel Algebra, I mentioned the 
+idea of `q.rider` channels which supplement 
+the type information contained in other channels, adding 
+more information without actually introducing new 
+parameters into a proceure.  So a rider asserting that 
+$y$ can be made into an `xy; pair is semantically analogous 
+to giving $y$ the type `i.integer greater than x`/, 
+but $y$ itself is not presented as having a dependent 
+type.  In short, `i.greater than x` is not presented 
+as an `i.alternative` type for $y$, nor is $y > x$ presented 
+as an alternative `i.value` as if we are `q.casting` 
+$y$ from a wider to narrower type.  Howevercwe are 
+asserting properties of $y$ by certifying that such 
+casts `i.would` be possible.  
+`p`
+
+`p.
+I think this may be a useful analogy to how 
+type-cases work in practice in Natural Languages, 
+especially in complex cases where multipl word-senss are 
+involved.  
 `p`
 
 `p.
 
 `p`
+
 
 
 
