@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  12 MAR 2019 23:50
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  13 MAR 2019 00:01
 entering extended mode
 **cstx.ngml.tex
 (C:\scign\phcg\ar\cstx\cstx.ngml.tex
@@ -9788,28 +9788,6 @@ LaTeX Warning: Citation `Luo' on page 101 undefined on input line 211.
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [101]
-! Undefined control sequence.
-<argument> ... some cases, a function-type \fFunT 
-                                                  {} is not only defined by ...
-l.295 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ture which must math between \fFunT 
-                                                  {}-instances and the insta...
-l.295 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 [102]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -10887,239 +10865,8 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 585.
 
 [105] [106]
-! Undefined control sequence.
-<argument> ...mblem (represented as \ChaAppendCar 
-                                                  {}). \item [Channel Produc...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...-to-channel operator \ChaProductCha 
-                                                  {} represents a channel pr...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...product formed by combining \ChaOne 
-                                                  {} and \ChaTwo {}. \item [...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...by combining \ChaOne {} and \ChaTwo 
-                                                  {}. \item [Carrier Handoff...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ier Handoff] Given carriers \CarOne 
-                                                  {} and \CarTwo {}, a \i {c...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ven carriers \CarOne {} and \CarTwo 
-                                                  {}, a \i {carrier handoff}...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\i {carrier handoff} \CarHandoffCar 
-                                                  {} means that the value ca...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...s that the value carried by \CarOne 
-                                                  {} is (at last temporarily...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ast temporarily) carried to \CarTwo 
-                                                  {}. This means that there ...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...e of program execution when \CarOne 
-                                                  {} and \CarTwo {} are sync...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ecution when \CarOne {} and \CarTwo 
-                                                  {} are synchronized, or \q...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\i {complex} (written \ChpAlliedChx 
-                                                  {}) if carriers in \Chp {}...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...hpAlliedChx {}) if carriers in \Chp 
-                                                  {} and \Chx {} are \q {ali...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...{}) if carriers in \Chp {} and \Chx 
-                                                  {} are \q {alignable}. The...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 LaTeX Warning: Citation `Neustein' on page 107 undefined on input line 743.
-
-! Undefined control sequence.
-<argument> ...gnment the chanel \i {package} \Chp 
-                                                  {} can be interpreted as a...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ed by the channel \i {complex} \Chx 
-                                                  {}. In this case we have a...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...gamma Reduction} operator \DigammaR 
-                                                  {}, meaning that the packa...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...R {}, meaning that the package \Chp 
-                                                  {} is \q {evaluated} and t...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...sses to the stage labeled \stageLbl 
-                                                  {}.\footnote {The motivati...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...t that the \q {sigma} in \sigmaCalc 
-                                                  {} looksblike a smaller ve...
-l.743 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...resentations, like arrays of \voidP 
-                                                  {}-pointers. These techniq...
-l.778 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 [107]
 
@@ -11647,6 +11394,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 834.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 1308) in paragraph at lines 885--900
 []\OT1/cmr/m/n/10.95 (+20) In a typ-i-cal type sys-tem, then, at least some
  []
@@ -11844,6 +11594,9 @@ LaTeX Warning: Citation `EstherPascual' on page 112 undefined on input line 81.
 
 
 [112]
+Underfull \vbox (badness 2460) has occurred while \output is active []
+
+
 
 LaTeX Warning: Citation `MullerBook' on page 113 undefined on input line 170.
 
@@ -12375,7 +12128,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 171.
 
-[114]
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [114]
+Underfull \vbox (badness 2443) has occurred while \output is active []
+
+
 Underfull \vbox (badness 1478) has occurred while \output is active []
 
  [115]
@@ -12388,7 +12147,10 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
 
-(C:\scign\phcg\ar\cstx\figure2.tex) [117]
+(C:\scign\phcg\ar\cstx\figure2.tex)
+Underfull \vbox (badness 1484) has occurred while \output is active []
+
+ [117]
 Underfull \vbox (badness 8075) has occurred while \output is active []
 
 
@@ -12919,6 +12681,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [118]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [119])
 (C:\scign\phcg\ar\cstx\section10.ngml.tex [120]
 
@@ -12949,7 +12714,7 @@ LaTeX Warning: Citation `MeryMootRetore' on page 121 undefined on input line 67
 .
 
 
-Underfull \vbox (badness 2302) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -13494,12 +13259,19 @@ LaTeX Warning: Citation `LakoffJohnson' on page 123 undefined on input line 214
 .
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
 LaTeX Warning: Citation `YiyuYao' on page 123 undefined on input line 245.
 
 
 LaTeX Warning: Citation `Wille' on page 123 undefined on input line 245.
 
 [123]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 LaTeX Warning: Citation `Pinker' on page 124 undefined on input line 316.
 
@@ -13522,7 +13294,10 @@ put line 363.
 LaTeX Warning: Citation `JordanZlatev' on page 124 undefined on input line 363.
 
 
-[124] [125]
+[124]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [125]
 Underfull \hbox (badness 1515) in paragraph at lines 562--562
 []\OT1/cmr/m/n/10.95 (+20) Returning to ``On-tol-ogy": types have as-so-ci-
  []
@@ -14118,13 +13893,19 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 LaTeX Warning: Command \textgreater invalid in math mode on input line 153.
 
 [131]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 LaTeX Warning: Citation `ElkeTeich' on page 132 undefined on input line 223.
 
 
 LaTeX Warning: Citation `TanakaEtAl' on page 132 undefined on input line 247.
 
-[132]
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [132]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -14695,6 +14476,9 @@ Underfull \vbox (badness 2302) has occurred while \output is active []
  [140]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
  [141])
 (C:\scign\phcg\ar\cstx\biblio.tex [142
 
@@ -14770,7 +14554,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  21815 strings out of 494049
  410630 string characters out of 3146069
- 550677 words of memory out of 3000000
+ 550482 words of memory out of 3000000
  23859 multiletter control sequences out of 15000+200000
  30472 words of font info for 216 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -14805,7 +14589,7 @@ blic/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 e1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/cm-super/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/wasy/wasy8.pfb>
-Output written on cstx.ngml.pdf (144 pages, 1295475 bytes).
+Output written on cstx.ngml.pdf (144 pages, 1295471 bytes).
 PDF statistics:
  1451 PDF objects out of 1728 (max. 8388607)
  463 named destinations out of 1000 (max. 500000)
