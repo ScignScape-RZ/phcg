@@ -1,690 +1,1743 @@
 
-`section.Cognitive Grammar and Type Theoretic Semantics`
-
+`section.Channel-Algebraic Grammar`
 `p.
-The emergence of Dependency Grammar as a `i.computational` approach has some broad
-implications.  The historical preference for phrase-structure foundations  %-- among
-those who actually build Natural Language Processing code libraries, in disciplines
-related to Artifical Intelligence %-- arguably reflects how phrase structure more
-cleanly models a theory of linguistic meaning and signification based on
-`q.symbolic logic` %-- a theory that the `i.meaning` of a complete and self-contained
-linguistic expression is the logical state of affairs which it asserts or in other
-ways connotes.  Correlated with this assumption is the idea that phrase structure
-logically transforms its constituent parts; so from the word `q.students` we
-can form the phrase `q.many students` to designate a kind of plurality %-- a plural
-set but also, more specifically, a set which is reasonably large relative to some context.
-In the hierarchical model presented by these norms, phrases subsume the roles of
-individual words and represent discrete semantic units with respect to still larger phrases.
+This section will briefly introduce what I call 
+`q.Channel Algebra` and how it can lead to a 
+theory (and practice, in a sense) of formal 
+and natural-language grammar.  Channel Algebra 
+is discussed in greater detail in `cite<Neustein>;.  
+It's fairly divergent from other formalizations 
+in computer science, though loosely decended from 
+Process Algebras and from the `q.sigma calculus`/, 
+which is a formal model of Object-Oriented 
+programming `cite<AbadiCardelli>;.  Channel Algebra 
+may also be seen as distantly related to Santanu 
+Paul's `q.Source Code Algebra` `cite<SantanuPaul>; 
+and to a network of discussions %-- not necessarily 
+coalesced into technical publications 
+%-- about how to unify Object Oriented 
+and Functional Programming.  There are many 
+interesting analyses presented by scientists like 
+Bartosz Milewski, on web forums such as 
+Milewski's blog (the address is his full name as a 
+dot-com domain).  In general, 
+though, I am developing Channel Algebra 
+in an `q.experimental` manner, using a concrete software 
+implementation in lieu of a technical or 
+mathematical axiomatic description.
 `p`
 
 `p.
-It is certainly true that one role for phrases is to satisfy a semantic niche %-- often
-a place occupied in other (or even the same) language with single words, or vice-versa.
-The French `q.laisse tomber` translates the English `q.drop`/, for example; and
-`q.parliamentarian` is a more exotic version of `q.Member of Parliament`/.  There is no
-evident pattern for when a single concept is conveyed, in one language or another,
-by a single word or a multi-word phrase.  Moreover, the meanings of phrases are influenced
-by semantic conventions no less than are individual words, and they are not solely a product
-of phrase constituents.  Semantics is guided by what people need to talk and write about often; when
-events in a linguistic community call for some fairly rigid and repeatable designation for
-an important concept, the resources of language adjust to provide that role, either through a
-complete neologism, or a lexical variant %-- a new usage; or the entrenchment of a phrase.
-In current events, the expression `q.Syrian Refugees` recurs when discussing people
-displaced by the Syrian civil war, and potentially other interrelated conflicts also;
-convention seems to allow that nominal `q.Syrian` Refugees don't have to be Syrian nationals.
-The meaning of the phrase is fixed by its niche in familiar discourse more than
-by its literal form.  Phrases
-exhibit conventionalization and usage pressures analogous to single words; which lends
-credance to the notion that phrases subsume the role of single words, and that the semantic
-contribution of words to sentences is determined through the phrases where they occur.
+In the present context I want to focus on Channel Algebra as a 
+potential theory in linguistic %-- particularly 
+Cognitive Grammar %-- but initially I'll describe 
+the underlying theory in a more computational manner.  
+A lot of the Channel Algebra formalization carries 
+between formal and natural languages.
 `p`
 
 `p.
-On the other hand, it is well established that words' contributions are not `i.wholly`
-subsumed by their surrounding phrase-structure.  The famous joke about the Holy Roman
-Empire %-- or its reprise in the current line that the Islamic State is neither Islamic
-nor a State %-- point to evidence that as language-users we still hear the individual
-words outside their phrase context.  To subsume a word into a phrase is also to suggest a
-particular semantic (and pragmatic, real world) interpretation, one which conversants
-may challenge.`footnote.
-How literally to take phrases is a notorious source of political controversy:
-recall debates about the relevance of Afghanistan for Iraq, in US policy, and
-Rudy Giuliani saying `q.There `i.is` Al Qaeda in Iraq %-- it's called, `sq.Al Qaeda in Iraq`/`/.
+A key notion in Channel Algebra is `i.procedures`/.  As in 
+Part 1, we can think of procedures as either cognitive 
+processes or as functions implemented in a software 
+system, although for exposition the latter interpretation 
+is simpler.  So, assume we have a computing environment 
+where many functions are available to be 
+called %-- in effect, a bundle of software libraries 
+each exposing some collection of function-implementations.  
+For reasons I'll cover momentarily, I'll call thse 
+`i.ambient procedures`/.
+`p`
+
+`p.
+At one level, Channel Algebra is conceived as an alternative 
+to data-sharing paradigms like the Semantic Web; so, one 
+kind of analysis is concerned with cases where some body 
+of information (which can be called a `i.data set`/) 
+needs to be transferred between two different 
+computing environments.  Channel Algebra takes the 
+view that data does not have intrinsic semantics outside 
+the computational environments where it is used.  
+As I argued in the context of Searle's `q.Chinese Room`/, 
+our identification that a software system represents facts 
+%-- like someone's full name (the example I used over several 
+paragraphs in the earlier discussion) %-- depends on the 
+software possessing capabilities to display the 
+information (usually visually).  In other words, 
+among the total of all procedures that can be performed by 
+the system, only a small set of procdures are involved in 
+user-interactions where semantic intentions like 
+`q.this piece of data represents someone's full name` are 
+relevant.
+`p`
+
+`p.
+As a consequence, when sharing data that includes 
+information like `i.full-name`/, we should not assume 
+that the raw data, in its semantic interpretation, 
+actually `q.means` `i.full-name`/, or some kind  
+of propositional assertion about full names.  For 
+example, a graph-edge in a Semantic Web resource 
+intended to model the proposition `q.This person has full 
+name Jane Doe` should not be seen as `q.meaning` anything about 
+full names.  Instead, it represents some computational 
+artifact which `i.becomes` an asserion of that fact 
+when a procedure is eventually calld which converts 
+the full name to a (usually visual) representation 
+which a human user would recognize as a view 
+on a full name (and hence on the proposition).
+`p`
+
+`p.
+In sum, the Semantic Web (or any data sharing 
+network) only `i.has` a semantics because software 
+connected by the network has requisite procedures to 
+make data-views that people can understand.  Data does 
+not have semantics (or at least not 
+human-conceptual semantics); `i.views` do.  
+This is consistent with an Interface Theory: most procedures 
+manipulating Semantic Web data are part of an 
+interface connecting networked data sources to the 
+handful of procedures which create views for human users.  
+Within the local structure of this interface, data does not 
+have a `q.human` semantics; instead, it must be passed around 
+between proceurs before eventually 
+reaching human-interaction procedures where 
+(what we would call) the `q.real` 
+procedures come into play. 
+`p`
+
+`p.
+When data is shared btween localities, then, the procedures 
+that will receive and manipulate this data are logicallly 
+prior to the data itself and constrain when data-sharing is 
+possible.  Without the proper network of procedures, 
+the data can never be transformed into the views 
+where non-local semantics are relevant.  
+This motivates my choosing the term `q.`i.ambient` procedures`/, 
+because a certain collection of procedures must be in place 
+on the receiver end of a data-sharing event.  This also implies 
+that one important role of data modeling is to indicate 
+which procures a potential receiver needs to have 
+available %-- i.e., needs to implement %-- to qualify as a 
+capable recipient of data conforming to the model.  
+Data models should describe what procedural 
+capabilities must be afforded by software libraries in 
+order for the human-level, conceptual semantics of 
+the data can actually emerge from humans' 
+interactions with the system.  
+`p`
+
+`p.
+Analogous to Ontologies as data model specifications 
+for the Semantic Web, I'll use the term `q.Ambient-Procedural 
+Ontologies` to express the paradigm that implememting data-sharing 
+protocols involves crafting software libraries around 
+procedural requirements.  This has two implications for 
+how we theorize software systems.  First, we need to characterize 
+procedures in a manner that expresses the proceural 
+capabilities that a system offers, or must have to satisfy a 
+data-sharing protocol.  Second, we can assume that 
+whenever data is sent, received, manipulated, or visualized, 
+there is a collection of procedures available in the system 
+which enact these computational processes.  
+`p`
+
+`p.
+On this basis, then, I will develop a Type Theory that operationalizes 
+this intuition about `q.Ambient Procedural Ontologies`/.  
+The main outlines of this type theory are first that procedures 
+have types; and second that procedures are `q.ambient` or 
+logically prior to (or at least equiprimordial with) the 
+type system itself.  This is not a mathematical type system 
+where every underlying type (like Natural Numbers) and 
+every operation (like arithmetic operators) have to be 
+mathematically described in the theory.  
+Instead, we can always take certain types and procedures as 
+`q.primitive` or (at least in their inner workings) 
+external to the type theory.  For any type system `tSys;, 
+whose structure is regulated by a type theory we intend 
+to prsent or assess, we can say that `tSys; is built 
+around a `i.kernel` `kErn; of `q.primitive` 
+types and functions.
+`p`
+
+`p.
+In general, an assumption of Channel Algebra is that a significant 
+portion of information, present in some structured system,  
+can be extracted by identifying elements in 
+the system with types in a suitably developd 
+type system `tSys;.  In the case of Natural Language 
+%-- specifically Cognitiv Grammar %-- this means that 
+many syntactic and semantic details for each word 
+in a sentence can be provided by mapping words to types.  
+As I have mentioned, linguists like Luo and Pustejovsky 
+have given persuasive analyses of certain type systems 
+for `i.semantics`/, but I intend to apply 
+type theory also to `i.syntax`/.  
+Later in this section I will demonstrate 
+this in practice, but for now 
+I will hust note that such analysis requires 
+a sufficiently complex type system.  For example, 
+semantic notions like dot-typs and dependent-product 
+typs, which have proven to be effective in shedding 
+light on common lexico-semantic phenomena, may need to be 
+expressible in a `tSys;, `i.along with` link- or cognitive-grammatic 
+notions like `i.connectors` and `i.expectations`/.  
+`p`
+
+`p.
+Similar comments apply to modeling and sharing 
+scientific data.  Here, I have in mind projects 
+like Conceptual Space Markup Language, and 
+applications of Conceptual Spaces to study the nature 
+and evolution of scientific theories, as reflected in 
+research by (notably) Frank Zenker and Gregor Strle 
+`cite<Zenker>;, `cite<Strle>;.  
+Implicit in this research is the philosophy 
+that scientific data models are not just electronic 
+specifications for transmitting raw data, but embody 
+scientific theories in terms of how data is structured and 
+constrained.  CSML, for example, 
+defines criteria on data parameters such as ranges, 
+dimensions (called `q.units` in CSML), and structural 
+protocols (including CSML `q.scales`/) \cite[p. 6]{RaubalAdamsCSML}.  
+As a concrete example, the biomedical concept `q.blood pressure` 
+is usually understood as a pair of numbers whose dimnsions ar 
+each in kilopascals (kPa) and whose first number 
+(systolic pressure) is necessarily greater than 
+the second (diastolic) %-- technically, the pair 
+is `i.monotone decreasing`/.  In conventional Biomedical 
+Ontology, cf. SNOMED-CT or the Vital 
+Signs Ontology, these conditions might be stipulated by 
+defining a `q.blood pressure measurement` concept subject 
+to the relevant dimensional and range criteria (e.g. 
+diastolic pressure must be greater than zero but 
+less than systolic pressure), and/or by classifying 
+systolic and diastolic pressure as subconcepts of 
+blood pressure (see `cite<BarrySmithBlood>; and 
+`cite<AlbertGoldfain>;).  In a kind of Ontology 
+paradigm incoporating type theory, the same conceptual 
+structure can be represented concisely by defining 
+a type whose structure conforms to the 
+semantic requirements on the `i.blood pressure` concept 
+as it is scientifically understood: i.e., a 
+monotone-decreasing integer pair whose 
+dimensional units are labeled `q.kPa` or `q.kilopascals`/.  
+Note also that the `q.monotone decreasing` 
+criterion is an example of the structure of 
+dependent-product types (in this case because the valid range for 
+the second number depends on the value of the first), 
+a construction which elsewhere is used for Natural 
+Language semanticcs, e.g. \cite[p. ?]{Luo}.
+`p`
+
+`p.
+Th point of this example is that many scientific concepts 
+%-- the semantic norms embedded in how scientific terms are defined 
+and understood and how the concepts ar used in scintific theories 
+and research %-- can be rigorously specified with a suitably 
+expressive type system.  Therefore, a sophisticated 
+system `tSys; is both a practical tool for scientific data 
+sharing and scientific computing, but also an expository 
+vehicle capturing theories' conceptual underpinnings.  
+Developing scientifically useful type theories can 
+then serve as a kind of formalized philosophy 
+of science %-- type theory as metascientific analysis.
+`p`
+
+`p.
+So in the past several paragraphs I have discussed the 
+idea of using type attributions to represent semantic and 
+syntactic details in natural language, and also 
+metascientific concepts in scientific theories and data 
+sharing.  A suitably developed type-system can, in light 
+of these possibilities, act as a kind of multi-purpose 
+tool capturing semantic principles in a broad array 
+of formal and informal cotexts.  This is possible insofar as 
+type theory is developed on a flexible basis so that 
+type systems can expand in different directions for 
+different intellectual environments %-- dependent 
+sum and product types for Natural Language semantics; 
+`q.connectors` for Link Grammar; CSML-style 
+units, ranges, and scales for scientific data; etc.  
+The overarching goal of Channel Algebra is to 
+enable these flexible, multi-purpose type systems.
+`p`
+
+`p.
+Another way of expressing this idea is that type systems 
+should be `i.multi-paradigm`/.  Suppose we are using a 
+collection of types to model the semantics of some linguistic 
+or scientific model.  We may realize that ther are some 
+crucial semantic formulations that need to be recognized 
+within the type system itself, if this 
+type-oriented modeling is to be comprehensive.  For 
+esample, in a link-grammar context, we may recognize 
+that, in addition to assigning semantic and/or 
+Part-of-Speech types to individual words, we need to 
+represent the `q.potentialities` latent in words 
+allowing them to link up (each word has a `i.connectors` 
+such that a pair of 
+`q.compatible` connectors can produce a `q.link`/).  
+Or, in a metascientific context, 
+we may rcognize that we need to annotate type-attributions 
+with CSML notions like range, scale, and units.  
+The multi-paradigm criteria means that there would be 
+a mchanism in place to enrich a type system 
+`tSys; so that such semantic details can be seen as
+structural parts of types modeled via `tSys;.`footnote.
+I refer to `q.semantic details` even in theories of 
+Natural Language `i.syntax`/, like Link Grammr, 
+because many ideas about language `i.grammar` are 
+relevant tobthe `i.semantics` of the linguistic 
+`i.theory`/, which is different than 
+the Semantics of Natural Language which linguistic 
+theories have as their subject matter.
+`footnote` 
+`p`
+
+`p.
+One virtue of organizing a type system `tSys; around 
+`i.procedures` is that this `q.multi-paradigm` 
+flexibility becomes easier to achieve when we can directly 
+model requirements on procedures, and how procedurs 
+interact with types (for instance, each type needs 
+one or more procedures to construct elements 
+of that type).  As I said earlier in this section, we 
+can start from any `q.kernel` of types and procedures 
+and build new types by describing procedures which 
+create, and/or operate on, values of 
+`kErn;-types.  However, there ar many different ways that 
+procedures can act on values and call other procedures.  
+This means there is a lot of room for extending 
+type systems to represent different kinds of inter-procedural 
+relations.  For example, in Link Grammar a Part of 
+Speech type is not just a `q.function` acting on 
+other types %-- e.g., adjectives act on nouns; 
+`q.red apple` modifies the image we have when we 
+conceptualize `q.apple`/.  The adjective/noun pair also 
+needs the right potentials to create a connector.  
+A type-thoretic model of this idea can involve stipulating that, 
+in some cases, a function-type `fFunT; is not only 
+defined by the type of its argument(s), but 
+by some added `q.connector` structure which must math between 
+`fFunT;-instances and the instances of its argument types.
+`p`
+
+`p.
+Channel Algebra, as I will now argue, 
+givs us a way to encode `q.extra information` 
+along these lins in type descriptions.
+`p`
+
+`spsubsectiontwoline.Channels as Type-System Extensions`
+`p.
+In concvtional type theory, every type system has `i.some` notion 
+of functional types, but these are often treated in a 
+simple form based on Typed Lambda Calculus.  
+Canonically, a function `i.inputs` 
+one or more values, and `i.outputs` on or more values 
+(in many concrete type systems, only on output 
+value).  We can (still rather informally) 
+talk of these input and output collections as 
+`q.channels`/.  So, a procedure 
+has an `i.input` channel %-- that's where it vgets 
+its arguments from %-- and an `i.output`  
+channel, where it provides a result.  The term 
+`q.channel` is usually usd in the context of 
+`q.process algebras` where procedurs can run concurrently, 
+and channels may be two-way means of communication between 
+concurrent procedures.  For this paper, I will only 
+consider `i.sequential` procedurs %-- where two 
+procedurs follow each other in time; no 
+parallelism %-- and `i.one way` channels, which 
+carry information from one procedure to another but have a fixed 
+direction.  Intuitively, if `procOne; sends a value 
+to `procTwo; via one channel, `procTwo; cannot send a value 
+back via the same channel (although it can `i.modify` the 
+value in the channel).
+`p`
+
+`p.
+While type theory may conceive functions as (in effect) 
+a combination of input and ouput channels, actually programming practice 
+reveals multiple distinct `i.kinds` of input and output 
+channels.  In Object-Oriented programming, Objects are 
+passed to functions (i.e., `q.methods`/) using a 
+different protocol than ordinary parameters.  Also, many 
+Object-Oriented languages support Exceptions, which are like 
+non-standard return values that disrupt the 
+normal program flow.  This suggests two different 
+`i.input` channels %-- I'll call them 
+`i.lambda` and `i.sigma` for the calculii which 
+can model their semantics %-- and two different 
+`i.output` channeos, which I'll call `i.result` and 
+`i.error`/, for normal and exceptional return values, 
+respectively.  
+`p`
+
+`p.
+Furthermore, many languages support `q.lambda` or `q.inline` 
+functions which can be `q.closures`/, enabling a proceure 
+to modify values in its `q.surrounding lexical scope`/.  In 
+other words, a `i.closure` is a procedure implemented 
+inside the implementation of an enclosing procedure, and 
+it has the ability to read and maybe modify data used by 
+the enclosing procedure.  We can consider this 
+`q.handing down` of values from outer to inner 
+procedures to be a kind of input channel, which 
+I will call a `q.capture` channel.  Some programming languages 
+make this value-sharing explicit: in the case of 
+modern-day `Cpp; (since the 2011 standard) lambda 
+functions have, as part of their definition, an 
+explicit documentation of which symbols are 
+`q.captured` from an enclosing lexical scope 
+%-- these symbols are listed in square brackets, just as 
+regular arguments are listed in parentheses, which 
+helps reinforce the idea that inputs via 
+symboo-capture are similar to inputs via argument-passing 
+(which I say in Channel Alegebr as `i.lambda` and 
+`i.capture` being both input channels).
+`p`
+
+`p.
+Nested procedures can also be used to represent branching and 
+control-flow, like `i.loop` and `i.if-then-else` 
+formations.  For instance, `i.if-then-else` can be 
+represented as a structure which involves two nested 
+procedures: if some condition (in the outer, 
+enclosing procedure) is true, then the first nested procedure 
+is calld; if not, the second is called.  Similarly, a 
+`i.loop` takes some nested procedure and calls it repeatedly.  
+In the simplest case, the nested procedure is called again and 
+again until the nested procedure returns in a manner 
+that signals the loop should be brocken off (a common keyword 
+for this condition, e.g. in `Cpp;, is `q.break`/).
+`p`
+
+`p.  
+To demonstrate with a trivial concrete example, we 
+might have pseudo-code like this:
+
+`sentenceList,
+`sentenceItem; int $x$ = 0;
+`sentenceItem; loop \{
+`sentenceItem; `hspace<1em>; if ($x$ > 10) break;
+`sentenceItem; `hspace<1em>; ++$x$;
+`sentenceItem; \} // end the loop
+`sentenceList`
+
+If we want to analyze the inner code-block as a distinct 
+(but nested) procedure, we would identify how 
+the nested implementation `q.captures` the $x$ value.  
+We also have to identify how `i.break` causes the nested 
+procedure to terminate %-- like `i.return` 
+in an ordinary channel %-- but does so as a signal 
+for `i.loop` (in the outer procedure) to break off.  
+In effect, a nested procedure used as a loop block 
+has a spcial kind of output channel which can represent two 
+possible states: `i.continue` the loop or 
+`i.break` the loop.  I will call this hypothetical 
+channel a `i.control` channel after Chung-Chieh Shan 
+`cite<ShanControl>; and Oleg Kiselyov `cite<KiselyovControl>; 
+(although they work in a different underlying context).  
+Most programming language runtimes don't actually 
+support the more `q.exotic` channels I discuss here, 
+and without runtime implementations they can 
+remain as just theortical descriptions of 
+programming phenomena implemented or analyzed via 
+some theortical framework quite different from 
+what I am calling `q.Channel Algebra`/.  
+However, the data set accompanying this text 
+demonstrates a runtine engine where the channel 
+structures I describe here can be directly implemented.
+`p`
+
+`p.
+I'll also mention the Link Grammar example, say 
+an adjective as a function modifying a noun.  
+In a formal model, an adjective is therefore a kind of 
+`q.procedure` which inputs a noun and outputs a noun.  
+In my terminology, a bread-and-butter input 
+channel is called `i.lambda`/, and a bread-and-butter 
+output channel is called `i.return`/.  However, Link Grammar 
+also recognizes various link kinds, each driven by connector-pairs.  
+For example, consider a simple link-grammatic analysis 
+of adjectives in the spirit of \cite[p. 16]{SleatorTamperley}.  
+Note that most nouns take adjectives, but some words we 
+might want to classify as nouns don't seem to:
+
+`sentenceList,
+`sentenceItem; Today is Tuesday.
+`sentenceItem; The big departmental meeting is Tuesday.
+`sentenceItem; It is very windy. 
+`sentenceItem; The lousy weather is very windy.
+`sentenceItem; They are forecasting snow.
+`sentenceItem; The latest reports are forecasting snow.
+`sentenceList`
+
+We might want to consider `i.today`/, `i.it`/, 
+and `i.they` as de-facto nouns, but notic the adjctival 
+constructions do not carry over: we can't say 
+`q.big today`/, `q.lousy it`/, or `q.latest they`/. 
+`p`
+
+`p. 
+In other words, some restriction on the `q.adjective` 
+and `q.noun` types must be identified which 
+blocks constructions like `q.big today` being parsed as valid 
+exampls of `i.big` as an adjective type-instance.  
+One option might be to define the adjective and noun 
+`q.types` more narrowly, which is more in the spirit of 
+type-theoretic semantics.  In that case, we 
+don't take adjectives, say, as `q.functions` 
+which input and output `i.any` noun, but rather 
+model a suite of adjectival types operating 
+on different noun types.  For example, the adjectives 
+`i.salaried` and `i.elected` in 
+
+`sentenceList,
+`sentenceItem; She is a salaried employee.
+`sentenceItem; He is an elected official. 
+`sentenceList`
+
+can only be attributed to persons, so qua functions 
+these adjectives only `q.input` persons, as a subtype 
+of nouns in gneral.  Via Link Grammmar, on the other hand, 
+the basic theory involves adding extra conditions on 
+the adjectives and nouns involved, which are required 
+(along with the underlying type-compatibility) 
+to permit the function (the adjective) to input 
+the argument (the noun).   Then `i.today`/, `i.it`/, 
+and `i.they` cannot take adjectivs because they do not have 
+the proper `q.connectors`/.  Of course, both idas 
+can be combined, so we can define 
+nouns and adjectives restricted to 
+narrower subtypes (like person, living 
+thing, physical object, etc.) and also marked with 
+connectors, so adjective-noun pairings depend on 
+compatibility both at the subtype level and the 
+connector level.
+`p`
+
+`p.
+The important point for the current context is that 
+connectors essentially extend any type system 
+compatible with Link Grammar, so we need to imagine 
+an extra kind of input and output channel representing 
+`i.connectors` as orthogonal to underlying 
+Part of Speech or lexical types.  In 
+`i.big departmental meeting` we have to treat 
+`i.departmental` as a kind of cognitive procedure 
+modifying the concept `i.meeting`/, and then `i.big` 
+as a procedure modifying the `q.output` of the first 
+procedure.  Then we `i.also` have to represent a 
+`i.connector` on `i.meeting` establishing that 
+this conecpt/lexeme can be modified by an adjective, 
+and similarly a related connector inheres to 
+the `i.output` of the `q.departmental` 
+procedure.  So there is a kind of output-channel 
+establishing which connectors ar eavailable on procedural 
+outputs (connectors of the same varieties as 
+would be available on individual words), and 
+special input-channels which similarly model 
+connectors which must be available on 
+procedural inputs.  I'll call these input-connector 
+and output-connector channels.  Type-thoretic semanticists 
+like Luo and Pustejovsky might prefer to 
+model connectors as aspects of types themselves, but we come 
+closer to capturing the Link Grammar model if we 
+reprsent the connector channels as distinct from 
+the regular input and output channels, whose parameter-types 
+are orthogonal to the language's connector-system.  
+`p`
+
+`p.
+I have, in any case, hereby prsented eight different kinds 
+of channels applicable to different programming- or 
+natural-language constructions: `i.lambda`/, `i.sigma`/, 
+`i.capture`/, and `i.input-connector` on the input 
+side; `i.return`/, `i.error`/, `i.control`/, 
+and `i.output-connector` on the output side.  
+Later I will introduce a few other channels.  
+Notice though that the range of different channels, 
+each with distinct semantics and theoretical 
+roles, extends far beyond the basic intuition 
+that every procesure has some inputs and some outputs.  
+Instead, type theories can evolve to capture theoretical 
+structures in diverse domains, because many theoretical 
+concepts can be systematically represented by describing 
+special kinds of channels applicable to certain procedures.  
+One way to capture data models and theoretical 
+commitments is to envision scientific models as 
+organized %-- implicitly or explicitly %-- around 
+some sort of `q.procedures` and then analyze the various 
+protocols by which information is 
+mapped into and out of procedures, with the `i.semantics` of 
+these protocols described by stating requirements 
+on specialized `q.channels`/.
+`p`
+
+`p.
+The notion of `i.channel` is therefore closely tied to the notion 
+of `i.procedure`/, and `i.types` are similarly specified 
+via both procedures and channels.  That is, most of 
+th complex typs in a type system are functional 
+types, which in turn are characterized in 
+part by the kind of channels used by instantiating procedures.  
+In principle, function-types are differentiated by the `i.kinds` 
+of channels they use as well as the `i.types` of their 
+arguments.  For example, in Object-Oriented 
+programming, a `i.method` in a string class might 
+take a string `i.object` (representing a string of 
+textual characters) as the nethod `q.receiver`/, 
+aside from `i.arguments`/: e.g., a `q.substring` 
+method would take a pair of intgers.  This procedure 
+would be considered to have a different type than an 
+equivalent non-method function taking `i.three` arguments 
+(one string and two integers) %-- even if both versions had 
+the same number and types of input parameters.  In `Cpp;, 
+`q.pointer-to-member-function` types are never equated to 
+function-pointer types.`footnote.
+Note that `Cpp; terminology is confusing in 
+that pointer-to-member-functions can never point at 
+`i.static` member functions (i.e., the fact that 
+such functions are members has no bearing on their 
+pointer-types), even though member functions themselves 
+`i.can` be static.
+`footnote`  The explanation for 
+such distinctions in Channel Algebra is that a 
+procedure which takes all inputs from a lambda channel 
+has a different type than an (even if otherwise identical) 
+procedure which takes one input from a `i.sigma` channel 
+(equivalnt to the `Cpp; `i.this` keyword).
+`p`
+
+`p.
+In Object-Oriented environments, non-static member-functions 
+(aka `q.methods`/) are distinguished from non-methods 
+in part because there are different rules for resolving method-calls 
+when a given function name refers to several different 
+procedural implementations (such as a base-class function and 
+a derived-class function which overrides it).  
+This is one example of how `q.sigma` and `q.lambda` channels 
+have different semantics: the types carried within 
+sigma channels are more consequential for overload-resolution than 
+those in lambda channels.  Conversely, sometimes channels are 
+not semantically significant enough to decisively 
+differentiate types.  In `Cpp;, a function which 
+`i.does` throw an exception cannot be overloaded 
+with a function which `i.does not` throw 
+an exception (assuming the rest of the functions' signatures 
+are identical).  This means that %-- if we model type systems like 
+that of `Cpp; via Channel Algebra %-- procedurs 
+with and without error channels can gbe the same type.  But it 
+is always possible `i.in principle` to differentiate function-types 
+based on the kinds of channels their associated procedures use; 
+just that somethimes this results in fine-grained distinctions 
+not recognized by a particular type system.
+`p`
+
+`p.
+The larger point is that function-types are specified 
+via channels (`q.modulo` potential coarsening that equates types 
+that could potentially be distinguished).  Therefore, the 
+fundamental fabric of the type system is dependent on 
+modeling channels, because this determines how 
+function-types themselves are miodeled; and, as I will now 
+explicate, function-types ar ethe logical core of 
+almost any practical type system
+`p`
+
+`subsection.Channels and Carriers`
+`p.
+Most type systems take it as self-evident that any type 
+is associated with `i.values` of that type, and usually 
+`i.sets` of values.  That is, intuitively, for any 
+type (say, 16-bit signed integers) there is a 
+set of values whichba are the `q.inhabitants` of 
+that type.  One weakness of this picture is that 
+many types vary in terms of `i.what` set of values is actually 
+representable in a given computational context.  The 
+case of 16-bit signed integers carries no such ambiguity; 
+this type always has an extension equivalent to the 
+interval -32768 to 32767 in $\mathbb{Z}$.  However, 
+consider the type of `i.lists` of 16-bit signed integers; 
+depending on a program's available memory, some relatively 
+long lists which can be represented on one computer will 
+exceed the capacity of a different computer.  Since computer 
+code in general is not tied to a specific environment, 
+we have to accept that for many types we 
+do not know `i.a priori` what set of values 
+conformant to that type can actually be used.
+`p`
+
+`p.
+In addition to this practical problem, it is also difficult to 
+describe exatly what a value `i.is`/.  Any instance of any type 
+(at least in the software ecosystem) 
+does have a numeric manifestation in computer memory %-- 
+essentially an encoding as a sequence of bytes, that is,  
+8-bit unsigned integers %-- but it is not obvious that such 
+encodings (sometimes called a `q.bit pattern`/) actually 
+are `q.values` of types.  In reality, computer code almost never 
+deals with `q.values` per se, but rather deals with types 
+represented symbolically in function signatures: passing 
+`q.values` around from procedure to procdure.  One exception to this 
+rule is that some values are written directly into computer 
+code %-- the numeric literal `q.10` represents a specific 
+value (usually in some intger type).  However, even here some 
+procedure is needed to interpret the character strings in 
+source code to the actual typed value.
+`p`
+
+`p.
+Given these considerations, while I will informally talk about 
+`q.values` I try to minimize the use of `q.value` as a technical 
+construct in Channel Algbra.  With this foundation we 
+can consider a kind of `q.value free` type theory by 
+rough analogy to `q.point-free` topology 
+(and therefore distantly to mereotopology).  More central than 
+the notion of `i.value` is the idea of a `i.carrier`/.  
+A carrier is a computational construct %-- symbolically 
+represented by a source-code token %-- which represents an 
+instance of a type.  Each carrier is asspociatd 
+with on canonical type (though carriers may be indirectly 
+associatd with supertypes of its canonical type).  
+When we talk about procedures calling other 
+procedures, we really mean that the value of symbols in one 
+body of code (whre the calling procedure 
+is implemented) is sychronized with tge value of symbols in 
+anothr stretch of code (where the callee is implemented).  
+In short, at any stage of program execution, we can form 
+groups of source-code symbols across the code base unified by 
+the guarantee that these symbols carry `q.the same` value.  
+But rather than talking of values directly we can 
+take this syncronization between symbols as the deeper notion: 
+the notion `i.value` is itself defined as the correlation exhibited 
+by synchronized `q.symbols`/.  The notion of 
+`q.carrir` is then a more rigorous extension of the 
+notion of source-code symbols or tokens.
+`p`
+
+`p.
+The difference between a `i.carrier` and a `i.type` is that 
+carrier have aditional states.  Some carriers are defind in 
+function signatures, but others are introduced as lexical 
+symbols in a procedure implementation.  In many programming 
+languags, lexical symbols can be `i.declared` before being 
+`i.defined`/.  We can represent this scenario via a `i.carrier` 
+which is in a particular `i.state` (I'll call it 
+`i.preinitialized`/).  When a carrier is initialized, it takes on 
+a sftate of holding a specific typed value %-- `i.values` are 
+defined indirectly as characteristics of carriers in initialized 
+states.  At some point (consider a pointer to deleted memory) carriers 
+no long hold meaningful values, and they enter a 
+state I'll call `i.retired`/.  Introducing `i.preinitialized` 
+and `i.retired` as carrier-states allows these to be separated from 
+the type-system: we do not have to assume a `q.preinitialized` 
+`i.value` which can be an `i.instance` of some types.  In some cases, 
+type systems `i.will` reognize values which play 
+similar semantic roles to these carrier-states: for example, 
+Haskell's `q.bottom` value is an instane of ervery typ and represents a 
+`q.null` or `q.missing` value.  However, using semenatics of carrier-states 
+rather than type-instancs means that we do not have to introduce extra 
+structure to type systems which we may want to model via Channel Algebra.
+`p`
+
+`p.
+Carrier which can be in preinitialized, retired, or initialized states 
+are called `i.tropes` (there may be only one, or multiple, 
+initialized states for tropes).  A different class of carriers ar e
+called `i.emblems`/, and represent abstract (`q.emblematic`/) 
+specfications on 
+carriers rather than carriers which hold concrete values: 
+in effect, emblems are carriers present in function 
+signatures.  One or more carriers in an ordered list then 
+form `i.channels` (though a channel can also be `i.empty`/, 
+with no carriers).  I distinguish an `i.empty` channel, 
+which exists but has no carriers, from a 
+`i.vacant` channel which does jot exist at all.  For instance, 
+a function that `i.can` throw exceptions but, at some point, 
+has returned a normal value instead, has an `i.empty` 
+error channel; a function which can `i.never` throw 
+an exception (e.g. the `Cpp; `i.nothrow` keyword) has 
+a `i.vacant` error channel.  Channels cannot include both 
+tropes and emblems; those taking tropes 
+are called `i.staged` channels, and those taking emblems are 
+called `i.abstract` channels.
+`p`
+
+`p.
+Carriers and channels interoperate according to several 
+operators, which give Channel Algebra its `q.algebraic` character.  
+To present these oprators I'll also intoduce the notion 
+of `i.stages`/.  Briefly, any procedure is broken down 
+into a sequence of stages, each of which involves 
+constructing som aggregate of chanels.  The basic 
+outline is as follows:
+
+`description,
+\item[Carrier Append]  Any staged channel can append 
+a trope, and any abstract channel can append an 
+emblem (represented as `ChaAppendCar;).
+\item[Channel Product]  Any collection of abstract 
+channels can combine to a `q.product`/, called a 
+`i.channel complex`/.  Similarly, any collection of staged  
+channels can become a channel `i.package`/.  
+A channel complex or package is generically called a 
+channel `i.product`/.  A channel product is considered 
+`q.complex` if any of its chanels are abstract.  
+The basic channel-to-channel operator `ChaProductCha; 
+represents a channel product formed by combining 
+`ChaOne; and `ChaTwo;.
+\item[Carrier Handoff]  Given carriers `CarOne; and 
+`CarTwo;, a `i.carrier handoff` `CarHandoffCar; means 
+that the value carried by `CarOne; is (at last temporarily) 
+carried to `CarTwo;.  This means that there is some phase 
+of program execution when `CarOne; and 
+`CarTwo; are synchronized, or `q.aligned`/; exhibiting the same state 
+(or sufficiently related) states.  Alignment allows for 
+imperfect handoffs, like coercing a floating-point 
+number to an integer.
+\item[Digamma Reduction]  A channel `i.package` 
+can be `i.allied with` a channel `i.complex` 
+(written `ChpAlliedChx;) if carriers in `Chp; and `Chx; 
+are `q.alignable`/.  The actual description of such 
+alignment is non-trivial; in `cite<Neustein>; I address this 
+in terms of hypergraph models of computer code.  But in 
+general alignment means that handoffs are possible between 
+tropes and emblems, and if there is enough alignment 
+the chanel `i.package` `Chp; can be interpreted as a call 
+to a `i.procedure`/, whose `i.signature` is modeled by the channel 
+`i.complex` `Chx;.  In this case we have a `q.Digamma Reduction` 
+operator `DigammaR;, meaning that the package `Chp; is 
+`q.evaluated` and then control passes to the stage 
+labeled `stageLbl;.`footnote.
+The motivation for the term `q.digamma` is first that the `q.sigma` in 
+`sigmaCalc; looksblike a smaller version of th Greek letter Digamma, 
+and second that `q.gamma` is often used to represent graphs, and 
+`q.digamma reduction` can be sen as a relationship between 
+two different source-code graphs.
+`footnote` 
+`description`
+`p`
+
+`p.
+Each of these operators represent a step in a computational 
+process whereby channel packages are constructed and then 
+evaluated, which overbthe course of several stages 
+(in general) provides implementation of procedures.  
+A single operator is associated with a `i.microstage`/, 
+for example, appending one carrier to one channel.  
+A sequence of microstages is than an `i.intermediate 
+representation` used to translate high-level source code 
+to data structures that can be executed direcly 
+(or more or less directly, by interfacing to 
+`q.ambient procedures`/, e.g. via `Cpp; reflection).  
+This strategy is concretely put into practice 
+in the sample code distributed with this paper.  In effect, 
+high-level source code is `q.compiled` into an 
+intermediate representation, and this IR is a more or less 
+direct translation of Channel Algebra oprations.  
+`p`
+
+`p.
+One of the technical challenges of using this strategy for 
+practical software developments involves mapping 
+sophisticated Channl semantics to ordinary 
+type systems.  Since a language like `Cpp; does not 
+support the full range of channels I have or will presented 
+here, the more detailed channel-complees have to be mapped to 
+function-call semantics which  `Cpp; will actually 
+recognize.  In practice, alot of this work involves 
+manipulating function pointers and casting carriers 
+to generic binary representations, like arrays of 
+`voidP;-pointers.  These techniques are not especially 
+relevant to the philosophical issues I am focused on in 
+this paper, so I'll leave them to the published 
+data set (interested readers will find a relatively 
+complete `Cpp; development environment, intended to be 
+used with the `Qt; platform, that operationalizes the 
+theory I am developing in this section).
+`p`
+
+`p. 
+At this point however I `i.will` comment 
+on the overall architecture of building and then evaluating 
+channel packages.  Supporting `q.Digamma Reduction` 
+in a runtime encironment requires reasonably complex 
+`Cpp; libraries (assuming `Cpp; is the language 
+of the runtime itself); but most of 
+the Intermediate Representation is concerned with 
+asserting carrier properties and then adding carriers 
+to channels.  Channels themselves act as stack machines, 
+in that they can be built up like machine 
+stacks and then cleared in the passage from one 
+stage to the next.  This is an example of a 
+point I made much earlier, in the introduction, that 
+computing environments ultimately 
+involve stack machines at their most primitive level.  
+`p`
+
+`p.
+We are, in any case, operating here on several different 
+semantic levels.  The Channel Algebra operators define 
+one, intermediate level whose main theme is building channel 
+packages.  At a `q.lower` level each package must be evaluated 
+at runtim, for instance by converting it to a 
+`Cpp; function-call, so the semantic issues there are 
+identifying the proper `Cpp; function (or function-pointer) and 
+marshaling the channels to mimic the `Cpp; ABI (Application 
+Binary Interface).  Conversely, at a higher level, 
+source-code formations are interprted in terms of the channel 
+products they imply: so in code like `i.x = y->f(z)` the 
+implicit channels are likely populated as follows: $z$ goes 
+into $f$'s `i.lambda`/, channel, $y$ into its `i.sigma`/, 
+and $x$ becoms bound to its `i.return` (of course whether this 
+is the actual meaning of the code depends on the 
+high-level language's formal grammar).  This implies 
+that grammars can be organized around the channel structures 
+indicated by conformant code.  To the degree that 
+grammar engines adopt this paradigm they can be 
+called `i.Channel Algebraic Grammars`/.
+`p`
+
+`p.
+This paper's data set includes one example of an 
+implmented Channel Algebraic Grammar insofar as code 
+written in a special high-level language is translated to 
+a Channel Algebraic Intermediate Representation 
+(and then evaluated).  The syntax and semantics of 
+this spcial-purpose language is, of course, 
+only distantly related to `i.natural` language; 
+I won't address whether a comparable architecture could 
+yield a workable Natural Language Processing engine.  
+However, the design and role of this Channel Algebraic 
+Grammar in the `i.Software Language Engineering` 
+problem-space can perhaps serve as at least an 
+analogy for how `i.natural` language 
+orchstrates the `q.flow` of information, 
+and the ordering of operations, across the cognitive 
+proceures which underly linguistic understanding.  
+I will return to this possibility at the end of the section. 
+`p`
+
+`subsection.Channels and Constructors`
+`p.
+As I indicated, Channel Algebra downplays 
+the notion of typed `i.values` except in a 
+derivative sense (e.g. a `q.handoff` means an 
+alignment between carriers which we can picture as a 
+value being copied).  However, carriers do 
+become initialized, and even if this initialization 
+results from a handoff originating with 
+another carrier, that carrier in turn had to be initialized.  
+At some point these chains of initialization 
+have to be grounded on some underlying data.  
+This data may come from outside the software 
+itself: for example, a program emulating a 
+calculator relies on human users to type numbers 
+on a kyboard or by pushing buttons on a User Interface.   
+Other times values are literally written 
+in computer code, or 8btained from files, databases, 
+or over a network.  
+`p`
+
+`p.
+For sake of discussion, we can limit attention to 
+values read literally from source code.  Even external 
+data tends to depend on some numeric or string literal: 
+reading data from a file requires specifying a file name, and 
+obtaining data from a network location requires a 
+URL.  So computer code itself provides the 
+primordial values from which other values 
+circulating through the software are derived.
+`p`
+
+`p.
+In a typical type system, then, at least some types 
+should have procdures which construct values directly 
+from source code literals.  I'll call these 
+`i.literal-constructors`/.`footnote. 
+In `Cpp;, similar constructor-functions are called `i.literal 
+operators`/.  This terminology only applies to `q.user-defined` 
+constructors; the compiler itself handles initialization 
+for built-in typs like integer and floats.  However th 
+overarching term `q.literal-constructors` is helpful for 
+theory-focused languag-agnostic discussion about types and 
+constructors.
+`footnote`  In addition to literal-constructors, 
+there are some procedures to create type values from 
+other values (or from no values at 
+all); I will call these `i.co-constructors`/.`footnote.
+This terminology has the benefit of distinguishing 
+the property of functions I call `i.co-constructors` from 
+what existing programming languages 
+call `q.constructors`/, which itself has different meanings for 
+different languages.  For example, in `Cpp; one 
+cannot take the address of a constructor function; 
+however, co-constructors are implemented such that 
+you `i.can` have co-constructor pointers, which is essential 
+to the idea of `q.preconstructors` that I will address below.
 `footnote`
 `p`
 
 `p.
-Arguably, joking or titular cases like `q.Holy Roman Empire` can be
-relegated to thematic margins, especially if we accept formal-logical construals of
-what semantics is all about, with an `i.a priori` contrast between Semantics and
-Pragmatics, the former rooted in `i.states of affairs` and only the latter addressing
-rhetoric and usage.
-Counter to this counter-argument, however, we can observe that different phrases imply
-different degrees of `q.autonomy` to their constituents, and different degrees of
-coherence or unification into a single idea.  Some phrases act as direct substitutes
-for single concepts (like `q.Member of Parliament`/) where it seems mostly historical
-accident that a phrase rather than a word emerged as the most popular; but many other
-phrases have more complex usage scanarios, including everyday expressions that don't have
-special rhetorical or sociolinguistic conventions that would make them tangential to
-semantic or syntactic analysis proper.  Moreover, many of these examples are similar to
-those used by Cognitive Grammar to challenge the syntax/semantic distinction and argue for
-`q.morphosyntactic` models as reciprocating cognitive formations, not abstract language-rules.
+There is no strict rule separating constructors for a type 
+`tTyp; from other procedures that may return values of 
+`tTyp;.  Intuitively, they play different roles: constructors 
+are about creating new values, while other functions 
+analyze or modify existing valus.  The canonical examples 
+are so-called `i.trivial` constructors, which 
+take no arguments %-- for instance, the constructor for a 
+list of numbers returns an empty list.  Such a 
+function surely qualifies as a constructor.  
+On the other hand, consider a function which takes a 
+list of numbers and returns a new list 
+with duplicate numbers removed %-- such a procedure 
+acts more as a utility function and probably 
+would not be classified as a constructor. 
 `p`
 
 `p.
-For example, in Ronald Langacker's `i.Foundations of Cognitive Grammar`/, the sentence
+The constructor/non-constructor distinction is anyhow 
+typically left open by the programming language 
+environment, so coders have to signal their 
+intention to treat a given function as a constructor by 
+some extra syntax.`footnote.
+E.g. in `Cpp; a constructor is given the same name as the 
+type it constructs for.  One consequence is that 
+two different constructors cannot be declared without 
+overload-resolution: each constructor has to have a different 
+signature than any other constructor of the same type.  
+However, the rationale for this restriction seems to be 
+syntactic more than semantic.
+`footnote`  In Channel Algebra, one option is to 
+define a special `q.`i.construct`/` channel for values 
+output from constructors.`footnote.
+It is useful to pair this channel with a semantically 
+similar channel I'll call `i.placement` (after 
+`q.placment new` in `Cpp;) for scenarios where the 
+constructed result should be written to a buffer 
+provided by the calling procedure rather than returned. 
+`footnote`  Consider the case of appending values to 
+a list of numbers: should a function which 
+maps `LappendX; to `Lprime; %-- where `Lprime; is 
+the same as `LpreX; except it has $x$ at the end 
+%-- be considered a constructor?  
+In most functional programming languages this 
+is actually a classical case (along 
+with trivial ones) of constructors, because they 
+provide the basic mechanism wherein instances 
+of list types are defined.  In other words, 
+this `i.append` function seems logically anterior 
+to other functions which may create a list 
+%-- for instance, by `i.removing` the last 
+element from a (non-empty) list. 
+`p`
+
+`p.
+Such a notion of `q.anteriority` can sometimes be made 
+rigorous.  If we build up a list of numbers by appending 
+values to smaller lists, we can eventually construct 
+any list whatsoever.  We can also run this process 
+in reverse: for non-empty `Lprime; there is only 
+one way to construct `Lprime; from a pair 
+`LappendX;.  In other words, an `i.append` 
+constructor is `q.reversible`/.  Moreover, we 
+can repeatedly reverse constructors like 
+thse to get shorter and shorter (and eventually 
+empty) lists.  This means that algorithms can 
+traverse a chain of constructors `q.backward` and 
+will be guaranteed to terminate.  For example, 
+to dtermine if a list of numbers contains 
+the number $n$, it is easy to check if it `i.ends` 
+with $n$.  If not, `q.reverse` the construction, and 
+see if each smaller list ends with $n$.  Eventually we 
+would reach the mpty list, meaning that the 
+original list did `i.not` have $n$. 
+`p`
+
+`p.
+The possibility of `q.reversing` constructors is a familiar 
+pattern in functional programming, where it is often called 
+`q.pattern matching`/.  It allows algorithms to be 
+implemented in a functional style, with heavy use of recursive 
+functions and sparing use of side-effects and mutable state.  
+On the other hand, pattern matching relies on some 
+simplifying assumptions that may not be consistent with 
+all type systems.  For example, `Cpp; is laxer about how 
+valus are constructed; I can obtain a list of numbers by 
+dereferencing a pointer to a list, with no information 
+about the provenance of the referenced data.  Data types in 
+`Cpp; do not usually carry around details about their 
+`q.history`/, and it is not always easy to 
+reconstruct that history the way we can 
+`q.obviously` reverse the construction of a list.  
+`p`
+
+`p.
+In any case, these variations present some potentially 
+informative characteristics about individual types.  
+Given type `tTyp;, we can ask questions like: 
+
+`enumerate,
+`item; Which instances of `tTyp;, if any, can be the result of 
+a trivial constructor?
+`item; Does `tTyp; have a `i.default value` whish is the result of 
+a trivial constructor? 
+`item; Which instances of `tTyp; can be the result of a 
+literal constructor?
+`item; Which instances of `tTyp;, if any, can be the result of 
+a reversible constructor?
+`item; If we have values which `i.are` the result of 
+a reversible constructor, is there an efficient way 
+to `q.un-construct` the value to support pattern matching?
+`item; Does `tTyp; have co-constructors (i.e., they 
+are not literal) which also are neither trivial nor reversible?
+`enumerate`  
+
+Notice that a trivial constructor does not necessarily produce 
+a defaukt value.  For example, a type meant to represent 
+days of the week could default to whichever day is current 
+when a constructor is called: if an application is run on 
+Tuesday, the day-of-week trivial constructor would return 
+the value for Tuesday.  So a type may have `i.more 
+than one` trivial-constructed values.  But 
+if a type has `i.exactly one` trivial-constructed value, 
+this is `i.usually` a `q.default` value.
+`p`
+
+`p.
+However, a type can have a default value without a trivial 
+constructor.  A defalt value plays the 
+conceptusl role of a `q.fallback`/: 0 is a reasonable 
+default for most numeric types.  However, some numeric types 
+don't have trivial constructors at all.  Meanwhile, types 
+representing calendar dates sometimes default to a 
+standardized `q.day zero`/, like January 1, 1970.  
+But a trivial constructor for such a type may instead 
+return today's date (when the function is called).  When a type has 
+a default value, a (co-)constructor which returns that value 
+can be called a `i.default` constructor.`footnote.
+For an example of a non-trivial default constructor, consider a 
+literal constructor for a ratio type that returns 
+0/1 given a malformed character string.
+`footnote`  As the Calendar Date example shows, 
+types can have default and trivial constructors 
+that return different values.
+`p`
+
+`p.
+Sometimes (co-)constructors are significant even if they are 
+not actually used.  To demonstrate how this may occur, consider 
+the problem of enforcing dependent-type constraints without 
+using dependent types explicitly.  A canonical example is 
+a function which must take a (maybe monotone) 
+increasing or decreasing pair of numbes (I used the 
+monotone-decreasing example for systolic and diastolic 
+blood pressure).  Suppose we implement a procedure to 
+highlight a selection of characters in a screeen display, 
+whose inputs are the start and end character indices in 
+some displayed text.  We want to indicate that the second number 
+(call it $y$) must be greater than the first ($x$).  
+Via unrestricted dependent types, we could just define 
+the type of $y$ as `q.numbers greater than $x$`/).  
+The problem with this type-declaration is 
+that we therefore do not know what type $y$ has until 
+the function is called (and $x$ has a 
+value).  This could violate the principle that 
+every argument to a function must have a type which 
+is known in advance.  Alternatively, we can 
+say that $y$'s type `q.provisionally` is, say, 
+a 32-bit integer the same as $x$, but it's `q.real` type 
+once $x$ is known is a dependent type that depends on 
+$x$'s value.  Not every type system however allows 
+for this kind of distinction between `q.real` and 
+`q.provisional` types.
+`p`
+
+`p.
+One way to assert the dependent-type restriction while avoiding 
+these problems is to note that $x$ and $y$ must form a 
+monotone-increasing pair.  That is, the procedure 
+mandates the `i.possibility` to create the monotone-increasing pair 
+`xy; from $x$ and $y$, even though the procedure 
+does not use this pair-value directly.  As a construct 
+in Channel Algebra, we can introduce the idea of 
+a `i.rider` channel which asserts the `i.possibility` 
+of creating certain values without actually creating them  
+The simplest case is suggested by this number-pair 
+example.  Let's assume we have an implemented type 
+modeling monotone-increasing pairs, with a co-constructor 
+that creates such a pair from two numbers 
+(verifying that the two numbers are indeed monotone-increasing).  
+We can then form a pointer to this co-constructor 
+function, or obtain some other unique identifier for it.  
+I call a function-pointer or similar value a `i.preconstructor` 
+if it references a co-constructor.  In addition to 
+being an indirect way of calling the co-constructor, 
+a preconstructor serves as a `i.certification` that the 
+co-constructor `i.could` be called.  For example, one 
+way to indicate that $y$ has been checked and 
+is indeed greater that $x$ is to use the 
+monotone-increasing pair preconstructor as a kind of 
+signal value: test for $y > x$, but if so, 
+instead of using boolean `i.true` for an 
+affirmative, use the preconstructor.   
+`p`
+
+`p.
+The key point here is that many conceptual details or 
+programming requirements that concern interrelationships 
+between values can be modeled within a 
+type system %-- even without full-fledged 
+dependent types %-- via preconstructros used as 
+signal values.  For a given requirement, such as 
+`q.is $y$ greater than $x$?`/, we can identify a type 
+that `i.could` be constructed if (and only if) 
+the requirement is satisfied.  For instance, 
+`i.$y$ is greater than $x$` is true iff we can form an 
+instance of a monotone-increasing pair type out 
+of $x$ and $y$ %-- and so, the preconstructor 
+for this type becomes a convnient signaling value 
+for the affirmation of $y > x$.  Conceptual requirements 
+can be defined by modeling types whose values 
+necessarily exhibit some significant property, and 
+then using preconstructors to those types as 
+certificates that the property is true (in some context).  
+A `q.`i.rider`/` channel can then be populated with 
+one (or possibly several) preconstructors affirming 
+facts about the values carried in other channels.  For instance, 
+a `i.lambda` channel holding $x$ and $y$ can be paired with 
+a `i.rider` channel holding a monotone-increasing-pair 
+preconstructor, certifying that $y$ has been checked to be 
+greater than $x$.
+`p`
+
+`p.
+The larger point of this whole subsection is that 
+details about the nature and existence of types' constructors 
+can provide useful concptual information about types 
+themselves.  Often this information dovetails 
+with the metadata pertinent to Conceptual Space Theory 
+and CSML.  Consider a simple but representative example of 
+an object exhibiting core Conceptual Space 
+`q.quality dimensions`/: a colored rectangle in a computer 
+graphics environment.  This object could have some 13 dimensions: 
+colors for the shape's interior and border (including 3-dimensional 
+color vectors plus transparency factors); the top-left position,  
+width, and height of the rectangle; and the width of th border.  
+A software engineer has numerous constructor options for 
+this type of object: should there be one `q.pod-tuple` constructor 
+that takes all 13 values in a flat list?`footnote.
+`q.POD` is a 
+common coder's parlance for `q.plain old data`/, and it generally 
+describes data structures conformant to `i.struct`/s in the 
+C languag, rather than `Cpp; classes.  A typical feature 
+of `i.struct`/s is that they are initialized by listing all of 
+their fields in one tuple.
+`footnote`  Should there be distinct data types for 3-vector 
+colors or 4-vector colors (including transparency)?  Should the 
+top-left point be merged into one 2-vector point type?  
+The rectangle-constructor could potentially have its 13 fields 
+folded into 5: two color 4-vectors, one top-left point, 
+width, height, and border-width.  Or border width and color can 
+be merged into one `q.border` type.  On top of that there is the 
+question of default values: should pure black, or maybe pure 
+white, be a default color for the interior?  Should the 
+border default to width-one black, or width-zero (i.e., 
+no border), or something else?  However the types are 
+designed, there is a mutual dependency between simpler types 
+like colors and points and the constructors for complex objects 
+like rectangles: since complex objects are built from simpler 
+ones, a type interface should be designed with consideration of 
+how to assemble the whole from the parts, or retrieve the 
+parts from the whole.
+`p`
+
+`p.
+Some compound objects are conceptually analogous to basic pairs or 
+tuples of values: 2D graphics points are 2-vectors, say, and 
+solid colors are RGB 3-vectors.  One way to signal that a 
+compound type is like a tuple `q.product` of its 
+component fields is to allow instancs of that type 
+to be constructed just by listing each field separately.  
+In `Cpp;, this is often implemented by defining a 
+constructor which takes an `q.initializer list`/.  
+Analogously, in Channel Algebra we can define a `i.pod-tuple` 
+channel that serves as the `i.lambda` channel 
+for pod-tuple co-constructors.  A `i.pod-tuple` channel 
+indicates that a given type behaves essentially like a tuple, 
+with a sequence of values that, in most cases, vary 
+independently of one another.  These kinds of types 
+hew closely to the Conceptual Space idea of 
+multi-dimensional quality spacs.  However, 
+other kinds of types have more complex, interdependent 
+internal structuration.  I think Channel Algebra is a 
+way to make Conceptual Space theory relevant for these more 
+complex types also, using different Channel Semantics 
+and the modeling roles of different forms of 
+types' constructors; how these rooes reveal types' conceptual 
+foundations.   
+`p`
+
+`p.
+Having argued for Channel Algebra as a formalization 
+potentially relevant to Conceptual Space models, I 
+want to conclude this section by considering 
+how Channel Algebra msy be intuitively applicable to 
+Cognitive Grammar.  
+`p`
+
+`spsubsectiontwoline.Rider Channels and Deferred Coercions`
+`p.
+Earlier in this section I described how Channel Algebra can 
+represent dependent types and coercions, both of which 
+are essential ingredients in type-theoretic semantics.  
+I am not proposing Channel Algebra as a `i.literal` 
+theory for natural language, particularly 
+in its implemented form as a runtime and parsing 
+environment for programming languages.  However, some 
+of its formal details for processing programming languages 
+could be at last suggestive of procedural patterns factoring 
+in to natural-language understanding.
+`p`
+
+`p.
+Before going into detail, I think it's worth 
+distinguish different aspects of natural language 
+where type theory may play a role.  
+On one level, very general Part of Speech classifications 
+can be approached type-theoretically.  This helps 
+reinforce the intuitive idea that syntactic categories like 
+verbs, adjectives, and adverbs corresponds to 
+concptual, cognitive processes which effectuat changes 
+in beliefs, conceptualizations, or situational 
+records.  A noun by itself is an abstract concept; 
+during the course of a sentence, it is 
+subject to concretization and preicatization, 
+ending up in an idea that has some degree of 
+concrete propositional content.
+`p`
+
+`p.
+For example, we might go from `i.dog` to `i.dogs` to 
+`i.those dogs` to the sentence `i.Those 
+dogs are barking`/.  Logically we can see this as 
+building up a propositional structure from sub-propositional 
+parts.  But cognitively the process is more like 
+migrating from a cognitive register dealing in conceptual 
+abstractions (like `q.dog`/) to a register for propositional 
+attitudes and situational understanding.  Logical 
+constituents are more like stages in a 
+concept-to-belief evolution than mereological units.  
+That is, the relation between the signifying whole and 
+its semantic or morphosyntactic parts is more 
+the relationship between a process's ending 
+to its intermediaries than a mereological hierarhy.  
+If this picture seems compelling it can be 
+conveyed by figuring the majority 
+of Part of Spech types as function-like: 
+the nature of verbs, for example, is to 
+functionally transform (in our 
+cognitive frames) nouns to 
+propositions.  Analogously, adjectives 
+transform nouns to other nouns %-- in 
+the sense that `q.red apples`/, say, can 
+substitute as a noun-concept in most places 
+that `q.apples` alone can; `i.red` being like a 
+procedure that produces a modified `i.apples` concept 
+which substitute for just `i.apples` in 
+subsequent processes.  Likewise, adverbs produce 
+new verbs from other verbs; subordinators like 
+`i.that` transform propositions back to 
+nouns (as I argued in the last section), and 
+so forth.  So Parts of Speech can be usefully analyzed 
+as `q.function-like` types (I will discuss 
+specific language examples arguing for this prespective 
+in the next section).  Thse are, however, very general 
+types, which would be the `q.uppermost` types 
+in a natural language semantcs; I will call 
+these `i.macrotypes`/.
+`p`
+
+`p.
+On the other hand, at a much finer level, individual 
+lexical `q.cliques`/`footnote.
+Borrowing this term from `cite<GaumeVenantVictorri>; though I'm 
+not using it exactly the same way
+`footnote` %-- the concept or extension or intensional 
+property-set associatd with particular word-meanings 
+%-- often seem to behave as `i.types` as well.  In `q.Formal 
+Concept Analysis`/, `i.concepts` are (statistically) 
+defined as a combination of extensional and intensional 
+criteria: neither extension nor attributes alone 
+fully characterizes a concept, either cognitively 
+or extra-mentally.  In particular, practical fluency 
+in a concept involves knowing canonical examples 
+(like seing many of the medium-size, traditionally 
+architected dwellings that would be prototypical 
+`i.houses`/) and also the prototypical features 
+that characterize the concept (houses are 
+three-dimensional, enclosed, divided into rooms, function 
+as a place of residence, etc.).  A combination of 
+exemplars and attribute-prototypes define 
+the `q.core` or `q.center` of a concept: insofar as 
+some example is `q.peripheral`/, an outlier which 
+is somehow not representative of the concept (but 
+still can be classified to it), it must have some 
+`i.featural` difference from examplars; but we can 
+also compare it as an individual to more 
+exemplary individuals.  That is, we understand outliers 
+both intensionally %-- we can articulate the features 
+which make both a log cabin and a gated mansion atypical 
+as houses %-- and extensionally: we can mentally 
+juxtapose cabins and mansions with ordinary houses.
+`p`
+
+`p.
+If this gloss on the nature of concepts is accurate, 
+it helps explain why the lexical entrenchment of 
+concepts often has a type-theortic feel.  In the 
+more logical aspects of semantics, lexicalized 
+concepts do present operationally as types: 
 
 `sentenceList,
-`sentenceItem; Three times, students asked an interesting question
+`sentenceItem; \label{itm:penguin} A penguin is a flightless bird.
+`sentenceItem; \label{itm:rhino} Rhinos in that park are threatened by poachers.
+`sentenceItem; \label{itm:elephant} Baby elephants don't have tusks.
 `sentenceList`
 
-is used to demonstrate how
-grammatical principles follow from cognitive `q.construals` of the relevant situations,
-those which language seeks to describe or takes as presupposed context.`footnote.
-For example, \cite[pp. 119 and 128]{LangackerFoundations},
-discussed by \cite[p. 189]{LineBrandt}, and \cite[p. 9]{EstherPascual}.
-`footnote`
-In particular, Langacker argues that `q.students` and `q.question` can both be either singular or
-plural: syntax is open-ended here, with neither form more evidently correct.  Langacker uses this
-example to make the Cognitive-Linguistic point that
-we assess syntactic propriety relative to cognitive frames and conversational context.  In this
-specific case, we are actually working with two different cognitive frames which are interlinked
-%-- on the one hand, we recognize distinct events consisting of a student asking a question, but
-the speaker calls attention, too, to their recurrence, so the events can also be understood
-as part of a single, larger pattern.  There are therefore two different cognitive foci, at two
-different scales of time and attention, a `q.split focus` which makes both singular and plural
-invocations of `q.student` and `q.question` acceptable.
+The point of these examples is that their signifying structures 
+involve operations that can be explaind type-theoretically.  
+In (\ref{itm:penguin}), a concept is 
+charactrized via a subtype/supertype relation.  In 
+(\ref{itm:rhino}), a concept is being 
+`q.extensionally filtered`/: we start with an 
+expression that seems to designate the extension of some concept 
+(`i.rhinos`/) and then narrow it based on 
+extensional criteria (`i.in that park`/).  This suggests 
+a type/set interface similar to my analysis earlier of 
+`q.students polled` (\ref{itm:maj}).  And (\ref{itm:elephant}) 
+suggests an `i.intensional` filter, narrowing a type 
+for contxtual purposes into a subtype that is 
+concptually meaningful but not ntrenched: 
+there is no common word (peer to `q.kitten` 
+or `q.puppy`/) for `q.baby elephant`/.  
 `p`
 
 `p.
-Supplementing this analysis, however, we can additionally focus attention directly on
-grammatical relations.  The words `q.student` and `q.question` are clearly linked as the subject and
-object of the verb `q.asked`/; yet, contrary to any simple presentation of rules,
-no agreement of singular or plural is required between them (they can be singular and/or plural in
-any combination),  Moreover, this anomaly is only in force due to the context established
-by an initial phrase like `q.Three times`/; absent some such framing, the singular/plural
-relation would be more rigid.  For example, `q.A student asked interesting questions` would
-(in isolation) strongly imply `i.one` student asking `i.several` questions.  So the initial
-`q.Three times` phrase alters how the subsequent phrase-structure is understood while remaining
-structurally isolated from the rest of the sentence.  Semantically, it suggests a
-`q.space builder` in the manner of Gilles Fauconnier or Per Aage Brandt
-`cite<Fauconnier>;; `cite<PerAageBrandt>;, but we
-need to append Mental Space analysis with theory of how these spaces
-influence syntactic acceptability, which would seem to be logically prior to the stage where Mental Spaces
-would come in play.  This complex interplay of phrase-structures
-is hard to accommodate from the grammar-hierarchy perspective.  There seems to be
-no way to break down this example sentence into a tree-like phrase hierarchy wherein each
-phrase, considering the semantic concept which it is apparently tasked to put into words,
-can be seen to function in isolation.  The mapping of the sentence to a logical
-substratum would be more transparent with a sentence like `q.Three students asked
-interesting questions`/; that sentence is a more direct translation of the facts
-which the original sentence conveys.  But this `q.more logical` sentence has different
-connotations than the sentence Langacker cites; the original sentence places the emphasis
-elsewhere, calling attention more to the idea of something temporally drawn-out,
-of a recurrence of events and a sense of time-scale.  The `q.more logical` sentence
-lacks this direct invocation of time scale and temporal progression.
+All of these operations %-- fine-tuning 
+concepts to the specific ideas salient in a 
+specific signifying act %-- have plausible 
+representations based on a concepts-as-typs 
+analogy, and suggest another level where 
+type theory could be an effective formalizing 
+tool.  But in this case, we are discussing 
+the almost minimal groupings of 
+a linguistic hierarchy, individual word-senses 
+%-- I'll call these `i.microtypes`/. 
 `p`
 
 `p.
-We can say that the `q.Three students` version is a more direct statement of fact, whereas
-Langacker's version is more speaker-relative, in the sense that it elaborates more
-on the speaker's own acknowledgment of belief.  The speaker retraces the steps of her
-coming to appreciate the fact %-- of coming to realize that the `q.interesting questions`
-were a recurrent phenomenon and therefore worthy of mention.  By situating expression
-relative to cognitive process rather than to the facts themselves, the sentence
-takes on a structure which models the cognition rather than the states of affairs.
-But this shift of semantic grounding from the factual to the cognitive also apparently
-breaks down the logical orderliness of the phrase structure.  `q.Three times`/, compared
-to `q.three students`/, leads to a morphosyntactic choice-space which is
-`q.underdetermined` and leaves room for speakers' shades of emphasis.
+Meanwhile, in between coarse Part of Speech types and 
+fine lexical `q.cliques` are the kinds of 
+Ontologically-characterized categories or 
+`q.lexical sorts` `cite<MeryRetore>; associated with 
+linguists working in a formal type-thoretic 
+vein, like Zhaohui Luo and Bruno Mery.  I 
+will call types in this vein `i.mesotypes`/, 
+being intermediate in generality between individual 
+lexemes and syntactic categoires (Parts of 
+Speech and their refinements, like plural nouns).  
+The broad philosophical implications of mesotypes 
+is that they give some formal traction to 
+what happens cognitive-procedurally 
+when we negotiate between different 
+word senses and/or use language in seemingly 
+metaphoric (but not unrestricted) ways.
 `p`
 
 `p.
-This is not an isolated example.  Many sentences can be provided with similar
-phrase-structure complications, particularly with respect to singular/plural agreement.
+Consider these exmples:
 
 `sentenceList,
-`sentenceItem; Time after time, tourists (a tourist) walk(s) by this building
-with no idea of its history.
-
-`sentenceItem; The streets around here are confusing; often people (someone)
-will ask me for directions.
-
-`sentenceItem; Student after student came with their (his/her)
-paper to compain about my grade(s).
-
-`sentenceItem; Student after student %-- and their (his/her) parents
-%-- complained about the tuition increase.
+`sentenceItem; \label{itm:koreanstore} My favorite Korean restaurant is adjacent to the bookstore.
+`sentenceItem; \label{itm:koreanclosed} My favorite Korean restaurant is closed today.
+`sentenceItem; \label{itm:koreanposter} My favorite Korean restaurant is decorated with posters from the 2002 World Cup.
+`sentenceItem; \label{itm:koreanstarted} My favorite Korean restaurant started out in a food court.
+`sentenceItem; \label{itm:koreanloyal} My favorite Korean restaurant said I'm their most loyal customer.
+`sentenceItem; \label{itm:bark} She's constantly barking at her employees.
+`sentenceItem; \label{itm:back} He's not playing well because his back is barking at him.
+`sentenceItem; \label{itm:actup} He's not playing well because his sore back is acting up.
+`sentenceItem; \label{itm:kitten} The kitten barked at the dog.
 `sentenceList`
 
-On a straightforward phrase-structure reading, `q.Student after student` reduces to an
-elegant equivalent of `q.Many students`/, with the rhetorical flourish abstracted away
-to a logical form.  But our willingness to accept both singular and plural agreements
-(his/her/their parents, grades, papers) shows that clearly we don't simply substitute
-`q.Many students`/; we recognize the plural as a logical gloss on the situation but
-engage the sentence in a more cogntively complex way, recognizing connotions of temporal
-unfolding and juxtapositions of cognitive frames.  The singular/plural underdeterminism
-is actually a signification in its own right, a signal to the listener that the
-sentence in question demands a layered cognitive attitude.  Here again, syntactic
-structure (morphosyntactic, in that syntactic allowances are linked with
-variations in the morphology of individual words, such as singular or plural form)
-serves to corroborate conversants' cognitive frames rather than to model logical
-form.
+The first three profile (using Langacker's term) 
+a restaurant as a location, a 
+building (with commercial and architectural properties), or 
+an institution/organization.  Note that we can distinguish 
+the commercial/architectural sense from the institutional sense: 
+to `i.close` can be temporary (as in \label{itm:koreanclosed}), 
+which we hear in conjunction with the former sense, or 
+more permanent as in `q.cease operations`/, i.e., close 
+`q.qua institution`/.  The former sense seems to mix 
+the institutional and location sense: while location 
+is not explicit as in \label{itm:koreanstore}, an asserion 
+that some `i.chain` restaurant is closed today would usually be 
+heard as referring to one location, not the 
+entire chain.  In (\ref{itm:bark}) through (\ref{itm:kitten}), 
+a common idiom applies `q.bark` to things that are not 
+dogs; but this is not just a matter of 
+metaphor, blending different `q.spaces` with 
+no conventionalizing pressues.  The (\ref{itm:bark}) and 
+(\ref{itm:back}) senses are rather entrenched, using 
+`i.bark` to suggest something a little obnoxious or 
+mean.  But (\ref{itm:kitten}) does not sound right, even though 
+it is no more of a strecth to imagine a kitten's 
+hissing as argry bark-like than a boss's orders.  
+Perhaps the `i.lotral` similarity btween cats and 
+dogs maks the figurative usage harder to accept 
+as a purported abstraction from literal situations.
 `p`
 
 `p.
-This is not to say that phrase-structure paradigms are refuted by these examples.  Cases
-like these can be accommodated by layering new structural rules, such as
-allowing exceptions for singular/plural agreement in the presence of certain
-`q.lead-in` phrases like `q.Three times`/.  It is not even accepted that these
-examples clearly favor inter-word relations (as language formalization, in preference over
-phrase-structure trees) %-- cases like `q.Student after student` have
-also been used `i.against` Dependency Grammar on the argument
-that there is not a clear `q.single` word, in that phrase,
-which should be seen as linking with words elsewhere in the sentence
-\cite[pp. 400-401]{MullerBook}, \cite[p. 2]{MullerPDF}.  It
-seems arbitrary to select either `q.student`/, or `q.after`/, as `q.the`
-representative of the phrase to link with %-- for example %-- the verb
-`q.complained`/; on that argument, the least arbitrary analysis is to
-treat the phrase as a whole as a single unit for purposes of grammatic
-linkage.  In short, both paradigms have potential problems with these example.
-Considering `q.Student after student` as an encapsulated phrase leaves
-the singular/plural flexibility in the continuation of the sentence unexplained
-(`q.Many students compained about `qmark-dubious;his grade` is clearly dubious, so
-`q.Many students` is not a direct substitution). But bracketing the phrase
-when decribing the sentences' `q.linkage` leads
-to an apparently arbitrary choice when it comes time to notate the subject/verb
-linkage for `q.complained`/.  I will address this particular ambiguity later;
-but for now I'll just point out that a simplistic reading of
-both Dependency and Phrase-Structure ideas seems to run aground.
-`p`
-
-`subsection.Comparing paradigms`
-`p.
-Since Computational-Linguistic paradigms find practical expression in code
-libraries, there are some options to assess competing theories empirically
-%-- comparing libraries' speed, accuracy, ease of use, and how readily can they be
-modified in light of new research.  Arguably, however, the
-quality of a code library does not automatically reflect the accuracy of
-its underlying linguistic paradigms (as opposed to the skill, foresight, and
-resources of its programmers); not to mention that more complex analyses of
-human language may be both more correct and also harder to express in code.
-There is, in any case, no apparent consensus amongst linguists and programmers that one
-or another language theory has proven computationally preferable.  Another approach to
-theory-comparison involves considering the range of linguistic phenomena which different methods can explain, without resorting to ad-hoc compilations of exceptions and
-special cases.  Arguably, here, Dependency Grammar provides more
-straghtforward explanations.  For example, the internal structure of phrases seems to
-lend specificity and nuance to their meaning in ways that get lost when
-trying to replace phrases with logico-semantic equivalents.
-`q.Student after student` is not losslessly substitutable with `q.Many students`/,
-and the former phrase has a temporal and multi-tier cognitive implication which
-the latter discards.  The second phrase is compatible with `q.Many students`
-complaining `i.at one time`/, as well as drawn out over time; the former phrase
-appears to clarify that the second kind of situation is the intended meaning,
-Of course, in context, the two phrases may be understood to have similar meanings;
-but this is a product of how the linguistic structure relates to its presumptive
-conversational context, not to an intrinsic semantic equivalence.  I will
-now consider these and other examples to discuss the dependency/phrase-structure
-contrast in a little more detail.
+The conventional type-semantic picture is that 
+language has a collection of (what I am calling) `q.mesotypes` 
+and we modulate word-uses by switching between 
+this medium-grain types, sometimes in unexpected ways.  
+An effective way to develop such an analysis 
+is to identify one or two senses as the most 
+prototypical for some concept/lexeme, and read 
+other senses as transforms involving other types.  
+So the commercial/architectural mesotype 
+may be canonical for `i.restaurant`/, and 
+then we branch out to a more geo-spatial 
+sense (`i.where` the building 
+is located), or institutional (the food-court 
+incarnation may have been in a different 
+place with diffrent staff and business classification).
+Hence a `i.commercial building` type is 
+`q.cast` to a geosptial point or to a social institution.   
+Thse `q.casts` are not really metaphors; 
+they have conventions, limitations, and rules.
 `p`
 
 `p.
-The contrast between the phrases `q.Student after student` and `q.Many students`
-cannot be based on `q.abstract` semantics alone %-- how the evident temporal implications of the
-first form, for example, are concretely understood, depends on conversants' mutual recognition
-of a relevant time frame.  The dialog may concern a single day, a school year, many
-years.  We assume that the speakers share a similar choice of time `q.scale`
-(or can converge on one through subsequent conversation).  `i.Some` time-frame
-is therefore presupposed in the discursive context, and the first phrase invokes
-this presumed but unstated framing.  The semantics of the phrase are therefore somewhat open-ended:
-the phrase `q.hooks into` shared understanding of a temporal cognitive framing without referring
-to it directly.  By contrast, the second phrase is less open-ended: it is consistent with both
-a more and less temporally protracted understanding of `q.many`/, but leaves such details (whatever
-they may be) unsignified.  The factual circumstance is designated with a level of abstraction that sets
-temporal considerations outside the focus of concern.  The second phrase is therefore both
-less open-ended and also less expressive: it carries less detail but accordingly also relies
-less on speaker's contextual understanding to fill in detail.
+The mainstream theory is simplest when analyzing 
+casts between mesotypes of similar 
+gnerality, like plant-to-sentient in 
+`q.flowers like water` or cerebral-to-physical 
+in `q.heavy thoughts`/.  But not all casts follow 
+this recipe: (\ref{itm:bark}) and (\ref{itm:back}) 
+seems to cast from a `i.microtype` to a `i.mesotype`/.  
+The construction in (\ref{itm:actup}) 
+is a common `q.personifacation` of medical/anatomical 
+concepts %-- a similarly scalar idiom is 
+cases like `i.my arthritis is acting up`/, or 
+`i.flaring up` to render figure ailment as physical 
+rather than personalistic %-- but here we 
+care operating between typs of comparable Ontological 
+granularity (anatomical part/medical ailment to 
+person/physical thing)  But semantically and 
+syntacticallly (\ref{itm:actup}) seems a lot 
+like (\label{itm:bark}), even though the ploy 
+in that cast is to compare things to a lexical 
+`q.clique` (dogs).  And in (\ref{itm:koreanloyal}) 
+we infer some `i.person` complimnted the speaker, but 
+this is more of a synecdoche than a cross-type 
+cast like (\ref{itm:koreanstarted})-(\ref{itm:koreanstarted}): 
+the point is not that a restaurant has a personhood 
+`q.aspect` that can be highlighted 
+(the way it `i.does` have an architectural or geo-spatial 
+aspect) but that reference to the restaurant can be proxy 
+for people closely associated with it.
 `p`
 
 `p.
-Clearly the two phrases are therefore semantically different; but notice also that the
-semantic properties of the first phrase are due explicitly to its internal structure.
-The temporality implicatures could be expressed in a more `q.purely` semantic
-fasion with a choice of wording, like `q.a procession of students complained`/.  This
-would rely on the conventional meaning of `q.procession` (or `q.stream`/, `q.sequence`/,
-etc.) to provide the expressive `q.time` dimension.  But the `q.Student after student`
-phraseology achieves this effect more economically and with more `q.oomph` because the
-internal repetition in the phrase itself effectively models the recurrence it
-seeks to feature semantically.  Here linguistic form actually does reproduce
-factual structure, like a syntactic version of onomatopoeia.  This fact of internal structure
-clearly can only be fully modeled by taking seriously the exact composition of the phrase, not
-treating the phrase-structure as a convention fully subsumed by a semantic role.
-`p`
-
-`p.
-In addition, aside from the expressive detail which depends on the actual phrase
-structure (which therefore cannot be summarized away), this inner structure also
-governs morphosyntactic possibilities over all.  `q.A procession of students`
-captures a similar temporal progression but also fully absorbs `q.student` in a plural
-guise, and `q.A procession of students complained about `qmark-dubious;his grade` is straightforwardly
-ungrammatical.  In Langacker's `q.Three times` example, the inter-word
-`q.linkage` captures the aforementioned complexities in a reasonably non-arbitrary
-way, I believe.  `q.Student` is linked as subject-to-verb with `q.asked`/, and as
-subject-to-object with `q.question`/.  It is true that these link-pairs seem to
-violate agreement norms, but there is nothing in the Link Grammar paradigm %-- which
-practices Dependency Grammar with a rather detailed and intricate
-inventory of inter-word relations, or `q.links` %-- mandating that
-`i.all` link-pairs exhibit forced agreement (like singular/plural).  Agreement, when it
-applies, is a property `i.of` link pairs.  There is also an implicit
-(cross-phrasal) link between `q.student` and `q.Three` %-- clarifying that, considered
-in its entirely, the sentence is about three students precisely %-- and the presence of
-this kind of link alters how the other links connecting to the word `q.student` are
-assessed.  In particular, this latter link stipulates that the word `q.student` is being
-simultaneously understood in both a plural and a singular sense, so it permits
-singular `i.and` plural link forms which, more commonly, could only be
-singular `i.or` plural.  So link grammar can offer an elegant analysis of
-singular/plural `q.underdeterminism`/, expressed in the
-same underlying graph-context terminology as most other link-grammar theorizing.
-It would be unfair to use this as a case against Phrase Structure grammars without a
-detailed presentation of how these grammars would handle such a case in turn, but
-I'd argue that link grammar accommodates this complex example with relatively little
-departure from its underlying theoretical and notational or presentational commitments.
-`p`
-
-`p.
-While my previous examples contrasted Phrase Structure and Dependency
-Grammars in terms of their resources for explaining sentences with
-unusual semantic patterns but relatively clear meanings (in context),
-another form of comparison can address actual ambiguity.  Consider
+Another complication for type-case theories is potential 
+ambiguity between word-senses and coercing 
+`q.usages`/, as in:
 
 `sentenceList,
-`sentenceItem; The Maple Leafs failed to win in overtime for the
-first time this year.
-`sentenceItem; The Maple Leafs failed for the first time this year
-to win in overtime.
+`sentenceItem; \label{itm:teaduck} Tea-smoked duck is a Sichuan delicacy.
+`sentenceItem; \label{itm:rubberduck} The baby's favorite toy is a rubber duck.
+`sentenceItem; \label{itm:weddingduck} Wedding ducks are traditional Korean gifts.
 `sentenceList`
 
-The first can mean either that the Leafs had won `i.all` or `i.none`
-of their prior overtime games.  From a phrase-structure perspective,
-we have to image that `q.to win in overtime` can `q.migrate` so we
-hear it as in the second version of the sentence.  For more inter-word
-grammars, the alternation is simpler: `q.for`/, initiating the phrase
-`q.for the first time`/, can be linked with either `i.failed` or
-`i.win` %-- notationally, it amounts to the presence or absence of one
-graph-edge, when the syntax is represented as a graph with
-inter-word labels for link kinds.  This could be a distinction without
-a real difference, since choosing which inter-word link to recognize
-triggers linking in the rest of the phrase along with it.
-But perhaps reflecting on how we process the ambiguity %-- realizing
-that there are two competing parses and deciding which is the one
-intended %-- we picture the alternatives more as `q.horizontal`
-options for connecting threads across the sentence,
-more so than a `q.vertical` organization where
-we hear `q.for the first time` as `q.contained` in a larger phrase.
-My own feeling is of exploring competing relational patterns more than
-exploring different ways that the phrases can be nested inside each
-other.
+If the prototypical duck sense is an animal, these 
+cases disrupt the basic type hierarchy: 
+Wedding ducks are made of wood; 
+tea-smoked duck is a kind of food; 
+rubber ducks are toys (is the phrase descriptive 
+%-- ducks which happen to be rubber %-- or 
+a distinct noun-concept, like `q.decoy duck`/?).  This translation 
+from one branch of sub/supertype relations to another is 
+what we would expect of type-cases, but 
+we can also see these cases as distinct lexemes, or 
+word-senses, or entrenched phrases with de facto lxical 
+status.  The overall picture which seems to 
+emerge is that type-coercions remain relatively 
+metaphorical or metonymic in cases like 
+(\ref{itm:bark}) or (\ref{itm:koreanloyal}); 
+become idiomatically entrenched in cases like 
+(\ref{itm:koreanstore}) and (\ref{itm:koreanstarted})
+%-- especially where there is a similar sccale of 
+granularity btween mesotypes in a coercion %-- and can 
+become `i.lexically` entrenched in cases like 
+(\ref{itm:rubberduck})-(\ref{itm:weddingduck}).
 `p`
 
 `p.
-That being said, how much of our sense of ambiguity (or clarity, for
-that matter) is driven by meaning, not form?  The `q.double parse`
-just examined does not always generalize to similar cases:
+Let's assume in any case we can give a thorough 
+analysis of type-coercions as semantic devices.  
+This is still working on the level of generalized 
+lexical use-patterns; we are not arefully studying the 
+`i.cognitive` steps involved in actuallly 
+making whatever imagistic, situational, or 
+conceptual modifications are directed by a type-case.  
+In other words, there is a cognitive process of 
+thinking of a restaurant (say) and 
+then revising this framing to accommoate senses like 
+spatial points or social institutions.  We can 
+weave different senses and coercions into one 
+sentence: 
 
 `sentenceList,
-`sentenceItem; The Maple Leafs failed to win two consecutive games
-for the first time this year.
+`sentenceItem; This book, which costs \$40, has some crazy ideas inside.
+`sentenceItem; This book, which the library classifies as young adult 
+nonfiction, has some dude's phone number scrawled inside.
+`sentenceItem; My boss barks louder than his dog does.
 `sentenceList`
 
-The reading as in `q.this is the first time they failed to win two
-consecutive games` makes no sense %-- unless you've won every game,
-but perhaps the first, you've at some point lost after a win.  Is this
-case anomalous, where a syntactic ambiguity idiosyncratically fails to
-yield logically plausible readings?
-The ambiguity is found in `i.failed to make the playoffs
-for the first time since 2013`/, and many `i.for the first time this
-season` cases, like `i.beat the Habs`/, `i.sell out the arena`/,
-`i.score a goal in the first period`/.  But `q.failed to score a goal`
-is almost surely read that they `i.did` score in every prior game.
-Do we hear the construction as intrinsically ambiguous, and reject one
-reading only when it is clearly flawed pragmatically?
+In short, we can't assume that type-coercions 
+simply replace an image forged according to one micro- or 
+mesotype with one shaped by an alternative type.  
+Instead, signifying elements seem to carry 
+a package of type attributions around, and different 
+types are `q.activated` to different extents, and in different 
+ways, at different stages of linguistic processing.
 `p`
 
 `p.
-If we believe that language understanding unfolds in a predictable
-operational sequence, then we should assume that both parses are
-deemed plausible, and semantic considerations only retroactively
-eschew one reading (if they do so at all).  This would explain why in
-many cases the ambiguity persists enough to cast the practically
-intended meaning in doubt.  But that account does not consider the
-temporality of language itself; the hearer does not know in advance
-that a trailing phrase like `q.for the first time this season` is coming,
-and starts to make sense of the sentence up to there; once then hearing or
-reading the addendum, the audience instinctively has to interpret the
-final phrase as deliberately inserted to modify an already-complete
-idea.  On this analysis, the addendum is initially approached as a
-performative detail, something said for a reason to be determined %--
-it is not structurally necessary to make the sentence well-formed.
-Perhaps we then try to fit the last phrase into the sentence both
-syntactically and semantically, together, triggered by a pragmatic
-phenomenon (the speaker's choice to add on to a seemingly complete
-thought) which then becomes logically prior to both syntax and
-semantics.  If this is plausible, it supports an inter-word relational
-model because we are forming a picture of language structure
-relationally, assimilating new words and phrases to those already
-heard by linkings referring back in time, rather than waiting until we
-are sure we have a complete sentence and then treating it as a static
-structure to vertically reconstruct.
+Another complication is that types of different scales 
+seem to coexist and yet in other respects macrotypes, 
+mesotypes, and microtypes seem to be distinct hierarchies.  
+A microtype like `i.dog` acts sometimes as a subtype 
+for a mesotype like `i.animal`/, but also 
+mesotype concepts like `i.animal` and `i.person` are 
+sometimes microtypes themselves: after all, 
+these are lexical entries as well as Ontological 
+categories.  So on the one hand we may say that words 
+have three different types %-- even excluding 
+cross-mesotype or cross-microtype 
+(`q.bosses barking` cases) casts %-- and that 
+macro-, meso-, and microtypes are distinct thoretical 
+posits with different analytic mthodology; 
+but sometimes the boundaries between micro- and 
+meso, and thir analyses, seem to plur.  Analogous comments 
+can apply to the meso/macro boundary as 
+evinced by issues like classifying forms 
+of pluarality, as in `cite<MeryMootRetore>;'s 
+analysis of noun plurals. 
 `p`
 
 `p.
-The examples I have used so far may also imply that a choice of phrase structure is
-always driven by semantic connotations of one structure or another;
-but seemingly the reverse can happen as
-well %-- speakers choose a semantic variant because its grammatic realization lends a useful
-organization to the larger expression.  There are many ways to say `q.many`/,
-for example: `i.a lot of`/,
-`i.quite a few`/, not to mention `q.time after time` style constructions.  Whatever their
-subtle semantic variations, these phrases also have different syntactic properties:
-`i.Quite a few` is legitimate as standalone (like an answer to a question);
-`i.A lot of` is not, and `i.A lot` on its own is awkward.  On the other hand the `q.of` in
-`i.A lot of` can `q.float` to be replicated further on: `q.A lot of students, of citizens,
-believe education must be our top priority` sounds more decorous than the equivalent sentence with the
-second `q.of` replaced by `q.and`/.  If the cadence of that sentence appeals to the speaker, then
-such stylistic preference will influence taking `q.A lot of` as the `q.many` variant of choice.
-So speakers have leeway in choosing grammatic forms that highlight one or another aspect of
-situations; but they also have leeway in choosing rhetorical and stylistic pitch.  Both cognitive
-framings and stylistic performance can be factored when reconstructing what compels the
-choice of one sentence over alternatives.
-`p`
-
-
-`p.
-One consequence of these analyses, should they be accepted, is that grammar
-needs to be approached holistically: the grammatic structure of phrases cannot,
-except when deliberate oversimplification is warranted, be isolated from
-surrounded sentences and still larger discourse units.  Semantic roles
-of phrases have some effect on their syntax, but phrases are nonetheless chosen
-from sets of options, whose variations reflect subtle semantic and syntactic
-maneuvers manifest at super-phrasal scales.  The constituent words of phrases retain some
-autonomy, and can enter into inter-word and phrasal structures with other words outside their
-immediate phrase-context.  We can still apply formal models to phrase
-structure %-- for example, Cognitive and Applicative Grammar (`CAG;) considers phrases
-as `q.applications` of (something like) linguistic or cognitive `q.functions`/,
-in the sense that (say) an adjective is like a `i.function` applied to a noun,
-to yield a different noun (viz., something playing a noun's conceptual role)
-`cite<Descles2010>;.
-I will consider related `q.functional` and (by extension) Type-Theoretic
-approaches in the next section.  But we should not read these transformations
-%-- like `i.Syrian refugee` from `i.refugee` %--
-too hastily as a purely semantic correlation within a space of denotable concepts
-%-- `i.such that` the new concept wholly replaces the
-contained parts, which then cease to have further linguistic role and effect.
-Instead, applicative structures represent shifts or evolutions in
-mental construal, which proceed in stages as conversants form
-cognitive models of each others' discourse.  Even if phrase structure
-sets landmarks in this unfolding, phrases do not wholly subsume their
-constituents; the parts within phrases do not `q.vanish` on the higher scale,
-but remain latent and may be `q.hooked` by other, overlapping phrases.
-This argument rests on a vantage point from semantics as well as syntax;
-therefore, I will discuss it briefly at present (I return to
-this analysis at greater length in the next section).
+This metathoretic hemming and hawing may be 
+acceptable %-- even desirable %-- at the philosophical 
+level.  But it causes problems if wecwant to se 
+typ thory as a formalizing (albit simplifying) 
+window onto cognitive-linguistic processes.  
+In a computational context values have one canonical 
+type; they can be cast to other types but 
+do not maintain a kind of superposition 
+`q.history` over multiple types.  
+These kinds of phenomena can be technically modeld 
+in various ways (e.g. Luo's `q.dot-product` types), 
+but in that case we want a formalization that seems 
+appropriate for how the corresponding cognitive procedures 
+might unfold.
 `p`
 
 `p.
-Consider the effect of `q.Many students complained`/.  Propositionally, this appears
-to say essentially that `i.students` complained; but, on hermeneutic charity, the
-speaker had `i.some` reason to say `q.many`/.  The familiar analysis is that
-`q.many` suggests relative size; but this
-is only half the story.  If the speaker chose merely `i.students complained`/, we would hear an assertion
-that more than one student did, but we would also understand that there were several
-occasions when complaints happened.  Adding `q.many` does not just
-imply `q.more` students, but suggests a mental shift away from the particular episodes.
-In the other direction, saying `i.a student complained` is not just
-asserting how at least one student did so, but
-apparently reports one specific occasion (which perhaps the speaker wishes to
-elaborate on).  In other words, we cannot really capture the singular/plural semantics,
-or different varieties of plural, just by looking at the relative size of implied
-sets; we need to track how representations of singleness or multitude imply
-temporal and event-situational details.  So `i.a student complained` focuses not
-on the numeric count of one, but on a singular event (unlike
-`q.`i.only one` student complained`/); `i.students complained` focuses not on the
-plural measure of students involved, but on the fact that a certain type
-of event happened several times.  `i.Many students complained`
-focuses not on sheer number (unlike `i.a large number of students complained`/),
-but rather on the implication that complaints were widespread enough to represent
-a significant sample, perhaps a majority sentiment, among the student body.
-The semantics of the former two forms seems to focus attention
-on the `i.events` of complaining, while the `i.many students` construction seems
-to focus more on their suggesting a prevailing attitude.  `q.Students complained`
-seems to single out each event as distinct, even though there are several of
-them; whereas `i.Many students complained` seems to construe the
-events as each resembling the other, to the point where they partly
-lose their individuality.  `q.Isolated events`/,
-in the English idiom, are those which are atypical; as we cognitively
-shift from the events as discrete to recurring patterns, they become
-suggestive of a larger state of affairs.  By implication, if many students
-complained, many other students may be unhappy; the extent of students'
-unrest is no longer measurable by the multiplicity of the complaining-events.
+In the case of Channel Algebra, I mentioned the 
+idea of `q.rider` channels which supplement 
+the type information contained in other channels, adding 
+more information without actually introducing new 
+parameters into a proceure.  So a rider asserting that 
+$y$ can be made into an `xy; pair is semantically analogous 
+to giving $y$ the type `i.integer greater than x`/, 
+but $y$ itself is not presented as having a dependent 
+type.  In short, `i.greater than x` is not presented 
+as an `i.alternative` type for $y$, nor is $y > x$ presented 
+as an alternative `i.value` as if we are `q.casting` 
+$y$ from a wider to narrower type.  Howevercwe are 
+asserting properties of $y$ by certifying that such 
+casts `i.would` be possible.  
 `p`
 
 `p.
-Against this backdrop, `i.Student after student complained` captures both dimensions,
-implying both a widespread unrest among the student body and also
-temporal recurrence of complainings.
-Formal models of syntax and semantics often borrow notation from formal
-language theory; for example, notations for Parts of Speech lifted
-from functional programming languages.`footnote.
-A note on notation: I adopt the Haskell convention (referring to the Haskell
-programming language and other functional languages) of using arrows both between
-parameters and before output notation, but for visual cue I add one dot above the
-arrow in the former case, and two dots in the latter: `argsToReturn;.
-I use `N; for the broadest designation of nouns (the broadest
-noun type, assuming we are using type-theoretic principles),
-with extra markings for more specific types (in principle
-similar notation could be adopted for verbs, propositions, and so on).
-`footnote`
-This notation can help us picture the `q.flow` of ideas building up
-to a complete sentence, formally represented via type theory
-(where sentences reveal a type hierarchy culminating in a self-contained idea,
-that is, a proposition); more informally we can picture a similar
-`q.conceptual` flow tracing how listeners come to make sense of the
-language they encounter enunciated by speakers.  By way
-of illustration, Figure ~`ref<fig:ESA>; shows a
-Depency-style descructuring, with implicit type annotations.  `input<figure2.tex>;
-As this shows, the `q.Student after Student` idiom can be notated as, say,
-`AfterNSingAndNSingToNPl; (using `NSing; and `NPl; to mean singular
-and count-plural nouns, respectively), but with the special case that the `q.argument` to
-`i.after` is repeated in both positions, suggesting an unusual degree of repetition,
-something frustratingly recurrent: `i.He went on and on`/; `i.Car after car passed
-us by`/; `i.Time after time I got turned down`/.
-Although I have no problem
-treating these constructions as idiomatic plurals, I also contend (on the
-premise of phrase-overlap) that the dependent constituents in the `BlankAfterBlank;
-construction can be hooked to other phrases as well (which is why
-`q.and [their/his/her] parents` can also be singular, in this case).  I dwell on
-this example because it shows how type/functional accounts of phrase structure
-can be useful even if we treat phrases more as frames which overlay linguistic
-structure, not as rigid compositional isolates.  Each `q.students` variation uses
-morphology to nudge cognitive attention in one direction or another, toward events or the
-degree to which events are representative of some global property (here of
-a student body), or both.  The `NSingToNPl; transformation is not `i.the`
-morphosyntactic meaning, but instead the skeleton on which the full meaning
-(via cognitive schema) is designed, its hints solicited.
-`p`
-
-
-`p.
-If this analysis has merit, it suggests that a `CAG;
-approach to phrases like `i.many students` or `i.student after student`
-(singular-to-plural or plural-to-plural mappings) should be understood not just
-as functions among Part of Speech (`POS;) types but as adding cognitive shading, foregrounding
-or backgrounding cognitive elements like events or typicality in some context.
-In other words, `i.many students` is type-theoretically `NtoN; or `NpltoNpl;;
-but, in more detail, it adds a kind of cognitive rider attached to the mapping which focuses
-cognition in the subsequent discourse onto events (their recurrence and temporal distribution);
-similarly `q.student after student` has a `q.rider` suggesting more of a temporal
-unfolding.  The second form implies not only that many students complained, but that
-the events of these complainings were spread out over some stretch of time.
-Each such functional application (mappings between `POS; understood as linguistic types)
-produces not only a resulting `POS; `q.type`/, but also a reconfiguration of cognitive
-attitudes toward the relevant situation and context.
-Language users have many ways to craft a sentence with similar meanings, and arguably one
-task for linguistic analysis is to model the space of choices which are available in a
-given situation and represent what specific ideas and effects are invoked by one
-choice over others.  It would be an argument in favor of Dependency Grammar if
-Dependency-oriented representational models, like Link Grammar, prove to be
-especially adept in this modeling.
+I think this may be a useful analogy to how 
+type-cases work in practice in Natural Languages, 
+especially in complex cases where multipl word-senss are 
+involved.  Not every type associated with a word 
+makes sense in every conceptualization.  When for instance we 
+attend to the concptual properties of a book as an 
+intellectual object there may be physical details which 
+are conceptually incompatibl with this attitude.  It would be 
+simpler if there were a neat partition among senses, and 
+some overarching cognitive order %-- Ok, now we're figuring 
+the book as physical; now it's an intellectual 
+artifact; now it's a commodity %-- supervises the 
+coercions back and forth.  Neither semantic nor syntactic 
+evidence warrants this simpler picture: it seems more as 
+if conceptualization across types is a matter of 
+nerworked cognitive procedures taking turns operating 
+on one conceptual package, where latent type atttributions 
+are available to each procedure whether or not they are 
+`q.usable` in the sense of involving type structures 
+that logically fit each procedure's purpose.
 `p`
 
 `p.
-In this analysis, I am already switching to functional and type notions that will be
-discussed in greater detail below; my current emphasis is on link grammar as a syntactic
-conception, although I have also tried to argue that separating syntax from semantics
-can be at most provisional.  Inter-word `q.link pairs` are vehicles for expressing
-syntactic rules (like singular/plural agreement) but are also a ground level for
-semantic analysis, since we can explain how semantic nuances are carried, in
-specific sentences, by the actual link-pairs in evidence (violations to
-agreement norms, for example).  These semantic nuances in turn can be given
-cognitive interpretations, revealing the syntax-semantics-cognition pattern
-which I am sketching here through specific perspectives like Link Grammar and
-Type Theory.  Returning to the initial grammatic stage of analysis, however,
-my tactics for contrasting overall Dependency and Phrase-Structure paradigms
-rest on an implicit picture of how theories should be evaluated.
-While such a picture is probably fairly consistent across perspectives, it is still worth
-making a little more explicit.
-`p`
-
-`subsection.Explanation and Formality`
-`p.
-Both Dependency and Phrase Structure grammars
-presuppose that the fundamental exposition and achievement of their theory involves
-formal transformation of linguistic givens, resulting in a more complex data structure
-which, to the extent that the theory is correct and useful, models something
-of the inner structure of language (`i.qua` abstract formal system and/or cognitive phenomenon).
-The `q.data structure` might be a phrase-structure `q.tree` or a graph-like dependency
-`q.linkage`/, but while these representations have different form they share certain
-criteria: they are formally describable systems which allow some structures but reject others;
-they are rigorous enough to be given a mathematical (e.g., algebraic) definition;
-and they can be expressed in computer code which builds these structures out of
-Natural Language artifacts, can verify that an instance of the relevant data structures
-satisfies the system rules, and can execute operations which modify the structures.
-The phrase trees or word-link graphs are `q.formal substrata` which encapsulate Natural Language
-patterns but also are rigidly mathematical and computational.  How thoroughly these substrata
-capture linguistic meaning, is therefore directly relevant to questions of whether and
-in what degree natural language itself, as social and cognitive, is also formal and computational.
+I will give concrete cases of word-senses that I think 
+substantiate this picture in the next section.  
+Here, though, I'l conclude as follows: 
+Channel Algebra can perhaps model what is going 
+on insofar as procedures can take `q.rider` channels 
+that can add detail to procedural inputs.  In a 
+cognitive-linguistic setting, we can imagine these riders as 
+multifaceted and complex.  Because riders are not part 
+of procedures' actual inputs, they do not necessarily need 
+to use types that the procedure recognizes or knows about; 
+the riders may only come into plays as values are 
+passed among procedures.  The analogous computational 
+case would be some extra data associated with a value that 
+is only relevant for certain scurity-oriented 
+validations; i.e., permissions to modify a file.  Functions 
+can pass around such values without considering the security-related 
+data, except for a few procdures where scurity-sensitive 
+operations are attempted.  So the security details are 
+`q.part` of the data carried by a value, but only 
+become semantically salient parts in certain procedural contexts.  
+Rider channels are a way to represent this kind of 
+extra information within a type system directly.  
+I think they are a plausible analogy for 
+cognitive re-inscriptions thatboccur 
+in the evolving significations in a sentence, 
+according to analyses like I will entertain 
+in the next section.
 `p`
 
 `p.
-Translating NL content into (say) a linked-grammar graph does not make software capable
-of `q.understanding` language.  If Dependency Grammar is a reasonable foundation
-for linguistics in general, then properly parsing sentences into their
-auxiliary graphs is, at most, a step in the direction toward `q.understanding`/.
-Even this may beg the question of what constitutes a `q.correct` parse: when writing
-real-world code, language engineers appear to rely principally on their own intuitions, based
-on their familiarity with the underlying theory, the idea they have of what a
-`i.correct` `q.re-presentation` looks like (for link grammar, of the correct collection of
-link types between the various words).  They then add code to ensure that this representation
-is indeed identified by the software in specific examples, and try to do so in such a way
-as to generalize to other examples.  This methodology can be gleaned from observing internet chat
-sites and other informal research venues; one can witness developers painstakingly constructing
-systems which `q.work right` in the sense of producing the interpretation for each sentence
-which corresponds with what the human linguists perceive, even for sentences which the
-software has never encountered before.  The code is considered reliable the more that
-new sentences are `q.correctly` parsed.  Again, `q.correctly` here means, conformant to
-linguists' own interpretations; insofar as these are subjective, such conformance is not
-conclusive evidence that the transformational algorithms are `q.correct`/.
+
 `p`
 
-`p.
-In order to assess linguistic `q.competence` (or whatever computational ability may simulate it),
-it is needed to check specific `q.behavior` and compare it to some expectation.  The gold standard
-for linguistic behavior is just participating in a linguistic community, judged by the community
-at large as fully competent and included.  Unfortunately, however %-- at least for those who
-want to profit from Artificial Intelligence %-- achieving true `q.language-like behavior` may be
-impossible.  Scholarship therefore has to turn toward more limited notions of
-competence, such as representational transformation of sentences %-- but since
-each theory has its own picture of what sentences should be transformed `i.into`/,
-the justification of competence measures can be circular.  It is the theory which
-dictates how the software should act, and the software is deemed `q.intelligent` if it
-acts accordingly.  We can be skeptical of such non-theory-neutral conceptions of
-`q.intelligence`/.  Nonetheless it does count
-in theories' favor if they both propose accounts of language structure which
-are independently defensible and also can produce computing systems that
-reliably and without external direction map language onto those structures.
-Language-like behavior then involves producing a transformed representation of
-language embodying a particular theoretical conception of
-linguistic `q.deep structure`/.
-`p`
 
-`p.
-It would serve Computational-Linguistic theories still further to create systems
-that demonstrate behavior which is `q.language-like` on terms less wedded to their
-own hypotheses.  More satisfying definitions of linguistic behavior would involve intuitions
-of language users in general, not just language experts.  For example, document classifiers
-%-- which typically use statistical analysis to predict which topic will be deemed most
-relevant for documents like news stories and technical articles %-- again illustate a kind
-of transformational representation, converting Natural Language to a formal data structure
-(in this case a relatively simple one, naming one or multiple topics from a predefined list).
-In this case however a broad user public can provide feedback on how well the system performs.
-For another example, artificial translators map language onto formal structures but then
-attempt an opposite map, translating the formalized representation into natural-seeming
-expressions in a different language.  This case is different in that formal representation is
-an intermediary rather than end point of the transformation, but like document classifiers it
-is a kind of behavior whose effectiveness can be judged by a large community of speakers.
-People who interact with text `q.chat` bots, or talking robots, and feel that the experience
-is similar to talking with another person, are also providing evidence of more complete and
-larger-scale language-like behavior.  Again, though, it is not now and may never be possible
-to engineer intelligent behavior to this level of perfection.  Existing language `AI; platforms
-are flawed but useful, which suggests both that formal re-presentation is an important
-step toward language understanding but also that attempts to use these formalisms as a springboard
-to more holistic behavior %-- like automated translation, but also extracting practical
-information, or gleaning emotion and sentiment %-- are missing something essential.
-Doing useful things with or gleaning useful insight from the re-presentational target structures
-appears to be a separate problem from that of generating them %-- which calls into question the
-degree to which the target structures sufficiently encapsulate linguistic meaning,
-even if they reveal structures which are essential to linguistic meaning.
-`p`
 
-`p.
-This does not have to mean that Natural Language Processing is basically impossible, only
-that more modest criteria of `q.correct` `NLP; systems need to be adopted.  This is complicated
-by the fact that artifical language behavior can be flawed but meaningful: `q.Urine shift one
-step forward` is an awkward English sentence but its meaning seems clear enough
-(this real example comes from a shopping center in New York's Flushing, Queens Chinatown).
-We have an intuition that some expressions are `q.incorrect` but not so completely
-off-base that they fail to signify anything at all %-- but in this case we need
-criteria for how a linguistic performance can be both incorrect `i.and` nonetheless coherent.
-`p`
 
-`p.
-These issues influence any theory which approaches linguistic competence from the
-viewpoint of formal re-presentations, and therefore effectively all branches of
-Computational Linguistics.  The reigning assumption appears to be that transformational
-representation which converts language to theory-regulated data structures, for which
-in many cases the transformation achieved by mechanical algorithms matches that
-intuited as most accurate by human experts, serves as `i.prima facie` evidence of
-something like computationally-engineered  `q.intelligent (language) behavior`/.
-This leaves room for language-like behavior to productively replicate dimensions
-of language understanding while also being very incomplete: language-like relative
-to experts' opinions on deep linguistic structure, not real-world communication.
-Structures like link grammar graphs can be essential formal substrata that linguistic expression
-relies on to achieve communication, without being the sole medium of this expression.
-`p`
 
-`p.
-My arguments so far have used Link Grammar as a representative example
-of `q.transformational representation` where a computational system
-can be judged to reveal some level of language competence, some
-kind of `q.language like behavior`/, insofar as it translates natural
-language expressions to data structures conformant to Dependency
-Grammar (and particularly Link Grammar) theory.
-As I also just argued, performance `visavis; structural transformation
-may be only tangential to human language, so whatever theory is
-built up needs a separate, more philosophical or metatheoretical analysis
-to consider how the theory is purported to engage with its phenomena.
-But I now take this as a starting point for pivoting the discussion from
-grammar to semantics; and will defer until after that speculating
-on philosophical implications of the theory thus extended.
-`p`
 

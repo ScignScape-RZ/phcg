@@ -1,30 +1,37 @@
-\spsubsectiontwoline{Distinguishing Computational Models From AI}
-\p{I contend we need to tease apart the pursuit of valuable computational
+
+`spsubsectiontwoline.Distinguishing Computational Models From AI`
+
+`p.
+I contend we need to tease apart the pursuit of valuable computational
 tools and models from an (often reductionistic) paradigm of
 seeking artifical, computationally engineered replicas of
-human cognition.  \i{Computational} does not have to equal
-\i{AI}.
-}
-\p{Holmqvist's and Selway's research that I have cited are good examples
+human cognition.  `i.Computational` does not have to equal
+`i.AI`/.
+`p`
+
+`p.
+Holmqvist's and Selway's research that I have cited are good examples
 of paradigm-overlap between cognitive and computational
 linguistics.  I will cite other scholarship which
 also finds philosophical inspiration in cognitive linguists
 like Langacker, G\"ardensfors, George Lakoff, and
 Eleanor Rosch, but which also target cognitive-science
-formalizations and \q{cognitive architecture}:
-\cite{AntonioLieto}, \cite{JacobWhitehill}, 
-\cite{OzkanKilic}, etc.  
+formalizations and `q.cognitive architecture`/:
+`cite<AntonioLieto>;, `cite<JacobWhitehill>;, 
+`cite<OzkanKilic>;, etc.  
 A recurring pattern in this
-scholarship is to \i{first} propose a structural intermediate
-representation \mdash{} a model of intellectual structures which
+scholarship is to `i.first` propose a structural intermediate
+representation %-- a model of intellectual structures which
 plausibly embody the processing of language and
 cognitive-perceptual content, partly abstracted from
-surface-level sensory or signifying details \mdash{} and
-\i{second} propose algorithmic or software
+surface-level sensory or signifying details %-- and
+`i.second` propose algorithmic or software
 models of how our minds translate linguistic and perceptual
 givens to abstract, or partly-abstract, schema.
-}
-\p{I have argued that we bring abstract situational prototypes
+`p`
+
+`p.
+I have argued that we bring abstract situational prototypes
 to bear on understanding all of the world and social situations
 around us, and that language taps into these models so that
 people can coordinate situation-appropriate activity.  Given
@@ -32,25 +39,27 @@ that there is an abstract and scehmatic dimension to
 how we understand situations, we should expect a
 partially abstract sheen to how we intellectually
 engage objcts and concepts once they are situationally
-\q{located}.  Having identified objects as
+`q.located`/.  Having identified objects as
 butter or carving knives, pitchers or glasses of
-water, wine or beer bottles, corkscrews and bottle openers \mdash{}
+water, wine or beer bottles, corkscrews and bottle openers %--
 identifications themselves mediated by situational
 awareness, viz. if we are hosting or attending a dinner
-party \mdash{} we no longer often attend actively to
+party %-- we no longer often attend actively to
 sense-perceptual minutiae.  Our mental map of our
-surroundings \mdash{} there's the corkscrew, there's
-the carving knife \mdash{} pulls these referents
+surroundings %-- there's the corkscrew, there's
+the carving knife %-- pulls these referents
 outside the register of sensate consciousness and
 into the pragmatic hum of worldly activity.  Insofar
 as they nestle in our intellectual faculties in that
 semi-abstract state, it seems fair to capture the
 schematic, structural appearance they have in
-this intellectual register \mdash{} phenomena without the
+this intellectual register %-- phenomena without the
 full-cloth phenomenology.
-}
-\p{This in turn seems to invite us to imagine how the
-structural essentials of such \q{pragmatic appearance}
+`p`
+
+`p.
+This in turn seems to invite us to imagine how the
+structural essentials of such `q.pragmatic appearance`
 may be captured by computers.  We do not need to endow
 computers with human consciousness or emotions, because
 our mental traffic with the corkscrew or carving
@@ -59,18 +68,20 @@ passionate fabric of momentary consciousness.  There
 is a schematic and mechanical dimnsion of
 human action, and we can imagine computers
 simulating human intellligence at least on
-\i{that} theatrical level.
-}
-\p{Or at least, such seems to be the intuition behind attemps
+`i.that` theatrical level.
+`p`
+
+`p.
+Or at least, such seems to be the intuition behind attemps
 to model our human representations of objects and
 concepts in terms of abstract structures.  But even a feasible
 theory of these semi-abstract layers of cognitive processing
 is only half the story.  Suppose we agree that there
 are legitimate cognitive insights in Holmqvist's model of cognitive
 frames, incorporating (but also extending, including in a more pragmatist
-direction) Conceptual Space Theory \mdash{} employing
+direction) Conceptual Space Theory %-- employing
 a generalized mereology that renders objects and concepts
-as \i{parts} of situations (I have suggested a
+as `i.parts` of situations (I have suggested a
 more conceptual-role account for analogous phenomena).
 Suppose also we find plausible cognitive-frame
 models in Selway's intermediate representation
@@ -81,56 +92,65 @@ In these cases we have potentially
 valuable Intermediate Representations which capture
 cognition, in effect, mid-stream, or in-the-act:
 neither conscious phenomenology nor neurophysical hardware.
-}
-\p{However, Holmqvist's and Selways' work appears to
+`p`
+
+`p.
+However, Holmqvist's and Selways' work appears to
 operate in an environment where these
 Intermediate Representations are valued
 primarily because and insofar as they allow
 human cognition to be mechanically recapitulated.
 This of course demands not only that
-compuers \i{represent} IR models, but also \i{create}
-them \mdash{} that is, when presented with an artifact of
+compuers `i.represent` IR models, but also `i.create`
+them %-- that is, when presented with an artifact of
 natural language, or the visual data of a scene, that
-computers should \i{automatically} map these givens
+computers should `i.automatically` map these givens
 to the theorized IR models, as if retracing
 the steps of human intelligence.
-}
-\p{But just because IR models can be given
+`p`
+
+`p.
+But just because IR models can be given
 computational form and representations, it
 does not automatically follow that automated
 generation of IRs is possible or effective.
 We can and should thereby distinguish the computational
-\i{study} of cognitive Intermediate Representation
+`i.study` of cognitive Intermediate Representation
 from the AI vision of programming computers
-not just to \i{host} but to \i{derive}
+not just to `i.host` but to `i.derive`
 Intermediate Representations.
 I am sympathetic to the former methodology
 but skeptical of the latter.
-}
-\p{I also believe that most research in, e.g., computational
+`p`
+
+`p.
+I also believe that most research in, e.g., computational
 linguistics, ends up conflating those two goals.  In that
 case, IR models are judged based on whether
 they facilitate automated, AI-driven generation
 of IR, not on whether the IRs are insightful
 suggestions of how human cognition itself
-builds an intermediary cognitive register \mdash{}
+builds an intermediary cognitive register %--
 paricularly if we accept Vakarelov's overall
 picture of language as an interface between
 speech-givens and prelinguistic cognitive
 fsculties.  Interface theories and Intermediate
-Representations tend to go together \mdash{} the IR is
+Representations tend to go together %-- the IR is
 the representation of some input during
 intermediate processing yielding an
 output; a structure between two other structures,
 where the role of the interface is to bridge
 the structures as well as to activate the correct
 capabilities via the output.  This is the
-architecture of an \q{interface theory}, in
+architecture of an `q.interface theory`/, in
 science or computer programming; it carries
 over to linguistics of we take Vakarelov's
 ITM seriously.
-}
-\p{An equally intrinsic aspect of interface theories,
+`p`
+
+
+`p.
+An equally intrinsic aspect of interface theories,
 however, is that the processes operative at the intermediate
 level aree theoretically distinct from the realms which the
 interface bridges.  For example, the theory of programming-language
@@ -140,17 +160,19 @@ specifications, and from the theory of CPU
 architecture and system-kernel development.  Runtime
 engineers can work through the medium of IR
 models, and compiler design itself is split between
-parsing surface-level source code \i{to} IR and
+parsing surface-level source code `i.to` IR and
 mapping IR structures to their proper runtime
 paths of execution.  It would be a breach of
 design architecture to attempt to solve
 source-to-IR problems within modules devoted to
 IR-to-runtime engineering.
-}
-\p{Unfortunately, I get the sense that AI research does
+`p`
+
+`p.
+Unfortunately, I get the sense that AI research does
 not respect a comparably disciplined Separation Of
 Concerns.  There are multiple parts to a
-typical AI platform \mdash{} modules for representing information
+typical AI platform %-- modules for representing information
 (or knowledge/facts/beliefs, or the state of the system's
 physical or digital environs, etc.); for populating
 these reprsentations with data deliberately introduced
@@ -166,13 +188,15 @@ branches of computer science and other disciplines,
 without the stated rationale of AI realizing
 (and monetizing) systems that exhibit
 humanlike intelligence.
-}
-\p{So perhaps \q{AI} is
+`p`
+
+`p.
+So perhaps `q.AI` is
 best understood as shorthand for a suite of
 research agendas across several aspects of
 computer science, not restricted to the
-fields \mdash{} like Machine Learning, Robotics,
-and Artificials Neural Networks \mdash{} that are
+fields %-- like Machine Learning, Robotics,
+and Artificials Neural Networks %-- that are
 publicly associated with the term.  This is
 not, however, how AI seeems to be represented by
 companies and institutions (including in academia)
@@ -190,25 +214,27 @@ However, a more cynical interpretation
 is that AI is valued as a cash cow, and
 residual disciplines which contribute to the
 engineering infrastructure that AI requires
-\mdash{} but are agnostic as to the AI vision
-itself \mdash{} are appreciated only so much as
+%-- but are agnostic as to the AI vision
+itself %-- are appreciated only so much as
 needed to keep the AI project moving forward.  On that
 interpretation support for AI-agnostic
 research becomes lukewarm and transactional, and
 actual innovation in such areas may not be properly
 celebrated.
-}
-\p{Whatver the reality, the technological infrastructure 
+`p`
+
+`p.
+Whatver the reality, the technological infrastructure 
 affording support for cognitive science/linguistics, 
 or cognitive humanities/phenomenology, 
 and so forth, is led by frameworks that 
 seem to fall into one of two categories.  
-On the one hand, there are \q{Cognitive AI} 
+On the one hand, there are `q.Cognitive AI` 
 projects that realize different theortical/proposed models 
 of mental architecture as software systems, emulating our 
-rational behaviors \mdash{} Natural Language Processing, 
+rational behaviors %-- Natural Language Processing, 
 classification, judging similarity, optimizing 
-problem-solving, and so on \mdash{} to various degrees; 
+problem-solving, and so on %-- to various degrees; 
 simulative success or failure then becomes a litmus 
 test for warranting or revising the implemented 
 theory of intlligence.  In the domain of 
@@ -216,9 +242,11 @@ linguistics, these projects serve as a paradigmatic
 complement (and sometimes testing-ground) for 
 thories of how linguistic processes are 
 computationally tractable.
-}
-\p{On the other hand, there are technologies that fall under 
-the rubrick of \q{proof assistants}, like Coq and Agda, 
+`p`
+
+`p.
+On the other hand, there are technologies that fall under 
+the rubrick of `q.proof assistants`/, like Coq and Agda, 
 which allow programmers to specify data structures 
 with mathematical precision and potentially prove 
 structural properties.  Such technologies have 
@@ -229,47 +257,51 @@ as linguistic research tools.  That is, linguists
 have used tools like Coq directly or have achieved 
 comparably rigorous analyses by developing 
 linguistic models in rigorous languages like Haskell 
-(representative are \cite{AnounEtAl} and 
-\cite{KiselyovShan}, respectively).  These applications 
-trade on the parable of language as \i{formal system}, 
-and allow theories of \i{what} formal structures actually 
+(representative are `cite<AnounEtAl>; and 
+`cite<KiselyovShan>;, respectively).  These applications 
+trade on the parable of language as `i.formal system`/, 
+and allow theories of `i.what` formal structures actually 
 apply to language to be tested in 
 environments well-established in other formal sciences, 
 like mathematics and systems engineering.
-}
-\p{In the specific context of linguistics, these two groups of 
-technologies \mdash{} AI platforms, and proof-assistants 
+`p`
+
+`p.
+In the specific context of linguistics, these two groups of 
+technologies %-- AI platforms, and proof-assistants 
 (or modeling frameworks in mathematically inspired 
-programming languages) \mdash{} reflect \i{computational} 
-and \i{formal} analogies respectively: language \i{qua} 
+programming languages) %-- reflect `i.computational` 
+and `i.formal` analogies respectively: language `i.qua` 
 computational or formal system.  This generalizes to other 
 applications buttressing cognitive science: most concrete 
 technology deployed in a research-oriented context 
 projects either or both of these analogy/paradigms. 
-}
-\p{I believe that both analogies are flawed, although they 
+`p`
+
+`p.
+I believe that both analogies are flawed, although they 
 may have value as indirect, theortically productive 
-models for \i{parts} of language and human intelligence.  
+models for `i.parts` of language and human intelligence.  
 I think there are several theoretical frameworks, with 
 at least partial realization in computational 
-settings, that \i{do} avoid the reductive ideologies of 
+settings, that `i.do` avoid the reductive ideologies of 
 bpth formalism and computationalism which yielding rigorous 
 technological models: Barry Smith and colleagues' Granular 
-Partition models \cite{BittnerSmithDonnelly}, 
-David Spivak's \q{Ologs} (\q{Ontology Logs}) 
-\cite{SpivakKent}, Conceptual Space 
-Markup Language \cite{RaubalAdamsCSML}, 
-or the \q{Image-Schema Language} described 
-in \cite{StAmant}.  But in general there is a lack of 
+Partition models `cite<BittnerSmithDonnelly>;, 
+David Spivak's `q.Ologs` (`q.Ontology Logs`/) 
+`cite<SpivakKent>;, Conceptual Space 
+Markup Language `cite<RaubalAdamsCSML>;, 
+or the `q.Image-Schema Language` described 
+in `cite<StAmant>;.  But in general there is a lack of 
 adequate tooling which embraces 
-\i{computational} representations of 
-cognitive processes \mdash{} for example, models of 
-Intermediate Representations and Interface Theories \mdash{} 
+`i.computational` representations of 
+cognitive processes %-- for example, models of 
+Intermediate Representations and Interface Theories %-- 
 while simultaneously, mostly, rejecting both 
 the formal and the computational metaphors.  
 How this absence 
-of \q{non-AI computational} projects may be explained, and 
+of `q.non-AI computational` projects may be explained, and 
 what such projects might look like, 
 is a question that will inform my discussions in the 
 next section and then Section 7.  
-}
+`p`
