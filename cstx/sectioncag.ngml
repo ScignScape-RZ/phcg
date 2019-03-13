@@ -1467,6 +1467,7 @@ Consider these exmples:
 `sentenceList,
 `sentenceItem; \label{itm:koreanstop} My favorite Korean restaurant is at the next stop.
 `sentenceItem; \label{itm:koreanclosed} My favorite Korean restaurant is closed today.
+`sentenceItem; \label{itm:koreanposter} My favorite Korean restaurant is decorated with posters from the 2002 World Cup.
 `sentenceItem; \label{itm:koreanstarted} My favorite Korean restaurant started out in a food court.
 `sentenceItem; \label{itm:koreanloyal} My favorite Korean restaurant said I'm their most loyal customer.
 `sentenceItem; \label{itm:bark} She's constantly barking at her employees.
@@ -1476,25 +1477,112 @@ Consider these exmples:
 `sentenceList`
 
 The first three profile (using Langacker's term) 
-a restaurant as a `i.location`/, a 
-commercial enterprise, or an 
-institution/organization.  Note that we can distinguish 
-the commercial sense from the institutional sense: 
+a restaurant as a location, a 
+building (with commercial and architectural properties), or 
+an institution/organization.  Note that we can distinguish 
+the commercial/architectural sense from the institutional sense: 
 to `i.close` can be temporary (as in \label{itm:koreanclosed}), 
 which we hear in conjunction with the former sense, or 
 more permanent as in `q.cease operations`/, i.e., close 
 `q.qua institution`/.  The former sense seems to mix 
 the institutional and location sense: while location 
 is not explicit as in \label{itm:koreanstop}, an asserion 
-that some chain rstaurant is closed today would usually be 
+that some `i.chain` restaurant is closed today would usually be 
 heard as referring to one location, not the 
-entire chain.  
- 
-
+entire chain.  In (\ref{itm:bark}) through (\ref{itm:kitten}), 
+a common idiom applies `q.bark` to things that are not 
+dogs; but this is not just a matter of 
+metaphor, blending different `q.spaces` with 
+no conventionalizing pressues.  The (\ref{itm:bark}) and 
+(\ref{itm:back}) senses are rather entrenched, using 
+`i.bark` to suggest something a little obnoxious or 
+mean.  But (\ref{itm:kitten}) does not sound right, even though 
+it is no more of a strecth to imagine a kitten's 
+hissing as argry bark-like than a boss's orders.  
+Perhaps the `i.lotral` similarity btween cats and 
+dogs maks the figurative usage harder to accept 
+as a purported abstraction from literal situations.
 `p`
 
+`p.
+The conventional type-semantic picture is that 
+language has a collection of (what I am calling) `q.mesotypes` 
+and we modulate word-uses by switching between 
+this medium-grain types, sometimes in unexpected ways.  
+An effective way to develop such an analysis 
+is to identify one or two senses as the most 
+prototypical for some concept/lexeme, and read 
+other senses as transforms involving other types.  
+So the commercial/architectural mesotype 
+may be canonical for `i.restaurant`/, and 
+then we branch out to a more geo-spatial 
+sense (`i.where` the building 
+is located), or institutional (the food-court 
+incarnation may have been in a different 
+place with diffrent staff and business classification).
+Hence a `i.commercial building` type is 
+`q.cast` to a geosptial point or to a social institution.   
+Thse `q.casts` are not really metaphors; 
+they have conventions, limitations, and rules.
+`p`
 
+`p.
+The mainstream theory is simplest when analyzing 
+casts between mesotypes of similar 
+gnerality, like plant-to-sentient in 
+`q.flowers like water` or cerebral-to-physical 
+in `q.heavy thoughts`/.  But not all casts follow 
+this recipe: (\ref{itm:bark}) and (\ref{itm:back}) 
+seems to cast from a `i.microtype` to a `i.mesotype`/.  
+The construction in (\ref{itm:actup}) 
+is a common `q.personifacation` of medical/anatomical 
+concepts %-- a similarly scalar idiom is 
+cases like `i.my arthritis is acting up`/, or 
+`i.flaring up` to render figure ailment as physical 
+rather than personalistic %-- but here we 
+care operating between typs of comparable Ontological 
+granularity (anatomical part/medical ailment to 
+person/physical thing)  But semantically and 
+syntacticallly (\ref{itm:actup}) seems a lot 
+like (\label{itm:bark}), even though the ploy 
+in that cast is to compare things to a lexical 
+`q.clique` (dogs).  And in (\ref{koreanloyal}) 
+we infer some `i.person` complimnted the speaker, but 
+this is more of a synecdoche than a cross-type 
+cast like (\ref{itm:koreanstarted})-(\ref{itm:koreanstarted}): 
+the point is not that a restaurant has a personhood 
+`q.aspect` that can be highlighted 
+(the way it `i.does` have an architectural or geo-spatial 
+aspect) but that reference to the restaurant can be proxy 
+for people closely associated with it.
+`p`
 
+`p.
+Another complication for type-case theories is potential 
+ambiguity between word-senses and coercing 
+`q.usages`/, as in:
+
+`sentenceList,
+`sentenceItem; \label{itm:teaduck} Tea-smoked duck is a Sichuan delicacy.
+`sentenceItem; \label{itm:rubberduck} The baby's favorite toy is a rubber duck.
+`sentenceItem; \label{itm:weddingduck} Wedding ducks are traditional Korean gifts.
+
+If the prototypical duck sense is an animal, these 
+cases disrupt the basic type hierarchy: 
+Wedding ducks are made of wood; rubber ducks are 
+toys; tea-smoked duck is a kind of food.  This translation 
+from one branch of sub/supertype relations to another is 
+what we would expect of type-cases, but 
+we can also see these cases as distinct lexemes, or 
+word-senses, or entrenched phrases with de facto lxical 
+status.  The overall picture which seems to 
+emerge is that type-coercions remain relatively 
+metaphorical or metonymic in cases like 
+(\ref{itm:})
+
+`sentenceList,
+
+`p`
 
 `p.
 
