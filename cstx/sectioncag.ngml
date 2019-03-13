@@ -1403,12 +1403,23 @@ more logical aspects of semantics, lexicalized
 concepts do present operationally as types: 
 
 `sentenceList,
-`sentenceItem; A penguin id s flightless bird.
-`sentenceItem; loop \{
-`sentenceItem; `hspace<1em>; if ($x$ > 10) break;
-`sentenceItem; `hspace<1em>; ++$x$;
-`sentenceItem; \} // end the loop
+`sentenceItem; \label{itm:penguin} A penguin is a flightless bird.
+`sentenceItem; \label{itm:rhino} Rhinos in that park are threatened by poachers.
+`sentenceItem; \label{itm:elephant} Baby elephants don't have tusks.
 `sentenceList`
+
+The point of these examples is that their signifying structures 
+involve operations that can be explaind type-theoretically.  
+In (\ref{itm:penguin}), a concept is 
+charactrized via a subtype/supertype relation.  In 
+(\ref{itm:rhino}), a concept is being 
+`q.extensionally filtered`/: we start with an 
+expression that seems to designate the extension of some concept 
+(`i.rhinos`/) and then narrow it based on 
+extensional criteria (`i.in that park`/).  This suggests 
+a type/set interface similar to my analysis earlier of 
+`q.students polled` (\ref{itm:maj}).     
+  
 
 `p`
 
