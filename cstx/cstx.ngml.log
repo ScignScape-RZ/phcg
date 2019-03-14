@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  13 MAR 2019 18:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  14 MAR 2019 02:33
 entering extended mode
 **cstx.ngml.tex
 (C:\scign\phcg\ar\cstx\cstx.ngml.tex
@@ -530,7 +530,7 @@ Package microtype Info: Loading configuration file microtype.cfg.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype.cfg"
 File: microtype.cfg 2010/01/10 v2.4 microtype main configuration file (RS)
 ))
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 105.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 107.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2009/05/18 v2.2 Customized lists
@@ -908,20 +908,7 @@ LaTeX Warning: No \author given.
 (C:\scign\phcg\ar\cstx\top-quotes.tex) (C:\scign\phcg\ar\cstx\intro.ngml.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
@@ -929,187 +916,35 @@ If that doesn't work, type  X <return>  to quit.
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.123 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[2] (C:\scign\phcg\ar\cstx\vectorian84.pgf)
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.226 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[3]
+ [2]
+(C:\scign\phcg\ar\cstx\vectorian84.pgf) [3]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.334 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[4]
+ [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.431 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[5]
+ [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.548 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[6]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.645 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [6]
 [7]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.758 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[8]) (C:\scign\phcg\ar\cstx\section1.ngml.tex
+ [8])
+(C:\scign\phcg\ar\cstx\section1.ngml.tex
 Underfull \vbox (badness 1360) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[9]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.188 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[10]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.313 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[11]
+ [9]
+[10] [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.416 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[12]
+ [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.505 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[13]
+ [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 507.
@@ -1645,65 +1480,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.631 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[14]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.732 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [14]
 [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.821 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[16]
+ [16]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.932 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[17]
+ [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 963.
@@ -2244,124 +2028,24 @@ Underfull \hbox (badness 1087) in paragraph at lines 1081--1081
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1081 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[18]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1165 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [18]
 [19]
 Overfull \hbox (2.30391pt too wide) in paragraph at lines 1180--1240
 \OT1/cmr/m/n/10.95 (-20) ``cog-ni-tive frames", which call for a dis-tinct pat-
 tern of anal-
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1240 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [20]
 Underfull \hbox (badness 6141) in paragraph at lines 1240--1240
 []\OT1/cmr/m/n/10.95 (+20) We un-der-stand sit-u-a-
  []
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1311 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [21]) (C:\scign\phcg\ar\cstx\section2.ngml.tex
 Underfull \hbox (badness 4341) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Truth-Theoretic Se-man-tics and
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.84 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[22]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.192 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[23]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.287 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[24]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.387 ...e{The Problem of Opaque Truth Conditions}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[25]
+[22] [23] [24] [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 387.
@@ -2894,45 +2578,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 387.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.489 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[26]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.624 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[27]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.737 \subsection{Meanings and State-Change}
-                                            
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[28]
+[26] [27] [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 737.
@@ -3456,18 +3102,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 737.
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.825 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [29]
 Underfull \vbox (badness 2302) has occurred while \output is active []
@@ -3997,77 +3631,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 871.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.961 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[30]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1042 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[31]) (C:\scign\phcg\ar\cstx\section3.ngml.tex
+[30] [31]) (C:\scign\phcg\ar\cstx\section3.ngml.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Cognitive and En-vi-ron-men-tal
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [32]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.218 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[33]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.313 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [33]
 [34]) (C:\scign\phcg\ar\cstx\section3a.ngml.tex
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
@@ -4604,69 +4176,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.79 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [35]
 Overfull \hbox (1.83365pt too wide) in paragraph at lines 147--162
 \OT1/cmr/m/n/10.95 (-20) ``lan-guage" is re-ally two dif-fer-ent sys-tems: one 
 that ef-fec-tu-
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.183 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.272 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[37]
+ [37]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.375 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[38]) (C:\scign\phcg\ar\cstx\section3b.ngml.tex
+ [38])
+(C:\scign\phcg\ar\cstx\section3b.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -5194,20 +4717,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[39]
+ [39]
 Underfull \hbox (badness 1014) in paragraph at lines 40--54
 \OT1/cmr/m/n/10.95 (+20) where mor-phosyn-tac-tic form --- pos-ses-sives, ad-je
 c-
@@ -5216,94 +4726,18 @@ c-
 
 Underfull \vbox (badness 2165) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[40]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.263 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[41]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.355 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[42]
+ [40]
+[41] [42]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.464 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[43]
+ [43]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.557 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[44]) (C:\scign\phcg\ar\cstx\section4.ngml.tex
+ [44])
+(C:\scign\phcg\ar\cstx\section4.ngml.tex
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.69 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[45]
+ [45]
 Underfull \hbox (badness 1472) in paragraph at lines 117--133
 []\OT1/cmr/m/n/10.95 (+20) This lat-ter model ac-tu-ally in-te-grates well with
 
@@ -5312,20 +4746,7 @@ Underfull \hbox (badness 1472) in paragraph at lines 117--133
 
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.182 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[46]
+ [46]
 Underfull \hbox (badness 1097) in paragraph at lines 214--231
 []\OT1/cmr/m/n/10.95 (+20) I be-lieve this bi-ol-ogy/chemistry case is a good
  []
@@ -5866,74 +5287,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 232.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.277 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[47]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.390 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[48]
+[47] [48]
 
 LaTeX Warning: Citation `MartinRaubal' on page 49 undefined on input line 404.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.502 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[49]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.610 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[50]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.690 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[51]
+[49] [50] [51]
 
 LaTeX Warning: Citation `MattSelway' on page 52 undefined on input line 784.
 
@@ -6465,32 +5823,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[52]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.147 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[53]) (C:\scign\phcg\ar\cstx\section4b.ngml.tex
+[52] [53]) (C:\scign\phcg\ar\cstx\section4b.ngml.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -7029,94 +6362,29 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 6725) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.84 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[54]
+ [54]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.200 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[55]
+ [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 (C:\scign\phcg\ar\cstx\section5.ngml.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[56]
+ [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.128 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[57]
+ [57]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.234 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[58]
+ [58]
 Overfull \hbox (1.61646pt too wide) in paragraph at lines 278--279
 \OT1/cmr/m/n/10.95 (-20) --- the legacy of this in-flu-ence can clearly be trac
 ed in AI re-
@@ -7659,67 +6927,16 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.170 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[60]
+ [60]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.251 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[61]
+ [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 ...and the Limits of Logic-Compositionality}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[62]
+ [62]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 328.
@@ -8255,162 +7472,24 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.440 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[63]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.509 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [63]
 [64]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.638 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[65]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.751 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [65]
 [66]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.820 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[67]) (C:\scign\phcg\ar\cstx\section6.ngml.tex
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.88 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[68]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.201 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[69]
+ [67])
+(C:\scign\phcg\ar\cstx\section6.ngml.tex [68] [69]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.285 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[70]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[71]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.456 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[72]
+ [70]
+[71] [72]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.569 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[73]) (C:\scign\phcg\ar\cstx\section6a.ngml.tex
+ [73])
+(C:\scign\phcg\ar\cstx\section6a.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -8943,137 +8022,24 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[74]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.163 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[75]
+[74] [75]
 Underfull \vbox (badness 1127) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.278 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[76]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.331 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [76]
 [77]
 Underfull \vbox (badness 7814) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.440 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[78]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.519 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[79]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.633 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[80]
+ [78]
+[79] [80]
 Overfull \hbox (2.26959pt too wide) in paragraph at lines 695--695
 \OT1/cmr/m/n/10.95 (-20) ``the team flew". And in \OT1/cmr/m/it/10.95 (-20) The
  city's largest theater company
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.695 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [81]) (C:\scign\phcg\ar\cstx\section7.ngml.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[82]
+ [82]
 Overfull \hbox (1.10547pt too wide) in paragraph at lines 143--145
 []\OT1/cmr/m/n/10.95 (-20) I ear-lier used com-put-ing pro-ce-dures roughly ske
 tched ---
@@ -9611,66 +8577,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 145.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.189 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[83]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.298 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[84]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.359 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[85]
+[83] [84] [85]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.467 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[86]
+ [86]
 Overfull \hbox (8.12332pt too wide) in paragraph at lines 503--503
- |[]  [] [][][][][][]
+ |[]  [] [][][][][][][][]
  []
 
 
@@ -10197,32 +9112,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 503.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[87]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.626 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[88]
+[87] [88]
 Underfull \hbox (badness 1603) in paragraph at lines 644--673
 []\OT1/cmr/m/n/10.95 (+20) Meanwhile, con-tem-po-rary for-mal-iza-tions of phe-
 
@@ -10231,52 +9121,14 @@ Underfull \hbox (badness 1603) in paragraph at lines 644--673
 
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.739 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[89]
+ [89]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.824 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[90]
+ [90]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.913 \p{}
-          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[91]) (C:\scign\phcg\ar\cstx\section7a.ngml.tex
+ [91])
+(C:\scign\phcg\ar\cstx\section7a.ngml.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -10809,18 +9661,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [92]
 Underfull \hbox (badness 1406) in paragraph at lines 136--165
 []\OT1/cmr/m/n/10.95 (+20) These un-fold-ing nar-ra-tives are rel-e-vant to phe
@@ -10830,20 +9670,7 @@ Underfull \hbox (badness 1406) in paragraph at lines 136--165
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.236 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[93]
+ [93]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
@@ -10852,47 +9679,10 @@ Underfull \hbox (badness 2080) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Procedural Net-works and Link
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[94]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[95]
+[94] [95]
 
 LaTeX Warning: Citation `HolmqvistDiss' on page 96 undefined on input line 169.
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.305 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [96]
 Overfull \hbox (0.55748pt too wide) in paragraph at lines 374--390
@@ -10900,18 +9690,6 @@ Overfull \hbox (0.55748pt too wide) in paragraph at lines 374--390
 20) dogs") \OT1/cmr/m/it/10.95 (-20) and also \OT1/cmr/m/n/10.95 (-20) that the
  speaker and lis-ten-ers share
  []
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [97]
 
@@ -11452,46 +10230,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 2617) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.534 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[98]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.651 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[99]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.807 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[100]
+ [98]
+[99] [100]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
@@ -11506,55 +10246,17 @@ LaTeX Warning: Citation `AbadiCardelli' on page 101 undefined on input line 26.
 
 LaTeX Warning: Citation `SantanuPaul' on page 101 undefined on input line 26.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [101]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.145 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[102]
+ [102]
 
 LaTeX Warning: Citation `Luo' on page 103 undefined on input line 211.
 
 
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.269 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[103]
+ [103]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 300.
@@ -12087,18 +10789,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 300.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.363 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [104]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 409.
 
@@ -12107,36 +10797,10 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 409.
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.466 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[105]
+ [105]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.575 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[106]
+ [106]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 585.
@@ -12660,34 +11324,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 585.
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.672 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [107]
 
 LaTeX Warning: Citation `Neustein' on page 108 undefined on input line 743.
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.743 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [108]
 
@@ -13217,63 +11857,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.861 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[109]
+ [109]
 Underfull \hbox (badness 1308) in paragraph at lines 885--900
 []\OT1/cmr/m/n/10.95 (+20) In a typ-i-cal type sys-tem, then, at least some
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.969 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[110]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1094 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[111]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1162 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[112]
+[110] [111] [112]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1163.
@@ -13806,45 +12395,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1163.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1285 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[113]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1400 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[114]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1491 }
-        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[115]
+[113] [114] [115]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
 )
@@ -13853,48 +12404,10 @@ Underfull \hbox (badness 1019) in paragraph at lines 1--1
  |[]\OT1/cmr/bx/n/14.4 Cognitive Gram-mar and Type
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[116]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.120 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[117]
+[116] [117]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.171 \subsection{Comparing paradigms}
-                                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[118]
+ [118]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 171.
@@ -14418,52 +12931,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 171.
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.254 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [119]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[120]
+ [120]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.412 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[121]
+ [121]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -14473,39 +12948,13 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 454.
 
-(C:\scign\phcg\ar\cstx\figure2.tex)
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.475 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[122]
+(C:\scign\phcg\ar\cstx\figure2.tex) [122]
 Underfull \vbox (badness 8075) has occurred while \output is active []
 
 
 Underfull \vbox (badness 8075) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.492 \subsection{Explanation and Formality}
-                                            
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[123]
+ [123]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 492.
@@ -15029,37 +13478,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 492.
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.583 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [124]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(C:\scign\phcg\ar\cstx\section11.ngml.tex
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[125]
+(C:\scign\phcg\ar\cstx\section11.ngml.tex [125]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 68.
@@ -15584,142 +14008,28 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 68.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.123 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[126]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.214 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[127]
+[126] [127]
 Underfull \vbox (badness 1275) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.276 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[128]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.380 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[129]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[130]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.562 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[131]
+ [128]
+[129] [130] [131]
 Underfull \hbox (badness 1515) in paragraph at lines 562--562
 []\OT1/cmr/m/n/10.95 (+20) Returning to ``On-tol-ogy": types have as-so-ci-
  []
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.598 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [132] (C:\scign\phcg\ar\cstx\figure.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.686 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[133]
+ [133]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 (C:\scign\phcg\ar\cstx\section11a.ngml.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 ...tion{Three tiers of linguistic type theory}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[134]
+ [134]
 Overfull \hbox (1.20703pt too wide) in paragraph at lines 1--1
- |[]  [] [][][][][][]
+ |[]  [] [][][][][][][][]
  []
 
 
@@ -16245,18 +14555,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [135]
 Underfull \hbox (badness 1688) in paragraph at lines 135--153
@@ -16280,49 +14578,11 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 153.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[136]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.247 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [136]
 [137]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.297 \subsection{Levels of formalization}
-                                          
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[138]
+ [138]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 297.
@@ -16847,32 +15107,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 297.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.391 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[139]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.476 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[140]) (C:\scign\phcg\ar\cstx\conclusion.ngml.tex
+[139] [140]) (C:\scign\phcg\ar\cstx\conclusion.ngml.tex
 Overfull \hbox (1.94017pt too wide) in paragraph at lines 476--1
 \OT1/cmr/m/n/10.95 (-20) ``func-tions" are mu-ta-tions/modifications in cog-ni-
 tive state,
@@ -16884,66 +15119,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 1024) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.78 }
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[141]
+ [141]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[142]
+ [142]
 
 LaTeX Warning: Reference `footnoteVision' on page 143 undefined on input line 2
 22.
 
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.238 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[143]
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.309 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[144] (C:\scign\phcg\ar\cstx\vectorian84.pgf)
+[143] [144] (C:\scign\phcg\ar\cstx\vectorian84.pgf)
 
 LaTeX Warning: Citation `CyberphysicalSystems' on page 145 undefined on input l
 ine 368.
@@ -16951,69 +15135,18 @@ ine 368.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.413 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[145]
+ [145]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.519 }
-       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[146]) (C:\scign\phcg\ar\cstx\biblio.tex
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \onecolumn
-              
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[147]
+ [146])
+(C:\scign\phcg\ar\cstx\biblio.tex [147]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.204 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[148
+ [148
 
 ]
 Missing character: There is no â in font cmr9!
@@ -17037,20 +15170,7 @@ Overfull \hbox (9.43044pt too wide) in paragraph at lines 334--336
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.385 \bibitem{Nivre}
-                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[149]
+ [149]
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no “ in font cmr9!
@@ -17062,50 +15182,17 @@ Overfull \hbox (73.18135pt too wide) in paragraph at lines 486--488
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.582 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[150])
-
-Package transparent Warning: Rerun to get transparencies right.
-
+ [150])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
-
-! Package xcolor Error: Undefined color `codegr'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61 \end{document}
-                   
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 [151]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
  (C:\scign\phcg\ar\cstx\cstx.ngml.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
+Package rerunfilecheck Info: File `cstx.ngml.out' has not changed.
+(rerunfilecheck)             Checksum: 41A3EAA775D6A728E1520BD150391AEB;6763.
 
-
-Package rerunfilecheck Warning: File `cstx.ngml.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cstx.ngml.out':
-(rerunfilecheck)             Before: D7DDEA574D11A6DB7043493DC82F56E4;7075
-(rerunfilecheck)             After:  41A3EAA775D6A728E1520BD150391AEB;6763.
 
 LaTeX Warning: There were undefined references.
 
@@ -17115,8 +15202,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  22085 strings out of 494049
- 414721 string characters out of 3146069
- 559354 words of memory out of 3000000
+ 414727 string characters out of 3146069
+ 559520 words of memory out of 3000000
  23996 multiletter control sequences out of 15000+200000
  33300 words of font info for 236 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -17152,7 +15239,7 @@ c/cm-super/sfrm0900.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/c
 m-super/sfrm1000.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/cm-s
 uper/sfrm1095.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/wasy/wa
 sy8.pfb>
-Output written on cstx.ngml.pdf (151 pages, 1404407 bytes).
+Output written on cstx.ngml.pdf (151 pages, 1411937 bytes).
 PDF statistics:
  1723 PDF objects out of 1728 (max. 8388607)
  553 named destinations out of 1000 (max. 500000)
