@@ -1,0 +1,63 @@
+
+`p.
+Several authors have recently proposed `q.non-well-founded` 
+or `q.non-anti-symmetric` mereologies.  This terminology 
+is relatively new, but at least some of the motivations 
+behing their alternative systems derive from 
+conundra that have inspired extensive commentary 
+in the past.  For example, is the clay out of 
+which a sculpture is made a proper part of the statue?  
+Most commentators seem to frame their 
+intuitions in the intuitive parameters 
+of part/whole hierarchies, and find some 
+mechanism to reconcile the parts of their intuitions 
+that don't fit simple accounts of parthood.  
+The more radical possibility, which is the subject of 
+this paper, is to re-engineer our 
+conceptual of parthood from the ground up.  In particalar, 
+we can drop the assumption that parthood is assymtric 
+or acyclic.  Doing so results in a 
+Non-Asymmetric Mereology, or NAM.  In NAM, 
+$x$ can be part of but different from $y$ 
+`i.and vice versa`/.
+`p`
+
+`p.
+As far as I can tell, most arguments for NAM 
+derive from statue/clay-lik cases where two things seem 
+deeply, metaphysically intertined by not identical.  
+It is said that the statue (call it $S$) is not 
+identical to the lump of clay (call it $C$) because 
+$C$ could be altered in ways $S$ cannot %-- if a fire melts 
+$C$ down to a blob, $C$ is still itself but $S$ disappears.  
+Ergo, an event can destroy $S$ but 
+not destroy $C$.  Conversely, a small piece could fall 
+out of $C$, leaving a hole then repaird with fresh clay, yielding 
+a new lump $C'$.  So $S$ could end up being 
+$C'$ instead of $C$.  But if we define $C$ as just that eact 
+lump of clay, $C$ can't be $C'$ instead of $C$.`footnote.
+Another issue: 
+Michael Jubien imagines that the sculptor could just have 
+built $S$ from another lump of clay in his studio, 
+call it $D$.  So, modally, $S$ `i.could have been` 
+$D$, but $C$ could not have been $D$.  If we use possible 
+world talk, we can posit a possible world 
+where $S$ id $D$, but we can't imagine a possible world 
+where $C$ is $D$.  This assumes that a hunk of matter 
+just is the matter that it is; we're not talking 
+about essential or inessential parts or any object 
+that may be `i.constituted` by some matter, like Tibbles 
+the cat and his later-amputated tail.  In other
+words, we're assuming that the self-identity of matter, 
+once we ignore any logical properties inhering in 
+its form, is immune from counterfactuals.  Matter can 
+be arranged differently, but it can't be different matter.  
+This seem plausible but not self-evident, 
+but in any case it may be a terminological rule 
+in how philosophers often use the word 
+`q.matter` %-- and by extnsion phrases 
+like `q.lump of clay` %-- especially in discussions like 
+statue/clay (non)identity.
+`footnote`  
+`p`
+
