@@ -17,7 +17,7 @@ definition that `hpp; is `q.proper`/, i.e.
 nothing is `hpp; itself, so in (*) necessarily 
 $x$ is not identical to $y$.  By this setup 
 `hpp; is not transitive, since $x$ `nhpp; $x$, 
-but call `chpp; th transitive closure of 
+but call `chpp; the transitive closure of 
 `hpp;.  Then (*) exemplifies a case where 
 $x$ `chpp; $x$.
 `p`
@@ -478,10 +478,10 @@ The two kinds of thories may be viewed on a spectrum,
 with mereology merging as we attend more 
 to the filtering effects of `xhppy; parthood, 
 the relation either witnessing or effectuating 
-our disposition to ingnore non-$x$ parts of $y$.
+our disposition to ignore non-$x$ parts of $y$.
 `p`
 
-`i.  
+`p.  
 To put it differently, arguably 
 any mereological system is an overlap-system 
 which we are able to filter or simplify to 
