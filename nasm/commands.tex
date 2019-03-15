@@ -577,15 +577,16 @@
 
 
 % nasm
-\newcommand{\hpp}{\ensuremath{hpp}}
+\newcommand{\hpp}{\ensuremath{\rhd}}
 \newcommand{\chpp}{\ensuremath{chpp}}
 \newcommand{\nhpp}{\ensuremath{nhpp}}
-\newcommand{\prof}{\ensuremath{prof}}
-\newcommand{\profr}{\ensuremath{profr}}
-\newcommand{\wtp}{\ensuremath{wtp}}
-\newcommand{\xpy}{\ensuremath{xpy}}
-\newcommand{\xhppy}{\ensuremath{xhppy}}
-\newcommand{\pprofy}{\ensuremath{pprofy}}
-\newcommand{\xwtpp}{\ensuremath{xwtpp}}
-\newcommand{\xhasy}{\ensuremath{xhasy}}
-\newcommand{\profinx}{\ensuremath{profinx}}
+\newcommand{\prof}{\ensuremath{\mathfrak{p}}}
+\newcommand{\profr}{\hspace*{2pt}\ensuremath{\makebox[1pt][l]{\textemdash}\rhd}}
+\newcommand{\wtp}{\ensuremath{\makebox[3pt][l]{\ensuremath{>}}{%
+-}}}
+\newcommand{\xpy}{\ensuremath{x \wtp{} \prof{} \profr{} y}}
+\newcommand{\xhppy}{\ensuremath{x \hpp{} y}}
+\newcommand{\pprofy}{\ensuremath{\prof{} \profr{} y}}
+\newcommand{\xwtpp}{\ensuremath{x \wtp{} \prof{}}}
+\newcommand{\profriso}{\hspace*{2pt}\ensuremath{\makebox[0pt][l]{\textemdash}\rhd}}
+\newcommand{\profinx}{\ensuremath{\prof{}_x}}

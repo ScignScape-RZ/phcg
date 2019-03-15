@@ -177,42 +177,44 @@ atypical or deflationary.
 `p`
 
 `p.
+Transitivity is problemmatic in many ways; 
+Mbappe's left foot has th property `i.being a foot`/, 
+which if it is part of the foot 
+is not part of Mbappe.  And Mbappe's foot is (arguably) 
+not part of the team.  Still, we'd like to preserve 
+parthood-transitivity as much as possible.  
+However, it seems that no matter how 
+narrowly a part differs from the whole, 
+it picks up some kernl of propositional 
+differnce that blocks transivity without 
+some complex concptual patchwork: if we 
+define parthood without a lot of conceptual 
+detail `i.no` $y$ not identical to $x$, 
+however modestly, can ever be a proper part 
+of $x$ full stop.
+`p`
+
+`p.
 That $y$ is part of $x$ does not seem to preclude $y$ 
 bearing predicative details that $x$ lacks: for instance, 
 if the camera zooms in on Mbappe it is not 
 picturing the whole team, so although Mbappe 
-is part of the team Mbappe, but not the team, 
+is part of the team, Mbappe, but not the team, 
 is covered by the predicate `q.being at the focus of 
 the camera angle` at some moment.  Of course, we 
 already know that Mbappe is not `i.entirely` 
 inside the team, so the proposect of Mbappe having 
 propositional attributes which the team lacks 
 is not concerting.  But a camera angle can show 
-Mbappe's `i.head`/, which we might think tonsay is 
-`q.part of` Mbappe, in a stronger sense, or 
-hos `i.right side`/, which seems even less independent.  
+Mbappe's `i.head`/, which we might think to say is 
+`q.part of` Mbappe in a stronger sense, or 
+his `i.right side`/, which seems even less independent.  
 Indeed any picture of Mbappe shows part of him, making 
-that part uniquely predicated as `i.that shown in this picture`/.  
+that part uniquely predicated as `i.what shown in this picture`/.  
 I cite these as further examples of conceptual 
 subtleties that can trip up strictly `q.subsuming` mereologies 
 %-- where an axiomatic distinction is made between 
 `i.proper parthood` and `i.overlap`/.
-`p`
-
-`p.
-Returning to cases for NAM itself, 
-I'll give another example set on the lost continent 
-of Atlantis, to be concrete in a hypothetical 
-way.  Suppose the continent's largest newspaper, 
-the Atlantis Times, creates a consortium of 
-semi-autonomous local newspapers in smaller 
-Atlantian towns.  We can then consider the Consortium to 
-be part of the Atlantis Times: perhaps its offics are in the 
-Times's headquarters, the Times funds, administrates, and legally 
-controls the Consortium, etc.  But we can also 
-say that the Times is part of the Consortium, if 
-the Consortium includes a portfolio of paprs 
-one of which is the Times itself.
 `p`
 
 `p.
@@ -222,7 +224,6 @@ rather than subsuming inclusion of something
 smaller into something larger.  That's why we don't 
 hear it as odd or metaphorical if something 
 apparently larger is presented as a part rather than a whole:
-
 
 `sentenceList,
 `sentenceItem; Phenomenology is only part of 
@@ -235,7 +236,7 @@ part of the chicken.
 `sentenceList`
   
 If we're doing formal semantics, we might want to 
-say that the propositional form ofvthese examples 
+say that the propositional form of these examples 
 is a matter of overlap rather than 
 proper parthood.  But something like 
 `i.Phenomenology overlapped with Merleau-Ponty's 
@@ -243,7 +244,25 @@ ouvre`/, or vice-versa, sounds awkward
 in comparison.  At the very least we have an apparent datum 
 that semantic structures involving overlap 
 often seem to invite surface articulations 
-involving explicit parthood. 
+involving explicit parthood.  From the angle of 
+NAM set against Classical mereology, of course, 
+overlap and parthood have a significant 
+difference: overlap is symmetric while parthood is not.
+`p`
+
+`p.
+I'll give another example set on the lost continent 
+of Atlantis, to be concrete in a hypothetical 
+way.  Suppose the continent's largest newspaper, 
+the Atlantis Times, creates a consortium of 
+semi-autonomous local newspapers in smaller 
+Atlantian towns.  We can then consider the Consortium to 
+be part of the Atlantis Times: perhaps its offices are in the 
+Times's headquarters, and the Times funds, administrates, and legally 
+controls the Consortium.  But we can also 
+say that the Times is part of the Consortium, if 
+the Consortium includes a portfolio of papers 
+one of which is the Times itself.
 `p`
 
 `p.
@@ -251,8 +270,8 @@ For a final introductory example, consider a web portal which
 includes a collection of resources.  Suppose one of those 
 resources is another web portals which in turn 
 includes a collection of resources %-- one of which is 
-th original portal!  Reading `q.includs` as `q.has as part`/, 
-this is clearly a partonomic circle.  Indeed the whole 
+th original portal!  Reading `q.includes` as `q.has as part`/, 
+this is clearly a partonomic cycle.  Indeed the whole 
 `q.web` ideology is that resources link up in 
 complex and dense (and often circular) ways.  
 `p`
@@ -260,8 +279,8 @@ complex and dense (and often circular) ways.
 `p.
 I think these kinds of examples are 
 both representative of `q.folk` mereology and 
-structures where non-assymtry is a more effective 
-modeling assumption than assymetry.  In that case 
+structures where non-anti-symtry is a more effective 
+modeling assumption than anti-symetry.  In that case 
 NAM is not the theory of a few ersatz cases but rather 
 a general framework from which, if desired, classical mereology 
 could be recoverd as, so to speak, a proper part.
