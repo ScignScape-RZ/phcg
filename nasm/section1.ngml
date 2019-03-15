@@ -4,7 +4,7 @@
 In order to demonstrate a pragmatic, common-sensical NAM 
 proposal, I will consider logical or conceptual relations 
 which `i.seem` like mereological relations but 
-which `i.also` sm like they involve a 
+which `i.also` seem like they involve a 
 `q.cyclical` notion of parthood.  
 To facilitate discussion I will use the 
 symbol `hpp; to mean `q.has as proper part`/, giving 
@@ -360,7 +360,198 @@ taken seriously as a candidate for mereology in general.
 `p`
 
 `p.
+Taking a cus from the `q.linked data` nature of 
+Information Spaces, the underlying model of parthood 
+in this kind of theory might involve 
+some kind of epistemological linkage, where access to 
+or information about parts is part of the epistemological 
+interface afforded to their wholes.  Mbappe as part of 
+les Blues means, for instance, that an information-source 
+profiling les Blues should link or provide entry to 
+a comparable source profiling Mbappe.  As a notion of 
+parthood, this contains an extra layer of indirection, since 
+we can distinguish a `i.link to` $y$ from $y$: an encyclopedia 
+entry on les Blues which Mbappe is a part ot actually 
+contains a `i.link` to Mbappe.  And we get 
+informed of Mbappe being part of les Bleus' 
+roster by seeing his `i.name` on a list.  
+Thus mereological relations often involve an intermediary 
+name, link, or designation which stands in 
+for an actually autonomous part in partonomic contexts.
+`p`
 
+`p.
+To make this somewhat formal, we need two relations: 
+first, a notation like `pprofy; which I'll 
+call (borriwing a term from Cognitive Grammar) 
+`q.profiles`/.  The relation of a `prof; profiling 
+a $y$ could be read, according to context, 
+as the conceptual tie between a 
+web address, computer pointer, or other technological 
+reference-artifact and its target; or the 
+designatory relation between a proper names and their 
+objects; or a more cognitive form of reference.  
+Then I'll introduce a whole-to-profile relation 
+`wtp; such that `xwtpp; can read `i.$x$ contains `prof;, 
+which profiles something (other than $x$)`/.  
+Combining `wtp; and `profr; yields a three-part 
+double relation like `xpy;, for `i.$x$ contains `prof;, 
+a profile of $y$`/.  Then finally a version of 
+`hpp; can be defined as this three-part relation 
+abstracting `prof;: `xhppy; becomes 
+`i.$x$ contains a profile of $y$`/.
+`p`
+
+`p.
+This particular version of `hpp; may be useful because it 
+is adaptable.  It accomodates systems where profiles 
+of $y$ either are or aren't `i.parts` of $y$, according 
+to familiar mereological criteria.  Dependeing on how 
+that goes, this latest `hpp; could model 
+`q.croteriological` mereology: suppose the 
+profile of $y$ in $x$ is the only part or aspect of $y$ 
+which is relevant to $x$.  Then `pprofy; acts as a 
+relevance filter, the profile selecting salient 
+parts of $y$ and excluding residual parts from mereological 
+consideration.  Then `xpy; can be read as $x$ encompassing 
+all parts of $y$ when filtered by $p$.  Either `prof; 
+expressly operates to isolate $x$-relevant aspects, or 
+$x$-relevance is derived from a filtering 
+according to more general criteria, like the 
+properties of a restaurant being subdivided into culinary, 
+operational, nutritional, and architectural dimensions 
+%-- i.e., a restaurant has architecturally relevant parts, 
+operationally relevant parts, etc.
+`p`
+
+`p.
+I will do further analysis however of the alternative model 
+where profile are `i.not` in general parts of what 
+they profile.  Instad, a profile is 
+like an epistemological or technological 
+device that `q.exposes` or permits access to something 
+else, like a pointer to a region of computer memory.  
+So I'll call this model `q.expository` mereology.  
+The canonical ida of parthood is now that 
+$y$ is a `i.proper part of` $x$ if and insofar as 
+$x$ `q.exposes` or provides an information link to $y$.
+`p`
+
+`spsubsectiontwoline.Normalizing 
+Arbtitraily Granular Mereologies`
+`p.
+One potential benefit of the Expository 
+model is that it may be applicable to and/or reflective 
+of how technology concretely implements ereologucal 
+systems.  I contend that any classical mereology 
+can be directly mapped to an Expository mereology: 
+take any classical parthood instance `xhasy;.  
+Designate a profile for $y$ inside $x$, say, 
+`profinx;.  Then reinterpret `xhasy; to 
+mean `xpy; where `prof; is `profinx;, along 
+with a restriction that any $y$ can have at most one 
+profile, and has `i.exactly one` profile 
+if it has a (classical) whole %-- actually 
+this one profile is part of the whole 
+`i.in lieu of` $y$. 
+`p`
+
+`p.
+So expository mereology includes Classical 
+mereology as a special case, but it allows for generalizations 
+which patch over conceptual objections that may be 
+raised to Classical mereology in its unadulturated form.  
+In practice the maxim that each $y$ has only on profile 
+may be too restrictive.  Instead, multiple divergent 
+wholes may overlap with $y$ in different ways and contexts.  
+For instanc, Mbappe is part of les Blus, and 
+also PSG, the Afro-French community, the Mbappe 
+family, etc.  Granted, this may be changing 
+the subject somewhat: `q.overlap-systems` 
+charactrized by generally complex entities that overklap 
+in different modes and contexts are a different area of 
+philosophy that mereology.  But in reality 
+thse two theories are intertwined: many conceptual 
+phenomena can be approached both from a mereological 
+perspective and an `q.overlap` perspective.  
+The two kinds of thories may be viewed on a spectrum, 
+with mereology merging as we attend more 
+to the filtering effects of `xhppy; parthood, 
+the relation either witnessing or effectuating 
+our disposition to ingnore non-$x$ parts of $y$.
+`p`
+
+`i.  
+To put it differently, arguably 
+any mereological system is an overlap-system 
+which we are able to filter or simplify to 
+reduce cases of practically inconsequential 
+externality that would otherwise block 
+proper parthood.  If almost always $y$ is 
+`i.never` an `i.completely subsumed` part 
+of $x$ then (classical) `xhppy; has to 
+reference some kind of theory that 
+$y$'s non-$x$ parts are inconsequential.  
+So `q.relevance` can be like a knob 
+tuning in mereological or overlap theories 
+depending on whether we are more or less 
+sympathetic of filtering: mereologies emerge 
+when we tolerate filtering non-$x$ $y$-parts in 
+`xhppy; as practically appropriate, and 
+overlap theories arise from merologies when 
+we realize that filtering skirts 
+around legitimate Ontological, cognitive, 
+conceptual, or natural-language/pragmatic concerns.  
+I think that the system of operators `wtp;, `profr;, and 
+`hpp; (when defined from the other two) models 
+both mereological and overlap systems and accordingly 
+can unify both kinds of thories.
+`p`
+
+`p.
+Aside from this philosophical case, however, there is a 
+practical benefit to the `q.Expository` definition of 
+`hpp; which applies to Classical as well as non-antisymmetric 
+mereologies.  Note that according to 
+Classical measures of parthood, Expository mereology 
+only has parthood relations between wholes 
+and `i.profiles`/, and moreover we can assert with 
+no loss of generality that [rofiles 
+themselves do not `i.contain` (as opposed to 
+`q.point to`/) other parts.  I assume a semantics 
+where profiles are not themselves organized 
+data structures, but rather referential atoms 
+leading to (arbitrarily complex) structures 
+outside themselves.  Proper reference in, say, 
+natural language is not quite so 
+simple %-- consider first and last names 
+%-- but we crtainly do seem to have a conceptual 
+ability to coalesce cognitive 
+quanta with almost no internal structuration, 
+save for designating intellectually complex 
+structures; and with this mechanism build up 
+arbitrarily complex cognitive models.  
+Analogouslt, computer software uses pointers 
+to build up arbitrarily complex data structures 
+without unworkable amounts of memory manipulation.  
+Our ability to designate complex wholes 
+with simpler icons %-- consider cities as dots on a 
+map, or facial portraits as links to bibliographies  
+%-- sure is a key enabler of complxity 
+in our conceptual and semiotic systems. 
+`p`
+
+`p.
+In short, we los no complexity when we 
+envision `q.profiles` as intellectual quanta 
+whose only signification is as a rational 
+bridge to something else; i.e., in a 
+mereological system, profiles ned notbhave their 
+own parts.  Accordingly, on Classical terms, 
+we have only one `q.wholes` layer 
+and only one `q.parts` layer: there are wholes whose 
+parts are profiles, and profiles refer to other 
+wholes.  
 `p`
 
 `p.
