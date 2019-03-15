@@ -551,7 +551,43 @@ own parts.  Accordingly, on Classical terms,
 we have only one `q.wholes` layer 
 and only one `q.parts` layer: there are wholes whose 
 parts are profiles, and profiles refer to other 
-wholes.  
+wholes.  This two-layer architecture takes the plac 
+of a classical system where partonomic nesting may be 
+arbitrarily deep.  Of course, `hpp;-chains 
+can be arbitrarily long, but in Expository mereology 
+%-- although `hpp; `i.conceptually` models 
+parthood %-- the relata in `xhppy; are not considered to 
+be on intrinsically different scales.  The 
+`wtp; relation `i.is` across levels, but in 
+`xhppy; we go from a whole $x$ to a `i.profile` and then 
+back to another whole.  This is not to rule out some 
+scale of size within the order of wholes, but that 
+detail is not intrinsic to the system. 
+`p`
+
+`p.
+I contend this kind of model with limited granular 
+levels is a more accurate representation of 
+how Information System actually work, consiering 
+the design of resource networks (like the 
+World Wide wen) and software systems (with 
+objects and pointers) or (relational) database 
+architcture (with tables and primary keys).  It is technologically 
+simpler to have only two or three levels of 
+organization and model complex structures via some kind of pointer 
+or indirect (e.g., foreign-key) reference.  
+Internally, technology that interacts direcly with 
+multi-level, hierarchical information %-- 
+consider an XML database %-- transforms this 
+structure into something more like an object-graph 
+(consider an XML Document Object Model). 
+`p`
+
+`p.
+I will generalize the two-level model a small bit, with 
+the following rationale: on occasion the intuition that 
+profiles point toward `i.one` target may be too 
+restrictive.  
 `p`
 
 `p.
