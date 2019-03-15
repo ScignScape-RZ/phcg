@@ -222,12 +222,87 @@ we use, say, $y$'s `i.name` on a `i.list` of
 $x$'s parts as proxy for $y$ being part of $x$.  
 Presumably $y$'s name is on the list because 
 it `i.is` part of $x$, at least on some criteria.  But 
-as such criteriological relevance 
-is built in to the list construction. 
-
+as such criteriological relevance is built in to the list 
+construction.  To enumerate the parts of $x$ we are not 
+committed to those parts being wholly subsumed under $x$; 
+just that they are `i.members of` $x$ in some 
+salient context.  An $x$ `i.taking` mereological 
+rlations is then a matter of $x$ bing concptually figured as a 
+collection, aggregate, or set.  Of course, wholes can be 
+conceived as multiples in different ways: all players in a 
+sports franchise's history is one kind of plurality; the current 
+roster is another; all the team's employees is a third.  
 `p`
 
 `p.
+I would argue that the most common kinds of mereologies in 
+paractice are some variations on this theme: to conceive 
+$x$ as a `i.whole` means to conceive it as a `i.plurality`/, 
+which introducs the posibility of numerating its 
+members, which thereby become its `i.parts`/.  But 
+rarely are part/whol relations thereby conceived 
+where the whole `q.surrounds` the part, absorbing it so 
+that mereological partiality vs. totality can be 
+readily resolved, like a room being part 
+of a house.  Usually the members of $x$ qua plurality 
+bear instead some functional and integrative relation 
+to $x$ in some context.  
+`p`
+
+`p.
+In that sense `q.enumerative` mereology may seem to be 
+incomplete, because the very act of conceiving 
+a $y$ in its functional role as a member 
+of $x$ seems to color how we are disposed to 
+$y$; we seem interested in $y$ as member 
+of $x$ rather than on its own terms.  In practice, however, 
+conceptualizing many things %-- as least initially 
+%-- as members of some multiple seems 
+epistemologically unavoidable.  Most people would 
+never know of Kylian Mbappe `i.except` 
+as a forward for les Bleus.  Usually we are 
+introduced to things viareference to a containing whole, 
+and usually that whole is figured as a plurality, 
+collection, or type (rather thanb as a physical or 
+spatial part, say): we are introduced to 
+a friend's cousin as a member of her family; 
+we learn of a new young athlete when he is drafted by a 
+team; we learn about our friend's dog by first 
+being told his breed.  Epistemologically the 
+aggregate-whole gives us an entr\'e which we 
+can then follow up by learning about the part/member 
+on its own terms. 
+`p`
+
+`p.
+Merology in this kind of situation then models a kind of 
+epistemological sequencing, tracing how our cognitive 
+attention can migrate from whole to part.  It is asy 
+to see how parthood in this context can come out circular, 
+because the pursuit of knowldge often circles back on 
+itself.  We learn about Mbappe because of our interest in les 
+Bleus; then we learn about Mbappe's carrer, of which the 
+2018 World Cup was an important part; but then we 
+circle back to les Bleus.  Mbappe is part of an  
+`q.epistemological` whole in the sense of our 
+desiring to learn a relatively complete picture of 
+French international fotball.  Mbappe is part of any 
+encyclopediac treatment of les Bleus; likewise, 
+les Bleus is part of any encyclopediac treatment of 
+Mbappe.  I might call this `i.encyclopediac` 
+mereology.  Encyclopedias, indeed, are almost essentially 
+cyclical in how references link back and forth.  But 
+veryay language suggests that these information 
+networks can be undersrood as a mereology; 
+we can readily accept sentences like: 
+
+`sentenceList,
+`sentenceItem; Husserl is part of that Encyclopedia's article on 
+Matheamtical Foundations.
+`sentenceItem; That Encyclopedia of Analytic Philosophy 
+includes Husserl but not Brentano.
+`sentenceList`
+
 
 `p`
 

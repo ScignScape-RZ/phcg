@@ -190,6 +190,25 @@ one of which is the Times itself.
 `p`
 
 `p.
+Usually when we hear part-like talk, we seem to 
+instinctively look for overlap-style relations 
+rather than subsuming inclusion of something 
+smaller into something larger.  That's why we don't 
+hear it as odd or metaphorical if something 
+apparently larger is presented as a part rather than a whole:
+
+
+`sentenceList,
+`sentenceItem; Phenomenology is only part of 
+Merleau-Ponty's ouevre.
+`sentenceItem; Iraq and Afghanistan are only part of 
+CENTCOMM's responsibility.
+`sentenceItem; .
+`sentenceList`
+  
+`p`
+
+`p.
 For a final introductory example, consider a web portal which 
 includes a collection of resources.  Suppose one of those 
 resources is another web portals which in turn 
