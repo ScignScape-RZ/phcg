@@ -292,7 +292,7 @@ les Bleus is part of any encyclopediac treatment of
 Mbappe.  I might call this `i.encyclopediac` 
 mereology.  Encyclopedias, indeed, are almost essentially 
 cyclical in how references link back and forth.  But 
-veryay language suggests that these information 
+everyday language suggests that these information 
 networks can be undersrood as a mereology; 
 we can readily accept sentences like: 
 
@@ -301,8 +301,65 @@ we can readily accept sentences like:
 Matheamtical Foundations.
 `sentenceItem; That Encyclopedia of Analytic Philosophy 
 includes Husserl but not Brentano.
+`sentenceItem; Iraq is a big part of Bush's legacy.
 `sentenceList`
 
+Of course, Iraq is not literally part of Bush's legacy 
+or of CENTCOM, as if these were geographic territories.  
+But the `i.idea` of Iraq, or in some sense 
+`q.reponsibility for` Iraq, finds a place there 
+conceptually.  
+`p`
+
+`p.
+Granted that only a hard-core idealist would equate the 
+mereological relations of the `i.idea` of 
+somthing with that thing's own 
+mereological rlations.  Surely the 
+`i.idea` of Iraq is part of many things that Iraq 
+itself is not part of.  But in fact many 
+practical applications of mereological theories 
+depend on tracing mereological relations 
+in a network of `i.ideas`/, or at least something 
+cerebral and/or computational rather than physical: 
+Web Ontologies, Information Systems, and so forth.  
+Consider the case of a web portal $W$ whose reasources 
+include a portal $W'$ which links back to $W$.  
+In general, web portals `i.contain` resources in the 
+sense that they link to or provide 
+access to web resources %-- resources that are not 
+necessarily `q.part of` the entry-point in the 
+enginering sense of being on the same servers, or 
+being URL subdomains.  So `i.to be part of` in 
+an Information Space $I$ (I'll use this as a generic 
+word for database, portal, Information System, etc.) 
+generally means that $I$ provides access 
+to, provides a kind of structrued 
+entryway to (e.g. a searchable front-end), or 
+`q.exposes` some affiliatd resource $R$.  Here saying 
+$R$ is part of $I$ also means that 
+$I$ `i.links to`/ $R$, which suggests $R$ and $I$ 
+are peers rather than granularly mismatched.  
+`p`
+
+`p.
+In short, in structures that might be conceived as 
+Information Spaces, the commensense picture that mereology implies a 
+difference in scale %-- parts are at least somewhat 
+smaller than wholes %-- seems readily contradicted.  It might 
+be argued that this is a eccentric feature of mereology 
+in `q.Information Spaces` which, as essentially cognitive 
+domains (albeit somwhat deperesonalized and 
+mchanized technologically) don't obey the usual laws of mreology.  
+But Information Technology is 
+atly where many philosophers are now 
+trying to embed mereology (or mereotopology) 
+as a technical artifact, so the kind of mereological 
+relation germane to IT should be 
+taken seriously as a candidate for mereology in general.
+`p`
+
+`p.
 
 `p`
 

@@ -203,9 +203,21 @@ apparently larger is presented as a part rather than a whole:
 Merleau-Ponty's ouevre.
 `sentenceItem; Iraq and Afghanistan are only part of 
 CENTCOMM's responsibility.
-`sentenceItem; .
+`sentenceItem; Tomorrow's chicken soup 
+(with the leftover chicken in it) is my favorite 
+part of the chicken.
 `sentenceList`
   
+If we're doing formal semantics, we might want to 
+say that the propositional form ofvthese examples 
+is a matter of overlap rather than 
+proper parthood.  But something like 
+`i.Phenomenology overlapped with Merleau-Ponty's 
+ouvre`/, or vice-versa, sounds awkward 
+in comparison.  At the very least we have an aparnt datum 
+that semantic structures involving overlap 
+often seem to invite surface articulations 
+involving explicit parthood. 
 `p`
 
 `p.
