@@ -494,8 +494,86 @@ requirements --- supporting a
 rich, multiparadigm semantics for scientific data 
 and centering a network of self-contained 
 desktop applications --- the MOSAIC SDK 
-introducs innovative features that  
-  
+introducs innovative features that some companies may 
+find useful outside the context of academic 
+publishing and Research Objects.  
+In particular, the MOSAIC application model 
+prioritizes Modular Native Design for applications 
+that are very flexible and verstile 
+from user's point of view, 
+while also securing a software-development methodology 
+that facilitates transparent Requirements 
+Enginering, rigorous code verification, 
+and demonastrable compliance with 
+legal and operational standards throughout the 
+lifetime of a project.
 
-Some companies may 
- 
+In addition to the SDK, MOSAIC utilizes technologies 
+targeted to both server-side (Cloud) 
+and client-side (Desktop) components.  On the 
+server side, NDP Cloud is a framework for deploying 
+cloud services tightly intgrated with native applications.  
+NDP Cloud applications can be tested and 
+devloped as stabalone desktop applications before 
+being uploaded to cloud servers.  
+NDP Cloud eliminates most of the technological 
+gap between web and desktop implementations.  
+For the most part, NDP Cloud uses the same code libraries 
+and programming paradigms (such as Qt/C++) as 
+desktop applications, so that client-server interop 
+bcomes analogous tob networking between two 
+desktop applications.  For this reason, NDP Cloud 
+can be a good solution for devlopers who want to 
+use cloud services to augment the capabilities 
+of desktop software, enabling peer-to-peer 
+messaging and seamless cloud backup and 
+personalization to enhance the desktop experience.
+
+On the client side, VersatileUX is an GUI 
+application framework which leverages 
+the peer-to-peer and personalization 
+capabilities of NDP Cloud.  VersatileUX 
+supports a highly modular approach to 
+application dvelopment, with tight 
+correlation between data structures and the GUI 
+elements used to display them.  VersatileUX 
+software is a composite of semi-autonomous  
+modules, each of which is responsible for 
+reading or receiving data conforming 
+to specific structureas (from a file or a network) 
+and presenting these data structres in specialized 
+GUIs.  GUI and data-structure components are 
+bound together via strong typing.  Because VersatileUX 
+components are developed in isolation, testing and 
+compliance verification is simplified for the application 
+as a whole.  At the same time, each VersatileUX 
+module can design its own scripting and personalization 
+features, so the overall application can be 
+granularly fine-tuned to the needs of each user.
+
+NDP Cloud and VersatileUX work together to 
+promote personalization and interoperability.  
+Individual desktop applications, built 
+with the aid of VersatileUX, can connect to an 
+NDP Cloud service so as to track user identity across 
+application instances (or even across applications themselves), 
+while using the cloud service for data vbackup and 
+to connect multiple users for messaging and collaboration.  
+VersatileUX modules can be fine-tuned via 
+user preferences and application-specific data obtained from 
+NDP Cloud services, updating application state via 
+Runtime Reflection.  Reflecting MOSAIC's 
+emphasis on complex semantics for scientific data, 
+NDP Cloud and VersatileUX interoperate via 
+sophisticated protocols for exchanging 
+strongly-typed data structures between clients and 
+servers and between clients themselves (via cloud messaging).  
+The key difference between this Cloud/Native Hybrid 
+architecture and conventional client/server architecture 
+(including other Cloud/Native paradigms) is that 
+both server- and client-side code uses 
+strong typing, and a single type system is 
+sustained across all client and server components.
+
+
+
