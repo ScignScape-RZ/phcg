@@ -1,0 +1,265 @@
+\documentclass[10pt,letterpaper,twocolumn,landscape]{article}
+
+\usepackage{eso-pic}
+
+\AddToShipoutPicture{%
+\ifnum\value{page}>1
+{\color{inOne}\transparent{0.3}{\put(15,35){\rule{0.5\paperwidth}{.4cm}}}}%
+{\color{inTwo}\transparent{0.3}\put(10,40){{\rule{0.5\paperwidth}{.4cm}}}}
+\put(271,44){%
+\transparent{1}{
+\includegraphics[width=0.1\textwidth]{logo.png}} }
+\fi
+}
+
+
+\pagestyle{empty} % no page number
+\parskip 7.2pt    % space between paragraphs
+\parindent 12pt   % indent for new paragraph
+\textwidth 4.5in  % width of text
+\columnsep 0.8in  % separation between columns
+
+\usepackage{geometry}
+\geometry{left=0.5in,top=0.5in,right=0.5in,bottom=0.5in} %margins
+\usepackage{graphicx}
+\usepackage{color,framed}
+
+\usepackage{float}
+
+\usepackage{mdframed}
+
+\newcommand{\propHeader}[1]{\huge\bgroup #1\egroup}
+\newcommand{\propAddress}[1]{#1}
+\newcommand{\propPrice}[1]{\$\textit{#1}}
+\newcommand{\propAgent}[1]{\huge\bgroup #1\egroup}
+\newcommand{\mlsNumber}[1]{\Large\bgroup MLS\##1\egroup}
+
+\usepackage{setspace}
+\newcommand{\rpdfNotice}[1]{\begin{onehalfspacing}{
+
+\Large #1
+
+}\end{onehalfspacing}}
+
+\usepackage{xcolor}
+
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage[hyphens]{url}
+
+\usepackage{hyperref}
+\newcommand{\rpdfLink}[1]{\href{#1}{\small{#1}}}
+\newcommand{\dblHref}[1]{\href{#1}{\small{\burl{#1}}}}
+\newcommand{\browseHref}[2]{\href{#1}{\Large #2}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\urlstyle{same}
+
+\definecolor{blGreen}{rgb}{.2,.7,.3}
+\definecolor{darkRed}{rgb}{.2,.0,.1}
+
+\definecolor{darkBlGreen}{rgb}{.1,.3,.2}
+
+\definecolor{oldBlColor}{rgb}{.2,.7,.3}
+
+\definecolor{blColor}{rgb}{.1,.3,.2}
+
+\definecolor{elColor}{rgb}{.2,.1,0}
+\definecolor{flColor}{rgb}{0.7,0.3,0.3}
+
+\definecolor{logoOrange}{RGB}{108, 18, 30}
+\definecolor{logoGreen}{RGB}{85, 153, 89}
+\definecolor{logoPurple}{RGB}{200, 208, 30}
+
+\definecolor{logoBlue}{RGB}{4, 2, 25}
+\definecolor{logoPeach}{RGB}{255, 159, 102}
+\definecolor{logoCyan}{RGB}{66, 206, 244}
+\definecolor{logoRed}{rgb}{.3,0,0}
+
+\definecolor{inOne}{rgb}{0.122, 0.435, 0.698}% Rule colour
+\definecolor{inTwo}{rgb}{0.122, 0.698, 0.435}% Rule colour
+
+\definecolor{outOne}{rgb}{0.435, 0.698, 0.122}% Rule colour
+\definecolor{outTwo}{rgb}{0.698, 0.435, 0.122}% Rule colour
+
+\usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
+
+\usepackage{transparent}
+
+\newenvironment{cframed}{\begin{mdframed}[linecolor=logoPeach,linewidth=0.4mm]}{\end{mdframed}}
+
+\newenvironment{ccframed}{\begin{mdframed}[backgroundcolor=logoGreen!5,linecolor=logoCyan!50!black,linewidth=0.4mm]}{\end{mdframed}}
+
+\usepackage{aurical}
+\usepackage[T1]{fontenc}
+
+\newcommand{\YPDFI}{{\fontfamily{fvs}\selectfont YPDF-Interactive}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% First page of the Brochure
+
+\raisebox{-1em}{\transparent{0.75}{{\begin{tcolorbox}[colframe=outOne,colback=inOne]\end{tcolorbox}}}}
+\vspace{-4em}{\transparent{0.5}{{\begin{tcolorbox}[colframe=outTwo,colback=inTwo]\end{tcolorbox}}}}
+
+\vspace{-5em}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Second and Third page
+
+
+\begin{ccframed}
+
+%{
+\section*{Property Highlights}
+\begin{description}
+\item[MLS\#] 1810325
+\item[Town] Emerson
+\item[Address] 16 Cindy Lane
+\item[Current Price] \$990,000
+\item[Style] Colonial
+\item[Rooms] 13
+\item[Bedrooms] 6
+\item[Full Baths] 4
+\item[Half Baths] 1
+\item[Basement] Finished,Full
+\item[Garage] Attached,2 Car	List Date: 03/20/2018
+\item[Category] Residential
+\item[Taxes] \$21,296
+\end{description}
+%}
+
+\section*{Community Highlights}
+\begin{description}
+\item[Population] 7,575
+\item[Median Household Income] \$111,912
+\item[Median Age] 45.71
+\end{description}
+More Community Info at: 
+\dblHref{http://www.njmls.com/communities/index.cfm?action=dsp.towninfo\&townname=EMERSON}
+\end{ccframed}
+
+\begin{cframed}
+
+\hspace{-.195\textwidth}
+\begin{minipage}{1.3\textwidth}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1.4in]{h2.jpg}
+\includegraphics[width=1.4in]{h3.jpg}
+\includegraphics[width=1.4in]{h4.jpg}
+\end{center}
+\end{figure}
+\end{minipage}
+
+%\begin{figure}[h]
+%\begin{center}
+%\includegraphics[width=1.5in]{h5.jpg}
+%\includegraphics[width=1.5in]{h6.jpg}
+%\includegraphics[width=1.5in]{h7.jpg}
+%\end{center}
+%\end{figure}
+
+\section*{Browse Options}
+\begin{itemize}
+\item\browseHref{http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1810325&openhouse=true&dayssince=15&countysearch=false}{View More Images}
+\item\browseHref{http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1810325&openhouse=true&dayssince=15&countysearch=false}{Take Virtual Tour}
+\item\browseHref{http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1810325&openhouse=true&dayssince=15&countysearch=false}{View Panorama Photos}
+\item\browseHref{http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1810325&openhouse=true&dayssince=15&countysearch=false}{View 3D Model}
+\item\browseHref{http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1810325&openhouse=true&dayssince=15&countysearch=false}{Architectural Highlights}
+
+\end{itemize}
+
+\section*{Property Remarks}
+Contemporary stunner! Located in the charming town of Emerson, this 6 bedroom, 4.5 bath home is a contemporary lovers dream. You'll find hardwood floors through out the home, detailed moldings, and freshly bright painted walls. The home has an open floor layout which creates great flow through the home. There is a large living room and dining area, which flows into the large state of the art kitchen. The kitchen features granite counters, all updated appliances, and tons of storage! There are 6 bedrooms throughout the home, this includes the stunning master bedroom suite. The basement is entirely finished. Equipped with a full family room great for entertainment, a large open kitchen and dining area, and tons of space to tailor to your home dreams! There is a large garage and a great yard. The entire home is stunning and close to shopping centers, worship centers, the best schools, and in close proximity to NYC transportation!
+\end{cframed}
+
+
+%\noindent{\Huge\textbf{\textsc{Click to 
+%\href{http://www.njmls.com/listings/index.cfm?action=dsp.info&mlsnum=1810325&openhouse=true&da%yssince=15&countysearch=false}{View More Images}}}}
+
+%\begin{figure}[b]
+%\begin{center}
+%\includegraphics[width=2.0in]{logo.png}
+%\end{center}
+%\end{figure}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Last page of the Brochure
+\begin{cframed}
+
+\subsection*{Property Features}
+{
+\begin{description}
+\setlength{\itemsep}{2pt}
+%\setlength{\parskip}{0pt}
+%\setlength{\parsep}{0pt} 
+\item[Cooling] Central Air
+\item[Exterior] Brick
+\item[Fireplace] 1 Fireplace
+\item[Lifestyle] Close to Shopping, Extended Family
+\item[Miscellaneous Interior/Exterior]
+Central Vac, Hardwood,
+Security, Skylights, Sprinklers,
+Storm Windows/Screens, Deck / Patio
+\item[Exterior] Brick
+\item[Heat/Cool] Baseboard, Gas, Multi-Zone
+\item[Lot Description] Regular
+\item[Pool] In-ground, Heated
+\item[Views/Exposure] South 
+\item[Year Built] 2000's
+\end{description}
+}
+\vspace{5mm}\hrule\vspace{0.75mm}
+
+\subsection*{NJMLS Listing History}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{tabular}{l c l l p{4cm}}
+
+1810325 & 03/20/18 & \$990,000 & Listed & By: Group Twenty Six, LLC \\
+1730907 & 02/15/18 & \$999,000 & Off-market & By: Group Twenty Six, LLC \\
+        & 10/13/17 & \$999,000 & Price change & \\
+        & 07/28/17 & \$1,169,000 & Listed & By: Friedberg Properties \& Associates -- Alpine  \\
+1433163 & 03/02/15 & \$1,169,000 & Off-market & \\
+        & 09/01/14 & \$1,169,000 & Listed & By: Coldwell Banker, Fort Lee
+
+%10/13/17 $999,000Price change
+%07/28/17 $1,169,000ListedBy: Friedberg Properties & Associates - Alpine
+%1433163 03/02/15 $1,169,000Off-market
+%09/01/14 $1,169,000ListedBy: Coldwell Banker, Fort Lee
+
+%7 & 8 & 9 
+
+%1810325 & 03/20/18 & \$990,000 & Listed & By: Group Twenty Six, LLC \\
+%1730907 & 02/15/18 & \$999,000 & Off-market & By: Group Twenty Six, LLC \\
+
+\end{tabular}
+
+%MLS #DatePriceStatusReal Estate Office
+%1810325 03/20/18 $990,000ListedBy: Group Twenty Six, LLC
+%1730907 02/15/18 $999,000Off-market
+%10/13/17 $999,000Price change
+%07/28/17 $1,169,000ListedBy: Friedberg Properties & Associates - Alpine
+%1433163 03/02/15 $1,169,000Off-market
+%09/01/14 $1,169,000ListedBy: Coldwell Banker, Fort Lee
+\end{cframed}
+
+\subsection*{Thanks!}
+For more information on how to use \YPDFI{}, please click 
+\href{http://mmui-lts-dev.193b.starter-ca-central-1.openshiftapps.com/}{here}.
+
+
+
+\end{document}
