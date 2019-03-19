@@ -347,11 +347,63 @@ to \textit{enhance} Research Objects with
 content tailord to specialized software --- for 
 example, sophisticated data visualization features, 
 or integration with software commonly used in the 
-relevant research fields.  Howevere, these extra capabilities 
+relevant research fields.  However, these extra capabilities 
 augment the core of the Research Object, which should 
 provide a mechnism for researchers to understand, 
 visualize, and reuse the bundled code and data without 
 requiring external software or code libraries.
 
+In order to help authors create self-contained 
+Research Objects, MOSAIC defines a 
+\textit{Reference Application Kernel} (RAK) 
+which presents a canonical format for bundling 
+research data and code into a self-contained 
+package.  A Research Object bundle using 
+the RAK format can be called an RAK bundle.  
+Each RAK bundle provides a standalone, desktop-style 
+Dataset Application that offers an entry point to 
+the raw data.  By design, it should be easy 
+to download the RAK bundle from MOSAIC and 
+then compile and launch the Dataset Application, so 
+readrs can begin exploring the data set with 
+minimal hassle.  The RAK format includes othr 
+features as well, such as code export and testing 
+features which provide a more detailed access to 
+the published data.  However, the Dataset Application 
+presents a useful introduction to the underlying 
+data set, which helps users get oriented to the dataset 
+in its broad overview before they start to examine it in 
+finer detail.
 
+Technically, MOSAIC RAK bundles are code repositories 
+based on the Qt platform for C++ Applications.  
+In RAK, each data set features C++ code which has no 
+dependencies apart from Qt itself.  The Dataset 
+Application should compile and run automatically from 
+inside Qt Creator.  Because Qt is an advanced 
+desktop GUI development platform, it allows 
+Research Objects to present compelling, 
+interactive graphics and GUI componenst 
+--- including 2D and 3D visualizations, tables and charts, 
+context menus, dialog boxes, explanations of 
+technical terms, embedded PDF viewers, and other 
+features which make Dataset Applications an 
+interactive and pedagogically useful tool for 
+exploring raw data, customized for each data set.
+  
+Research Objects indexed by MOSAIC do not have to 
+use the RAK model.  However, RAK provides a 
+Reference Implementation of how Research Object 
+metadata can be described so it is automatically 
+processed by a MOSAIC portal.  Developers 
+using different Research Object models can 
+examine how RAK bundles expose data to MOSAIC 
+so as to create analogous metadata for their own 
+bundles.
 
+The MOSAIC SDK and Data Modeling Features
+
+To facilitate implementation of RAK bundles, 
+MOSAIC provides several development tools and 
+code libraries which can help set up a development 
+environment tailored to the MOSAIC ecosystem.  
