@@ -1,4 +1,4 @@
-\documentclass[11pt,letterpaper]{article}
+\documentclass[10pt,letterpaper]{article}
 
 \usepackage{eso-pic}
 
@@ -56,7 +56,7 @@
 %\columnsep 0.8in  % separation between columns
 
 \usepackage{geometry}
-\geometry{left=.65in,top=1.15in,right=.65in,bottom=1.15in} %margins
+\geometry{left=.5in,top=.85in,right=.5in,bottom=1.15in} %margins
 \usepackage{graphicx}
 \usepackage{color,framed}
 
@@ -154,9 +154,9 @@
 
 
 \section{Introduction}
-{\MOSAIC} is a cloud portal for hosting scientific, academic, and 
+{\lfMOSAIC} is a cloud portal for hosting scientific, academic, and 
 technical publications.  {\MOSAIC} bridges the gap between 
-traditional acadmic publishing and the new 
+traditional academic publishing and the new 
 world of software- and data-driven research platforms, 
 which feature interactive reading experiences 
 and open-access data sharing.
@@ -240,15 +240,15 @@ In addition to {\MOSAIC} itself,
 the technology driving the platform can be 
 deployed as a suite of three products that can 
 be licenced individually or collectively --- the
-{\MOSAIC} {\SDK}, NDP Cloud (Native-Driven Platform 
-for the Cloud), and VersatileUX (a front-end 
+{\MOSAIC} {\SDK}, {\NDPCloud} (Native-Driven Platform 
+for the Cloud), and {\VersatileUX} (a front-end 
 development toolkit).  
 \p{}
 This summary and accompanying slides will describe the 
 current technological limitations that {\MOSAIC} 
 addresses, outline {\MOSAIC} as a whole, 
-and then review the {\MOSAIC} {\SDK}, NDP Cloud, 
-and VersatileUX products.
+and then review the {\MOSAIC} {\SDK}, {\NDPCloud}, 
+and {\VersatileUX} products.
 \p{}
 \subsection{How the Research Object Protocol is Supposed to Work}
 Unlike a data set which just exposes raw data, a 
@@ -663,62 +663,62 @@ lifetime of a project.
 In addition to the {\SDK}, {\MOSAIC} utilizes technologies 
 targeted to both server-side (Cloud) 
 and client-side (Desktop) components.  On the 
-server side, NDP Cloud is a framework for deploying 
+server side, {\NDPCloud} is a framework for deploying 
 cloud services tightly intgrated with native applications.  
-NDP Cloud applications can be tested and 
+{\NDPCloud} applications can be tested and 
 developed as standalone desktop applications before 
 being uploaded to cloud servers.  
-NDP Cloud also eliminates most of the technological 
+{\NDPCloud} also eliminates most of the technological 
 gap between web and desktop implementations.  
-For the most part, NDP Cloud uses the same code libraries 
+For the most part, {\NDPCloud} uses the same code libraries 
 and programming paradigms as 
 desktop applications (such as Qt/C++), 
 so that client-server interop 
 becomes analogous to networking between two 
-desktop applications.  For this reason, NDP Cloud 
+desktop applications.  For this reason, {\NDPCloud} 
 can be a good solution for developers who want to 
 use cloud services to augment the capabilities 
 of desktop software, enabling peer-to-peer 
 messaging and seamless cloud backup and 
 personalization to enhance the desktop experience.
 \p{}
-On the client side, VersatileUX is an {\GUI} 
+On the client side, {\VersatileUX} is an {\GUI} 
 application framework which leverages 
 the peer-to-peer and personalization 
-capabilities of NDP Cloud.  VersatileUX 
+capabilities of {\NDPCloud}.  {\VersatileUX} 
 supports a highly modular approach to 
 application development, with tight 
 correlation between data structures and the {\GUI} 
-elements used to display them.  Any VersatileUX 
+elements used to display them.  Any {\VersatileUX} 
 software is a composite of semi-autonomous  
 modules, each of which is responsible for 
 reading or receiving data conforming 
 to specific structures (from a file or a network) 
 and presenting these data structures in specialized 
 {\GUI}s.  {\GUI} and data-structure components are 
-bound together via strong typing.  Because VersatileUX 
+bound together via strong typing.  Because {\VersatileUX} 
 components are developed in isolation, testing and 
 compliance verification is simplified for the application 
-as a whole.  At the same time, each VersatileUX 
+as a whole.  At the same time, each {\VersatileUX} 
 module can design its own scripting and personalization 
 features, so the overall application can be 
 granularly fine-tuned to the needs of each user.
 \p{}
-NDP Cloud and VersatileUX work together to 
+{\NDPCloud} and {\VersatileUX} work together to 
 promote personalization and interoperability.  
 Individual desktop applications, built 
-with the aid of VersatileUX, can connect to an 
-NDP Cloud service so as to track user identity across 
+with the aid of {\VersatileUX}, can connect to an 
+{\NDPCloud} service so as to track user identity across 
 application instances (or even across applications themselves), 
 while using the cloud service for data backup and 
 to connect multiple users, for purposes of 
 messaging and collaboration.  
-VersatileUX modules can be fine-tuned via 
+{\VersatileUX} modules can be fine-tuned via 
 user preferences and application-specific data obtained from 
-NDP Cloud services, updating application state via 
+{\NDPCloud} services, updating application state via 
 Runtime Reflection.  Reflecting {\MOSAIC}'s 
 emphasis on complex semantics for scientific data, 
-NDP Cloud and VersatileUX interoperate via 
+{\NDPCloud} and {\VersatileUX} interoperate via 
 sophisticated protocols for exchanging 
 strongly-typed data structures between clients and 
 servers and between clients themselves (via cloud messaging).  
@@ -729,8 +729,8 @@ both server- and client-side code uses
 strong typing, and a single type system is 
 sustained across all client and server components.
 \p{}
-Companies can licence the {\MOSAIC} {\SDK}, VersatileUX, and/or 
-NDP Cloud whther or not they 
+Companies can licence the {\MOSAIC} {\SDK}, {\VersatileUX}, and/or 
+{\NDPCloud} whether or not they 
 host publications on {\MOSAIC} or host their own instance 
 of a {\MOSAIC} portal.
 
