@@ -8,21 +8,24 @@ world of software- and data-driven research platforms,
 which feature interactive reading experiences 
 and open-access data sharing.
 
-Today there are many online portals, catering 
+Today there are many online academic/scientific/technical 
+portals, catering 
 to an academic and technical audience, which aggregate 
-links to research articles, books, and journals.   
-Portals typically link to web pages devoted to individual 
+links to research articles, books, and journals.  
+Portals with this emphasis can be called 
+AST (academic/scientific/technical) Portals.  
+AST Portals typically link to web pages devoted to individual 
 publications, with each page displaying citations, 
 abstracts, keywords/topical classification, and 
 (when appropriate) links to download entire 
 publications in e-reader (typically PDF) formats.  
-Document portals are provided both by 
+AST Portals are provided both by 
 individual publishers and by scientific 
 projects (like Sciverse, Mendeley Data, and Dryad) 
 aggregating content from many publishers.
 
 Because they were designed for traditional publications, 
-these existing portals have limited 
+current AST Portals have limited 
 support for technologically sophisticatd 
 features of modern publications: annotating 
 document text with linked data, and joining 
@@ -30,7 +33,7 @@ publications with open-access data and interactive
 presentations.  Publishers have therefore 
 sponsored several projects and standards, including 
 the FAIR (Findable, Accessible, Interoperable, 
-Reusable) initiatives and the Research Object 
+Reusable) initiative and the Research Object 
 Protocol.  These initiatives are designed to 
 improve research portals' support for cutting-edge 
 publication technology.
@@ -38,10 +41,9 @@ publication technology.
 Unfortunately, publishers have not significantly adopted 
 or embraced the Research Object Protocol and similar 
 proposals.  As a result, authors and researchers have 
-had fewer incentives to embrace these standards 
-either.  While scintists increasingly 
-publish raw data --- part of an emerging 
-paradigm prioritizing replication 
+had fewer incentives to embrace these standards.  While 
+scintists increasingly publish raw data --- part of an 
+emerging paradigm prioritizing replication 
 and transparency --- very few data sets are published 
 as Research Objects conforming to contemporary standards.  
 Even when data sets do have this 
@@ -53,8 +55,8 @@ afforded by the Research Object Protocol.
 
 This explains why a new scientific, academic, technical 
 publishing platform is needed.  MOSAIC 
-steps into this void first by providing a new 
-portal and second by providing the cloud-native 
+steps into this void first by instantiating a new 
+AST Portal and second by providing the cloud-native 
 technology to replicate this portal in 
 other conextss, so that publishers and 
 other institutions can create their own versions of 
@@ -63,7 +65,7 @@ MOSAIC or reuse its components in other projects.
 In addition to MOSAIC itself, 
 the technology driving the platform can be 
 deployed as a suite of three products that can 
-be licenced individually or collectively --- 
+be licenced individually or collectively --- the
 MOSAIC SDK, NDP Cloud (Native-Driven Platform 
 for the Cloud), and VersatileUX (a front-end 
 development toolkit).  
@@ -75,10 +77,11 @@ and then review the MOSAIC SDK, NDP Cloud,
 and VersatileUX products.
 
 How the Research Object Protocol is Supposed to Work
+
 Unlike a data set which just exposes raw data, a 
 Research Object combines data and code into a bundle 
 that promotes interactive exploration and reuse, 
-adding value to their text-based associated publications.  
+adding value to associated publications.  
 To fully levrage this added value, the Research Object 
 Protocol was designed to ensure that Research Object 
 publications can seamlessly interoperate 
@@ -88,21 +91,115 @@ According to the standard, when an author publishers a
 Research Object --- either on a specialized academic 
 site like Mendeley Data or a generic service like 
 Github --- authors would notify the maintainers of 
-portals that index their publications that a new 
-data set, associated with the corresponding 
+AST Portals (those which index the corresponding publication) 
+that a new data set, associated with the corresponding 
 publication, is now publicly available.  Because 
 Research Objects have a fixed structure, portals' 
 software can then, in principle, automatically 
 extract metadata from the Research Object and 
-use this metadata to update web pages indexing 
-the associated publication.  These web pages can 
+use this metadata to update the relevant web pages.  
+These web pages can 
 then, first, include a link for readers to 
 download the data set itself as a zipped folder, 
 and, second, present basic information about 
 the data set: its software requirements, 
 file formats, download/unzipped size, programming 
 language(s) used, update and version info, and 
-other basic technical information.  
+instructions on compiling/using the 
+Research Object code.  Second, 
+web applications (and other kinds of software) can use 
+the Research Object metadata to display an overview of 
+the Research Object code --- for instance, a summary of 
+important data types and procedures implemented on them.  
+Technical overviews of Research Object code 
+serves as pedagogical overviews of research 
+methods: the data structures and algorithms used to compute 
+research findings encapsulate the data collection 
+instruments (which can be lab equiment but also surveys, 
+corpora, and other social-science data sources) 
+and the experimental protocols which have informed 
+the published work.
+ 
+In short, Research Objects are a logical extension of a 
+published book or article.  By sharing code alongside raw 
+data, each Research Object includes a code base whose 
+design captures the essential structural and methodological 
+features of the research.  For example, by 
+modeling the information entered into the system by 
+data collection instruments, the Research Object 
+code base clarifies the system's scientific theory and 
+epistemological paradigms.  It distinguishes 
+input data points from calculated data values, and 
+demonstrates the requirements and presuppotions 
+concerning input data and how derived values 
+are computed.  The 
+Research Object code thereby bcomes a concrete 
+prototype of the experimentl and analytical 
+methodology described theoretically in the publication.
+
+In principle, then, AST  
+Portals can use Research Objects to build summary 
+presentations of published research.  Like an 
+abstract, these summaries can show readers a 
+concise overview of a publication to help them 
+decide whether they will benefit from rading and/or 
+downloading the publication and/or data set as a whole.
+
+But the Research Object Protocol has not Been Implemented!
+
+Unfortunately, the Research Object features just described 
+have not yet found their way into existing AST  
+Portals.  Current technology does not 
+interoprate with Research Object on either 
+the simpler metadata level or the more sophisticated 
+architectural level.  This gap is a combination 
+of three distinct problems:
+
+\begin{enumerate}
+\item First, there is no standardized way for authors 
+to notify publishers about new Research Objects.  
+Some data set portals, like Mendeley, have 
+web forms where resarchers can enter information 
+about their Research Objects.  According to Elsevier, 
+the metadata in Mendeley is then internally shard 
+with other Elsevier portals, like SciVerse.  
+However, it is not clear when new technology 
+which is supposed to integrate Mndeley Dataand 
+SciVerse will actually come online.  
+Other publishers, meanwhile, do not appear to have 
+any mchnism for interoperating between 
+AST Portals (which aggregate publications) and 
+data set portals (which can aggregate Research Objects).
+
+\item Even if authors \textit{can} refer AST Portals 
+to published Research Objects, the AST Portals 
+need sufficient capabilities to access and 
+interpret Research Object metadata.  This 
+requires portal software that can read such metadata, 
+and also that web templates include sections for 
+displaying Research Objects' technical information 
+(like programming language and file format), 
+the kind of basic information which can be automatically 
+extracted according to the Research Object Protocol.
+
+\item Moreover, to fully leverage the value 
+of Research Objects, AST Portals need to interpret 
+Research Object metadata at a higher scientific level.  
+This bcomes possible when Research Object metadata 
+presents summarial information about the 
+experimental protocols and computational 
+methods employed via Research Object code.  
+However, although the Research Object Protocol 
+recommends that data bundles include 
+this sort of higher-level metadata, 
+the protocol does not spcify how 
+such scientific infornation should 
+be represented and how it should be used 
+by protocol-compliant software.  
+
+\end{enumerate} 
+ 
+
  
 
 
