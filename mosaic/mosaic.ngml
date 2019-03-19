@@ -326,5 +326,32 @@ practices, and conceptualizations.
 
 The MOSAIC Architecture and Data Models
 
+A MOSAIC portal combines a central web service with a 
+collection of independent Research Objects.  Not every 
+document indexed by MOSAIC must have an associated 
+Research Object, but the technological design of 
+MOSAIC prioritizes integrating research portals 
+with downloadable Research Objects.
+
+In particular, MOSAIC encouragesa the 
+creation of \tectit{self-contained} Research Objects.  
+In particular, MOSAIC assumes that the 
+typical Research Object indexed on a MOSAIC portal 
+will be a downloadable code-and-data bundle 
+with \textit{minimal external dependencies}.  
+It should be easy for readers to get 
+started exploring and interacting with Research Objects 
+without complicated downloads or installation of 
+additional software.  Authors are certainly free 
+to \textit{enhance} Research Objects with 
+content tailord to specialized software --- for 
+example, sophisticated data visualization features, 
+or integration with software commonly used in the 
+relevant research fields.  Howevere, these extra capabilities 
+augment the core of the Research Object, which should 
+provide a mechnism for researchers to understand, 
+visualize, and reuse the bundled code and data without 
+requiring external software or code libraries.
+
 
 
