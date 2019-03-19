@@ -75,7 +75,35 @@ and then review the MOSAIC SDK, NDP Cloud,
 and VersatileUX products.
 
 How the Research Object Protocol is Supposed to Work
+Unlike a data set which just exposes raw data, a 
+Research Object combines data and code into a bundle 
+that promotes interactive exploration and reuse, 
+adding value to their text-based associated publications.  
+To fully levrage this added value, the Research Object 
+Protocol was designed to ensure that Research Object 
+publications can seamlessly interoperate 
+with research portals and publishers' web sites.
 
+According to the standard, when an author publishers a 
+Research Object --- either on a specialized academic 
+site like Mendeley Data or a generic service like 
+Github --- authors would notify the maintainers of 
+portals that index their publications that a new 
+data set, associated with the corresponding 
+publication, is now publicly available.  Because 
+Research Objects have a fixed structure, portals' 
+software can then, in principle, automatically 
+extract metadata from the Research Object and 
+use this metadata to update web pages indexing 
+the associated publication.  These web pages can 
+then, first, include a link for readers to 
+download the data set itself as a zipped folder, 
+and, second, present basic information about 
+the data set: its software requirements, 
+file formats, download/unzipped size, programming 
+language(s) used, update and version info, and 
+other basic technical information.  
+ 
 
 
  
