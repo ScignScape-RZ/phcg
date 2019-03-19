@@ -33,17 +33,37 @@ publications with open-access data and interactive
 presentations.  Publishers have therefore 
 sponsored several projects and standards, including 
 the FAIR (Findable, Accessible, Interoperable, 
-Reusable) initiative and the Research Object 
+Reusable) initiative, 
+FORCE11 (Future of Research Communication and e-Scholarship), 
+and the Research Object 
 Protocol.  These initiatives are designed to 
 improve research portals' support for cutting-edge 
-publication technology.
+publication technology.  In the 
+words of the FORCE11 \q{Manifesto}:
+
+\begin{quote}
+While not disputing the expressive power of the written 
+word to communicate complex ideas, our foundational assumption 
+is that scholarly communication by means of semantically-enhanced 
+media-rich digital publishing is likely to have a greater impact 
+than communication in traditional print media or electronic 
+facsimiles of printed works.  However, to date, online [publications] 
+have tended to replicate print forms, rather than exploit the 
+additional functionalities afforded by the digital terrain.  
+We believe that digital publishing of enhanced papers will enable 
+more effective scholarly communication, which will also broaden 
+to include, for example, better links to data, the publication of 
+software tools, mathematical models, protocols and workflows, and 
+research communication by means of social media channels.
+\end{quote}
 
 Unfortunately, publishers have not significantly adopted 
 or embraced the Research Object Protocol and similar 
 proposals.  As a result, authors and researchers have 
-had fewer incentives to embrace these standards.  While 
-scintists increasingly publish raw data --- part of an 
-emerging paradigm prioritizing replication 
+had fewer incentives to embrace these paradigms, 
+despite the efforts of groups like FORCE11 to promote them.  
+While scintists increasingly publish raw data --- part of 
+an emerging paradigm prioritizing replication 
 and transparency --- very few data sets are published 
 as Research Objects conforming to contemporary standards.  
 Even when data sets do have this 
@@ -196,11 +216,115 @@ the protocol does not spcify how
 such scientific infornation should 
 be represented and how it should be used 
 by protocol-compliant software.  
-
 \end{enumerate} 
  
+According to the Research Object bundle specification: 
 
+\begin{quote}
+The specification for the RO model does not mandate any 
+particular form for the representation of Research Objects. 
+... Annotations about this research object and its resources ... 
+may be present, [and] provides additional metadata or descriptions 
+which are somewhat about or related to the research object or some 
+of its aggregated resources.
+\end{quote}
+
+Extending the underlying RO model, developers have 
+specified more detailed models such as \q{Wf4Ever}:
+
+\begin{quote}
+The focus of Wf4Ever is on workflow preservation 
+(and more specifically workflows supporting scientific investigation). 
+Thus the objects that will be described using the model are inherently 
+workflow-centric.  Although the basic infrastructure 
+(aggregation + annotation + domain vocabularies) that the RO model supports 
+is applicable to many situations 
+(for example the executable or enhanced publication of FORCE11), 
+the specific vocabularies defined within the Wf4Ever RO model are 
+intended to support those Research Objects that 
+have workflows (methods) as their primary content.
+\end{quote}
+
+In short, a well-established model is provided for workflow-centric 
+Research Objects, but comparable specifications have not 
+emerged for other kinds of technical projects.  In the general 
+case, publishers have to define their own Research Object 
+modls.  That is, they have to specify what sort of 
+metadata Research Objects should expose so that 
+information about Research Objects can be integrated 
+into publishers' overall online resources.  
+
+Because publishers have been unwilling to develop their own 
+Research Object technology, authors do not have clear 
+guidelines about how to document and annotate Research Objects 
+even if they embrace the Research Object paradigm.  
+This has appently caused an impasse wherein 
+neither authors nor publishers model sufficiently detailed 
+requirements of one another to complete the Research Object 
+circuit.  In particular, scientists do not have 
+Research Object data models for most academic disciplines 
+which are fine-grained like the Wf4Ever Ontology.  
+While this situation surely reflects technologically 
+inertia, it also testifies to the conceptual gap between 
+Semantic Web Ontologies and scientific data models 
+themselves, a gap which has been noted 
+by many scientists themselves.  
+
+Scientists have criticized contemporary standards for data sharing 
+--- e.g., the Semantic Web --- for lacking conceptual precision 
+and failing to capture the essence of scientific 
+procedures.  In the words of 
+Martin Raubal and Benjamin Adams,
+
+\begin{quote}
+ the Semantic Web is still not semantic in the 
+ human sense because it does not sufficiently 
+account for people's cognition, i.e., human conceptual 
+representations and reasoning...  [K]nowledge representations 
+underpinning the Semantic Web should
+afford two important human cognitive tasks: 
+the efficient calculation of semantic similarity ... 
+and combinations of concepts.... However, 
+the existing logical foundations of the Semantic
+Web --- description logics and rules --- presume a set-based 
+classification scheme that does a poor job of
+facilitating these operations. 
+\end{quote}
+
+Raubal and Adams have developed their own system 
+for representing scientific data, called Conceptual 
+Space Markup Language (CSML), which can 
+be an equal or superior format for describing 
+scientific metadata than RDF Ontologies.  However, 
+although the Research Object Protocol 
+does not specifically require RDF (Resource Description 
+Format), its tooling and specification clearly 
+show the influence of Semantic Web technology.  
+This has prevented alternatve models like 
+Conceptual Spaces --- originally proposd 
+by the Cognitive Scientist Peter G\"ardenfors 
+--- which are intended to be more 
+accurate models of scientific data, based on investigation 
+of both human conceptualization and scientific practice. 
  
+In contrast to the existing Research Object model, 
+MOSAIC provides a detailed structure for 
+describing scientific data.  MOSAIC itself 
+is an acronym for \textit{Multiparadigm 
+Ontologies for Scientific, Academic, and Technical Publications}.  
+MOSAIC unifies diverse models and theories of 
+scientific metadata, such as Conceptual 
+Space Markup Language, into a canonical but flexible format 
+that ensures interoperability between Research Object code 
+and AST Portals' software.  MOSAIC, furthermore, 
+models scientific metadata with rigorous attention 
+to scientific practic (and rsearch methodology 
+in gneral, across academic disciplines).  In 
+short, for MOSAIC, metadata is not just a technological 
+artifact but a conceptual summary of scientific theories, 
+practices, and conceptualizations.  
+
+The MOSAIC Architecture and Data Models
 
 
- 
+
