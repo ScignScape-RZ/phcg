@@ -1,2 +1,57 @@
 
-MOSAIC 
+MOSAIC Science, Humanities, and Enginering Portal
+
+MOSAIC is a cloud portal for hosting scientific, academic, and 
+technical publications.  MOSAIC bridges the gap between 
+traditional acadmic publishing and the new 
+world of software- and data-driven research platforms, 
+which feature interactive reading experiences 
+and open-access data sharing.
+
+Today there are many online portals, catering 
+to an academic and technical audience, which aggregate 
+links to research articles, books, and journals.   
+Portals typically link to web pages devoted to individual 
+publications, with each page displaying citations, 
+abstracts, keywords/topical classification, and 
+(when appropriate) links to download entire 
+publications in e-reader (typically PDF) formats.  
+Document portals are provided both by 
+individual publishers and by scientific 
+projects (like Sciverse, Mendeley Data, and Dryad) 
+aggregating content from many publishers.
+
+Because they were designed for traditional publications, 
+these existing portals have limited 
+support for technologically sophisticatd 
+features of modern publications: annotating 
+document text with linked data, and joining 
+publications with open-access data and interactive 
+presentations.  Publishers have therefore 
+sponsored several projects and standards, including 
+the FAIR (Findable, Accessible, Interoperable, 
+Reusable) initiatives and the Research Object 
+Protocol.  These initiatives are designed to 
+improve research portals' support for cutting-edge 
+publication technology.
+
+Unfortunately, publishers have not significantly adopted 
+or embraced the Research Object Protocol and similar 
+proposals.  As a result, authors and researchers have 
+had fewer incentives to embrace these standards 
+either.  While scintists increasingly 
+publish raw data --- part of an emerging 
+paradigm prioritizing replication 
+and transparency --- very few data sets are published 
+as Research Objects conforming to contemporary standards.  
+Even when data sets do have this 
+extra structure, the research portals which 
+link to their associated publications have 
+no tehnological means to document 
+or provide access to the enhanced features 
+afforded by the Research Object Protocol.
+
+This xplains why a new  
+
+
+ 
