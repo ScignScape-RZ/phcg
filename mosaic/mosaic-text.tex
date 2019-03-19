@@ -240,14 +240,14 @@ In addition to {\MOSAIC} itself,
 the technology driving the platform can be 
 deployed as a suite of three products that can 
 be licenced individually or collectively --- the
-{\MOSAIC} SDK, NDP Cloud (Native-Driven Platform 
+{\MOSAIC} {\SDK}, NDP Cloud (Native-Driven Platform 
 for the Cloud), and VersatileUX (a front-end 
 development toolkit).  
 \p{}
 This summary and accompanying slides will describe the 
 current technological limitations that {\MOSAIC} 
 addresses, outline {\MOSAIC} as a whole, 
-and then review the {\MOSAIC} SDK, NDP Cloud, 
+and then review the {\MOSAIC} {\SDK}, NDP Cloud, 
 and VersatileUX products.
 \p{}
 \subsection{How the Research Object Protocol is Supposed to Work}
@@ -535,9 +535,9 @@ In {\RAK}, each data set features C++ code which has no
 dependencies apart from Qt itself.  The Dataset 
 Application should compile and run automatically from 
 inside Qt Creator.  Because Qt is an advanced 
-desktop GUI development platform, it allows 
+desktop {\GUI} development platform, it allows 
 Research Objects to present compelling, 
-interactive graphics and GUI componenst 
+interactive graphics and {\GUI} componenst 
 --- including 2D and 3D visualizations, tables and charts, 
 context menus, dialog boxes, explanations of 
 technical terms, embedded PDF viewers, and other 
@@ -555,7 +555,7 @@ examine how {\RAK} bundles expose data to {\MOSAIC}
 so as to create analogous metadata for their own 
 bundles.
 \p{}
-\subsection{The {\lMOSAIC} SDK and Data Modeling Features}
+\subsection{The {\lMOSAIC} {\SDK} and Data Modeling Features}
 To facilitate implementation of {\RAK} bundles, 
 {\MOSAIC} provides several development tools and 
 code libraries which can help set up a development 
@@ -567,15 +567,15 @@ These assets include the following:
 inside Qt Creator, the {\RAK} build systm 
 is based on \textit{qmake}, which is Qt's 
 layer atop the C/C++ \q{make} system.  
-{\MOSAIC}'s build system extends \textit{qmake} to 
-simply the integration of {\RAK} applications 
-with {\MOSAIC} portals and with other acientific 
+{\lMOSAIC}'s build system extends \textit{qmake} to 
+simplify the integration of {\RAK} applications 
+with {\MOSAIC} portals and with other scientific 
 software that may be available as enhancements 
 for {\RAK} applications, depending on their 
 discipline and topics.
 
 \item[Hypergraph Code Libraries and Parsers]  
-{\MOSAIC} uses a multiparadigm representation for 
+{\lMOSAIC} defines a multiparadigm representation for 
 scientific data based on Directed Hypergraphs.  
 This representation is flexible enough to 
 accomodate many different modeling 
@@ -584,11 +584,11 @@ conventional OWL Ontologies,
 CSML-style Conceptual Spaces, and 
 several other workflow and linguistics-based models 
 --- while at the same time conducive to self-contained 
-Dataset Applications.  The {\MOSAIC} SDK provides 
+Dataset Applications.  The {\MOSAIC} {\SDK} provides 
 code for creating hypergraphs from text documents and 
 integrating hypergraph data into C++ applications.
 
-\item[Scripting and Testing]  The {\MOSAIC} SDK includes 
+\item[Scripting and Testing]  The {\MOSAIC} {\SDK} includes 
 components that developers can use to create 
 test suites for Research Objects and to design a 
 customized scripting environment.  Selected 
@@ -601,34 +601,34 @@ Enginering for application procedures, including scientific
 details like statistical scale (Nominal/Ordinal/Interval/Ratio),
 dimensions, ranges, and declarations of side effects.
 
-\item[{\MOSAIC} Interop]  Applications built 
-with the {\MOSAIC} SDK can also automatically 
-interoperate with {\MOSAIC} portals.  The SDK 
+\item[{\lMOSAIC} Interop]  Applications built 
+with the {\MOSAIC} {\SDK} can also automatically 
+interoperate with {\MOSAIC} portals.  The {\SDK} 
 allows Dataset Applications to be eqipped 
 with special fatures for different user roles, 
 including authors and editors.  Authorized 
 users can automatically notify {\MOSAIC}, 
 from within their Dataset Application itself, about 
-a new or updated veersion of their Research Object.
+a new or updated version of their Research Object.
 \end{description}
 \p{}
 Architecturally, {\MOSAIC} is developed as a 
 Cloud/Native Hybrid featuring a collection of 
 independent native applications (the {\RAK} 
 Research Objects) connected to a central 
-cloud service (the {\MOSAIC} Portal).  The portal 
+cloud service (the {\MOSAIC} portal).  The portal 
 itself is also a Cloud/Native Hybrid, in that a 
-miniature version of a {\MOSAIC} Portal can be run 
-as a standalone desktop application.  {\MOSAIC} 
+miniature version of a {\MOSAIC} portal can run 
+as a standalone desktop application.  {\lfMOSAIC} 
 is implemented to allow seamless integration between 
-native and cloud components --- for eampl, 
-using non-GUI Qt libraries as the core of the 
+native and cloud components --- for example, 
+using non-{\GUI} Qt libraries as the core of the 
 server-side code --- so as to minimize data 
 marshaling when the cloud service 
 communicates with native endpoints.
 \p{}
 As described above, not every Research Object indexed 
-by a {\MOSAIC} portal will use the {\MOSAIC} SDK or 
+by a {\MOSAIC} portal will use the {\MOSAIC} {\SDK} or 
 {\MOSAIC}'s {\RAK} format.  Research Object developers are 
 free to adopt their preferred RO models and 
 communicate with {\MOSAIC} via an API.  However, 
@@ -638,21 +638,21 @@ to clarify the requirements and
 proper usage of the {\MOSAIC} API.
 \p{}
 \subsection{{\lMOSAIC} Products}
-The {\MOSAIC} SDK, as just described, nables 
+The {\MOSAIC} {\SDK}, as just described, nables 
 developers to create Research Objects that 
 seamlessly interoperate with {\MOSAIC} 
 portals.  Because of {\MOSAIC}'s unique design 
 requirements --- supporting a 
 rich, multiparadigm semantics for scientific data 
 and centering a network of self-contained 
-desktop applications --- the {\MOSAIC} SDK 
+desktop applications --- the {\MOSAIC} {\SDK} 
 introducs innovative features that some companies may 
 find useful outside the context of academic 
 publishing and Research Objects.  
-In particular, the {\MOSAIC} application model 
-prioritizes Modular Native Design for applications 
-that are very flexible and verstile 
-from user's point of view, 
+The {\MOSAIC} system  
+prioritizes Modular Native Design, for applications 
+that are flexible and versatile 
+from a user's point of view, 
 while also securing a software-development methodology 
 that facilitates transparent Requirements 
 Enginering, rigorous code verification, 
@@ -660,41 +660,42 @@ and demonastrable compliance with
 legal and operational standards throughout the 
 lifetime of a project.
 \p{}
-In addition to the SDK, {\MOSAIC} utilizes technologies 
+In addition to the {\SDK}, {\MOSAIC} utilizes technologies 
 targeted to both server-side (Cloud) 
 and client-side (Desktop) components.  On the 
 server side, NDP Cloud is a framework for deploying 
 cloud services tightly intgrated with native applications.  
 NDP Cloud applications can be tested and 
-devloped as stabalone desktop applications before 
+developed as standalone desktop applications before 
 being uploaded to cloud servers.  
-NDP Cloud eliminates most of the technological 
+NDP Cloud also eliminates most of the technological 
 gap between web and desktop implementations.  
 For the most part, NDP Cloud uses the same code libraries 
-and programming paradigms (such as Qt/C++) as 
-desktop applications, so that client-server interop 
-bcomes analogous tob networking between two 
+and programming paradigms as 
+desktop applications (such as Qt/C++), 
+so that client-server interop 
+becomes analogous to networking between two 
 desktop applications.  For this reason, NDP Cloud 
-can be a good solution for devlopers who want to 
+can be a good solution for developers who want to 
 use cloud services to augment the capabilities 
 of desktop software, enabling peer-to-peer 
 messaging and seamless cloud backup and 
 personalization to enhance the desktop experience.
 \p{}
-On the client side, VersatileUX is an GUI 
+On the client side, VersatileUX is an {\GUI} 
 application framework which leverages 
 the peer-to-peer and personalization 
 capabilities of NDP Cloud.  VersatileUX 
 supports a highly modular approach to 
-application dvelopment, with tight 
-correlation between data structures and the GUI 
-elements used to display them.  VersatileUX 
+application development, with tight 
+correlation between data structures and the {\GUI} 
+elements used to display them.  Any VersatileUX 
 software is a composite of semi-autonomous  
 modules, each of which is responsible for 
 reading or receiving data conforming 
-to specific structureas (from a file or a network) 
-and presenting these data structres in specialized 
-GUIs.  GUI and data-structure components are 
+to specific structures (from a file or a network) 
+and presenting these data structures in specialized 
+{\GUI}s.  {\GUI} and data-structure components are 
 bound together via strong typing.  Because VersatileUX 
 components are developed in isolation, testing and 
 compliance verification is simplified for the application 
@@ -709,8 +710,9 @@ Individual desktop applications, built
 with the aid of VersatileUX, can connect to an 
 NDP Cloud service so as to track user identity across 
 application instances (or even across applications themselves), 
-while using the cloud service for data vbackup and 
-to connect multiple users for messaging and collaboration.  
+while using the cloud service for data backup and 
+to connect multiple users, for purposes of 
+messaging and collaboration.  
 VersatileUX modules can be fine-tuned via 
 user preferences and application-specific data obtained from 
 NDP Cloud services, updating application state via 
@@ -727,13 +729,13 @@ both server- and client-side code uses
 strong typing, and a single type system is 
 sustained across all client and server components.
 \p{}
-Companies can licence the {\MOSAIC} SDK, VersatileUX, and/or 
+Companies can licence the {\MOSAIC} {\SDK}, VersatileUX, and/or 
 NDP Cloud whther or not they 
-host publications on {\MOSAIC} or host thir own instance 
+host publications on {\MOSAIC} or host their own instance 
 of a {\MOSAIC} portal.
 
 \subsection{For More information}
-Plase see the accompanying slides or request a meeting 
+Please see the accompanying slides or request a meeting 
 or phone conference to discuss {\MOSAIC} in greater detail!
 
 \end{document}
