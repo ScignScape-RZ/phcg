@@ -407,3 +407,20 @@ To facilitate implementation of RAK bundles,
 MOSAIC provides several development tools and 
 code libraries which can help set up a development 
 environment tailored to the MOSAIC ecosystem.  
+These assets include the following: 
+
+\begin{description}
+\item[Build Tools]  Since it is designed to run 
+inside Qt Creator, the RAK build systm 
+is based on \textit{qmake}, which is Qt's 
+layer atop the C/C++ \q{make} system.  
+MOSAIC's build system extends \textit{qmake} to 
+simply the integration of RAK applications 
+with MOSAIC portals and with other acientific 
+software that may be available as enhancements 
+for RAK applications, depending on their 
+discipline and topics.
+
+\item[Hypergraph Code Libraries and Parsers] 
+
+\end{description}
