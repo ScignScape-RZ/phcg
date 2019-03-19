@@ -421,6 +421,81 @@ software that may be available as enhancements
 for RAK applications, depending on their 
 discipline and topics.
 
-\item[Hypergraph Code Libraries and Parsers] 
+\item[Hypergraph Code Libraries and Parsers]  
+MOSAIC uses a multiparadigm representation for 
+scientific data based on Directed Hypergraphs.  
+This representation is flexible enough to 
+accomodate many different modeling 
+paradigms --- including 
+conventional OWL Ontologies, 
+CSML-style Conceptual Spaces, and 
+several other workflow and linguistics-based models 
+--- while at the same time conducive to self-contained 
+Dataset Applications.  The MOSAIC SDK provides 
+code for creating hypergraphs from text documents and 
+integrating hypergraph data into C++ applications.
 
+\item[Scripting and Testing]  The MOSAIC SDK includes 
+components that developers can use to create 
+test suites for Research Objects and to design a 
+customized scripting environment.  Selected 
+functions from the Research Object code are exposed 
+to a Runtime Reflection engine, which allows these 
+functions to be invoked by scripts, including 
+scripts composed for unit and integration testing.  
+Functional annotations provide detailed Requirements 
+Enginering for application procedures, including scientific 
+details like statistical scale (Nominal/Ordinal/Interval/Ratio),
+dimensions, ranges, and declarations of side effects.
+
+\item[MOSAIC Interop]  Applications built 
+with the MOSAIC SDK can also automatically 
+interoperate with MOSAIC portals.  The SDK 
+allows Dataset Applications to be eqipped 
+with special fatures for different user roles, 
+including authors and editors.  Authorized 
+users can automatically notify MOSAIC, 
+from within their Dataset Application itself, about 
+a new or updated veersion of their Research Object.
 \end{description}
+
+Architecturally, MOSAIC is developed as a 
+Cloud/Native Hybrid featuring a collection of 
+independent native applications (the RAK 
+Research Objects) connected to a central 
+cloud service (the MOSAIC Portal).  The portal 
+itself is also a Cloud/Native Hybrid, in that a 
+miniature version of a MOSAIC Portal can be run 
+as a standalone desktop application.  MOSAIC 
+is implemented to allow seamless integration between 
+native and cloud components --- for eampl, 
+using non-GUI Qt libraries as the core of the 
+server-side code --- so as to minimize data 
+marshaling when the cloud service 
+communicates with native endpoints.
+
+As described above, not every Research Object indexed 
+by a MOSAIC portal will use the MOSAIC SDK or 
+MOSAIC's RAK format.  Research Object developers are 
+free to adopt their preferred RO models and 
+communicate with MOSAIC via an API.  However, 
+the RAK model can still be used in this case as a 
+reference for other kinds of Research Objects, 
+to clarify the requirements and 
+proper usage of the MOSAIC API.
+
+MOSAIC Products
+
+The MOSAIC SDK, as just described, nables 
+developers to create Research Objects that 
+seamlessly interoperate with MOSAIC 
+portals.  Because of MOSAIC's unique design 
+requirements --- supporting a 
+rich, multiparadigm semantics for scientific data 
+and centering a network of self-contained 
+desktop applications --- the MOSAIC SDK 
+introducs innovative features that  
+  
+
+Some companies may 
+ 
