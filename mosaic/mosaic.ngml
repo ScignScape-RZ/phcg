@@ -51,7 +51,31 @@ no tehnological means to document
 or provide access to the enhanced features 
 afforded by the Research Object Protocol.
 
-This xplains why a new  
+This explains why a new scientific, academic, technical 
+publishing platform is needed.  MOSAIC 
+steps into this void first by providing a new 
+portal and second by providing the cloud-native 
+technology to replicate this portal in 
+other conextss, so that publishers and 
+other institutions can create their own versions of 
+MOSAIC or reuse its components in other projects.
+
+In addition to MOSAIC itself, 
+the technology driving the platform can be 
+deployed as a suite of three products that can 
+be licenced individually or collectively --- 
+MOSAIC SDK, NDP Cloud (Native-Driven Platform 
+for the Cloud), and VersatileUX (a front-end 
+development toolkit).  
+
+This summary and accompanying slides will describe the 
+current technological limitations that MOSAIC 
+addresses, outline MOSAIC as a whole, 
+and then review the MOSAIC SDK, NDP Cloud, 
+and VersatileUX products.
+
+How the Research Object Protocol is Supposed to Work
+
 
 
  
