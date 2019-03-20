@@ -160,7 +160,7 @@
 
 \section{Introduction}
 {\lfMOSAIC} is a cloud portal for hosting scientific, academic, and 
-technical publications.  {\MOSAIC} bridges the gap between 
+technical publications.  {\lfMOSAIC} bridges the gap between 
 traditional academic publishing and the new 
 world of software- and data-driven research platforms, 
 which feature interactive reading experiences 
@@ -178,7 +178,7 @@ abstracts, keywords/topical classification, and
 (when appropriate) links to download documents  
 in e-reader (typically PDF) formats.  
 Some AST Portals are curated by 
-individual publishers; others (such as Sciverse, Mendeley Data, 
+individual publishers; others (such as SciVerse, Mendeley Data, 
 and Dryad) are scientific projects  
 incorporating content from many publishers.
 \p{}
@@ -198,7 +198,7 @@ Protocol.  These initiatives are designed to
 improve research portals' support for cutting-edge 
 publication technology.  In the 
 words of the FORCE11 \q{Manifesto}:
-\qvspace{}
+\qvspace{}\vspace{4.5pt}
 \begin{quote}{\textqt{While not disputing the expressive power of the written 
 word to communicate complex ideas, our foundational assumption 
 is that scholarly communication by means of semantically-enhanced 
@@ -214,7 +214,7 @@ software tools, mathematical models, protocols and workflows, and
 research communication by means of social media channels.}}
 \rpdfLink{https://www.force11.org/about/manifesto}
 \end{quote}
-\qvspace{}
+\vspace{-.5pt}
 \p{}
 Unfortunately, publishers have not significantly adopted 
 or embraced proposals such as the Research Object Protocol.  
@@ -222,13 +222,13 @@ As a result, authors and researchers themselves have
 fewer incentives to embrace these paradigms, 
 despite the efforts of groups like FORCE11 to promote them.  
 While scientists increasingly publish raw data --- part of 
-an emerging paradigm prioritizing replication 
+an emerging emphasis on replication 
 and transparency --- very few data sets are published 
 as conformant Research Objects.  
 Even when data sets do have this 
 extra structure, the research portals which 
 link to their associated publications have 
-no tehnological means to document 
+no technological means to document 
 or provide access to the enhanced features 
 afforded by the Research Object Protocol.
 \p{}
@@ -237,14 +237,14 @@ publishing platform is needed.  {\lfMOSAIC}
 steps into this void first by instantiating a new 
 AST Portal and second by providing the Cloud-Native 
 technology needed to reproduce this portal in 
-other conexts, so that publishers and 
+other contexts, so that publishers and 
 other institutions can create their own versions of 
 {\MOSAIC} or reuse its components in other projects.
 \p{}
 In addition to {\MOSAIC} itself, 
 the technology driving the platform can be 
 deployed as a suite of three products that can 
-be licenced individually or collectively --- the
+be licensed individually or collectively --- the
 {\MOSAIC} {\SDK}, {\NDPCloud} (Native-Driven Platform 
 for the Cloud), and {\VersatileUX} (a front-end 
 development toolkit).  
@@ -289,7 +289,7 @@ instructions on compiling/using the
 web applications (and other kinds of software) can then use 
 the {\RO} metadata to display an overview of 
 the {\RO} code --- for instance, a summary of 
-important data types and important procedures implemented on them.  
+important data types and important implemented on them.  
 Technical overviews of {\RO} code 
 serves as pedagogical overviews of research 
 methods: the data structures and algorithms used to compute 
@@ -309,10 +309,10 @@ data collection instruments, the {\RO}
 code base clarifies the system's scientific theory and 
 epistemological paradigms.  It distinguishes 
 input data points from calculated data values, and 
-demonstrates the requirements and presuppotions 
+demonstrates the requirements and presuppositions 
 concerning input data and how derived values 
 are computed.  The 
-{\RO} code thereby bcomes a concrete 
+{\RO} code thereby becomes a concrete 
 prototype of the experimental and analytical 
 methodology described theoretically in the publication.
 \p{}
@@ -320,8 +320,8 @@ In principle, then, AST
 Portals can use Research Objects to build summary 
 presentations of published research.  Like an 
 abstract, these summaries can show readers a 
-concise overview of a publication to help them 
-decide whether they will benefit from rading and/or 
+concise overview of a publication ,to help them 
+decide whether they will benefit from reading and/or 
 downloading the publication and/or data set as a whole.
 \p{}
 \subsection{But the Research Object Protocol has not Been Implemented!}
@@ -347,7 +347,7 @@ SciVerse will actually come online.
 Other publishers, meanwhile, do not appear to have 
 any mechanism at all for interoperating between 
 AST Portals (which aggregate publications) and 
-data set portals (which can aggregate Research Objects).
+dataset portals (which can aggregate Research Objects).
 
 \item Even if authors \textit{can} refer AST Portals 
 to published {\RO}s, the AST Portals 
@@ -357,7 +357,7 @@ requires portal software that can read such metadata,
 and also that web templates include sections for 
 displaying {\RO}s' technical information 
 (like programming language and file format), 
-the kind of basic information which can be automatically 
+the kind of basic information which should be automatically 
 extracted according to the Research Object Protocol.
 
 \item Moreover, to fully leverage the value 
@@ -421,7 +421,7 @@ requirements for one another, to complete the Research Object
 circuit.  In particular, scientists do not have 
 {\RO} data models for most academic disciplines 
 which are as fine-grained as the Wf4Ever Ontology.  
-While this situation surely reflects technologically 
+While this situation surely reflects technological 
 inertia, it also testifies to the conceptual gap between 
 Semantic Web Ontologies and scientific data models, a gap 
 which has been noted by many scientists themselves.  
@@ -457,7 +457,7 @@ does not specifically require RDF (Resource Description
 Format), its tooling and specifications clearly 
 show the influence of the Semantic Web.  
 This has prevented alternative models like 
-Conceptual Spaces --- originally proposd 
+Conceptual Spaces --- originally proposed 
 by the Cognitive Scientist, Peter G\"ardenfors 
 --- which are intended to be more 
 accurate models of scientific data, based on investigation 
@@ -511,7 +511,7 @@ requiring external software or code libraries.
 \p{}
 In order to help authors create self-contained 
 Research Objects, {\MOSAIC} defines a 
-\textit{Reference Application Kernel} (\textit{RAK}) 
+\textit{Reference Application Kernel} ({\RAK}) 
 which presents a canonical format for bundling 
 research data and code into a self-contained 
 package.   
@@ -562,7 +562,7 @@ examine how {\RAK} bundles expose data to {\MOSAIC}
 so as to create analogous metadata for their own 
 bundles.
 \p{}
-\subsection{The {\lMOSAIC} {\SDK} and Data Modeling Features}
+\subsection{The {\lMOSAIC} {\lSDK} and Data Modeling Features}
 To facilitate implementation of {\RAK} bundles, 
 {\MOSAIC} provides several development tools and 
 code libraries which can help set up a development 
@@ -571,18 +571,18 @@ These assets include the following:
 
 \begin{description}
 \item[Build Tools]  Since it is designed to run 
-inside Qt Creator, the {\RAK} build systm 
+inside Qt Creator, the {\RAK} build system 
 is based on \textit{qmake}, which is Qt's 
 layer atop the C/C++ \q{make} system.  
-{\lMOSAIC}'s build system extends \textit{qmake} to 
+{\lfMOSAIC}'s build system extends \textit{qmake} to 
 simplify the integration of {\RAK} applications 
 with {\MOSAIC} portals and with other scientific 
 software that may be available as enhancements 
-for {\RAK} applications, depending on their 
-discipline and topics.
+for {\RAK} applications, depending on  
+discipline/topics.
 
 \item[Hypergraph Code Libraries and Parsers]  
-{\lMOSAIC} defines a multiparadigm representation for 
+{\lfMOSAIC} defines a multiparadigm representation for 
 scientific data based on Directed Hypergraphs.  
 This representation is flexible enough to 
 accommodate many different modeling 
@@ -640,7 +640,7 @@ by a {\MOSAIC} portal will use the {\MOSAIC} {\SDK} or
 {\MOSAIC}'s {\RAK} format.  Research Object developers are 
 free to adopt their preferred RO models and 
 communicate with {\MOSAIC} via an API.  However, 
-the {\RAK} model can still be used in this case as a 
+the {\RAK} model can still be consulted in this case as a 
 reference for other kinds of Research Objects, 
 to clarify the requirements and 
 proper usage of the {\MOSAIC} API.
@@ -651,14 +651,14 @@ developers to create {\RO}s that
 seamlessly interoperate with {\MOSAIC} 
 portals.  Because of {\MOSAIC}'s unique design 
 requirements --- supporting a 
-rich, multiparadigm semantics for scientific data 
+rich, multiparadigm semantics for scientific data,  
 and centering a network of self-contained 
 desktop applications --- the {\MOSAIC} {\SDK} 
 introduces innovative features that companies may 
 find useful outside the context of academic 
-publishing/Research Objects.  
+publishing and of Research Objects.  
 The {\MOSAIC} system  
-prioritizes Modular Native Design, for applications 
+prioritizes \q{Modular Native Design}, for applications 
 that are flexible and versatile 
 from a user's point of view, 
 while also securing a software-development methodology 
@@ -677,8 +677,8 @@ cloud services tightly integrated with native applications.
 developed as standalone desktop applications before 
 being uploaded to cloud servers.  
 {\NDPCloud} also eliminates most of the technological 
-gap between web and desktop implementations.  
-For the most part, {\NDPCloud} uses the same code libraries 
+gap between web and desktop implementations:   
+{\NDPCloud} adopts mostly the same code libraries 
 and programming paradigms as 
 desktop applications (such as Qt/C++), 
 so that client-server interop 
@@ -723,18 +723,20 @@ to connect multiple users, for purposes of
 messaging and collaboration.  
 {\VersatileUX} modules can be fine-tuned via 
 user preferences and application-specific data obtained from 
-{\NDPCloud} services, updating application state via 
+{\NDPCloud} services, updating application state through  
 Runtime Reflection.  Reflecting {\MOSAIC}'s 
 emphasis on complex semantics for scientific data, 
-{\NDPCloud} and {\VersatileUX} interoperate via 
+{\NDPCloud} and {\VersatileUX} interoperate according to  
 sophisticated protocols for exchanging 
 strongly-typed data structures between clients and 
 servers and between clients themselves (via cloud messaging).  
 The key difference between this Cloud/Native Hybrid 
 architecture and conventional client/server architecture 
 (including other Cloud/Native paradigms) is that 
-both server- and client-side code uses 
-strong typing, and a single type system is 
+both server- and client-side code takes full advantage of 
+strong typing (selecting the best aspects of 
+Functional and Object-Oriented programming), 
+and a single type system is 
 sustained across all client and server components.
 \p{}
 Companies can license the {\MOSAIC} {\SDK}, {\VersatileUX}, and/or 
