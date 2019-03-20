@@ -4,12 +4,13 @@
 
 \AddToShipoutPictureBG{%
 
+\ifnum\value{page}>1{
 \AtTextUpperLeft{
 \makebox[\textwidth][r]{
 \raisebox{-1.3cm}{%
 {\transparent{0.3}{\includegraphics[width=0.25\textwidth]{e-logo.png}}	}} } }
+}\fi
 }
-
 
 \AddToShipoutPicture{%
 {
@@ -56,7 +57,7 @@
 %\columnsep 0.8in  % separation between columns
 
 \usepackage{geometry}
-\geometry{left=.7in,top=.85in,right=.5in,bottom=1.15in} %margins
+\geometry{left=.7in,top=.85in,right=.5in,bottom=1.25in} %margins
 \usepackage{graphicx}
 \usepackage{color,framed}
 
@@ -149,8 +150,9 @@
 \vspace*{-6em}
 
 \begin{center}
-{\relscale{1.5}{\fontfamily{qcr}\fontseries{b}\selectfont {\lMOSAIC}}}\\\vspace{2pt}
-\mbox{Science, Humanities, and Engineering Portal}\\\vspace{3pt}
+{\relscale{1.5}{\fontfamily{qcr}\fontseries{b}\selectfont {\llMOSAIC}}}\\
+\vspace{8pt}
+\mbox{{\Large Science, Humanities, and Engineering Portal}}\\\vspace{3pt}
 \end{center}
 
 \vspace*{-2em}
