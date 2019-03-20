@@ -118,7 +118,7 @@
 \let\OldSubsection\subsection
 \renewcommand\subsection[1]{
 
-	\vspace{12pt}
+	\vspace{5pt}
 	
     %{\LARGE
 	%\colorbox{logoCyan}{%
@@ -135,7 +135,7 @@
 	%\end{minipage}
     %}
     %}
-	\vspace{-6pt}
+	\vspace{-2pt}
 }
 
 
@@ -291,6 +291,8 @@ leftrule=5pt,rightrule=3pt,toprule=0pt,toprule=0pt,
 \sectionline{darkRed!60!cyan}
 }
 
+\newcommand{\RO}{\mbox{RO}}
+
 \newcommand{\lMOSAIC}{\mbox{MOSAIC}}
 \newcommand{\lfMOSAIC}{\mbox{M\small{OSAIC}}}
 \newcommand{\MOSAIC}{\mbox{\small{MOSAIC}}}
@@ -298,10 +300,13 @@ leftrule=5pt,rightrule=3pt,toprule=0pt,toprule=0pt,
 \newcommand{\SDK}{\mbox{\small{SDK}}}
 \newcommand{\lSDK}{\mbox{SDK}}
 \newcommand{\GUI}{\mbox{\small{GUI}}}
+\newcommand{\lfGUI}{\mbox{G\small{UI}}}
 \newcommand{\qvspace}{\vspace{.4em}}
+
+\newcommand{\textqt}[1]{{{\fontfamily{qhv}\selectfont \small{#1}}}}
 
 \newcommand{\VersatileUX}{{\color{red!85!black}\Fontauri Versatile}%
 {{\fontfamily{qhv}\selectfont\smaller UX}}}
 
 \newcommand{\NDPCloud}{{\color{red!15!black}%
-{\fontfamily{qhv}\selectfont NDP C{\smaller LOUD}}}}
+{\fontfamily{qhv}\selectfont {\smaller NDP C{\smaller LOUD}}}}}

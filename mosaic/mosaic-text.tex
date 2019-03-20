@@ -6,7 +6,7 @@
 
 \AtTextUpperLeft{
 \makebox[\textwidth][r]{
-\raisebox{.2cm}{%
+\raisebox{-1.3cm}{%
 {\transparent{0.3}{\includegraphics[width=0.25\textwidth]{e-logo.png}}	}} } }
 }
 
@@ -56,7 +56,7 @@
 %\columnsep 0.8in  % separation between columns
 
 \usepackage{geometry}
-\geometry{left=.5in,top=.85in,right=.5in,bottom=1.15in} %margins
+\geometry{left=.7in,top=.85in,right=.5in,bottom=1.15in} %margins
 \usepackage{graphicx}
 \usepackage{color,framed}
 
@@ -145,12 +145,15 @@
 \input{commands}
 
 \begin{document}
+
+\vspace*{-6em}
+
 \begin{center}
 {\relscale{1.5}{\fontfamily{qcr}\fontseries{b}\selectfont {\lMOSAIC}}}\\\vspace{2pt}
-\mbox{Science, Humanities, and Enginering Portal}\\\vspace{3pt}
+\mbox{Science, Humanities, and Engineering Portal}\\\vspace{3pt}
 \end{center}
 
-\vspace*{-5pt}
+\vspace*{-2em}
 
 
 \section{Introduction}
@@ -170,8 +173,8 @@ research data.
 AST Portals typically link to web pages devoted to individual 
 publications, with each page displaying citations, 
 abstracts, keywords/topical classification, and 
-(when appropriate) links to download entire 
-publications in e-reader (typically PDF) formats.  
+(when appropriate) links to download documents  
+in e-reader (typically PDF) formats.  
 Some AST Portals are curated by 
 individual publishers; others (such as Sciverse, Mendeley Data, 
 and Dryad) are scientific projects  
@@ -194,8 +197,7 @@ improve research portals' support for cutting-edge
 publication technology.  In the 
 words of the FORCE11 \q{Manifesto}:
 \qvspace{}
-\begin{quote}
-{\textit{While not disputing the expressive power of the written 
+\begin{quote}{\textqt{While not disputing the expressive power of the written 
 word to communicate complex ideas, our foundational assumption 
 is that scholarly communication by means of semantically-enhanced 
 media-rich digital publishing is likely to have a greater impact 
@@ -208,6 +210,7 @@ more effective scholarly communication, which will also broaden
 to include, for example, better links to data, the publication of 
 software tools, mathematical models, protocols and workflows, and 
 research communication by means of social media channels.}}
+\rpdfLink{https://www.force11.org/about/manifesto}
 \end{quote}
 \qvspace{}
 \p{}
@@ -227,12 +230,12 @@ no tehnological means to document
 or provide access to the enhanced features 
 afforded by the Research Object Protocol.
 \p{}
-This explains why a new scientific, academic, and technical 
-publishing platform is needed.  {\MOSAIC} 
+This explains why a new Academic, Scientific, and Technical 
+publishing platform is needed.  {\lfMOSAIC} 
 steps into this void first by instantiating a new 
 AST Portal and second by providing the Cloud-Native 
-technology needed to replicate this portal in 
-other conextss, so that publishers and 
+technology needed to reproduce this portal in 
+other conexts, so that publishers and 
 other institutions can create their own versions of 
 {\MOSAIC} or reuse its components in other projects.
 \p{}
@@ -252,24 +255,24 @@ and {\VersatileUX} products.
 \p{}
 \subsection{How the Research Object Protocol is Supposed to Work}
 Unlike a data set which just exposes raw data, a 
-Research Object combines data and code into a bundle 
+Research Object ({\RO}) combines data and code into a bundle 
 that promotes interactive exploration and reuse, 
 adding value to associated publications.  
 To fully leverage this added value, the Research Object 
-Protocol was designed to ensure that Research Object 
+Protocol was designed to ensure that {\RO} 
 publications can seamlessly interoperate 
 with research portals and publishers' web sites.
 \p{}
 According to the standard, when an author publishers a 
-Research Object --- either on a specialized academic 
+{\RO} --- either on a specialized academic 
 site like Mendeley Data or a generic service like 
 Github --- authors would notify the maintainers of 
 AST Portals (those which index the corresponding publication) 
 that a new data set, associated with the corresponding 
 publication, is now publicly available.  Because 
-Research Objects have a fixed structure, portals' 
+{\RO}s have a fixed structure, portals' 
 software can then, in principle, automatically 
-extract metadata from the Research Object and 
+extract metadata from the {\RO} and 
 use this metadata to update the relevant web pages. 
 \p{} 
 These web pages can 
@@ -280,12 +283,12 @@ the data set: its software requirements,
 file formats, download/unzipped size, programming 
 language(s) used, update and version info, and 
 instructions on compiling/using the 
-Research Object code.  Third, 
-web applications (and other kinds of software) can use 
-the Research Object metadata to display an overview of 
-the Research Object code --- for instance, a summary of 
-important data types and procedures implemented on them.  
-Technical overviews of Research Object code 
+{\RO} code.  Third, 
+web applications (and other kinds of software) can then use 
+the {\RO} metadata to display an overview of 
+the {\RO} code --- for instance, a summary of 
+important data types and important procedures implemented on them.  
+Technical overviews of {\RO} code 
 serves as pedagogical overviews of research 
 methods: the data structures and algorithms used to compute 
 research findings encapsulate the data collection 
@@ -294,21 +297,21 @@ corpora, and other social-science data sources)
 and the experimental protocols which have informed 
 the published work.
 \p{} 
-In short, Research Objects are a logical extension of a 
+In short, {\RO}s are a logical extension of a 
 published book or article.  By sharing code alongside raw 
-data, each Research Object includes a code base whose 
+data, each {\RO} includes a code base whose 
 design captures the essential structural and methodological 
 features of the research.  For example, by 
 modeling the information entered into the system by 
-data collection instruments, the Research Object 
+data collection instruments, the {\RO} 
 code base clarifies the system's scientific theory and 
 epistemological paradigms.  It distinguishes 
 input data points from calculated data values, and 
 demonstrates the requirements and presuppotions 
 concerning input data and how derived values 
 are computed.  The 
-Research Object code thereby bcomes a concrete 
-prototype of the experimentl and analytical 
+{\RO} code thereby bcomes a concrete 
+prototype of the experimental and analytical 
 methodology described theoretically in the publication.
 \p{}
 In principle, then, AST  
@@ -320,10 +323,10 @@ decide whether they will benefit from rading and/or
 downloading the publication and/or data set as a whole.
 \p{}
 \subsection{But the Research Object Protocol has not Been Implemented!}
-Unfortunately, the Research Object features just described 
+Unfortunately, the {\RO} features just described 
 have not yet found their way into existing AST  
 Portals.  Current technology does not 
-interoprate with Research Object on either 
+interoprate with Research Objects on either 
 the simpler metadata level or the more sophisticated 
 architectural level.  This gap is a combination 
 of three distinct problems:
@@ -332,8 +335,8 @@ of three distinct problems:
 \item First, there is no standardized way for authors 
 to notify publishers about new Research Objects.  
 Some data set portals, like Mendeley, have 
-web forms where resarchers can enter information 
-about their Research Objects.  According to Elsevier, 
+web forms where researchers can enter information 
+about their {\RO}s.  According to Elsevier, 
 the metadata in Mendeley is then internally shared 
 with other Elsevier portals, such as SciVerse.  
 However, it is not clear when new technology 
@@ -345,23 +348,23 @@ AST Portals (which aggregate publications) and
 data set portals (which can aggregate Research Objects).
 
 \item Even if authors \textit{can} refer AST Portals 
-to published Research Objects, the AST Portals 
+to published {\RO}s, the AST Portals 
 need sufficient capabilities to access and 
-interpret Research Object metadata.  This 
+interpret {\RO} metadata.  This 
 requires portal software that can read such metadata, 
 and also that web templates include sections for 
-displaying Research Objects' technical information 
+displaying {\RO}s' technical information 
 (like programming language and file format), 
 the kind of basic information which can be automatically 
 extracted according to the Research Object Protocol.
 
 \item Moreover, to fully leverage the value 
 of Research Objects, AST Portals need to interpret 
-Research Object metadata at a higher scientific level.  
-This bcomes possible when Research Object metadata 
-presents summarial information about the 
+{\RO} metadata at a higher scientific level.  
+This becomes possible when {\RO} metadata 
+presents summary information about the 
 experimental protocols and computational 
-methods employed via Research Object code.  
+methods employed via {\RO} code.  
 However, although the Research Object Protocol 
 recommends that data bundles include 
 this sort of higher-level metadata, 
@@ -373,18 +376,19 @@ by protocol-compliant software.
  
 According to the Research Object bundle specification: 
 
-\begin{quote}{\textit{The specification for the RO model does not mandate any 
+\begin{quote}{\textqt{The specification for the RO model does not mandate any 
 particular form for the representation of Research Objects. 
 ... Annotations about this research object and its resources ... 
 may be present, [and] provides additional metadata or descriptions 
 which are somewhat about or related to the research object or some 
-of its aggregated resources.}}
+of its aggregated resources.}}\\
+\rpdfLink{https://researchobject.github.io/specifications/bundle}
 \end{quote}
 
 Extending the underlying RO model, developers have 
 specified more detailed models such as \q{Wf4Ever}:
 
-\begin{quote}{\textit{The focus of Wf4Ever is on workflow preservation 
+\begin{quote}{\textqt{The focus of Wf4Ever is on workflow preservation 
 (and more specifically workflows supporting scientific investigation). 
 Thus the objects that will be described using the model are inherently 
 workflow-centric.  Although the basic infrastructure 
@@ -393,41 +397,41 @@ is applicable to many situations ...
 the specific vocabularies defined within the Wf4Ever RO model are 
 intended to support those Research Objects that 
 have workflows (methods) as their primary content.}}
+\rpdfLink{https://wf4ever.github.io/ro/2016-01-28/}
 \end{quote}
 
 In short, a well-established model is provided for workflow-centric 
 Research Objects, but comparable specifications have not 
 emerged for other kinds of technical projects.  In the general 
-case, publishers have to define their own Research Object 
-modls.  That is, they have to specify what sort of 
-metadata Research Objects should expose so that 
-information about Research Objects can be integrated 
+case, publishers have to define their own {\RO} 
+models.  That is, they have to specify what sort of 
+metadata {\RO}s should expose so that 
+information about {\RO}s can be integrated 
 into publishers' overall online resources.  
 \p{}
 Because publishers have been unwilling to develop their own 
 Research Object technology, authors do not have clear 
-guidelines about how to document and annotate Research Objects 
+guidelines about how to document and annotate {\RO}s 
 even once they embrace the Research Object paradigm.  
 This has appently caused an impasse wherein 
 neither authors nor publishers model sufficiently detailed 
-requirements of one another to complete the Research Object 
+requirements for one another, to complete the Research Object 
 circuit.  In particular, scientists do not have 
-Research Object data models for most academic disciplines 
+{\RO} data models for most academic disciplines 
 which are as fine-grained as the Wf4Ever Ontology.  
 While this situation surely reflects technologically 
 inertia, it also testifies to the conceptual gap between 
 Semantic Web Ontologies and scientific data models, a gap 
 which has been noted by many scientists themselves.  
 \p{}
-Scientists have criticized contemporary standards for data sharing 
+Indeed, scientists have criticized contemporary data sharing standards  
 --- e.g., the Semantic Web --- for lacking conceptual precision 
 and failing to capture the essence of scientific 
 procedures.  In the words of 
 Martin Raubal and Benjamin Adams,
 
-\begin{quote}{\textit{
- the Semantic Web is still not semantic in the 
- human sense because it does not sufficiently 
+\begin{quote}{\textqt{the Semantic Web is still not semantic in the 
+human sense because it does not sufficiently 
 account for people's cognition, i.e., human conceptual 
 representations and reasoning...  [K]nowledge representations 
 underpinning the Semantic Web should
@@ -437,21 +441,22 @@ and combinations of concepts.... However,
 the existing logical foundations of the Semantic
 Web --- description logics and rules --- presume a set-based 
 classification scheme that does a poor job of
-facilitating these operations.}} 
+facilitating these operations.}}\\
+\rpdfLink{http://www.semantic-web-journal.net/sites/default/files/swj37\_0.pdf}
 \end{quote}
 
 Raubal and Adams have developed their own system 
 for representing scientific data, called Conceptual 
-Space Markup Language (CSML), which can 
+Space Markup Language (CSML), which is  
 equal or superior to RDF Ontologies for describing 
 scientific metadata.  However, 
 although the Research Object Protocol 
 does not specifically require RDF (Resource Description 
-Format), its tooling and specification clearly 
+Format), its tooling and specifications clearly 
 show the influence of the Semantic Web.  
-This has prevented alternatve models like 
+This has prevented alternative models like 
 Conceptual Spaces --- originally proposd 
-by the Cognitive Scientist Peter G\"ardenfors 
+by the Cognitive Scientist, Peter G\"ardenfors 
 --- which are intended to be more 
 accurate models of scientific data, based on investigation 
 of both human conceptualization and scientific practice. 
@@ -461,11 +466,11 @@ In contrast to the existing Research Object model,
 Ontologies for Scientific, Academic, and Technical Publications} 
 --- provides a detailed structure for 
 describing scientific data.  
-{\MOSAIC} unifies diverse models and theories of 
+{\lfMOSAIC} unifies diverse models and theories of 
 scientific metadata, such as Conceptual 
 Space Markup Language, into a canonical but flexible format 
-that ensures interoperability between Research Object code 
-and AST Portals' software.  {\MOSAIC}, furthermore, 
+that ensures interoperability between {\RO} code 
+and AST Portals' software.  {\lfMOSAIC}, furthermore, 
 models scientific metadata with rigorous attention 
 to scientific practice (and research methodology 
 in general, across academic disciplines).  In 
@@ -484,7 +489,7 @@ with downloadable Research Objects.
 \p{}
 In particular, {\MOSAIC} encourages the 
 creation of \textit{self-contained} Research Objects.  
-{\MOSAIC} assumes that the 
+{\lfMOSAIC} assumes that the 
 typical Research Object indexed on a {\MOSAIC} portal 
 will be a downloadable code-and-data bundle 
 with \textit{minimal external dependencies}.  
@@ -493,13 +498,13 @@ started exploring and interacting with Research Objects
 without complicated downloads or installation of 
 additional software.  Authors are certainly free 
 to \textit{enhance} Research Objects with 
-content tailord to specialized software --- for 
+content tailored to specialized software --- for 
 example, sophisticated data visualization features, 
 or integration with software commonly used in the 
 relevant research fields.  However, these extra capabilities 
-augment the core of the Research Object, which should 
-provide a mechnism for researchers to understand, 
-visualize, and reuse the bundled code and data without 
+augment the core of the {\RO}, which should 
+provide a standalone mechnism for researchers to understand, 
+visualize, and reuse the bundled code and data, without 
 requiring external software or code libraries.
 \p{}
 In order to help authors create self-contained 
@@ -508,7 +513,7 @@ Research Objects, {\MOSAIC} defines a
 which presents a canonical format for bundling 
 research data and code into a self-contained 
 package.   
-Each Research Object bundle using 
+Each {\RO} bundle using 
 the {\RAK} format provides a standalone, desktop-style 
 Dataset Application that offers an entry point to 
 the raw data.  By design, it should be easy 
@@ -521,7 +526,7 @@ minimal hassle.
 The {\RAK} format includes other 
 features as well, such as code export and testing, 
 which provide a more detailed access to 
-the published data (including several command-lin 
+the published data (including several command-line 
 executables built alongside the Dataset Application).  
 However, the Dataset Application 
 presents a useful introduction to the underlying 
@@ -536,8 +541,8 @@ dependencies apart from Qt itself.  The Dataset
 Application should compile and run automatically from 
 inside Qt Creator.  Because Qt is an advanced 
 desktop {\GUI} development platform, it allows 
-Research Objects to present compelling, 
-interactive graphics and {\GUI} componenst 
+{\RO}s to present compelling, 
+interactive graphics and {\GUI} componens 
 --- including 2D and 3D visualizations, tables and charts, 
 context menus, dialog boxes, explanations of 
 technical terms, embedded PDF viewers, and other 
@@ -547,10 +552,10 @@ exploring raw data, customized for each data set.
 \p{}  
 Research Objects indexed by {\MOSAIC} do not have to 
 use the {\RAK} model.  However, {\RAK} provides a 
-Reference Implementation of how Research Object 
-metadata can be described so it is automatically 
+Reference Implementation demonstrating how {\RO} 
+metadata can be described for it to be automatically 
 processed by a {\MOSAIC} portal.  Developers 
-using different Research Object models can 
+using different {\RO} models can 
 examine how {\RAK} bundles expose data to {\MOSAIC} 
 so as to create analogous metadata for their own 
 bundles.
@@ -592,7 +597,7 @@ integrating hypergraph data into C++ applications.
 components that developers can use to create 
 test suites for Research Objects and to design a 
 customized scripting environment.  Selected 
-functions from the Research Object code are exposed 
+functions from the {\RO} code are exposed 
 to a Runtime Reflection engine, which allows these 
 functions to be invoked by scripts, including 
 scripts composed for unit and integration testing.  
@@ -604,9 +609,10 @@ dimensions, ranges, and declarations of side effects.
 \item[{\lMOSAIC} Interop]  Applications built 
 with the {\MOSAIC} {\SDK} can also automatically 
 interoperate with {\MOSAIC} portals.  The {\SDK} 
-allows Dataset Applications to be eqipped 
-with special fatures for different user roles, 
-including authors and editors.  Authorized 
+allows Dataset Applications to be equipped 
+with special features for different user roles, 
+including authors and editors as well as ordinary readers.  
+Authorized 
 users can automatically notify {\MOSAIC}, 
 from within their Dataset Application itself, about 
 a new or updated version of their Research Object.
@@ -638,17 +644,17 @@ to clarify the requirements and
 proper usage of the {\MOSAIC} API.
 \p{}
 \subsection{{\lMOSAIC} Products}
-The {\MOSAIC} {\SDK}, as just described, nables 
-developers to create Research Objects that 
+The {\MOSAIC} {\SDK}, as just described, enables 
+developers to create {\RO}s that 
 seamlessly interoperate with {\MOSAIC} 
 portals.  Because of {\MOSAIC}'s unique design 
 requirements --- supporting a 
 rich, multiparadigm semantics for scientific data 
 and centering a network of self-contained 
 desktop applications --- the {\MOSAIC} {\SDK} 
-introducs innovative features that some companies may 
+introduces innovative features that companies may 
 find useful outside the context of academic 
-publishing and Research Objects.  
+publishing/Research Objects.  
 The {\MOSAIC} system  
 prioritizes Modular Native Design, for applications 
 that are flexible and versatile 
@@ -695,7 +701,7 @@ modules, each of which is responsible for
 reading or receiving data conforming 
 to specific structures (from a file or a network) 
 and presenting these data structures in specialized 
-{\GUI}s.  {\GUI} and data-structure components are 
+{\GUI}s.  {\lfGUI} and data-structure components are 
 bound together via strong typing.  Because {\VersatileUX} 
 components are developed in isolation, testing and 
 compliance verification is simplified for the application 
@@ -709,8 +715,8 @@ promote personalization and interoperability.
 Individual desktop applications, built 
 with the aid of {\VersatileUX}, can connect to an 
 {\NDPCloud} service so as to track user identity across 
-application instances (or even across applications themselves), 
-while using the cloud service for data backup and 
+application instances (or even across different applications), 
+while working through the cloud service for data backup and 
 to connect multiple users, for purposes of 
 messaging and collaboration.  
 {\VersatileUX} modules can be fine-tuned via 
