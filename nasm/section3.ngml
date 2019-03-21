@@ -284,7 +284,65 @@ to the more symbolic logical formulation like
 `p`
 
 `p.
-It might seem as if 
+It might seem as if $X$-quantification can be logically 
+converted to $R$-quantification by, in effect, 
+treating the $R$-quantifier as a predicate under the 
+scope of the (purported) $X$-quantifier.  So from 
+`i.there is a sculpture that...` we can get something like 
+`i.there exists an \underline{x} such that, \underline{x} is 
+a sculpture and...`/.  And also like 
+`i.there exists an \underline{x} such that, \underline{x} is 
+a molded expanse of clay and...` %-- in other words, 
+we are logically lifting an `i.\underline{x}` from 
+the sculpture/clay and transcribing sculptureness 
+and clayness as predicates on this `i.\underline{x}`/.
+`p`
+
+`p.
+From that point we can see how mereological 
+controversies arise, because now 
+`i.\underline{x}` is logically neither sculpture nor clay but 
+some kind of generic token of thing-ness of 
+which sculptureness and clayness can be preicated.  
+That is, `i.\underline{x}` is an $X$-object, under the 
+domain of a quantifier without any 
+ontological structure or specificity.  
+If an $X$-object can be a whole, then we have mereological 
+relations outside the regulations of $R$-quantification.  
+For instance, we have a stated theory of why $Triv$ 
+is trivial; because there is $R$-quantifier, for any 
+$R$, which covers $Triv$ (or at last there is 
+no multiscientific mixture of $R$s that 
+would render $Triv$ a `q.multiscientific` whole).  
+However, it seems rasonable 
+to allow that $Triv$ is an $X$-object, because by 
+definition $X$-quantification does not impose 
+ontological structure on its domain of iteration.
+`p`
+
+`p.
+I contend, then, that problems about trivial 
+wholes are interrelated with problems 
+about $X$-quantification.  If there is only 
+$R$-quantification, then there are only nontrivial 
+wholes, because there are no quantifiers whose 
+domain encompasses trivial mereological sums.
+`p`
+
+`p.
+Whether or not this setup seems intuitive may depend 
+on our beliefs about quantification.  If we are 
+already committed to the idea that $X$-quantification is 
+possible %-- or that phikosophers have to give 
+a good reason for excluding this generic quantification 
+%-- then my reasoning could well be deemed circular. 
+I am presupposing the mereological restrictions that 
+should fall out of a theory, by 
+restriction how quantification works; thus I 
+eliminate problemmatic objects by eliminating 
+the quantifiers that could quantify over them, but 
+this may seem like eliminating problems 
+by fiat.
 `p`
 
 `p.
