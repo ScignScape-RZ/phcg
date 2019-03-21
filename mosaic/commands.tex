@@ -245,9 +245,19 @@ leftrule=5pt,rightrule=3pt,toprule=0pt,toprule=0pt,
 \newcommand{\itemLargerLine}[2]{\item {\raisebox{-2pt}{\larger{#1}}}%
 \hspace{1em}{\raisebox{-2pt}{#2}}}
 
+\newcommand{\lead}[1]{%
+\noindent{\raisebox{1pt}{\relscale{1.25}{{{%
+\fcolorbox{logoCyan!50!black}{logoGreen!5}{#1}
+}}}}}\hspace{1em}}
+
+\newcommand{\slead}[1]{%
+\noindent{\raisebox{2pt}{\relscale{1.15}{{{%
+\fcolorbox{logoCyan!50!black}{logoGreen!5}{#1}
+}}}}}\hspace{.5em}}
+
 \newcommand{\p}{
 
-\vspace{.85em}}
+\vspace{.8em}}
 
 \newcommand{\txtbl}{\hspace{2pt}{{\raisebox{1pt}{\relsize{-2}\textbullet}}}\hspace{2pt}}
 
@@ -293,6 +303,8 @@ leftrule=5pt,rightrule=3pt,toprule=0pt,toprule=0pt,
 \sectionline{darkRed!60!cyan}
 }
 
+\renewcommand{\labelitemi}{{\color{red!60!black}$\star$}}
+
 \newcommand{\RO}{\mbox{RO}}
 
 \newcommand{\llMOSAIC}{\mbox{{\LARGE MOSAIC}}}
@@ -313,3 +325,6 @@ leftrule=5pt,rightrule=3pt,toprule=0pt,toprule=0pt,
 
 \newcommand{\NDPCloud}{{\color{red!15!black}%
 {\fontfamily{qhv}\selectfont {\smaller NDP C{\smaller LOUD}}}}}
+
+\newcommand{\lfNDPCloud}{{\color{red!15!black}%
+{\fontfamily{qhv}\selectfont N{\smaller DP C{\smaller LOUD}}}}}
