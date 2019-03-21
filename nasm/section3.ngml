@@ -140,9 +140,151 @@ different $R$s (and the granularity increases because each
 mixture of $R$s gives rise to a different sort of quantifier.
 `p`
 
-`spsubsectiontwoline.
+`spsubsectiontwoline.$R$-Quantification and Non-Antisymmerty`
 `p.
+Adding $R$-quantification casts a different perspective on 
+discussions of NAM, such as Cotnoir's.  He points out 
+that statue/clay examples can potentially 
+lead to symmetric parthood: 
+`q.the clay is an improper part of
+the statue and the statue is an improper part of the clay` 
+\cite[p. 401]{AaronCotnoir} (I'll add, statue and clay 
+need not be metaphysically identical).  My account 
+would express the analogous situation via 
+`q.mixed quantifers`/: the $R$-quantifier 
+which can select the statue is actually a 
+mixture of an archaeological-quantifier and a 
+minerological-quantifier.  Thus by the very formulation  
+of any mereological relation 
+wherein the statue is the whole (the left-hand side 
+of `xhppy;), the statue has archaeological 
+and minerological tfactes, because it falls under the 
+scope of a quantifier which `i.requires` those facets.  
+`p`
 
+`p.
+On the face of it, then, the relationship of facets to 
+one another is not itself mereological 
+(even allowing for `i.improper` parthood).  
+How could we say that the clay-facet, for example, 
+is a part of the sculpture-facet?  That is, 
+in a archaeological/minerological-quantifier, can 
+the minerological facet be `q.part of` the 
+archaeological facet?  I think a reasonable 
+$R$-quantifier mereology could block that kind of formula 
+because there is no apparent $R$-quantifier 
+that would come into play to express it.  
+After all, the sculprture belongs to 
+a domain of quantification which intrinsically 
+mixes (at last) two facets; to 
+formulate parthood `i.between` those facets would 
+seem to require switching to a different 
+domain of quantification. 
+`p`
+
+`p.
+It is reasonable, perhaps, that a mixed-domain 
+quantification can be combined with quantification 
+involving the integrated facets in isolation.  So 
+if I say that the sculpture is an 
+archaeological-and-minerological object, perhaps 
+I should allow the sculpture's archaeological facet 
+in isolation to be included in a 
+archaeological-quantification domain which is not 
+limited to minereological objects (not every sculpture, 
+for instance %-- consider ice-sculptures 
+%-- is executed in a minerological medium).  
+`p`
+
+`p.
+Certainly we need some semantics for migrating between 
+different $R$-quantification domains, because 
+we do have reasonable conceptualizations like 
+`i.this ice sculpture replicates that clay sculpture` or 
+`i.this photograph shows that clay sculpture`/.  
+However, the `q.rules` for such `q.cross-$R$` 
+domain-switching may be relatively restricted; we ar 
+not forced to theorize mereological systems 
+where the component $R$s in a mixed-register 
+domain can be generically factored out to their 
+own quantification-domains. 
+`p`
+
+`p.
+Moreover, this restriction captures why $R$-quantification 
+produces a more regulated mereological structrs, 
+because ther are limited `q.parthood` rlations 
+between $R$s in a mixture themselves.  In an 
+$R/R'$-quantification such as archaeological-minerological, 
+it might be said that the specified domains 
+(archaeological and minerological) are `q.parts` of 
+the mixed $R$ which governs the quantification 
+accessing the sculpture.  In other words, 
+the quantifier applicable to the sculpture  
+seems like a `q.quantificational sum` of the 
+archaeological and minerological domains.  
+Analogously, the sculpture seems like a `q.conceptual 
+sum` of aesthetic and physical properties.  
+However, even though `q.summation` invites notions 
+of membership and inclusion, we do 
+not automatically proceed from conceptual 
+sums to mereological sums: 
+we can consider the conceptual sum of milk 
+and almond milk without treating a glass 
+of milk as a token of a milk/almond-milk 
+disjunctive-or'ed substance, wherein 
+milk-related-properties would be 
+parts of hypothetical milk-or-almond-milk 
+related propertes.  Analogously, even if 
+we accept the language of an $R$-quantifier as 
+a `q.quantificational sum` of two 
+finer domains, we can deny that this 
+summation translates to `i.mereological` relations 
+between facets in the finer and the mixed domains. 
+`p`
+
+`p.
+Suppose we `i.could` formulate that both clay and sculpture 
+are parts of some enveloping whole 
+which has both sculptural and clay-like aspects.  With 
+$R$-quantification, this would require a distinct 
+domain of quantification which I have yet theorized 
+$-- I'll call it $X$.  Of course, the actual 
+domain for the sculpture combines (at least) 
+archaeological and minerological, but 
+this mixture is not $X$, because we want the various 
+`i.factes` to be `i.part of` the $X$-object 
+in the internal vocabulary of a mereology.  I have 
+allowed that $R$-mixtures are in some sense 
+`q.quantificational sums` but blocked a 
+concurrent mereological summation: we can't necssarily 
+take the `i.mereological sum` of an archaeological-facet 
+and a minerological-facet even (or especially) if 
+they are facets of `q.the same object` (a unit of iteration 
+under one quantifir).  Someone might find 
+that restriction arbitrary. 
+`p`
+
+`p.
+In particular, someone might argue that domains of 
+quantification should be arbitrarily generalizable.  
+For example, archaeological, minerological, biological, 
+and psychological objects are all among the 
+things that exist, so we seem invited to 
+quantify over `q.things that exist`/, as a generalized 
+domain abstracting from finer $R$-domains.  
+So quantifying over this general 
+domain %-- say, $X$-quantification %-- 
+models a different semantic pattern 
+than $R$-quantification.  Whereas $R$-quantification 
+reflects expressions like `i.there is a sculpture 
+such that...`/, $X$-quantification corresponds 
+to the more symbolic logical formulation like 
+`i.there exists \underline{x} such that...`/.
+`p`
+
+`p.
+It might seem as if 
 `p`
 
 `p.
