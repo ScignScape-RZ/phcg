@@ -339,16 +339,274 @@ a good reason for excluding this generic quantification
 I am presupposing the mereological restrictions that 
 should fall out of a theory, by 
 restriction how quantification works; thus I 
-eliminate problemmatic objects by eliminating 
+avoid problemmatic objects by eliminating 
 the quantifiers that could quantify over them, but 
 this may seem like eliminating problems 
 by fiat.
 `p`
 
 `p.
+We can consider, then, arguments for and against 
+unrestricted or $X$-quantification.  On the one hand, 
+formal logic certainly leaves quantification open-ended.  
+It's not clear what we should read into that philosophically 
+%-- after all, logic is a study of abstract domains, 
+rather than empicial universe of statues and toes and such.  
+Also, even in mathematics you have type-theoreric 
+paradigms which are consistent with type-restricted 
+quantification; no mathematical object 
+is recognized which cannot be given a corresponding 
+type (which excludes unrestricted set-formation).  
+So quantification is limited to quantification 
+over `q.fibers` induced by the value-to-type 
+mapping.  With a sufficiently expressive 
+type theory, the category of types becomes 
+effectively isomorphic to the collection of 
+domains of quantification.  In other words, 
+universal quantification is not universally 
+accepted even in logic and maethamtics.  
+Granted, though, type-restricted quantification 
+is not the predominant logical construct.  
+`p`
 
+`p.
+Another philosophical case for $X$-quantification 
+is that recognizing only $R$-quantification 
+`i.without abstracting to` an unrestricted 
+`q.$X$-domain` would seem to leave the $R$-domains 
+bearing a lot of weight.  It is one thing 
+to quantify over a set of objects bearing biological 
+properties; it is another to stablish a rule 
+of quantification presupposing that there is some 
+essential register in existence containing 
+all and only biological objects.  We moderns 
+presumably reject thoughts of an `i.elan vital` 
+or any other metaphysical essence that suffuces biological 
+wholes to make them a distinct order of 
+reality.  Even more so should we be skeptical 
+of models implying a minerological `i.elan`/, a 
+psychological `i.elan`/, and so forth.  Rather we 
+assume that there is an underlying physical reality 
+%-- atoms and molecules and a small set of 
+force fields %-- and that objects of physical 
+composition take on biological or minerological 
+proprties, which `i.makes` them biological or minerological 
+objects.  I'll call this the `q.`i.elan`/` problem. 
+`p`
+
+`p.
+From the arguing-against-unresteicted-quantification 
+side, the `q.`i.elan` problem` can be turned on its head.  
+As stated, there is no `i.elan vital` 
+which makes biological objects biological, 
+or minerological objects mineral.  Instead, at 
+sufficiently small scales, all matter reveals itself 
+as having the same minimal constituents 
+(subatomic particles plus Standard Model forces, say).  
+That is, we may believe we can avoid the 
+`i.elan` problem by elevating a kind of subatomic-physics 
+talk as the prestige dialect, an ontologically 
+neutral way of talking about all physical 
+things without mysteriously essentializing 
+biological or any other higher-scale properties.  
+In this vein, unrestricted quantification %-- 
+at least with respect to physical reality %-- 
+is essentially quantification over that subatomic domain.
+`p`
+
+`p.
+But such an inscription of $X$-quantification 
+has its own blind-spots.  The objects 
+of the subatomic domain are not metaphysical 
+essencs outside the play of science; they are posits of a 
+specific science, subatomic (and quantum) physics.  
+Objects do not just `q.contain` quarks and electrons 
+like bricks in a wall; the actual subatomic realm 
+is apparently complexly structured by forces and 
+quantum indeterminacy, where particles have some approximate 
+and dispersive existence.  When we knock on would 
+we're not really encountering protons; there is a 
+system of microphysical charges that creates the illusion of 
+hardness.
+`p`
+
+`p.
+So we can't really capture the idea of unstructured 
+materiality %-- a minimal unit of physical 
+presence which lies conceptually outside 
+any `i.elan`/; which is too small 
+to be biological, say %-- we can't capture such an 
+idea of an `i.ur`/-particle by plugging in 
+the latest scientific theories of the smallest 
+constituents of the universe.  The quantum 
+model is subject to refinement, after 
+all.  And philosophers who talk of 
+objects as `q.collections of molecules`/, say, 
+are not really proposing that molecular chemistry 
+is an operational part of their theory.  
+Rather, this language tends to use talk 
+of atoms and moleculres %-- or, say, 
+of material extension %-- as proxies for 
+a picture of `q.ur-particles`/, of an 
+imagined smallest unit of physical 
+nature.
+`p`
+
+`p.
+These ur-particles are essentially a philosophical 
+fiction; they don't align with 
+elementary particles recognized by physics, though we can 
+plug various hypotheses (like string theory) to give 
+then scientific detail.  But it's not like 
+philosophers present ur-particles as an emprical claim 
+and look for science to substantiate it.  Rather, 
+ur-particles are a way of talking: having 
+(on metaphysical as much as empirical grounds) 
+rejected the idea of `i.elan`/s, and also `i.accepted` 
+the idea of physical things being (down to some 
+tiny scale) made of smaller physical things, 
+the concptual merger of these ideas creates the notion 
+of an `q.ur-particle`/: something so small 
+as to be individible and therefore unstructured, 
+and something lacking any `i.elan` that would 
+make it biological, minerological, or 
+scientific in any sense of being an 
+object `i.of` a science. 
+`p`
+
+`p.
+Larger objects then become figured as mereological sums of 
+ur-particles, which in turn raises problems due to the 
+dynamic nature of macroscopic objects (and their sheer 
+differences in scale to `q.ur-particles`/).  Even leaving 
+aside the point that ur-particles do not actually 
+exist %-- they are conceptual proxies for a messier 
+subatomic reality %-- we cannot simplistically 
+equate biological objects (or objects of any other macroscopic 
+register) with mereological sums of ur-particles.  Through 
+breathing, discharge of skin cells, the dynamics of 
+our microbiome, and so forth, the boundary between 
+our own molecules and the external world is 
+(at sufficiently magnified scales) fluid and indeterminate.  
+Indeed, consider any colored object: having color means that it 
+absorbes some light from the environment, and emits heat; 
+the perptual exchange of photons between bodies and 
+their surroundings prohibits and direct enumeration 
+(even in principle) of the ur-particles 
+thst would `q.make up` an object.
+`p`
+
+`p.  
+Meanwhile, we still have to account for why (only) some 
+mereological sums of ur-particles are non-trivial.  
+Presumably sufficintly scattered sums are trivial, 
+but we can't assume any physically connected mass of 
+ur-particles is non-trivial (even if we accept the approximation 
+that solid objects are not `i.really`/) solid.  
+A glass on top a table forms a connected but, we'd say, 
+physically trivial sum.  A metal chain has possible states 
+where it is not connected (one of the rings not touching 
+any others) but it is, even while in those states, non-trivial.  
+A bucket of sand or glas of water have states where physical 
+forces will destructure them (the water or sand spill out), 
+but we may want to consider the glass-and-water 
+or bucket-and-sand to be nontrivial sums.  
+In short, the criterion of triviality 
+%-- even just in the register of everyday objects %-- 
+requires explicit consideration of physical forces 
+promoting an object's integrity.
+`p`
+
+`p.
+In short, while it may be appealing to adopt a discource 
+of `q.ur-particles` which ncapsulates our atomistic and 
+non-`i.elan` intuitions, this conceptual model 
+does not really address concerns like the 
+`q.`i.elan` problem` and it raises a host of new problems.  
+Quantification over non-trivial mereological sums 
+of ur-particles does not seem like a 
+philosophical improvement over $R$-quantification, even if 
+this seems to lead us back to the question of how 
+to think tgrough $R$-quantifiers without 
+conjuring a realm of $R$-elans.
+`p`
+
+`p.
+Ultimately, I think the answer to this question 
+lies not in philosophy alone but in the interface between 
+philosophy and science(s).  The question of 
+what forces and autopoietic regulation allows 
+$R$-objects to sustain as non-trivial wholes is 
+complex, and depends on laws and dynamics 
+investigated by $R$-sciences themselves.  We do not have a 
+succinct logical statement of what makes $R$-quantified 
+mereological wholes non-trivial.  This does not mean we 
+fall back on spooky `i.elans`/; but rather that, for a 
+given $R$-quantifier, we can form (with sufficient scientific 
+input) a `i.theory` of non-triviality in the 
+$R$-domain.  Biologists, for example, do not rely 
+on unexamined `i.elans` to demarcate the realm of living things; 
+this is an scientific question, in light of astrobiological 
+possibilities.  So biology itself taks on the 
+question of under which circumstances 
+an object is a `i.biological` object.  Similarly, psychologists 
+can debate the proper demarcation of psychological objects 
+(is a brain-dead patient still a psychological object, say); 
+archaeologists the demarcation of archaeological objects 
+(e.g., as compared to collectibles), and so forth.
+`p`
+
+`p.  
+Of course, these scientists are not trying to 
+distinguish trivial from non-trivial mereological sums, 
+but sciences do include theories of their proper reach; 
+that is, we can argue philosophically equipped 
+with an inventory of tgeories drawn from 
+multiple sciences, of what makes a biological object 
+biological, etc.  While a prima facie 
+claim that sums with no $R$-quantifier just are trivial, 
+a rstriction that seems question-begging, 
+seems at best philosophically incomplete, we 
+can complete the [icture by introducing 
+constitutive theories developed by sciences 
+to identify their ontic extent.  For any $R$-domain, 
+we can assume that there is a scientific 
+theory of $R$-ness; of the conditions where 
+objects are $R$-objects.  These theories may be provisional 
+an `i.a posteriori`/, but they can complement 
+an underlying mereological theory: 
+a whole is non-trivial if it lies 
+in the domain of an $E$-quantifier, and we can philosophically 
+defer to a suite of empirical theories delimiting 
+$R$-objects for different $R$'s; the corresponding 
+`q.$R$-theories` may lie outside philosophy proper, but 
+they are not intellectually vacant `i.elans`/.   
+`p`
+
+`spsubsctiontwoline.$R$-Quantification and Cognitive Frames`
+`p.
+My analysis of $R$-quantification has been driven by a desire 
+to theorize `q.Extramental` mereology.  For those who 
+intuit that mereological relations are 
+really modeling how we cognitively 
+(perceptually, conceptually, etc.) engage with 
+objects, the mtaphysical problems of triviality may 
+never arise.  Non-trivial wholes 
+in `i.cognitive` mereologya re non-trivial 
+because we have innate perceptual tendencies and 
+learned concptualizations that dispose us to 
+treat some wholes as integral.  
 `p`
 
 `p.
 
 `p`
+
+
+
+
+
+
+
+
+
