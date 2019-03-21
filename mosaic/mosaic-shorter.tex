@@ -1,4 +1,4 @@
-\documentclass[10pt,letterpaper]{article}
+\documentclass[11pt,letterpaper]{article}
 
 \usepackage{eso-pic}
 
@@ -152,76 +152,88 @@
 \begin{center}
 {\relscale{1.5}{\fontfamily{qcr}\fontseries{b}\selectfont {\llMOSAIC}}}\\
 \vspace{8pt}
-\mbox{{\Large Science, Humanities, and Engineering Portal}}\\\vspace{3pt}
+\mbox{(\textit{Multiparadigm Ontologies for 
+Scientific, Academic, and Technical Publications)}}\\\vspace{8pt}
+\mbox{{\Large SDK and Software Engineering Products}}\\\vspace{13pt}
 \end{center}
 
-\vspace*{-2em}
+\vspace*{.2em}
 
-{\lfMOSAIC} is a cloud portal for hosting scientific, academic, and 
-technical publications.  {\lfMOSAIC} bridges the gap between 
+The {\MOSAIC} Portal is a cloud application for hosting 
+scientific, academic, and 
+technical publications.  Together with a collection 
+of server- and client-side code libraries and tools, 
+{\MOSAIC} forms an SDK and application-development 
+toolkit that can be applied to many vertical markets, 
+including biomedicine, manufacturing, industrial design, 
+cyberphysical systems, cybersecurity, and Software 
+Language Engineering.  This versatility is a product 
+of the unique design requirememts for a platform 
+hosting data sets paired with 
+self-contained, customized applocations: scientific 
+data must be exposed in a representation that preserves 
+semantically rich scientific principles, and 
+dataset applications need a streamlined, modular 
+design that limits external dependencies.
+\p{}
+{\lfMOSAIC} is powered by technologies and products that can 
+be used and licenced separately, or in combination: 
+
+\vspace{.5em}
+\begin{cframed}
+\begin{itemize}
+\item {\VersatileUX}, a desktop client-side application 
+framework; 
+\item {\NDPCloud}, a server-side cloud framework 
+optimized for interoperating between desktop 
+clients; 
+\item The {\MOSAIC} Portal, itself, a new service for 
+hosting and aggregating academic, scientific, and technical 
+data and publications.
+\end{itemize}
+\end{cframed}
+\vspace{.5em}
+\p{}
+The {\MOSAIC} portal bridges the gap between 
 traditional academic publishing and the new 
 world of software- and data-driven research platforms, 
 which feature interactive reading experiences 
-and open-access data sharing.
-\p{}
-Today there are many Academic/Scientific/Technical Portals.
-These resources, catering 
-to an academic and technical audience, aggregate 
-research articles, books, journals, and publicly accessible 
-research data.  
-AST Portals typically link to web pages devoted to individual 
-publications, with each page displaying citations, 
-abstracts, keywords/topical classification, and 
-(when appropriate) links to download documents  
-in e-reader (typically PDF) formats.  
-Some AST Portals are curated by 
-individual publishers; others (such as SciVerse, Mendeley Data, 
-and Dryad) are scientific projects  
-incorporating content from many publishers.
+and open-access data sharing.  While scientists have 
+proposed new models for curating data and publications 
+for a digital age --- such as the Research Object Protocol, 
+the FAIR (Findable, Accessible, Interoperable, 
+Reusable) initiative, and 
+FORCE (Future of Research Communication and e-Scholarship) 
+--- these paradigms have not been widely adopted by 
+publoshing companies, which in turn limits the market 
+for new products that can truly enhance the 
+reading and research experience.  As a result, 
+the {\MOSAIC} portal can implement a deeper layer of 
+academic, scientific and technical data sharing 
+than currently offerred by publishrs or scholarly 
+projects, thereby promoting the features of 
+the {\MOSAIC} {\SDK} and associated comercial products.
 
-\subsection{The {\lMOSAIC} Architecture and Data Models}
+\subsection{The {\lMOSAIC} Architecture}
 A {\MOSAIC} portal combines a central web service with a 
-collection of independent Research Objects.  Not every 
+collection of independent \q{Research Objects}, 
+which are self-contained applications combining 
+research data and application code.  Not every 
 document indexed by {\MOSAIC} must have an associated 
 Research Object, but the technological design of 
 {\MOSAIC} prioritizes integrating research portals 
 with downloadable Research Objects.
-\p{}
-In particular, {\MOSAIC} encourages the 
-creation of \textit{self-contained} Research Objects.  
-{\lfMOSAIC} assumes that the 
-typical Research Object indexed on a {\MOSAIC} portal 
-will be a downloadable code-and-data bundle 
-with \textit{minimal external dependencies}.  
-It should be easy for readers to get 
-started exploring and interacting with Research Objects 
-without complicated downloads or installation of 
-additional software.  Authors are certainly free 
-to \textit{enhance} Research Objects with 
-content tailored to specialized software --- for 
-example, sophisticated data visualization features, 
-or integration with software commonly used in the 
-relevant research fields.  However, these extra capabilities 
-augment the core of the {\RO}, which should 
-provide a standalone mechanism for researchers to understand, 
-visualize, and reuse the bundled code and data, without 
-requiring external software or code libraries.
 \p{}
 In order to help authors create self-contained 
 Research Objects, {\MOSAIC} defines a 
 \textit{Reference Application Kernel} ({\RAK}) 
 which presents a canonical format for bundling 
 research data and code into a self-contained 
-package.   
-Each {\RO} bundle using 
-the {\RAK} format provides a standalone, desktop-style 
-Dataset Application that offers an entry point to 
-the raw data.  By design, it should be easy 
+package.   By design, it should be easy 
 to download the {\RAK} bundle from {\MOSAIC} and 
 then compile and launch the Dataset Application, so 
 readers can begin exploring the data set with 
 minimal hassle.  
-
 \p{}
 The {\RAK} format includes other 
 features as well, such as code export and testing, 
@@ -237,11 +249,9 @@ finer detail.
 Technically, {\MOSAIC} {\RAK} bundles are code repositories 
 based on the Qt platform for C++ Applications.  
 In {\RAK}, each data set features C++ code which has no 
-dependencies apart from Qt itself.  The Dataset 
-Application should compile and run automatically from 
-inside Qt Creator.  Because Qt is an advanced 
+dependencies apart from Qt itself.  Because Qt is an advanced 
 desktop {\GUI} development platform, it allows 
-{\RO}s to present compelling, 
+Research Objects to present compelling, 
 interactive graphics and {\GUI} components 
 --- including 2D and 3D visualizations, tables and charts, 
 context menus, dialog boxes, explanations of 
@@ -252,14 +262,10 @@ exploring raw data, customized for each data set.
 \p{}  
 Research Objects indexed by {\MOSAIC} do not have to 
 use the {\RAK} model.  However, {\RAK} provides a 
-Reference Implementation demonstrating how {\RO} 
+Reference Implementation demonstrating how Research Object 
 metadata can be described for it to be automatically 
-processed by a {\MOSAIC} portal.  Developers 
-using different {\RO} models can 
-examine how {\RAK} bundles expose data to {\MOSAIC} 
-so as to create analogous metadata for their own 
-bundles.
-\p{}
+processed by a {\MOSAIC} portal.
+
 \subsection{The {\lMOSAIC} {\lSDK} and Data Modeling Features}
 To facilitate implementation of {\RAK} bundles, 
 {\MOSAIC} provides several development tools and 
@@ -278,7 +284,6 @@ with {\MOSAIC} portals and with other scientific
 software that may be available as enhancements 
 for {\RAK} applications, depending on  
 discipline/topics.
-
 \item[Hypergraph Code Libraries and Parsers]  
 {\lfMOSAIC} defines a multiparadigm representation for 
 scientific data based on Directed Hypergraphs.  
@@ -292,7 +297,6 @@ several other workflow and linguistics-based models
 Dataset Applications.  The {\MOSAIC} {\SDK} provides 
 code for creating hypergraphs from text documents and 
 integrating hypergraph data into C++ applications.
-
 \item[Scripting and Testing]  The {\MOSAIC} {\SDK} includes 
 components that developers can use to create 
 test suites for Research Objects and to design a 
@@ -305,7 +309,6 @@ Functional annotations provide detailed Requirements
 Engineering for application procedures, including scientific 
 details like statistical scale (Nominal/Ordinal/Interval/Ratio),
 dimensions, ranges, and declarations of side effects.
-
 \item[{\lMOSAIC} Interop]  Applications built 
 with the {\MOSAIC} {\SDK} can also automatically 
 interoperate with {\MOSAIC} portals.  The {\SDK} 
@@ -332,31 +335,31 @@ using non-{\GUI} Qt libraries as the core of the
 server-side code --- so as to minimize data 
 marshaling when the cloud service 
 communicates with native endpoints.
-\p{}
-As described above, not every Research Object indexed 
-by a {\MOSAIC} portal will use the {\MOSAIC} {\SDK} or 
-{\MOSAIC}'s {\RAK} format.  Research Object developers are 
-free to adopt their preferred RO models and 
-communicate with {\MOSAIC} via an API.  However, 
-the {\RAK} model can still be consulted in this case as a 
-reference for other kinds of Research Objects, 
-to clarify the requirements and 
-proper usage of the {\MOSAIC} API.
-\p{}
+
 \subsection{{\lMOSAIC} Products}
-The {\MOSAIC} {\SDK}, as just described, enables 
-developers to create {\RO}s that 
-seamlessly interoperate with {\MOSAIC} 
-portals.  Because of {\MOSAIC}'s unique design 
+Because of {\MOSAIC}'s unique design 
 requirements --- supporting a 
 rich, multiparadigm semantics for scientific data,  
 and centering a network of self-contained 
 desktop applications --- the {\MOSAIC} {\SDK} 
-introduces innovative features that companies may 
-find useful outside the context of academic 
-publishing and of Research Objects.  
-The {\MOSAIC} system  
-prioritizes \q{Modular Native Design}, for applications 
+introduces innovative features that can improve 
+application development methodology in general.  
+Whereas the {\MOSAIC} Portal is a cloud service 
+hosting an array of data set applications, a 
+generic {\MOSAIC} system could unify a decentralized 
+network of self-contained desktop applications sharing 
+data and services via a containerized cloud application.  
+\p{}
+The crucial feature of {\MOSAIC} is that desktop-client 
+endpoints are self-contained and architecturally 
+lightweight --- they are easy to download and 
+compile --- but are still Thick Clients, equipped with 
+a full arsenal ofvGUI, scripting, and testing features.  
+For the {\MOSAIC} Portal, these end-points are Research Objects 
+presenting open-access research data in an interactive, reusable 
+way.  For other areas, {\MOSAIC} promotes the 
+implementation of cloud-networked desktop 
+applications applications 
 that are flexible and versatile 
 from a user's point of view, 
 while also securing a software-development methodology 
@@ -366,9 +369,7 @@ and demonastrable compliance with
 legal and operational standards throughout the 
 lifetime of a project.
 \p{}
-In addition to the {\SDK}, {\MOSAIC} utilizes technologies 
-targeted to both server-side (Cloud) 
-and client-side (Desktop) components.  On the 
+On the 
 server side, {\NDPCloud} is a framework for deploying 
 cloud services tightly integrated with native applications.  
 {\NDPCloud} applications can be tested and 
