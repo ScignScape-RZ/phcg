@@ -669,7 +669,7 @@ more or better `i.concrete models` than
 Classical mreologies.  I'll call this 
 the Model-Theoretic Argument: 
 when we look at `i.concrete` models in 
-cognitive or scientifuically-described systems 
+cognitive or scientifically-described systems 
 %-- not just imagined models like 
 `q.Voxel Mereology` which are more about 
 notating philosophical intuitions than 
@@ -679,6 +679,44 @@ non-antisymmertry, not antisymmetry, predominates.
 
 `spsubsectiontwoline.Concreteness and Computation`
 `p.
+I would be remiss to draw a contrast between 
+`i.abstract` and `i.concrete` models without mntioning 
+the emergent field of `q.Ontology Engineering` and the role 
+of mereology therein.  Arguably, mereology 
+in these contexts is neither abstract like logical-axiomatic 
+models, nor concrete in the sense of `q.routing` through 
+cognitive or scientific models.  Ontologies 
+%-- as this term applies in computer science and 
+Information Systems %-- are computational artifacts, effectively 
+documents in a special-purpose language, enabling 
+programmers and scientists to define and 
+annotate data structures so as to describe logical 
+patterns obtaining within data.  Ontologies allow 
+data to be correctly shared and reproduced, and 
+also sometimes to be logically analyzed, identifying 
+structures within a data set that can be 
+extracted via logical rules.  Embedding logical axioms, 
+including those ofvmereology, 
+in data modeling frameworks therefoe becomes 
+part of an overall data nanagement technology.  Logical 
+analysis becomes a part of data analytics in general. 
+`p`
+
+`p.
 
 `p`
+
+`p.
+
+`p`
+
+`p.
+
+`p`
+
+
+
+
+
+
 
