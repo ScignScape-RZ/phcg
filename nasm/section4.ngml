@@ -1,5 +1,5 @@
 
-`section.Conclusion`
+`section.Mereology and Models`
 `p.
 The upshot of my argument lat section was 
 that the realm of mereologuical theory should 
@@ -105,8 +105,87 @@ completely random; they reflect stress points and accumulated
 forces acting upon the larger object, and 
 the geometry of the detached part reflects the structures 
 of thse forces.  Like the patterns formed by water spilling 
-over a surface, comp,exity and semi-randomness still 
+over a surface, complexity and semi-randomness still 
 has some mathematically tractable background.
+`p`
+
+`p.
+In short, a `q.voxel` model has rlativly limited usefulness even as 
+an approximate picture of solid wholes.  While connected voxel-blocks 
+are not unrealistic discrete approximations of three-dimnsional 
+shaops, voxels are less appropriate for representing 
+part-whole relationships: a model of parthood (in the 
+context of solid physical objects) is better organized around 
+functional or mechanical constructs.  There are parts induced by 
+the accumulative processes which form wholes, like 
+twigs on a branch.  There are also parts deriving from 
+stressors, fault-tolerance, and other material qualities 
+of solid substance in the sense of materials science, 
+where lines of force and/or vulerability can dispose pieces 
+of a whole to become semi-detached, giving them 
+some autonomy as defined parts in the whole.  But 
+properly modeling these material 
+tendencies presumably involves mathematical 
+formations like vector fields, where the voxel 
+dicretization is at best tangential.  Even if connected 
+voxel-blocks can model inducd parts as well has wholes, it is not 
+clear what physical reality such a model 
+would capture; it is more like a predefined 
+conceptual scheme imposed on a mostly unrelated physical 
+situation. 
+`p`
+
+`p.
+So `q.Voxel Mereology`/, as a straightforward model 
+of an axiomatic Classical Mereology, has at least dubious 
+merit as a model of physical states of affairs.  
+We could try to refine the model in a more scientifically 
+rigorous way %-- in the direction of mereotopology, 
+for example, allowing $n$-dimensional generalizations 
+of voxels and/or infinite subdivision.  So we could 
+have a system whose elements have varying dimensions 
+(perhaps to a maximum 
+of four, representing temporal change) and smaller-dimensional 
+objects can be part of larger-dimensional ones.  
+Moreover, any objects of non-zero dimension can 
+potentially have proper parts; there are no `q.atoms`/.  
+This picture may be more appropriate for 
+topological or differential-geometric 
+representations of surfaces and manifolds as they 
+would apply to science.  To have a useful notion 
+of parthood we may want to restrict partonomic 
+assertions to parts which are not too `q.bizarre` 
+%-- perhaps to connected open or closed manifolds, 
+excluding `q.fractal` shapes of fractional dimension, 
+or infinitely scattered subsets.  By way of 
+naming a juxtaposition with `q.Voxel Mereology`/, 
+I'll call this theory `q.Manifold Merology`/.
+`p`
+
+`p.
+Certainly topological spaces can be a foundation for 
+Classical Mereology models.  As with voxels, though, 
+we need to consider how applicable these models 
+are to empirical phenomena.  The topology of 
+manifolds may be a better (e.g., 
+non-discrete) approximation of material objects' nature; 
+for instance solids' outer bounday is reasonably seen 
+as a 2-manifold immersed in 3-space.  There still is 
+not a prfect isomorphism between material parts and 
+submanifolds, however.  Granted, to a reasonable 
+approximation every recognizable part of an 
+object has a corresponding submanifold.  For sake of 
+discussion, suppose we equate all wholes and parts to 
+their 2-manifold surface (and assume 
+parts are three-dimensional submanifolds of 
+three-dimensional wholes).  Assume the 
+surface of a part either overlaps with the 
+surface of a whole or else is entirely inside 
+the whole (that is, assume we are using a 
+version of the Region Connected Calculus).  
+The system of parts in relation to wholes is 
+then an example of a system of submanifolds 
+in relation to manifolds.   
 `p`
 
 `p.
