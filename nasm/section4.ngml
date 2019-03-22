@@ -565,9 +565,119 @@ of parthood as a precis of part/whole relations
 among physical phenomena; a fature/example statistic 
 as a Formal Concept space; a prototyped and dimensionalized 
 feature-space as a Conceptual Space theory.  
+In each of these cases we have to consider how a model 
+for the logical `i.system` could also 
+be a `i.philosophical` model; an explanatory tool 
+or simplifying idealization that casts philosophical 
+light on cognitive or physical phenomena.
 `p`
 
+`p.
+Philosophical models do not need to be models of 
+physical objects or systems direcly; they could encapsulate 
+or productively simplify how we perceive or conceptualize 
+external reality.  In that case we want to question the 
+cognituve place for the `i.logical` model  
+%-- the model-of-the-logical-system in 
+the model-thoretic sense.  For instance, is actual 
+human conceptual process a model of Formal 
+Concept Analysis in its guise as an axiomatic 
+system whose formmulae can b realized in 
+axiomatic models?  Do concepts as cognitive 
+entities model those axiomatics?
+`p`
 
+`p.
+Or if we look for extramental models, to what extent can 
+physical objects and systems realize axiomatic structures?  
+Certainly sciences present models (often useful and, on 
+that basis, probably relatively accurate) of 
+physical phenomena, and often do so via mathematical 
+structures that are logical modles of an 
+axiomatic system.  So the relevant 
+scientifically studied phenomena become indirectly 
+associated with the stipulated axiomatic.  But 
+as I have argued, the logic is two stps removed 
+from the phenomena; at best the siting of 
+logical structures in empirical reality 
+%-- the idea that material systems ralize structures that can 
+be abstractly specified %-- depends on complex 
+scientific investigation.  It requires detailed analysis 
+to show how a terrain of scientific givens %-- the populations 
+of species in an ecosystem, say %-- play out 
+as exemples of a logically hypotheized (e.g. in 
+this case Darwinian or genetic) theory.
+`p`
+
+`p.
+Scientific models are therefore thoretical utilizations 
+of axiomatic structures (usually via a mathematical intermediary), and 
+provable consequencs of the axiomatic system can factor in 
+to scientific reasoning.  But scientific models are 
+not `q.logical` models in the sense that science gives 
+us sets that axiomatically realize logical systems by 
+grounding quantification domains that allow 
+positions in logical formulae to be inhabited.  
+The logical model-theoretic picture %-- that axiomatic systems 
+get instantiated in sets of entities into which 
+logical symbols quantify %-- is at best only 
+abstractly applicable to scientific models, 
+which do not yield a physical reality composed of 
+`q.sets` whose members can be unproblemmatically labeled 
+with logical symbols.
+`p`
+
+`p.
+To the degree that logical systems have even indirect 
+axiomatic realization in philosophically salient 
+contexts, then, they have to be `q.routed` either 
+through cognition or through `q.science`/.  Either an 
+axiomatic schema represents (perhaps with some 
+deliberate simpification) how 
+we cognize some region of phenomena, 
+or else it models how the phenomena behave 
+irrespective our cognitive inclinations 
+(of course, it can do both in mutual 
+influence).  But either we have to see axiomatic 
+systems embedded in structures 
+sutured in cognitive structure, or we have to see 
+axiomatic systems embedded in scientific 
+theories of phenomenal composition and behavior.  
+In any case axiomatic models have to `q.latch on to` 
+cognitive and/or scientific models to have a 
+philosophical resonance.
+`p`
+
+`p.
+This effectively metaphilosophical ideology, I think, 
+includes mereology as an (important) special 
+case.  Introducing mereology via an axiomatic 
+system is quite common, even in philosophy.  But 
+I'd argue that the philosophical value of 
+an axiomatized mereological system is dependent 
+on how and whether it can latch on to 
+the requisite cognitive and/or scientific 
+models to make its own, axiomatic model-building 
+something more concrete than afforded by set-based 
+model theory in pure logic.
+`p`
+
+`p.
+This brings me to my final case for NAM: 
+non-antisymmetric mereologies have 
+more or better `i.concrete models` than 
+Classical mreologies.  I'll call this 
+the Model-Theoretic Argument: 
+when we look at `i.concrete` models in 
+cognitive or scientifuically-described systems 
+%-- not just imagined models like 
+`q.Voxel Mereology` which are more about 
+notating philosophical intuitions than 
+philosophical expos\'es of thought or reality %-- 
+non-antisymmertry, not antisymmetry, predominates.
+`p`
+
+`spsubsectiontwoline.Concreteness and Computation`
 `p.
 
 `p`
