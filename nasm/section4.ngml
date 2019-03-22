@@ -185,11 +185,354 @@ the whole (that is, assume we are using a
 version of the Region Connected Calculus).  
 The system of parts in relation to wholes is 
 then an example of a system of submanifolds 
-in relation to manifolds.   
+in relation to manifolds.   However, the system of 
+manifolds has some properties that 
+may not be dsired in a mereological thory.  
+For instance, for a submanifold properly contained in a 
+larger manifold, a sufficiently small deformation of 
+the smaller manifold yields a new manifold 
+also contained in the larger.
 `p`
+
+`p.
+The mereological equivalent to this property is 
+that if `xhppy;, there is an infinite space of 
+topological deformations of $y$ yielding a $y'$s 
+that, without some extra criteria, will also be in $x$.  
+We can of courdr stipulate that only some submanifolds 
+correspond to actual parts, but then the formalization of 
+submanifolds is only one dimension in the 
+description of parthood.  Whereas Voxel Mereology was a 
+flawed model of (solid, material) objects because its discrete 
+architecture was at best a rather arbitrary 
+structure superimposed on physical forms, 
+Manifold Mereology has limits of applicability 
+for essentially the opposite reason: mathematical 
+continuity allows for infinitessimal modifications 
+of geometric forms in ways that have no physical meaning.
+`p`
+
+`p.
+Both the Voxel and the Manifold pictures are only 
+indirectly representations of `q.solid matter`/; 
+they are actually models of geometric extension, 
+figured either discretely or continuously.  
+The `q.voxel` as a binary empty-or-filled spatial region 
+is an idealization; but physical surfaces as 2-manifolds 
+is an idealization also.  Physical solids do not have a 
+crisp boundary where their interior ends and surroundings 
+space begins, such that exterior surfaces can be mathematically 
+embodied in 2-manifolds.  This may be a reasonable 
+approximation for some solids, just as the voxel 
+`q.little brick` picture is somtimes mostly 
+appropriate.  But neither are physically oriented 
+theories of how matter actually extends in and relates to 
+surrounding space.  Instead, they are 
+mathematical formulations of extension 
+per se, as geometric primitive.  This may yield 
+valuably mathematics %-- consider differential 
+geometry as a theory of physical procsses 
+on objects' surface, or even tools like 
+NURBS Non-Uniform Rational B-Spline, a feature of 
+Computer-Aided Design and Computer Graphics) 
+for computarionally modeling solid geometry.  But 
+mathematical formalizations always have 
+at best an indirect relation to physical phenomena. 
+`p`
+
+`p.
+This may suggest an intrinsic limit to any 
+axiomatic mreology invoked as part of a philosophical 
+treatment of parts and wholes: any `i.model` of 
+such a system has to be interpreted as a model 
+(to some approximation) of physical wholes.  
+But the most natural mereological models are likely 
+to be mathematical systems, like 
+discrete geometries or topologies %-- perhaps 
+with certain mereologically-inspired 
+restrictions (e.g. distincguishing 
+connected submanifolds from submanifolds in 
+general) %-- or perhaps algebraic models, like 
+lattices.  In any case we then need a further 
+accpunt of the relation between 4the 
+mathematical idealization and 
+physical reality.  So the mereological 
+system is removed at two steps from 
+physical phenomena, which means the 
+philosophical analysis has to preovide at 
+least two `q.bridge` theories alongside 
+the formal statemeent of the mereological 
+system, to explain why the 
+proposed axiomatization is a 
+philosophical subject-matter.
+`p`
+
+`p.
+The tenor of this line of analysis is not 
+rstricted to mereology; I would 
+make similar arguments about the theory of 
+concepts, say, or `q.truth-theoretic` semantics.  
+Given an axiomatic system like Formal Concept Analysis, 
+we need to explain how models of that theory actually 
+relate to conceptualization as a phenomenon of 
+human intellect.  Formal Concept Analysis engages a 
+structural morphology of concepts 
+not very different from the building 
+blocks of a mereology; intensional 
+`q.features` and extensional `q.examples` jointly 
+characterize cpncepts, which can then 
+be merged together or split apart.  For example, 
+merging the feature-set of two concepts, and then 
+selecting all examples which have all (or a sufficient 
+number of) the combined features, represents an 
+`q.addition` between concpts (a variation is to 
+consider examples with `i.common` features of 
+two concepts: so a potential 
+milk-plus-almond-jilk concpt would have as examples any 
+liquid exhibiting the features milk and 
+almond milk have in common).
+`p`
+
+`p.
+Formal Concept Analysis may provide an interesting systmatization 
+of discriminitive or evolutionary factors shaping 
+how humans intuit and modify concpts.  There are other 
+formal concept models as well, such as prototype-based 
+models, or the idea of mapping concepts to rgions in 
+qualitative spaces, featured in Conceptual Space Theory.  
+These various theores can be combined; for example, 
+Formal Concept Analysis can be extended with prototype criteria 
+such that features and examples are weighted in terms 
+of how essential they are to the relevant 
+concept (as features) or how characteristic they are 
+(as examples).  The most representative prototypes 
+of a concept are (on such a model) ones 
+that strongly reflect the features most 
+indicative of the concept.  These criteria 
+of weights and prototypes can be adjoined to 
+the feature/example matrix of Formal Concept Analysis, 
+yielding an axiomatic system which may model, to some 
+approximation, human conceptual activity.
+`p`
+
+`p.
+When we start to compare these formal models with actual 
+conceptual patterns, however %-- for instance 
+in Cognitive Semantics or Cognitive Grammar %-- 
+the models start to seem unnaturally simplistic 
+and superimposed.  It's not that structural 
+analysis of cognitive representations is impossible; 
+but rather that each structure tends to have its 
+own `i.sui generis` rationale, and trying to 
+trace cognitive gestalts to an 
+axiomatic foundation starts to feel, at best, 
+reductionistic.  
+`p`
+
+`p.
+Analogously, a `q.truth-theoretic` model of linguistic 
+meaning %-- mapping sentences to logical formulae 
+or to truth conditions %-- have intuitive appeal but 
+also many apparent counter-examples.  A full discussion 
+is beyond the scope of this paper, but I'll give some 
+of my favorite examples demonstrating why truth-theoretic 
+readings are, in my opinion, at best incomplete: 
+
+
+`sentenceList,
+`sentenceItem; \label{itm:sangalong} Everyone sang along to two songs.
+`sentenceItem; \label{itm:performed} Everyone performed two songs.
+`sentenceItem; \label{itm:boroughs} New Yorkers live in one of five boroughs.
+`sentenceItem; \label{itm:commute} New Yorkers often gripe about long commutes.
+`sentenceItem; \label{itm:democratic} New Yorkers reliably vote Democratic.
+`sentenceItem; \label{itm:after} Student after student came out against the tuition hikes.
+`sentenceItem; \label{itm:mass} A critical mass of students came out against the tuition hikes.
+`sentenceItem; \label{itm:tipping} Students' anger about tuition hikes may have reached a tipping point.
+`sentenceList`
+
+If a truth-theoretic model is accurate, it should be possible 
+to capture the approximate signifying content of each of these sentencs 
+by expressing them in logical form; or at least show a 
+systematic translation of syrface linguistic structure 
+to truth-making conditions.  I want to argue that every of these 
+sentences fail the test.
+`p`
+
+`p.
+Start with (\ref{itm:sangalong}).  The most natural interpretation 
+to my ear %-- i.e., I imagine the kind of scenario 
+where (\ref{itm:sangalong}) is most likely to be epressed 
+%-- involves some sort of concert which included two 
+particularly popular songs, that most people in the audience 
+could sing along with.  On that reading, there 
+were `i.eactly two songs` and the sentence does not 
+commmit to `i.literally` everyone singing them.  
+Conversely, (\ref{itm:performed}) strikes me as talking 
+about musicians onstage rather than the aueince, and 
+suggesting that each performer had a two-song 
+set; i.e., each performed two 
+`i.different` songs.
+`p`
+
+`p.
+So, I hear a wide-scope reading for `q.two songs` in 
+(\ref{itm:sangalong}) but a narrow scope in 
+(\ref{itm:perfromed}).  What I want to emphasize is `i.why` 
+we would make that judgment: there is norhing 
+in the sentence itself that points toward 
+a wider or narrower scope.  Instead this follows from a 
+pragmatic construal of the verbs involved: 
+to `i.perform` seems to bind the verb to its subject 
+more tightly than `i.sing along`/.  The situationsl 
+model most appropriate for `i.perform` leans toward 
+narrow scope, while the situationsl 
+model for `i.sing along` leans toward wide scope.
+`p`
+
+`p.
+In (\ref{itm:boroughs}), a reasonable interpretation is that, 
+according to the sentence, `i.all` New Yorkers live in 
+one of five boroughs.  Indeed, the territory of 
+New York is precisely partitioned into five boroughs. 
+On the other hand, (\ref{itm:commute}) does not 
+appear to commit to referencing literally `i.all` 
+New Yorkers; meanwhile it also appears to use the 
+phrase `q.New Yorkers` differently than (\ref{itm:boroughs}), 
+to mean generically people who work in New York or 
+live in th New York metro area.  In the case of 
+(\ref{itm:democratic}) we hear `q.New Yorkers` narrowly 
+as in (\ref{itm:boroughs}), because voting relates 
+a person to their actual place of residence (not 
+where they work or their metro area).  However, 
+the implicit quantifier in (\ref{itm:democratic}) 
+is `i.most`/, not `i.all`/; it does jot fit our 
+conceptual picture of `q.voting` to imagine 
+one party winning `i.all` votes.  
+Again, these contrasts are not produced by sentence 
+or phrasalform; they are instead driven by 
+lexical peculiarities of words 
+like `i.borough`/, `i.commute`/, and `i.vote`/.
+`p`
+
+`p.
+In the last three sentencs, we can similarly hear an 
+implied quantifier to the effect that `i.many` 
+students are complaining or unhappy about some tuition 
+increases.  But each sentence adds a shading on the generic 
+form like `i.many students complained`/: in 
+(\ref{itm:after) the speaker tries to connote the 
+pervasiveness of students' anger by giving it a temporal 
+figure.  She suggests how a temporal recurrence of 
+some phenomenon reinforces our sense of its extent; 
+not only is it aserted that many students are unhappy, but that 
+this fact is reiterate multiple times by the repeated 
+occurance of some particular student expression unhappiness.  
+The verbiage used to describe that unhappiness, also 
+%-- `i.come out against` %-- carries an extra spatial or 
+narrative dimension than a plainer alternative like `q.complained`/.   
+To `i.come out against` implies a public, maybe even activist 
+display of anger.  In (\ref{itm:mass), a similar figuration 
+of `i.many` imposes an interpretive attitude on the 
+sentence: to refer to `i.many` as a `i.critical mass` 
+implies not just magnitude, but `i.enough` magnitude 
+to effectuate something: (\ref{itm:mass) might be said of 
+a case where student protests forced a school 
+to cancel planned hikes.  And (\ref{itm:tipping) is 
+similarly implying that some threshold may be 
+crossed, without indicating (at least within the 
+sentence) what tghe spaker thinks might happen then.
+`p`
+
+`p.
+These readings do not dispute that each sentence in 
+(\ref{itm:borough)-(\ref{itm:tipping) have a logical 
+substance that could be modeled as quantified assertions, 
+using the appropriate quantifiers in each 
+case (`i.every` performer/audience member; 
+`i.all` New Yorkers; `i.most` New Yorkers; 
+`i.many` students).  Lexical variation 
+(like `q.New Yorker` meaning both a resident of the 
+city and the metro area) has to be accounted for, 
+as does scope variation (like an `i.everyone ... two songs` 
+case, where `q.everyone` as `q.space builder` 
+introduce both a global and a local space such that 
+scopes must be resolved for the rest of the sentence).  
+I grant, however, that an underlying predicate logic can 
+be enriched to represent these added scope and 
+lexical details.  So I believe that, at least among 
+the sentences I've analyzed, we `i.can` construct a 
+logical representation which captures at last some 
+of the intended meaning of the sentencs.
+`p`
+
+`p.
+However, this by itself does not strike me as legitimating 
+a truth-thoretic semantics.  One reason is that the actual 
+words chosen provide shades of meaning %-- narrative or figurative 
+construals, interpretive connotations, visual imagery 
+%-- which add communicative content 
+that cannot be readily modeled within logical 
+details themselves.  In the `q.many students` examples, 
+different formations taking the palce of 
+`i.many` present different interpretations 
+or figurations of the described states of affairs.  
+These added details, however, can still be said to 
+have a logical structure: for instance 
+the `i.critical mass` language implies the speaker thinks 
+thesher number of students complaining `i.caused` something 
+to happen.  As such, the interpretive or 
+figurative implications of the word-choices can be 
+seen as a compact or rhetorically effective way to denote an 
+underlying logical structure.  We can even in these cases find 
+a propositional content; except, the language 
+itself uses figurative or connoytative devices to actually refer 
+us toward that content.
+`p`
+
+`p.
+By broader claim is that there is no effectively logical 
+transformation `i.from` the linguistic 
+content as presented `i.to` the constituent elements 
+of the relevant, signified propositional content.  
+What `i.rules` are we following when we hear 
+`q.sing along` as having wide scope and 
+`q.perform` as having narrow scope?  Or 
+hear the implicit quantifier in (\ref{itm:democratic}) 
+and (\ref{itm:commmute}) as `i.most`/, but in 
+(\ref{itm:democratic}) is `i.all`/?
+`p`
+
+`p.
+I am prepared to admit that a truth-thoretic `i.semantics` 
+need not be a truth-theoretic `i.grammar`/; that is, 
+we can say that sentences haveva propositionaln content 
+that semantics should isolate, even if there 
+is only an indirect mapping from the surface-level 
+linguistic performance to th predicate structure 
+which, in many cases, we could see as sentences' 
+`i.meaning`/.  Linguistic expressions do 
+not, in general, structurally recapitulate the form 
+of propositional asserions laid out mechanistically.  
+Truth-theoretic models could still have semantic validity 
+if we say that situational awareness and sensitivity 
+to rhtorical nuance allows us to proceed, perhaps 
+circuitously and interpretively, from 
+language acts to predicate structures.  The predicate logic 
+of language is not so baldly apparent that we can 
+program computers to understand language, but 
+everything that seems not-quite-logical about 
+language %-- its reliance on connotation and 
+figuration %-- could, we might speculate, 
+be cordoned off as an economy of `i.grammar`/.  
+We speak figuratively because it is grammatically 
+more efficient %-- and, partly for this reason, 
+rhetorically more persuasive %-- to designate 
+propositional content indirectly, rather than speaking 
+in surface forms mimicking predicate algebra.     
+`p`
+
 
 `p.
 
 `p`
-
 
