@@ -761,7 +761,54 @@ query about podiatric diagnoses.
 Mereology is, accordingly, part of an overall logical 
 structure designed to facilitate the operational 
 requirements of adding and filtering data 
-from information spaces.  
+from information spaces.  This adds a further dimension to 
+mereological analysis, because the 
+mereology (along with other logical 
+relations) becomes part of an engineered system, 
+where we have prior anticipation of `i.how` 
+we want the system to perform.  We identify specific 
+kinds of inferences which should be engineered 
+into the system based on anticipated 
+preferences of human users.
+`p`
+
+`p.
+To clarify, we can recognize in an Information 
+System at least two different classes of 
+`q.behaviors`/: `i.input` and `i.output`/.  
+Input behaviors are the system's implementations, 
+and the interactions it affords, for people 
+entering new data (say a doctor entering a 
+new ingrown-toenail diagnosis); output behaviors are 
+implementations and afforances for getting information 
+out of the systm, such as by queries (perhaps, a 
+list of patints with podiatric diagnoses).  
+We can add `i.internal` behaviors involving 
+internal processing to link inputs and outputs 
+in (according to users' expectation) correct 
+ways.  The system-outputs are products of 
+the cumulative history of its inputs up to the 
+point where output behavior is requisite.  
+For example, the prior input of an ingrown-toenail 
+diagnosis constitutes `i.relevant input histoey 
+for a query (demanding output 
+behavior) for podiatric diagnoses.
+`p`
+
+`p.
+So mereology and other logical relations play a role when it 
+comes to identifying `i.input history` that is `i.relevant` 
+for a certain output rquest.  Logical reasoning 
+expands the space of input history which will be 
+considered relevant in a given output-context.  
+This points to an interpretation of mereology in 
+terms of `i.relevance`/; properties or 
+assertions involving a part (e.g., diagnoses) 
+are relevant to ponding whole.  
+`p`
+
+`p.
+Notionally, then, mereology 
 `p`
 
 `p.
