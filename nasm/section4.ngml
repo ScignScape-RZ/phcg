@@ -703,18 +703,63 @@ analysis becomes a part of data analytics in general.
 `p`
 
 `p.
+Ontologies are abstract prototypes; they play a determinative 
+modeling role only in conjunction with actual data sets.   
+Also, although computer programs can perform 
+some `q.reasoning` on modeled data sets, the 
+explicit correlation between Ontologies and 
+empirical data depends on people consciously 
+aligning data structures to Ontologies' types and 
+relations.  Data sets annotated via formal Ontologies 
+therefore reprsent deliberate human attempts to 
+relate conceptual and empirical 
+tsructures %-- they are both cognitively 
+and scientifically concrete.
+`p`
 
+`p.
+Consider, for sake ofvdemonstration, a derivation of 
+the fact that an ingrown toenail should 
+qualify as a malady of the foot.  An Ontology 
+might represent ingrown toenails afflicting 
+toes, and also that toes are part of the foot, 
+without identifying an ingrown toenail as a 
+malady of the foot per se.  Someone searching 
+a database for foot afflictions, however, 
+might well expect cases of ingrown toenails to be  
+among the search results.  Thus mereological 
+rules can extend the semantic reach of an information system.
+`p`
+
+`p.
+But that semantics depends first on conscious design 
+of Ontologies to represent things like 
+disease classifications and part/whole relations, and 
+also on human c;assification activity.  Someone has 
+to specifically notate that a patient's condition 
+exemplifies an ingrown toenail.  The Information 
+System is designed around human practice, according 
+to different operational needs: entering a disagnostic code 
+in a medical record, for example, and then 
+querying a database to gather a set of results 
+such as cases of diagnoses filtereed by some 
+condition (say, conditions that might be 
+treated by a podiatrist).  An Information 
+System %-- its technology as well as its 
+actual data %-- can evolve in response to 
+operational preferences.  In short, 
+deductive reasoning like `i.ingrown 
+toenail is a kind of foot malady` is desired not 
+out of some abstract concern for logical completeness, 
+but it fits operational needs to 
+pair a data entry about a patient with an 
+ingrown toenail matching a potential database 
+query about podiatric diagnoses.
 `p`
 
 `p.
 
 `p`
-
-`p.
-
-`p`
-
-
 
 
 
