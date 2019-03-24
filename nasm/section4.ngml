@@ -837,10 +837,70 @@ constituent feature of information spaces,
 replication means that the points 
 where the data is shared will replicate 
 analogous input-to-output patterns.  
+Data sharing does not necessarily mean that 
+all points process data identically; when data is 
+exported between environments the new location 
+may serve different operational purposes, 
+so that analogous queries or interactions 
+which receieve output data may beevaluated different 
+at different points in a data-sharing network.  
+But assuming the `i.receiver` of shared data 
+does differ in its output structures from 
+the `i.senders`/, these differences should be 
+systematically accounted for `visavis; how 
+the respective systems are engineered. 
 `p`
 
 `p.
+Conventional Semantic Web data srructures are 
+organized around the principle of `i.labeled graphs`/, 
+where the building blocks of data models are 
+so-called `q.triples`/: `i.Subject/Predicate/Object` 
+graph units where `i.Subject` and `i.Object` 
+are graph-nodes and `i.Predicates` are labels 
+applied to graph-edges, asserting that the `i.Object` 
+bears to the `i.Subject` some 
+identified relationship.  Ontologies then, 
+first and foremost, provide lists 
+of identifier for both nodes and edge-labels: 
+this allows nodes to be associated with a kind or 
+type (a `i.person`/, say, or a `i.diagnostic code`/) 
+while edges are labelled according to a controlled 
+vocabulary (so edges represent concrete 
+relations, for example, that a person has a diagnosis).  
+Ontologies then superimopose logical axioms 
+pertaining to restrictions or guarantees among relations and/or 
+nodes: that a relation is transitive, 
+say, or that a given relation is only reasonable 
+for certain `i.Subject` and `i.Object` types 
+(e.g., a diagnostic relation is only 
+coherent as a relation between a person or 
+patient and a diagnosis or diagnostic code).
+`p`
 
+`p.
+Although a fair range of empirical semantics can be 
+captured by individual `i.Subject/Predicate/Object` 
+triples, in many cases a realistic semantics 
+demands a model of how multiple relations aggregate 
+to form meaningful units.  For example, instead of 
+a diagnosis being modeled as a single relation between 
+a patient and a diagnostic code, a systm may 
+stipulate a more detailed representation where a single 
+`q.diagnosis` has several associated piecs 
+of information, such as a diagnostic code, a date, a 
+doctor's name, and potential 
+reference to laboratory or radiological findings that 
+substantiate the diagnosis.  This relflects how, in 
+most computational settings, the basic units of 
+evaluationb are not single data points but internally 
+structured data aggrgates.
+`p`
+
+`p.
+Thus far, no standard model has emerged to represent 
+larger-scale data structures in the Semantic Web 
+context.
 `p`
 
 `p.
