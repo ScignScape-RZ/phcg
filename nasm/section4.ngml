@@ -1117,8 +1117,118 @@ is closest to mathematical graph theory.
 `p`
 
 `p.
-The diversity of rlated by not identical approaches poibts 
-to an incomplete dimension in the 
+The diversity of rlated by not identical approaches points 
+to an incomplete dimension to the Semantic Web; 
+multiscale representations have 
+not been standardized.`footnote.There is an official 
+`q.RDF Collections` model but this addresses only a small 
+part of genuine multscale modeling.`  Not that a 
+single form of multiscal structure should be preferred 
+over others; there ar ecompetingpriorities which come 
+to the fore in different contexts.  
+This actually reflects competing ideas about what the 
+Semantic Web should try, first and foremost, to accomplish.  
+The Semantic Web can be seen as a potentially 
+global, open-ended data-sharing community; as a foundation 
+for a future of AI-driven networking; as a kinnd 
+of vast, decentralized graph database; or as an 
+analytics ecosystem that allows logical analytic 
+methods to be applied, alongside othr 
+(e.g., statistical) forms of data analysis, 
+to travserse and filter information from 
+the internet.  Which priorities we emphasize 
+dictate the kinds of tchnologies that have 
+to be implemented, and the `q.semantics` of the 
+Semantic Web can reflect the need to optimize 
+representations and network interactions to 
+benefit those priorotized technologies.  
+`p`
+
+`p.
+What this diversity of option reveals, however, is that 
+the question of multiscale data represenatation 
+is complex and multifacted.  Instead of just 
+setting forth one system as a speculative enterprise, 
+engineers have to identify different forms 
+of multiscalar data %--for eample, 
+I enumerated four versions of hypergaphs %-- and study 
+which flavor is best suited for different technological 
+priorities and acceptable trade-offs.  
+Implicitly, I believevthat s7uch a field of study represents 
+a kind of computational investigation of 
+mereology %-- not mereology tied to 
+predefined logical axioms, but an organizing 
+pattern for computational phenomena 
+(e.g., hypergraphs) whose properties 
+have to be codified and optimized.
+`p`
+
+`p.
+This brings me to the final characterization 
+of mereology I'll propose here: Hypergraph Mereology.  
+I think that analyzing hypergraphs in the computational 
+and software engineering contexts presents a philosophically 
+interesting pictur of formalized mereology 
+no less relevant %-- and perhaps more cognitively 
+or scientifically appropriate %-- then a `q.logical` or 
+`q.axiomatic` mereology. 
+`p`
+
+`p.
+Note that Hypergraph Mereology is not necessarily 
+set forth axiomatically; we do not specifically 
+define hypergraphs by stating their axiomatic 
+condition.  We `i.could` proceeed in this 
+way, of course; hypergraphs are a meaningful 
+matheamtical subject.  But often the formalizationb
+of hypergraph models is indirect, 
+relying on software implementations rather than 
+logical specification.  In other words, much of the 
+intellctual substance behind research into 
+hypergraphs is built from practical implementations 
+of hypergraph code libraries, allowing us 
+to study and compare how these libraries are
+abstractly conceived and concretely implemented.
+`p`
+
+`p.
+This demonstrates a phenomeneon which I think Analytic Philosophy 
+has not fully registered: the kind of 
+formalizing effortsthat in dcades past may have been 
+pursued via logical or logicomathematical axiomatics 
+can increasingly be replaced by software and compurter 
+code.  Testing philosophical intuitions in an 
+intellectual environment oriented to concrete code 
+devleopment rather than logicomathematical 
+abstraction has several implications: there is a 
+kind of feedback and trial-and error which 
+can shape the intellectual process; the ecosystem
+of open-source code and software development tools 
+has diffferent institutional norms 
+than communal deliberation over the 
+validity of logical argumentation; and 
+code development tangibly augments academic 
+writing, in that philosophers (or writers from 
+any other discipline) can pair their conventional 
+publications with code repositories and data sets.  
+This kind of research can lad 
+philosophy in a kind of empirical, experimental 
+direction, but also simultaneously in a 
+direction which accords to the individual philosopher, 
+I think, somerhing lik renewed agency and autonomy.  
+In this spirit we ar not only sharing 
+with our peers rational claims, but 
+exhibiting practical technology created 
+under the inspiration of philosophical arguments.  
+Well-designed, open-source code projects have a 
+certain inner empowerment for their contributors; 
+in a world of (often imperfctly 
+apportioned) intellectual capital, they 
+act as fiat currency, neither curated nor 
+endoecd by academicinstitutions 
+in the conventional sense, and as such 
+not diluted by the not-always-rational 
+timelines of academic prestige.
 `p`
 
 `p.
