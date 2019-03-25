@@ -17,6 +17,8 @@
 #include <QString>
 #include <QMap>
 
+#include <QDebug>
+
 #include <functional>
 
 
@@ -37,22 +39,22 @@ public:
  void push_back(const VAL_Type& v)
  {
   void* spot = hive_structure_->get_push_back_location();
-  VAL_Type* vv = (VAL_Type*) spot;
+  //VAL_Type* vv = (VAL_Type*) spot;
   memcpy(spot, &v, hive_structure_->value_size());
-
-  VAL_Type& rvv = *vv;
-
   hive_structure_->increment_total_size();
  }
-
 
  void each(std::function<void(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   while(!hit.end())
   {
+//   qDebug() << QString("hit: %1,%2,%3")
+//               .arg(hit.block_index)
+//               .arg(hit.inner_index)
+//               .arg(hit.total_index);
+
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
-   VAL_Type& rv = *pv;
    fn(*pv);
    hive_structure_->increment_iterator(hit);
   }

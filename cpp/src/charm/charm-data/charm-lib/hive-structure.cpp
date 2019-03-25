@@ -11,6 +11,8 @@
 #include <QString>
 #include <QMap>
 
+#include <QDebug>
+
 Hive_Structure::Hive_Structure()
  :  block_size_(0), total_size_(0),
    value_size_(0), first_block_(nullptr)
@@ -31,7 +33,12 @@ Hive_Block* Hive_Structure::check_init_blocks(quint32 max)
    //last_block = *current_block;
    continue;
   }
-  void* mem = malloc(block_size_ * total_size_);
+  void* mem = malloc(block_size_ * value_size_);
+
+//  if(!mem)
+//  {
+//   qDebug() << "malloc failed ...";
+//  }
   (*current_block) = new Hive_Block{mem, nullptr};
   result = *current_block;
   current_block = &(result->next_block);
@@ -41,6 +48,7 @@ Hive_Block* Hive_Structure::check_init_blocks(quint32 max)
  }
  return result;
 }
+
 
 void* Hive_Structure::get_indexed_location(quint32 index)
 {
@@ -54,6 +62,7 @@ void* Hive_Structure::get_indexed_location(quint32 blkn, quint16 blki)
  Hive_Block* hb = check_init_blocks(blkn);
 // char loc [value_size_][block_size_] = (char*) hb->values;
 // return loc[blki];
+
  return (unsigned char*)(hb->values)
    + (blki * value_size_);
 
