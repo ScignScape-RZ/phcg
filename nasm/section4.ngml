@@ -940,10 +940,53 @@ in the general case computational oprocedures operate upon.
 `p.
 For these reasons, part/whole aggregation and the rules for 
 nesting data structures (directly or indirectly) 
-should be essential topics for the Semantic Web separate 
+should be essential topics for the Semantic Web (separate 
 and apart from mereological axioms built into 
-web Ontologies.  
+web Ontologies).  Thre are at last four different 
+strategies that can be used to represent multiscale data in a 
+graph or labeled graph context.  These are not mutually 
+exclusive but have different emphases; insofar as 
+labeled graphs form the notional foundation of 
+the Semantic Web they can carry over into 
+that context as well.  Graphs supporting multi-scale 
+representations are generically called `q.hypergrphs`/, 
+although there are different hypergraphs 
+theories providing differebt spaces of models. For sake 
+of illustration, I'll use the hypothetical case 
+of a diagnosis encompassing a diagnostic code, 
+date, and the diagnosing doctor's name, 
+and refer to schematic diagrams in Fig1a-d.  
+`p`
 
+`p.
+One form of hypergraph is based on the 
+idea of `i.hyperdges`/, and further 
+`i.directed` and `i.labeled hyperdges`/, which 
+generalize graph-edges to include more than two nodes.  
+For instance, a record of a diagnosis even 
+can involve a four-node edge where one 
+node represents the patient, and the remaining 
+three nodres represent a diagnositic code, date, 
+and doctor's name.  Directed Hypergraphs 
+group the nodes incident to a hyperedge 
+into `i.source` and `i.target` nodes; in 
+this example the patient's node is the 
+lone source and the remaining nodes are targets, 
+indicating several pieces of information associated 
+with a diagnosis.  The (potentially multi-node) 
+sourc and target sts generalize the Semantic 
+Web concpt of `i.Subject` and `i.Object` 
+for context where a given predicate-relation 
+needs to be expressd with multiple subjcts and/or 
+objects.
+`p`
+
+`p.
+A second moel of hypergraphs can be defined by allowin each 
+node to be (or internally contain)
+`p`
+
+`p.
 
 `p`
 
