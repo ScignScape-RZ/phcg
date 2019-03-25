@@ -61,6 +61,8 @@ public:
  ACCESSORS(Hive_Block*, first_block)
 
  void* get_push_back_location();
+ void* get_back_location();
+
  void* get_indexed_location(quint32 index);
  void* get_indexed_location(quint32 blkn, quint16 blki);
 
@@ -72,6 +74,8 @@ public:
  void increment_total_size();
  void reverse_iterator(iterator& hit);
  void decrement_iterator(iterator& hit);
+
+ void pop_back();
 
 };
 

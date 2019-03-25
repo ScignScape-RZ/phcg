@@ -18,6 +18,31 @@
 
 int main(int argc, char **argv)
 {
+ Stk1d<int> s1d;
+
+ s1d.push(7);
+ s1d.push(9);
+ s1d.push(17);
+
+ s1d.each([](int& i)
+ {
+  qDebug() << i;
+ });
+
+ s1d.pop();
+
+ s1d.each([](int& i)
+ {
+  qDebug() << i;
+ });
+
+ qDebug() << "ok";
+ return 0;
+}
+
+
+int main4(int argc, char **argv)
+{
  Deq1d<int> d1d;
 
  d1d.push_back(7);

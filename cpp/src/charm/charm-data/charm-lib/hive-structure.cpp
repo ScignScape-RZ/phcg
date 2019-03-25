@@ -68,6 +68,29 @@ void* Hive_Structure::get_indexed_location(quint32 blkn, quint16 blki)
 
 }
 
+void* Hive_Structure::get_back_location()
+{
+ if(total_size_ == 0)
+   return nullptr;
+ return get_indexed_location(total_size_ - 1);
+}
+
+void Hive_Structure::pop_back()
+{
+ if(total_size_ == 0)
+   return;
+ --total_size_;
+
+ quint16 blki = (total_size_ % block_size_;
+
+ if(blki == 0)
+ {
+  quint32 blkn = index / block_size_;
+ }
+
+}
+}
+
 void* Hive_Structure::get_push_back_location()
 {
  return get_indexed_location(total_size_);
