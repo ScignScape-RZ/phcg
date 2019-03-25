@@ -19,6 +19,12 @@ int main(int argc, char **argv)
  Vec1d<int> v1d;
 
  v1d.push_back(7);
+ v1d.push_back(9);
+
+ v1d.each([](int& i)
+ {
+  qDebug() << i;
+ });
 
  qDebug() << "ok";
  return 0;

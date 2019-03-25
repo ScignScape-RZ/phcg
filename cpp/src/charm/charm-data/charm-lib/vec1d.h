@@ -17,6 +17,8 @@
 #include <QString>
 #include <QMap>
 
+#include <functional>
+
 
 template<typename VAL_Type>
 class Vec1d
@@ -32,11 +34,28 @@ public:
   hive_structure_->set_value_size(sizeof(VAL_Type));
  }
 
-
- void push_back(VAL_Type& v)
+ void push_back(const VAL_Type& v)
  {
-  void* spot = hive_structure_.get_push_back_location();
+  void* spot = hive_structure_->get_push_back_location();
+  VAL_Type* vv = (VAL_Type*) spot;
+  memcpy(spot, &v, hive_structure_->value_size());
 
+  VAL_Type& rvv = *vv;
+
+  hive_structure_->increment_total_size();
+ }
+
+
+ void each(std::function<void(VAL_Type& v)> fn)
+ {
+  Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  while(!hit.end())
+  {
+   VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
+   VAL_Type& rv = *pv;
+   fn(*pv);
+   hive_structure_->increment_iterator(hit);
+  }
  }
 
 };

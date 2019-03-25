@@ -24,13 +24,32 @@ struct Hive_Block
 
 class Hive_Structure
 {
- quint8 block_size_;
+ quint16 block_size_;
  quint32 total_size_;
  quint16 value_size_;
 
  Hive_Block* first_block_;
 
 public:
+
+
+ struct iterator
+ {
+  quint32 block_index;
+  quint16 inner_index;
+  quint32 total_index;
+
+  static iterator start()
+  {
+   return iterator{0,0,0};
+  }
+
+  bool end()
+  {
+   return total_index == -1;
+  }
+ };
+
 
  Hive_Structure();
 
@@ -43,8 +62,15 @@ public:
 
  void* get_push_back_location();
  void* get_indexed_location(quint32 index);
+ void* get_indexed_location(quint32 blkn, quint16 blki);
 
- void check_init_blocks(quint32 max);
+ Hive_Block* check_init_blocks(quint32 max);
+
+ void* get_iterator_location(iterator& hit);
+
+ void increment_iterator(iterator& hit);
+ void increment_total_size();
+
 };
 
 
