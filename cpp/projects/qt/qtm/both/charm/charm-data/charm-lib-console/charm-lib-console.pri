@@ -28,7 +28,7 @@ SOURCES += \
   $$SRC_DIR/main.cpp \
 
 
-#LIBS += -L$$TARGETSDIR -lrelae-phaon
+LIBS += -L$$TARGETSDIR -lcharm-lib
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

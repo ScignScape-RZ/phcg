@@ -24,10 +24,11 @@ DEFINES += USE_KANS
 
 HEADERS += \
   $$SRC_DIR/vec1d.h \
+  $$SRC_DIR/hive-structure.h \
 
-  
-#SOURCES += \
-#  $$SRC_DIR/vec1d.cpp \
+
+SOURCES += \
+  $$SRC_DIR/hive-structure.cpp \
 
 
 LIBS += -L$$TARGETSDIR -lrelae-phaon

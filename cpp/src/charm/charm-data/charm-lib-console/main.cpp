@@ -5,6 +5,8 @@
 //          http://www.boost.org/LICENSE_1_0.txt)
 
 
+#include "charm-lib/vec1d.h"
+
 //#include "kans.h"
 
 //USING_KANS(KDMI)
@@ -14,6 +16,10 @@
 
 int main(int argc, char **argv)
 {
+ Vec1d<int> v1d;
+
+ v1d.push_back(7);
+
  qDebug() << "ok";
  return 0;
 }
