@@ -70,6 +70,8 @@ public:
 
  void increment_iterator(iterator& hit);
  void increment_total_size();
+ void reverse_iterator(iterator& hit);
+ void decrement_iterator(iterator& hit);
 
 };
 

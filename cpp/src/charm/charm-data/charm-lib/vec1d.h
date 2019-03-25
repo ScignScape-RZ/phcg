@@ -25,6 +25,7 @@
 template<typename VAL_Type>
 class Vec1d
 {
+protected:
  Hive_Structure* hive_structure_;
 
 public:
@@ -57,6 +58,18 @@ public:
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
    fn(*pv);
    hive_structure_->increment_iterator(hit);
+  }
+ }
+
+ void reach(std::function<void(VAL_Type& v)> fn)
+ {
+  Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->reverse_iterator(hit);
+  while(!hit.end())
+  {
+   VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
+   fn(*pv);
+   hive_structure_->decrement_iterator(hit);
   }
  }
 

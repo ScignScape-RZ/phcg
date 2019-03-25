@@ -83,6 +83,18 @@ void Hive_Structure::increment_total_size()
  ++total_size_;
 }
 
+void Hive_Structure::reverse_iterator(iterator& hit)
+{
+ if(total_size_ == 0)
+ {
+  hit.total_index = -1;
+  return;
+ }
+ hit.total_index = total_size_ - 1;
+ hit.block_index = hit.total_index / block_size_;
+ hit.inner_index = hit.total_index % block_size_;
+}
+
 void Hive_Structure::increment_iterator(iterator& hit)
 {
  if(++hit.total_index == total_size_)
@@ -94,3 +106,20 @@ void Hive_Structure::increment_iterator(iterator& hit)
  }
 }
 
+
+void Hive_Structure::decrement_iterator(iterator& hit)
+{
+ if(hit.total_index == 0)
+ {
+  hit.total_index = -1;
+  return;
+ }
+ --hit.total_index;
+ if(hit.inner_index == 0)
+ {
+  hit.inner_index = block_size_ - 1;
+  --hit.block_index;
+ }
+ else
+   --hit.inner_index;
+}
