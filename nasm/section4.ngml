@@ -900,7 +900,55 @@ structured data aggrgates.
 `p.
 Thus far, no standard model has emerged to represent 
 larger-scale data structures in the Semantic Web 
-context.
+context.  Intrinsically, the `q.semantics` of the Semantic Web 
+depends on computer environments where data is shard and 
+received.  Since people generally do not consider data 
+sets as a whole, any ,eaningfulness we can attribute 
+to dignital information depends on selecting 
+smaller amounts of data, which in turn depends on 
+the digital systems %-- user interface technology as 
+well as data management software %-- through which 
+people interact with information 
+senses.  So any discussion of 
+the `q.semantics` of data formally warehoused in 
+information spaces.  Fundamentally, this semantics 
+has to recognize the multiscalar organization 
+intrinsic to information spaces. 
+`p`
+
+`p.
+The interaction between humans and information spaces 
+is itself a technological artifact which has 
+to be engineered and implemented.  Such implementation 
+in turns depends on implemented `i.procdures`/, 
+which classify, manipulate, and visually or 
+textually present relevat data to human users.  
+A major element in the semantics of information spaces 
+is accordingly the semantics of procedures operating on this 
+data %-- what data structures are valid operands 
+for procedures' operations; how procedures mody 
+data structures or map inputs to outputs; how data 
+manipulated procedurally must be internally structured, 
+according to procedures' computational assumptions 
+and preconditions.  The constituent elements of 
+information spaces are internally structured data aggregates, 
+more so than they are unstructured information atoms, 
+because structured data is the kind of value which 
+in the general case computational oprocedures operate upon. 
+`p`
+
+`p.
+For these reasons, part/whole aggregation and the rules for 
+nesting data structures (directly or indirectly) 
+should be essential topics for the Semantic Web separate 
+and apart from mereological axioms built into 
+web Ontologies.  
+
+
+`p`
+
+`p.
+
 `p`
 
 `p.
