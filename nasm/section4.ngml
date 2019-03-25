@@ -973,7 +973,7 @@ into `i.source` and `i.target` nodes; in
 this example the patient's node is the 
 lone source and the remaining nodes are targets, 
 indicating several pieces of information associated 
-with a diagnosis.  The (potentially multi-node) 
+with a diagnosis (see Fig1a).  The (potentially multi-node) 
 sourc and target sts generalize the Semantic 
 Web concpt of `i.Subject` and `i.Object` 
 for context where a given predicate-relation 
@@ -982,16 +982,143 @@ objects.
 `p`
 
 `p.
-A second moel of hypergraphs can be defined by allowin each 
-node to be (or internally contain)
+A second model of hypergraphs can be defined by allowing each 
+node to be (or internally contain) its own graph.  
+This lads to nestd levels of graphs, where 
+a graph on one level can be incorporated into a graph on the 
+next higher level by being nested into one of 
+the latter graph's nodes.  Figure 1b shown how 
+this could work in the running xample: it 
+shows the fact of a doctor giving a diagnosis 
+on a given date as a miniature graph whose edges 
+connect the doctor's name to a `q.date` node and 
+`q.diagnostic code` nod, respctively.  
+The mini graph is then placed as a pckage 
+via a node inside the higher-level graph, where 
+that node is joined to a nod designating the 
+diagnosed patient.  Models may or may not allow 
+nodes on one level to be linked with nodes on another 
+level, or allow two nodes nested inside two different higher-level 
+nodes to be linked to each other.
 `p`
 
 `p.
-
+A third genre of hypergraph has similar aggregational features 
+but does not distinguish between different levels.  Instead, each 
+graph has one level, but a collection of nodes and/or 
+edges can be separately identified and associated 
+with a separate node, or presented as some aggregate 
+structure with special significance.  Hypergraphs 
+with this added structure function like conventional 
+Semantic Web graphs upon which are superimposed 
+added details.  Figure 1c shows the extra layer of 
+information via a dotted line around three graph edges.  
+The underlying data in this case is a regular 
+(labeled, directed) graph (not a hypergraph).  
+A separate node is inrroduced representing a 
+`i.diagnostic event`/, serving 
+essentially as a `q.placeholder` to which 
+estra nods (carrying factual details) 
+can be attached.  This is a common pattern 
+sometimes called a `q.snowflake`/: a `i.Subject` 
+node (here the `i.patient`/) is 
+connected to an `i.Objct` 
+node (here a `i.diagnostic even` whose 
+semantic role is to unify 
+additoonal nodes, that provid the relevant 
+actual detaikls; the net effect is nodes branching 
+off from a center, like a snowflake.  The extra 
+layer of information comes into play by unifying 
+the three nodes and edges one step removed 
+from the `i.patient`/.  These edges would be grouped 
+together to indicate that their respective objeect-nodes 
+form a logical unit (three components of a 
+diagnosis: medical code, date, and doctor's anme).  
+They could also indicate data requirements: an  
+Ontology can stipulate that if a `i.diagnostic event` 
+node is present in a graph, it must be accompanied 
+by three additional edges providing 
+pertinent info about that event.
 `p`
 
 `p.
+A final option for representing hypergraphs 
+comes into effect if we recognize a `i.type system` 
+applied to a graph; a classification of nodes 
+according to an interrelated collection 
+of types.  One feature of most type
+systems is that for any type `i.ty; there are  
+corresponding types representing `i.lists` of 
+`ty;-values with different characteristics.  Lists are 
+often classified in terms of how they are 
+modified.  `i.Stacks` are lists where the last value added 
+(the one which has been on the list for the 
+shortest time) is the is the first value removed 
+(think of a stack of trays in a cafeteria).  
+`i.Queues` are lists where the value in the 
+list for the `i.longest` time comes off the 
+list first (think of people 
+lining up for tickets).  And `i.Deques` 
+(double-ended queues) can have values added 
+or removed from both ends.  (There are more 
+complex aggregate data structures as well, like 
+associative arrays where values of one type 
+are used as indicies to retrieve values of 
+a second type from a long list; consider how a phone 
+book maps people's names to telephone numbers).  
+Collectively, these multi-valued types 
+are often called `q.container` types.
+`p`
 
+`p.
+One way to construct hypergraphs is to allow 
+node-types to bebcontainer types as well as 
+singled-value types.  Therefore, a node may 
+encapsulate a many-valued data structure.  
+This is similar to the case depictird 
+in Fig1b, where nodes could contain nested 
+graphs; the difference here is that the nested 
+data structures encapsulated in nodes are not necessarily 
+graphs; they can also be different sorts of lists or tables.  
+In Fig1d, this is shown by 
+imagining a table that represents a patient's diagnostic 
+history.  Each new diagnosis is added to the list, 
+so the node can expand over time.  The data structure 
+`q.inside` the node then functions as a table, 
+whose rows represent diagnoses made on a single 
+occasion and whose columns are different facets 
+of a diagnosis (date, code, and doctor's name).  
+The entire table is treated as one node, linked 
+to the `i.patint` node 
+(indicating that the provided table is diagnostic 
+history for that one patient).
+`p`
+
+`p.
+These four dofferent kinds of hypergraphs are to some degree 
+interchangable, in that algorithms can transform 
+hypergraphs between these formats.   They are 
+still more or less optimal for different contexts.  
+The fourth solution is similar to how container types 
+work in conventional programming 
+languages %-- and also to foreign 
+key links in relational databases %-- so hypergaphs 
+using that system can be easier to 
+integrate with conventional (not necessarily 
+Semantic Web) applications.  On the 
+other hand, the third solution is closer 
+in spirit to the Semantic Web, adding an extra 
+level of specification but preserving 
+the underlying Semantic Web graph thory.  Meanwhile, 
+the nested-graph model is similar to 
+how popular enterprise graph databases are 
+designed; and the directed-hyperedge approach 
+is closest to mathematical graph theory.  
+`p`
+
+`p.
+The diversity of rlated by not identical approaches poibts 
+to an incomplete dimension in the 
 `p`
 
 `p.
