@@ -66,6 +66,17 @@ public:
   front_vec_.push_back(v);
  }
 
+ void pop_back()
+ {
+  back_vec_.hive_structure_->pop_back();
+ }
+
+ void pop_front()
+ {
+  front_vec_.hive_structure_->pop_back();
+ }
+
+
 
  void each(std::function<void(VAL_Type& v)> fn)
  {

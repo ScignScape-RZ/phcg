@@ -55,9 +55,7 @@ public:
   if(offset_ == 0)
     Vec1d<VAL_Type>::each(fn);
   else
-  {
-   Vec1d<VAL_Type>::each_from_index(offset_, fn);
-  }
+    Vec1d<VAL_Type>::each_from_index(offset_, fn);
  }
 
 

@@ -21,11 +21,15 @@
 
 #include <functional>
 
+template<typename VAL_Type>
+class Deq1d;
 
 template<typename VAL_Type>
 class Vec1d
 {
 protected:
+
+ friend class Deq1d<VAL_Type>;
  Hive_Structure* hive_structure_;
 
 public:
