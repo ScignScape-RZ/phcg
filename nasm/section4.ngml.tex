@@ -613,7 +613,8 @@ notating philosophical intuitions than
 philosophical expos\'es of thought or reality \mdash{} 
 non-antisymmertry, not antisymmetry, predominates.
 }
-\spsubsectiontwoline{Concreteness and Computation}
+%\spsubsectiontwoline{Concreteness and Computation}
+\section{Concreteness and Computation}
 \p{I would be remiss to draw a contrast between 
 \i{abstract} and \i{concrete} models without mntioning 
 the emergent field of \q{Ontology Engineering} and the role 
@@ -764,7 +765,7 @@ the \i{senders}, these differences should be
 systematically accounted for \visavis{} how 
 the respective systems are engineered. 
 }
-\p{Conventional Semantic Web data srructures are 
+\p{Conventional Semantic Web data structures are 
 organized around the principle of \i{labeled graphs}, 
 where the building blocks of data models are 
 so-called \q{triples}: \i{Subject/Predicate/Object} 
@@ -808,6 +809,464 @@ structured data aggrgates.
 }
 \p{Thus far, no standard model has emerged to represent 
 larger-scale data structures in the Semantic Web 
-context.
+context.  Intrinsically, the \q{semantics} of the Semantic Web 
+depends on computer environments where data is shard and 
+received.  Since people generally do not consider data 
+sets as a whole, any ,eaningfulness we can attribute 
+to dignital information depends on selecting 
+smaller amounts of data, which in turn depends on 
+the digital systems \mdash{} user interface technology as 
+well as data management software \mdash{} through which 
+people interact with information 
+senses.  So any discussion of 
+the \q{semantics} of data, formally warehoused in 
+information spaces, 
+has to recognize the multiscalar organization 
+intrinsic to information spaces. 
+}
+\subsection{Mereology and Hypergraphs}
+\p{The interaction between humans and information spaces 
+is itself a technological artifact which has 
+to be engineered and implemented.  Such implementation 
+in turns depends on implemented \i{procdures}, 
+which classify, manipulate, and visually or 
+textually present relevat data to human users.  
+A major element in the semantics of information spaces 
+is accordingly the semantics of procedures operating on this 
+data \mdash{} what data structures are valid operands 
+for procedures' operations; how procedures mody 
+data structures or map inputs to outputs; how data 
+manipulated procedurally must be internally structured, 
+according to procedures' computational assumptions 
+and preconditions.  The constituent elements of 
+information spaces are internally structured data aggregates, 
+more so than they are unstructured information atoms, 
+because structured data is the kind of value which 
+in the general case computational oprocedures operate upon. 
+}
+\p{For these reasons, part/whole aggregation and the rules for 
+nesting data structures (directly or indirectly) 
+should be essential topics for the Semantic Web (separate 
+and apart from mereological axioms built into 
+web Ontologies).  Thre are at last four different 
+strategies that can be used to represent multiscale data in a 
+graph or labeled graph context.  These are not mutually 
+exclusive but have different emphases; insofar as 
+labeled graphs form the notional foundation of 
+the Semantic Web they can carry over into 
+that context as well.  Graphs supporting multi-scale 
+representations are generically called \q{hypergraphs}, 
+although there are different hypergraph  
+theories providing different spaces of models. For sake 
+of illustration, I'll use the hypothetical case 
+of a diagnosis encompassing a diagnostic code, 
+date, and the diagnosing doctor's name, 
+and refer to schematic diagrams in Fig1a-d.  
+}
+\p{One form of hypergraph is based on the 
+idea of \i{hyperdges}, and further 
+\i{directed} and \i{labeled hyperdges}, which 
+generalize graph-edges to include more than two nodes.  
+For instance, a record of a diagnosis even 
+can involve a four-node edge where one 
+node represents the patient, and the remaining 
+three nodres represent a diagnositic code, date, 
+and doctor's name.  Directed Hypergraphs 
+group the nodes incident to a hyperedge 
+into \i{source} and \i{target} nodes; in 
+this example the patient's node is the 
+lone source and the remaining nodes are targets, 
+indicating several pieces of information associated 
+with a diagnosis (see Fig1a).  The (potentially multi-node) 
+sourc and target sts generalize the Semantic 
+Web concpt of \i{Subject} and \i{Object} 
+for context where a given predicate-relation 
+needs to be expressd with multiple subjcts and/or 
+objects.
+}
+\p{A second model of hypergraphs can be defined by allowing each 
+node to be (or internally contain) its own graph.  
+This lads to nestd levels of graphs, where 
+a graph on one level can be incorporated into a graph on the 
+next higher level by being nested into one of 
+the latter graph's nodes.  Figure 1b shown how 
+this could work in the running xample: it 
+shows the fact of a doctor giving a diagnosis 
+on a given date as a miniature graph whose edges 
+connect the doctor's name to a \q{date} node and 
+\q{diagnostic code} nod, respctively.  
+The mini graph is then placed as a pckage 
+via a node inside the higher-level graph, where 
+that node is joined to a nod designating the 
+diagnosed patient.  Models may or may not allow 
+nodes on one level to be linked with nodes on another 
+level, or allow two nodes nested inside two different higher-level 
+nodes to be linked to each other.
+}
+\p{A third genre of hypergraph has similar aggregational features 
+but does not distinguish between different levels.  Instead, each 
+graph has one level, but a collection of nodes and/or 
+edges can be separately identified and associated 
+with a separate node, or presented as some aggregate 
+structure with special significance.  Hypergraphs 
+with this added structure function like conventional 
+Semantic Web graphs upon which are superimposed 
+added details.  Figure 1c shows the extra layer of 
+information via a dotted line around three graph edges.  
+The underlying data in this case is a regular 
+(labeled, directed) graph (not a hypergraph).  
+A separate node is inrroduced representing a 
+\i{diagnostic event}, serving 
+essentially as a \q{placeholder} to which 
+estra nods (carrying factual details) 
+can be attached.  This is a common pattern 
+sometimes called a \q{snowflake}: a \i{Subject} 
+node (here the \i{patient}) is 
+connected to an \i{Objct} 
+node (here a \i{diagnostic even} whose 
+semantic role is to unify 
+additoonal nodes, that provid the relevant 
+actual detaikls; the net effect is nodes branching 
+off from a center, like a snowflake.  The extra 
+layer of information comes into play by unifying 
+the three nodes and edges one step removed 
+from the \i{patient}.  These edges would be grouped 
+together to indicate that their respective objeect-nodes 
+form a logical unit (three components of a 
+diagnosis: medical code, date, and doctor's anme).  
+They could also indicate data requirements: an  
+Ontology can stipulate that if a \i{diagnostic event} 
+node is present in a graph, it must be accompanied 
+by three additional edges providing 
+pertinent info about that event.
+}
+\p{A final option for representing hypergraphs 
+comes into effect if we recognize a \i{type system} 
+applied to a graph; a classification of nodes 
+according to an interrelated collection 
+of types.  One feature of most type
+systems is that for any type \ty{} there are  
+corresponding types representing \i{lists} of 
+\ty{}-values with different characteristics.  Lists are 
+often classified in terms of how they are 
+modified.  \i{Stacks} are lists where the last value added 
+(the one which has been on the list for the 
+shortest time) is the is the first value removed 
+(think of a stack of trays in a cafeteria).  
+\i{Queues} are lists where the value in the 
+list for the \i{longest} time comes off the 
+list first (think of people 
+lining up for tickets).  And \i{Deques} 
+(double-ended queues) can have values added 
+or removed from both ends.  (There are more 
+complex aggregate data structures as well, like 
+associative arrays where values of one type 
+are used as indicies to retrieve values of 
+a second type from a long list; consider how a phone 
+book maps people's names to telephone numbers).  
+Collectively, these multi-valued types 
+are often called \q{container} types.
+}
+\p{One way to construct hypergraphs is to allow 
+node-types to bebcontainer types as well as 
+singled-value types.  Therefore, a node may 
+encapsulate a many-valued data structure.  
+This is similar to the case depictird 
+in Fig1b, where nodes could contain nested 
+graphs; the difference here is that the nested 
+data structures encapsulated in nodes are not necessarily 
+graphs; they can also be different sorts of lists or tables.  
+In Fig1d, this is shown by 
+imagining a table that represents a patient's diagnostic 
+history.  Each new diagnosis is added to the list, 
+so the node can expand over time.  The data structure 
+\q{inside} the node then functions as a table, 
+whose rows represent diagnoses made on a single 
+occasion and whose columns are different facets 
+of a diagnosis (date, code, and doctor's name).  
+The entire table is treated as one node, linked 
+to the \i{patint} node 
+(indicating that the provided table is diagnostic 
+history for that one patient).
+}
+\p{These four dofferent kinds of hypergraphs are to some degree 
+interchangable, in that algorithms can transform 
+hypergraphs between these formats.   They are 
+still more or less optimal for different contexts.  
+The fourth solution is similar to how container types 
+work in conventional programming 
+languages \mdash{} and also to foreign 
+key links in relational databases \mdash{} so hypergaphs 
+using that system can be easier to 
+integrate with conventional (not necessarily 
+Semantic Web) applications.  On the 
+other hand, the third solution is closer 
+in spirit to the Semantic Web, adding an extra 
+level of specification but preserving 
+the underlying Semantic Web graph thory.  Meanwhile, 
+the nested-graph model is similar to 
+how popular enterprise graph databases are 
+designed; and the directed-hyperedge approach 
+is closest to mathematical graph theory.  
+}
+\p{The diversity of rlated by not identical approaches points 
+to an incomplete dimension to the Semantic Web; 
+multiscale representations have 
+not been standardized.\footnote{There is an official 
+\q{RDF Collections} model but this addresses only a small 
+part of genuine multscale modeling.}  Not that a 
+single form of multiscal structure should be preferred 
+over others; there ar ecompetingpriorities which come 
+to the fore in different contexts.  
+This actually reflects competing ideas about what the 
+Semantic Web should try, first and foremost, to accomplish.  
+The Semantic Web can be seen as a potentially 
+global, open-ended data-sharing community; as a foundation 
+for a future of AI-driven networking; as a kinnd 
+of vast, decentralized graph database; or as an 
+analytics ecosystem that allows logical analytic 
+methods to be applied, alongside othr 
+(e.g., statistical) forms of data analysis, 
+to travserse and filter information from 
+the internet.  Which priorities we emphasize 
+dictate the kinds of tchnologies that have 
+to be implemented, and the \q{semantics} of the 
+Semantic Web can reflect the need to optimize 
+representations and network interactions to 
+benefit those priorotized technologies.  
+}
+\p{What this diversity of option reveals, however, is that 
+the question of multiscale data represenatation 
+is complex and multifacted.  Instead of just 
+setting forth one system as a speculative enterprise, 
+engineers have to identify different forms 
+of multiscalar data \mdash{}for eample, 
+I enumerated four versions of hypergaphs \mdash{} and study 
+which flavor is best suited for different technological 
+priorities and acceptable trade-offs.  
+Implicitly, I believe that such a field of study represents 
+a kind of computational investigation of 
+mereology \mdash{} not mereology tied to 
+predefined logical axioms, but an organizing 
+pattern for computational phenomena 
+(e.g., hypergraphs) whose properties 
+have to be codified and optimized.
+}
+\p{This brings me to the final characterization 
+of mereology I'll propose here: Hypergraph Mereology.  
+I think that analyzing hypergraphs in the computational 
+and software engineering contexts presents a philosophically 
+interesting pictur of formalized mereology 
+no less relevant \mdash{} and perhaps more cognitively 
+or scientifically appropriate \mdash{} then a \q{logical} or 
+\q{axiomatic} mereology. 
+}
+\p{Note that Hypergraph Mereology is not necessarily 
+set forth axiomatically; we do not specifically 
+define hypergraphs by stating their axiomatic 
+condition.  We \i{could} proceeed in this 
+way, of course; hypergraphs are a meaningful 
+matheamtical subject.  But often the formalizationb
+of hypergraph models is indirect, 
+relying on software implementations rather than 
+logical specification.  In other words, much of the 
+intellctual substance behind research into 
+hypergraphs is built from practical implementations 
+of hypergraph code libraries, allowing us 
+to study and compare how these libraries are
+abstractly conceived and concretely implemented.
+}
+\p{This demonstrates a phenomeneon which I think Analytic Philosophy 
+has not fully registered: the kind of 
+formalizing effortsthat in dcades past may have been 
+pursued via logical or logicomathematical axiomatics 
+can increasingly be replaced by software and compurter 
+code.  Testing philosophical intuitions in an 
+intellectual environment oriented to concrete code 
+devleopment rather than logicomathematical 
+abstraction has several implications: there is a 
+kind of feedback and trial-and error which 
+can shape the intellectual process; the ecosystem
+of open-source code and software development tools 
+has diffferent institutional norms 
+than communal deliberation over the 
+validity of logical argumentation; and 
+code development tangibly augments academic 
+writing, in that philosophers (or writers from 
+any other discipline) can pair their conventional 
+publications with code repositories and data sets.  
+This kind of research can lad 
+philosophy in a kind of empirical, experimental 
+direction, but also simultaneously in a 
+direction which accords to the individual philosopher, 
+I think, somerhing lik renewed agency and autonomy.  
+In this spirit we ar not only sharing 
+with our peers rational claims, but 
+exhibiting practical technology created 
+under the inspiration of philosophical arguments.  
+Well-designed, open-source code projects have a 
+certain inner empowerment for their contributors; 
+in a world of (often imperfctly 
+apportioned) intellectual capital, they 
+act as fiat currency, neither curated nor 
+endoecd by academicinstitutions 
+in the conventional sense, and as such 
+not diluted by the not-always-rational 
+timelines of academic prestige.
+}
+\p{It should be uncontroversial to say that \q{Analytic} 
+philosophy is the prestige dialect of the mdern philosophical 
+community, especially in English.  Partly this is no 
+doubt topical \mdash{} Analytic philosopers seem to entertain 
+more \q{hard science} themes than the political 
+or cultural concerns, or issues of subjective 
+experince and personal identity, guiding 
+\q{Continental} philosophy.  But paryly it 
+also reflects the [resupposition of analytic 
+rigor accompanying analyses that can be 
+grounded in, or at least shown to be 
+inspired by, some kind of logial 
+or mathematical framework. 
+}
+\p{With that said, some of the divergence between 
+a logically-inspired Analytic paradigm and a more sociocultural 
+Continental thought is methodological, not just 
+thematic.  Logical models which discount the 
+nuance and complexity of language and experience 
+risk becoming reductionistic, or of 
+limited explanatory value.  
+Potentially, then, the emergence of a computational discipline 
+for addressing philosophical 
+structures can change the familiar 
+Analytic/Continental narrative.  Software models 
+can be technically drawn without being either 
+exiomatic nor reductionistic; they can 
+engage a formalization in software implementation in 
+lieu of specifications of logical structure;  
+and they can present technological 
+systems as suggestive approximations of 
+human phenomena without committing 
+to a reductive theory that cognitive 
+processes \mdash{} in sutuational understanding, 
+linguistic meaning, or conceptualization, 
+for example \mdash{} are wholly characterized by the 
+terms of the implemented software.  Type-theoretic 
+analyses of natural-language semantics and syntax, 
+for example, can represent linguistic artifacts 
+according to formal/computational structures 
+without implying that the human 
+procss of actually converting surface-level 
+language to these derived representation 
+happens mechanically or  mathematically.  
+Computational \i{models} of linguistic phenomena 
+are different from Natural Language 
+\i{Processing}, which makes the further 
+metaphysical assumption that 
+computers can \q{parse} language down to 
+schematized representations analogously to people.
+}
+\p{It is possible, then, to treat computational 
+models as methodologically useful adjuncts to 
+philosophical analysis while rejecting 
+reductive analysis of cognition or 
+language as transparently itself computational 
+or logically tractable.  In this 
+way, computational models can bring a technical 
+methodology to Continental thought 
+analogous to th role of logical 
+axiomatics on the Analytic side, but 
+with different methodological 
+commitments \mdash{} and also in a different 
+metatheoretical perspctive.  Whereas Analytic 
+philosphrs may look on logicaomathematical 
+techniqus as a kind of rational kernel, 
+a core ground of scure entailments on which 
+to rest other claims, the Continental 
+engagement with computational models can be 
+more figured within the general 
+plurality of Theory; the same pull toward hybridization 
+that would wed phenomenology to analyses of 
+race, class, and gender, for example, to elucidate 
+the experiential as well as cultural political 
+dimensions of social relations.  
+Humanities \q{theory} acts as a kind 
+of intellectual gravity, pulling in phenomenology, 
+Critical Theory, Structuralism, linguistic and discourse 
+analysis, and so forth; there is no \i{a priori} 
+obstacle that would provent the same force 
+from reaching, say, formal and natural-language type 
+theory and the analysis of multiscale information systems.
+}
+\p{To my mind the most well-developed body 
+of working merging phenomenology with 
+computational methods is that of Jean Petitot; 
+although I would add some at least 
+provisional formal elaborations 
+of Cognitive Grammar (if I may take this 
+as a kind of applied phenomenology in the linguistic domain) 
+by, for insta,ce Kenneth Holmqvist and Matt Selway.  
+I might add, implicitly, the larger tradition 
+of type-thoretic semantics represented by the sometimes 
+highly formal work of a Zhaohui Luo, 
+James Pustehovsky, or Bruno Mery; which 
+in turn establishd technical links to 
+linguistic models inspired directly by 
+computer programming languages and computing 
+paradigms, as represented by linguists such as 
+Ash Asudeh, Gianluca Giorgolo, Oleg Kiselyov, and 
+Chung-Chieh Shan.  In short, we can develop an 
+overarching model of linguistic reprsentation 
+which is anchored both in cognitive 
+phenomenology and in computational 
+procedures. 
+}
+\p{Alongside this linguistic line of development we 
+can identify a parallel integration between 
+phenomenology and theories of spatial comprehension, 
+perceptual synthesis, and cognitive 
+\q{visualistics}.  One line of analysis, for example, 
+considers the phenomenon of experiential \q{presence}, 
+motivating phenomenological treatment of 
+computer imagery and Virtual Reality.  Along 
+this subjective assessment we can consider the 
+mathematical infrastructure for creating realistic 
+depictions of three-dimensional scens and surfaces; 
+and for applying lighting, textures, and space-filling 
+effects (mimicking the impression of smoke or flowing 
+water, say).  This technology does not 
+necessarily recreate the neurological processes by which 
+we cognize our spatial environment \mdash{} nor 
+create perfectly lifelike graphics \mdash{} but 
+it presents a suite of technological formalisms 
+that bear a simulative and structuraly articulated 
+relation to visual phenomenology.  As such it provides a 
+ground for complimentary but non-reductive analyses 
+that can be set alongside, for example, theoriesof 
+spatial synthesis as found in, say, 
+Husserl or Merleau-Ponty.
+}
+\p{These linguistic and spatial/visual examples have a 
+common architecture, at least \visavis{} phenomenology, 
+in that theypersent computarional structures that 
+can be argued to encapsulate cognitive representations 
+without eliminating the complexity, situationality, 
+phenomenological immediacy, and interpersonal 
+dimensions of consciousness.  Cimputational models 
+are suggestive analogies rather than axiomatic 
+reconstructions of cognitive \q{logic}.
+}
+\p{I think mereological theories can have an analogous 
+intellectual architecture, albeit in a narrower 
+topic area.  Formal systems developed in the 
+context of computer code \mdash{} say, hypergraphs in 
+one of the four models outlined above \mdash{} provide a 
+tangible but technological mdium for 
+articulating mereological concepts in a 
+rigorous domain, while also allowing these models 
+to be adjunct prototypes for theories of mereology 
+as a cognitive phenomenon.  Hypergraphs, in 
+short, are to mereology what formal parse-representations and 
+lexicons are to natural language, or computer-generated 
+imagery is to visual experience.  
 }
 \p{}

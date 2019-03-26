@@ -682,7 +682,8 @@ philosophical expos\'es of thought or reality %--
 non-antisymmertry, not antisymmetry, predominates.
 `p`
 
-`spsubsectiontwoline.Concreteness and Computation`
+%`spsubsectiontwoline.Concreteness and Computation`
+`section.Concreteness and Computation`
 `p.
 I would be remiss to draw a contrast between 
 `i.abstract` and `i.concrete` models without mntioning 
@@ -852,7 +853,7 @@ the respective systems are engineered.
 `p`
 
 `p.
-Conventional Semantic Web data srructures are 
+Conventional Semantic Web data structures are 
 organized around the principle of `i.labeled graphs`/, 
 where the building blocks of data models are 
 so-called `q.triples`/: `i.Subject/Predicate/Object` 
@@ -910,12 +911,13 @@ the digital systems %-- user interface technology as
 well as data management software %-- through which 
 people interact with information 
 senses.  So any discussion of 
-the `q.semantics` of data formally warehoused in 
-information spaces.  Fundamentally, this semantics 
+the `q.semantics` of data, formally warehoused in 
+information spaces, 
 has to recognize the multiscalar organization 
 intrinsic to information spaces. 
 `p`
 
+`subsection.Mereology and Hypergraphs`
 `p.
 The interaction between humans and information spaces 
 is itself a technological artifact which has 
@@ -949,9 +951,9 @@ exclusive but have different emphases; insofar as
 labeled graphs form the notional foundation of 
 the Semantic Web they can carry over into 
 that context as well.  Graphs supporting multi-scale 
-representations are generically called `q.hypergrphs`/, 
-although there are different hypergraphs 
-theories providing differebt spaces of models. For sake 
+representations are generically called `q.hypergraphs`/, 
+although there are different hypergraph  
+theories providing different spaces of models. For sake 
 of illustration, I'll use the hypothetical case 
 of a diagnosis encompassing a diagnostic code, 
 date, and the diagnosing doctor's name, 
@@ -1047,7 +1049,7 @@ comes into effect if we recognize a `i.type system`
 applied to a graph; a classification of nodes 
 according to an interrelated collection 
 of types.  One feature of most type
-systems is that for any type `i.ty; there are  
+systems is that for any type `ty; there are  
 corresponding types representing `i.lists` of 
 `ty;-values with different characteristics.  Lists are 
 often classified in terms of how they are 
@@ -1154,7 +1156,7 @@ of multiscalar data %--for eample,
 I enumerated four versions of hypergaphs %-- and study 
 which flavor is best suited for different technological 
 priorities and acceptable trade-offs.  
-Implicitly, I believevthat s7uch a field of study represents 
+Implicitly, I believe that such a field of study represents 
 a kind of computational investigation of 
 mereology %-- not mereology tied to 
 predefined logical axioms, but an organizing 
