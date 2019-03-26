@@ -1,13 +1,13 @@
 
-&type LingEx {6} ,text:3 ,comment:4 ,arg:5 ;
+&type LingEx {6} ,text:4 ,comment:5 ;
 
 &/
 
 !/ LingEx
 $text: Lang87
-$comment: vvv
- ;;- $1# 5 29
-$arg. This is a test sentence.
+$comment;
+$1# 5 29
+$$. This is a test sentence.
 .
 /!
 

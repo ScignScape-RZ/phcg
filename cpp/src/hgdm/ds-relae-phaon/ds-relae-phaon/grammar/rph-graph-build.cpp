@@ -44,10 +44,13 @@ void RPH_Graph_Build::end_field()
  {
   flags.split_acc = false;
   QStringList qsl = acc_.simplified().split(' ');
-  for(QString qs : qsl)
+  QStringListIterator qsli(qsl);
+  while(qsli.hasNext())
   {
+   QString qs = qsli.next();
    add_read_token(qs);
-   ++current_field_number_;
+   if(qsli.hasNext())
+     ++current_field_number_;
   }
  }
  else
@@ -64,6 +67,7 @@ void RPH_Graph_Build::read_acc(QString s)
 
 void RPH_Graph_Build::prepare_field_read(QString prefix, QString field, QString suffix)
 {
+ flags.discard_acc = false;
  if(suffix == ".")
    parse_context_.flags.multiline_field = true;
  else if(suffix == "#")
@@ -133,7 +137,7 @@ void RPH_Graph_Build::add_read_token(QString text)
  if(current_field_name_.isEmpty())
  {
   graph_.add_read_token(current_hypernode_, current_type_name_,
-    current_type_field_index_, {text, nullptr});
+    current_field_number_, {text, nullptr});
  }
  else
  {
