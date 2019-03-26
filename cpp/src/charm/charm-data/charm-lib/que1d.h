@@ -26,12 +26,23 @@
 template<typename VAL_Type>
 class Que1d : protected Vec1d<VAL_Type>
 {
+ quint16 offset_;
 
 public:
 
  Que1d(quint8 bsz = 16)
-  :  Vec1d<VAL_Type>(bsz)
+  :  Vec1d<VAL_Type>(bsz), offset_(0)
  {
+ }
+
+ void dequeue()
+ {
+  ++offset_;
+  if(offset_ == this->hive_structure_->block_size())
+  {
+   this->hive_structure_->pop_first_block();
+   offset_ = 0;
+  }
  }
 
  void enqueue(const VAL_Type& v)
@@ -41,7 +52,12 @@ public:
 
  void each(std::function<void(VAL_Type& v)> fn)
  {
-  Vec1d<VAL_Type>::each(fn);
+  if(offset_ == 0)
+    Vec1d<VAL_Type>::each(fn);
+  else
+  {
+   Vec1d<VAL_Type>::each_from_index(offset_, fn);
+  }
  }
 
 

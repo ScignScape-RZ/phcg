@@ -74,8 +74,10 @@ public:
  void increment_total_size();
  void reverse_iterator(iterator& hit);
  void decrement_iterator(iterator& hit);
+ void position_iterator(iterator& hit, quint32 ix);
 
  void pop_back();
+ void pop_first_block();
 
 };
 

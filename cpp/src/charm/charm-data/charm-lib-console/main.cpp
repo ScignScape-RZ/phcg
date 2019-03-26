@@ -18,6 +18,31 @@
 
 int main(int argc, char **argv)
 {
+ Que1d<int> q1d;
+
+ q1d.enqueue(7);
+ q1d.enqueue(9);
+ q1d.enqueue(17);
+
+ q1d.each([](int& i)
+ {
+  qDebug() << i;
+ });
+
+ q1d.dequeue();
+
+ q1d.each([](int& i)
+ {
+  qDebug() << i;
+ });
+
+ qDebug() << "ok";
+ return 0;
+}
+
+
+int main5(int argc, char **argv)
+{
  Stk1d<int> s1d(5);
 
  s1d.push(7);

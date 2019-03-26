@@ -45,6 +45,19 @@ public:
   hive_structure_->increment_total_size();
  }
 
+ void each_from_index(quint32 ix,
+   std::function<void(VAL_Type& v)> fn)
+ {
+  Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->position_iterator(hit, ix);
+  while(!hit.end())
+  {
+   VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
+   fn(*pv);
+   hive_structure_->increment_iterator(hit);
+  }
+ }
+
  void each(std::function<void(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();

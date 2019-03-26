@@ -75,6 +75,24 @@ void* Hive_Structure::get_back_location()
  return get_indexed_location(total_size_ - 1);
 }
 
+void Hive_Structure::pop_first_block()
+{
+ if(first_block_)
+ {
+  if(first_block_->next_block)
+  {
+   Hive_Block* hb = first_block_;
+   first_block_ = first_block_->next_block;
+   delete hb;
+  }
+  else
+  {
+   delete first_block_;
+   first_block_ = nullptr;
+  }
+ }
+}
+
 void Hive_Structure::pop_back()
 {
  if(total_size_ == 0)
@@ -125,6 +143,18 @@ void Hive_Structure::reverse_iterator(iterator& hit)
  hit.total_index = total_size_ - 1;
  hit.block_index = hit.total_index / block_size_;
  hit.inner_index = hit.total_index % block_size_;
+}
+
+void Hive_Structure::position_iterator(iterator& hit, quint32 ix)
+{
+ if(ix >= total_size_)
+ {
+  hit.total_index = -1;
+  return;
+ }
+ hit.total_index = ix;
+ hit.block_index = ix / block_size_;
+ hit.inner_index = ix % block_size_;
 }
 
 void Hive_Structure::increment_iterator(iterator& hit)
