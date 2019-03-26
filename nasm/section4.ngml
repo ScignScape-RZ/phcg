@@ -1242,9 +1242,163 @@ experince and personal identity, guiding
 `q.Continental` philosophy.  But paryly it 
 also reflects the [resupposition of analytic 
 rigor accompanying analyses that can be 
-grounded in, or at last shown to be 
+grounded in, or at least shown to be 
 inspired by, some kind of logial 
 or mathematical framework. 
+`p`
+
+`p.
+With that said, some of the divergence between 
+a logically-inspired Analytic paradigm and a more sociocultural 
+Continental thought is methodological, not just 
+thematic.  Logical models which discount the 
+nuance and complexity of language and experience 
+risk becoming reductionistic, or of 
+limited explanatory value.  
+Potentially, then, the emergence of a computational discipline 
+for addressing philosophical 
+structures can change the familiar 
+Analytic/Continental narrative.  Software models 
+can be technically drawn without being either 
+exiomatic nor reductionistic; they can 
+engage a formalization in software implementation in 
+lieu of specifications of logical structure;  
+and they can present technological 
+systems as suggestive approximations of 
+human phenomena without committing 
+to a reductive theory that cognitive 
+processes %-- in sutuational understanding, 
+linguistic meaning, or conceptualization, 
+for example %-- are wholly characterized by the 
+terms of the implemented software.  Type-theoretic 
+analyses of natural-language semantics and syntax, 
+for example, can represent linguistic artifacts 
+according to formal/computational structures 
+without implying that the human 
+procss of actually converting surface-level 
+language to these derived representation 
+happens mechanically or  mathematically.  
+Computational `i.models` of linguistic phenomena 
+are different from Natural Language 
+`i.Processing`/, which makes the further 
+metaphysical assumption that 
+computers can `q.parse` language down to 
+schematized representations analogously to people.
+`p`
+
+`p.
+It is possible, then, to treat computational 
+models as methodologically useful adjuncts to 
+philosophical analysis while rejecting 
+reductive analysis of cognition or 
+language as transparently itself computational 
+or logically tractable.  In this 
+way, computational models can bring a technical 
+methodology to Continental thought 
+analogous to th role of logical 
+axiomatics on the Analytic side, but 
+with different methodological 
+commitments %-- and also in a different 
+metatheoretical perspctive.  Whereas Analytic 
+philosphrs may look on logicaomathematical 
+techniqus as a kind of rational kernel, 
+a core ground of scure entailments on which 
+to rest other claims, the Continental 
+engagement with computational models can be 
+more figured within the general 
+plurality of Theory; the same pull toward hybridization 
+that would wed phenomenology to analyses of 
+race, class, and gender, for example, to elucidate 
+the experiential as well as cultural political 
+dimensions of social relations.  
+Humanities `q.theory` acts as a kind 
+of intellectual gravity, pulling in phenomenology, 
+Critical Theory, Structuralism, linguistic and discourse 
+analysis, and so forth; there is no `i.a priori` 
+obstacle that would provent the same force 
+from reaching, say, formal and natural-language type 
+theory and the analysis of multiscale information systems.
+`p`
+
+`p.
+To my mind the most well-developed body 
+of working merging phenomenology with 
+computational methods is that of Jean Petitot; 
+although I would add some at least 
+provisional formal elaborations 
+of Cognitive Grammar (if I may take this 
+as a kind of applied phenomenology in the linguistic domain) 
+by, for insta,ce Kenneth Holmqvist and Matt Selway.  
+I might add, implicitly, the larger tradition 
+of type-thoretic semantics represented by the sometimes 
+highly formal work of a Zhaohui Luo, 
+James Pustehovsky, or Bruno Mery; which 
+in turn establishd technical links to 
+linguistic models inspired directly by 
+computer programming languages and computing 
+paradigms, as represented by linguists such as 
+Ash Asudeh, Gianluca Giorgolo, Oleg Kiselyov, and 
+Chung-Chieh Shan.  In short, we can develop an 
+overarching model of linguistic reprsentation 
+which is anchored both in cognitive 
+phenomenology and in computational 
+procedures. 
+`p`
+
+`p.
+Alongside this linguistic line of development we 
+can identify a parallel integration between 
+phenomenology and theories of spatial comprehension, 
+perceptual synthesis, and cognitive 
+`q.visualistics`/.  One line of analysis, for example, 
+considers the phenomenon of experiential `q.presence`/, 
+motivating phenomenological treatment of 
+computer imagery and Virtual Reality.  Along 
+this subjective assessment we can consider the 
+mathematical infrastructure for creating realistic 
+depictions of three-dimensional scens and surfaces; 
+and for applying lighting, textures, and space-filling 
+effects (mimicking the impression of smoke or flowing 
+water, say).  This technology does not 
+necessarily recreate the neurological processes by which 
+we cognize our spatial environment %-- nor 
+create perfectly lifelike graphics %-- but 
+it presents a suite of technological formalisms 
+that bear a simulative and structuraly articulated 
+relation to visual phenomenology.  As such it provides a 
+ground for complimentary but non-reductive analyses 
+that can be set alongside, for example, theoriesof 
+spatial synthesis as found in, say, 
+Husserl or Merleau-Ponty.
+`p`
+
+`p.
+These linguistic and spatial/visual examples have a 
+common architecture, at least `visavis; phenomenology, 
+in that theypersent computarional structures that 
+can be argued to encapsulate cognitive representations 
+without eliminating the complexity, situationality, 
+phenomenological immediacy, and interpersonal 
+dimensions of consciousness.  Cimputational models 
+are suggestive analogies rather than axiomatic 
+reconstructions of cognitive `q.logic`/.
+`p`
+
+`p.
+I think mereological theories can have an analogous 
+intellectual architecture, albeit in a narrower 
+topic area.  Formal systems developed in the 
+context of computer code %-- say, hypergraphs in 
+one of the four models outlined above %-- provide a 
+tangible but technological mdium for 
+articulating mereological concepts in a 
+rigorous domain, while also allowing these models 
+to be adjunct prototypes for theories of mereology 
+as a cognitive phenomenon.  Hypergraphs, in 
+short, are to mereology what formal parse-representations and 
+lexicons are to natural language, or computer-generated 
+imagery is to visual experience.  
+
 `p`
 
 `p.
