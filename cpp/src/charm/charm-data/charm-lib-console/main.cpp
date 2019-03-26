@@ -16,7 +16,20 @@
 
 #include <QDebug>
 
+
 int main(int argc, char **argv)
+{
+ Que1d<int> q1d;
+
+ q1d <= defzfn(int);
+
+ qDebug() << q1d.head();
+ qDebug() << q1d.tail();
+
+ return 0;
+}
+
+int main7(int argc, char **argv)
 {
  Deq1d<int> d1d;
 
@@ -118,6 +131,11 @@ int main4(int argc, char **argv)
  });
 
  qDebug() << "ok";
+
+ qDebug() << d1d.front();
+ qDebug() << d1d.back();
+
+
  return 0;
 }
 
@@ -135,6 +153,10 @@ int main3(int argc, char **argv)
  });
 
  qDebug() << "ok";
+
+ qDebug() << q1d.head();
+ qDebug() << q1d.tail();
+
  return 0;
 }
 
@@ -150,6 +172,9 @@ int main2(int argc, char **argv)
  {
   qDebug() << i;
  });
+
+ qDebug() << s1d.top();
+ qDebug() << s1d.bottom();
 
  qDebug() << "ok";
  return 0;
@@ -170,5 +195,9 @@ int main1(int argc, char **argv)
  });
 
  qDebug() << "ok";
+
+ qDebug() << v1d.last();
+ qDebug() << v1d.first();
+
  return 0;
 }

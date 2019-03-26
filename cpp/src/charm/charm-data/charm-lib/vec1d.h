@@ -21,12 +21,27 @@
 
 #include <functional>
 
+
+#define deffn(ty, arg) [](ty** def) \
+{ \
+ static int _def = arg; \
+ *def = &_def; \
+} \
+
+#define defzfn(ty) deffn(ty, 0)
+
+#define _default_fn(ty ,arg) set_default_fn(deffn(ty, arg))
+
+#define _default_z(ty) _default_fn(ty ,0)
+
 template<typename VAL_Type>
 class Deq1d;
 
 template<typename VAL_Type>
 class Vec1d
 {
+ std::function<void(VAL_Type**)> default_fn_;
+
 protected:
 
  friend class Deq1d<VAL_Type>;
@@ -35,11 +50,18 @@ protected:
 public:
 
  Vec1d(quint8 bsz = 16)
-  :  hive_structure_(new Hive_Structure)
+  :  hive_structure_(new Hive_Structure), default_fn_(nullptr)
  {
   hive_structure_->set_block_size(bsz);
   hive_structure_->set_value_size(sizeof(VAL_Type));
  }
+
+ void operator <=(std::function<void(VAL_Type**)> fn)
+ {
+  set_default_fn(fn);
+ }
+
+ ACCESSORS(std::function<void(VAL_Type**)> ,default_fn)
 
  void push_back(const VAL_Type& v)
  {
@@ -60,6 +82,22 @@ public:
    fn(*pv);
    hive_structure_->increment_iterator(hit);
   }
+ }
+
+ VAL_Type& last()
+ {
+  VAL_Type* vv = (VAL_Type*) hive_structure_->get_back_location();
+  if(!vv)
+    default_fn_(&vv);
+  return *vv;
+ }
+
+ VAL_Type& first()
+ {
+  VAL_Type* vv = (VAL_Type*) hive_structure_->get_indexed_location(0);
+  if(!vv)
+    default_fn_(&vv);
+  return *vv;
  }
 
  void each(std::function<void(VAL_Type& v)> fn)

@@ -34,6 +34,16 @@ public:
  {
  }
 
+ void set_default_fn(std::function<void(VAL_Type**)> fn)
+ {
+  Vec1d<VAL_Type>::set_default_fn(fn);
+ }
+
+ void operator <=(std::function<void(VAL_Type**)> fn)
+ {
+  set_default_fn(fn);
+ }
+
  void push(const VAL_Type& v)
  {
   Vec1d<VAL_Type>::push_back(v);
@@ -47,6 +57,17 @@ public:
  void pop()
  {
   this->hive_structure_->pop_back();
+ }
+
+
+ VAL_Type& top()
+ {
+  return this->last();
+ }
+
+ VAL_Type& bottom()
+ {
+  return this->first();
  }
 
 

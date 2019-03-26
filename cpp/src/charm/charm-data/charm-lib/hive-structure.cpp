@@ -52,6 +52,8 @@ Hive_Block* Hive_Structure::check_init_blocks(quint32 max)
 
 void* Hive_Structure::get_indexed_location(quint32 index)
 {
+ if(index >= total_size_)
+   return nullptr;
  quint32 blkn = index / block_size_;
  quint16 blki = index % block_size_;
  return get_indexed_location(blkn, blki);

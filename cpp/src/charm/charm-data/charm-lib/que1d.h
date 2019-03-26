@@ -35,6 +35,16 @@ public:
  {
  }
 
+ void set_default_fn(std::function<void(VAL_Type**)> fn)
+ {
+  Vec1d<VAL_Type>::set_default_fn(fn);
+ }
+
+ void operator <=(std::function<void(VAL_Type**)> fn)
+ {
+  set_default_fn(fn);
+ }
+
  void dequeue()
  {
   ++offset_;
@@ -58,6 +68,15 @@ public:
     Vec1d<VAL_Type>::each_from_index(offset_, fn);
  }
 
+ VAL_Type& tail()
+ {
+  return this->last();
+ }
+
+ VAL_Type& head()
+ {
+  return this->first();
+ }
 
 };
 

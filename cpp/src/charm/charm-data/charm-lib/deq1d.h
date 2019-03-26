@@ -55,6 +55,16 @@ public:
 
  }
 
+ void set_default_fn(std::function<void(VAL_Type**)> fn)
+ {
+  front_vec_.set_default_fn(fn);
+  back_vec_.set_default_fn(fn);
+ }
+
+ void operator <=(std::function<void(VAL_Type**)> fn)
+ {
+  set_default_fn(fn);
+ }
 
  void push_back(const VAL_Type& v)
  {
@@ -76,7 +86,15 @@ public:
   front_vec_.hive_structure_->pop_back();
  }
 
+ VAL_Type& back()
+ {
+  return back_vec_.last();
+ }
 
+ VAL_Type& front()
+ {
+  return front_vec_.last();
+ }
 
  void each(std::function<void(VAL_Type& v)> fn)
  {
