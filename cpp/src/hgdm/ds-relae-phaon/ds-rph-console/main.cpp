@@ -35,10 +35,26 @@ int main(int argc, char **argv)
 
  RPH_Graph::hypernode_type* hn = doc.graph()->hypernodes()[0];
 
+ doc.graph()->get_sf(hn, 2, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
+
  doc.graph()->get_sf(hn, 3, [](QPair<QString, void*>& pr)
  {
   qDebug() << pr.first;
  });
+
+ doc.graph()->get_sf(hn, 4, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
+
+ doc.graph()->get_sf(hn, 5, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
+
 
  return 0;
 }

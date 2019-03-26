@@ -77,7 +77,8 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 
  add_rule(flags_all_(parse_context ,active_type_decl), prelude_context,
    "type-field",
-   " \\s* : (?<fn> [^:]+ ) \\s* (?: : \\s* (?<code> \\d+)  ) ",
+   " \\s* , (?<fn> [^:,\\s]+ ) \\s* "
+     "(?: : \\s* (?<code> \\d+)  )? ",
    [&]
  {
   QString fn = p.matched("fn");
@@ -133,6 +134,14 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
  {
   QString s = p.match_text();
   graph_build.read_acc(s);
+ });
+
+ add_rule(read_context,
+   "comment",
+   " .single-space.* ;+ -  "
+   " [^\\n]* (?= \\n) ",
+   [&]
+ {
  });
 
  add_rule(read_context,
