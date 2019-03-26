@@ -18,18 +18,29 @@
 
 int main(int argc, char **argv)
 {
- Stk1d<int> s1d;
+ Stk1d<int> s1d(5);
 
  s1d.push(7);
  s1d.push(9);
- s1d.push(17);
+ s1d.push(27);
+ s1d.push(37);
+ s1d.push(39);
+ s1d.push(47);
+ s1d.push(9);
+ s1d.push(27);
+ s1d.push(37);
+ s1d.push(39);
+ s1d.push(47);
 
  s1d.each([](int& i)
  {
   qDebug() << i;
  });
 
- s1d.pop();
+ qDebug() << "...";
+
+ for(int i  = 0; i < 6; ++i)
+  s1d.pop();
 
  s1d.each([](int& i)
  {

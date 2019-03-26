@@ -81,14 +81,23 @@ void Hive_Structure::pop_back()
    return;
  --total_size_;
 
- quint16 blki = (total_size_ % block_size_;
+ quint16 blki = (total_size_ % block_size_);
 
  if(blki == 0)
  {
-  quint32 blkn = index / block_size_;
+  quint32 blkn = total_size_ / block_size_;
+  Hive_Block* hb = check_init_blocks(blkn);
+  if(hb)
+  {
+   if(hb->next_block)
+   {
+    delete hb->next_block;
+    hb->next_block = nullptr;
+   }
+  }
  }
 
-}
+
 }
 
 void* Hive_Structure::get_push_back_location()

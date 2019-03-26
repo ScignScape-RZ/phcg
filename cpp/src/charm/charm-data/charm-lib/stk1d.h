@@ -44,6 +44,11 @@ public:
   Vec1d<VAL_Type>::reach(fn);
  }
 
+ void pop()
+ {
+  this->hive_structure_->pop_back();
+ }
+
 
 };
 
