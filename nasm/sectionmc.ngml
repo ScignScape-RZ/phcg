@@ -3,7 +3,7 @@
 In Formal Concept Analysis, a concept is defined by the combination of 
 its instances and its indicators.  Two distinct concepts can share 
 the same extension: the set of black US presidents 
-equals the set of Hawaian born presidents.  
+equals the set of Hawaian-born presidents.  
 Within a collection of objects and 
 properties, a `q.formal concept` is a set with both objects and 
 properties such that every object bears every property.  In this 
@@ -22,7 +22,7 @@ the reasons or properties for why they belong.
 Moreover, within real-world concepts %-- 
 typically imprecise and dynamically 
 evolving, insofar as they are cognitive and communicative tools 
-%-- intension and extension evolve in consort.  Borderling cases 
+%-- intension and extension evolve in consort.  Borderline cases 
 need to be either excluded from or included into a concept's reach, 
 and this choice forces an evolution in intension.  Suppose we 
 start with a simple, provisional account for a familiar concept 
@@ -132,7 +132,7 @@ associated with young animals, such as being exceptionally vulnerable and
 being cared for by parents); while (\ref{itm:park}) seems to construct a narrower 
 concept by adding specifiers to `i.extent`/, not `i.intent`/.  There 
 is no suggestion that rhinos `q.in that park` have any further 
-resemblance aside from their being there; as a result, (8) comes 
+resemblance aside from their being there; as a result, (\ref{itm:park}) comes 
 to designate some set of animals by invoking the `i.set` of 
 rhinos and then adding semantics to focus on some select portion of that set.
 In these examples the concept `i.rhino` plays different semantic 
@@ -183,10 +183,14 @@ internal complexity or `i.internal structuration`/.  A torpedo and a
 school of fish may both follow a quantifiable trajectory through 
 water, but the directedness of the former's motion depends on 
 complex biosocial synchronization much different from the 
-latter's straightforward physics.  For each conceptualized 
+latter's straightforward physics.
+`p`
+
+`p.
+For each conceptualized 
 totality, then, there is a measure of Individual Coherence 
 and of Internal Structuration %-- which can be quite independent 
-from another (the imaginary `q.IS/IC` scale) 
+from another (the `q.IS/IC` scale) 
 %-- that specifies `i.in what sense` the whole 
 is a (single, unitary) individual.  The concept used to 
 designate the whole, along with (in a language setting) 
@@ -564,18 +568,12 @@ new operation which opens in the prior location %--
 it is permissable to say `q.that restaurant is Chinese now`/.  
 We can say that a restaurant is `i.unionized`/, `i.vegetarian`/, 
 and `i.remodeled`/, asserting properties respectively of 
-its staff, menu, and building.  Yet `q.This restaurant is 
-vegetarian` is not a mere abbreviation for `q.This restaurant's 
-menu is vegetarian`/.  By analogy, if a book has a yellow cover 
-or a house has yellow bricks, we can say `q.this house/book is yellow`/.  
-That does not imply that the internal decor of the house has much yellow, 
-or that the book's paper sheets are not white.  Instead, a property of the 
-visible exterior is plausibly predicated of the whole.  Such 
-mereological property-attribution carries over to the examples 
-of a restaurant's menu/staff/building, but the `q.mereology` in 
-these cases is subtler because it involves different `q.registers`/.  
-Certainly the staff, building, etc., is `q.part` of a restaurant.  
-But a `q.sum of parts` here is not simplistic set-theoretical union; 
+its staff, menu, and building.  
+Certainly the staff, building, and menu are `q.parts` of a restaurant.
+`p`
+
+`p.  
+Yet `q.sum of parts` here is not simplistic set-theoretical union; 
 it is a more complex functional interrelationship.  A restaurant 
 joins a set of people (staff) with a set of places and rooms 
 (dining areas, kitchen areas, etc.) according to schema involving 
