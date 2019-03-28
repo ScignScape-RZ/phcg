@@ -10,26 +10,34 @@
 
 #include <functional>
 
-template<typename _THIS_Type>
+template<typename _THIS_Type, typename VAL_type>
 struct _each_holder
 {
- _THIS_Type& _this;
- void operator <=(std::function<void(typename _THIS_Type::Value_type& v)> fn)
+ _THIS_Type& _this; //typename _THIS_Type::Value_type& v
+ void operator <=(std::function<void(VAL_type& v)> fn)
  {
   _this._each(fn);
  }
 };
 
-template<typename _THIS_Type>
+template<typename _THIS_Type, typename VAL_type>
 struct _reach_holder
 {
  _THIS_Type& _this;
- void operator <=(std::function<void(typename _THIS_Type::Value_type& v)> fn)
+ void operator <=(std::function<void(VAL_type& v)> fn)
  {
   _this._reach(fn);
  }
 };
 
+template<typename VEC_Type, typename VAL_Type>
+struct each_holders
+{
+ union{
+ _each_holder<VEC_Type, VAL_Type> each;
+ _reach_holder<VEC_Type, VAL_Type> reach;
+ };
+};
 
 
 #endif // _EACH_HOLDERS__H

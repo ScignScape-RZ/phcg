@@ -125,10 +125,10 @@ int main4(int argc, char **argv)
  d1d.push_back(9);
  d1d.push_front(17);
 
- d1d._each([](int& i)
+ d1d.each <= [](int& i)
  {
   qDebug() << i;
- });
+ };
 
  qDebug() << "ok";
 
@@ -147,10 +147,10 @@ int main3(int argc, char **argv)
  q1d.enqueue(9);
  q1d.enqueue(17);
 
- q1d._each([](int& i)
+ q1d.each <= [](int& i)
  {
   qDebug() << i;
- });
+ };
 
  qDebug() << "ok";
 
@@ -160,7 +160,7 @@ int main3(int argc, char **argv)
  return 0;
 }
 
-int main(int argc, char **argv)
+int main2(int argc, char **argv)
 {
  Stk1d<int> s1d;
 
@@ -181,7 +181,7 @@ int main(int argc, char **argv)
 }
 
 
-int main1(int argc, char **argv)
+int main(int argc, char **argv)
 {
  Vec1d<int> v1d;
 
@@ -189,7 +189,7 @@ int main1(int argc, char **argv)
  v1d.push_back(9);
  v1d.push_back(17);
 
- v1d.each <= [](int& i)
+ v1d.reach <= [](int& i)
  {
   qDebug() << i;
  };
