@@ -17,8 +17,6 @@ class Vec1d : public _Vec1d<VAL_Type>, public each_holders<Vec1d<VAL_Type>, VAL_
 {
 public:
 
-  typedef VAL_Type Value_type;
-
  Vec1d(quint8 bsz = 16)
   :  _Vec1d<VAL_Type>(bsz), each_holders<Vec1d<VAL_Type>, VAL_Type>({{*this}})
  {

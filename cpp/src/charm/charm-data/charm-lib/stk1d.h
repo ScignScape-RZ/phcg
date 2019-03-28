@@ -28,13 +28,6 @@ class Stk1d : protected _Vec1d<VAL_Type>, public each_holders<Stk1d<VAL_Type>, V
 {
 public:
 
- typedef VAL_Type Value_type;
-
-// union{
-// _each_holder<Stk1d> each;
-// _each_holder<Stk1d> reach;
-// };
-
  Stk1d(quint8 bsz = 16)
   :  _Vec1d<VAL_Type>(bsz), each_holders<Stk1d<VAL_Type>, VAL_Type>({{*this}})
  {

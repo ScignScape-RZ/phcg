@@ -30,13 +30,6 @@ class Que1d : protected _Vec1d<VAL_Type>, public each_holders<Que1d<VAL_Type>, V
 
 public:
 
- typedef VAL_Type Value_type;
-
-// union{
-// _each_holder<Que1d> each;
-// _each_holder<Que1d> reach;
-// };
-
  Que1d(quint8 bsz = 16)
   :  _Vec1d<VAL_Type>(bsz), offset_(0), each_holders<Que1d<VAL_Type>, VAL_Type>({{*this}})
  {

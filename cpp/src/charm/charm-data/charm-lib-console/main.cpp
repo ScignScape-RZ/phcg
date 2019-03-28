@@ -189,7 +189,7 @@ int main(int argc, char **argv)
  v1d.push_back(9);
  v1d.push_back(17);
 
- v1d.reach <= [](int& i)
+ v1d.each <= [](int& i)
  {
   qDebug() << i;
  };

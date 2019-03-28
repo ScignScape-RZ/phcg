@@ -34,12 +34,6 @@ protected:
 
 public:
 
- typedef VAL_Type Value_type;
-
-// union{
-// _each_holder<Deq1d> each;
-// _each_holder<Deq1d> reach;
-// };
 
  Deq1d()
   :  front_vec_(_Vec1d<VAL_Type>()),
