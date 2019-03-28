@@ -1,770 +1,914 @@
-
-`section.Multiscientific Objects`
+`section.Coherence and Concepts`
 `p.
-A statue and the small piece that has fallen off of 
-it is at best a `q.trivial` mereological sum because 
-it is not a `q.meaningful` whole %-- it is not an 
-anarchaeological object, say, while the statue 
-now missing the piece `i.is` an 
-anarchaeological whol.  Similarly, $Me$ after 
-a nail-clip is a biological object, 
-while $Triv$ ($Me$ plues the piece of nail) 
-is not a biological whole. 
+In Formal Concept Analysis, a concept is defined by the combination of 
+its instances and its indicators.  Two distinct concepts can share 
+the same extension: the set of black US presidents 
+equals the set of Hawaian-born presidents.  
+Within a collection of objects and 
+properties, a `q.formal concept` is a set with both objects and 
+properties such that every object bears every property.  In this 
+formal setting, a concept is a statistical artifact, 
+which may or may not correspond with concepts of thought and 
+language (despite its well-defined extent, in the singular person of Barack 
+Obama, `i.black Hawaian president` probably does not express a concept 
+with cognitive value beyond its constituent properties).  Such analysis 
+however suggests a more general truth, that concepts depend on 
+both intension and extension; to be acquainted with a 
+concept is to understand to some degree both a set of instances and 
+the reasons or properties for why they belong.
 `p`
 
 `p.
-Also, the (current) statue is additionally 
-a minerological whole in the sense that clay minerology 
-affects its properties (e.g., its fragility).  
-The sum of the statue and the piece is probably 
-not an analogous minerological whole (it is 
-not a single clay object).  Parallelwise, 
-$Triv$ is certainly a `i.psychological` object 
-as $Me$ is; I don't feel sensations from 
-the snipped-nail part, see it as myself, 
-and so forth.
+Moreover, within real-world concepts %-- 
+typically imprecise and dynamically 
+evolving, insofar as they are cognitive and communicative tools 
+%-- intension and extension evolve in consort.  Borderline cases 
+need to be either excluded from or included into a concept's reach, 
+and this choice forces an evolution in intension.  Suppose we 
+start with a simple, provisional account for a familiar concept 
+%-- a `i.house` is a place of residence.  We can then consider 
+places which we may or may not consider houses %-- an apartment, 
+apartment building, hotel, cabin, tent, tree house, the White House.  
+Based on how we classify these examples, our posited `q.house 
+indicators` evolve; e.g., a house is a place of permanent, year-round 
+residence for at most a few families, where habitation (as opposed 
+to, say, government or commerce) is its primary purpose.  Such  
+thought experiments do not `i.define` concepts, but perhaps they retrace 
+their history as linguistic and cognitive phenomena within a relevant community.
 `p`
 
 `p.
-A clear case for mereological integrity or 
-nontriviality seems to be the convergence of 
-multiple sciences: the sculpture is 
-`i.archaeological` and `i.minerological`/; 
-$Me$ is `i.biological` and `i.psychological`/.  
-The interesting or bonafide wholes here integrate 
-properties of different sciences, or different 
-ontologial registers.  So $Triv$ may 
-instantiate biological properties (say, even 
-the snipped-nail-part is composed of cells) 
-and th statue-plus-piece instantiates minerological 
-properties (even th piece is composed of clay).  
-But our attention %-- both literal perceptual 
-attention and figurative philosophical 
-attention %-- is drawn to the objects that tie 
-between several ontologial registers 
-(which is presumably a precondition of objects lieing 
-in the circle of the human life world and 
-horizon of cognitiv engagement).  
+Although I will consider how conceptual attribution suggests patterns 
+of `i.functional organization` within objects thereby identified, we 
+can also consider the `q.function` of concepts as serving thought:  
+what `i.roles` do typical concepts serve within mental life overall?  
+Given the intension/extension co-evolution, we recognize at least 
+two distinct roles; a concept both characterizes an `i.extension`/, 
+a set of instances, and also an `i.intension`/, a set of properties 
+or indicators which provide a rationale, and a suggestion of 
+further characterization, for identifying an instance with a concept.  
+To assert that something tokenizes a concept is not only to 
+provide a very rough suggestion of what it is like, but to imply 
+a strategy or `q.script` for providing more detail.  Once I 
+identify something as a `i.house`/, I imply a kind of 
+organization %-- a yard or some sort of surrounding property; 
+an inside and outside; an external style and architecture; 
+a set of several internal separated but interconnected rooms.  
+I also imply (in contrast to a motor home) that the house 
+is built in one fixed place and has a permanent location, 
+perhaps a postal address, that visiting someone at their 
+home means returning to the same location on each occasion.   
+But implying this general schema also `q.initiates` a script 
+for further specification; identifying something with a 
+concept is more often the start of a conceptual and linguistic 
+process, rather than a conclusion.  I can learn the address 
+of your new house, directions to get there, you can describe 
+its various features, its yard and interior design and so forth.
 `p`
 
 `p.
-Given the recurring interest in sculpture/clay 
-examples, I'll focus on this case: the 
-sculpture (unlike, say, the piece that 
-has fallen off, alone or in combination with 
-th larger whole) is actually 
-an integral archaeological object 
-(plus minerological, physical, aesthetic, 
-and commercial).  As such it 
-instantiates different kinds of properties: 
-archaeological (created during a particular historical 
-era), minerological (composed of clay), 
-physical (weight, dimensions such as maximum 
-width, breadth, and height), aesthetic
-(artistic value and provenance), commercial (having 
-a monetary value for insurance purposes; contributing 
-to the traffic and revenue of the museum which 
-houses it).  Note that some of these 
-aspects are interdependent: e.g., objects cannot be 
-archaeological and minerological without 
-being physical.
+Concepts play different roles, and these can be `q.activated` in 
+turn by different situations, in particular by different 
+linguistic and grammatic formations.  Similar meanings can be 
+achieved by subtle variation in which conceptual roles are 
+suggested, providing a case study for how grammar connotes role.  
+Consider Ronald Langacker's comparison of sentences like 
+
+`sentenceList,
+`sentenceItem; \label{itm:threes}Three times, students asked an interesting question.
+`sentenceItem; \label{itm:threean}Three times, a student asked an interesting question.
+`sentenceList`
+
+In (\ref{itm:threes}), the plural `i.students` reflects how a type of noteworthy 
+situation occurred multiple times; whereas the singular in (\ref{itm:threean}) reflects 
+how, on each occasion, one student was involved.  The `q.student` in 
+(\ref{itm:threean}) does not designate a particular person, but is rather a generic 
+token of the concept `i.student` `q.conjured`/, as Langacker says, to 
+provide a kind of unspecified cognition of a conceptual tokening without 
+implying reference to some specific token.  Along these lines, consider 
+
+`sentenceList,
+`sentenceItem; \label{itm:rhinos}Rhinos are mammals.
+`sentenceItem; \label{itm:arhino}A rhino is a mammal.
+`sentenceItem; \label{itm:therhino}The rhino is a mammal.
+`sentenceList`
+
+While (\ref{itm:rhinos}) refers via the 
+set of all rhinos (each of them is a 
+mammal), (\ref{itm:arhino}) second 
+`q.conjures` a `q.generic` rhino, from an 
+abstract `q.plane` %-- again using Langacker's terminology %--  
+to make the point that 
+any conceivable rhino is a mammal.  That is, mammalness is a generic feature 
+of the entire species, it is not a quality which depends on the nature of 
+any given instance.  In (\ref{itm:therhino}), the 
+signification by contrast selects from the 
+`q.plane` of all species types; so `i.rhino` here applies in 
+the guise of naming a discrete element in categorizing thought.  These examples 
+illustrate roles of `i.selecting an extension`/, `i.expressing intension` 
+%-- in the specific sense of concept-intension; that is, envisioning a 
+representative abstract case which explifies the conjunction of properties 
+and indicators that are a concepts' signature %-- and `i.naming a type`/, 
+referring into a space of `i.kinds` insofar as these are present in thought 
+as discrete units.
 `p`
 
 `p.
-I will assume for the moment that archaeological, 
-minerological, commercial objects, etc., exist: 
-i.e., that it is unproblemmatic to take 
-for granted that our world contains an arsenal of 
-objects in numerous different ontological registers.  
-This ontology gives rise to a kind of 
-types quantification: when assrting 
-properties about an object, we can identify 
-the register (or one of the registers) where an 
-object belongs.  In effect we say things like 
-`i.there exists an archaeological object 
-such that...` or `i.there exists an minerological object 
-such that...`/.  Let's say that for a register $R$ 
-we can have $R$-quantifiers that can iterate over 
-things which have an $R$-aspect.  Thus an archaeological 
-objct is one that can be in the domain 
-of an archaeological-quantifier.
+Which of these roles is most clearly `q.activated`/, 
+given semantic and grammatic cues, then shapes the surrounding discourse: 
+
+`sentenceList,
+`sentenceItem; \label{itm:related}The rhino is related to the horse.
+`sentenceItem; \label{itm:young}Young rhinos are threatened by poachers.
+`sentenceItem; \label{itm:park}Rhinos in that park are threatened by poachers.
+`sentenceList`
+ 
+\noindent Here (\ref{itm:related}) forefronts rhinos as a natural kind, invoking a familiar 
+relation between species; (\ref{itm:young}), I would argue, invokes a more 
+intensional sense of the concept insofar as it adds a further 
+specifier to suggest a narrower concept (a young rhino has the 
+properties associated with rhinos in general, and then further those 
+associated with young animals, such as being exceptionally vulnerable and 
+being cared for by parents); while (\ref{itm:park}) seems to construct a narrower 
+concept by adding specifiers to `i.extent`/, not `i.intent`/.  There 
+is no suggestion that rhinos `q.in that park` have any further 
+resemblance aside from their being there; as a result, (\ref{itm:park}) comes 
+to designate some set of animals by invoking the `i.set` of 
+rhinos and then adding semantics to focus on some select portion of that set.
+In these examples the concept `i.rhino` plays different semantic 
+roles %-- guise of a species, a bundle of typical properties and indicators, 
+and a set of jointly classified individually %-- corresponding to 
+different cognitive roles.
 `p`
 
 `p.
-Objects in multiple registers %-- each of which can be called 
-a `q.facet` %-- are in the domain of different sorts of 
-quantifers, or of combined quantifers.  If $R$ and 
-$R'$ are registers, then an $R/R'$-quantifier iterats 
-over things that have a facet as $R$ and also a facet as 
-$R'$.  Inter-register dependence means that some 
-quantifiers are necessarily mixed: an 
-archaeoloical-quantifer is necessarily actually 
-an $R/R'$-quantifier where $R$ is archaeology and 
-$R'$ is physicality.
+This multiplicity of roles precludes simplistic theorizations of 
+concepts as `i.just` instance-sets, or property-bundles, or taxonomic entries.  
+Rather than a single (meta-) definition, a general theory of concepts should 
+begin by classifying different ways that concepts are used.  An initial 
+distinction is that a concept can `q.profile` (another Langacker term) 
+`i.either` an individual `i.or` a collection of individuals, 
+including (but not necessarily) a set of all (actual or possible) instances.  
+In the latter guise a concept (alone or in consort with other semantic 
+elements) demarcates a collection from some more general or expansive collection.  
+In the former case a concept `i.singles out` an individual; as I discussed earlier, 
+this implies some mixture of continuity and discontinuity, insofar as the 
+individual is (to some degree) posited as separable (in an act of cognition 
+and/or perception) from its surroundings and also as internally connected or 
+integrated.  There is some `q.theory` of the `i.internal coherence` 
+of the individual, of how it is appropriate in some context to consider it 
+a discrete unit %-- acting as as singular whole, causally integrated, or 
+in some other fashion disposed to function unitarily.
 `p`
 
 `p.
-I believe that a notion of $R$-quantifiers is a 
-natural correlate of what I am calling 
-`q.multiscientific mereology`/.  Indeed, perhaps 
-we can ntrench the notion as a kind of 
-`q.$R$-quantifier mereology`/.  On this account, 
-wholes intrinsically are wholes in one 
-or multiple registers: there are biological 
-wholes, archaeological wholes, and so forth.  
-Any partness fact or assertion contains 
-an embedded $R$-quantifier: that a statue 
-contains a horse, say, means that the statue 
-`i.qua archaeological object` includes a 
-depiction of a horse.  Thus in any 
-`xhppy; (at least if $x$ is not a trivial 
-mereological sum, assuming our mereological 
-system can even represent formulae involving 
-trivial sums) there is an implicit 
-$R$ from which $x$ is drawn via an 
-implicit $R$-quantifier (and the $R$ may actually be a 
-mix of registers).
+Certainly the `q.individual coherence` of a totality may be provisional.  Some 
+collections are bound together only by people's desire to group them, e.g., 
+the books in a library.  Nevertheless, even this `q.external` connectedness 
+is caussally efficacious, with non-neglibable effects of cohering the integral 
+whole more than a random baseline: books in a library are much more likely to 
+remain spatially proximate than a random pair of books which happen to be in 
+some one building at the same time.  On the other hand, the degree to which 
+parts `i.do` cohere into a whole is an essential conceptual detail, and, 
+once a whole is characterized as an individual tokenizing a concept, part of that 
+concept's role is to suggest the degree and nature of this coherence.  
+For example, the United Nations is a more diffuse collection of political 
+units than the United States.  Nevertheless, there is a well-established 
+semantics where the UN functions as a singular entity which can, say, 
+pass a resolution.  
+On the other hand, insofar as a totality has a strong degree of 
+internal coherence, this may result from a complex causal or 
+processual integration between many parts, or conversely by a relative lack of 
+internal complexity or `i.internal structuration`/.  A torpedo and a 
+school of fish may both follow a quantifiable trajectory through 
+water, but the directedness of the former's motion depends on 
+complex biosocial synchronization much different from the 
+latter's straightforward physics.
 `p`
 
 `p.
-I'll say that an $R$-quantifier mereology is one where 
-`i.any` whole that can be part of `xhppy; formulae 
-has an implicit $R$-quantifier, and therefore has an 
-$R$-facet for some $R$ (or a mixture of $R$-facets).  
-On a multiscientific account, most or all 
-cognitively significant $R$-quantifiers actually involve a 
-mixture of facets.  The universe of quantification 
-is therefore partitioned into different regions 
-because quantification itself is sprad over 
-different $R$s (and the granularity increases because each 
-mixture of $R$s gives rise to a different sort of quantifier.
-`p`
-
-`spsubsectiontwoline.$R$-Quantification and Non-Antisymmerty`
-`p.
-Adding $R$-quantification casts a different perspective on 
-discussions of NAM, such as Cotnoir's.  He points out 
-that statue/clay examples can potentially 
-lead to symmetric parthood: 
-`q.the clay is an improper part of
-the statue and the statue is an improper part of the clay` 
-\cite[p. 401]{AaronCotnoir} (I'll add, statue and clay 
-need not be metaphysically identical).  My account 
-would express the analogous situation via 
-`q.mixed quantifers`/: the $R$-quantifier 
-which can select the statue is actually a 
-mixture of an archaeological-quantifier and a 
-minerological-quantifier.  Thus by the very formulation  
-of any mereological relation 
-wherein the statue is the whole (the left-hand side 
-of `xhppy;), the statue has archaeological 
-and minerological tfactes, because it falls under the 
-scope of a quantifier which `i.requires` those facets.  
+For each conceptualized 
+totality, then, there is a measure of Individual Coherence 
+and of Internal Structuration %-- which can be quite independent 
+from another (the `q.IS/IC` scale) 
+%-- that specifies `i.in what sense` the whole 
+is a (single, unitary) individual.  The concept used to 
+designate the whole, along with (in a language setting) 
+surrounding grammar and context, suggests a particular 
+account of the degree and schematic nature of this individuation.
 `p`
 
 `p.
-On the face of it, then, the relationship of facets to 
-one another is not itself mereological 
-(even allowing for `i.improper` parthood).  
-How could we say that the clay-facet, for example, 
-is a part of the sculpture-facet?  That is, 
-in a archaeological/minerological-quantifier, can 
-the minerological facet be `q.part of` the 
-archaeological facet?  I think a reasonable 
-$R$-quantifier mereology could block that kind of formula 
-because there is no apparent $R$-quantifier 
-that would come into play to express it.  
-After all, the sculprture belongs to 
-a domain of quantification which intrinsically 
-mixes (at last) two facets; to 
-formulate parthood `i.between` those facets would 
-seem to require switching to a different 
-domain of quantification. 
+Grammatic choices, like singular/plural and defininte/indefinite article, 
+play a role here: 
+
+`sentenceList,
+`sentenceItem; \label{itm:arlake}A rhino is by the lake.
+`sentenceItem; \label{itm:therlake}The rhino is by the lake.
+`sentenceItem; \label{itm:rslake}Rhinos are by the lake.
+`sentenceItem; \label{itm:therslake}The rhinos are by the lake.
+`sentenceList`
+
+These grammatic variations induce subtle cues to construct or 
+indicate a `q.plane` from which individuation selects.  In 
+(\ref{itm:arlake}), the hearer's attention is newly directed to something 
+which, the speaker suggests, either the hearer or both parties 
+had not previously observed.  In other words, (\ref{itm:arlake}) wants to 
+shift the topic of conversation (even if only temporarily, 
+so as to register the asserted fact as something collectivly 
+realized) and so functions both to individuate the rhino, 
+to propose it as a new object collectively recognized as something 
+in their mutual surroundings, and to shift attention in its direction.  
+By contrast, the rhino in (\ref{itm:therlake}) has a presumptive 
+prior acknowledgement in the current discourse; the point of 
+the definite article is to select the rhino from among the 
+set of all entities which have in some fashion been 
+talked about already.  These different `q.planes of selection` 
+carry over to the plural examples, but the designation there 
+selects a group of animals, not one single individual.  
+Nevertheless, (\ref{itm:therslake}) implies that the group has some 
+sort of internal connectedness, perhaps moving roughly 
+as a unit.  By referring back, as does (\ref{itm:arlake}), to an earlier phase 
+in the discourse, (\ref{itm:therslake}) implies that the group represents (more or less) 
+`q.the same` rhinos as observed earlier, an effect of comparison 
+which helps call attention to the rhinos in their totality.  
+Without the definite article, (\ref{itm:rslake}) is 
+less specific in asserting such a totality; it may, 
+but need not, suggest that the rhinos by the lake are situated 
+in some spatial or interacting formation so that the speakers 
+should be disposed to consider them collectively.  If the speaker 
+wanted to nudge the emphasis more or less toward this grouping interpretation, 
+she would have to select some further semantics: e.g., 
+`i.A school of rhinos`/, or conversely `i.Some rhinos`/, are by the lake.  
 `p`
 
 `p.
-It is reasonable, perhaps, that a mixed-domain 
-quantification can be combined with quantification 
-involving the integrated facets in isolation.  So 
-if I say that the sculpture is an 
-archaeological-and-minerological object, perhaps 
-I should allow the sculpture's archaeological facet 
-in isolation to be included in a 
-archaeological-quantification domain which is not 
-limited to minereological objects (not every sculpture, 
-for instance %-- consider ice-sculptures 
-%-- is executed in a minerological medium).  
+In these examples, the concept `i.rhino` does not, on its own, guide one 
+interpretation or another (singular/plural; more itegral or 
+more scatterrred); it is rather a resource which is deployed 
+in a linguistic and communicative setting along with further 
+details, and the effect of conceptual resonance `i.in context` bears these 
+further connotations.  Whether a concept designates a group or an individual, 
+it is the speaker (or a person using a concept as a tool in thought) 
+who uses ideas activated by the concept so as to evoke patterns 
+by which the selected individual or collection is internally 
+connected and externally separated.  Any conceptualization presents 
+schema where continuities and discontinuities are mixed, but 
+in different ways.  Suppose a game warden says:
+
+`sentenceList,
+`sentenceItem; \label{itm:footprints}Those footprints were left by rhinos.
+`sentenceItem; \label{itm:trail} That trail of footprints was left by rhinos.
+`sentenceItem; \label{itm:tracks} Those tracks were left by rhinos.
+`sentenceList`
+
+I argued above that the concept `q.footprint` internally suggests both 
+continuity (of medium) and separation (of shape or contour).  Analogously, 
+a collection of footprints as in (\ref{itm:footprints}) has a presumptive internal 
+separation into discreet individuals, but enough spatial proximity to be 
+plausibly grasped as a perceptual group, relative to a reasonably 
+typical vantage point.  The choice of words in (\ref{itm:trail}) implies a further notion 
+of directedness, and a somewhat different relation of the observer's spatial position  
+`visavis; the observed.  While the two sentences might describe the 
+same situation, (\ref{itm:trail}) carries an additional implication that the 
+footprints suggest some line of direction which extends beyond the speakers' 
+immediate line of sight, and can perhaps be followed.  This directionality 
+is also implied in (\ref{itm:tracks}), but in that case the internal continuity which 
+supports this sense of direction is further emphasized.  In this context 
+`q.tracks` can mean not just footprints but also, say, bent grass or hairs 
+or broken twigs, so that each particular artifact which cumulatively 
+constitutes the `q.tracks` may have less precise distinctness than 
+a particular footprint.  Moreover, the word `q.tracks` tends overall to 
+refer to physically continuous structures, like train tracks, whereas 
+`q.trail` can be used in more metaphorical senses and with greater 
+sense of internal pauses and separations (a dective `i.on the trail` of a 
+fugitive; a scientist `i.on the trail` of a discovery).
 `p`
 
 `p.
-Certainly we need some semantics for migrating between 
-different $R$-quantification domains, because 
-we do have reasonable conceptualizations like 
-`i.this ice sculpture replicates that clay sculpture` or 
-`i.this photograph shows that clay sculpture`/.  
-However, the `q.rules` for such `q.cross-$R$` 
-domain-switching may be relatively restricted; we ar 
-not forced to theorize mereological systems 
-where the component $R$s in a mixed-register 
-domain can be generically factored out to their 
-own quantification-domains. 
+So (\ref{itm:footprints})-(\ref{itm:tracks}) 
+show progressively less attention paid to internal 
+constituents and more to the nature and direction of a whole, 
+even if some scenarios tolerate all three sentences. 
+Each usage would convey slightly different connotations to the 
+scene at hand.  The point of this comparison is that individuation 
+through concepts depends on properly connoting the patterns of 
+continuity and discontinuity which define individuals' coherence 
+and separateness (as well as that of sets of individuals, when 
+concepts are used to profile collections).  A concept implies a 
+schema both for individuals' internal structuration, and for 
+its suitability as being conceptually and perceptually isolated 
+from its surroundings.  The function of concepts is, typically, 
+to `i.set the stage` for further characterization of their tokens, 
+first by individuating them as points of attention, and then 
+by implying the presence of `q.scripts` or `q.schema` leading to 
+more precise descriptions.  Both of these roles present challenges 
+for `i.formal` semantics, if this means defining rigorous of 
+quasi-mathematical theories of how concepts select a `i.set` of 
+instances, or of how each instance `i.instantiates` a concept.  
+The act of linking a concept to an instance is a complex 
+cognitive/semantic event, one which occurs against the backdrop of a 
+mental and often dialogic context, and which should be theorized 
+as one step in an evolving process.  A concept is an opening 
+onto a more detailed (process of) characterization.  To say that 
+something is an instance of some concept is not a simple 
+act of classification, then, analogous to declaring a variable 
+in a programming language to be of some data type.  
 `p`
 
 `p.
-Moreover, this restriction captures why $R$-quantification 
-produces a more regulated mereological structrs, 
-because ther are limited `q.parthood` rlations 
-between $R$s in a mixture themselves.  In an 
-$R/R'$-quantification such as archaeological-minerological, 
-it might be said that the specified domains 
-(archaeological and minerological) are `q.parts` of 
-the mixed $R$ which governs the quantification 
-accessing the sculpture.  In other words, 
-the quantifier applicable to the sculpture  
-seems like a `q.quantificational sum` of the 
-archaeological and minerological domains.  
-Analogously, the sculpture seems like a `q.conceptual 
-sum` of aesthetic and physical properties.  
-However, even though `q.summation` invites notions 
-of membership and inclusion, we do 
-not automatically proceed from conceptual 
-sums to mereological sums: 
-we can consider the conceptual sum of milk 
-and almond milk without treating a glass 
-of milk as a token of a milk/almond-milk 
-disjunctive-or'ed substance, wherein 
-milk-related-properties would be 
-parts of hypothetical milk-or-almond-milk 
-related propertes.  Analogously, even if 
-we accept the language of an $R$-quantifier as 
-a `q.quantificational sum` of two 
-finer domains, we can deny that this 
-summation translates to `i.mereological` relations 
-between facets in the finer and the mixed domains. 
+Of particular importance, I believe, is the notion that conceptualization 
+(if we define this as concept-to-token identification) is only one 
+stage in an extended process.  This means that no one single 
+concept provides a definitive account of an identified instance, 
+even a provisional or imprecise account.  Obviously concepts 
+operate at some level of coarse-graining and can be combined 
+together for greater precision.  However, if we fail to 
+theorize conceptualization as `i.process`/, we can end up with a 
+view of concepts as imprecise but, `i.at some degree of detail`/, 
+self-contained mental `q.pictures` which cover some range of 
+possible cases.  For each concept, there would correspond 
+(on this account) a `q.rough` sketch of how a token of the 
+concept is, insofar as it does bear the concept.  The degree 
+of (im)precision in these `q.sketches` would depend on how 
+general or specific is the concept itself: scientific terms, 
+for example, are more specific than everyday words.  
+But each concept would connote a family of instances whose 
+features are more clearly or more vaguely aligned with a 
+set of indicators.  Each house is vaguely aligned with a 
+`q.sketch` of some locale with a yard, a front door, interior 
+rooms, and so forth; each restaurant is aligned with a 
+general notion of a place to sit at a table and eat prepared food, 
+and so forth.  The concept leaves particulars imprecise 
+(what kind of food, what kind of yard) but presents them at a 
+level of vagueness in which they match all examples.  A 
+concept, in other words, finds a suitable mix of vagueness 
+and resemblance %-- it abstracts from particular details 
+enough that all tokens can be considered to resemble each other.
 `p`
 
 `p.
-Suppose we `i.could` formulate that both clay and sculpture 
-are parts of some enveloping whole 
-which has both sculptural and clay-like aspects.  With 
-$R$-quantification, this would require a distinct 
-domain of quantification which I have yet theorized 
-%-- I'll call it $X$.  Of course, the actual 
-domain for the sculpture combines (at least) 
-archaeological and minerological, but 
-this mixture is not $X$, because we want the various 
-`i.factes` to be `i.part of` the $X$-object 
-in the internal vocabulary of a mereology.  I have 
-allowed that $R$-mixtures are in some sense 
-`q.quantificational sums` but blocked a 
-concurrent mereological summation: we can't necssarily 
-take the `i.mereological sum` of an archaeological-facet 
-and a minerological-facet even (or especially) if 
-they are facets of `q.the same object` (a unit of iteration 
-under one quantifir).  Someone might find 
-that restriction arbitrary. 
+While my analysis has likewise argued for `i.characterizing features`/, 
+where I differ from this kind of theory is in emphasizing conceptual 
+imprecision as a matter of `i.process` and not of `i.vagueness`/, 
+or concepts as `i.scripts` rather than `i.sketches`/.  It is misleading, 
+I believe, to think of a concept as `i.imprecise` in that it seeks 
+to achieve a degree of nonspecifity which allows many somewhat mutually 
+resembling things to be grouped together.  This notion seems to both 
+minimize the potential for using particular concepts to initiate 
+more precise further characterization, and also to overstate the 
+degree to which concept-tokens resemble each other.  As mental 
+tools concepts are thereby weakened on two fronts: they are neither 
+precise enough to truly describe their instances, nor general enough 
+to group together these instance outside of some `q.resemblance` between 
+them.  I would argue, however, that real-world concepts both trend 
+toward a degree of generality which is hard to account for in terms 
+of token-resemblance, `i.and also` serve within cognitive and linguistic 
+episodes in which general concepts provide a framework for precisely 
+describing individuals, up to a degree of resolution suited for a 
+given thought or dialog.  The concept may not internally `i.imply` 
+these details, but it implies a `i.framework` for accumulating them.
 `p`
 
 `p.
-In particular, someone might argue that domains of 
-quantification should be arbitrarily generalizable.  
-For example, archaeological, minerological, biological, 
-and psychological objects are all among the 
-things that exist, so we seem invited to 
-quantify over `q.things that exist`/, as a generalized 
-domain abstracting from finer $R$-domains.  
-So quantifying over this general 
-domain %-- say, $X$-quantification %-- 
-models a different semantic pattern 
-than $R$-quantification.  Whereas $R$-quantification 
-reflects expressions like `i.there is a sculpture 
-such that...`/, $X$-quantification corresponds 
-to the more symbolic logical formulation like 
-`i.there exists \underline{x} such that...`/.
+If we consider the concept of `i.fly`/, for example, we note that it 
+covers many different cases: the flight of birds, planes, coments, commercial 
+passengers, leaves, kites, debris, shrapnel, types of aircraft 
+(`q.that model flew during World War II`/), carriers (`q.we fly 
+Korean Air whenever possible`/), their fleet (`q.that company flies the 
+youngest planes of any discount carrier`/).  All of these somehow 
+involve travel through air, so we might say that the role of `q.fly` is to 
+invoke a highly stylized or fuzzy sketch of `q.movement above the ground`/; 
+in other words, to find the point of resemblance among all of these cases.  
+The different senses of `i.fly` might then be considered `i.subconcepts`/, 
+each with a more precise picture, which finds more detailed resemblances 
+between its tokens.  By this account, the concept `q.fly` is really a 
+loose aggregate of more precise concepts, which manifest as different 
+senses of the polysemous English word.  However, such an analysis 
+seems to too neatly group these various senses into a conceptual 
+hierarchy, as if word-senses can assemble into a taxonomy akin to the 
+classification of living species, each sense finding a degree of 
+precision and inter-token resemblance relative to its hierarchical position.  
+I would argue that different `q.senses` of words or concepts do not 
+generally reveal such straightforward taxonomic patterns, at least 
+unless (as with biological names for species, genera, etc.) they are 
+deliberately constructed to do so.  In normal usage new senses evolve 
+gradually and can emerge ad-hoc for some specific language community 
+(or `q.micro` community).  For example, the sense of `q.fly` as 
+in `q.Commercial Flight` %-- with its typical associations of 
+buying a ticket, going to an airport, checking baggage, passing 
+security, and so on %-- emerged only gradually from the more general 
+sense of flying in an aircraft.  Moreover, we can imagine specific 
+situations where new senses emerge %-- for example, executives 
+of a multinational company who use the phrase `q.Flying to London` 
+to mean a trip to specific offices, thereby mixing (in this specific 
+context) the destination with the purpose of the trip. 
 `p`
 
 `p.
-It might seem as if $X$-quantification can be logically 
-converted to $R$-quantification by, in effect, 
-treating the $R$-quantifier as a predicate under the 
-scope of the (purported) $X$-quantifier.  So from 
-`i.there is a sculpture that...` we can get something like 
-`i.there exists an \underline{x} such that, \underline{x} is 
-a sculpture and...`/.  And also like 
-`i.there exists an \underline{x} such that, \underline{x} is 
-a molded expanse of clay and...` %-- in other words, 
-we are logically lifting an `i.\underline{x}` from 
-the sculpture/clay and transcribing sculptureness 
-and clayness as predicates on this `i.\underline{x}`/.
+The fecundity with which these senses arises suggests to me that we should 
+not consider each `q.sense` as its own (sub)concept; instead, I would 
+consider `i.fly` to be `i.one` concept, not a loose assortment of 
+vaguely related concepts.  This concept coverts many different cases, 
+but the cases can be compared and characterized according to certain 
+overall criteria, such as the `i.cause`/, `i.reason`/, `i.agent`/, and 
+`i.destination` of the flight.  Flying `i.debris`/, `i.leaves`/, and `i.kites`   
+all rely on the power of wind, but the former implies a relatively strong gust 
+to dislodge solid objects naturally resting on the ground, whereas the latter 
+implies a human agent who orients the kite to best gather the wind.  
+Flying `i.birds` and `i.planes` are both self-powered, but the latter relies 
+on human agency to provide fueal.  The various senses of human flight are 
+comparable based on the kind of craft used, the relation between passengers, 
+pilots, and whoever owns the craft (contrast hobbyist who owns and flies 
+planes, an air force pilot, a passenger service where flying is a commercial 
+transaction).  Each of these distinctions provide parameters for comparing 
+different examples of flight.  No parameters, except perhaps for the 
+most general notion of airborn motion, apply to all cases and kinds of 
+flights; but each case involves some mixture of some relevant parameters, 
+and each parameter offers a ground of comparison.  For example, only 
+commercial flight involves a ticket, but once this parameter is 
+`q.activated` we can compare the price of different flights.
 `p`
 
 `p.
-From that point we can see how mereological 
-controversies arise, because now 
-`i.\underline{x}` is logically neither sculpture nor clay but 
-some kind of generic token of thing-ness of 
-which sculptureness and clayness can be preicated.  
-That is, `i.\underline{x}` is an $X$-object, under the 
-domain of a quantifier without any 
-ontological structure or specificity.  
-If an $X$-object can be a whole, then we have mereological 
-relations outside the regulations of $R$-quantification.  
-For instance, we have a stated theory of why $Triv$ 
-is trivial; because there is $R$-quantifier, for any 
-$R$, which covers $Triv$ (or at last there is 
-no multiscientific mixture of $R$s that 
-would render $Triv$ a `q.multiscientific` whole).  
-However, it seems rasonable 
-to allow that $Triv$ is an $X$-object, because by 
-definition $X$-quantification does not impose 
-ontological structure on its domain of iteration.
+It is hard to identify isolated `q.subconcepts` within general 
+flight because different parameters overlap in different 
+ways.  Passenger flight has unique aspects of cost and 
+value (and whatever legal and social considerations 
+come along with commercial transactions), but it shares 
+other parameters with other (but not all) senses: 
+relatively specific times and destinations of travel, 
+like the flight of birds but unlike that of leaves or debris; 
+the distinction between the subject and the agent of flight, 
+a `i.person` ia flying but by virtue of being on an aircraft, 
+so the subject/agent relation becomes a conceptual parameter, 
+which is also present in some other contexts, like cargo.  
+For an analogous example, we might think to subdivide the 
+concept of `q.restautant` into more specific cases %-- after 
+all, merely expressing the desire to visit a restaurant
+in general, or searching for one, can cover a wide spectrum 
+much of which may not actually reflect the speaker's/searcher's 
+interest.  Someone may want a formal dining experience, a casual 
+spot for family dinner, a healthy and inexpensive lunch, a 
+quick meal, or a place to have a snack and go online.  Certain 
+lexemes cover some part of these more specific spectra 
+%-- bistro, steak house, diner, coffee shop, cafeteria %-- yet none 
+of these compete with `q.restaurant`/'s dominance of the relevant semantic 
+territory: one will often use the more general word even when one 
+of the more specific ones apply.  I believe this can be explained, 
+in part, because the more general concept can be narrowed in 
+several ways at once, thereby providing a more effective point 
+of origin for a specified description; providing more 
+`q.avenues` for elaboration.  For example, a `q.Five Dishes and Soup` 
+spot in a Chinatown might be considered a Chinese restaurant and a 
+cafeteria, but there does not appear to be an established 
+usage `q.Chinese Cafeteria`/.  Even if `q.cafeteria` might be 
+plausibly defined as any restaurant without table service, it 
+seems to connote further details about the kind and pricing of the food.  
+Instead of specifiers offering a clear-cut segmentation of the 
+`q.restaurant` spectrum, English speakers seem to prefer the more 
+general usage and to provide further specification by an unfolding, 
+dialogic, and open-ended process, relying on communicative cues to 
+converge on an image of the `q.kind of place` some restaurant is, 
+rather than trusting some narrower lexeme (like `i.cafeteria` or 
+`i.diner`/) to impart these cues via convention.  Arguably, 
+in some specific circumstances, a narrower lexeme has indeed 
+achieved something like canonical status (`i.pizzeria`/, `i.coffee bar`/); 
+so a speaker using those terms, amongst a particular language community, 
+shows confidence that the allusions embedded in them convey a 
+sufficiently precise picture of the `q.kind of place` being mentioned.  
+But this specificity stands in semantic relation to the more general term, 
+even if the latter is replaced on some occasions: the ubiquity of the 
+word `q.restaurant` adds an extra dimension to a speaker's choice on 
+some occasion to instead say `i.pizzeria` or `i.coffee bar`/.  The concept 
+`q.flight`/, I would argue, has a similar semantic ubiquity; it 
+encompasses a spectrum of cases so broadly that the occasional 
+choice of a different word (`q.I jetted to London`/; `q.The birds migrated 
+south`/) carries the semantics not only of the word used but the dominant 
+one `i.not` used. 
 `p`
 
 `p.
-I contend, then, that problems about trivial 
-wholes are interrelated with problems 
-about $X$-quantification.  If there is only 
-$R$-quantification, then there are only nontrivial 
-wholes, because there are no quantifiers whose 
-domain encompasses trivial mereological sums.
+What this analysis suggests is that real-world language does not necessarily 
+show a tendency to semantic specificity, to a preference for more specific 
+usages and a relegation of more general terms to cases of deliberate 
+imprecision or abstraction.  If a language community had an instinctive 
+drive toward semantic precision, then dominant but imprecise words like 
+`q.restaurant` would tend to gradually be replaced in many cases by 
+narrower concepts, and to be retained mostly when speakers deliberately 
+intend to avoid any narrower connotations.  However, this does not 
+appear to be the way language in general evolves.  I believe that, 
+to an important degree, this fact can be explained by appeal to 
+conceptual roles: the point of a concept is not to condence as 
+precise a picture of its tokens into as concise a semantic unit as 
+possible, but rather to initiate a further descriptive process 
+as efficiently as possible.  
+`p`
+
+`spsubsectiontwoline.Concepts' Descriptive Spaces and Functional Schema`
+`p.
+A concept-attribution, I have argued, does not primarily serve to 
+suggest the nature of some token by aligning it with a vague 
+schema, a fuzzy picture it `q.resembles`/.  Instead, saying that some 
+instance bears some concept, like `i.restaurant`/, intiates a 
+process or `q.script` in which further characterizations 
+are available.  The attribution does not just imply a 
+`q.bundle of properties` which can be enumerated, like in a 
+relational database or `q.facts at a glance` %-- here is a 
+restaurant; here is its address, kind of food, hours, 
+coded numbers for price and quality, etc.  The tabular 
+form of a database relation can be considered one very 
+specific kind of `q.script`/, in which description 
+proceeds just by listing a set of parameters and  
+values.  Typically, however, characterization is more 
+unfolding and `q.branching`/: does a restaurant have 
+table service?  If so, how polite/professional/knowledgable 
+are the wait staff?  Does it have a wine list?  If so, 
+how thoughtful/inexpensive/well-matched are its selections 
+relative to the menu?  And so forth.
 `p`
 
 `p.
-Whether or not this setup seems intuitive may depend 
-on our beliefs about quantification.  If we are 
-already committed to the idea that $X$-quantification is 
-possible %-- or that phikosophers have to give 
-a good reason for excluding this generic quantification 
-%-- then my reasoning could well be deemed circular. 
-I am presupposing the mereological restrictions that 
-should fall out of a theory, by 
-restriction how quantification works; thus I 
-avoid problemmatic objects by eliminating 
-the quantifiers that could quantify over them, but 
-this may seem like eliminating problems 
-by fiat.
+Taking departure from Formal Concept 
+Analysis, we can say that a single concept does not have a 
+single `q.frame`/; a single set of properties (or 
+even parameters, property-dimensions which take different 
+values for different instances, like the averge price 
+of a restaurant entr\'ee) which collectively characterize 
+all tokens.  Instead, concepts associate with `i.description spaces` in 
+which different parameters are `q.packaged` to be activated collectively, or 
+not %-- a table-service or wine-list package is appropriate 
+to some, but not all, restaurants.  In a characterizational 
+process, these packages are sequentially activated and 
+provide particular details, but the precise collection of 
+details will vary from case to case.  In other words, for a 
+general concept like `i.restaurant`/, there is no one 
+set of properties or parameters which fully characterizes 
+all tokens.  There may be general parameters which apply 
+everywhere (like a restaurant's address or opening hours), 
+but these tend to offer only the beginnings of a useful description. 
 `p`
 
 `p.
-We can consider, then, arguments for and against 
-unrestricted or $X$-quantification.  On the one hand, 
-formal logic certainly leaves quantification open-ended.  
-It's not clear what we should read into that philosophically 
-%-- after all, logic is a study of abstract domains, 
-rather than empicial universe of statues and toes and such.  
-Also, even in mathematics you have type-theoreric 
-paradigms which are consistent with type-restricted 
-quantification; no mathematical object 
-is recognized which cannot be given a corresponding 
-type (which excludes unrestricted set-formation).  
-So quantification is limited to quantification 
-over `q.fibers` induced by the value-to-type 
-mapping.  With a sufficiently expressive 
-type theory, the category of types becomes 
-effectively isomorphic to the collection of 
-domains of quantification.  In other words, 
-universal quantification is not universally 
-accepted even in logic and maethamtics.  
-Granted, though, type-restricted quantification 
-is not the predominant logical construct.  
+Aside from the semantic subtlety of how a single concept 
+gives rise to a spectrum of different `q.description 
+packages`/, we also need to honor the ontological 
+complexity of how the properties attributed to concept-instances 
+vary across these packages.  Real world concept-tokens tend 
+to be ontologically `q.complex`/, which is to say 
+that there is no single fashion in which they 
+`q.exist`/.  A restaurant, for example, is a physical building and 
+location, a collection of people (social institution), and a 
+collection of dishes served.  These various facets of a restaurant's 
+existence belong to different ontological `q.registers`/.  
+A restaurant which moves to a new location but 
+keeps more or less the same staff, name, and menu 
+might be considered `q.the same` restaurant.  So too might a 
+new operation which opens in the prior location %-- 
+it is permissable to say `q.that restaurant is Chinese now`/.  
+We can say that a restaurant is `i.unionized`/, `i.vegetarian`/, 
+and `i.remodeled`/, asserting properties respectively of 
+its staff, menu, and building, and by 
+extension, metonymmically, of the restaurant itself 
+%-- like calling a book with yellow cover (and white pages) 
+%-- `q.yellow`/.   
 `p`
 
 `p.
-Another philosophical case for $X$-quantification 
-is that recognizing only $R$-quantification 
-`i.without abstracting to` an unrestricted 
-`q.$X$-domain` would seem to leave the $R$-domains 
-bearing a lot of weight.  It is one thing 
-to quantify over a set of objects bearing biological 
-properties; it is another to stablish a rule 
-of quantification presupposing that there is some 
-essential register in existence containing 
-all and only biological objects.  We moderns 
-presumably reject thoughts of an `i.elan vital` 
-or any other metaphysical essence that suffuces biological 
-wholes to make them a distinct order of 
-reality.  Even more so should we be skeptical 
-of models implying a minerological `i.elan`/, a 
-psychological `i.elan`/, and so forth.  Rather we 
-assume that there is an underlying physical reality 
-%-- atoms and molecules and a small set of 
-force fields %-- and that objects of physical 
-composition take on biological or minerological 
-proprties, which `i.makes` them biological or minerological 
-objects.  I'll call this the `q.`i.elan`/` problem. 
+Certainly the staff, building, and menu are `q.parts` of a restaurant.   
+Yet `q.sum of parts` here is not simplistic set-theoretical union; 
+it is a more complex functional interrelationship.  A restaurant 
+joins a set of people (staff) with a set of places and rooms 
+(dining areas, kitchen areas, etc.) according to schema involving 
+how the physical space enables the staff to carry out typical 
+operations, and how the combination of physical and operational 
+design (the procedures which employees understand and consent to enact) 
+allow the restaurant to carry out its expected roles 
+(taking orders, preparing food, bringing them to patrons).  
+We expect the restaurant to be a `q.site` where certain kinds 
+of things can happen, so that certain kinds of activities are 
+afforded to us, and it is the nature of these affordances 
+(insofar as they have gustatory, interpersonal, economic, 
+and spatial aspects) 
+%-- to cross ontological `q.registers`/.  
 `p`
 
+`subsection.Mereology and Referential Vagueness`
 `p.
-From the arguing-against-unresteicted-quantification 
-side, the `q.`i.elan` problem` can be turned on its head.  
-As stated, there is no `i.elan vital` 
-which makes biological objects biological, 
-or minerological objects mineral.  Instead, at 
-sufficiently small scales, all matter reveals itself 
-as having the same minimal constituents 
-(subatomic particles plus Standard Model forces, say).  
-That is, we may believe we can avoid the 
-`i.elan` problem by elevating a kind of subatomic-physics 
-talk as the prestige dialect, an ontologically 
-neutral way of talking about all physical 
-things without mysteriously essentializing 
-biological or any other higher-scale properties.  
-In this vein, unrestricted quantification %-- 
-at least with respect to physical reality %-- 
-is essentially quantification over that subatomic domain.
-`p`
-
-`p.
-But such an inscription of $X$-quantification 
-has its own blind-spots.  The objects 
-of the subatomic domain are not metaphysical 
-essencs outside the play of science; they are posits of a 
-specific science, subatomic (and quantum) physics.  
-Objects do not just `q.contain` quarks and electrons 
-like bricks in a wall; the actual subatomic realm 
-is apparently complexly structured by forces and 
-quantum indeterminacy, where particles have some approximate 
-and dispersive existence.  When we knock on would 
-we're not really encountering protons; there is a 
-system of microphysical charges that creates the illusion of 
-hardness.
-`p`
-
-`p.
-So we can't really capture the idea of unstructured 
-materiality %-- a minimal unit of physical 
-presence which lies conceptually outside 
-any `i.elan`/; which is too small 
-to be biological, say %-- we can't capture such an 
-idea of an `i.ur`/-particle by plugging in 
-the latest scientific theories of the smallest 
-constituents of the universe.  The quantum 
-model is subject to refinement, after 
-all.  And philosophers who talk of 
-objects as `q.collections of molecules`/, say, 
-are not really proposing that molecular chemistry 
-is an operational part of their theory.  
-Rather, this language tends to use talk 
-of atoms and moleculres %-- or, say, 
-of material extension %-- as proxies for 
-a picture of `q.ur-particles`/, of an 
-imagined smallest unit of physical 
-nature.
-`p`
-
-`p.
-These ur-particles are essentially a philosophical 
-fiction; they don't align with 
-elementary particles recognized by physics, though we can 
-plug various hypotheses (like string theory) to give 
-then scientific detail.  But it's not like 
-philosophers present ur-particles as an emprical claim 
-and look for science to substantiate it.  Rather, 
-ur-particles are a way of talking: having 
-(on metaphysical as much as empirical grounds) 
-rejected the idea of `i.elan`/s, and also `i.accepted` 
-the idea of physical things being (down to some 
-tiny scale) made of smaller physical things, 
-the concptual merger of these ideas creates the notion 
-of an `q.ur-particle`/: something so small 
-as to be individible and therefore unstructured, 
-and something lacking any `i.elan` that would 
-make it biological, minerological, or 
-scientific in any sense of being an 
-object `i.of` a science. 
-`p`
-
-`p.
-Larger objects then become figured as mereological sums of 
-ur-particles, which in turn raises problems due to the 
-dynamic nature of macroscopic objects (and their sheer 
-differences in scale to `q.ur-particles`/).  Even leaving 
-aside the point that ur-particles do not actually 
-exist %-- they are conceptual proxies for a messier 
-subatomic reality %-- we cannot simplistically 
-equate biological objects (or objects of any other macroscopic 
-register) with mereological sums of ur-particles.  Through 
-breathing, discharge of skin cells, the dynamics of 
-our microbiome, and so forth, the boundary between 
-our own molecules and the external world is 
-(at sufficiently magnified scales) fluid and indeterminate.  
-Indeed, consider any colored object: having color means that it 
-absorbes some light from the environment, and emits heat; 
-the perptual exchange of photons between bodies and 
-their surroundings prohibits and direct enumeration 
-(even in principle) of the ur-particles 
-thst would `q.make up` an object.
+The ontological complexity of `i.objects` (like 
+`i.restaurants`/) then complicates semantics and 
+reference (like `i.a restaurant` as a designated 
+signified).  Which `q.facet` of the 
+restaurant is a referential target in different 
+discursive contexts?  These questions complicate 
+attemps to map units of language to things 
+`q.in the world`/.
 `p`
 
 `p.  
-Meanwhile, we still have to account for why (only) some 
-mereological sums of ur-particles are non-trivial.  
-Presumably sufficintly scattered sums are trivial, 
-but we can't assume any physically connected mass of 
-ur-particles is non-trivial (even if we accept the approximation 
-that solid objects are not `i.really`/) solid.  
-A glass on top a table forms a connected but, we'd say, 
-physically trivial sum.  A metal chain has possible states 
-where it is not connected (one of the rings not touching 
-any others) but it is, even while in those states, non-trivial.  
-A bucket of sand or glas of water have states where physical 
-forces will destructure them (the water or sand spill out), 
-but we may want to consider the glass-and-water 
-or bucket-and-sand to be nontrivial sums.  
-In short, the criterion of triviality 
-%-- even just in the register of everyday objects %-- 
-requires explicit consideration of physical forces 
-promoting an object's integrity.
+Granted, we should assess any `q.formal` semantics against 
+a presumptive distinction of `i.semantics` and `i.pragmatics`/, 
+such that linguistic nuances which seem to violate referential 
+rigidity are artifacts of actual `i.usage`/, as separate from formal 
+`q.meaning`/.  For example, the apparent ambiguity of `i.London` 
+as either the larger city of the financial district, and 
+`i.Manhattan` as either an island or a borough, is a product of 
+how the respective language-communities reuse a single name for 
+multiple, slightly different but overlapping purposes.
 `p`
 
 `p.
-In short, while it may be appealing to adopt a discource 
-of `q.ur-particles` which ncapsulates our atomistic and 
-non-`i.elan` intuitions, this conceptual model 
-does not really address concerns like the 
-`q.`i.elan` problem` and it raises a host of new problems.  
-Quantification over non-trivial mereological sums 
-of ur-particles does not seem like a 
-philosophical improvement over $R$-quantification, even if 
-this seems to lead us back to the question of how 
-to think tgrough $R$-quantifiers without 
-conjuring a realm of $R$-elans.
-`p`
-
-`p.
-Ultimately, I think the answer to this question 
-lies not in philosophy alone but in the interface between 
-philosophy and science(s).  The question of 
-what forces and autopoietic regulation allows 
-$R$-objects to sustain as non-trivial wholes is 
-complex, and depends on laws and dynamics 
-investigated by $R$-sciences themselves.  We do not have a 
-succinct logical statement of what makes $R$-quantified 
-mereological wholes non-trivial.  This does not mean we 
-fall back on spooky `i.elans`/; but rather that, for a 
-given $R$-quantifier, we can form (with sufficient scientific 
-input) a `i.theory` of non-triviality in the 
-$R$-domain.  Biologists, for example, do not rely 
-on unexamined `i.elans` to demarcate the realm of living things; 
-this is an scientific question, in light of astrobiological 
-possibilities.  So biology itself taks on the 
-question of under which circumstances 
-an object is a `i.biological` object.  Similarly, psychologists 
-can debate the proper demarcation of psychological objects 
-(is a brain-dead patient still a psychological object, say); 
-archaeologists the demarcation of archaeological objects 
-(e.g., as compared to collectibles), and so forth.
+To be precise, the `q.City of London` is 
+technically a small district 
+in what people informally call `q.London`/; and the `i.borough 
+of Manhattan` includes Manhattan island but also several 
+other islands and the small Marble Hill neighborhood on the mainland.  
+If we accept a `q.model-theoretic` paradigm 
+where formal semantics takes a collection of symbols (names, lexemes) and 
+maps them to a collection of empirical things (like geospatial regions), 
+we then ask, which regions are designated by the respective names?
 `p`
 
 `p.  
-Of course, these scientists are not trying to 
-distinguish trivial from non-trivial mereological sums, 
-but sciences do include theories of their proper reach; 
-that is, we can argue philosophically equipped 
-with an inventory of tgeories drawn from 
-multiple sciences, of what makes a biological object 
-biological, etc.  While a prima facie 
-claim that sums with no $R$-quantifier just are trivial, 
-a rstriction that seems question-begging, 
-seems at best philosophically incomplete, we 
-can complete the [icture by introducing 
-constitutive theories developed by sciences 
-to identify their ontic extent.  For any $R$-domain, 
-we can assume that there is a scientific 
-theory of $R$-ness; of the conditions where 
-objects are $R$-objects.  These theories may be provisional 
-an `i.a posteriori`/, but they can complement 
-an underlying mereological theory: 
-a whole is non-trivial if it lies 
-in the domain of an $E$-quantifier, and we can philosophically 
-defer to a suite of empirical theories delimiting 
-$R$-objects for different $R$'s; the corresponding 
-`q.$R$-theories` may lie outside philosophy proper, but 
-they are not intellectually vacant `i.elans`/.   
-`p`
-
-`spsubsectiontwoline.$R$-Quantification and Cognitive Frames`
-`p.
-My analysis of $R$-quantification has been driven by a desire 
-to theorize `q.Extramental` mereology.  For those who 
-intuit that mereological relations are 
-really modeling how we cognitively 
-(perceptually, conceptually, etc.) engage with 
-objects, the mtaphysical problems of triviality may 
-never arise.  Non-trivial wholes 
-in `i.cognitive` mereologya re non-trivial 
-because we have innate perceptual tendencies and 
-learned concptualizations that dispose us to 
-treat some wholes as integral.  We can 
-study different aspects of 
-our whole- (or part-) forming dispositions: 
-basic perceptual continuity, force-dynamic 
-intuition, situational undertsanding, 
-and so forth. Indeed, a theory of 
-mereological intuition will likely 
-overlap with an outline of Cognitive Grammar.  
-But in any case the cognitive criteria for 
-non-triviality lie in our cognitive acts of 
-synthesis and analysis, at the intersection 
-of perceptual, situational, conceptual, 
-and enactive criteria. 
+Conventional usage in the two cities suggests that this question is 
+not settled; New Yorkers for example will use `q.Manhattan` for 
+either the borough or the island (or both) depending on context.  
+There seems to be no nonarbitrary reason to name one or the other 
+as the `q.real` (referent of) Manhattan.`footnote.
+Maps on the westbound 
+$`textcircled<F>;$ train show Roosevelt Island as the first stop in 
+Manhattan (borough), but riders would not necessarily consider 
+this stop (across the river from Midtown) to be `q.in` Manhattan, 
+and Real Estate listings might be considered misleading if they 
+classified Roosevelt Island addresses as in Manhattan.
+`footnote`
 `p`
 
 `p.
-Quantification becomes an issue when we want to get 
-beyond mereology within cognitive frames and 
-define mreological relations as extramental features 
-compelling or at least influencing the cognitive 
-manifestations of mreology.  In that 
-sense we need to refer to physical objects 
-in their extramental existence and observe thir 
-wholeness when it applies.  Without the ambient 
-cognitive discrimination which marks some 
-cognized phenomena as wholes, we then have to 
-introduce new criteria such that non-trivial 
-mereological sums can be posited in reality 
-so that they can be notated in formulae 
-like `xhppy;.  We then face the question of 
-how to properly restrict quantification for terms 
-like the $x$ in `xhppy; so that only 
-empirically/scientifically 
-meaningful, naturally intergal, non-trivial wholes 
-are modeled by `xhppy; like formulae.  
+Distinguishing `i.semantics` from `i.pragmatics`/, we might 
+argue that there is nonetheless an underlying semantic 
+system here where the two locations actually are differentiated, 
+so the name `q.Manhattan` actually has two senses.  Speakers 
+understand from context which sense is intended %-- this 
+is the pragmatic layer %-- but `i.each` sense, if 
+we can treat it as a distinct lexical 
+unit, may still function in accord with (say) 
+model-theoretic semantics.  On this account, 
+the name `q.Manhattan` reflects a pragmatic, communicational 
+speech-gesture which singles out one or another formal-semantic 
+meanings depending on context; underlying the surface pragmatics 
+of everyday usage there is a formal semantic framework, where the 
+two `q.Manhattan`/s are distinguished.  
 `p`
 
 `p.
-In sbort, I propose $R$-quantification not as thestarting point 
-of a mereological theory but in conjunction with `i.cognitive` 
-mereology: we want to pass beyond a theory 
-wherein mereological rlations ar `i.only` cognitive 
-without thereby ending up in vague ur-particle-like talk where 
-verything extra-mental is a mereological sum of 
-some hypothized minimal quantum of physical reality.  
-The problem with `i.unrestricted` 
-quantification is that it seems to construct a simplistic 
-register for the extra-mental: everything which is outside 
-the mind is a sum of `q.stuff` and therefore its physical 
-(i.e., exyramental) reality is ontologically 
-carried by all the stuff (e.g., ur-particles) 
-composing it.
+The problem for this account is that most pragmatic usage does not 
+make this distinction %-- and the reason is 
+not because one sense or another can be inferred 
+from context, but because it is not relevant.  
+This can be called an example of `i.vagueness` rather than 
+`i.ambiguity`/; not that references are ambiguous between 
+Manhattan-the-borough and the island, 
+but rather they are vague about even positing the distinction.
+For example %-- to borrow an 
+example due to Mark Heller %-- the assertion `i.Syracuse is north of 
+Manhattan` holds despite fine-grained ambiguities in construing the 
+designatum of `q.Manhattan` (or of Syracuse, for that matter).  Heller 
+does not mention the island/borough confusion, but points out that 
+geospatial regions are in some sense `q.fuzzy` as sets of geospatial 
+points %-- the precise borders of an island, for example, seem to depend 
+on everchanging variations in water levels.  Heller develops a theory 
+according to which, considering this imprecision, the referents of 
+proper names should be considered `q.conventional objects` which 
+overlap to large extent with empirical objects or regions.  For 
+another example, he runs a Sculpture/Clay discussion: 
+how a sculpture may begin as a 
+block of clay, be completed and then exhibited as a work of art, 
+and (let's imagine) at some point destroyed; the block of clay 
+is there all along, but only in the middle phase (when on display) 
+do we consider it a statue.  Therefore (for Heller) the statue is a 
+`q.conventional object` distinct from the block but 
+overlapping with it for much of its history.
 `p`
 
 `p.
-In effect, when passing beyond the cognitive 
-register to the extramental, a mereological 
-argument could reach for a convenient designation 
-of physicality for `q.anything which is not mental`/; 
-e.g., ur-particles.  Then ur-particles, or 
-`q.being composed of ur-particles`/, become 
-conceptual proxy for extramentality.  Since we then 
-have all the ingredients to build ur-particle sums, 
-it seems as if the very gesture of siteing mereology 
-outside cognition compels us toward 
-unrestricted quantification.  If the essence of being 
-extramental is being composed of 
-ur-particles, then as soon as our 
-mereological universe vntures outside the mind it 
-picks up ur-particles and therefore the prospect 
-of mereological sums of ur-particles.  Granted, we can 
-introduce notions like `i.biological properties` 
-to corral the interesting sums from the trivial ones, 
-but this is a superstructure layered on to a 
-mereological system which allows a lot of 
-trivial `q.$X$-quantified` wholes.
+In `cite<JubienOntology>; Michael Jubien counters this analysis 
+with a reference theory based on `i.properties`/; specifically, 
+corresponding to conventionalized concepts (like Manhattan or 
+a sculpture) there is a property of `i.being` that thing 
+(e.g., `i.being` Manhattan), and linguistic expressions 
+(like proper names) semantically designate those properties.  
+`q.There is no contingent
+identity.... There are no conventional objects.
+There are just things and their properties` 
+\cite[p. 38]{JubienOntology}.
+Depending on contexts and speakers' particular cognitive orientations, 
+different specific entities can be conceived as 
+instantiating the respective properties %-- adopting this notion to 
+my examples, both the island and the borough can plausibly be 
+supposed as `i.being Manhattan` for the sake of interpreting a 
+particular speech-act.  Better, since either island or borough 
+may plausible be construed as `i.being Manhattan`/, most 
+uses need not commit to one interpretation or another.  
+In other words, examples like the Syracuse/Manhattan directions 
+would, on Jubien's account, be interpreted roughly as asserting 
+that there is some geospatial territory (its precise 
+borders not necessarily characterized) with the property of 
+`i.being Syracuse`/, another with the property of `i.being Manhattan`/, 
+and the former is north of the latter.  
 `p`
 
 `p.
-The problem in this intellectual trajectory is 
-an intuition that extramentality automatically takes 
-into a territory of ur-particles, as if we have 
-to philosophically construct some minimal quantum 
-of th xtramental world.  We can instead say that extramental 
-objects are $R$-quantified for various $R$s: outside 
-the mind are biological, minerological, archaeological objeects, 
-and so forth.  These are extramental registers because 
-our cognition does not `i.make` biological objects 
-biological, for example, although there may be a synergy between 
-out inclination to perceive objects framed in particular ways 
-and their biological (etc.) status.  Extramentality 
-is not summarily dispatched by a fictional 
-ur-particle, a conceptual proxy for `q.minimal unit 
-of extramental existence`/, but rather through a multiscientific 
-patchwork of ontological registers which permit 
-extramental quantification to be restricted.  For 
-sake of disucssion, I'll call this multiscientific 
-pathwork the $R$-patchwork.
+Suppose someone 
+actually asserts, or thinks to themselves about how, `q.Syracuse is north of 
+Manhattan`/.  They may be driving down from Syracuse University to 
+join a protest at Columbia University (to imagine one possible scenario).  
+Neither of the two geospatial names are involved, in these thoughts or statements, 
+in such a way that their precise geospatial extents are relevant.  It is entirely 
+possible that by `q.Syracuse` the speaker does not specifically mean that city per se 
+but rather its immediate metro area %-- one could certainly describe a drive from 
+Skaneateles to Columbia as 
+`q.Syracuse to Manhattan`/.  The place names are understood `q.functionally`/; 
+that is, we conceive places not as precise sets of points on the ground, or on 
+maps, but as functional ecosystems, `i.places` constituted conceptually 
+by dynamic activities they afford: entering into and out of 
+(which means, for `i.geo`/spatial regions, going to or leaving them 
+by car, train, etc.), targeting a specific destination within them,
+associating specific such places with addresses, etc.  In this functional 
+sense the distinction between `i.Manhattan island` and 
+`i.borough of Manhattan` is not often relevant, because many 
+functional conceptualizations %-- planning a trip, anticipating 
+taking the train to Penn Station and catching the right subway, and so forth 
+%-- unfold mentally and operationally with no regard to the distinction.  
+Depending on context, it is entirely possible that in someone's mind 
+the locale with the `i.property of being Syracuse` is roughly the 
+metro area, and the locale which instantiates the property 
+`i.being Manhattan` is the general stretch of land extending outward 
+from Penn Station or some other familiar landmark or neighborhood.  
+Only in specific circumstances %-- like visiting a friend's apartment 
+on Roosevelt Island, or voting for the proper elected officials 
+while living in Marble Hill %-- does the island/borough distinction 
+become relevant.  As a result, this distinction is only 
+`i.semantically` relevant for the meaning of the lexeme 
+`q.Manhattan` insofar as it is `i.functionally` relevant 
+for the lifeworld activity relative to which the name is used.
 `p`
 
 `p.
-I'd like to argue that the $R$-patchwork functions alot 
-like cognitive frames.  The $R$-patchwork contributes 
-xtramentally as cognitive frames contribute mentally: 
-both project order onto existent/cognized phenomena; both 
-select a realm of non-trivial wholes; 
-both buttress a scaffolding of restricted quantification 
-with interrelations and mixing between quantification domains.
-The structure of cognitive frames, at least from the 
-vantage point of mereological analysis, seems 
-architecturally resonant 
-with the integrated structure of sciences, especially 
-in their `q.patchwork` interconnections where 
-sciences unify into our empirical picture of the world.
+Conventional `q.model-theoretic` or 
+`q.truth-theoretic` semantics has to assume that, 
+separate and apart from functional associations 
+between word-usesand environments, 
+there is a purely formal function definable to map 
+specific lexemes to specific entities 
+of a corresponding kind %-- place names 
+to geospatial regions, personal names to human 
+bodies, species names to sets of living things, etc.  
+Such an assumption %-- that the world around us 
+provides a `q.domain of reference` for a formal 
+semantic, a `q.set` of `q.things` which can be 
+singled out semantically or referentially %-- 
+this perspective is questionable on ontological 
+grounds, let alone invoking subtleties 
+of language.  Our macroscopic, 
+processual lifeworld does not readily partition into 
+a neat agglomeration of self-identical things, like 
+molecules into atoms.
 `p`
 
 `p.
-Perhaps this rsonance is not surpising: science is shaped by 
-cognition even if it concerns itself with 
-extramental reality.  Our cognitive patterns and propensities 
-set the scientific agenda; the origins of biology, for instance, 
-lie in our construal that living things behave in the 
-world differently than inorganic matter.  Scientific 
-discipline guids toward mpirical modeos that 
-can be tested apart from human beliefs and 
-prejudics, but the structural outline of the sciencs and 
-their interrelationships still draws on 
-the contrasts between different regions of 
-existence as we cognize them.
+It is almost impossible 
+to take any real-world concept or referent and 
+formulate a precise definition (or `q.nomination`/) 
+of it as a wholly self-contained object or place.  
+A restaurant is not just a building; 
+a nation is not just a landmass; 
+even a building is not just a mereological sum of 
+architectural features.  
+The `q.identity` of almost all concept-instances 
+is dependent on how they function within a larger 
+totality, whose activities include the people 
+having occasion to speak about and conceive 
+them through the structures of language.  
 `p`
 
 `p.
-In short, the extramental realm is not devoid of 
-cognitive structure; it's just that in our sciences 
-of empirical reality we try to 
-accept cognitive structure as a scaffolding to 
-pass beyond, testing mental images (like 
-scientific models) so they may remain as 
-tools for formulating and communicating scientific 
-theories but disproving models and impressions which 
-sem intuitive on cognitive terms 
-but end up being empirically misleading, like optical 
-illusionsn or the sun's rotation around the earth.
-Extramental reality is not essentially 
-`i.non-cognitive`/, which is not to say that our 
-cognitive actions `q.create` extramental rality, but 
-rather that our intellectual establishment of 
-rational exercises which excavate the extramental 
-from the envelop of cognition remains influenced 
-by the structural order of the cognitive realm.
+In `i.Ontology, Modality, and the Fallacy of 
+Refererence` Jubien's analysis centers on the 
+apparent mereological ambiguity of referenctial 
+semantics: how mereological composition seems functionally 
+orthogonal to referring acts.  Signifying designations 
+of `i.Manhattan` seem unaffected by the fuzziness 
+surrounding Manhattan's borders (both because islands have 
+imprecise extent and because there are several distinct but overlapping 
+senses of Manhattan).  Or, as Jubien analyzes in the 
+context of modal logic, referring to 
+`i.this statue` does not seem to be 
+actually referring to a `i.lump of clay`/.  As Cotnoir 
+points out, modal contrasts 
+(like `i.the clay could be flattened to a disk`/) 
+have inspired consideration of 
+Statue/Clay pairs as `q.mutual proper parts`/.  
+Jubien's theory, on the other hand, proceeds 
+more on an underlying distinction between 
+`q.the `sq.is` of predication rather than the `sq.is` 
+of identity` (p. 34).  It is not that the 
+sculpture `i.is` the lump of clay; rather, the 
+lump of clay is a physical mass bearing 
+the property `i.being the statue`/.
 `p`
 
 `p.
-As such, bracketing that order %-- formulating a symbolic 
-language wholly removed from cognitive strucrure 
-%-- is not a prerequiste of extramentality.  Quantifying 
-outside the cognitive ralm does not mean 
-an unrestricted quantification with no intellectual 
-structure, or within a quantification domain 
-that does noy trace back (as in biology) at some level 
-to cognitive artitudes.  Extramental implies a 
-disciplinencorrecting for cognitive prejudice, but 
-not a radically non-cognitive world or a world 
-(an ur-particle space with arbitrarty composition, say)
-radically devoid of intellectual structure.
+As Jubien puts it in `i.Possibility`/:
+`quote,
+While I believe that typical DR [Direct Reference] 
+theorists would agree at the outset that the bearer is a 
+physical object, I also believe they have not noticed the 
+present sort of difficulty.  A typical theorist ... would initially think that loading Daffy 
+%-- a statue %-- into a proposition was nothing more nor less than 
+loading a certain physical object into the proposition.  
+But the present difficulty might lead such a theorist to think anew and 
+seize upon the idea that although it's a statue that gets loaded in, 
+it is somehow not just a physical object.  This might be thought to provide 
+a way to avoid the great-divide problem of the object's not being a 
+statue essentially, since one would think that the statue %-- 
+whatever exactly it is %-- is surely essentially a statue.  
+Thus a DR theorist might seek a different way of understanding 
+the proposition that Daffy might have been made of different 
+matter, one that avoids the absurd conclusion that 
+I claimed derails DR. But the options are not inviting. 
+They would be views according to which a 
+statue %-- the loaded entity %-- (1) is not a physical object 
+at all, (2) is only partly physical, or (3) is a physical 
+object of a kind somehow different from a simple 
+mereological sum.... \cite[p. 121]{JubienPossibility}.
+`quote`  The `q.present sort of difficulty` is the Sculpture/Clay 
+`q.overlap` that inspires things like `q.conventional 
+objects` or mutual-proper-parthood.  Two years 
+later Jubien would suggest his `q.property instantiation` 
+model in `cite<JubientOntology>;, wherein the 
+clay becomes an instantiator of `i.being the statue`/, 
+so the relevant relation is not parthood but 
+property-substrate.  Mereological sums are, on Jubien's later 
+theory, material aggregates that participate in 
+conceptual or complex/functional organization 
+as `i.substrata` instantiating `i.properties`/, 
+which in turn are the actual referents of 
+conceptual intentions \cite[p. 12]{JubienOntology}. 
 `p`
 
 `p.
-
+The consequence for conventional mereological analysis 
+lies in how mereology is supposed to 
+underlie semantics: in particular, the idea that 
+meanings can be unpacked by mapping words 
+to objcts (or, say, geospatial regions) and 
+higher-scale expressions to propositions.  
+So `i.this sculpture is Greek` would assert a 
+proposition whose intention can be recovered by 
+substituting some object for `q.this sculpture`/, 
+and which should be deemed true if the 
+corresponding worldly object did indeed 
+originate in Greece.  And `i.Syracuse is 
+south of Manhattan` has concrete meaning 
+by substituting geographical regions for 
+the corresponding words.  The underlying 
+dynamic in both cases is that things and 
+extents `q.in the world` are to be 
+substituted for units `q.in language`/, 
+implying that linguistic complexes are composed 
+of sites for eventual substitutions, 
+laying out (at the sentence level) sentences' 
+`q.truth conditions`/.
 `p`
 
+`p.
+The mereological 
+complexities here then arise from the indeterminacy 
+of a mereological whole which 
+can be the target of reference distinguished 
+from other wholes.  Since Manhattan is `q.fuzzy`/, 
+`i.which` whole should substitute for `i.Manhattan` 
+when stating truth conditions for sentences 
+about Manhattan?  Which whole is 
+`i.this statue` when the object may erode over 
+time, losing its boundary precision?  
+`p`
 
+`p.
+I will return to these issues in a later section.  At this point, 
+however, I want to point out 
+that these mereological controversies lie 
+not within cognitive scheman but in the, 
+perhaps it can be called, `q.cognitive/extramental` 
+boundary or intrface.  The problem 
+of `q.selecting` one whole from among 
+mereologically similar candidates is not an 
+analysis of the parts of our `i.conceptualization` 
+of Manhattan or the statue, but rather trying to 
+relate the conceptualized thing `i.as cognized` from 
+the extramental object whose properties %-- at least 
+on many theories %-- ground the accuracy and 
+fallibility of cognitive attitudes.
+`p`
 

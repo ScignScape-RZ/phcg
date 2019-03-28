@@ -29,12 +29,13 @@ NASM
 
 `input<intro.ngml>;
 `input<section1.ngml>;
-`input<sectionmpd.ngml>;
-`input<sectionmc.ngml>;
 `input<section2.ngml>;
 `input<section3.ngml>;
 `input<section4.ngml>;
+`input<section5.ngml>;
+`input<section6.ngml>;
 `input<conclusion.ngml>;
+`input<biblio>;
 
 `document`
 

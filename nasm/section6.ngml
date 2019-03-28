@@ -1,0 +1,1409 @@
+
+`section.Mereology and Models`
+`p.
+The upshot of my argument last section was 
+that the realm of mereologuical theory should 
+be divided into `i.cognitive` and `i.multiscientific`/.  
+Criteria of mereological non-triviality are 
+derived in the first case from `i.cognitive frames`/, 
+and in the second case from an `q.$R$-patchwork`/: 
+a patchwork of scientific theories delimiting the 
+extent of different scientific registers and the 
+dynamics and autopoesis sustaining the 
+integrtity of (in various domains) 
+non-trivial wholes.  Moreover, there is a structural 
+resonance and interpenetration between 
+cognitive frames and the `q.$R$-patchwork`/.
+`p`
+
+`p.
+Whether from the perspective of cognitive frames or the 
+`q.extramental` perspective of the $R$-patchwork, 
+mereological theories can be reasonably elaborated 
+in parallel to theories of the cognitive/ontological 
+status of wholes participating in `xhppy; style 
+parthood assertions.  Any formalization of 
+parthood relations can assume that all wholes have 
+some integral unity that can be described on cognitive 
+or scientific grounds (or really multiscientific, because 
+any macroscopic object has properties at the 
+intersection of different sciencs, like physics 
+and biology and/or chemistry).  
+`p`
+
+`p.
+Of course, we can investigate mereologies as abstract, 
+axiomatic logical systems.  I contend however that 
+such essentially mathematical theories have only 
+limited applicability to philosophy.  
+In particular, what would be `i.models` of these 
+theories in the logical sense?  Imagine a collection 
+of `q.voxels` %-- three-dimensional indivisible 
+cubes with two states (`i.empty` or `i.full`/).  
+Two (orthogonally) adjacent voxels can be said 
+to form a `q.block`/, and in general a set of 
+connected voxels to form a `q.connected block`/, say.  
+The system of connected blocks then forms a 
+classical mereological model where proper parthood 
+is voxel set inclusion.  Let's call this a 
+`q.Voxel Mereology`/.
+`p`
+
+`p.
+Some picture like this may feel like a natural bridge 
+between logical-axiomatic mereological theories and 
+philosophical analysis.  The rason is that 
+a Voxel Mereology undeniably instantiates Classical 
+Mereology and also fits our intuitive picture 
+of physical reality.  In our folk phsyics, we experience 
+objects as resisting force and sustaining shape as if they 
+were composed of hard little bricks.  And we can match this 
+intuitive picture to actual science by imagining voxels 
+sized to the small units of quantifying possible, 
+e.g., the Planck scale.  Science suggests that there is indeed 
+a scale of reality finer than which there is no 
+possible scientific measurement, information, or 
+discrimination.
+`p`
+
+`p.
+Such quantum analogies however are of limited value in 
+scientifically validating the `q.voxel` picture.  
+Space itself at the Planck scale does not fit the ambient 
+Euclidean topology that voxels presuppose; nor is there 
+a precise quantum distinction between `q.matter` and `q.emptiness`/.
+So we can't just assume our voxel picture plugs 
+in to quantum physics.  Instead, Voxel Mereology 
+is at best a brdige %-- it encapsulates how we `i.experience` 
+physical reality while also offering a rough 
+conceptual figuration of physical principles, like the 
+idea of a smallest measurable unit of space.  Rather than as 
+an analogy to the quantum realm, Voxel Mereology is 
+perhaps most realistic as describing in 
+approximate detail the Emergent Properties of ordinary macroscopic 
+physical objects.  Compact solids do tend to behave 
+as if composed of hard `q.bricks` on a scale fine enough to 
+mold to their convex geometry.
+`p`
+
+`p.
+Having said that, `i.parthood` within macroscopic 
+physical objects does not really work like little 
+lego pieces being lifted apart.  Usually 
+parthood reflects some functional or 
+manufactured assemblage; the knob on a drawer, 
+the cap on a bottle; the twig on a branch, etc.  
+Parts can of course break off with no apparent 
+functional integrity: if the bottom of a table leg 
+spliters away, or a small tree branch is blown 
+apart from the tree, the surface where the detachment 
+occurs will presumably evince a jagged, apparently 
+random edge.  Setting the `q.voxel` scale small enough can 
+still model the geometry of the parts, but that seems 
+besides the point.  In reality, patterns of breaks are not 
+completely random; they reflect stress points and accumulated 
+forces acting upon the larger object, and 
+the geometry of the detached part reflects the structures 
+of thse forces.  Like the patterns formed by water spilling 
+over a surface, complexity and semi-randomness still 
+has some mathematically tractable background.
+`p`
+
+`p.
+In short, a `q.voxel` model has limited usefulness even as 
+an approximate picture of solid wholes.  While connected voxel-blocks 
+are not unrealistic discrete approximations of three-dimnsional 
+shaops, voxels are less appropriate for representing 
+part-whole relationships: a model of parthood (in the 
+context of solid physical objects) is better organized around 
+functional or mechanical constructs.  There are parts induced by 
+the accumulative processes which form wholes, like 
+twigs on a branch.  There are also parts deriving from 
+stressors, fault-tolerance, and other material qualities 
+of solid substance in the sense of materials science, 
+where lines of force and/or vulerability can dispose pieces 
+of a whole to become semi-detached, giving them 
+some definitional autonomy relative to the whole.  But 
+properly modeling these material 
+tendencies presumably involves mathematical 
+formations like vector fields, where the voxel 
+dicretization is at best tangential.  Even if connected 
+voxel-blocks can model induced parts as well as wholes, it is not 
+clear what physical reality such a model 
+would capture; it is more like a predefined 
+conceptual scheme imposed on a mostly unrelated physical 
+situation. 
+`p`
+
+`p.
+So `q.Voxel Mereology`/, as a straightforward model 
+of an axiomatic Classical Mereology, has at least dubious 
+merit as a model of physical states of affairs.  
+We could try to refine the model in a more scientifically 
+rigorous way %-- in the direction of mereotopology, 
+for example, allowing $n$-dimensional generalizations 
+of voxels and/or infinite subdivision.  So we could 
+have a system whose elements have varying dimensions 
+(perhaps to a maximum 
+of four, representing temporal change) and smaller-dimensional 
+objects can be part of larger-dimensional ones.  
+Moreover, any objects of non-zero dimension can 
+potentially have proper parts; there are no `q.atoms`/.  
+This picture may be more appropriate for 
+topological or differential-geometric 
+representations of surfaces and manifolds as they 
+would apply to science.  To have a useful notion 
+of parthood we may want to restrict partonomic 
+assertions to parts which are not too `q.bizarre` 
+%-- perhaps to connected open or closed manifolds, 
+excluding `q.fractal` shapes of fractional dimension, 
+or infinitely scattered subsets.  By way of 
+naming a juxtaposition with `q.Voxel Mereology`/, 
+I'll call this theory `q.Manifold Merology`/.
+`p`
+
+`p.
+Certainly topological spaces can be a foundation for 
+Classical Mereology models.  As with voxels, though, 
+we need to consider how applicable these models 
+are to empirical phenomena.  The topology of 
+manifolds may be a better (e.g., 
+non-discrete) approximation of material objects' nature; 
+for instance solids' outer bounday is reasonably seen 
+as a 2-manifold immersed in 3-space.  There still is 
+not a perfect isomorphism between material parts and 
+submanifolds, however.  Granted, to a reasonable 
+approximation every recognizable part of an 
+object has a corresponding submanifold.  For sake of 
+discussion, suppose we equate all wholes and parts to 
+their 2-manifold surface (and assume 
+parts are three-dimensional submanifolds of 
+three-dimensional wholes).  Assume the 
+surface of a part either overlaps with the 
+surface of a whole or else is entirely inside 
+the whole (that is, assume we are using a 
+version of the Region Connected Calculus).  
+The system of parts in relation to wholes is 
+then an example of a system of submanifolds 
+in relation to manifolds.   However, the system of 
+manifolds has some properties that 
+may not be desired in a mereological thory.  
+For instance, for a submanifold properly contained in a 
+larger manifold, a sufficiently small deformation of 
+the smaller manifold yields a new manifold 
+also contained in the larger.
+`p`
+
+`p.
+The mereological equivalent to this property is 
+that if `xhppy;, there is an infinite space of 
+topological deformations of $y$ yielding $y'$s 
+that, without some extra criteria, will also be in $x$.  
+We can of course stipulate that only some submanifolds 
+correspond to actual parts, but then the formalization of 
+submanifolds is only one dimension in the 
+description of parthood.  Whereas Voxel Mereology was a 
+flawed model of (solid, material) objects because its discrete 
+architecture was at best a rather arbitrary 
+structure superimposed on physical forms, 
+Manifold Mereology has limits of applicability 
+for essentially the opposite reason: mathematical 
+continuity allows for infinitessimal modifications 
+of geometric forms in ways that have no physical meaning.
+`p`
+
+`p.
+Both the Voxel and the Manifold pictures are only 
+indirectly representations of `q.solid matter`/; 
+they are actually models of geometric extension, 
+figured either discretely or continuously.  
+The `q.voxel` as a binary empty-or-filled spatial region 
+is an idealization; but physical surfaces as 2-manifolds 
+is an idealization also.  Physical solids do not have a 
+crisp boundary where their interior ends and surroundings 
+space begins, such that exterior surfaces can be mathematically 
+embodied in 2-manifolds.  This may be a reasonable 
+approximation for some solids, just as the voxel 
+`q.little brick` picture is somtimes mostly 
+appropriate.  But neither are physically oriented 
+theories of how matter actually extends in and relates to 
+surrounding space.  Instead, they are 
+mathematical formulations of extension 
+per se, as geometric primitive.  This may yield 
+valuably mathematics %-- consider differential 
+geometry as a theory of physical procsses 
+on objects' surface, or even tools like 
+NURBS (Non-Uniform Rational B-Spline, a feature of 
+Computer-Aided Design and Computer Graphics) 
+for computarionally modeling solid geometry.  But 
+mathematical formalizations always have 
+at best an indirect relation to physical phenomena. 
+`p`
+
+`p.
+This may suggest an intrinsic limit to any 
+axiomatic mereology invoked as part of a philosophical 
+treatment of parts and wholes: any `i.model` of 
+such a system has to be interpreted as a model 
+(to some approximation) of physical wholes.  
+But the most natural mereological models are likely 
+to be mathematical systems, like 
+discrete geometries or topologies %-- perhaps 
+with certain mereologically-inspired 
+restrictions (e.g. distinguishing 
+connected submanifolds from submanifolds in 
+general) %-- or perhaps algebraic models, like 
+lattices.  In any case we then need a further 
+account of the relation between the 
+mathematical idealization and 
+physical reality.  So the mereological 
+system is removed at two steps from 
+physical phenomena, which means the 
+philosophical analysis has to preovide at 
+least two `q.bridge` theories alongside 
+the formal statement of the mereological 
+system, to explain why the 
+proposed axiomatization is a 
+philosophical subject-matter.
+`p`
+
+`p.
+The tenor of this line of analysis is not 
+rstricted to mereology; I would 
+make similar arguments about the theory of 
+concepts, say, or `q.truth-theoretic` semantics.  
+Given an axiomatic system like Formal Concept Analysis, 
+we need to explain how models of that theory actually 
+relate to conceptualization as a phenomenon of 
+human intellect.  Formal Concept Analysis engages a 
+structural morphology of concepts 
+not very different from the building 
+blocks of a mereology; intensional 
+`q.features` and extensional `q.examples` jointly 
+characterize concepts, which can then 
+be merged together or split apart.  For example, 
+merging the feature-set of two concepts, and then 
+selecting all examples which have all (or a sufficient 
+number of) the combined features, represents an 
+`q.addition` between concepts (a variation is to 
+consider examples with `i.common` features of 
+two concepts: so a potential 
+milk-plus-almond-milk concept would have as examples any 
+liquid exhibiting the features milk and 
+almond milk have in common).
+`p`
+
+`p.
+Formal Concept Analysis may provide an interesting systematization 
+of discriminitive or evolutionary factors shaping 
+how humans intuit and modify concepts.  There are other 
+formal concept models as well, such as prototype-based 
+models, or the idea of mapping concepts to rgions in 
+qualitative spaces, featured in Conceptual Space Theory.  
+These various theories can be combined; for example, 
+Formal Concept Analysis can be extended with prototype criteria 
+such that features and examples are weighted in terms 
+of how essential they are to the relevant 
+concept (as features) or how characteristic they are 
+(as examples).  The most representative prototypes 
+of a concept are (on such a model) ones 
+that strongly reflect the features most 
+indicative of the concept.  These criteria 
+of weights and prototypes can be adjoined to 
+the feature/example matrix of Formal Concept Analysis, 
+yielding an axiomatic system which may model, to some 
+approximation, human conceptual activity.
+`p`
+
+`p.
+When we start to compare these formal models with actual 
+conceptual patterns, however %-- for instance 
+in Cognitive Semantics or Cognitive Grammar %-- 
+the models start to seem unnaturally simplistic 
+and superimposed.  It's not that structural 
+analysis of cognitive representations is impossible; 
+but rather that each structure tends to have its 
+own `i.sui generis` rationale, and trying to 
+trace cognitive gestalts to an 
+axiomatic foundation starts to feel, at best, 
+reductionistic.  
+`p`
+
+`p.
+Analogously, a `q.truth-theoretic` model of linguistic 
+meaning %-- mapping sentences to logical formulae 
+or to truth conditions %-- have intuitive appeal but 
+also many apparent counter-examples.  A full discussion 
+is beyond the scope of this paper, but I'll give some 
+of my favorite examples demonstrating why truth-theoretic 
+readings are, in my opinion, at best incomplete: 
+
+
+`sentenceList,
+`sentenceItem; \label{itm:sangalong} Everyone sang along to two songs.
+`sentenceItem; \label{itm:performed} Everyone performed two songs.
+`sentenceItem; \label{itm:boroughs} New Yorkers live in one of five boroughs.
+`sentenceItem; \label{itm:commute} New Yorkers often gripe about long commutes.
+`sentenceItem; \label{itm:democratic} New Yorkers reliably vote Democratic.
+`sentenceItem; \label{itm:after} Student after student came out against the tuition hikes.
+`sentenceItem; \label{itm:mass} A critical mass of students came out against the tuition hikes.
+`sentenceItem; \label{itm:tipping} Students' anger about tuition hikes may have reached a tipping point.
+`sentenceList`
+
+If a truth-theoretic model is accurate, it should be possible 
+to capture the approximate signifying content of each of these sentencs 
+by expressing them in logical form; or at least show a 
+systematic translation of surface linguistic structure 
+to truth-making conditions.  I want to argue that every of these 
+sentences fail the test.
+`p`
+
+`p.
+Start with (\ref{itm:sangalong}).  The most natural interpretation 
+to my ear %-- i.e., I imagine the kind of scenario 
+where (\ref{itm:sangalong}) is most likely to be expressed 
+%-- involves some sort of concert which included two 
+particularly popular songs, that most people in the audience 
+could sing along with.  On that reading, there 
+were `i.exactly two songs` and the sentence does not 
+commmit to `i.literally` everyone singing them.  
+Conversely, (\ref{itm:performed}) strikes me as talking 
+about musicians onstage rather than the audience, and 
+suggesting that each performer had a two-song 
+set; i.e., each performed two 
+`i.different` songs.
+`p`
+
+`p.
+So, I hear a wide-scope reading for `q.two songs` in 
+(\ref{itm:sangalong}) but a narrow scope in 
+(\ref{itm:performed}).  What I want to emphasize is `i.why` 
+we would make that judgment: there is nothing 
+in the sentence itself that points toward 
+a wider or narrower scope.  Instead this follows from a 
+pragmatic construal of the verbs involved: 
+to `i.perform` seems to bind the verb to its subject 
+more tightly than `i.sing along`/.  The situational 
+model most appropriate for `i.perform` leans toward 
+narrow scope, while the situational 
+model for `i.sing along` leans toward wide scope.
+`p`
+
+`p.
+In (\ref{itm:boroughs}), a reasonable interpretation is that, 
+according to the sentence, `i.all` New Yorkers live in 
+one of five boroughs.  Indeed, the territory of 
+New York is precisely partitioned into five boroughs. 
+On the other hand, (\ref{itm:commute}) does not 
+appear to commit to referencing literally `i.all` 
+New Yorkers; meanwhile it also appears to use the 
+phrase `q.New Yorkers` differently than (\ref{itm:boroughs}), 
+to mean generically people who work in New York or 
+live in New York's metro area.  In the case of 
+(\ref{itm:democratic}) we hear `q.New Yorkers` narrowly 
+as in (\ref{itm:boroughs}), because voting relates 
+a person to their actual place of residence (not 
+where they work or their metro area).  However, 
+the implicit quantifier in (\ref{itm:democratic}) 
+is `i.most`/, not `i.all`/; it does not fit our 
+conceptual picture of `q.voting` to imagine 
+one party winning `i.all` votes.  
+Again, these contrasts are not produced by sentence 
+or phrasalform; they are instead driven by 
+lexical peculiarities of words 
+like `i.borough`/, `i.commute`/, and `i.vote`/.
+`p`
+
+`p.
+In the last three sentencs, we can similarly hear an 
+implied quantifier to the effect that `i.many` 
+students are complaining or unhappy about some tuition 
+increases.  But each sentence adds a shading on the generic 
+form like `i.many students complained`/: in 
+(\ref{itm:after}) the speaker tries to connote the 
+pervasiveness of students' anger by giving it a temporal 
+figure.  She suggests how a temporal recurrence of 
+some phenomenon reinforces our sense of its extent; 
+not only is it aserted that many students are unhappy, but that 
+this fact has come to hear awareness multiple times.  
+The verbiage used to describe unhappiness, also 
+%-- `i.come out against` %-- carries an extra spatial or 
+narrative dimension than a plainer alternative like `q.complained`/.   
+To `i.come out against` implies a public, maybe even activist 
+display of anger.  In (\ref{itm:mass}), a similar figuration 
+of `i.many` imposes an interpretive attitude on the 
+sentence: to refer to `i.many` as a `i.critical mass` 
+implies not just magnitude, but `i.enough` magnitude 
+to effectuate something: (\ref{itm:mass}) might be said of 
+a case where student protests forced a school 
+to cancel planned hikes.  And (\ref{itm:tipping}) is 
+similarly implying that some threshold may be 
+crossed, without indicating (at least within the 
+sentence) what the speaker thinks might happen then.
+`p`
+
+`p.
+These readings do not dispute that each sentence in 
+(\ref{itm:sangalong})-(\ref{itm:tipping}) have a logical 
+substance that could be modeled as quantified assertions, 
+using the appropriate quantifiers in each 
+case (`i.every` performer/audience member; 
+`i.all` New Yorkers; `i.most` New Yorkers; 
+`i.many` students).  Lexical variation 
+(like `q.New Yorker` meaning both a resident of the 
+city and the metro area) has to be accounted for, 
+as does scope variation (like an `i.everyone ... two songs` 
+case, where `q.everyone` as `q.space builder` 
+introduces both a global and a local space such that 
+scopes must be resolved for the rest of the sentence).  
+I grant, however, that an underlying predicate logic can 
+be enriched to represent these added scope and 
+lexical details.  So I believe that, at least among 
+the sentences I've analyzed, we `i.can` construct a 
+logical representation which captures 
+the intended meaning of the sentencs.
+`p`
+
+`p.
+However, this by itself does not strike me as legitimating 
+a truth-thoretic semantics.  One reason is that the actual 
+words chosen provide shades of meaning %-- narrative or figurative 
+construals, interpretive connotations, visual imagery 
+%-- which add communicative content 
+that cannot be readily modeled within logical 
+details themselves.  In the `q.many students` examples, 
+different formations taking the place of 
+`i.many` present different interpretations 
+or figurations of the described states of affairs.  
+These added details, however, can still be said to 
+have a logical structure: for instance 
+the `i.critical mass` language implies the speaker thinks 
+the sheer number of students complaining `i.caused` something 
+to happen.  As such, the interpretive or 
+figurative implications of the word-choices can be 
+seen as a compact or rhetorically effective way to denote an 
+underlying logical structure.  We can, even in these cases, find 
+a propositional content; except, the language 
+itself uses figurative or connotative devices to actually refer 
+us toward that content.
+`p`
+
+`p.
+My broader claim is that there is no effectively logical 
+transformation `i.from` the linguistic 
+content as presented `i.to` the constituent elements 
+of the relevant, signified propositional content.  
+What `i.rules` are we following when we hear 
+`q.sing along` as having wide scope and 
+`q.perform` as having narrow scope?  Or 
+hear the implicit quantifier in (\ref{itm:democratic}) 
+and (\ref{itm:commute}) as `i.most`/, but in 
+(\ref{itm:boroughs}) as `i.all`/?
+`p`
+
+`p.
+I am prepared to admit that a truth-thoretic `i.semantics` 
+need not be a truth-theoretic `i.grammar`/; that is, 
+we can say that sentences have a propositional content 
+that semantics should isolate, even if there 
+is only an indirect mapping from the surface-level 
+linguistic performance to the predicate structure 
+which, in many cases, we could see as sentences' 
+`i.meaning`/.  Linguistic expressions do 
+not, in general, structurally recapitulate the form 
+of propositional assertions laid out mechanistically.  
+Truth-theoretic models could still have semantic validity 
+if we say that situational awareness and sensitivity 
+to rhetorical nuance allows us to proceed, perhaps 
+circuitously and interpretively, from 
+language acts to predicate structures.  The predicate logic 
+of language is not so baldly apparent that we can 
+program computers to understand language, but 
+everything that seems not-quite-logical about 
+language %-- its reliance on connotation and 
+figuration %-- could, we might speculate, 
+be cordoned off as an economy of `i.grammar`/.  
+We speak figuratively because it is grammatically 
+more efficient %-- and, partly for this reason, 
+rhetorically more persuasive %-- to designate 
+propositional content indirectly, rather than speaking 
+in surface forms mimicking predicate algebra.     
+`p`
+
+`p.
+However, my analysis suggests that the 
+indirection of the expression-to-proposition 
+path is `i.not` just grammatical.  As I argued, 
+our disposition to read logical 
+formations as one way and not another 
+%-- wide scope or narrow, `i.most` or `i.all` 
+%-- depends in part on the semantics lexically 
+embeded in words like (in these cases) 
+`i.borough`/, `i.commute`/, `i.vote`/, or 
+phrases like `i.critical mass` and `i.tipping point`/.  
+Our belief that parsing a sentence includes 
+mapping down to a propositional intention 
+does not help us trace the semantic effects which different 
+word-senses contribute to this process.  In short, 
+the cognitive structures which must receive language 
+%-- the situational awareness and 
+interpretive empathy that tunes us toward 
+communicative intent %-- is not only manifest 
+in how linguistic form translates to propositional 
+signification.  It is also embedded in the lexical 
+specificity of word-senses themselves.  Even when the 
+semantics of `i.sentences` can be expressd propositionally, 
+the semantics of thir constituent words does not 
+fit mechanically into the semantics of the whole.
+`p`
+
+`p.
+Taking these analyses together, I am trying 
+to describe cases where philosophers have turned to 
+some logical, axiomatizable system to 
+compose a model judged for its value as a 
+philosophical sketch of some kind: a model 
+of parthood as a precis of part/whole relations 
+among physical phenomena; a feature/example statistic 
+as a Formal Concept space; a prototyped and dimensionalized 
+feature-space as a Conceptual Space theory; or a 
+construal of semantcs (abstracted from pragmatics and syntax) 
+equating the meaning of sentencs to 
+their propositional content.  
+In each of these cases we have to consider how a model 
+for the logical `i.system` could also 
+be a `i.philosophical` model; an explanatory tool 
+or simplifying idealization that casts philosophical 
+light on cognitive or physical phenomena.
+`p`
+
+`p.
+Philosophical models do not need to be models of 
+physical objects or systems direcly; they could encapsulate 
+or productively simplify how we perceive or conceptualize 
+external reality.  In that case we want to question the 
+cognituve place for the `i.logical` model  
+%-- the model-of-the-logical-system in 
+the model-thoretic sense.  For instance, is actual 
+human conceptual process a model of Formal 
+Concept Analysis in its guise as an axiomatic 
+system whose formmulae can b realized in 
+axiomatic models?  Do concepts as cognitive 
+entities model those axiomatics?
+`p`
+
+`p.
+Or if we look for extramental models, to what extent can 
+physical objects and systems realize axiomatic structures?  
+Certainly sciences present models (often useful and, on 
+that basis, probably relatively accurate) of 
+physical phenomena, and often do so via mathematical 
+structures that are logical modles of an 
+axiomatic system.  So the relevant 
+scientifically studied phenomena become indirectly 
+associated with the stipulated axiomatic.  But 
+as I have argued, the logic is two stps removed 
+from the phenomena; at best the siting of 
+logical structures in empirical reality 
+%-- the idea that material systems ralize structures that can 
+be abstractly specified %-- depends on complex 
+scientific investigation.  It requires detailed analysis 
+to show how a terrain of scientific givens %-- the populations 
+of species in an ecosystem, say %-- play out 
+as exemples of a logically hypotheized (e.g. in 
+this case Darwinian or genetic) theory.
+`p`
+
+`p.
+Scientific models are therefore thoretical utilizations 
+of axiomatic structures (usually via a mathematical intermediary), and 
+provable consequencs of the axiomatic system can factor in 
+to scientific reasoning.  But scientific models are 
+not `q.logical` models in the sense that science gives 
+us sets that axiomatically realize logical systems by 
+grounding quantification domains that allow 
+positions in logical formulae to be inhabited.  
+The logical model-theoretic picture %-- that axiomatic systems 
+get instantiated in sets of entities into which 
+logical symbols quantify %-- is at best only 
+abstractly applicable to scientific models, 
+which do not yield a physical reality composed of 
+`q.sets` whose members can be unproblemmatically labeled 
+with logical symbols.
+`p`
+
+`p.
+To the degree that logical systems have even indirect 
+axiomatic realization in philosophically salient 
+contexts, then, they have to be `q.routed` either 
+through cognition or through `q.science`/.  Either an 
+axiomatic schema represents (perhaps with some 
+deliberate simpification) how 
+we cognize some region of phenomena, 
+or else it models how the phenomena behave 
+irrespective our cognitive inclinations 
+(of course, it can do both in mutual 
+influence).  But either we have to see axiomatic 
+systems embedded in structures 
+sutured in cognitive structure, or we have to see 
+axiomatic systems embedded in scientific 
+theories of phenomenal composition and behavior.  
+In any case axiomatic models have to `q.latch on to` 
+cognitive and/or scientific models to have a 
+philosophical resonance.
+`p`
+
+`p.
+This effectively metaphilosophical ideology, I think, 
+includes mereology as an (important) special 
+case.  Introducing mereology via an axiomatic 
+system is quite common, even in philosophy.  But 
+I'd argue that the philosophical value of 
+an axiomatized mereological system is dependent 
+on how and whether it can latch on to 
+the requisite cognitive and/or scientific 
+models to make its own, axiomatic model-building 
+something more concrete than afforded by set-based 
+model theory in pure logic.
+`p`
+
+`p.
+This brings me to my final case for NAM: 
+non-antisymmetric mereologies have 
+more or better `i.concrete models` than 
+Classical mreologies.  I'll call this 
+the Model-Theoretic Argument: 
+when we look at `i.concrete` models in 
+cognitive or scientifically-described systems 
+%-- not just imagined models like 
+`q.Voxel Mereology` which are more about 
+notating philosophical intuitions than 
+philosophical expos\'es of thought or reality %-- 
+non-antisymmertry, not antisymmetry, predominates.
+`p`
+
+%`spsubsectiontwoline.Concreteness and Computation`
+`section.Concreteness and Computation`
+`p.
+I would be remiss to draw a contrast between 
+`i.abstract` and `i.concrete` models without mntioning 
+the emergent field of `q.Ontology Engineering` and the role 
+of mereology therein.  Arguably, mereology 
+in these contexts is neither abstract like logical-axiomatic 
+models, nor concrete in the sense of `q.routing` through 
+cognitive or scientific models.  Ontologies 
+%-- as this term applies in computer science and 
+Information Systems %-- are computational artifacts, effectively 
+documents in a special-purpose language, enabling 
+programmers and scientists to define and 
+annotate data structures so as to describe logical 
+patterns obtaining within data.  Ontologies allow 
+data to be correctly shared and reproduced, and 
+also sometimes to be logically analyzed, identifying 
+structures within a data set that can be 
+extracted via logical rules.  Embedding logical axioms, 
+including those of mereology, 
+in data modeling frameworks therefoe becomes 
+part of an overall data nanagement technology.  Logical 
+analysis becomes a part of data analytics in general. 
+`p`
+
+`p.
+Ontologies are abstract prototypes; they play a determinative 
+modeling role only in conjunction with actual data sets.   
+Also, although computer programs can perform 
+some `q.reasoning` on modeled data sets, the 
+explicit correlation between Ontologies and 
+empirical data depends on people consciously 
+aligning data structures to Ontologies' types and 
+relations.  Data sets annotated via formal Ontologies 
+therefore reprsent deliberate human attempts to 
+relate conceptual and empirical 
+tsructures %-- they are both cognitively 
+and scientifically concrete.
+`p`
+
+`p.
+Consider, for sake of demonstration, a derivation of 
+the fact that an ingrown toenail should 
+qualify as a malady of the foot.  An Ontology 
+might represent ingrown toenails afflicting 
+toes, and also that toes are part of the foot, 
+without identifying an ingrown toenail as a 
+malady of the foot per se.  Someone searching 
+a database for foot afflictions, however, 
+might well expect cases of ingrown toenails to be  
+among the search results.  Thus mereological 
+rules can extend the semantic reach of an information system.
+`p`
+
+`p.
+But that semantics depends first on conscious design 
+of Ontologies to represent things like 
+disease classifications and part/whole relations, and 
+also on human c;assification activity.  Someone has 
+to specifically notate that a patient's condition 
+exemplifies an ingrown toenail.  The Information 
+System is designed around human practice, according 
+to different operational needs: entering a disagnostic code 
+in a medical record, for example, and then 
+querying a database to gather a set of results 
+such as cases of diagnoses filtereed by some 
+condition (say, conditions that might be 
+treated by a podiatrist).  An Information 
+System %-- its technology as well as its 
+actual data %-- can evolve in response to 
+operational preferences.  In short, 
+deductive reasoning like `i.ingrown 
+toenail is a kind of foot malady` is desired not 
+out of some abstract concern for logical completeness, 
+but it fits operational needs to 
+pair a data entry about a patient with an 
+ingrown toenail matching a potential database 
+query about podiatric diagnoses.
+`p`
+
+`p.
+Mereology is, accordingly, part of an overall logical 
+structure designed to facilitate the operational 
+requirements of adding and filtering data 
+from information spaces.  This adds a further dimension to 
+mereological analysis, because the 
+mereology (along with other logical 
+relations) becomes part of an engineered system, 
+where we have prior anticipation of `i.how` 
+we want the system to perform.  We identify specific 
+kinds of inferences which should be engineered 
+into the system based on anticipated 
+preferences of human users.
+`p`
+
+`p.
+To clarify, we can recognize in an Information 
+System at least two different classes of 
+`q.behaviors`/: `i.input` and `i.output`/.  
+Input behaviors are the system's implementations, 
+and the interactions it affords, for people 
+entering new data (say a doctor entering a 
+new ingrown-toenail diagnosis); output behaviors are 
+implementations and afforances for getting information 
+out of the systm, such as by queries (perhaps, a 
+list of patints with podiatric diagnoses).  
+We can add `i.internal` behaviors involving 
+internal processing to link inputs and outputs 
+in (according to users' expectation) correct 
+ways.  The system-outputs are products of 
+the cumulative history of its inputs up to the 
+point where output behavior is requisite.  
+For example, the prior input of an ingrown-toenail 
+diagnosis constitutes `i.relevant` input history 
+for a query (demanding output 
+behavior) for podiatric diagnoses.
+`p`
+
+`p.
+So mereology and other logical relations play a role when it 
+comes to identifying `i.input history` that is `i.relevant` 
+for a certain output rquest.  Logical reasoning 
+expands the space of input history which will be 
+considered relevant in a given output-context.  
+This points to an interpretation of mereology in 
+terms of `i.relevance`/; properties or 
+assertions involving a part (e.g., diagnoses) 
+are relevant to corresponding whole.  
+`p`
+
+`p.
+Notionally, then, mereology serves as a kind of 
+semantic enrichment of a system whose essential 
+nature is a mapping from `i.input history` 
+to `i.output behavior`/.  This core 
+operational motive %-- `i.input history 
+determines output behavior` %-- should be reiterated 
+in the context of the Semantic Web in particular, 
+to help establish an underlying conceptual 
+model to properly analyze (and implement) 
+Semantic Web technology.
+`p`
+
+`p.
+Conceptually, the Semantic Web is one 
+example of a data-sharing platform; 
+and the keyingredient of data sharing is 
+the replication of information spacs, 
+in whole or in part, between different 
+places.  Insofar as `q.input history 
+determines output behavior` is the 
+constituent feature of information spaces, 
+replication means that the points 
+where the data is shared will replicate 
+analogous input-to-output patterns.  
+Data sharing does not necessarily mean that 
+all points process data identically; when data is 
+exported between environments the new location 
+may serve different operational purposes, 
+so that analogous queries or interactions 
+which receieve output data may beevaluated different 
+at different points in a data-sharing network.  
+But assuming the `i.receiver` of shared data 
+does differ in its output structures from 
+the `i.senders`/, these differences should be 
+systematically accounted for `visavis; how 
+the respective systems are engineered. 
+`p`
+
+`p.
+Conventional Semantic Web data structures are 
+organized around the principle of `i.labeled graphs`/, 
+where the building blocks of data models are 
+so-called `q.triples`/: `i.Subject/Predicate/Object` 
+graph units where `i.Subject` and `i.Object` 
+are graph-nodes and `i.Predicates` are labels 
+applied to graph-edges, asserting that the `i.Object` 
+bears to the `i.Subject` some 
+identified relationship.  Ontologies then, 
+first and foremost, provide lists 
+of identifier for both nodes and edge-labels: 
+this allows nodes to be associated with a kind or 
+type (a `i.person`/, say, or a `i.diagnostic code`/) 
+while edges are labelled according to a controlled 
+vocabulary (so edges represent concrete 
+relations, for example, that a person has a diagnosis).  
+Ontologies then superimopose logical axioms 
+pertaining to restrictions or guarantees among relations and/or 
+nodes: that a relation is transitive, 
+say, or that a given relation is only reasonable 
+for certain `i.Subject` and `i.Object` types 
+(e.g., a diagnostic relation is only 
+coherent as a relation between a person or 
+patient and a diagnosis or diagnostic code).
+`p`
+
+`p.
+Although a fair range of empirical semantics can be 
+captured by individual `i.Subject/Predicate/Object` 
+triples, in many cases a realistic semantics 
+demands a model of how multiple relations aggregate 
+to form meaningful units.  For example, instead of 
+a diagnosis being modeled as a single relation between 
+a patient and a diagnostic code, a systm may 
+stipulate a more detailed representation where a single 
+`q.diagnosis` has several associated piecs 
+of information, such as a diagnostic code, a date, a 
+doctor's name, and potential 
+reference to laboratory or radiological findings that 
+substantiate the diagnosis.  This relflects how, in 
+most computational settings, the basic units of 
+evaluationb are not single data points but internally 
+structured data aggrgates.
+`p`
+
+`p.
+Thus far, no standard model has emerged to represent 
+larger-scale data structures in the Semantic Web 
+context.  Intrinsically, the `q.semantics` of the Semantic Web 
+depends on computer environments where data is shard and 
+received.  Since people generally do not consider data 
+sets as a whole, any ,eaningfulness we can attribute 
+to dignital information depends on selecting 
+smaller amounts of data, which in turn depends on 
+the digital systems %-- user interface technology as 
+well as data management software %-- through which 
+people interact with information 
+senses.  So any discussion of 
+the `q.semantics` of data, formally warehoused in 
+information spaces, 
+has to recognize the multiscalar organization 
+intrinsic to information spaces. 
+`p`
+
+`subsection.Mereology and Hypergraphs`
+`p.
+The interaction between humans and information spaces 
+is itself a technological artifact which has 
+to be engineered and implemented.  Such implementation 
+in turns depends on implemented `i.procdures`/, 
+which classify, manipulate, and visually or 
+textually present relevat data to human users.  
+A major element in the semantics of information spaces 
+is accordingly the semantics of procedures operating on this 
+data %-- what data structures are valid operands 
+for procedures' operations; how procedures mody 
+data structures or map inputs to outputs; how data 
+manipulated procedurally must be internally structured, 
+according to procedures' computational assumptions 
+and preconditions.  The constituent elements of 
+information spaces are internally structured data aggregates, 
+more so than they are unstructured information atoms, 
+because structured data is the kind of value which 
+in the general case computational oprocedures operate upon. 
+`p`
+
+`p.
+For these reasons, part/whole aggregation and the rules for 
+nesting data structures (directly or indirectly) 
+should be essential topics for the Semantic Web (separate 
+and apart from mereological axioms built into 
+web Ontologies).  Thre are at last four different 
+strategies that can be used to represent multiscale data in a 
+graph or labeled graph context.  These are not mutually 
+exclusive but have different emphases; insofar as 
+labeled graphs form the notional foundation of 
+the Semantic Web they can carry over into 
+that context as well.  Graphs supporting multi-scale 
+representations are generically called `q.hypergraphs`/, 
+although there are different hypergraph  
+theories providing different spaces of models. For sake 
+of illustration, I'll use the hypothetical case 
+of a diagnosis encompassing a diagnostic code, 
+date, and the diagnosing doctor's name, 
+and refer to schematic diagrams in Fig1a-d.  
+`p`
+
+`p.
+One form of hypergraph is based on the 
+idea of `i.hyperdges`/, and further 
+`i.directed` and `i.labeled hyperdges`/, which 
+generalize graph-edges to include more than two nodes.  
+For instance, a record of a diagnosis even 
+can involve a four-node edge where one 
+node represents the patient, and the remaining 
+three nodres represent a diagnositic code, date, 
+and doctor's name.  Directed Hypergraphs 
+group the nodes incident to a hyperedge 
+into `i.source` and `i.target` nodes; in 
+this example the patient's node is the 
+lone source and the remaining nodes are targets, 
+indicating several pieces of information associated 
+with a diagnosis (see Fig1a).  The (potentially multi-node) 
+sourc and target sts generalize the Semantic 
+Web concpt of `i.Subject` and `i.Object` 
+for context where a given predicate-relation 
+needs to be expressd with multiple subjcts and/or 
+objects.
+`p`
+
+`p.
+A second model of hypergraphs can be defined by allowing each 
+node to be (or internally contain) its own graph.  
+This lads to nestd levels of graphs, where 
+a graph on one level can be incorporated into a graph on the 
+next higher level by being nested into one of 
+the latter graph's nodes.  Figure 1b shown how 
+this could work in the running xample: it 
+shows the fact of a doctor giving a diagnosis 
+on a given date as a miniature graph whose edges 
+connect the doctor's name to a `q.date` node and 
+`q.diagnostic code` nod, respctively.  
+The mini graph is then placed as a pckage 
+via a node inside the higher-level graph, where 
+that node is joined to a nod designating the 
+diagnosed patient.  Models may or may not allow 
+nodes on one level to be linked with nodes on another 
+level, or allow two nodes nested inside two different higher-level 
+nodes to be linked to each other.
+`p`
+
+`p.
+A third genre of hypergraph has similar aggregational features 
+but does not distinguish between different levels.  Instead, each 
+graph has one level, but a collection of nodes and/or 
+edges can be separately identified and associated 
+with a separate node, or presented as some aggregate 
+structure with special significance.  Hypergraphs 
+with this added structure function like conventional 
+Semantic Web graphs upon which are superimposed 
+added details.  Figure 1c shows the extra layer of 
+information via a dotted line around three graph edges.  
+The underlying data in this case is a regular 
+(labeled, directed) graph (not a hypergraph).  
+A separate node is inrroduced representing a 
+`i.diagnostic event`/, serving 
+essentially as a `q.placeholder` to which 
+estra nods (carrying factual details) 
+can be attached.  This is a common pattern 
+sometimes called a `q.snowflake`/: a `i.Subject` 
+node (here the `i.patient`/) is 
+connected to an `i.Objct` 
+node (here a `i.diagnostic even` whose 
+semantic role is to unify 
+additoonal nodes, that provid the relevant 
+actual detaikls; the net effect is nodes branching 
+off from a center, like a snowflake.  The extra 
+layer of information comes into play by unifying 
+the three nodes and edges one step removed 
+from the `i.patient`/.  These edges would be grouped 
+together to indicate that their respective objeect-nodes 
+form a logical unit (three components of a 
+diagnosis: medical code, date, and doctor's anme).  
+They could also indicate data requirements: an  
+Ontology can stipulate that if a `i.diagnostic event` 
+node is present in a graph, it must be accompanied 
+by three additional edges providing 
+pertinent info about that event.
+`p`
+
+`p.
+A final option for representing hypergraphs 
+comes into effect if we recognize a `i.type system` 
+applied to a graph; a classification of nodes 
+according to an interrelated collection 
+of types.  One feature of most type
+systems is that for any type `ty; there are  
+corresponding types representing `i.lists` of 
+`ty;-values with different characteristics.  Lists are 
+often classified in terms of how they are 
+modified.  `i.Stacks` are lists where the last value added 
+(the one which has been on the list for the 
+shortest time) is the is the first value removed 
+(think of a stack of trays in a cafeteria).  
+`i.Queues` are lists where the value in the 
+list for the `i.longest` time comes off the 
+list first (think of people 
+lining up for tickets).  And `i.Deques` 
+(double-ended queues) can have values added 
+or removed from both ends.  (There are more 
+complex aggregate data structures as well, like 
+associative arrays where values of one type 
+are used as indicies to retrieve values of 
+a second type from a long list; consider how a phone 
+book maps people's names to telephone numbers).  
+Collectively, these multi-valued types 
+are often called `q.container` types.
+`p`
+
+`p.
+One way to construct hypergraphs is to allow 
+node-types to bebcontainer types as well as 
+singled-value types.  Therefore, a node may 
+encapsulate a many-valued data structure.  
+This is similar to the case depictird 
+in Fig1b, where nodes could contain nested 
+graphs; the difference here is that the nested 
+data structures encapsulated in nodes are not necessarily 
+graphs; they can also be different sorts of lists or tables.  
+In Fig1d, this is shown by 
+imagining a table that represents a patient's diagnostic 
+history.  Each new diagnosis is added to the list, 
+so the node can expand over time.  The data structure 
+`q.inside` the node then functions as a table, 
+whose rows represent diagnoses made on a single 
+occasion and whose columns are different facets 
+of a diagnosis (date, code, and doctor's name).  
+The entire table is treated as one node, linked 
+to the `i.patint` node 
+(indicating that the provided table is diagnostic 
+history for that one patient).
+`p`
+
+`p.
+These four dofferent kinds of hypergraphs are to some degree 
+interchangable, in that algorithms can transform 
+hypergraphs between these formats.   They are 
+still more or less optimal for different contexts.  
+The fourth solution is similar to how container types 
+work in conventional programming 
+languages %-- and also to foreign 
+key links in relational databases %-- so hypergaphs 
+using that system can be easier to 
+integrate with conventional (not necessarily 
+Semantic Web) applications.  On the 
+other hand, the third solution is closer 
+in spirit to the Semantic Web, adding an extra 
+level of specification but preserving 
+the underlying Semantic Web graph thory.  Meanwhile, 
+the nested-graph model is similar to 
+how popular enterprise graph databases are 
+designed; and the directed-hyperedge approach 
+is closest to mathematical graph theory.  
+`p`
+
+`p.
+The diversity of rlated by not identical approaches points 
+to an incomplete dimension to the Semantic Web; 
+multiscale representations have 
+not been standardized.`footnote.There is an official 
+`q.RDF Collections` model but this addresses only a small 
+part of genuine multscale modeling.`  Not that a 
+single form of multiscal structure should be preferred 
+over others; there ar ecompetingpriorities which come 
+to the fore in different contexts.  
+This actually reflects competing ideas about what the 
+Semantic Web should try, first and foremost, to accomplish.  
+The Semantic Web can be seen as a potentially 
+global, open-ended data-sharing community; as a foundation 
+for a future of AI-driven networking; as a kinnd 
+of vast, decentralized graph database; or as an 
+analytics ecosystem that allows logical analytic 
+methods to be applied, alongside othr 
+(e.g., statistical) forms of data analysis, 
+to travserse and filter information from 
+the internet.  Which priorities we emphasize 
+dictate the kinds of tchnologies that have 
+to be implemented, and the `q.semantics` of the 
+Semantic Web can reflect the need to optimize 
+representations and network interactions to 
+benefit those priorotized technologies.  
+`p`
+
+`p.
+What this diversity of option reveals, however, is that 
+the question of multiscale data represenatation 
+is complex and multifacted.  Instead of just 
+setting forth one system as a speculative enterprise, 
+engineers have to identify different forms 
+of multiscalar data %--for eample, 
+I enumerated four versions of hypergaphs %-- and study 
+which flavor is best suited for different technological 
+priorities and acceptable trade-offs.  
+Implicitly, I believe that such a field of study represents 
+a kind of computational investigation of 
+mereology %-- not mereology tied to 
+predefined logical axioms, but an organizing 
+pattern for computational phenomena 
+(e.g., hypergraphs) whose properties 
+have to be codified and optimized.
+`p`
+
+`p.
+This brings me to the final characterization 
+of mereology I'll propose here: Hypergraph Mereology.  
+I think that analyzing hypergraphs in the computational 
+and software engineering contexts presents a philosophically 
+interesting pictur of formalized mereology 
+no less relevant %-- and perhaps more cognitively 
+or scientifically appropriate %-- then a `q.logical` or 
+`q.axiomatic` mereology. 
+`p`
+
+`p.
+Note that Hypergraph Mereology is not necessarily 
+set forth axiomatically; we do not specifically 
+define hypergraphs by stating their axiomatic 
+condition.  We `i.could` proceeed in this 
+way, of course; hypergraphs are a meaningful 
+matheamtical subject.  But often the formalizationb
+of hypergraph models is indirect, 
+relying on software implementations rather than 
+logical specification.  In other words, much of the 
+intellctual substance behind research into 
+hypergraphs is built from practical implementations 
+of hypergraph code libraries, allowing us 
+to study and compare how these libraries are
+abstractly conceived and concretely implemented.
+`p`
+
+`p.
+This demonstrates a phenomeneon which I think Analytic Philosophy 
+has not fully registered: the kind of 
+formalizing effortsthat in dcades past may have been 
+pursued via logical or logicomathematical axiomatics 
+can increasingly be replaced by software and compurter 
+code.  Testing philosophical intuitions in an 
+intellectual environment oriented to concrete code 
+devleopment rather than logicomathematical 
+abstraction has several implications: there is a 
+kind of feedback and trial-and error which 
+can shape the intellectual process; the ecosystem
+of open-source code and software development tools 
+has diffferent institutional norms 
+than communal deliberation over the 
+validity of logical argumentation; and 
+code development tangibly augments academic 
+writing, in that philosophers (or writers from 
+any other discipline) can pair their conventional 
+publications with code repositories and data sets.  
+This kind of research can lad 
+philosophy in a kind of empirical, experimental 
+direction, but also simultaneously in a 
+direction which accords to the individual philosopher, 
+I think, somerhing lik renewed agency and autonomy.  
+In this spirit we ar not only sharing 
+with our peers rational claims, but 
+exhibiting practical technology created 
+under the inspiration of philosophical arguments.  
+Well-designed, open-source code projects have a 
+certain inner empowerment for their contributors; 
+in a world of (often imperfctly 
+apportioned) intellectual capital, they 
+act as fiat currency, neither curated nor 
+endoecd by academicinstitutions 
+in the conventional sense, and as such 
+not diluted by the not-always-rational 
+timelines of academic prestige.
+`p`
+
+`p.
+It should be uncontroversial to say that `q.Analytic` 
+philosophy is the prestige dialect of the mdern philosophical 
+community, especially in English.  Partly this is no 
+doubt topical %-- Analytic philosopers seem to entertain 
+more `q.hard science` themes than the political 
+or cultural concerns, or issues of subjective 
+experince and personal identity, guiding 
+`q.Continental` philosophy.  But paryly it 
+also reflects the [resupposition of analytic 
+rigor accompanying analyses that can be 
+grounded in, or at least shown to be 
+inspired by, some kind of logial 
+or mathematical framework. 
+`p`
+
+`p.
+With that said, some of the divergence between 
+a logically-inspired Analytic paradigm and a more sociocultural 
+Continental thought is methodological, not just 
+thematic.  Logical models which discount the 
+nuance and complexity of language and experience 
+risk becoming reductionistic, or of 
+limited explanatory value.  
+Potentially, then, the emergence of a computational discipline 
+for addressing philosophical 
+structures can change the familiar 
+Analytic/Continental narrative.  Software models 
+can be technically drawn without being either 
+exiomatic nor reductionistic; they can 
+engage a formalization in software implementation in 
+lieu of specifications of logical structure;  
+and they can present technological 
+systems as suggestive approximations of 
+human phenomena without committing 
+to a reductive theory that cognitive 
+processes %-- in sutuational understanding, 
+linguistic meaning, or conceptualization, 
+for example %-- are wholly characterized by the 
+terms of the implemented software.  Type-theoretic 
+analyses of natural-language semantics and syntax, 
+for example, can represent linguistic artifacts 
+according to formal/computational structures 
+without implying that the human 
+procss of actually converting surface-level 
+language to these derived representation 
+happens mechanically or  mathematically.  
+Computational `i.models` of linguistic phenomena 
+are different from Natural Language 
+`i.Processing`/, which makes the further 
+metaphysical assumption that 
+computers can `q.parse` language down to 
+schematized representations analogously to people.
+`p`
+
+`p.
+It is possible, then, to treat computational 
+models as methodologically useful adjuncts to 
+philosophical analysis while rejecting 
+reductive analysis of cognition or 
+language as transparently itself computational 
+or logically tractable.  In this 
+way, computational models can bring a technical 
+methodology to Continental thought 
+analogous to th role of logical 
+axiomatics on the Analytic side, but 
+with different methodological 
+commitments %-- and also in a different 
+metatheoretical perspctive.  Whereas Analytic 
+philosphrs may look on logicaomathematical 
+techniqus as a kind of rational kernel, 
+a core ground of scure entailments on which 
+to rest other claims, the Continental 
+engagement with computational models can be 
+more figured within the general 
+plurality of Theory; the same pull toward hybridization 
+that would wed phenomenology to analyses of 
+race, class, and gender, for example, to elucidate 
+the experiential as well as cultural political 
+dimensions of social relations.  
+Humanities `q.theory` acts as a kind 
+of intellectual gravity, pulling in phenomenology, 
+Critical Theory, Structuralism, linguistic and discourse 
+analysis, and so forth; there is no `i.a priori` 
+obstacle that would provent the same force 
+from reaching, say, formal and natural-language type 
+theory and the analysis of multiscale information systems.
+`p`
+
+`p.
+To my mind the most well-developed body 
+of working merging phenomenology with 
+computational methods is that of Jean Petitot; 
+although I would add some at least 
+provisional formal elaborations 
+of Cognitive Grammar (if I may take this 
+as a kind of applied phenomenology in the linguistic domain) 
+by, for insta,ce Kenneth Holmqvist and Matt Selway.  
+I might add, implicitly, the larger tradition 
+of type-thoretic semantics represented by the sometimes 
+highly formal work of a Zhaohui Luo, 
+James Pustehovsky, or Bruno Mery; which 
+in turn establishd technical links to 
+linguistic models inspired directly by 
+computer programming languages and computing 
+paradigms, as represented by linguists such as 
+Ash Asudeh, Gianluca Giorgolo, Oleg Kiselyov, and 
+Chung-Chieh Shan.  In short, we can develop an 
+overarching model of linguistic reprsentation 
+which is anchored both in cognitive 
+phenomenology and in computational 
+procedures. 
+`p`
+
+`p.
+Alongside this linguistic line of development we 
+can identify a parallel integration between 
+phenomenology and theories of spatial comprehension, 
+perceptual synthesis, and cognitive 
+`q.visualistics`/.  One line of analysis, for example, 
+considers the phenomenon of experiential `q.presence`/, 
+motivating phenomenological treatment of 
+computer imagery and Virtual Reality.  Along 
+this subjective assessment we can consider the 
+mathematical infrastructure for creating realistic 
+depictions of three-dimensional scens and surfaces; 
+and for applying lighting, textures, and space-filling 
+effects (mimicking the impression of smoke or flowing 
+water, say).  This technology does not 
+necessarily recreate the neurological processes by which 
+we cognize our spatial environment %-- nor 
+create perfectly lifelike graphics %-- but 
+it presents a suite of technological formalisms 
+that bear a simulative and structuraly articulated 
+relation to visual phenomenology.  As such it provides a 
+ground for complimentary but non-reductive analyses 
+that can be set alongside, for example, theoriesof 
+spatial synthesis as found in, say, 
+Husserl or Merleau-Ponty.
+`p`
+
+`p.
+These linguistic and spatial/visual examples have a 
+common architecture, at least `visavis; phenomenology, 
+in that theypersent computarional structures that 
+can be argued to encapsulate cognitive representations 
+without eliminating the complexity, situationality, 
+phenomenological immediacy, and interpersonal 
+dimensions of consciousness.  Cimputational models 
+are suggestive analogies rather than axiomatic 
+reconstructions of cognitive `q.logic`/.
+`p`
+
+`p.
+I think mereological theories can have an analogous 
+intellectual architecture, albeit in a narrower 
+topic area.  Formal systems developed in the 
+context of computer code %-- say, hypergraphs in 
+one of the four models outlined above %-- provide a 
+tangible but technological mdium for 
+articulating mereological concepts in a 
+rigorous domain, while also allowing these models 
+to be adjunct prototypes for theories of mereology 
+as a cognitive phenomenon.  Hypergraphs, in 
+short, are to mereology what formal parse-representations and 
+lexicons are to natural language, or computer-generated 
+imagery is to visual experience.  
+
+`p`
+
+`p.
+
+`p`
+
