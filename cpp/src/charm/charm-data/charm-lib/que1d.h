@@ -12,7 +12,7 @@
 #include "accessors.h"
 
 #include "hive-structure.h"
-#include "vec1d.h"
+#include "_vec1d.h"
 
 #include <QVector>
 #include <QString>
@@ -24,20 +24,20 @@
 
 
 template<typename VAL_Type>
-class Que1d : protected Vec1d<VAL_Type>
+class Que1d : protected _Vec1d<VAL_Type>
 {
  quint16 offset_;
 
 public:
 
  Que1d(quint8 bsz = 16)
-  :  Vec1d<VAL_Type>(bsz), offset_(0)
+  :  _Vec1d<VAL_Type>(bsz), offset_(0)
  {
  }
 
  void set_default_fn(std::function<void(VAL_Type**)> fn)
  {
-  Vec1d<VAL_Type>::set_default_fn(fn);
+  _Vec1d<VAL_Type>::set_default_fn(fn);
  }
 
  void operator <=(std::function<void(VAL_Type**)> fn)
@@ -57,15 +57,15 @@ public:
 
  void enqueue(const VAL_Type& v)
  {
-  Vec1d<VAL_Type>::push_back(v);
+  _Vec1d<VAL_Type>::push_back(v);
  }
 
  void _each(std::function<void(VAL_Type& v)> fn)
  {
   if(offset_ == 0)
-    Vec1d<VAL_Type>::_each(fn);
+    _Vec1d<VAL_Type>::_each(fn);
   else
-    Vec1d<VAL_Type>::_each_from_index(offset_, fn);
+    _Vec1d<VAL_Type>::_each_from_index(offset_, fn);
  }
 
  VAL_Type& tail()

@@ -160,7 +160,7 @@ int main3(int argc, char **argv)
  return 0;
 }
 
-int main2(int argc, char **argv)
+int main(int argc, char **argv)
 {
  Stk1d<int> s1d;
 
@@ -168,10 +168,10 @@ int main2(int argc, char **argv)
  s1d.push(9);
  s1d.push(17);
 
- s1d._each([](int& i)
+ s1d.each <= [](int& i)
  {
   qDebug() << i;
- });
+ };
 
  qDebug() << s1d.top();
  qDebug() << s1d.bottom();
@@ -181,7 +181,7 @@ int main2(int argc, char **argv)
 }
 
 
-int main(int argc, char **argv)
+int main1(int argc, char **argv)
 {
  Vec1d<int> v1d;
 

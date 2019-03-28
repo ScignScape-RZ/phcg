@@ -24,19 +24,26 @@
 
 
 template<typename VAL_Type>
-class Stk1d : protected Vec1d<VAL_Type>
+class Stk1d : protected _Vec1d<VAL_Type>
 {
-
 public:
 
+ typedef VAL_Type Value_type;
+
+ union{
+ _each_holder<Stk1d> each;
+ _each_holder<Stk1d> reach;
+ };
+
  Stk1d(quint8 bsz = 16)
-  :  Vec1d<VAL_Type>(bsz)
+  :  _Vec1d<VAL_Type>(bsz), each({*this})
  {
  }
 
+
  void set_default_fn(std::function<void(VAL_Type**)> fn)
  {
-  Vec1d<VAL_Type>::set_default_fn(fn);
+  _Vec1d<VAL_Type>::set_default_fn(fn);
  }
 
  void operator <=(std::function<void(VAL_Type**)> fn)
@@ -46,12 +53,12 @@ public:
 
  void push(const VAL_Type& v)
  {
-  Vec1d<VAL_Type>::push_back(v);
+  _Vec1d<VAL_Type>::push_back(v);
  }
 
  void _each(std::function<void(VAL_Type& v)> fn)
  {
-  Vec1d<VAL_Type>::_reach(fn);
+  _Vec1d<VAL_Type>::_reach(fn);
  }
 
  void pop()

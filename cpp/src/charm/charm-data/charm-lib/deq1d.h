@@ -12,7 +12,7 @@
 #include "accessors.h"
 
 #include "hive-structure.h"
-#include "vec1d.h"
+#include "_vec1d.h"
 
 #include <QVector>
 #include <QString>
@@ -29,28 +29,28 @@ class Deq1d //: protected QPair<Vec1d<VAL_Type>, Vec1d<VAL_Type>>
  //Hive_Structure* front_hive_;
 protected:
 
- Vec1d<VAL_Type> front_vec_;
- Vec1d<VAL_Type> back_vec_;
+ _Vec1d<VAL_Type> front_vec_;
+ _Vec1d<VAL_Type> back_vec_;
 
 public:
 
  Deq1d()
-  :  front_vec_(Vec1d<VAL_Type>()),
-     back_vec_(Vec1d<VAL_Type>())
+  :  front_vec_(_Vec1d<VAL_Type>()),
+     back_vec_(_Vec1d<VAL_Type>())
  {
 
  }
 
  Deq1d(quint8 bsz)
-  :  front_vec_(Vec1d<VAL_Type>(bsz)),
-     back_vec_(Vec1d<VAL_Type>(bsz))
+  :  front_vec_(_Vec1d<VAL_Type>(bsz)),
+     back_vec_(_Vec1d<VAL_Type>(bsz))
  {
 
  }
 
  Deq1d(quint8 bsz, quint8 fbsz)
-  :  front_vec_(Vec1d<VAL_Type>(bsz)),
-     back_vec_(Vec1d<VAL_Type>(fbsz))
+  :  front_vec_(_Vec1d<VAL_Type>(bsz)),
+     back_vec_(_Vec1d<VAL_Type>(fbsz))
  {
 
  }
