@@ -49,9 +49,9 @@ public:
   Vec1d<VAL_Type>::push_back(v);
  }
 
- void each(std::function<void(VAL_Type& v)> fn)
+ void _each(std::function<void(VAL_Type& v)> fn)
  {
-  Vec1d<VAL_Type>::reach(fn);
+  Vec1d<VAL_Type>::_reach(fn);
  }
 
  void pop()

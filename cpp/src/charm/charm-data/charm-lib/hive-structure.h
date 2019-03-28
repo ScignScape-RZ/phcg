@@ -65,6 +65,7 @@ public:
 
  void* get_indexed_location(quint32 index);
  void* get_indexed_location(quint32 blkn, quint16 blki);
+ void* get_indexed_location_unchecked(quint32 index);
 
  Hive_Block* check_init_blocks(quint32 max);
 

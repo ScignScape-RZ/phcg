@@ -17,7 +17,7 @@
 #include <QDebug>
 
 
-int main(int argc, char **argv)
+int main8(int argc, char **argv)
 {
  Que1d<int> q1d;
 
@@ -37,7 +37,7 @@ int main7(int argc, char **argv)
  d1d.push_back(9);
  d1d.push_front(17);
 
- d1d.each([](int& i)
+ d1d._each([](int& i)
  {
   qDebug() << i;
  });
@@ -45,7 +45,7 @@ int main7(int argc, char **argv)
  d1d.pop_back();
  d1d.pop_front();
 
- d1d.each([](int& i)
+ d1d._each([](int& i)
  {
   qDebug() << i;
  });
@@ -64,14 +64,14 @@ int main6(int argc, char **argv)
  q1d.enqueue(9);
  q1d.enqueue(17);
 
- q1d.each([](int& i)
+ q1d._each([](int& i)
  {
   qDebug() << i;
  });
 
  q1d.dequeue();
 
- q1d.each([](int& i)
+ q1d._each([](int& i)
  {
   qDebug() << i;
  });
@@ -97,7 +97,7 @@ int main5(int argc, char **argv)
  s1d.push(39);
  s1d.push(47);
 
- s1d.each([](int& i)
+ s1d._each([](int& i)
  {
   qDebug() << i;
  });
@@ -107,7 +107,7 @@ int main5(int argc, char **argv)
  for(int i  = 0; i < 6; ++i)
   s1d.pop();
 
- s1d.each([](int& i)
+ s1d._each([](int& i)
  {
   qDebug() << i;
  });
@@ -125,7 +125,7 @@ int main4(int argc, char **argv)
  d1d.push_back(9);
  d1d.push_front(17);
 
- d1d.each([](int& i)
+ d1d._each([](int& i)
  {
   qDebug() << i;
  });
@@ -147,7 +147,7 @@ int main3(int argc, char **argv)
  q1d.enqueue(9);
  q1d.enqueue(17);
 
- q1d.each([](int& i)
+ q1d._each([](int& i)
  {
   qDebug() << i;
  });
@@ -168,7 +168,7 @@ int main2(int argc, char **argv)
  s1d.push(9);
  s1d.push(17);
 
- s1d.each([](int& i)
+ s1d._each([](int& i)
  {
   qDebug() << i;
  });
@@ -181,7 +181,7 @@ int main2(int argc, char **argv)
 }
 
 
-int main1(int argc, char **argv)
+int main(int argc, char **argv)
 {
  Vec1d<int> v1d;
 
@@ -189,10 +189,10 @@ int main1(int argc, char **argv)
  v1d.push_back(9);
  v1d.push_back(17);
 
- v1d.each([](int& i)
+ v1d.each <= [](int& i)
  {
   qDebug() << i;
- });
+ };
 
  qDebug() << "ok";
 

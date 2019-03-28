@@ -96,10 +96,10 @@ public:
   return front_vec_.last();
  }
 
- void each(std::function<void(VAL_Type& v)> fn)
+ void _each(std::function<void(VAL_Type& v)> fn)
  {
-  front_vec_.reach(fn);
-  back_vec_.each(fn);
+  front_vec_._reach(fn);
+  back_vec_._each(fn);
  }
 
 

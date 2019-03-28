@@ -60,12 +60,12 @@ public:
   Vec1d<VAL_Type>::push_back(v);
  }
 
- void each(std::function<void(VAL_Type& v)> fn)
+ void _each(std::function<void(VAL_Type& v)> fn)
  {
   if(offset_ == 0)
-    Vec1d<VAL_Type>::each(fn);
+    Vec1d<VAL_Type>::_each(fn);
   else
-    Vec1d<VAL_Type>::each_from_index(offset_, fn);
+    Vec1d<VAL_Type>::_each_from_index(offset_, fn);
  }
 
  VAL_Type& tail()

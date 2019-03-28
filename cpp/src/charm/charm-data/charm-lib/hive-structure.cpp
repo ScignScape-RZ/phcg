@@ -59,6 +59,14 @@ void* Hive_Structure::get_indexed_location(quint32 index)
  return get_indexed_location(blkn, blki);
 }
 
+void* Hive_Structure::get_indexed_location_unchecked(quint32 index)
+{
+ quint32 blkn = index / block_size_;
+ quint16 blki = index % block_size_;
+ return get_indexed_location(blkn, blki);
+}
+
+
 void* Hive_Structure::get_indexed_location(quint32 blkn, quint16 blki)
 {
  Hive_Block* hb = check_init_blocks(blkn);
@@ -122,7 +130,7 @@ void Hive_Structure::pop_back()
 
 void* Hive_Structure::get_push_back_location()
 {
- return get_indexed_location(total_size_);
+ return get_indexed_location_unchecked(total_size_);
 }
 
 void* Hive_Structure::get_iterator_location(iterator& hit)

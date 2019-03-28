@@ -50,7 +50,8 @@ protected:
 public:
 
  Vec1d(quint8 bsz = 16)
-  :  hive_structure_(new Hive_Structure), default_fn_(nullptr)
+  :  hive_structure_(new Hive_Structure),
+    default_fn_(nullptr), each({*this})
  {
   hive_structure_->set_block_size(bsz);
   hive_structure_->set_value_size(sizeof(VAL_Type));
@@ -71,7 +72,7 @@ public:
   hive_structure_->increment_total_size();
  }
 
- void each_from_index(quint32 ix,
+ void _each_from_index(quint32 ix,
    std::function<void(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
@@ -100,7 +101,18 @@ public:
   return *vv;
  }
 
- void each(std::function<void(VAL_Type& v)> fn)
+ struct _each_holder
+ {
+  Vec1d& _this;
+  void operator <=(std::function<void(VAL_Type& v)> fn)
+  {
+   _this._each(fn);
+  }
+ };
+
+ _each_holder each;
+
+ void _each(std::function<void(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   while(!hit.end())
@@ -116,7 +128,7 @@ public:
   }
  }
 
- void reach(std::function<void(VAL_Type& v)> fn)
+ void _reach(std::function<void(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->reverse_iterator(hit);
