@@ -79,7 +79,7 @@ public:
 
  void pop_back();
  void pop_first_block();
-
+ void push_first_block();
 };
 
 

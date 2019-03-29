@@ -60,6 +60,21 @@ public:
   _Vec1d<VAL_Type>::push_back(v);
  }
 
+ void push_front(const VAL_Type& v)
+ {
+  if(offset_ == 0)
+  {
+   this->hive_structure_->push_first_block();
+   offset_ = this->hive_structure_->block_size() - 1;
+  }
+  else
+  {
+   --offset_;
+  }
+  void* spot = this->hive_structure_->get_indexed_location(offset_);
+  memcpy(spot, &v, this->hive_structure_->value_size());
+ }
+
  void _each(std::function<void(VAL_Type& v)> fn)
  {
   if(offset_ == 0)
@@ -92,15 +107,57 @@ public:
     return _Vec1d<VAL_Type>::_pr_each_from_index(offset_, fn);
  }
 
- VAL_Type& tail()
+ void _reach(std::function<void(VAL_Type& v)> fn)
+ {
+  if(offset_ == 0)
+    _Vec1d<VAL_Type>::_reach(fn);
+  else
+    _Vec1d<VAL_Type>::_reach_to_index(offset_, fn);
+ }
+
+ void _reach(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ {
+  if(offset_ == 0)
+    _Vec1d<VAL_Type>::_reach(fn);
+  else
+    _Vec1d<VAL_Type>::_reach_to_index(offset_, fn);
+ }
+
+ PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
+ {
+  if(offset_ == 0)
+    return _Vec1d<VAL_Type>::_pr_reach(fn);
+  else
+    return _Vec1d<VAL_Type>::_pr_reach_to_index(fn, offset_);
+ }
+
+ PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
+ {
+  if(offset_ == 0)
+    return _Vec1d<VAL_Type>::_pr_reach(fn);
+  else
+    return _Vec1d<VAL_Type>::_pr_reach_to_index(fn, offset_);
+ }
+
+ VAL_Type& back()
  {
   return this->last();
  }
 
- VAL_Type& head()
+ VAL_Type& front()
  {
-  return this->first();
+  return this->at_index(offset_);
  }
+
+// VAL_Type& tail()
+// {
+//  return this->last();
+// }
+
+// VAL_Type& head()
+// {
+//  return this->first();
+// }
 
 };
 

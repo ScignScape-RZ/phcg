@@ -85,6 +85,13 @@ void* Hive_Structure::get_back_location()
  return get_indexed_location(total_size_ - 1);
 }
 
+void Hive_Structure::push_first_block()
+{
+ void* mem = malloc(block_size_ * value_size_);
+ first_block_ = new Hive_Block{mem, first_block_};
+ total_size_ += block_size_;
+}
+
 void Hive_Structure::pop_first_block()
 {
  if(first_block_)

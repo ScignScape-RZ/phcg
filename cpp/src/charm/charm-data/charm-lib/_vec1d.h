@@ -173,6 +173,14 @@ public:
   return *vv;
  }
 
+ VAL_Type& at_index(quint32 index)
+ {
+  VAL_Type* vv = (VAL_Type*) hive_structure_->get_indexed_location(index);
+  if(!vv)
+    default_fn_(&vv);
+  return *vv;
+ }
+
  void _each(std::function<void(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
@@ -231,7 +239,7 @@ public:
   }
  }
 
- void _reach(std::function<void(VAL_Type& v)> fn)
+ void _reach(std::function<void(VAL_Type& v)> fn, quint32* bottom = nullptr)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->reverse_iterator(hit);
@@ -239,11 +247,22 @@ public:
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
    fn(*pv);
+   if(bottom)
+   {
+    if(hit.total_index == *bottom)
+      break;
+   }
    hive_structure_->decrement_iterator(hit);
   }
  }
 
- void _reach(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ void _reach_to_index(std::function<void(VAL_Type& v)> fn, quint32 bottom)
+ {
+  _reach(fn, &bottom);
+ }
+
+ void _reach(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn,
+   quint32* bottom = nullptr)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->reverse_iterator(hit);
@@ -253,11 +272,22 @@ public:
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
    ++index;
    fn(*pv, index);
+   if(bottom)
+   {
+    if(hit.total_index == *bottom)
+      break;
+   }
    hive_structure_->decrement_iterator(hit);
   }
  }
 
- PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
+ void _reach_to_index(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn,
+   quint32 bottom)
+ {
+  _reach(fn, &bottom);
+ }
+
+ PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v)> fn, quint32* bottom = nullptr)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->reverse_iterator(hit);
@@ -270,12 +300,24 @@ public:
    l = fn(*pv, index);
    if(l >= 0)
      break;
+   if(bottom)
+   {
+    if(hit.total_index == *bottom)
+      break;
+   }
    hive_structure_->decrement_iterator(hit);
   }
   return {index, l};
  }
 
- PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
+ PR_Type _pr_reach_to_index(std::function<typename PR_Type::level_type(VAL_Type& v)> fn,
+    quint32 bottom)
+ {
+  return _pr_reach(fn, &bottom);
+ }
+
+ PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v,
+   const INDEX_Type& index)> fn, quint32* bottom = nullptr)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->reverse_iterator(hit);
@@ -288,11 +330,21 @@ public:
    l = fn(*pv, index);
    if(l >= 0)
      break;
+   if(bottom)
+   {
+    if(hit.total_index == *bottom)
+      break;
+   }
    hive_structure_->decrement_iterator(hit);
   }
   return {index, l};
  }
 
+ PR_Type _pr_reach_to_index(std::function<typename PR_Type::level_type(VAL_Type& v,
+   const INDEX_Type& index)> fn, quint32 bottom)
+ {
+  return _pr_reach(fn, &bottom);
+ }
 
 };
 
