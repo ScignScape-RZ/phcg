@@ -12,25 +12,19 @@
 #include "_vec1d.h"
 
 
-template<typename VAL_Type>
-class Vec1d : public _Vec1d<VAL_Type>, public each_holders<Vec1d<VAL_Type>, VAL_Type>
+template<typename VAL_Type, typename INDEX_Type = quint16>
+class Vec1d : public _Vec1d<VAL_Type>,
+   public each_holders<Vec1d<VAL_Type>, VAL_Type, INDEX_Type>
 {
 public:
 
  Vec1d(quint8 bsz = 16)
-  :  _Vec1d<VAL_Type>(bsz), each_holders<Vec1d<VAL_Type>, VAL_Type>({{*this}})
+  :  _Vec1d<VAL_Type>(bsz),
+    each_holders<Vec1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
  {
  }
 
 };
 
-//template<typename VEC_Type>
-//struct test
-//{
-// union{
-// _each_holder<VEC_Type> each;
-// _reach_holder<VEC_Type> reach;
-// };
-//};
 
 #endif // VEC1D__H

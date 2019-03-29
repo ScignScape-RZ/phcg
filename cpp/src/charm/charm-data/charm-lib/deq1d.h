@@ -23,8 +23,9 @@
 #include <functional>
 
 
-template<typename VAL_Type>
-class Deq1d : public each_holders<Deq1d<VAL_Type>, VAL_Type> //: protected QPair<Vec1d<VAL_Type>, Vec1d<VAL_Type>>
+template<typename VAL_Type, typename INDEX_Type = quint16>
+class Deq1d :
+  public each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type> //: protected QPair<Vec1d<VAL_Type>, Vec1d<VAL_Type>>
 {
  //Hive_Structure* front_hive_;
 protected:
@@ -37,21 +38,24 @@ public:
 
  Deq1d()
   :  front_vec_(_Vec1d<VAL_Type>()),
-     back_vec_(_Vec1d<VAL_Type>()), each_holders<Deq1d<VAL_Type>, VAL_Type>({{*this}})
+     back_vec_(_Vec1d<VAL_Type>()),
+     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
  {
 
  }
 
  Deq1d(quint8 bsz)
   :  front_vec_(_Vec1d<VAL_Type>(bsz)),
-     back_vec_(_Vec1d<VAL_Type>(bsz)), each_holders<Deq1d<VAL_Type>, VAL_Type>({{*this}})
+     back_vec_(_Vec1d<VAL_Type>(bsz)),
+     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
  {
 
  }
 
  Deq1d(quint8 bsz, quint8 fbsz)
   :  front_vec_(_Vec1d<VAL_Type>(bsz)),
-     back_vec_(_Vec1d<VAL_Type>(fbsz)), each_holders<Deq1d<VAL_Type>, VAL_Type>({{*this}})
+     back_vec_(_Vec1d<VAL_Type>(fbsz)),
+     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
  {
 
  }
@@ -62,7 +66,7 @@ public:
   back_vec_.set_default_fn(fn);
  }
 
- void operator <=(std::function<void(VAL_Type**)> fn)
+ void _set_default(std::function<void(VAL_Type**)> fn)
  {
   set_default_fn(fn);
  }
@@ -103,6 +107,11 @@ public:
   back_vec_._each(fn);
  }
 
+ void _each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ {
+  front_vec_._reach(fn);
+  back_vec_._each(fn);
+ }
 
 };
 

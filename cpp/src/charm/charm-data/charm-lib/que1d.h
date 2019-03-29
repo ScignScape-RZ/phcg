@@ -23,15 +23,17 @@
 #include <functional>
 
 
-template<typename VAL_Type>
-class Que1d : protected _Vec1d<VAL_Type>, public each_holders<Que1d<VAL_Type>, VAL_Type>
+template<typename VAL_Type, typename INDEX_Type = quint16>
+class Que1d : protected _Vec1d<VAL_Type>,
+  public each_holders<Que1d<VAL_Type>, VAL_Type, INDEX_Type>
 {
  quint16 offset_;
 
 public:
 
  Que1d(quint8 bsz = 16)
-  :  _Vec1d<VAL_Type>(bsz), offset_(0), each_holders<Que1d<VAL_Type>, VAL_Type>({{*this}})
+  :  _Vec1d<VAL_Type>(bsz), offset_(0),
+    each_holders<Que1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
  {
  }
 
@@ -40,7 +42,7 @@ public:
   _Vec1d<VAL_Type>::set_default_fn(fn);
  }
 
- void operator <=(std::function<void(VAL_Type**)> fn)
+ void _set_default(std::function<void(VAL_Type**)> fn)
  {
   set_default_fn(fn);
  }
@@ -67,6 +69,15 @@ public:
   else
     _Vec1d<VAL_Type>::_each_from_index(offset_, fn);
  }
+
+ void _each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ {
+  if(offset_ == 0)
+    _Vec1d<VAL_Type>::_each(fn);
+  else
+    _Vec1d<VAL_Type>::_each_from_index(offset_, fn);
+ }
+
 
  VAL_Type& tail()
  {

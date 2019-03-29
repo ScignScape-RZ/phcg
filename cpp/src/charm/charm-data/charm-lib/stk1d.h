@@ -23,13 +23,14 @@
 #include <functional>
 
 
-template<typename VAL_Type>
-class Stk1d : protected _Vec1d<VAL_Type>, public each_holders<Stk1d<VAL_Type>, VAL_Type>
+template<typename VAL_Type, typename INDEX_Type = quint16>
+class Stk1d : protected _Vec1d<VAL_Type>,
+  public each_holders<Stk1d<VAL_Type>, VAL_Type, INDEX_Type>
 {
 public:
 
  Stk1d(quint8 bsz = 16)
-  :  _Vec1d<VAL_Type>(bsz), each_holders<Stk1d<VAL_Type>, VAL_Type>({{*this}})
+  :  _Vec1d<VAL_Type>(bsz), each_holders<Stk1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
  {
  }
 
@@ -39,7 +40,7 @@ public:
   _Vec1d<VAL_Type>::set_default_fn(fn);
  }
 
- void operator <=(std::function<void(VAL_Type**)> fn)
+ void _set_default(std::function<void(VAL_Type**)> fn)
  {
   set_default_fn(fn);
  }
@@ -50,6 +51,11 @@ public:
  }
 
  void _each(std::function<void(VAL_Type& v)> fn)
+ {
+  _Vec1d<VAL_Type>::_reach(fn);
+ }
+
+ void _each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
  {
   _Vec1d<VAL_Type>::_reach(fn);
  }

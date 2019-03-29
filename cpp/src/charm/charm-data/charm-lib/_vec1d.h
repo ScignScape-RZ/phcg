@@ -36,18 +36,18 @@
 
 #define _default_z(ty) _default_fn(ty ,0)
 
-template<typename VAL_Type>
+template<typename VAL_Type, typename INDEX_Type>
 class Deq1d;
 
 
-template<typename VAL_Type>
+template<typename VAL_Type, typename INDEX_Type = quint16>
 class _Vec1d
 {
  std::function<void(VAL_Type**)> default_fn_;
 
 protected:
 
- friend class Deq1d<VAL_Type>;
+ friend class Deq1d<VAL_Type, INDEX_Type>;
  Hive_Structure* hive_structure_;
 
 public:
@@ -60,9 +60,14 @@ public:
   hive_structure_->set_value_size(sizeof(VAL_Type));
  }
 
- typedef VAL_Type Value_type;
+// typedef VAL_Type Value_type;
 
- void operator <=(std::function<void(VAL_Type**)> fn)
+// void operator <=(std::function<void(VAL_Type**)> fn)
+// {
+//  set_default_fn(fn);
+// }
+
+ void _set_default(std::function<void(VAL_Type**)> fn)
  {
   set_default_fn(fn);
  }
@@ -90,6 +95,22 @@ public:
   }
  }
 
+ void _each_from_index(quint32 ix,
+   std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ {
+  Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->position_iterator(hit, ix);
+  INDEX_Type index = 0;
+  while(!hit.end())
+  {
+   VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
+   ++index;
+   fn(*pv, index);
+   hive_structure_->increment_iterator(hit);
+  }
+ }
+
+
  VAL_Type& last()
  {
   VAL_Type* vv = (VAL_Type*) hive_structure_->get_back_location();
@@ -111,13 +132,21 @@ public:
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   while(!hit.end())
   {
-//   qDebug() << QString("hit: %1,%2,%3")
-//               .arg(hit.block_index)
-//               .arg(hit.inner_index)
-//               .arg(hit.total_index);
-
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
    fn(*pv);
+   hive_structure_->increment_iterator(hit);
+  }
+ }
+
+ void _each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ {
+  Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  INDEX_Type index = 0;
+  while(!hit.end())
+  {
+   VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
+   ++index;
+   fn(*pv, index);
    hive_structure_->increment_iterator(hit);
   }
  }
@@ -134,8 +163,29 @@ public:
   }
  }
 
+ void _reach(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ {
+  Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->reverse_iterator(hit);
+  INDEX_Type index = 0;
+  while(!hit.end())
+  {
+   VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
+   ++index;
+   fn(*pv, index);
+   hive_structure_->decrement_iterator(hit);
+  }
+ }
+
+
+
 };
 
 
 
 #endif // _VEC1D__H
+
+//   qDebug() << QString("hit: %1,%2,%3")
+//               .arg(hit.block_index)
+//               .arg(hit.inner_index)
+//               .arg(hit.total_index);

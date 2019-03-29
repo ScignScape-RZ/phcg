@@ -21,7 +21,7 @@ int main8(int argc, char **argv)
 {
  Que1d<int> q1d;
 
- q1d <= defzfn(int);
+ q1d.set_default <= defzfn(int);
 
  qDebug() << q1d.head();
  qDebug() << q1d.tail();
@@ -163,6 +163,7 @@ int main3(int argc, char **argv)
 int main2(int argc, char **argv)
 {
  Stk1d<int> s1d;
+ s1d.set_default <= defzfn(int);
 
  s1d.push(7);
  s1d.push(9);
@@ -185,12 +186,17 @@ int main(int argc, char **argv)
 {
  Vec1d<int> v1d;
 
+ v1d.set_default <= defzfn(int);
+
+ qDebug() << v1d.first();
+
  v1d.push_back(7);
  v1d.push_back(9);
  v1d.push_back(17);
 
- v1d.each <= [](int& i)
+ v1d.reach <= [](int& i, quint16 index)
  {
+  qDebug() << index;
   qDebug() << i;
  };
 
