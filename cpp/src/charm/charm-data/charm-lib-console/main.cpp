@@ -127,13 +127,17 @@ int main(int argc, char **argv)
 // d1d.pop_front();
 //
  d1d.push_front(17);
+ d1d.push_front(23);
+ d1d.push_front(45);
  //d1d.push_back(17);
 
 // d1d.pop_front();
 
- d1d.each <= [](int& i, quint16 ix)
+ d1d.each <<= [](int& i, quint16 ix)
  {
   qDebug() << ix << ": " << i;
+  //return-0;
+  return-1;
  };
 
  qDebug() << "ok";

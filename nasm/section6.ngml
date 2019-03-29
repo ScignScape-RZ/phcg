@@ -957,7 +957,7 @@ theories providing different spaces of models. For sake
 of illustration, I'll use the hypothetical case 
 of a diagnosis encompassing a diagnostic code, 
 date, and the diagnosing doctor's name, 
-and refer to schematic diagrams in Fig1a-d.  
+and refer to schematic diagrams in Fig1a-e.  
 `p`
 
 `p.
@@ -986,7 +986,7 @@ objects.
 `p.
 A second model of hypergraphs can be defined by allowing each 
 node to be (or internally contain) its own graph.  
-This lads to nestd levels of graphs, where 
+This leads to nestd levels of graphs, where 
 a graph on one level can be incorporated into a graph on the 
 next higher level by being nested into one of 
 the latter graph's nodes.  Figure 1b shown how 
@@ -1020,7 +1020,7 @@ The underlying data in this case is a regular
 A separate node is inrroduced representing a 
 `i.diagnostic event`/, serving 
 essentially as a `q.placeholder` to which 
-estra nods (carrying factual details) 
+estra nodes (carrying factual details) 
 can be attached.  This is a common pattern 
 sometimes called a `q.snowflake`/: a `i.Subject` 
 node (here the `i.patient`/) is 
@@ -1041,6 +1041,45 @@ Ontology can stipulate that if a `i.diagnostic event`
 node is present in a graph, it must be accompanied 
 by three additional edges providing 
 pertinent info about that event.
+`p`
+
+`p.
+Consider also the possible interrelationships 
+between the first and third cases (hyperedges 
+and frames).  A consequence of hyperedges 
+in `i.directed` hypergraphs is that each 
+hyperedge can have distinct head- and tail-sets, 
+which can be called `q.hypernodes`/.  So a directed 
+hyperedge connects two hypernodes.  In a typical 
+case, a hypernode packages together multiple 
+interrelated values, like `i.name`/, `i.adress`/, 
+and `i.telephone number` or `i.date`/, 
+`i.doctor's name`/, and `i.diagnostic code`/.  
+In a frame model, several `i.edges` 
+may be grouped togther to provide an interrelated 
+package of information.  Combining these two ideas, 
+we can define a sort of `i.cross-reference graph` 
+whose nodes are hypernodes and whose edges are 
+defined by values within a hypernode that `q.point` to 
+other hypernods.  A hypothetic case is 
+outlined in Fig1d, with the assumption that 
+elements in a hypernode are proxies for 
+additional complx data structures.  For 
+eaxmple, diagnostic codes can refer to 
+a collection of known medical conditions each 
+linked to additional data, such as symptoms 
+and treatments.  Similarly, a doctor's name 
+can link to a profile of that doctor 
+in a database, and a `i.date` represented as a single 
+value can be treated as a stand-in for an 
+aggregate of `i.day`/, `i.month`/, and 
+`i.year`/.  A set of hypernodes whose component 
+values cross-reference to other hypernodeas can 
+be seen as defining a hypergraph whose edges are 
+cross-references themselves; a computer 
+representation of such a data space may not even need to 
+recognize a separate model of `q.edges` apart 
+from cross-reference values. 
 `p`
 
 `p.
@@ -1074,7 +1113,7 @@ are often called `q.container` types.
 
 `p.
 One way to construct hypergraphs is to allow 
-node-types to bebcontainer types as well as 
+node-types to be container types as well as 
 singled-value types.  Therefore, a node may 
 encapsulate a many-valued data structure.  
 This is similar to the case depictird 
@@ -1082,7 +1121,7 @@ in Fig1b, where nodes could contain nested
 graphs; the difference here is that the nested 
 data structures encapsulated in nodes are not necessarily 
 graphs; they can also be different sorts of lists or tables.  
-In Fig1d, this is shown by 
+In Fig1e, this is shown by 
 imagining a table that represents a patient's diagnostic 
 history.  Each new diagnosis is added to the list, 
 so the node can expand over time.  The data structure 
@@ -1269,7 +1308,7 @@ and they can present technological
 systems as suggestive approximations of 
 human phenomena without committing 
 to a reductive theory that cognitive 
-processes %-- in sutuational understanding, 
+processes %-- in situational understanding, 
 linguistic meaning, or conceptualization, 
 for example %-- are wholly characterized by the 
 terms of the implemented software.  Type-theoretic 
@@ -1391,8 +1430,8 @@ I think mereological theories can have an analogous
 intellectual architecture, albeit in a narrower 
 topic area.  Formal systems developed in the 
 context of computer code %-- say, hypergraphs in 
-one of the four models outlined above %-- provide a 
-tangible but technological mdium for 
+one of the five models outlined above %-- provide a 
+tangible but technological medium for 
 articulating mereological concepts in a 
 rigorous domain, while also allowing these models 
 to be adjunct prototypes for theories of mereology 
@@ -1400,7 +1439,6 @@ as a cognitive phenomenon.  Hypergraphs, in
 short, are to mereology what formal parse-representations and 
 lexicons are to natural language, or computer-generated 
 imagery is to visual experience.  
-
 `p`
 
 `p.
