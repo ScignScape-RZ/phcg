@@ -109,7 +109,7 @@ public:
  void _each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
  {
   front_vec_._reach(fn);
-  back_vec_._each(fn);
+  back_vec_._each(fn, front_vec_.size());
  }
 
  PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
@@ -125,7 +125,7 @@ public:
   PR_Type result = front_vec_._pr_reach(fn);
   if(result.level >= 0)
     return result;
-  return back_vec_._pr_each(fn);
+  return back_vec_._pr_each(fn, front_vec_.size());
  }
 
  void _reach(std::function<void(VAL_Type& v)> fn)
@@ -137,7 +137,7 @@ public:
  void _reach(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
  {
   back_vec_._reach(fn);
-  front_vec_._each(fn);
+  front_vec_._each(fn, back_vec_.size());
  }
 
  PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
@@ -153,7 +153,7 @@ public:
   PR_Type result = back_vec_._pr_reach(fn);
   if(result.level >= 0)
     return result;
-  return front_vec_._pr_each(fn);
+  return front_vec_._pr_each(fn, back_vec_.size());
  }
 };
 

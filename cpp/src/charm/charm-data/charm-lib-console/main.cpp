@@ -133,7 +133,7 @@ int main(int argc, char **argv)
 
 // d1d.pop_front();
 
- d1d.each <<= [](int& i, quint16 ix)
+ d1d.reach <<= [](int& i, quint16 ix)
  {
   qDebug() << ix << ": " << i;
   //return-0;

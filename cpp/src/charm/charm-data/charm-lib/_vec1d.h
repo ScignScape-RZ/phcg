@@ -68,12 +68,10 @@ public:
   hive_structure_->set_value_size(sizeof(VAL_Type));
  }
 
-// typedef VAL_Type Value_type;
-
-// void operator <=(std::function<void(VAL_Type**)> fn)
-// {
-//  set_default_fn(fn);
-// }
+ quint32 size()
+ {
+  return hive_structure_->total_size();
+ }
 
  void _set_default(std::function<void(VAL_Type**)> fn)
  {
@@ -209,10 +207,10 @@ public:
   return {index, l};
  }
 
- PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v,
+   const INDEX_Type& index)> fn, INDEX_Type index = 0)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
-  INDEX_Type index = 0;
   typename PR_Type::level_type l = -1;
   while(!hit.end())
   {
@@ -226,10 +224,10 @@ public:
   return {index, l};
  }
 
- void _each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ void _each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn,
+   INDEX_Type index = 0)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
-  INDEX_Type index = 0;
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
