@@ -5,6 +5,6 @@
 #           http://www.boost.org/LICENSE_1_0.txt)
 
 
-PROJECT_SET = kdmi
+PROJECT_GROUP = hgdm
 
-include(../build-root.pri)
+include(../build-proset.pri)

@@ -150,6 +150,15 @@ void Hive_Structure::increment_total_size()
  ++total_size_;
 }
 
+void Hive_Structure::check_start_iterator(iterator& hit)
+{
+ if(total_size_ == 0)
+ {
+  hit.total_index = -1;
+  return;
+ }
+}
+
 void Hive_Structure::reverse_iterator(iterator& hit)
 {
  if(total_size_ == 0)

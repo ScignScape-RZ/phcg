@@ -182,6 +182,7 @@ public:
  void _each(std::function<void(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->check_start_iterator(hit);
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
@@ -193,6 +194,7 @@ public:
  PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->check_start_iterator(hit);
   INDEX_Type index = 0;
   typename PR_Type::level_type l = -1;
   while(!hit.end())
@@ -211,6 +213,7 @@ public:
    const INDEX_Type& index)> fn, INDEX_Type index = 0)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->check_start_iterator(hit);
   typename PR_Type::level_type l = -1;
   while(!hit.end())
   {
@@ -228,6 +231,7 @@ public:
    INDEX_Type index = 0)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->check_start_iterator(hit);
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
@@ -240,6 +244,7 @@ public:
  void _reach(std::function<void(VAL_Type& v)> fn, quint32* bottom = nullptr)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  hive_structure_->check_start_iterator(hit);
   hive_structure_->reverse_iterator(hit);
   while(!hit.end())
   {

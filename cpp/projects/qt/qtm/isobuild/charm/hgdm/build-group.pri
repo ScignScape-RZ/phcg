@@ -5,6 +5,6 @@
 #           http://www.boost.org/LICENSE_1_0.txt)
 
 
-PROJECT_GROUP = ds-relae-phaon
+PROJECT_GROUP = hgdm
 
 include(../build-proset.pri)

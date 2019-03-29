@@ -27,6 +27,7 @@ HEADERS += \
   $$SRC_DIR/_each-holders.h \
   $$SRC_DIR/_vec1d.h \
   $$SRC_DIR/vec1d.h \
+  $$SRC_DIR/arr1d.h \
   $$SRC_DIR/stk1d.h \
   $$SRC_DIR/que1d.h \
   $$SRC_DIR/deq1d.h \

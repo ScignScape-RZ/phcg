@@ -10,6 +10,7 @@
 #include "charm-lib/que1d.h"
 #include "charm-lib/deq1d.h"
 #include "charm-lib/desk1d.h"
+#include "charm-lib/arr1d.h"
 
 //#include "kans.h"
 
@@ -117,7 +118,7 @@ int main5(int argc, char **argv)
  return 0;
 }
 
-int main(int argc, char **argv)
+int main4a(int argc, char **argv)
 {
  Desk1d<int> d1d;
 
@@ -220,6 +221,45 @@ int main2(int argc, char **argv)
  qDebug() << s1d.bottom();
 
  qDebug() << "ok";
+ return 0;
+}
+
+
+int main(int argc, char **argv)
+{
+ Arr1d<int> a1d(4);
+
+ a1d.set_default <= defzfn(int);
+
+ qDebug() << a1d.first();
+
+
+ a1d.push_back(7);
+ a1d.push_back(9);
+ a1d.push_back(17);
+ a1d.push_back(27);
+ a1d.push_back(29);
+ a1d.push_back(37);
+
+ a1d.each <= [](int& i, quint16 index)
+ {
+  qDebug() << index;
+  qDebug() << i;
+ };
+
+ a1d.reach <<= [](int& i, quint16 index)
+ {
+  if(index == 3)
+    return-0;
+  qDebug() << i;
+  return-1;
+ };
+
+ qDebug() << "ok";
+
+ qDebug() << a1d.last();
+ qDebug() << a1d.first();
+
  return 0;
 }
 

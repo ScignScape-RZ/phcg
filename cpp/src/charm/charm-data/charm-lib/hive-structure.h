@@ -77,6 +77,8 @@ public:
  void decrement_iterator(iterator& hit);
  void position_iterator(iterator& hit, quint32 ix);
 
+ void check_start_iterator(iterator& hit);
+
  void pop_back();
  void pop_first_block();
  void push_first_block();
