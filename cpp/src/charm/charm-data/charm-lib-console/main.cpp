@@ -9,6 +9,7 @@
 #include "charm-lib/stk1d.h"
 #include "charm-lib/que1d.h"
 #include "charm-lib/deq1d.h"
+#include "charm-lib/desk1d.h"
 
 //#include "kans.h"
 
@@ -116,8 +117,36 @@ int main5(int argc, char **argv)
  return 0;
 }
 
-
 int main(int argc, char **argv)
+{
+ Desk1d<int> d1d;
+
+ d1d.push_back(7);
+ d1d.push_back(9);
+
+// d1d.pop_front();
+//
+ d1d.push_front(17);
+ //d1d.push_back(17);
+
+// d1d.pop_front();
+
+ d1d.each <= [](int& i, quint16 ix)
+ {
+  qDebug() << ix << ": " << i;
+ };
+
+ qDebug() << "ok";
+
+// qDebug() << d1d.front();
+// qDebug() << d1d.back();
+
+
+ return 0;
+}
+
+
+int main4(int argc, char **argv)
 {
  Deq1d<int> d1d;
 

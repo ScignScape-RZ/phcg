@@ -30,7 +30,7 @@ HEADERS += \
   $$SRC_DIR/stk1d.h \
   $$SRC_DIR/que1d.h \
   $$SRC_DIR/deq1d.h \
-
+  $$SRC_DIR/desk1d.h \
 
 SOURCES += \
   $$SRC_DIR/hive-structure.cpp \
