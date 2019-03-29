@@ -125,9 +125,10 @@ int main4(int argc, char **argv)
  d1d.push_back(9);
  d1d.push_front(17);
 
- d1d.each <= [](int& i)
+ d1d.each <<= [](int& i, quint16 ix)
  {
   qDebug() << i;
+  return-1;
  };
 
  qDebug() << "ok";
@@ -147,9 +148,10 @@ int main3(int argc, char **argv)
  q1d.enqueue(9);
  q1d.enqueue(17);
 
- q1d.each <= [](int& i)
+ q1d.each <<= [](int& i, quint16 ix)
  {
   qDebug() << i;
+  return-1;
  };
 
  qDebug() << "ok";
@@ -169,9 +171,10 @@ int main2(int argc, char **argv)
  s1d.push(9);
  s1d.push(17);
 
- s1d.each <= [](int& i)
+ s1d.each <<= [](int& i, quint16 ix)
  {
   qDebug() << i;
+  return-1;
  };
 
  qDebug() << s1d.top();
@@ -200,10 +203,10 @@ int main(int argc, char **argv)
   qDebug() << i;
  };
 
- v1d.each <<= [](int& i)
+ v1d.reach <<= [](int& i, quint16 index)
  {
-  if(i == 9)
-    return+0;
+  if(index == 3)
+    return-0;
   qDebug() << i;
   return-1;
  };

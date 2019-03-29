@@ -28,6 +28,10 @@ struct _##name##_holder \
  { \
   _this._##name(fn); \
  } \
+ PR_Type operator <<=(std::function<typename PR_Type::level_type(VAL_type suffix v, INDEX_type index)> fn) \
+ { \
+  _this._pr_##name(fn); \
+ } \
 }; \
 
 
