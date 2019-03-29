@@ -35,14 +35,14 @@ int main7(int argc, char **argv)
 
  d1d.push_back(7);
  d1d.push_back(9);
- d1d.push_front(17);
+ //d1d.push_front(17);
 
  d1d._each([](int& i)
  {
   qDebug() << i;
  });
 
- d1d.pop_back();
+ //d1d.pop_back();
  d1d.pop_front();
 
  d1d._each([](int& i)
@@ -117,13 +117,16 @@ int main5(int argc, char **argv)
 }
 
 
-int main4(int argc, char **argv)
+int main(int argc, char **argv)
 {
  Deq1d<int> d1d;
 
  d1d.push_back(7);
  d1d.push_back(9);
- d1d.push_front(17);
+// d1d.push_front(17);
+ d1d.push_back(17);
+
+// d1d.pop_front();
 
  d1d.each <<= [](int& i, quint16 ix)
  {
@@ -133,8 +136,8 @@ int main4(int argc, char **argv)
 
  qDebug() << "ok";
 
- qDebug() << d1d.front();
- qDebug() << d1d.back();
+// qDebug() << d1d.front();
+// qDebug() << d1d.back();
 
 
  return 0;
@@ -185,7 +188,7 @@ int main2(int argc, char **argv)
 }
 
 
-int main(int argc, char **argv)
+int main1(int argc, char **argv)
 {
  Vec1d<int> v1d;
 
