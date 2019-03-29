@@ -23,9 +23,9 @@
 #include <functional>
 
 
-template<typename VAL_Type, typename INDEX_Type = quint16>
+template<typename VAL_Type, typename INDEX_Type = quint16, typename PR_Type>
 class Deq1d :
-  public each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type> //: protected QPair<Vec1d<VAL_Type>, Vec1d<VAL_Type>>
+  public each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type, PR_Type> //: protected QPair<Vec1d<VAL_Type>, Vec1d<VAL_Type>>
 {
  //Hive_Structure* front_hive_;
 protected:
@@ -39,7 +39,7 @@ public:
  Deq1d()
   :  front_vec_(_Vec1d<VAL_Type>()),
      back_vec_(_Vec1d<VAL_Type>()),
-     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
+     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type, PR_Type>({{*this}})
  {
 
  }
@@ -47,7 +47,7 @@ public:
  Deq1d(quint8 bsz)
   :  front_vec_(_Vec1d<VAL_Type>(bsz)),
      back_vec_(_Vec1d<VAL_Type>(bsz)),
-     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
+     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type, PR_Type>({{*this}})
  {
 
  }
@@ -55,7 +55,7 @@ public:
  Deq1d(quint8 bsz, quint8 fbsz)
   :  front_vec_(_Vec1d<VAL_Type>(bsz)),
      back_vec_(_Vec1d<VAL_Type>(fbsz)),
-     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
+     each_holders<Deq1d<VAL_Type>, VAL_Type, INDEX_Type, PR_Type>({{*this}})
  {
 
  }

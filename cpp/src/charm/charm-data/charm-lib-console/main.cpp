@@ -194,10 +194,18 @@ int main(int argc, char **argv)
  v1d.push_back(9);
  v1d.push_back(17);
 
- v1d.reach <= [](int& i, quint16 index)
+ v1d.each <= [](int& i, quint16 index)
  {
   qDebug() << index;
   qDebug() << i;
+ };
+
+ v1d.each <<= [](int& i)
+ {
+  if(i == 9)
+    return+0;
+  qDebug() << i;
+  return-1;
  };
 
  qDebug() << "ok";

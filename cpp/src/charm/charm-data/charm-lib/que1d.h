@@ -23,9 +23,9 @@
 #include <functional>
 
 
-template<typename VAL_Type, typename INDEX_Type = quint16>
+template<typename VAL_Type, typename INDEX_Type = quint16, typename PR_Type = _pr_break>
 class Que1d : protected _Vec1d<VAL_Type>,
-  public each_holders<Que1d<VAL_Type>, VAL_Type, INDEX_Type>
+  public each_holders<Que1d<VAL_Type>, VAL_Type, INDEX_Type, PR_Type>
 {
  quint16 offset_;
 
@@ -33,7 +33,7 @@ public:
 
  Que1d(quint8 bsz = 16)
   :  _Vec1d<VAL_Type>(bsz), offset_(0),
-    each_holders<Que1d<VAL_Type>, VAL_Type, INDEX_Type>({{*this}})
+    each_holders<Que1d<VAL_Type>, VAL_Type, INDEX_Type, PR_Type>({{*this}})
  {
  }
 

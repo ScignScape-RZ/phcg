@@ -11,13 +11,18 @@
 #include <functional>
 
 #define _MAKE_FULL_HOLDER(name, suffix) \
-template<typename _THIS_Type, typename VAL_type, typename INDEX_type> \
+template<typename _THIS_Type, typename VAL_type, \
+  typename INDEX_type, typename PR_Type> \
 struct _##name##_holder \
 { \
  _THIS_Type& _this;  \
  void operator <=(std::function<void(VAL_type suffix v)> fn) \
  { \
   _this._##name(fn); \
+ } \
+ PR_Type operator <<=(std::function<typename PR_Type::level_type(VAL_type suffix v)> fn) \
+ { \
+  return _this._pr_##name(fn); \
  } \
  void operator <=(std::function<void(VAL_type suffix v, INDEX_type index)> fn) \
  { \
@@ -64,12 +69,13 @@ _MAKE_HOLDER(set_default ,**)
 // }
 //};
 
-template<typename VEC_Type, typename VAL_Type, typename INDEX_type>
+template<typename VEC_Type, typename VAL_Type,
+  typename INDEX_type, typename PR_Type>
 struct each_holders
 {
  union{
- _each_holder<VEC_Type, VAL_Type, INDEX_type> each;
- _reach_holder<VEC_Type, VAL_Type, INDEX_type> reach;
+ _each_holder<VEC_Type, VAL_Type, INDEX_type, PR_Type> each;
+ _reach_holder<VEC_Type, VAL_Type, INDEX_type, PR_Type> reach;
  _set_default_holder<VEC_Type, VAL_Type> set_default;
  };
 };

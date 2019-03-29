@@ -32,15 +32,23 @@
 
 #define defzfn(ty) deffn(ty, 0)
 
-#define _default_fn(ty ,arg) set_default_fn(deffn(ty, arg))
+//#define _default_fn(ty ,arg) set_default_fn(deffn(ty, arg))
+//#define _default_z(ty) _default_fn(ty ,0)
 
-#define _default_z(ty) _default_fn(ty ,0)
+struct _pr_break
+{
+ quint16 index;
+ qint8 level;
 
-template<typename VAL_Type, typename INDEX_Type>
+ typedef qint8 level_type;
+};
+
+template<typename VAL_Type, typename INDEX_Type, typename PR_Type = _pr_break>
 class Deq1d;
 
 
-template<typename VAL_Type, typename INDEX_Type = quint16>
+template<typename VAL_Type, typename INDEX_Type = quint16,
+         typename PR_Type = _pr_break>
 class _Vec1d
 {
  std::function<void(VAL_Type**)> default_fn_;
@@ -136,6 +144,23 @@ public:
    fn(*pv);
    hive_structure_->increment_iterator(hit);
   }
+ }
+
+ _pr_break _pr_each(std::function<_pr_break::level_type(VAL_Type& v)> fn)
+ {
+  Hive_Structure::iterator hit = Hive_Structure::iterator::start();
+  INDEX_Type index = 0;
+  _pr_break::level_type l = -1;
+  while(!hit.end())
+  {
+   VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
+   ++index;
+   l = fn(*pv);
+   if(l >= 0)
+     break;
+   hive_structure_->increment_iterator(hit);
+  }
+  return {index, l};
  }
 
  void _each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
