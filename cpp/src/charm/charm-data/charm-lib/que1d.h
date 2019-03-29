@@ -78,7 +78,7 @@ public:
     _Vec1d<VAL_Type>::_each_from_index(offset_, fn);
  }
 
- _pr_break _pr_each(std::function<_pr_break::level_type(VAL_Type& v)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
  {
   if(offset_ == 0)
     return _Vec1d<VAL_Type>::_pr_each(fn);
@@ -86,7 +86,7 @@ public:
     return _Vec1d<VAL_Type>::_pr_each_from_index(offset_, fn);
  }
 
- _pr_break _pr_each(std::function<_pr_break::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
  {
   if(offset_ == 0)
     return _Vec1d<VAL_Type>::_pr_each(fn);

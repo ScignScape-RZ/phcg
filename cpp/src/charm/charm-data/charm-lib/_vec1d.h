@@ -103,13 +103,13 @@ public:
   }
  }
 
- _pr_break _pr_each_from_index(quint32 ix,
+ PR_Type _pr_each_from_index(quint32 ix,
    std::function<void(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->position_iterator(hit, ix);
   INDEX_Type index = 0;
-  _pr_break::level_type l = -1;
+  typename PR_Type::level_type l = -1;
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
@@ -137,13 +137,13 @@ public:
   }
  }
 
- _pr_break _pr_each_from_index(quint32 ix,
-   std::function<_pr_break::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
+ PR_Type _pr_each_from_index(quint32 ix,
+   std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->position_iterator(hit, ix);
   INDEX_Type index = 0;
-  _pr_break::level_type l = -1;
+  typename PR_Type::level_type l = -1;
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
@@ -184,11 +184,11 @@ public:
   }
  }
 
- _pr_break _pr_each(std::function<_pr_break::level_type(VAL_Type& v)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   INDEX_Type index = 0;
-  _pr_break::level_type l = -1;
+  typename PR_Type::level_type l = -1;
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
@@ -201,11 +201,11 @@ public:
   return {index, l};
  }
 
- _pr_break _pr_each(std::function<_pr_break::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   INDEX_Type index = 0;
-  _pr_break::level_type l = -1;
+  typename PR_Type::level_type l = -1;
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
@@ -257,12 +257,12 @@ public:
   }
  }
 
- _pr_break _pr_reach(std::function<_pr_break::level_type(VAL_Type& v)> fn)
+ PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->reverse_iterator(hit);
   INDEX_Type index = 0;
-  _pr_break::level_type l = -1;
+  typename PR_Type::level_type l = -1;
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);
@@ -275,12 +275,12 @@ public:
   return {index, l};
  }
 
- _pr_break _pr_reach(std::function<_pr_break::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
+ PR_Type _pr_reach(std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
  {
   Hive_Structure::iterator hit = Hive_Structure::iterator::start();
   hive_structure_->reverse_iterator(hit);
   INDEX_Type index = 0;
-  _pr_break::level_type l = -1;
+  typename PR_Type::level_type l = -1;
   while(!hit.end())
   {
    VAL_Type* pv = (VAL_Type*) hive_structure_->get_iterator_location(hit);

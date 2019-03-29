@@ -60,12 +60,12 @@ public:
   _Vec1d<VAL_Type>::_reach(fn);
  }
 
- _pr_break _pr_each(std::function<_pr_break::level_type(VAL_Type& v)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
  {
   return _Vec1d<VAL_Type>::_pr_reach(fn);
  }
 
- _pr_break _pr_each(std::function<_pr_break::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
  {
   return _Vec1d<VAL_Type>::_pr_reach(fn);
  }

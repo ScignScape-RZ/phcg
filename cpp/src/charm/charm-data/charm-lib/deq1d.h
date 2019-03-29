@@ -113,16 +113,16 @@ public:
   back_vec_._each(fn);
  }
 
- _pr_break _pr_each(std::function<void(VAL_Type& v)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v)> fn)
  {
-  front_vec_._reach(fn);
-  back_vec_._each(fn);
+  front_vec_._pr_reach(fn);
+  back_vec_._pr_each(fn);
  }
 
- _pr_break _pr_each(std::function<void(VAL_Type& v, const INDEX_Type& index)> fn)
+ PR_Type _pr_each(std::function<typename PR_Type::level_type(VAL_Type& v, const INDEX_Type& index)> fn)
  {
-  front_vec_._reach(fn);
-  back_vec_._each(fn);
+  front_vec_._pr_reach(fn);
+  back_vec_._pr_each(fn);
  }
 };
 
