@@ -1,43 +1,22 @@
 
 `section.Mereology and Models`
-`p.
-The upshot of my argument last section was 
-that the realm of mereologuical theory should 
-be divided into `i.cognitive` and `i.multiscientific`/.  
-Criteria of mereological non-triviality are 
-derived in the first case from `i.cognitive frames`/, 
-and in the second case from an `q.$R$-patchwork`/: 
-a patchwork of scientific theories delimiting the 
-extent of different scientific registers and the 
-dynamics and autopoesis sustaining the 
-integrtity of (in various domains) 
-non-trivial wholes.  Moreover, there is a structural 
-resonance and interpenetration between 
-cognitive frames and the `q.$R$-patchwork`/.
+So, last section I voiced skepticism 
+tht abstract logical models (in contrast 
+to scientifically-inspired theories) 
+concerning mereology are of great philosophical 
+value.  I'll defend this opinion in this 
+section by adopting (for sake of argument) 
+a model-theoretic perspctive.  So assume 
+that when we have a non-contradictory logical 
+system we can analyze its set of possibl 
+models, where each model is a set with some 
+additional structure (stipulated by the 
+logical axioms and whatever further cetailing they entail).
 `p`
 
 `p.
-Whether from the perspective of cognitive frames or the 
-`q.extramental` perspective of the $R$-patchwork, 
-mereological theories can be reasonably elaborated 
-in parallel to theories of the cognitive/ontological 
-status of wholes participating in `xhppy; style 
-parthood assertions.  Any formalization of 
-parthood relations can assume that all wholes have 
-some integral unity that can be described on cognitive 
-or scientific grounds (or really multiscientific, because 
-any macroscopic object has properties at the 
-intersection of different sciencs, like physics 
-and biology and/or chemistry).  
-`p`
-
-`p.
-Of course, we can investigate mereologies as abstract, 
-axiomatic logical systems.  I contend however that 
-such essentially mathematical theories have only 
-limited applicability to philosophy.  
-In particular, what would be `i.models` of these 
-theories in the logical sense?  Imagine a collection 
+What, then, would be `i.models` of mereological 
+theories in this logical sense?  Imagine a collection 
 of `q.voxels` %-- three-dimensional indivisible 
 cubes with two states (`i.empty` or `i.full`/).  
 Two (orthogonally) adjacent voxels can be said 
