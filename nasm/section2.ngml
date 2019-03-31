@@ -1,704 +1,506 @@
-`section.Mereotopology and Phenomenological Discontinuity`
+`section.Coherence and Concepts`
 `p.
-I am now going to transition away from the case for 
-non-antisymmetry and launch a review of different areas 
-of philosophical mereology as I see them: what are the 
-analyses to which mereology can be productively applied?  
-What are the analyzands suggesting that mereology should 
-be pursued as a distinct philosophical topic; that 
-part/whole relations have some recurring, foundational, 
-and distinctly formalizable role in 
-phenomena and conceptualization? 
+In Formal Concept Analysis, a concept is defined by the combination of 
+its instances and its indicators.  Two distinct concepts can share 
+the same extension: the set of black US presidents 
+equals the set of Hawaian-born presidents.  
+Within a collection of objects and 
+properties, a `q.formal concept` is a set with both objects and 
+properties such that every object bears every property.  In this 
+formal setting, a concept is a statistical artifact, 
+which may or may not correspond with concepts of thought and 
+language (despite its well-defined extent, in the singular person of Barack 
+Obama, `i.black Hawaian president` probably does not express a concept 
+with cognitive value beyond its constituent properties).  Such analysis 
+however suggests a more general truth, that concepts depend on 
+both intension and extension; to be acquainted with a 
+concept is to understand to some degree both a set of instances and 
+the reasons or properties for why they belong.
 `p`
 
 `p.
-The rough progression to follow will migrate thematically 
-from cognition to science to 
-computer science.  I will, in effect, first examine 
-themes of parts and wholes in cognitive %-- perceptual,
-conceptual, and enactive %-- frames and schema, and 
-in the overall phenomenology of engaged world-experience.  
-Phenomenologically, parthood as such is 
-peconditioned on an experience of perceptual 
-(and/or conceptual and enactive) `i.discontinuity`/, 
-which establishes the possibility of a part being 
-cognized independently of its whole.  
-I will argue that our inclination to 
-recognize parts is influenced by 
-conceptual commitments: whether a putative 
-part can be recognized under a concept can determine 
-the difference between discontinuities passively 
-perceived and the active, explicit isolation 
-of parts as distinct available foci of attention.
+Moreover, within real-world concepts %-- 
+typically imprecise and dynamically 
+evolving, insofar as they are cognitive and communicative tools 
+%-- intension and extension evolve in consort.  Borderline cases 
+need to be either excluded from or included into a concept's reach, 
+and this choice forces an evolution in intension.  Suppose we 
+start with a simple, provisional account for a familiar concept 
+%-- a `i.house` is a place of residence.  We can then consider 
+places which we may or may not consider houses %-- an apartment, 
+apartment building, hotel, cabin, tent, tree house, the White House.  
+Based on how we classify these examples, our posited `q.house 
+indicators` evolve; e.g., a house is a place of permanent, year-round 
+residence for at most a few families, where habitation (as opposed 
+to, say, government or commerce) is its primary purpose.  Such  
+thought experiments do not `i.define` concepts, but perhaps they retrace 
+their history as linguistic and cognitive phenomena within a relevant community.
 `p`
 
 `p.
-This role of concepts then invites us to consider 
-how the part/whole organizations we experience correspond 
-to functional patterns in our environing spaces: 
-what ar ethe physical and dynamic impulses producing 
-mereological patterns in physical reality?  To what 
-extent are subjective experiences of parthood 
-shaped by analogous relations in the objects we 
-perceive?  I will consider the dual options 
-of treating mereology as a model of partonomy 
-in our `i.concepts` %-- or cognition 
-or language; in general in the schema 
-we mentally employ to find order in our 
-surroundings %-- or conversely as a 
-formulation reprsenting parthood as a relation 
-in nature and in physical reality.  
-The latter interpretation leads to separate 
-quesions: what aspects of materiality 
-are operative in mereological instantiations, 
-when we deem these extramentally?  Is a part 
-compositionally enclosed in its whole; 
-or behaviorally dependent (but with some 
-partial autonomy) on a whole; or, more 
-dynamically, is a part some idntifiably 
-subspace of the state-space and dynamic 
-system of the whole?  Qua scientific oe 
-`q.paleoscientific` principle, how 
-should parthood be understood? 
+Although I will consider how conceptual attribution suggests patterns 
+of `i.functional organization` within objects thereby identified, we 
+can also consider the `q.function` of concepts as serving thought:  
+what `i.roles` do typical concepts serve within mental life overall?  
+Given the intension/extension co-evolution, we recognize at least 
+two distinct roles; a concept both characterizes an `i.extension`/, 
+a set of instances, and also an `i.intension`/, a set of properties 
+or indicators which provide a rationale, and a suggestion of 
+further characterization, for identifying an instance with a concept.  
+To assert that something tokenizes a concept is not only to 
+provide a very rough suggestion of what it is like, but to imply 
+a strategy or `q.script` for providing more detail.  Once I 
+identify something as a `i.house`/, I imply a kind of 
+organization %-- a yard or some sort of surrounding property; 
+an inside and outside; an external style and architecture; 
+a set of several internal separated but interconnected rooms.  
+I also imply (in contrast to a motor home) that the house 
+is built in one fixed place and has a permanent location, 
+perhaps a postal address, that visiting someone at their 
+home means returning to the same location on each occasion.   
+But implying this general schema also `q.initiates` a script 
+for further specification; identifying something with a 
+concept is more often the start of a conceptual and linguistic 
+process, rather than a conclusion.  I can learn the address 
+of your new house, directions to get there, you can describe 
+its various features, its yard and interior design and so forth.
 `p`
 
 `p.
-Finally, having asserted a duality between cognitive 
-(phenomenological) and scientific (extramental) 
-mereology, I will discuss technological 
-and computer-science expressions of mereology 
-which combine both mental and extramental 
-dimensions.  Computationally 
-curatd and shared information systems 
-are at once cognitive and scientific phenomena 
-because they represent human judgments and enginering 
-for human usage, but also record 
-humans' attempts to systematically and, 
-to the degree warranted, non-subjectively record scientific 
-facts and data.  How mereology functions and 
-is modeled in information spaces therefore 
-unifies both `q.cognitive` and `q.scientific` 
-mereology, presenting new perspectives on each.
-`p`
+Concepts play different roles, and these can be `q.activated` in 
+turn by different situations, in particular by different 
+linguistic and grammatic formations.  Similar meanings can be 
+achieved by subtle variation in which conceptual roles are 
+suggested, providing a case study for how grammar connotes role.  
+Consider Ronald Langacker's comparison of sentences like 
 
-`EnglischeLinie;
+`sentenceList,
+`sentenceItem; \label{itm:threes}Three times, students asked an interesting question.
+`sentenceItem; \label{itm:threean}Three times, a student asked an interesting question.
+`sentenceList`
 
-`p.
-When we conceptualize something %-- or some class of `q.things` %-- 
-we inevitably interject cognitive and perceptual shema, 
-mental summarials of various kind which create cognitive routes 
-away from the explicit presentation of things themselves in 
-momentary consciousness.  Some sensory and perceptual details  
-have (at least for situations at hand) comparatively 
-minor individual importance even if they cumulatively 
-synthesize into experiential wholes which are important.  These 
-are details we tend to forget, or not talk about, or notice 
-only pre-consciously.  The detailing committed to memory, 
-focal attention, and language, tends to exhibit some recurrent 
-schema and often to operate on a higher scale of integration.
-While analyses of cognitive schema need to integrate 
-multiple perspectives, two facets of schema deserve 
-special attention: the mereological (concerned with part/whole 
-relations), and topological (concerned with spatial and functional 
-relations of contact, connectedness, boundaries, and 
-non-geometric properties of objects' shape, such as the 
-presence or absence of holes, the number of dimensions 
-%-- contrast a point, line, surface, solid %-- and relations 
-like a surface covering a solid, as in a table cloth, 
-or a solid inside an open area bounded by a surface, 
-like an object in a bag).
-`p`
+In (\ref{itm:threes}), the plural `i.students` reflects how a type of noteworthy 
+situation occurred multiple times; whereas the singular in (\ref{itm:threean}) reflects 
+how, on each occasion, one student was involved.  The `q.student` in 
+(\ref{itm:threean}) does not designate a particular person, but is rather a generic 
+token of the concept `i.student` `q.conjured`/, as Langacker says, to 
+provide a kind of unspecified cognition of a conceptual tokening without 
+implying reference to some specific token.  Along these lines, consider 
 
-`p.
-These two areas are sometimes 
-grouped together as `q.Mereotopology`/, which %-- at a technical 
-level %-- concerns alternative 
-constructions for mathematical topology which avoid the 
-arguably problematic notion of dimensionless points, and 
-%-- in a more computational vein %-- concerns models of 
-spatial reasoning and representation where individual 
-points, infinitely divisible space, and real-valued  
-geometry are cognitively or technologically implausible or 
-impractical.  Both human and Artificial Intelligent 
-conceptions of space seem to often rely on schemas of 
-coarser-grained relations, like overall direction or overlap 
-or relative distance, rather than precise numerical, 
-geometric recognition of objects' locations within a 
-real-valued grid.  From this basic orientation, I also 
-believe the notion of Mereotopology can be extended 
-to concern schemas where mereological and topological 
-relations or aspects are interrelated, in a variety 
-of cognitive, linguistic, and computational contexts.  
-Therefore I assume a rather general understanding 
-of `q.Mereotopology` as any theorizing involving 
-mereological and topological analyses in consort, while 
-not neglecting to orient such theories against the 
-`q.core` notion of Mereotopology as `q.region-based 
-theories of space`/.
+`sentenceList,
+`sentenceItem; \label{itm:rhinos}Rhinos are mammals.
+`sentenceItem; \label{itm:arhino}A rhino is a mammal.
+`sentenceItem; \label{itm:therhino}The rhino is a mammal.
+`sentenceList`
+
+While (\ref{itm:rhinos}) refers via the 
+set of all rhinos (each of them is a 
+mammal), (\ref{itm:arhino}) second 
+`q.conjures` a `q.generic` rhino, from an 
+abstract `q.plane` %-- again using Langacker's terminology %--  
+to make the point that 
+any conceivable rhino is a mammal.  That is, mammalness is a generic feature 
+of the entire species, it is not a quality which depends on the nature of 
+any given instance.  In (\ref{itm:therhino}), the 
+signification by contrast selects from the 
+`q.plane` of all species types; so `i.rhino` here applies in 
+the guise of naming a discrete element in categorizing thought.  These examples 
+illustrate roles of `i.selecting an extension`/, `i.expressing intension` 
+%-- in the specific sense of concept-intension; that is, envisioning a 
+representative abstract case which explifies the conjunction of properties 
+and indicators that are a concepts' signature %-- and `i.naming a type`/, 
+referring into a space of `i.kinds` insofar as these are present in thought 
+as discrete units.
 `p`
 
 `p.
-Mereotopology can be thematized on two fronts: 
-first, from the 
-perspective of how mereotopological properties of 
-familiar physical objects suggest accounts of their 
-functional properties; second, from a more conceptual angle, 
-how spatial and functional properties help demarcate 
-the sense and extent of concepts.
-The act of focusing attention on one object, or 
-some interrelated cluster of objects, simulataneously 
-marks their collective separation from surroundings 
-and highlights their internal connectedness.  Often 
-there is a finer-grained scale where internal 
-separation, instead, is more clearly perceived; 
-attention tends to move across scales as readily as 
-across spatial location.  At least as an intuitive 
-picture %-- and perhaps, in some contexts, as a formal 
-model %-- we can consider this balance of aggregate 
-connection and surrounding separation in topological 
-terms.  That is, attention tends to introduce (or 
-magnify) discontinuity between some focal entity and 
-its surroundings, and to minimize discontinuities within it.  
-Each particular focus of attention is one manner in 
-which a complex object or system may be revealed.  
-The continuities and discontinuities thereby involved 
-in a particular attention-act are therefore facets of 
-the object/system intended in experience, which can 
-perhaps be modeled via topology.  In this 
-phenomenological thought milieu, objects do not 
-have `q.a` topology; but, often, many different 
-topologies depending on whether certain discontinuities 
-are or are not attended to.
+Which of these roles is most clearly `q.activated`/, 
+given semantic and grammatic cues, then shapes the surrounding discourse: 
+
+`sentenceList,
+`sentenceItem; \label{itm:related}The rhino is related to the horse.
+`sentenceItem; \label{itm:young}Young rhinos are threatened by poachers.
+`sentenceItem; \label{itm:park}Rhinos in that park are threatened by poachers.
+`sentenceList`
+ 
+\noindent Here (\ref{itm:related}) forefronts rhinos as a natural kind, invoking a familiar 
+relation between species; (\ref{itm:young}), I would argue, invokes a more 
+intensional sense of the concept insofar as it adds a further 
+specifier to suggest a narrower concept (a young rhino has the 
+properties associated with rhinos in general, and then further those 
+associated with young animals, such as being exceptionally vulnerable and 
+being cared for by parents); while (\ref{itm:park}) seems to construct a narrower 
+concept by adding specifiers to `i.extent`/, not `i.intent`/.  There 
+is no suggestion that rhinos `q.in that park` have any further 
+resemblance aside from their being there; as a result, (\ref{itm:park}) comes 
+to designate some set of animals by invoking the `i.set` of 
+rhinos and then adding semantics to focus on some select portion of that set.
+In these examples the concept `i.rhino` plays different semantic 
+roles %-- guise of a species, a bundle of typical properties and indicators, 
+and a set of jointly classified individually %-- corresponding to 
+different cognitive roles.
 `p`
 
 `p.
-Suppose I look at a Canadian flag. 
-Insofar as I identify the Maple Leaf pattern and the outer red stripes, 
-I perceptually divide it into distinct, visual pieces: I identify 
-discontinuities in the flag as an (otherwise) 
-integrated union of material and color.  
-On the other hand, if I observe its blowing to and fro in the wind, 
-or physically manipulate it (folding it ritualistically, for example), 
-I cease to attend specifically to the color patterns.  The flag therefore 
-lends itself to (at least) two different viewer comportments, 
-either as a continuous material object or as a setting for visual 
-patterns and icons, and (depending on which viewpoint we take) thereby 
-exhibits two different `q.topologies`/.  This duality is indeed intrinsic 
-to its semiotic functioning: a flag typically relies on visual forms 
-for the construction of symbolic patterns, representing characteristic 
-or celebrated aspects of a community's culture and history.  
-At the same 
-time, a flag in its semiotic function must be a physical entity 
-that can be perched over certain places and buildings, in plain 
-air, with specific material properties.  A reproduction of the 
-visual appearance of a flag, for example in an encyclopedia or 
-as a metonymic icon for a particular language, is not itself a 
-flag (contrast this to the reasons why a picture of a stop sign 
-in a driver's instruction manual is not a stop sign, or conversely 
-why a graphical reproduction of a copyrights or trademark symbol 
-may indeed be a binding example of such a symbol).  As `i.sign`/, 
-in short, a flag exists simultaneously as material cloth and 
-visual tableau, and has different morphological properties depending 
-on which (or both) of these guises dominate how it is disclosed to 
-us on each occasion.   
+This multiplicity of roles precludes simplistic theorizations of 
+concepts as `i.just` instance-sets, or property-bundles, or taxonomic entries.  
+Rather than a single (meta-) definition, a general theory of concepts should 
+begin by classifying different ways that concepts are used.  An initial 
+distinction is that a concept can `q.profile` (another Langacker term) 
+`i.either` an individual `i.or` a collection of individuals, 
+including (but not necessarily) a set of all (actual or possible) instances.  
+In the latter guise a concept (alone or in consort with other semantic 
+elements) demarcates a collection from some more general or expansive collection.  
+In the former case a concept `i.singles out` an individual; as I discussed earlier, 
+this implies some mixture of continuity and discontinuity, insofar as the 
+individual is (to some degree) posited as separable (in an act of cognition 
+and/or perception) from its surroundings and also as internally connected or 
+integrated.  There is some `q.theory` of the `i.internal coherence` 
+of the individual, of how it is appropriate in some context to consider it 
+a discrete unit %-- acting as as singular whole, causally integrated, or 
+in some other fashion disposed to function unitarily.
 `p`
 
 `p.
-Our collectively surrouding environs, insofar as this forms the 
-horizon and selection-space for our signfications, embody multiple 
-potential topologies, multiple parameters of continuity and discontinuity.  
-Instead of a binary notion of (dis)continuity, we therefore need an 
-image of `i.partial` discontinuity, in which separation in one 
-parameter is joined with connectedness in another.  The Canadian flag, 
-for example, has regions separated by color but connected by 
-material substrate.  Such a combination is intrinsic to certain 
-concepts: for example, a `i.footprint` is not a foreign object in some 
-medium (like mud or sand), but involves a physical continuity crossed 
-with a distinct shape and impression, typically outlined by a separation 
-in one direction (down into the ground).  Partial discontinuity has 
-an intrinsic mereological aspect, insofar as its mixture of continuity 
-and separateness implies both a distinct unit and a larger whole of 
-which it is one part.  Therefore mereotopology can be adopted as a 
-study of topological properties in these cognitive and semiotic 
-contexts, where multiple topologies overlap.  
+Certainly the `q.individual coherence` of a totality may be provisional.  Some 
+collections are bound together only by people's desire to group them, e.g., 
+the books in a library.  Nevertheless, even this `q.external` connectedness 
+is caussally efficacious, with non-neglibable effects of cohering the integral 
+whole more than a random baseline: books in a library are much more likely to 
+remain spatially proximate than a random pair of books which happen to be in 
+some one building at the same time.  On the other hand, the degree to which 
+parts `i.do` cohere into a whole is an essential conceptual detail, and, 
+once a whole is characterized as an individual tokenizing a concept, part of that 
+concept's role is to suggest the degree and nature of this coherence.  
+For example, the United Nations is a more diffuse collection of political 
+units than the United States.  Nevertheless, there is a well-established 
+semantics where the UN functions as a singular entity which can, say, 
+pass a resolution.  
+On the other hand, insofar as a totality has a strong degree of 
+internal coherence, this may result from a complex causal or 
+processual integration between many parts, or conversely by a relative lack of 
+internal complexity or `i.internal structuration`/.  A torpedo and a 
+school of fish may both follow a quantifiable trajectory through 
+water, but the directedness of the former's motion depends on 
+complex biosocial synchronization much different from the 
+latter's straightforward physics.
 `p`
 
 `p.
-Mereology in this kind of analysis can be more general than 
-splitting a whole into crisp parts.  Our experience of part/whole 
-`q.articulation` can depend on the regularity or symmetries 
-in some pattern, irregardless of whether we experience crisply delineated 
-parts.  For example, our experience of a chessboard depends on symmetries by 
-which a color space is mapped onto a spatial extent, as 
-much as on the visual discontinuity between black and white.  Imagine 
-an artistic chessboard on which the color lines are replaced with 
-smooth gradient transitions %-- the underlying color 
-space becoming a `q.loop` instead of a simple 
-two-valued collection.  Despite being topologically more complex, 
-this color-loop is nonetheless a distinct subset of all possible 
-color values, and the distribution of color values projected onto 
-the checkerboard surface can exhibit the same translational 
-symmetries of the two-valued, black/white board, creating the impression 
-of similar mereological articulation even in the absence of 
-identifiable distinct parts.  Furthermore, the chessboard's mereology has 
-functional as well as purely geometric properties.  Each square represents 
-a distinct site where, in a game, at most one piece may be placed.  
-It is certainly physically possible to violate this norm, 
-but such an arrangement would not model a real game situation, or 
-physically instantiate the abstract specifications of a chess match.  
-The pattern of lighter and darker squares also helps to visually 
-specify the rows, columns, and diagonals, so that players can 
-clearly see possible moves for the different pieces.
+For each conceptualized 
+totality, then, there is a measure of Individual Coherence 
+and of Internal Structuration %-- which can be quite independent 
+from another (the `q.IS/IC` scale) 
+%-- that specifies `i.in what sense` the whole 
+is a (single, unitary) individual.  The concept used to 
+designate the whole, along with (in a language setting) 
+surrounding grammar and context, suggests a particular 
+account of the degree and schematic nature of this individuation.
 `p`
 
 `p.
-As such, a board-game `q.square` 
-is more one site in a functionally organized system than just a spatial 
-shape; it may function just as well even if it is not actually clearly 
-delineated as a shape (as in the hypothetical `q.artistic` board).  
-By analogy, geospatial regions like islands or political units 
-function as delineated wholes even if their precise spatial borders 
-are impractical to specify with arbitrary granularity (considering 
-how changing tides and water levels minutely alter the outline 
-of islands, or how border conflicts can obscure the actual 
-geospatial extent of nations).
+Grammatic choices, like singular/plural and defininte/indefinite article, 
+play a role here: 
+
+`sentenceList,
+`sentenceItem; \label{itm:arlake}A rhino is by the lake.
+`sentenceItem; \label{itm:therlake}The rhino is by the lake.
+`sentenceItem; \label{itm:rslake}Rhinos are by the lake.
+`sentenceItem; \label{itm:therslake}The rhinos are by the lake.
+`sentenceList`
+
+These grammatic variations induce subtle cues to construct or 
+indicate a `q.plane` from which individuation selects.  In 
+(\ref{itm:arlake}), the hearer's attention is newly directed to something 
+which, the speaker suggests, either the hearer or both parties 
+had not previously observed.  In other words, (\ref{itm:arlake}) wants to 
+shift the topic of conversation (even if only temporarily, 
+so as to register the asserted fact as something collectivly 
+realized) and so functions both to individuate the rhino, 
+to propose it as a new object collectively recognized as something 
+in their mutual surroundings, and to shift attention in its direction.  
+By contrast, the rhino in (\ref{itm:therlake}) has a presumptive 
+prior acknowledgement in the current discourse; the point of 
+the definite article is to select the rhino from among the 
+set of all entities which have in some fashion been 
+talked about already.  These different `q.planes of selection` 
+carry over to the plural examples, but the designation there 
+selects a group of animals, not one single individual.  
+Nevertheless, (\ref{itm:therslake}) implies that the group has some 
+sort of internal connectedness, perhaps moving roughly 
+as a unit.  By referring back, as does (\ref{itm:arlake}), to an earlier phase 
+in the discourse, (\ref{itm:therslake}) implies that the group represents (more or less) 
+`q.the same` rhinos as observed earlier, an effect of comparison 
+which helps call attention to the rhinos in their totality.  
+Without the definite article, (\ref{itm:rslake}) is 
+less specific in asserting such a totality; it may, 
+but need not, suggest that the rhinos by the lake are situated 
+in some spatial or interacting formation so that the speakers 
+should be disposed to consider them collectively.  If the speaker 
+wanted to nudge the emphasis more or less toward this grouping interpretation, 
+she would have to select some further semantics: e.g., 
+`i.A school of rhinos`/, or conversely `i.Some rhinos`/, are by the lake.  
 `p`
 
 `p.
-For a mathematical model of the chess board or Canadian flag, we can consider 
-`q.product spaces`/, in these examples a simple, compact two-dimensional space 
-crossed with a discrete color dimension (red/white or black/white).  In the 
-statistical classification of dimensions as nominal, ordinal, interval, or ratio, 
-these color dimensions would be nominal, so there is no concept of relative distance 
-between colors.  This changes in the `q.artistic board` example, but symmetries 
-of the color/board product space preserve the mereological morphology.  This suggests 
-that a simple product-space model, such as one generated by an arbitrarily fine-grained 
-mapping (one color value for each dimensionless point), does not fully capture the 
-topological properties of the integrated space as a `i.functional` totality.  
-In Peter G\"ardenfors's Conceptual Space theory, color is a canonical `q.geometrized` 
-concept space, in which different (possibly overlapping) color-concepts can be 
-associated with well-defined quantifiable regions in a `q.color space` suitable 
-to several mathematical dimensionalizations (the `RGB;, `CMYK;, or `q.color wheel` of 
-computer graphics).  The coloration of a 2D surface is then a simple spatial-point 
-to color-point map.  Seen from a more functional perspective, however, color space 
-is less crisply quantified; for example, a chess board functions pretty well even 
-if fading and smudging corrupt the idealized black/white pattern.  We have a 
-tendency to `q.see` the pattern even if actual perceived colors merely approximate it, 
-which suggests that our disposition to find such patterns is driven by organizational 
-cues (like symmetries) as much as by crisp forms.  So color may have several different 
-functional roles.  It may be purely `q.contrastive` %-- consider how many tournament 
-chess boards replace black with green, to equal effect; or decorative, in which case 
-precise hues become important; or also symbolic, like the colors in most flags, 
-which often carry patriotic and/or geographic metaphors 
-(blue for sky or ocean, brown for soil, etc.).`footnote.
-Flags of African nations often 
-carry tones suggestive of the local landscapes (browns, greens, yellows), whereas 
-flags of European nations feature colors which are more `q.abstract` (like red and 
-white), or harder to match to geographic artifacts, except perhaps for blue, 
-which in an admittedly rather speculative analysis might signify that the most 
-concrete earthbound feature in those nations' historical collective consciousness 
-was the oceans %-- the routes to expansion, colonization, increasing national influence.
-`footnote`    
+In these examples, the concept `i.rhino` does not, on its own, guide one 
+interpretation or another (singular/plural; more itegral or 
+more scatterrred); it is rather a resource which is deployed 
+in a linguistic and communicative setting along with further 
+details, and the effect of conceptual resonance `i.in context` bears these 
+further connotations.  Whether a concept designates a group or an individual, 
+it is the speaker (or a person using a concept as a tool in thought) 
+who uses ideas activated by the concept so as to evoke patterns 
+by which the selected individual or collection is internally 
+connected and externally separated.  Any conceptualization presents 
+schema where continuities and discontinuities are mixed, but 
+in different ways.  Suppose a game warden says:
+
+`sentenceList,
+`sentenceItem; \label{itm:footprints}Those footprints were left by rhinos.
+`sentenceItem; \label{itm:trail} That trail of footprints was left by rhinos.
+`sentenceItem; \label{itm:tracks} Those tracks were left by rhinos.
+`sentenceList`
+
+I argued above that the concept `q.footprint` internally suggests both 
+continuity (of medium) and separation (of shape or contour).  Analogously, 
+a collection of footprints as in (\ref{itm:footprints}) has a presumptive internal 
+separation into discreet individuals, but enough spatial proximity to be 
+plausibly grasped as a perceptual group, relative to a reasonably 
+typical vantage point.  The choice of words in (\ref{itm:trail}) implies a further notion 
+of directedness, and a somewhat different relation of the observer's spatial position  
+`visavis; the observed.  While the two sentences might describe the 
+same situation, (\ref{itm:trail}) carries an additional implication that the 
+footprints suggest some line of direction which extends beyond the speakers' 
+immediate line of sight, and can perhaps be followed.  This directionality 
+is also implied in (\ref{itm:tracks}), but in that case the internal continuity which 
+supports this sense of direction is further emphasized.  In this context 
+`q.tracks` can mean not just footprints but also, say, bent grass or hairs 
+or broken twigs, so that each particular artifact which cumulatively 
+constitutes the `q.tracks` may have less precise distinctness than 
+a particular footprint.  Moreover, the word `q.tracks` tends overall to 
+refer to physically continuous structures, like train tracks, whereas 
+`q.trail` can be used in more metaphorical senses and with greater 
+sense of internal pauses and separations (a dective `i.on the trail` of a 
+fugitive; a scientist `i.on the trail` of a discovery).
 `p`
 
 `p.
-The previous examples considered mereology in terms of color, a dimension which has 
-functional as well as visual aspects, but similar analyses can involve parameters 
-with more purely functional interpretations.  Consider 
-the contrast between a dumbell fasioned from a single metal part and 
-those separated into a central shaft and detached outer rings.  While the 
-topology of these shapes is different, they have comparable functional 
-form: a good dumbell must be easy to grasp but relatively hard to 
-lift, so it needs parameters of both bulk and graspability.  In both 
-types, a central shaft provides graspability while outer bulges 
-provide heft; therefore these two parameters are distributed around 
-the shape of the dumbell, by analogy to the red/while of the 
-Canadian flag.  Relative to the `q.functional space` defined 
-by these parameters %-- a two-valued {graspable/bulk} contrast %-- the central area 
-is isolated by virtue of its graspability, analogous to the 
-central Maple Leaf pattern isolated by color, even if in some dumbells 
-there is no comparable discontinuity in the physical 
-extent considered alone.  Functional parameters can introduce 
-partonomies into an otherwise connected substratum, 
-or, conversely, topologically unify disparate pieces. 
+So (\ref{itm:footprints})-(\ref{itm:tracks}) 
+show progressively less attention paid to internal 
+constituents and more to the nature and direction of a whole, 
+even if some scenarios tolerate all three sentences. 
+Each usage would convey slightly different connotations to the 
+scene at hand.  The point of this comparison is that individuation 
+through concepts depends on properly connoting the patterns of 
+continuity and discontinuity which define individuals' coherence 
+and separateness (as well as that of sets of individuals, when 
+concepts are used to profile collections).  A concept implies a 
+schema both for individuals' internal structuration, and for 
+its suitability as being conceptually and perceptually isolated 
+from its surroundings.  The function of concepts is, typically, 
+to `i.set the stage` for further characterization of their tokens, 
+first by individuating them as points of attention, and then 
+by implying the presence of `q.scripts` or `q.schema` leading to 
+more precise descriptions.  Both of these roles present challenges 
+for `i.formal` semantics, if this means defining rigorous of 
+quasi-mathematical theories of how concepts select a `i.set` of 
+instances, or of how each instance `i.instantiates` a concept.  
+The act of linking a concept to an instance is a complex 
+cognitive/semantic event, one which occurs against the backdrop of a 
+mental and often dialogic context, and which should be theorized 
+as one step in an evolving process.  A concept is an opening 
+onto a more detailed (process of) characterization.  To say that 
+something is an instance of some concept is not a simple 
+act of classification, then, analogous to declaring a variable 
+in a programming language to be of some data type.  
 `p`
 
 `p.
-Geospatial semantics provide good examples of both 
-of these phenomena.  
-For most of its extent, the border between the New York City boroughs 
-of Brooklyn and Queens injects discontinuity into a terrestrial continuum.   
-Conversely, a jogger whose itinerary crosses East Harlem and 
-Randall's Island is making a closed loop in the borough of 
-Manhattan but not the island of Manhattan; also, the borough integrates 
-several other islands and also the small Marble Hill neighborhood on 
-the mainland, attached to the Bronx.  The tendency of geospatial 
-designations to either partition or bridge together geospatial 
-extent, sometimes with no apparent relation to geographical 
-features, is a canonical example of Barry Smith's distinction of 
-`i.fiat` and `i.bona fide` boundaries as constituting objects 
-of reference (and therefore of domain-ontological record).  
-The mere presence of a naming scheme induces `q.product spaces` 
-where geospaptial regions are crossed with names selected from 
-an nominal axis, like {M, B, Q, S, T} for the New York boroughs 
-(`q.T` for `q.The Bronx`/).
+Of particular importance, I believe, is the notion that conceptualization 
+(if we define this as concept-to-token identification) is only one 
+stage in an extended process.  This means that no one single 
+concept provides a definitive account of an identified instance, 
+even a provisional or imprecise account.  Obviously concepts 
+operate at some level of coarse-graining and can be combined 
+together for greater precision.  However, if we fail to 
+theorize conceptualization as `i.process`/, we can end up with a 
+view of concepts as imprecise but, `i.at some degree of detail`/, 
+self-contained mental `q.pictures` which cover some range of 
+possible cases.  For each concept, there would correspond 
+(on this account) a `q.rough` sketch of how a token of the 
+concept is, insofar as it does bear the concept.  The degree 
+of (im)precision in these `q.sketches` would depend on how 
+general or specific is the concept itself: scientific terms, 
+for example, are more specific than everyday words.  
+But each concept would connote a family of instances whose 
+features are more clearly or more vaguely aligned with a 
+set of indicators.  Each house is vaguely aligned with a 
+`q.sketch` of some locale with a yard, a front door, interior 
+rooms, and so forth; each restaurant is aligned with a 
+general notion of a place to sit at a table and eat prepared food, 
+and so forth.  The concept leaves particulars imprecise 
+(what kind of food, what kind of yard) but presents them at a 
+level of vagueness in which they match all examples.  A 
+concept, in other words, finds a suitable mix of vagueness 
+and resemblance %-- it abstracts from particular details 
+enough that all tokens can be considered to resemble each other.
 `p`
 
 `p.
-Whether or not the outlines of named regions correspond with natural 
-features, the mere presence of fiat boundaries alters the functional 
-organization of geospatial extents seen as sites of human activity.  
-A walk along Myrtle Avenue, for example, might cross between Brooklyn 
-and Queens.  This discontinuity may have no `q.natural` meaning, but 
-could still be functionally significant; for example, if that path 
-is actually a proposed route for a parade, or central strip of a 
-business development zone, where regulations from both boroughs need 
-to be accommodated.  Fiat boundaries can also exercise causative 
-influence on the natural land itself: the border between 
-nations with different environmental laws might evolve into a 
-line between lands with different ecological properties.  Moreover, 
-fiat boundaries tend to be drawn on functional considerations: fiat lines 
-tend to be straight, presumably to facilitate surveying and resolving 
-land-claims; alternatively, borders may group together 
-speakers of a common language, or citizens who have 
-voted to form a union.  Geospatial regions, if they have political 
-and legal significance, are not just spatial forms, but 
-functional collections of people and places.  So `q.fiat` 
-boundaries are not really arbitrary.  Evolutionary pressures 
-act against truly random or arbitrary geospatial forms.  For example, 
-a border so misshapen that it causes inconvience for citizens 
-or government might end up being modified by popular demand.  A 
-dramatic example is the ill-conceived partition of India, which 
-resulted in the topologically disjoint marphology of Pakistan, and 
-finally a further war as East Pakistan seceded to become Bangladesh.  
-As a more peaceful example, on the Brooklyn/Queens border, the Ridgewood 
-neighborhood voted in 1950 to switch from being part of Brooklyn to part 
-of Queens.  There were several socioeconomic motives for this demand, 
-but the areas' architecture and urban space does seem 
-more reminiscent of Queens, and, probably 
-more important, the pedestrian and transportation routes seem more 
-conventient heading toward Queens business and government districts 
-than those of Brooklyn.  The point of this example is that the notion 
-of `q.fiat` boundary, while not entirely unmotivated, should not 
-be understood too simplistically.  Borders which seem arbitrary from a 
-purely geometric or geographic perspective may make sense 
-sociologically, or at least have their own social histories.  
-The connection of geospatial regions to socially recognized 
-names, and functional units (post codes, electoral districts, etc.), 
-both encapsulates and helps to create a complex system in which 
-human activity plays out against a geographic background.    
+While my analysis has likewise argued for `i.characterizing features`/, 
+where I differ from this kind of theory is in emphasizing conceptual 
+imprecision as a matter of `i.process` and not of `i.vagueness`/, 
+or concepts as `i.scripts` rather than `i.sketches`/.  It is misleading, 
+I believe, to think of a concept as `i.imprecise` in that it seeks 
+to achieve a degree of nonspecifity which allows many somewhat mutually 
+resembling things to be grouped together.  This notion seems to both 
+minimize the potential for using particular concepts to initiate 
+more precise further characterization, and also to overstate the 
+degree to which concept-tokens resemble each other.  As mental 
+tools concepts are thereby weakened on two fronts: they are neither 
+precise enough to truly describe their instances, nor general enough 
+to group together these instance outside of some `q.resemblance` between 
+them.  I would argue, however, that real-world concepts both trend 
+toward a degree of generality which is hard to account for in terms 
+of token-resemblance, `i.and also` serve within cognitive and linguistic 
+episodes in which general concepts provide a framework for precisely 
+describing individuals, up to a degree of resolution suited for a 
+given thought or dialog.  The concept may not internally `i.imply` 
+these details, but it implies a `i.framework` for accumulating them.
 `p`
 
 `p.
-A `q.topological` theory of functional organization should therefore 
-explore how notions of contact, connection, continuity, and 
-discontinuity are to be defined in functional as well as 
-purely spatial terms.  To say that two spaces are `q.in contact` can 
-mean different things, and purely physical contact may be replaced 
-with contact via travel, shipping, digital media, causal correlation, 
-etc.  A convey of cars can be modeled as a single unit, as if there 
-were actually physical forces connecting them, even though the 
-actual synergy between their movements depends instead on their 
-collective desire to stay together.  Similarly, a group of hikers 
-may adopt a spacing on a trail so that each hiker is visible to 
-one behind, but the group covers a relatively large area (consider a 
-search-and-rescue mission).  Here `q.contact` most 
-usefully means `q.visual contact`/.  Of course, 
-different notions of contact can functionally interrelate, or 
-fail to function properly in consort.  Political union can 
-forge contacts between disjoint regions, but (as in the 
-Pakistan/Bangladesh example) such non-physical connectedness 
-is not logistically equivalent to geospatial continuity.   
-Or, suppose that I remove a key from a keychain, 
-attach a small metal ring, and reattach that key to the new ring.  
-During this exercise the keychain has undergone several topological 
-modifications, but it has retained a certain cognitive unity as a 
-functional object %-- even when dissambled into keys and rings, 
-I can with some justice refer to the ensemble as `q.my keychain`/. 
-I can even carry around the disjoint lot in my pocket with the 
-intention of completing it later, while still thinking of it 
-in the singular.  But the loose key is be more likely to be 
-lost in that scenario: there are (at least) two different 
-topologies which are functionally relevant, one based 
-primarily on direct physical morphology and one based on 
-my intentions.  Functional parameters merge disparate 
-parts and introduce new topologies than yielded 
-directly from three-dimensional geometry, usually without however 
-rendering the original topology functionally irrelevant.
+If we consider the concept of `i.fly`/, for example, we note that it 
+covers many different cases: the flight of birds, planes, coments, commercial 
+passengers, leaves, kites, debris, shrapnel, types of aircraft 
+(`q.that model flew during World War II`/), carriers (`q.we fly 
+Korean Air whenever possible`/), their fleet (`q.that company flies the 
+youngest planes of any discount carrier`/).  All of these somehow 
+involve travel through air, so we might say that the role of `q.fly` is to 
+invoke a highly stylized or fuzzy sketch of `q.movement above the ground`/; 
+in other words, to find the point of resemblance among all of these cases.  
+The different senses of `i.fly` might then be considered `i.subconcepts`/, 
+each with a more precise picture, which finds more detailed resemblances 
+between its tokens.  By this account, the concept `q.fly` is really a 
+loose aggregate of more precise concepts, which manifest as different 
+senses of the polysemous English word.  However, such an analysis 
+seems to too neatly group these various senses into a conceptual 
+hierarchy, as if word-senses can assemble into a taxonomy akin to the 
+classification of living species, each sense finding a degree of 
+precision and inter-token resemblance relative to its hierarchical position.  
+I would argue that different `q.senses` of words or concepts do not 
+generally reveal such straightforward taxonomic patterns, at least 
+unless (as with biological names for species, genera, etc.) they are 
+deliberately constructed to do so.  In normal usage new senses evolve 
+gradually and can emerge ad-hoc for some specific language community 
+(or `q.micro` community).  For example, the sense of `q.fly` as 
+in `q.Commercial Flight` %-- with its typical associations of 
+buying a ticket, going to an airport, checking baggage, passing 
+security, and so on %-- emerged only gradually from the more general 
+sense of flying in an aircraft.  Moreover, we can imagine specific 
+situations where new senses emerge %-- for example, executives 
+of a multinational company who use the phrase `q.Flying to London` 
+to mean a trip to specific offices, thereby mixing (in this specific 
+context) the destination with the purpose of the trip. 
 `p`
 
 `p.
-On the other hand, functionalities can also introduce new criteria of 
-separation.  A zipper is distinguished from a jacket, partly perhaps by 
-a difference in color, but more importantly because it has 
-dynamic affordances, patterns of movement, distinct from those 
-of the jacket itself.  Similarly, a black knob on a white 
-stovetop stands out not only by color contrast, but by 
-the actions it permits.  The zipper and the knob introduce 
-patterns of continuous but delimeted change which give rise 
-to new concepts %-- on or off, zipped or unzipped, or 
-hitching the zipper just enough to keep the jacket from 
-flying open, or zipping `q.all the way to the top` on a cold 
-day.  These dynamic patterns represent the emergence 
-of geometric dimensions within an underlying topology; I 
-can visually represent, and to some degree capture by 
-concepts, the degree to which the zipper is zipped along 
-an up/down axis, or the knob turned between `q.off` and 
-`q.max`/.`footnote.
-Perhaps it is not by accident that knobs and 
-faucets, in North America, given our left-to-right orthography 
-and our metaphor of `q.clockwise` as `q.forward in time`/, 
-that turning to the right tends to produce `q.on` or 
-`q.more` (heat, light, volume).
-`footnote`  A `q.functional mereology` does not only isolate 
-parts by virtue of functional parameters (like the dumbell's 
-{graspable/bulk}); it also reveals parthood isolated 
-by the presence of functional dynamics concentrated within 
-one area of a larger whole (the up/down of the zipper, or 
-left/right of the knob, which have no correspondants across 
-the general space of the jacket and stovetop).  Moreover, 
-these patterns 
-tend to elicit schema which abstract from specific spatial 
-and perceptual forms.  The idea of the zipper or the knob 
-as a zone of special dynamic affordances, relative to some 
-larger whole %-- both the mereological fact of a parthood 
-thus established, and the (at least partially) geometric 
-fact of the smaller zone, when attended to, revealing a 
-bounded but continuous dynamics %-- this pattern 
-is instantiated by a given jacket or stovetop but 
-is expected and replicated across almost all examples of 
-these concept.  The position of the zipper or the knob 
-provides a specification of the jacket or stovetop's `q.state`/, 
-and moreover a dynamics of how such state may be changed.         
+The fecundity with which these senses arises suggests to me that we should 
+not consider each `q.sense` as its own (sub)concept; instead, I would 
+consider `i.fly` to be `i.one` concept, not a loose assortment of 
+vaguely related concepts.  This concept coverts many different cases, 
+but the cases can be compared and characterized according to certain 
+overall criteria, such as the `i.cause`/, `i.reason`/, `i.agent`/, and 
+`i.destination` of the flight.  Flying `i.debris`/, `i.leaves`/, and `i.kites`   
+all rely on the power of wind, but the former implies a relatively strong gust 
+to dislodge solid objects naturally resting on the ground, whereas the latter 
+implies a human agent who orients the kite to best gather the wind.  
+Flying `i.birds` and `i.planes` are both self-powered, but the latter relies 
+on human agency to provide fueal.  The various senses of human flight are 
+comparable based on the kind of craft used, the relation between passengers, 
+pilots, and whoever owns the craft (contrast hobbyist who owns and flies 
+planes, an air force pilot, a passenger service where flying is a commercial 
+transaction).  Each of these distinctions provide parameters for comparing 
+different examples of flight.  No parameters, except perhaps for the 
+most general notion of airborn motion, apply to all cases and kinds of 
+flights; but each case involves some mixture of some relevant parameters, 
+and each parameter offers a ground of comparison.  For example, only 
+commercial flight involves a ticket, but once this parameter is 
+`q.activated` we can compare the price of different flights.
 `p`
 
 `p.
-These examples demonstrate a correlation between `i.state` and 
-`i.mereology`/: a particular parameter for the state of a whole 
-is often the state of one part, and a part can be isolated 
-by virtue of its bearing this state, or being `q.in` one 
-of a related set of possible states.  The fact of some 
-detail being part of a whole's state therefore tends to 
-suggest a mereological corrolary: there may well be 
-some part which embodies the state, and so the state 
-is a state of the whole because of (or by causal or some other 
-correlation with) being a state of the part.  Moreover, 
-the dynamics of the part-state reveal various degrees of 
-automony relative to other parts or to the whole.  If a stovetop 
-has several burners, each knob can be on or off independent of 
-each other.  For the stovetop to be considered `q.on`/, however,  
-(e.g., to be a fire hazard if unattended), it is enough for any 
-one knob to be on.  This network of automony and correlation 
-governs both the partonomy and the functional organization of the 
-whole: the knobs (and also the burners they control) are different 
-parts because they are mutually autonomous, at least 
-to some degree %-- they remain if nothing else physically 
-connected, part of one single appliance %-- but they are 
-all parts of one whole, whose state they can all influence.  
+It is hard to identify isolated `q.subconcepts` within general 
+flight because different parameters overlap in different 
+ways.  Passenger flight has unique aspects of cost and 
+value (and whatever legal and social considerations 
+come along with commercial transactions), but it shares 
+other parameters with other (but not all) senses: 
+relatively specific times and destinations of travel, 
+like the flight of birds but unlike that of leaves or debris; 
+the distinction between the subject and the agent of flight, 
+a `i.person` ia flying but by virtue of being on an aircraft, 
+so the subject/agent relation becomes a conceptual parameter, 
+which is also present in some other contexts, like cargo.  
+For an analogous example, we might think to subdivide the 
+concept of `q.restautant` into more specific cases %-- after 
+all, merely expressing the desire to visit a restaurant
+in general, or searching for one, can cover a wide spectrum 
+much of which may not actually reflect the speaker's/searcher's 
+interest.  Someone may want a formal dining experience, a casual 
+spot for family dinner, a healthy and inexpensive lunch, a 
+quick meal, or a place to have a snack and go online.  Certain 
+lexemes cover some part of these more specific spectra 
+%-- bistro, steak house, diner, coffee shop, cafeteria %-- yet none 
+of these compete with `q.restaurant`/'s dominance of the relevant semantic 
+territory: one will often use the more general word even when one 
+of the more specific ones apply.  I believe this can be explained, 
+in part, because the more general concept can be narrowed in 
+several ways at once, thereby providing a more effective point 
+of origin for a specified description; providing more 
+`q.avenues` for elaboration.  For example, a `q.Five Dishes and Soup` 
+spot in a Chinatown might be considered a Chinese restaurant and a 
+cafeteria, but there does not appear to be an established 
+usage `q.Chinese Cafeteria`/.  Even if `q.cafeteria` might be 
+plausibly defined as any restaurant without table service, it 
+seems to connote further details about the kind and pricing of the food.  
+Instead of specifiers offering a clear-cut segmentation of the 
+`q.restaurant` spectrum, English speakers seem to prefer the more 
+general usage and to provide further specification by an unfolding, 
+dialogic, and open-ended process, relying on communicative cues to 
+converge on an image of the `q.kind of place` some restaurant is, 
+rather than trusting some narrower lexeme (like `i.cafeteria` or 
+`i.diner`/) to impart these cues via convention.  Arguably, 
+in some specific circumstances, a narrower lexeme has indeed 
+achieved something like canonical status (`i.pizzeria`/, `i.coffee bar`/); 
+so a speaker using those terms, amongst a particular language community, 
+shows confidence that the allusions embedded in them convey a 
+sufficiently precise picture of the `q.kind of place` being mentioned.  
+But this specificity stands in semantic relation to the more general term, 
+even if the latter is replaced on some occasions: the ubiquity of the 
+word `q.restaurant` adds an extra dimension to a speaker's choice on 
+some occasion to instead say `i.pizzeria` or `i.coffee bar`/.  The concept 
+`q.flight`/, I would argue, has a similar semantic ubiquity; it 
+encompasses a spectrum of cases so broadly that the occasional 
+choice of a different word (`q.I jetted to London`/; `q.The birds migrated 
+south`/) carries the semantics not only of the word used but the dominant 
+one `i.not` used. 
 `p`
 
 `p.
-According to Olav K. Wiegand, 
-`quote,
-The unfamiliarity of an object exhibits itself 
-not by complete absence of anticipations that are 
-inducd by the type to which it 
-belongs, but rather by the degree to which 
-the typical latitude (`i.Spielraum`/) of 
-anticipations is determined.  Hence, the 
-`i.familiar` things of everyday life 
-are exactlythose things, perceived by virtue of their 
-typicality, that possess a minimal amount of 
-indeterminacy in their normal characteristics.  Such 
-familoar objcts give rise to a certain `q.intimacy` and 
-`q.automatism` in our dealings with them.  However, the 
-Phenomenologist views and analyzes these phenomena as a 
-highly complicated structure of 
-`i.explicit` and `i.implicit` expectations and memories.
-\\\vspace{.25em}
-A crucial point here, however, is that the 
-anticipated perceptions, to which the present one points, 
-are subject to two conditions: they must be in agreement 
-and conformity both with one another and with the 
-present perception....  Th individual object is 
-thus an `i.organized totality`/, the members of which are 
-subject to mutual `i.functional dependencies`/.  
-These dependenciescan now be clarified as having 
-two aspects: (a) each individual noma has a functional 
-significance for the whole (on could say tht 
-it maks demands on the whole in order to fit into the 
-whole) and (b) at the sam time the complete noematic system 
-determines the functional significance of each of its 
-parts.  Both of these make up what Gurwitch 
-calls the `sq.principle of sense conformity`/.  Expressed 
-noematically, the principle states that the complete 
-noematic system must be constituted in 
-such a way that it can adopt each perceptual 
-noema as a part or element of itself. 
-\cite[p. 14]{WiegandSemantics}
-`quote`  The likely implication is that 
-protention and retention are not based 
-solely on perceptual continuity %-- imagine the 
-continuous perceptual path accompanying the 
-act of turning over an object held in one's hand 
-%-- but more significantly on our functionalized 
-exprience of objects as structured wholes.
-
-`p`
-
-`p.
-What I have hoped to emphasize in the discussion so far, in any case, 
-is that mereotopological structures within real-world 
-phenomena sometimes take on functional patterns, which 
-engender schema that abstract from explicit experiential engagement.  
-These schema then become rules of interacting with classes of 
-objects, or metaphors which can be adoted in artifical-interactive 
-settings, like the use of knobs or scrollbars in a Graphical User 
-Interface, or scrolling though pages in an electronic document 
-with a motion that simulates `q.flipping pages`/.  Philosophically, 
-our study of these metaphors and these electronic environments 
-involves crossing from a phenomenology of the experienced world, 
-in which at some level of consciousness we register all sensory and 
-perceptual details, to a phenomenology of special `q.operational` 
-worlds %-- like the world of a computer application, or the 
-World Wide Web %-- in which consciousness is directed toward 
-norms and purposes of engagement, and less engrossed with fine-grained 
-sensory detail.  This is still phenomenology %-- in other words, 
-we need to understand Phenomenology more broadly than an 
-Analytic Philosophy of Mind sense preoccupied with qualia 
-and `q.first-person experience`/.  Qualia, in all their 
-experiential preciseness, are indeed intrinsic to the phenomenology 
-of the perceptual life-world, but the `i.life-world` is also the 
-world of all our actions and purposes, which often have schematic 
-forms that abstract from sensory detail, and which in our modern 
-age often engage us with constructed environments wherein consciousness 
-adapts to hyletically imperfect conditions.  Such ecosystems 
-%-- watching television, videos online, using software %-- lack in full 
-experiential `q.presence` as this is qualified 
-in phenomenologies of Virtual Reality Environments.  Yet as we become 
-engrossed in these constructed `q.worlds`/, the structures 
-of mental intentionality adapt to noemata individuated less by 
-sensory distinction and more by how artifacts in these worlds 
-implement learnt or familiar functional patterns, so that these 
-patterns permit (no less than `q.sense data`/) 
-the formation of attentional foci.
-`p`
-
-`spsubsectiontwoline.Individual Coherence and 
-Internal Structuration`
-`p.
-On this reasoning, a `i.cognitive` theory of 
-mereology can originate with `i.perceptual` 
-discontinuity but then generalize outward.  A part is 
-experienced as such not only because it is 
-visually or sensorily distinguishable from 
-its surroundings, but because it has some 
-functional integrity, perhaps reinforced by 
-conceptual specificity: the zipper in a 
-jacket, the knob on a stovetop, 
-the promotion rank on a chessboard, etc.  
-A thorough `q.cognitive mereology` should therefore 
-both differentiate these perceptual/functional/conceptual 
-foundations and also consider the structural accounts that 
-unite them %-- there are aspcts of parthood 
-that are correspondingly envincd in each partonomic 
-`q.mode`/.  For example, whether we ar econsidering the 
-relation perceptually, functionally, 
-or conceptually, a part is necessarily 
-both continuous with and detached from the whole, 
-in appropriate senses.  A part, therefore, 
-necessarily has some `i.individual coherence`/, 
-some features warramting its being experienced as 
-noticably distinct from the whole on some 
-attentional premise.  
-`p`
-
-`p.
-Meanwhile, a whole must in turn have individual coherence, 
-for it to be other than a trivial assortment of 
-other wholes.  The very idea of a `i.whole` implies a 
-balance between unifying criteria and sufficient 
-inner discontinuity, or `i.internal structuration`/, 
-to be appropriately cognized as a whole `i.with parts`/.  
-A putative whole with no coherent rationale 
-can be deemed `q.trivial` insofar as a random assortment 
-of physical objects, for example, is not itself 
-a physical objects.  On the other hand, an atomic or 
-undifferentiated whole is trivial in a different sense, 
-given that it becomes seemingly a partless a whole, a 
-whole removed in its own part from mereological considerations.  
-`p`
-
-`p.
-In this latter kind of case a putative whole may 
-have strong criteria of individuation, but 
-its status as `i.whole` depends on a surrounding 
-environment.  We tend to experience qquares on a 
-chessboard, or stripes on a flag, or say a solid-color 
-placemat, are `i.wholes` because they are `i.parts` of 
-a larger totality, against which their individuation can be 
-figured.  So, cognitively, parthood and wholeness 
-can be interdependent; there ar ecases where something's 
-cognitive status as `i.whole` relies on its 
-simultaneous status as `i.part`/.  Here we do 
-not experience comportments to whole-aspects or
-part-aspects as in tension; instead, they are 
-mutually founding.
-`p`
-
-`p.
-Jointly, then, `i.individual coherence` and 
-`i.internal structuration` present a kind of two-valued 
-criteriology modulating appraisals of 
-wholeness and parthood.  There are putative 
-wholes that seem to slide toward triviality 
-because there are few senses in which 
-their integral unity is relevant.  Consider the 
-British Commonwealth, which nomimally aggregates 
-most former UK colonis but would 
-rarely be classified as a geopolitical entity 
-analogous to the Unitd Nations 
-or the European Union, much less a sovereign nation.  
-These wholes effectively have 
-significant `i.internal structuration` but little 
-`i.individual coherence`/.  
-Meanwhile, there are wholes which seem 
-essentially insignificant %-- at 
-ast outside contxts where they are 
-parts in turn %-- because they have 
-`i.individual coherence` but little 
-`i.internal structration`/.
-`p`
-
-`p.
-The wholes which are important or meaningful, which 
-tend to evolve toward distinct concepts and 
-schematic conceptualization %-- 
-entrenched in conceptual schema, e.g. via 
-natural language lexicons %-- tend to lie 
-at the intersection of high apportions 
-of both `i.internal structration` and  
-`i.individual coherence`/.  If we imagine 
-these on a two-dimensional `q.scale`/, 
-say, an `q.IS/IC` scale, cognitively 
-significant wholes would tend to be 
-situated toward the upper-left of 
-region.  
-`p`
-
-`p.
-An IS/IC scale is at best a suggestive idea, a philosophical 
-trope; I don't actually think we should try to `q.quantify` 
-thse dimensions.  But as an image I think the 
-notion of intersecting `q.IS` and `q.IC` can serve as an 
-intuition not only for analyzing cognitive 
-frames %-- our perceptual/enactive comportment in 
-the momen %-- hut also our conceptual 
-systems that condition cognitive dispositions.  Mereological 
-models can have noteworthy structural significance 
-in this domain as well.  
-`p`
-
-`p.
-
+What this analysis suggests is that real-world language does not necessarily 
+show a tendency to semantic specificity, to a preference for more specific 
+usages and a relegation of more general terms to cases of deliberate 
+imprecision or abstraction.  If a language community had an instinctive 
+drive toward semantic precision, then dominant but imprecise words like 
+`q.restaurant` would tend to gradually be replaced in many cases by 
+narrower concepts, and to be retained mostly when speakers deliberately 
+intend to avoid any narrower connotations.  However, this does not 
+appear to be the way language in general evolves.  I believe that, 
+to an important degree, this fact can be explained by appeal to 
+conceptual roles: the point of a concept is not to condence as 
+precise a picture of its tokens into as concise a semantic unit as 
+possible, but rather to initiate a further descriptive process 
+as efficiently as possible.  
 `p`

@@ -218,87 +218,75 @@ subtleties that can trip up strictly `q.subsuming` mereologies
 `i.proper parthood` and `i.overlap`/.
 `p`
 
-`p.
-Usually when we hear part-like talk, we seem to 
-instinctively look for overlap-style relations 
-rather than subsuming inclusion of something 
-smaller into something larger.  The linguistic 
-template `i.$x$ is part of $y$` is usually interpreted 
-in such a way that $y$ actually has some existence or aspects 
-`i.not` part of $x$, but the current speakr's attention 
-is focusing on contexts where $x$ and $y$ overlap.  
-That's why we don't 
-hear it as odd or metaphorical if something 
-apparently larger is presented as a part rather than a whole:
 
-`sentenceList,
-`sentenceItem; Phenomenology is only part of 
-Merleau-Ponty's ouevre.
-`sentenceItem; Iraq and Afghanistan are only part of 
-`CENTCOMM;'s responsibility.
-`sentenceItem; Tomorrow's chicken soup 
-(with the leftover chicken in it) is my favorite 
-part of the chicken.
-`sentenceList`
-  
-If we're doing formal semantics, we might want to 
-say that the propositional form of these examples 
-is a matter of overlap rather than 
-proper parthood.  But something like 
-`i.Phenomenology overlapped with Merleau-Ponty's 
-ouvre`/, or vice-versa, sounds awkward 
-in comparison.  At the very least we have an apparent datum 
-that semantic structures involving overlap 
-often seem to invite surface articulations 
-involving explicit parthood.  From the angle of 
-NAM set against Classical mereology, of course, 
-overlap and parthood have a significant 
-difference: overlap is symmetric while parthood is not.
+`p.
+The rough progression to follow will migrate thematically 
+from cognition to science to 
+computer science.  I will, in effect, first examine 
+themes of parts and wholes in cognitive %-- perceptual,
+conceptual, and enactive %-- frames and schema, and 
+in the overall phenomenology of engaged world-experience.  
+Phenomenologically, parthood as such is 
+peconditioned on an experience of perceptual 
+(and/or conceptual and enactive) `i.discontinuity`/, 
+which establishes the possibility of a part being 
+cognized independently of its whole.  
+I will argue that our inclination to 
+recognize parts is influenced by 
+conceptual commitments: whether a putative 
+part can be recognized under a concept can determine 
+the difference between discontinuities passively 
+perceived and the active, explicit isolation 
+of parts as distinct available foci of attention.
 `p`
 
 `p.
-I'll give another example set on the lost continent 
-of Atlantis, to be concrete in a hypothetical 
-way.  Suppose the continent's largest newspaper, 
-the Atlantis Times, creates a consortium of 
-semi-autonomous local newspapers in smaller 
-Atlantian towns.  We can then consider the Consortium to 
-be part of the Atlantis Times: perhaps its offices are in the 
-Times's headquarters, and the Times funds, administrates, and legally 
-controls the Consortium.  But we can also 
-say that the Times is part of the Consortium, if 
-the Consortium includes a portfolio of papers 
-one of which is the Times itself.
+This role of concepts then invites us to consider 
+how the part/whole organizations we experience correspond 
+to functional patterns in our environing spaces: 
+what ar ethe physical and dynamic impulses producing 
+mereological patterns in physical reality?  To what 
+extent are subjective experiences of parthood 
+shaped by analogous relations in the objects we 
+perceive?  I will consider the dual options 
+of treating mereology as a model of partonomy 
+in our `i.concepts` %-- or cognition 
+or language; in general in the schema 
+we mentally employ to find order in our 
+surroundings %-- or conversely as a 
+formulation reprsenting parthood as a relation 
+in nature and in physical reality.  
+The latter interpretation leads to separate 
+quesions: what aspects of materiality 
+are operative in mereological instantiations, 
+when we deem these extramentally?  Is a part 
+compositionally enclosed in its whole; 
+or behaviorally dependent (but with some 
+partial autonomy) on a whole; or, more 
+dynamically, is a part some idntifiably 
+subspace of the state-space and dynamic 
+system of the whole?  Qua scientific oe 
+`q.paleoscientific` principle, how 
+should parthood be understood? 
 `p`
 
 `p.
-For a final introductory example, consider a web portal which 
-includes a collection of resources.  Suppose one of those 
-resources is another web portals which in turn 
-includes a collection of resources %-- one of which is 
-th original portal!  Reading `q.includes` as `q.has as part`/, 
-this is clearly a partonomic cycle.  Indeed the whole 
-`q.web` ideology is that resources link up in 
-complex and dense (and often circular) ways.  
-`p`
-
-`p.
-I think these kinds of examples are 
-both representative of `q.folk` mereology and 
-structures where non-anti-symmetry is a more effective 
-modeling assumption than anti-symetry.  In that case 
-NAM is not the theory of a few ersatz cases but rather 
-a general framework from which, if desired, classical mereology 
-could be recoverd as, so to speak, a proper part.
-`p`
-
-`p.
-So here I will present my thoughts on 
-what a `q.generalized` non-anti-symmetric mereology 
-can look like and how it might be practically 
-%-- i.e., technologically %-- applied.  
-Then I'll revisit philosophical terrain like 
-the sculpture/clay conundrum.
+Finally, having asserted a duality between cognitive 
+(phenomenological) and scientific (extramental) 
+mereology, I will discuss technological 
+and computer-science expressions of mereology 
+which combine both mental and extramental 
+dimensions.  Computationally 
+curatd and shared information systems 
+are at once cognitive and scientific phenomena 
+because they represent human judgments and enginering 
+for human usage, but also record 
+humans' attempts to systematically and, 
+to the degree warranted, non-subjectively record scientific 
+facts and data.  How mereology functions and 
+is modeled in information spaces therefore 
+unifies both `q.cognitive` and `q.scientific` 
+mereology, presenting new perspectives on each.
 `p`
 
 `p.

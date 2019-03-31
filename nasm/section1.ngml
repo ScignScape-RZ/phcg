@@ -1,605 +1,558 @@
-
-`section.`q.Criteriological` and `q.Expository` Mereology`
+`section.Mereotopology and Phenomenological Discontinuity`
 `p.
-In order to demonstrate a pragmatic, common-sensical NAM 
-proposal, I will consider logical or conceptual relations 
-which `i.seem` like mereological relations but 
-which `i.also` seem like they involve a 
-`q.cyclical` notion of parthood.  
-To facilitate discussion I will use the 
-symbol `hpp; to mean `q.has as proper part`/, giving 
-`hpp; different names in the course of debating 
-which parthood-concepts are most appropriate.  
-So parthood is modeled via `hpp; read left-to-right.  
-I will pay special attention to cases where both 
-(*) $x$ `hpp; $y$ and $y$ `hpp; $x$.  I'll assume by 
-definition that `hpp; is `q.proper`/, i.e. 
-nothing is `hpp; itself, so in (*) necessarily 
-$x$ is not identical to $y$.  By this setup 
-`hpp; is not transitive, since $x$ `nhpp; $x$, 
-but call `chpp; the transitive closure of 
-`hpp;.  Then (*) exemplifies a case where 
-$x$ `chpp; $x$.
+When we conceptualize something %-- or some class of `q.things` %-- 
+we inevitably interject cognitive and perceptual shema, 
+mental summarials of various kind which create cognitive routes 
+away from the explicit presentation of things themselves in 
+momentary consciousness.  Some sensory and perceptual details  
+have (at least for situations at hand) comparatively 
+minor individual importance even if they cumulatively 
+synthesize into experiential wholes which are important.  These 
+are details we tend to forget, or not talk about, or notice 
+only pre-consciously.  The detailing committed to memory, 
+focal attention, and language, tends to exhibit some recurrent 
+schema and often to operate on a higher scale of integration.
+While analyses of cognitive schema need to integrate 
+multiple perspectives, two facets of schema deserve 
+special attention: the mereological (concerned with part/whole 
+relations), and topological (concerned with spatial and functional 
+relations of contact, connectedness, boundaries, and 
+non-geometric properties of objects' shape, such as the 
+presence or absence of holes, the number of dimensions 
+%-- contrast a point, line, surface, solid %-- and relations 
+like a surface covering a solid, as in a table cloth, 
+or a solid inside an open area bounded by a surface, 
+like an object in a bag).
 `p`
 
 `p.
-Consider the Atlantis example, which posed that as 
-the Consortium being an `i.administrative part` 
-of the Atlantis Times, whilr the Times 
-is a `q.constituant` part of the 
-Consortium %-- if someone listed the papers in the consortium, 
-this list would include the Times.   Granted, these 
-are not exactly the same notion of mereology, 
-so we could treat this kind of case as an anomaly 
-due to two different mereological relations which happen 
-to conflict.  Of course, $y$ can be part 
-of $x$ on some criteria but not others: French 
-Guyana is part of Europe politically but part of 
-South America geographically. 
+Suppose I look at a Canadian flag. 
+Insofar as I identify the Maple Leaf pattern and the outer red stripes, 
+I perceptually divide it into distinct, visual pieces: I identify 
+discontinuities in the flag as an (otherwise) 
+integrated union of material and color.  
+On the other hand, if I observe its blowing to and fro in the wind, 
+or physically manipulate it (folding it ritualistically, for example), 
+I cease to attend specifically to the color patterns.  The flag therefore 
+lends itself to (at least) two different viewer comportments, 
+either as a continuous material object or as a setting for visual 
+patterns and icons, and (depending on which viewpoint we take) thereby 
+exhibits two different `q.topologies`/.  This duality is indeed intrinsic 
+to its semiotic functioning: a flag typically relies on visual forms 
+for the construction of symbolic patterns, representing characteristic 
+or celebrated aspects of a community's culture and history.  
+At the same 
+time, a flag in its semiotic function must be a physical entity 
+that can be perched over certain places and buildings, in plain 
+air, with specific material properties.  A reproduction of the 
+visual appearance of a flag, for example in an encyclopedia or 
+as a metonymic icon for a particular language, is not itself a 
+flag (contrast this to the reasons why a picture of a stop sign 
+in a driver's instruction manual is not a stop sign, or conversely 
+why a graphical reproduction of a copyrights or trademark symbol 
+may indeed be a binding example of such a symbol).  As `i.sign`/, 
+in short, a flag exists simultaneously as material cloth and 
+visual tableau, and has different morphological properties depending 
+on which (or both) of these guises dominate how it is disclosed to 
+us on each occasion.   
 `p`
 
 `p.
-However, there are millions of notions of parthood, and 
-mereology is not very useful if we can 
-only very rarely mix such notions together to 
-form complex ideas.  Problems like the violinist's 
-arm %-- which is not part of the orchestra %-- 
-suggest that transitivity between two 
-`i.conceptually different` kinds of parthood needs 
-be somehow restricted, but we should leave open the 
-possibility that concptually different mereologies 
-can still find `i.some` propositional connections.  
-This implies building in to mereological 
-theories a sense of the conceptual structure of 
-the parthood relations thereby theorized. 
+Our collectively surrouding environs, insofar as this forms the 
+horizon and selection-space for our signfications, embody multiple 
+potential topologies, multiple parameters of continuity and discontinuity.  
+Instead of a binary notion of (dis)continuity, we therefore need an 
+image of `i.partial` discontinuity, in which separation in one 
+parameter is joined with connectedness in another.  The Canadian flag, 
+for example, has regions separated by color but connected by 
+material substrate.  Such a combination is intrinsic to certain 
+concepts: for example, a `i.footprint` is not a foreign object in some 
+medium (like mud or sand), but involves a physical continuity crossed 
+with a distinct shape and impression, typically outlined by a separation 
+in one direction (down into the ground).  Partial discontinuity has 
+an intrinsic mereological aspect, insofar as its mixture of continuity 
+and separateness implies both a distinct unit and a larger whole of 
+which it is one part.  Therefore mereotopology can be adopted as a 
+study of topological properties in these cognitive and semiotic 
+contexts, where multiple topologies overlap.  
 `p`
 
 `p.
-I'll start by defining `hpp; 
-as something like: `q.`i.has as proper part by all relevant 
-criteria`/`/.  In other words, $x$ `hpp; $y$ means 
-`i.y is part of $x$ by all criteria relevant to $x$`/.  
-This does not exclude the mere Ontological possibility that 
-some part of $y$ may be outside $x$; but any such parts 
-are of no importance for $x$ %-- i.e., for any 
-propositions of practical significance for people 
-engaged with $x$ insofar and duing the time that they are 
-engaged with $x$.  On Atlantis, the Consortium 
-is an `q.administrative` part of the Times, and 
-let's imagine that for all practical purposs, for everyone 
-working for or otherwise engaged with the Times, 
-the Consortium is just `q.part` of the times 
-(no conceptual qualification needed).  
+Mereology in this kind of analysis can be more general than 
+splitting a whole into crisp parts.  Our experience of part/whole 
+`q.articulation` can depend on the regularity or symmetries 
+in some pattern, irregardless of whether we experience crisply delineated 
+parts.  For example, our experience of a chessboard depends on symmetries by 
+which a color space is mapped onto a spatial extent, as 
+much as on the visual discontinuity between black and white.  Imagine 
+an artistic chessboard on which the color lines are replaced with 
+smooth gradient transitions %-- the underlying color 
+space becoming a `q.loop` instead of a simple 
+two-valued collection.  Despite being topologically more complex, 
+this color-loop is nonetheless a distinct subset of all possible 
+color values, and the distribution of color values projected onto 
+the checkerboard surface can exhibit the same translational 
+symmetries of the two-valued, black/white board, creating the impression 
+of similar mereological articulation even in the absence of 
+identifiable distinct parts.  Furthermore, the chessboard's mereology has 
+functional as well as purely geometric properties.  Each square represents 
+a distinct site where, in a game, at most one piece may be placed.  
+It is certainly physically possible to violate this norm, 
+but such an arrangement would not model a real game situation, or 
+physically instantiate the abstract specifications of a chess match.  
+The pattern of lighter and darker squares also helps to visually 
+specify the rows, columns, and diagonals, so that players can 
+clearly see possible moves for the different pieces.
 `p`
 
 `p.
-But notice that `hpp; hereby conceptualized could easily be symmetric.  
-We could have both $x$ `hpp; $y$ and $y$ `hpp; $x$, if 
-$x$ is part of $y$ by all criteria `i.relevant to $y$`/.  The fact 
-that we are evaluating criteria relative to the whole 
-allows `hpp; to be inverted, since the former part then 
-`i.becomes` the whole and relevance-criteria are assessed 
-on `i.its` terms.  For employees of the 
-Consortium %-- those who promote, deliver, index, 
-or represent the papers, or whatever %-- the Times may be just one 
-of several papers in the portfolio.  By `i.their` 
-criteria, the Times is part of the 
-Consortium, not the other way around.  
+As such, a board-game `q.square` 
+is more one site in a functionally organized system than just a spatial 
+shape; it may function just as well even if it is not actually clearly 
+delineated as a shape (as in the hypothetical `q.artistic` board).  
+By analogy, geospatial regions like islands or political units 
+function as delineated wholes even if their precise spatial borders 
+are impractical to specify with arbitrary granularity (considering 
+how changing tides and water levels minutely alter the outline 
+of islands, or how border conflicts can obscure the actual 
+geospatial extent of nations).
 `p`
 
 `p.
-Someone looking from outside might prefer to say that 
-neither institution is truly a proper part of the 
-other.  Their vantage point compels them to consider 
-`i.both` parts' criteria, and in this holistic 
-sense there may be parts of the Consortium that are 
-not practically speaking parts of the Times, and vice-versa.  
-It might seem then that the `q.real` picture involves 
-no proper parthood on either side %-- and 
-therefore no NAM.
+For a mathematical model of the chess board or Canadian flag, we can consider 
+`q.product spaces`/, in these examples a simple, compact two-dimensional space 
+crossed with a discrete color dimension (red/white or black/white).  In the 
+statistical classification of dimensions as nominal, ordinal, interval, or ratio, 
+these color dimensions would be nominal, so there is no concept of relative distance 
+between colors.  This changes in the `q.artistic board` example, but symmetries 
+of the color/board product space preserve the mereological morphology.  This suggests 
+that a simple product-space model, such as one generated by an arbitrarily fine-grained 
+mapping (one color value for each dimensionless point), does not fully capture the 
+topological properties of the integrated space as a `i.functional` totality.  
+In Peter G\"ardenfors's Conceptual Space theory, color is a canonical `q.geometrized` 
+concept space, in which different (possibly overlapping) color-concepts can be 
+associated with well-defined quantifiable regions in a `q.color space` suitable 
+to several mathematical dimensionalizations (the `RGB;, `CMYK;, or `q.color wheel` of 
+computer graphics).  The coloration of a 2D surface is then a simple spatial-point 
+to color-point map.  Seen from a more functional perspective, however, color space 
+is less crisply quantified; for example, a chess board functions pretty well even 
+if fading and smudging corrupt the idealized black/white pattern.  We have a 
+tendency to `q.see` the pattern even if actual perceived colors merely approximate it, 
+which suggests that our disposition to find such patterns is driven by organizational 
+cues (like symmetries) as much as by crisp forms.  So color may have several different 
+functional roles.  It may be purely `q.contrastive` %-- consider how many tournament 
+chess boards replace black with green, to equal effect; or decorative, in which case 
+precise hues become important; or also symbolic, like the colors in most flags, 
+which often carry patriotic and/or geographic metaphors 
+(blue for sky or ocean, brown for soil, etc.).`footnote.
+Flags of African nations often 
+carry tones suggestive of the local landscapes (browns, greens, yellows), whereas 
+flags of European nations feature colors which are more `q.abstract` (like red and 
+white), or harder to match to geographic artifacts, except perhaps for blue, 
+which in an admittedly rather speculative analysis might signify that the most 
+concrete earthbound feature in those nations' historical collective consciousness 
+was the oceans %-- the routes to expansion, colonization, increasing national influence.
+`footnote`    
 `p`
 
 `p.
-That analysis is not wrong `i.per se`/, but it may 
-pare down parthood relations unacceptably.  After all, when 
-are the occasions where we say that $y$ is part of $x$ 
-`i.completely`/, in every sense?  An institute inside 
-an acadmic department may be spatially and administratively 
-part %-- its offices inside the building; 
-its staff demed departmental staff.  But the institute 
-might develop curricula, plan events, embrace intellectual 
-paradigms, and form a social circle somewhat autonomous from 
-and tangential to the department.  A specialized imprint 
-of a publishing house may prioritize disciplines 
-different from the larger company.  Usually parthood implies 
-some level of autonomy, in real situations, because 
-we usually don't expend the conceptual and 
-bureaucratic effort to keep track of 
-some mere part if the part's behavior or 
-properties is fully predictable from the 
-whole.  A semi-autonomous part can still be a 
-part %-- mereology can permit autonomy; indeed 
-this is a defining characteristic of complex systems 
-%-- but once we allow parts' autonomy it is easy to 
-soon realize aspects of those parts that make them 
-no longer seem `i.completely` part of their wholes.  
-We do jot have to abandon mereology 
-completely if we argue that those residual 
-parts are not `i.relevant` to the whole, and therefore 
-do not interfere with propositional attitudes 
-concerning the relationship on the whole's terms. 
+The previous examples considered mereology in terms of color, a dimension which has 
+functional as well as visual aspects, but similar analyses can involve parameters 
+with more purely functional interpretations.  Consider 
+the contrast between a dumbell fasioned from a single metal part and 
+those separated into a central shaft and detached outer rings.  While the 
+topology of these shapes is different, they have comparable functional 
+form: a good dumbell must be easy to grasp but relatively hard to 
+lift, so it needs parameters of both bulk and graspability.  In both 
+types, a central shaft provides graspability while outer bulges 
+provide heft; therefore these two parameters are distributed around 
+the shape of the dumbell, by analogy to the red/while of the 
+Canadian flag.  Relative to the `q.functional space` defined 
+by these parameters %-- a two-valued {graspable/bulk} contrast %-- the central area 
+is isolated by virtue of its graspability, analogous to the 
+central Maple Leaf pattern isolated by color, even if in some dumbells 
+there is no comparable discontinuity in the physical 
+extent considered alone.  Functional parameters can introduce 
+partonomies into an otherwise connected substratum, 
+or, conversely, topologically unify disparate pieces. 
 `p`
 
 `p.
-This definition of mereology is arguably more robust, because 
-it allows conceptually different mereological relations to be 
-unified.  The administrative nature of the Times 
-including the Consortium can coexist with the `q.compositional` 
-nature of the Consortium including the Times, as part of 
-one mereological system.  The key detail here 
-is that we allow `hpp;-relations to exclude 
-`q.irrelvant` parts %-- which of course means we 
-introduce a criteria of relevance, which can `q.filter` 
-the `q.Universe` of available parts.  For any $x$ whole, it 
-can consider $y$s as its parts on the basis 
-of filtering away irrelevant details.  Therefore 
-$x$ `hpp; $y$ does not force all $y$-parts 
-to also be $x$-parts (like, say, `i.being $y$` qua 
-metaphysical part of $y$), but just that any 
-stray $z$ in $y$ not be 
-a `i.potentially relevant` part of $x$.
+Geospatial semantics provide good examples of both 
+of these phenomena.  
+For most of its extent, the border between the New York City boroughs 
+of Brooklyn and Queens injects discontinuity into a terrestrial continuum.   
+Conversely, a jogger whose itinerary crosses East Harlem and 
+Randall's Island is making a closed loop in the borough of 
+Manhattan but not the island of Manhattan; also, the borough integrates 
+several other islands and also the small Marble Hill neighborhood on 
+the mainland, attached to the Bronx.  The tendency of geospatial 
+designations to either partition or bridge together geospatial 
+extent, sometimes with no apparent relation to geographical 
+features, is a canonical example of Barry Smith's distinction of 
+`i.fiat` and `i.bona fide` boundaries as constituting objects 
+of reference (and therefore of domain-ontological record).  
+The mere presence of a naming scheme induces `q.product spaces` 
+where geospaptial regions are crossed with names selected from 
+an nominal axis, like {M, B, Q, S, T} for the New York boroughs 
+(`q.T` for `q.The Bronx`/).
 `p`
 
 `p.
-I'll call the version of `hpp; just outlined 
-`q.criteriological` because it depends on 
-relevance-criteria localized to each whole.  Note 
-that `hpp; decays to `q.Classical` mereology if we 
-stipulate that there is only one global set of 
-relevance criteria across all wholes in the analysis.  
-Thus classical mereology is a restricted form 
-of this `q.criteriological` mereology. 
+Whether or not the outlines of named regions correspond with natural 
+features, the mere presence of fiat boundaries alters the functional 
+organization of geospatial extents seen as sites of human activity.  
+A walk along Myrtle Avenue, for example, might cross between Brooklyn 
+and Queens.  This discontinuity may have no `q.natural` meaning, but 
+could still be functionally significant; for example, if that path 
+is actually a proposed route for a parade, or central strip of a 
+business development zone, where regulations from both boroughs need 
+to be accommodated.  Fiat boundaries can also exercise causative 
+influence on the natural land itself: the border between 
+nations with different environmental laws might evolve into a 
+line between lands with different ecological properties.  Moreover, 
+fiat boundaries tend to be drawn on functional considerations: fiat lines 
+tend to be straight, presumably to facilitate surveying and resolving 
+land-claims; alternatively, borders may group together 
+speakers of a common language, or citizens who have 
+voted to form a union.  Geospatial regions, if they have political 
+and legal significance, are not just spatial forms, but 
+functional collections of people and places.  So `q.fiat` 
+boundaries are not really arbitrary.  Evolutionary pressures 
+act against truly random or arbitrary geospatial forms.  For example, 
+a border so misshapen that it causes inconvience for citizens 
+or government might end up being modified by popular demand.  A 
+dramatic example is the ill-conceived partition of India, which 
+resulted in the topologically disjoint marphology of Pakistan, and 
+finally a further war as East Pakistan seceded to become Bangladesh.  
+As a more peaceful example, on the Brooklyn/Queens border, the Ridgewood 
+neighborhood voted in 1950 to switch from being part of Brooklyn to part 
+of Queens.  There were several socioeconomic motives for this demand, 
+but the areas' architecture and urban space does seem 
+more reminiscent of Queens, and, probably 
+more important, the pedestrian and transportation routes seem more 
+conventient heading toward Queens business and government districts 
+than those of Brooklyn.  The point of this example is that the notion 
+of `q.fiat` boundary, while not entirely unmotivated, should not 
+be understood too simplistically.  Borders which seem arbitrary from a 
+purely geometric or geographic perspective may make sense 
+sociologically, or at least have their own social histories.  
+The connection of geospatial regions to socially recognized 
+names, and functional units (post codes, electoral districts, etc.), 
+both encapsulates and helps to create a complex system in which 
+human activity plays out against a geographic background.    
 `p`
 
 `p.
-As I have maintained, 
-things are not in most common-sense 
-perspectives `i.completely part` of 
-other things.  Usually the appearance of complete 
-parthood is an illusion conjured by 
-how parthood relations are disclosed.  For example, 
-surely Kyrian Mbappe is part of les Bleus.  
-But how do we know this?  Presumably we see his name on 
-a list of les Bleu's roster, or perhaps see him on the pitch 
-with the squad.  But the former case is not actually 
-a warrant (with no further logic) for Mbappe being 
-`i.part of` les Bleus; it is rather `i.Mbappe's name` 
-being listed as `i.a member of les Bleus' roster`/.  
-We use the referential relation between his `i.name` and 
-Mbappe himself to project to the idea of the player being 
-part of the team.
+A `q.topological` theory of functional organization should therefore 
+explore how notions of contact, connection, continuity, and 
+discontinuity are to be defined in functional as well as 
+purely spatial terms.  To say that two spaces are `q.in contact` can 
+mean different things, and purely physical contact may be replaced 
+with contact via travel, shipping, digital media, causal correlation, 
+etc.  A convey of cars can be modeled as a single unit, as if there 
+were actually physical forces connecting them, even though the 
+actual synergy between their movements depends instead on their 
+collective desire to stay together.  Similarly, a group of hikers 
+may adopt a spacing on a trail so that each hiker is visible to 
+one behind, but the group covers a relatively large area (consider a 
+search-and-rescue mission).  Here `q.contact` most 
+usefully means `q.visual contact`/.  Of course, 
+different notions of contact can functionally interrelate, or 
+fail to function properly in consort.  Political union can 
+forge contacts between disjoint regions, but (as in the 
+Pakistan/Bangladesh example) such non-physical connectedness 
+is not logistically equivalent to geospatial continuity.   
+Or, suppose that I remove a key from a keychain, 
+attach a small metal ring, and reattach that key to the new ring.  
+During this exercise the keychain has undergone several topological 
+modifications, but it has retained a certain cognitive unity as a 
+functional object %-- even when dissambled into keys and rings, 
+I can with some justice refer to the ensemble as `q.my keychain`/. 
+I can even carry around the disjoint lot in my pocket with the 
+intention of completing it later, while still thinking of it 
+in the singular.  But the loose key is be more likely to be 
+lost in that scenario: there are (at least) two different 
+topologies which are functionally relevant, one based 
+primarily on direct physical morphology and one based on 
+my intentions.  Functional parameters merge disparate 
+parts and introduce new topologies than yielded 
+directly from three-dimensional geometry, usually without however 
+rendering the original topology functionally irrelevant.
 `p`
 
 `p.
-But this referential indirection carries all the 
-potential for criteriological criteria I have discussed.   
-There is a sense of Mbappe being part of les Bleus 
-relevant to les Bleus %-- their training, formation, tactics, 
-marketing, popularity, etc.  Obviously 
-not every part of Mbappe is relevant to the team; he 
-does not train with them every minute.  Indeed, he has a whole 
-other career at Paris St.-Germain.  But aside from the 
-cognitive complexity of tracing in what senses he 
-is part of les Bleus, there is a nagging problem 
-of defining what `i.Mbappe is part of les Bleus` 
-actually `i.means`/.  Maybe this is simpler in 
-well-defined contexts: surely he is part of the 
-squad when he lines up in the starting eleven and 
-the ball is kicked off.  But surely also 
-Mbappe being part of les Bleus is a more 
-general phenomenon than just those 
-moments on the pitch.  
+On the other hand, functionalities can also introduce new criteria of 
+separation.  A zipper is distinguished from a jacket, partly perhaps by 
+a difference in color, but more importantly because it has 
+dynamic affordances, patterns of movement, distinct from those 
+of the jacket itself.  Similarly, a black knob on a white 
+stovetop stands out not only by color contrast, but by 
+the actions it permits.  The zipper and the knob introduce 
+patterns of continuous but delimeted change which give rise 
+to new concepts %-- on or off, zipped or unzipped, or 
+hitching the zipper just enough to keep the jacket from 
+flying open, or zipping `q.all the way to the top` on a cold 
+day.  These dynamic patterns represent the emergence 
+of geometric dimensions within an underlying topology; I 
+can visually represent, and to some degree capture by 
+concepts, the degree to which the zipper is zipped along 
+an up/down axis, or the knob turned between `q.off` and 
+`q.max`/.`footnote.
+Perhaps it is not by accident that knobs and 
+faucets, in North America, given our left-to-right orthography 
+and our metaphor of `q.clockwise` as `q.forward in time`/, 
+that turning to the right tends to produce `q.on` or 
+`q.more` (heat, light, volume).
+`footnote`  A `q.functional mereology` does not only isolate 
+parts by virtue of functional parameters (like the dumbell's 
+{graspable/bulk}); it also reveals parthood isolated 
+by the presence of functional dynamics concentrated within 
+one area of a larger whole (the up/down of the zipper, or 
+left/right of the knob, which have no correspondants across 
+the general space of the jacket and stovetop).  Moreover, 
+these patterns 
+tend to elicit schema which abstract from specific spatial 
+and perceptual forms.  The idea of the zipper or the knob 
+as a zone of special dynamic affordances, relative to some 
+larger whole %-- both the mereological fact of a parthood 
+thus established, and the (at least partially) geometric 
+fact of the smaller zone, when attended to, revealing a 
+bounded but continuous dynamics %-- this pattern 
+is instantiated by a given jacket or stovetop but 
+is expected and replicated across almost all examples of 
+these concept.  The position of the zipper or the knob 
+provides a specification of the jacket or stovetop's `q.state`/, 
+and moreover a dynamics of how such state may be changed.         
 `p`
 
 `p.
-In real life, a concept like an athlete being part of a team 
-can actually involve complex legal, financial, and 
-procedural criteria, so it may require a detailed 
-contract to state rather precisely what `i.being part of a team` 
-actually means.  However, supporters know the players on 
-their teams without knowing the requisite contractual 
-minutiae; in short, a fan's acquaintance 
-with their team's history enables them to summon a list of 
-current or past players on demand.  Ask a fan who is part 
-of the team, and they will rattle off 
-a list of names.  In this sense, they are conceiving a 
-kind of parthood which we might call `i.enumerative`/: 
-$x$ `hpp; $y$ if we would (under ordinary circumstances) 
-include $y$ when enumerating a list of $x$'s parts.  
+These examples demonstrate a correlation between `i.state` and 
+`i.mereology`/: a particular parameter for the state of a whole 
+is often the state of one part, and a part can be isolated 
+by virtue of its bearing this state, or being `q.in` one 
+of a related set of possible states.  The fact of some 
+detail being part of a whole's state therefore tends to 
+suggest a mereological corrolary: there may well be 
+some part which embodies the state, and so the state 
+is a state of the whole because of (or by causal or some other 
+correlation with) being a state of the part.  Moreover, 
+the dynamics of the part-state reveal various degrees of 
+automony relative to other parts or to the whole.  If a stovetop 
+has several burners, each knob can be on or off independent of 
+each other.  For the stovetop to be considered `q.on`/, however,  
+(e.g., to be a fire hazard if unattended), it is enough for any 
+one knob to be on.  This network of automony and correlation 
+governs both the partonomy and the functional organization of the 
+whole: the knobs (and also the burners they control) are different 
+parts because they are mutually autonomous, at least 
+to some degree %-- they remain if nothing else physically 
+connected, part of one single appliance %-- but they are 
+all parts of one whole, whose state they can all influence.  
 `p`
 
 `p.
-Technically, though, an `q.enumerative` mereology is `q.indirect`/: 
-we use, say, $y$'s `i.name` on a `i.list` of 
-$x$'s parts as proxy for $y$ being part of $x$.  
-Presumably $y$'s name is on the list because 
-it `i.is` part of $x$, at least on some criteria.  But 
-as such criteriological relevance is built in to the list 
-construction.  To enumerate the parts of $x$ we are not 
-committed to those parts being wholly subsumed under $x$; 
-just that they are `i.members of` $x$ in some 
-salient context.  An $x$ `i.taking` mereological 
-relations is then a matter of $x$ being concptually figured as a 
-collection, aggregate, or set.  Of course, wholes can be 
-conceived as multiples in different ways: all players in a 
-sports franchise's history is one kind of plurality; the current 
-roster is another; all the team's employees is a third.  
+According to Olav K. Wiegand, 
+`quote,
+The unfamiliarity of an object exhibits itself 
+not by complete absence of anticipations that are 
+inducd by the type to which it 
+belongs, but rather by the degree to which 
+the typical latitude (`i.Spielraum`/) of 
+anticipations is determined.  Hence, the 
+`i.familiar` things of everyday life 
+are exactlythose things, perceived by virtue of their 
+typicality, that possess a minimal amount of 
+indeterminacy in their normal characteristics.  Such 
+familoar objcts give rise to a certain `q.intimacy` and 
+`q.automatism` in our dealings with them.  However, the 
+Phenomenologist views and analyzes these phenomena as a 
+highly complicated structure of 
+`i.explicit` and `i.implicit` expectations and memories.
+\\\vspace{.25em}
+A crucial point here, however, is that the 
+anticipated perceptions, to which the present one points, 
+are subject to two conditions: they must be in agreement 
+and conformity both with one another and with the 
+present perception....  Th individual object is 
+thus an `i.organized totality`/, the members of which are 
+subject to mutual `i.functional dependencies`/.  
+These dependenciescan now be clarified as having 
+two aspects: (a) each individual noma has a functional 
+significance for the whole (on could say tht 
+it maks demands on the whole in order to fit into the 
+whole) and (b) at the sam time the complete noematic system 
+determines the functional significance of each of its 
+parts.  Both of these make up what Gurwitch 
+calls the `sq.principle of sense conformity`/.  Expressed 
+noematically, the principle states that the complete 
+noematic system must be constituted in 
+such a way that it can adopt each perceptual 
+noema as a part or element of itself. 
+\cite[p. 14]{WiegandSemantics}
+`quote`  The likely implication is that 
+protention and retention are not based 
+solely on perceptual continuity %-- imagine the 
+continuous perceptual path accompanying the 
+act of turning over an object held in one's hand 
+%-- but more significantly on our functionalized 
+exprience of objects as structured wholes.
+
 `p`
 
 `p.
-I would argue that the most common kinds of mereologies in 
-paractice are some variations on this theme: to conceive 
-$x$ as a `i.whole` means to conceive it as a `i.plurality`/, 
-which introduces the posibility of enumerating its 
-members, which thereby become its `i.parts`/.  But 
-rarely are part/whole relations thereby conceived 
-where the whole `q.fully surrounds` the part, absorbing it so 
-that mereological partiality vs. totality can be 
-readily resolved, like a room being part 
-of a house.  Usually the members of $x$ qua plurality 
-bear instead some functional and integrative relation 
-to $x$ in some context.  
+What I have hoped to emphasize in the discussion so far, in any case, 
+is that mereotopological structures within real-world 
+phenomena sometimes take on functional patterns, which 
+engender schema that abstract from explicit experiential engagement.  
+These schema then become rules of interacting with classes of 
+objects, or metaphors which can be adoted in artifical-interactive 
+settings, like the use of knobs or scrollbars in a Graphical User 
+Interface, or scrolling though pages in an electronic document 
+with a motion that simulates `q.flipping pages`/.  Philosophically, 
+our study of these metaphors and these electronic environments 
+involves crossing from a phenomenology of the experienced world, 
+in which at some level of consciousness we register all sensory and 
+perceptual details, to a phenomenology of special `q.operational` 
+worlds %-- like the world of a computer application, or the 
+World Wide Web %-- in which consciousness is directed toward 
+norms and purposes of engagement, and less engrossed with fine-grained 
+sensory detail.  This is still phenomenology %-- in other words, 
+we need to understand Phenomenology more broadly than an 
+Analytic Philosophy of Mind sense preoccupied with qualia 
+and `q.first-person experience`/.  Qualia, in all their 
+experiential preciseness, are indeed intrinsic to the phenomenology 
+of the perceptual life-world, but the `i.life-world` is also the 
+world of all our actions and purposes, which often have schematic 
+forms that abstract from sensory detail, and which in our modern 
+age often engage us with constructed environments wherein consciousness 
+adapts to hyletically imperfect conditions.  Such ecosystems 
+%-- watching television, videos online, using software %-- lack in full 
+experiential `q.presence` as this is qualified 
+in phenomenologies of Virtual Reality Environments.  Yet as we become 
+engrossed in these constructed `q.worlds`/, the structures 
+of mental intentionality adapt to noemata individuated less by 
+sensory distinction and more by how artifacts in these worlds 
+implement learnt or familiar functional patterns, so that these 
+patterns permit (no less than `q.sense data`/) 
+the formation of attentional foci.
+`p`
+
+`spsubsectiontwoline.Individual Coherence and 
+Internal Structuration`
+`p.
+On this reasoning, a `i.cognitive` theory of 
+mereology can originate with `i.perceptual` 
+discontinuity but then generalize outward.  A part is 
+experienced as such not only because it is 
+visually or sensorily distinguishable from 
+its surroundings, but because it has some 
+functional integrity, perhaps reinforced by 
+conceptual specificity: the zipper in a 
+jacket, the knob on a stovetop, 
+the promotion rank on a chessboard, etc.  
+A thorough `q.cognitive mereology` should therefore 
+both differentiate these perceptual/functional/conceptual 
+foundations and also consider the structural accounts that 
+unite them %-- there are aspcts of parthood 
+that are correspondingly envincd in each partonomic 
+`q.mode`/.  For example, whether we ar econsidering the 
+relation perceptually, functionally, 
+or conceptually, a part is necessarily 
+both continuous with and detached from the whole, 
+in appropriate senses.  A part, therefore, 
+necessarily has some `i.individual coherence`/, 
+some features warramting its being experienced as 
+noticably distinct from the whole on some 
+attentional premise.  
 `p`
 
 `p.
-In that sense `q.enumerative` mereology may seem to be 
-incomplete, because the very act of conceiving 
-a $y$ in its functional role as a member 
-of $x$ seems to color how we are disposed to 
-$y$; we seem interested in $y$ as member 
-of $x$ rather than on its own terms.  In practice, however, 
-conceptualizing many things %-- as least initially 
-%-- as members of some multiple seems 
-epistemologically unavoidable.  Most people would 
-never know of Kylian Mbappe `i.except` 
-as a forward for les Bleus.  Usually we are 
-introduced to things via reference to a containing whole, 
-and usually that whole is figured as a plurality, 
-collection, or type (rather than as a physical or 
-spatial part, say): we are introduced to 
-a friend's cousin as a member of her family; 
-we learn of a new young athlete when he is drafted by a 
-team; we learn about our friend's dog by first 
-being told his breed.  Epistemologically the 
-aggregate-whole gives us an entr\'e which we 
-can then follow up by learning about the part/member 
-on its own terms. 
+Meanwhile, a whole must in turn have individual coherence, 
+for it to be other than a trivial assortment of 
+other wholes.  The very idea of a `i.whole` implies a 
+balance between unifying criteria and sufficient 
+inner discontinuity, or `i.internal structuration`/, 
+to be appropriately cognized as a whole `i.with parts`/.  
+A putative whole with no coherent rationale 
+can be deemed `q.trivial` insofar as a random assortment 
+of physical objects, for example, is not itself 
+a physical objects.  On the other hand, an atomic or 
+undifferentiated whole is trivial in a different sense, 
+given that it becomes seemingly a partless a whole, a 
+whole removed in its own part from mereological considerations.  
 `p`
 
 `p.
-Merology in this kind of situation then models a kind of 
-epistemological sequencing, tracing how our cognitive 
-attention can migrate from whole to part.  It is easy 
-to see how parthood in this context can come out circular, 
-because the pursuit of knowldge often circles back on 
-itself.  We learn about Mbappe because of our interest in les 
-Bleus; then we learn about Mbappe's career, of which the 
-2018 World Cup was an important part; but then we 
-circle back to les Bleus.  Mbappe is part of an  
-`q.epistemological` whole in the sense of our 
-desiring to learn a relatively complete picture of 
-French international fotball.  Mbappe is part of any 
-encyclopediac treatment of les Bleus; likewise, 
-les Bleus is part of any encyclopediac treatment of 
-Mbappe.  I might call this `i.encyclopediac` 
-mereology.  Encyclopedias, indeed, are almost essentially 
-cyclical in how references link back and forth.  But 
-everyday language suggests that these information 
-networks can be understood as a mereology; 
-we can readily accept sentences like: 
-
-`sentenceList,
-`sentenceItem; Husserl is part of that Encyclopedia's article on 
-Matheamtical Foundations.
-`sentenceItem; That Encyclopedia of Analytic Philosophy 
-includes Husserl but not Brentano.
-`sentenceItem; Iraq is a big part of Bush's legacy.
-`sentenceList`
-
-Of course, Iraq is not literally part of Bush's legacy 
-or of `CENTCOMM;, as if these were geographic territories.  
-But the `i.idea` of Iraq, or in some sense 
-`q.reponsibility for` Iraq, finds a place there 
-conceptually.  
+In this latter kind of case a putative whole may 
+have strong criteria of individuation, but 
+its status as `i.whole` depends on a surrounding 
+environment.  We tend to experience qquares on a 
+chessboard, or stripes on a flag, or say a solid-color 
+placemat, are `i.wholes` because they are `i.parts` of 
+a larger totality, against which their individuation can be 
+figured.  So, cognitively, parthood and wholeness 
+can be interdependent; there ar ecases where something's 
+cognitive status as `i.whole` relies on its 
+simultaneous status as `i.part`/.  Here we do 
+not experience comportments to whole-aspects or
+part-aspects as in tension; instead, they are 
+mutually founding.
 `p`
 
 `p.
-Granted that only a hard-core idealist would equate the 
-mereological relations of the `i.idea` of 
-somthing with that thing's own 
-mereological relations.  Surely the 
-`i.idea` of Iraq is part of many things that Iraq 
-itself is not part of.  But in fact many 
-practical applications of mereological theories 
-depend on tracing mereological relations 
-in a network of `i.ideas`/, or at least something 
-cerebral and/or computational rather than physical: 
-Web Ontologies, Information Systems, and so forth.  
-Consider the case of a web portal $W$ whose reasources 
-include a portal $W'$ which links back to $W$.  
-In general, web portals `i.contain` resources in the 
-sense that they link to or provide 
-access to web resources %-- resources that are not 
-necessarily `q.part of` the entry-point in the 
-enginering sense of being on the same servers, or 
-being `URL; subdomains.  So `i.to be part of` in 
-an Information Space $I$ (I'll use this as a generic 
-word for database, portal, Information System, etc.) 
-generally means that $I$ provides access 
-to, provides a kind of structrued 
-entryway to (e.g. a searchable front-end), or 
-`q.exposes` some affiliated resource $R$.  Here saying 
-$R$ is part of $I$ also means that 
-$I$ `i.links to`/ $R$, which suggests $R$ and $I$ 
-are peers rather than granularly mismatched.  
+Jointly, then, `i.individual coherence` and 
+`i.internal structuration` present a kind of two-valued 
+criteriology modulating appraisals of 
+wholeness and parthood.  There are putative 
+wholes that seem to slide toward triviality 
+because there are few senses in which 
+their integral unity is relevant.  Consider the 
+British Commonwealth, which nomimally aggregates 
+most former UK colonis but would 
+rarely be classified as a geopolitical entity 
+analogous to the Unitd Nations 
+or the European Union, much less a sovereign nation.  
+These wholes effectively have 
+significant `i.internal structuration` but little 
+`i.individual coherence`/.  
+Meanwhile, there are wholes which seem 
+essentially insignificant %-- at 
+ast outside contxts where they are 
+parts in turn %-- because they have 
+`i.individual coherence` but little 
+`i.internal structration`/.
 `p`
 
 `p.
-In short, in structures that might be conceived as 
-Information Spaces, the commensense picture that mereology implies a 
-difference in scale %-- parts are at least somewhat 
-smaller than wholes %-- seems readily contradicted.  
-I will consider the consequences of this `q.cross-referencing` 
-in the final section of this paper.
+The wholes which are important or meaningful, which 
+tend to evolve toward distinct concepts and 
+schematic conceptualization %-- 
+entrenched in conceptual schema, e.g. via 
+natural language lexicons %-- tend to lie 
+at the intersection of high apportions 
+of both `i.internal structration` and  
+`i.individual coherence`/.  If we imagine 
+these on a two-dimensional `q.scale`/, 
+say, an `q.IS/IC` scale, cognitively 
+significant wholes would tend to be 
+situated toward the upper-left of 
+region.  
 `p`
 
 `p.
-Taking a cue from the `q.linked data` nature of 
-Information Spaces, the underlying model of parthood 
-in this kind of theory might involve 
-some form of epistemological linkage, where access to 
-or information about parts is part of the epistemological 
-interface afforded to their wholes.  Mbappe as part of 
-les Blues means, for instance, that an information-source 
-profiling les Blues should link or provide entry to 
-a comparable source profiling Mbappe.  As a notion of 
-parthood, this contains an extra layer of indirection, since 
-we can distinguish a `i.link to` $y$ from $y$: an encyclopedia 
-entry on les Blues which Mbappe is a part ot actually 
-contains a `i.link` to Mbappe.  And we get 
-informed of Mbappe being part of les Bleus' 
-roster by seeing his `i.name` on a list.  
-Thus mereological relations often involve an intermediary 
-name, link, or designation which stands in 
-for an actually autonomous part in partonomic contexts.
-`p`
-
-`p.
-To make this somewhat formal, we need two relations: 
-first, a notation like `pprofy; which I'll 
-call (borrowing a term from Cognitive Grammar) 
-`q.profiles`/.  The relation of a `prof; profiling 
-a $y$ could be read, according to context, 
-as the conceptual tie between a 
-web address, computer pointer, or other technological 
-reference-artifact and its target; or the 
-designatory relation between proper names and their 
-objects; or a more cognitive form of reference.  
-Then I'll introduce a whole-to-profile relation 
-`wtp; such that `xwtpp; can read `i.$x$ contains `prof;, 
-which profiles something (other than $x$)`/.  
-Combining `wtp; and `profriso; yields a three-part 
-double relation like `xpy;, for `i.$x$ contains `prof;, 
-a profile of $y$`/.  Then finally a version of 
-`hpp; can be defined as this three-part relation 
-abstracting `prof;: `xhppy; becomes 
-`i.$x$ contains a profile of $y$`/.
-`p`
-
-`p.
-This particular version of `hpp; may be useful because it 
-is adaptable.  It accomodates systems where profiles 
-of $y$ either are or aren't `i.parts` of $y$, according 
-to familiar mereological criteria.  Dependeing on how 
-that goes, this latest `hpp; could model 
-`q.criteriological` mereology: suppose the 
-profile of $y$ in $x$ is the only part or aspect of $y$ 
-which is relevant to $x$.  Then `pprofy; acts as a 
-relevance filter, the profile selecting salient 
-parts of $y$ and excluding residual parts from mereological 
-consideration.  Then `xpy; can be read as $x$ encompassing 
-all parts of $y$ when filtered by $p$.  Either `prof; 
-expressly operates to isolate $x$-relevant aspects, or 
-$x$-relevance is derived from a filtering 
-according to more general criteria, like the 
-properties of a restaurant being subdivided into culinary, 
-operational, nutritional, and architectural dimensions 
-%-- i.e., a restaurant has architecturally relevant parts, 
-operationally relevant parts, etc.
-`p`
-
-`p.
-I will do further analysis however of the alternative model 
-where profiles are `i.not` in general parts of what 
-they profile.  Instead, a profile is 
-like an epistemological or technological 
-device that `q.exposes` or permits access to something 
-else, like a pointer to a region of computer memory.  
-I'll call this model `q.Expository` mereology.  
-The canonical idea of parthood is now that 
-$y$ is a `i.proper part of` $x$ if and insofar as 
-$x$ `q.exposes` or provides an information link to $y$.
-`p`
-
-`spsubsectiontwoline.Normalizing 
-Arbtitraily Granular Mereologies`
-`p.
-One potential benefit of the Expository 
-model is that it may be applicable to and/or reflective 
-of how technology concretely implements mereological 
-systems.  I contend that any classical mereology 
-can be directly mapped to an Expository mereology: 
-take any classical parthood instance `xhppy;.  
-Designate a profile for $y$ inside $x$, say, 
-`profinx;.  Then reinterpret `xhppy; to 
-mean `xpy; where `prof; is `profinx;, along 
-with a restriction that any $y$ can have at most one 
-profile, and has `i.exactly one` profile 
-if it has a (classical) whole %-- actually 
-this one profile is part of the whole 
-`i.in lieu of` $y$. 
-`p`
-
-`p.
-So expository mereology includes Classical 
-mereology as a special case, but it allows for generalizations 
-which patch over conceptual objections that may be 
-raised to Classical mereology in its unadulturated form.  
-In practice the maxim that each $y$ has only on profile 
-may be too restrictive.  Instead, multiple divergent 
-wholes may overlap with $y$ in different ways and contexts.  
-For instanc, Mbappe is part of les Blus, and 
-also PSG, the Afro-French community, the Mbappe 
-family, etc.  This might be changing 
-the subject somewhat: `q.overlap-systems` 
-characterized by generally complex entities that overlap 
-in different modes and contexts are a different area of 
-philosophy that mereology.  But in reality 
-thse two theories are intertwined: many conceptual 
-phenomena can be approached both from a mereological 
-perspective and an `q.overlap` perspective.  
-The two kinds of thories may be viewed on a spectrum, 
-with mereology emerging as we attend more 
-to the filtering effects of `xhppy; parthood, 
-the relation either witnessing or effectuating 
-our disposition to ignore non-$x$ parts of $y$.
-`p`
-
-`p.  
-To put it differently, arguably 
-any mereological system is an overlap-system 
-which we are able to filter or simplify to 
-reduce cases of practically inconsequential 
-externality that would otherwise block 
-proper parthood.  If almost always $y$ is 
-`i.never` an `i.completely subsumed` part 
-of $x$ then (classical) `xhppy; has to 
-reference some kind of theory that 
-$y$'s non-$x$ parts are inconsequential.  
-So `q.relevance` can be like a `q.knob` 
-tuning in mereological `i.or` overlap theories 
-depending on whether we are more or less 
-sympathetic of filtering: mereologies emerge 
-when we tolerate filtering non-$x$ $y$-parts in 
-`xhppy; as practically appropriate, and 
-overlap theories arise from merologies when 
-we realize that filtering skirts 
-around legitimate Ontological, cognitive, 
-conceptual, or natural-language/pragmatic concerns.  
-I think that the system of operators `wtp;, `profr;, and 
-`hpp; (when defined from the other two) models 
-both mereological and overlap systems and accordingly 
-can unify both kinds of thories.
-`p`
-
-`p.
-Aside from this philosophical case, however, there is a 
-practical benefit to the `q.Expository` definition of 
-`hpp; which applies to Classical as well as non-antisymmetric 
-mereologies.  In a 
-mereological system, profiles need not have their 
-own parts, because any internal structure belongs not to 
-the profile in itself but to the thing profiled.  
-Accordingly, on Classical terms, 
-we can have only one `q.wholes` layer 
-and only one `q.parts` layer: there are wholes whose 
-parts are profiles, and profiles refer to other 
-wholes.  This two-layer architecture takes the place 
-of a classical system where partonomic nesting may be 
-arbitrarily deep.  Of course, `hpp;-chains 
-can be arbitrarily long, but in Expository mereology 
-%-- although `hpp; `i.conceptually` models 
-parthood %-- the relata in `xhppy; are not considered to 
-be on intrinsically different scales.  The 
-`wtp; relation `i.is` across levels, but in 
-`xhppy; we go from a whole $x$ to a `i.profile` and then 
-back to another whole.  This is not to rule out some 
-scale of size within the order of wholes, but that 
-detail is not intrinsic to the system. 
-`p`
-
-`p.
-I will generalize the two-level model a small bit, with 
-the following rationale: on occasion the intuition that 
-profiles point toward `i.one` target may be too 
-restrictive.  Suppose `prof; profiles a `i.set`/, $s$.  
-We could treat $s$ as a whole and model its members 
-via their own profiles in $s$, but then we hav an extra layer of 
-indirection that may serve no modeling purpose.  
-For this reason I allow that there may be a level higher-scale 
-than wholes, which I'll call `i.frames`/.  This 
-results in a three-level system: a higher level with frames, 
-a lower level with profiles, and an intermediary 
-level which contains most of the primary 
-objects of investigation or conceptualization.  Profiles can 
-target multiple objects at this mid-level by targeting a frame 
-rather than a single object.`footnote.
-The significance 
-of frames emerges in some semantic and technological 
-contexts where we want to distinguish between 
-relatively dispersed collections and 
-complex wholes with some organizational oherence, such 
-that we are inclined in many contexts to treat them as singular.  
-That is, arbitrarily collating any collection into a whole 
-may dilute a model's ability to distincguish between 
-intgrated wholes that often function as singles, 
-from fiat wholes that warrant encircling in a specific 
-context but do not on most criteria cohere 
-as individuals.  So as not to bias 
-`q.wholeness` toward either coherent or fiat aggregates, 
-I propose a `q.frame` level for `q.fiat` wholes 
-distinguished, as a system feature, from intermdiate 
-wholes with significant `i.individual coherence`/.
-`footnote`
-`p`
-
-`p.
-With this addendum, Expository mereology then 
-becomes a three-level system.  Arbitrarily complex 
-scales of granularity can be modeled `i.within` the 
-levels, particularly at the intermediate level, but the 
-formal model can express a technological design 
-where only those three levels need to be 
-implemented as computational primitives. 
-`p`
-
-`p.
-A consequence of this design is that arbitrarily complex 
-mereological systems can be encoded in hierarchy 
-with only three levels, a process I'll call `q.normalization`/.  
-This process is philosophically analogous to 
-normalizing a hierarchical document database to a 
-computationally more malleable graph database.  
-Moreover, I will close this section by noting
-that the Expository mereology relation 
-is quite naturally non-anti-symmtric: if $x$ contains 
-a profile of $y$ there is no restriction 
-against $y$ containing a profile of $x$.  With that 
-in mind I'll refer to an Expository mereology using 
-the general three-level model and its associated 
-non-anti-symmtric `hpp; relation as an `q.N3` 
-model or encoding.`footnote.
-I don't propose this term outside the present writing 
-because it conflicts with N3 in the Semantic Web 
-%-- a notation for graph structures.  N3 mereologies 
-are actually a superset of N3-expressible 
-data structures, where the second N3 is the 
-Semantic Web term.
-`footnote`
+An IS/IC scale is at best a suggestive idea, a philosophical 
+trope; I don't actually think we should try to `q.quantify` 
+thse dimensions.  But as an image I think the 
+notion of intersecting `q.IS` and `q.IC` can serve as an 
+intuition not only for analyzing cognitive 
+frames %-- our perceptual/enactive comportment in 
+the momen %-- hut also our conceptual 
+systems that condition cognitive dispositions.  Mereological 
+models can have noteworthy structural significance 
+in this domain as well.  
 `p`
 
 `p.
 
 `p`
-
-

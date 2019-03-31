@@ -27,6 +27,23 @@ files" as intellectual quanta whose only signification is as
 a rational bridge to something else; i.e., in a mereological
 system, profiles ned notbhave their own parts. Accord
 
+
+
+I am now going to transition away from the case for 
+non-antisymmetry and launch a review of different areas 
+of philosophical mereology as I see them: w
+
+`p.
+What are the 
+analyses to which mereology can be productively applied?  
+What are the analyzands suggesting that mereology should 
+be pursued as a distinct philosophical topic; that 
+part/whole relations have some recurring, foundational, 
+and distinctly formalizable role in 
+phenomena and conceptualization? 
+`p`
+
+
 `p.
 I contend this kind of model with limited granular 
 levels is a more accurate representation of 
@@ -43,4 +60,66 @@ multi-level, hierarchical information %--
 consider an XML database %-- transforms this 
 structure into something more like an object-graph 
 (consider an XML Document Object Model). 
+`p`
+
+`p.
+These two areas are sometimes 
+grouped together as `q.Mereotopology`/, which %-- at a technical 
+level %-- concerns alternative 
+constructions for mathematical topology which avoid the 
+arguably problematic notion of dimensionless points, and 
+%-- in a more computational vein %-- concerns models of 
+spatial reasoning and representation where individual 
+points, infinitely divisible space, and real-valued  
+geometry are cognitively or technologically implausible or 
+impractical.  Both human and Artificial Intelligent 
+conceptions of space seem to often rely on schemas of 
+coarser-grained relations, like overall direction or overlap 
+or relative distance, rather than precise numerical, 
+geometric recognition of objects' locations within a 
+real-valued grid.  From this basic orientation, I also 
+believe the notion of Mereotopology can be extended 
+to concern schemas where mereological and topological 
+relations or aspects are interrelated, in a variety 
+of cognitive, linguistic, and computational contexts.  
+Therefore I assume a rather general understanding 
+of `q.Mereotopology` as any theorizing involving 
+mereological and topological analyses in consort, while 
+not neglecting to orient such theories against the 
+`q.core` notion of Mereotopology as `q.region-based 
+theories of space`/.
+`p`
+
+`p.
+Mereotopology can be thematized on two fronts: 
+first, from the 
+perspective of how mereotopological properties of 
+familiar physical objects suggest accounts of their 
+functional properties; second, from a more conceptual angle, 
+how spatial and functional properties help demarcate 
+the sense and extent of concepts.
+The act of focusing attention on one object, or 
+some interrelated cluster of objects, simulataneously 
+marks their collective separation from surroundings 
+and highlights their internal connectedness.  Often 
+there is a finer-grained scale where internal 
+separation, instead, is more clearly perceived; 
+attention tends to move across scales as readily as 
+across spatial location.  At least as an intuitive 
+picture %-- and perhaps, in some contexts, as a formal 
+model %-- we can consider this balance of aggregate 
+connection and surrounding separation in topological 
+terms.  That is, attention tends to introduce (or 
+magnify) discontinuity between some focal entity and 
+its surroundings, and to minimize discontinuities within it.  
+Each particular focus of attention is one manner in 
+which a complex object or system may be revealed.  
+The continuities and discontinuities thereby involved 
+in a particular attention-act are therefore facets of 
+the object/system intended in experience, which can 
+perhaps be modeled via topology.  In this 
+phenomenological thought milieu, objects do not 
+have `q.a` topology; but, often, many different 
+topologies depending on whether certain discontinuities 
+are or are not attended to.
 `p`
