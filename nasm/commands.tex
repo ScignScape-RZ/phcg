@@ -532,6 +532,8 @@
 \newcommand{\langC}{\AcronymText{C}}
 \newcommand{\SDK}{\AcronymText{SDK}}
 
+\newcommand{\URL}{\AcronymText{URL}}
+
 \newcommand{\SOV}{\AcronymText{SOV}}
 \newcommand{\SVO}{\AcronymText{SVO}}
 
@@ -583,8 +585,10 @@
 
 % nasm
 \newcommand{\hpp}{\ensuremath{\rhd}}
-\newcommand{\chpp}{\ensuremath{chpp}}
-\newcommand{\nhpp}{\ensuremath{nhpp}}
+\newcommand{\chpp}{\makebox[2pt][l]{\raisebox{0pt}%
+{\ensuremath\rhd}}\ensuremath{\triangleright}}
+\newcommand{\nhpp}{\makebox[2pt][l]{\raisebox{2pt}%
+{\ensuremath\smallsetminus}}\ensuremath{\rhd}}
 \newcommand{\prof}{\ensuremath{\mathfrak{p}}}
 \newcommand{\profr}{\hspace*{2pt}\ensuremath{\makebox[1pt][l]{\textemdash}\rhd}}
 \newcommand{\wtp}{\ensuremath{\makebox[3pt][l]{\ensuremath{>}}{%
@@ -600,3 +604,5 @@
 \newcommand{\Rcal}{\ensuremath{\mathcal{R}}}
 
 \newcommand{\hTwoO}{H$_2$O}
+
+\newcommand{\CENTCOMM}{\AcronymText{CENTCOMM}}

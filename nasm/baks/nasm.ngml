@@ -1,0 +1,59 @@
+
+\documentclass[11pt,twocolumn]{article}
+
+`include<commands>;
+
+\AddToShipoutPicture{%
+  \AtPageLowerLeft{%
+    \hspace*{1em}
+ \rotatebox{90}{%
+        \begin{minipage}{\paperheight}
+   \centering
+   {\color{codegr!65}\textcopyright ~\today{} Nathaniel Christen}
+        \end{minipage} %
+      }
+    } %
+  }%
+
+`document,
+
+`title.NASM`
+
+`maketitle;
+
+`abstract,
+NASM
+`abstract`
+
+`quote,
+Now, the `q.science of salience`
+proposed by Petitot and Smith (1997) illustrates the
+kind of formalized analysis made possible through the direct
+mathematization of phenomenological descriptions.
+Its aim is to account for the invariant descriptive
+structures of lived experience (what Husserl called `q.essences`/)
+through formalization, providing a descriptive geometry of
+macroscopic phenomena, a `q.morphological eidetics` of the
+disclosure of objects in conscious experience (in Husserl's
+words, the `q.constitution` of objects).
+Petitot employs differential geometry and morphodynamics
+to model phenomenal experience, and Smith uses formal structures from
+mereotopology (the theory of parts, wholes, and their boundaries)
+to a similar effect.
+`quote`  %--  Maxwell James Ramstead
+
+`vspace<1em>;
+
+`input<intro.ngml>;
+`input<section1.ngml>;
+`input<section2.ngml>;
+`input<section3.ngml>;
+`input<section4.ngml>;
+`input<section5.ngml>;
+`input<section6.ngml>;
+`input<section7.ngml>;
+`input<conclusion.ngml>;
+`input<biblio>;
+
+`document`
+

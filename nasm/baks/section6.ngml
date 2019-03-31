@@ -1,0 +1,690 @@
+
+`section.Mereology and Models`
+`p.
+Last section I voiced skepticism 
+that abstract logical models (in contrast 
+to scientifically-inspired theories) 
+concerning mereology are of great philosophical 
+value.  I'll defend this opinion in this 
+section by adopting (for sake of argument) 
+a model-theoretic perspctive.  So assume 
+that when we have a non-contradictory logical 
+system we can analyze its collection of possible 
+models, where each model is a set with some 
+additional structure (stipulated by the 
+logical axioms and whatever further 
+detailing they entail).
+`p`
+
+`p.
+What, then, would be `i.models` of mereological 
+theories in this logical sense?  Imagine a collection 
+of `q.voxels` %-- three-dimensional indivisible 
+cubes with two states (`i.empty` or `i.full`/).  
+Two (orthogonally) adjacent voxels can be said 
+to form a `q.block`/, and in general a set of 
+connected voxels to form a `q.connected block`/, say.  
+The system of connected blocks then forms a 
+classical mereological model where proper parthood 
+is voxel set inclusion.  Let's call this a 
+`q.Voxel Mereology`/.
+`p`
+
+`p.
+Some picture like this may feel like a natural bridge 
+between logical-axiomatic mereological theories and 
+philosophical analysis.  The rason is that 
+a Voxel Mereology undeniably instantiates Classical 
+Mereology and also fits our intuitive picture 
+of physical reality.  In our folk phsyics, we experience 
+objects as resisting force and sustaining shape as if they 
+were composed of hard little bricks.  And we can match this 
+intuitive picture to actual science by imagining voxels 
+sized to the small units of quantifying possible, 
+e.g., the Planck scale.  Science suggests that there is indeed 
+a scale of reality finer than which there is no 
+possible scientific measurement, information, or 
+discrimination.
+`p`
+
+`p.
+But, as I argued last section `visavis; `q.ur-particles`/, 
+such quantum analogies are of limited value.  
+Space itself at the Planck scale does not fit the ambient 
+Euclidean topology that voxels presuppose; nor is there 
+a precise quantum distinction between `q.matter` and `q.emptiness`/.
+So we can't just assume our voxel picture plugs 
+in to quantum physics.  Instead, Voxel Mereology 
+is at best a bridge %-- it encapsulates how we `i.experience` 
+physical reality while also offering a rough 
+conceptual figuration of physical principles, like the 
+idea of a smallest measurable unit of space.  Rather than as 
+an analogy to the quantum realm, Voxel Mereology is 
+perhaps most realistic as describing in 
+approximate detail the Emergent Properties of ordinary macroscopic 
+physical objects.  Compact solids do tend to behave 
+as if composed of hard `q.bricks` on a scale fine enough to 
+mold to their convex geometry.
+`p`
+
+`p.
+Having said that, `i.parthood` within macroscopic 
+physical objects does not really work like little 
+lego pieces being lifted apart.  Usually 
+parthood reflects some functional or 
+manufactured assemblage; the knob on a drawer, 
+the cap on a bottle; the twig on a branch, etc.  
+Parts can of course break off with no apparent 
+functional integrity: if the bottom of a table leg 
+spliters away, or a small tree branch is blown 
+apart from the tree, the surface where the detachment 
+occurs will presumably evince a jagged, apparently 
+random edge.  Setting the `q.voxel` scale small enough can 
+still model the geometry of the parts, but that seems 
+besides the point.  In reality, patterns of breaks are not 
+completely random; they reflect stress points and accumulated 
+forces acting upon the larger object, and 
+the geometry of the detached part reflects the structures 
+of thse forces.  Like the patterns formed by water spilling 
+over a surface, complexity and semi-randomness still 
+has some mathematically tractable background.
+`p`
+
+`p.
+In short, a `q.voxel` model has limited usefulness even as 
+an approximate picture of solid wholes.  While connected voxel-blocks 
+are not unrealistic discrete approximations of three-dimnsional 
+shaops, voxels are less appropriate for representing 
+part-whole relationships: a model of parthood (in the 
+context of solid physical objects) is better organized around 
+functional or mechanical constructs.  There are parts induced by 
+the accumulative processes which form wholes, like 
+twigs on a branch.  There are also parts deriving from 
+stressors, fault-tolerance, and other material qualities 
+of solid substance in the sense of materials science, 
+where lines of force and/or vulerability can dispose pieces 
+of a whole to become semi-detached, giving them 
+some definitional autonomy relative to the whole.  But 
+properly modeling these material 
+tendencies presumably involves mathematical 
+formations like vector fields, where the voxel 
+discretization is at best conceptually 
+tangential.  Even if connected 
+voxel-blocks can model induced parts as well as wholes, it is not 
+clear what physical reality such a model 
+would capture; it is more like a predefined 
+conceptual scheme imposed on a mostly unrelated physical 
+situation. 
+`p`
+
+`p.
+So `q.Voxel Mereology`/, as a straightforward model 
+of an axiomatic Classical Mereology, has at least dubious 
+merit as a model of physical states of affairs.  
+We could try to refine the model in a more scientifically 
+rigorous way %-- in the direction of mereotopology, 
+for example, allowing $n$-dimensional generalizations 
+of voxels and/or infinite subdivision.  So we could 
+have a system whose elements have varying dimensions 
+(perhaps to a maximum 
+of four, representing temporal change) and smaller-dimensional 
+objects can be part of larger-dimensional ones.  
+Moreover, any objects of non-zero dimension can 
+potentially have proper parts; there are no `q.atoms`/.  
+This picture may be more appropriate for 
+topological or differential-geometric 
+representations of surfaces and manifolds as they 
+would apply to science.  To have a useful notion 
+of parthood we may want to restrict partonomic 
+assertions to parts which are not too `q.bizarre` 
+%-- perhaps to connected open or closed manifolds, 
+excluding `q.fractal` shapes of fractional dimension, 
+or infinitely scattered subsets.  By way of 
+naming a juxtaposition with `q.Voxel Mereology`/, 
+I'll call this theory `q.Manifold Merology`/.
+`p`
+
+`p.
+Certainly topological spaces can be a foundation for 
+Classical Mereology models.  As with voxels, though, 
+we need to consider how applicable these models 
+are to empirical phenomena.  The topology of 
+manifolds may be a better (e.g., 
+non-discrete) approximation of material objects' nature; 
+for instance solids' outer bounday is reasonably seen 
+as a 2-manifold immersed in 3-space.  There still is 
+not a perfect isomorphism between material parts and 
+submanifolds, however.  Granted, to a reasonable 
+approximation every recognizable part of an 
+object has a corresponding submanifold.  For sake of 
+discussion, suppose we equate all wholes and parts to 
+their 2-manifold surface (and assume 
+parts are three-dimensional submanifolds of 
+three-dimensional wholes).  Assume the 
+surface of a part either overlaps with the 
+surface of a whole or else is entirely inside 
+the whole (that is, assume we are using a 
+version of the Region Connected Calculus).  
+The system of parts in relation to wholes is 
+then an example of a system of submanifolds 
+in relation to manifolds.   However, the system of 
+manifolds has some properties that 
+may not be desired in a mereological thory.  
+For instance, for a submanifold properly contained in a 
+larger manifold, a sufficiently small deformation of 
+the smaller manifold yields a new manifold 
+also contained in the larger.
+`p`
+
+`p.
+The mereological equivalent to this property is 
+that if `xhppy;, there is an infinite space of 
+topological deformations of $y$ yielding $y'$s 
+that, without some extra criteria, will also be in $x$.  
+We can of course stipulate that only some submanifolds 
+correspond to actual parts, but then the formalization of 
+submanifolds is only one dimension in the 
+description of parthood.  Whereas Voxel Mereology was a 
+flawed model of (solid, material) objects because its discrete 
+architecture was at best a rather arbitrary 
+structure superimposed on physical forms, 
+Manifold Mereology has limits of applicability 
+for essentially the opposite reason: mathematical 
+continuity allows for infinitessimal modifications 
+of geometric forms in ways that have no physical meaning.
+`p`
+
+`p.
+Both the Voxel and the Manifold pictures are only 
+indirectly representations of `q.solid matter`/; 
+they are actually models of geometric extension, 
+figured either discretely or continuously.  
+The `q.voxel` as a binary empty-or-filled spatial region 
+is an idealization; but physical surfaces as 2-manifolds 
+is an idealization also.  Physical solids do not have a 
+crisp boundary where their interior ends and surroundings 
+space begins, such that exterior surfaces can be mathematically 
+embodied in 2-manifolds.  This may be a reasonable 
+approximation for some solids, just as the voxel 
+`q.little brick` picture is somtimes mostly 
+appropriate.  But neither are physically oriented 
+theories of how matter actually extends in and relates to 
+surrounding space.  Instead, they are 
+mathematical formulations of extension 
+per se, as geometric primitive.  This may yield 
+valuably mathematics %-- consider differential 
+geometry as a theory of physical procsses 
+on objects' surface, or even tools like 
+NURBS (Non-Uniform Rational B-Spline, a feature of 
+Computer-Aided Design and Computer Graphics) 
+for computarionally modeling solid geometry.  But 
+mathematical formalizations always have 
+at best an indirect relation to physical phenomena. 
+`p`
+
+`p.
+This may suggest an intrinsic limit to any 
+axiomatic mereology invoked as part of a philosophical 
+treatment of parts and wholes: any `i.model` of 
+such a system has to be interpreted as a model 
+(to some approximation) of physical wholes.  
+But the most natural mereological models are likely 
+to be mathematical systems, like 
+discrete geometries or topologies %-- perhaps 
+with certain mereologically-inspired 
+restrictions (e.g. distinguishing 
+connected submanifolds from submanifolds in 
+general) %-- or perhaps algebraic models, like 
+lattices.  In any case we then need a further 
+account of the relation between the 
+mathematical idealization and 
+physical reality.  So the mereological 
+system is removed at two steps from 
+physical phenomena, which means the 
+philosophical analysis has to provide at 
+least two `q.bridge` theories alongside 
+the formal statement of the mereological 
+system, to explain why the 
+proposed axiomatization is a 
+philosophical subject-matter.
+`p`
+
+`p.
+The tenor of this line of analysis is not 
+restricted to mereology; I would 
+make similar arguments about the theory of 
+concepts, say, or `q.truth-theoretic` semantics.  
+The `i.potential` problem in any use of logical-axiomatic 
+systems in a philosophical context is that 
+models of the system will always be 
+fundamentally abstract.  At best they can 
+serve as simplifying and/or explanatory 
+idealizations, so long as `i.we` in an exercise of 
+philosophical reasoning can connect the model 
+to the phenomenal explananda.  
+But doing so rigorously requires one (or maybe 
+several) `q.bridge theories`/, which means 
+that however well-conceived a system may be 
+as an artifact of pure logic, its philosophical 
+value can be muted for want of 
+an adequate  bridge theory.  To motivate 
+a claim that this effect can indeed apply 
+to mereology, I will present analyses of 
+related situations, as I see it, in 
+theories of concepts and semantics, 
+harkening back to my earlier overview 
+of Formal Concpt Analysis and then Cognitive Semantics.
+`p`
+
+`spsubsectiontwoline.Concepts and lexemes are not model-thoretic models`
+`p.
+Because Formal Concept Analysis can be rigorously 
+defined axiomatically, it certainly has abstract 
+models; but we need to explain how models of that theory actually 
+relate to conceptualization as a phenomenon of 
+human intellect.  Formal Concept Analysis engages a 
+structural morphology of concepts 
+not very different from the building 
+blocks of a mereology; intensional 
+`q.features` and extensional `q.examples` jointly 
+characterize concepts, which can then 
+be merged together or split apart.  For example, 
+merging the feature-set of two concepts, and then 
+selecting all examples which have all (or a sufficient 
+number of) the combined features, represents an 
+`q.addition` between concepts (a variation is to 
+consider examples with `i.common` features of 
+two concepts: so a potential 
+milk-plus-almond-milk concept would have as examples any 
+liquid exhibiting the features milk and 
+almond milk have in common).
+`p`
+
+`p.
+Formal Concept Analysis may provide an interesting systematization 
+of discriminitive or evolutionary factors shaping 
+how humans intuit and modify concepts.  There are other 
+formal concept models as well, such as prototype-based 
+models, or the idea of mapping concepts to rgions in 
+qualitative spaces, featured in Conceptual Space Theory.  
+These various theories can be combined; for example, 
+Formal Concept Analysis can be extended with prototype criteria 
+such that features and examples are weighted in terms 
+of how essential they are to the relevant 
+concept (as features) or how characteristic they are 
+(as examples).  The most representative prototypes 
+of a concept are (on such a model) ones 
+that strongly reflect the features most 
+indicative of the concept.  These criteria 
+of weights and prototypes can be adjoined to 
+the feature/example matrix of Formal Concept Analysis, 
+yielding an axiomatic system which may model, to some 
+approximation, human conceptual activity.
+`p`
+
+`p.
+When we start to compare these formal models with actual 
+conceptual patterns, however %-- for instance 
+in Cognitive Semantics or Cognitive Grammar %-- 
+the models start to seem unnaturally simplistic 
+and superimposed.  It's not that structural 
+analysis of cognitive representations is impossible; 
+but rather that each structure tends to have its 
+own `i.sui generis` rationale, and trying to 
+trace cognitive gestalts to an 
+axiomatic foundation starts to feel, at best, 
+reductionistic.  
+`p`
+
+`p.
+Analogously, a `q.truth-theoretic` model of linguistic 
+meaning %-- mapping sentences to logical formulae 
+or to truth conditions %-- have intuitive appeal but 
+also many apparent counter-examples.  A full discussion 
+is beyond the scope of this paper, but I'll give some 
+of my favorite examples demonstrating why truth-theoretic 
+readings are, in my opinion, at best incomplete: 
+
+
+`sentenceList,
+`sentenceItem; \label{itm:sangalong} Everyone sang along to two songs.
+`sentenceItem; \label{itm:performed} Everyone performed two songs.
+`sentenceItem; \label{itm:boroughs} New Yorkers live in one of five boroughs.
+`sentenceItem; \label{itm:commute} New Yorkers often gripe about long commutes.
+`sentenceItem; \label{itm:democratic} New Yorkers reliably vote Democratic.
+`sentenceItem; \label{itm:after} Student after student came out against the tuition hikes.
+`sentenceItem; \label{itm:mass} A critical mass of students came out against the tuition hikes.
+`sentenceItem; \label{itm:tipping} Students' anger about tuition hikes may have reached a tipping point.
+`sentenceList`
+
+If a truth-theoretic model is accurate, it should be possible 
+to capture the approximate signifying content of each of these sentencs 
+by expressing them in logical form; or at least show a 
+systematic translation of surface linguistic structure 
+to truth-making conditions.  I want to argue that every of these 
+sentences fail the test.
+`p`
+
+`p.
+Start with (\ref{itm:sangalong}).  The most natural interpretation 
+to my ear %-- i.e., I imagine the kind of scenario 
+where (\ref{itm:sangalong}) is most likely to be expressed 
+%-- involves some sort of concert which included two 
+particularly popular songs, that most people in the audience 
+could sing along with.  On that reading, there 
+were `i.exactly two songs` and the sentence does not 
+commmit to `i.literally` everyone singing them.  
+Conversely, (\ref{itm:performed}) strikes me as talking 
+about musicians onstage rather than the audience, and 
+suggesting that each performer had a two-song 
+set; i.e., each performed two 
+`i.different` songs.
+`p`
+
+`p.
+So, I hear a wide-scope reading for `q.two songs` in 
+(\ref{itm:sangalong}) but a narrow scope in 
+(\ref{itm:performed}).  What I want to emphasize is `i.why` 
+we would make that judgment: there is nothing 
+in the sentence itself that points toward 
+a wider or narrower scope.  Instead this follows from a 
+pragmatic construal of the verbs involved: 
+to `i.perform` seems to bind the verb to its subject 
+more tightly than `i.sing along`/.  The situational 
+model most appropriate for `i.perform` leans toward 
+narrow scope, while the situational 
+model for `i.sing along` leans toward wide scope.
+`p`
+
+`p.
+In (\ref{itm:boroughs}), a reasonable interpretation is that, 
+according to the sentence, `i.all` New Yorkers live in 
+one of five boroughs.  Indeed, the territory of 
+New York is precisely partitioned into five boroughs. 
+On the other hand, (\ref{itm:commute}) does not 
+appear to commit to referencing literally `i.all` 
+New Yorkers; meanwhile it also appears to use the 
+phrase `q.New Yorkers` differently than (\ref{itm:boroughs}), 
+to mean generically people who work in New York or 
+live in New York's metro area.  In the case of 
+(\ref{itm:democratic}) we hear `q.New Yorkers` narrowly 
+as in (\ref{itm:boroughs}), because voting relates 
+a person to their actual place of residence (not 
+where they work or their metro area).  However, 
+the implicit quantifier in (\ref{itm:democratic}) 
+is `i.most`/, not `i.all`/; it does not fit our 
+conceptual picture of `q.voting` to imagine 
+one party winning `i.all` votes.  
+Again, these contrasts are not produced by sentence 
+or phrasalform; they are instead driven by 
+lexical peculiarities of words 
+like `i.borough`/, `i.commute`/, and `i.vote`/.
+`p`
+
+`p.
+In the last three sentencs, we can similarly hear an 
+implied quantifier to the effect that `i.many` 
+students are complaining or unhappy about some tuition 
+increases.  But each sentence adds a shading on the generic 
+form like `i.many students complained`/: in 
+(\ref{itm:after}) the speaker tries to connote the 
+pervasiveness of students' anger by giving it a temporal 
+figure.  She suggests how a temporal recurrence of 
+some phenomenon reinforces our sense of its extent; 
+not only is it aserted that many students are unhappy, but that 
+this fact has come to hear awareness multiple times.  
+The verbiage used to describe unhappiness, also 
+%-- `i.come out against` %-- carries an extra spatial or 
+narrative dimension than a plainer alternative like `q.complained`/.   
+To `i.come out against` implies a public, maybe even activist 
+display of anger.  In (\ref{itm:mass}), a similar figuration 
+of `i.many` imposes an interpretive attitude on the 
+sentence: to refer to `i.many` as a `i.critical mass` 
+implies not just magnitude, but `i.enough` magnitude 
+to effectuate something: (\ref{itm:mass}) might be said of 
+a case where student protests forced a school 
+to cancel planned hikes.  And (\ref{itm:tipping}) is 
+similarly implying that some threshold may be 
+crossed, without indicating (at least within the 
+sentence) what the speaker thinks might happen then.
+`p`
+
+`p.
+These readings do not dispute that each sentence in 
+(\ref{itm:sangalong})-(\ref{itm:tipping}) have a logical 
+substance that could be modeled as quantified assertions, 
+using the appropriate quantifiers in each 
+case (`i.every` performer/audience member; 
+`i.all` New Yorkers; `i.most` New Yorkers; 
+`i.many` students).  Lexical variation 
+(like `q.New Yorker` meaning both a resident of the 
+city and the metro area) has to be accounted for, 
+as does scope variation (like an `i.everyone ... two songs` 
+case, where `q.everyone` as `q.space builder` 
+introduces both a global and a local space such that 
+scopes must be resolved for the rest of the sentence).  
+I grant, however, that an underlying predicate logic can 
+be enriched to represent these added scope and 
+lexical details.  So I believe that, at least among 
+the sentences I've analyzed, we `i.can` construct a 
+logical representation which captures 
+the intended meaning of the sentencs.
+`p`
+
+`p.
+However, this by itself does not strike me as legitimating 
+a truth-theoretic semantics.  One reason is that the actual 
+words chosen provide shades of meaning %-- narrative or figurative 
+construals, interpretive connotations, visual imagery 
+%-- which add communicative content 
+that cannot be readily modeled within logical 
+details themselves.  In the `q.many students` examples, 
+different formations taking the place of 
+`i.many` present different interpretations 
+or figurations of the described states of affairs.  
+These added details, however, can still be said to 
+have a logical structure: for instance 
+the `i.critical mass` language implies the speaker thinks 
+the sheer number of students complaining `i.caused` something 
+to happen.  As such, the interpretive or 
+figurative implications of the word-choices can be 
+seen as a compact or rhetorically effective way to denote an 
+underlying logical structure.  We can, even in these cases, find 
+a propositional content; except, the language 
+itself uses figurative or connotative devices to actually refer 
+us toward that content.
+`p`
+
+`p.
+My broader claim is that there is no effectively logical 
+transformation `i.from` the linguistic 
+content as presented `i.to` the constituent elements 
+of the relevant, signified propositional content.  
+What `i.rules` are we following when we hear 
+`q.sing along` as having wide scope and 
+`q.perform` as having narrow scope?  Or 
+hear the implicit quantifier in (\ref{itm:democratic}) 
+and (\ref{itm:commute}) as `i.most`/, but in 
+(\ref{itm:boroughs}) as `i.all`/?
+`p`
+
+`p.
+I am prepared to admit that a truth-theoretic `i.semantics` 
+need not be a truth-theoretic `i.grammar`/; that is, 
+we can say that sentences have a propositional content 
+that semantics should isolate, even if there 
+is only an indirect mapping from the surface-level 
+linguistic performance to the predicate structure 
+which, in many cases, we could see as sentences' 
+`i.meaning`/.  Linguistic expressions do 
+not, in general, structurally recapitulate the form 
+of propositional assertions laid out mechanistically.  
+Truth-theoretic models could still have semantic validity 
+if we say that situational awareness and sensitivity 
+to rhetorical nuance allows us to proceed, perhaps 
+circuitously and interpretively, from 
+language acts to predicate structures.  The predicate logic 
+of language is not so baldly apparent that we can 
+program computers to understand language, but 
+everything that seems not-quite-logical about 
+language %-- its reliance on connotation and 
+figuration %-- could, we might speculate, 
+be cordoned off as an economy of `i.grammar`/.  
+We speak figuratively because it is grammatically 
+more efficient %-- and, partly for this reason, 
+rhetorically more persuasive %-- to designate 
+propositional content indirectly, rather than speaking 
+in surface forms mimicking predicate algebra.     
+`p`
+
+`p.
+However, my analysis suggests that the 
+indirection of the expression-to-proposition 
+path is `i.not` just grammatical.  As I argued, 
+our disposition to read logical 
+formations as one way and not another 
+%-- wide scope or narrow, `i.most` or `i.all` 
+%-- depends in part on the semantics lexically 
+embeded in words like (in these cases) 
+`i.borough`/, `i.commute`/, `i.vote`/, or 
+phrases like `i.critical mass` and `i.tipping point`/.  
+Our belief that parsing a sentence includes 
+mapping down to a propositional intention 
+does not help us trace the semantic effects which different 
+word-senses contribute to this process.  In short, 
+the cognitive structures which must receive language 
+%-- the situational awareness and 
+interpretive empathy that tunes us toward 
+communicative intent %-- is not only manifest 
+in how linguistic form translates to propositional 
+signification.  It is also embedded in the lexical 
+specificity of word-senses themselves.  Even when the 
+semantics of `i.sentences` can be expressd propositionally, 
+the semantics of thir constituent words does not 
+fit mechanically into the semantics of the whole.
+`p`
+
+`p.
+Taking these analyses together, I am trying 
+to describe cases where philosophers have turned to 
+some logical, axiomatizable system to 
+compose a model judged for its value as a 
+philosophical sketch of some kind: a model 
+of parthood as a precis of part/whole relations 
+among physical phenomena; a feature/example statistic 
+as a Formal Concept space; a prototyped and dimensionalized 
+feature-space as a Conceptual Space theory; or a 
+construal of semantcs (abstracted from pragmatics and syntax) 
+equating the meaning of sentencs to 
+their propositional content.  
+In each of these cases we have to consider how a model 
+for the logical `i.system` could also 
+be a `i.philosophical` model; an explanatory tool 
+or simplifying idealization that casts philosophical 
+light on cognitive or physical phenomena.
+`p`
+
+`p.
+Philosophical models do not need to be models of 
+physical objects or systems direcly; they could encapsulate 
+or productively simplify how we perceive or conceptualize 
+external reality.  In that case we want to question the 
+cognituve place for the `i.logical` model  
+%-- the model-of-the-logical-system in 
+the model-theoretic sense.  For instance, is actual 
+human conceptual process a model of Formal 
+Concept Analysis in its guise as an axiomatic 
+system whose formmulae can b realized in 
+axiomatic models?  Do concepts as cognitive 
+entities model those axiomatics?
+`p`
+
+`p.
+Or if we look for extramental models, to what extent can 
+physical objects and systems realize axiomatic structures?  
+Certainly sciences present models (often useful and, on 
+that basis, probably relatively accurate) of 
+physical phenomena, and often do so via mathematical 
+structures that are logical modles of an 
+axiomatic system.  So the relevant 
+scientifically studied phenomena become indirectly 
+associated with the stipulated axiomatic.  But 
+as I have argued, the logic is two stps removed 
+from the phenomena; at best the siting of 
+logical structures in empirical reality 
+%-- the idea that material systems ralize structures that can 
+be abstractly specified %-- depends on complex 
+scientific investigation.  It requires detailed analysis 
+to show how a terrain of scientific givens %-- the populations 
+of species in an ecosystem, say %-- play out 
+as exemples of a logically hypotheized (e.g. in 
+this case Darwinian or genetic) theory.
+`p`
+
+`p.
+Scientific models are therefore theoretical utilizations 
+of axiomatic structures (usually via a mathematical intermediary), and 
+provable consequencs of the axiomatic system can factor in 
+to scientific reasoning.  But scientific models are 
+not `q.logical` models in the sense that science gives 
+us sets that axiomatically realize logical systems by 
+grounding quantification domains that allow 
+positions in logical formulae to be inhabited.  
+The logical model-theoretic picture %-- that axiomatic systems 
+get instantiated in sets of entities into which 
+logical symbols quantify %-- is at best only 
+abstractly applicable to scientific models, 
+which do not yield a physical reality composed of 
+`q.sets` whose members can be unproblemmatically labeled 
+with logical symbols.
+`p`
+
+`p.
+To the degree that logical systems have even indirect 
+axiomatic realization in philosophically salient 
+contexts, then, they have to be `q.routed` either 
+through cognition or through `q.science`/.  Either an 
+axiomatic schema represents (perhaps with some 
+deliberate simpification) how 
+we cognize some region of phenomena, 
+or else it models how the phenomena behave 
+irrespective our cognitive inclinations 
+(of course, it can do both in mutual 
+influence).  But either we have to see axiomatic 
+systems embedded in structures 
+sutured in cognitive structure, or we have to see 
+axiomatic systems embedded in scientific 
+theories of phenomenal composition and behavior.  
+In any case axiomatic models have to `q.latch on to` 
+cognitive and/or scientific models to have a 
+philosophical resonance.
+`p`
+
+`p.
+This effectively metaphilosophical ideology, I think, 
+includes mereology as an (important) special 
+case.  Introducing mereology via an axiomatic 
+system is quite common, even in philosophy.  But 
+I'd argue that the philosophical value of 
+an axiomatized mereological system is dependent 
+on how and whether it can latch on to 
+the requisite cognitive and/or scientific 
+models to make its own, axiomatic model-building 
+something more concrete than afforded by set-based 
+model theory in pure logic.
+`p`
+
+`p.
+This brings me to my final case for NAM: 
+non-antisymmetric mereologies have 
+more or better `i.concrete models` than 
+Classical mreologies.  I'll call this 
+the Model-Theoretic Argument: 
+when we look at `i.concrete` models in 
+cognitive or scientifically-described systems 
+%-- not just imagined models like 
+`q.Voxel Mereology` which are more about 
+notating philosophical intuitions than 
+philosophical expos\'es of thought or reality %-- 
+non-antisymmertry, not antisymmetry, predominates.
+`p`

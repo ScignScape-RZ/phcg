@@ -1,0 +1,46 @@
+
+Note that according to Classical measures
+of parthood, Expository mereology only has parthood relations
+between wholes and profiles, and moreover we can
+assert with no loss of generality that [rofiles themselves
+do not contain (as opposed to \point to") other parts.
+I assume a semantics where profiles are not themselves
+organized data structures, but rather referential atoms
+7
+© March 30, 2019 Nathaniel Christen
+leading to (arbitrarily complex) structures outside themselves.
+Proper reference in, say, natural language is not
+quite so simple | consider first and last names | but we
+crtainly do seem to have a conceptual ability to coalesce
+cognitive quanta with almost no internal structuration,
+save for designating intellectually complex structures;
+and with this mechanism build up arbitrarily complex
+cognitive models. Analogouslt, computer software uses
+pointers to build up arbitrarily complex data structures
+without unworkable amounts of memory manipulation.
+Our ability to designate complex wholes with simpler
+icons | consider cities as dots on a map, or facial portraits
+as links to bibliographies | sure is a key enabler
+of complxity in our conceptual and semiotic systems.
+In short, we los no complexity when we envision \pro-
+files" as intellectual quanta whose only signification is as
+a rational bridge to something else; i.e., in a mereological
+system, profiles ned notbhave their own parts. Accord
+
+`p.
+I contend this kind of model with limited granular 
+levels is a more accurate representation of 
+how Information System actually work, considering 
+the design of resource networks (like the 
+World Wide wen) and software systems (with 
+objects and pointers) or (relational) database 
+architcture (with tables and primary keys).  It is technologically 
+simpler to have only two or three levels of 
+organization and model complex structures via some kind of pointer 
+or indirect (e.g., foreign-key) reference.  
+Internally, technology that interacts direcly with 
+multi-level, hierarchical information %-- 
+consider an XML database %-- transforms this 
+structure into something more like an object-graph 
+(consider an XML Document Object Model). 
+`p`
