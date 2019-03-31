@@ -1,4 +1,4 @@
-`section.Concreteness and Computation`
+`subsection.Concreteness and Computation`
 `p.
 I would be remiss to draw a contrast between 
 `i.abstract` and `i.concrete` models without mntioning 
@@ -232,7 +232,7 @@ has to recognize the multiscalar organization
 intrinsic to information spaces. 
 `p`
 
-`subsection.Mereology and Hypergraphs`
+`subsubsection.Mereology and Hypergraphs`
 `p.
 The interaction between humans and information spaces 
 is itself a technological artifact which has 
