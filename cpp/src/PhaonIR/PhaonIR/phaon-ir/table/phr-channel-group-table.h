@@ -33,6 +33,8 @@
 
 #include "phr-function-package.h"
 
+#include "phaon-ir/channel/phr-channel-group.h"
+
 #include <QMap>
 
 //KANS_CLASS_DECLARE(KCM ,KCM_Channel_Group)

@@ -41,7 +41,7 @@
 
 #include "phaon-lib/phr-symbol-scope.h"
 
-#include "phr-direct-eval/phr-direct-eval.h"
+
 #include "phaon-ir/scopes/phr-runtime-scope.h"
 
 #include "test-functions.h"
@@ -60,7 +60,8 @@ void local_program(PhaonIR& phr)
 
  phr.push_carrier_stack("fuxe");
  phr.hold_type_by_name("fbase");
- phr.push_carrier_raw_value("&prn");
+ //? phr.push_carrier_raw_value("&prn");
+ phr.push_carrier_symbol("&prn");
 
  phr.push_carrier_stack("lambda");
  phr.hold_type_by_name("u4");

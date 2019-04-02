@@ -15,6 +15,9 @@
 #include <QDebug>
 
 
+#include "phr-direct-eval/phr-direct-eval.h"
+
+
 extern void local_program(PhaonIR& phr);
 
 

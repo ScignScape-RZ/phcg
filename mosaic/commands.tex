@@ -129,8 +129,8 @@
 			\hspace{-2.75em}
 			%\begin{minipage}{}
 			\protect\raisebox{-5pt}{%
-			\colorbox{logoCyan!50}{\hspace{2.1em}}}%
-			\hspace{-5pt}{\protect\transparent{0.3}{\colorbox{logoBlue!80}{\protect\transparent{1}{%
+			\colorbox{drp!20}{\hspace{2.1em}}}%
+			\hspace{-5pt}{\protect\transparent{0.6}{\colorbox{logoCyan!80!black}{\protect\transparent{1}{%
 						   \protect\raisebox{1pt}{\textit{{\large #1}}} }}}}
 			%\end{minipage}
 		}
@@ -303,6 +303,8 @@ leftrule=5pt,rightrule=3pt,toprule=0pt,toprule=0pt,
 \sectionline{darkRed!60!cyan}
 }
 
+\colorlet{drp}{darkRed!70!purple}
+
 \renewcommand{\labelitemi}{{\color{red!60!black}$\star$}}
 
 \newcommand{\RO}{\mbox{RO}}
@@ -328,3 +330,9 @@ leftrule=5pt,rightrule=3pt,toprule=0pt,toprule=0pt,
 
 \newcommand{\lfNDPCloud}{{\color{red!15!black}%
 {\fontfamily{qhv}\selectfont N{\smaller DP C{\smaller LOUD}}}}}
+
+\newcommand{\textds}[1]{{\fontfamily{lmdh}\selectfont{%
+\raisebox{-1pt}{#1}}}}
+
+\newcommand{\dsC}{{\textds{ds}{\fontfamily{qhv}\selectfont \raisebox{-1pt}{C}}}}
+%\newcommand{\dsC}{dsC}

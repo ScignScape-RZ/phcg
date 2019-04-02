@@ -12,20 +12,23 @@
 }\fi
 }
 
+
 \AddToShipoutPicture{%
 {
  {\color{blGreen!70!red}\transparent{0.9}{\put(0,0){\rule{.55cm}{\paperheight}}}}%
  {\color{darkRed!70!purple}\transparent{1}\put(6,0){{\rule{.3cm}{\paperheight}}}}
- {\color{logoPeach!80!cyan}\transparent{0.5}{\put(0,700){\rule{1cm}{.6cm}}}}%
- {\color{darkRed!60!cyan}\transparent{0.7}\put(0,706){{\rule{1cm}{.6cm}}}}
- \put(18,726){\thepage}
- \transparent{0.8}
+ \ifnum\value{page}>3{ 
+ {\color{logoPeach!80!cyan}\transparent{0.5}{\put(0,760){\rule{1cm}{.6cm}}}}%
+ {\color{darkRed!60!cyan}\transparent{0.7}\put(0,766){{\rule{1cm}{.6cm}}}}
+ \put(8,786){\thepage}
+ \transparent{0.8}}\fi
+}
 }
 
 %\put(0,4){%
 %\transparent{1}{
 %\includegraphics[width=0.1\textwidth]{logo.jpg}} }
-}
+
 
 
 
@@ -38,7 +41,7 @@
 {\color{inOne}\transparent{0.8}{\put(300,15){\rule{0.5\paperwidth}{.3cm}}}}%
 {\color{inTwo}\transparent{0.3}\put(300,18){{\rule{0.5\paperwidth}{.3cm}}}}
 
-\put(301,21){%
+\put(470,12){%
 \transparent{0.7}{
 \includegraphics[width=0.2\textwidth]{logo.png}} }
 
@@ -57,7 +60,7 @@
 %\columnsep 0.8in  % separation between columns
 
 \usepackage{geometry}
-\geometry{left=.85in,top=.85in,right=.5in,bottom=1.25in} %margins
+\geometry{left=.85in,top=.85in,right=.5in,bottom=1.1in} %margins
 \usepackage{graphicx}
 \usepackage{color,framed}
 
@@ -154,32 +157,32 @@
 \vspace{8pt}
 \mbox{(\textit{Multiparadigm Ontologies for 
 Scientific, Academic, and Technical Publications)}}\\\vspace{2pt}
-\mbox{{\Large SDK and Software Engineering Products}}\\\vspace{8pt}
+\mbox{{\Large SDK and Software Engineering Tools}}\\\vspace{8pt}
 \end{center}
 
-\vspace*{-.2em}
+\vspace*{-1em}
 
 The {\MOSAIC} Portal is a cloud application for hosting 
 scientific, academic, and 
 technical publications.  Together with a collection 
-of server- and client-side code libraries and tools, 
+of server-side and client-side code libraries and tools, 
 {\MOSAIC} forms an SDK and application-development 
 toolkit that can be applied to many vertical markets, 
 including biomedicine, manufacturing, industrial design, 
 cyberphysical systems, cybersecurity, and Software 
-Language Engineering.  This versatility is a product 
-of the unique design requirememts for a platform 
-hosting data sets which are paired with 
-self-contained, customized applocations: scientific 
-data must be exposed in a representation that preserves 
-semantically rich scientific principles, and 
-dataset applications need a streamlined, modular 
-design that limits external dependencies.
-\vspace{.2em}
+Language Engineering.  This versatility is a result 
+of {\MOSAIC}'s unique design principles for creating a 
+platform that hosts data sets which are paired with 
+self-contained, customized applications.  These include: 
+scientific data must be exposed in a representation that 
+preserves semantically rich scientific principles; and 
+dataset applications must be implemented according a 
+streamlined, modular design that limits external dependencies.
+\vspace{-1.8em}
 \EnglischeLinie
-\vspace{.3em}
-{\lfMOSAIC} is powered by technologies and products that can 
-be used and licenced separately, or in combination: 
+\vspace*{-.2em}
+{\lfMOSAIC} includes several new technologies that can 
+be used and licenced separately or in combination, as listed below: 
 
 \vspace{.5em}
 \begin{cframed}
@@ -213,12 +216,12 @@ FORCE (Future of Research Communication and e-Scholarship)
 --- these paradigms have not been widely adopted by 
 publishing companies.  This in turn limits the market 
 for new products that can truly enhance the 
-reading and research experience.  As a result, 
+reading and research experience.  By bridging 
+this gap, 
 the {\MOSAIC} portal can implement a deeper layer of 
-academic, scientific and technical data sharing 
-than currently offered by publishers or scholarly 
-projects, thereby promoting the features of 
-the {\MOSAIC} {\SDK} and associated comercial products.
+academic, scientific, and technical data sharing 
+than is currently offerred by publishers or online 
+communities.
 
 \subsection{The {\lMOSAIC} Architecture}
 A {\MOSAIC} portal combines a central web service with a 
@@ -233,15 +236,17 @@ Research Object, but the technological design of
 with downloadable Research Objects.
 \p{}
 In order to help authors create self-contained 
-Research Objects, {\MOSAIC} defines a 
-\textit{Reference Application Kernel} ({\RAK}) 
+Research Objects, {\MOSAIC} projects are structured 
+around a specialized 
+\q{\textit{Reference Application Kernel}} ({\RAK}), 
 which presents a canonical format for bundling 
 research data and code into a self-contained 
-package.   By design, it should be easy 
-to download the {\RAK} bundle from {\MOSAIC} and 
-then compile and launch the Dataset Application, so 
-readers can begin exploring the data set with 
-minimal hassle.  
+package.  To be user-friendly, the MOSAIC Portal 
+and tools make it easy 
+to download the {\RAK} bundle, and 
+then to compile and launch the Dataset Application.  
+In this fashion, readers can start exploring the data 
+set with minimal hassle.  
 \p{}
 The {\RAK} format includes other 
 features as well, such as code export and testing, 
@@ -250,9 +255,9 @@ the published data (including several command-line
 executables built alongside the Dataset Application).  
 However, the Dataset Application 
 presents a useful introduction to the underlying 
-data set, which helps users get oriented to the data set 
-in its broad overview before they start to examine it in 
-finer detail.
+data set, which helps users become oriented to the data set 
+in its broad overview before they begin to 
+examine the data set in finer detail.
 \p{}
 Technically, {\MOSAIC} {\RAK} bundles are code repositories 
 based on the Qt platform for C++ Applications.  
@@ -264,17 +269,20 @@ interactive graphics and {\GUI} components
 --- including 2D and 3D visualizations, tables and charts, 
 context menus, dialog boxes, explanations of 
 technical terms, embedded PDF viewers, and other 
-features which make Dataset Applications an 
+features which make Dataset Applications 
+(customized for each data set) an 
 interactive and pedagogically useful tool for 
-exploring raw data, customized for each data set.
+exploring raw data.
 \p{}  
-Research Objects indexed by {\MOSAIC} do not have to 
-use the {\RAK} model.  However, {\RAK} provides a 
+Research Objects indexed by {\MOSAIC} do not necessarily have 
+to use the {\RAK} model.  However, {\RAK} provides a 
 Reference Implementation demonstrating how Research Object 
 metadata can be described for it to be automatically 
 processed by a {\MOSAIC} portal.
 
+\vspace{-.1em}
 \subsection{The {\lMOSAIC} {\lSDK} and Data Modeling Features}
+\vspace{.1em}
 To facilitate implementation of {\RAK} bundles, 
 {\MOSAIC} provides several development tools and 
 code libraries which can help set up a development 
@@ -282,8 +290,8 @@ environment tailored to the {\MOSAIC} ecosystem.
 These assets include the following: 
 
 \begin{description}[labelsep=.6em,itemsep=.6em]
-\item[\slead{Build Tools}]  Since it is designed to run 
-inside Qt Creator, the {\RAK} build system 
+\item[\slead{Build Tools}]  Since {\RAK}s are designed to 
+run inside Qt Creator, the {\RAK} build system 
 is based on \textit{qmake}, which is Qt's 
 layer atop the C/C++ \q{make} system.  
 {\lfMOSAIC}'s build system extends \textit{qmake} to 
@@ -316,7 +324,7 @@ scripts composed for unit and integration testing.
 Functional annotations provide detailed Requirements 
 Engineering for application procedures, including scientific 
 details like statistical scale (Nominal/Ordinal/Interval/Ratio),
-dimensions, ranges, and declarations of side effects.
+dimensions, ranges, and declarations of side-effects.
 \item[\slead{{\lMOSAIC} Interop}]  Applications built 
 with the {\MOSAIC} {\SDK} can also automatically 
 interoperate with {\MOSAIC} portals.  The {\SDK} 
@@ -328,7 +336,7 @@ users can automatically notify {\MOSAIC},
 from within their Dataset Application itself, about 
 a new or updated version of their Research Object.
 \end{description}
-\p{}
+\p{}\vspace{-.5em}
 Architecturally, {\MOSAIC} is developed as a 
 Cloud/Native Hybrid featuring a collection of 
 independent native applications (the {\RAK} 
@@ -351,8 +359,9 @@ rich, multiparadigm semantics for scientific data,
 and centering a network of self-contained 
 desktop applications --- the {\MOSAIC} {\SDK} 
 introduces innovative features that can improve 
-application development methodology across vertical markets.  
-Whereas the {\MOSAIC} Portal is a cloud service 
+application development methodology across 
+a number of vertical markets:   
+whereas the {\MOSAIC} Portal is a cloud service 
 hosting an array of data set applications, a 
 generic {\MOSAIC} system can unify decentralized 
 networks of self-contained desktop applications sharing 
@@ -361,8 +370,8 @@ data and services via a containerized cloud application.
 The crucial feature of {\MOSAIC} is that desktop-client 
 endpoints are self-contained and architecturally 
 lightweight --- they are easy to download and 
-compile --- but are still Thick Clients, equipped with 
-a full arsenal of GUI, scripting, and testing features.  
+compile --- but are still Thick (Native/Desktop) Clients, equipped 
+with a full arsenal of GUI, scripting, and testing features.  
 For the {\MOSAIC} Portal, these end-points are Research Objects 
 presenting open-access research data in an interactive, reusable 
 way.  For other areas, {\MOSAIC} facilitates the 
@@ -376,7 +385,6 @@ and demonastrable compliance with
 legal and operational standards throughout the 
 lifetime of a project.
 \p{}
-\vspace{.8em}
 \lead{{\NDPCloud}} On the 
 server side, {\NDPCloud} is a framework for deploying 
 cloud services tightly integrated with native applications.  
@@ -395,9 +403,8 @@ can be a good solution for developers who want to
 use cloud services to augment the capabilities 
 of desktop software, enabling peer-to-peer 
 messaging and seamless cloud backup and 
-personalization to enhance the desktop experience.
+personalization, which enhance the desktop experience.
 \p{}
-\vspace{.8em}
 \lead{{\VersatileUX}} On the client side, {\VersatileUX} is an {\GUI} 
 application framework which leverages 
 the peer-to-peer and personalization 
@@ -417,19 +424,32 @@ components are developed in isolation, testing and
 compliance verification is simplified for the application 
 as a whole.  At the same time, each {\VersatileUX} 
 module can design its own scripting and personalization 
-features, so the overall application can be 
+features.  In this way, the overall application can be 
 granularly fine-tuned to the needs of each user.
-\vspace{.8em}
+\p{}
+\lead{{Dataset Creator ({\dsC})}}  A related tool is our 
+\q{Dataset Creator} for authors and publishers who would 
+like to develop Research Objects using some of the techniques 
+available through the {\MOSAIC} {\SDK}.  In contrast to the 
+{\SDK}, {\dsC} is not engineered to work 
+primarily with a {\MOSAIC} portal; accordingly, it can be adapted to 
+various online platforms which host or index data sets.  
+For developers, {\dsC} provides templates for a 
+{\MOSAIC} {\RAK} that runs as a self-contained application 
+presenting a Research Object; developers can then insert 
+additional code or files to interoperate with the 
+applicable host platforms. 
+\vspace{-1.4em}
 \EnglischeLinie
-\vspace{.8em}
+\vspace{-.2em}
 {\lfNDPCloud} and {\VersatileUX} work together to 
 promote personalization and interoperability.  
 Individual desktop applications, built 
 with the aid of {\VersatileUX}, can connect to an 
 {\NDPCloud} service so as to track user identity across 
 application instances (or even across different applications), 
-while working through the cloud service for data backup and 
-to connect multiple users, for purposes of 
+while working through the cloud service for data backup 
+as well as to connect multiple users, for purposes of 
 messaging and collaboration.  
 {\VersatileUX} modules can be fine-tuned via 
 user preferences and application-specific data obtained from 
@@ -443,11 +463,10 @@ servers and between clients themselves (via cloud messaging).
 The key difference between this Cloud/Native Hybrid 
 architecture and conventional client/server architecture 
 (including other Cloud/Native paradigms) is that 
-both server- and client-side code takes full advantage of 
+both server-side and client-side code take full advantage of 
 strong typing (selecting the best aspects of 
-Functional and Object-Oriented programming), 
-and a single type system is 
+Functional and Object-Oriented programming).  
+Moreover a \textit{single} type system is 
 sustained across all client and server components.
-
 
 \end{document}

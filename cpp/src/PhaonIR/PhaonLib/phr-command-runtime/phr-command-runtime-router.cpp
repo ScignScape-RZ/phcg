@@ -199,12 +199,14 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg
   return;
  }
  PHR_Channel* result = cpkg->result_ch();
- if(!result->isEmpty())
+ if(result)
  {
-  PHR_Carrier* r1 = result->first();
-  result_type_object_ = r1->type_object();
+  if(!result->isEmpty())
+  {
+   PHR_Carrier* r1 = result->first();
+   result_type_object_ = r1->type_object();
+  }
  }
-
  PHR_Carrier* phc = fuxe->first();
  fuxe_name_ = phc->symbol_name();
 

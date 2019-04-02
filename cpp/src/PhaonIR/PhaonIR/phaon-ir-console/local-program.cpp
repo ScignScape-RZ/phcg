@@ -7,8 +7,18 @@
 
 #include "phaon-ir/phaon-ir.h"
 
-#include <QDebug>
+#include "phaon-ir/phr-code-model.h"
+#include "phaon-ir/scopes/phr-runtime-scope.h"
 
+#include "phr-direct-eval/phr-direct-eval.h"
+#include "phaon-ir/table/phr-symbol-scope.h"
+#include "phaon-ir/table/phr-channel-group-table.h"
+
+#include "basic-functions.h"
+
+//#include "phaon-lib/phr-runner.h"
+
+#include <QDebug>
 
 
 void local_program(PhaonIR& phr)
@@ -16,6 +26,25 @@ void local_program(PhaonIR& phr)
  phr.init_type_system();
  phr.init_type("fbase", DEFAULT_PTR_BYTE_CODE);
  phr.init_type("u4", 4);
+
+ phr.init_code_model();
+
+ PHR_Code_Model& pcm = *phr.code_model();
+ pcm.set_type_system(phr.type_system());
+
+ pcm.set_direct_eval_fn(&phr_direct_eval);
+
+ PHR_Runtime_Scope prs(nullptr);
+
+ PHR_Symbol_Scope pss(&prs);
+
+ PHR_Channel_Group_Table table(*phr.type_system());
+
+// PHR_Runner phrn;
+// phrn.
+
+ init_test_functions(phr, pcm, table, pss);
+ //phrn.get_runtime_scope_queue().push_front(&prs);
 
  phr.init_program_stack();
 

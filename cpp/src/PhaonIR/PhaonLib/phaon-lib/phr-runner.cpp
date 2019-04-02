@@ -31,6 +31,7 @@ PHR_Runner::PHR_Runner()
     table_(nullptr)//, scopes_(nullptr)
 {
  init_scope_system();
+//? pcm_->set_table(table_);
 }
 
 void PHR_Runner::init_scope_system()

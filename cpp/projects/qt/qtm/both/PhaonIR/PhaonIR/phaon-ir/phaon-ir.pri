@@ -14,14 +14,15 @@ DEFINES += DEFAULT_KPH_FOLDER=\\\"$$CPP_ROOT_DIR/kph\\\"
 INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR
 
 
-INCLUDEPATH += $$KAUVIR_PHAON_SRC_GROUP_DIR
-INCLUDEPATH += $$KAUVIR_KCM_SRC_GROUP_DIR
-INCLUDEPATH += $$QHYP_SRC_GROUP_DIR
-INCLUDEPATH += $$KCM_RUNTIME_EVAL_SRC_GROUP_DIR
-INCLUDEPATH += $$KAUVIR_RUNTIME_SRC_GROUP_DIR
+#INCLUDEPATH += $$KAUVIR_PHAON_SRC_GROUP_DIR
+#INCLUDEPATH += $$KAUVIR_KCM_SRC_GROUP_DIR
+#INCLUDEPATH += $$QHYP_SRC_GROUP_DIR
+#INCLUDEPATH += $$KCM_RUNTIME_EVAL_SRC_GROUP_DIR
+#INCLUDEPATH += $$KAUVIR_RUNTIME_SRC_GROUP_DIR
+#INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 
-INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
-
+INCLUDEPATH += $$HGDM_SRC_GROUP_DIR
+INCLUDEPATH += $$PHAONLIB_SRC_GROUP_DIR
 
 CONFIG += no_keywords
 
@@ -53,6 +54,11 @@ HEADERS += \
   $$SRC_DIR/scopes/phr-scope-system.h \
   $$SRC_DIR/scopes/phr-logical-scope-info.h \
   $$SRC_DIR/phr-code-model.h \
+  $$SRC_DIR/table/phr-channel-group-table.h \
+  $$SRC_DIR/table/phr-symbol-scope.h \
+  $$SRC_DIR/table/phr-function.h \
+  $$SRC_DIR/table/phr-function-vector.h \
+  $$SRC_DIR/table/phr-function-package.h \
 
 
 SOURCES += \
@@ -79,6 +85,11 @@ SOURCES += \
   $$SRC_DIR/scopes/phr-scope-system.cpp \
   $$SRC_DIR/scopes/phr-logical-scope-info.cpp \
   $$SRC_DIR/phr-code-model.cpp \
+  $$SRC_DIR/table/phr-channel-group-table.cpp \
+  $$SRC_DIR/table/phr-symbol-scope.cpp \
+  $$SRC_DIR/table/phr-function.cpp \
+  $$SRC_DIR/table/phr-function-vector.cpp \
+  $$SRC_DIR/table/phr-function-package.cpp \
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
