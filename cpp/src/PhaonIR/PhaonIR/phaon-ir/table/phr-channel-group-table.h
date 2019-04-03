@@ -34,6 +34,7 @@
 #include "phr-function-package.h"
 
 #include "phaon-ir/channel/phr-channel-group.h"
+#include "phaon-ir/types/phr-universal-class.h"
 
 #include <QMap>
 
@@ -57,6 +58,9 @@ class PHR_Channel_Group_Table
 
  PHR_Type_System& type_system_;
 
+ // //?
+ QMultiMap<QString, QPair<PHR_Channel_Group*, s1_fng_type>> s1_declared_functions_generic_;
+
 
 public:
 
@@ -65,6 +69,8 @@ public:
  ACCESSORS__GET(PHR_Type_System& ,type_system)
 
  PHR_Channel_Group* find_channel_group(const PHR_Channel_Group& channels);
+
+ PHR_Runtime_Scope* get_runtime_scope(PHR_Symbol_Scope& pss);
 
  template<typename FN_Type>
  void init_phaon_function(const PHR_Channel_Group& g, PHR_Symbol_Scope& pss,
@@ -84,6 +90,9 @@ public:
   //pss[name].push_back(phf);
 
  }
+
+ s1_fng_type find_s1_declared_function_0(QString name,
+   PHR_Channel_Group* kcg, const PHR_Type_Object** pkto);
 
 
 };

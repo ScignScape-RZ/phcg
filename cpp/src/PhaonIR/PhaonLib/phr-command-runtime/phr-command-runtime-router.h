@@ -42,8 +42,10 @@ class PHR_Command_Runtime_Argument;
 class PHR_Command_Package;
 class PHR_Scope_System;
 
+class PHR_Symbol_Scope;
+
 class PHR_Carrier;
-class PHR_Command_Runtime_Table;
+class PHR_Channel_Group_Table;
 class PHR_Command_Runtime_Argument;
 
 class PHR_Type_Object;
@@ -227,7 +229,7 @@ class PHR_Command_Runtime_Router
 
  const PHR_Type_Object* result_type_object_;
 
- PHR_Command_Runtime_Table* table_;
+ PHR_Channel_Group_Table* table_;
  PHR_Scope_System* scopes_;
 
  quint64 call_result_;
@@ -237,6 +239,8 @@ class PHR_Command_Runtime_Router
  PHR_Expression* phr_expression_;
 
  PHR_Proxy_Scope* proxy_scope_;
+
+ PHR_Symbol_Scope* symbol_scope_;
 
  quint64 string_result_code_;
 
@@ -269,7 +273,8 @@ class PHR_Command_Runtime_Router
 
 public:
 
- PHR_Command_Runtime_Router(PHR_Command_Runtime_Table* table,
+ PHR_Command_Runtime_Router(PHR_Channel_Group_Table* table,
+   PHR_Symbol_Scope* pss,
    PHR_Scope_System* scopes, PHR_Proxy_Scope* proxy_scope, QString& string_result);
 
  ACCESSORS(quint64 ,call_result)

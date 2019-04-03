@@ -35,6 +35,7 @@ public:
 
  void add_function(QString name, PHR_Function& phf);
 
+ ACCESSORS(PHR_Runtime_Scope* ,runtime_scope)
 
 
 };

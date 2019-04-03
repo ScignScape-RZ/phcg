@@ -10,11 +10,15 @@
 #include "phaon-ir/types/phr-type-object.h"
 #include "phaon-ir/types/phr-type.h"
 
+#include "phaon-ir/scopes/phr-runtime-scope.h"
+
 #include "phr-command-runtime-argument.h"
 
 #include "phaon-ir/runtime/phr-command-package.h"
 
-#include "phr-command-runtime-table.h"
+//#include "phr-command-runtime-table.h"
+
+#include "phaon-ir/table/phr-channel-group-table.h"
 
 //#include "PHR-command-runtime-router-qob.h"
 
@@ -53,12 +57,14 @@
 //USING_KANS(CMD)
 
 
-PHR_Command_Runtime_Router::PHR_Command_Runtime_Router(PHR_Command_Runtime_Table* table,
-  PHR_Scope_System* scopes, PHR_Proxy_Scope* proxy_scope,
+PHR_Command_Runtime_Router::PHR_Command_Runtime_Router(PHR_Channel_Group_Table* table,
+  PHR_Symbol_Scope* symbol_scope, PHR_Scope_System* scopes, PHR_Proxy_Scope* proxy_scope,
   QString& string_result)
   :  sigma_argument_(nullptr), phr_expression_(nullptr),
      result_type_object_(nullptr), string_result_(string_result),
-     table_(table), scopes_(scopes), proxy_scope_(proxy_scope), call_result_(0),
+     table_(table), scopes_(scopes), proxy_scope_(proxy_scope),
+     symbol_scope_(symbol_scope),
+     call_result_(0),
      reflection_convention_(Reflection_Conventions::N_A),
      string_result_code_(0), envv_fn_(nullptr)
 {
@@ -232,7 +238,10 @@ PHR_Function_Vector* PHR_Command_Runtime_Router::get_phr_function_vector(QString
 // }
  if(table_)
  {
-  return table_->get_phr_function_vector(fn);
+  PHR_Runtime_Scope* prs = table_->get_runtime_scope(*symbol_scope_);
+  //?return prs->get_phr_function_vector(fn);
+  return prs->get_function_vector_value_as<PHR_Function_Vector>(fn);
+
 //  auto it = table_->find(fn);
 //  if(it != table_->end())
 //    return &it.value();
@@ -402,6 +411,8 @@ void PHR_Command_Runtime_Router::proceed_s1_2(PHR_Function_Vector* pfv, void** p
   }
   return;
  }
+
+ //PHR_Runtime_Scope* prs = table_->get_runtime_scope(*symbol_scope_);
 
  s1_fng_type fn = table_->find_s1_declared_function_0(fuxe_name_, nullptr, &result_type_object_);
  if(fn)

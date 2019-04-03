@@ -15,13 +15,13 @@ class PHR_Type_System;
 class PHR_Scope_System;
 class PHR_Command_Package;
 
-class PHR_Command_Runtime_Table;
+class PHR_Channel_Group_Table;
 
 class PHR_Code_Model
 {
  PHR_Type_System* type_system_;
  PHR_Scope_System* scope_system_;
- PHR_Command_Runtime_Table* table_;
+ PHR_Channel_Group_Table* table_;
 
  typedef std::function<void(PHR_Code_Model* pcm,
    PHR_Command_Package* pcp)> direct_eval_fn_type;
@@ -35,7 +35,7 @@ public:
 
  ACCESSORS(PHR_Type_System* ,type_system)
  ACCESSORS(PHR_Scope_System* ,scope_system)
- ACCESSORS(PHR_Command_Runtime_Table* ,table)
+ ACCESSORS(PHR_Channel_Group_Table* ,table)
 
  ACCESSORS(direct_eval_fn_type ,direct_eval_fn)
 

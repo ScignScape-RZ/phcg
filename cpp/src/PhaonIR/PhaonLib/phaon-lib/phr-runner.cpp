@@ -31,7 +31,7 @@ PHR_Runner::PHR_Runner()
     table_(nullptr)//, scopes_(nullptr)
 {
  init_scope_system();
-//? pcm_->set_table(table_);
+ pcm_->set_table(table_);
 }
 
 void PHR_Runner::init_scope_system()
@@ -42,7 +42,6 @@ void PHR_Runner::init_scope_system()
 
  PHR_Type_System* type_system = pcm_->type_system();
  table_ = new PHR_Channel_Group_Table(*type_system);
-
 }
 
 

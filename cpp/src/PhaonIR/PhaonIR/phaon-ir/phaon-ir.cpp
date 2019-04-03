@@ -214,6 +214,7 @@ void PhaonIR::push_delete(void* pv)
 void PhaonIR::init_table()
 {
  table_ = new PHR_Channel_Group_Table(*type_system_);
+ code_model_->set_table(table_);
 }
 
 void PhaonIR::evaluate_channel_group()
