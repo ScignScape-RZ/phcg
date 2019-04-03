@@ -25,7 +25,7 @@ class PHR_Runtime_Scope
 public:
 
  enum class Storage_Options {
-   N_A, Direct, Pointer, Function_Vector
+   N_A, Direct, Pointer, Function_Vector, Not_Otherwise_Specified
  };
 
  QMap<QString, QPair<Storage_Options, PHR_Scope_Value>> values_;

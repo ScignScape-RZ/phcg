@@ -54,6 +54,7 @@ class PHR_Proxy_Scope;
 
 class PHR_Channel_Group;
 class PHR_Function_Vector;
+class PhaonIR;
 
 class PHR_Command_Runtime_Router
 {
@@ -242,6 +243,8 @@ class PHR_Command_Runtime_Router
 
  PHR_Symbol_Scope* symbol_scope_;
 
+ PhaonIR* phaon_ir_;
+
  quint64 string_result_code_;
 
  QString cpkg_output_symbol_name_;
@@ -274,7 +277,7 @@ class PHR_Command_Runtime_Router
 public:
 
  PHR_Command_Runtime_Router(PHR_Channel_Group_Table* table,
-   PHR_Symbol_Scope* pss,
+   PhaonIR* phaon_ir, PHR_Symbol_Scope* pss,
    PHR_Scope_System* scopes, PHR_Proxy_Scope* proxy_scope, QString& string_result);
 
  ACCESSORS(quint64 ,call_result)

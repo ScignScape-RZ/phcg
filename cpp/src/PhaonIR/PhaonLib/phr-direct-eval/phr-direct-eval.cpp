@@ -121,7 +121,7 @@ void phr_direct_eval(PHR_Code_Model* pcm,
  QString string_result;
 
  PHR_Command_Runtime_Router pcrr(pcm->table(),
-                                 pss,
+   pcm->phaon_ir(), pss,
                                  scope_system,
    nullptr, //?pcm->current_proxy_scope(),
    string_result);

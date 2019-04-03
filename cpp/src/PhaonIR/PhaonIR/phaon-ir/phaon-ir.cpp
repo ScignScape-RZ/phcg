@@ -98,6 +98,15 @@ qint32 PhaonIR::get_s4_symbol_value(QString sym)
  }
 }
 
+PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
+  PHR_Runtime_Scope::Storage_Options& so, quint64& val)
+{
+ //quint64 val;
+ //PHR_Runtime_Scope::Storage_Options so;
+ //PHR_Type* ty = current_lexical_scope_->find_value(sym, val, so);
+ return current_lexical_scope_->find_value(sym, val, so);
+}
+
 void PhaonIR::delete_temps()
 {
  retired_temps_.append(temps_by_channel_group_.values());
@@ -348,6 +357,7 @@ void PhaonIR::init_code_model()
 {
  code_model_ = new PHR_Code_Model;
  code_model_->set_type_system(type_system_);
+ code_model_->set_phaon_ir(this);
 }
 
 void PhaonIR::init_type(QString type_name, quint8 byte_code)

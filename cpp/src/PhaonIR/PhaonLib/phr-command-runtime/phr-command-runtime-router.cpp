@@ -10,6 +10,8 @@
 #include "phaon-ir/types/phr-type-object.h"
 #include "phaon-ir/types/phr-type.h"
 
+#include "phaon-ir/phaon-ir.h"
+
 #include "phaon-ir/scopes/phr-runtime-scope.h"
 
 #include "phr-command-runtime-argument.h"
@@ -58,12 +60,13 @@
 
 
 PHR_Command_Runtime_Router::PHR_Command_Runtime_Router(PHR_Channel_Group_Table* table,
-  PHR_Symbol_Scope* symbol_scope, PHR_Scope_System* scopes, PHR_Proxy_Scope* proxy_scope,
+  PhaonIR* phaon_ir, PHR_Symbol_Scope* symbol_scope,
+  PHR_Scope_System* scopes, PHR_Proxy_Scope* proxy_scope,
   QString& string_result)
   :  sigma_argument_(nullptr), phr_expression_(nullptr),
      result_type_object_(nullptr), string_result_(string_result),
      table_(table), scopes_(scopes), proxy_scope_(proxy_scope),
-     symbol_scope_(symbol_scope),
+     phaon_ir_(phaon_ir), symbol_scope_(symbol_scope),
      call_result_(0),
      reflection_convention_(Reflection_Conventions::N_A),
      string_result_code_(0), envv_fn_(nullptr)
@@ -580,6 +583,24 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
    quint64* rv;//? = scopes_->find_raw_value_from_current_scope(kcra->bind_code(), envv_fn_, PHR_expression_,
      //pto, cpto, encoded_value, qclo_value.second);
 
+   quint64 prv;
+   PHR_Runtime_Scope::Storage_Options so;
+
+   PHR_Type* ty = phaon_ir_->init_value_from_symbol(kcra->bind_code(), so, prv);
+
+   if(so != PHR_Runtime_Scope::Storage_Options::N_A)
+   {
+    if(ty)
+    {
+     //...
+    }
+    else
+    {
+     mem = prv;
+     result = &mem;
+    }
+   }
+   else
    if(rv == (quint64*) &encoded_value)
    {
     if(!pto)

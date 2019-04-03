@@ -50,6 +50,8 @@ PHR_Type* PHR_Runtime_Scope::find_value(QString key, quint64& val, Storage_Optio
  if(it == values_.end())
    return nullptr;
  so = it.value().first;
+ if(so == Storage_Options::N_A)
+   so = Storage_Options::Not_Otherwise_Specified;
  val = it.value().second.raw_value;
  return it.value().second.ty;
 }

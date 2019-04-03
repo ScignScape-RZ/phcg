@@ -15,6 +15,8 @@
 
 #include "accessors.h"
 
+#include "scopes/phr-runtime-scope.h"
+
 #define PASTE_EXPRESSION(...) __VA_ARGS__
 
 
@@ -141,6 +143,9 @@ public:
  void temp_anchor_channel_group();
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
+
+ PHR_Type* init_value_from_symbol(QString sym,
+   PHR_Runtime_Scope::Storage_Options& so, quint64& val);
 
  void push_delete(void* pv);
 

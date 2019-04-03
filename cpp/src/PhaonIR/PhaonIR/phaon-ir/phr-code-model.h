@@ -19,6 +19,8 @@ class PHR_Symbol_Scope;
 
 class PHR_Channel_Group_Table;
 
+class PhaonIR;
+
 class PHR_Code_Model
 {
  PHR_Type_System* type_system_;
@@ -30,6 +32,8 @@ class PHR_Code_Model
 
  direct_eval_fn_type direct_eval_fn_;
 
+ PhaonIR* phaon_ir_;
+
 
 public:
 
@@ -38,6 +42,8 @@ public:
  ACCESSORS(PHR_Type_System* ,type_system)
  ACCESSORS(PHR_Scope_System* ,scope_system)
  ACCESSORS(PHR_Channel_Group_Table* ,table)
+
+ ACCESSORS(PhaonIR* ,phaon_ir)
 
 //? ACCESSORS(PHR_Symbol_Scope* ,current_symbol_scope)
 
