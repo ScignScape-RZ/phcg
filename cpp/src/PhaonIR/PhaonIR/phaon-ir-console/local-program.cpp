@@ -32,18 +32,21 @@ void local_program(PhaonIR& phr)
  PHR_Code_Model& pcm = *phr.code_model();
  pcm.set_type_system(phr.type_system());
 
+ phr.create_channel_semantic_protocol("lambda");
+ phr.create_channel_semantic_protocol("result");
+
  pcm.set_direct_eval_fn(&phr_direct_eval);
 
  PHR_Runtime_Scope prs(nullptr);
 
  PHR_Symbol_Scope pss(&prs);
 
- PHR_Channel_Group_Table table(*phr.type_system());
+ phr.init_table();
 
 // PHR_Runner phrn;
 // phrn.
 
- init_test_functions(phr, pcm, table, pss);
+ init_test_functions(phr, pcm, *phr.table(), pss);
  //phrn.get_runtime_scope_queue().push_front(&prs);
 
  phr.init_program_stack();
@@ -54,7 +57,8 @@ void local_program(PhaonIR& phr)
 
  phr.push_carrier_stack("fuxe");
  phr.hold_type_by_name("fbase");
- phr.push_carrier_raw_value("&prn");
+ //?phr.push_carrier_raw_value("&prn");
+ phr.push_carrier_symbol("&prn");
 
  phr.push_carrier_stack("lambda");
  phr.hold_type_by_name("u4");

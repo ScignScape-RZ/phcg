@@ -32,6 +32,7 @@ class PHR_Scope_Value;
 class PHR_Channel_System;
 
 class PHR_Code_Model;
+class PHR_Channel_Group_Table;
 
 class PhaonIR
 {
@@ -55,6 +56,8 @@ class PhaonIR
  PHR_Type* held_type_;
  PHR_Carrier_Stack* current_carrier_stack_;
  PHR_Channel_Group* held_channel_group_;
+ PHR_Channel_Group_Table* table_;
+
  QString held_usi_symbol_;
 
  std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
@@ -119,6 +122,7 @@ public:
  ACCESSORS__GET(PHR_Code_Model* ,code_model)
  ACCESSORS__GET(PHR_Channel_System* ,channel_system)
  ACCESSORS__GET(PHR_Type_System* ,type_system)
+ ACCESSORS__GET(PHR_Channel_Group_Table* ,table)
 
  void create_channel_semantic_protocol(QString name);
 
@@ -127,6 +131,7 @@ public:
   return held_channel_group_;
  }
 
+ void init_table();
  void init_program_stack();
  void reset_program_stack();
  void index_channel_group();

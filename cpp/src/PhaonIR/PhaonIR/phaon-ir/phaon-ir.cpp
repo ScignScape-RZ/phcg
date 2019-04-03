@@ -18,8 +18,12 @@
 #include "scopes/phr-runtime-scope.h"
 
 #include "channel/phr-channel-system.h"
+#include "table/phr-channel-group-table.h"
+#include "runtime/phr-command-package.h"
 
 #include "phr-code-model.h"
+
+#include "phr-direct-eval/phr-direct-eval.h"
 
 
 PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
@@ -207,11 +211,25 @@ void PhaonIR::push_delete(void* pv)
  retired_temps_.push_back(pv);
 }
 
+void PhaonIR::init_table()
+{
+ table_ = new PHR_Channel_Group_Table(*type_system_);
+}
+
 void PhaonIR::evaluate_channel_group()
 {
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
- ev->run_eval();
- ev->debug_report();
+
+ if(ev)
+ {
+  ev->run_eval();
+  ev->debug_report();
+ }
+ else
+ {
+  PHR_Command_Package pcp(*held_channel_group_);
+  phr_direct_eval(code_model_, &pcp);
+ }
 
  for(auto it: anchored_channel_groups_.values(held_channel_group_))
  {
