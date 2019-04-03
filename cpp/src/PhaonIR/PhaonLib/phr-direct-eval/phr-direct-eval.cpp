@@ -52,7 +52,8 @@
 #include "phaon-ir/phr-code-model.h"
 
 
-void phr_direct_eval(PHR_Code_Model* pcm, PHR_Command_Package* pcp)
+void phr_direct_eval(PHR_Code_Model* pcm,
+  PHR_Command_Package* pcp, PHR_Symbol_Scope* pss)
 {
 
 #ifdef USING_KPH_GEN
@@ -119,7 +120,9 @@ void phr_direct_eval(PHR_Code_Model* pcm, PHR_Command_Package* pcp)
 
  QString string_result;
 
- PHR_Command_Runtime_Router pcrr(pcm->table(), scope_system,
+ PHR_Command_Runtime_Router pcrr(pcm->table(),
+                                 pss,
+                                 scope_system,
    nullptr, //?pcm->current_proxy_scope(),
    string_result);
  //?pcrr.set_envv_fn(pcm->envv_fn());

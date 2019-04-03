@@ -117,15 +117,20 @@ PHR_Command_Runtime_Argument* PHR_Command_Runtime_Router::parse_carrier_to_argum
 //   result->set_raw_value(phc.symbol_as_pointer());
 //   result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
 //  }
-  if(false)
-  {
 
-  }
-  else
+  QString rvs = phc.raw_value_string();
+
+  if(rvs.isEmpty())
   {
    result->set_bind_code(sym);
    result->set_raw_value(phc.symbol_as_pointer());
    result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
+  }
+  else
+  {
+   result->set_raw_value(phc.raw_value_string_as_pointer());
+   result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr);
+
   }
  }
 // else if(phc.flags.literal_string)
@@ -240,6 +245,10 @@ PHR_Function_Vector* PHR_Command_Runtime_Router::get_phr_function_vector(QString
  {
   PHR_Runtime_Scope* prs = table_->get_runtime_scope(*symbol_scope_);
   //?return prs->get_phr_function_vector(fn);
+
+  if(fn.startsWith('&'))
+    fn = fn.mid(1);
+
   return prs->get_function_vector_value_as<PHR_Function_Vector>(fn);
 
 //  auto it = table_->find(fn);
@@ -491,6 +500,8 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
  {
   QString* qs = (QString*) kcra->raw_value();
 
+  int* pi = (int*) kcra->raw_value();
+
   if(kcra->type_name() == "str")
   {
 
@@ -509,6 +520,12 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
   }
   else
   {
+   if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
+   {
+    int i = qs->toInt();
+    mem = qs->toLongLong();
+   }
+
    // //  are these value classifications misleading?
    if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr)
    {

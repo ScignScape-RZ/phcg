@@ -217,7 +217,7 @@ void PhaonIR::init_table()
  code_model_->set_table(table_);
 }
 
-void PhaonIR::evaluate_channel_group()
+void PhaonIR::evaluate_channel_group(PHR_Symbol_Scope* pss)
 {
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
 
@@ -229,7 +229,7 @@ void PhaonIR::evaluate_channel_group()
  else
  {
   PHR_Command_Package pcp(*held_channel_group_);
-  phr_direct_eval(code_model_, &pcp);
+  phr_direct_eval(code_model_, &pcp, pss);
  }
 
  for(auto it: anchored_channel_groups_.values(held_channel_group_))

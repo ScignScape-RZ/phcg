@@ -27,6 +27,9 @@ class PHR_Channel_Group;
 class PHR_Channel_Group_Evaluator;
 class PHR_Channel;
 
+class PHR_Symbol_Scope;
+
+
 class PHR_Runtime_Scope;
 class PHR_Scope_Value;
 class PHR_Channel_System;
@@ -159,7 +162,7 @@ public:
 
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
- void evaluate_channel_group();
+ void evaluate_channel_group(PHR_Symbol_Scope* pss);
 
  void enter_lexical_scope();
 

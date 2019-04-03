@@ -15,6 +15,12 @@ PHR_Carrier::PHR_Carrier()
 
 }
 
+
+QString* PHR_Carrier::raw_value_string_as_pointer()
+{
+ return &raw_value_string_;
+}
+
 QString* PHR_Carrier::symbol_as_pointer()
 {
  return &symbol_name_;

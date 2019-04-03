@@ -65,7 +65,7 @@ void local_program(PhaonIR& phr)
  phr.push_carrier_raw_value("2");
 
  phr.coalesce_channel_group();
- phr.evaluate_channel_group();
+ phr.evaluate_channel_group(&pss);
 
  phr.delete_temps();
  phr.delete_retired();

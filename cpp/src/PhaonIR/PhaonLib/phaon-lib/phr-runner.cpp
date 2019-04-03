@@ -45,11 +45,11 @@ void PHR_Runner::init_scope_system()
 }
 
 
-void PHR_Runner::run(PHR_Channel_Group& pcg)
+void PHR_Runner::run(PHR_Channel_Group& pcg, PHR_Symbol_Scope* pss)
 {
  PHR_Command_Package pcp(pcg);
 // KCM_Command_Package kcp(kcg);
- pcm_->direct_eval(&pcp);
+ pcm_->direct_eval(&pcp, pss);
 }
 
 

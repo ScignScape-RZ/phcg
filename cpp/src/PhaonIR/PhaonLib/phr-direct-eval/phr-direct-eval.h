@@ -33,8 +33,10 @@
 
 class PHR_Code_Model;
 class PHR_Command_Package;
+class PHR_Symbol_Scope;
 
-void phr_direct_eval(PHR_Code_Model* pcm, PHR_Command_Package* pcp);
+void phr_direct_eval(PHR_Code_Model* pcm,
+  PHR_Command_Package* pcp, PHR_Symbol_Scope* pss);
 
 //KCM_Command_Package* make_kcm_command_package_from_channel_group(const KCM_Channel_Group& kcg);
 

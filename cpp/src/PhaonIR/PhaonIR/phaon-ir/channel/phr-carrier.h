@@ -35,6 +35,7 @@ public:
  ACCESSORS__GDECLARE(PHR_Type_Object* ,type_object)
 
  QString* symbol_as_pointer();
+ QString* raw_value_string_as_pointer();
 
  //PHR_Type_Object* type_object() const;
 };

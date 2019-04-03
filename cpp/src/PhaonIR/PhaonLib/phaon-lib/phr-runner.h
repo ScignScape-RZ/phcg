@@ -34,6 +34,8 @@ class PHR_Channel_Group;
 class PHR_Scope_System;
 class PHR_Code_Model;
 
+class PHR_Symbol_Scope;
+
 class PHR_Runner
 {
 // Kauvir_Code_Model* kcm_;
@@ -60,7 +62,7 @@ public:
 // QQueue<PHR_Symbol_Scope*>& get_phaon_scope_queue();
  QQueue<PHR_Runtime_Scope*>& get_runtime_scope_queue();
 
- void run(PHR_Channel_Group& pcg);
+ void run(PHR_Channel_Group& pcg, PHR_Symbol_Scope* pss);
 
 };
 

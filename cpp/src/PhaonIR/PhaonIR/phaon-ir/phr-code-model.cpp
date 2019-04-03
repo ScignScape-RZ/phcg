@@ -9,16 +9,19 @@
 
 
 PHR_Code_Model::PHR_Code_Model()
-  :  type_system_(nullptr), scope_system_(nullptr), table_(nullptr)
+  :  type_system_(nullptr), scope_system_(nullptr),
+     //?current_symbol_scope_(nullptr),
+     table_(nullptr)
 {
 
 }
 
-void PHR_Code_Model::direct_eval(PHR_Command_Package* pcp)
+void PHR_Code_Model::direct_eval(PHR_Command_Package* pcp, PHR_Symbol_Scope* current_symbol_scope)
 {
  if(direct_eval_fn_)
  {
-  direct_eval_fn_(this, pcp);
+  //?current_symbol_scope_ = current_symbol_scope;
+  direct_eval_fn_(this, pcp, current_symbol_scope);
  }
 }
 
