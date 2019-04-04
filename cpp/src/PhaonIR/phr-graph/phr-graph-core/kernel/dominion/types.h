@@ -1,0 +1,31 @@
+
+//           Copyright Nathaniel Christen 2019.
+//  Distributed under the Boost Software License, Version 1.0.
+//     (See accompanying file LICENSE_1_0.txt or copy at
+//           http://www.boost.org/LICENSE_1_0.txt)
+
+
+#define DOMINION_NODE_TYPE PHR_Graph_Node
+
+#ifndef DOMINION_HIDE_NO_NAMESPACE
+// // No namespace
+#include "relae-graph/dominion-macros.h"
+DOMINION_TYPE(dbl, double, Double)
+DOMINION_TYPE(integer, int, Int)
+DOMINION_TYPE(i8, char, I8)
+DOMINION_TYPE(qstring, QString, QStr)
+#endif
+
+#include "relae-graph/dominion-macros.h"
+
+#define DOMINION_OUTER_NAMESPACE RZ
+
+#define DOMINION_INNER_NAMESPACE PhrGraphCore
+#include "relae-graph/dominion-macros.h"
+DOMINION_TYPE(phr_graph_root, PHR_Graph_Root, PHR_Graph_Root)
+DOMINION_TYPE(phr_graph_token, PHR_Graph_Token, PHR_Graph_Token)
+
+#undef DOMINION_INNER_NAMESPACE
+
+#undef DOMINION_OUTER_NAMESPACE
+#undef DOMINION_NODE_TYPE
