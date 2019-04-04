@@ -175,6 +175,12 @@ QString PhaonIR::get_first_raw_value_string(QString sp_name, PHR_Channel_Group& 
  return pcg.get_first_raw_value_string((*channel_system_)[sp_name]);
 }
 
+void PhaonIR::push_unwind_scope(QString level_delta)
+{
+ push_unwind_scope(level_delta.toInt());
+}
+
+
 void PhaonIR::push_unwind_scope(int level_delta)
 {
  Unwind_Scope_Index usi = current_chief_unwind_scope_index_;//.project();
@@ -293,6 +299,12 @@ void PhaonIR::copy_anchor_channel_group(QString sym, QString ch)
    {(*channel_system_)[ch], current_lexical_scope_, sym, &default_cofinalizer});
 }
 
+void PhaonIR::copy_anchor_channel_group(QString str)
+{
+ QStringList qsl = str.simplified().split(' ');
+ copy_anchor_channel_group(qsl.first(), qsl.last());
+}
+
 void PhaonIR::temp_anchor_channel_group()
 {
  temp_anchored_channel_groups_[held_usi_symbol_] = held_channel_group_;
@@ -387,6 +399,10 @@ void PhaonIR::read_line(QString inst)
   { "delete_retired", &delete_retired },
   { "clear_temps", &clear_temps },
   { "reset_program_stack", &reset_program_stack },
+  { "pop_unwind_scope", &pop_unwind_scope },
+  { "temp_anchor_channel_group", &temp_anchor_channel_group },
+  { "push_carrier_expression", &push_carrier_expression }
+
  }};
 
  auto it = static_map.find(inst);
@@ -405,6 +421,7 @@ void PhaonIR::read_line(QString inst, QString arg)
   { "push_carrier_symbol", &push_carrier_symbol },
   { "push_carrier_stack", &push_carrier_stack },
   { "push_carrier_raw_value", &push_carrier_raw_value },
+  { "copy_anchor_channel_group", &copy_anchor_channel_group },
  }};
 
  auto it = static_map.find(inst);

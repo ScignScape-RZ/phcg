@@ -146,6 +146,8 @@ public:
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
 
+ void copy_anchor_channel_group(QString str);
+
  PHR_Type* init_value_from_symbol(QString sym,
    PHR_Runtime_Scope::Storage_Options& so, quint64& val);
 
@@ -180,6 +182,10 @@ public:
  void enter_lexical_scope();
 
  void push_unwind_scope(int level_delta);
+
+ void push_unwind_scope(QString level_delta);
+
+
  void pop_unwind_scope();
 
  void push_carrier_expression();
