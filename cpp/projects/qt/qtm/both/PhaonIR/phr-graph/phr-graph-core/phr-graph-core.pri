@@ -14,6 +14,8 @@ DEFINES += DEFAULT_KPH_FOLDER=\\\"$$CPP_ROOT_DIR/kph\\\"
 INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR
 
 
+DEFINES += USE_RZNS
+
 #INCLUDEPATH += $$KAUVIR_PHAON_SRC_GROUP_DIR
 #INCLUDEPATH += $$KAUVIR_KCM_SRC_GROUP_DIR
 #INCLUDEPATH += $$QHYP_SRC_GROUP_DIR
@@ -40,6 +42,8 @@ HEADERS += \
   $$SRC_DIR/kernel/document/phr-graph-document.h \
   $$SRC_DIR/kernel/frame/phr-graph-frame.h \
   $$SRC_DIR/kernel/query/phr-graph-query.h \
+  $$SRC_DIR/token/phr-graph-token.h \
+  $$SRC_DIR/output/phr-graph-output.h \
 
 
 SOURCES += \
@@ -51,7 +55,8 @@ SOURCES += \
   $$SRC_DIR/kernel/document/phr-graph-document.cpp \
   $$SRC_DIR/kernel/frame/phr-graph-frame.cpp \
   $$SRC_DIR/kernel/query/phr-graph-query.cpp \
-
+  $$SRC_DIR/token/phr-graph-token.cpp \
+  $$SRC_DIR/output/phr-graph-output.cpp \
 
 #LIBS += -L$$TARGETSDIR  -lphr-direct-eval
 

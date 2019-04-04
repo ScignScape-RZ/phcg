@@ -31,6 +31,8 @@
 
 RZNS_(PhrGraphCore)
 
+class PHR_Graph_Token;
+
 
 class PHR_Graph_Node : public node_ptr<PHR_Graph_Dominion>
 {
@@ -41,8 +43,12 @@ class PHR_Graph_Node : public node_ptr<PHR_Graph_Dominion>
 public:
 
  #define DOMINION_TYPE DOMINION_NODE_CONSTRUCTOR
- #include "kernel/dominion/types.h"
+ //??
+#include "kernel/dominion/types.h"
  #undef DOMINION_TYPE
+
+// PHR_Graph_Node(caon_ptr<RZ::PhrGraphCore::PHR_Graph_Token> v)
+//  : PHR_Graph_Node::node_ptr_base_type(v) {}
 
  ACCESSORS__RGET(QVector<caon_ptr<PHR_Graph_Node>> ,hyponodes)
  ACCESSORS(caon_ptr<PHR_Graph_Node> ,parent)

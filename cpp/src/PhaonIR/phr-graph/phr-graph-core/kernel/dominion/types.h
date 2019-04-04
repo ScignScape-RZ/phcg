@@ -7,14 +7,15 @@
 
 #define DOMINION_NODE_TYPE PHR_Graph_Node
 
-#ifndef DOMINION_HIDE_NO_NAMESPACE
-// // No namespace
-#include "relae-graph/dominion-macros.h"
-DOMINION_TYPE(dbl, double, Double)
-DOMINION_TYPE(integer, int, Int)
-DOMINION_TYPE(i8, char, I8)
-DOMINION_TYPE(qstring, QString, QStr)
-#endif
+//#ifndef DOMINION_HIDE_NO_NAMESPACE
+//// // No namespace
+//#include "relae-graph/dominion-macros.h"
+//DOMINION_TYPE(dbl, double, Double)
+//DOMINION_TYPE(integer, int, Int)
+//DOMINION_TYPE(i8, char, I8)
+//DOMINION_TYPE(qstring, QString, QStr)
+//#endif
+//
 
 #include "relae-graph/dominion-macros.h"
 

@@ -4,28 +4,28 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
-#include "rz-re-frame.h"
+#include "phr-graph-frame.h"
 
-#include "kernel/graph/rz-re-node.h"
+#include "kernel/graph/phr-graph-node.h"
 
 #include "rzns.h"
 
 #include <QDebug>
 
 
-USING_RZNS(RECore)
+USING_RZNS(PhrGraphCore)
 
-RE_Frame::RE_Frame()
- : node_frame<RE_Dominion>()
+PHR_Graph_Frame::PHR_Graph_Frame()
+ : node_frame<PHR_Graph_Dominion>()
 {
 
 
 }
 
-RE_Frame& RE_Frame::instance()
+PHR_Graph_Frame& PHR_Graph_Frame::instance()
 {
- static RE_Frame* the_instance = nullptr;
+ static PHR_Graph_Frame* the_instance = nullptr;
  if(!the_instance)
-  the_instance = new RE_Frame;
+  the_instance = new PHR_Graph_Frame;
  return *the_instance;
 }

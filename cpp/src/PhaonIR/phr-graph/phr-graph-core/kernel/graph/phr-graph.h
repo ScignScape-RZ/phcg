@@ -8,10 +8,30 @@
 #define PHR_GRAPH__H
 
 
-class PHR_Graph
+#include "relae-graph/relae-node-ptr.h"
+
+#include "kernel/phr-graph-dominion.h"
+
+#include <QTextStream>
+
+#include "rzns.h"
+
+RZNS_(PhrGraphCore)
+
+
+class PHR_Graph : public node_graph<PHR_Graph_Dominion>
 {
+ public:
+  PHR_Graph(caon_ptr<PHR_Graph_Node> root_node = nullptr);
+
+ void report(QTextStream& qts);
+ void report_from_node(QTextStream& qts,
+  const PHR_Graph_Node& node, int indent = 0);
 
 };
+
+_RZNS(PhrGraphCore)
+
 
 
 #endif

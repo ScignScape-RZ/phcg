@@ -10,16 +10,16 @@
 
 #include "rzns.h"
 
-USING_RZNS(RECore)
+USING_RZNS(PhrGraphCore)
 
 
-RE_Root::RE_Root(RE_Document* document)
+PHR_Graph_Root::PHR_Graph_Root(PHR_Graph_Document* document)
   : document_(document)
 {
 
 }
 
-QString RE_Root::document_path()
+QString PHR_Graph_Root::document_path()
 {
  return document_->local_path();
 }

@@ -4,14 +4,19 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
-#include "phr-graph-connection.h"
+#include "phr-graph-token.h"
 
+#include <QRegularExpression>
+
+#include <QDebug>
 
 #include "rzns.h"
+
 USING_RZNS(PhrGraphCore)
 
-PHR_Graph_Connection::PHR_Graph_Connection(caon_ptr<PHR_Graph_Node> phr_node)
- : phr_node_(phr_node)
+PHR_Graph_Token::PHR_Graph_Token(QString raw_text)
+ : Flags(0), raw_text_(raw_text)
 {
-
 }
+
+

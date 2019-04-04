@@ -7,9 +7,11 @@
 #ifndef PHR_GRAPH_DOMINION__H
 #define PHR_GRAPH_DOMINION__H
 
+#include "relae-graph/relae-node-ptr.h"
+#include "relae-graph/relae-caon-ptr.h"
+
+
 #include "rzns.h"
-
-
 RZNS_(PhrGraphCore)
 
 

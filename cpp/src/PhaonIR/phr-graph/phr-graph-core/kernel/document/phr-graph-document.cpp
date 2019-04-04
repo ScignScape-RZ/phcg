@@ -56,7 +56,7 @@ void PHR_Graph_Document::report_graph(QString path)
  {
   QTextStream qts(&file);
   if(graph_)
-   graph_->report(qts);
+    graph_->report(qts);
  }
 }
 
