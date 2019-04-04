@@ -22,6 +22,7 @@ pop_unwind_scope ;.
 temp_anchor_channel_group ;.
 hold_type_by_name $ u4 ;.
 push_carrier_expression ;.
+coalesce_channel_group ;.
 copy_anchor_channel_group $ x result ;.
 evaluate_channel_group ;.
 delete_temps ;.

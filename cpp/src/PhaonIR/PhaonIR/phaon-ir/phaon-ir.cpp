@@ -418,6 +418,7 @@ void PhaonIR::read_line(QString inst, QString arg)
  static QMap<QString, void(PhaonIR::*)(QString)> static_map {{
   { "push_carrier_stack", &push_carrier_stack },
   { "hold_type_by_name", &hold_type_by_name },
+  { "push_unwind_scope", &push_unwind_scope },
   { "push_carrier_symbol", &push_carrier_symbol },
   { "push_carrier_stack", &push_carrier_stack },
   { "push_carrier_raw_value", &push_carrier_raw_value },
