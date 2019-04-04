@@ -25,13 +25,17 @@
 
 #include "phr-direct-eval/phr-direct-eval.h"
 
+#include "textio.h"
+
+USING_KANS(TextIO)
+
 
 PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
   channel_system_(channel_system), program_stack_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
   held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
   current_chief_unwind_scope_index_({0,0,0,0}),
-  current_lexical_scope_(nullptr)
+  current_lexical_scope_(nullptr), held_symbol_scope_(nullptr)
 {
 
 }
@@ -226,7 +230,13 @@ void PhaonIR::init_table()
  code_model_->set_table(table_);
 }
 
-void PhaonIR::evaluate_channel_group(PHR_Symbol_Scope* pss)
+
+void PhaonIR::hold_symbol_scope(PHR_Symbol_Scope* pss)
+{
+ held_symbol_scope_ = pss;
+}
+
+void PhaonIR::evaluate_channel_group()
 {
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
 
@@ -238,7 +248,7 @@ void PhaonIR::evaluate_channel_group(PHR_Symbol_Scope* pss)
  else
  {
   PHR_Command_Package pcp(*held_channel_group_);
-  phr_direct_eval(code_model_, &pcp, pss);
+  phr_direct_eval(code_model_, &pcp, held_symbol_scope_);
  }
 
  for(auto it: anchored_channel_groups_.values(held_channel_group_))
@@ -363,4 +373,75 @@ void PhaonIR::init_code_model()
 void PhaonIR::init_type(QString type_name, quint8 byte_code)
 {
  type_system_->check_add_type_by_name(type_name, byte_code);
+}
+
+void PhaonIR::read_line(QString inst)
+{
+ static QMap<QString, void(PhaonIR::*)()> static_map {{
+  { "init_program_stack", &init_program_stack },
+  { "enter_lexical_scope", &enter_lexical_scope },
+  { "reset_program_stack", &reset_program_stack },
+  { "coalesce_channel_group", &coalesce_channel_group },
+  { "evaluate_channel_group", &evaluate_channel_group },
+  { "delete_temps", &delete_temps },
+  { "delete_retired", &delete_retired },
+  { "clear_temps", &clear_temps },
+  { "reset_program_stack", &reset_program_stack },
+ }};
+
+ auto it = static_map.find(inst);
+ if(it != static_map.end())
+ {
+  (this->*(it.value()))();
+  //this->(it.value)();
+ }
+}
+
+void PhaonIR::read_line(QString inst, QString arg)
+{
+ static QMap<QString, void(PhaonIR::*)(QString)> static_map {{
+  { "push_carrier_stack", &push_carrier_stack },
+  { "hold_type_by_name", &hold_type_by_name },
+  { "push_carrier_symbol", &push_carrier_symbol },
+  { "push_carrier_stack", &push_carrier_stack },
+  { "push_carrier_raw_value", &push_carrier_raw_value },
+ }};
+
+ auto it = static_map.find(inst);
+ if(it != static_map.end())
+ {
+  (this->*(it.value()))(arg);
+  //this->(*it->value())(arg);
+ }
+}
+
+void PhaonIR::read_local_program(QString path)
+{
+ QString lines;
+ load_file(path, lines);
+
+ int pos = 0;
+ int end = lines.length();
+
+ while(pos < end)
+ {
+  int np = lines.indexOf(";.\n", pos);
+  if(np == -1)
+    np = lines.indexOf("\n.\n", pos);
+  if(np == -1)
+    break;
+  QString l = lines.mid(pos, np - pos);
+  int mp = l.indexOf(" $");
+  if(mp != -1)
+  {
+   QString l1 = l.mid(0, mp).trimmed();
+   QString l2 = l.mid(mp + 2, np - mp - 2).trimmed();
+   read_line(l1, l2);
+  }
+  else
+  {
+   read_line(l.trimmed());
+  }
+  pos = np + 3;
+ }
 }

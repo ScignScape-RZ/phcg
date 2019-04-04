@@ -20,8 +20,8 @@
 
 #include <QDebug>
 
-#ifdef HIDE
-void local_program(PhaonIR& phr)
+//#ifdef HIDE
+void local_program1(PhaonIR& phr)
 {
  phr.init_type_system();
  phr.init_type("fbase", DEFAULT_PTR_BYTE_CODE);
@@ -40,6 +40,8 @@ void local_program(PhaonIR& phr)
  PHR_Runtime_Scope prs(nullptr);
 
  PHR_Symbol_Scope pss(&prs);
+
+ phr.hold_symbol_scope(&pss);
 
  phr.init_table();
 
@@ -65,7 +67,7 @@ void local_program(PhaonIR& phr)
  phr.push_carrier_raw_value("2");
 
  phr.coalesce_channel_group();
- phr.evaluate_channel_group(&pss);
+ phr.evaluate_channel_group();
 
  phr.delete_temps();
  phr.delete_retired();
@@ -74,7 +76,7 @@ void local_program(PhaonIR& phr)
  phr.reset_program_stack();
 
 }
-#endif // HIDE
+//#endif // HIDE
 
 //#ifdef HIDE
 void local_program(PhaonIR& phr)
@@ -105,8 +107,14 @@ void local_program(PhaonIR& phr)
 // phrn.
 
  init_test_functions(phr, pcm, *phr.table(), pss);
+
+ phr.hold_symbol_scope(&pss);
  //phrn.get_runtime_scope_queue().push_front(&prs);
  // //  setup
+
+ phr.read_local_program(DEFAULT_PHR_FOLDER "/t1.phr");
+
+#ifdef HIDE
 
  phr.init_program_stack();
 
@@ -145,7 +153,7 @@ void local_program(PhaonIR& phr)
  phr.coalesce_channel_group();
  phr.copy_anchor_channel_group("x", "result");
 
- phr.evaluate_channel_group(&pss);
+ phr.evaluate_channel_group();
 
  phr.delete_temps();
  phr.delete_retired();
@@ -164,7 +172,7 @@ void local_program(PhaonIR& phr)
  phr.push_carrier_symbol("x");
  phr.coalesce_channel_group();
 
- phr.evaluate_channel_group(&pss);
+ phr.evaluate_channel_group();
 
  phr.delete_temps();
  phr.delete_retired();
@@ -182,7 +190,7 @@ void local_program(PhaonIR& phr)
  phr.push_carrier_symbol("x");
 
  phr.coalesce_channel_group();
- phr.evaluate_channel_group(&pss);
-
+ phr.evaluate_channel_group();
+#endif
 }
-//#endif
+

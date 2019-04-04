@@ -84,6 +84,8 @@ class PhaonIR
 
  PHR_Code_Model* code_model_;
 
+ PHR_Symbol_Scope* held_symbol_scope_;
+
  struct anchor_channel_link
  {
   PHR_Channel_Semantic_Protocol* protocol;
@@ -167,7 +169,13 @@ public:
 
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
- void evaluate_channel_group(PHR_Symbol_Scope* pss);
+ void evaluate_channel_group();
+
+ void hold_symbol_scope(PHR_Symbol_Scope* pss);
+
+ void read_local_program(QString path);
+ void read_line(QString inst);
+ void read_line(QString inst, QString arg);
 
  void enter_lexical_scope();
 
