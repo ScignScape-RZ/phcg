@@ -22,7 +22,6 @@ class PHR_Graph_Connection;
 class PHR_Graph_Annotated_Connectors;
 class PHR_Graph_Frame;
 class PHR_Graph_Document;
-class PHR_Graph_Graph;
 class PHR_Graph_Root;
 class PHR_Graph_Token;
 
@@ -39,7 +38,7 @@ struct PHR_Graph_Dominion
  typedef PHR_Graph_Connection Connection_type;
  typedef PHR_Graph_Annotated_Connectors Annotated_Connectors_type;
  typedef PHR_Graph_Document Document_type;
- typedef PHR_Graph_Graph Graph_type;
+ //typedef PHR_Graph Graph_type;
  typedef PHR_Graph_Root Root_type;
 
  enum class Type_Codes { N_A,

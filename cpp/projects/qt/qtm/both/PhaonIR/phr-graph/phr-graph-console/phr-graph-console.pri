@@ -13,8 +13,10 @@ TEMPLATE = app
 DEFINES += DEFAULT_KPH_FOLDER=\\\"$$CPP_ROOT_DIR/kph\\\"
 DEFINES += DEFAULT_PHR_FOLDER=\\\"$$CPP_ROOT_DIR/phr\\\"
 
+DEFINES += USE_RZNS
 
-INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR
+
+INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR $$SRC_GROUP_DIR/phr-graph-core
 
 
 #INCLUDEPATH += $$KAUVIR_PHAON_SRC_GROUP_DIR
@@ -46,7 +48,7 @@ SOURCES += \
 
 
 
-#LIBS += -L$$TARGETSDIR -lphaon-ir -lphr-direct-eval
+LIBS += -L$$TARGETSDIR  -lphr-graph-core
 
 
 
