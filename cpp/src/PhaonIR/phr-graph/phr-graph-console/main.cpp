@@ -6,9 +6,15 @@
 
 #include "phr-graph-core/kernel/graph/phr-graph.h"
 
+#include "phr-graph-core/output/phr-graph-phr-output.h"
 #include "phr-graph-core/kernel/graph/phr-graph-node.h"
 
 #include "phr-graph-core/kernel/phr-graph-root.h"
+
+#include "phr-graph-core/token/phr-graph-token.h"
+
+#include "phr-graph-core/kernel/frame/phr-graph-frame.h"
+#include "phr-graph-core/kernel/query/phr-graph-query.h"
 
 #include "rzns.h"
 
@@ -20,10 +26,27 @@ int main(int argc, char **argv)
 {
  PHR_Graph pgr;
 
- caon_ptr<PHR_Graph_Root> rt = new PHR_Graph_Root(nullptr);
+ PHR_Graph_PHR_Output pgo(DEFAULT_PHR_GEN_FOLDER "/t1.phr");
+
+ caon_ptr<PHR_Graph_Root> rt = new PHR_Graph_Root(pgo.document().raw_pointer());
  caon_ptr<PHR_Graph_Node> rn = new PHR_Graph_Node(rt);
 
  pgr.set_root_node(rn);
+
+ caon_ptr<PHR_Graph_Token> t1 = new PHR_Graph_Token("&prn");
+ caon_ptr<PHR_Graph_Node> n1 = new PHR_Graph_Node(t1);
+
+ caon_ptr<PHR_Graph_Token> t2 = new PHR_Graph_Token("44");
+ caon_ptr<PHR_Graph_Node> n2 = new PHR_Graph_Node(t2);
+
+ PHR_Graph_Frame& fr = PHR_Graph_Frame::instance();
+ const PHR_Graph_Query& qy = PHR_Graph_Query::instance();
+
+ rn << fr/qy.Statement_Entry >> n1;
+
+ n1 << fr/qy.Channel_Entry >> n2;
+
+ pgo.generate();
 
  qDebug() << "ok";
  return 0;

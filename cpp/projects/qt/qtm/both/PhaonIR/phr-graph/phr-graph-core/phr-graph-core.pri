@@ -44,6 +44,7 @@ HEADERS += \
   $$SRC_DIR/kernel/query/phr-graph-query.h \
   $$SRC_DIR/token/phr-graph-token.h \
   $$SRC_DIR/output/phr-graph-output.h \
+  $$SRC_DIR/output/phr-graph-phr-output.h \
 
 
 SOURCES += \
@@ -57,6 +58,7 @@ SOURCES += \
   $$SRC_DIR/kernel/query/phr-graph-query.cpp \
   $$SRC_DIR/token/phr-graph-token.cpp \
   $$SRC_DIR/output/phr-graph-output.cpp \
+  $$SRC_DIR/output/phr-graph-phr-output.cpp \
 
 #LIBS += -L$$TARGETSDIR  -lphr-direct-eval
 

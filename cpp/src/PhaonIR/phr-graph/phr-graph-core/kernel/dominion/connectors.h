@@ -6,6 +6,10 @@
 
 
 DOMINION_CONNECTOR(N_A, "No Connection")
+
+DOMINION_CONNECTOR(Statement_Entry, "statement-entry")
+DOMINION_CONNECTOR(Channel_Entry, "channel-entry")
+
 DOMINION_CONNECTOR(Run_Call_Entry, "run-call-entry")
 DOMINION_CONNECTOR(Run_Data_Entry, "run-data-entry")
 DOMINION_CONNECTOR(Run_Call_Sequence, "run-call-sequence")
