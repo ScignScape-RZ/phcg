@@ -23,14 +23,18 @@ class PHR_Graph_Node;
 
 class PHR_Graph_Connection
 {
+ QString channel_name_;
+
  caon_ptr<PHR_Graph_Node> phr_node_;
 
 public:
 
  ACCESSORS(caon_ptr<PHR_Graph_Node> ,phr_node)
+ ACCESSORS(QString ,channel_name)
 
  PHR_Graph_Connection(caon_ptr<PHR_Graph_Node> phr_node);
-
+ PHR_Graph_Connection(QString channel_name,
+   caon_ptr<PHR_Graph_Node> phr_node = nullptr);
 
 
 };

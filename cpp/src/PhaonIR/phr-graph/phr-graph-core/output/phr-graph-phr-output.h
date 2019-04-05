@@ -12,6 +12,8 @@
 
 #include "phr-graph-output.h"
 
+#include "generators/statement-generator.h"
+
 #include <QTextStream>
 #include <QMap>
 
@@ -30,6 +32,8 @@ class PHR_Graph_PHR_Output : public PHR_Graph_Output
 
  void generate_from_node(QTextStream& qts,
   const PHR_Graph_Node& node);
+
+ Statement_Generator statement_generator_;
 
 public:
 

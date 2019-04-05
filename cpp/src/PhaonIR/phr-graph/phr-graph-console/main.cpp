@@ -8,6 +8,7 @@
 
 #include "phr-graph-core/output/phr-graph-phr-output.h"
 #include "phr-graph-core/kernel/graph/phr-graph-node.h"
+#include "phr-graph-core/kernel/graph/phr-graph-connection.h"
 
 #include "phr-graph-core/kernel/phr-graph-root.h"
 #include "phr-graph-core/token/phr-graph-token.h"
@@ -46,7 +47,9 @@ int main(int argc, char **argv)
 
  rn << fr/qy.Statement_Entry >> n1;
 
- n1 << fr/qy.Channel_Entry >> n2;
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection("lambda");
+
+ n1 << fr/qy.Channel_Entry(cion) >> n2;
 
  pgo.generate();
 

@@ -35,10 +35,12 @@ void PHR_Graph_PHR_Output::generate_from_node(QTextStream& qts,
 {
  if(caon_ptr<PHR_Graph_Node> sen = rq_.Statement_Entry(&node))
  {
-  if(caon_ptr<PHR_Graph_Token> sent = sen->phr_graph_token())
-  {
-   qts << sent->raw_text();
-  }
+  statement_generator_.generate_from_node(qts, *sen);
+//  generate_statement()
+//  if(caon_ptr<PHR_Graph_Token> sent = sen->phr_graph_token())
+//  {
+//   qts << sent->raw_text();
+//  }
  }
 }
 
@@ -48,6 +50,8 @@ void PHR_Graph_PHR_Output::generate(QTextStream& qts)
 
  caon_ptr<PHR_Graph_Node> node = document_->graph()->root_node();
  generate_from_node(qts, *node);
+
+
 }
 
 void PHR_Graph_PHR_Output::generate()
