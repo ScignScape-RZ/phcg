@@ -10,8 +10,8 @@
 #include "phr-graph-core/kernel/graph/phr-graph-node.h"
 
 #include "phr-graph-core/kernel/phr-graph-root.h"
-
 #include "phr-graph-core/token/phr-graph-token.h"
+#include "phr-graph-core/kernel/document/phr-graph-document.h"
 
 #include "phr-graph-core/kernel/frame/phr-graph-frame.h"
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
@@ -27,6 +27,8 @@ int main(int argc, char **argv)
  PHR_Graph pgr;
 
  PHR_Graph_PHR_Output pgo(DEFAULT_PHR_GEN_FOLDER "/t1.phr");
+
+ pgo.document()->set_graph(&pgr);
 
  caon_ptr<PHR_Graph_Root> rt = new PHR_Graph_Root(pgo.document().raw_pointer());
  caon_ptr<PHR_Graph_Node> rn = new PHR_Graph_Node(rt);

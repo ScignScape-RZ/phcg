@@ -30,9 +30,24 @@ PHR_Graph_PHR_Output::PHR_Graph_PHR_Output(QString outpath, QString inpath)
  document_ = new PHR_Graph_Document(inpath);
 }
 
+void PHR_Graph_PHR_Output::generate_from_node(QTextStream& qts,
+ const PHR_Graph_Node& node)
+{
+ if(caon_ptr<PHR_Graph_Node> sen = rq_.Statement_Entry(&node))
+ {
+  if(caon_ptr<PHR_Graph_Token> sent = sen->phr_graph_token())
+  {
+   qts << sent->raw_text();
+  }
+ }
+}
+
 void PHR_Graph_PHR_Output::generate(QTextStream& qts)
 {
- qts << "yy";
+ CAON_PTR_DEBUG(PHR_Graph_Document ,document_)
+
+ caon_ptr<PHR_Graph_Node> node = document_->graph()->root_node();
+ generate_from_node(qts, *node);
 }
 
 void PHR_Graph_PHR_Output::generate()

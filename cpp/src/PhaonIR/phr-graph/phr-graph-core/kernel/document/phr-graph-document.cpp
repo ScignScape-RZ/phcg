@@ -29,8 +29,11 @@ PHR_Graph_Document::PHR_Graph_Document(QString path)
  : graph_(nullptr)
 {
  local_path_ = path;
- QFileInfo qfi(local_path_);
- local_directory_ = qfi.absoluteDir().absolutePath();
+ if(!path.isEmpty())
+ {
+  QFileInfo qfi(local_path_);
+  local_directory_ = qfi.absoluteDir().absolutePath();
+ }
 }
 
 void PHR_Graph_Document::resolve_report_path(QString& path)

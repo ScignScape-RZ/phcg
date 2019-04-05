@@ -28,6 +28,9 @@ class PHR_Graph_PHR_Output : public PHR_Graph_Output
 {
  QString output_path_;
 
+ void generate_from_node(QTextStream& qts,
+  const PHR_Graph_Node& node);
+
 public:
 
  PHR_Graph_PHR_Output(QString outpath, QString inpath = QString());
