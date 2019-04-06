@@ -25,6 +25,7 @@
 #include "relae-graph/dominion-macros.h"
 DOMINION_TYPE(phr_graph_root, PHR_Graph_Root, PHR_Graph_Root)
 DOMINION_TYPE(phr_graph_token, PHR_Graph_Token, PHR_Graph_Token)
+DOMINION_TYPE(fuxe_entry, PHR_Graph_Fuxe_Entry, PHR_Graph_Fuxe_Entry)
 
 #undef DOMINION_INNER_NAMESPACE
 

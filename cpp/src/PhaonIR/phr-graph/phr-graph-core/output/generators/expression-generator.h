@@ -23,6 +23,7 @@ RZNS_(PhrGraphCore)
 
 class PHR_Graph_Node;
 class PHR_Graph_Token;
+class PHR_Graph_Fuxe_Entry;
 
 class Expression_Generator
 {
@@ -44,6 +45,9 @@ public:
 
  void generate_from_node(QTextStream& qts,
   const PHR_Graph_Node& node, int unw = 0);
+
+ void generate_fuxe_entry(QTextStream& qts, PHR_Graph_Fuxe_Entry& fen,
+  const PHR_Graph_Node& node, int unw);
 
  void generate_from_fn_node(QTextStream& qts,
   PHR_Graph_Token& tok, QString channel_name,

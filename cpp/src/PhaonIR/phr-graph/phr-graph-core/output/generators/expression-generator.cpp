@@ -17,6 +17,7 @@
 #include "token/phr-graph-token.h"
 
 #include "token/phr-graph-token.h"
+#include "token/phr-graph-fuxe-entry.h"
 
 #include "textio.h"
 USING_KANS(TextIO)
@@ -49,7 +50,11 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
   caon_ptr<PHR_Graph_Connection> cion1;
   if(caon_ptr<PHR_Graph_Node> n1 = rq_.Channel_Fuxe_Entry[cion1](n))
   {
-   generate_from_node(qts, *n1, unw + 1);
+   if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
+   {
+    generate_fuxe_entry(qts, *fen, *n1, unw + 1);
+   }
+
   }
   if(caon_ptr<PHR_Graph_Node> n2 = rq_.Channel_Sequence(n))
   {
@@ -61,7 +66,16 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
  }
 }
 
-
+void Expression_Generator::generate_fuxe_entry(QTextStream& qts,
+  PHR_Graph_Fuxe_Entry& fen,
+  const PHR_Graph_Node& node, int unw)
+{
+ qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";
+ if(!fen.result_type_name().isEmpty())
+    qts << "hold_type_by_name $ " << fen.result_type_name() << " ;.\n";
+ generate_line(qts, "index_channel_group");
+ generate_from_node(qts, node, unw);
+}
 
 //void Expression_Generator::generate_close(QTextStream& qts)
 //{

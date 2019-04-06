@@ -33,6 +33,7 @@ RZNS_(PhrGraphCore)
 
 class PHR_Graph_Token;
 
+class PHR_Graph_Fuxe_Entry;
 
 class PHR_Graph_Node : public node_ptr<PHR_Graph_Dominion>
 {

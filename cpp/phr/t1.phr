@@ -22,8 +22,9 @@ push_carrier_raw_value $ #+ ;.
 push_carrier_stack $ lambda ;.
 hold_type_by_name $ u4 ;.
 push_carrier_raw_value $ 21 ;.
-push_carrier_raw_value $ 9 ;.
+push_carrier_raw_value $ 19 ;.
 push_carrier_stack $ result ;.
+hold_type_by_name $ u4 ;.
 index_channel_group ;.
 coalesce_channel_group ;.
 pop_unwind_scope ;.

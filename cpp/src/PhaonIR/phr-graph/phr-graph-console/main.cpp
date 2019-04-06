@@ -17,6 +17,8 @@
 #include "phr-graph-core/kernel/frame/phr-graph-frame.h"
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
 
+#include "phr-graph-core/token/phr-graph-fuxe-entry.h"
+
 #include "rzns.h"
 
 USING_RZNS(PhrGraphCore)
@@ -60,13 +62,17 @@ int main(int argc, char **argv)
  t4->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n4 = new PHR_Graph_Node(t4);
 
- caon_ptr<PHR_Graph_Token> t5 = new PHR_Graph_Token("3", "u4");
+ caon_ptr<PHR_Graph_Token> t5 = new PHR_Graph_Token("13");
  t5->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n5 = new PHR_Graph_Node(t5);
 
 // caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection("lambda");
 
- n2 << fr/qy.Channel_Fuxe_Entry(cion) >> n3;
+ caon_ptr<PHR_Graph_Fuxe_Entry> f1 = new PHR_Graph_Fuxe_Entry("result", "u4");
+ caon_ptr<PHR_Graph_Node> fn1 = new PHR_Graph_Node(f1);
+ caon_ptr<PHR_Graph_Connection> fc1 = new PHR_Graph_Connection(fn1);
+
+ n2 << fr/qy.Channel_Fuxe_Entry(fc1) >> n3;
  n3 << fr/qy.Channel_Entry(cion) >> n4;
  n4 << fr/qy.Channel_Sequence >> n5;
 

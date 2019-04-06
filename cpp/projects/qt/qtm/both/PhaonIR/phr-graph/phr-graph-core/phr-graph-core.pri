@@ -50,6 +50,7 @@ HEADERS += \
   $$SRC_DIR/output/phr-graph-phr-output.h \
   $$SRC_DIR/output/generators/statement-generator.h \
   $$SRC_DIR/output/generators/expression-generator.h \
+  $$SRC_DIR/token/phr-graph-fuxe-entry.h \
 
 
 SOURCES += \
@@ -66,6 +67,7 @@ SOURCES += \
   $$SRC_DIR/output/phr-graph-phr-output.cpp \
   $$SRC_DIR/output/generators/statement-generator.cpp \
   $$SRC_DIR/output/generators/expression-generator.cpp \
+  $$SRC_DIR/token/phr-graph-fuxe-entry.cpp \
 
 #LIBS += -L$$TARGETSDIR  -lphr-direct-eval
 
