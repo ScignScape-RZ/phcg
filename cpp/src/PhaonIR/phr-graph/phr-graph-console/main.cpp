@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 
  pgr.set_root_node(rn);
 
- caon_ptr<PHR_Graph_Token> t1 = new PHR_Graph_Token("&prn");
+ caon_ptr<PHR_Graph_Token> t1 = new PHR_Graph_Token("#+");
  caon_ptr<PHR_Graph_Node> n1 = new PHR_Graph_Node(t1);
 
  caon_ptr<PHR_Graph_Token> t2 = new PHR_Graph_Token("44", "u4");
@@ -49,8 +49,24 @@ int main(int argc, char **argv)
  rn << fr/qy.Statement_Entry >> n1;
 
  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection("lambda");
-
  n1 << fr/qy.Channel_Entry(cion) >> n2;
+
+ caon_ptr<PHR_Graph_Token> t3 = new PHR_Graph_Token("#+");
+ caon_ptr<PHR_Graph_Node> n3 = new PHR_Graph_Node(t3);
+
+ caon_ptr<PHR_Graph_Token> t4 = new PHR_Graph_Token("21", "u4");
+ t2->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Node> n4 = new PHR_Graph_Node(t4);
+
+ caon_ptr<PHR_Graph_Token> t5 = new PHR_Graph_Token("3", "u4");
+ t2->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Node> n5 = new PHR_Graph_Node(t5);
+
+// caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection("lambda");
+
+ n2 << fr/qy.Channel_Fuxe_Entry(cion) >> n3;
+ n3 << fr/qy.Channel_Entry(cion) >> n4;
+ n4 << fr/qy.Channel_Sequence >> n5;
 
  pgo.generate();
 

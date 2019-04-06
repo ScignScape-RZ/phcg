@@ -25,8 +25,9 @@ USING_KANS(TextIO)
 USING_RZNS(PhrGraphCore)
 
 
-Statement_Generator::Statement_Generator()
- :  rq_(PHR_Graph_Query::instance())
+Statement_Generator::Statement_Generator(Expression_Generator& expression_generator)
+ :  rq_(PHR_Graph_Query::instance()),
+    expression_generator_(expression_generator)
 {
 
 }
@@ -34,20 +35,8 @@ Statement_Generator::Statement_Generator()
 void Statement_Generator::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node)
 {
- caon_ptr<PHR_Graph_Connection> cion;
- if(caon_ptr<PHR_Graph_Node> n = rq_.Channel_Entry[cion](&node))
- {
-  QString channel_name;
-  if(cion)
-  {
-   channel_name = cion->channel_name();
-  }
-  if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
-  {
-   generate_from_fn_node(qts, *tokn, channel_name, *n);
-   generate_close(qts);
-  }
- }
+ generate_from_node(qts, node);
+ generate_close(qts);
 }
 
 void Statement_Generator::generate_close(QTextStream& qts)
@@ -59,46 +48,3 @@ void Statement_Generator::generate_close(QTextStream& qts)
   "clear_temps ;.\n"
   "reset_program_stack";
 }
-
-
-void Statement_Generator::generate_from_fn_node(QTextStream& qts,
- PHR_Graph_Token& tok, QString channel_name, const PHR_Graph_Node& arg_node)
-{
- qts << "push_carrier_stack $ fuxe ;.\n";
- if(tok.type_name().isEmpty())
-   tok.set_type_name("fbase");
- generate_carrier_with_symbol(qts, tok);
- generate_arg_carriers(qts, channel_name, arg_node);
-}
-
-void Statement_Generator::generate_arg_carriers(QTextStream& qts,
- QString channel_name, const PHR_Graph_Node& arg_node)
-{
- qts << "push_carrier_stack $ " << channel_name << " ;.\n";
- if(caon_ptr<PHR_Graph_Token> tokn = arg_node.phr_graph_token())
- {
-  if(tokn->flags.gen_raw_value)
-    generate_carrier_with_raw_value(qts, *tokn);
-  else
-   generate_carrier_with_symbol(qts, *tokn);
- }
-}
-
-void Statement_Generator::generate_carrier_with_symbol(QTextStream& qts,
- PHR_Graph_Token& tok)
-{
- QString ty = tok.type_name();
- if(!ty.isEmpty())
-   qts << "hold_type_by_name $ " << ty << " ;.\n";
- qts << "push_carrier_symbol $ " << tok.raw_text() << " ;.\n";
-}
-
-void Statement_Generator::generate_carrier_with_raw_value(QTextStream& qts,
- PHR_Graph_Token& tok)
-{
- QString ty = tok.type_name();
- if(!ty.isEmpty())
-   qts << "hold_type_by_name $ " << ty << " ;.\n";
- qts << "push_carrier_raw_value $ " << tok.raw_text() << " ;.\n";
-}
-

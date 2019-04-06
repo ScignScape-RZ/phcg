@@ -25,7 +25,8 @@ USING_RZNS(PhrGraphCore)
 
 
 PHR_Graph_PHR_Output::PHR_Graph_PHR_Output(QString outpath, QString inpath)
- : PHR_Graph_Output(nullptr), output_path_(outpath)
+ : PHR_Graph_Output(nullptr), output_path_(outpath),
+   expression_generator_(), statement_generator_(expression_generator_)
 {
  document_ = new PHR_Graph_Document(inpath);
 }

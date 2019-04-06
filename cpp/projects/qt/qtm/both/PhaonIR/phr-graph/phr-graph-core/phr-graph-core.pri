@@ -49,6 +49,7 @@ HEADERS += \
   $$SRC_DIR/output/phr-graph-output.h \
   $$SRC_DIR/output/phr-graph-phr-output.h \
   $$SRC_DIR/output/generators/statement-generator.h \
+  $$SRC_DIR/output/generators/expression-generator.h \
 
 
 SOURCES += \
@@ -64,6 +65,7 @@ SOURCES += \
   $$SRC_DIR/output/phr-graph-output.cpp \
   $$SRC_DIR/output/phr-graph-phr-output.cpp \
   $$SRC_DIR/output/generators/statement-generator.cpp \
+  $$SRC_DIR/output/generators/expression-generator.cpp \
 
 #LIBS += -L$$TARGETSDIR  -lphr-direct-eval
 
