@@ -40,6 +40,8 @@ protected:
  virtual void output_from_node(QTextStream& qts,
   const PHR_Graph_Node& node, int indent = 0);
 
+ void generate_line(QTextStream& qts, QString ln);
+
 public:
 
  PHR_Graph_Output(caon_ptr<PHR_Graph_Document> document);

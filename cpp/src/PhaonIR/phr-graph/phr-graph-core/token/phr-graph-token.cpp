@@ -14,8 +14,8 @@
 
 USING_RZNS(PhrGraphCore)
 
-PHR_Graph_Token::PHR_Graph_Token(QString raw_text)
- : Flags(0), raw_text_(raw_text)
+PHR_Graph_Token::PHR_Graph_Token(QString raw_text, QString type_name)
+ : Flags(0), raw_text_(raw_text), type_name_(type_name)
 {
 }
 

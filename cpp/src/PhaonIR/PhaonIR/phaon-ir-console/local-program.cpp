@@ -112,7 +112,7 @@ void local_program(PhaonIR& phr)
  //phrn.get_runtime_scope_queue().push_front(&prs);
  // //  setup
 
- phr.read_local_program(DEFAULT_PHR_FOLDER "/t1.phr");
+ phr.read_local_program(DEFAULT_PHR_FOLDER "/gen/t1.phr");
 
 #ifdef HIDE
 

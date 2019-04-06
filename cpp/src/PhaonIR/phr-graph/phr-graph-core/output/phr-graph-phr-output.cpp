@@ -49,8 +49,12 @@ void PHR_Graph_PHR_Output::generate(QTextStream& qts)
  CAON_PTR_DEBUG(PHR_Graph_Document ,document_)
 
  caon_ptr<PHR_Graph_Node> node = document_->graph()->root_node();
- generate_from_node(qts, *node);
 
+ generate_line(qts, "init_program_stack");
+ generate_line(qts, "enter_lexical_scope");
+ generate_line(qts, "reset_program_stack");
+
+ generate_from_node(qts, *node);
 
 }
 

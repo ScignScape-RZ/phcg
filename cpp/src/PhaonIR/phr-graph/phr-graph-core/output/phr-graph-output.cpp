@@ -32,6 +32,12 @@ PHR_Graph_Output::PHR_Graph_Output(caon_ptr<PHR_Graph_Document> document)
 
 }
 
+
+void PHR_Graph_Output::generate_line(QTextStream& qts, QString ln)
+{
+ qts << ln << " ;.\n";
+}
+
 void PHR_Graph_Output::output(QString path)
 {
  //document_->write_report(path, *this);

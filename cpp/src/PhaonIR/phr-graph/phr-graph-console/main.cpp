@@ -39,7 +39,8 @@ int main(int argc, char **argv)
  caon_ptr<PHR_Graph_Token> t1 = new PHR_Graph_Token("&prn");
  caon_ptr<PHR_Graph_Node> n1 = new PHR_Graph_Node(t1);
 
- caon_ptr<PHR_Graph_Token> t2 = new PHR_Graph_Token("44");
+ caon_ptr<PHR_Graph_Token> t2 = new PHR_Graph_Token("44", "u4");
+ t2->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n2 = new PHR_Graph_Node(t2);
 
  PHR_Graph_Frame& fr = PHR_Graph_Frame::instance();

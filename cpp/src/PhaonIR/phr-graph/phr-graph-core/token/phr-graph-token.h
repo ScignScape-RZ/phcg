@@ -36,19 +36,21 @@ public:
   bool is_back_quoted:1;
   bool is_string_literal:1;
   bool is_numeric_literal:1;
+  bool gen_raw_value:1;
  _flags
 
 
 private:
 
+ QString type_name_;
  QString raw_text_;
 
 public:
 
  ACCESSORS(QString ,raw_text)
+ ACCESSORS(QString ,type_name)
 
-
- PHR_Graph_Token(QString raw_text);
+ PHR_Graph_Token(QString raw_text, QString type_name = QString());
 
 };
 

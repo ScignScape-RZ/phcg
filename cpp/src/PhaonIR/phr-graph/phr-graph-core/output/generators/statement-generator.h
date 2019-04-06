@@ -22,6 +22,7 @@
 RZNS_(PhrGraphCore)
 
 class PHR_Graph_Node;
+class PHR_Graph_Token;
 
 class Statement_Generator
 {
@@ -33,10 +34,22 @@ public:
 
  Statement_Generator();
 
+ void generate_close(QTextStream& qts);
 
  void generate_from_node(QTextStream& qts,
   const PHR_Graph_Node& node);
 
+ void generate_from_fn_node(QTextStream& qts,
+  PHR_Graph_Token& tok, QString channel_name, const PHR_Graph_Node& arg_node);
+
+ void generate_arg_carriers(QTextStream& qts,
+  QString channel_name, const PHR_Graph_Node& arg_node);
+
+ void generate_carrier_with_symbol(QTextStream& qts,
+  PHR_Graph_Token& tok);
+
+ void generate_carrier_with_raw_value(QTextStream& qts,
+  PHR_Graph_Token& tok);
 
 };
 
