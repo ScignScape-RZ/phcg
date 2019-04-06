@@ -1,19 +1,27 @@
 init_program_stack ;.
 enter_lexical_scope ;.
 reset_program_stack ;.
+
+
+ .; generate_from_fn_node ;.
 push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.
 push_carrier_raw_value $ #+ ;.
+ .; args ;.
 push_carrier_stack $ lambda ;.
 hold_type_by_name $ u4 ;.
-push_carrier_raw_value $ 2 ;.
+push_carrier_raw_value $ 44 ;.
+
 push_unwind_scope $ 1 ;.
+
+ .; generate_from_fn_node ;.
 push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.
 push_carrier_raw_value $ #+ ;.
+ .; args ;.
 push_carrier_stack $ lambda ;.
 hold_type_by_name $ u4 ;.
-push_carrier_raw_value $ 7 ;.
+push_carrier_raw_value $ 21 ;.
 push_carrier_raw_value $ 9 ;.
 push_carrier_stack $ result ;.
 index_channel_group ;.

@@ -32,7 +32,7 @@ Expression_Generator::Expression_Generator()
 }
 
 void Expression_Generator::generate_from_node(QTextStream& qts,
- const PHR_Graph_Node& node)
+ const PHR_Graph_Node& node, int unw)
 {
  caon_ptr<PHR_Graph_Connection> cion;
  if(caon_ptr<PHR_Graph_Node> n = rq_.Channel_Entry[cion](&node))
@@ -44,12 +44,12 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
   }
   if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
   {
-   generate_from_fn_node(qts, *tokn, channel_name, *n);
+   generate_from_fn_node(qts, *tokn, channel_name, *n, unw);
   }
   caon_ptr<PHR_Graph_Connection> cion1;
   if(caon_ptr<PHR_Graph_Node> n1 = rq_.Channel_Fuxe_Entry[cion1](n))
   {
-   generate_from_node(qts, *n1);
+   generate_from_node(qts, *n1, unw + 1);
   }
   if(caon_ptr<PHR_Graph_Node> n2 = rq_.Channel_Sequence(n))
   {
@@ -83,34 +83,49 @@ void Expression_Generator::generate_empty_line(QTextStream& qts, int n)
  qts << QString(n, '\n');
 }
 
-void Expression_Generator::generate_comment_line(QTextStream& qts, QString ln)
+void Expression_Generator::generate_comment_line(QTextStream& qts,
+  QString ln, int n)
 {
+ if(n > 0)
+   generate_empty_line(qts, n);
  qts << " .; " << ln << " ;.\n";
 }
 
 void Expression_Generator::generate_from_fn_node(QTextStream& qts,
- PHR_Graph_Token& tok, QString channel_name, const PHR_Graph_Node& arg_node)
+  PHR_Graph_Token& tok, QString channel_name,
+  const PHR_Graph_Node& arg_node, int unw)
 {
- generate_empty_line(qts);
- generate_comment_line(qts, "generate_from_fn_node");
+ if(unw > 0)
+ {
+  generate_empty_line(qts);
+  qts << "push_unwind_scope $ " << unw << " ;.\n";
+ }
+ generate_comment_line(qts, "generate_from_fn_node", (unw > 0)?1:2);
  qts << "push_carrier_stack $ fuxe ;.\n";
  if(tok.type_name().isEmpty())
    tok.set_type_name("fbase");
- generate_carrier_with_symbol(qts, tok);
- generate_arg_carriers(qts, channel_name, arg_node);
+ generate_carrier(qts, tok);
+ generate_comment_line(qts, "args");
+ generate_arg_carriers(qts, channel_name, arg_node, unw);
 }
 
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,
- QString channel_name, const PHR_Graph_Node& arg_node)
+ QString channel_name, const PHR_Graph_Node& arg_node, int unw)
 {
  qts << "push_carrier_stack $ " << channel_name << " ;.\n";
  if(caon_ptr<PHR_Graph_Token> tokn = arg_node.phr_graph_token())
  {
-  if(tokn->flags.gen_raw_value)
-    generate_carrier_with_raw_value(qts, *tokn);
-  else
-   generate_carrier_with_symbol(qts, *tokn);
+  generate_carrier(qts, *tokn);
  }
+}
+
+void Expression_Generator::generate_carrier(QTextStream& qts,
+  PHR_Graph_Token& tokn)
+{
+ if(tokn.flags.gen_raw_value)
+   generate_carrier_with_raw_value(qts, tokn);
+ else
+   generate_carrier_with_symbol(qts, tokn);
 }
 
 void Expression_Generator::generate_carrier_with_symbol(QTextStream& qts,

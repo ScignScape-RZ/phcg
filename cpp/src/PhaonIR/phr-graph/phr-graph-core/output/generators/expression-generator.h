@@ -36,17 +36,22 @@ public:
 
 // void generate_close(QTextStream& qts);
  void generate_line(QTextStream& qts, QString ln);
- void generate_comment_line(QTextStream& qts, QString ln);
+ void generate_comment_line(QTextStream& qts, QString ln, int n = 0);
  void generate_empty_line(QTextStream& qts, int n = 1);
 
+ void generate_carrier(QTextStream& qts,
+   PHR_Graph_Token& tokn);
+
  void generate_from_node(QTextStream& qts,
-  const PHR_Graph_Node& node);
+  const PHR_Graph_Node& node, int unw = 0);
 
  void generate_from_fn_node(QTextStream& qts,
-  PHR_Graph_Token& tok, QString channel_name, const PHR_Graph_Node& arg_node);
+  PHR_Graph_Token& tok, QString channel_name,
+  const PHR_Graph_Node& arg_node, int unw);
 
  void generate_arg_carriers(QTextStream& qts,
-  QString channel_name, const PHR_Graph_Node& arg_node);
+  QString channel_name,
+  const PHR_Graph_Node& arg_node, int unw);
 
  void generate_carrier_with_symbol(QTextStream& qts,
   PHR_Graph_Token& tok);
