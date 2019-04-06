@@ -35,6 +35,9 @@ public:
  Expression_Generator();
 
 // void generate_close(QTextStream& qts);
+ void generate_line(QTextStream& qts, QString ln);
+ void generate_comment_line(QTextStream& qts, QString ln);
+ void generate_empty_line(QTextStream& qts, int n = 1);
 
  void generate_from_node(QTextStream& qts,
   const PHR_Graph_Node& node);

@@ -49,7 +49,7 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
   caon_ptr<PHR_Graph_Connection> cion1;
   if(caon_ptr<PHR_Graph_Node> n1 = rq_.Channel_Fuxe_Entry[cion1](n))
   {
-   generate_from_node(qts, node);
+   generate_from_node(qts, *n1);
   }
   if(caon_ptr<PHR_Graph_Node> n2 = rq_.Channel_Sequence(n))
   {
@@ -73,10 +73,26 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
 //  "reset_program_stack";
 //}
 
+void Expression_Generator::generate_line(QTextStream& qts, QString ln)
+{
+ qts << ln << " ;.\n";
+}
+
+void Expression_Generator::generate_empty_line(QTextStream& qts, int n)
+{
+ qts << QString(n, '\n');
+}
+
+void Expression_Generator::generate_comment_line(QTextStream& qts, QString ln)
+{
+ qts << " .; " << ln << " ;.\n";
+}
 
 void Expression_Generator::generate_from_fn_node(QTextStream& qts,
  PHR_Graph_Token& tok, QString channel_name, const PHR_Graph_Node& arg_node)
 {
+ generate_empty_line(qts);
+ generate_comment_line(qts, "generate_from_fn_node");
  qts << "push_carrier_stack $ fuxe ;.\n";
  if(tok.type_name().isEmpty())
    tok.set_type_name("fbase");

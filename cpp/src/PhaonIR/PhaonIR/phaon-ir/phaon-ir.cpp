@@ -448,7 +448,13 @@ void PhaonIR::read_local_program(QString path)
     np = lines.indexOf("\n.\n", pos);
   if(np == -1)
     break;
-  QString l = lines.mid(pos, np - pos);
+  QString l = lines.mid(pos, np - pos).trimmed();
+  if(l.startsWith(".;"))
+  {
+   pos = np + 3;
+   continue;
+  }
+
   int mp = l.indexOf(" $");
   if(mp != -1)
   {

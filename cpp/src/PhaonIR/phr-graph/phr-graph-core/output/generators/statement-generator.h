@@ -48,4 +48,4 @@ public:
 
 _RZNS(PhrGraphCore)
 
-#endif //PHR_GRAPH_PHR_OUTPUT__H
+#endif // STATEMENT_GENERATOR__H

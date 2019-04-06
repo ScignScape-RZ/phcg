@@ -6,6 +6,8 @@
 
 #include "statement-generator.h"
 
+#include "expression-generator.h"
+
 #include "kernel/document/phr-graph-document.h"
 
 #include "kernel/graph/phr-graph.h"
@@ -35,7 +37,7 @@ Statement_Generator::Statement_Generator(Expression_Generator& expression_genera
 void Statement_Generator::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node)
 {
- generate_from_node(qts, node);
+ expression_generator_.generate_from_node(qts, node);
  generate_close(qts);
 }
 
