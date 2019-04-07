@@ -25,6 +25,14 @@ push_carrier_stack $ lambda ;.
 hold_type_by_name $ u4 ;.
 push_carrier_raw_value $ 21 ;.
 push_carrier_raw_value $ 13 ;.
+push_carrier_stack $ result ;.
+hold_type_by_name $ u4 ;.
+index_channel_group ;.
+coalesce_channel_group ;.
+ .; pop ;.
+pop_unwind_scope ;.
+temp_anchor_channel_group ;.
+ .; end fuxe entry ;.
 coalesce_channel_group ;.
 evaluate_channel_group ;.
 delete_temps ;.

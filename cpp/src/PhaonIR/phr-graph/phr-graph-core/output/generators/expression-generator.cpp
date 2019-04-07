@@ -57,14 +57,27 @@ void Expression_Generator::generate_fuxe_entry(QTextStream& qts,
  if(unw > 0)
    qts << "\npush_unwind_scope $ "
    << unw << ' ' << fen.channel_name() << " ;.\n";
- else
+// else
+// {
+//  qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";
+//  if(!fen.result_type_name().isEmpty())
+//    qts << "hold_type_by_name $ " << fen.result_type_name() << " ;.\n";
+//  generate_line(qts, "index_channel_group");
+// }
+ generate_from_node(qts, node, unw);
+
+ if(unw > 0)
  {
   qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";
   if(!fen.result_type_name().isEmpty())
     qts << "hold_type_by_name $ " << fen.result_type_name() << " ;.\n";
   generate_line(qts, "index_channel_group");
+  generate_line(qts, "coalesce_channel_group");
+  generate_comment_line(qts, "pop");
+  generate_line(qts, "pop_unwind_scope");
+  generate_line(qts, "temp_anchor_channel_group");
  }
- generate_from_node(qts, node, unw);
+ generate_comment_line(qts, "end fuxe entry");
 }
 
 //void Expression_Generator::generate_close(QTextStream& qts)
@@ -137,10 +150,13 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
    if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
    {
     generate_fuxe_entry(qts, *fen, *n1, unw + 1);
+    qts << "hold_type_by_name $ " << fen->result_type_name() << " ;.\n";
+    generate_line(qts, "push_carrier_expression");
    }
   }
   n = n1;
  }
+
 }
 
 void Expression_Generator::generate_carrier(QTextStream& qts,
