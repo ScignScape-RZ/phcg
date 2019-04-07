@@ -33,6 +33,8 @@ coalesce_channel_group ;.
 pop_unwind_scope ;.
 temp_anchor_channel_group ;.
  .; end fuxe entry ;.
+hold_type_by_name $ u4 ;.
+push_carrier_expression ;.
 coalesce_channel_group ;.
 evaluate_channel_group ;.
 delete_temps ;.
