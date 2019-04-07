@@ -177,11 +177,12 @@ QString PhaonIR::get_first_raw_value_string(QString sp_name, PHR_Channel_Group& 
 
 void PhaonIR::push_unwind_scope(QString level_delta)
 {
- push_unwind_scope(level_delta.toInt());
+ QStringList qsl = level_delta.simplified().split(' ');
+ push_unwind_scope(qsl[0].toInt(), qsl[1]);
 }
 
 
-void PhaonIR::push_unwind_scope(int level_delta)
+void PhaonIR::push_unwind_scope(int level_delta, QString chn)
 {
  Unwind_Scope_Index usi = current_chief_unwind_scope_index_;//.project();
  inc_channel_pos();
@@ -189,6 +190,7 @@ void PhaonIR::push_unwind_scope(int level_delta)
  current_chief_unwind_scope_index_.unwind_level = 0;
  current_chief_unwind_scope_index_.unwind_maximum_ = level_delta;
  current_chief_unwind_scope_index_.level_channel_pos = 0;
+ current_chief_unwind_scope_index_.channel_name = chn;
  unwind_scope_index_parents_[current_chief_unwind_scope_index_] = usi;//.project();
  held_program_stacks_[usi] = {program_stack_, current_carrier_stack_};
  check_init_program_stack();

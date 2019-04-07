@@ -48,9 +48,11 @@ class PhaonIR
   quint8 unwind_maximum_;
   quint8 level_channel_pos;
 
+  QString channel_name;
+
   Unwind_Scope_Index project()
   {
-   return {chief_channel_pos, unwind_level, 0, 0};
+   return {chief_channel_pos, unwind_level, 0, 0, channel_name};
   }
  };
 
@@ -181,7 +183,7 @@ public:
 
  void enter_lexical_scope();
 
- void push_unwind_scope(int level_delta);
+ void push_unwind_scope(int level_delta, QString chn);
 
  void push_unwind_scope(QString level_delta);
 

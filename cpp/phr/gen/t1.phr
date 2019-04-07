@@ -11,11 +11,10 @@ push_carrier_raw_value $ #+ ;.
 push_carrier_stack $ lambda ;.
 hold_type_by_name $ u4 ;.
 push_carrier_raw_value $ 44 ;.
-push_carrier_stack $ result ;.
-hold_type_by_name $ u4 ;.
-index_channel_group ;.
 
-push_unwind_scope $ 1 ;.
+push_unwind_scope $ 1 result ;.
+
+ .; unwind_scope: 1 ;.
 
  .; generate_from_fn_node ;.
 push_carrier_stack $ fuxe ;.
@@ -25,7 +24,7 @@ push_carrier_raw_value $ #+ ;.
 push_carrier_stack $ lambda ;.
 hold_type_by_name $ u4 ;.
 push_carrier_raw_value $ 21 ;.
-push_carrier_symbol $ 13 ;.
+push_carrier_raw_value $ 13 ;.
 coalesce_channel_group ;.
 evaluate_channel_group ;.
 delete_temps ;.

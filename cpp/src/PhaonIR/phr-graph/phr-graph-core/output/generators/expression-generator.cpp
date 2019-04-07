@@ -47,22 +47,6 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
   {
    generate_from_fn_node(qts, *tokn, channel_name, *n, unw);
   }
-  caon_ptr<PHR_Graph_Connection> cion1;
-  if(caon_ptr<PHR_Graph_Node> n1 = rq_.Channel_Fuxe_Entry[cion1](n))
-  {
-   if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
-   {
-    generate_fuxe_entry(qts, *fen, *n1, unw + 1);
-   }
-
-  }
-  if(caon_ptr<PHR_Graph_Node> n2 = rq_.Channel_Sequence(n))
-  {
-   if(caon_ptr<PHR_Graph_Token> tokn = n2->phr_graph_token())
-   {
-    generate_carrier_with_symbol(qts, *tokn);
-   }
-  }
  }
 }
 
@@ -70,10 +54,16 @@ void Expression_Generator::generate_fuxe_entry(QTextStream& qts,
   PHR_Graph_Fuxe_Entry& fen,
   const PHR_Graph_Node& node, int unw)
 {
- qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";
- if(!fen.result_type_name().isEmpty())
+ if(unw > 0)
+   qts << "\npush_unwind_scope $ "
+   << unw << ' ' << fen.channel_name() << " ;.\n";
+ else
+ {
+  qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";
+  if(!fen.result_type_name().isEmpty())
     qts << "hold_type_by_name $ " << fen.result_type_name() << " ;.\n";
- generate_line(qts, "index_channel_group");
+  generate_line(qts, "index_channel_group");
+ }
  generate_from_node(qts, node, unw);
 }
 
@@ -111,8 +101,7 @@ void Expression_Generator::generate_from_fn_node(QTextStream& qts,
 {
  if(unw > 0)
  {
-  generate_empty_line(qts);
-  qts << "push_unwind_scope $ " << unw << " ;.\n";
+  qts << "\n .; unwind_scope: " << unw << " ;.\n";
  }
  generate_comment_line(qts, "generate_from_fn_node", (unw > 0)?1:2);
  qts << "push_carrier_stack $ fuxe ;.\n";
@@ -130,6 +119,27 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  if(caon_ptr<PHR_Graph_Token> tokn = arg_node.phr_graph_token())
  {
   generate_carrier(qts, *tokn);
+ }
+ caon_ptr<PHR_Graph_Node> n = &arg_node;
+ caon_ptr<PHR_Graph_Node> n1 = nullptr;
+ while(n)
+ {
+  caon_ptr<PHR_Graph_Connection> cion1;
+  if(n1 = rq_.Channel_Sequence(n))
+  {
+   if(caon_ptr<PHR_Graph_Token> tok = n1->phr_graph_token())
+   {
+    generate_carrier(qts, *tok);
+   }
+  }
+  else if(n1 = rq_.Channel_Fuxe_Entry[cion1](n))
+  {
+   if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
+   {
+    generate_fuxe_entry(qts, *fen, *n1, unw + 1);
+   }
+  }
+  n = n1;
  }
 }
 
