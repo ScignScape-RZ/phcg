@@ -18,6 +18,7 @@
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
 
 #include "phr-graph-core/token/phr-graph-fuxe-entry.h"
+#include "phr-graph-core/token/phr-graph-statement-info.h"
 
 #include "rzns.h"
 
@@ -49,7 +50,11 @@ int main(int argc, char **argv)
  PHR_Graph_Frame& fr = PHR_Graph_Frame::instance();
  const PHR_Graph_Query& qy = PHR_Graph_Query::instance();
 
- rn << fr/qy.Statement_Entry >> n1;
+ caon_ptr<PHR_Graph_Statement_Info> si = new
+   PHR_Graph_Statement_Info("x", "result", "\\=");
+ caon_ptr<PHR_Graph_Node> sin = new PHR_Graph_Node(si);
+ caon_ptr<PHR_Graph_Connection> sicion = new PHR_Graph_Connection(sin);
+ rn << fr/qy.Statement_Entry(sicion) >> n1;
 
  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection("lambda");
  n1 << fr/qy.Channel_Entry(cion) >> n2;

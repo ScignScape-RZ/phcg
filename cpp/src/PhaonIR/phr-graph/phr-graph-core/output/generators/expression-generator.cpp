@@ -156,7 +156,6 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
   }
   n = n1;
  }
-
 }
 
 void Expression_Generator::generate_carrier(QTextStream& qts,

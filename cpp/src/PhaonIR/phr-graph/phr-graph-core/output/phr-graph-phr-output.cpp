@@ -10,12 +10,15 @@
 
 #include "kernel/graph/phr-graph.h"
 #include "kernel/graph/phr-graph-node.h"
+#include "kernel/graph/phr-graph-connection.h"
 
 #include "kernel/phr-graph-root.h"
 
 #include "token/phr-graph-token.h"
 
 #include "token/phr-graph-token.h"
+
+#include "token/phr-graph-statement-info.h"
 
 #include "textio.h"
 USING_KANS(TextIO)
@@ -34,9 +37,13 @@ PHR_Graph_PHR_Output::PHR_Graph_PHR_Output(QString outpath, QString inpath)
 void PHR_Graph_PHR_Output::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node)
 {
- if(caon_ptr<PHR_Graph_Node> sen = rq_.Statement_Entry(&node))
+ caon_ptr<PHR_Graph_Connection> cion;
+ if(caon_ptr<PHR_Graph_Node> sen = rq_.Statement_Entry[cion](&node))
  {
-  statement_generator_.generate_from_node(qts, *sen);
+  PHR_Graph_Statement_Info* si = nullptr;
+  if(cion)
+    si = cion->phr_node()->statement_info().raw_pointer();
+  statement_generator_.generate_from_node(qts, *sen, si);
 //  generate_statement()
 //  if(caon_ptr<PHR_Graph_Token> sent = sen->phr_graph_token())
 //  {

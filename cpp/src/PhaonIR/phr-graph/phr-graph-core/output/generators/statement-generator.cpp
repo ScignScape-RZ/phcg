@@ -18,7 +18,7 @@
 
 #include "token/phr-graph-token.h"
 
-#include "token/phr-graph-token.h"
+#include "token/phr-graph-statement-info.h"
 
 #include "textio.h"
 USING_KANS(TextIO)
@@ -35,15 +35,19 @@ Statement_Generator::Statement_Generator(Expression_Generator& expression_genera
 }
 
 void Statement_Generator::generate_from_node(QTextStream& qts,
- const PHR_Graph_Node& node)
+ const PHR_Graph_Node& node, PHR_Graph_Statement_Info* si)
 {
  expression_generator_.generate_from_node(qts, node);
- generate_close(qts);
+ generate_close(qts, si);
 }
 
-void Statement_Generator::generate_close(QTextStream& qts)
+void Statement_Generator::generate_close(QTextStream& qts, PHR_Graph_Statement_Info* si)
 {
- qts << "coalesce_channel_group ;.\n"
+ qts << "coalesce_channel_group ;.\n";
+ if(si)
+   qts << "copy_anchor_channel_group $ " <<
+   si->anchor_name() << ' ' << si->channel_name() << " ;.\n";
+ qts <<
   "evaluate_channel_group ;.\n"
   "delete_temps ;.\n"
   "delete_retired ;.\n"

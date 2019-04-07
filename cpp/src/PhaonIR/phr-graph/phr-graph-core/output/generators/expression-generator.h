@@ -24,6 +24,7 @@ RZNS_(PhrGraphCore)
 class PHR_Graph_Node;
 class PHR_Graph_Token;
 class PHR_Graph_Fuxe_Entry;
+class PHR_Graph_Statement_Info;
 
 class Expression_Generator
 {
