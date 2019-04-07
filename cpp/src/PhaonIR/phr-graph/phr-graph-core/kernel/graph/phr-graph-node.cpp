@@ -38,7 +38,7 @@ void PHR_Graph_Node::each_connection(std::function<void(const PHR_Graph_Connecto
 }
 
 
-void PHR_Graph_Node::debug_connections()
+void PHR_Graph_Node::debug_connections() const
 {
  targets_iterator_type it(targets_);
  while(it.hasNext())

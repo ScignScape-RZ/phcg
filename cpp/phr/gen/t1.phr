@@ -41,4 +41,22 @@ evaluate_channel_group ;.
 delete_temps ;.
 delete_retired ;.
 clear_temps ;.
-reset_program_stack
+reset_program_stack ;.
+ .; end of statement ;.
+
+
+ .; generate_from_fn_node ;.
+push_carrier_stack $ fuxe ;.
+hold_type_by_name $ fbase ;.
+push_carrier_raw_value $ &prn ;.
+ .; args ;.
+push_carrier_stack $ lambda ;.
+hold_type_by_name $ u4 ;.
+push_carrier_symbol $ x ;.
+coalesce_channel_group ;.
+evaluate_channel_group ;.
+delete_temps ;.
+delete_retired ;.
+clear_temps ;.
+reset_program_stack ;.
+ .; end of statement ;.

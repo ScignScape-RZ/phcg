@@ -54,7 +54,7 @@ public:
  ACCESSORS__RGET(QVector<caon_ptr<PHR_Graph_Node>> ,hyponodes)
  ACCESSORS(caon_ptr<PHR_Graph_Node> ,parent)
 
- void debug_connections();
+ void debug_connections() const;
 
  void each_connection(std::function<void(const PHR_Graph_Connectors& connector,
   const PHR_Graph_Node&, const PHR_Graph_Connection* connection)> fn)  const;

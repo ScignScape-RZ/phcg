@@ -81,6 +81,21 @@ int main(int argc, char **argv)
  n3 << fr/qy.Channel_Entry(cion) >> n4;
  n4 << fr/qy.Channel_Sequence >> n5;
 
+ caon_ptr<PHR_Graph_Token> t6 = new PHR_Graph_Token("&prn");
+ t6->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Node> n6 = new PHR_Graph_Node(t6);
+
+ caon_ptr<PHR_Graph_Token> t7 = new PHR_Graph_Token("x", "u4");
+ t2->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Node> n7 = new PHR_Graph_Node(t7);
+
+ caon_ptr<PHR_Graph_Connection> cion6 = new PHR_Graph_Connection("lambda");
+ n6 << fr/qy.Channel_Entry(cion6) >> n7;
+
+ n1 << fr/qy.Statement_Sequence >> n6;
+
+ n1->set_label("n1");
+
  pgo.generate();
 
  qDebug() << "ok";

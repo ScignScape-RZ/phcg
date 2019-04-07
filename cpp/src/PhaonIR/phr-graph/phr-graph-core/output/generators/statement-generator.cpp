@@ -39,6 +39,17 @@ void Statement_Generator::generate_from_node(QTextStream& qts,
 {
  expression_generator_.generate_from_node(qts, node);
  generate_close(qts, si);
+
+ node.debug_connections();
+
+ caon_ptr<PHR_Graph_Connection> cion;
+ if(caon_ptr<PHR_Graph_Node> sen = rq_.Statement_Sequence[cion](&node))
+ {
+  PHR_Graph_Statement_Info* si1 = nullptr;
+  if(cion)
+    si1 = cion->phr_node()->statement_info().raw_pointer();
+  generate_from_node(qts, *sen, si1);
+ }
 }
 
 void Statement_Generator::generate_close(QTextStream& qts, PHR_Graph_Statement_Info* si)
@@ -52,5 +63,7 @@ void Statement_Generator::generate_close(QTextStream& qts, PHR_Graph_Statement_I
   "delete_temps ;.\n"
   "delete_retired ;.\n"
   "clear_temps ;.\n"
-  "reset_program_stack";
+  "reset_program_stack ;.\n"
+  " .; end of statement ;.\n"
+        ;
 }

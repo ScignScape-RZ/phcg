@@ -13,7 +13,7 @@ DOMINION_CONNECTOR(Channel_Entry, "channel-entry")
 DOMINION_CONNECTOR(Channel_Fuxe_Entry, "channel-fuxe-entry")
 
 DOMINION_CONNECTOR(Channel_Sequence, "channel-sequence")
-
+DOMINION_CONNECTOR(Statement_Sequence, "statement-sequence")
 
 DOMINION_CONNECTOR(Run_Call_Entry, "run-call-entry")
 DOMINION_CONNECTOR(Run_Data_Entry, "run-data-entry")

@@ -350,7 +350,8 @@ public:
    connection = result.first;
    return result.second;
   }
-  return nullptr;
+  // // fall back to unannotated ...
+  return retrieve(connector);
  }
 
  void match_relation(const Connectors_type& connector, QList<Node_Caon_type>& target_nodes)
