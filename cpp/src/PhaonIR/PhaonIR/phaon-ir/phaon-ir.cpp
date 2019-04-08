@@ -106,6 +106,16 @@ qint32 PhaonIR::get_s4_symbol_value(QString sym)
 PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
   PHR_Runtime_Scope::Storage_Options& so, quint64& val)
 {
+ if(sym.startsWith('#'))
+ {
+  //PHR_Channel_Group* pcg
+  PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(sym);
+  if(ev)
+  {
+   val = ev->get_result_value_as<qint32>();
+  }
+  return nullptr;
+ }
  //quint64 val;
  //PHR_Runtime_Scope::Storage_Options so;
  //PHR_Type* ty = current_lexical_scope_->find_value(sym, val, so);
