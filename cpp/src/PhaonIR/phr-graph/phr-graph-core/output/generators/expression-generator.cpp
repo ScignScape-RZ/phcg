@@ -83,8 +83,9 @@ void Expression_Generator::generate_fuxe_entry(QTextStream& qts,
  if(unw > 0)
  {
   qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";
-  if(!fen.result_type_name().isEmpty())
-    qts << "hold_type_by_name $ " << fen.result_type_name() << " ;.\n";
+//?
+//  if(!fen.result_type_name().isEmpty())
+//    qts << "hold_type_by_name $ " << fen.result_type_name() << " ;.\n";
   generate_line(qts, "index_channel_group");
   generate_line(qts, "coalesce_channel_group");
   generate_comment_line(qts, "pop");
