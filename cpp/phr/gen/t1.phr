@@ -9,8 +9,6 @@ hold_type_by_name $ fbase ;.
 push_carrier_raw_value $ #+ ;.
  .; args ;.
 push_carrier_stack $ lambda ;.
-hold_type_by_name $ u4 ;.
-push_carrier_raw_value $ 44 ;.
 
 push_unwind_scope $ 1 result ;.
 
@@ -34,6 +32,8 @@ temp_anchor_channel_group ;.
  .; end fuxe entry ;.
 hold_type_by_name $ u4 ;.
 push_carrier_expression ;.
+hold_type_by_name $ u4 ;.
+push_carrier_raw_value $ 44 ;.
 coalesce_channel_group ;.
 copy_anchor_channel_group $ x result ;.
 evaluate_channel_group ;.

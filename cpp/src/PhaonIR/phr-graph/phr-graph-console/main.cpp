@@ -26,7 +26,7 @@ USING_RZNS(PhrGraphCore)
 
 #include <QDebug>
 
-int main1(int argc, char **argv)
+int main(int argc, char **argv)
 {
  PHR_Graph pgr;
 
@@ -130,7 +130,7 @@ int main1(int argc, char **argv)
 }
 
 
-int main(int argc, char **argv)
+int main1(int argc, char **argv)
 {
  PHR_Graph pgr;
 
