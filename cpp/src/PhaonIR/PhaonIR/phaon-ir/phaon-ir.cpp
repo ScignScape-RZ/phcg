@@ -37,7 +37,7 @@ PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
   current_chief_unwind_scope_index_({0,0,0,0}),
   current_lexical_scope_(nullptr), held_symbol_scope_(nullptr)
 {
-
+ current_source_fn_name_ = starting_source_fn_name_ = ";_main";
 }
 
 
@@ -411,8 +411,22 @@ void PhaonIR::read_line(QString inst)
  auto it = static_map.find(inst);
  if(it != static_map.end())
  {
-  (this->*(it.value()))();
-  //this->(it.value)();
+  line_ops_[current_source_fn_name_].push_back({nullptr, fn_u{.fn0 = it.value()}});
+ }
+}
+
+void PhaonIR::run_lines(QString source_fn)
+{
+ auto it = line_ops_.find(source_fn);
+ if(it == line_ops_.end())
+   return;
+ const QList<QPair<QString*, fn_u>>& lines = it.value();
+ for(auto& pr: lines)
+ {
+  if(pr.first)
+    (this->*(pr.second.fn1))(*pr.first);
+  else
+    (this->*(pr.second.fn0))();
  }
 }
 
@@ -431,8 +445,8 @@ void PhaonIR::read_line(QString inst, QString arg)
  auto it = static_map.find(inst);
  if(it != static_map.end())
  {
-  (this->*(it.value()))(arg);
-  //this->(*it->value())(arg);
+  QString* a = new QString(arg);
+  line_ops_[current_source_fn_name_].push_back({a, fn_u{.fn1=it.value()}});
  }
 }
 
@@ -471,4 +485,5 @@ void PhaonIR::read_local_program(QString path)
   }
   pos = np + 3;
  }
+ run_lines(starting_source_fn_name_);
 }

@@ -10,6 +10,7 @@
 #include <QString>
 #include <QMap>
 #include <QMultiMap>
+#include <QStack>
 
 #include <functional>
 
@@ -55,6 +56,17 @@ class PhaonIR
    return {chief_channel_pos, unwind_level, 0, 0, channel_name};
   }
  };
+
+ typedef union {void(PhaonIR::*fn0)(); void(PhaonIR::*fn1)(QString);} fn_u ;
+
+// typedef union {int fn1; void* fn2;} fn_u;
+
+ QMap<QString, QList<QPair<QString*, fn_u>>> line_ops_;
+
+ QString starting_source_fn_name_;
+ QString current_source_fn_name_;
+ QStack<QString> source_fn_names_;
+
 
  PHR_Channel_System* channel_system_;
  QMap<QPair<Unwind_Scope_Index, PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*> sp_map_;
@@ -180,6 +192,8 @@ public:
  void read_local_program(QString path);
  void read_line(QString inst);
  void read_line(QString inst, QString arg);
+
+ void run_lines(QString source_fn);
 
  void enter_lexical_scope();
 
