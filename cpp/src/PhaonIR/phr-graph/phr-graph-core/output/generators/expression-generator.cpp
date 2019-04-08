@@ -54,6 +54,10 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
     {
      channel_name = cion->channel_name();
      generate_from_fn_node(qts, *tokn, channel_name, *n, unw, fen.raw_pointer());
+
+     //generate_fuxe_entry(qts, *fen, *n1, unw + 1);
+     qts << "hold_type_by_name $ " << fen->result_type_name() << " ;.\n";
+     generate_line(qts, "push_carrier_expression");
     }
    }
   }
@@ -141,7 +145,32 @@ void Expression_Generator::generate_from_fn_node(QTextStream& qts,
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  QString channel_name, const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen)
 {
-
+ qts << "push_carrier_stack $ " << channel_name << " ;.\n";
+ // assume depth 1 for now ...
+ generate_fuxe_entry(qts, *fen, arg_node, unw + 1);
+ caon_ptr<PHR_Graph_Node> n = &arg_node;
+ caon_ptr<PHR_Graph_Node> n1 = nullptr;
+ while(n)
+ {
+  caon_ptr<PHR_Graph_Connection> cion1;
+  if(n1 = rq_.Channel_Continue(n))
+  {
+   if(caon_ptr<PHR_Graph_Token> tok = n1->phr_graph_token())
+   {
+    generate_carrier(qts, *tok);
+   }
+  }
+  else if(n1 = rq_.Channel_Fuxe_Entry[cion1](n))
+  {
+   if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
+   {
+    generate_fuxe_entry(qts, *fen, *n1, unw + 1);
+    qts << "hold_type_by_name $ " << fen->result_type_name() << " ;.\n";
+    generate_line(qts, "push_carrier_expression");
+   }
+  }
+  n = n1;
+ }
 }
 
 
@@ -151,6 +180,7 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  qts << "push_carrier_stack $ " << channel_name << " ;.\n";
  if(caon_ptr<PHR_Graph_Token> tokn = arg_node.phr_graph_token())
  {
+  CAON_PTR_DEBUG(PHR_Graph_Token ,tokn)
   generate_carrier(qts, *tokn);
  }
  caon_ptr<PHR_Graph_Node> n = &arg_node;
