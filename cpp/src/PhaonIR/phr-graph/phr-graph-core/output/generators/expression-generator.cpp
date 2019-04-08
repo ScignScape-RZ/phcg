@@ -36,16 +36,26 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node, int unw)
 {
  caon_ptr<PHR_Graph_Connection> cion;
+ QString channel_name;
  if(caon_ptr<PHR_Graph_Node> n = rq_.Channel_Entry[cion](&node))
  {
-  QString channel_name;
+  if(cion)
+    channel_name = cion->channel_name();
+  if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
+    generate_from_fn_node(qts, *tokn, channel_name, *n, unw);
+ }
+ else if(n = rq_.Channel_Fuxe_Entry[cion](&node))
+ {
   if(cion)
   {
-   channel_name = cion->channel_name();
-  }
-  if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
-  {
-   generate_from_fn_node(qts, *tokn, channel_name, *n, unw);
+   if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion->phr_node()->fuxe_entry())
+   {
+    if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
+    {
+     channel_name = cion->channel_name();
+     generate_from_fn_node(qts, *tokn, channel_name, *n, unw, fen.raw_pointer());
+    }
+   }
   }
  }
 }
@@ -110,7 +120,7 @@ void Expression_Generator::generate_comment_line(QTextStream& qts,
 
 void Expression_Generator::generate_from_fn_node(QTextStream& qts,
   PHR_Graph_Token& tok, QString channel_name,
-  const PHR_Graph_Node& arg_node, int unw)
+  const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen)
 {
  if(unw > 0)
  {
@@ -122,8 +132,18 @@ void Expression_Generator::generate_from_fn_node(QTextStream& qts,
    tok.set_type_name("fbase");
  generate_carrier(qts, tok);
  generate_comment_line(qts, "args");
- generate_arg_carriers(qts, channel_name, arg_node, unw);
+ if(fen)
+   generate_arg_carriers(qts, channel_name, arg_node, unw, fen);
+ else
+   generate_arg_carriers(qts, channel_name, arg_node, unw);
 }
+
+void Expression_Generator::generate_arg_carriers(QTextStream& qts,
+ QString channel_name, const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen)
+{
+
+}
+
 
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  QString channel_name, const PHR_Graph_Node& arg_node, int unw)

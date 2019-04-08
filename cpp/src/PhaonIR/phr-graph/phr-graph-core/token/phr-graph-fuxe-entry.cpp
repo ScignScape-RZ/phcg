@@ -16,7 +16,7 @@ USING_RZNS(PhrGraphCore)
 
 PHR_Graph_Fuxe_Entry::PHR_Graph_Fuxe_Entry(QString channel_name,
   QString result_type_name)
- :  channel_name_(channel_name), result_type_name_(result_type_name)
+ :  channel_name_(channel_name), result_type_name_(result_type_name), depth_(0)
 {
 }
 

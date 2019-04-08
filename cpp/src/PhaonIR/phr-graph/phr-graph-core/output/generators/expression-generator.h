@@ -52,7 +52,11 @@ public:
 
  void generate_from_fn_node(QTextStream& qts,
   PHR_Graph_Token& tok, QString channel_name,
-  const PHR_Graph_Node& arg_node, int unw);
+  const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen = nullptr);
+
+ void generate_arg_carriers(QTextStream& qts,
+  QString channel_name,
+  const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen);
 
  void generate_arg_carriers(QTextStream& qts,
   QString channel_name,

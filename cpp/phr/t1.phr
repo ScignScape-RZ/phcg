@@ -6,15 +6,39 @@ reset_program_stack ;.
  .; generate_from_fn_node ;.
 push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.
-push_carrier_symbol $ if-t-e ;.
+push_carrier_raw_value $ #+ ;.
+
+ .; args ;.
+push_unwind_scope $ 1 result ;.
+
+ .; unwind_scope: 1 ;.
+ 
+ .; generate_from_fn_node ;.
+push_carrier_stack $ fuxe ;.
+hold_type_by_name $ fbase ;.
+push_carrier_raw_value $ #+ ;.
  .; args ;.
 push_carrier_stack $ lambda ;.
 hold_type_by_name $ u4 ;.
-push_carrier_raw_value $ 44 ;.
-push_carrier_raw_value $ 45 ;.
+push_carrier_raw_value $ 21 ;.
+push_carrier_raw_value $ 13 ;.
+push_carrier_stack $ result ;.
+hold_type_by_name $ u4 ;.
 index_channel_group ;.
 coalesce_channel_group ;.
+ .; pop ;.
+pop_unwind_scope ;.
 
+push_carrier_stack $ lambda ;.
+hold_type_by_name $ u4 ;.
+push_carrier_raw_value $ 44 ;.
+
+temp_anchor_channel_group ;.
+ .; end fuxe entry ;.
+hold_type_by_name $ u4 ;.
+push_carrier_expression ;.
+coalesce_channel_group ;.
+copy_anchor_channel_group $ x result ;.
 evaluate_channel_group ;.
 delete_temps ;.
 delete_retired ;.
