@@ -135,6 +135,7 @@ void PhaonIR::delete_retired()
  {
   delete pv;
  }
+ retired_temps_.clear();
 }
 
 PHR_Channel* PhaonIR::get_channel_by_sp_name(QString sp_name, PHR_Channel_Group& pcg)

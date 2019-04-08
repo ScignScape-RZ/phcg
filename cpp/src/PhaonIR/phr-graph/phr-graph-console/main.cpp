@@ -81,18 +81,38 @@ int main(int argc, char **argv)
  n3 << fr/qy.Channel_Entry(cion) >> n4;
  n4 << fr/qy.Channel_Sequence >> n5;
 
- caon_ptr<PHR_Graph_Token> t6 = new PHR_Graph_Token("&prn");
+ caon_ptr<PHR_Graph_Token> t6 = new PHR_Graph_Token("#+");
  t6->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n6 = new PHR_Graph_Node(t6);
 
- caon_ptr<PHR_Graph_Token> t7 = new PHR_Graph_Token("x", "u4");
- t2->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Token> t7 = new PHR_Graph_Token("22", "u4");
+ t7->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n7 = new PHR_Graph_Node(t7);
 
  caon_ptr<PHR_Graph_Connection> cion6 = new PHR_Graph_Connection("lambda");
  n6 << fr/qy.Channel_Entry(cion6) >> n7;
 
- n1 << fr/qy.Statement_Sequence >> n6;
+ caon_ptr<PHR_Graph_Token> t8 = new PHR_Graph_Token("x");
+ caon_ptr<PHR_Graph_Node> n8 = new PHR_Graph_Node(t8);
+
+ n7 << fr/qy.Channel_Sequence >> n8;
+
+ caon_ptr<PHR_Graph_Statement_Info> si1 = new
+   PHR_Graph_Statement_Info("x", "result", "\\=");
+ caon_ptr<PHR_Graph_Node> sin1 = new PHR_Graph_Node(si1);
+ caon_ptr<PHR_Graph_Connection> sicion1 = new PHR_Graph_Connection(sin1);
+ n1 << fr/qy.Statement_Sequence(sicion1) >> n6;
+
+ caon_ptr<PHR_Graph_Token> t9 = new PHR_Graph_Token("&prn");
+ caon_ptr<PHR_Graph_Node> n9 = new PHR_Graph_Node(t9);
+
+ caon_ptr<PHR_Graph_Token> t10 = new PHR_Graph_Token("x", "u4");
+ caon_ptr<PHR_Graph_Node> n10 = new PHR_Graph_Node(t10);
+
+ caon_ptr<PHR_Graph_Connection> cion9 = new PHR_Graph_Connection("lambda");
+ n9 << fr/qy.Channel_Entry(cion9) >> n10;
+
+ n6 << fr/qy.Statement_Sequence >> n9;
 
  n1->set_label("n1");
 

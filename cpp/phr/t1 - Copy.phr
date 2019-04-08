@@ -15,7 +15,7 @@ push_carrier_raw_value $ 44 ;.
 push_unwind_scope $ 1 result ;.
 
  .; unwind_scope: 1 ;.
-
+ 
  .; generate_from_fn_node ;.
 push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.
@@ -44,8 +44,8 @@ clear_temps ;.
 reset_program_stack ;.
  .; end of statement ;.
 
-
- .; generate_from_fn_node ;.
+ 
+ .; generate_from_fn_node ;. 
 push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.
 push_carrier_raw_value $ #+ ;.
@@ -62,8 +62,7 @@ delete_retired ;.
 clear_temps ;.
 reset_program_stack ;.
  .; end of statement ;.
-
-
+ 
  .; generate_from_fn_node ;.
 push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.
