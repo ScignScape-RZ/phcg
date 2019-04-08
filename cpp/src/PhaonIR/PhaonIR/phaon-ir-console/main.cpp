@@ -45,6 +45,8 @@ int main(int argc, char **argv)
  PhaonIR phr(&pcs);
 
  phr.set_load_evaluator_fn(&load_evaluator);
+ phr.set_direct_eval_fn(&phr_direct_eval);
+
  local_program(phr);
  qDebug() << "ok";
 }

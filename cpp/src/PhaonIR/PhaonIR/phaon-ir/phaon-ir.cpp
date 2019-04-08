@@ -35,7 +35,8 @@ PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
   held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
   current_chief_unwind_scope_index_({0,0,0,0}),
-  current_lexical_scope_(nullptr), held_symbol_scope_(nullptr)
+  current_lexical_scope_(nullptr),
+  held_symbol_scope_(nullptr), direct_eval_fn_(nullptr)
 {
  current_source_fn_name_ = starting_source_fn_name_ = ";_main";
 }
@@ -257,7 +258,9 @@ void PhaonIR::evaluate_channel_group()
  else
  {
   PHR_Command_Package pcp(*held_channel_group_);
-  phr_direct_eval(code_model_, &pcp, held_symbol_scope_);
+  if(direct_eval_fn_)
+    direct_eval_fn_(code_model_, &pcp, held_symbol_scope_);
+  //? phr_direct_eval(code_model_, &pcp, held_symbol_scope_);
  }
 
  for(auto it: anchored_channel_groups_.values(held_channel_group_))

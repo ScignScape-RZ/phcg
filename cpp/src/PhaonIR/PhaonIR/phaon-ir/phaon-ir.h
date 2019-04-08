@@ -29,6 +29,7 @@ class PHR_Type;
 class PHR_Channel_Group;
 class PHR_Channel_Group_Evaluator;
 class PHR_Channel;
+class PHR_Command_Package;
 
 class PHR_Symbol_Scope;
 
@@ -114,6 +115,9 @@ class PhaonIR
 
  PHR_Runtime_Scope* current_lexical_scope_;
 
+ std::function<void(PHR_Code_Model* pcm,
+   PHR_Command_Package* pcp, PHR_Symbol_Scope* pss)> direct_eval_fn_;
+
 
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
  {
@@ -139,6 +143,9 @@ public:
 
  ACCESSORS(PASTE_EXPRESSION(std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
    PHR_Channel_Group&)>) ,load_evaluator_fn)
+
+ ACCESSORS(PASTE_EXPRESSION(std::function<void(PHR_Code_Model* pcm,
+    PHR_Command_Package* pcp, PHR_Symbol_Scope* pss)>) ,direct_eval_fn)
 
  ACCESSORS__GET(PHR_Code_Model* ,code_model)
  ACCESSORS__GET(PHR_Channel_System* ,channel_system)

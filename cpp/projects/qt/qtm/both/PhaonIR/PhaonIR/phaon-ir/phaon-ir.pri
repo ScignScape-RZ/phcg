@@ -94,7 +94,7 @@ SOURCES += \
   $$SRC_DIR/table/phr-function-package.cpp \
 
 
-LIBS += -L$$TARGETSDIR  -lphr-direct-eval
+#LIBS += -L$$TARGETSDIR  -lphr-direct-eval
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
 mkpath($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
