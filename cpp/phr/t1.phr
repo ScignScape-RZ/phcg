@@ -52,6 +52,8 @@ reset_program_stack ;.
  .; end of statement ;.
 @fne ;.
 
+push_carrier_anon_fn @ last_source_fn_name ;.
+
 coalesce_channel_group ;.
 evaluate_channel_group ;.
 delete_temps ;.

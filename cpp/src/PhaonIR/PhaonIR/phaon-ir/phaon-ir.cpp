@@ -357,6 +357,11 @@ void PhaonIR::push_carrier_raw_value(QString rv)
  current_carrier_stack_->push(phc);
 }
 
+void PhaonIR::push_carrier_anon_fn(QString fn)
+{
+ push_carrier_symbol(fn.prepend('&'));
+}
+
 void PhaonIR::push_carrier_symbol(QString sn)
 {
  inc_channel_pos();
@@ -454,6 +459,7 @@ void PhaonIR::read_line(QString inst, QString arg)
   { "push_carrier_stack", &push_carrier_stack },
   { "push_carrier_raw_value", &push_carrier_raw_value },
   { "copy_anchor_channel_group", &copy_anchor_channel_group },
+  { "push_carrier_anon_fn", &push_carrier_anon_fn },
  }};
 
  auto it = static_map.find(inst);
@@ -474,11 +480,25 @@ void PhaonIR::parse_fn_line(QString line)
  }
  else if(line[3] == 'e')
  {
+  last_source_fn_name_ = current_source_fn_name_;
   current_source_fn_name_ = source_fn_names_.pop();
  }
  else
  {
   QString fn = line.mid(3).simplified();
+ }
+}
+
+void PhaonIR::reread_substitute(QString& key)
+{
+ static QMap<QString, QString(PhaonIR::*)() const> static_map {{
+  { "last_source_fn_name", &last_source_fn_name },
+ }};
+
+ auto it = static_map.find(key);
+ if(it != static_map.end())
+ {
+  key = (this->**it)();
  }
 }
 
@@ -510,11 +530,19 @@ void PhaonIR::read_local_program(QString path)
    continue;
   }
 
+  bool reread = false;
   int mp = l.indexOf(" $");
+  if(mp == -1)
+  {
+   mp = l.indexOf(" @");
+   reread = true;
+  }
   if(mp != -1)
   {
    QString l1 = l.mid(0, mp).trimmed();
    QString l2 = l.mid(mp + 2, np - mp - 2).trimmed();
+   if(reread)
+     reread_substitute(l2);
    read_line(l1, l2);
   }
   else

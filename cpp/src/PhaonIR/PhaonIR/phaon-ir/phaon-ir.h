@@ -68,6 +68,9 @@ class PhaonIR
  QString current_source_fn_name_;
  QStack<QString> source_fn_names_;
 
+ QString last_source_fn_name_;
+ ACCESSORS__GET(QString ,last_source_fn_name)
+
 
  PHR_Channel_System* channel_system_;
  QMap<QPair<Unwind_Scope_Index, PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*> sp_map_;
@@ -139,6 +142,8 @@ class PhaonIR
 
  void check_init_program_stack();
 
+ void reread_substitute(QString& key);
+
 public:
 
  PhaonIR(PHR_Channel_System* channel_system);
@@ -189,6 +194,7 @@ public:
  void push_carrier_stack(QString sp_name);
  void push_carrier_raw_value(QString rv);
  void push_carrier_symbol(QString sn);
+ void push_carrier_anon_fn(QString fn);
 
  PHR_Channel_Group_Evaluator* evaluate_channel_group_by_usi_symbol(QString usi_sym);
 
