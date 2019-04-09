@@ -441,6 +441,12 @@ void PhaonIR::read_line(QString inst)
  }
 }
 
+
+void PhaonIR::run_callable_value(QString source_fn)
+{
+ run_lines(source_fn);
+}
+
 void PhaonIR::run_lines(QString source_fn)
 {
  auto it = line_ops_.find(source_fn);

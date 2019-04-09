@@ -211,6 +211,8 @@ public:
 
  void run_lines(QString source_fn);
 
+ void run_callable_value(QString source_fn);
+
  void enter_lexical_scope();
 
  void push_unwind_scope(int level_delta, QString chn);

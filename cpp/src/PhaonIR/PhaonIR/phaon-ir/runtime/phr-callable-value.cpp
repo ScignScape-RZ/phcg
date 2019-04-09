@@ -7,6 +7,8 @@
 
 #include "phr-callable-value.h"
 
+#include "phaon-ir.h"
+
 #include <QDebug>
 
 PHR_Callable_Value::PHR_Callable_Value(PhaonIR* phaon_ir, QString name)
@@ -18,4 +20,5 @@ PHR_Callable_Value::PHR_Callable_Value(PhaonIR* phaon_ir, QString name)
 void PHR_Callable_Value::run()
 {
  qDebug() << name_;
+ phaon_ir_->run_callable_value(name_);
 }
