@@ -85,7 +85,7 @@ void local_program(PhaonIR& phr)
  phr.init_type("fbase", DEFAULT_PTR_BYTE_CODE);
  phr.init_type("u4", 4);
  phr.init_type("argvec", 9);
- phr.init_type("fnc", DEFAULT_PTR_BYTE_CODE);
+ phr.init_type("pcv", DEFAULT_PTR_BYTE_CODE);
 
  // //  setup
  phr.init_code_model();

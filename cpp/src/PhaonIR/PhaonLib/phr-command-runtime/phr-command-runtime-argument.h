@@ -30,7 +30,8 @@ public:
 
   enum class Value_Classification
   {
-   N_A, Generic_Ptr, QObject_Ptr, Raw_Value_String_Ptr, Raw_Int, Raw_QReal
+   N_A, Generic_Ptr, QObject_Ptr, PCV_Ptr,
+   Raw_Value_String_Ptr, Raw_Int, Raw_QReal
   };
 
 private:

@@ -25,6 +25,8 @@
 //#include "PhaonLib/phaon-symbol-scope.h"
 //#include "PhaonLib/phaon-function.h"
 
+#include "phaon-ir/runtime/phr-callable-value.h"
+
 
 #include <QTextStream>
 
@@ -98,11 +100,13 @@ void test_if_then_else(quint64 args_ptr)
  bool test = false;
  for(quint64 qui: args)
  {
-  qint32 i1 = *(qint32*) qui;
   if(i % 2)
   {
    if(test)
    {
+    PHR_Callable_Value* pcv = (PHR_Callable_Value*) qui;
+    pcv->run();
+
 //    KCM_Callable_Value** kcv = (KCM_Callable_Value**) qui;
 //    KCM_Command_Runtime_Router* kcrr = (*kcv)->kcrr();
 //    kcrr->run_callable_value(*kcv);
@@ -116,7 +120,8 @@ void test_if_then_else(quint64 args_ptr)
 //   quint64 result;
 //   KCM_Lisp_Eval::eval_lisp_callable_deferred_value(qclo, result, "bool");
 //   qDebug() << result;
-//   test = (bool) result;
+   qint32 i1 = *(qint32*) qui;
+   test =  (bool) i1;
   }
   ++i;
  }
