@@ -25,6 +25,8 @@
 
 #include "phr-direct-eval/phr-direct-eval.h"
 
+#include "runtime/phr-callable-value.h"
+
 #include "textio.h"
 
 USING_KANS(TextIO)
@@ -359,7 +361,12 @@ void PhaonIR::push_carrier_raw_value(QString rv)
 
 void PhaonIR::push_carrier_anon_fn(QString fn)
 {
- push_carrier_symbol(fn.prepend('&'));
+ PHR_Callable_Value* pcv = new PHR_Callable_Value(this, fn);
+ //push_carrier_symbol(fn.prepend('&'));
+ PHR_Carrier* phc = new PHR_Carrier;
+ phc->set_raw_value(pcv);
+ phc->set_phr_type(held_type_);
+ current_carrier_stack_->push(phc);
 }
 
 void PhaonIR::push_carrier_symbol(QString sn)
