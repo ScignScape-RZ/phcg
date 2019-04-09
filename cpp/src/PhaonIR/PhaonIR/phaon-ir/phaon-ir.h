@@ -118,7 +118,7 @@ class PhaonIR
 
 
  PHR_Channel_System* channel_system_;
- QMap<QPair<Unwind_Scope_Index, PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*> sp_map_;
+ QMap<QPair<Unwind_Scope_Index, PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*>* sp_map_;
  PHR_Type_System* type_system_;
  PHR_Program_Stack* program_stack_;
  PHR_Type* held_type_;
@@ -160,9 +160,12 @@ class PhaonIR
 
  struct Run_State
  {
-  Source_Function_Scope* source_function_scope;
-  PHR_Program_Stack* program_stack;
-  PHR_Carrier_Stack* carrier_stack;
+  Source_Function_Scope* _source_function_scope;
+  PHR_Program_Stack* _program_stack;
+  PHR_Carrier_Stack* _carrier_stack;
+  PHR_Channel_Group* _held_channel_group;
+  QMap<QPair<Unwind_Scope_Index,
+    PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*>* _sp_map;
  };
  QStack<Run_State> run_state_stack_;
 

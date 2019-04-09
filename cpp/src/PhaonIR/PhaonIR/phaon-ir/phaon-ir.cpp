@@ -39,7 +39,9 @@ PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
    //?current_chief_unwind_scope_index_({0,0,0,0}),
   current_lexical_scope_(nullptr),
   held_symbol_scope_(nullptr), direct_eval_fn_(nullptr),
-  source_fn_anon_count_(0)
+  source_fn_anon_count_(0),
+  sp_map_(new QMap<QPair<Unwind_Scope_Index,
+    PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*>)
 {
  current_source_fn_name_ = starting_source_fn_name_ = ";_main";
  //current_source_function_scope_ = new Source_Function_Scope{current_source_fn_name_};
@@ -170,12 +172,12 @@ PHR_Channel* PhaonIR::get_channel_by_sp_name(QString sp_name, PHR_Channel_Group&
 PHR_Carrier_Stack* PhaonIR::get_carrier_stack_by_sp_name(Unwind_Scope_Index usi,
   QString sp_name)
 {
- auto it = sp_map_.find({usi, (*channel_system_)[sp_name]});
- if(it == sp_map_.end())
+ auto it = sp_map_->find({usi, (*channel_system_)[sp_name]});
+ if(it == sp_map_->end())
  {
   PHR_Carrier_Stack* result = new PHR_Carrier_Stack;
   result->set_sp_name(sp_name);
-  sp_map_.insert({usi, (*channel_system_)[sp_name]}, result);
+  sp_map_->insert({usi, (*channel_system_)[sp_name]}, result);
   return result;
  }
  return it.value();
@@ -458,22 +460,28 @@ void PhaonIR::init_current_source_function_scope(QString source_fn)
 void PhaonIR::run_callable_value(QString source_fn)
 {
  run_state_stack_.push({current_source_function_scope_,
-   program_stack_, current_carrier_stack_});
+   program_stack_, current_carrier_stack_,
+   held_channel_group_, sp_map_});
 
  init_current_source_function_scope(source_fn);
  init_program_stack();
  current_carrier_stack_ = nullptr;
+ held_channel_group_ = nullptr;
+ sp_map_ = new QMap<QPair<Unwind_Scope_Index,
+   PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*>;
  run_lines(source_fn);
 
  //if(current_carrier_stack_) delete?
  delete current_source_function_scope_;
  delete program_stack_;
+ delete sp_map_;
 
  Run_State rs = run_state_stack_.pop();
- current_source_function_scope_ = rs.source_function_scope;
- program_stack_ = rs.program_stack;
- current_carrier_stack_ = rs.carrier_stack;
-
+ current_source_function_scope_ = rs._source_function_scope;
+ program_stack_ = rs._program_stack;
+ current_carrier_stack_ = rs._carrier_stack;
+ held_channel_group_ = rs._held_channel_group;
+ sp_map_ = rs._sp_map;
 }
 
 void PhaonIR::run_lines(QString source_fn)
