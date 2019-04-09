@@ -58,6 +58,50 @@ class PhaonIR
   }
  };
 
+ struct Source_Function_Scope
+ {
+  QString source_fn_name;
+
+  Unwind_Scope_Index _current_chief_unwind_scope_index;
+
+  QMap<Unwind_Scope_Index, Unwind_Scope_Index> _unwind_scope_index_parents;
+  QMap<Unwind_Scope_Index, QPair<PHR_Program_Stack*, PHR_Carrier_Stack*>> _held_program_stacks;
+  QMap<Unwind_Scope_Index, PHR_Program_Stack*> _stashed_program_stacks;
+  QMap<Unwind_Scope_Index, PHR_Channel_Group*> _indexed_channel_groups;
+ };
+
+ void init_current_source_function_scope(QString source_fn);
+
+ Source_Function_Scope* current_source_function_scope_;
+
+ Unwind_Scope_Index& current_chief_unwind_scope_index()
+ {
+  return current_source_function_scope_->_current_chief_unwind_scope_index;
+ }
+
+ QMap<Unwind_Scope_Index, Unwind_Scope_Index>& unwind_scope_index_parents()
+ {
+  return current_source_function_scope_->_unwind_scope_index_parents;
+ }
+
+ QMap<Unwind_Scope_Index, QPair<PHR_Program_Stack*, PHR_Carrier_Stack*>>&
+   held_program_stacks()
+ {
+  return current_source_function_scope_->_held_program_stacks;
+ }
+
+ QMap<Unwind_Scope_Index, PHR_Program_Stack*>& stashed_program_stacks()
+ {
+  return current_source_function_scope_->_stashed_program_stacks;
+ }
+
+ QMap<Unwind_Scope_Index, PHR_Channel_Group*>& indexed_channel_groups()
+ {
+  return current_source_function_scope_->_indexed_channel_groups;
+ }
+
+ QStack<Source_Function_Scope*> source_function_scopes_;
+
  typedef union {void(PhaonIR::*fn0)(); void(PhaonIR::*fn1)(QString);} fn_u ;
 
 // typedef union {int fn1; void* fn2;} fn_u;
@@ -67,6 +111,7 @@ class PhaonIR
  QString starting_source_fn_name_;
  QString current_source_fn_name_;
  QStack<QString> source_fn_names_;
+
 
  QString last_source_fn_name_;
  ACCESSORS__GET(QString ,last_source_fn_name)
@@ -86,13 +131,6 @@ class PhaonIR
  std::function<PHR_Channel_Group_Evaluator*(PhaonIR&,
    PHR_Channel_Group&)> load_evaluator_fn_;
 
- Unwind_Scope_Index current_chief_unwind_scope_index_;
-
- QMap<Unwind_Scope_Index, Unwind_Scope_Index> unwind_scope_index_parents_;
-
- QMap<Unwind_Scope_Index, QPair<PHR_Program_Stack*, PHR_Carrier_Stack*>> held_program_stacks_;
- QMap<Unwind_Scope_Index, PHR_Program_Stack*> stashed_program_stacks_;
- QMap<Unwind_Scope_Index, PHR_Channel_Group*> indexed_channel_groups_;
 
  QMap<QString, PHR_Channel_Group*> temp_anchored_channel_groups_;
 
@@ -119,6 +157,14 @@ class PhaonIR
  QMultiMap<PHR_Channel_Group*, anchor_channel_link> anchored_channel_groups_;
 
  PHR_Runtime_Scope* current_lexical_scope_;
+
+ struct Run_State
+ {
+  Source_Function_Scope* source_function_scope;
+  PHR_Program_Stack* program_stack;
+  PHR_Carrier_Stack* carrier_stack;
+ };
+ QStack<Run_State> run_state_stack_;
 
  std::function<void(PHR_Code_Model* pcm,
    PHR_Command_Package* pcp, PHR_Symbol_Scope* pss)> direct_eval_fn_;
@@ -168,6 +214,7 @@ public:
 
  void init_table();
  void init_program_stack();
+ void reinit_program_stack();
  void reset_program_stack();
  void index_channel_group();
  void temp_anchor_channel_group();

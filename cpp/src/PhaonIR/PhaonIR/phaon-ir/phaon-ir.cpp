@@ -36,28 +36,35 @@ PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
   channel_system_(channel_system), program_stack_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
   held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
-  current_chief_unwind_scope_index_({0,0,0,0}),
+   //?current_chief_unwind_scope_index_({0,0,0,0}),
   current_lexical_scope_(nullptr),
   held_symbol_scope_(nullptr), direct_eval_fn_(nullptr),
   source_fn_anon_count_(0)
 {
  current_source_fn_name_ = starting_source_fn_name_ = ";_main";
+ //current_source_function_scope_ = new Source_Function_Scope{current_source_fn_name_};
+ init_current_source_function_scope(current_source_fn_name_);
 }
 
 
 void PhaonIR::check_init_program_stack()
 {
- auto it = stashed_program_stacks_.find(current_chief_unwind_scope_index_);
- if(it == stashed_program_stacks_.end())
+ auto it = stashed_program_stacks().find(current_chief_unwind_scope_index());
+ if(it == stashed_program_stacks().end())
  {
   init_program_stack();
-  stashed_program_stacks_.insert(current_chief_unwind_scope_index_, program_stack_);
+  stashed_program_stacks().insert(current_chief_unwind_scope_index(), program_stack_);
  }
  else
  {
   program_stack_ = it.value();
   program_stack_->clear();
  }
+}
+
+void PhaonIR::reinit_program_stack()
+{
+ program_stack_ = new PHR_Program_Stack;
 }
 
 void PhaonIR::init_program_stack()
@@ -139,8 +146,8 @@ void PhaonIR::clear_temps()
 {
  temp_anchored_channel_groups_.clear();
  temps_by_channel_group_.clear();
- indexed_channel_groups_.clear();
- unwind_scope_index_parents_.clear();
+ indexed_channel_groups().clear();
+ unwind_scope_index_parents().clear();
 }
 
 void PhaonIR::delete_retired()
@@ -199,25 +206,25 @@ void PhaonIR::push_unwind_scope(QString level_delta)
 
 void PhaonIR::push_unwind_scope(int level_delta, QString chn)
 {
- Unwind_Scope_Index usi = current_chief_unwind_scope_index_;//.project();
+ Unwind_Scope_Index usi = current_chief_unwind_scope_index();//.project();
  inc_channel_pos();
- current_chief_unwind_scope_index_.chief_channel_pos = usi.level_channel_pos;
- current_chief_unwind_scope_index_.unwind_level = 0;
- current_chief_unwind_scope_index_.unwind_maximum_ = level_delta;
- current_chief_unwind_scope_index_.level_channel_pos = 0;
- current_chief_unwind_scope_index_.channel_name = chn;
- unwind_scope_index_parents_[current_chief_unwind_scope_index_] = usi;//.project();
- held_program_stacks_[usi] = {program_stack_, current_carrier_stack_};
+ current_chief_unwind_scope_index().chief_channel_pos = usi.level_channel_pos;
+ current_chief_unwind_scope_index().unwind_level = 0;
+ current_chief_unwind_scope_index().unwind_maximum_ = level_delta;
+ current_chief_unwind_scope_index().level_channel_pos = 0;
+ current_chief_unwind_scope_index().channel_name = chn;
+ unwind_scope_index_parents()[current_chief_unwind_scope_index()] = usi;//.project();
+ held_program_stacks()[usi] = {program_stack_, current_carrier_stack_};
  check_init_program_stack();
 }
 
 void PhaonIR::pop_unwind_scope()
 {
- current_chief_unwind_scope_index_ = unwind_scope_index_parents_[current_chief_unwind_scope_index_.project()];
- program_stack_ = held_program_stacks_[current_chief_unwind_scope_index_].first;
- current_carrier_stack_ = held_program_stacks_[current_chief_unwind_scope_index_].second;
- held_usi_symbol_ = QString("#%1-%2").arg(current_chief_unwind_scope_index_.chief_channel_pos)
-   .arg(current_chief_unwind_scope_index_.unwind_level);
+ current_chief_unwind_scope_index() = unwind_scope_index_parents()[current_chief_unwind_scope_index().project()];
+ program_stack_ = held_program_stacks()[current_chief_unwind_scope_index()].first;
+ current_carrier_stack_ = held_program_stacks()[current_chief_unwind_scope_index()].second;
+ held_usi_symbol_ = QString("#%1-%2").arg(current_chief_unwind_scope_index().chief_channel_pos)
+   .arg(current_chief_unwind_scope_index().unwind_level);
 }
 
 
@@ -303,7 +310,7 @@ void PhaonIR::push_carrier_expression()
 
 void PhaonIR::index_channel_group()
 {
- indexed_channel_groups_[current_chief_unwind_scope_index_] = held_channel_group_;
+ indexed_channel_groups()[current_chief_unwind_scope_index()] = held_channel_group_;
 }
 
 void PhaonIR::anchor_channel_group(QString sym, QString ch)
@@ -347,7 +354,7 @@ void PhaonIR::coalesce_channel_group()
 
 void PhaonIR::inc_channel_pos()
 {
- ++current_chief_unwind_scope_index_.level_channel_pos;
+ ++current_chief_unwind_scope_index().level_channel_pos;
 }
 
 void PhaonIR::push_carrier_raw_value(QString rv)
@@ -381,7 +388,7 @@ void PhaonIR::push_carrier_symbol(QString sn)
 void PhaonIR::push_carrier_stack(QString sp_name)
 {
  check_semantic_protocol(sp_name);
- PHR_Carrier_Stack* st = get_carrier_stack_by_sp_name(current_chief_unwind_scope_index_,
+ PHR_Carrier_Stack* st = get_carrier_stack_by_sp_name(current_chief_unwind_scope_index(),
    sp_name);
  program_stack_->push(st);
  current_carrier_stack_ = st;
@@ -441,10 +448,32 @@ void PhaonIR::read_line(QString inst)
  }
 }
 
+void PhaonIR::init_current_source_function_scope(QString source_fn)
+{
+ current_source_function_scope_ = new Source_Function_Scope({
+   source_fn, {0,0,0,0}, {}, {}, {} , {}
+ });
+}
 
 void PhaonIR::run_callable_value(QString source_fn)
 {
+ run_state_stack_.push({current_source_function_scope_,
+   program_stack_, current_carrier_stack_});
+
+ init_current_source_function_scope(source_fn);
+ init_program_stack();
+ current_carrier_stack_ = nullptr;
  run_lines(source_fn);
+
+ //if(current_carrier_stack_) delete?
+ delete current_source_function_scope_;
+ delete program_stack_;
+
+ Run_State rs = run_state_stack_.pop();
+ current_source_function_scope_ = rs.source_function_scope;
+ program_stack_ = rs.program_stack;
+ current_carrier_stack_ = rs.carrier_stack;
+
 }
 
 void PhaonIR::run_lines(QString source_fn)
