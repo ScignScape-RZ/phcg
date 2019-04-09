@@ -232,10 +232,21 @@ void PhaonIR::pop_unwind_scope()
 
 PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QString usi_sym)
 {
+// char by_need = 0;
+// if(usi_sym[1] == '?')
+// {
+//  usi_sym.remove(1, 1);
+//  by_need = '?';
+// }
  auto it = temp_anchored_channel_groups_.find(usi_sym);
  if( it != temp_anchored_channel_groups_.end())
  {
   PHR_Channel_Group* pcg = it.value();
+  if(usi_sym[1] == '?')
+  {
+   return nullptr;
+  }
+
   PHR_Channel_Group_Evaluator* result = load_evaluator_fn_(*this, *pcg);
   result->run_eval();
   temps_by_channel_group_.insertMulti(pcg, result->get_result_value());
@@ -331,6 +342,11 @@ void PhaonIR::copy_anchor_channel_group(QString str)
 {
  QStringList qsl = str.simplified().split(' ');
  copy_anchor_channel_group(qsl.first(), qsl.last());
+}
+
+void PhaonIR::temp_anchor_channel_group_by_need()
+{
+ temp_anchored_channel_groups_[held_usi_symbol_.replace(1, 0, '?')] = held_channel_group_;
 }
 
 void PhaonIR::temp_anchor_channel_group()
@@ -439,8 +455,8 @@ void PhaonIR::read_line(QString inst)
   { "reset_program_stack", &reset_program_stack },
   { "pop_unwind_scope", &pop_unwind_scope },
   { "temp_anchor_channel_group", &temp_anchor_channel_group },
+  { "temp_anchor_channel_group_by_need", &temp_anchor_channel_group_by_need },
   { "push_carrier_expression", &push_carrier_expression }
-
  }};
 
  auto it = static_map.find(inst);

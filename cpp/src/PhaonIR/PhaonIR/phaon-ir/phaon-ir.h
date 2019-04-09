@@ -221,6 +221,7 @@ public:
  void reset_program_stack();
  void index_channel_group();
  void temp_anchor_channel_group();
+ void temp_anchor_channel_group_by_need();
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
 
