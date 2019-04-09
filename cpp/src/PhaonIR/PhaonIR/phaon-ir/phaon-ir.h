@@ -101,6 +101,8 @@ class PhaonIR
 
  PHR_Symbol_Scope* held_symbol_scope_;
 
+ int source_fn_anon_count_;
+
  struct anchor_channel_link
  {
   PHR_Channel_Semantic_Protocol* protocol;
@@ -199,6 +201,7 @@ public:
  void read_local_program(QString path);
  void read_line(QString inst);
  void read_line(QString inst, QString arg);
+ void parse_fn_line(QString line);
 
  void run_lines(QString source_fn);
 

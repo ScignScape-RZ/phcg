@@ -36,7 +36,8 @@ PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
   held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
   current_chief_unwind_scope_index_({0,0,0,0}),
   current_lexical_scope_(nullptr),
-  held_symbol_scope_(nullptr), direct_eval_fn_(nullptr)
+  held_symbol_scope_(nullptr), direct_eval_fn_(nullptr),
+  source_fn_anon_count_(0)
 {
  current_source_fn_name_ = starting_source_fn_name_ = ";_main";
 }
@@ -463,6 +464,24 @@ void PhaonIR::read_line(QString inst, QString arg)
  }
 }
 
+void PhaonIR::parse_fn_line(QString line)
+{
+ if(line[3] == 'p')
+ {
+  ++source_fn_anon_count_;
+  source_fn_names_.push(current_source_fn_name_);
+  current_source_fn_name_ = QString::number(source_fn_anon_count_).prepend(';');
+ }
+ else if(line[3] == 'e')
+ {
+  current_source_fn_name_ = source_fn_names_.pop();
+ }
+ else
+ {
+  QString fn = line.mid(3).simplified();
+ }
+}
+
 void PhaonIR::read_local_program(QString path)
 {
  QString lines;
@@ -481,6 +500,12 @@ void PhaonIR::read_local_program(QString path)
   QString l = lines.mid(pos, np - pos).trimmed();
   if(l.startsWith(".;"))
   {
+   pos = np + 3;
+   continue;
+  }
+  if(l.startsWith("@fn"))
+  {
+   parse_fn_line(l);
    pos = np + 3;
    continue;
   }
