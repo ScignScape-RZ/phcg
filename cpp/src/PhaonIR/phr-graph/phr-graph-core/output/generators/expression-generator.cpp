@@ -68,9 +68,17 @@ void Expression_Generator::generate_fuxe_entry(QTextStream& qts,
   PHR_Graph_Fuxe_Entry& fen,
   const PHR_Graph_Node& node, int unw)
 {
+ char fc = 0;
+ QString cn = fen.channel_name();
+ if(cn.startsWith('?'))
+ {
+  fc = '?';
+  cn = cn.mid(1);
+ }
+
  if(unw > 0)
    qts << "\npush_unwind_scope $ "
-   << unw << ' ' << fen.channel_name() << " ;.\n";
+   << unw << ' ' << cn << " ;.\n";
 // else
 // {
 //  qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";
@@ -82,7 +90,7 @@ void Expression_Generator::generate_fuxe_entry(QTextStream& qts,
 
  if(unw > 0)
  {
-  qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";
+  qts << "push_carrier_stack $ " << cn << " ;.\n";
 //?
 //  if(!fen.result_type_name().isEmpty())
 //    qts << "hold_type_by_name $ " << fen.result_type_name() << " ;.\n";
@@ -90,7 +98,10 @@ void Expression_Generator::generate_fuxe_entry(QTextStream& qts,
   generate_line(qts, "coalesce_channel_group");
   generate_comment_line(qts, "pop");
   generate_line(qts, "pop_unwind_scope");
-  generate_line(qts, "temp_anchor_channel_group");
+  if(fc == '?')
+    generate_line(qts, "temp_anchor_channel_group_by_need");
+  else
+    generate_line(qts, "temp_anchor_channel_group");
  }
  generate_comment_line(qts, "end fuxe entry");
 }
