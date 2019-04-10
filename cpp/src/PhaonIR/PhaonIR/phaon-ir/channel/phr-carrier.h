@@ -34,6 +34,8 @@ public:
 
  ACCESSORS__GDECLARE(PHR_Type_Object* ,type_object)
 
+ PHR_Carrier* clone();
+
  QString* symbol_as_pointer();
  QString* raw_value_string_as_pointer();
 

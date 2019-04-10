@@ -27,6 +27,8 @@ public:
   return lhs.value(0) < rhs.value(0);
  }
 
+ PHR_Channel* clone();
+
 };
 
 #endif // PHR_CHANNEL__H

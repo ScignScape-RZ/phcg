@@ -44,6 +44,8 @@ public:
  PHR_Channel* result_ch();
  PHR_Channel* sigma_ch();
 
+ PHR_Channel_Group* clone();
+
  void clear_all()
  {
   clear();

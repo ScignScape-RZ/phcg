@@ -41,6 +41,7 @@ HEADERS += \
   $$SRC_DIR/channel/phr-channel-system.h \
   $$SRC_DIR/runtime/phr-command-package.h \
   $$SRC_DIR/runtime/phr-callable-value.h \
+  $$SRC_DIR/runtime/phr-expression-object.h \
   $$SRC_DIR/types/phr-type.h \
   $$SRC_DIR/types/phr-type-object.h \
   $$SRC_DIR/types/phr-universal-class.h \
@@ -75,6 +76,7 @@ SOURCES += \
   $$SRC_DIR/channel/phr-channel-system.cpp \
   $$SRC_DIR/runtime/phr-command-package.cpp \
   $$SRC_DIR/runtime/phr-callable-value.cpp \
+  $$SRC_DIR/runtime/phr-expression-object.cpp \
   $$SRC_DIR/types/phr-type.cpp \
   $$SRC_DIR/types/phr-type-object.cpp \
   $$SRC_DIR/types/phr-universal-class.cpp \

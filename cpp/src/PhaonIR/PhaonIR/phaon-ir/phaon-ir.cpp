@@ -26,6 +26,7 @@
 #include "phr-direct-eval/phr-direct-eval.h"
 
 #include "runtime/phr-callable-value.h"
+#include "runtime/phr-expression-object.h"
 
 #include "textio.h"
 
@@ -95,8 +96,9 @@ qint32 PhaonIR::get_s4_symbol_value(QString sym)
 {
  if(sym.startsWith('#'))
  {
+  PHR_Expression_Object* pxo = nullptr;
   //PHR_Channel_Group* pcg
-  PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(sym);
+  PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(sym, pxo);
   if(ev)
   {
    return ev->get_result_value_as<qint32>();
@@ -121,7 +123,9 @@ PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
  if(sym.startsWith('#'))
  {
   //PHR_Channel_Group* pcg
-  PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(sym);
+  PHR_Expression_Object* pxo = nullptr;
+  PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(
+    sym, pxo);
   if(ev)
   {
    val = ev->get_result_value_as<qint32>();
@@ -230,7 +234,8 @@ void PhaonIR::pop_unwind_scope()
 }
 
 
-PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QString usi_sym)
+PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QString usi_sym,
+  PHR_Expression_Object*& pxo)
 {
 // char by_need = 0;
 // if(usi_sym[1] == '?')
@@ -244,6 +249,7 @@ PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QStri
   PHR_Channel_Group* pcg = it.value();
   if(usi_sym[1] == '?')
   {
+   pxo = new PHR_Expression_Object(this, pcg->clone());
    return nullptr;
   }
 
@@ -254,6 +260,15 @@ PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QStri
  }
  return nullptr;
 }
+
+PHR_Channel_Group_Evaluator* PhaonIR::run_expression_object(PHR_Channel_Group* pcg)
+{
+ PHR_Channel_Group_Evaluator* result = load_evaluator_fn_(*this, *pcg);
+ result->run_eval();
+ temps_by_channel_group_.insertMulti(pcg, result->get_result_value());
+ return result;
+}
+
 
 quint64 PhaonIR::default_cofinalizer(anchor_channel_link& acl, void* pv)
 {

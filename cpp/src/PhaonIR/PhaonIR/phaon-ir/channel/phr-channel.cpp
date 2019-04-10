@@ -14,6 +14,15 @@ PHR_Channel::PHR_Channel()
 
 }
 
+PHR_Channel* PHR_Channel::clone()
+{
+ PHR_Channel* result = new PHR_Channel;
+ for(PHR_Carrier* phc : *this)
+ {
+  result->push_back(phc->clone());
+ }
+ return result;
+}
 
 void* PHR_Channel::get_first_raw_value()
 {

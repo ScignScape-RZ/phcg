@@ -30,6 +30,7 @@ class PHR_Channel_Group;
 class PHR_Channel_Group_Evaluator;
 class PHR_Channel;
 class PHR_Command_Package;
+class PHR_Expression_Object;
 
 class PHR_Symbol_Scope;
 
@@ -215,6 +216,8 @@ public:
   return held_channel_group_;
  }
 
+ PHR_Channel_Group_Evaluator* run_expression_object(PHR_Channel_Group* pcg);
+
  void init_table();
  void init_program_stack();
  void reinit_program_stack();
@@ -247,7 +250,8 @@ public:
  void push_carrier_symbol(QString sn);
  void push_carrier_anon_fn(QString fn);
 
- PHR_Channel_Group_Evaluator* evaluate_channel_group_by_usi_symbol(QString usi_sym);
+ PHR_Channel_Group_Evaluator* evaluate_channel_group_by_usi_symbol(QString usi_sym,
+   PHR_Expression_Object*& pxo);
 
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();

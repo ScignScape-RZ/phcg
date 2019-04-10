@@ -15,6 +15,16 @@ PHR_Carrier::PHR_Carrier()
 
 }
 
+PHR_Carrier* PHR_Carrier::clone()
+{
+ PHR_Carrier* result = new PHR_Carrier;
+ result->phr_type_ = phr_type_;
+ result->raw_value_ = raw_value_;
+ result->raw_value_string_ = raw_value_string_;
+ result->symbol_name_ = symbol_name_;
+ result->type_object_ = type_object_;
+ return result;
+}
 
 QString* PHR_Carrier::raw_value_string_as_pointer()
 {
