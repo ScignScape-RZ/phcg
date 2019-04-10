@@ -53,6 +53,7 @@ HEADERS += \
   $$SRC_DIR/output/generators/expression-generator.h \
   $$SRC_DIR/token/phr-graph-fuxe-entry.h \
   $$SRC_DIR/token/phr-graph-statement-info.h \
+  $$SRC_DIR/token/phr-graph-block-info.h \
 
 
 SOURCES += \
@@ -71,6 +72,7 @@ SOURCES += \
   $$SRC_DIR/output/generators/expression-generator.cpp \
   $$SRC_DIR/token/phr-graph-fuxe-entry.cpp \
   $$SRC_DIR/token/phr-graph-statement-info.cpp \
+  $$SRC_DIR/token/phr-graph-block-info.cpp \
 
 
 #LIBS += -L$$TARGETSDIR  -lphr-direct-eval

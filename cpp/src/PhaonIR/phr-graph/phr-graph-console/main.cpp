@@ -19,6 +19,7 @@
 
 #include "phr-graph-core/token/phr-graph-fuxe-entry.h"
 #include "phr-graph-core/token/phr-graph-statement-info.h"
+#include "phr-graph-core/token/phr-graph-block-info.h"
 
 #include "rzns.h"
 
@@ -75,17 +76,25 @@ int main(int argc, char **argv)
  n2 << fr/qy.Channel_Entry(cion) >> n3;
  n3 << fr/qy.Channel_Sequence >> n4;
 
+ PHR_Graph_Block_Info* bin = new PHR_Graph_Block_Info;
+ PHR_Graph_Statement_Info* sin = new PHR_Graph_Statement_Info;
 
-// caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection("lambda");
-// n1 << fr/qy.Channel_Entry(cion) >> n2;
+ caon_ptr<PHR_Graph_Connection> bcion = new PHR_Graph_Connection(bin);
+ bcion->add_node(sin);
 
-
- caon_ptr<PHR_Graph_Token> t5 = new PHR_Graph_Token("44", "u4");
+ caon_ptr<PHR_Graph_Token> t5 = new PHR_Graph_Token("&prn");
  t5->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n5 = new PHR_Graph_Node(t5);
 
  //caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection("lambda");
- n2 << fr/qy.Channel_Continue >> n5;
+ n2 << fr/qy.Channel_Continue_Block(bcion) >> n5;
+
+ caon_ptr<PHR_Graph_Token> t6 = new PHR_Graph_Token("33", "u4");
+ t4->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Node> n6 = new PHR_Graph_Node(t6);
+
+ caon_ptr<PHR_Graph_Connection> cion5 = new PHR_Graph_Connection("lambda");
+ n5 << fr/qy.Channel_Entry(cion5) >> n6;
 
  pgo.generate();
 

@@ -18,6 +18,8 @@ DOMINION_CONNECTOR(Channel_Sequence, "channel-sequence")
 
 DOMINION_CONNECTOR(Channel_Continue, "channel-continue")
 
+DOMINION_CONNECTOR(Channel_Continue_Block, "channel-continue-block")
+
 DOMINION_CONNECTOR(Statement_Sequence, "statement-sequence")
 
 DOMINION_CONNECTOR(Run_Call_Entry, "run-call-entry")
