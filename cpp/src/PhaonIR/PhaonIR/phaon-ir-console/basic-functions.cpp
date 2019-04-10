@@ -26,6 +26,9 @@
 //#include "PhaonLib/phaon-function.h"
 
 #include "phaon-ir/runtime/phr-callable-value.h"
+#include "phaon-ir/runtime/phr-expression-object.h"
+
+#include "phaon-ir/eval/phr-channel-group-evaluator.h"
 
 
 #include <QTextStream>
@@ -120,8 +123,15 @@ void test_if_then_else(quint64 args_ptr)
 //   quint64 result;
 //   KCM_Lisp_Eval::eval_lisp_callable_deferred_value(qclo, result, "bool");
 //   qDebug() << result;
-   qint32 i1 = *(qint32*) qui;
-   test =  (bool) i1;
+
+
+   PHR_Expression_Object** pxo = (PHR_Expression_Object**) qui;
+
+   PHR_Channel_Group_Evaluator* ev = (*pxo)->run();
+   qint32 i1 = ev->get_result_value_as<qint32>();
+
+//   qint32 i1 = *(qint32*) qui;
+   test = (bool) i1;
   }
   ++i;
  }

@@ -18,8 +18,8 @@ PHR_Expression_Object::PHR_Expression_Object(PhaonIR* phaon_ir,
 
 }
 
-void PHR_Expression_Object::run()
+PHR_Channel_Group_Evaluator* PHR_Expression_Object::run()
 {
  //qDebug() << name_;
- phaon_ir_->run_expression_object(channel_group_);
+ return phaon_ir_->run_expression_object(channel_group_);
 }

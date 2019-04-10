@@ -14,6 +14,7 @@
 
 class PhaonIR;
 class PHR_Channel_Group;
+class PHR_Channel_Group_Evaluator;
 
 class PHR_Expression_Object
 {
@@ -24,7 +25,7 @@ public:
 
  PHR_Expression_Object(PhaonIR* phaon_ir, PHR_Channel_Group* channel_group);
 
- void run();
+ PHR_Channel_Group_Evaluator* run();
 
 };
 

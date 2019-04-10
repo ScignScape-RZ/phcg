@@ -130,6 +130,10 @@ PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
   {
    val = ev->get_result_value_as<qint32>();
   }
+  else if(pxo)
+  {
+   val = (quint64) pxo;
+  }
   return nullptr;
  }
  //quint64 val;
@@ -265,7 +269,7 @@ PHR_Channel_Group_Evaluator* PhaonIR::run_expression_object(PHR_Channel_Group* p
 {
  PHR_Channel_Group_Evaluator* result = load_evaluator_fn_(*this, *pcg);
  result->run_eval();
- temps_by_channel_group_.insertMulti(pcg, result->get_result_value());
+ //?temps_by_channel_group_.insertMulti(pcg, result->get_result_value());
  return result;
 }
 
