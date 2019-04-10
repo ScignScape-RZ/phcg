@@ -31,7 +31,7 @@ Statement_Generator::Statement_Generator(Expression_Generator& expression_genera
  :  rq_(PHR_Graph_Query::instance()),
     expression_generator_(expression_generator)
 {
-
+ expression_generator_.set_statement_generator(this);
 }
 
 void Statement_Generator::generate_from_node(QTextStream& qts,

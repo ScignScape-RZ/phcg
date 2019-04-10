@@ -25,7 +25,7 @@ PHR_Graph_Connection::PHR_Graph_Connection(QString channel_name,
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Connection::phr_node(int i)
 {
- return phr_nodes_.at(i);
+ return phr_nodes_.value(i);
 }
 
 void PHR_Graph_Connection::add_node(caon_ptr<PHR_Graph_Node> n)

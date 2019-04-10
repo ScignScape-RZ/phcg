@@ -6,6 +6,8 @@
 
 #include "expression-generator.h"
 
+#include "statement-generator.h"
+
 #include "kernel/document/phr-graph-document.h"
 
 #include "kernel/graph/phr-graph.h"
@@ -27,7 +29,7 @@ USING_RZNS(PhrGraphCore)
 
 
 Expression_Generator::Expression_Generator()
- :  rq_(PHR_Graph_Query::instance())
+ :  rq_(PHR_Graph_Query::instance()), statement_generator_(nullptr)
 {
 
 }
@@ -187,9 +189,16 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
   {
    if(caon_ptr<PHR_Graph_Block_Info> bin = cion1->phr_node()->block_info())
    {
-    if(caon_ptr<PHR_Graph_Statement_Info> sin = cion1->phr_node(1)->statement_info())
+    if(cion1->phr_node(1))
     {
-     generate_block(qts, *bin, *sin);
+     if(caon_ptr<PHR_Graph_Statement_Info> sin = cion1->phr_node(1)->statement_info())
+     {
+      generate_block(qts, *bin, *n1, sin.raw_pointer());
+     }
+    }
+    else
+    {
+     generate_block(qts, *bin, *n1);
     }
    }
   }
@@ -197,10 +206,13 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  }
 }
 
-void Expression_Generator::generate_block(QTextStream& qts, PHR_Graph_Block_Info& bin, PHR_Graph_Statement_Info& sin)
+void Expression_Generator::generate_block(QTextStream& qts, PHR_Graph_Block_Info& bin,
+  const PHR_Graph_Node& node, PHR_Graph_Statement_Info* sin)
 {
  generate_comment_line(qts, "block ...", 2);
  generate_line(qts, "@fnp");
+ statement_generator_->generate_from_node(qts, node, sin);
+ generate_from_node(qts, node);
  generate_line(qts, "@fne");
  generate_comment_line(qts, "end block ...", 1);
  generate_empty_line(qts);

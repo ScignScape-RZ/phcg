@@ -27,15 +27,21 @@ class PHR_Graph_Fuxe_Entry;
 class PHR_Graph_Statement_Info;
 class PHR_Graph_Block_Info;
 
+class Statement_Generator;
+
 class Expression_Generator
 {
 
  //const PHR_Graph_Frame& fr_;
  const PHR_Graph_Query& rq_;
 
+ Statement_Generator* statement_generator_;
+
 public:
 
  Expression_Generator();
+
+ ACCESSORS(Statement_Generator* ,statement_generator)
 
 // void generate_close(QTextStream& qts);
  void generate_line(QTextStream& qts, QString ln);
@@ -51,7 +57,8 @@ public:
  void generate_fuxe_entry(QTextStream& qts, PHR_Graph_Fuxe_Entry& fen,
   const PHR_Graph_Node& node, int unw);
 
- void generate_block(QTextStream& qts, PHR_Graph_Block_Info& bin, PHR_Graph_Statement_Info& sin);
+ void generate_block(QTextStream& qts, PHR_Graph_Block_Info& bin,
+   const PHR_Graph_Node& node, PHR_Graph_Statement_Info* sin = nullptr);
 
  void generate_from_fn_node(QTextStream& qts,
   PHR_Graph_Token& tok, QString channel_name,

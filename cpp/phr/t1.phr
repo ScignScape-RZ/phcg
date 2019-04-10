@@ -33,7 +33,11 @@ temp_anchor_channel_group_by_need ;.
 hold_type_by_name $ u4 ;.
 push_carrier_expression ;.
 
+
+ .; block ... ;.
 @fnp ;.
+
+
  .; generate_from_fn_node ;.
 push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.

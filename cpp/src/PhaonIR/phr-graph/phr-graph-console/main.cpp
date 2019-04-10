@@ -86,14 +86,13 @@ int main(int argc, char **argv)
  bcion->add_node(nsin);
 
  caon_ptr<PHR_Graph_Token> t5 = new PHR_Graph_Token("&prn");
- t5->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n5 = new PHR_Graph_Node(t5);
 
  //caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection("lambda");
  n2 << fr/qy.Channel_Continue_Block(bcion) >> n5;
 
- caon_ptr<PHR_Graph_Token> t6 = new PHR_Graph_Token("33", "u4");
- t4->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Token> t6 = new PHR_Graph_Token("38", "u4");
+ t6->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n6 = new PHR_Graph_Node(t6);
 
  caon_ptr<PHR_Graph_Connection> cion5 = new PHR_Graph_Connection("lambda");
