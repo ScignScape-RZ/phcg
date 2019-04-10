@@ -55,6 +55,8 @@ reset_program_stack ;.
  .; end of statement ;.
 @fne ;.
 
+ .; end block ... ;.
+ 
 hold_type_by_name $ pcv ;.
 push_carrier_anon_fn @ last_source_fn_name ;.
 

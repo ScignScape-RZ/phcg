@@ -20,6 +20,7 @@
 
 #include "token/phr-graph-token.h"
 #include "token/phr-graph-fuxe-entry.h"
+#include "token/phr-graph-block-info.h"
 
 #include "textio.h"
 USING_KANS(TextIO)
@@ -212,9 +213,16 @@ void Expression_Generator::generate_block(QTextStream& qts, PHR_Graph_Block_Info
  generate_comment_line(qts, "block ...", 2);
  generate_line(qts, "@fnp");
  statement_generator_->generate_from_node(qts, node, sin);
- generate_from_node(qts, node);
  generate_line(qts, "@fne");
  generate_comment_line(qts, "end block ...", 1);
+ generate_empty_line(qts);
+ generate_line(qts, "hold_type_by_name $ pcv");
+ if(bin.fn_name().isEmpty())
+   generate_line(qts, "push_carrier_anon_fn @ last_source_fn_name");
+ else
+   //?
+   qts << "push_carrier_named_fn @ =" << bin.fn_name() << " ;.\n";
+
  generate_empty_line(qts);
 }
 

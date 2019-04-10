@@ -14,9 +14,8 @@
 
 USING_RZNS(PhrGraphCore)
 
-PHR_Graph_Block_Info::PHR_Graph_Block_Info(
-  QString channel_name)
- :  channel_name_(channel_name)
+PHR_Graph_Block_Info::PHR_Graph_Block_Info(QString fn_name)
+ :  fn_name_(fn_name)
 {
 }
 
