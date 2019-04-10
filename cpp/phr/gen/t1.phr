@@ -32,8 +32,14 @@ temp_anchor_channel_group_by_need ;.
  .; end fuxe entry ;.
 hold_type_by_name $ u4 ;.
 push_carrier_expression ;.
-hold_type_by_name $ u4 ;.
-push_carrier_raw_value $ 44 ;.
+
+
+ .; block ... ;.
+@fnp ;.
+@fne ;.
+
+ .; end block ... ;.
+
 coalesce_channel_group ;.
 evaluate_channel_group ;.
 delete_temps ;.

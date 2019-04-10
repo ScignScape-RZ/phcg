@@ -41,6 +41,7 @@ public:
  PHR_Graph_Statement_Info(QString anchor_name, QString channel_name,
    QString anchor_kind);
 
+ PHR_Graph_Statement_Info();
 };
 
 _RZNS(PhrGraphCore)

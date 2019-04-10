@@ -76,11 +76,14 @@ int main(int argc, char **argv)
  n2 << fr/qy.Channel_Entry(cion) >> n3;
  n3 << fr/qy.Channel_Sequence >> n4;
 
- PHR_Graph_Block_Info* bin = new PHR_Graph_Block_Info;
- PHR_Graph_Statement_Info* sin = new PHR_Graph_Statement_Info;
+ caon_ptr<PHR_Graph_Block_Info> bin = new PHR_Graph_Block_Info("lambda");
+ caon_ptr<PHR_Graph_Statement_Info> sin = new PHR_Graph_Statement_Info;
 
- caon_ptr<PHR_Graph_Connection> bcion = new PHR_Graph_Connection(bin);
- bcion->add_node(sin);
+ caon_ptr<PHR_Graph_Node> nbin = new PHR_Graph_Node(bin);
+ caon_ptr<PHR_Graph_Node> nsin = new PHR_Graph_Node(sin);
+
+ caon_ptr<PHR_Graph_Connection> bcion = new PHR_Graph_Connection(nbin);
+ bcion->add_node(nsin);
 
  caon_ptr<PHR_Graph_Token> t5 = new PHR_Graph_Token("&prn");
  t5->flags.gen_raw_value = true;

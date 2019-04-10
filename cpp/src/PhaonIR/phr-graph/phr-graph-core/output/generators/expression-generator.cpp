@@ -183,8 +183,27 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
     generate_line(qts, "push_carrier_expression");
    }
   }
+  else if(n1 = rq_.Channel_Continue_Block[cion1](n))
+  {
+   if(caon_ptr<PHR_Graph_Block_Info> bin = cion1->phr_node()->block_info())
+   {
+    if(caon_ptr<PHR_Graph_Statement_Info> sin = cion1->phr_node(1)->statement_info())
+    {
+     generate_block(qts, *bin, *sin);
+    }
+   }
+  }
   n = n1;
  }
+}
+
+void Expression_Generator::generate_block(QTextStream& qts, PHR_Graph_Block_Info& bin, PHR_Graph_Statement_Info& sin)
+{
+ generate_comment_line(qts, "block ...", 2);
+ generate_line(qts, "@fnp");
+ generate_line(qts, "@fne");
+ generate_comment_line(qts, "end block ...", 1);
+ generate_empty_line(qts);
 }
 
 

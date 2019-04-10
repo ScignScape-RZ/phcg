@@ -20,4 +20,6 @@ PHR_Graph_Statement_Info::PHR_Graph_Statement_Info(QString anchor_name,
 {
 }
 
-
+PHR_Graph_Statement_Info::PHR_Graph_Statement_Info()
+{
+}
