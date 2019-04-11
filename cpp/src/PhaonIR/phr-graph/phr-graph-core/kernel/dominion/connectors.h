@@ -8,6 +8,7 @@
 DOMINION_CONNECTOR(N_A, "No Connection")
 
 DOMINION_CONNECTOR(Statement_Entry, "statement-entry")
+DOMINION_CONNECTOR(Block_Entry, "block-entry")
 DOMINION_CONNECTOR(Channel_Entry, "channel-entry")
 
 DOMINION_CONNECTOR(Channel_Fuxe_Entry, "channel-fuxe-entry")

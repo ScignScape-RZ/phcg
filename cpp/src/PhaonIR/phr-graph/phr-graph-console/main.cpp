@@ -53,7 +53,13 @@ int main(int argc, char **argv)
 //   PHR_Graph_Statement_Info("x", "result", "\\=");
 // caon_ptr<PHR_Graph_Node> sin = new PHR_Graph_Node(si);
 // caon_ptr<PHR_Graph_Connection> sicion = new PHR_Graph_Connection(sin);
- rn << fr/qy.Statement_Entry >> n1;
+
+ caon_ptr<PHR_Graph_Block_Info> rbin = new PHR_Graph_Block_Info;
+ //caon_ptr<PHR_Graph_Statement_Info> sin = new PHR_Graph_Statement_Info;
+ caon_ptr<PHR_Graph_Node> nrbin = new PHR_Graph_Node(rbin);
+ caon_ptr<PHR_Graph_Connection> nrcion = new PHR_Graph_Connection(nrbin);
+
+ rn << fr/qy.Block_Entry(nrcion) >> n1;
 
  caon_ptr<PHR_Graph_Token> t2 = new PHR_Graph_Token("#<");
  t2->flags.gen_raw_value = true;

@@ -38,12 +38,18 @@ void PHR_Graph_PHR_Output::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node)
 {
  caon_ptr<PHR_Graph_Connection> cion;
- if(caon_ptr<PHR_Graph_Node> sen = rq_.Statement_Entry[cion](&node))
+ if(caon_ptr<PHR_Graph_Node> ben = rq_.Block_Entry[cion](&node))
  {
-  PHR_Graph_Statement_Info* si = nullptr;
+  PHR_Graph_Statement_Info* sin = nullptr;
+  PHR_Graph_Block_Info* bin = nullptr;
+
   if(cion)
-    si = cion->phr_node()->statement_info().raw_pointer();
-  statement_generator_.generate_from_node(qts, *sen, si);
+  {
+   bin = cion->phr_node()->block_info().raw_pointer();
+   if(cion->phr_node(1))
+     sin = cion->phr_node()->statement_info().raw_pointer();
+  }
+  statement_generator_.generate_from_node(qts, *ben, sin);
 //  generate_statement()
 //  if(caon_ptr<PHR_Graph_Token> sent = sen->phr_graph_token())
 //  {
