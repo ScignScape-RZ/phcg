@@ -38,7 +38,7 @@ _RZNS(GBuild)
 USING_RZNS(GBuild)
 
 RZNS_(PhrGraphCore)
- class PHR_Graph;
+ class PHR_Graph_Build;
 _RZNS(PhrGraphCore)
 
 USING_RZNS(PhrGraphCore)
@@ -123,7 +123,7 @@ public:
 
  RZ_Lisp_Graph_Visitor& visitor();
 
- void write(PHR_Graph& phg);
+ void build_phaon_graph(PHR_Graph_Build& phgb);
 
  void scan_top_level(RZ_Graph_Visitor_Phaon& visitor_phaon);
 

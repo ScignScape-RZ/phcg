@@ -28,7 +28,7 @@
 #include "rz-code-generators/phaon/rz-phaon-output.h"
 
 #include "phr-graph-core/kernel/graph/phr-graph.h"
-
+#include "phr-graph-core/kernel/graph/phr-graph-build.h"
 
 #include "kans.h"
 
@@ -79,6 +79,7 @@ void compile_rz(QString file_name)
  anticipate.run_core_pairs_generations();
 
  PHR_Graph phg;
+ PHR_Graph_Build phgb(phg);
 
 // anticipate.write_core_pairs(doc->local_path() + ".cprs.txt");
 // anticipate.run_core_pairs();
@@ -86,7 +87,7 @@ void compile_rz(QString file_name)
 // QString output;
 // QTextStream qts(&output);
 
- rpo.write(phg);
+ rpo.build_phaon_graph(phgb);
 
 // QString result_file = doc->local_path() + ".cl";
 // QFile outfile(result_file);

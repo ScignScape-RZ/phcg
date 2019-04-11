@@ -719,7 +719,7 @@ void RZ_Phaon_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon&
 
 
 
-void RZ_Phaon_Block::write(PHR_Graph& phg)
+void RZ_Phaon_Block::build_phaon_graph(PHR_Graph_Build& phgb)
 {
  if(parent_block_)
  {

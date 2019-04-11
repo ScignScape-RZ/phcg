@@ -4,8 +4,8 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
-#ifndef PHR_GRAPH__H
-#define PHR_GRAPH__H
+#ifndef PHR_GRAPH_BUILD__H
+#define PHR_GRAPH_BUILD__H
 
 
 #include "relae-graph/relae-node-ptr.h"
@@ -18,15 +18,17 @@
 
 RZNS_(PhrGraphCore)
 
+class PHR_Graph;
 
-class PHR_Graph : public node_graph<PHR_Graph_Dominion>
+class PHR_Graph_Build
 {
- public:
-  PHR_Graph(caon_ptr<PHR_Graph_Node> root_node = nullptr);
+ PHR_Graph& graph_;
 
- void report(QTextStream& qts);
- void report_from_node(QTextStream& qts,
-  const PHR_Graph_Node& node, int indent = 0);
+ public:
+
+  PHR_Graph_Build(PHR_Graph& graph);
+
+
 
 };
 
@@ -34,4 +36,4 @@ _RZNS(PhrGraphCore)
 
 
 
-#endif // PHR_GRAPH__H
+#endif // PHR_GRAPH_BUILD__H
