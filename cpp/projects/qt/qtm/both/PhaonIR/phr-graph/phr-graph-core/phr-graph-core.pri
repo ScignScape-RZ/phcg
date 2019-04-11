@@ -40,6 +40,8 @@ HEADERS += \
   $$SRC_DIR/kernel/graph/phr-graph-build.h \
   $$SRC_DIR/kernel/graph/phr-graph-connection.h \
   $$SRC_DIR/kernel/graph/phr-graph-node.h \
+  $$SRC_DIR/kernel/graph/pgb-ir-run.h \
+  $$SRC_DIR/kernel/graph/pgb-ir-build.h \
   $$SRC_DIR/kernel/phr-graph-dominion.h \
   $$SRC_DIR/kernel/dominion/types.h \
   $$SRC_DIR/kernel/dominion/connectors.h \
@@ -60,6 +62,8 @@ HEADERS += \
 SOURCES += \
   $$SRC_DIR/kernel/graph/phr-graph.cpp \
   $$SRC_DIR/kernel/graph/phr-graph-build.cpp \
+  $$SRC_DIR/kernel/graph/pgb-ir-run.cpp \
+  $$SRC_DIR/kernel/graph/pgb-ir-build.cpp \
   $$SRC_DIR/kernel/graph/phr-graph-connection.cpp \
   $$SRC_DIR/kernel/graph/phr-graph-node.cpp \
   $$SRC_DIR/kernel/phr-graph-dominion.cpp \

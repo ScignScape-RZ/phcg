@@ -5,14 +5,15 @@
 //           http://www.boost.org/LICENSE_1_0.txt)
 
 #ifndef MULTIGRAPH_TOKEN__H
-#define MULTIGRAPHP_TOKEN__H
+#define MULTIGRAPH_TOKEN__H
 
 #include <QString>
 #include <QMap>
 
 enum class MG_Token_Kinds
 {
- N_A, Generic, Raw_Symbol, Raw_Value, String_Literal
+ N_A, Generic, Raw_Symbol, Raw_Value, String_Literal,
+ Arg_Raw_Symbol, Arg_Raw_Value, Target, Known_Target
 };
 
 struct MG_Token
@@ -107,6 +108,16 @@ struct MG_Token
   return { (k1 == MG_Token_Kinds::N_A?k2:k1), qs};
  }
 
+
+ static MG_Token decode_symbol(QString str)
+ {
+  if(str.startsWith(":|"))
+    str = str.mid(2);
+  if(str.endsWith('|'))
+    str.chop(1);
+  return decode(str);
+ }
+
  static MG_Token decode(QString str)
  {
   static QMap<QString, MG_Token_Kinds> static_map {{
@@ -115,6 +126,11 @@ struct MG_Token
   TEMP_MACRO(Raw_Symbol, "__@")
   TEMP_MACRO(Raw_Value, "__$")
   TEMP_MACRO(Generic, "|||")
+
+  TEMP_MACRO(Arg_Raw_Symbol, ">_@")
+  TEMP_MACRO(Arg_Raw_Value, ">_$")
+  TEMP_MACRO(Target, "<->")
+  TEMP_MACRO(Known_Target, "<!>")
 
 #undef TEMP_MACRO
   }};
@@ -139,6 +155,11 @@ struct MG_Token
   TEMP_MACRO(Raw_Symbol, "__@")
   TEMP_MACRO(Raw_Value, "__$")
   TEMP_MACRO(Generic, "|||")
+
+  TEMP_MACRO(Arg_Raw_Symbol, ">_@")
+  TEMP_MACRO(Arg_Raw_Value, ">_$")
+  TEMP_MACRO(Target, "<->")
+  TEMP_MACRO(Known_Target, "<!>")
 
 #undef TEMP_MACRO
   }};
@@ -165,8 +186,8 @@ struct MG_Token
    return QString("\"%1\"").arg(raw_text);
 
   default:
-   //return QString(":|%1%2|").arg(get_encode_prefix()).arg(escaped_raw_text());
-   return QString("%1%2").arg(get_encode_prefix()).arg(raw_text);
+   return QString(":|%1%2|").arg(get_encode_prefix()).arg(escaped_raw_text());
+   //return QString("%1%2").arg(get_encode_prefix()).arg(raw_text);
   }
  }
 };

@@ -4,7 +4,7 @@
 #     (See accompanying file LICENSE_1_0.txt or copy at
 #           http://www.boost.org/LICENSE_1_0.txt)
 
-PROJECT_NAME = pgb-ir-build-run
+PROJECT_NAME = pgb-ir-run-console
 
 include(../build-group.pri)
 
