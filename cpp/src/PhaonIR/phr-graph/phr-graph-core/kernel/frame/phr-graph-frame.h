@@ -7,11 +7,10 @@
 #ifndef PHR_GRAPH_FRAME__H
 #define PHR_GRAPH_FRAME__H
 
-#include "phr-graph-frame.h"
 
 #include "relae-graph/relae-node-ptr.h"
 
-#include "kernel/phr-graph-dominion.h"
+#include "phr-graph-core/kernel/phr-graph-dominion.h"
 
 #include "rzns.h"
 

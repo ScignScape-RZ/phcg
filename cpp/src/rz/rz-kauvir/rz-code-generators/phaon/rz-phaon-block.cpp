@@ -55,14 +55,14 @@ int RZ_Phaon_Block::get_new_hd_code()
  return ++result;
 }
 
-void RZ_Phaon_Block::scan_top_level(RZ_Graph_Visitor_Phaon& visitor_phaon)
+void RZ_Phaon_Block::scan_top_level(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon)
 {
  caon_ptr<RE_Node> rn = visitor_phaon.visitor().graph_root_node();
 
- scan(visitor_phaon, *rn);
+ scan(phgb, visitor_phaon, *rn);
 }
 
-void RZ_Phaon_Block::scan(RZ_Graph_Visitor_Phaon& visitor_phaon,
+void RZ_Phaon_Block::scan(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon,
   RE_Node& start_node)
 {
  caon_ptr<RZ_Lisp_Graph_Block_Info> rbi;
@@ -84,7 +84,8 @@ void RZ_Phaon_Block::scan(RZ_Graph_Visitor_Phaon& visitor_phaon,
 
   if(cen)
   {
-   add_form_from_call_entry_node(visitor_phaon, *cen);
+   add_statement_from_call_entry_node(phgb, visitor_phaon, *cen, phgb.current_node());
+   //?add_form_from_call_entry_node(visitor_phaon, *cen);
   }
 
   caon_ptr<RE_Node> current_node = cen;

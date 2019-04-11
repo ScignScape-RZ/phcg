@@ -33,7 +33,7 @@ void RZ_Phaon_Output::build_phaon_graph(PHR_Graph_Build& phgb)
  phgb.make_root_node();
  if(top_level_block_)
  {
-  top_level_block_->scan_top_level(visitor_phaon_);
+  top_level_block_->scan_top_level(phgb, visitor_phaon_);
   top_level_block_->build_phaon_graph(phgb);
  }
 }

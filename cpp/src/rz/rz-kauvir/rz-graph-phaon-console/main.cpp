@@ -31,6 +31,7 @@
 #include "phr-graph-core/kernel/graph/phr-graph-build.h"
 
 #include "phr-graph-core/output/phr-graph-phr-output.h"
+#include "phr-graph-core/kernel/document/phr-graph-document.h"
 
 #include "kans.h"
 
@@ -83,9 +84,9 @@ void compile_rz(QString file_name)
  PHR_Graph phg;
  PHR_Graph_Build phgb(phg);
 
- PHR_Graph_PHR_Output pgo(file_name + "/t1.phr");
+ PHR_Graph_PHR_Output pgo(file_name + ".phr");
 
- pgo.document()->set_graph(&pgr);
+ pgo.document()->set_graph(&phg);
 
  rpo.init_top_level_block();
 

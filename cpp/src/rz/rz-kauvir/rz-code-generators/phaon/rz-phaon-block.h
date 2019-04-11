@@ -129,9 +129,9 @@ public:
 
  void build_phaon_graph(PHR_Graph_Build& phgb);
 
- void scan_top_level(RZ_Graph_Visitor_Phaon& visitor_phaon);
+ void scan_top_level(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon);
 
- void scan(RZ_Graph_Visitor_Phaon& visitor_phaon, RE_Node& start_node);
+ void scan(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon, RE_Node& start_node);
 
  void scan_form_from_start_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
    RE_Node& start_node);

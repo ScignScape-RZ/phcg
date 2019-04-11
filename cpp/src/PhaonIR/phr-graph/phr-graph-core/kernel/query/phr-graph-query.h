@@ -7,7 +7,7 @@
 #ifndef PHR_GRAPH_QUERY__H
 #define PHR_GRAPH_QUERY__H
 
-#include "kernel/phr-graph-dominion.h"
+#include "phr-graph-core/kernel/phr-graph-dominion.h"
 
 #include "relae-graph/relae-node-ptr.h"
 

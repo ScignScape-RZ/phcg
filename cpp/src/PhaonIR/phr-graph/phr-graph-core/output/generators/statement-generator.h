@@ -10,8 +10,8 @@
 #include "accessors.h"
 #include "flags.h"
 
-#include "kernel/query/phr-graph-query.h"
-#include "kernel/frame/phr-graph-frame.h"
+#include "phr-graph-core/kernel/query/phr-graph-query.h"
+#include "phr-graph-core/kernel/frame/phr-graph-frame.h"
 
 #include <QTextStream>
 #include <QMap>
