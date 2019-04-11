@@ -35,7 +35,7 @@ class PGB_IR_Run
  enum class PGB_Methods {
 
   N_A, make_root_node, make_token_node,
-  add_block_entry_node
+  add_block_entry_node, add_channel_raw_value_token
 
  };
 
@@ -44,6 +44,7 @@ class PGB_IR_Run
  QMap<QString, caon_ptr<PHR_Graph_Node>> ledger_;
 
  MG_Token get_arg_token(const QMultiMap<MG_Token_Kinds, QString>& mgts);
+ QString get_string_arg(const QMultiMap<MG_Token_Kinds, QString>& mgts);
 
  caon_ptr<PHR_Graph_Node>* get_target(const QMultiMap<MG_Token_Kinds, QString>& mgts);
  caon_ptr<PHR_Graph_Node>* get_known_target(QString tr);

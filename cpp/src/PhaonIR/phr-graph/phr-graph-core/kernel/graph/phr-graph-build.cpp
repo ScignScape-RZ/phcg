@@ -42,7 +42,7 @@ PHR_Graph_Build::PHR_Graph_Build(PHR_Graph& graph)
 
 }
 
-void PHR_Graph_Build::make_root_node()
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_root_node()
 {
  caon_ptr<PHR_Graph_Document> doc = new PHR_Graph_Document(file_);
 
@@ -51,7 +51,7 @@ void PHR_Graph_Build::make_root_node()
 
  graph_.set_root_node(rn);
 
- current_node_ = rn;
+ //?current_node_ = rn;
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
@@ -59,15 +59,15 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
  caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(mgt.raw_text);
  if(mgt.kind == MG_Token_Kinds::Raw_Value)
    tok->flags.gen_raw_value = true;
+ if(mgt.kind == MG_Token_Kinds::Arg_Raw_Value)
+   tok->flags.gen_raw_value = true;
  return new PHR_Graph_Node(tok);
 }
 
-caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_raw_value_token(caon_ptr<PHR_Graph_Node> source,
-  QString channel, QString txt)
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_token(caon_ptr<PHR_Graph_Node> source,
+  QString channel, MG_Token& mgt)
 {
- caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(txt);
- tok->flags.gen_raw_value = true;
- caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(tok);
+ caon_ptr<PHR_Graph_Node> result = make_token_node(mgt);
 
  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(channel);
  source << fr_/qy_.Channel_Entry(cion) >> result;

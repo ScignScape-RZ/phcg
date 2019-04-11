@@ -44,7 +44,7 @@ public:
  ACCESSORS(QString ,file)
  ACCESSORS(caon_ptr<PHR_Graph_Node> ,current_node)
 
- void make_root_node();
+ caon_ptr<PHR_Graph_Node> make_root_node();
 
  caon_ptr<PHR_Graph_Node> add_block_entry_node(
    caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target);
@@ -55,8 +55,8 @@ public:
   return make_token_node(mgt);
  }
 
- caon_ptr<PHR_Graph_Node> add_channel_raw_value_token(caon_ptr<PHR_Graph_Node> source,
-   QString channel, QString txt);
+ caon_ptr<PHR_Graph_Node> add_channel_token(caon_ptr<PHR_Graph_Node> source,
+   QString channel, MG_Token& mgt);
 
 
 };

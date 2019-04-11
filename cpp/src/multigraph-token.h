@@ -13,7 +13,8 @@
 enum class MG_Token_Kinds
 {
  N_A, Generic, Raw_Symbol, Raw_Value, String_Literal,
- Arg_Raw_Symbol, Arg_Raw_Value, Target, Known_Target
+ Arg_Raw_Symbol, Arg_Raw_Value, Target, Known_Target,
+ Arg_String_Literal
 };
 
 struct MG_Token
@@ -131,6 +132,7 @@ struct MG_Token
   TEMP_MACRO(Arg_Raw_Value, ">_$")
   TEMP_MACRO(Target, "<->")
   TEMP_MACRO(Known_Target, "<!>")
+  TEMP_MACRO(Arg_String_Literal, "<$>")
 
 #undef TEMP_MACRO
   }};
@@ -160,6 +162,7 @@ struct MG_Token
   TEMP_MACRO(Arg_Raw_Value, ">_$")
   TEMP_MACRO(Target, "<->")
   TEMP_MACRO(Known_Target, "<!>")
+  TEMP_MACRO(Arg_String_Literal, "<$>")
 
 #undef TEMP_MACRO
   }};

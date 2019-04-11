@@ -1,6 +1,5 @@
 
 (pgb::make_root_node :|<!>current_node|) 
 (pgb::make_token_node :|>_@&prn| :|<->entry-node|)
-(pgb::make_token_node :|>_$44| :|<->arg-node|)
-(pgb::add_block_entry_node :|<->entry-node| :|<->arg-node|)
-
+(pgb::add_block_entry_node :|<!>current_node| :|<->entry-node|)
+(pgb::add_channel_raw_value_token :|<$>lambda| :|>_$44|)

@@ -124,8 +124,13 @@ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
 MG_Token PGB_IR_Run::get_arg_token(const QMultiMap<MG_Token_Kinds, QString>& mgts)
 {
  if(mgts.values(MG_Token_Kinds::Arg_Raw_Symbol).isEmpty())
-   return {MG_Token_Kinds::Arg_Raw_Symbol, mgts.value(MG_Token_Kinds::Arg_Raw_Symbol)};
- return {MG_Token_Kinds::Arg_Raw_Value, mgts.value(MG_Token_Kinds::Arg_Raw_Value)};
+   return {MG_Token_Kinds::Arg_Raw_Value, mgts.value(MG_Token_Kinds::Arg_Raw_Value)};
+ return {MG_Token_Kinds::Arg_Raw_Symbol, mgts.value(MG_Token_Kinds::Arg_Raw_Symbol)};
+}
+
+QString PGB_IR_Run::get_string_arg(const QMultiMap<MG_Token_Kinds, QString>& mgts)
+{
+ return mgts.value(MG_Token_Kinds::Arg_String_Literal);
 }
 
 void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QString>& mgts)
@@ -134,14 +139,14 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QString>& mgts)
 
  switch (md)
  {
- case make_root_node:
+ case PGB_Methods::make_root_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgts);
    if(tr)
      *tr = graph_build_.make_root_node();
   };
   break;
- case make_token_node:
+ case PGB_Methods::make_token_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgts);
    MG_Token tok = get_arg_token(mgts);
@@ -151,12 +156,20 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QString>& mgts)
      graph_build_.make_token_node(tok);
   };
   break;
- case add_block_entry_node:
+ case PGB_Methods::add_block_entry_node:
   {
    auto pr = get_args(mgts);
    graph_build_.add_block_entry_node(pr.first, pr.second);
   }
   break;
+ case PGB_Methods::add_channel_raw_value_token:
+  {
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgts);
+   QString cn = get_string_arg(mgts);
+   MG_Token mgt = get_arg_token(mgts);
+   graph_build_.add_channel_token(n, cn, mgt);
+  }
+ break;
  default:
   break;
  }

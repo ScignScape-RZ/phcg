@@ -10,6 +10,9 @@
 #include "phr-graph-core/kernel/graph/phr-graph-build.h"
 #include "phr-graph-core/kernel/graph/phr-graph.h"
 
+#include "phr-graph-core/output/phr-graph-phr-output.h"
+#include "phr-graph-core/kernel/document/phr-graph-document.h"
+
 #include "rzns.h"
 
 USING_RZNS(PhrGraphCore)
@@ -23,6 +26,12 @@ int main(int argc, char **argv)
  PGB_IR_Run pgb(phgb);
 
  pgb.run_from_file(DEFAULT_PHR_FOLDER "/pgb/t1.pgb");
+
+ PHR_Graph_PHR_Output pgo(DEFAULT_PHR_FOLDER "/pgb/t1.phr");
+
+ pgo.document()->set_graph(&phg);
+
+ pgo.generate();
 
  qDebug() << "ok";
  return 0;
