@@ -9,6 +9,8 @@
 
 #include "rz-phaon-block.h"
 
+#include "phr-graph-core/kernel/graph/phr-graph-build.h"
+
 USING_RZNS(GVal)
 
 RZ_Phaon_Output::RZ_Phaon_Output(RZ_Graph_Visitor_Phaon& visitor_phaon)
@@ -28,6 +30,7 @@ void RZ_Phaon_Output::init_top_level_block()
 
 void RZ_Phaon_Output::build_phaon_graph(PHR_Graph_Build& phgb)
 {
+ phgb.make_root_node();
  if(top_level_block_)
  {
   top_level_block_->scan_top_level(visitor_phaon_);

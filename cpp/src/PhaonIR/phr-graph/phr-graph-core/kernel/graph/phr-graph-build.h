@@ -12,6 +12,8 @@
 
 #include "phr-graph-core/kernel/phr-graph-dominion.h"
 
+#include "accessors.h"
+
 #include <QTextStream>
 
 #include "rzns.h"
@@ -23,11 +25,15 @@ class PHR_Graph;
 class PHR_Graph_Build
 {
  PHR_Graph& graph_;
+ QString file_;
 
- public:
+public:
 
-  PHR_Graph_Build(PHR_Graph& graph);
+ PHR_Graph_Build(PHR_Graph& graph);
 
+ ACCESSORS(QString ,file)
+
+ void make_root_node();
 
 
 };
