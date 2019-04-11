@@ -32,6 +32,8 @@
 
 #include "phr-graph-core/kernel/graph/phr-graph-build.h"
 
+#include "multigraph-token.h"
+
 #include "rzns.h"
 
 USING_RZNS(RECore)
@@ -117,7 +119,10 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PHR_Graph_Build& phgb,
   caon_ptr<PHR_Graph_Node> pen = nullptr;
   if(caon_ptr<RZ_Lisp_Token> rzlt = start_node->lisp_token())
   {
-   pen = phgb.make_symbol_token_node(rzlt->raw_text());
+   if(rzlt->raw_text().startsWith('#'))
+     pen = phgb.make_token_node({MG_Token_Kinds::Raw_Value, rzlt->raw_text()});
+   else
+     pen = phgb.make_token_node({MG_Token_Kinds::Raw_Symbol, rzlt->raw_text()});
    phgb.add_block_entry_node(prior_node, pen);
   }
 

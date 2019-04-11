@@ -28,6 +28,8 @@
 #include "phr-graph-core/kernel/frame/phr-graph-frame.h"
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
 
+#include "multigraph-token.h"
+
 #include "rzns.h"
 
 USING_RZNS(PhrGraphCore)
@@ -52,16 +54,11 @@ void PHR_Graph_Build::make_root_node()
  current_node_ = rn;
 }
 
-caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_symbol_token_node(QString txt)
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
 {
- caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(txt);
- return new PHR_Graph_Node(tok);
-}
-
-caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_raw_value_token_node(QString txt)
-{
- caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(txt);
- tok->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(mgt.raw_text);
+ if(mgt.kind == MG_Token_Kinds::Raw_Value)
+   tok->flags.gen_raw_value = true;
  return new PHR_Graph_Node(tok);
 }
 

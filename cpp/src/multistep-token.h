@@ -142,6 +142,8 @@ struct MS_Token
     TEMP_MACRO(Proxy_Value_Symbol, "_@_")
     TEMP_MACRO(Assignment_Kind, "_=_")
 
+	
+	
 #undef TEMP_MACRO
   }};
 
