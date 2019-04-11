@@ -28,6 +28,8 @@ class PHR_Graph_Query;
 
 class PHR_Graph_Build
 {
+ friend class PGB_IR_Run;
+
  PHR_Graph& graph_;
  QString file_;
  caon_ptr<PHR_Graph_Node> current_node_;

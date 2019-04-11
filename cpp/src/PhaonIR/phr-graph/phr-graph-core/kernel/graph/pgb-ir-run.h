@@ -11,6 +11,7 @@
 #include "relae-graph/relae-node-ptr.h"
 
 #include "phr-graph-core/kernel/phr-graph-dominion.h"
+#include "phr-graph-core/kernel/graph/phr-graph-node.h"
 
 #include "accessors.h"
 
@@ -30,6 +31,31 @@ class PHR_Graph_Build;
 class PGB_IR_Run
 {
  PHR_Graph_Build& graph_build_;
+
+ enum class PGB_Methods {
+
+  N_A, make_root_node, make_token_node,
+  add_block_entry_node
+
+ };
+
+ PGB_Methods parse_pgb_method(QString key);
+
+ QMap<QString, caon_ptr<PHR_Graph_Node>> ledger_;
+
+ MG_Token get_arg_token(const QMultiMap<MG_Token_Kinds, QString>& mgts);
+
+ caon_ptr<PHR_Graph_Node>* get_target(const QMultiMap<MG_Token_Kinds, QString>& mgts);
+ caon_ptr<PHR_Graph_Node>* get_known_target(QString tr);
+ caon_ptr<PHR_Graph_Node> unpoint(caon_ptr<PHR_Graph_Node>* pr)
+ {
+  if(pr) return *pr; return nullptr;
+ }
+
+ caon_ptr<PHR_Graph_Node> get_arg(const QMultiMap<MG_Token_Kinds, QString>& mgts);
+
+ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
+   get_args(const QMultiMap<MG_Token_Kinds, QString>& mgts);
 
 
 public:
