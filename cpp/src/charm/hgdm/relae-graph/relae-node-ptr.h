@@ -62,7 +62,7 @@ struct Node_Ptr_Default_Galaxy : Node_Ptr_Basic_Galaxy
  typedef typename DOMINION::Type_Codes Type_Codes_type;
  typedef typename DOMINION::Node_type Node_type;
  typedef typename DOMINION::Frame_type Frame_type;
- //typedef typename DOMINION::Graph_type Graph_type;
+ typedef typename DOMINION::Graph_type Graph_type;
  typedef typename DOMINION::Document_type Document_type;
  typedef typename DOMINION::Root_type Root_type;
  typedef caon_ptr<Connectors_type> Connectors_Caon_type;

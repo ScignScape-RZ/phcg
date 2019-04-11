@@ -16,7 +16,7 @@ INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR \
   $$SRC_GROUP_DIR/rz-graph-core \
 
 
-INCLUDEPATH += $$QHYP_SRC_GROUP_DIR
+INCLUDEPATH += $$HGDM_SRC_GROUP_DIR
 
 INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 
@@ -38,6 +38,8 @@ HEADERS += \
   $$SRC_DIR/rz-dynamo-form-annotation.h \
   $$SRC_DIR/rz-dynamo-expression.h \
   $$SRC_DIR/rz-dynamo-type-declaration.h \
+  $$SRC_DIR/phaon/rz-phaon-block.h \
+  $$SRC_DIR/phaon/rz-phaon-output.h \
 
 
 SOURCES += \
@@ -47,6 +49,8 @@ SOURCES += \
   $$SRC_DIR/rz-dynamo-form-annotation.cpp \
   $$SRC_DIR/rz-dynamo-expression.cpp \
   $$SRC_DIR/rz-dynamo-type-declaration.cpp \
+  $$SRC_DIR/phaon/rz-phaon-block.cpp \
+  $$SRC_DIR/phaon/rz-phaon-output.cpp \
 
 
 LIBS += -L$$TARGETSDIR -lrz-graph-core -lrz-graph-token -lrz-graph-visit \

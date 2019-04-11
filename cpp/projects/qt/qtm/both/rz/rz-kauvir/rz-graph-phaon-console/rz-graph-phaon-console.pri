@@ -5,12 +5,12 @@
 #           http://www.boost.org/LICENSE_1_0.txt)
 
 
-PROJECT_NAME = rz-graph-lisp-console
+PROJECT_NAME = rz-graph-phaon-console
 
 
 include(../build-group.pri)
 
-include(../../../../find-ecl-sexp.pri)
+#include(../../../../find-ecl-sexp.pri)
 
 
 TEMPLATE = app
@@ -28,9 +28,9 @@ INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR \
 INCLUDEPATH += $$HGDM_SRC_GROUP_DIR
 
 INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
+INCLUDEPATH += $$PHR_GRAPH_SRC_GROUP_DIR
 
-
-INCLUDEPATH += $$SEXP_DIR
+#INCLUDEPATH += $$SEXP_DIR
 
 
 CONFIG += no_keywords
@@ -38,8 +38,8 @@ CONFIG += no_keywords
 DEFINES += USE_RZNS
 
 
-INCLUDEPATH += $$SEXP_DIR
-INCLUDEPATH += $$SEXP_DIR/pingus/
+#INCLUDEPATH += $$SEXP_DIR
+#INCLUDEPATH += $$SEXP_DIR/pingus/
 
 
 
@@ -65,7 +65,10 @@ LIBS += -L$$TARGETSDIR  \
 
 LIBS += -lrz-code-generators
 
-LIBS += -L$$TARGETSDIR -lsexpr
+LIBS += -lphr-graph-core
+
+
+#LIBS += -L$$TARGETSDIR -lsexpr
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
 mkpath($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

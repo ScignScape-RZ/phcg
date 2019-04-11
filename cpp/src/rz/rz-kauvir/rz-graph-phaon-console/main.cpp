@@ -5,7 +5,7 @@
 //           http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "rz-graph-visit/rz-lisp-graph-visitor-dynamo.h"
+#include "rz-graph-visit/rz-graph-visitor-phaon.h"
 
 
 #include <QtEndian>
@@ -25,10 +25,10 @@
 #include "rz-graph-code/prerun/rz-re-prerun-anticipate.h"
 
 #include "rz-graph-visit/rz-lisp-graph-visitor.h"
-#include "rz-code-generators/rz-dynamo-output.h"
+#include "rz-code-generators/phaon/rz-phaon-output.h"
 
-#include "sexp/parser.hpp"
-#include "lisp/writer.hpp"
+#include "phr-graph-core/kernel/graph/phr-graph.h"
+
 
 #include "kans.h"
 
@@ -60,31 +60,50 @@ void compile_rz(QString file_name)
 
  visitor->set_document_directory(doc->local_directory());
 
- RZ_Lisp_Graph_Visitor_Dynamo visitor_dynamo(*visitor);
- RZ_Dynamo_Output rdo(visitor_dynamo);
+// RZ_Lisp_Graph_Visitor_Dynamo visitor_dynamo(*visitor);
+// RZ_Dynamo_Output rdo(visitor_dynamo);
+// visitor->set_dynamo_output(&rdo);
 
- visitor->set_dynamo_output(&rdo);
-
+ RZ_Graph_Visitor_Phaon visitor_phaon(*visitor);
+ RZ_Phaon_Output rpo(visitor_phaon);
 
  doc->report_graph(file_name + ".re1.txt");
 
  RE_Pre_Normal_Lisp prenorm1(doc);
  prenorm1.output("..prenorm1.txt");
 
-
  RE_Prerun_Anticipate anticipate(*visitor, doc->local_path() + ".cprs");
 
- anticipate.scan([](RZ_Dynamo_Output& rzdo){rzdo.init_top_level_block();});
+ anticipate.scan(nullptr);//[](RZ_Dynamo_Output& rzdo){rzdo.init_top_level_block();});
 
  anticipate.run_core_pairs_generations();
+
+ PHR_Graph phg;
+
 // anticipate.write_core_pairs(doc->local_path() + ".cprs.txt");
 // anticipate.run_core_pairs();
+
+// QString output;
+// QTextStream qts(&output);
+
+ rpo.write(phg);
+
+// QString result_file = doc->local_path() + ".cl";
+// QFile outfile(result_file);
+
+// if(outfile.open(QIODevice::WriteOnly | QIODevice::Text))
+// {
+//  QTextStream out(&outfile);
+//  out << output;
+//  outfile.close();
+// }
+
+#ifdef HIDE
 
  QString output;
  QTextStream qts(&output);
 
-
- rdo.write(qts);
+//? rdo.write(qts);
 
  QString result_file = doc->local_path() + ".cl";
  QFile outfile(result_file);
@@ -124,11 +143,12 @@ void compile_rz(QString file_name)
   out << vstr;
   clean_outfile.close();
  }
+#endif // HIDE
 }
 
 int main(int argc, char *argv[])
 {
- compile_rz(RZ_DIR "/phaon/test/t1.rz");
+ compile_rz(RZ_DIR "/phaon/t1.rz");
 
  return 0;
 }
