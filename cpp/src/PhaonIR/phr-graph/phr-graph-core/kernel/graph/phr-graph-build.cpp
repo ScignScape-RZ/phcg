@@ -52,6 +52,32 @@ void PHR_Graph_Build::make_root_node()
  current_node_ = rn;
 }
 
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_symbol_token_node(QString txt)
+{
+ caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(txt);
+ return new PHR_Graph_Node(tok);
+}
+
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_raw_value_token_node(QString txt)
+{
+ caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(txt);
+ tok->flags.gen_raw_value = true;
+ return new PHR_Graph_Node(tok);
+}
+
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_raw_value_token(caon_ptr<PHR_Graph_Node> source,
+  QString channel, QString txt)
+{
+ caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(txt);
+ tok->flags.gen_raw_value = true;
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(tok);
+
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(channel);
+ source << fr_/qy_.Channel_Entry(cion) >> result;
+
+ return result;
+}
+
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
   caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target)
 {
@@ -61,5 +87,7 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(nbin);
 
  source << fr_/qy_.Block_Entry(cion) >> target;
+
+ return nbin;
 }
 

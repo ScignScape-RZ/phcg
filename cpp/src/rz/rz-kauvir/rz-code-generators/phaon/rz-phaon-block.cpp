@@ -30,6 +30,8 @@
 
 #include "multistep-token.h"
 
+#include "phr-graph-core/kernel/graph/phr-graph-build.h"
+
 #include "rzns.h"
 
 USING_RZNS(RECore)
@@ -99,6 +101,65 @@ void RZ_Phaon_Block::scan(RZ_Graph_Visitor_Phaon& visitor_phaon,
   CAON_DEBUG_NOOP
  }
 
+}
+
+
+
+void RZ_Phaon_Block::add_statement_from_call_entry_node(PHR_Graph_Build& phgb,
+  RZ_Graph_Visitor_Phaon& visitor_phaon,
+  RE_Node& entry_node, caon_ptr<PHR_Graph_Node> prior_node)
+{
+ if(caon_ptr<RE_Node> start_node = visitor_phaon.start_node_from_call_entry_node(&entry_node))
+ {
+  CAON_PTR_DEBUG(RE_Node ,start_node)
+
+  caon_ptr<PHR_Graph_Node> pen = nullptr;
+  if(caon_ptr<RZ_Lisp_Token> rzlt = start_node->lisp_token())
+  {
+   pen = phgb.make_symbol_token_node(rzlt->raw_text());
+   phgb.add_block_entry_node(prior_node, pen);
+  }
+
+  RZ_Lisp_Graph_Visitor::Next_Node_Premise nnp;
+
+  caon_ptr<RE_Node> next_node = visitor_phaon.get_next_node(start_node, nnp);
+
+//  CAON_PTR_DEBUG(RE_Node ,current_node)
+  CAON_PTR_DEBUG(RE_Node ,next_node)
+
+  switch(nnp)
+  {
+  case RZ_Lisp_Graph_Visitor::Next_Node_Premise::Normal:
+   {
+    if(caon_ptr<RZ_Lisp_Token> rzlt = next_node->lisp_token())
+    {
+     phgb.add_channel_raw_value_token(pen, "lambda", rzlt->raw_text());
+    }
+   }
+  }
+
+
+  if(caon_ptr<RZ_Expression_Review> rer = visitor_phaon.get_expression_review_from_entry_node(start_node))
+  {
+   CAON_PTR_DEBUG(RZ_Expression_Review ,rer)
+   CAON_DEBUG_NOOP
+   //current_form_->set_expression_review(rer);
+  }
+
+  if(caon_ptr<RZ_Code_Statement> st = visitor_phaon.get_code_statement_from_statement_entry_node(start_node))
+  {
+   CAON_PTR_DEBUG(RZ_Code_Statement ,st)
+//   code_statements_.push_back(st);
+//   current_form_->set_code_statement(st);
+   visitor_phaon.check_assignment_annotation(start_node, st);
+   CAON_DEBUG_NOOP
+  }
+  else
+  {
+   //code_statements_.push_back(nullptr);
+  }
+//?  scan_form_from_start_node(visitor_phaon, *start_node);
+ }
 }
 
 

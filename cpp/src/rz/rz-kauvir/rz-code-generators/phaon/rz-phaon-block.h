@@ -39,6 +39,7 @@ USING_RZNS(GBuild)
 
 RZNS_(PhrGraphCore)
  class PHR_Graph_Build;
+ class PHR_Graph_Node;
 _RZNS(PhrGraphCore)
 
 USING_RZNS(PhrGraphCore)
@@ -86,6 +87,9 @@ private:
 
  void add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
    RE_Node& entry_node);
+
+ void add_statement_from_call_entry_node(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon,
+   RE_Node& entry_node, caon_ptr<PHR_Graph_Node> prior_node);
 
  QString es_argument_;
 
