@@ -28,6 +28,8 @@ int main(int argc, char **argv)
    "lambda", "44", MG_Token_Subgroups::Value,
    "current-channel-node", MG_Token_Subgroups::Ledger);
 
+ pgb.generate_file();
+
  qDebug() << "ok";
  return 0;
 }

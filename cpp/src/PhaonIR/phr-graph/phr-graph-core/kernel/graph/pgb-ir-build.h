@@ -59,7 +59,7 @@ public:
 
  void end_line(QList<MG_Token>&& mgts);
 
-
+ void generate_file();
 
  static MG_Token mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Subgroups sg);
 
