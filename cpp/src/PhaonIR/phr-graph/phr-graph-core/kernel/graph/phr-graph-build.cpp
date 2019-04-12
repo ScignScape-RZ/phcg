@@ -28,6 +28,8 @@
 #include "phr-graph-core/kernel/frame/phr-graph-frame.h"
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
 
+#include "pgb-ir-run.h"
+
 #include "multigraph-token.h"
 
 #include "rzns.h"
@@ -40,6 +42,13 @@ PHR_Graph_Build::PHR_Graph_Build(PHR_Graph& graph)
   qy_(PHR_Graph_Query::instance())
 {
 
+}
+
+
+void PHR_Graph_Build::load_from_pgb_file(QString file)
+{
+ PGB_IR_Run pgbr(*this);
+ pgbr.run_from_file(file);
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_root_node()

@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 {
  PGB_IR_Build pgb(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb");
 
+
  pgb.make_root_node("!current_node");
  pgb.make_token_node("@&prn", "&entry-node");
  pgb.add_block_entry_node("!current_node", "&entry-node");

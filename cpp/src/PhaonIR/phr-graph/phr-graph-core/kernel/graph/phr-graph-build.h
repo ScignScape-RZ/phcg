@@ -58,6 +58,8 @@ public:
  caon_ptr<PHR_Graph_Node> add_channel_token(caon_ptr<PHR_Graph_Node> source,
    QString channel, MG_Token& mgt);
 
+ void load_from_pgb_file(QString file);
+
 
 };
 

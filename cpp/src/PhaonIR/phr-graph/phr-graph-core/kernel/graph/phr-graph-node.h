@@ -9,9 +9,9 @@
 
 #include "relae-graph/relae-node-ptr.h"
 
-#include "kernel/phr-graph-dominion.h"
+#include "phr-graph-core/kernel/phr-graph-dominion.h"
 
-#include "kernel/frame/phr-graph-frame.h"
+#include "phr-graph-core/kernel/frame/phr-graph-frame.h"
 
 #include "accessors.h"
 

@@ -31,7 +31,7 @@ void RZ_Phaon_Output::init_top_level_block()
 void RZ_Phaon_Output::build_phaon_graph(PGB_IR_Build& pgb)
 {
  //caon_ptr<PHR_Graph_Node> n =
- pgb.make_root_node("!current");
+ pgb.make_root_node("!current_node");
  //phgb.set_current_node(n);
  if(top_level_block_)
  {
