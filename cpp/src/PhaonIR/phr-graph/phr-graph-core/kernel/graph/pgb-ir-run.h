@@ -43,20 +43,23 @@ class PGB_IR_Run
 
  QMap<QString, caon_ptr<PHR_Graph_Node>> ledger_;
 
- MG_Token get_arg_token(const QMultiMap<MG_Token_Kinds, QString>& mgts);
- QString get_string_arg(const QMultiMap<MG_Token_Kinds, QString>& mgts);
+ static QList<MG_Token> mgts_by_kind_group(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm,
+   MG_Token_Kind_Groups g);
 
- caon_ptr<PHR_Graph_Node>* get_target(const QMultiMap<MG_Token_Kinds, QString>& mgts);
+ MG_Token get_arg_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
+ QString get_string_arg(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
+
+ caon_ptr<PHR_Graph_Node>* get_target(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
  caon_ptr<PHR_Graph_Node>* get_known_target(QString tr);
  caon_ptr<PHR_Graph_Node> unpoint(caon_ptr<PHR_Graph_Node>* pr)
  {
   if(pr) return *pr; return nullptr;
  }
 
- caon_ptr<PHR_Graph_Node> get_arg(const QMultiMap<MG_Token_Kinds, QString>& mgts);
+ caon_ptr<PHR_Graph_Node> get_arg(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
 
  QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
-   get_args(const QMultiMap<MG_Token_Kinds, QString>& mgts);
+   get_args(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
 
 
 public:
@@ -69,7 +72,7 @@ public:
 
  void run_line(QString line);
 
- void run_line(QString fn, QMultiMap<MG_Token_Kinds, QString>& mgts);
+ void run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
 
 };
 

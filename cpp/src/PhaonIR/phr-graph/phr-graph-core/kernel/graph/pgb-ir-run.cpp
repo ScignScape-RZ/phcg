@@ -72,14 +72,44 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
  return static_map.value(key.toLower(), PGB_Methods::N_A);
 }
 
-caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_target(const QMultiMap<MG_Token_Kinds, QString>& mgts)
+QList<MG_Token> PGB_IR_Run::mgts_by_kind_group(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm,
+  MG_Token_Kind_Groups g)
 {
- if(mgts.values(MG_Token_Kinds::Known_Target).isEmpty())
+ QList<QPair<MG_Token, int>> qlp;
+ QList<MG_Token_Kinds> ks = MG_Token_Kind_Group_to_kinds(g);
+ for(MG_Token_Kinds k : ks)
+   qlp.append(mgtm.values(k));
+ qSort(qlp.begin(), qlp.end(), [](const QPair<MG_Token, int>& pr1,
+   const QPair<MG_Token, int>& pr2)
  {
-  return &ledger_[mgts.value(MG_Token_Kinds::Target)];
- }
- QString tr = mgts.value(MG_Token_Kinds::Known_Target);
- return get_known_target(tr);
+  return pr1.second < pr2.second;
+ });
+
+ QList<MG_Token> result;
+ std::transform(qlp.begin(), qlp.end(),
+                std::back_inserter(result),
+   std::bind(&QPair<MG_Token, int>::first, std::placeholders::_1)
+//   [](const QPair<MG_Token, int>& pr)
+//  {return pr.first;}
+                //std::mem_fun(&QPair<MG_Token, int>::second)
+                );
+ //for(const QPair<MG_Token, int>& pr: qlp)
+ return result;
+}
+
+caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_target(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
+{
+ QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Target);
+ MG_Token& mgt = mgts[0];
+ if(mgt.kind == MG_Token_Kinds::Target)
+   return &ledger_[mgt.raw_text];
+// QString tr = mgt
+// if(mgtm.values(MG_Token_Kinds::Known_Target).isEmpty())
+// {
+//  return &ledger_[mgtm.value(MG_Token_Kinds::Target)];
+// }
+// QString tr = mgtm.value(MG_Token_Kinds::Known_Target);
+ return get_known_target(mgt.raw_text);
 }
 
 caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_known_target(QString tr)
@@ -89,51 +119,73 @@ caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_known_target(QString tr)
  return nullptr;
 }
 
-caon_ptr<PHR_Graph_Node> PGB_IR_Run::get_arg(const QMultiMap<MG_Token_Kinds, QString>& mgts)
+caon_ptr<PHR_Graph_Node> PGB_IR_Run::get_arg(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
- if(mgts.values(MG_Token_Kinds::Arg_Known_Target).isEmpty())
-   return ledger_[mgts.value(MG_Token_Kinds::Arg_Target)];
- QString tr = mgts.value(MG_Token_Kinds::Arg_Known_Target);
- return unpoint(get_known_target(tr));
+ QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
+ MG_Token& mgt = mgts[0];
+ if(mgt.kind == MG_Token_Kinds::Arg_Target)
+   return ledger_[mgt.raw_text];
+// if(mgtm.values(MG_Token_Kinds::Arg_Known_Target).isEmpty())
+//   return ledger_[mgtm.value(MG_Token_Kinds::Arg_Target)];
+// QString tr = mgtm.value(MG_Token_Kinds::Arg_Known_Target);
+ return unpoint(get_known_target(mgt.raw_text));
 }
 
 QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
-  PGB_IR_Run::get_args(const QMultiMap<MG_Token_Kinds, QString>& mgts)
+  PGB_IR_Run::get_args(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
  caon_ptr<PHR_Graph_Node> r1, r2;
- if(mgts.values(MG_Token_Kinds::Arg_Known_Target).isEmpty())
- {
-  auto vs = mgts.values(MG_Token_Kinds::Arg_Target);
-  r1 = ledger_[vs.value(0)];
-  r2 = ledger_[vs.value(1)];
- }
- else if(mgts.values(MG_Token_Kinds::Arg_Known_Target).size() == 1)
- {
-  r1 = unpoint(get_known_target(mgts.value(MG_Token_Kinds::Arg_Known_Target)));
-  r2 = ledger_[mgts.value(MG_Token_Kinds::Arg_Target)];
- }
+ QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
+ MG_Token& mgt0 = mgts[0];
+ if(mgt0.kind == MG_Token_Kinds::Arg_Target)
+   r1 = ledger_[mgt0.raw_text];
  else
- {
-  auto vs = mgts.values(MG_Token_Kinds::Arg_Known_Target);
-  r1 = unpoint(get_known_target(vs.value(0)));
-  r2 = unpoint(get_known_target(vs.value(1)));
- }
+   r1 = unpoint(get_known_target(mgt0.raw_text));
+ MG_Token& mgt1 = mgts[1];
+ if(mgt1.kind == MG_Token_Kinds::Arg_Target)
+   r2 = ledger_[mgt1.raw_text];
+ else
+   r2 = unpoint(get_known_target(mgt1.raw_text));
+
+
+// if(mgtm.values(MG_Token_Kinds::Arg_Known_Target).isEmpty())
+// {
+//  auto vs = mgtm.values(MG_Token_Kinds::Arg_Target);
+//  r1 = ledger_[vs.value(0)];
+//  r2 = ledger_[vs.value(1)];
+// }
+// else if(mgtm.values(MG_Token_Kinds::Arg_Known_Target).size() == 1)
+// {
+//  r1 = unpoint(get_known_target(mgtm.value(MG_Token_Kinds::Arg_Known_Target)));
+//  r2 = ledger_[mgtm.value(MG_Token_Kinds::Arg_Target)];
+// }
+// else
+// {
+//  auto vs = mgtm.values(MG_Token_Kinds::Arg_Known_Target);
+//  r1 = unpoint(get_known_target(vs.value(0)));
+//  r2 = unpoint(get_known_target(vs.value(1)));
+// }
  return {r1, r2};
 }
 
-MG_Token PGB_IR_Run::get_arg_token(const QMultiMap<MG_Token_Kinds, QString>& mgts)
+MG_Token PGB_IR_Run::get_arg_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
- if(mgts.values(MG_Token_Kinds::Arg_Raw_Symbol).isEmpty())
-   return {MG_Token_Kinds::Arg_Raw_Value, mgts.value(MG_Token_Kinds::Arg_Raw_Value)};
- return {MG_Token_Kinds::Arg_Raw_Symbol, mgts.value(MG_Token_Kinds::Arg_Raw_Symbol)};
+ QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
+ return mgts[0];
+// QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
+// return mgts[0];
+
+// if(mgtm.values(MG_Token_Kinds::Arg_Raw_Symbol).isEmpty())
+//   return {MG_Token_Kinds::Arg_Raw_Value, mgtm.value(MG_Token_Kinds::Arg_Raw_Value)};
+// return {MG_Token_Kinds::Arg_Raw_Symbol, mgtm.value(MG_Token_Kinds::Arg_Raw_Symbol)};
 }
 
-QString PGB_IR_Run::get_string_arg(const QMultiMap<MG_Token_Kinds, QString>& mgts)
+QString PGB_IR_Run::get_string_arg(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
- return mgts.value(MG_Token_Kinds::Arg_String_Literal);
+ return mgtm.value(MG_Token_Kinds::Arg_String_Literal).first.raw_text;
 }
 
-void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QString>& mgts)
+void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
  PGB_Methods md = parse_pgb_method(fn);
 
@@ -141,15 +193,15 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QString>& mgts)
  {
  case PGB_Methods::make_root_node:
   {
-   caon_ptr<PHR_Graph_Node>* tr = get_target(mgts);
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
    if(tr)
      *tr = graph_build_.make_root_node();
   };
   break;
  case PGB_Methods::make_token_node:
   {
-   caon_ptr<PHR_Graph_Node>* tr = get_target(mgts);
-   MG_Token tok = get_arg_token(mgts);
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   MG_Token tok = get_arg_token(mgtm);
    if(tr)
      *tr = graph_build_.make_token_node(tok);
    else
@@ -158,16 +210,16 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QString>& mgts)
   break;
  case PGB_Methods::add_block_entry_node:
   {
-   auto pr = get_args(mgts);
+   auto pr = get_args(mgtm);
    graph_build_.add_block_entry_node(pr.first, pr.second);
   }
   break;
  case PGB_Methods::add_channel_token:
   {
-   caon_ptr<PHR_Graph_Node> n = get_arg(mgts);
-   QString cn = get_string_arg(mgts);
-   MG_Token mgt = get_arg_token(mgts);
-   caon_ptr<PHR_Graph_Node>* tr = get_target(mgts);
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+   QString cn = get_string_arg(mgtm);
+   MG_Token mgt = get_arg_token(mgtm);
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
    if(tr)
      *tr = graph_build_.add_channel_token(n, cn, mgt);
    else
@@ -184,12 +236,13 @@ void PGB_IR_Run::run_line(QString line)
 {
  QStringList qsl = line.split(' ');
  QString fn = qsl.takeFirst();
- QMultiMap<MG_Token_Kinds, QString> mgts;
+ QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>> mgtm;
+ int i = 0;
  for(QString qs: qsl)
  {
   MG_Token mgt = MG_Token::decode_symbol(qs);
-  mgts.insert(mgt.kind, mgt.raw_text);
+  mgtm.insert(mgt.kind, {mgt, i++});
  }
- run_line(fn, mgts);
+ run_line(fn, mgtm);
 }
 

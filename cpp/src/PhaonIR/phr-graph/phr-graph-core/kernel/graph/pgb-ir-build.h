@@ -14,6 +14,8 @@
 
 #include "accessors.h"
 
+#include "multigraph-token.h"
+
 #include <QTextStream>
 
 #include "rzns.h"
@@ -29,7 +31,9 @@ class PHR_Graph_Query;
 class PGB_IR_Build
 {
 // PHR_Graph& graph_;
-// QString file_;
+ QString out_file_;
+ QString text_;
+ QTextStream qts_;
 // caon_ptr<PHR_Graph_Node> current_node_;
 
 // PHR_Graph_Frame& fr_;
@@ -37,10 +41,11 @@ class PGB_IR_Build
 
 public:
 
- PGB_IR_Build();
+ PGB_IR_Build(QString out_file);
 
-// ACCESSORS(QString ,file)
-// ACCESSORS(caon_ptr<PHR_Graph_Node> ,current_node)
+ ACCESSORS(QString ,out_file)
+ ACCESSORS__RGET(QTextStream ,qts)
+ ACCESSORS__RGET(QString ,text)
 
 // void make_root_node();
 

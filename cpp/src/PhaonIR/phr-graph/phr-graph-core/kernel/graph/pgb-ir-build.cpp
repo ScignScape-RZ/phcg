@@ -13,11 +13,13 @@
 
 USING_RZNS(PhrGraphCore)
 
-PGB_IR_Build::PGB_IR_Build()
-
+PGB_IR_Build::PGB_IR_Build(QString out_file)
+  :  out_file_(out_file), qts_(&text_)
 {
 
 }
+
+
 
 //void PHR_Graph_Build::make_root_node()
 //{
