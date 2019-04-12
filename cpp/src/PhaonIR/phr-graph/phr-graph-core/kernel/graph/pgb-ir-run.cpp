@@ -101,12 +101,12 @@ caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_target(const QMultiMap<MG_Token_Kinds,
 {
  QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Target);
  MG_Token& mgt = mgts[0];
- if(mgt.kind == MG_Token_Kinds::Target)
+ if(mgt.kind == MG_Token_Kinds::Ledger_Target)
    return &ledger_[mgt.raw_text];
 // QString tr = mgt
 // if(mgtm.values(MG_Token_Kinds::Known_Target).isEmpty())
 // {
-//  return &ledger_[mgtm.value(MG_Token_Kinds::Target)];
+//  return &ledger_[mgtm.value(MG_Token_Kinds::Ledger_Target)];
 // }
 // QString tr = mgtm.value(MG_Token_Kinds::Known_Target);
  return get_known_target(mgt.raw_text);
@@ -123,7 +123,7 @@ caon_ptr<PHR_Graph_Node> PGB_IR_Run::get_arg(const QMultiMap<MG_Token_Kinds, QPa
 {
  QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
  MG_Token& mgt = mgts[0];
- if(mgt.kind == MG_Token_Kinds::Arg_Target)
+ if(mgt.kind == MG_Token_Kinds::Arg_Ledger_Target)
    return ledger_[mgt.raw_text];
 // if(mgtm.values(MG_Token_Kinds::Arg_Known_Target).isEmpty())
 //   return ledger_[mgtm.value(MG_Token_Kinds::Arg_Target)];
@@ -137,12 +137,12 @@ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
  caon_ptr<PHR_Graph_Node> r1, r2;
  QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
  MG_Token& mgt0 = mgts[0];
- if(mgt0.kind == MG_Token_Kinds::Arg_Target)
+ if(mgt0.kind == MG_Token_Kinds::Arg_Ledger_Target)
    r1 = ledger_[mgt0.raw_text];
  else
    r1 = unpoint(get_known_target(mgt0.raw_text));
  MG_Token& mgt1 = mgts[1];
- if(mgt1.kind == MG_Token_Kinds::Arg_Target)
+ if(mgt1.kind == MG_Token_Kinds::Arg_Ledger_Target)
    r2 = ledger_[mgt1.raw_text];
  else
    r2 = unpoint(get_known_target(mgt1.raw_text));

@@ -47,7 +47,23 @@ public:
  ACCESSORS__RGET(QTextStream ,qts)
  ACCESSORS__RGET(QString ,text)
 
-// void make_root_node();
+ void make_root_node(QString target, MG_Token_Subgroups sg);
+ void make_token_node(QString arg, MG_Token_Subgroups asg,
+   QString target, MG_Token_Subgroups tsg);
+ void add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2);
+
+ void add_channel_token(QString src, MG_Token_Subgroups srcsg,
+   QString chn, QString tok, MG_Token_Subgroups toksg,
+   QString target, MG_Token_Subgroups tsg);
+
+ void end_line(QList<MG_Token>&& mgts);
+
+
+
+ static MG_Token mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Subgroups sg);
+
+
 
 // caon_ptr<PHR_Graph_Node> add_block_entry_node(
 //   caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target);

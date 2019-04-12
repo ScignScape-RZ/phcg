@@ -16,11 +16,16 @@ enum class MG_Token_Kind_Groups
  N_A, Generic, Raw, String_Literal, Arg, Target, Arg_Target, Arg_String_Literal
 };
 
+enum class MG_Token_Subgroups
+{
+ N_A, Symbol, Value, Ledger, Known
+};
+
 enum class MG_Token_Kinds
 {
  N_A, Generic, Raw_Symbol, Raw_Value, String_Literal,
- Arg_Raw_Symbol, Arg_Raw_Value, Target, Known_Target,
- Arg_Target, Arg_Known_Target, Arg_String_Literal
+ Arg_Raw_Symbol, Arg_Raw_Value, Ledger_Target, Known_Target,
+ Arg_Ledger_Target, Arg_Known_Target, Arg_String_Literal
 };
 
 inline MG_Token_Kind_Groups MG_Token_Kind_to_group(MG_Token_Kinds k)
@@ -39,15 +44,36 @@ inline MG_Token_Kind_Groups MG_Token_Kind_to_group(MG_Token_Kinds k)
  case MG_Token_Kinds::Arg_Raw_Value:
   return MG_Token_Kind_Groups::Arg;
 
- case MG_Token_Kinds::Target:
+ case MG_Token_Kinds::Ledger_Target:
  case MG_Token_Kinds::Known_Target:
   return MG_Token_Kind_Groups::Target;
 
- case MG_Token_Kinds::Arg_Target:
+ case MG_Token_Kinds::Arg_Ledger_Target:
  case MG_Token_Kinds::Arg_Known_Target:
   return MG_Token_Kind_Groups::Arg_Target;
 
  default: return MG_Token_Kind_Groups::N_A;
+ }
+}
+
+inline MG_Token_Subgroups MG_Token_Kind_to_subgroup(MG_Token_Kinds k)
+{
+ switch(k)
+ {
+ case MG_Token_Kinds::Arg_Raw_Symbol:
+  return MG_Token_Subgroups::Symbol;
+ case MG_Token_Kinds::Arg_Raw_Value:
+  return MG_Token_Subgroups::Value;
+
+ case MG_Token_Kinds::Arg_Ledger_Target:
+ case MG_Token_Kinds::Ledger_Target:
+  return MG_Token_Subgroups::Ledger;
+
+ case MG_Token_Kinds::Arg_Known_Target:
+ case MG_Token_Kinds::Known_Target:
+  return MG_Token_Subgroups::Known;
+
+ default: return MG_Token_Subgroups::N_A;
  }
 }
 
@@ -66,10 +92,10 @@ inline QList<MG_Token_Kinds> MG_Token_Kind_Group_to_kinds(MG_Token_Kind_Groups g
   return {MG_Token_Kinds::Arg_Raw_Symbol, MG_Token_Kinds::Arg_Raw_Value};
 
  case MG_Token_Kind_Groups::Target:
-  return {MG_Token_Kinds::Target, MG_Token_Kinds::Known_Target};
+  return {MG_Token_Kinds::Ledger_Target, MG_Token_Kinds::Known_Target};
 
  case MG_Token_Kind_Groups::Arg_Target:
-  return {MG_Token_Kinds::Arg_Target, MG_Token_Kinds::Arg_Known_Target};
+  return {MG_Token_Kinds::Arg_Ledger_Target, MG_Token_Kinds::Arg_Known_Target};
 
  default: return {MG_Token_Kinds::N_A};
  }
@@ -189,10 +215,10 @@ struct MG_Token
   TEMP_MACRO(Arg_Raw_Symbol, ">_@")
   TEMP_MACRO(Arg_Raw_Value, ">_$")
 
-  TEMP_MACRO(Arg_Target, "<->")
+  TEMP_MACRO(Arg_Ledger_Target, "<->")
   TEMP_MACRO(Arg_Known_Target, "<!>")
 
-  TEMP_MACRO(Target, "-->")
+  TEMP_MACRO(Ledger_Target, "-->")
   TEMP_MACRO(Known_Target, "-!>")
 
 
@@ -212,7 +238,7 @@ struct MG_Token
   }
  }
 
- QString get_encode_prefix()
+ QString get_encode_prefix() const
  {
   static QMap<MG_Token_Kinds, QString> static_map {{
 
@@ -225,10 +251,10 @@ struct MG_Token
   TEMP_MACRO(Arg_Raw_Symbol, ">_@")
   TEMP_MACRO(Arg_Raw_Value, ">_$")
 
-  TEMP_MACRO(Target, "-->")
+  TEMP_MACRO(Ledger_Target, "-->")
   TEMP_MACRO(Known_Target, "-!>")
 
-  TEMP_MACRO(Arg_Target, "<->")
+  TEMP_MACRO(Arg_Ledger_Target, "<->")
   TEMP_MACRO(Arg_Known_Target, "<!>")
 
   TEMP_MACRO(Arg_String_Literal, "<$>")
@@ -239,7 +265,7 @@ struct MG_Token
   return static_map.value(kind);
  }
 
- QString escaped_raw_text()
+ QString escaped_raw_text() const
  {
   QString result = raw_text;
   if(result.startsWith(":|"))
@@ -250,7 +276,7 @@ struct MG_Token
   return result;
  }
 
- QString encode()
+ QString encode() const
  {
   switch(kind)
   {
