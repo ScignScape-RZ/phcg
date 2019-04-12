@@ -98,7 +98,7 @@ void RZ_Phaon_Block::scan(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_pha
     CAON_PTR_DEBUG(RE_Node, current_node)
     last_form_ = current_form_;
     current_form_ = nullptr;
-    add_form_from_call_entry_node(visitor_phaon, *current_node);
+    add_statement_from_call_entry_node(visitor_phaon, *current_node);
    }
   }
   CAON_DEBUG_NOOP
@@ -145,7 +145,11 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
     {
      if(caon_ptr<RZ_Lisp_Token> rzlt = next_node->lisp_token())
      {
-      pgb.add_channel_token("&channel-seq", "lambda",
+      if(current_node == start_node)
+        pgb.add_channel_entry_token("&channel-seq", "lambda",
+        rzlt->raw_text().prepend('$'), "&channel-seq");
+      else
+        pgb.add_channel_token("&channel-seq", "lambda",
         rzlt->raw_text().prepend('$'), "&channel-seq");
      }
      current_node = next_node;

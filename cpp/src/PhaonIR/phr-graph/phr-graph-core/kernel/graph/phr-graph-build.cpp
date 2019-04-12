@@ -38,6 +38,7 @@ USING_RZNS(PhrGraphCore)
 
 PHR_Graph_Build::PHR_Graph_Build(PHR_Graph& graph)
  : graph_(graph), current_node_(nullptr),
+   last_statement_entry_node_(nullptr),
   fr_(PHR_Graph_Frame::instance()),
   qy_(PHR_Graph_Query::instance())
 {
@@ -81,6 +82,18 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_token(caon_ptr<PHR_Graph_Node> source,
+  MG_Token& mgt)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+
+ caon_ptr<PHR_Graph_Node> result = make_token_node(mgt);
+
+ source << fr_/qy_.Channel_Sequence >> result;
+
+ return result;
+}
+
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_entry_token(caon_ptr<PHR_Graph_Node> source,
   QString channel, MG_Token& mgt)
 {
  CAON_PTR_DEBUG(PHR_Graph_Node ,source)
@@ -92,6 +105,7 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_token(caon_ptr<PHR_Graph_N
 
  return result;
 }
+
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
   caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target)
@@ -109,3 +123,12 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
  return nbin;
 }
 
+
+void PHR_Graph_Build::add_statement_sequence_node(
+  caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,target)
+
+ source << fr_/qy_.Statement_Sequence >> target;
+}

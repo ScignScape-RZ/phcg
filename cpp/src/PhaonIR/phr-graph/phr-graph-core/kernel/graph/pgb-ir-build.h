@@ -70,16 +70,36 @@ public:
     t2.mid(1), get_subgroup(t2[0]));
  }
 
+ void add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2);
+ void add_statement_sequence_node(QString t1, QString t2)
+ {
+  add_statement_sequence_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]));
+ }
+
  void add_channel_token(QString src, MG_Token_Subgroups srcsg,
-   QString chn, QString tok, MG_Token_Subgroups toksg,
+   QString tok, MG_Token_Subgroups toksg,
    QString target, MG_Token_Subgroups tsg);
- void add_channel_token(QString src, QString chn,
+ void add_channel_token(QString src,
    QString tok, QString target)
  {
-  add_channel_token(src.mid(1), get_subgroup(src[0]), chn,
+  add_channel_token(src.mid(1), get_subgroup(src[0]),
     tok.mid(1), get_subgroup(tok[0]),
     target.mid(1), get_subgroup(target[0]));
  }
+
+ void add_channel_entry_token(QString src, MG_Token_Subgroups srcsg,
+   QString chn, QString tok, MG_Token_Subgroups toksg,
+   QString target, MG_Token_Subgroups tsg);
+ void add_channel_entry_token(QString src, QString chn,
+   QString tok, QString target)
+ {
+  add_channel_entry_token(src.mid(1), get_subgroup(src[0]), chn,
+    tok.mid(1), get_subgroup(tok[0]),
+    target.mid(1), get_subgroup(target[0]));
+ }
+
 
  void copy_value(QString t1, MG_Token_Subgroups sg1,
    QString t2, MG_Token_Subgroups sg2);

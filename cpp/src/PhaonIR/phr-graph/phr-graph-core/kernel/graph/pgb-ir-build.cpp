@@ -86,6 +86,15 @@ void PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
  qts_ << "(pgb::add_block_entry_node "; end_line({mgt1, mgt2});
 }
 
+void PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
+  QString t2, MG_Token_Subgroups sg2)
+{
+ MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
+ MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
+
+ qts_ << "(pgb::add_statement_sequence_node "; end_line({mgt1, mgt2});
+}
+
 void PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2)
 {
@@ -109,6 +118,18 @@ void PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
 }
 
 void PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
+  QString tok, MG_Token_Subgroups toksg,
+  QString target, MG_Token_Subgroups tsg)
+{
+ MG_Token mgt1 = mgtoken(src, MG_Token_Kind_Groups::Arg_Target, srcsg);
+ MG_Token mgt2 = mgtoken(tok, MG_Token_Kind_Groups::Arg, toksg);
+ MG_Token mgt3 = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
+
+ qts_ << "(pgb::add_channel_token "; end_line({mgt1, mgt2, mgt3});
+}
+
+
+void PGB_IR_Build::add_channel_entry_token(QString src, MG_Token_Subgroups srcsg,
   QString chn, QString tok, MG_Token_Subgroups toksg,
   QString target, MG_Token_Subgroups tsg)
 {
@@ -117,7 +138,7 @@ void PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
  MG_Token mgt3 = mgtoken(tok, MG_Token_Kind_Groups::Arg, toksg);
  MG_Token mgt4 = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
 
- qts_ << "(pgb::add_channel_token "; end_line({mgt1, mgt2, mgt3, mgt4});
+ qts_ << "(pgb::add_channel_entry_token "; end_line({mgt1, mgt2, mgt3, mgt4});
 }
 
 void PGB_IR_Build::generate_file()
