@@ -62,13 +62,13 @@ void PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
  qts_ << "(make_token_node "; end_line({mgt1, mgt2});
 }
 
-void PGB_IR_Build::end_line(QList<MG_Token> mgts)
+void PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
 {
  QListIterator<MG_Token> it(mgts);
 
  while(it.hasNext())
  {
-  qts_ << const_cast<const MG_Token>(it.next()).encode();
+  qts_ << const_cast<const MG_Token&>(it.next()).encode();
   if(it.hasNext())
     qts_ << ' ';
  }
