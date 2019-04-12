@@ -48,16 +48,43 @@ public:
  ACCESSORS__RGET(QString ,text)
 
  void make_root_node(QString target, MG_Token_Subgroups sg);
+
+ void make_root_node(QString target)
+ {
+  make_root_node(target.mid(1), get_subgroup(target[0]));
+ }
+
  void make_token_node(QString arg, MG_Token_Subgroups asg,
    QString target, MG_Token_Subgroups tsg);
+ void make_token_node(QString arg, QString target)
+ {
+  make_token_node(arg.mid(1), get_subgroup(arg[0]),
+    target.mid(1), get_subgroup(target[0]));
+ }
+
  void add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
    QString t2, MG_Token_Subgroups sg2);
+ void add_block_entry_node(QString t1, QString t2)
+ {
+  add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]));
+ }
 
  void add_channel_token(QString src, MG_Token_Subgroups srcsg,
    QString chn, QString tok, MG_Token_Subgroups toksg,
    QString target, MG_Token_Subgroups tsg);
+ void add_channel_token(QString src, QString chn,
+   QString tok, QString target)
+ {
+  add_channel_token(src.mid(1), get_subgroup(src[0]), chn,
+    tok.mid(1), get_subgroup(tok[0]),
+    target.mid(1), get_subgroup(target[0]));
+ }
 
  void end_line(QList<MG_Token>&& mgts);
+
+ MG_Token_Subgroups get_subgroup(QChar c);
+
 
  void generate_file();
 

@@ -81,12 +81,10 @@ void compile_rz(QString file_name)
 
  anticipate.run_core_pairs_generations();
 
- PHR_Graph phg;
- PHR_Graph_Build phgb(phg);
-
- PHR_Graph_PHR_Output pgo(file_name + ".phr");
-
- pgo.document()->set_graph(&phg);
+// PHR_Graph phg;
+// PHR_Graph_Build phgb(phg);
+// PHR_Graph_PHR_Output pgo(file_name + ".phr");
+// pgo.document()->set_graph(&phg);
 
  rpo.init_top_level_block();
 

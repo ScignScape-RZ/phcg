@@ -47,6 +47,20 @@ MG_Token PGB_IR_Build::mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Sub
  }
 }
 
+
+MG_Token_Subgroups PGB_IR_Build::get_subgroup(QChar c)
+{
+ switch (c.toLatin1())
+ {
+ case '@': return MG_Token_Subgroups::Symbol;
+ case '$': return MG_Token_Subgroups::Value;
+ case '!': return MG_Token_Subgroups::Known;
+ case '&': return MG_Token_Subgroups::Ledger;
+ default: return MG_Token_Subgroups::N_A;
+ }
+}
+
+
 void PGB_IR_Build::make_root_node(QString target, MG_Token_Subgroups sg)
 {
  MG_Token mgt = mgtoken(target, MG_Token_Kind_Groups::Target, sg);
