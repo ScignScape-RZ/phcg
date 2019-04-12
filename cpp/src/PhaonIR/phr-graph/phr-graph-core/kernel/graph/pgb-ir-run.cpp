@@ -64,7 +64,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(make_root_node)
   TEMP_MACRO(make_token_node)
   TEMP_MACRO(add_block_entry_node)
-
+  TEMP_MACRO(add_channel_token)
  }};
 
 #undef TEMP_MACRO
@@ -91,9 +91,9 @@ caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_known_target(QString tr)
 
 caon_ptr<PHR_Graph_Node> PGB_IR_Run::get_arg(const QMultiMap<MG_Token_Kinds, QString>& mgts)
 {
- if(mgts.values(MG_Token_Kinds::Known_Target).isEmpty())
-   return ledger_[mgts.value(MG_Token_Kinds::Target)];
- QString tr = mgts.value(MG_Token_Kinds::Known_Target);
+ if(mgts.values(MG_Token_Kinds::Arg_Known_Target).isEmpty())
+   return ledger_[mgts.value(MG_Token_Kinds::Arg_Target)];
+ QString tr = mgts.value(MG_Token_Kinds::Arg_Known_Target);
  return unpoint(get_known_target(tr));
 }
 
@@ -101,20 +101,20 @@ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
   PGB_IR_Run::get_args(const QMultiMap<MG_Token_Kinds, QString>& mgts)
 {
  caon_ptr<PHR_Graph_Node> r1, r2;
- if(mgts.values(MG_Token_Kinds::Known_Target).isEmpty())
+ if(mgts.values(MG_Token_Kinds::Arg_Known_Target).isEmpty())
  {
-  auto vs = mgts.values(MG_Token_Kinds::Target);
+  auto vs = mgts.values(MG_Token_Kinds::Arg_Target);
   r1 = ledger_[vs.value(0)];
   r2 = ledger_[vs.value(1)];
  }
- else if(mgts.values(MG_Token_Kinds::Known_Target).size() == 1)
+ else if(mgts.values(MG_Token_Kinds::Arg_Known_Target).size() == 1)
  {
-  r1 = unpoint(get_known_target(mgts.value(MG_Token_Kinds::Known_Target)));
-  r2 = ledger_[mgts.value(MG_Token_Kinds::Target)];
+  r1 = unpoint(get_known_target(mgts.value(MG_Token_Kinds::Arg_Known_Target)));
+  r2 = ledger_[mgts.value(MG_Token_Kinds::Arg_Target)];
  }
  else
  {
-  auto vs = mgts.values(MG_Token_Kinds::Known_Target);
+  auto vs = mgts.values(MG_Token_Kinds::Arg_Known_Target);
   r1 = unpoint(get_known_target(vs.value(0)));
   r2 = unpoint(get_known_target(vs.value(1)));
  }
@@ -162,12 +162,16 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QString>& mgts)
    graph_build_.add_block_entry_node(pr.first, pr.second);
   }
   break;
- case PGB_Methods::add_channel_raw_value_token:
+ case PGB_Methods::add_channel_token:
   {
    caon_ptr<PHR_Graph_Node> n = get_arg(mgts);
    QString cn = get_string_arg(mgts);
    MG_Token mgt = get_arg_token(mgts);
-   graph_build_.add_channel_token(n, cn, mgt);
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgts);
+   if(tr)
+     *tr = graph_build_.add_channel_token(n, cn, mgt);
+   else
+     graph_build_.add_channel_token(n, cn, mgt);
   }
  break;
  default:

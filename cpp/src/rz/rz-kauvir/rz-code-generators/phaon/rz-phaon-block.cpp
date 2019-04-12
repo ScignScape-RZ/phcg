@@ -139,7 +139,8 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PHR_Graph_Build& phgb,
    {
     if(caon_ptr<RZ_Lisp_Token> rzlt = next_node->lisp_token())
     {
-     phgb.add_channel_raw_value_token(pen, "lambda", rzlt->raw_text());
+     MG_Token tok{MG_Token_Kinds::Arg_Raw_Value, rzlt->raw_text()};
+     phgb.add_channel_token(pen, "lambda", tok);
     }
    }
   }

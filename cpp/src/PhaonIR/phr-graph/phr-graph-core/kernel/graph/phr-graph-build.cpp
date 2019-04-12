@@ -47,9 +47,13 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_root_node()
  caon_ptr<PHR_Graph_Document> doc = new PHR_Graph_Document(file_);
 
  caon_ptr<PHR_Graph_Root> rt = new PHR_Graph_Root(doc.raw_pointer());
- caon_ptr<PHR_Graph_Node> rn = new PHR_Graph_Node(rt);
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(rt);
 
- graph_.set_root_node(rn);
+ graph_.set_root_node(result);
+
+ result->set_label("<root>");
+
+ return result;
 
  //?current_node_ = rn;
 }
@@ -61,7 +65,10 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
    tok->flags.gen_raw_value = true;
  if(mgt.kind == MG_Token_Kinds::Arg_Raw_Value)
    tok->flags.gen_raw_value = true;
- return new PHR_Graph_Node(tok);
+
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(tok);
+ result->set_label(mgt.raw_text);
+ return result;
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_token(caon_ptr<PHR_Graph_Node> source,
@@ -78,6 +85,9 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_token(caon_ptr<PHR_Graph_N
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
   caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target)
 {
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,target)
+
  caon_ptr<PHR_Graph_Block_Info> bin = new PHR_Graph_Block_Info;
  //caon_ptr<PHR_Graph_Statement_Info> sin = new PHR_Graph_Statement_Info;
  caon_ptr<PHR_Graph_Node> nbin = new PHR_Graph_Node(bin);
