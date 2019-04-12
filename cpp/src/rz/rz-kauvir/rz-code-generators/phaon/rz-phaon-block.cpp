@@ -128,26 +128,34 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
    pgb.add_block_entry_node(pgbs, "&pen");
   }
 
-  RZ_Lisp_Graph_Visitor::Next_Node_Premise nnp;
+  caon_ptr<RE_Node> current_node = start_node;
 
-  caon_ptr<RE_Node> next_node = visitor_phaon.get_next_node(start_node, nnp);
+  RZ_Lisp_Graph_Visitor::Next_Node_Premise nnp = RZ_Lisp_Graph_Visitor::Next_Node_Premise::N_A;
 
-//  CAON_PTR_DEBUG(RE_Node ,current_node)
-  CAON_PTR_DEBUG(RE_Node ,next_node)
-
-  switch(nnp)
+  pgb.copy_value("&pen", "&channel-seq");
+  while(current_node)
   {
-  case RZ_Lisp_Graph_Visitor::Next_Node_Premise::Normal:
+   caon_ptr<RE_Node> next_node = visitor_phaon.get_next_node(current_node, nnp);
+//  CAON_PTR_DEBUG(RE_Node ,current_node)
+   CAON_PTR_DEBUG(RE_Node ,next_node)
+
+   switch(nnp)
    {
-    if(caon_ptr<RZ_Lisp_Token> rzlt = next_node->lisp_token())
+   case RZ_Lisp_Graph_Visitor::Next_Node_Premise::Normal:
     {
-     //MG_Token tok{MG_Token_Kinds::Arg_Raw_Value, rzlt->raw_text()};
-     pgb.add_channel_token("&pen", "lambda",
-       rzlt->raw_text().prepend('$'), "&channel-seq");
+     if(caon_ptr<RZ_Lisp_Token> rzlt = next_node->lisp_token())
+     {
+      pgb.add_channel_token("&channel-seq", "lambda",
+        rzlt->raw_text().prepend('$'), "&channel-seq");
+     }
+     current_node = next_node;
     }
+    break;
+   case RZ_Lisp_Graph_Visitor::Next_Node_Premise::N_A:
+    current_node = nullptr;
+    break;
    }
   }
-
 
   if(caon_ptr<RZ_Expression_Review> rer = visitor_phaon.get_expression_review_from_entry_node(start_node))
   {

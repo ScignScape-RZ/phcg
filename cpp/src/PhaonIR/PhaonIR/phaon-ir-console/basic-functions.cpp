@@ -95,6 +95,12 @@ void prn(qint32 arg)
  qDebug() << arg;
 }
 
+void prnn(qint32 arg1, qint32 arg2)
+{
+ qDebug() << arg1;
+ qDebug() << arg2;
+}
+
 void test_if_then_else(quint64 args_ptr)
 {
  QVector<quint64>& args = *(QVector<quint64>*)(args_ptr);
@@ -166,6 +172,18 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   table.init_phaon_function(g1, pss, "prn", 700, &prn);
 
   //?
+  g1.clear_all();
+ }
+ {
+  PHR_Type* ty = type_system->get_type_by_name("u4");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty);
+  g1.init_channel(lambda, 2);
+  (*g1[lambda])[0] = phc1;
+  (*g1[lambda])[1] = phc2;
+  table.init_phaon_function(g1, pss, "prnn", 700, &prnn);
   g1.clear_all();
  }
  {

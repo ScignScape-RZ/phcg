@@ -81,6 +81,14 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
+ void copy_value(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2);
+ void copy_value(QString t1, QString t2)
+ {
+  copy_value(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]));
+ }
+
  void end_line(QList<MG_Token>&& mgts);
 
  MG_Token_Subgroups get_subgroup(QChar c);

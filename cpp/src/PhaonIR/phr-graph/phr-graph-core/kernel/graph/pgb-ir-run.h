@@ -35,7 +35,8 @@ class PGB_IR_Run
  enum class PGB_Methods {
 
   N_A, make_root_node, make_token_node,
-  add_block_entry_node, add_channel_token
+  add_block_entry_node, add_channel_token,
+  copy_value
 
  };
 

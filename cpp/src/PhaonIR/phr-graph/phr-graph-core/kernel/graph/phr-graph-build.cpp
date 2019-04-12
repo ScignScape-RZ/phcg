@@ -83,6 +83,8 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_token(caon_ptr<PHR_Graph_Node> source,
   QString channel, MG_Token& mgt)
 {
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+
  caon_ptr<PHR_Graph_Node> result = make_token_node(mgt);
 
  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(channel);

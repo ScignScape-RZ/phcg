@@ -86,6 +86,15 @@ void PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
  qts_ << "(pgb::add_block_entry_node "; end_line({mgt1, mgt2});
 }
 
+void PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
+  QString t2, MG_Token_Subgroups sg2)
+{
+ MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
+ MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Target, sg2);
+
+ qts_ << "(pgb::copy_value "; end_line({mgt1, mgt2});
+}
+
 void PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
 {
  QListIterator<MG_Token> it(mgts);
