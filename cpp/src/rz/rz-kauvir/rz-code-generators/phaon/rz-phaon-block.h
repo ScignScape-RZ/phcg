@@ -88,7 +88,7 @@ private:
    RE_Node& entry_node);
 
  void add_statement_from_call_entry_node(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_phaon,
-   RE_Node& entry_node, QString pgbs);
+   RE_Node& entry_node, QString pgbs, caon_ptr<RE_Block_Entry> rbe = nullptr);
 
  QString es_argument_;
 

@@ -103,23 +103,20 @@ void compile_rz(QString file_name)
 
  rpo.build_phaon_graph(pgb);
 
-
  pgb.generate_file();
 
 
  PHR_Graph phg;
  PHR_Graph_Build phgb(phg);
 
-// PGB_IR_Run pgbr(phgb);
-// pgbr.run_from_file(pgb.out_file());
  phgb.load_from_pgb_file(pgb.out_file());
+
 
  PHR_Graph_PHR_Output pgo(pgb.out_file() + ".phr");
 
  pgo.document()->set_graph(&phg);
 
  pgo.generate();
-
 
 // QString result_file = doc->local_path() + ".cl";
 // QFile outfile(result_file);

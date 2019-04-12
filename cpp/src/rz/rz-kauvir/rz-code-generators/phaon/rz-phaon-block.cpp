@@ -75,8 +75,9 @@ void RZ_Phaon_Block::scan(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_pha
   caon_ptr<RE_Node> cen = visitor_phaon.visitor().find_run_call_entry(ben);
 
   // // does this need to be more fine-grained?
+  caon_ptr<RE_Block_Entry> rbe = ben->re_block_entry();
 
-  if(caon_ptr<RE_Block_Entry> rbe = ben->re_block_entry())
+  if(rbe)
   {
    CAON_PTR_DEBUG(RE_Block_Entry ,rbe)
    lexical_scope_ = rbe->lexical_scope();
@@ -86,7 +87,8 @@ void RZ_Phaon_Block::scan(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_pha
 
   if(cen)
   {
-   add_statement_from_call_entry_node(pgb, visitor_phaon, *cen, "!current_node");
+   add_statement_from_call_entry_node(pgb, visitor_phaon,
+     *cen, "!current_node", rbe);
    //?add_form_from_call_entry_node(visitor_phaon, *cen);
   }
 
@@ -95,10 +97,12 @@ void RZ_Phaon_Block::scan(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_pha
   {
    if(current_node = visitor_phaon.find_statement_cross_sequence_node(current_node) )
    {
-    CAON_PTR_DEBUG(RE_Node, current_node)
+    caon_ptr<RE_Node> cen1 = visitor_phaon.visitor().find_run_call_entry(current_node);
+    CAON_PTR_DEBUG(RE_Node, cen1)
     last_form_ = current_form_;
     current_form_ = nullptr;
-    add_statement_from_call_entry_node(visitor_phaon, *current_node);
+    add_statement_from_call_entry_node(pgb, visitor_phaon,
+      *current_node, "!last_statement_entry_node");
    }
   }
   CAON_DEBUG_NOOP
@@ -110,7 +114,7 @@ void RZ_Phaon_Block::scan(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_pha
 
 void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
   RZ_Graph_Visitor_Phaon& visitor_phaon,
-  RE_Node& entry_node, QString pgbs)
+  RE_Node& entry_node, QString pgbs, caon_ptr<RE_Block_Entry> rbe)
 {
  if(caon_ptr<RE_Node> start_node = visitor_phaon.start_node_from_call_entry_node(&entry_node))
  {
@@ -120,19 +124,24 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
   if(caon_ptr<RZ_Lisp_Token> rzlt = start_node->lisp_token())
   {
    if(rzlt->raw_text().startsWith('#'))
-     pgb.make_token_node(rzlt->raw_text().prepend('$'), "&pen");
+     pgb.make_token_node(rzlt->raw_text().prepend('$'), "&entry-node");
      //phgb.make_token_node({MG_Token_Kinds::Raw_Value, rzlt->raw_text()});
    else
-     pgb.make_token_node(rzlt->raw_text().prepend('@'), "&pen");
+     pgb.make_token_node(rzlt->raw_text().prepend('@'), "&entry-node");
      //pen = phgb.make_token_node({MG_Token_Kinds::Raw_Symbol, rzlt->raw_text()});
-   pgb.add_block_entry_node(pgbs, "&pen");
+
+   if(rbe)
+     pgb.add_block_entry_node(pgbs, "&entry-node");
+   else
+     pgb.add_statement_sequence_node(pgbs, "&entry-node");
+   pgb.copy_value("&entry-node", "!last_statement_entry_node");
   }
 
   caon_ptr<RE_Node> current_node = start_node;
 
   RZ_Lisp_Graph_Visitor::Next_Node_Premise nnp = RZ_Lisp_Graph_Visitor::Next_Node_Premise::N_A;
 
-  pgb.copy_value("&pen", "&channel-seq");
+  pgb.copy_value("&entry-node", "&channel-seq");
   while(current_node)
   {
    caon_ptr<RE_Node> next_node = visitor_phaon.get_next_node(current_node, nnp);
@@ -149,7 +158,7 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
         pgb.add_channel_entry_token("&channel-seq", "lambda",
         rzlt->raw_text().prepend('$'), "&channel-seq");
       else
-        pgb.add_channel_token("&channel-seq", "lambda",
+        pgb.add_channel_token("&channel-seq",
         rzlt->raw_text().prepend('$'), "&channel-seq");
      }
      current_node = next_node;
