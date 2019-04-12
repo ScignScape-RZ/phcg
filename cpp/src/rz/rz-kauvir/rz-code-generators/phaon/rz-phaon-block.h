@@ -38,8 +38,7 @@ _RZNS(GBuild)
 USING_RZNS(GBuild)
 
 RZNS_(PhrGraphCore)
- class PHR_Graph_Build;
- class PHR_Graph_Node;
+ class PGB_IR_Build;
 _RZNS(PhrGraphCore)
 
 USING_RZNS(PhrGraphCore)
@@ -88,8 +87,8 @@ private:
  void add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
    RE_Node& entry_node);
 
- void add_statement_from_call_entry_node(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon,
-   RE_Node& entry_node, caon_ptr<PHR_Graph_Node> prior_node);
+ void add_statement_from_call_entry_node(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_phaon,
+   RE_Node& entry_node, QString pgbs);
 
  QString es_argument_;
 
@@ -127,11 +126,11 @@ public:
 
  RZ_Lisp_Graph_Visitor& visitor();
 
- void build_phaon_graph(PHR_Graph_Build& phgb);
+ void build_phaon_graph(PGB_IR_Build& pgb);
 
- void scan_top_level(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon);
+ void scan_top_level(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_phaon);
 
- void scan(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon, RE_Node& start_node);
+ void scan(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_phaon, RE_Node& start_node);
 
  void scan_form_from_start_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
    RE_Node& start_node);

@@ -30,7 +30,7 @@
 
 #include "multistep-token.h"
 
-#include "phr-graph-core/kernel/graph/phr-graph-build.h"
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
 
 #include "multigraph-token.h"
 
@@ -57,14 +57,14 @@ int RZ_Phaon_Block::get_new_hd_code()
  return ++result;
 }
 
-void RZ_Phaon_Block::scan_top_level(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon)
+void RZ_Phaon_Block::scan_top_level(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_phaon)
 {
  caon_ptr<RE_Node> rn = visitor_phaon.visitor().graph_root_node();
 
- scan(phgb, visitor_phaon, *rn);
+ scan(pgb, visitor_phaon, *rn);
 }
 
-void RZ_Phaon_Block::scan(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor_phaon,
+void RZ_Phaon_Block::scan(PGB_IR_Build& pgb, RZ_Graph_Visitor_Phaon& visitor_phaon,
   RE_Node& start_node)
 {
  caon_ptr<RZ_Lisp_Graph_Block_Info> rbi;
@@ -86,7 +86,7 @@ void RZ_Phaon_Block::scan(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor
 
   if(cen)
   {
-   add_statement_from_call_entry_node(phgb, visitor_phaon, *cen, phgb.current_node());
+   add_statement_from_call_entry_node(pgb, visitor_phaon, *cen, "!current_node");
    //?add_form_from_call_entry_node(visitor_phaon, *cen);
   }
 
@@ -108,22 +108,24 @@ void RZ_Phaon_Block::scan(PHR_Graph_Build& phgb, RZ_Graph_Visitor_Phaon& visitor
 
 
 
-void RZ_Phaon_Block::add_statement_from_call_entry_node(PHR_Graph_Build& phgb,
+void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
   RZ_Graph_Visitor_Phaon& visitor_phaon,
-  RE_Node& entry_node, caon_ptr<PHR_Graph_Node> prior_node)
+  RE_Node& entry_node, QString pgbs)
 {
  if(caon_ptr<RE_Node> start_node = visitor_phaon.start_node_from_call_entry_node(&entry_node))
  {
   CAON_PTR_DEBUG(RE_Node ,start_node)
 
-  caon_ptr<PHR_Graph_Node> pen = nullptr;
+  //caon_ptr<PHR_Graph_Node> pen = nullptr;
   if(caon_ptr<RZ_Lisp_Token> rzlt = start_node->lisp_token())
   {
    if(rzlt->raw_text().startsWith('#'))
-     pen = phgb.make_token_node({MG_Token_Kinds::Raw_Value, rzlt->raw_text()});
+     pgb.make_token_node(rzlt->raw_text().prepend('$'), "&pen");
+     //phgb.make_token_node({MG_Token_Kinds::Raw_Value, rzlt->raw_text()});
    else
-     pen = phgb.make_token_node({MG_Token_Kinds::Raw_Symbol, rzlt->raw_text()});
-   phgb.add_block_entry_node(prior_node, pen);
+     pgb.make_token_node(rzlt->raw_text().prepend('@'), "&pen");
+     //pen = phgb.make_token_node({MG_Token_Kinds::Raw_Symbol, rzlt->raw_text()});
+   pgb.add_block_entry_node(pgbs, "&pen");
   }
 
   RZ_Lisp_Graph_Visitor::Next_Node_Premise nnp;
@@ -139,8 +141,9 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PHR_Graph_Build& phgb,
    {
     if(caon_ptr<RZ_Lisp_Token> rzlt = next_node->lisp_token())
     {
-     MG_Token tok{MG_Token_Kinds::Arg_Raw_Value, rzlt->raw_text()};
-     phgb.add_channel_token(pen, "lambda", tok);
+     //MG_Token tok{MG_Token_Kinds::Arg_Raw_Value, rzlt->raw_text()};
+     pgb.add_channel_token("&pen", "lambda",
+       rzlt->raw_text().prepend('$'), "&channel-seq");
     }
    }
   }
@@ -787,7 +790,7 @@ void RZ_Phaon_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon&
 
 
 
-void RZ_Phaon_Block::build_phaon_graph(PHR_Graph_Build& phgb)
+void RZ_Phaon_Block::build_phaon_graph(PGB_IR_Build& pgb)
 {
  if(parent_block_)
  {

@@ -33,6 +33,8 @@
 #include "phr-graph-core/output/phr-graph-phr-output.h"
 #include "phr-graph-core/kernel/document/phr-graph-document.h"
 
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
+
 #include "kans.h"
 
 #include <functional>
@@ -86,6 +88,9 @@ void compile_rz(QString file_name)
 // PHR_Graph_PHR_Output pgo(file_name + ".phr");
 // pgo.document()->set_graph(&phg);
 
+ PGB_IR_Build pgb(file_name + ".gen.pgb");
+
+
  rpo.init_top_level_block();
 
 // anticipate.write_core_pairs(doc->local_path() + ".cprs.txt");
@@ -94,10 +99,10 @@ void compile_rz(QString file_name)
 // QString output;
 // QTextStream qts(&output);
 
- rpo.build_phaon_graph(phgb);
+ rpo.build_phaon_graph(pgb);
 
 
- pgo.generate();
+ pgb.generate_file();
 
 // QString result_file = doc->local_path() + ".cl";
 // QFile outfile(result_file);

@@ -9,7 +9,7 @@
 
 #include "rz-phaon-block.h"
 
-#include "phr-graph-core/kernel/graph/phr-graph-build.h"
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
 
 USING_RZNS(GVal)
 
@@ -28,13 +28,14 @@ void RZ_Phaon_Output::init_top_level_block()
 }
 
 
-void RZ_Phaon_Output::build_phaon_graph(PHR_Graph_Build& phgb)
+void RZ_Phaon_Output::build_phaon_graph(PGB_IR_Build& pgb)
 {
- caon_ptr<PHR_Graph_Node> n = phgb.make_root_node();
- phgb.set_current_node(n);
+ //caon_ptr<PHR_Graph_Node> n =
+ pgb.make_root_node("!current");
+ //phgb.set_current_node(n);
  if(top_level_block_)
  {
-  top_level_block_->scan_top_level(phgb, visitor_phaon_);
-  top_level_block_->build_phaon_graph(phgb);
+  top_level_block_->scan_top_level(pgb, visitor_phaon_);
+  top_level_block_->build_phaon_graph(pgb);
  }
 }
