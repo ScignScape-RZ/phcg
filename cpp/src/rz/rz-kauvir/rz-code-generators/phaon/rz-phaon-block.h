@@ -62,6 +62,7 @@ public:
 
 private:
 
+ QStringList header_step_forms_;
 
  caon_ptr<RZ_Lisp_Graph_Lexical_Scope> lexical_scope_;
 

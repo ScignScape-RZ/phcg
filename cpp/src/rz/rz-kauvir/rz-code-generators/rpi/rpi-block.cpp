@@ -37,12 +37,18 @@ USING_RZNS(RECore)
 
 USING_RZNS(GVal)
 
-RPI_Block::RPI_Block(caon_ptr<RPI_Block> parent_block)
-  :  parent_block_(parent_block), block_sequence_mode_(Block_Sequence_Modes::N_A),
+RPI_Block::RPI_Block(PGB_IR_Build& pgb, caon_ptr<RPI_Block> parent_block)
+  :  pgb_(pgb),
+     parent_block_(parent_block), block_sequence_mode_(Block_Sequence_Modes::N_A),
      current_form_(nullptr), last_form_(nullptr), continue_block_(nullptr),
      block_info_(nullptr), pending_block_info_(nullptr),
      lexical_scope_(nullptr),
      parent_lambda_position_(-1)
+{
+
+}
+
+void RPI_Block::build_phaon_graph()
 {
 
 }
@@ -192,7 +198,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
    {
     current_form_->init_type_declaration(tok->raw_text());
     fn = visitor_phaon.function_name_from_token_text(tok->raw_text());
-    current_form_->add_instruction_token({MS_Token_Kinds::Instruction_Symbol, fn});
+    current_form_->add_instruction_element(RPI_Stage_Element_Kinds::Instruction_Symbol, fn);
    }
    break;
   case RZ_Graph_Visitor_Phaon::Special_Form_Flags::Formula:
@@ -235,7 +241,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
     current_form_->check_init_annotation(fn);
     if(fn.startsWith("kb::"))
     {
-     current_form_->add_instruction_token({MS_Token_Kinds::Instruction_Symbol, fn});
+     current_form_->add_instruction_element(RPI_Stage_Element_Kinds::Instruction_Symbol, fn);
      if(fn == "kb::write-overloadable-fdef")
      {
       current_form_->init_type_declaration("kb::write-overloadable-fdef");
@@ -246,7 +252,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
      if(fn.startsWith('&'))
      {
       current_form_->init_inferred_s0_statement();
-      fn = fn.mid(1);
+      //?fn = fn.mid(1);
      }
      else if(lexical_scope_->contains_function_symbol(fn))
      {
@@ -256,7 +262,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
      {
       current_form_->init_inferred_s0_statement();
      }
-     current_form_->add_fn_token({MS_Token_Kinds::Fuxe_Symbol, fn});
+     current_form_->set_fn(fn); ;// add_fn_token({MS_Token_Kinds::Fuxe_Symbol, fn});
     }
 
     // should be a flag ...
@@ -368,13 +374,15 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
       {
        if(next_tok->flags.is_numeric_literal)
        {
-        current_form_->add_insert_token({MS_Token_Kinds::Kernel_Type_Symbol, "u32"});
-        current_form_->add_literal_token(MS_Token::check_as(mstk, MS_Token_Kinds::Literal, lt));//{MS_Token_Kinds::Literal, lt});
+        current_form_->add_insert_element(RPI_Stage_Element_Kinds::Kernel_Type_Symbol, "u32");
+        current_form_->add_literal_element(RPI_Stage_Element_Kinds::Literal, lt);
+         //?current_form_->add_literal_token(MS_Token::check_as(mstk, MS_Token_Kinds::Literal, lt));//{MS_Token_Kinds::Literal, lt});
        }
        else if(next_tok->flags.is_string_literal)
        {
-        current_form_->add_insert_token({MS_Token_Kinds::Kernel_Type_Symbol, "str"});
-        current_form_->add_literal_token(MS_Token::check_as(mstk, MS_Token_Kinds::String_Literal, lt));
+        current_form_->add_insert_element(RPI_Stage_Element_Kinds::Kernel_Type_Symbol, "str");
+        current_form_->add_literal_element(RPI_Stage_Element_Kinds::String_Literal, lt);
+        //current_form_->add_literal_token(MS_Token::check_as(mstk, MS_Token_Kinds::String_Literal, lt));
        }
        else if(next_tok->flags.has_assignment_initialization_expression)
        {
@@ -386,7 +394,8 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        }
        else if(next_tok->flags.is_assignment_initialization_entry)
        {
-        current_form_->add_assignment_initialization_token(MS_Token::check_as(mstk, MS_Token_Kinds::Instruction_Symbol, lt));
+        current_form_->add_assignment_initialization_element(RPI_Stage_Element_Kinds::Instruction_Symbol, lt)
+           //MS_Token::check_as(mstk, MS_Token_Kinds::Instruction_Symbol, lt));
        }
        else if(mstk == MS_Token_Kinds::Skipped_Flag_Symbol)
        {
@@ -455,7 +464,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
     // "hand-off" the pending_block_info_ from visitor_phaon to this
     caon_ptr<RZ_Lisp_Graph_Block_Info> rbi = visitor_phaon.clear_pending_block_info();
 
-    caon_ptr<RPI_Block> new_block = new RPI_Block(this);
+    caon_ptr<RPI_Block> new_block = new RPI_Block(pgb_, this);
     caon_ptr<RPI_Block> current_block = new_block;
 
     new_block->set_block_info(rbi);
@@ -530,7 +539,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
         }
         if(new_ben)
         {
-         caon_ptr<RPI_Block> new_block = new RPI_Block(this);
+         caon_ptr<RPI_Block> new_block = new RPI_Block(pgb_, this);
          new_block->set_block_info(new_rbi);
 
          if(caon_ptr<RE_Node> new_cen = visitor_phaon.call_entry_node_from_block_entry_node(new_ben))
@@ -560,7 +569,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
 
         if(new_ben)
         {
-         caon_ptr<RPI_Block> new_block = new RPI_Block(this);
+         caon_ptr<RPI_Block> new_block = new RPI_Block(pgb_, this);
          new_block->set_block_info(new_rbi);
 
          if(caon_ptr<RE_Node> new_cen = visitor_phaon.call_entry_node_from_block_entry_node(new_ben))
@@ -576,7 +585,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        }
       }
 
-      caon_ptr<RPI_Block> nb = new RPI_Block(this);
+      caon_ptr<RPI_Block> nb = new RPI_Block(pgb_, this);
       nb->set_block_info(nn_bi);
       nb->set_preceding_expression_form(expression_form);
       current_block->set_continue_block(nb);
@@ -642,7 +651,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
      {
       CAON_PTR_DEBUG(RE_Node ,ben)
       CAON_DEBUG_NOOP
-      caon_ptr<RPI_Block> new_block = new RPI_Block(this);
+      caon_ptr<RPI_Block> new_block = new RPI_Block(pgb_, this);
 
       // //  does this need to depend on the function def info somehow?
       new_block->set_es_argument("ks");
@@ -690,7 +699,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
 
   case RZ_Lisp_Graph_Visitor::Next_Node_Premise::Token_To_Block_Entry:
    {
-    caon_ptr<RPI_Block> new_block = new RPI_Block(this);
+    caon_ptr<RPI_Block> new_block = new RPI_Block(pgb_, this);
 
     caon_ptr<RE_Block_Entry> rbe = next_node->re_block_entry();
 
@@ -730,12 +739,12 @@ void RPI_Block::write(QTextStream& qts)
   else
   {
    // // same ?
-   qts << "\n(kb::write-enter-scope)\n";
+   // ... qts << "\n(kb::write-enter-scope)\n";
   }
  }
  else
  {
-  qts << "\n(kb::write-file-start)\n";
+  // ... qts << "\n(kb::write-file-start)\n";
  }
 
 

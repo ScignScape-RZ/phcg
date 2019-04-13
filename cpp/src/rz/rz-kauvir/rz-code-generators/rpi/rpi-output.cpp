@@ -20,11 +20,28 @@ void RPI_Output::init_function_def_syntax()
 {
 }
 
-void RPI_Output::init_top_level_block()
+void RPI_Output::init_top_level_block(PGB_IR_Build& pgb)
 {
- top_level_block_ = new RPI_Block();
+ top_level_block_ = new RPI_Block(pgb);
 }
 
+
+void RPI_Output::build_phaon_graph(PGB_IR_Build& pgb)
+{
+ init_top_level_block(pgb);
+ //caon_ptr<PHR_Graph_Node> n =
+
+ //?pgb.make_root_node("!current_node");
+
+ top_level_block_->scan_top_level(visitor_phaon_);
+
+ QString qs;
+ QTextStream qts(&qs);
+ top_level_block_->write(qts);
+
+ top_level_block_->build_phaon_graph();
+
+}
 
 void RPI_Output::write(QTextStream& qts)
 {
@@ -34,3 +51,4 @@ void RPI_Output::write(QTextStream& qts)
   top_level_block_->write(qts);
  }
 }
+

@@ -25,7 +25,7 @@
 #include "rz-graph-code/prerun/rz-re-prerun-anticipate.h"
 
 #include "rz-graph-visit/rz-lisp-graph-visitor.h"
-#include "rz-code-generators/phaon/rz-phaon-output.h"
+#include "rz-code-generators/rpi/rpi-output.h"
 
 #include "phr-graph-core/kernel/graph/phr-graph.h"
 #include "phr-graph-core/kernel/graph/phr-graph-build.h"
@@ -72,7 +72,7 @@ void compile_rz(QString file_name)
 // visitor->set_dynamo_output(&rdo);
 
  RZ_Graph_Visitor_Phaon visitor_phaon(*visitor);
- RZ_Phaon_Output rpo(visitor_phaon);
+ RPI_Output rpo(visitor_phaon);
 
  doc->report_graph(file_name + ".re1.txt");
 
@@ -93,7 +93,7 @@ void compile_rz(QString file_name)
  PGB_IR_Build pgb(file_name + ".gen.pgb");
 
 
- rpo.init_top_level_block();
+// rpo.init_top_level_block();
 
 // anticipate.write_core_pairs(doc->local_path() + ".cprs.txt");
 // anticipate.run_core_pairs();
@@ -103,7 +103,8 @@ void compile_rz(QString file_name)
 
  rpo.build_phaon_graph(pgb);
 
- pgb.generate_file();
+ QStringList qsl;
+ pgb.generate_file(qsl);
 
 
  PHR_Graph phg;

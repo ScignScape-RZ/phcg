@@ -19,18 +19,19 @@ int main(int argc, char **argv)
 {
  PGB_IR_Build pgb(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb");
 
+ QStringList qsl;
 
- pgb.make_root_node("!current_node");
- pgb.make_token_node("@&prn", "&entry-node");
- pgb.add_block_entry_node("!current_node", "&entry-node");
- pgb.copy_value("&entry-node", "!last_statement_entry_node");
- pgb.add_channel_entry_token("&entry-node",
+ pgb(qsl).make_root_node("!current_node");
+ pgb(qsl).make_token_node("@&prn", "&entry-node");
+ pgb(qsl).add_block_entry_node("!current_node", "&entry-node");
+ pgb(qsl).copy_value("&entry-node", "!last_statement_entry_node");
+ pgb(qsl).add_channel_entry_token("&entry-node",
    "lambda", "$44", "&current-channel-node");
 
- pgb.make_token_node("@&prn", "&entry-node");
- pgb.add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
+ pgb(qsl).make_token_node("@&prn", "&entry-node");
+ pgb(qsl).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
 
- pgb.add_channel_entry_token("&entry-node",
+ pgb(qsl).add_channel_entry_token("&entry-node",
    "lambda", "$55", "&entry-node");
 
 // pgb.make_root_node("current_node", MG_Token_Subgroups::Known);
@@ -42,7 +43,7 @@ int main(int argc, char **argv)
 //   "lambda", "44", MG_Token_Subgroups::Value,
 //   "current-channel-node", MG_Token_Subgroups::Ledger);
 
- pgb.generate_file();
+ pgb.generate_file(qsl);
 
  qDebug() << "ok";
  return 0;

@@ -21,6 +21,8 @@
 
 #include "relae-graph/relae-caon-ptr.h"
 
+#include "rpi-stage-element.h"
+
 #include "multistep-token.h"
 
 RZNS_(GBuild)
@@ -41,9 +43,11 @@ class RZ_Expression_Review;
 
 class RPI_Stage_Form
 {
- QVector<QPair<caon_ptr<RPI_Stage_Form>, MS_Token>> inner_elements_;
+ QString fn_;
 
- typedef QVector<QPair<caon_ptr<RPI_Stage_Form>, MS_Token>> inner_elements_type;
+ QVector<RPI_Stage_Element> inner_elements_;
+
+ typedef QVector<RPI_Stage_Element> inner_elements_type;
 
  caon_ptr<RPI_Stage_Form> parent_;
 
@@ -86,6 +90,8 @@ public:
  RPI_Stage_Form(caon_ptr<RPI_Stage_Form> parent = nullptr);
 
  RPI_Stage_Form(caon_ptr<RPI_Block> block);
+
+ ACCESSORS(QString ,fn)
 
  ACCESSORS__RGET(inner_elements_type ,inner_elements)
  ACCESSORS(caon_ptr<RPI_Stage_Form> ,parent)
@@ -139,7 +145,7 @@ public:
 
  void add_nested_block(caon_ptr<RPI_Block> block);
 
- void add_prin1_quoted_form(QString text, MS_Token mt);
+ //void add_prin1_quoted_form(QString text, RPI_Stage_Element_Kinds kind, QString text);
 
  void write_checked_unmediated(QTextStream& qts);
 
@@ -149,15 +155,15 @@ public:
  bool implict_end_form_before_nested_written();
 
  void set_assignment_token(MS_Token mt);
- void add_assignment_initialization_token(MS_Token mt);
- void add_literal_token(MS_Token mt);
- void add_carrier_token(MS_Token mt);
- void add_kauvir_token(MS_Token mt);
- void add_fn_token(MS_Token mt);
- void add_bridge_token(MS_Token mt);
- void add_instruction_token(MS_Token mt);
- void add_argument_token(MS_Token mt);
- void add_insert_token(MS_Token mt);
+ void add_assignment_initialization_element(RPI_Stage_Element_Kinds kind, QString text);
+ void add_literal_element(RPI_Stage_Element_Kinds kind, QString text);
+ void add_carrier_element(RPI_Stage_Element_Kinds kind, QString text);
+ void add_kauvir_element(RPI_Stage_Element_Kinds kind, QString text);
+ void add_fn_element(RPI_Stage_Element_Kinds kind, QString text);
+ void add_bridge_element(RPI_Stage_Element_Kinds kind, QString text);
+ void add_instruction_element(RPI_Stage_Element_Kinds kind, QString text);
+ void add_argument_element(RPI_Stage_Element_Kinds kind, QString text);
+ void add_insert_element(RPI_Stage_Element_Kinds kind, QString text);
 
 };
 

@@ -37,6 +37,12 @@ _RZNS(GBuild)
 
 USING_RZNS(GBuild)
 
+RZNS_(PhrGraphCore)
+ class PGB_IR_Build;
+_RZNS(PhrGraphCore)
+
+USING_RZNS(PhrGraphCore)
+
 RZNS_(GVal)
 
 class RPI_Stage_Form;
@@ -56,6 +62,9 @@ public:
 
 private:
 
+ PGB_IR_Build& pgb_;
+
+ QStringList header_step_forms_;
 
  caon_ptr<RZ_Lisp_Graph_Lexical_Scope> lexical_scope_;
 
@@ -91,7 +100,7 @@ private:
 
 public:
 
- RPI_Block(caon_ptr<RPI_Block> parent_block = nullptr);
+ RPI_Block(PGB_IR_Build& pgb, caon_ptr<RPI_Block> parent_block = nullptr);
 
  ACCESSORS(caon_ptr<RPI_Block> ,parent_block)
  ACCESSORS(caon_ptr<RPI_Block> ,continue_block)
@@ -120,6 +129,8 @@ public:
  void write(QTextStream& qts);
 
  void scan_top_level(RZ_Graph_Visitor_Phaon& visitor_phaon);
+
+ void build_phaon_graph();
 
  void scan(RZ_Graph_Visitor_Phaon& visitor_phaon, RE_Node& start_node);
 

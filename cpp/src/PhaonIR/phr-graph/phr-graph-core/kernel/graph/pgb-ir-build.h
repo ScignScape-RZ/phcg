@@ -28,24 +28,16 @@ class PHR_Graph;
 class PHR_Graph_Frame;
 class PHR_Graph_Query;
 
-class PGB_IR_Build
+class _PGB_IR_Build
 {
-// PHR_Graph& graph_;
- QString out_file_;
- QString text_;
- QTextStream qts_;
-// caon_ptr<PHR_Graph_Node> current_node_;
-
-// PHR_Graph_Frame& fr_;
-// const PHR_Graph_Query& qy_;
+ QTextStream& qts_;
 
 public:
 
- PGB_IR_Build(QString out_file);
+ _PGB_IR_Build(QTextStream& qts);
 
- ACCESSORS(QString ,out_file)
  ACCESSORS__RGET(QTextStream ,qts)
- ACCESSORS__RGET(QString ,text)
+
 
  void make_root_node(QString target, MG_Token_Subgroups sg);
 
@@ -118,20 +110,31 @@ public:
 
  static MG_Token mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Subgroups sg);
 
+};
 
+class PGB_IR_Build
+{
+ QString out_file_;
+ //QString text_;
+ QTextStream qts_;
 
-// caon_ptr<PHR_Graph_Node> add_block_entry_node(
-//   caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target);
+public:
 
-// caon_ptr<PHR_Graph_Node> make_token_node(MG_Token& mgt);
-// caon_ptr<PHR_Graph_Node> make_token_node(MG_Token&& mgt)
-// {
-//  return make_token_node(mgt);
-// }
+ PGB_IR_Build(QString out_file);
 
-// caon_ptr<PHR_Graph_Node> add_channel_raw_value_token(caon_ptr<PHR_Graph_Node> source,
-//   QString channel, QString txt);
+ ACCESSORS(QString ,out_file)
 
+ _PGB_IR_Build operator()(QString& qs);
+ _PGB_IR_Build operator()(QStringList& qsl);
+ _PGB_IR_Build operator[](QStringList& qsl);
+
+ void generate_file(QStringList& qsl);
+
+// ACCESSORS__RGET(QTextStream ,qts)
+// ACCESSORS__RGET(QString ,text)
+
+ //PGB_IR_Build::PGB_IR_Build(QString out_file)
+ // :  out_file_(out_file), qts_(&text_)
 
 };
 

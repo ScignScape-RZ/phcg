@@ -16,13 +16,13 @@ USING_KANS(TextIO)
 
 USING_RZNS(PhrGraphCore)
 
-PGB_IR_Build::PGB_IR_Build(QString out_file)
-  :  out_file_(out_file), qts_(&text_)
+_PGB_IR_Build::_PGB_IR_Build(QTextStream& qts)
+  :  qts_(qts)
 {
 
 }
 
-MG_Token PGB_IR_Build::mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Subgroups sg)
+MG_Token _PGB_IR_Build::mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Subgroups sg)
 {
  switch(kg)
  {
@@ -48,7 +48,7 @@ MG_Token PGB_IR_Build::mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Sub
 }
 
 
-MG_Token_Subgroups PGB_IR_Build::get_subgroup(QChar c)
+MG_Token_Subgroups _PGB_IR_Build::get_subgroup(QChar c)
 {
  switch (c.toLatin1())
  {
@@ -61,13 +61,13 @@ MG_Token_Subgroups PGB_IR_Build::get_subgroup(QChar c)
 }
 
 
-void PGB_IR_Build::make_root_node(QString target, MG_Token_Subgroups sg)
+void _PGB_IR_Build::make_root_node(QString target, MG_Token_Subgroups sg)
 {
  MG_Token mgt = mgtoken(target, MG_Token_Kind_Groups::Target, sg);
  qts_ << "(pgb::make_root_node "; end_line({mgt});
 }
 
-void PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
+void _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
   QString target, MG_Token_Subgroups tsg)
 {
  MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg, asg);
@@ -77,7 +77,7 @@ void PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
 }
 
 
-void PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
+void _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
@@ -86,7 +86,7 @@ void PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
  qts_ << "(pgb::add_block_entry_node "; end_line({mgt1, mgt2});
 }
 
-void PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
+void _PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
@@ -95,7 +95,7 @@ void PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups sg
  qts_ << "(pgb::add_statement_sequence_node "; end_line({mgt1, mgt2});
 }
 
-void PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
+void _PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
@@ -104,7 +104,7 @@ void PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
  qts_ << "(pgb::copy_value "; end_line({mgt1, mgt2});
 }
 
-void PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
+void _PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
 {
  QListIterator<MG_Token> it(mgts);
 
@@ -114,10 +114,10 @@ void PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
   if(it.hasNext())
     qts_ << ' ';
  }
- qts_ << ")\n";
+ qts_ << ")";
 }
 
-void PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
+void _PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
   QString tok, MG_Token_Subgroups toksg,
   QString target, MG_Token_Subgroups tsg)
 {
@@ -129,7 +129,7 @@ void PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
 }
 
 
-void PGB_IR_Build::add_channel_entry_token(QString src, MG_Token_Subgroups srcsg,
+void _PGB_IR_Build::add_channel_entry_token(QString src, MG_Token_Subgroups srcsg,
   QString chn, QString tok, MG_Token_Subgroups toksg,
   QString target, MG_Token_Subgroups tsg)
 {
@@ -141,54 +141,41 @@ void PGB_IR_Build::add_channel_entry_token(QString src, MG_Token_Subgroups srcsg
  qts_ << "(pgb::add_channel_entry_token "; end_line({mgt1, mgt2, mgt3, mgt4});
 }
 
-void PGB_IR_Build::generate_file()
+PGB_IR_Build::PGB_IR_Build(QString out_file)
+  :  out_file_(out_file)//, qts_(&text)
 {
- save_file(out_file_, text_);
+
 }
 
-//void PHR_Graph_Build::make_root_node()
-//{
-// caon_ptr<PHR_Graph_Document> doc = new PHR_Graph_Document(file_);
+_PGB_IR_Build PGB_IR_Build::operator()(QString& qs)
+{
+ qts_.setString(&qs);
+ _PGB_IR_Build result(qts_);
+ return result;
+}
 
-// caon_ptr<PHR_Graph_Root> rt = new PHR_Graph_Root(doc.raw_pointer());
-// caon_ptr<PHR_Graph_Node> rn = new PHR_Graph_Node(rt);
-
-// graph_.set_root_node(rn);
-
-// current_node_ = rn;
-//}
-
-//caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
-//{
-// caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(mgt.raw_text);
-// if(mgt.kind == MG_Token_Kinds::Raw_Value)
-//   tok->flags.gen_raw_value = true;
-// return new PHR_Graph_Node(tok);
-//}
-
-//caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_raw_value_token(caon_ptr<PHR_Graph_Node> source,
-//  QString channel, QString txt)
-//{
-// caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(txt);
-// tok->flags.gen_raw_value = true;
-// caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(tok);
-
-// caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(channel);
-// source << fr_/qy_.Channel_Entry(cion) >> result;
-
+_PGB_IR_Build PGB_IR_Build::operator()(QStringList& qsl)
+{
+ qsl.push_back(QString());
+ QString& qs = qsl.back();
+ return operator()(qs);
+// qts_.setString(&qs);
+// _PGB_IR_Build result(qts_);
 // return result;
-//}
+}
 
-//caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
-//  caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target)
-//{
-// caon_ptr<PHR_Graph_Block_Info> bin = new PHR_Graph_Block_Info;
-// //caon_ptr<PHR_Graph_Statement_Info> sin = new PHR_Graph_Statement_Info;
-// caon_ptr<PHR_Graph_Node> nbin = new PHR_Graph_Node(bin);
-// caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(nbin);
+_PGB_IR_Build PGB_IR_Build::operator[](QStringList& qsl)
+{
+ qsl.push_front(QString());
+ QString& qs = qsl.front();
+ return operator()(qs);
+// qts_.setString(&qs);
+// _PGB_IR_Build result(qts_);
+// return result;
+}
 
-// source << fr_/qy_.Block_Entry(cion) >> target;
-
-// return nbin;
-//}
+void PGB_IR_Build::generate_file(QStringList& qsl)
+{
+ save_file(out_file_, qsl.join('\n'));
+}
 

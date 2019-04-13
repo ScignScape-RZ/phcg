@@ -4,8 +4,8 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
-#ifndef RPI_OUTPUT__H
-#define RPI_OUTPUT__H
+#ifndef RPI_STAGE_ENEMENT__H
+#define RPI_STAGE_ENEMENT__H
 
 #include "accessors.h"
 #include "flags.h"
@@ -39,32 +39,31 @@ USING_RZNS(PhrGraphCore)
 
 RZNS_(GVal)
 
-class RPI_Block;
+class RPI_Stage_Form;
 
-
-
-class RPI_Output
+enum class RPI_Stage_Element_Kinds
 {
+  N_A, Fuxe, Token, Form,
 
- RZ_Graph_Visitor_Phaon& visitor_phaon_;
- RZ_Lisp_Graph_Visitor& visitor();
+ Instruction_Symbol, Literal, String_Literal, Kernel_Type_Symbol
+};
 
- caon_ptr<RPI_Block> top_level_block_;
-
- void init_function_def_syntax();
+class RPI_Stage_Element
+{
+ caon_ptr<RPI_Stage_Form> form_;
+ RPI_Stage_Element_Kinds kind_;
+ QString text_;
 
 public:
 
- RPI_Output(RZ_Graph_Visitor_Phaon& visitor_phaon);
+ RPI_Stage_Element(RPI_Stage_Element_Kinds kind, QString text);
+ RPI_Stage_Element(caon_ptr<RPI_Stage_Form> form);
 
- void write(QTextStream& qts);
-
- void init_top_level_block(PGB_IR_Build& pgb);
-
- void build_phaon_graph(PGB_IR_Build& pgb);
-
+ ACCESSORS(RPI_Stage_Element_Kinds ,kind)
+ ACCESSORS(QString ,text)
+ ACCESSORS(caon_ptr<RPI_Stage_Form> ,form)
 };
 
 _RZNS(GVal)
 
-#endif //RPI_OUTPUT__H
+#endif //RPI_STAGE_ENEMENT__H

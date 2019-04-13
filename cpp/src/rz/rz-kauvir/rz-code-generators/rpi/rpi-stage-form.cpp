@@ -90,7 +90,7 @@ void RPI_Stage_Form::write_as_statement(QTextStream& qts)
 
 }
 
-void RPI_Stage_Form::add_prin1_quoted_form(QString text, MS_Token mt)
+void RPI_Stage_Form::add_prin1_quoted_form(QString text, RPI_Stage_Element_Kinds kind, QString text)
 {
  check_init_annotation();
  annotation_->flags.has_prin1_quoted_form = true;
@@ -729,27 +729,27 @@ void RPI_Stage_Form::set_assignment_token(MS_Token mt)
  assignment_token_ = mt;
 }
 
-void RPI_Stage_Form::add_assignment_initialization_token(MS_Token mt)
+void RPI_Stage_Form::add_assignment_initialization_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back({nullptr, mt});
 }
 
-void RPI_Stage_Form::add_literal_token(MS_Token mt)
+void RPI_Stage_Form::add_literal_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back({nullptr, mt});
 }
 
-void RPI_Stage_Form::add_insert_token(MS_Token mt)
+void RPI_Stage_Form::add_insert_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back({nullptr, mt});
 }
 
-void RPI_Stage_Form::add_carrier_token(MS_Token mt)
+void RPI_Stage_Form::add_carrier_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back({nullptr, mt});
 }
 
-void RPI_Stage_Form::add_kauvir_token(MS_Token mt)
+void RPI_Stage_Form::add_kauvir_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back({nullptr, mt});
 }
@@ -760,17 +760,17 @@ void RPI_Stage_Form::init_inferred_s0_statement()
  annotation_->flags.infer_write_s0_statement = true;
 }
 
-void RPI_Stage_Form::add_fn_token(MS_Token mt)
+void RPI_Stage_Form::add_fn_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back({nullptr, mt});
 }
 
-void RPI_Stage_Form::add_bridge_token(MS_Token mt)
+void RPI_Stage_Form::add_bridge_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back({nullptr, mt});
 }
 
-void RPI_Stage_Form::add_instruction_token(MS_Token mt)
+void RPI_Stage_Form::add_instruction_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  check_init_annotation();
  annotation_->flags.has_instruction_token = true;
@@ -778,15 +778,15 @@ void RPI_Stage_Form::add_instruction_token(MS_Token mt)
  if(annotation_->flags.parent_s1_assignment_preempts_s0)
  {
   QString ch = parent_->s1_assignment_check();
-  MS_Token mt1 = {MS_Token_Kinds::Preempted_Instruction_Symbol, ch};
-  inner_elements_.push_back({nullptr, mt1});
+//  MS_Token mt1 = {MS_Token_Kinds::Preempted_Instruction_Symbol, ch};
+//  inner_elements_.push_back({nullptr, mt1});
   annotation_->flags.first_inner_element_is_s1_assignment_preempts_s0 = true;
  }
 
  inner_elements_.push_back({nullptr, mt});
 }
 
-void RPI_Stage_Form::add_argument_token(MS_Token mt)
+void RPI_Stage_Form::add_argument_token(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back({nullptr, mt});
 }

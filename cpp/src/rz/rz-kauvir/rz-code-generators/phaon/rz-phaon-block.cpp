@@ -124,24 +124,24 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
   if(caon_ptr<RZ_Lisp_Token> rzlt = start_node->lisp_token())
   {
    if(rzlt->raw_text().startsWith('#'))
-     pgb.make_token_node(rzlt->raw_text().prepend('$'), "&entry-node");
+     pgb(header_step_forms_).make_token_node(rzlt->raw_text().prepend('$'), "&entry-node");
      //phgb.make_token_node({MG_Token_Kinds::Raw_Value, rzlt->raw_text()});
    else
-     pgb.make_token_node(rzlt->raw_text().prepend('@'), "&entry-node");
+     pgb(header_step_forms_).make_token_node(rzlt->raw_text().prepend('@'), "&entry-node");
      //pen = phgb.make_token_node({MG_Token_Kinds::Raw_Symbol, rzlt->raw_text()});
 
    if(rbe)
-     pgb.add_block_entry_node(pgbs, "&entry-node");
+     pgb(header_step_forms_).add_block_entry_node(pgbs, "&entry-node");
    else
-     pgb.add_statement_sequence_node(pgbs, "&entry-node");
-   pgb.copy_value("&entry-node", "!last_statement_entry_node");
+     pgb(header_step_forms_).add_statement_sequence_node(pgbs, "&entry-node");
+   pgb(header_step_forms_).copy_value("&entry-node", "!last_statement_entry_node");
   }
 
   caon_ptr<RE_Node> current_node = start_node;
 
   RZ_Lisp_Graph_Visitor::Next_Node_Premise nnp = RZ_Lisp_Graph_Visitor::Next_Node_Premise::N_A;
 
-  pgb.copy_value("&entry-node", "&channel-seq");
+  pgb(header_step_forms_).copy_value("&entry-node", "&channel-seq");
   while(current_node)
   {
    caon_ptr<RE_Node> next_node = visitor_phaon.get_next_node(current_node, nnp);
@@ -155,10 +155,10 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
      if(caon_ptr<RZ_Lisp_Token> rzlt = next_node->lisp_token())
      {
       if(current_node == start_node)
-        pgb.add_channel_entry_token("&channel-seq", "lambda",
+        pgb(header_step_forms_).add_channel_entry_token("&channel-seq", "lambda",
         rzlt->raw_text().prepend('$'), "&channel-seq");
       else
-        pgb.add_channel_token("&channel-seq",
+        pgb(header_step_forms_).add_channel_token("&channel-seq",
         rzlt->raw_text().prepend('$'), "&channel-seq");
      }
      current_node = next_node;
