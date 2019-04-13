@@ -40,7 +40,12 @@ HEADERS += \
   $$SRC_DIR/rz-dynamo-type-declaration.h \
   $$SRC_DIR/phaon/rz-phaon-block.h \
   $$SRC_DIR/phaon/rz-phaon-output.h \
-
+  $$SRC_DIR/rpi/rpi-output.h \
+  $$SRC_DIR/rpi/rpi-block.h \
+  $$SRC_DIR/rpi/rpi-stage-form.h \
+  $$SRC_DIR/rpi/rpi-stage-form-annotation.h \
+  $$SRC_DIR/rpi/rpi-expression.h \
+  $$SRC_DIR/rpi/rpi-type-declaration.h \
 
 SOURCES += \
   $$SRC_DIR/rz-dynamo-output.cpp \
@@ -51,7 +56,12 @@ SOURCES += \
   $$SRC_DIR/rz-dynamo-type-declaration.cpp \
   $$SRC_DIR/phaon/rz-phaon-block.cpp \
   $$SRC_DIR/phaon/rz-phaon-output.cpp \
-
+  $$SRC_DIR/rpi/rpi-output.cpp \
+  $$SRC_DIR/rpi/rpi-block.cpp \
+  $$SRC_DIR/rpi/rpi-stage-form.cpp \
+  $$SRC_DIR/rpi/rpi-stage-form-annotation.cpp \
+  $$SRC_DIR/rpi/rpi-expression.cpp \
+  $$SRC_DIR/rpi/rpi-type-declaration.cpp \
 
 LIBS += -L$$TARGETSDIR -lrz-graph-core -lrz-graph-token -lrz-graph-visit \
   -lrz-graph-valuer -lrz-function-def -lrz-code-elements
