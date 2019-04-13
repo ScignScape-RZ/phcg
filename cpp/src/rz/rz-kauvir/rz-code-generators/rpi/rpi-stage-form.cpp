@@ -90,18 +90,18 @@ void RPI_Stage_Form::write_as_statement(QTextStream& qts)
 
 }
 
-void RPI_Stage_Form::add_prin1_quoted_form(QString text, RPI_Stage_Element_Kinds kind, QString text)
-{
- check_init_annotation();
- annotation_->flags.has_prin1_quoted_form = true;
+//void RPI_Stage_Form::add_prin1_quoted_form(QString text, RPI_Stage_Element_Kinds kind, QString text)
+//{
+// check_init_annotation();
+// annotation_->flags.has_prin1_quoted_form = true;
 
- RPI_Stage_Form* new_form = new RPI_Stage_Form(this);
+// RPI_Stage_Form* new_form = new RPI_Stage_Form(this);
 
- new_form->set_raw_text(QString("\n\n(prin1-to-string '(%1))\n\n").arg(text));
+// new_form->set_raw_text(QString("\n\n(prin1-to-string '(%1))\n\n").arg(text));
 
- inner_elements_.push_back({new_form, mt});
+// inner_elements_.push_back({new_form, mt});
 
-}
+//}
 
 void RPI_Stage_Form::init_type_declaration(QString cmd)
 {
@@ -173,7 +173,7 @@ void RPI_Stage_Form::add_expression_wrapper(caon_ptr<RPI_Stage_Form> form,
 
 void RPI_Stage_Form::add_expression(caon_ptr<RPI_Stage_Form> form)
 {
- inner_elements_.push_back({form, MS_Token::Null()});
+ inner_elements_.push_back(RPI_Stage_Element(form));
 }
 
 void RPI_Stage_Form::add_nested_block(caon_ptr<RPI_Block> block)
@@ -183,7 +183,7 @@ void RPI_Stage_Form::add_nested_block(caon_ptr<RPI_Block> block)
   first_nested_block_ = block;
  }
  caon_ptr<RPI_Stage_Form> form = new RPI_Stage_Form(block);
- inner_elements_.push_back({form, MS_Token::Null()});
+ inner_elements_.push_back(form);
 }
 
 void RPI_Stage_Form::mark_as_fn_no_block()
@@ -426,7 +426,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
  int skip = -1;
  int pseudo_first = -1;
 
- for(QPair<caon_ptr<RPI_Stage_Form>, MS_Token> element : inner_elements_)
+ for(RPI_Stage_Element element : inner_elements_)
  {
   if(count == skip)
   {
@@ -434,12 +434,12 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
    continue;
   }
 
-  if(element.first)
+  if(element.form())
   {
-   caon_ptr<RPI_Stage_Form> ef = element.first;
+   caon_ptr<RPI_Stage_Form> ef = element.form();
    CAON_PTR_DEBUG(RPI_Stage_Form ,ef)
 
-   QString note = element.second.raw_text;
+   QString note = element.text();
 
 #ifdef HIDE
    // //  would this only apply to tokens?
@@ -476,10 +476,10 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
     if(ANNOTATION_FLAG(first_nested_is_assignment))
     {
      // // should I set this here or elsewhere?
-     element.first->mark_as_assignment_expression();
+     element.form()->mark_as_assignment_expression();
     }
 
-    element.first->write(qts);
+    element.form()->write(qts);
    }
    else if(note.isEmpty())
    {
@@ -493,8 +493,8 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
    }
    else
    {
-    qts << ' ' << element.second.encode() << ' ';
-    element.first->write(qts);
+    //?qts << ' ' << element.second.encode() << ' ';
+    element.form()->write(qts);
     qts << ' ';
    }
   }
@@ -515,12 +515,12 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
     }
    }
 
-   QString rt = element.second.raw_text;
-   MS_Token_Kinds mstk = element.second.kind;
+//   QString rt = element.second.raw_text;
+//   MS_Token_Kinds mstk = element.second.kind;
 
-   QString str = element.second.encode();
+//?   QString str = element.second.encode();
 
-   qts << ' ' << str << ' ';
+ //?  qts << ' ' << str << ' ';
   }
   ++count;
  }
@@ -731,27 +731,27 @@ void RPI_Stage_Form::set_assignment_token(MS_Token mt)
 
 void RPI_Stage_Form::add_assignment_initialization_element(RPI_Stage_Element_Kinds kind, QString text)
 {
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }
 
 void RPI_Stage_Form::add_literal_element(RPI_Stage_Element_Kinds kind, QString text)
 {
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }
 
 void RPI_Stage_Form::add_insert_element(RPI_Stage_Element_Kinds kind, QString text)
 {
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }
 
 void RPI_Stage_Form::add_carrier_element(RPI_Stage_Element_Kinds kind, QString text)
 {
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }
 
 void RPI_Stage_Form::add_kauvir_element(RPI_Stage_Element_Kinds kind, QString text)
 {
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }
 
 void RPI_Stage_Form::init_inferred_s0_statement()
@@ -762,12 +762,12 @@ void RPI_Stage_Form::init_inferred_s0_statement()
 
 void RPI_Stage_Form::add_fn_element(RPI_Stage_Element_Kinds kind, QString text)
 {
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }
 
 void RPI_Stage_Form::add_bridge_element(RPI_Stage_Element_Kinds kind, QString text)
 {
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }
 
 void RPI_Stage_Form::add_instruction_element(RPI_Stage_Element_Kinds kind, QString text)
@@ -783,10 +783,10 @@ void RPI_Stage_Form::add_instruction_element(RPI_Stage_Element_Kinds kind, QStri
   annotation_->flags.first_inner_element_is_s1_assignment_preempts_s0 = true;
  }
 
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }
 
-void RPI_Stage_Form::add_argument_token(RPI_Stage_Element_Kinds kind, QString text)
+void RPI_Stage_Form::add_argument_element(RPI_Stage_Element_Kinds kind, QString text)
 {
- inner_elements_.push_back({nullptr, mt});
+ inner_elements_.push_back(RPI_Stage_Element(kind, text));
 }

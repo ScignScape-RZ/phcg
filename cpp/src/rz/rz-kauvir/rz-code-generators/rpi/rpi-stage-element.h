@@ -45,7 +45,8 @@ enum class RPI_Stage_Element_Kinds
 {
   N_A, Fuxe, Token, Form,
 
- Instruction_Symbol, Literal, String_Literal, Kernel_Type_Symbol
+ Instruction_Symbol, Literal, String_Literal, Kernel_Type_Symbol,
+ Raw_Symbol, Bridge_Symbol,
 };
 
 class RPI_Stage_Element
@@ -58,6 +59,7 @@ public:
 
  RPI_Stage_Element(RPI_Stage_Element_Kinds kind, QString text);
  RPI_Stage_Element(caon_ptr<RPI_Stage_Form> form);
+ RPI_Stage_Element();
 
  ACCESSORS(RPI_Stage_Element_Kinds ,kind)
  ACCESSORS(QString ,text)

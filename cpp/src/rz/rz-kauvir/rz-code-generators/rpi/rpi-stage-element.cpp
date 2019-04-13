@@ -11,10 +11,17 @@
 USING_RZNS(GVal)
 
 RPI_Stage_Element::RPI_Stage_Element(RPI_Stage_Element_Kinds kind, QString text)
-  :  kind_(kind), text_(text), form_(form)
+  :  kind_(kind), text_(text), form_(nullptr)
 {
 
 }
+
+RPI_Stage_Element::RPI_Stage_Element()
+  :  kind_(RPI_Stage_Element_Kinds::N_A), form_(nullptr)
+{
+
+}
+
 
 RPI_Stage_Element::RPI_Stage_Element(caon_ptr<RPI_Stage_Form> form)
  :  kind_(RPI_Stage_Element_Kinds::Form), form_(form)

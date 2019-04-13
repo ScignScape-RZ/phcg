@@ -394,7 +394,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        }
        else if(next_tok->flags.is_assignment_initialization_entry)
        {
-        current_form_->add_assignment_initialization_element(RPI_Stage_Element_Kinds::Instruction_Symbol, lt)
+        current_form_->add_assignment_initialization_element(RPI_Stage_Element_Kinds::Instruction_Symbol, lt);
            //MS_Token::check_as(mstk, MS_Token_Kinds::Instruction_Symbol, lt));
        }
        else if(mstk == MS_Token_Kinds::Skipped_Flag_Symbol)
@@ -406,13 +406,16 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        }
        else
        {
-        current_form_->add_argument_token(MS_Token::check_as(mstk, MS_Token_Kinds::Raw_Symbol, lt));
+        current_form_->add_argument_element(RPI_Stage_Element_Kinds::Raw_Symbol, lt);
+           //MS_Token::check_as(mstk, MS_Token_Kinds::Raw_Symbol, lt));
        }
       }
       else
       {
        QString code = visitor_phaon.wrap_token_with_bridge_code(lt, bridge_code, es_argument_);
-       current_form_->add_bridge_token(MS_Token::check_as(mstk, MS_Token_Kinds::Bridge_Symbol, code));
+       current_form_->add_bridge_element(RPI_Stage_Element_Kinds::Bridge_Symbol, code);
+
+          //MS_Token::check_as(mstk, MS_Token_Kinds::Bridge_Symbol, code));
       }
       if(!skip_increase_lambda_count)
       {
@@ -420,7 +423,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
       }
       if(!held_token_.raw_text.isEmpty())
       {
-       current_form_->add_carrier_token(held_token_);
+       current_form_->add_carrier_element(RPI_Stage_Element_Kinds::N_A, held_token_.raw_text);
        held_token_.clear();
       }
      }
@@ -621,7 +624,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
       {
        signature_code  = function_def_info->dynamo_signature_code_string();
        MS_Token note {MS_Token_Kinds::Note_Symbol, ":fdef"};
-       current_form_->add_prin1_quoted_form(signature_code, note);
+       //?current_form_->add_prin1_quoted_form(signature_code, note);
       }
 
 
@@ -637,7 +640,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
       {
        QString signature_code = function_def_info->dynamo_signature_code_string();
        MS_Token note {MS_Token_Kinds::Note_Symbol, ":fdef"};
-       current_form_->add_prin1_quoted_form(signature_code, note);
+       //?current_form_->add_prin1_quoted_form(signature_code, note);
       }
      }
 
