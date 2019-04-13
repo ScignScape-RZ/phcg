@@ -32,7 +32,7 @@ USING_RZNS(RECore)
 
 RZNS_(GBuild)
  class RZ_Lisp_Graph_Visitor;
- class RZ_Lisp_Graph_Visitor_Dynamo;
+ class RZ_Graph_Visitor_Phaon;
 _RZNS(GBuild)
 
 USING_RZNS(GBuild)
@@ -78,7 +78,7 @@ private:
 
  int parent_lambda_position_;
 
- void add_form_from_call_entry_node(RZ_Lisp_Graph_Visitor_Dynamo& visitor_dynamo,
+ void add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
    RE_Node& entry_node);
 
  QString es_argument_;
@@ -119,14 +119,14 @@ public:
 
  void write(QTextStream& qts);
 
- void scan_top_level(RZ_Lisp_Graph_Visitor_Dynamo& visitor_dynamo);
+ void scan_top_level(RZ_Graph_Visitor_Phaon& visitor_phaon);
 
- void scan(RZ_Lisp_Graph_Visitor_Dynamo& visitor_dynamo, RE_Node& start_node);
+ void scan(RZ_Graph_Visitor_Phaon& visitor_phaon, RE_Node& start_node);
 
- void scan_form_from_start_node(RZ_Lisp_Graph_Visitor_Dynamo& visitor_dynamo,
+ void scan_form_from_start_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
    RE_Node& start_node);
 
- void scan_form_from_statement_entry_node(RZ_Lisp_Graph_Visitor_Dynamo& visitor_dynamo,
+ void scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
    RE_Node& start_node);
 
 };

@@ -30,7 +30,7 @@ USING_RZNS(RECore)
 
 RZNS_(GBuild)
  class RZ_Lisp_Graph_Visitor;
- class RZ_Lisp_Graph_Visitor_Dynamo;
+ class RZ_Graph_Visitor_Phaon;
 _RZNS(GBuild)
 
 USING_RZNS(GBuild)

@@ -25,7 +25,7 @@
 
 RZNS_(GBuild)
  class RZ_Lisp_Graph_Visitor;
- class RZ_Lisp_Graph_Visitor_Dynamo;
+ class RZ_Graph_Visitor_Phaon;
 _RZNS(GBuild)
 
 USING_RZNS(GBuild)
@@ -39,7 +39,7 @@ class RPI_Block;
 class RPI_Output
 {
 
- RZ_Lisp_Graph_Visitor_Dynamo& visitor_dynamo_;
+ RZ_Graph_Visitor_Phaon& visitor_phaon_;
  RZ_Lisp_Graph_Visitor& visitor();
 
  caon_ptr<RPI_Block> top_level_block_;
@@ -48,7 +48,7 @@ class RPI_Output
 
 public:
 
- RPI_Output(RZ_Lisp_Graph_Visitor_Dynamo& visitor_dynamo);
+ RPI_Output(RZ_Graph_Visitor_Phaon& visitor_phaon);
 
  void write(QTextStream& qts);
 

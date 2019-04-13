@@ -11,8 +11,8 @@
 
 USING_RZNS(GVal)
 
-RPI_Output::RPI_Output(RZ_Lisp_Graph_Visitor_Dynamo& visitor_dynamo)
-  :  visitor_dynamo_(visitor_dynamo), top_level_block_(nullptr)
+RPI_Output::RPI_Output(RZ_Graph_Visitor_Phaon& visitor_phaon)
+  :  visitor_phaon_(visitor_phaon), top_level_block_(nullptr)
 {
 }
 
@@ -30,7 +30,7 @@ void RPI_Output::write(QTextStream& qts)
 {
  if(top_level_block_)
  {
-  top_level_block_->scan_top_level(visitor_dynamo_);
+  top_level_block_->scan_top_level(visitor_phaon_);
   top_level_block_->write(qts);
  }
 }
