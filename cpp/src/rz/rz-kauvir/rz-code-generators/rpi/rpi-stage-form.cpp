@@ -205,6 +205,13 @@ void RPI_Stage_Form::mark_as_parent_s1_assignment_preempts_s0()
  annotation_->flags.parent_s1_assignment_preempts_s0 = true;
 }
 
+void RPI_Stage_Form:: mark_as_block_entry_statment()
+{
+ check_init_annotation();
+ annotation_->flags.is_block_entry_statment = true;
+ //CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
+}
+
 void RPI_Stage_Form::mark_as_assignment_expression()
 {
  check_init_annotation();

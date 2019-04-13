@@ -127,6 +127,7 @@ public:
 
  void mark_deferred(int hdcode);
  void mark_as_assignment_expression();
+ void mark_as_block_entry_statment();
  void mark_as_fn_no_block();
  void mark_as_s1_assignment_preempts_s0();
  void mark_as_parent_s1_assignment_preempts_s0();

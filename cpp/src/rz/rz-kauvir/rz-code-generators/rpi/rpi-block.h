@@ -88,7 +88,7 @@ private:
  int parent_lambda_position_;
 
  void add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
-   RE_Node& entry_node);
+   RE_Node& entry_node, caon_ptr<RE_Block_Entry> rbe = nullptr);
 
  QString es_argument_;
 

@@ -27,7 +27,7 @@ class RPI_Stage_Form_Annotation
 {
 public:
 
- flags_(4)
+ flags_(5)
   bool checked:1;
   bool is_if:1;
   bool is_if_with_elsif:1;
@@ -57,6 +57,8 @@ public:
   bool s1_assignment_preempts_s0:1;
   bool parent_s1_assignment_preempts_s0:1;
   bool first_inner_element_is_s1_assignment_preempts_s0:1;
+
+  bool is_block_entry_statment:1;
  _flags
 
 

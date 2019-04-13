@@ -78,7 +78,9 @@ void RPI_Block::scan(RZ_Graph_Visitor_Phaon& visitor_phaon,
 
   // // does this need to be more fine-grained?
 
-  if(caon_ptr<RE_Block_Entry> rbe = ben->re_block_entry())
+  caon_ptr<RE_Block_Entry> rbe = ben->re_block_entry();
+
+  if(rbe)
   {
    CAON_PTR_DEBUG(RE_Block_Entry ,rbe)
    lexical_scope_ = rbe->lexical_scope();
@@ -88,7 +90,7 @@ void RPI_Block::scan(RZ_Graph_Visitor_Phaon& visitor_phaon,
 
   if(cen)
   {
-   add_form_from_call_entry_node(visitor_phaon, *cen);
+   add_form_from_call_entry_node(visitor_phaon, *cen, rbe);
   }
 
   caon_ptr<RE_Node> current_node = cen;
@@ -109,7 +111,7 @@ void RPI_Block::scan(RZ_Graph_Visitor_Phaon& visitor_phaon,
 
 
 void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
-  RE_Node& entry_node)
+  RE_Node& entry_node, caon_ptr<RE_Block_Entry> rbe)
 {
  if(current_form_)
  {
@@ -119,6 +121,13 @@ void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_ph
  else
  {
   current_form_ = new RPI_Stage_Form;
+
+
+  if(rbe)
+  {
+   current_form_->mark_as_block_entry_statment();
+  }
+
   forms_.push_back(current_form_);
   if(caon_ptr<RE_Node> start_node = visitor_phaon.start_node_from_call_entry_node(&entry_node))
   {
@@ -137,6 +146,7 @@ void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_ph
     current_form_->set_code_statement(st);
 
     visitor_phaon.check_assignment_annotation(start_node, st);
+
 
    }
    else
@@ -262,7 +272,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
      {
       current_form_->init_inferred_s0_statement();
      }
-     current_form_->set_fn(fn); ;// add_fn_token({MS_Token_Kinds::Fuxe_Symbol, fn});
+     current_form_->add_fn_element(RPI_Stage_Element_Kinds::Fuxe_Symbol, fn);
     }
 
     // should be a flag ...
