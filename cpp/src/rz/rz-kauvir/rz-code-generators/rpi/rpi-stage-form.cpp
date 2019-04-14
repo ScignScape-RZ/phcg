@@ -393,8 +393,9 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
      pgb_(step_forms_).add_channel_entry_token("&channel-seq", "lambda",
        rset.prepend('$'), "&channel-seq");
    else
-     pgb_(step_forms_).add_channel_entry_token("&channel-seq", "lambda",
+     pgb_(step_forms_).add_channel_token("&channel-seq",
        rset.prepend('$'), "&channel-seq");
+   ++channel_count;
   default:
    break;
   }
