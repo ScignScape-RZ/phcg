@@ -43,6 +43,8 @@ class RZ_Expression_Review;
 
 class RPI_Stage_Form
 {
+ PGB_IR_Build& pgb_;
+
  QStringList step_forms_;
 
  QString fn_;
@@ -89,9 +91,9 @@ class RPI_Stage_Form
 
 public:
 
- RPI_Stage_Form(caon_ptr<RPI_Stage_Form> parent = nullptr);
+ RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Stage_Form> parent = nullptr);
 
- RPI_Stage_Form(caon_ptr<RPI_Block> block);
+ RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Block> block);
 
  ACCESSORS(QString ,fn)
 

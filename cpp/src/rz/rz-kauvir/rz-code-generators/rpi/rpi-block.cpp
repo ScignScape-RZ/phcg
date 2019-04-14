@@ -120,7 +120,7 @@ void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_ph
  }
  else
  {
-  current_form_ = new RPI_Stage_Form;
+  current_form_ = new RPI_Stage_Form(pgb_);
 
 
   if(rbe)
@@ -444,7 +444,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
 
   case RZ_Lisp_Graph_Visitor::Next_Node_Premise::Expression:
    {
-    RPI_Stage_Form* new_form = new RPI_Stage_Form(current_form_);
+    RPI_Stage_Form* new_form = new RPI_Stage_Form(pgb_, current_form_);
     new_form->set_parent_lambda_position(lambda_count);
     new_form->set_implicit_added_depth(implicit_added_depth);
     current_form_->add_expression(new_form);
@@ -523,7 +523,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
          CAON_PTR_DEBUG(RE_Node ,nen)
          if(nen)
          {
-          expression_form = new RPI_Stage_Form(current_form_);
+          expression_form = new RPI_Stage_Form(pgb_, current_form_);
           current_form_ = expression_form;
 
           caon_ptr<RE_Node> nene = visitor_phaon.visitor().entry_from_call_entry(nen);

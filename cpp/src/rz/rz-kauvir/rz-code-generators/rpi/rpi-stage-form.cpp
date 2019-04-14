@@ -20,6 +20,8 @@
 #include "rz-code-elements/rz-code-statement.h"
 #include "rz-code-elements/rz-expression-review.h"
 
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
+
 #include <functional>
 
 #include "rzns.h"
@@ -29,8 +31,8 @@
 
 USING_RZNS(GVal)
 
-RPI_Stage_Form::RPI_Stage_Form(caon_ptr<RPI_Stage_Form> parent)
-  :  parent_(parent), parent_lambda_position_(-1),
+RPI_Stage_Form::RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Stage_Form> parent)
+  :  pgb_(pgb), parent_(parent), parent_lambda_position_(-1),
      first_nested_block_(nullptr), implicit_added_depth_(0),
      nesting_level_(0),
      type_declaration_(nullptr), expression_(nullptr),
@@ -42,8 +44,8 @@ RPI_Stage_Form::RPI_Stage_Form(caon_ptr<RPI_Stage_Form> parent)
 
 }
 
-RPI_Stage_Form::RPI_Stage_Form(caon_ptr<RPI_Block> block)
-  :  parent_(nullptr), plene_block_(block),
+RPI_Stage_Form::RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Block> block)
+  :  pgb_(pgb), parent_(nullptr), plene_block_(block),
      first_nested_block_(nullptr), implicit_added_depth_(0),
      type_declaration_(nullptr), expression_(nullptr),
      assignment_token_(MS_Token::Null())
@@ -183,7 +185,7 @@ void RPI_Stage_Form::add_nested_block(caon_ptr<RPI_Block> block)
  {
   first_nested_block_ = block;
  }
- caon_ptr<RPI_Stage_Form> form = new RPI_Stage_Form(block);
+ caon_ptr<RPI_Stage_Form> form = new RPI_Stage_Form(pgb_, block);
  inner_elements_.push_back(form);
 }
 
@@ -367,33 +369,39 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
 
 // if(ANNOTATION_FLAG(is_block_entry_statment))
 // {
+ int channel_count = 0;
  for(RPI_Stage_Element& rse : inner_elements_)
  {
   QString rset = rse.text();
   switch (rse.kind())
   {
   case RPI_Stage_Element_Kinds::Fuxe_Symbol:
-   if(text.startsWith('#'))
-     pgb_(step_forms_).make_token_node(rset.prepend('$'));
+   if(rset.startsWith('#'))
+     pgb_(step_forms_).make_token_node(rset.prepend('$'), "&entry-node");
    else
-     pgb_(step_forms_).make_token_node(rset.prepend('@'));
+     pgb_(step_forms_).make_token_node(rset.prepend('@'), "&entry-node");
    if(ANNOTATION_FLAG(is_block_entry_statment))
      pgb_(step_forms_).add_block_entry_node("!block_pre_entry_node", "&entry-node");
    else
      pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
-     pgb(header_step_forms_).copy_value("&entry-node", "!last_statement_entry_node");
-     pgb(header_step_forms_).copy_value("&entry-node", "&channel-seq");
+     pgb_(step_forms_).copy_value("&entry-node", "!last_statement_entry_node");
+     pgb_(step_forms_).copy_value("&entry-node", "&channel-seq");
    break;
 
-  case RPI_Stage_Element_Kinds::Token:
-
-
+  case RPI_Stage_Element_Kinds::Literal:
+   if(channel_count == 0)
+     pgb_(step_forms_).add_channel_entry_token("&channel-seq", "lambda",
+       rset.prepend('$'), "&channel-seq");
+   else
+     pgb_(step_forms_).add_channel_entry_token("&channel-seq", "lambda",
+       rset.prepend('$'), "&channel-seq");
   default:
    break;
   }
 
  }
 
+ return;
 
  //}
 
