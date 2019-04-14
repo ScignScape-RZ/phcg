@@ -127,6 +127,7 @@ public:
  RZ_Lisp_Graph_Visitor& visitor();
 
  void write(QStringList& qsl, QTextStream& qts);
+ void write_top_level(QStringList& qsl, QTextStream& qts);
 
  void scan_top_level(RZ_Graph_Visitor_Phaon& visitor_phaon);
 

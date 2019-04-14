@@ -122,6 +122,9 @@ caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_known_target(QString tr)
    return &graph_build_.current_node_;
  if(tr == "last_statement_entry_node")
    return &graph_build_.last_statement_entry_node_;
+ if(tr == "last_block_pre_entry_node")
+   return &graph_build_.last_block_pre_entry_node_;
+
  return nullptr;
 }
 

@@ -40,7 +40,6 @@ public:
 
 
  void make_root_node(QString target, MG_Token_Subgroups sg);
-
  void make_root_node(QString target)
  {
   make_root_node(target.mid(1), get_subgroup(target[0]));

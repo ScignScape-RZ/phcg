@@ -28,6 +28,8 @@
 #include "rz-function-def/rz-function-def-syntax.h"
 #include "rz-function-def/rz-function-def-info.h"
 
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
+
 #include "multistep-token.h"
 
 #include "rzns.h"
@@ -739,6 +741,14 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
  }
 }
 
+void RPI_Block::write_top_level(QStringList& qsl, QTextStream& qts)
+{
+ pgb_(qsl).make_root_node("!last_block_pre_entry_node");
+
+// _PGB_IR_Build _pgb = pgb_(qsl);
+// _pgb.make_root_node("!last_last_block_pre_entry_node");
+ write(qsl, qts);
+}
 
 
 void RPI_Block::write(QStringList& qsl, QTextStream& qts)

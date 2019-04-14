@@ -39,6 +39,7 @@ USING_RZNS(PhrGraphCore)
 PHR_Graph_Build::PHR_Graph_Build(PHR_Graph& graph)
  : graph_(graph), current_node_(nullptr),
    last_statement_entry_node_(nullptr),
+   last_block_pre_entry_node_(nullptr),
   fr_(PHR_Graph_Frame::instance()),
   qy_(PHR_Graph_Query::instance())
 {

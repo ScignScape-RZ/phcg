@@ -37,7 +37,7 @@ void RPI_Output::build_phaon_graph(PGB_IR_Build& pgb)
 
  QString qs;
  QTextStream qts(&qs);
- top_level_block_->write(step_forms_, qts);
+ top_level_block_->write_top_level(step_forms_, qts);
 
  top_level_block_->build_phaon_graph();
 

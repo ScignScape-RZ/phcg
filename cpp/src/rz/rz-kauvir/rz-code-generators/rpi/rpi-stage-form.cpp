@@ -381,7 +381,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
    else
      pgb_(step_forms_).make_token_node(rset.prepend('@'), "&entry-node");
    if(ANNOTATION_FLAG(is_block_entry_statment))
-     pgb_(step_forms_).add_block_entry_node("!block_pre_entry_node", "&entry-node");
+     pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
    else
      pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
      pgb_(step_forms_).copy_value("&entry-node", "!last_statement_entry_node");
