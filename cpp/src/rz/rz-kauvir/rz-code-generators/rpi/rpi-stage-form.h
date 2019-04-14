@@ -22,6 +22,7 @@
 #include "relae-graph/relae-caon-ptr.h"
 
 #include "rpi-stage-element.h"
+#include "rpi-assignment-info.h"
 
 #include "multistep-token.h"
 
@@ -75,7 +76,7 @@ class RPI_Stage_Form
  caon_ptr<RPI_Type_Declaration> type_declaration_;
  caon_ptr<RPI_Expression> expression_;
 
- MS_Token assignment_token_;
+ RPI_Assignment_Info assignment_info_;
 
  caon_ptr<RZ_Code_Statement> code_statement_;
  caon_ptr<RZ_Expression_Review> expression_review_;
@@ -102,7 +103,7 @@ public:
  ACCESSORS(int ,parent_lambda_position)
  ACCESSORS(int ,implicit_added_depth)
  ACCESSORS(QString ,raw_text)
- ACCESSORS__RGET(MS_Token ,assignment_token)
+ ACCESSORS__RGET(RPI_Assignment_Info ,assignment_info)
  ACCESSORS(int ,nesting_level)
  ACCESSORS(caon_ptr<RZ_Code_Statement> ,code_statement)
  ACCESSORS(caon_ptr<RZ_Expression_Review> ,expression_review)
@@ -161,7 +162,12 @@ public:
 
  bool implict_end_form_before_nested_written();
 
- void set_assignment_token(MS_Token mt);
+ void set_assignment_info(RPI_Assignment_Info& assignment_info);
+ void set_assignment_info(RPI_Assignment_Info&& assignment_info)
+ {
+  set_assignment_info(assignment_info);
+ }
+
  void add_assignment_initialization_element(RPI_Stage_Element_Kinds kind, QString text);
  void add_literal_element(RPI_Stage_Element_Kinds kind, QString text);
  void add_carrier_element(RPI_Stage_Element_Kinds kind, QString text);

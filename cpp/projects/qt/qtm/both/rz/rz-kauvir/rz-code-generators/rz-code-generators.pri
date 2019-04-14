@@ -45,6 +45,7 @@ HEADERS += \
   $$SRC_DIR/rpi/rpi-stage-form.h \
   $$SRC_DIR/rpi/rpi-stage-form-annotation.h \
   $$SRC_DIR/rpi/rpi-stage-element.h \
+  $$SRC_DIR/rpi/rpi-assignment-info.h \
   $$SRC_DIR/rpi/rpi-expression.h \
   $$SRC_DIR/rpi/rpi-type-declaration.h \
 
@@ -62,6 +63,7 @@ SOURCES += \
   $$SRC_DIR/rpi/rpi-stage-form.cpp \
   $$SRC_DIR/rpi/rpi-stage-form-annotation.cpp \
   $$SRC_DIR/rpi/rpi-stage-element.cpp \
+  $$SRC_DIR/rpi/rpi-assignment-info.cpp \
   $$SRC_DIR/rpi/rpi-expression.cpp \
   $$SRC_DIR/rpi/rpi-type-declaration.cpp \
 

@@ -398,11 +398,17 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        }
        else if(next_tok->flags.has_assignment_initialization_expression)
        {
-        current_form_->set_assignment_token(MS_Token::check_as(mstk, MS_Token_Kinds::Scoped_Symbol, lt));
+        current_form_->set_assignment_info(RPI_Assignment_Info(
+          RPI_Assignment_Value_Kinds::Scoped_Symbol,
+          RPI_Assignment_Initialization_Kinds::Init, lt));
+//?        current_form_->set_assignment_token(MS_Token::check_as(mstk, MS_Token_Kinds::Scoped_Symbol, lt));
        }
        else if(next_tok->flags.has_assignment_initialization_token)
        {
-        current_form_->set_assignment_token({MS_Token_Kinds::Scoped_Symbol_Literal_Init, lt});
+        current_form_->set_assignment_info(RPI_Assignment_Info(
+          RPI_Assignment_Value_Kinds::Literal,
+          RPI_Assignment_Initialization_Kinds::Init, lt));
+//?        current_form_->set_assignment_token({MS_Token_Kinds::Scoped_Symbol_Literal_Init, lt});
        }
        else if(next_tok->flags.is_assignment_initialization_entry)
        {

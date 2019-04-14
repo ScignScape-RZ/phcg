@@ -38,6 +38,11 @@ void RPI_Expression::write_as_statement(QTextStream& qts)
  }
  else
  {
+  RPI_Assignment_Info& rai = form_.assignment_info();
+  if(rai.vkind() == RPI_Assignment_Value_Kinds::Literal)
+    qts << "\n ;;- tb_\n(kb::write-assignment-initialization-via-token ";
+
+#ifdef HIDE
   MS_Token& mst = form_.assignment_token();
 
   MS_Token askt = MS_Token {MS_Token_Kinds::Assignment_Kind, assignment_token_};
@@ -78,8 +83,7 @@ void RPI_Expression::write_as_statement(QTextStream& qts)
 
   qts << "\n(kb::write-cmd-eval)";
   qts << "\n(kb::write-statement-clear)";
-
-
+#endif HIDE
  }
 }
 

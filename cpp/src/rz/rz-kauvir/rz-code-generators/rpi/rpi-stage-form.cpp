@@ -36,7 +36,7 @@ RPI_Stage_Form::RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Stage_Form> paren
      first_nested_block_(nullptr), implicit_added_depth_(0),
      nesting_level_(0),
      type_declaration_(nullptr), expression_(nullptr),
-     assignment_token_(MS_Token::Null()),
+     assignment_info_(),
      annotation_(nullptr),
      code_statement_(nullptr),
      expression_review_(nullptr), hdcode_(0)
@@ -48,14 +48,14 @@ RPI_Stage_Form::RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Block> block)
   :  pgb_(pgb), parent_(nullptr), plene_block_(block),
      first_nested_block_(nullptr), implicit_added_depth_(0),
      type_declaration_(nullptr), expression_(nullptr),
-     assignment_token_(MS_Token::Null())
+     assignment_info_()
 {
 
 }
 
 QString RPI_Stage_Form::get_assignment_target()
 {
- return assignment_token_.raw_text;
+ return assignment_info_.text();
 }
 
 void RPI_Stage_Form::write_as_statement(QTextStream& qts)
@@ -505,7 +505,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
     continue;
    }
 #endif // HIDE
-   if( (count == 0) && (assignment_token_.has_text() ) )
+   if( (count == 0) && (assignment_info_.has_text() ) )
    {
 #ifdef HIDE
    // //  again, would this only apply to tokens?
@@ -768,7 +768,7 @@ void RPI_Stage_Form::mark_child_implict_end_form_before_nested_written()
  annotation_->flags.child_implict_end_form_before_nested_written = true;
 }
 
-void RPI_Stage_Form::set_assignment_token(MS_Token mt)
+void RPI_Stage_Form::set_assignment_info(RPI_Assignment_Info& assignment_info)
 {
  // always?
  check_init_annotation();
@@ -776,7 +776,7 @@ void RPI_Stage_Form::set_assignment_token(MS_Token mt)
 
  CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
 
- assignment_token_ = mt;
+ assignment_info_ = assignment_info;
 }
 
 void RPI_Stage_Form::add_assignment_initialization_element(RPI_Stage_Element_Kinds kind, QString text)
