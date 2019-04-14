@@ -15,6 +15,7 @@
 #include "rpi-expression.h"
 
 #include "rpi-stage-form-annotation.h"
+#include "rpi-stage-element.h"
 
 #include "rz-code-elements/rz-code-statement.h"
 #include "rz-code-elements/rz-expression-review.h"
@@ -364,10 +365,37 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
 
  qts << icd;
 
- if(ANNOTATION_FLAG(is_block_entry_statment))
+// if(ANNOTATION_FLAG(is_block_entry_statment))
+// {
+ for(RPI_Stage_Element& rse : inner_elements_)
  {
+  QString rset = rse.text();
+  switch (rse.kind())
+  {
+  case RPI_Stage_Element_Kinds::Fuxe_Symbol:
+   if(text.startsWith('#'))
+     pgb_(step_forms_).make_token_node(rset.prepend('$'));
+   else
+     pgb_(step_forms_).make_token_node(rset.prepend('@'));
+   if(ANNOTATION_FLAG(is_block_entry_statment))
+     pgb_(step_forms_).add_block_entry_node("!block_pre_entry_node", "&entry-node");
+   else
+     pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
+     pgb(header_step_forms_).copy_value("&entry-node", "!last_statement_entry_node");
+     pgb(header_step_forms_).copy_value("&entry-node", "&channel-seq");
+   break;
+
+  case RPI_Stage_Element_Kinds::Token:
+
+
+  default:
+   break;
+  }
 
  }
+
+
+ //}
 
 
  if(!ANNOTATION_FLAG(has_instruction_token))
