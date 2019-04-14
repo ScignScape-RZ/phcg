@@ -23,14 +23,15 @@ int main(int argc, char **argv)
 {
  PHR_Graph phg;
  PHR_Graph_Build phgb(phg);
- PGB_IR_Run pgb(phgb);
+ //PGB_IR_Run pgb(phgb);
+
+// phgb.load_from_pgb_file(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb");
 
 //? pgb.run_from_file(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb");
-
- pgb.run_from_file("C:/scign/phcg/ar/scripts/rz/phaon" "/t1.rz.gen.pgb");
-
-
+ //pgb.run_from_file("C:/scign/phcg/ar/scripts/rz/phaon" "/t1.rz.gen.pgb");
+ phgb.load_from_pgb_file("C:/scign/phcg/ar/scripts/rz/phaon" "/t1.rz.gen.pgb");
 //? PHR_Graph_PHR_Output pgo(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb.phr");
+//
  PHR_Graph_PHR_Output pgo("C:/scign/phcg/ar/scripts/rz/phaon" "/t1.rz.gen.pgbx.phr");
 
  pgo.document()->set_graph(&phg);

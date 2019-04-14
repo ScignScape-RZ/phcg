@@ -106,17 +106,11 @@ void compile_rz(QString file_name)
  //QStringList qsl;
  pgb.generate_file(rpo.step_forms());
 
-
  PHR_Graph phg;
  PHR_Graph_Build phgb(phg);
-
  phgb.load_from_pgb_file(pgb.out_file());
-
-
  PHR_Graph_PHR_Output pgo(pgb.out_file() + ".phr");
-
  pgo.document()->set_graph(&phg);
-
  pgo.generate();
 
 // QString result_file = doc->local_path() + ".cl";

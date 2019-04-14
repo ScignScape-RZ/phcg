@@ -21,18 +21,20 @@ int main(int argc, char **argv)
 
  QStringList qsl;
 
- pgb(qsl).make_root_node("!current_node");
+ pgb(qsl).make_root_node("!last_block_pre_entry_node");
  pgb(qsl).make_token_node("@&prn", "&entry-node");
- pgb(qsl).add_block_entry_node("!current_node", "&entry-node");
+ pgb(qsl).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
  pgb(qsl).copy_value("&entry-node", "!last_statement_entry_node");
  pgb(qsl).add_channel_entry_token("&entry-node",
    "lambda", "$44", "&current-channel-node");
 
- pgb(qsl).make_token_node("@&prn", "&entry-node");
- pgb(qsl).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
+// pgb(qsl).make_token_node("@&prn", "&entry-node");
+// pgb(qsl).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
 
- pgb(qsl).add_channel_entry_token("&entry-node",
-   "lambda", "$55", "&entry-node");
+// pgb(qsl).add_channel_entry_token("&entry-node",
+//   "lambda", "$55", "&entry-node");
+
+
 
 // pgb.make_root_node("current_node", MG_Token_Subgroups::Known);
 // pgb.make_token_node("&prn", MG_Token_Subgroups::Symbol,
