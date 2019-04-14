@@ -43,6 +43,8 @@ class RZ_Expression_Review;
 
 class RPI_Stage_Form
 {
+ QStringList step_forms_;
+
  QString fn_;
 
  QVector<RPI_Stage_Element> inner_elements_;
@@ -103,6 +105,8 @@ public:
  ACCESSORS(caon_ptr<RZ_Code_Statement> ,code_statement)
  ACCESSORS(caon_ptr<RZ_Expression_Review> ,expression_review)
  ACCESSORS(QString ,s1_assignment_check)
+
+ ACCESSORS__RGET(QStringList ,step_forms)
 
  bool s1_assignment_preempts_s0();
 

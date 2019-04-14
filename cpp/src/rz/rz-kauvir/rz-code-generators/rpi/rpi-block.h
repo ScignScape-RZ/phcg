@@ -64,7 +64,7 @@ private:
 
  PGB_IR_Build& pgb_;
 
- QStringList header_step_forms_;
+ //?QStringList header_step_forms_;
 
  caon_ptr<RZ_Lisp_Graph_Lexical_Scope> lexical_scope_;
 
@@ -126,7 +126,7 @@ public:
 
  RZ_Lisp_Graph_Visitor& visitor();
 
- void write(QTextStream& qts);
+ void write(QStringList& qsl, QTextStream& qts);
 
  void scan_top_level(RZ_Graph_Visitor_Phaon& visitor_phaon);
 

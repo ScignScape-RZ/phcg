@@ -103,8 +103,8 @@ void compile_rz(QString file_name)
 
  rpo.build_phaon_graph(pgb);
 
- QStringList qsl;
- pgb.generate_file(qsl);
+ //QStringList qsl;
+ pgb.generate_file(rpo.step_forms());
 
 
  PHR_Graph phg;

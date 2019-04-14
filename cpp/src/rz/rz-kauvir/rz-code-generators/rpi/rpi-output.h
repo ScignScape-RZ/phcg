@@ -45,6 +45,7 @@ class RPI_Block;
 
 class RPI_Output
 {
+ QStringList step_forms_;
 
  RZ_Graph_Visitor_Phaon& visitor_phaon_;
  RZ_Lisp_Graph_Visitor& visitor();
@@ -56,6 +57,8 @@ class RPI_Output
 public:
 
  RPI_Output(RZ_Graph_Visitor_Phaon& visitor_phaon);
+
+ ACCESSORS__RGET(QStringList ,step_forms)
 
  void write(QTextStream& qts);
 

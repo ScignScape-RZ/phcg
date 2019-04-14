@@ -364,6 +364,12 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
 
  qts << icd;
 
+ if(ANNOTATION_FLAG(is_block_entry_statment))
+ {
+
+ }
+
+
  if(!ANNOTATION_FLAG(has_instruction_token))
  {
   if(ANNOTATION_FLAG(infer_write_s0_statement))
@@ -419,7 +425,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
   }
 
   qts << "\n(kb::write-enter-plene-block)\n";
-  plene_block_->write(qts);
+  plene_block_->write(step_forms_, qts);
   qts << "\n(kb::write-leave-plene-block)\n";
  }
  else

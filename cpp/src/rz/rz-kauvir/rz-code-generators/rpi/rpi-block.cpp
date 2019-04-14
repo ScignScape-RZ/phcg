@@ -741,7 +741,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
 
 
 
-void RPI_Block::write(QTextStream& qts)
+void RPI_Block::write(QStringList& qsl, QTextStream& qts)
 {
  if(parent_block_)
  {
@@ -763,9 +763,11 @@ void RPI_Block::write(QTextStream& qts)
 
  qts << entry_lisp_code_;
 
- for(caon_ptr<RPI_Stage_Form> rkf : forms_)
+ for(caon_ptr<RPI_Stage_Form> rsf : forms_)
  {
-  rkf->write_as_statement(qts);
+  rsf->write_as_statement(qts);
+
+  qsl.append(rsf->step_forms());
  }
 
  if(parent_block())
