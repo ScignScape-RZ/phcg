@@ -47,7 +47,7 @@ void PHR_Graph_PHR_Output::generate_from_node(QTextStream& qts,
   {
    bin = cion->phr_node()->block_info().raw_pointer();
    if(cion->phr_node(1))
-     sin = cion->phr_node()->statement_info().raw_pointer();
+     sin = cion->phr_node(1)->statement_info().raw_pointer();
   }
   statement_generator_.generate_from_node(qts, *ben, sin);
 //  generate_statement()

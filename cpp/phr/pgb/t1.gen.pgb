@@ -1,6 +1,7 @@
 (pgb::make_root_node :|-!>last_block_pre_entry_node|)
 (pgb::make_statement_info_node  :|>_@x| :|/--parse-literal| :|/--\=| :|-->si-node|)
+(pgb::add_block_entry_token :|<!>last_block_pre_entry_node| :|>_$44| :|<->si-node| :|-!>last_statement_entry_node|)
 (pgb::make_token_node :|>_@&prn| :|-->entry-node|)
-(pgb::add_block_entry_node :|<!>last_block_pre_entry_node| :|<->entry-node|)
+(pgb::add_statement_sequence_node :|<!>last_statement_entry_node| :|<->entry-node|)
 (pgb::copy_value :|<->entry-node| :|-!>last_statement_entry_node|)
 (pgb::add_channel_entry_token :|<->entry-node| :|<$>lambda| :|>_@x| :|-->current-channel-node|)

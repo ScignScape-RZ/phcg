@@ -34,11 +34,28 @@ Statement_Generator::Statement_Generator(Expression_Generator& expression_genera
  expression_generator_.set_statement_generator(this);
 }
 
+void Statement_Generator::generate_anchor_without_channel_group(QTextStream& qts,
+ const PHR_Graph_Node& node, PHR_Graph_Statement_Info& sin)
+{
+ if(caon_ptr<PHR_Graph_Token> tok = node.phr_graph_token())
+ {
+  qts << "\ngenerate_anchor_without_channel_group $ " <<
+    tok->raw_text() << ' ' << sin.channel_name() << " ;.\n";
+ }
+}
+
 void Statement_Generator::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node, PHR_Graph_Statement_Info* sin)
 {
- expression_generator_.generate_from_node(qts, node);
- generate_close(qts, sin);
+ if(sin && sin->channel_name() == "parse-literal")
+ {
+  generate_anchor_without_channel_group(qts, node, *sin);
+ }
+ else
+ {
+  expression_generator_.generate_from_node(qts, node);
+  generate_close(qts, sin);
+ }
 
  node.debug_connections();
 
@@ -52,12 +69,12 @@ void Statement_Generator::generate_from_node(QTextStream& qts,
  }
 }
 
-void Statement_Generator::generate_close(QTextStream& qts, PHR_Graph_Statement_Info* si)
+void Statement_Generator::generate_close(QTextStream& qts, PHR_Graph_Statement_Info* sin)
 {
  qts << "coalesce_channel_group ;.\n";
- if(si)
-   qts << "copy_anchor_channel_group $ " <<
-   si->anchor_name() << ' ' << si->channel_name() << " ;.\n";
+ if(sin)
+  qts << "copy_anchor_channel_group $ " <<
+  sin->anchor_name() << ' ' << sin->channel_name() << " ;.\n";
  qts <<
   "evaluate_channel_group ;.\n"
   "delete_temps ;.\n"

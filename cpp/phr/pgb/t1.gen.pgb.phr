@@ -1,6 +1,7 @@
 init_program_stack ;.
 enter_lexical_scope ;.
 reset_program_stack ;.
+generate_anchor_without_channel_group $ 44 parse-literal ;.
 
 
  .; generate_from_fn_node ;.

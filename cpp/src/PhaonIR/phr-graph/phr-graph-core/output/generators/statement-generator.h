@@ -39,10 +39,13 @@ public:
 
  Statement_Generator(Expression_Generator& expression_generator);
 
- void generate_close(QTextStream& qts, PHR_Graph_Statement_Info* si);
+ void generate_close(QTextStream& qts, PHR_Graph_Statement_Info* sin);
 
  void generate_from_node(QTextStream& qts,
   const PHR_Graph_Node& node, PHR_Graph_Statement_Info* si);
+
+ void generate_anchor_without_channel_group(QTextStream& qts,
+  const PHR_Graph_Node& node, PHR_Graph_Statement_Info& sin) ;
 
 
 };

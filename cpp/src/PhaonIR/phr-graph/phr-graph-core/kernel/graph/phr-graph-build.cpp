@@ -115,6 +115,27 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_statement_info_node(QString ancho
  caon_ptr<PHR_Graph_Statement_Info> sin = new
    PHR_Graph_Statement_Info(anchor_name, channel_name, anchor_kind);
  caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(sin);
+ result->set_label(QString("<statement-info:%1%2").arg(anchor_name).arg(anchor_kind));
+ return result;
+}
+
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_token(caon_ptr<PHR_Graph_Node> source,
+  MG_Token& mgt, caon_ptr<PHR_Graph_Node> statement_info_node)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,statement_info_node)
+
+ caon_ptr<PHR_Graph_Block_Info> bin = new PHR_Graph_Block_Info;
+ caon_ptr<PHR_Graph_Node> nbin = new PHR_Graph_Node(bin);
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(nbin);
+ cion->add_node(statement_info_node);
+
+ caon_ptr<PHR_Graph_Node> result = make_token_node(mgt);
+
+ CAON_PTR_DEBUG(PHR_Graph_Connection ,cion)
+
+ source << fr_/qy_.Block_Entry(cion) >> result;
+
  return result;
 }
 
