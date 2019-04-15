@@ -345,6 +345,16 @@ void PhaonIR::index_channel_group()
  indexed_channel_groups()[current_chief_unwind_scope_index()] = held_channel_group_;
 }
 
+void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
+{
+ PHR_Carrier_Stack* pcs = program_stack_->top();
+ PHR_Carrier* phc = pcs->top();
+ QString rvs = phc->raw_value_string();
+ PHR_Type* ty = phc->phr_type();
+ void* rv = phc->raw_value();
+ current_lexical_scope_->add_direct_value(rvs, ty, rvs.toInt());
+}
+
 void PhaonIR::anchor_channel_group(QString sym, QString ch)
 {
  anchored_channel_groups_.insert(held_channel_group_,
@@ -355,6 +365,12 @@ void PhaonIR::copy_anchor_channel_group(QString sym, QString ch)
 {
  anchored_channel_groups_.insert(held_channel_group_,
    {(*channel_system_)[ch], current_lexical_scope_, sym, &default_cofinalizer});
+}
+
+void PhaonIR::anchor_without_channel_group(QString str)
+{
+ QStringList qsl = str.simplified().split(' ');
+ anchor_without_channel_group(qsl.first(), qsl.last());
 }
 
 void PhaonIR::copy_anchor_channel_group(QString str)
@@ -476,6 +492,7 @@ void PhaonIR::read_line(QString inst)
   { "temp_anchor_channel_group", &temp_anchor_channel_group },
   { "temp_anchor_channel_group_by_need", &temp_anchor_channel_group_by_need },
   { "push_carrier_expression", &push_carrier_expression }
+
  }};
 
  auto it = static_map.find(inst);
@@ -544,6 +561,7 @@ void PhaonIR::read_line(QString inst, QString arg)
   { "push_carrier_stack", &push_carrier_stack },
   { "push_carrier_raw_value", &push_carrier_raw_value },
   { "copy_anchor_channel_group", &copy_anchor_channel_group },
+  { "anchor_without_channel_group", &anchor_without_channel_group },
   { "push_carrier_anon_fn", &push_carrier_anon_fn },
  }};
 

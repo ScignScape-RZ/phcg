@@ -228,6 +228,9 @@ public:
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
 
+ void anchor_without_channel_group(QString sym, QString ch);
+ void anchor_without_channel_group(QString str);
+
  void copy_anchor_channel_group(QString str);
 
  PHR_Type* init_value_from_symbol(QString sym,
