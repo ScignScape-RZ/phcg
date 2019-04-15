@@ -604,6 +604,11 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
    {
     if(ty)
     {
+     if(so == PHR_Runtime_Scope::Storage_Options::Direct)
+     {
+      mem = prv;
+      result = &mem;
+     }
      //...
     }
     else

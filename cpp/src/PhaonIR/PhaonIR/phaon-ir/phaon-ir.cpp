@@ -351,8 +351,8 @@ void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
  PHR_Carrier* phc = pcs->top();
  QString rvs = phc->raw_value_string();
  PHR_Type* ty = phc->phr_type();
- void* rv = phc->raw_value();
- current_lexical_scope_->add_direct_value(rvs, ty, rvs.toInt());
+ //void* rv = phc->raw_value();
+ current_lexical_scope_->add_direct_value(sym, ty, rvs.toInt());
 }
 
 void PhaonIR::anchor_channel_group(QString sym, QString ch)
