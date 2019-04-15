@@ -1,7 +1,11 @@
 init_program_stack ;.
 enter_lexical_scope ;.
 reset_program_stack ;.
-generate_anchor_without_channel_group $ 44 parse-literal ;.
+
+push_carrier_stack $ parse-literal ;.
+push_carrier_raw_value $ 64 ;.
+anchor_without_channel_group $ x parse-literal ;.
+reset_program_stack ;.
 
 
  .; generate_from_fn_node ;.

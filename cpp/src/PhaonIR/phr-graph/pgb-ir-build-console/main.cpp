@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 
  pgb(qsl).make_statement_info_node("@x", ":parse-literal", ":\\=", "&si-node");
  pgb(qsl).add_block_entry_token("!last_block_pre_entry_node",
-   "$44", "&si-node", "!last_statement_entry_node");
+   "$64", "&si-node", "!last_statement_entry_node");
 
  pgb(qsl).make_token_node("@&prn", "&entry-node");
  pgb(qsl).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");

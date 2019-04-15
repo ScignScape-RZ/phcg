@@ -39,9 +39,12 @@ void Statement_Generator::generate_anchor_without_channel_group(QTextStream& qts
 {
  if(caon_ptr<PHR_Graph_Token> tok = node.phr_graph_token())
  {
-  qts << "\ngenerate_anchor_without_channel_group $ " <<
-    tok->raw_text() << ' ' << sin.channel_name() << " ;.\n";
+  qts << "\npush_carrier_stack $ " << sin.channel_name() << " ;.\n";
+  expression_generator_.generate_carrier(qts, *tok);
+  qts << "anchor_without_channel_group $ " <<
+    sin.anchor_name() << ' ' << sin.channel_name() << " ;.\n";
  }
+ qts << "reset_program_stack ;.\n";
 }
 
 void Statement_Generator::generate_from_node(QTextStream& qts,
