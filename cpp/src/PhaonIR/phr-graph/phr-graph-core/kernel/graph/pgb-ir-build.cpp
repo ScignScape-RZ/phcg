@@ -85,7 +85,7 @@ void _PGB_IR_Build::make_statement_info_node(QString anchor_name,
   QString anchor_kind, MG_Token_Subgroups aksg,
   QString target, MG_Token_Subgroups tsg)
 {
- MG_Token amgt = mgtoken(anchor_name, MG_Token_Kind_Groups::Raw, asg);
+ MG_Token amgt = mgtoken(anchor_name, MG_Token_Kind_Groups::Arg, asg);
  MG_Token cmgt = mgtoken(channel_name, MG_Token_Kind_Groups::Generic, csg);
  MG_Token kmgt = mgtoken(anchor_kind, MG_Token_Kind_Groups::Generic, aksg);
  MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);

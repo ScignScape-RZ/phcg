@@ -68,6 +68,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(add_channel_entry_token)
   TEMP_MACRO(copy_value)
   TEMP_MACRO(add_statement_sequence_node)
+  TEMP_MACRO(make_statement_info_node)
 
  }};
 
@@ -177,6 +178,12 @@ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
  return {r1, r2};
 }
 
+QList<MG_Token> PGB_IR_Run::get_generic_tokens(const QMultiMap<MG_Token_Kinds,
+  QPair<MG_Token, int>>& mgtm)
+{
+ return mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Generic);
+}
+
 MG_Token PGB_IR_Run::get_arg_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
  QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
@@ -216,6 +223,19 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
    else
      graph_build_.make_token_node(tok);
   };
+  break;
+ case PGB_Methods::make_statement_info_node:
+  {
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   QList<MG_Token> mgts = get_generic_tokens(mgtm);
+   MG_Token tok = get_arg_token(mgtm);
+   if(tr)
+     *tr = graph_build_.make_statement_info_node(tok.raw_text,
+     mgts[0].raw_text, mgts[1].raw_text);
+   else
+     graph_build_.make_statement_info_node(tok.raw_text,
+     mgts[0].raw_text, mgts[1].raw_text);
+  }
   break;
  case PGB_Methods::add_block_entry_node:
   {

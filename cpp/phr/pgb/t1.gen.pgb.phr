@@ -9,7 +9,7 @@ hold_type_by_name $ fbase ;.
 push_carrier_symbol $ &prn ;.
  .; args ;.
 push_carrier_stack $ lambda ;.
-push_carrier_raw_value $ 4 ;.
+push_carrier_symbol $ x ;.
 coalesce_channel_group ;.
 evaluate_channel_group ;.
 delete_temps ;.
