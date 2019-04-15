@@ -22,6 +22,6 @@ RPI_Type_Declaration::RPI_Type_Declaration(RPI_Stage_Form& form)
 void RPI_Type_Declaration::write(QTextStream& qts)
 {
  qts << "\n\n;;type decl \n";
- form_.write_checked_unmediated(qts);
+ form_.write_checked_unmediated(qts, nullptr);
 }
 

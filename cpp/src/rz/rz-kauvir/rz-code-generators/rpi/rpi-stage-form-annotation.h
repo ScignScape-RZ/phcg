@@ -59,6 +59,7 @@ public:
   bool first_inner_element_is_s1_assignment_preempts_s0:1;
 
   bool is_block_entry_statment:1;
+  bool write_type_declaration:1;
  _flags
 
 

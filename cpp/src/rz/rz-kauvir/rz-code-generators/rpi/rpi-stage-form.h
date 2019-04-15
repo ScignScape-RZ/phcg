@@ -108,16 +108,19 @@ public:
  ACCESSORS(caon_ptr<RZ_Code_Statement> ,code_statement)
  ACCESSORS(caon_ptr<RZ_Expression_Review> ,expression_review)
  ACCESSORS(QString ,s1_assignment_check)
+ ACCESSORS(caon_ptr<RPI_Type_Declaration> ,type_declaration)
 
  ACCESSORS__RGET(QStringList ,step_forms)
 
  bool s1_assignment_preempts_s0();
 
- void write(QTextStream& qts);
- void write_unmediated(QTextStream& qts);
- void write_as_statement(QTextStream& qts);
+ caon_ptr<RPI_Type_Declaration> type_declaration_on_block_entry();
 
- void write_assignment_initialization_via_token(QTextStream& qts);
+ void write(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
+ void write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
+ void write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
+
+ void write_assignment_initialization_via_token(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
 
  void add_expression_wrapper(caon_ptr<RPI_Stage_Form> form, QString text, int hdcode);
 
@@ -157,7 +160,7 @@ public:
 
  //void add_prin1_quoted_form(QString text, RPI_Stage_Element_Kinds kind, QString text);
 
- void write_checked_unmediated(QTextStream& qts);
+ void write_checked_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
 
  void mark_parent_implict_end_form_before_nested_written();
  void mark_child_implict_end_form_before_nested_written();

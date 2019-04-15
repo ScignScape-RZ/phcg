@@ -58,7 +58,16 @@ QString RPI_Stage_Form::get_assignment_target()
  return assignment_info_.text();
 }
 
-void RPI_Stage_Form::write_assignment_initialization_via_token(QTextStream& qts)
+
+caon_ptr<RPI_Type_Declaration> RPI_Stage_Form::type_declaration_on_block_entry()
+{
+ if(ANNOTATION_FLAG(is_block_entry_statment))
+   return type_declaration_;
+ return nullptr;
+}
+
+void RPI_Stage_Form::write_assignment_initialization_via_token(
+  QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
  pgb_(step_forms_).make_statement_info_node(assignment_info_.text().prepend('@'),
    ":parse-literal", assignment_info_.encode_ikind().prepend(':'),
@@ -66,13 +75,19 @@ void RPI_Stage_Form::write_assignment_initialization_via_token(QTextStream& qts)
 
  QString ty;
 
+ caon_ptr<RPI_Type_Declaration> prior_type_declaration_ben = nullptr;
+ if(prior)
+ {
+  prior_type_declaration_ben = prior->type_declaration_on_block_entry();
+ }
+
  for(RPI_Stage_Element& rse: inner_elements_)
  {
   if(rse.kind() == RPI_Stage_Element_Kinds::Kernel_Type_Symbol)
     ty = rse.text();
   else if(rse.kind() == RPI_Stage_Element_Kinds::Literal)
   {
-   if(ANNOTATION_FLAG(is_block_entry_statment))
+   if(prior_type_declaration_ben)
      pgb_(step_forms_).add_block_entry_token("!last_block_pre_entry_node",
      rse.text().prepend('$'), "&si-node", "!last_statement_entry_node");
    else
@@ -83,7 +98,7 @@ void RPI_Stage_Form::write_assignment_initialization_via_token(QTextStream& qts)
  }
 }
 
-void RPI_Stage_Form::write_as_statement(QTextStream& qts)
+void RPI_Stage_Form::write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
  if(code_statement_)
  {
@@ -109,11 +124,11 @@ void RPI_Stage_Form::write_as_statement(QTextStream& qts)
  }
  else if(expression_)
  {
-  expression_->write_as_statement(qts);
+  expression_->write_as_statement(qts, prior);
  }
  else
  {
-  write(qts);
+  write(qts, prior);
  }
 
 }
@@ -161,7 +176,7 @@ void RPI_Stage_Form::init_formula_expression(QString tok)
  expression_->set_assignment_token(tok);
 }
 
-void RPI_Stage_Form::write(QTextStream& qts)
+void RPI_Stage_Form::write(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
  check_init_annotation_flags();
  CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
@@ -175,12 +190,12 @@ void RPI_Stage_Form::write(QTextStream& qts)
   if(ANNOTATION_FLAG(is_deferred))
   {
    qts << "kb::hold-deferred " << hdcode_ << " '(progn (;; annotation_flag_ deferred ...\n";
-   expression_->write(qts);
+   expression_->write(qts, prior);
    qts << "\n)) ;; ... annotation_flag_ deferred\n";
   }
   else
   {
-   expression_->write(qts);
+   expression_->write(qts, prior);
   }
  }
  else if(!raw_text_.isEmpty())
@@ -189,7 +204,7 @@ void RPI_Stage_Form::write(QTextStream& qts)
  }
  else
  {
-  write_unmediated(qts);
+  write_unmediated(qts, prior);
  }
 }
 
@@ -364,10 +379,10 @@ void RPI_Stage_Form::check_write_first_nested_is_assignment_leave(QTextStream& q
 }
 
 
-void RPI_Stage_Form::write_checked_unmediated(QTextStream& qts)
+void RPI_Stage_Form::write_checked_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
  qts << "( ; write_unmediated_ \n";
- write_unmediated(qts);
+ write_unmediated(qts, prior);
  if(ANNOTATION_FLAG(has_prin1_quoted_form))
  {
   if(annotation_->flags.is_fn_no_block)
@@ -385,12 +400,21 @@ void RPI_Stage_Form::write_checked_unmediated(QTextStream& qts)
  }
 }
 
-void RPI_Stage_Form::write_unmediated(QTextStream& qts)
+void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
  check_init_annotation_flags();
  QString icd = QString(implicit_added_depth_, '(');
 
  qts << icd;
+
+ if(type_declaration_)
+ {
+  if(!ANNOTATION_FLAG(write_type_declaration))
+  {
+   qts << "skipping type declaration ...";
+   return;
+  }
+ }
 
 // if(ANNOTATION_FLAG(is_block_entry_statment))
 // {
@@ -421,6 +445,18 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
      pgb_(step_forms_).add_channel_token("&channel-seq",
        rset.prepend('$'), "&channel-seq");
    ++channel_count;
+   break;
+
+  case RPI_Stage_Element_Kinds::Raw_Symbol:
+   if(channel_count == 0)
+     pgb_(step_forms_).add_channel_entry_token("&channel-seq", "lambda",
+       rset.prepend('@'), "&channel-seq");
+   else
+     pgb_(step_forms_).add_channel_token("&channel-seq",
+       rset.prepend('@'), "&channel-seq");
+   ++channel_count;
+   break;
+
   default:
    break;
   }
@@ -554,7 +590,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
      element.form()->mark_as_assignment_expression();
     }
 
-    element.form()->write(qts);
+    element.form()->write(qts, prior);
    }
    else if(note.isEmpty())
    {
@@ -569,7 +605,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
    else
    {
     //?qts << ' ' << element.second.encode() << ' ';
-    element.form()->write(qts);
+    element.form()->write(qts, prior);
     qts << ' ';
    }
   }
@@ -715,7 +751,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts)
   }
   nf->set_nesting_level(nesting_level_ + 1);
   qts << ' ';
-  nf->write(qts);
+  nf->write(qts, prior);
   qts << ' ';
   if(ANNOTATION_FLAG(surround_nested_secondary))
   {

@@ -58,8 +58,8 @@ public:
  ACCESSORS(QString ,assignment_token)
 
 
- void write(QTextStream& qts);
- void write_as_statement(QTextStream& qts);
+ void write(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
+ void write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
 
  caon_ptr<RPI_Stage_Form> ptr_to_form();
 

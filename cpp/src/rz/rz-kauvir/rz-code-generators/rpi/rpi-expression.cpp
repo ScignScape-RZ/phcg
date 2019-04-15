@@ -25,13 +25,13 @@ caon_ptr<RPI_Stage_Form> RPI_Expression::ptr_to_form()
 }
 
 
-void RPI_Expression::write_as_statement(QTextStream& qts)
+void RPI_Expression::write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
  if(assignment_token_.isEmpty())
  {
   form_.write_statement_entry(qts);
 
-  write(qts);
+  write(qts, prior);
 
   form_.write_statement_leave(qts);
 
@@ -41,7 +41,7 @@ void RPI_Expression::write_as_statement(QTextStream& qts)
   RPI_Assignment_Info& rai = form_.assignment_info();
   if(rai.vkind() == RPI_Assignment_Value_Kinds::Literal)
   {
-   form_.write_assignment_initialization_via_token(qts);
+   form_.write_assignment_initialization_via_token(qts, prior);
    //pgb
    //qts << "\n ;;- tb_\n(kb::write-assignment-initialization-via-token ";
   }
@@ -113,7 +113,7 @@ void RPI_Expression::mark_form_as_assignment_expression()
  form_.mark_as_assignment_expression();
 }
 
-void RPI_Expression::write(QTextStream& qts)
+void RPI_Expression::write(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
- form_.write_unmediated(qts);
+ form_.write_unmediated(qts, prior);
 }

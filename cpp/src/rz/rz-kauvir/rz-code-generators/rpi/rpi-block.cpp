@@ -779,11 +779,13 @@ void RPI_Block::write(QStringList& qsl, QTextStream& qts)
 
  qts << entry_lisp_code_;
 
+ caon_ptr<RPI_Stage_Form> prior = nullptr;
  for(caon_ptr<RPI_Stage_Form> rsf : forms_)
  {
-  rsf->write_as_statement(qts);
+  rsf->write_as_statement(qts, prior);
 
   qsl.append(rsf->step_forms());
+  prior = rsf;
  }
 
  if(parent_block())
