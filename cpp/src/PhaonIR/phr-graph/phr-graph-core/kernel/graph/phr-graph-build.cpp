@@ -28,6 +28,8 @@
 #include "phr-graph-core/kernel/frame/phr-graph-frame.h"
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
 
+#include "phr-graph-core/token/phr-graph-statement-info.h"
+
 #include "pgb-ir-run.h"
 
 #include "multigraph-token.h"

@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 // make_statement_info_node(QString anchor_name,
 //    QString channel_name, QString anchor_kind)
 
- pgb(qsl).make_statement_info_node("@x", "parse-literal", "\\=", "&si-node");
+ pgb(qsl).make_statement_info_node("@x", ":parse-literal", ":\\=", "&si-node");
 
  pgb(qsl).make_token_node("@&prn", "&entry-node");
  pgb(qsl).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");

@@ -43,6 +43,9 @@ MG_Token _PGB_IR_Build::mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Su
     return {MG_Token_Kinds::Arg_Raw_Symbol, rt};
   return {MG_Token_Kinds::Generic, rt};
 
+ case MG_Token_Kind_Groups::Generic:
+  return {MG_Token_Kinds::Generic, rt};
+
  default: return {MG_Token_Kinds::N_A, rt};
  }
 }
@@ -56,6 +59,7 @@ MG_Token_Subgroups _PGB_IR_Build::get_subgroup(QChar c)
  case '$': return MG_Token_Subgroups::Value;
  case '!': return MG_Token_Subgroups::Known;
  case '&': return MG_Token_Subgroups::Ledger;
+ case ':': return MG_Token_Subgroups::Generic;
  default: return MG_Token_Subgroups::N_A;
  }
 }
@@ -81,15 +85,15 @@ void _PGB_IR_Build::make_statement_info_node(QString anchor_name,
   QString anchor_kind, MG_Token_Subgroups aksg,
   QString target, MG_Token_Subgroups tsg)
 {
- MG_Token amgt = mgtoken(anchor_name, MG_Token_Kind_Groups::Arg_Target, asg);
- MG_Token cmgt = mgtoken(channel_name, MG_Token_Kind_Groups::Arg_Target, csg);
- MG_Token kmgt = mgtoken(anchor_kind, MG_Token_Kind_Groups::Arg_Target, aksg);
- MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Arg_Target, tsg);
+ MG_Token amgt = mgtoken(anchor_name, MG_Token_Kind_Groups::Raw, asg);
+ MG_Token cmgt = mgtoken(channel_name, MG_Token_Kind_Groups::Generic, csg);
+ MG_Token kmgt = mgtoken(anchor_kind, MG_Token_Kind_Groups::Generic, aksg);
+ MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
 
 
  //?qts_ << const_cast<const MG_Token&>(it.next()).encode();
  qts_ << "(pgb::make_statement_info_node  ";
- end_line({asg, csg, aksg, tsg});
+ end_line({amgt, cmgt, kmgt, tmgt});
 }
 
 void _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,

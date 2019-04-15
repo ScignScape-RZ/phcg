@@ -18,7 +18,7 @@ enum class MG_Token_Kind_Groups
 
 enum class MG_Token_Subgroups
 {
- N_A, Symbol, Value, Ledger, Known
+ N_A, Symbol, Value, Ledger, Known, Generic
 };
 
 enum class MG_Token_Kinds
@@ -72,6 +72,9 @@ inline MG_Token_Subgroups MG_Token_Kind_to_subgroup(MG_Token_Kinds k)
  case MG_Token_Kinds::Arg_Known_Target:
  case MG_Token_Kinds::Known_Target:
   return MG_Token_Subgroups::Known;
+
+ case MG_Token_Kinds::Generic:
+  return MG_Token_Subgroups::Generic;
 
  default: return MG_Token_Subgroups::N_A;
  }
@@ -210,7 +213,7 @@ struct MG_Token
 
   TEMP_MACRO(Raw_Symbol, "__@")
   TEMP_MACRO(Raw_Value, "__$")
-  TEMP_MACRO(Generic, "|||")
+  TEMP_MACRO(Generic, "/--")
 
   TEMP_MACRO(Arg_Raw_Symbol, ">_@")
   TEMP_MACRO(Arg_Raw_Value, ">_$")
@@ -246,7 +249,7 @@ struct MG_Token
 
   TEMP_MACRO(Raw_Symbol, "__@")
   TEMP_MACRO(Raw_Value, "__$")
-  TEMP_MACRO(Generic, "|||")
+  TEMP_MACRO(Generic, "/--")
 
   TEMP_MACRO(Arg_Raw_Symbol, ">_@")
   TEMP_MACRO(Arg_Raw_Value, ">_$")
