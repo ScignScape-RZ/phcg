@@ -119,6 +119,23 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_statement_info_node(QString ancho
  return result;
 }
 
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_statement_sequence_token(caon_ptr<PHR_Graph_Node> source,
+  MG_Token& mgt, caon_ptr<PHR_Graph_Node> statement_info_node)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,statement_info_node)
+
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(statement_info_node);
+
+ caon_ptr<PHR_Graph_Node> result = make_token_node(mgt);
+
+ CAON_PTR_DEBUG(PHR_Graph_Connection ,cion)
+
+ source << fr_/qy_.Statement_Sequence(cion) >> result;
+
+ return result;
+}
+
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_token(caon_ptr<PHR_Graph_Node> source,
   MG_Token& mgt, caon_ptr<PHR_Graph_Node> statement_info_node)
 {

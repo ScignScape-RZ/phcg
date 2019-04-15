@@ -147,6 +147,18 @@ void _PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
  qts_ << "(pgb::add_channel_token "; end_line({mgt1, mgt2, mgt3});
 }
 
+void _PGB_IR_Build::add_statement_sequence_token(QString src, MG_Token_Subgroups srcsg,
+  QString tok, MG_Token_Subgroups toksg,
+  QString sin, MG_Token_Subgroups sinsg,
+  QString target, MG_Token_Subgroups tsg)
+{
+ MG_Token mgt1 = mgtoken(src, MG_Token_Kind_Groups::Arg_Target, srcsg);
+ MG_Token mgt2 = mgtoken(tok, MG_Token_Kind_Groups::Arg, toksg);
+ MG_Token mgt3 = mgtoken(sin, MG_Token_Kind_Groups::Arg_Target, sinsg);
+ MG_Token mgt4 = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
+
+ qts_ << "(pgb::add_statement_sequence_token "; end_line({mgt1, mgt2, mgt3, mgt4});
+}
 
 void _PGB_IR_Build::add_block_entry_token(QString src, MG_Token_Subgroups srcsg,
   QString tok, MG_Token_Subgroups toksg, QString sin, MG_Token_Subgroups sinsg,

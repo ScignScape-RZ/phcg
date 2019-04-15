@@ -58,6 +58,31 @@ QString RPI_Stage_Form::get_assignment_target()
  return assignment_info_.text();
 }
 
+void RPI_Stage_Form::write_assignment_initialization_via_token(QTextStream& qts)
+{
+ pgb_(step_forms_).make_statement_info_node(assignment_info_.text().prepend('@'),
+   ":parse-literal", assignment_info_.encode_ikind().prepend(':'),
+   "&si-node");
+
+ QString ty;
+
+ for(RPI_Stage_Element& rse: inner_elements_)
+ {
+  if(rse.kind() == RPI_Stage_Element_Kinds::Kernel_Type_Symbol)
+    ty = rse.text();
+  else if(rse.kind() == RPI_Stage_Element_Kinds::Literal)
+  {
+   if(ANNOTATION_FLAG(is_block_entry_statment))
+     pgb_(step_forms_).add_block_entry_token("!last_block_pre_entry_node",
+     rse.text().prepend('$'), "&si-node", "!last_statement_entry_node");
+   else
+     pgb_(step_forms_).add_statement_sequence_token("!last_statement_entry_node",
+     rse.text().prepend('$'), "&si-node", "!last_statement_entry_node");
+   break;
+  }
+ }
+}
+
 void RPI_Stage_Form::write_as_statement(QTextStream& qts)
 {
  if(code_statement_)

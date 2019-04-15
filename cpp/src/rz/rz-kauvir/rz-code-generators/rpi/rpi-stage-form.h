@@ -117,6 +117,8 @@ public:
  void write_unmediated(QTextStream& qts);
  void write_as_statement(QTextStream& qts);
 
+ void write_assignment_initialization_via_token(QTextStream& qts);
+
  void add_expression_wrapper(caon_ptr<RPI_Stage_Form> form, QString text, int hdcode);
 
  QString get_s1_assignment_check();

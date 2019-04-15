@@ -40,7 +40,11 @@ void RPI_Expression::write_as_statement(QTextStream& qts)
  {
   RPI_Assignment_Info& rai = form_.assignment_info();
   if(rai.vkind() == RPI_Assignment_Value_Kinds::Literal)
-    qts << "\n ;;- tb_\n(kb::write-assignment-initialization-via-token ";
+  {
+   form_.write_assignment_initialization_via_token(qts);
+   //pgb
+   //qts << "\n ;;- tb_\n(kb::write-assignment-initialization-via-token ";
+  }
 
 #ifdef HIDE
   MS_Token& mst = form_.assignment_token();

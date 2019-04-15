@@ -67,6 +67,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(add_channel_token)
   TEMP_MACRO(add_channel_entry_token)
   TEMP_MACRO(add_block_entry_token)
+  TEMP_MACRO(add_statement_sequence_token)
   TEMP_MACRO(copy_value)
   TEMP_MACRO(add_statement_sequence_node)
   TEMP_MACRO(make_statement_info_node)
@@ -267,6 +268,17 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
      *tr = graph_build_.add_channel_token(n, mgt);
    else
      graph_build_.add_channel_token(n, mgt);
+  }
+  break;
+ case PGB_Methods::add_statement_sequence_token:
+  {
+   auto pr = get_args(mgtm);
+   MG_Token mgt = get_arg_token(mgtm);
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   if(tr)
+     *tr = graph_build_.add_statement_sequence_token(pr.first, mgt, pr.second);
+   else
+     graph_build_.add_statement_sequence_token(pr.first, mgt, pr.second);
   }
   break;
  case PGB_Methods::add_block_entry_token:

@@ -17,6 +17,20 @@ RPI_Assignment_Info::RPI_Assignment_Info(RPI_Assignment_Value_Kinds vkind,
 
 }
 
+
+QString RPI_Assignment_Info::encode_ikind()
+{
+ switch (ikind_)
+ {
+ case RPI_Assignment_Initialization_Kinds::Init:
+  return "\\=";
+ case RPI_Assignment_Initialization_Kinds::Reinit:
+  return "\\\\=";
+ default:
+  return "?";
+ }
+}
+
 RPI_Assignment_Info::RPI_Assignment_Info()
   :  vkind_(RPI_Assignment_Value_Kinds::N_A),
      ikind_(RPI_Assignment_Initialization_Kinds::N_A)

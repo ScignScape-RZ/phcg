@@ -72,6 +72,9 @@ public:
  caon_ptr<PHR_Graph_Node> add_block_entry_token(caon_ptr<PHR_Graph_Node> source,
    MG_Token& mgt, caon_ptr<PHR_Graph_Node> statement_info_node);
 
+ caon_ptr<PHR_Graph_Node> add_statement_sequence_token(caon_ptr<PHR_Graph_Node> source,
+   MG_Token& mgt, caon_ptr<PHR_Graph_Node> statement_info_node);
+
  void load_from_pgb_file(QString file);
 
 

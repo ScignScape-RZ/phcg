@@ -116,6 +116,19 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
+ void add_statement_sequence_token(QString src, MG_Token_Subgroups srcsg,
+   QString tok, MG_Token_Subgroups toksg,
+   QString sin, MG_Token_Subgroups sinsg,
+   QString target, MG_Token_Subgroups tsg);
+ void add_statement_sequence_token(QString src,
+   QString tok, QString sin, QString target)
+ {
+  add_statement_sequence_token(src.mid(1), get_subgroup(src[0]),
+    tok.mid(1), get_subgroup(tok[0]), sin.mid(1), get_subgroup(sin[0]),
+    target.mid(1), get_subgroup(target[0]));
+ }
+
+
  void copy_value(QString t1, MG_Token_Subgroups sg1,
    QString t2, MG_Token_Subgroups sg2);
  void copy_value(QString t1, QString t2)

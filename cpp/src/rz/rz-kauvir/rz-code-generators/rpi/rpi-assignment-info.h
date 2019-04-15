@@ -72,6 +72,9 @@ public:
  {
   return !text_.isEmpty();
  }
+
+ QString encode_ikind();
+
 };
 
 _RZNS(GVal)
