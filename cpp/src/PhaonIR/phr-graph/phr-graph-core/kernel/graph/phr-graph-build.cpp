@@ -157,7 +157,8 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_token(caon_ptr<PHR_Gra
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
-  caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target)
+  caon_ptr<PHR_Graph_Node> source,
+  caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> sin)
 {
  CAON_PTR_DEBUG(PHR_Graph_Node ,source)
  CAON_PTR_DEBUG(PHR_Graph_Node ,target)
@@ -167,6 +168,9 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
  caon_ptr<PHR_Graph_Node> nbin = new PHR_Graph_Node(bin);
  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(nbin);
 
+ if(sin)
+   cion->add_node(sin);
+
  source << fr_/qy_.Block_Entry(cion) >> target;
 
  return nbin;
@@ -174,10 +178,17 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
 
 
 void PHR_Graph_Build::add_statement_sequence_node(
-  caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target)
+  caon_ptr<PHR_Graph_Node> source,
+  caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> sin)
 {
  CAON_PTR_DEBUG(PHR_Graph_Node ,source)
  CAON_PTR_DEBUG(PHR_Graph_Node ,target)
 
- source << fr_/qy_.Statement_Sequence >> target;
+ if(sin)
+ {
+  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(sin);
+    source << fr_/qy_.Statement_Sequence(cion) >> target;
+ }
+ else
+   source << fr_/qy_.Statement_Sequence >> target;
 }

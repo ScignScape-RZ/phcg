@@ -475,6 +475,12 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
   }
  }
 
+ RPI_Assignment_Info* rai = nullptr;
+ if(parent_)
+ {
+  rai = &parent_->assignment_info();
+ }
+
 // if(ANNOTATION_FLAG(is_block_entry_statment))
 // {
  int channel_count = 0;
@@ -491,9 +497,33 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 
    if( ANNOTATION_FLAG(is_block_entry_statment)
       || ANNOTATION_FLAG(is_inferred_block_entry_statment) )
-     pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
+   {
+    if(rai)
+    {
+     pgb_(step_forms_).make_statement_info_node(
+       rai->text().prepend('@'), ":result",
+       assignment_info_.encode_ikind().prepend(':'), "&si-node");
+       //   ":parse-literal", assignment_info_.encode_ikind().prepend(':'));   rai->text()
+     pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node",
+      "&entry-node", "&si-node");
+    }
+    else
+      pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
+   }
    else
-     pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
+   {
+    if(rai)
+    {
+     pgb_(step_forms_).make_statement_info_node(
+       rai->text().prepend('@'), ":result",
+       assignment_info_.encode_ikind().prepend(':'), "&si-node");
+     pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node",
+       "&entry-node", "&si-node");
+    }
+    else
+      pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
+   }
+
      pgb_(step_forms_).copy_value("&entry-node", "!last_statement_entry_node");
      pgb_(step_forms_).copy_value("&entry-node", "&channel-seq");
    break;

@@ -62,7 +62,8 @@ class PGB_IR_Run
  caon_ptr<PHR_Graph_Node> get_arg(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
 
  QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
-   get_args(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
+   get_args(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm,
+   caon_ptr<PHR_Graph_Node>* extra = nullptr);
 
 
 public:

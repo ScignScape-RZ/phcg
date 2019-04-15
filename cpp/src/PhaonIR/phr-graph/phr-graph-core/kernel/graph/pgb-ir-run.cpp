@@ -144,7 +144,8 @@ caon_ptr<PHR_Graph_Node> PGB_IR_Run::get_arg(const QMultiMap<MG_Token_Kinds, QPa
 }
 
 QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
-  PGB_IR_Run::get_args(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
+  PGB_IR_Run::get_args(const QMultiMap<MG_Token_Kinds,
+  QPair<MG_Token, int>>& mgtm, caon_ptr<PHR_Graph_Node>* extra)
 {
  caon_ptr<PHR_Graph_Node> r1, r2;
  QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
@@ -159,6 +160,14 @@ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
  else
    r2 = unpoint(get_known_target(mgt1.raw_text));
 
+ if(extra && mgts.size() > 2)
+ {
+  MG_Token& mgt2 = mgts[2];
+  if(mgt2.kind == MG_Token_Kinds::Arg_Ledger_Target)
+    *extra = ledger_[mgt2.raw_text];
+  else
+    *extra = unpoint(get_known_target(mgt2.raw_text));
+ }
 
 // if(mgtm.values(MG_Token_Kinds::Arg_Known_Target).isEmpty())
 // {
@@ -241,14 +250,16 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
   break;
  case PGB_Methods::add_block_entry_node:
   {
-   auto pr = get_args(mgtm);
-   graph_build_.add_block_entry_node(pr.first, pr.second);
+   caon_ptr<PHR_Graph_Node> extra = nullptr;
+   auto pr = get_args(mgtm, &extra);
+   graph_build_.add_block_entry_node(pr.first, pr.second, extra);
   }
   break;
  case PGB_Methods::add_statement_sequence_node:
   {
-   auto pr = get_args(mgtm);
-   graph_build_.add_statement_sequence_node(pr.first, pr.second);
+   caon_ptr<PHR_Graph_Node> extra = nullptr;
+   auto pr = get_args(mgtm, &extra);
+   graph_build_.add_statement_sequence_node(pr.first, pr.second, extra);
   }
   break;
  case PGB_Methods::copy_value:

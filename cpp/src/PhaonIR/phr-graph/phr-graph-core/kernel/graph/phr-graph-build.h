@@ -52,10 +52,12 @@ public:
     QString channel_name, QString anchor_kind);
 
  caon_ptr<PHR_Graph_Node> add_block_entry_node(
-   caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target);
+   caon_ptr<PHR_Graph_Node> source,
+   caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> sin = nullptr);
 
  void add_statement_sequence_node(
-   caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target);
+   caon_ptr<PHR_Graph_Node> source,
+   caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> sin = nullptr);
 
  caon_ptr<PHR_Graph_Node> make_token_node(MG_Token& mgt);
  caon_ptr<PHR_Graph_Node> make_token_node(MG_Token&& mgt)

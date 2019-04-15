@@ -66,8 +66,24 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
+// void add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
+//   QString t2, MG_Token_Subgroups sg2);
+// void add_block_entry_node(QString t1, QString t2)
+// {
+//  add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
+//    t2.mid(1), get_subgroup(t2[0]));
+// }
+
  void add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
-   QString t2, MG_Token_Subgroups sg2);
+   QString t2, MG_Token_Subgroups sg2, QString anchor_name = QString(),
+   MG_Token_Subgroups ansg = MG_Token_Subgroups::N_A);
+ void add_block_entry_node(QString t1, QString t2,
+   QString anchor_name)
+ {
+  add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]),
+    anchor_name.mid(1), get_subgroup(anchor_name[0]));
+ }
  void add_block_entry_node(QString t1, QString t2)
  {
   add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
@@ -75,7 +91,14 @@ public:
  }
 
  void add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
-   QString t2, MG_Token_Subgroups sg2);
+   QString t2, MG_Token_Subgroups sg2, QString anchor_name = QString(),
+   MG_Token_Subgroups ansg = MG_Token_Subgroups::N_A);
+ void add_statement_sequence_node(QString t1, QString t2, QString anchor_name)
+ {
+  add_statement_sequence_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]),
+    anchor_name.mid(1), get_subgroup(anchor_name[0]));
+ }
  void add_statement_sequence_node(QString t1, QString t2)
  {
   add_statement_sequence_node(t1.mid(1), get_subgroup(t1[0]),

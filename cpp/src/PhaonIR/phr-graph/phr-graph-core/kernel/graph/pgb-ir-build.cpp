@@ -97,21 +97,37 @@ void _PGB_IR_Build::make_statement_info_node(QString anchor_name,
 }
 
 void _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
-  QString t2, MG_Token_Subgroups sg2)
+  QString t2, MG_Token_Subgroups sg2, QString anchor_name, MG_Token_Subgroups ansg)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
  MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
 
- qts_ << "(pgb::add_block_entry_node "; end_line({mgt1, mgt2});
+ if(anchor_name.isEmpty())
+ {
+  qts_ << "(pgb::add_block_entry_node "; end_line({mgt1, mgt2});
+ }
+ else
+ {
+  MG_Token mgt3 = mgtoken(anchor_name, MG_Token_Kind_Groups::Arg_Target, ansg);
+  qts_ << "(pgb::add_block_entry_node "; end_line({mgt1, mgt2, mgt3});
+ }
 }
 
 void _PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
-  QString t2, MG_Token_Subgroups sg2)
+  QString t2, MG_Token_Subgroups sg2, QString anchor_name, MG_Token_Subgroups ansg)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
  MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
 
- qts_ << "(pgb::add_statement_sequence_node "; end_line({mgt1, mgt2});
+ if(anchor_name.isEmpty())
+ {
+  qts_ << "(pgb::add_statement_sequence_node "; end_line({mgt1, mgt2});
+ }
+ else
+ {
+  MG_Token mgt3 = mgtoken(anchor_name, MG_Token_Kind_Groups::Arg_Target, ansg);
+  qts_ << "(pgb::add_statement_sequence_node "; end_line({mgt1, mgt2, mgt3});
+ }
 }
 
 void _PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
