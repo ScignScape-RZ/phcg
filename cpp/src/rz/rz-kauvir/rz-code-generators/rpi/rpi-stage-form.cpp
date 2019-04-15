@@ -66,6 +66,59 @@ caon_ptr<RPI_Type_Declaration> RPI_Stage_Form::type_declaration_on_block_entry()
  return nullptr;
 }
 
+
+void RPI_Stage_Form::write_assignment_initialization_via_expression(
+  QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
+{
+ RPI_Stage_Element& rse = inner_elements_.first();
+ caon_ptr<RPI_Stage_Form> f = rse.form();
+
+ caon_ptr<RPI_Type_Declaration> td = nullptr;
+ if(prior)
+ {
+  td = prior->type_declaration_on_block_entry();
+ }
+ if(td)
+   f->mark_as_block_entry_statment();
+ f->write_unmediated(qts, prior);
+ step_forms_.append(f->step_forms());
+
+//? pgb_(step_forms_).add_channel_anchor(assignment_info_.text())
+
+
+ //pgb_(step_forms_).add_channel_anchor()
+
+// pgb_(step_forms_).make_statement_info_node(assignment_info_.text().prepend('@'),
+//   ":parse-literal", assignment_info_.encode_ikind().prepend(':'),
+//   "&si-node");
+
+#ifdef HIDE
+ QString ty;
+
+ caon_ptr<RPI_Type_Declaration> prior_type_declaration_ben = nullptr;
+ if(prior)
+ {
+  prior_type_declaration_ben = prior->type_declaration_on_block_entry();
+ }
+
+ for(RPI_Stage_Element& rse: inner_elements_)
+ {
+  if(rse.kind() == RPI_Stage_Element_Kinds::Kernel_Type_Symbol)
+    ty = rse.text();
+  else if(rse.kind() == RPI_Stage_Element_Kinds::Literal)
+  {
+   if(prior_type_declaration_ben)
+     pgb_(step_forms_).add_block_entry_token("!last_block_pre_entry_node",
+     rse.text().prepend('$'), "&si-node", "!last_statement_entry_node");
+   else
+     pgb_(step_forms_).add_statement_sequence_token("!last_statement_entry_node",
+     rse.text().prepend('$'), "&si-node", "!last_statement_entry_node");
+   break;
+  }
+ }
+#endif // HIDE
+}
+
 void RPI_Stage_Form::write_assignment_initialization_via_token(
   QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
@@ -246,6 +299,12 @@ void RPI_Stage_Form::mark_as_parent_s1_assignment_preempts_s0()
 {
  check_init_annotation();
  annotation_->flags.parent_s1_assignment_preempts_s0 = true;
+}
+
+void RPI_Stage_Form::mark_as_inferred_block_entry_statment()
+{
+ check_init_annotation();
+ annotation_->flags.is_inferred_block_entry_statment = true;
 }
 
 void RPI_Stage_Form::mark_as_block_entry_statment()
@@ -429,7 +488,9 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      pgb_(step_forms_).make_token_node(rset.prepend('$'), "&entry-node");
    else
      pgb_(step_forms_).make_token_node(rset.prepend('@'), "&entry-node");
-   if(ANNOTATION_FLAG(is_block_entry_statment))
+
+   if( ANNOTATION_FLAG(is_block_entry_statment)
+      || ANNOTATION_FLAG(is_inferred_block_entry_statment) )
      pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
    else
      pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");

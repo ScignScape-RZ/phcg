@@ -42,7 +42,12 @@ void RPI_Expression::write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_For
   if(rai.vkind() == RPI_Assignment_Value_Kinds::Literal)
   {
    form_.write_assignment_initialization_via_token(qts, prior);
-   //pgb
+  }
+  else if(rai.vkind() == RPI_Assignment_Value_Kinds::Expression)
+  {
+   form_.write_assignment_initialization_via_expression(qts, prior);
+  // form_.inner_elements()
+  //pgb
    //qts << "\n ;;- tb_\n(kb::write-assignment-initialization-via-token ";
   }
 

@@ -121,6 +121,7 @@ public:
  void write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
 
  void write_assignment_initialization_via_token(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
+ void write_assignment_initialization_via_expression(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
 
  void add_expression_wrapper(caon_ptr<RPI_Stage_Form> form, QString text, int hdcode);
 
@@ -144,6 +145,7 @@ public:
  void mark_as_s1_assignment_preempts_s0();
  void mark_as_parent_s1_assignment_preempts_s0();
 
+ void mark_as_inferred_block_entry_statment();
 
  QString get_assignment_target();
 

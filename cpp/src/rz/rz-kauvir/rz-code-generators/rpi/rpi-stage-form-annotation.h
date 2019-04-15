@@ -60,6 +60,7 @@ public:
 
   bool is_block_entry_statment:1;
   bool write_type_declaration:1;
+  bool is_inferred_block_entry_statment:1;
  _flags
 
 
