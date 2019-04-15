@@ -45,6 +45,19 @@ public:
   make_root_node(target.mid(1), get_subgroup(target[0]));
  }
 
+ void make_statement_info_node(QString anchor_name,
+   MG_Token_Subgroups asg, QString channel_name,
+   MG_Token_Subgroups csg, QString anchor_kind,
+   MG_Token_Subgroups aksg, QString target, MG_Token_Subgroups tsg);
+ void make_statement_info_node(QString anchor_name,
+   QString channel_name, QString anchor_kind, QString target)
+ {
+  make_statement_info_node(anchor_name.mid(1), get_subgroup(anchor_name[0]),
+    channel_name.mid(1), get_subgroup(channel_name[0]),
+    anchor_kind.mid(1), get_subgroup(anchor_kind[0]),
+    target.mid(1), get_subgroup(target[0]));
+ }
+
  void make_token_node(QString arg, MG_Token_Subgroups asg,
    QString target, MG_Token_Subgroups tsg);
  void make_token_node(QString arg, QString target)

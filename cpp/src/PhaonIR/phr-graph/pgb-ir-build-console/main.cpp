@@ -22,6 +22,32 @@ int main(int argc, char **argv)
  QStringList qsl;
 
  pgb(qsl).make_root_node("!last_block_pre_entry_node");
+
+// make_statement_info_node(QString anchor_name,
+//    QString channel_name, QString anchor_kind)
+
+ pgb(qsl).make_statement_info_node("@x", "parse-literal", "\\=", "&si-node");
+
+ pgb(qsl).make_token_node("@&prn", "&entry-node");
+ pgb(qsl).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
+ pgb(qsl).copy_value("&entry-node", "!last_statement_entry_node");
+ pgb(qsl).add_channel_entry_token("&entry-node",
+   "lambda", "@x", "&current-channel-node");
+
+ pgb.generate_file(qsl);
+
+ qDebug() << "ok";
+ return 0;
+}
+
+
+int main1(int argc, char **argv)
+{
+ PGB_IR_Build pgb(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb");
+
+ QStringList qsl;
+
+ pgb(qsl).make_root_node("!last_block_pre_entry_node");
  pgb(qsl).make_token_node("@&prn", "&entry-node");
  pgb(qsl).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
  pgb(qsl).copy_value("&entry-node", "!last_statement_entry_node");

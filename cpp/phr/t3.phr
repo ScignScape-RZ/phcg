@@ -1,3 +1,7 @@
+
+
+(pgb::make_token_node :|>_@x| :|-->entry-node|)
+
 init_program_stack ;.
 enter_lexical_scope ;.
 reset_program_stack ;.

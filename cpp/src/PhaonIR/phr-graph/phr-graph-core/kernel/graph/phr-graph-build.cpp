@@ -107,6 +107,14 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_entry_token(caon_ptr<PHR_G
  return result;
 }
 
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_statement_info_node(QString anchor_name,
+   QString channel_name, QString anchor_kind)
+{
+ caon_ptr<PHR_Graph_Statement_Info> sin = new
+   PHR_Graph_Statement_Info(anchor_name, channel_name, anchor_kind);
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(sin);
+ return result;
+}
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
   caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target)

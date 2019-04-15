@@ -76,6 +76,21 @@ void _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
  qts_ << "(pgb::make_token_node "; end_line({amgt, tmgt});
 }
 
+void _PGB_IR_Build::make_statement_info_node(QString anchor_name,
+  MG_Token_Subgroups asg, QString channel_name, MG_Token_Subgroups csg,
+  QString anchor_kind, MG_Token_Subgroups aksg,
+  QString target, MG_Token_Subgroups tsg)
+{
+ MG_Token amgt = mgtoken(anchor_name, MG_Token_Kind_Groups::Arg_Target, asg);
+ MG_Token cmgt = mgtoken(channel_name, MG_Token_Kind_Groups::Arg_Target, csg);
+ MG_Token kmgt = mgtoken(anchor_kind, MG_Token_Kind_Groups::Arg_Target, aksg);
+ MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Arg_Target, tsg);
+
+
+ //?qts_ << const_cast<const MG_Token&>(it.next()).encode();
+ qts_ << "(pgb::make_statement_info_node  ";
+ end_line({asg, csg, aksg, tsg});
+}
 
 void _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2)

@@ -35,20 +35,20 @@ Statement_Generator::Statement_Generator(Expression_Generator& expression_genera
 }
 
 void Statement_Generator::generate_from_node(QTextStream& qts,
- const PHR_Graph_Node& node, PHR_Graph_Statement_Info* si)
+ const PHR_Graph_Node& node, PHR_Graph_Statement_Info* sin)
 {
  expression_generator_.generate_from_node(qts, node);
- generate_close(qts, si);
+ generate_close(qts, sin);
 
  node.debug_connections();
 
  caon_ptr<PHR_Graph_Connection> cion;
  if(caon_ptr<PHR_Graph_Node> sen = rq_.Statement_Sequence[cion](&node))
  {
-  PHR_Graph_Statement_Info* si1 = nullptr;
+  PHR_Graph_Statement_Info* sin1 = nullptr;
   if(cion)
-    si1 = cion->phr_node()->statement_info().raw_pointer();
-  generate_from_node(qts, *sen, si1);
+    sin1 = cion->phr_node()->statement_info().raw_pointer();
+  generate_from_node(qts, *sen, sin1);
  }
 }
 

@@ -48,6 +48,9 @@ public:
 
  caon_ptr<PHR_Graph_Node> make_root_node();
 
+ caon_ptr<PHR_Graph_Node> make_statement_info_node(QString anchor_name,
+    QString channel_name, QString anchor_kind);
+
  caon_ptr<PHR_Graph_Node> add_block_entry_node(
    caon_ptr<PHR_Graph_Node> source, caon_ptr<PHR_Graph_Node> target);
 
