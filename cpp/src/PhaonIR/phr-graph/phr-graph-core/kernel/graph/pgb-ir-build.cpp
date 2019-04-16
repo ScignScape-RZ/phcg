@@ -76,7 +76,7 @@ Purpose_Codes& _PGB_IR_Build::make_block_info_node(QString target, MG_Token_Subg
 {
  MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
 
- qts_ << "(pgb::make_token_node "; end_line({tmgt});
+ qts_ << "(pgb::make_block_info_node "; end_line({tmgt});
  return purpose_;
 }
 
@@ -137,7 +137,7 @@ Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_S
  else
  {
   MG_Token mgt3 = mgtoken(chn, MG_Token_Kind_Groups::Generic, chnsg);
-  MG_Token mgt4 = mgtoken(cfen, MG_Token_Kind_Groups::Arg_Target, chnsg);
+  MG_Token mgt4 = mgtoken(cfen, MG_Token_Kind_Groups::Arg_Target, cfensg);
   qts_ << "(pgb::add_channel_fuxe_entry_node ";
   end_line({mgt1, mgt2, mgt3, mgt4});
  }

@@ -474,6 +474,12 @@ void RPI_Stage_Form::write_checked_unmediated(QTextStream& qts, caon_ptr<RPI_Sta
  }
 }
 
+bool RPI_Stage_Form::is_non_block_expression()
+{
+ // for now ...
+ return !plene_block_;
+}
+
 RPI_Assignment_Info* RPI_Stage_Form::get_parent_assignmnt_info()
 {
  RPI_Assignment_Info* rai = nullptr;
@@ -519,7 +525,8 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      pgb_(step_forms_).make_token_node(rset.prepend('$'), "&entry-node")
      = Purpose_Codes::Make_Token_Node_Fuxe_Sumbol;
    else
-     pgb_(step_forms_).make_token_node(rset.prepend('@'), "&entry-node");
+     pgb_(step_forms_).make_token_node(rset.prepend('@'), "&entry-node")
+     = Purpose_Codes::Make_Token_Node_Fuxe_Sumbol;
 
    if( ANNOTATION_FLAG(is_block_entry_statment)
       || ANNOTATION_FLAG(is_inferred_block_entry_statment) )
@@ -536,7 +543,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     else
       pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
    }
-   else
+   else if(ANNOTATION_FLAG(is_inferred_block_entry_statment))
    {
     if(rai)
     {
@@ -579,14 +586,17 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     caon_ptr<RPI_Stage_Form> f = rse.form();
     CAON_PTR_DEBUG(RPI_Stage_Form ,f)
 
-    if(f->instruction("kb-write-anon-fdef"))
+    if(f->instruction("kb::write-anon-fdef"))
     {
      f->write_unmediated(qts, nullptr);
      if(!f->step_forms().isEmpty())
      {
       pgb_(step_forms_).make_block_info_node("&bin");
-      pgb_(step_forms_).add_channel_continue_block_node("!last_statement_entry_node",
+
+      pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+        .add_channel_continue_block_node("!last_statement_entry_node",
         "&entry-node", "&bin");
+
       step_forms_.append(f->step_forms());
      }
     }
@@ -595,15 +605,18 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      f->write_unmediated(qts, nullptr);
      if(!f->step_forms().isEmpty())
      {
-      QString ty = "u4"; //?
-      pgb_(step_forms_).make_channel_fuxe_entry_node(
-        ":?result", ty.prepend(':'),  "&cfx-node");
+      if(f->is_non_block_expression())
+      {
+       QString ty = "u4"; //?
+       pgb_(step_forms_).make_channel_fuxe_entry_node(
+         ":?result", ty.prepend(':'),  "&cfx-node");
 
-      pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
-        .add_channel_fuxe_entry_node(
+       pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+         .add_channel_fuxe_entry_node(
          "!last_statement_entry_node",
          "&entry-node", ":lambda", "&cfx-node");
-
+         //= Purpose_Codes::Add_Channel_Fuxe_Entry_Node;
+      }
       step_forms_.append(f->step_forms());
      }
     }
@@ -616,7 +629,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 
  }
 
- return;
+ //?return;
 
  //}
 

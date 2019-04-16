@@ -120,6 +120,8 @@ public:
 
  bool instruction(QString sym);
 
+ bool is_non_block_expression();
+
  caon_ptr<RPI_Type_Declaration> type_declaration_on_block_entry();
 
  void write(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);

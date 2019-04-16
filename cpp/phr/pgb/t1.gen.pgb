@@ -14,8 +14,9 @@
 
 (pgb::make_block_info_node :|-->bin|)
 (pgb::make_token_node :|>_@&prn| :|-->entry-node|)
-(pgb::copy_value :|<->entry-node| :|-->channel-seq|)
 (pgb::add_channel_continue_block_node :|<!>last_statement_entry_node| :|<->entry-node| :|<->bin|)
+(pgb::copy_value :|<->entry-node| :|-!>last_statement_entry_node|)
+(pgb::copy_value :|<->entry-node| :|-->channel-seq|)
 (pgb::add_channel_entry_token :|<->channel-seq| :|<$>lambda| :|>_$44| :|-->channel-seq|)
 
 
