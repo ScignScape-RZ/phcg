@@ -558,14 +558,20 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     pgb_(step_forms_).make_channel_fuxe_entry_node(
       ":?result", ty.prepend(':'),  "&cfx-node");
 
-    pgb_(step_forms_).add_channel_fuxe_entry_node(
-      "!last_statement_entry_node",
-      "!current_statement_entry_node", ":lambda", "&cfx-node");
+//    pgb_(step_forms_).add_channel_fuxe_entry_node(
+//      "!last_statement_entry_node",
+//      "!current_statement_entry_node", ":lambda", "&cfx-node");
 
 
       //add_channel_fuxe_entry_node
 
     f->write_unmediated(qts, nullptr);
+
+    pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+      .add_channel_fuxe_entry_node(
+       "!last_statement_entry_node",
+       "&entry_node", ":lambda", "&cfx-node");
+
     step_forms_.append(f->step_forms());
 
     CAON_DEBUG_NOOP

@@ -49,7 +49,7 @@ public:
  Purpose_Codes& make_root_node(QString target, MG_Token_Subgroups sg);
  Purpose_Codes& make_root_node(QString target)
  {
-  make_root_node(target.mid(1), get_subgroup(target[0]));
+  return make_root_node(target.mid(1), get_subgroup(target[0]));
  }
 
  Purpose_Codes& make_statement_info_node(QString anchor_name,
@@ -59,7 +59,7 @@ public:
  Purpose_Codes& make_statement_info_node(QString anchor_name,
    QString channel_name, QString anchor_kind, QString target)
  {
-  make_statement_info_node(anchor_name.mid(1), get_subgroup(anchor_name[0]),
+  return make_statement_info_node(anchor_name.mid(1), get_subgroup(anchor_name[0]),
     channel_name.mid(1), get_subgroup(channel_name[0]),
     anchor_kind.mid(1), get_subgroup(anchor_kind[0]),
     target.mid(1), get_subgroup(target[0]));
@@ -69,7 +69,7 @@ public:
    QString target, MG_Token_Subgroups tsg);
  Purpose_Codes& make_token_node(QString arg, QString target)
  {
-  make_token_node(arg.mid(1), get_subgroup(arg[0]),
+  return make_token_node(arg.mid(1), get_subgroup(arg[0]),
     target.mid(1), get_subgroup(target[0]));
  }
 
@@ -79,7 +79,7 @@ public:
    QString target, MG_Token_Subgroups tsg);
  Purpose_Codes& make_channel_fuxe_entry_node(QString arg1, QString arg2, QString target)
  {
-  make_channel_fuxe_entry_node(arg1.mid(1), get_subgroup(arg1[0]),
+  return make_channel_fuxe_entry_node(arg1.mid(1), get_subgroup(arg1[0]),
     arg2.mid(1), get_subgroup(arg2[0]),
     target.mid(1), get_subgroup(target[0]));
  }
@@ -102,14 +102,14 @@ public:
  Purpose_Codes& add_channel_fuxe_entry_node(QString t1, QString t2,
    QString chn, QString cfen)
  {
-  add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]),
     chn.mid(1), get_subgroup(chn[0]),
     cfen.mid(1), get_subgroup(cfen[0]));
  }
  Purpose_Codes& add_channel_fuxe_entry_node(QString t1, QString t2)
  {
-  add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
  }
 
@@ -119,13 +119,13 @@ public:
  Purpose_Codes& add_block_entry_node(QString t1, QString t2,
    QString anchor_name)
  {
-  add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]),
     anchor_name.mid(1), get_subgroup(anchor_name[0]));
  }
  Purpose_Codes& add_block_entry_node(QString t1, QString t2)
  {
-  add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
  }
 
@@ -134,13 +134,13 @@ public:
    MG_Token_Subgroups ansg = MG_Token_Subgroups::N_A);
  Purpose_Codes& add_statement_sequence_node(QString t1, QString t2, QString anchor_name)
  {
-  add_statement_sequence_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_statement_sequence_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]),
     anchor_name.mid(1), get_subgroup(anchor_name[0]));
  }
  Purpose_Codes& add_statement_sequence_node(QString t1, QString t2)
  {
-  add_statement_sequence_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_statement_sequence_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
  }
 
@@ -150,7 +150,7 @@ public:
  Purpose_Codes& add_channel_token(QString src,
    QString tok, QString target)
  {
-  add_channel_token(src.mid(1), get_subgroup(src[0]),
+  return add_channel_token(src.mid(1), get_subgroup(src[0]),
     tok.mid(1), get_subgroup(tok[0]),
     target.mid(1), get_subgroup(target[0]));
  }
@@ -161,7 +161,7 @@ public:
  Purpose_Codes& add_channel_entry_token(QString src, QString chn,
    QString tok, QString target)
  {
-  add_channel_entry_token(src.mid(1), get_subgroup(src[0]), chn,
+  return add_channel_entry_token(src.mid(1), get_subgroup(src[0]), chn,
     tok.mid(1), get_subgroup(tok[0]),
     target.mid(1), get_subgroup(target[0]));
  }
@@ -173,7 +173,7 @@ public:
  Purpose_Codes& add_block_entry_token(QString src,
    QString tok, QString sin, QString target)
  {
-  add_block_entry_token(src.mid(1), get_subgroup(src[0]),
+  return add_block_entry_token(src.mid(1), get_subgroup(src[0]),
     tok.mid(1), get_subgroup(tok[0]), sin.mid(1), get_subgroup(sin[0]),
     target.mid(1), get_subgroup(target[0]));
  }
@@ -185,7 +185,7 @@ public:
  Purpose_Codes& add_statement_sequence_token(QString src,
    QString tok, QString sin, QString target)
  {
-  add_statement_sequence_token(src.mid(1), get_subgroup(src[0]),
+  return add_statement_sequence_token(src.mid(1), get_subgroup(src[0]),
     tok.mid(1), get_subgroup(tok[0]), sin.mid(1), get_subgroup(sin[0]),
     target.mid(1), get_subgroup(target[0]));
  }
@@ -195,11 +195,11 @@ public:
    QString t2, MG_Token_Subgroups sg2);
  Purpose_Codes& copy_value(QString t1, QString t2)
  {
-  copy_value(t1.mid(1), get_subgroup(t1[0]),
+  return copy_value(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
  }
 
- Purpose_Codes& end_line(QList<MG_Token>&& mgts);
+ void end_line(QList<MG_Token>&& mgts);
 
  MG_Token_Subgroups get_subgroup(QChar c);
 
@@ -234,6 +234,9 @@ public:
  _PGB_IR_Build operator[](QList<Text_With_Purpose>& tps);
 
  _PGB_IR_Build insert_after_purpose(QList<Text_With_Purpose>& tps,
+    Purpose_Codes purpose);
+
+ _PGB_IR_Build insert_before_purpose(QList<Text_With_Purpose>& tps,
     Purpose_Codes purpose);
 
  void generate_file(QList<Text_With_Purpose>& tps);
