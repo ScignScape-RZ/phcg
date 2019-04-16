@@ -121,6 +121,7 @@ public:
  bool instruction(QString sym);
 
  bool is_non_block_expression();
+ bool is_deferred();
 
  caon_ptr<RPI_Type_Declaration> type_declaration_on_block_entry();
 

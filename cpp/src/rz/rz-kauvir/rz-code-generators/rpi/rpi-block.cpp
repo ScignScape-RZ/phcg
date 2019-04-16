@@ -468,6 +468,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
     CAON_PTR_DEBUG(RE_Call_Entry ,rce)
     if(rce->flags.is_deferred)
     {
+     new_form->mark_deferred(0);
      current_form_->add_expression_wrapper(new_form, "defer'", get_new_hd_code());
     }
     current_form_ = new_form;

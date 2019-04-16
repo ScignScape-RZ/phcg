@@ -1,5 +1,4 @@
 
-&test-if-then-else \(47 #< 77) do .() ->
- &prn 78;;
+&prn (78 #+ 1);
 
 

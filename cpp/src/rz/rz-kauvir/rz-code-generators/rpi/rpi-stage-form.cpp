@@ -608,8 +608,14 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
       if(f->is_non_block_expression())
       {
        QString ty = "u4"; //?
-       pgb_(step_forms_).make_channel_fuxe_entry_node(
+
+       if(f->is_deferred())
+         pgb_(step_forms_).make_channel_fuxe_entry_node(
          ":?result", ty.prepend(':'),  "&cfx-node");
+       else
+         pgb_(step_forms_).make_channel_fuxe_entry_node(
+         ":result", ty.prepend(':'),  "&cfx-node");
+
 
        pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
          .add_channel_fuxe_entry_node(
@@ -975,6 +981,10 @@ void RPI_Stage_Form::mark_unsurrounded_nested()
  annotation_->flags.unsurrounded_nested = true;
 }
 
+bool RPI_Stage_Form::is_deferred()
+{
+ return ANNOTATION_FLAG(is_deferred);
+}
 
 void RPI_Stage_Form::mark_deferred(int hdcode)
 {
