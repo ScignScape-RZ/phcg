@@ -1,5 +1,5 @@
 
-,x ::: u4;
-x \= 47 #+ 11;
-&prn x;
+&test-if-then-else \(47 #< 77) do .() ->
+ &prn 78;;
+
 

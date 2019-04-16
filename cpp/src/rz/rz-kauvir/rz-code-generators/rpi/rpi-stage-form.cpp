@@ -548,6 +548,17 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
    ++channel_count;
    break;
 
+  case RPI_Stage_Element_Kinds::Form:
+   {
+    caon_ptr<RPI_Stage_Form> f = rse.form();
+    CAON_PTR_DEBUG(RPI_Stage_Form ,f)
+
+    f->write_unmediated(qts, nullptr);
+    step_forms_.append(f->step_forms());
+
+    CAON_DEBUG_NOOP
+    //pgb_(step_forms_).
+   }
   default:
    break;
   }
