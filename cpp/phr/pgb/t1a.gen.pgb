@@ -6,16 +6,8 @@
 (pgb::make_channel_fuxe_entry_node :|/--?result| :|/--u4| :|-->cfx-node|)
 (pgb::make_token_node :|>_$#<| :|-->entry-node|)
 (pgb::add_channel_fuxe_entry_node :|<!>last_statement_entry_node| :|<->entry_node| :|/--lambda| :|<!>cfx-node|)
-
+(pgb::add_statement_sequence_node :|<!>last_statement_entry_node| :|<->entry-node|)
 (pgb::copy_value :|<->entry-node| :|-!>last_statement_entry_node|)
 (pgb::copy_value :|<->entry-node| :|-->channel-seq|)
 (pgb::add_channel_entry_token :|<->channel-seq| :|<$>lambda| :|>_$47| :|-->channel-seq|)
 (pgb::add_channel_token :|<->channel-seq| :|>_$77| :|-->channel-seq|)
-
-(pgb::make_block_info_node :|-->bin|)
-(pgb::make_token_node :|>_@&prn| :|-->entry-node|)
-(pgb::copy_value :|<->entry-node| :|-->channel-seq|)
-(pgb::add_channel_continue_block_node :|<!>last_statement_entry_node| :|<->entry-node| :|<->bin|)
-(pgb::add_channel_entry_token :|<->channel-seq| :|<$>lambda| :|>_$44| :|-->channel-seq|)
-
-

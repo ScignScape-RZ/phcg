@@ -92,6 +92,8 @@ class RPI_Stage_Form
  void mark_unsurrounded_nested();
  void add_string_token(QString tok);
 
+ RPI_Assignment_Info* get_parent_assignmnt_info();
+
 public:
 
  RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Stage_Form> parent = nullptr);

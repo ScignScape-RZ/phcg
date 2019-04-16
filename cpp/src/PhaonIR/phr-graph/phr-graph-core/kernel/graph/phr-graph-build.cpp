@@ -110,13 +110,22 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_entry_token(caon_ptr<PHR_G
  return result;
 }
 
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_block_info_node()
+{
+ caon_ptr<PHR_Graph_Block_Info> bin = new
+   PHR_Graph_Block_Info();
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(bin);
+ result->set_label(QString("<block-info>"));
+ return result;
+}
+
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_statement_info_node(QString anchor_name,
    QString channel_name, QString anchor_kind)
 {
  caon_ptr<PHR_Graph_Statement_Info> sin = new
    PHR_Graph_Statement_Info(anchor_name, channel_name, anchor_kind);
  caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(sin);
- result->set_label(QString("<statement-info:%1%2").arg(anchor_name).arg(anchor_kind));
+ result->set_label(QString("<statement-info:%1%2>").arg(anchor_name).arg(anchor_kind));
  return result;
 }
 
@@ -180,6 +189,18 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_entry_node(
  }
  else
    source << fr_/qy_.Channel_Fuxe_Entry >> target;
+}
+
+void PHR_Graph_Build::add_channel_continue_block_node(
+  caon_ptr<PHR_Graph_Node> source,
+  caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,target)
+
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(bin);
+
+ source << fr_/qy_.Channel_Continue_Block(cion) >> target;
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(

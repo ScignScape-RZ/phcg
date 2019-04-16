@@ -1,20 +1,6 @@
 init_program_stack ;.
 enter_lexical_scope ;.
 reset_program_stack ;.
-
-push_carrier_stack $ parse-literal ;.
-push_carrier_raw_value $ 64 ;.
-anchor_without_channel_group $ x parse-literal ;.
-reset_program_stack ;.
-
-
- .; generate_from_fn_node ;.
-push_carrier_stack $ fuxe ;.
-hold_type_by_name $ fbase ;.
-push_carrier_symbol $ &prn ;.
- .; args ;.
-push_carrier_stack $ lambda ;.
-push_carrier_symbol $ x ;.
 coalesce_channel_group ;.
 evaluate_channel_group ;.
 delete_temps ;.

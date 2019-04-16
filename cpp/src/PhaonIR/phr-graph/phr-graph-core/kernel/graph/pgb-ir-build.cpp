@@ -91,7 +91,7 @@ Purpose_Codes& _PGB_IR_Build::make_channel_fuxe_entry_node(QString arg1,
  MG_Token mgt2 = mgtoken(arg2, MG_Token_Kind_Groups::Generic, asg2);
  MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
 
- qts_ << "(pgb::make_channel_fuxe_node "; end_line({mgt1, mgt2, tmgt});
+ qts_ << "(pgb::make_channel_fuxe_entry_node "; end_line({mgt1, mgt2, tmgt});
  return purpose_;
 }
 
@@ -283,6 +283,7 @@ _PGB_IR_Build PGB_IR_Build::operator[](QList<Text_With_Purpose>& tps)
 _PGB_IR_Build PGB_IR_Build::insert_after_purpose(QList<Text_With_Purpose>& tps,
    Purpose_Codes purpose)
 {
+ static Text_With_Purpose dummy {QString(), Purpose_Codes::N_A};
  QList<Text_With_Purpose>::iterator it = std::find_if(tps.begin(),
    tps.end(), [purpose](const Text_With_Purpose& tp)
  {
@@ -290,7 +291,7 @@ _PGB_IR_Build PGB_IR_Build::insert_after_purpose(QList<Text_With_Purpose>& tps,
  });
  if(it == tps.end())
  {
-  return operator ()(tps);
+  return operator ()(dummy);
  }
  ++it;
  it = tps.insert(it, {QString(), Purpose_Codes::N_A});
@@ -301,6 +302,7 @@ _PGB_IR_Build PGB_IR_Build::insert_after_purpose(QList<Text_With_Purpose>& tps,
 _PGB_IR_Build PGB_IR_Build::insert_before_purpose(QList<Text_With_Purpose>& tps,
    Purpose_Codes purpose)
 {
+ static Text_With_Purpose dummy {QString(), Purpose_Codes::N_A};
  QList<Text_With_Purpose>::iterator it = std::find_if(tps.begin(),
    tps.end(), [purpose](const Text_With_Purpose& tp)
  {
@@ -308,7 +310,7 @@ _PGB_IR_Build PGB_IR_Build::insert_before_purpose(QList<Text_With_Purpose>& tps,
  });
  if(it == tps.end())
  {
-  return operator ()(tps);
+  return operator ()(dummy);
  }
  it = tps.insert(it, {QString(), Purpose_Codes::N_A});
  Text_With_Purpose& tp = *it;
