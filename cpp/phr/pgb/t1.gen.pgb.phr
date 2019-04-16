@@ -1,6 +1,63 @@
 init_program_stack ;.
 enter_lexical_scope ;.
 reset_program_stack ;.
+
+
+ .; generate_from_fn_node ;.
+push_carrier_stack $ fuxe ;.
+hold_type_by_name $ fbase ;.
+push_carrier_symbol $ &test-if-then-else ;.
+ .; args ;.
+push_carrier_stack $ lambda ;.
+
+push_unwind_scope $ 1 result ;.
+
+ .; unwind_scope: 1 ;.
+
+ .; generate_from_fn_node ;.
+push_carrier_stack $ fuxe ;.
+hold_type_by_name $ fbase ;.
+push_carrier_raw_value $ #< ;.
+ .; args ;.
+push_carrier_stack $ lambda ;.
+push_carrier_raw_value $ 47 ;.
+push_carrier_raw_value $ 77 ;.
+push_carrier_stack $ result ;.
+index_channel_group ;.
+coalesce_channel_group ;.
+ .; pop ;.
+pop_unwind_scope ;.
+temp_anchor_channel_group_by_need ;.
+ .; end fuxe entry ;.
+hold_type_by_name $ u4 ;.
+push_carrier_expression ;.
+
+
+ .; block ... ;.
+@fnp ;.
+
+
+ .; generate_from_fn_node ;.
+push_carrier_stack $ fuxe ;.
+hold_type_by_name $ fbase ;.
+push_carrier_symbol $ &prn ;.
+ .; args ;.
+push_carrier_stack $ lambda ;.
+push_carrier_raw_value $ 44 ;.
+coalesce_channel_group ;.
+evaluate_channel_group ;.
+delete_temps ;.
+delete_retired ;.
+clear_temps ;.
+reset_program_stack ;.
+ .; end of statement ;.
+@fne ;.
+
+ .; end block ... ;.
+
+hold_type_by_name $ pcv ;.
+push_carrier_anon_fn @ last_source_fn_name ;.
+
 coalesce_channel_group ;.
 evaluate_channel_group ;.
 delete_temps ;.

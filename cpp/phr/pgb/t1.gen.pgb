@@ -5,7 +5,7 @@
 (pgb::copy_value :|<->entry-node| :|-->channel-seq|)
 (pgb::make_channel_fuxe_entry_node :|/--?result| :|/--u4| :|-->cfx-node|)
 (pgb::make_token_node :|>_$#<| :|-->entry-node|)
-(pgb::add_channel_fuxe_entry_node :|<!>last_statement_entry_node| :|<->entry_node| :|/--lambda| :|<!>cfx-node|)
+(pgb::add_channel_fuxe_entry_node :|<!>last_statement_entry_node| :|<->entry-node| :|/--lambda| :|<->cfx-node|)
 
 (pgb::copy_value :|<->entry-node| :|-!>last_statement_entry_node|)
 (pgb::copy_value :|<->entry-node| :|-->channel-seq|)

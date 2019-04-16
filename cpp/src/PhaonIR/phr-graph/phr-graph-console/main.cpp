@@ -49,6 +49,8 @@ int main(int argc, char **argv)
  //t1->flags.gen_raw_value = true;
  caon_ptr<PHR_Graph_Node> n1 = new PHR_Graph_Node(t1);
 
+ n1->set_label("if-t-e");
+
 // caon_ptr<PHR_Graph_Statement_Info> si = new
 //   PHR_Graph_Statement_Info("x", "result", "\\=");
 // caon_ptr<PHR_Graph_Node> sin = new PHR_Graph_Node(si);
