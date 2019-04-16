@@ -149,7 +149,7 @@ Purpose_Codes& _PGB_IR_Build::add_channel_continue_block_node(QString t1, MG_Tok
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
  MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
- MG_Token mgt3 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg3);
+ MG_Token mgt3 = mgtoken(t3, MG_Token_Kind_Groups::Arg_Target, sg3);
 
  qts_ << "(pgb::add_channel_continue_block_node "; end_line({mgt1, mgt2, mgt3});
  return purpose_;
