@@ -29,6 +29,7 @@
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
 
 #include "phr-graph-core/token/phr-graph-statement-info.h"
+#include "phr-graph-core/token/phr-graph-fuxe-entry.h"
 
 #include "pgb-ir-run.h"
 
@@ -154,6 +155,31 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_token(caon_ptr<PHR_Gra
  source << fr_/qy_.Block_Entry(cion) >> result;
 
  return result;
+}
+
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_channel_fuxe_entry_node(QString chn, QString ty)
+{
+ caon_ptr<PHR_Graph_Fuxe_Entry> fen = new PHR_Graph_Fuxe_Entry(chn, ty);
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(fen);
+ result->set_label("<channel-fuxe-entry>");
+ return result;
+}
+
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_entry_node(
+  caon_ptr<PHR_Graph_Node> source,
+  caon_ptr<PHR_Graph_Node> target, QString chn,
+  caon_ptr<PHR_Graph_Node> cfen)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,target)
+
+ if(cfen)
+ {
+  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(chn, cfen);
+  source << fr_/qy_.Channel_Fuxe_Entry(cion) >> target;
+ }
+ else
+   source << fr_/qy_.Channel_Fuxe_Entry >> target;
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
