@@ -139,6 +139,8 @@ public:
  void init_assignment_expression(QString tok);
  void init_formula_expression(QString tok);
 
+ void mark_as_statement();
+
  void write_statement_entry(QTextStream& qts);
  void write_statement_leave(QTextStream& qts);
 

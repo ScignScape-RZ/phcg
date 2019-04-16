@@ -124,6 +124,14 @@ void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_ph
  {
   current_form_ = new RPI_Stage_Form(pgb_);
 
+  caon_ptr<RE_Call_Entry> rce = entry_node.re_call_entry();
+
+  CAON_PTR_DEBUG(RE_Call_Entry ,rce)
+
+  if(rce && rce->flags.is_statement_entry)
+  {
+   current_form_->mark_as_statement();
+  }
 
   if(rbe)
   {

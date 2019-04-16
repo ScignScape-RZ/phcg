@@ -316,6 +316,12 @@ void RPI_Stage_Form::mark_as_inferred_block_entry_statment()
  annotation_->flags.is_inferred_block_entry_statment = true;
 }
 
+void RPI_Stage_Form::mark_as_statement()
+{
+ check_init_annotation();
+ annotation_->flags.is_statement = true;
+}
+
 void RPI_Stage_Form::mark_as_block_entry_statment()
 {
  check_init_annotation();
