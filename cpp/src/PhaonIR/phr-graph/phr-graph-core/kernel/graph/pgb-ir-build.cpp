@@ -268,6 +268,23 @@ _PGB_IR_Build PGB_IR_Build::operator[](QList<Text_With_Purpose>& tps)
 // return result;
 }
 
+_PGB_IR_Build PGB_IR_Build::insert_after_purpose(QList<Text_With_Purpose>& tps,
+   Purpose_Codes purpose)
+{
+ QList<Text_With_Purpose>::iterator it = std::find_if(tps.begin(),
+   tps.end(), [purpose](const Text_With_Purpose& tp)
+ {
+  return tp.purpose == purpose;
+ });
+ if(it == tps.end())
+ {
+  return operator ()(tps);
+ }
+ it = tps.insert(it, {QString(), Purpose_Codes::N_A});
+ Text_With_Purpose& tp = *it;
+ return operator()(tp);
+}
+
 void PGB_IR_Build::generate_file(QList<Text_With_Purpose>& tps)
 {
  if(tps.isEmpty())

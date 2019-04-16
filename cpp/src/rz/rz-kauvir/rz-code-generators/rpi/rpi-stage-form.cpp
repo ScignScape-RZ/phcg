@@ -491,7 +491,8 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
   {
   case RPI_Stage_Element_Kinds::Fuxe_Symbol:
    if(rset.startsWith('#'))
-     pgb_(step_forms_).make_token_node(rset.prepend('$'), "&entry-node");
+     pgb_(step_forms_).make_token_node(rset.prepend('$'), "&entry-node")
+     = Purpose_Codes::Make_Token_Node_Fuxe_Sumbol;
    else
      pgb_(step_forms_).make_token_node(rset.prepend('@'), "&entry-node");
 

@@ -30,7 +30,7 @@ class PHR_Graph_Query;
 
 enum class Purpose_Codes
 {
- N_A, Generic, Establish_Statement_Entry_Node
+ N_A, Generic, Make_Token_Node_Fuxe_Sumbol
 };
 
 
@@ -233,7 +233,16 @@ public:
  _PGB_IR_Build operator()(QList<Text_With_Purpose>& tps);
  _PGB_IR_Build operator[](QList<Text_With_Purpose>& tps);
 
+ _PGB_IR_Build insert_after_purpose(QList<Text_With_Purpose>& tps,
+    Purpose_Codes purpose);
+
  void generate_file(QList<Text_With_Purpose>& tps);
+
+// static QListIterator<Text_With_Purpose> get_iterator(QList<Text_With_Purpose>& tps,
+//   Purpose_Code purpose)
+// {
+//  return tps.find()
+// }
 
 // ACCESSORS__RGET(QTextStream ,qts)
 // ACCESSORS__RGET(QString ,text)
