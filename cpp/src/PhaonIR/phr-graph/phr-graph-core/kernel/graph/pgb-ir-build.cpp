@@ -72,6 +72,14 @@ Purpose_Codes& _PGB_IR_Build::make_root_node(QString target, MG_Token_Subgroups 
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::make_block_info_node(QString target, MG_Token_Subgroups tsg)
+{
+ MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
+
+ qts_ << "(pgb::make_token_node "; end_line({tmgt});
+ return purpose_;
+}
+
 Purpose_Codes& _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
   QString target, MG_Token_Subgroups tsg)
 {
@@ -133,6 +141,17 @@ Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_S
   qts_ << "(pgb::add_channel_fuxe_entry_node ";
   end_line({mgt1, mgt2, mgt3, mgt4});
  }
+ return purpose_;
+}
+
+Purpose_Codes& _PGB_IR_Build::add_channel_continue_block_node(QString t1, MG_Token_Subgroups sg1,
+  QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3)
+{
+ MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
+ MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
+ MG_Token mgt3 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg3);
+
+ qts_ << "(pgb::add_channel_continue_block_node "; end_line({mgt1, mgt2, mgt3});
  return purpose_;
 }
 

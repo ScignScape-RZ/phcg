@@ -73,6 +73,13 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
+ Purpose_Codes& make_block_info_node(QString target, MG_Token_Subgroups tsg);
+ Purpose_Codes& make_block_info_node(QString target)
+ {
+  return make_block_info_node(target.mid(1), get_subgroup(target[0]));
+ }
+
+
  Purpose_Codes& make_channel_fuxe_entry_node(QString arg1,
    MG_Token_Subgroups asg1, QString arg2,
    MG_Token_Subgroups asg2,
@@ -111,6 +118,14 @@ public:
  {
   return add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
+ }
+
+ Purpose_Codes& add_channel_continue_block_node(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3);
+ Purpose_Codes& add_channel_continue_block_node(QString t1, QString t2, QString t3)
+ {
+  return add_channel_continue_block_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]), t3.mid(1), get_subgroup(t3[0]));
  }
 
  Purpose_Codes& add_block_entry_node(QString t1, MG_Token_Subgroups sg1,

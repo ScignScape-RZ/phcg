@@ -261,6 +261,15 @@ void RPI_Stage_Form::write(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
  }
 }
 
+bool RPI_Stage_Form::instruction(QString sym)
+{
+ if(inner_elements_.isEmpty())
+   return false;
+ if(inner_elements_.first().kind() != RPI_Stage_Element_Kinds::Instruction_Symbol)
+   return false;
+ return inner_elements_.first().text() == sym;
+}
+
 void RPI_Stage_Form::add_expression_wrapper(caon_ptr<RPI_Stage_Form> form,
   QString text, int hdcode)
 {
@@ -564,29 +573,34 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     caon_ptr<RPI_Stage_Form> f = rse.form();
     CAON_PTR_DEBUG(RPI_Stage_Form ,f)
 
-//    pgb_(step_forms_).add_channel_fuxe_entry_node(
-//      "!last_statement_entry_node",
-//      "!current_statement_entry_node", ":lambda", "&cfx-node");
-
-
-      //add_channel_fuxe_entry_node
-
-    f->write_unmediated(qts, nullptr);
-
-    if(!f->step_forms().isEmpty())
+    if(f->instruction("kb-write-anon-fdef"))
     {
-     QString ty = "u4"; //?
-     pgb_(step_forms_).make_channel_fuxe_entry_node(
-       ":?result", ty.prepend(':'),  "&cfx-node");
-
-     pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
-       .add_channel_fuxe_entry_node(
-        "!last_statement_entry_node",
-        "&entry-node", ":lambda", "&cfx-node");
-
-     step_forms_.append(f->step_forms());
+     f->write_unmediated(qts, nullptr);
+     if(!f->step_forms().isEmpty())
+     {
+      pgb_(step_forms_).make_block_info_node("&bin");
+      pgb_(step_forms_).add_channel_continue_block_node("!last_statement_entry_node",
+        "&entry-node", "&bin");
+      step_forms_.append(f->step_forms());
+     }
     }
+    else
+    {
+     f->write_unmediated(qts, nullptr);
+     if(!f->step_forms().isEmpty())
+     {
+      QString ty = "u4"; //?
+      pgb_(step_forms_).make_channel_fuxe_entry_node(
+        ":?result", ty.prepend(':'),  "&cfx-node");
 
+      pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+        .add_channel_fuxe_entry_node(
+         "!last_statement_entry_node",
+         "&entry-node", ":lambda", "&cfx-node");
+
+      step_forms_.append(f->step_forms());
+     }
+    }
     CAON_DEBUG_NOOP
     //pgb_(step_forms_).
    }
