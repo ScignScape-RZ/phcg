@@ -66,6 +66,18 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
+ void make_channel_fuxe_entry_node(QString arg1,
+   MG_Token_Subgroups asg1, QString arg2,
+   MG_Token_Subgroups asg2,
+   QString target, MG_Token_Subgroups tsg);
+ void make_channel_fuxe_entry_node(QString arg1, QString arg2, QString target)
+ {
+  make_channel_fuxe_entry_node(arg1.mid(1), get_subgroup(arg1[0]),
+    arg2.mid(1), get_subgroup(arg2[0]),
+    target.mid(1), get_subgroup(target[0]));
+ }
+
+
 // void add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
 //   QString t2, MG_Token_Subgroups sg2);
 // void add_block_entry_node(QString t1, QString t2)
@@ -73,6 +85,26 @@ public:
 //  add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
 //    t2.mid(1), get_subgroup(t2[0]));
 // }
+
+ void add_channel_fuxe_entry_node(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2,
+   QString chn = QString(),
+   MG_Token_Subgroups chnsg = MG_Token_Subgroups::N_A,
+   QString cfen = QString(),
+   MG_Token_Subgroups cfensg = MG_Token_Subgroups::N_A);
+ void add_channel_fuxe_entry_node(QString t1, QString t2,
+   QString chn, QString cfen)
+ {
+  add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]),
+    chn.mid(1), get_subgroup(chn[0]),
+    cfen.mid(1), get_subgroup(cfen[0]));
+ }
+ void add_channel_fuxe_entry_node(QString t1, QString t2)
+ {
+  add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]));
+ }
 
  void add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
    QString t2, MG_Token_Subgroups sg2, QString anchor_name = QString(),

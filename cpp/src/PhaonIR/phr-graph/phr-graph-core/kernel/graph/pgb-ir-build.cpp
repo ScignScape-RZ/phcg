@@ -80,6 +80,18 @@ void _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
  qts_ << "(pgb::make_token_node "; end_line({amgt, tmgt});
 }
 
+void _PGB_IR_Build::make_channel_fuxe_entry_node(QString arg1,
+  MG_Token_Subgroups asg1, QString arg2,
+  MG_Token_Subgroups asg2,
+  QString target, MG_Token_Subgroups tsg)
+{
+ MG_Token mgt1 = mgtoken(arg1, MG_Token_Kind_Groups::Generic, asg1);
+ MG_Token mgt2 = mgtoken(arg2, MG_Token_Kind_Groups::Generic, asg2);
+ MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
+
+ qts_ << "(pgb::make_channel_fuxe_node "; end_line({mgt1, mgt2, tmgt});
+}
+
 void _PGB_IR_Build::make_statement_info_node(QString anchor_name,
   MG_Token_Subgroups asg, QString channel_name, MG_Token_Subgroups csg,
   QString anchor_kind, MG_Token_Subgroups aksg,
@@ -94,6 +106,29 @@ void _PGB_IR_Build::make_statement_info_node(QString anchor_name,
  //?qts_ << const_cast<const MG_Token&>(it.next()).encode();
  qts_ << "(pgb::make_statement_info_node  ";
  end_line({amgt, cmgt, kmgt, tmgt});
+}
+
+void _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_Subgroups sg1,
+  QString t2, MG_Token_Subgroups sg2,
+  QString chn,
+  MG_Token_Subgroups chnsg,
+  QString cfen,
+  MG_Token_Subgroups cfensg)
+{
+ MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
+ MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
+
+ if(cfen.isEmpty())
+ {
+  qts_ << "(pgb::add_channel_fuxe_entry_node "; end_line({mgt1, mgt2});
+ }
+ else
+ {
+  MG_Token mgt3 = mgtoken(chn, MG_Token_Kind_Groups::Generic, chnsg);
+  MG_Token mgt4 = mgtoken(cfen, MG_Token_Kind_Groups::Arg_Target, chnsg);
+  qts_ << "(pgb::add_channel_fuxe_entry_node ";
+  end_line({mgt1, mgt2, mgt3, mgt4});
+ }
 }
 
 void _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
