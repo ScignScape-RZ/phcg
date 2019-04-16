@@ -23,6 +23,8 @@
 
 #include "multistep-token.h"
 
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
+
 RZNS_(RECore)
  class RE_Node;
  class RE_Block_Entry;
@@ -126,8 +128,8 @@ public:
 
  RZ_Lisp_Graph_Visitor& visitor();
 
- void write(QStringList& qsl, QTextStream& qts);
- void write_top_level(QStringList& qsl, QTextStream& qts);
+ void write(QList<PGB_IR_Build::Text_With_Purpose>& tps, QTextStream& qts);
+ void write_top_level(QList<PGB_IR_Build::Text_With_Purpose>& tps, QTextStream& qts);
 
  void scan_top_level(RZ_Graph_Visitor_Phaon& visitor_phaon);
 

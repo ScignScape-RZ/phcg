@@ -21,6 +21,8 @@
 
 #include "relae-graph/relae-caon-ptr.h"
 
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
+
 #include "multistep-token.h"
 
 RZNS_(RECore)
@@ -62,7 +64,7 @@ public:
 
 private:
 
- QStringList header_step_forms_;
+ QList<PGB_IR_Build::Text_With_Purpose> header_step_forms_;
 
  caon_ptr<RZ_Lisp_Graph_Lexical_Scope> lexical_scope_;
 

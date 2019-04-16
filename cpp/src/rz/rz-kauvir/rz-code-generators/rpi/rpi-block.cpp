@@ -747,17 +747,17 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
  }
 }
 
-void RPI_Block::write_top_level(QStringList& qsl, QTextStream& qts)
+void RPI_Block::write_top_level(QList<PGB_IR_Build::Text_With_Purpose>& tps, QTextStream& qts)
 {
- pgb_(qsl).make_root_node("!last_block_pre_entry_node");
+ pgb_(tps).make_root_node("!last_block_pre_entry_node");
 
 // _PGB_IR_Build _pgb = pgb_(qsl);
 // _pgb.make_root_node("!last_last_block_pre_entry_node");
- write(qsl, qts);
+ write(tps, qts);
 }
 
 
-void RPI_Block::write(QStringList& qsl, QTextStream& qts)
+void RPI_Block::write(QList<PGB_IR_Build::Text_With_Purpose>& tps, QTextStream& qts)
 {
  if(parent_block_)
  {
@@ -784,7 +784,7 @@ void RPI_Block::write(QStringList& qsl, QTextStream& qts)
  {
   rsf->write_as_statement(qts, prior);
 
-  qsl.append(rsf->step_forms());
+  tps.append(rsf->step_forms());
   prior = rsf;
  }
 

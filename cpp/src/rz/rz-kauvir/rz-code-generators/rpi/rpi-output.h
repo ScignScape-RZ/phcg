@@ -21,6 +21,8 @@
 
 #include "rz-function-def/rz-function-def-syntax.h"
 
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
+
 
 
 RZNS_(GBuild)
@@ -45,7 +47,7 @@ class RPI_Block;
 
 class RPI_Output
 {
- QStringList step_forms_;
+ QList<PGB_IR_Build::Text_With_Purpose> step_forms_;
 
  RZ_Graph_Visitor_Phaon& visitor_phaon_;
  RZ_Lisp_Graph_Visitor& visitor();
@@ -58,7 +60,7 @@ public:
 
  RPI_Output(RZ_Graph_Visitor_Phaon& visitor_phaon);
 
- ACCESSORS__RGET(QStringList ,step_forms)
+ ACCESSORS__RGET(QList<PGB_IR_Build::Text_With_Purpose> ,step_forms)
 
  void write(QTextStream& qts);
 

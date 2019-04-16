@@ -553,6 +553,17 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     caon_ptr<RPI_Stage_Form> f = rse.form();
     CAON_PTR_DEBUG(RPI_Stage_Form ,f)
 
+    QString ty = "u4"; //?
+    pgb_(step_forms_).make_channel_fuxe_entry_node(
+      ":?result", ty.prepend(':'),  "&cfx-node");
+
+    pgb_(step_forms_).add_channel_fuxe_entry_node(
+      "!last_statement_entry_node",
+      "!current_statement_entry_node", ":lambda", "&cfx-node");
+
+
+      //add_channel_fuxe_entry_node
+
     f->write_unmediated(qts, nullptr);
     step_forms_.append(f->step_forms());
 

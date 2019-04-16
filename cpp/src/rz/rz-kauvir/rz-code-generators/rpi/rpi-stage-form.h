@@ -24,6 +24,8 @@
 #include "rpi-stage-element.h"
 #include "rpi-assignment-info.h"
 
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
+
 #include "multistep-token.h"
 
 RZNS_(GBuild)
@@ -46,7 +48,7 @@ class RPI_Stage_Form
 {
  PGB_IR_Build& pgb_;
 
- QStringList step_forms_;
+ QList<PGB_IR_Build::Text_With_Purpose> step_forms_;
 
  QString fn_;
 
@@ -110,7 +112,7 @@ public:
  ACCESSORS(QString ,s1_assignment_check)
  ACCESSORS(caon_ptr<RPI_Type_Declaration> ,type_declaration)
 
- ACCESSORS__RGET(QStringList ,step_forms)
+ ACCESSORS__RGET(QList<PGB_IR_Build::Text_With_Purpose> ,step_forms)
 
  bool s1_assignment_preempts_s0();
 

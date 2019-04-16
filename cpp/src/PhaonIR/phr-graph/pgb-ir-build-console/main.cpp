@@ -19,24 +19,24 @@ int main(int argc, char **argv)
 {
  PGB_IR_Build pgb(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb");
 
- QStringList qsl;
+ QList<PGB_IR_Build::Text_With_Purpose> tps;
 
- pgb(qsl).make_root_node("!last_block_pre_entry_node");
+ pgb(tps).make_root_node("!last_block_pre_entry_node");
 
 // make_statement_info_node(QString anchor_name,
 //    QString channel_name, QString anchor_kind)
 
- pgb(qsl).make_statement_info_node("@x", ":parse-literal", ":\\=", "&si-node");
- pgb(qsl).add_block_entry_token("!last_block_pre_entry_node",
+ pgb(tps).make_statement_info_node("@x", ":parse-literal", ":\\=", "&si-node");
+ pgb(tps).add_block_entry_token("!last_block_pre_entry_node",
    "$64", "&si-node", "!last_statement_entry_node");
 
- pgb(qsl).make_token_node("@&prn", "&entry-node");
- pgb(qsl).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
- pgb(qsl).copy_value("&entry-node", "!last_statement_entry_node");
- pgb(qsl).add_channel_entry_token("&entry-node",
+ pgb(tps).make_token_node("@&prn", "&entry-node");
+ pgb(tps).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
+ pgb(tps).copy_value("&entry-node", "!last_statement_entry_node");
+ pgb(tps).add_channel_entry_token("&entry-node",
    "lambda", "@x", "&current-channel-node");
 
- pgb.generate_file(qsl);
+ pgb.generate_file(tps);
 
  qDebug() << "ok";
  return 0;
@@ -47,19 +47,19 @@ int main1(int argc, char **argv)
 {
  PGB_IR_Build pgb(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb");
 
- QStringList qsl;
+ QList<PGB_IR_Build::Text_With_Purpose> tps;
 
- pgb(qsl).make_root_node("!last_block_pre_entry_node");
- pgb(qsl).make_token_node("@&prn", "&entry-node");
- pgb(qsl).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
- pgb(qsl).copy_value("&entry-node", "!last_statement_entry_node");
- pgb(qsl).add_channel_entry_token("&entry-node",
+ pgb(tps).make_root_node("!last_block_pre_entry_node");
+ pgb(tps).make_token_node("@&prn", "&entry-node");
+ pgb(tps).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
+ pgb(tps).copy_value("&entry-node", "!last_statement_entry_node");
+ pgb(tps).add_channel_entry_token("&entry-node",
    "lambda", "$44", "&current-channel-node");
 
-// pgb(qsl).make_token_node("@&prn", "&entry-node");
-// pgb(qsl).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
+// pgb(tps).make_token_node("@&prn", "&entry-node");
+// pgb(tps).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
 
-// pgb(qsl).add_channel_entry_token("&entry-node",
+// pgb(tps).add_channel_entry_token("&entry-node",
 //   "lambda", "$55", "&entry-node");
 
 
@@ -73,7 +73,7 @@ int main1(int argc, char **argv)
 //   "lambda", "44", MG_Token_Subgroups::Value,
 //   "current-channel-node", MG_Token_Subgroups::Ledger);
 
- pgb.generate_file(qsl);
+ pgb.generate_file(tps);
 
  qDebug() << "ok";
  return 0;

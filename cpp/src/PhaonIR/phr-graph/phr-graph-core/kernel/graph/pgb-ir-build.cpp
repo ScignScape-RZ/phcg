@@ -16,8 +16,8 @@ USING_KANS(TextIO)
 
 USING_RZNS(PhrGraphCore)
 
-_PGB_IR_Build::_PGB_IR_Build(QTextStream& qts)
-  :  qts_(qts)
+_PGB_IR_Build::_PGB_IR_Build(QTextStream& qts, Purpose_Codes& purpose)
+  :  qts_(qts), purpose_(purpose)
 {
 
 }
@@ -65,13 +65,13 @@ MG_Token_Subgroups _PGB_IR_Build::get_subgroup(QChar c)
 }
 
 
-void _PGB_IR_Build::make_root_node(QString target, MG_Token_Subgroups sg)
+Purpose_Codes& _PGB_IR_Build::make_root_node(QString target, MG_Token_Subgroups sg)
 {
  MG_Token mgt = mgtoken(target, MG_Token_Kind_Groups::Target, sg);
  qts_ << "(pgb::make_root_node "; end_line({mgt});
 }
 
-void _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
+Purpose_Codes& _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
   QString target, MG_Token_Subgroups tsg)
 {
  MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg, asg);
@@ -80,7 +80,7 @@ void _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
  qts_ << "(pgb::make_token_node "; end_line({amgt, tmgt});
 }
 
-void _PGB_IR_Build::make_channel_fuxe_entry_node(QString arg1,
+Purpose_Codes& _PGB_IR_Build::make_channel_fuxe_entry_node(QString arg1,
   MG_Token_Subgroups asg1, QString arg2,
   MG_Token_Subgroups asg2,
   QString target, MG_Token_Subgroups tsg)
@@ -92,7 +92,7 @@ void _PGB_IR_Build::make_channel_fuxe_entry_node(QString arg1,
  qts_ << "(pgb::make_channel_fuxe_node "; end_line({mgt1, mgt2, tmgt});
 }
 
-void _PGB_IR_Build::make_statement_info_node(QString anchor_name,
+Purpose_Codes& _PGB_IR_Build::make_statement_info_node(QString anchor_name,
   MG_Token_Subgroups asg, QString channel_name, MG_Token_Subgroups csg,
   QString anchor_kind, MG_Token_Subgroups aksg,
   QString target, MG_Token_Subgroups tsg)
@@ -108,7 +108,7 @@ void _PGB_IR_Build::make_statement_info_node(QString anchor_name,
  end_line({amgt, cmgt, kmgt, tmgt});
 }
 
-void _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_Subgroups sg1,
+Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2,
   QString chn,
   MG_Token_Subgroups chnsg,
@@ -131,7 +131,7 @@ void _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_Subgroups s
  }
 }
 
-void _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
+Purpose_Codes& _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2, QString anchor_name, MG_Token_Subgroups ansg)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
@@ -148,7 +148,7 @@ void _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
  }
 }
 
-void _PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
+Purpose_Codes& _PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2, QString anchor_name, MG_Token_Subgroups ansg)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
@@ -165,7 +165,7 @@ void _PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups s
  }
 }
 
-void _PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
+Purpose_Codes& _PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
@@ -174,7 +174,7 @@ void _PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
  qts_ << "(pgb::copy_value "; end_line({mgt1, mgt2});
 }
 
-void _PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
+Purpose_Codes& _PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
 {
  QListIterator<MG_Token> it(mgts);
 
@@ -187,7 +187,7 @@ void _PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
  qts_ << ")";
 }
 
-void _PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
+Purpose_Codes& _PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
   QString tok, MG_Token_Subgroups toksg,
   QString target, MG_Token_Subgroups tsg)
 {
@@ -198,7 +198,7 @@ void _PGB_IR_Build::add_channel_token(QString src, MG_Token_Subgroups srcsg,
  qts_ << "(pgb::add_channel_token "; end_line({mgt1, mgt2, mgt3});
 }
 
-void _PGB_IR_Build::add_statement_sequence_token(QString src, MG_Token_Subgroups srcsg,
+Purpose_Codes& _PGB_IR_Build::add_statement_sequence_token(QString src, MG_Token_Subgroups srcsg,
   QString tok, MG_Token_Subgroups toksg,
   QString sin, MG_Token_Subgroups sinsg,
   QString target, MG_Token_Subgroups tsg)
@@ -211,7 +211,7 @@ void _PGB_IR_Build::add_statement_sequence_token(QString src, MG_Token_Subgroups
  qts_ << "(pgb::add_statement_sequence_token "; end_line({mgt1, mgt2, mgt3, mgt4});
 }
 
-void _PGB_IR_Build::add_block_entry_token(QString src, MG_Token_Subgroups srcsg,
+Purpose_Codes& _PGB_IR_Build::add_block_entry_token(QString src, MG_Token_Subgroups srcsg,
   QString tok, MG_Token_Subgroups toksg, QString sin, MG_Token_Subgroups sinsg,
   QString target, MG_Token_Subgroups tsg)
 {
@@ -223,7 +223,7 @@ void _PGB_IR_Build::add_block_entry_token(QString src, MG_Token_Subgroups srcsg,
  qts_ << "(pgb::add_block_entry_token "; end_line({mgt1, mgt2, mgt3, mgt4});
 }
 
-void _PGB_IR_Build::add_channel_entry_token(QString src, MG_Token_Subgroups srcsg,
+Purpose_Codes& _PGB_IR_Build::add_channel_entry_token(QString src, MG_Token_Subgroups srcsg,
   QString chn, QString tok, MG_Token_Subgroups toksg,
   QString target, MG_Token_Subgroups tsg)
 {
@@ -241,35 +241,47 @@ PGB_IR_Build::PGB_IR_Build(QString out_file)
 
 }
 
-_PGB_IR_Build PGB_IR_Build::operator()(QString& qs)
+_PGB_IR_Build PGB_IR_Build::operator()(Text_With_Purpose& tp)
 {
- qts_.setString(&qs);
- _PGB_IR_Build result(qts_);
+ qts_.setString(&tp.text);
+ _PGB_IR_Build result(qts_, tp.purpose);
  return result;
 }
 
-_PGB_IR_Build PGB_IR_Build::operator()(QStringList& qsl)
+_PGB_IR_Build PGB_IR_Build::operator()(QList<Text_With_Purpose>& tps)
 {
- qsl.push_back(QString());
- QString& qs = qsl.back();
- return operator()(qs);
+ tps.push_back({QString(), Purpose_Codes::N_A});
+ Text_With_Purpose& tp = tps.back();
+ return operator()(tp);
 // qts_.setString(&qs);
 // _PGB_IR_Build result(qts_);
 // return result;
 }
 
-_PGB_IR_Build PGB_IR_Build::operator[](QStringList& qsl)
+_PGB_IR_Build PGB_IR_Build::operator[](QList<Text_With_Purpose>& tps)
 {
- qsl.push_front(QString());
- QString& qs = qsl.front();
- return operator()(qs);
+ tps.push_front({QString(), Purpose_Codes::N_A});
+ Text_With_Purpose& tp = tps.front();
+ return operator()(tp);
 // qts_.setString(&qs);
 // _PGB_IR_Build result(qts_);
 // return result;
 }
 
-void PGB_IR_Build::generate_file(QStringList& qsl)
+void PGB_IR_Build::generate_file(QList<Text_With_Purpose>& tps)
 {
- save_file(out_file_, qsl.join('\n'));
+ if(tps.isEmpty())
+   return;
+
+ int i = 0;
+ QListIterator<Text_With_Purpose> it(tps);
+
+ save_file(out_file_, [&i, &it](QString& line)
+ {
+  line = it.next().text + "\n";
+  if(it.hasNext())
+    return ++i;
+  return 0;
+ });
 }
 

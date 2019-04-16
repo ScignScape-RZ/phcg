@@ -12,6 +12,8 @@
 #include <QFile>
 #include <QTextStream>
 
+#include <functional>
+
 
 KANS_(TextIO)
 
@@ -63,6 +65,25 @@ inline void save_file(QString path, QString text)
    return;
  QTextStream outstream(&outfile);
  outstream << text;
+ outfile.close();
+}
+
+
+inline void save_file(QString path, std::function<int(QString&)> fn)
+{
+ QFile outfile(path);
+ if (!outfile.open(QIODevice::WriteOnly | QIODevice::Text))
+   return;
+ QTextStream outstream(&outfile);
+ int i = 0;
+ do
+ {
+  QString line;
+  i = fn(line);
+  outstream << line;
+ }
+ while(i > 0);
+
  outfile.close();
 }
 
