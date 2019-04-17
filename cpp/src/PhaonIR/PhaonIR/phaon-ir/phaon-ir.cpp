@@ -239,7 +239,7 @@ void PhaonIR::pop_unwind_scope()
  usi = unwind_scope_index_parents()[lusi.project()];
  program_stack_ = held_program_stacks()[usi].first;
  current_carrier_stack_ = held_program_stacks()[usi].second;
- held_usi_symbol_ = QString("#%1-%2-%3").arg(usi.chief_channel_pos)
+ held_usi_symbol_ = QString("#%1-%2-%3").arg(usi.level_channel_pos)
    .arg(usi.unwind_level)
    .arg(usi.depth);
  QString hsi = held_usi_symbol_;

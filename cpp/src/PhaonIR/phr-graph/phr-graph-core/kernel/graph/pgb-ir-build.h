@@ -170,6 +170,18 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
+ Purpose_Codes& add_channel_continue_token(QString src, MG_Token_Subgroups srcsg,
+   QString tok, MG_Token_Subgroups toksg,
+   QString target, MG_Token_Subgroups tsg);
+ Purpose_Codes& add_channel_continue_token(QString src,
+   QString tok, QString target)
+ {
+  return add_channel_continue_token(src.mid(1), get_subgroup(src[0]),
+    tok.mid(1), get_subgroup(tok[0]),
+    target.mid(1), get_subgroup(target[0]));
+ }
+
+
  Purpose_Codes& add_channel_entry_token(QString src, MG_Token_Subgroups srcsg,
    QString chn, QString tok, MG_Token_Subgroups toksg,
    QString target, MG_Token_Subgroups tsg);

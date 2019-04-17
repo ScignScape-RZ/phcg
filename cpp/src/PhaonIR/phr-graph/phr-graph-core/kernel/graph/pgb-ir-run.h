@@ -37,6 +37,7 @@ class PGB_IR_Run
   N_A, make_root_node, make_token_node,
   make_channel_fuxe_entry_node,
   add_block_entry_node, add_channel_token,
+  add_channel_continue_token,
   add_channel_entry_token, add_block_entry_token,
   add_statement_sequence_token, copy_value,
   add_statement_sequence_node,
