@@ -48,6 +48,7 @@ class PhaonIR
  {
   quint8 chief_channel_pos;
   quint8 unwind_level;
+  quint8 depth;
   quint8 unwind_maximum_;
   quint8 level_channel_pos;
 
@@ -55,7 +56,7 @@ class PhaonIR
 
   Unwind_Scope_Index project()
   {
-   return {chief_channel_pos, unwind_level, 0, 0, channel_name};
+   return {chief_channel_pos, unwind_level, depth, 0, 0, channel_name};
   }
  };
 
@@ -182,6 +183,8 @@ class PhaonIR
     return lhs.unwind_level < rhs.unwind_level;
   if(lhs.level_channel_pos != rhs.level_channel_pos)
     return lhs.level_channel_pos < rhs.level_channel_pos;
+  if(lhs.depth != rhs.depth)
+    return lhs.depth < rhs.depth;
   return false;
  }
 

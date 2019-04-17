@@ -28,6 +28,8 @@
 #include "runtime/phr-callable-value.h"
 #include "runtime/phr-expression-object.h"
 
+#include <QDebug>
+
 #include "textio.h"
 
 USING_KANS(TextIO)
@@ -216,25 +218,32 @@ void PhaonIR::push_unwind_scope(QString level_delta)
 
 void PhaonIR::push_unwind_scope(int level_delta, QString chn)
 {
- Unwind_Scope_Index usi = current_chief_unwind_scope_index();//.project();
+ Unwind_Scope_Index& usi = current_chief_unwind_scope_index();//.project();
+ Unwind_Scope_Index lusi = usi;
  inc_channel_pos();
- current_chief_unwind_scope_index().chief_channel_pos = usi.level_channel_pos;
- current_chief_unwind_scope_index().unwind_level = 0;
- current_chief_unwind_scope_index().unwind_maximum_ = level_delta;
- current_chief_unwind_scope_index().level_channel_pos = 0;
- current_chief_unwind_scope_index().channel_name = chn;
- unwind_scope_index_parents()[current_chief_unwind_scope_index()] = usi;//.project();
- held_program_stacks()[usi] = {program_stack_, current_carrier_stack_};
+ usi.chief_channel_pos = lusi.level_channel_pos;
+ usi.unwind_level = 0;
+ usi.depth = lusi.depth + level_delta;
+ usi.unwind_maximum_ = level_delta;
+ usi.level_channel_pos = 0;
+ usi.channel_name = chn;
+ unwind_scope_index_parents()[usi] = lusi;//.project();
+ held_program_stacks()[lusi] = {program_stack_, current_carrier_stack_};
  check_init_program_stack();
 }
 
 void PhaonIR::pop_unwind_scope()
 {
- current_chief_unwind_scope_index() = unwind_scope_index_parents()[current_chief_unwind_scope_index().project()];
- program_stack_ = held_program_stacks()[current_chief_unwind_scope_index()].first;
- current_carrier_stack_ = held_program_stacks()[current_chief_unwind_scope_index()].second;
- held_usi_symbol_ = QString("#%1-%2").arg(current_chief_unwind_scope_index().chief_channel_pos)
-   .arg(current_chief_unwind_scope_index().unwind_level);
+ Unwind_Scope_Index& usi = current_chief_unwind_scope_index();
+ Unwind_Scope_Index lusi = usi;
+ usi = unwind_scope_index_parents()[lusi.project()];
+ program_stack_ = held_program_stacks()[usi].first;
+ current_carrier_stack_ = held_program_stacks()[usi].second;
+ held_usi_symbol_ = QString("#%1-%2-%3").arg(usi.chief_channel_pos)
+   .arg(usi.unwind_level)
+   .arg(usi.depth);
+ QString hsi = held_usi_symbol_;
+ qDebug() << hsi;
 }
 
 
@@ -491,8 +500,8 @@ void PhaonIR::read_line(QString inst)
   { "pop_unwind_scope", &pop_unwind_scope },
   { "temp_anchor_channel_group", &temp_anchor_channel_group },
   { "temp_anchor_channel_group_by_need", &temp_anchor_channel_group_by_need },
-  { "push_carrier_expression", &push_carrier_expression }
-
+  { "push_carrier_expression", &push_carrier_expression },
+  { "index_channel_group", &index_channel_group }
  }};
 
  auto it = static_map.find(inst);

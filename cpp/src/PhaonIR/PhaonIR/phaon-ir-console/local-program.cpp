@@ -118,7 +118,7 @@ void local_program(PhaonIR& phr)
  // phr.read_local_program(RZ_DIR "/phaon/t1.rz.gen.pgb.phr");
 
  //
- phr.read_local_program(DEFAULT_PHR_FOLDER "/t1.phr");
+phr.read_local_program(DEFAULT_PHR_FOLDER "/t1.phr");
 #ifdef HIDE
 
  phr.init_program_stack();
