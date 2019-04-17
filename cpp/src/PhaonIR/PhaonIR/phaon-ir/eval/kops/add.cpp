@@ -14,7 +14,7 @@ PHR_KOP_Add::PHR_KOP_Add()
 
 void PHR_KOP_Add::run_eval(QPair<qint32, qint32>& args, qint32& result)
 {
- result += args.first + args.second;
+ result = args.first + args.second;
 }
 
 void PHR_KOP_Add::run_eval(QVector<qint32>& args, qint32& result)
@@ -25,9 +25,10 @@ void PHR_KOP_Add::run_eval(QVector<qint32>& args, qint32& result)
  case 0:
   return;
  case 1:
-  result = args[1];
+  result = args[0];
  default:
   {
+   //result = args[0];
    for(int i = 1; i < sz; ++i)
    {
     QPair<qint32, qint32> pr{args[i - 1], args[i]};

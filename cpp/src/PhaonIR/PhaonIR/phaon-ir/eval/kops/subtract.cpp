@@ -15,7 +15,7 @@ PHR_KOP_Subtract::PHR_KOP_Subtract()
 
 void PHR_KOP_Subtract::run_eval(QPair<qint32, qint32>& args, qint32& result)
 {
- result -= args.first - args.second;
+ result = args.first - args.second;
 }
 
 void PHR_KOP_Subtract::run_eval(QVector<qint32>& args, qint32& result)
