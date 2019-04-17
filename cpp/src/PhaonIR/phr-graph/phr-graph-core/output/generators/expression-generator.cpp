@@ -283,6 +283,11 @@ void Expression_Generator::generate_carrier_with_raw_value(QTextStream& qts,
  PHR_Graph_Token& tok)
 {
  QString ty = tok.type_name();
+
+ //?
+ if(ty.isEmpty())
+   ty = "u4";
+
  if(!ty.isEmpty())
    qts << "hold_type_by_name $ " << ty << " ;.\n";
  qts << "push_carrier_raw_value $ " << tok.raw_text() << " ;.\n";
