@@ -115,10 +115,64 @@ void local_program(PhaonIR& phr)
 
  // phr.read_local_program(DEFAULT_PHR_FOLDER "/pgb/t1.gen.pgb.phr");
 
- //
- phr.read_local_program(RZ_DIR "/phaon/t1.rz.gen.pgb.phr");
+ // phr.read_local_program(RZ_DIR "/phaon/t1.rz.gen.pgb.phr");
 
  //phr.read_local_program(DEFAULT_PHR_FOLDER "/t1.phr");
+
+
+ phr.init_program_stack();
+ phr.enter_lexical_scope();
+ phr.reset_program_stack();
+
+
+ phr.push_carrier_stack("fuxe");
+ phr.hold_type_by_name("fbase");
+ phr.push_carrier_symbol("&prn");
+
+ phr.push_unwind_scope(1, "result");
+
+ phr.push_carrier_stack("fuxe");
+ phr.hold_type_by_name("fbase");
+ phr.push_carrier_raw_value("#+");
+
+ phr.push_carrier_stack("lambda");
+ phr.hold_type_by_name("u4");
+ phr.push_carrier_raw_value("2");
+
+ phr.push_unwind_scope(1, "result");
+
+ phr.push_carrier_stack("fuxe");
+ phr.hold_type_by_name("fbase");
+ phr.push_carrier_raw_value("#+");
+
+ phr.push_carrier_stack("lambda");
+ phr.hold_type_by_name("u4");
+ phr.push_carrier_raw_value("7");
+ phr.push_carrier_raw_value("9");
+
+ phr.push_carrier_stack("result");
+ phr.index_channel_group();
+ phr.coalesce_channel_group();
+ phr.pop_unwind_scope();
+ phr.temp_anchor_channel_group();
+
+ phr.hold_type_by_name("u4");
+ phr.push_carrier_expression();
+ phr.coalesce_channel_group();
+ phr.pop_unwind_scope();
+ phr.temp_anchor_channel_group();
+
+
+ phr.evaluate_channel_group();
+
+ phr.delete_temps();
+ phr.delete_retired();
+ phr.clear_temps();
+
+ phr.reset_program_stack();
+
+
+
 
 #ifdef HIDE
 
