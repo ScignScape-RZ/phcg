@@ -80,8 +80,12 @@ void Expression_Generator::generate_fuxe_entry(QTextStream& qts,
  }
 
  if(unw > 0)
-   qts << "\npush_unwind_scope $ "
-   << unw << ' ' << cn << " ;.\n";
+   qts << "\npush_unwind_scope $ 1 "
+   << cn << " ;.\n";
+
+// qts << "\npush_unwind_scope $ "
+// << unw << ' ' << cn << " ;.\n";
+
 // else
 // {
 //  qts << "push_carrier_stack $ " << fen.channel_name() << " ;.\n";

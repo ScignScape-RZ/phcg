@@ -316,6 +316,12 @@ void RPI_Stage_Form::mark_as_inferred_block_entry_statment()
  annotation_->flags.is_inferred_block_entry_statment = true;
 }
 
+void RPI_Stage_Form::mark_preceder_token()
+{
+ check_init_annotation();
+ annotation_->flags.has_preceder_token = true;
+}
+
 void RPI_Stage_Form::mark_as_statement()
 {
  check_init_annotation();
@@ -493,6 +499,10 @@ RPI_Assignment_Info* RPI_Stage_Form::get_parent_assignmnt_info()
  return result;
 }
 
+bool RPI_Stage_Form::has_preceder_token()
+{
+ return ANNOTATION_FLAG(has_preceder_token);
+}
 
 void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
@@ -616,12 +626,16 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
          pgb_(step_forms_).make_channel_fuxe_entry_node(
          ":result", ty.prepend(':'),  "&cfx-node");
 
-
-       pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+       if(f->has_preceder_token())
+         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+         .add_channel_fuxe_entry_node(
+         "&channel-seq",
+         "&entry-node", ":lambda", "&cfx-node");
+       else
+         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
          .add_channel_fuxe_entry_node(
          "!last_statement_entry_node",
          "&entry-node", ":lambda", "&cfx-node");
-         //= Purpose_Codes::Add_Channel_Fuxe_Entry_Node;
       }
       step_forms_.append(f->step_forms());
      }

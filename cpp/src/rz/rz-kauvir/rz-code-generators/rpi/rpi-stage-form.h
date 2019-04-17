@@ -122,6 +122,7 @@ public:
 
  bool is_non_block_expression();
  bool is_deferred();
+ bool has_preceder_token();
 
  caon_ptr<RPI_Type_Declaration> type_declaration_on_block_entry();
 
@@ -157,6 +158,7 @@ public:
  void mark_as_parent_s1_assignment_preempts_s0();
 
  void mark_as_inferred_block_entry_statment();
+ void mark_preceder_token();
 
  QString get_assignment_target();
 

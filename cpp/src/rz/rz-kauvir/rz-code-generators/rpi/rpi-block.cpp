@@ -302,8 +302,12 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
 
  RZ_Lisp_Graph_Visitor::Next_Node_Premise nnp = RZ_Lisp_Graph_Visitor::Next_Node_Premise::N_A;
 
+ // maybe temp ...
+ bool last_nnp_expr = false;
  while(current_node)
  {
+  last_nnp_expr = nnp == RZ_Lisp_Graph_Visitor::Next_Node_Premise::Expression;
+
   // nnp is read-write in visitor_phaon.get_next_node(...)
   caon_ptr<RE_Node> next_node = visitor_phaon.get_next_node(current_node, nnp);
 
@@ -466,6 +470,8 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
     current_form_->add_expression(new_form);
     caon_ptr<RE_Call_Entry> rce = next_node->re_call_entry();
     CAON_PTR_DEBUG(RE_Call_Entry ,rce)
+    if( (lambda_count > 0) && !last_nnp_expr )
+      new_form->mark_preceder_token();
     if(rce->flags.is_deferred)
     {
      new_form->mark_deferred(0);

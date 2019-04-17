@@ -62,6 +62,7 @@ public:
   bool write_type_declaration:1;
   bool is_inferred_block_entry_statment:1;
   bool is_statement:1;
+  bool has_preceder_token:1;
  _flags
 
 
