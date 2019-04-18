@@ -50,7 +50,9 @@ void Statement_Generator::generate_anchor_without_channel_group(QTextStream& qts
 void Statement_Generator::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node, PHR_Graph_Statement_Info* sin)
 {
- if(sin && sin->channel_name() == "parse-literal")
+ if(sin && (
+   (sin->channel_name() == "parse-literal") ||
+   (sin->channel_name() == "type-default") ) )
  {
   generate_anchor_without_channel_group(qts, node, *sin);
  }
