@@ -68,6 +68,8 @@ public:
 
  void add_hyponode(caon_ptr<PHR_Graph_Node> n);
 
+// QVector<caon_ptr<PHR_Graph_Connection>, caon_ptr<PHR_Graph_Node>>
+
 
 };
 

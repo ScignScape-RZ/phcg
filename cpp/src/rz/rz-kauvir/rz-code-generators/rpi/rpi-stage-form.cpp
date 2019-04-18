@@ -585,7 +585,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     {
      pgb_(step_forms_).make_statement_info_node(
        rai->text().prepend('@'), ":result",
-       ray->encode_ikind().prepend(':'), "&si-node");
+       rai->encode_ikind().prepend(':'), "&si-node");
 //?
 // // which  assignment_info_.encode_ikind()?
 //     pgb_(step_forms_).make_statement_info_node(

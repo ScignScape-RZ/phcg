@@ -100,6 +100,9 @@ public:
  caon_ptr<PHR_Graph_Node> add_channel_entry_token(caon_ptr<PHR_Graph_Node> source,
    QString channel, MG_Token& mgt);
 
+ caon_ptr<PHR_Graph_Node> add_channel_xentry_token(caon_ptr<PHR_Graph_Node> source,
+   QString channel, MG_Token& mgt);
+
  caon_ptr<PHR_Graph_Node> add_block_entry_token(caon_ptr<PHR_Graph_Node> source,
    MG_Token& mgt, caon_ptr<PHR_Graph_Node> statement_info_node);
 

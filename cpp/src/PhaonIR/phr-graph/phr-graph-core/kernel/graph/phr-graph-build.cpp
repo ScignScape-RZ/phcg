@@ -125,6 +125,19 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_entry_token(caon_ptr<PHR_G
  return result;
 }
 
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_xentry_token(caon_ptr<PHR_Graph_Node> source,
+  QString channel, MG_Token& mgt)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+
+ caon_ptr<PHR_Graph_Node> result = make_token_node(mgt);
+
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(channel);
+ source << fr_/qy_.Channel_XEntry(cion) >> result;
+
+ return result;
+}
+
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_block_info_node()
 {
  caon_ptr<PHR_Graph_Block_Info> bin = new

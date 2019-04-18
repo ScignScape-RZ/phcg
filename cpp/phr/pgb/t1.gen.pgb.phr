@@ -8,6 +8,9 @@ push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.
 push_carrier_symbol $ test ;.
  .; args ;.
+push_carrier_stack $ lambda ;.
+hold_type_by_name $ u4 ;.
+push_carrier_raw_value $ 44 ;.
 push_carrier_stack $ sigma ;.
 push_carrier_symbol $ obj ;.
 coalesce_channel_group ;.

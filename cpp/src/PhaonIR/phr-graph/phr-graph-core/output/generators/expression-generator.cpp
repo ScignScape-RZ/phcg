@@ -42,6 +42,7 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
  QString channel_name;
  if(caon_ptr<PHR_Graph_Node> n = rq_.Channel_Entry[cion](&node))
  {
+  CAON_PTR_DEBUG(PHR_Graph_Node ,n)
   if(cion)
     channel_name = cion->channel_name();
   if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
@@ -66,6 +67,17 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
     }
    }
   }
+ }
+
+ caon_ptr<PHR_Graph_Connection> xcion;
+ QString xchannel_name;
+ caon_ptr<PHR_Graph_Node> xn = &node;
+ if(xn = rq_.Channel_XEntry[cion](xn))
+ {
+  CAON_PTR_DEBUG(PHR_Graph_Node ,xn)
+  if(cion)
+    xchannel_name = cion->channel_name();
+  generate_xchannel(qts, xchannel_name, *xn, unw);
  }
 }
 
@@ -272,6 +284,11 @@ void Expression_Generator::generate_block(QTextStream& qts, PHR_Graph_Block_Info
  generate_empty_line(qts);
 }
 
+void Expression_Generator::generate_xchannel(QTextStream& qts, QString channel_name,
+ const PHR_Graph_Node& arg_node, int unw)
+{
+ generate_arg_carriers(qts, channel_name, arg_node, unw);
+}
 
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  QString channel_name, const PHR_Graph_Node& arg_node, int unw)

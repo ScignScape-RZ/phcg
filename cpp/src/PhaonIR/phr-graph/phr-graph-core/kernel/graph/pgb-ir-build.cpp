@@ -328,6 +328,20 @@ Purpose_Codes& _PGB_IR_Build::add_channel_entry_token(QString src, MG_Token_Subg
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::add_channel_xentry_token(QString src, MG_Token_Subgroups srcsg,
+  QString chn, QString tok, MG_Token_Subgroups toksg,
+  QString target, MG_Token_Subgroups tsg)
+{
+ MG_Token mgt1 = mgtoken(src, MG_Token_Kind_Groups::Arg_Target, srcsg);
+ MG_Token mgt2 = {MG_Token_Kinds::Arg_String_Literal, chn};
+ MG_Token mgt3 = mgtoken(tok, MG_Token_Kind_Groups::Arg, toksg);
+ MG_Token mgt4 = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
+
+ qts_ << "(pgb::add_channel_xentry_token "; end_line({mgt1, mgt2, mgt3, mgt4});
+ return purpose_;
+}
+
+
 PGB_IR_Build::PGB_IR_Build(QString out_file)
   :  out_file_(out_file)//, qts_(&text)
 {

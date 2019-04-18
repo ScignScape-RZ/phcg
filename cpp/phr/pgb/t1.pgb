@@ -1,6 +1,11 @@
 (pgb::make_root_node :|-!>last_block_pre_entry_node|) 
 
 (pgb::make_token_node :|>_@test| :|-->entry-node|)
+(pgb::copy_value :|<->entry-node| :|-!>last_expression_entry-node|)
+
 (pgb::add_block_entry_node :|<!>last_block_pre_entry_node| :|<->entry-node|)
+
 (pgb::add_channel_entry_token :|<->entry-node| 
-  :|<$>sigma| :|>_@obj| :|-->channel-seq|)
+  :|<$>lambda| :|>_$44| :|-->channel-seq|)
+
+(pgb::add_channel_xentry_token :|<->entry-node| :|<$>sigma| :|>_@obj| :|-->channel-seq|)
