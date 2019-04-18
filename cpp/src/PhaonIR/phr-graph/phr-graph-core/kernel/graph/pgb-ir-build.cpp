@@ -144,6 +144,30 @@ Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_S
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_cross_node(QString t1, MG_Token_Subgroups sg1,
+  QString t2, MG_Token_Subgroups sg2,
+  QString chn,
+  MG_Token_Subgroups chnsg,
+  QString cfen,
+  MG_Token_Subgroups cfensg)
+{
+ MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
+ MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
+
+ if(cfen.isEmpty())
+ {
+  qts_ << "(pgb::add_channel_fuxe_cross_node "; end_line({mgt1, mgt2});
+ }
+ else
+ {
+  MG_Token mgt3 = mgtoken(chn, MG_Token_Kind_Groups::Generic, chnsg);
+  MG_Token mgt4 = mgtoken(cfen, MG_Token_Kind_Groups::Arg_Target, cfensg);
+  qts_ << "(pgb::add_channel_fuxe_cross_node ";
+  end_line({mgt1, mgt2, mgt3, mgt4});
+ }
+ return purpose_;
+}
+
 Purpose_Codes& _PGB_IR_Build::add_channel_continue_block_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3)
 {

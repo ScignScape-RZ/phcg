@@ -201,6 +201,16 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
     generate_line(qts, "push_carrier_expression");
    }
   }
+  else if(n1 = rq_.Channel_Fuxe_Cross[cion1](n))
+  {
+   CAON_PTR_DEBUG(PHR_Graph_Node ,n1)
+   if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
+   {
+    generate_fuxe_entry(qts, *fen, *n1, unw + 1);
+    qts << "hold_type_by_name $ " << fen->result_type_name() << " ;.\n";
+    generate_line(qts, "push_carrier_expression");
+   }
+  }
   else if(n1 = rq_.Channel_Continue_Block[cion1](n))
   {
    if(caon_ptr<PHR_Graph_Block_Info> bin = cion1->phr_node()->block_info())
