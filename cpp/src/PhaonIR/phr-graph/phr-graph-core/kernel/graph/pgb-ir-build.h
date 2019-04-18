@@ -30,7 +30,8 @@ class PHR_Graph_Query;
 
 enum class Purpose_Codes
 {
- N_A, Generic, Make_Token_Node_Fuxe_Sumbol
+ N_A, Generic, Make_Token_Node_Fuxe_Sumbol,
+ Copy_To_Last_Statement_Entry_Node
 };
 
 

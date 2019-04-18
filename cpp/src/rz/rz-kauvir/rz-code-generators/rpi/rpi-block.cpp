@@ -799,6 +799,10 @@ void RPI_Block::write(QList<PGB_IR_Build::Text_With_Purpose>& tps, QTextStream& 
  {
   rsf->write_as_statement(qts, prior);
 
+  pgb_.insert_before_purpose(rsf->step_forms(),  Purpose_Codes::Copy_To_Last_Statement_Entry_Node)
+    .add_statement_sequence_node("!last_statement_entry_node",
+    "&entry-node");
+
   tps.append(rsf->step_forms());
   prior = rsf;
  }

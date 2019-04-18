@@ -189,11 +189,13 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
   {
    // // already handled ...?
 //?
+#ifdef PROB_CUT
 //   if(n == &arg_node)
 //   {
 //    n = rq_.Channel_Continue(n1);
 //    continue;
 //   }
+#endif // PROB_CUT
    CAON_PTR_DEBUG(PHR_Graph_Node ,n1)
    if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
    {
@@ -210,6 +212,7 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
 //     {
       n = rq_.Channel_Continue(n1);
       continue;
+#ifdef PROB_CUT
 //     }
 //   if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
 //   {
@@ -217,6 +220,7 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
 //    qts << "hold_type_by_name $ " << fen->result_type_name() << " ;.\n";
 //    generate_line(qts, "push_carrier_expression");
 //   }
+#endif // PROB_CUT
   }
   else if(n1 = rq_.Channel_Fuxe_Cross[cion1](n))
   {
@@ -300,6 +304,7 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
     generate_line(qts, "push_carrier_expression");
    }
   }
+  // no coentry right? ...
   n = n1;
  }
 }

@@ -80,6 +80,9 @@ void RPI_Stage_Form::write_assignment_initialization_via_expression(
  }
  if(td)
    f->mark_as_block_entry_statment();
+
+ f->mark_as_assignment_expression();
+
  f->write_unmediated(qts, prior);
  step_forms_.append(f->step_forms());
 
@@ -335,6 +338,13 @@ void RPI_Stage_Form::mark_as_block_entry_statment()
  //CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
 }
 
+//void RPI_Stage_Form::mark_as_initialization_expression()
+//{
+// check_init_annotation();
+// annotation_->flags.is_block_entry_statment = true;
+// //CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
+//}
+
 void RPI_Stage_Form::mark_as_assignment_expression()
 {
  check_init_annotation();
@@ -568,8 +578,10 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
       pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
    }
 
-   if(ANNOTATION_FLAG(is_statement))
-     pgb_(step_forms_).copy_value("&entry-node", "!last_statement_entry_node");
+   if(ANNOTATION_FLAG(is_statement) || ANNOTATION_FLAG(is_nested_as_assignment))
+     pgb_(step_forms_).copy_value("&entry-node", "!last_statement_entry_node")
+     = Purpose_Codes::Copy_To_Last_Statement_Entry_Node;
+
    pgb_(step_forms_).copy_value("&entry-node", "!last_expression_entry_node");
    pgb_(step_forms_).copy_value("&entry-node", "&channel-seq");
    break;
