@@ -338,6 +338,21 @@ void RPI_Stage_Form::mark_as_block_entry_statment()
  //CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
 }
 
+bool RPI_Stage_Form::is_effective_block_entry_statment()
+{
+ bool result = ANNOTATION_FLAG(is_block_entry_statment);
+ if(!result)
+ {
+  if(inner_elements_.isEmpty())
+    return false;
+  if(inner_elements_[0].kind() == RPI_Stage_Element_Kinds::Form)
+    result = inner_elements_[0].form()->is_effective_block_entry_statment();
+ }
+ return result;
+
+ //CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
+}
+
 //void RPI_Stage_Form::mark_as_initialization_expression()
 //{
 // check_init_annotation();
@@ -570,13 +585,19 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     {
      pgb_(step_forms_).make_statement_info_node(
        rai->text().prepend('@'), ":result",
-       assignment_info_.encode_ikind().prepend(':'), "&si-node");
+       ray->encode_ikind().prepend(':'), "&si-node");
+//?
+// // which  assignment_info_.encode_ikind()?
+//     pgb_(step_forms_).make_statement_info_node(
+//       rai->text().prepend('@'), ":result",
+//       assignment_info_.encode_ikind().prepend(':'), "&si-node");
      pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node",
        "&entry-node", "&si-node");
     }
     else
       pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
    }
+   // non block entry handled in the block ...
 
    if(ANNOTATION_FLAG(is_statement) || ANNOTATION_FLAG(is_nested_as_assignment))
      pgb_(step_forms_).copy_value("&entry-node", "!last_statement_entry_node")

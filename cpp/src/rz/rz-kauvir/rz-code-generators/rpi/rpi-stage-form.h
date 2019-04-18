@@ -120,6 +120,7 @@ public:
 
  bool instruction(QString sym);
 
+ bool is_effective_block_entry_statment();
  bool is_non_block_expression();
  bool is_deferred();
  bool has_preceder_token();
