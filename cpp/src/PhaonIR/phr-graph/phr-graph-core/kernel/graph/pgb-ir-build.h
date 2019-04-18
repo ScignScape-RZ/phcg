@@ -140,6 +140,27 @@ public:
     t2.mid(1), get_subgroup(t2[0]));
  }
 
+ Purpose_Codes& add_channel_fuxe_coentry_node(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2,
+   QString chn = QString(),
+   MG_Token_Subgroups chnsg = MG_Token_Subgroups::N_A,
+   QString cfen = QString(),
+   MG_Token_Subgroups cfensg = MG_Token_Subgroups::N_A);
+ Purpose_Codes& add_channel_fuxe_coentry_node(QString t1, QString t2,
+   QString chn, QString cfen)
+ {
+  return add_channel_fuxe_coentry_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]),
+    chn.mid(1), get_subgroup(chn[0]),
+    cfen.mid(1), get_subgroup(cfen[0]));
+ }
+ Purpose_Codes& add_channel_fuxe_coentry_node(QString t1, QString t2)
+ {
+  return add_channel_fuxe_coentry_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]));
+ }
+
+
  Purpose_Codes& add_channel_continue_block_node(QString t1, MG_Token_Subgroups sg1,
    QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3);
  Purpose_Codes& add_channel_continue_block_node(QString t1, QString t2, QString t3)

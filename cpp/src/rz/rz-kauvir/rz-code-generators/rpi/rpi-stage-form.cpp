@@ -647,7 +647,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
          "&entry-node", ":lambda", "&cfx-node");
        else
          pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
-         .add_channel_fuxe_entry_node(
+         .add_channel_fuxe_coentry_node(
          "!last_expression_entry_node",
          "&entry-node", ":lambda", "&cfx-node");
       }

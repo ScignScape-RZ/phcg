@@ -13,6 +13,8 @@ DOMINION_CONNECTOR(Channel_Entry, "channel-entry")
 
 DOMINION_CONNECTOR(Channel_Fuxe_Entry, "channel-fuxe-entry")
 
+DOMINION_CONNECTOR(Channel_Fuxe_Coentry, "channel-fuxe-coentry")
+
 DOMINION_CONNECTOR(Channel_Fuxe_Cross, "channel-fuxe-cross")
 
 DOMINION_CONNECTOR(Channel_Sequence, "channel-sequence")

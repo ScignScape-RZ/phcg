@@ -47,7 +47,7 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
   if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
     generate_from_fn_node(qts, *tokn, channel_name, *n, unw);
  }
- else if(n = rq_.Channel_Fuxe_Entry[cion](&node))
+ else if(n = rq_.Channel_Fuxe_Coentry[cion](&node))
  {
   CAON_PTR_DEBUG(PHR_Graph_Node ,n)
   if(cion)
@@ -188,11 +188,12 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
   else if(n1 = rq_.Channel_Fuxe_Entry[cion1](n))
   {
    // // already handled ...?
-   if(n == &arg_node)
-   {
-    n = rq_.Channel_Continue(n1);
-    continue;
-   }
+//?
+//   if(n == &arg_node)
+//   {
+//    n = rq_.Channel_Continue(n1);
+//    continue;
+//   }
    CAON_PTR_DEBUG(PHR_Graph_Node ,n1)
    if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
    {
@@ -200,6 +201,22 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
     qts << "hold_type_by_name $ " << fen->result_type_name() << " ;.\n";
     generate_line(qts, "push_carrier_expression");
    }
+  }
+  else if(n1 = rq_.Channel_Fuxe_Coentry[cion1](n))
+  {
+   CAON_PTR_DEBUG(PHR_Graph_Node ,n1)
+//     // // already handled ...?
+//     if(n == &arg_node)
+//     {
+      n = rq_.Channel_Continue(n1);
+      continue;
+//     }
+//   if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
+//   {
+//    generate_fuxe_entry(qts, *fen, *n1, unw + 1);
+//    qts << "hold_type_by_name $ " << fen->result_type_name() << " ;.\n";
+//    generate_line(qts, "push_carrier_expression");
+//   }
   }
   else if(n1 = rq_.Channel_Fuxe_Cross[cion1](n))
   {
