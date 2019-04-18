@@ -35,6 +35,7 @@ USING_RZNS(RECore)
 RZNS_(GBuild)
  class RZ_Lisp_Graph_Visitor;
  class RZ_Graph_Visitor_Phaon;
+ class RZ_Lisp_Token;
 _RZNS(GBuild)
 
 USING_RZNS(GBuild)
@@ -84,6 +85,7 @@ private:
  caon_ptr<RPI_Stage_Form> preceding_expression_form_;
 
  MS_Token held_token_;
+ caon_ptr<RZ_Lisp_Token> held_sigma_token_;
 
  QString entry_lisp_code_;
 

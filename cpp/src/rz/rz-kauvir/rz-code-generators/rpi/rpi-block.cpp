@@ -359,6 +359,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
 
       held_token_ = {MS_Token_Kinds::Sigma_Symbol, ht};
       lt.clear();
+      held_sigma_token_ = next_tok;
      }
      else if(next_tok->flags.follows_call_arrow)
      {
@@ -426,6 +427,15 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        {
         current_form_->add_assignment_initialization_element(RPI_Stage_Element_Kinds::Instruction_Symbol, lt);
            //MS_Token::check_as(mstk, MS_Token_Kinds::Instruction_Symbol, lt));
+       }
+       else if(next_tok->flags.follows_call_arrow)
+       {
+        if(held_sigma_token_)
+        {
+         CAON_PTR_DEBUG(RZ_Lisp_Token ,held_sigma_token)
+         current_form_->add_s1_fn_element(lt, held_sigma_token_->raw_text());
+         held_sigma_token_ = nullptr;
+        }
        }
        else if(mstk == MS_Token_Kinds::Skipped_Flag_Symbol)
        {

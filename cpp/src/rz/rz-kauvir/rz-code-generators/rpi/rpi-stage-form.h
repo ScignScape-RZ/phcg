@@ -163,6 +163,8 @@ public:
 
  QString get_assignment_target();
 
+ void add_s1_fn_element(QString fn, QString obj);
+
 
  void check_init_annotation();
  void check_init_annotation(QString fn);

@@ -1077,6 +1077,19 @@ void RPI_Stage_Form::set_assignment_info(RPI_Assignment_Info& assignment_info)
  assignment_info_ = assignment_info;
 }
 
+void RPI_Stage_Form::add_s1_fn_element(QString fn, QString obj)
+{
+ check_init_annotation();
+ annotation_->flags.has_instruction_token = true;
+
+ inner_elements_.push_back(RPI_Stage_Element(
+   RPI_Stage_Element_Kinds::Fuxe_Symbol, fn));
+
+ inner_elements_.push_back(RPI_Stage_Element(
+   RPI_Stage_Element_Kinds::S1_Symbol, obj));
+}
+
+
 void RPI_Stage_Form::add_assignment_initialization_element(RPI_Stage_Element_Kinds kind, QString text)
 {
  inner_elements_.push_back(RPI_Stage_Element(kind, text));
