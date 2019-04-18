@@ -525,6 +525,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 // if(ANNOTATION_FLAG(is_block_entry_statment))
 // {
  int channel_count = 0;
+ RPI_Stage_Element_Kinds last_kind = RPI_Stage_Element_Kinds::N_A;
  for(RPI_Stage_Element& rse : inner_elements_)
  {
   QString rset = rse.text();
@@ -567,14 +568,22 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
       pgb_(step_forms_).add_statement_sequence_node("!last_statement_entry_node", "&entry-node");
    }
 
+   if(ANNOTATION_FLAG(is_statement))
      pgb_(step_forms_).copy_value("&entry-node", "!last_statement_entry_node");
-     pgb_(step_forms_).copy_value("&entry-node", "&channel-seq");
+   pgb_(step_forms_).copy_value("&entry-node", "!last_expression_entry_node");
+   pgb_(step_forms_).copy_value("&entry-node", "&channel-seq");
    break;
 
   case RPI_Stage_Element_Kinds::Literal:
    if(channel_count == 0)
      pgb_(step_forms_).add_channel_entry_token("&channel-seq", "lambda",
        rset.prepend('$'), "&channel-seq");
+   else if(last_kind == RPI_Stage_Element_Kinds::Form)
+   {
+    pgb_(step_forms_).copy_value("!last_expression_entry_node", "&channel-seq");
+    pgb_(step_forms_).add_channel_continue_token("&channel-seq",
+      rset.prepend('$'), "&channel-seq");
+   }
    else
      pgb_(step_forms_).add_channel_token("&channel-seq",
        rset.prepend('$'), "&channel-seq");
@@ -604,7 +613,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
       pgb_(step_forms_).make_block_info_node("&bin");
 
       pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
-        .add_channel_continue_block_node("!last_statement_entry_node",
+        .add_channel_continue_block_node("!last_expression_entry_node",
         "&entry-node", "&bin");
 
       step_forms_.append(f->step_forms());
@@ -634,19 +643,19 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
        else
          pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
          .add_channel_fuxe_entry_node(
-         "!last_statement_entry_node",
+         "!last_expression_entry_node",
          "&entry-node", ":lambda", "&cfx-node");
       }
       step_forms_.append(f->step_forms());
      }
     }
-    CAON_DEBUG_NOOP
-    //pgb_(step_forms_).
+    ++channel_count;
    }
-  default:
    break;
+  default:
+   continue; // skip last_kind assignment ...
   }
-
+  last_kind = rse.kind();
  }
 
  //?return;

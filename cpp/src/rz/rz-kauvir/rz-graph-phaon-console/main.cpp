@@ -108,6 +108,7 @@ void compile_rz(QString file_name)
 
  PHR_Graph phg;
  PHR_Graph_Build phgb(phg);
+
  phgb.load_from_pgb_file(pgb.out_file());
  PHR_Graph_PHR_Output pgo(pgb.out_file() + ".phr");
  pgo.document()->set_graph(&phg);

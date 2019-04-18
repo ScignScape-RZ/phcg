@@ -28,13 +28,13 @@ push_unwind_scope $ 1 result ;.
  .; generate_from_fn_node ;.
 push_carrier_stack $ fuxe ;.
 hold_type_by_name $ fbase ;.
-push_carrier_raw_value $ #- ;.
+push_carrier_raw_value $ #+ ;.
  .; args ;.
 push_carrier_stack $ lambda ;.
 hold_type_by_name $ u4 ;.
 push_carrier_raw_value $ 78 ;.
 hold_type_by_name $ u4 ;.
-push_carrier_raw_value $ 13 ;.
+push_carrier_raw_value $ 12 ;.
 push_carrier_stack $ result ;.
 index_channel_group ;.
 coalesce_channel_group ;.
