@@ -196,24 +196,23 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg
 //? cpkg_output_symbol_name_ = cpkg->output_symbol_name();
 
  PHR_Channel* sigma = cpkg->sigma_ch();
-#ifdef HIDE
- if(!sigma.carriers().isEmpty())
+ if(sigma  && !sigma->isEmpty())
  {
-  PHR_Carrier s1;
-  sigma.get_carrier_at_position(0, s1);
+  PHR_Carrier* s1 = sigma->first();
   PHR_Command_Runtime_Argument* s1a = new PHR_Command_Runtime_Argument;
-  if(s1.flags.literal_string)
-  {
-   s1a->set_raw_value(s1.symbol_as_pointer());
-   s1a->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
-  }
-  else
-  {
-   s1a->set_bind_code(s1.symbol());
-  }
+//?
+//  if(s1->flags.literal_string)
+//  {
+//   s1a->set_raw_value(s1.symbol_as_pointer());
+//   s1a->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr);
+//  }
+//  else
+//  {
+   s1a->set_bind_code(s1->symbol_name());
+//  }
   sigma_argument_ = s1a;
  }
-#endif
+
  PHR_Channel* fuxe = cpkg->fuxe_ch();
  if(fuxe->isEmpty())
  {
@@ -234,12 +233,15 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg
 
  PHR_Channel* lambda = cpkg->lambda_ch();
 
- int size = lambda->size();
- for(int i = 0; i < size; ++i)
+ if(lambda)
  {
-  PHR_Carrier* phc = lambda->at(i);
-  PHR_Command_Runtime_Argument* la = parse_carrier_to_argument(*phc, i);
-  lambda_arguments_.push_back(la);
+  int size = lambda->size();
+  for(int i = 0; i < size; ++i)
+  {
+   PHR_Carrier* phc = lambda->at(i);
+   PHR_Command_Runtime_Argument* la = parse_carrier_to_argument(*phc, i);
+   lambda_arguments_.push_back(la);
+  }
  }
 }
 
