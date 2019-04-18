@@ -432,7 +432,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        {
         if(held_sigma_token_)
         {
-         CAON_PTR_DEBUG(RZ_Lisp_Token ,held_sigma_token)
+         CAON_PTR_DEBUG(RZ_Lisp_Token ,held_sigma_token_)
          current_form_->add_s1_fn_element(lt, held_sigma_token_->raw_text());
          held_sigma_token_ = nullptr;
         }
@@ -463,7 +463,11 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
       }
       if(!held_token_.raw_text.isEmpty())
       {
-       current_form_->add_carrier_element(RPI_Stage_Element_Kinds::N_A, held_token_.raw_text);
+       if(held_token_.kind != MS_Token_Kinds::Sigma_Symbol)
+       {
+        qDebug() << "maybe unexpected held token ...      ";
+        current_form_->add_carrier_element(RPI_Stage_Element_Kinds::N_A, held_token_.raw_text);
+       }
        held_token_.clear();
       }
      }

@@ -556,6 +556,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
   QString rset = rse.text();
   switch (rse.kind())
   {
+  case RPI_Stage_Element_Kinds::S1_Fuxe_Symbol:
   case RPI_Stage_Element_Kinds::Fuxe_Symbol:
    if(rset.startsWith('#'))
      pgb_(step_forms_).make_token_node(rset.prepend('$'), "&entry-node")
@@ -621,6 +622,12 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      pgb_(step_forms_).add_channel_token("&channel-seq",
        rset.prepend('$'), "&channel-seq");
    ++channel_count;
+   break;
+
+
+  case RPI_Stage_Element_Kinds::S1_Symbol:
+    pgb_(step_forms_).add_channel_xentry_token("!last_expression_entry_node",
+      "lambda", rset.prepend('@'), "&xchannel");
    break;
 
   case RPI_Stage_Element_Kinds::Raw_Symbol:
@@ -1083,7 +1090,7 @@ void RPI_Stage_Form::add_s1_fn_element(QString fn, QString obj)
  annotation_->flags.has_instruction_token = true;
 
  inner_elements_.push_back(RPI_Stage_Element(
-   RPI_Stage_Element_Kinds::Fuxe_Symbol, fn));
+   RPI_Stage_Element_Kinds::S1_Fuxe_Symbol, fn));
 
  inner_elements_.push_back(RPI_Stage_Element(
    RPI_Stage_Element_Kinds::S1_Symbol, obj));
