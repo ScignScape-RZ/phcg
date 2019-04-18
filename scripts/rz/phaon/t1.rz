@@ -2,5 +2,8 @@
 ,fnd ::: Fn_Doc*;
 fnd \== default;
 
-&prn fnd;
+
+fnd -> init kenv;
+
+
 
