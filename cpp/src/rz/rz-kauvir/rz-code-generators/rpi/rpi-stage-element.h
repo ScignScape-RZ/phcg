@@ -43,7 +43,8 @@ class RPI_Stage_Form;
 
 enum class RPI_Stage_Element_Kinds
 {
-  N_A, Fuxe_Symbol, S1_Fuxe_Symbol, Token, Form, S1_Symbol,
+ N_A, Fuxe_Symbol, S1_Fuxe_Symbol, Token, Form, S1_Symbol,
+ Type_Default_Marker,
 
  Instruction_Symbol, Literal, String_Literal, Kernel_Type_Symbol,
  Raw_Symbol, Bridge_Symbol,

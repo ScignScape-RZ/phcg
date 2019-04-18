@@ -41,7 +41,11 @@ void RPI_Expression::write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_For
   RPI_Assignment_Info& rai = form_.assignment_info();
   if(rai.vkind() == RPI_Assignment_Value_Kinds::Literal)
   {
-   form_.write_assignment_initialization_via_token(qts, prior);
+   form_.write_assignment_initialization_via_token("parse-literal", prior);
+  }
+  else if(rai.vkind() == RPI_Assignment_Value_Kinds::Type_Default)
+  {
+   form_.write_assignment_initialization_via_token("type-default", prior);
   }
   else if(rai.vkind() == RPI_Assignment_Value_Kinds::Expression)
   {

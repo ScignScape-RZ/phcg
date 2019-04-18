@@ -83,7 +83,7 @@ void RZ_Lisp_Token::init_lisp_token(RE_Token& re_token)
  rlt->flags.is_symbol_declaration = re_token.flags.is_symbol_declaration;
  rlt->flags.is_string_literal = re_token.flags.is_string_literal;
  rlt->flags.is_numeric_literal = re_token.flags.is_numeric_literal;
- rlt->flags.is_xq_literal = re_token.flags.is_xq_literal;
+ //?rlt->flags.is_xq_literal = re_token.flags.is_xq_literal;
  rlt->flags.is_raw_lisp = re_token.flags.is_raw_lisp;
 
  rlt->flags.is_quoted = re_token.flags.is_quoted;

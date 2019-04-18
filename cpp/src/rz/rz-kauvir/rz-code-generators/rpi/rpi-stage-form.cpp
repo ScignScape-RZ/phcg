@@ -123,10 +123,10 @@ void RPI_Stage_Form::write_assignment_initialization_via_expression(
 }
 
 void RPI_Stage_Form::write_assignment_initialization_via_token(
-  QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
+  QString key, caon_ptr<RPI_Stage_Form> prior)
 {
  pgb_(step_forms_).make_statement_info_node(assignment_info_.text().prepend('@'),
-   ":parse-literal", assignment_info_.encode_ikind().prepend(':'),
+   key.prepend(':'), assignment_info_.encode_ikind().prepend(':'),
    "&si-node");
 
  QString ty;
@@ -149,6 +149,16 @@ void RPI_Stage_Form::write_assignment_initialization_via_token(
    else
      pgb_(step_forms_).add_statement_sequence_token("!last_statement_entry_node",
      rse.text().prepend('$'), "&si-node", "!last_statement_entry_node");
+   break;
+  }
+  else if(rse.kind() == RPI_Stage_Element_Kinds::Type_Default_Marker)
+  {
+   if(prior_type_declaration_ben)
+     pgb_(step_forms_).add_block_entry_token("!last_block_pre_entry_node",
+     rse.text().prepend('@'), "&si-node", "!last_statement_entry_node");
+   else
+     pgb_(step_forms_).add_statement_sequence_token("!last_statement_entry_node",
+     rse.text().prepend('@'), "&si-node", "!last_statement_entry_node");
    break;
   }
  }
@@ -624,10 +634,9 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
    ++channel_count;
    break;
 
-
   case RPI_Stage_Element_Kinds::S1_Symbol:
     pgb_(step_forms_).add_channel_xentry_token("!last_expression_entry_node",
-      "lambda", rset.prepend('@'), "&xchannel");
+      "sigma", rset.prepend('@'), "&xchannel");
    break;
 
   case RPI_Stage_Element_Kinds::Raw_Symbol:

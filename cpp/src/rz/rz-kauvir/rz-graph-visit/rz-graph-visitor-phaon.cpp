@@ -116,6 +116,7 @@ RZ_Graph_Visitor_Phaon::Special_Form_Flags RZ_Graph_Visitor_Phaon::parse_special
    {".let", Special_Form_Flags::Type_Declare},
    {"\\=", Special_Form_Flags::Assignment},
    {"=", Special_Form_Flags::Assignment},
+   {"\\==", Special_Form_Flags::Assignment},
    {"<<|", Special_Form_Flags::Formula},
 
   }};

@@ -1,4 +1,6 @@
 
-obj -> test 44;
+,fnd ::: Fn_Doc*;
+fnd \== default;
 
+&prn fnd;
 

@@ -345,7 +345,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
      if(next_tok->flags.is_assign_to_default_ctor)
      {
       skip_increase_lambda_count = true;
-      lt.clear();
+      //lt.clear();
       //  currently this just ignores the token.
      }
      else if(next_tok->flags.precedes_call_arrow)
@@ -423,10 +423,29 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
           RPI_Assignment_Initialization_Kinds::Init, lt));
 //?        current_form_->set_assignment_token({MS_Token_Kinds::Scoped_Symbol_Literal_Init, lt});
        }
+       else if(next_tok->flags.has_assignment_to_type)
+       {
+        if(next_tok->flags.has_assignment_to_type_default)
+          current_form_->set_assignment_info(RPI_Assignment_Info(
+          RPI_Assignment_Value_Kinds::Type_Default,
+          RPI_Assignment_Initialization_Kinds::Init, lt));
+        else if(next_tok->flags.has_assignment_to_ctor_expression)
+          current_form_->set_assignment_info(RPI_Assignment_Info(
+          RPI_Assignment_Value_Kinds::Ctor,
+          RPI_Assignment_Initialization_Kinds::Init, lt));
+        else
+          current_form_->set_assignment_info(RPI_Assignment_Info(
+          RPI_Assignment_Value_Kinds::Type,
+          RPI_Assignment_Initialization_Kinds::Init, lt));
+       }
        else if(next_tok->flags.is_assignment_initialization_entry)
        {
         current_form_->add_assignment_initialization_element(RPI_Stage_Element_Kinds::Instruction_Symbol, lt);
            //MS_Token::check_as(mstk, MS_Token_Kinds::Instruction_Symbol, lt));
+       }
+       else if(next_tok->flags.is_assign_to_default_ctor)
+       {
+        current_form_->add_argument_element(RPI_Stage_Element_Kinds::Type_Default_Marker, lt);
        }
        else if(next_tok->flags.follows_call_arrow)
        {

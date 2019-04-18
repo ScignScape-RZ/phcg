@@ -62,10 +62,10 @@ public:
   bool is_numeric_literal:1;
   bool is_string_literal:1;
   bool is_token_representation:1;
-  bool unUSED_1:1;
+  bool has_assignment_to_type:1;
   bool is_declaration_arrow:1;
   bool is_call_arrow:1;
-  bool unUSED_2:1;
+  bool has_assignment_to_type_default:1;
   bool has_assignment_initialization_token:1;
   bool has_assignment_initialization_expression:1;
   bool is_assignment_initialization_entry:1;
@@ -111,7 +111,7 @@ public:
   bool is_type_symbol_in_declaration:1;
   bool is_untyped_symbol_declaration:1;
   bool is_assign_to_default_ctor:1;
-  bool is_xq_literal:1;
+  bool has_assignment_to_ctor_expression:1;
   bool is_raw_lisp:1;
   bool has_type_indicator:1;
   bool follows_call_arrow:1;

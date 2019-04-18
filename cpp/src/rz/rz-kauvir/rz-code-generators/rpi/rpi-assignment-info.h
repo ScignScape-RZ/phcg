@@ -42,7 +42,8 @@ RZNS_(GVal)
 
 enum class RPI_Assignment_Value_Kinds
 {
-  N_A, Scoped_Symbol, Literal, Expression
+  N_A, Scoped_Symbol, Literal, Expression,
+  Type, Type_Default, Ctor
 };
 
 enum class RPI_Assignment_Initialization_Kinds

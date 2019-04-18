@@ -1142,6 +1142,7 @@ void RZ_Lisp_Graph_Valuer::set_preinit_equal(RZ_Lisp_Graph_Result_Holder& rh, RZ
 void RZ_Lisp_Graph_Valuer::set_preinit_equal_to_type(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
  RZ_Lisp_Graph_Value_Holder& lhs, RZ_Lisp_Graph_Value_Holder& rhs)
 {
+ bool is_assign_to_default_ctor = false;
  if(caon_ptr<RZ_Opaque_Type_Symbol> otsr = rhs.pRestore<RZ_Opaque_Type_Symbol>())
  {
   if(caon_ptr<tNode> n = otsr->get_node())
@@ -1150,11 +1151,26 @@ void RZ_Lisp_Graph_Valuer::set_preinit_equal_to_type(RZ_Lisp_Graph_Result_Holder
    {
     if(tok->raw_text() == "default")
     {
+     is_assign_to_default_ctor = true;
      tok->flags.is_assign_to_default_ctor = true;
     }
    }
   }
  }
+
+ if(caon_ptr<RZ_Opaque_Type_Symbol> otsl = lhs.pRestore<RZ_Opaque_Type_Symbol>())
+ {
+  if(caon_ptr<tNode> n = otsl->get_node())
+  {
+   if(caon_ptr<RZ_Lisp_Token> tok = n->lisp_token())
+   {
+    CAON_PTR_DEBUG(RZ_Lisp_Token ,tok)
+    tok->flags.has_assignment_to_type = true;
+    tok->flags.has_assignment_to_type_default = is_assign_to_default_ctor;
+   }
+  }
+ }
+
  // //  check for statement kind ...
  if(caon_ptr<RE_Node> lfn = rh.get_lead_function_node())
  {
