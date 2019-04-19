@@ -29,7 +29,7 @@ INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 INCLUDEPATH += $$HGDM_SRC_GROUP_DIR
 INCLUDEPATH += $$PHAONIR_SRC_GROUP_DIR
 INCLUDEPATH += $$PHAONLIB_SRC_GROUP_DIR
-
+INCLUDEPATH += $$PHR_RUNTIME_SRC_GROUP_DIR
 
 CONFIG += no_keywords
 
@@ -47,7 +47,7 @@ SOURCES += \
   $$SRC_DIR/basic-functions.cpp \
 
 
-LIBS += -L$$TARGETSDIR -lphaon-ir -lphr-direct-eval
+LIBS += -L$$TARGETSDIR -lphaon-ir -lphr-direct-eval -lphr-fn-doc
 
 
 

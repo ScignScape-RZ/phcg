@@ -89,6 +89,47 @@
 #include "phaon-ir/channel/phr-carrier.h"
 #include "phaon-ir/phaon-ir.h"
 
+#include "phr-fn-doc/phr-fn-doc.h"
+
+void fndoc_read(PHR_Fn_Doc* fnd, QString fn)
+{
+ qDebug() << "Reading " << fn << " ...";
+ fnd->read(fn);
+}
+
+QString fndoc_test_summary(PHR_Fn_Doc* fnd)
+{
+ QString summ = fnd->test_summary();
+ return summ;
+}
+
+
+void* insert_envv(void* kind, void* test)
+{
+ static QMap<QString, void*> hold;
+ QString* k = reinterpret_cast<QString*>(kind);
+ if(test)
+ {
+  hold[*k] = test;
+ }
+ return hold.value(*k);
+}
+
+void* envv(void* kind)
+{
+ if(kind)
+ {
+  qDebug() << "Kind: " << *(QString*)kind;
+  return insert_envv(kind, nullptr);
+ }
+ else
+ {
+  qDebug() << "In envv: Return kind could not be determined.";
+  return nullptr;
+ }
+}
+
+
 
 void prn(qint32 arg)
 {
@@ -155,6 +196,9 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
  PHR_Channel_System& pcs = *phr.channel_system();
 
  PHR_Channel_Semantic_Protocol* lambda = pcs["lambda"];
+ PHR_Channel_Semantic_Protocol* result = pcs["result"];
+ PHR_Channel_Semantic_Protocol* sigma = pcs["sigma"];
+
  PHR_Channel_Group g1;//(pcm.channel_names());
  {
   PHR_Type* ty = type_system->get_type_by_name("u4");
@@ -186,6 +230,46 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   table.init_phaon_function(g1, pss, "prnn", 700, &prnn);
   g1.clear_all();
  }
+
+ {
+  PHR_Type* ty1 = type_system->get_type_by_name("Fn_Doc*");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty1);
+
+  PHR_Type* ty2 = type_system->get_type_by_name("str");
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty2);
+
+  g1.init_channel(sigma, 1);
+  (*g1[sigma])[0] = phc1;
+
+  g1.init_channel(lambda, 1);
+  (*g1[lambda])[1] = phc2;
+
+  table.init_phaon_function(g1, pss, "read-f", 710, &fndoc_read);
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty1 = type_system->get_type_by_name("Fn_Doc*");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty1);
+
+  PHR_Type* ty2 = type_system->get_type_by_name("str");
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty2);
+
+  g1.init_channel(sigma, 1);
+  (*g1[sigma])[0] = phc1;
+
+  g1.init_channel(result, 1);
+  (*g1[result])[1] = phc2;
+
+  table.init_phaon_function(g1, pss, "test-summary", 610, &fndoc_test_summary);
+  g1.clear_all();
+ }
+
+
  {
 //  g1.add_lambda_carrier(
 //     {kcm.get_kcm_type_by_kauvir_type_object( &type_system->type_object__argument_vector() ), nullptr},
@@ -200,6 +284,27 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[lambda])[0] = phc;
 
   table.init_phaon_function(g1, pss, "if-t-e", 700, &if_t_e);
+
+  g1.clear_all();
+ }
+
+
+ {
+  PHR_Type* ty1 = type_system->get_type_by_name("str");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty1);
+
+  PHR_Type* ty2 = type_system->get_type_by_name("u64");
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty2);
+
+  g1.init_channel(lambda, 1);
+  (*g1[lambda])[0] = phc1;
+
+  g1.init_channel(result, 1);
+  (*g1[lambda])[0] = phc1;
+
+  table.init_phaon_function(g1, pss, "envv", 700, &envv);
 
   g1.clear_all();
  }
