@@ -75,11 +75,15 @@ int PHR_Channel_Group::get_sigma_lambda_byte_code()
 //  result += 9;
  }
 
- for(const PHR_Carrier* c : *lambda_ch())
+ if(lambda_ch())
  {
-  result *= 10;
-  result += c->type_object()->byte_code();
+  for(const PHR_Carrier* c : *lambda_ch())
+  {
+   result *= 10;
+   result += c->type_object()->byte_code();
+  }
  }
+
  return result;
 }
 

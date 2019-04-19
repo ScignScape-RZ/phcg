@@ -10,6 +10,8 @@
 #include "types/phr-type.h"
 #include "types/phr-type-object.h"
 
+#include "types/phr-type-system.h"
+
 #include <QMetaType>
 
 
@@ -35,9 +37,7 @@ PHR_Type_Object* PHR_Code_Model::create_and_register_type_object(QString name)
 
 PHR_Type_Object* PHR_Code_Model::create_and_register_type_object(QString name, int bc)
 {
- PHR_Type* pt = new PHR_Type;
- pt->set_name(name);
- pt->set_byte_code(bc);
+ PHR_Type* pt = type_system_->check_add_type_by_name(name, bc);
  PHR_Type_Object* pto = new PHR_Type_Object(pt);
 // KCM_Type_Object* result = new KCM_Type_Object(kto);
 

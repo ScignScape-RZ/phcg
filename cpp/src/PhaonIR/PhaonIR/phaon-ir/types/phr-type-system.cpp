@@ -19,7 +19,7 @@ PHR_Type* PHR_Type_System::get_type_by_name(QString name)
  return types_.value(name);
 }
 
-void PHR_Type_System::check_add_type_by_name(QString name, quint8 byte_code)
+PHR_Type* PHR_Type_System::check_add_type_by_name(QString name, quint8 byte_code)
 {
  auto it = types_.find(name);
  if(it == types_.end())
@@ -28,5 +28,7 @@ void PHR_Type_System::check_add_type_by_name(QString name, quint8 byte_code)
   ty->set_name(name);
   ty->set_byte_code(byte_code);
   types_.insert(name, ty);
+  return ty;
  }
+ return *it;
 }
