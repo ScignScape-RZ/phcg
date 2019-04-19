@@ -20,6 +20,7 @@ class PHR_Symbol_Scope;
 class PHR_Channel_Group_Table;
 
 class PhaonIR;
+class PHR_Type_Object;
 
 class PHR_Code_Model
 {
@@ -49,6 +50,8 @@ public:
 
  ACCESSORS(direct_eval_fn_type ,direct_eval_fn)
 
+ PHR_Type_Object* create_and_register_type_object(QString name);
+ PHR_Type_Object* create_and_register_type_object(QString name, int bc);
 
  void init_scope_system();
 

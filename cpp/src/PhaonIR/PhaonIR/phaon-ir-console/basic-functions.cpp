@@ -232,7 +232,7 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
  }
 
  {
-  PHR_Type* ty1 = type_system->get_type_by_name("Fn_Doc*");
+  PHR_Type* ty1 = type_system->get_type_by_name("PHR_Fn_Doc*");
   PHR_Carrier* phc1 = new PHR_Carrier;
   phc1->set_phr_type(ty1);
 
@@ -244,14 +244,14 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[sigma])[0] = phc1;
 
   g1.init_channel(lambda, 1);
-  (*g1[lambda])[1] = phc2;
+  (*g1[lambda])[0] = phc2;
 
   table.init_phaon_function(g1, pss, "read-f", 710, &fndoc_read);
   g1.clear_all();
  }
 
  {
-  PHR_Type* ty1 = type_system->get_type_by_name("Fn_Doc*");
+  PHR_Type* ty1 = type_system->get_type_by_name("PHR_Fn_Doc*");
   PHR_Carrier* phc1 = new PHR_Carrier;
   phc1->set_phr_type(ty1);
 
@@ -263,7 +263,7 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[sigma])[0] = phc1;
 
   g1.init_channel(result, 1);
-  (*g1[result])[1] = phc2;
+  (*g1[result])[0] = phc2;
 
   table.init_phaon_function(g1, pss, "test-summary", 610, &fndoc_test_summary);
   g1.clear_all();

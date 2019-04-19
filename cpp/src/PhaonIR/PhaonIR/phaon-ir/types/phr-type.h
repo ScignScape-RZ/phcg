@@ -11,10 +11,17 @@
 
 #include "accessors.h"
 
+class QMetaObject;
+
 class PHR_Type
 {
  QString name_;
  quint8 byte_code_;
+
+ const QMetaObject* qmo_;
+ const QMetaObject* pqmo_;
+
+ int qmetatype_ptr_code_;
 
 public:
 
@@ -22,6 +29,11 @@ public:
 
  ACCESSORS(QString ,name)
  ACCESSORS(quint8 ,byte_code)
+
+ ACCESSORS(const QMetaObject* ,qmo)
+ ACCESSORS(const QMetaObject* ,pqmo)
+
+ ACCESSORS(int ,qmetatype_ptr_code)
 
 };
 

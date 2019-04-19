@@ -2,8 +2,11 @@
 ,fnd ::: Fn_Doc*;
 fnd \== default;
 
+,penv ::: PHR_Env*;
+penv \= (envv _$);
 
-fnd -> init kenv;
+fnd -> init penv;
+
 
 
 
