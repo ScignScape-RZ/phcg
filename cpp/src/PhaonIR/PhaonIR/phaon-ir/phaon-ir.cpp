@@ -28,6 +28,8 @@
 #include "runtime/phr-callable-value.h"
 #include "runtime/phr-expression-object.h"
 
+#include "types/phr-type.h"
+
 #include <QDebug>
 
 #include "textio.h"
@@ -321,8 +323,12 @@ void PhaonIR::evaluate_channel_group()
   PHR_Command_Package pcp(*held_channel_group_);
   if(direct_eval_fn_)
     direct_eval_fn_(code_model_, &pcp, held_symbol_scope_);
+
+  return;
   //? phr_direct_eval(code_model_, &pcp, held_symbol_scope_);
  }
+
+
 
  for(auto it: anchored_channel_groups_.values(held_channel_group_))
  {
@@ -359,9 +365,31 @@ void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
  PHR_Carrier_Stack* pcs = program_stack_->top();
  PHR_Carrier* phc = pcs->top();
  QString rvs = phc->raw_value_string();
- PHR_Type* ty = phc->phr_type();
+
  //void* rv = phc->raw_value();
- current_lexical_scope_->add_direct_value(sym, ty, rvs.toInt());
+ if(ch == "parse-literal")
+ {
+  PHR_Type* ty = phc->phr_type();
+  current_lexical_scope_->add_direct_value(sym, ty, rvs.toInt());
+ }
+ else if(ch == "type-default")
+ {
+  QString ts = phc->symbol_name();
+  if(ts.startsWith("default:"))
+    ts = ts.mid(8);
+  if(ts.endsWith('*'))
+    ts.chop(1);
+  PHR_Type* ty = type_system_->get_type_by_name(ts);
+
+  //const QMetaObject* qmo = kto->kauvir_type_object()->qmo();
+  int pid = ty->qmetatype_ptr_code();
+  if(pid != QMetaType::UnknownType)
+  {
+   void* pv = QMetaType::create(pid);
+   QObject* qob = static_cast<QObject*>(pv);
+   current_lexical_scope_->add_pointer_value(sym, ty, (quint64) pv);
+  }
+ }
 }
 
 void PhaonIR::anchor_channel_group(QString sym, QString ch)

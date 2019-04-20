@@ -75,11 +75,23 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_root_node()
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
 {
- caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(mgt.raw_text);
- if(mgt.kind == MG_Token_Kinds::Raw_Value)
+ bool rv = (mgt.kind == MG_Token_Kinds::Raw_Value)
+   || (mgt.kind == MG_Token_Kinds::Arg_Raw_Value);
+ bool sl = false;
+ QString rt = mgt.raw_text;
+ if(rv && rt.startsWith('"'))
+ {
+  sl = true;
+  rt = rt.mid(1);
+  if(rt.endsWith('"'))
+    rt.chop(1);
+ }
+
+ caon_ptr<PHR_Graph_Token> tok = new PHR_Graph_Token(rt);
+ if(rv)
    tok->flags.gen_raw_value = true;
- if(mgt.kind == MG_Token_Kinds::Arg_Raw_Value)
-   tok->flags.gen_raw_value = true;
+ if(sl)
+   tok->flags.is_string_literal = true;
 
  caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(tok);
  result->set_label(mgt.raw_text);

@@ -639,6 +639,15 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
       "sigma", rset.prepend('@'), "&xchannel");
    break;
 
+  case RPI_Stage_Element_Kinds::String_Literal:
+   if(channel_count == 0)
+     pgb_(step_forms_).add_channel_entry_token("&channel-seq", "lambda",
+       rset.prepend('$'), "&channel-seq");
+   else
+     pgb_(step_forms_).add_channel_token("&channel-seq",
+       rset.prepend('$'), "&channel-seq");
+   ++channel_count;
+   break;
   case RPI_Stage_Element_Kinds::Raw_Symbol:
    if(channel_count == 0)
      pgb_(step_forms_).add_channel_entry_token("&channel-seq", "lambda",

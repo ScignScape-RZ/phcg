@@ -355,6 +355,10 @@ void Expression_Generator::generate_carrier_with_raw_value(QTextStream& qts,
 
  if(!ty.isEmpty())
    qts << "hold_type_by_name $ " << ty << " ;.\n";
- qts << "push_carrier_raw_value $ " << tok.raw_text() << " ;.\n";
+
+ if(tok.flags.is_string_literal)
+   qts << "push_carrier_raw_value $ \"" << tok.raw_text() << "\" ;.\n";
+ else
+   qts << "push_carrier_raw_value $ " << tok.raw_text() << " ;.\n";
 }
 

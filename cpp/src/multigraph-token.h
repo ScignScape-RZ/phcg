@@ -284,7 +284,8 @@ struct MG_Token
   switch(kind)
   {
   case MG_Token_Kinds::String_Literal:
-   return QString("\"%1\"").arg(raw_text);
+    return raw_text;
+   //?return QString("\"%1\"").arg(raw_text);
 
   default:
    return QString(":|%1%2|").arg(get_encode_prefix()).arg(escaped_raw_text());

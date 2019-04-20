@@ -515,7 +515,14 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
 
   int* pi = (int*) kcra->raw_value();
 
-  if(kcra->type_name() == "str")
+  QString tn = kcra->raw_value();
+  if(tn.isEmpty())
+  {
+   if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
+     tn = "str";
+  }
+
+  if(tn == "str")
   {
 
    // //  account for how scopes store strings ...

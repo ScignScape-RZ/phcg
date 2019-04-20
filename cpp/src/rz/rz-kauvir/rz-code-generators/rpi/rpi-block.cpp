@@ -390,8 +390,9 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
      }
      else if(next_tok->flags.is_string_literal)
      {
-      lt.prepend("\\\"");
-      lt.append("\\\"");
+//?
+      lt.prepend("\"");
+      lt.append("\"");
      }
      else if(lexical_scope_ && lexical_scope_->contains_symbol(lt))
      {

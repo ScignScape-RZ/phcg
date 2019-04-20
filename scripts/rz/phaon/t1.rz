@@ -1,9 +1,9 @@
 
-,fnd ::: Fn_Doc*;
+,fnd ::: PHR_Fn_Doc*;
 fnd \== default;
 
 ,penv ::: PHR_Env*;
-penv \= (envv _$);
+penv \= (envv "PHR_Env*");
 
 fnd -> init penv;
 
