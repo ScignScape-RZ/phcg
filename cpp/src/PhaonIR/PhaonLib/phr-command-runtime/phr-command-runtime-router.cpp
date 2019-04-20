@@ -6,6 +6,8 @@
 
 #include "phr-command-runtime-router.h"
 
+#include "phr-command-runtime-router-qob.h"
+
 #include "phaon-ir/channel/phr-carrier.h"
 #include "phaon-ir/types/phr-type-object.h"
 #include "phaon-ir/types/phr-type.h"
@@ -13,6 +15,8 @@
 #include "phaon-ir/phaon-ir.h"
 
 #include "phaon-ir/scopes/phr-runtime-scope.h"
+
+#include "phaon-ir/scopes/phr-scope-system.h"
 
 #include "phr-command-runtime-argument.h"
 
@@ -1480,9 +1484,11 @@ void PHR_Command_Runtime_Router::init_argument_info_qob(QVector<PHR_Command_Runt
    const PHR_Type_Object* cpto;
    QString encoded_value;
    QPair<int, quint64> qclo_value = {0, 0};
-   quint64* rv;// = scopes_->find_raw_value_from_current_scope(abc, envv_fn_, PHR_expression_,
+   quint64 rv = scopes_->find_value_from_current_scope(abc);
+
+   // = scopes_->find_raw_value_from_current_scope(abc, envv_fn_, PHR_expression_,
      //pto, cpto, encoded_value, qclo_value);
-   store[i] = *rv;
+   store[i] = rv;
    argument_info_[i + 1].qob_convention = ac;
    argument_info_[i + 1].void_argument = &store[i];
    continue;
@@ -1532,9 +1538,14 @@ void PHR_Command_Runtime_Router::init_argument_info_qob(QVector<PHR_Command_Runt
   const PHR_Type_Object* cpto;
   QString encoded_value;
   QPair<int, quint64> qclo_value = {0, 0};
-  quint64* rv;// = scopes_->find_raw_value_from_current_scope(bc, envv_fn_, PHR_expression_,
-    //pto, cpto, encoded_value, qclo_value);
-  argument_info_[0].void_argument = (void*) *rv;
+
+//  quint64* rv;// = scopes_->find_raw_value_from_current_scope(bc, envv_fn_, PHR_expression_,
+//    //pto, cpto, encoded_value, qclo_value);
+//  argument_info_[0].void_argument = (void*) *rv;
+
+  quint64 rv = scopes_->find_value_from_current_scope(bc);
+  argument_info_[0].void_argument = (void*) rv;
+
  }
 }
 
@@ -1550,13 +1561,14 @@ void PHR_Command_Runtime_Router::Do_Invoke_Method<Arg_Count>
 {
   switch(this_->reflection_convention_)
   {//?
-//  case Reflection_Conventions::Qt_Meta_Object:
-//   Do_Invoke_Method__Cast_Schedule__QOB__Cast_<Arg_Count>
-//     ::Type::template run<QObject*, typename Type_List__All_Cast_Needed<Arg_Count>::Type //,
-//     >
-//      (this_->fuxe_name(),
-//      this_->this_object(), 0, *this_,
-//      this_->argument_info(), args);
-//   break;
+
+  case Reflection_Conventions::Qt_Meta_Object:
+   Do_Invoke_Method__Cast_Schedule__QOB__Cast_<Arg_Count>
+     ::Type::template run<QObject*, typename Type_List__All_Cast_Needed<Arg_Count>::Type //,
+     >
+      (this_->fuxe_name(),
+      this_->this_object(), 0, *this_,
+      this_->argument_info(), args);
+   break;
   }
 }

@@ -17,6 +17,7 @@
 #include "accessors.h"
 
 #include "scopes/phr-runtime-scope.h"
+#include "scopes/phr-scope-system.h"
 
 #define PASTE_EXPRESSION(...) __VA_ARGS__
 
@@ -158,7 +159,12 @@ class PhaonIR
 
  QMultiMap<PHR_Channel_Group*, anchor_channel_link> anchored_channel_groups_;
 
- PHR_Runtime_Scope* current_lexical_scope_;
+ PHR_Scope_System scopes_;
+ PHR_Runtime_Scope* current_lexical_scope()
+ {
+  return scopes_.current_scope();
+ }
+
 
  struct Run_State
  {

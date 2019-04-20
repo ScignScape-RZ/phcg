@@ -42,7 +42,7 @@ PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
   held_type_(nullptr), current_carrier_stack_(nullptr),
   held_channel_group_(nullptr), load_evaluator_fn_(nullptr),
    //?current_chief_unwind_scope_index_({0,0,0,0}),
-  current_lexical_scope_(nullptr),
+  //current_lexical_scope()(nullptr),
   held_symbol_scope_(nullptr), direct_eval_fn_(nullptr),
   source_fn_anon_count_(0),
   sp_map_(new QMap<QPair<Unwind_Scope_Index,
@@ -114,7 +114,7 @@ qint32 PhaonIR::get_s4_symbol_value(QString sym)
  {
   quint64 val;
   PHR_Runtime_Scope::Storage_Options so;
-  PHR_Type* ty = current_lexical_scope_->find_value(sym, val, so);
+  PHR_Type* ty = current_lexical_scope()->find_value(sym, val, so);
 //  void* pv = (void*) val;
 //  return *(qint32*)pv;
   return (qint32) val;
@@ -142,8 +142,8 @@ PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
  }
  //quint64 val;
  //PHR_Runtime_Scope::Storage_Options so;
- //PHR_Type* ty = current_lexical_scope_->find_value(sym, val, so);
- return current_lexical_scope_->find_value(sym, val, so);
+ //PHR_Type* ty = current_lexical_scope()->find_value(sym, val, so);
+ return current_lexical_scope()->find_value(sym, val, so);
 }
 
 void PhaonIR::delete_temps()
@@ -383,7 +383,7 @@ void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
  if(ch == "parse-literal")
  {
   PHR_Type* ty = phc->phr_type();
-  current_lexical_scope_->add_direct_value(sym, ty, rvs.toInt());
+  current_lexical_scope()->add_direct_value(sym, ty, rvs.toInt());
  }
  else if(ch == "type-default")
  {
@@ -400,7 +400,7 @@ void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
   {
    void* pv = QMetaType::create(pid);
    QObject* qob = static_cast<QObject*>(pv);
-   current_lexical_scope_->add_pointer_value(sym, ty, (quint64) pv);
+   current_lexical_scope()->add_pointer_value(sym, ty, (quint64) pv);
   }
  }
 }
@@ -408,13 +408,13 @@ void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
 void PhaonIR::anchor_channel_group(QString sym, QString ch)
 {
  anchored_channel_groups_.insert(held_channel_group_,
-   {(*channel_system_)[ch], current_lexical_scope_, sym, nullptr});
+   {(*channel_system_)[ch], current_lexical_scope(), sym, nullptr});
 }
 
 void PhaonIR::copy_anchor_channel_group(QString sym, QString ch)
 {
  anchored_channel_groups_.insert(held_channel_group_,
-   {(*channel_system_)[ch], current_lexical_scope_, sym, &default_cofinalizer});
+   {(*channel_system_)[ch], current_lexical_scope(), sym, &default_cofinalizer});
 }
 
 void PhaonIR::anchor_without_channel_group(QString str)
@@ -499,7 +499,7 @@ void PhaonIR::push_carrier_stack(QString sp_name)
 
 void PhaonIR::enter_lexical_scope()
 {
- current_lexical_scope_ = new PHR_Runtime_Scope(current_lexical_scope_);
+ scopes_.set_current_scope(new PHR_Runtime_Scope(current_lexical_scope()));
 }
 
 void PhaonIR::create_channel_semantic_protocol(QString name)
@@ -519,6 +519,7 @@ void PhaonIR::init_code_model()
  code_model_ = new PHR_Code_Model;
  code_model_->set_type_system(type_system_);
  code_model_->set_phaon_ir(this);
+ code_model_->set_scope_system(&scopes_);
 }
 
 void PhaonIR::init_type(QString type_name, quint8 byte_code)

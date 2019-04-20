@@ -28,6 +28,8 @@ HEADERS +=  \
   $$SRC_DIR/phr-command-runtime-router.h \
   $$SRC_DIR/phr-command-runtime-argument.h \
   $$SRC_DIR/phr-command-runtime-table.h \
+  $$SRC_DIR/phr-command-runtime-router-qob.h \
+  $$SRC_DIR/phr-command-runtime-router-cast-schedule.h \
 
 # $$SRC_DIR/kcm-command-runtime-router-qob.h \
 #  $$SRC_DIR/kcm-command-runtime-argument.h \

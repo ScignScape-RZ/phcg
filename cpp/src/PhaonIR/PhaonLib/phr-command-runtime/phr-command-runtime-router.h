@@ -20,7 +20,7 @@
 
 #include "phaon-ir/types/phr-universal-class.h"
 
-//#include "kcm-command-runtime-router-cast-schedule.h"
+#include "phr-command-runtime-router-cast-schedule.h"
 
 
 //KANS_CLASS_DECLARE(KCM ,KCM_Carrier)
