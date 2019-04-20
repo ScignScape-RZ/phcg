@@ -143,18 +143,27 @@ void phr_direct_eval(PHR_Code_Model* pcm,
   pcrr.proceed();
  }
 
- if(scope_system)
+ quint64 eval_result = pcrr.call_result();
+ const PHR_Type_Object* pto = pcrr.result_type_object();
+ if(pto)
  {
-  QString osn = pcp->output_symbol_name();
-  if(!osn.isEmpty())
-  {
-//   if(pcrr.string_result_code())
-//   {
-//    const PHR_Type_Object* rkto = kcrr.result_type_object();
-//    scope_system->current_scope()->add_string_value(osn, rkto, string_result);
-//   }
-  }
+  pcp->set_eval_result(eval_result);
+  pcp->set_result_type_object(pto);
  }
+
+
+// if(scope_system)
+// {
+//  QString osn = pcp->output_symbol_name();
+//  if(!osn.isEmpty())
+//  {
+////   if(pcrr.string_result_code())
+////   {
+////    const PHR_Type_Object* rkto = kcrr.result_type_object();
+////    scope_system->current_scope()->add_string_value(osn, rkto, string_result);
+////   }
+//  }
+// }
 #ifdef HIDE
  if(scope_system)
  {

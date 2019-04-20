@@ -313,37 +313,50 @@ void PhaonIR::evaluate_channel_group()
 {
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
 
+ const PHR_Type_Object* pto = nullptr;
+ quint64 rv = 0;
+ void* pv = nullptr;
+
  if(ev)
  {
   ev->run_eval();
   ev->debug_report();
+  pv = ev->get_result_value();
  }
  else
  {
   PHR_Command_Package pcp(*held_channel_group_);
   if(direct_eval_fn_)
     direct_eval_fn_(code_model_, &pcp, held_symbol_scope_);
-
-  return;
+  pto = pcp.result_type_object();
+  if(!pto)
+    return;
+  rv = pcp.eval_result();
+  //return;
   //? phr_direct_eval(code_model_, &pcp, held_symbol_scope_);
  }
 
 
+ //pcp.
+ //quint64 rv = pcp.
 
  for(auto it: anchored_channel_groups_.values(held_channel_group_))
  {
   // //  chance to tailor for different protocols ...
   QString sym = it.sym;
   PHR_Runtime_Scope* scope = it.scope;
-  void* pv = ev->get_result_value();
+
   if(it.cofinalizer)
   {
-   quint64 val = (this->*it.cofinalizer)(it, pv);
+   quint64 val = pv?
+      (this->*it.cofinalizer)(it, pv) : rv;
    scope->update_direct_value(sym, val);
   }
   else
   {
-   scope->update_value(sym, pv);
+   void* vv = pv? pv :  (void*) rv;
+
+   scope->update_value(sym, vv);
   }
  }
 

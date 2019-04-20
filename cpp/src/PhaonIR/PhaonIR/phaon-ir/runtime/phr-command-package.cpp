@@ -9,7 +9,8 @@
 
 
 PHR_Command_Package::PHR_Command_Package(const PHR_Channel_Group& pcg)
-  :  PHR_Channel_Group(pcg), bind_pto_(nullptr)
+  :  PHR_Channel_Group(pcg), bind_pto_(nullptr),
+     eval_result_(0), result_type_object_(nullptr)
 {
 
 }

@@ -22,12 +22,16 @@ class PHR_Command_Package : public PHR_Channel_Group
 
  PHR_Type_Object* bind_pto_;
 
+ quint64 eval_result_;
+ const PHR_Type_Object* result_type_object_;
+
 public:
 
  PHR_Command_Package(const PHR_Channel_Group& pcg);
 
  ACCESSORS(PHR_Type_Object* ,bind_pto)
-
+ ACCESSORS(const PHR_Type_Object* ,result_type_object)
+ ACCESSORS(quint64 ,eval_result)
 
 };
 
