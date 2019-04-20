@@ -302,7 +302,7 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[lambda])[0] = phc1;
 
   g1.init_channel(result, 1);
-  (*g1[lambda])[0] = phc1;
+  (*g1[result])[0] = phc2;
 
   table.init_phaon_function(g1, pss, "envv", 700, &envv);
 
