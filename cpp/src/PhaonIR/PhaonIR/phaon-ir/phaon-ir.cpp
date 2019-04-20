@@ -495,6 +495,7 @@ void PhaonIR::push_carrier_stack(QString sp_name)
    sp_name);
  program_stack_->push(st);
  current_carrier_stack_ = st;
+ held_type_ = nullptr;
 }
 
 void PhaonIR::enter_lexical_scope()

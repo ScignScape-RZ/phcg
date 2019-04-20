@@ -105,13 +105,20 @@ PHR_Command_Runtime_Argument* PHR_Command_Runtime_Router::parse_carrier_to_argum
  {
   result = new PHR_Command_Runtime_Argument;
 
-  if(pto->ty()->name() == "pcv")
+  //?result->set_type_name(pto->ty()->name());
+
+  if(pto->ty())
   {
-   result->set_raw_value(phc.raw_value());
-   result->set_value_classification(
-     PHR_Command_Runtime_Argument::Value_Classification::PCV_Ptr);
-   return result;
+   result->set_type_name(pto->ty()->name());
+   if(pto->ty()->name() == "pcv")
+   {
+    result->set_raw_value(phc.raw_value());
+    result->set_value_classification(
+      PHR_Command_Runtime_Argument::Value_Classification::PCV_Ptr);
+    return result;
+   }
   }
+
 
 //  const Kauvir_Type_Object* kvto =  pto->kauvir_type_object();
 //  result->set_type_name(kvto->name());
@@ -522,13 +529,15 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
   if(tn.isEmpty())
   {
    if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
-   {
-    tn = "str";
-    if(qs->startsWith('"'))
-      *qs = qs->mid(1);
-    if(qs->endsWith('"'))
-      qs->chop(1);
-   }
+     tn = "str";
+  }
+
+  if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
+  {
+   if(qs->startsWith('"'))
+     *qs = qs->mid(1);
+   if(qs->endsWith('"'))
+     qs->chop(1);
   }
 
   if(tn == "str")
@@ -1464,6 +1473,9 @@ void PHR_Command_Runtime_Router::init_argument_info_qob(QVector<PHR_Command_Runt
    {
     ac = QOB_Argument_Conventions::QObject_Direct;
    }
+   //?
+   else if(arg->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr)
+     ac = QOB_Argument_Conventions::QObject_Direct;
   }
   else
   {

@@ -351,7 +351,12 @@ void Expression_Generator::generate_carrier_with_raw_value(QTextStream& qts,
 
  //?
  if(ty.isEmpty())
-   ty = "u4";
+ {
+  if(tok.flags.is_string_literal)
+    ty = "str";
+  else
+    ty = "u4";
+ }
 
  if(!ty.isEmpty())
    qts << "hold_type_by_name $ " << ty << " ;.\n";
