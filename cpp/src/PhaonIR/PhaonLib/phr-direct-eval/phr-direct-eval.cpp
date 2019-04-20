@@ -142,6 +142,19 @@ void phr_direct_eval(PHR_Code_Model* pcm,
  {
   pcrr.proceed();
  }
+
+ if(scope_system)
+ {
+  QString osn = pcp->output_symbol_name();
+  if(!osn.isEmpty())
+  {
+//   if(pcrr.string_result_code())
+//   {
+//    const PHR_Type_Object* rkto = kcrr.result_type_object();
+//    scope_system->current_scope()->add_string_value(osn, rkto, string_result);
+//   }
+  }
+ }
 #ifdef HIDE
  if(scope_system)
  {

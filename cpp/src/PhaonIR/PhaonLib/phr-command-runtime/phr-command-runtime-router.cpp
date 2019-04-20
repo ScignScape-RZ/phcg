@@ -141,7 +141,6 @@ PHR_Command_Runtime_Argument* PHR_Command_Runtime_Router::parse_carrier_to_argum
   {
    result->set_raw_value(phc.raw_value_string_as_pointer());
    result->set_value_classification(PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr);
-
   }
  }
 // else if(phc.flags.literal_string)
@@ -515,11 +514,17 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
 
   int* pi = (int*) kcra->raw_value();
 
-  QString tn = kcra->raw_value();
+  QString tn = kcra->type_name();
   if(tn.isEmpty())
   {
    if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
-     tn = "str";
+   {
+    tn = "str";
+    if(qs->startsWith('"'))
+      *qs = qs->mid(1);
+    if(qs->endsWith('"'))
+      qs->chop(1);
+   }
   }
 
   if(tn == "str")
