@@ -91,6 +91,9 @@ public:
   return make_token_node(mgt);
  }
 
+ caon_ptr<PHR_Graph_Node> add_type_declaration(
+   MG_Token& amgt, MG_Token& tmgt);
+
  caon_ptr<PHR_Graph_Node> add_channel_token(caon_ptr<PHR_Graph_Node> source,
    MG_Token& mgt);
 

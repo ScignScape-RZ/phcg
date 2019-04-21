@@ -73,6 +73,14 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_root_node()
  //?current_node_ = rn;
 }
 
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_type_declaration(
+   MG_Token& amgt, MG_Token& tmgt)
+{
+ QString sym = amgt.raw_text;
+ QString ty = tmgt.raw_text;
+
+}
+
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
 {
  bool rv = (mgt.kind == MG_Token_Kinds::Raw_Value)

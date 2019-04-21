@@ -80,6 +80,16 @@ Purpose_Codes& _PGB_IR_Build::make_block_info_node(QString target, MG_Token_Subg
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::add_type_declaration(QString arg, MG_Token_Subgroups asg,
+  QString ty, MG_Token_Subgroups tsg)
+{
+ MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg, asg);
+ MG_Token tmgt = mgtoken(ty, MG_Token_Kind_Groups::Arg, tsg);
+
+ qts_ << "(pgb::add_type_declaration "; end_line({amgt, tmgt});
+ return purpose_;
+}
+
 Purpose_Codes& _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
   QString target, MG_Token_Subgroups tsg)
 {

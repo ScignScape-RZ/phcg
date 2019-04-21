@@ -131,6 +131,8 @@ public:
  void write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
  void write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
 
+ void write_type_declaration(QTextStream& qts);
+
  void write_assignment_initialization_via_token(QString key, caon_ptr<RPI_Stage_Form> prior);
 
  void write_assignment_initialization_via_expression(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);

@@ -223,6 +223,9 @@ void RPI_Stage_Form::init_type_declaration(QString cmd)
  // // should distinguish cmd == "my" and "our" ...
  type_declaration_ = new RPI_Type_Declaration(*this);
  type_declaration_->set_cmd(cmd);
+
+ check_init_annotation();
+ annotation_->flags.write_type_declaration = true;
 }
 
 void RPI_Stage_Form::init_expression()
@@ -539,6 +542,16 @@ bool RPI_Stage_Form::has_preceder_token()
  return ANNOTATION_FLAG(has_preceder_token);
 }
 
+void RPI_Stage_Form::write_type_declaration(QTextStream& qts)
+{
+ RPI_Stage_Element& rse1 = inner_elements_[1];
+ RPI_Stage_Element& rse2 = inner_elements_[2];
+
+ pgb_(step_forms_).add_type_declaration(rse1.text().prepend('@'),
+   rse2.text().prepend('@'));
+}
+
+
 void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
  check_init_annotation_flags();
@@ -553,6 +566,9 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
    qts << "skipping type declaration ...";
    return;
   }
+  if(inner_elements_.size() >= 3)
+    write_type_declaration(qts);
+  return;
  }
 
  RPI_Assignment_Info* rai = get_parent_assignmnt_info();
@@ -561,11 +577,17 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 // {
  int channel_count = 0;
  RPI_Stage_Element_Kinds last_kind = RPI_Stage_Element_Kinds::N_A;
+
+ //QString
  for(RPI_Stage_Element& rse : inner_elements_)
  {
   QString rset = rse.text();
   switch (rse.kind())
   {
+  case RPI_Stage_Element_Kinds::Instruction_Symbol:
+   {// for now
+   }
+   break;
   case RPI_Stage_Element_Kinds::S1_Fuxe_Symbol:
   case RPI_Stage_Element_Kinds::Fuxe_Symbol:
    if(rset.startsWith('#'))

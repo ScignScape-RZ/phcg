@@ -66,6 +66,14 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
+ Purpose_Codes& add_type_declaration(QString arg, MG_Token_Subgroups asg,
+   QString ty, MG_Token_Subgroups tsg);
+ Purpose_Codes& add_type_declaration(QString arg, QString ty)
+ {
+  return add_type_declaration(arg.mid(1), get_subgroup(arg[0]),
+    ty.mid(1), get_subgroup(ty[0]));
+ }
+
  Purpose_Codes& make_token_node(QString arg, MG_Token_Subgroups asg,
    QString target, MG_Token_Subgroups tsg);
  Purpose_Codes& make_token_node(QString arg, QString target)

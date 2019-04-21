@@ -63,6 +63,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
 
   TEMP_MACRO(make_root_node)
   TEMP_MACRO(make_token_node)
+  TEMP_MACRO(add_type_declaration)
   TEMP_MACRO(make_channel_fuxe_entry_node)
   TEMP_MACRO(add_block_entry_node)
   TEMP_MACRO(add_channel_token)
@@ -233,6 +234,25 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
      *tr = graph_build_.make_root_node();
   };
   break;
+
+ case PGB_Methods::add_type_declaration:
+  {
+   QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
+   if(mgts.size() < 2)
+     break;
+   //?caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+
+//   QList<MG_Token> gts = get_generic_tokens(mgtm);
+//   if(gts.size() < 2)
+//     break;
+
+//   if(tr)
+//     *tr = graph_build_.add_type_declaration(gts[0], gts[1]);
+//   else
+     graph_build_.add_type_declaration(mgts[0], mgts[1]);
+  };
+ break;
+
  case PGB_Methods::make_token_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
