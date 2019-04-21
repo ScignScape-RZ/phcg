@@ -113,7 +113,7 @@ void local_program(PhaonIR& phr)
 
  pcm.set_direct_eval_fn(&phr_direct_eval);
 
- pcm.create_and_register_type_object("PHR_Fn_Doc");
+// pcm.create_and_register_type_object("PHR_Fn_Doc");
  pcm.create_and_register_type_object("PHR_Fn_Doc*");
 
  PHR_Env* penv = new PHR_Env(&pcm);

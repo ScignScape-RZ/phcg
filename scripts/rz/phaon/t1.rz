@@ -3,7 +3,7 @@
 fnd \== default;
 
 ,penv ::: PHR_Env*;
-penv \= (envv "PHR_Env*");
+penv \= (envv _$);
 
 fnd -> init penv;
 

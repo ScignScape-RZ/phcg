@@ -305,7 +305,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
  // maybe temp ...
  bool last_nnp_expr = false;
 
- bool need_to_hold_type = false;
+ //?bool need_to_hold_type = false;
 
  while(current_node)
  {
@@ -330,12 +330,13 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
     {
      CAON_PTR_DEBUG(RZ_Lisp_Token ,next_tok)
 
-     if(need_to_hold_type)
-     {
-      if(next_tok->flags.is_type_symbol_in_declaration)
-        held_type_name_ = next_tok->raw_text();
-      need_to_hold_type = false;
-     }
+       //?
+//     if(need_to_hold_type)
+//     {
+//      if(next_tok->flags.is_type_symbol_in_declaration)
+//        held_type_name_ = next_tok->raw_text();
+//      need_to_hold_type = false;
+//     }
 
      if(next_tok->flags.is_dep_marker)
      {
@@ -456,11 +457,12 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        }
        else if(next_tok->flags.is_assign_to_default_ctor)
        {
-        if(!held_type_name_.isEmpty())
-        {
-         lt += ":" + held_type_name_;
-         held_type_name_.clear();
-        }
+//?
+//        if(!held_type_name_.isEmpty())
+//        {
+//         lt += ":" + held_type_name_;
+//         held_type_name_.clear();
+//        }
         current_form_->add_argument_element(RPI_Stage_Element_Kinds::Type_Default_Marker, lt);
        }
        else if(next_tok->flags.follows_call_arrow)
@@ -482,7 +484,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        else if(mstk == MS_Token_Kinds::Skip_Token ||
          lt == ":TYPE-DECL")
        {
-        need_to_hold_type = true;
+        //?need_to_hold_type = true;
         skip_increase_lambda_count = true;
         //current_form_->mark_as_fn_no_block();
        }

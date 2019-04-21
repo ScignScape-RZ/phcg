@@ -65,6 +65,9 @@ void PHR_Runtime_Scope::update_value(QString key, void* pv)
 
 PHR_Type* PHR_Runtime_Scope::find_value(QString key, quint64& val, Storage_Options& so)
 {
+ // what about preinit?
+ check_type_decl(key);
+
  auto it = values_.find(key);
  if(it == values_.end())
    return nullptr;
