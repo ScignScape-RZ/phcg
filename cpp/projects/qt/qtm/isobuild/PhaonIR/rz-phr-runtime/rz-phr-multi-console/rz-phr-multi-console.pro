@@ -5,7 +5,7 @@
 #           http://www.boost.org/LICENSE_1_0.txt)
 
 
-PROJECT_NAME = rz-phr-runtime-multi
+PROJECT_NAME = rz-phr-multi-console
 
 include(../build-group.pri)
 

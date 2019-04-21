@@ -7,7 +7,7 @@
 #ifndef TYPE_FAMILIES__H
 #define TYPE_FAMILIES__H
 
-#include "rz-lisp-graph-typedefs.h"
+#include "rz-graph-token/rz-lisp-graph-typedefs.h"
 
 #include <QMap>
 

@@ -12,8 +12,8 @@
 
 #include "relae-graph/relae-node-ptr.h"
 
-#include "kernel/query/rz-re-query.h"
-#include "kernel/frame/rz-re-frame.h"
+#include "rz-graph-core/kernel/query/rz-re-query.h"
+#include "rz-graph-core/kernel/frame/rz-re-frame.h"
 
 #include <QString>
 #include <QTextStream>

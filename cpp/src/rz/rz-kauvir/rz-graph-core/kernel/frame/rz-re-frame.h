@@ -11,7 +11,7 @@
 
 #include "relae-graph/relae-node-ptr.h"
 
-#include "kernel/rz-re-dominion.h"
+#include "rz-graph-core/kernel/rz-re-dominion.h"
 
 #include "rzns.h"
 

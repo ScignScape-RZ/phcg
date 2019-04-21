@@ -7,7 +7,7 @@
 #ifndef RZ_RE_QUERY__H
 #define RZ_RE_QUERY__H
 
-#include "kernel/rz-re-dominion.h"
+#include "rz-graph-core/kernel/rz-re-dominion.h"
 
 #include "relae-graph/relae-node-ptr.h"
 
@@ -23,7 +23,7 @@ class RE_Query : public node_query<RE_Dominion>
  public:
   #define DOMINION_CONNECTOR(name, label) \
    RE_Connectors name;
-  #include "kernel/dominion/connectors.h"
+  #include "rz-graph-core/kernel/dominion/connectors.h"
   #undef DOMINION_CONNECTOR
 
  static const RE_Query& instance();

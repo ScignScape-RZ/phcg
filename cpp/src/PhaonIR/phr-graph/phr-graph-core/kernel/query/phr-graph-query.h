@@ -23,7 +23,7 @@ class PHR_Graph_Query : public node_query<PHR_Graph_Dominion>
  public:
   #define DOMINION_CONNECTOR(name, label) \
    PHR_Graph_Connectors name;
-  #include "kernel/dominion/connectors.h"
+  #include "phr-graph-core/kernel/dominion/connectors.h"
   #undef DOMINION_CONNECTOR
 
  static const PHR_Graph_Query& instance();

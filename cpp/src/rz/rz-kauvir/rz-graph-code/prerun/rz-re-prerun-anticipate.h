@@ -13,7 +13,7 @@
 
 #include "relae-graph/relae-node-ptr.h"
 
-#include "output/rz-re-lisp-output.h"
+#include "rz-graph-core/output/rz-re-lisp-output.h"
 
 #include "rz-graph-core/kernel/graph/rz-re-graph.h"
 
