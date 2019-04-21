@@ -120,6 +120,8 @@ void local_program(PhaonIR& phr)
  QString penv_typename = "PHR_Env*";
  insert_envv(&penv_typename, penv);
 
+ pcm.create_and_register_type_object("PHR_Env*");
+
  PHR_Runtime_Scope prs(nullptr);
 
  PHR_Symbol_Scope pss(&prs);

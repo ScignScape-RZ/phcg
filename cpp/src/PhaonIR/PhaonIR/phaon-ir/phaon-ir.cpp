@@ -221,13 +221,14 @@ void PhaonIR::push_unwind_scope(QString level_delta)
 
 void PhaonIR::type_decl(QString sym, QString type_name)
 {
- if(type_name.endsWith('*'))
-   type_name.chop(1);
-
  PHR_Type* ty = type_system_->get_type_by_name(type_name);
 
  // currently only supports...
- PHR_Runtime_Scope::Storage_Options so = PHR_Runtime_Scope::Storage_Options::Pointer;
+ PHR_Runtime_Scope::Storage_Options so;
+ if(type_name.endsWith('*'))
+   so = PHR_Runtime_Scope::Storage_Options::Pointer;
+ else
+   so = PHR_Runtime_Scope::Storage_Options::Direct;
 
  scopes_.current_scope()->type_decl(sym, so, ty);
 }
@@ -640,6 +641,7 @@ void PhaonIR::read_line(QString inst, QString arg)
   { "copy_anchor_channel_group", &copy_anchor_channel_group },
   { "anchor_without_channel_group", &anchor_without_channel_group },
   { "push_carrier_anon_fn", &push_carrier_anon_fn },
+  { "type_decl", &type_decl },
  }};
 
  auto it = static_map.find(inst);

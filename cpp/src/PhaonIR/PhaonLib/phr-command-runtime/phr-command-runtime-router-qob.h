@@ -449,11 +449,11 @@ struct Cast_1_Ready
 
   QString mn = "init";
 
-  QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
-    ( tnw.toLatin1(), arg1) );
-
 //  QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
-//    ( argument_info[1].type_name_with_modifier(args[1 - 1]->qob_reflection_modifier(), args[1 - 1]->qob_reflection_type_name()).toLatin1(), arg1) );
+//    ( tnw.toLatin1(), arg1) );
+
+  QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
+    ( argument_info[1].type_name_with_modifier(args[1 - 1]->qob_reflection_modifier(), args[1 - 1]->qob_reflection_type_name()).toLatin1(), arg1) );
 
  }
  template<typename OBJECT_Type, typename RET_Type ,typename ARG1_Type> static void run(QString method_name, OBJECT_Type obj, QString return_type, RET_Type& ret, QVector<PHR_Command_Runtime_Argument*>& args ,ARG1_Type arg1, const QVector<PHR_Command_Runtime_Router::Argument_Info>& argument_info)
