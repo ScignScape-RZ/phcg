@@ -22,8 +22,6 @@
 
 #include "phaon-ir/runtime/phr-command-package.h"
 
-#include "PhaonIR/phr-runtime/phr-fn-doc/phr-fn-doc.h"
-
 //#include "phr-command-runtime-table.h"
 
 #include "phaon-ir/table/phr-channel-group-table.h"
@@ -1567,10 +1565,6 @@ void PHR_Command_Runtime_Router::init_argument_info_qob(QVector<PHR_Command_Runt
   PHR_Type* ty = nullptr;
 
   quint64 rv = scopes_->find_value_from_current_scope(bc, &ty);
-
-  //quint64* prv = (quint64*) rv;
-
-  PHR_Fn_Doc** fd = (PHR_Fn_Doc**) rv;
 
   argument_info_[0].void_argument = (void*) rv;
   if(ty)

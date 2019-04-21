@@ -11,7 +11,6 @@
 
 #include "phr-command-runtime-argument.h"
 
-#include "PhaonIR/phr-runtime/phr-fn-doc/phr-fn-doc.h"
 
 
 //?USING_KANS(CMD)
@@ -448,17 +447,7 @@ struct Cast_1_Ready
  {
   QString tnw = "PHR_Env*";
 
-  QString mn = "test";
-
-//  PHR_Fn_Doc* objj = new PHR_Fn_Doc;
-
-//  QMetaObject::invokeMethod(objj, mn.toLatin1());
-
-//  quint64* qui = (quint64*) obj;
-
-//  PHR_Fn_Doc* oj = (PHR_Fn_Doc*) *qui;
-
-  QMetaObject::invokeMethod(obj, mn.toLatin1());
+  QString mn = "init";
 
   QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
     ( tnw.toLatin1(), arg1) );

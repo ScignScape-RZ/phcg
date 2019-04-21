@@ -42,8 +42,6 @@ public:
 
  ACCESSORS(PHR_Scope_System* ,scopes)
 
- ACCESSORS(QString ,held_fn)
-
  Q_INVOKABLE void read(QString fn);
  Q_INVOKABLE void init(PHR_Env* penv);
  Q_INVOKABLE void kph_gen(QString subs);
@@ -51,8 +49,6 @@ public:
  Q_INVOKABLE void hold_function_name(QString fn);
 
  Q_INVOKABLE void add_documentation(QString key_val);
-
- Q_INVOKABLE void test();
 
  const PHR_Type_Object* get_type_object_from_symbol_name(QString fn);
 

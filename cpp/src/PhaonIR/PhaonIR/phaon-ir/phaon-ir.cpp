@@ -417,10 +417,6 @@ void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
   {
    void* pv = QMetaType::create(pid);
    QObject* qob = static_cast<QObject*>(pv);
-
-   PHR_Fn_Doc* fd = (PHR_Fn_Doc*) pv;
-   fd->set_held_fn("xx");
-
    current_lexical_scope()->add_pointer_value(sym, ty, (quint64) pv);
   }
  }
