@@ -30,15 +30,20 @@ public:
 
  QMap<QString, QPair<Storage_Options, PHR_Scope_Value>> values_;
 
+ QMap<QString, QPair<Storage_Options, PHR_Type*>> type_declarations_;
+
 public:
 
  PHR_Runtime_Scope(PHR_Runtime_Scope* parent_scope, PHR_Logical_Scope_Info* info = nullptr);
+
+ void type_decl(QString sym, Storage_Options so, PHR_Type*);
 
  void add_direct_value(QString key, PHR_Type* ty, quint64 val);
  void add_pointer_value(QString key, PHR_Type* ty, quint64 val);
  void add_function_vector_value(QString key, PHR_Type* ty, quint64 val);
 
  void add_function_vector_value(QString key, void* fv);
+ void check_type_decl(QString key);
 
  PHR_Type* find_value(QString key, quint64& val, Storage_Options& so);
 

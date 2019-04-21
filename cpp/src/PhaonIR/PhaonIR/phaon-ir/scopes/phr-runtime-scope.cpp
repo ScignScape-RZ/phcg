@@ -34,13 +34,32 @@ void PHR_Runtime_Scope::add_function_vector_value(QString key, PHR_Type* ty, qui
  values_[key] = {Storage_Options::Function_Vector, {ty, val}};
 }
 
+void PHR_Runtime_Scope::check_type_decl(QString key)
+{
+ if(values_.contains(key))
+   return;
+ auto it = type_declarations_.find(key);
+ if(it != type_declarations_.end())
+ {
+  values_[key] = {it.value().first, {it.value().second, 0} };
+ }
+}
+
 void PHR_Runtime_Scope::update_direct_value(QString key, quint64 val)
 {
+ check_type_decl(key);
  values_[key].second.raw_value = val;
+}
+
+void PHR_Runtime_Scope::type_decl(QString sym,
+  Storage_Options so, PHR_Type* ty)
+{
+ type_declarations_[sym] = {so, ty};
 }
 
 void PHR_Runtime_Scope::update_value(QString key, void* pv)
 {
+ check_type_decl(key);
  values_[key].second.raw_value = (quint64) pv;
 }
 

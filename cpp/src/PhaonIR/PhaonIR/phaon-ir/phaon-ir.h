@@ -103,8 +103,6 @@ class PhaonIR
   return current_source_function_scope_->_indexed_channel_groups;
  }
 
- QMap<QString, QString> type_declarations_;
-
  QStack<Source_Function_Scope*> source_function_scopes_;
 
  typedef union {void(PhaonIR::*fn0)(); void(PhaonIR::*fn1)(QString);} fn_u ;
@@ -288,7 +286,7 @@ public:
 
  void push_unwind_scope(QString level_delta);
 
- void type_decl(QString sym, QString ty);
+ void type_decl(QString sym, QString type_name);
  void type_decl(QString sym_ty);
 
  void pop_unwind_scope();

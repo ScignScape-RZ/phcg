@@ -219,9 +219,17 @@ void PhaonIR::push_unwind_scope(QString level_delta)
  push_unwind_scope(qsl[0].toInt(), qsl[1]);
 }
 
-void PhaonIR::type_decl(QString sym, QString ty)
+void PhaonIR::type_decl(QString sym, QString type_name)
 {
- type_declarations_.insert(sym, ty);
+ if(type_name.endsWith('*'))
+   type_name.chop(1);
+
+ PHR_Type* ty = type_system_->get_type_by_name(type_name);
+
+ // currently only supports...
+ PHR_Runtime_Scope::Storage_Options so = PHR_Runtime_Scope::Storage_Options::Pointer;
+
+ scopes_.current_scope()->type_decl(sym, so, ty);
 }
 
 void PhaonIR::type_decl(QString sym_ty)

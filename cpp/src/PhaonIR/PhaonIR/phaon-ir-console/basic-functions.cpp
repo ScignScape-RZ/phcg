@@ -294,7 +294,7 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   PHR_Carrier* phc1 = new PHR_Carrier;
   phc1->set_phr_type(ty1);
 
-  PHR_Type* ty2 = type_system->get_type_by_name("u64");
+  PHR_Type* ty2 = type_system->get_type_by_name("u8");
   PHR_Carrier* phc2 = new PHR_Carrier;
   phc2->set_phr_type(ty2);
 
