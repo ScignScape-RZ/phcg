@@ -57,6 +57,8 @@ HEADERS += \
   $$SRC_DIR/token/phr-graph-fuxe-entry.h \
   $$SRC_DIR/token/phr-graph-statement-info.h \
   $$SRC_DIR/token/phr-graph-block-info.h \
+  $$SRC_DIR/token/phr-graph-type-declaration.h \
+
 
 
 SOURCES += \
@@ -79,7 +81,7 @@ SOURCES += \
   $$SRC_DIR/token/phr-graph-fuxe-entry.cpp \
   $$SRC_DIR/token/phr-graph-statement-info.cpp \
   $$SRC_DIR/token/phr-graph-block-info.cpp \
-
+  $$SRC_DIR/token/phr-graph-type-declaration.cpp \
 
 #LIBS += -L$$TARGETSDIR  -lphr-direct-eval
 

@@ -51,7 +51,7 @@ SOURCES +=  \
 
 CONFIG += no_keywords
 
-LIBS += -L$$TARGETSDIR -lphaon-ir -lphaon-lib
+LIBS += -L$$TARGETSDIR -lphaon-ir -lphaon-lib -lphr-fn-doc
 #LIBS += -L$$TARGETSDIR -lphaon-lib
 
 #LIBS += -L$$TARGETSDIR -lkcm-scopes -lkauvir-code-model \

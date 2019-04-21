@@ -22,6 +22,8 @@
 
 #include "phaon-ir/runtime/phr-command-package.h"
 
+#include "PhaonIR/phr-runtime/phr-fn-doc/phr-fn-doc.h"
+
 //#include "phr-command-runtime-table.h"
 
 #include "phaon-ir/table/phr-channel-group-table.h"
@@ -1496,13 +1498,20 @@ void PHR_Command_Runtime_Router::init_argument_info_qob(QVector<PHR_Command_Runt
    const PHR_Type_Object* cpto;
    QString encoded_value;
    QPair<int, quint64> qclo_value = {0, 0};
-   quint64 rv = scopes_->find_value_from_current_scope(abc);
+
+   PHR_Type* ty = nullptr;
+
+   quint64 rv = scopes_->find_value_from_current_scope(abc, &ty);
 
    // = scopes_->find_raw_value_from_current_scope(abc, envv_fn_, PHR_expression_,
      //pto, cpto, encoded_value, qclo_value);
    store[i] = rv;
    argument_info_[i + 1].qob_convention = ac;
    argument_info_[i + 1].void_argument = &store[i];
+
+   if(ty)
+     argument_info_[i + 1].type_name = ty->name();
+
    continue;
   }
 
@@ -1555,8 +1564,17 @@ void PHR_Command_Runtime_Router::init_argument_info_qob(QVector<PHR_Command_Runt
 //    //pto, cpto, encoded_value, qclo_value);
 //  argument_info_[0].void_argument = (void*) *rv;
 
-  quint64 rv = scopes_->find_value_from_current_scope(bc);
+  PHR_Type* ty = nullptr;
+
+  quint64 rv = scopes_->find_value_from_current_scope(bc, &ty);
+
+  //quint64* prv = (quint64*) rv;
+
+  PHR_Fn_Doc** fd = (PHR_Fn_Doc**) rv;
+
   argument_info_[0].void_argument = (void*) rv;
+  if(ty)
+    argument_info_[0].type_name = ty->name();
 
  }
 }

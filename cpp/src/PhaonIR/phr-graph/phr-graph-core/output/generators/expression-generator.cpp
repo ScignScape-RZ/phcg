@@ -21,6 +21,7 @@
 #include "token/phr-graph-token.h"
 #include "token/phr-graph-fuxe-entry.h"
 #include "token/phr-graph-block-info.h"
+#include "token/phr-graph-type-declaration.h"
 
 #include "textio.h"
 USING_KANS(TextIO)
@@ -38,6 +39,8 @@ Expression_Generator::Expression_Generator()
 void Expression_Generator::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node, int unw)
 {
+ check_generate_type_declaration(qts, node);
+
  caon_ptr<PHR_Graph_Connection> cion;
  QString channel_name;
  if(caon_ptr<PHR_Graph_Node> n = rq_.Channel_Entry[cion](&node))
@@ -288,6 +291,20 @@ void Expression_Generator::generate_xchannel(QTextStream& qts, QString channel_n
  const PHR_Graph_Node& arg_node, int unw)
 {
  generate_arg_carriers(qts, channel_name, arg_node, unw);
+}
+
+void Expression_Generator::check_generate_type_declaration(QTextStream& qts,
+  const PHR_Graph_Node& node)
+{
+ if(caon_ptr<PHR_Graph_Node> tdn = rq_.Type_Declaration(&node))
+ {
+  if(caon_ptr<PHR_Graph_Type_Declaration> td = tdn->type_declaration())
+  {
+   CAON_PTR_DEBUG(PHR_Graph_Type_Declaration ,td)
+   qts << "\ntype_decl $ " <<
+     td->symbol_name() << ' ' << td->type_name() << " ;.\n";
+  }
+ }
 }
 
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,

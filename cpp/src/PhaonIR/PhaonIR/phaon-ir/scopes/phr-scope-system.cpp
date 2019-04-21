@@ -18,12 +18,14 @@ PHR_Scope_System::PHR_Scope_System()
 
 }
 
-quint64 PHR_Scope_System::find_value_from_current_scope(QString key)//, quint64& val, PHR_Runtime_Scope::Storage_Options& so)
+quint64 PHR_Scope_System::find_value_from_current_scope(QString key, PHR_Type** rty)//, quint64& val, PHR_Runtime_Scope::Storage_Options& so)
 {
  if(!current_scope_)
    return 0;
  PHR_Runtime_Scope::Storage_Options so;
  quint64 val;
  PHR_Type* ty = current_scope_->find_value(key, val, so);
+ if(rty)
+   *rty = ty;
  return val;
 }

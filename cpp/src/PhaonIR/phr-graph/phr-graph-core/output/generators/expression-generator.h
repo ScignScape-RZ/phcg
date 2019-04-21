@@ -48,6 +48,8 @@ public:
  void generate_comment_line(QTextStream& qts, QString ln, int n = 0);
  void generate_empty_line(QTextStream& qts, int n = 1);
 
+ void check_generate_type_declaration(QTextStream& qts, const PHR_Graph_Node& node);
+
  void generate_carrier(QTextStream& qts,
    PHR_Graph_Token& tokn);
 

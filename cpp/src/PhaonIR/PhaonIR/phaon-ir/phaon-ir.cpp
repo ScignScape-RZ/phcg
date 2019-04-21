@@ -30,6 +30,8 @@
 
 #include "types/phr-type.h"
 
+#include "PhaonIR/phr-runtime/phr-fn-doc/phr-fn-doc.h"
+
 #include <QDebug>
 
 #include "textio.h"
@@ -217,6 +219,16 @@ void PhaonIR::push_unwind_scope(QString level_delta)
  push_unwind_scope(qsl[0].toInt(), qsl[1]);
 }
 
+void PhaonIR::type_decl(QString sym, QString ty)
+{
+ type_declarations_.insert(sym, ty);
+}
+
+void PhaonIR::type_decl(QString sym_ty)
+{
+ QStringList qsl = sym_ty.simplified().split(' ');
+ type_decl(qsl[0], qsl[1]);
+}
 
 void PhaonIR::push_unwind_scope(int level_delta, QString chn)
 {
@@ -390,16 +402,25 @@ void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
   QString ts = phc->symbol_name();
   if(ts.startsWith("default:"))
     ts = ts.mid(8);
+
+  PHR_Type* pty = type_system_->get_type_by_name(ts);
+
   if(ts.endsWith('*'))
     ts.chop(1);
   PHR_Type* ty = type_system_->get_type_by_name(ts);
 
+
+
   //const QMetaObject* qmo = kto->kauvir_type_object()->qmo();
-  int pid = ty->qmetatype_ptr_code();
+  int pid = pty->qmetatype_ptr_code();
   if(pid != QMetaType::UnknownType)
   {
    void* pv = QMetaType::create(pid);
    QObject* qob = static_cast<QObject*>(pv);
+
+   PHR_Fn_Doc* fd = (PHR_Fn_Doc*) pv;
+   fd->set_held_fn("xx");
+
    current_lexical_scope()->add_pointer_value(sym, ty, (quint64) pv);
   }
  }

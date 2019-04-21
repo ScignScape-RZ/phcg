@@ -19,6 +19,7 @@
 #include "token/phr-graph-token.h"
 
 #include "token/phr-graph-statement-info.h"
+#include "token/phr-graph-type-declaration.h"
 
 #include "textio.h"
 USING_KANS(TextIO)
@@ -37,6 +38,8 @@ Statement_Generator::Statement_Generator(Expression_Generator& expression_genera
 void Statement_Generator::generate_anchor_without_channel_group(QTextStream& qts,
  const PHR_Graph_Node& node, PHR_Graph_Statement_Info& sin)
 {
+ expression_generator_.check_generate_type_declaration(qts, node);
+
  if(caon_ptr<PHR_Graph_Token> tok = node.phr_graph_token())
  {
   qts << "\npush_carrier_stack $ " << sin.channel_name() << " ;.\n";

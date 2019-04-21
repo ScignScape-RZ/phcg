@@ -51,7 +51,7 @@ public:
  ACCESSORS(PHR_Runtime_Scope* ,current_scope)
  ACCESSORS__RGET(QQueue<PHR_Runtime_Scope*> ,phr_scope_queue)
 
- quint64 find_value_from_current_scope(QString key); //, quint64& val, PHR_Runtime_Scope::Storage_Options& so
+ quint64 find_value_from_current_scope(QString key, PHR_Type** rty = nullptr); //, quint64& val, PHR_Runtime_Scope::Storage_Options& so
 
 };
 

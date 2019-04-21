@@ -37,6 +37,8 @@ class PHR_Graph_Build
  caon_ptr<PHR_Graph_Node> last_block_pre_entry_node_;
  caon_ptr<PHR_Graph_Node> last_expression_entry_node_;
 
+ caon_ptr<PHR_Graph_Node> held_type_declaration_node_;
+
  PHR_Graph_Frame& fr_;
  const PHR_Graph_Query& qy_;
 

@@ -45,6 +45,10 @@ void PHR_Fn_Doc::init(PHR_Env* penv)
  qDebug() << "init...";
 }
 
+void PHR_Fn_Doc::test()
+{
+ qDebug() << "ok...";
+}
 
 QString PHR_Fn_Doc::test_summary()
 {

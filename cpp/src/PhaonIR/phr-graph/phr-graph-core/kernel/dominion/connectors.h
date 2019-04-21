@@ -11,6 +11,8 @@ DOMINION_CONNECTOR(Statement_Entry, "statement-entry")
 DOMINION_CONNECTOR(Block_Entry, "block-entry")
 DOMINION_CONNECTOR(Channel_Entry, "channel-entry")
 
+DOMINION_CONNECTOR(Type_Declaration, "type-declaration")
+
 DOMINION_CONNECTOR(Channel_XEntry, "channel-xentry")
 
 DOMINION_CONNECTOR(Channel_Fuxe_Entry, "channel-fuxe-entry")

@@ -31,6 +31,8 @@
 #include "phr-graph-core/token/phr-graph-statement-info.h"
 #include "phr-graph-core/token/phr-graph-fuxe-entry.h"
 
+#include "phr-graph-core/token/phr-graph-type-declaration.h"
+
 #include "pgb-ir-run.h"
 
 #include "multigraph-token.h"
@@ -44,6 +46,7 @@ PHR_Graph_Build::PHR_Graph_Build(PHR_Graph& graph)
    last_statement_entry_node_(nullptr),
    last_block_pre_entry_node_(nullptr),
    last_expression_entry_node_(nullptr),
+   held_type_declaration_node_(nullptr),
   fr_(PHR_Graph_Frame::instance()),
   qy_(PHR_Graph_Query::instance())
 {
@@ -78,6 +81,15 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_type_declaration(
 {
  QString sym = amgt.raw_text;
  QString ty = tmgt.raw_text;
+
+ caon_ptr<PHR_Graph_Type_Declaration> td = new
+   PHR_Graph_Type_Declaration(sym, ty);
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(td);
+ result->set_label(QString("<type-decl:%1%2>").arg(sym).arg(ty));
+
+ held_type_declaration_node_ = result;
+
+ return result;
 
 }
 
@@ -211,6 +223,12 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_token(caon_ptr<PHR_Gra
 
  source << fr_/qy_.Block_Entry(cion) >> result;
 
+ if(held_type_declaration_node_)
+ {
+  result << fr_/qy_.Type_Declaration >> held_type_declaration_node_;
+  held_type_declaration_node_ = nullptr;
+ }
+
  return result;
 }
 
@@ -303,6 +321,12 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_node(
 
  source << fr_/qy_.Block_Entry(cion) >> target;
 
+ if(held_type_declaration_node_)
+ {
+  target << fr_/qy_.Type_Declaration >> held_type_declaration_node_;
+  held_type_declaration_node_ = nullptr;
+ }
+
  return nbin;
 }
 
@@ -321,4 +345,11 @@ void PHR_Graph_Build::add_statement_sequence_node(
  }
  else
    source << fr_/qy_.Statement_Sequence >> target;
+
+
+ if(held_type_declaration_node_)
+ {
+  target << fr_/qy_.Type_Declaration >> held_type_declaration_node_;
+  held_type_declaration_node_ = nullptr;
+ }
 }

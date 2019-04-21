@@ -11,6 +11,8 @@
 
 #include "phr-command-runtime-argument.h"
 
+#include "PhaonIR/phr-runtime/phr-fn-doc/phr-fn-doc.h"
+
 
 //?USING_KANS(CMD)
 
@@ -441,20 +443,62 @@ TEMP_MACRO_0
 
 struct Cast_1_Ready
 {
- template<typename OBJECT_Type ,typename ARG1_Type> static void run(QString method_name, OBJECT_Type obj, QVector<PHR_Command_Runtime_Argument*>& args ,ARG1_Type arg1, const QVector<PHR_Command_Runtime_Router::Argument_Info>& argument_info) { QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type> ( argument_info[1].type_name_with_modifier(args[1 - 1]->qob_reflection_modifier(), args[1 - 1]->qob_reflection_type_name()).toLatin1(), arg1) ); } template<typename OBJECT_Type, typename RET_Type ,typename ARG1_Type> static void run(QString method_name, OBJECT_Type obj, QString return_type, RET_Type& ret, QVector<PHR_Command_Runtime_Argument*>& args ,ARG1_Type arg1, const QVector<PHR_Command_Runtime_Router::Argument_Info>& argument_info)
+ template<typename OBJECT_Type ,typename ARG1_Type> static void run
+ (QString method_name, OBJECT_Type obj, QVector<PHR_Command_Runtime_Argument*>& args ,ARG1_Type arg1, const QVector<PHR_Command_Runtime_Router::Argument_Info>& argument_info)
  {
+  QString tnw = "PHR_Env*";
+
+  QString mn = "test";
+
+//  PHR_Fn_Doc* objj = new PHR_Fn_Doc;
+
+//  QMetaObject::invokeMethod(objj, mn.toLatin1());
+
+//  quint64* qui = (quint64*) obj;
+
+//  PHR_Fn_Doc* oj = (PHR_Fn_Doc*) *qui;
+
+  QMetaObject::invokeMethod(obj, mn.toLatin1());
+
+  QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
+    ( tnw.toLatin1(), arg1) );
+
+//  QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
+//    ( argument_info[1].type_name_with_modifier(args[1 - 1]->qob_reflection_modifier(), args[1 - 1]->qob_reflection_type_name()).toLatin1(), arg1) );
+
+ }
+ template<typename OBJECT_Type, typename RET_Type ,typename ARG1_Type> static void run(QString method_name, OBJECT_Type obj, QString return_type, RET_Type& ret, QVector<PHR_Command_Runtime_Argument*>& args ,ARG1_Type arg1, const QVector<PHR_Command_Runtime_Router::Argument_Info>& argument_info)
+ {
+  QString tnw = argument_info[1].type_name_with_modifier(
+     args[1 - 1]->qob_reflection_modifier(),
+     args[1 - 1]->qob_reflection_type_name());
+
+  tnw = "PHR_Env*";
+
   QMetaObject::invokeMethod(obj, method_name.toLatin1(),
   QReturnArgument<RET_Type>(return_type.toLatin1(), ret),
-   QArgument<ARG1_Type> ( argument_info[1].type_name_with_modifier(
-                           args[1 - 1]->qob_reflection_modifier(),
-                           args[1 - 1]->qob_reflection_type_name()).toLatin1(), arg1) );
+   QArgument<ARG1_Type> (tnw.toLatin1(), arg1) );
+
+//  QMetaObject::invokeMethod(obj, method_name.toLatin1(),
+//  QReturnArgument<RET_Type>(return_type.toLatin1(), ret),
+//   QArgument<ARG1_Type> (
+//     argument_info[1].type_name_with_modifier(
+//     args[1 - 1]->qob_reflection_modifier(),
+//     args[1 - 1]->qob_reflection_type_name()).toLatin1(), arg1) );
  }
 };
 struct Cast_1 {
 static constexpr int ready_at_cast_index = 1; template<typename OBJECT_Type, typename Type_List_Type> static void run(QString method_name, OBJECT_Type obj, int cast_index, PHR_Command_Runtime_Router& kcrr, QVector<PHR_Command_Runtime_Router::Argument_Info>& argument_info, QVector<PHR_Command_Runtime_Argument*>& args) {
 if(cast_index == ready_at_cast_index)
 {
- switch(kcrr.return_type_code()) { case PHR_Command_Runtime_Router::Arg_Type_Codes::No_Return: { typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument ); Cast_1_Ready::run(method_name, obj, args ,arg1, argument_info); } break; case PHR_Command_Runtime_Router::Arg_Type_Codes::Void_Pointer: { typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument ); Cast_1_Ready::run(method_name, obj, kcrr.return_type_name_strip_namespace(), kcrr.raw_result_ref(), args ,arg1, argument_info); } break; case PHR_Command_Runtime_Router::Arg_Type_Codes::Int: { int& x = *reinterpret_cast<int*>(kcrr.raw_result_ref()); typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument ); Cast_1_Ready::run(method_name, obj, "int", x, args ,arg1, argument_info); } break; case PHR_Command_Runtime_Router::Arg_Type_Codes::QString_Return: { QString& qs = kcrr.string_result(); typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument ); Cast_1_Ready::run(method_name, obj, "QString", qs, args ,arg1, argument_info); } break; }
+ switch(kcrr.return_type_code())
+ {
+ case PHR_Command_Runtime_Router::Arg_Type_Codes::No_Return:
+ {
+  typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument );
+  Cast_1_Ready::run(method_name, obj, args ,arg1, argument_info);
+ }
+  break; case PHR_Command_Runtime_Router::Arg_Type_Codes::Void_Pointer: { typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument ); Cast_1_Ready::run(method_name, obj, kcrr.return_type_name_strip_namespace(), kcrr.raw_result_ref(), args ,arg1, argument_info); } break; case PHR_Command_Runtime_Router::Arg_Type_Codes::Int: { int& x = *reinterpret_cast<int*>(kcrr.raw_result_ref()); typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument ); Cast_1_Ready::run(method_name, obj, "int", x, args ,arg1, argument_info); } break; case PHR_Command_Runtime_Router::Arg_Type_Codes::QString_Return: { QString& qs = kcrr.string_result(); typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument ); Cast_1_Ready::run(method_name, obj, "QString", qs, args ,arg1, argument_info); } break; }
 }
 else
 {
