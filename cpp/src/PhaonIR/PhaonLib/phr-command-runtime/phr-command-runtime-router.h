@@ -247,7 +247,7 @@ class PHR_Command_Runtime_Router
 
  quint64 string_result_code_;
 
- QString cpkg_output_symbol_name_;
+ QString output_symbol_name_;
 
  typedef void*(*envv_fn_type)(void*);
  envv_fn_type envv_fn_;

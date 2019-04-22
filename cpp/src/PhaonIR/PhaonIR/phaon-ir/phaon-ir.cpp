@@ -346,9 +346,14 @@ void PhaonIR::evaluate_channel_group()
  }
  else
  {
+  QString rsym = anchored_channel_groups_.value(held_channel_group_).sym;
+
   PHR_Command_Package pcp(*held_channel_group_);
+  pcp.set_output_symbol_name(rsym);
+
   if(direct_eval_fn_)
     direct_eval_fn_(code_model_, &pcp, held_symbol_scope_);
+
   pto = pcp.result_type_object();
   if(!pto)
     return;

@@ -200,13 +200,14 @@ QString PHR_Command_Runtime_Router::return_type_name()
 }
 
 
-void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg)
+void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* pcp)
 {
- //?phr_expression_ = cpkg->phr_expression();
+ //?phr_expression_ = pcp->phr_expression();
 
-//? cpkg_output_symbol_name_ = cpkg->output_symbol_name();
+//? pcp_output_symbol_name_ = pcp->output_symbol_name();
+ output_symbol_name_ = pcp->output_symbol_name();
 
- PHR_Channel* sigma = cpkg->sigma_ch();
+ PHR_Channel* sigma = pcp->sigma_ch();
  if(sigma  && !sigma->isEmpty())
  {
   PHR_Carrier* s1 = sigma->first();
@@ -224,13 +225,13 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg
   sigma_argument_ = s1a;
  }
 
- PHR_Channel* fuxe = cpkg->fuxe_ch();
+ PHR_Channel* fuxe = pcp->fuxe_ch();
  if(fuxe->isEmpty())
  {
   // no function name!
   return;
  }
- PHR_Channel* result = cpkg->result_ch();
+ PHR_Channel* result = pcp->result_ch();
  if(result)
  {
   if(!result->isEmpty())
@@ -242,7 +243,7 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg
  PHR_Carrier* phc = fuxe->first();
  fuxe_name_ = phc->symbol_name();
 
- PHR_Channel* lambda = cpkg->lambda_ch();
+ PHR_Channel* lambda = pcp->lambda_ch();
 
  if(lambda)
  {
@@ -250,15 +251,6 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg
   for(int i = 0; i < size; ++i)
   {
    PHR_Carrier* phc = lambda->at(i);
-   QString sym = phc->symbol_name();
-   if(sym == "_$")
-   {
-    //PHR_Type* pty = scopes_.get_type_for_symbol_name(sym);
-    if(result_type_object_)
-    {
-     phc->set_raw_value_string(result_type_object_->name());
-    }
-   }
    PHR_Command_Runtime_Argument* la = parse_carrier_to_argument(*phc, i);
    lambda_arguments_.push_back(la);
   }
@@ -512,12 +504,16 @@ void PHR_Command_Runtime_Router::proceed_s1_2(PHR_Function_Vector* pfv, void** p
 
 QString PHR_Command_Runtime_Router::output_type_string()
 {
- if(cpkg_output_symbol_name_.isEmpty())
+ if(output_symbol_name_.isEmpty())
  {
   return QString();
  }
  //?
-// if(const PHR_Type_Object* pto = scopes_->get_type_object_from_symbol_name(cpkg_output_symbol_name_))
+ if(const PHR_Type* ty = scopes_->get_type_for_symbol_name(output_symbol_name_))
+ {
+  return ty->name();
+ }
+// if(const PHR_Type_Object* pto = scopes_->get_type_object_from_symbol_name(pcp_output_symbol_name_))
 // {
 //  return pto->get_name_string();
 // }
