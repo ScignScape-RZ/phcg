@@ -53,6 +53,7 @@ public:
 
  quint64 find_value_from_current_scope(QString key, PHR_Type** rty = nullptr); //, quint64& val, PHR_Runtime_Scope::Storage_Options& so
 
+ PHR_Type* get_type_for_symbol_name(QString sym);
 };
 
 //_KANS(CMD)

@@ -408,20 +408,21 @@ void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
  }
  else if(ch == "type-default")
  {
-  PHR_Type* pty;
-  quint64 vv = scopes_.find_value_from_current_scope(sym, &pty);
+  PHR_Type* ty = scopes_.get_type_for_symbol_name(sym);
 
-  if(!pty)
+  //quint64 vv = scopes_.find_value_from_current_scope(sym, &pty);
+
+  if(!ty)
   {
    return;
   }
 
-  int pid = pty->qmetatype_ptr_code();
+  int pid = ty->qmetatype_ptr_code();
   if(pid != QMetaType::UnknownType)
   {
    void* pv = QMetaType::create(pid);
    QObject* qob = static_cast<QObject*>(pv);
-   current_lexical_scope()->add_pointer_value(sym, pty, (quint64) pv);
+   current_lexical_scope()->add_pointer_value(sym, ty, (quint64) pv);
   }
  }
 }

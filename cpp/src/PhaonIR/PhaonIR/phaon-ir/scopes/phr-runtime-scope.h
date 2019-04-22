@@ -45,6 +45,7 @@ public:
  void add_function_vector_value(QString key, void* fv);
  void check_type_decl(QString key);
 
+ PHR_Type* get_type_for_symbol_name(QString sym);
  PHR_Type* find_value(QString key, quint64& val, Storage_Options& so);
 
  void update_value(QString key, void* pv);

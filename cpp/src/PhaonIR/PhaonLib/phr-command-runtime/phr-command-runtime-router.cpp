@@ -100,6 +100,7 @@ PHR_Command_Runtime_Argument* PHR_Command_Runtime_Router::parse_carrier_to_argum
 {
  PHR_Command_Runtime_Argument* result;
  QString sym = phc.symbol_name();
+
  const PHR_Type_Object* pto = phc.type_object();
  if(pto)
  {
@@ -249,6 +250,15 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* cpkg
   for(int i = 0; i < size; ++i)
   {
    PHR_Carrier* phc = lambda->at(i);
+   QString sym = phc->symbol_name();
+   if(sym == "_$")
+   {
+    //PHR_Type* pty = scopes_.get_type_for_symbol_name(sym);
+    if(result_type_object_)
+    {
+     phc->set_raw_value_string(result_type_object_->name());
+    }
+   }
    PHR_Command_Runtime_Argument* la = parse_carrier_to_argument(*phc, i);
    lambda_arguments_.push_back(la);
   }

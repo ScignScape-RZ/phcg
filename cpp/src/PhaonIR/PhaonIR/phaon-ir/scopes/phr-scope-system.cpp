@@ -18,6 +18,14 @@ PHR_Scope_System::PHR_Scope_System()
 
 }
 
+PHR_Type* PHR_Scope_System::get_type_for_symbol_name(QString sym)
+{
+ if(!current_scope_)
+   return nullptr;
+ PHR_Type* result = current_scope_->get_type_for_symbol_name(sym);
+ return result;
+}
+
 quint64 PHR_Scope_System::find_value_from_current_scope(QString key, PHR_Type** rty)//, quint64& val, PHR_Runtime_Scope::Storage_Options& so)
 {
  if(!current_scope_)
