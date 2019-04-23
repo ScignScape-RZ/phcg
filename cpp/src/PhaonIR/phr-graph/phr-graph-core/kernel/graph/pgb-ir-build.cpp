@@ -353,6 +353,24 @@ Purpose_Codes& _PGB_IR_Build::add_channel_xentry_token(QString src, MG_Token_Sub
 
 
 
+Purpose_Codes& _PGB_IR_Build::comment(QString str)
+{
+ qts_ << "(pgb::comment \"" << str << "\")\n";
+ return purpose_;
+}
+
+Purpose_Codes& _PGB_IR_Build::macro(QStringList _args)
+{
+ QList<MG_Token> args;
+ //args.resize(_args.size());
+ std::transform(_args.begin(), _args.end(),
+   std::back_inserter(args), [](const QString& str) -> MG_Token
+ {
+  return {MG_Token_Kinds::Macro_TBD, str};
+ });
+ return macro(args);
+}
+
 Purpose_Codes& _PGB_IR_Build::macro(QList<MG_Token>& args)
 {
  //MG_Token amgt = {carrier_kind, MG_Token_Kinds::Generic};

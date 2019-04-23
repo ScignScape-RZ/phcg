@@ -27,9 +27,6 @@ INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 INCLUDEPATH += $$PHR_GRAPH_SRC_GROUP_DIR
 
 
-LIBS += -L$$TARGETSDIR -lrz-graph-token -lrz-graph-build \
- -lrz-graph-embed -lrz-graph-core
-
 HEADERS += \
    $$SRC_DIR/rz-function-def-info.h \
    $$SRC_DIR/rz-type-formation.h \
@@ -40,6 +37,13 @@ SOURCES += \
    $$SRC_DIR/rz-function-def-info.cpp \
    $$SRC_DIR/rz-type-formation.cpp \
    $$SRC_DIR/rz-function-def-syntax.cpp \
+
+
+LIBS += -L$$TARGETSDIR -lrz-graph-token -lrz-graph-build \
+ -lrz-graph-embed -lrz-graph-core
+
+LIBS += -L$$TARGETSDIR -lphr-graph-core
+
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
 mkpath($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

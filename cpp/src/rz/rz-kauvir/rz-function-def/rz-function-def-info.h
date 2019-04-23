@@ -151,7 +151,8 @@ public:
  QString dynamo_signature_code_string();
  QString dynamo_signature_code_string_by_channel_type(Channel_Types ct);
 
- void write_phr_signature_code(QList<PGB_IR_Build::Text_With_Purpose>& step_forms);
+ void write_phr_signature_code(PGB_IR_Build& pgb,
+   QList<PGB_IR_Build::Text_With_Purpose>& step_forms);
  void write_phr_signature_code_by_channel_type(PGB_IR_Build& pgb,
    QList<PGB_IR_Build::Text_With_Purpose>& step_forms, Channel_Types ct);
  void write_phr_signature_code_for_empty_channel(PGB_IR_Build& pgb,

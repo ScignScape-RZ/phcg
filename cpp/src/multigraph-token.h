@@ -227,7 +227,7 @@ struct MG_Token
 
   TEMP_MACRO(Arg_String_Literal, "<$>")
 
-  TEMP_MACRO(Macro_TBD, ":::")
+  TEMP_MACRO(Macro_TBD, "...")
 
 #undef TEMP_MACRO
   }};
@@ -264,7 +264,7 @@ struct MG_Token
 
   TEMP_MACRO(Arg_String_Literal, "<$>")
 
-  TEMP_MACRO(Macro_TBD, ":::")
+  TEMP_MACRO(Macro_TBD, "...")
 
 #undef TEMP_MACRO
   }};

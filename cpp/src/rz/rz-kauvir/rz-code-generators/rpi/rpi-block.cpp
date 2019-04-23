@@ -713,7 +713,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
       if(caon_ptr<RZ_Function_Def_Info> function_def_info =
         visitor_phaon.get_function_def_info_from_entry(fde))
       {
-       function_def_info->write_phaonir_signature_code(PGB_IR_Build& pgb, current_form_->step_forms());
+       function_def_info->write_phr_signature_code(pgb_, current_form_->step_forms());
 
        //?signature_code  = function_def_info->dynamo_signature_code_string();
        //?MS_Token note {MS_Token_Kinds::Note_Symbol, ":fdef"};
