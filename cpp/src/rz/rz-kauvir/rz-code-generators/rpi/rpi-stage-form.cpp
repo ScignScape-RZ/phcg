@@ -542,6 +542,11 @@ bool RPI_Stage_Form::has_preceder_token()
  return ANNOTATION_FLAG(has_preceder_token);
 }
 
+void RPI_Stage_Form::write_signature_type_declaration(QTextStream& qts)
+{
+
+}
+
 void RPI_Stage_Form::write_type_declaration(QTextStream& qts)
 {
  RPI_Stage_Element& rse1 = inner_elements_[1];
@@ -565,6 +570,11 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
   {
    qts << "skipping type declaration ...";
    return;
+  }
+  if(ANNOTATION_FLAG(is_fn_no_block))
+  {
+   if(inner_elements_.size() >= 2)
+     write_signature_type_declaration(qts);
   }
   if(inner_elements_.size() >= 3)
     write_type_declaration(qts);

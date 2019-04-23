@@ -274,7 +274,6 @@ QString RZ_Function_Def_Info::kauvir_entry_code_string(RZ_Lisp_Graph_Lexical_Sco
  result += kauvir_entry_code_string_by_channel_type(Channel_Types::Lambda, ls);
 
  return result;
-
 }
 
 QString RZ_Function_Def_Info::dynamo_signature_code_string()
@@ -623,3 +622,112 @@ void RZ_Function_Def_Info::init_channels(tNode& fdef_node)
  }
 }
 
+
+
+void RZ_Function_Def_Info::write_phr_signature_code(QList<PGB_IR_Build::Text_With_Purpose>& step_forms)
+{
+ write_phr_signature_code_by_channel_type(step_forms, Channel_Types::Sigma);
+ write_phr_signature_code_by_channel_type(step_forms, Channel_Types::Lambda);
+ write_phr_signature_code_by_channel_type(step_forms, Channel_Types::Return);
+}
+
+
+void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(
+  QList<PGB_IR_Build::Text_With_Purpose>& step_forms, Channel_Types ct)
+{
+ caon_ptr<RE_Node> sequence_node = nullptr;
+
+ QString channel_name_code;
+
+ switch(ct)
+ {
+ case Channel_Types::Lambda:
+  channel_name_code = "lambda";
+  goto ok_sequence_node;
+
+
+ case Channel_Types::Sigma:
+  channel_name_code = "sigma";
+  goto ok_sequence_node;
+
+
+ case Channel_Types::Return:
+  channel_name_code = "return";
+  goto ok_sequence_node;
+
+ default:
+  break;
+
+ ok_sequence_node: sequence_node = entry_nodes_map_.value(ct); break;
+
+ }
+ QString result;
+
+ signed int depth_change;
+
+ QString symbol_name;
+ bool awaiting_type_name = false;
+
+ int position_count = 0;
+ while(sequence_node)
+ {
+  // this advances sequence_node
+  if(caon_ptr<RZ_Lisp_Token> rzlt = channel_sequence(sequence_node, depth_change))
+  {
+   CAON_PTR_DEBUG(RZ_Lisp_Token ,rzlt)
+   if(rzlt->flags.is_empty_tuple_indicator)
+   {
+    write_phr_signature_code_for_empty_channel(step_forms, channel_name_code);
+   }
+   QString rt = rzlt->raw_text();
+   if(rt == "<-")
+   {
+    awaiting_type_name = true;
+   }
+   else if(awaiting_type_name)
+   {
+    write_phr_signature_code_for_symbol(step_forms, channel_name_code, symbol_name, rt);
+    symbol_name.clear();
+   }
+   else if(symbol_name.isEmpty())
+   {
+    symbol_name = rt;
+   }
+   else
+   {
+    write_phr_signature_code_for_type(step_forms, channel_name_code, symbol_name);
+    write_phr_signature_code_for_type(step_forms, channel_name_code, rt);
+    symbol_name.clear();
+   }
+  }
+ }
+ if(!symbol_name.isEmpty())
+ {
+  // left over type ...
+  write_phr_signature_code_for_type(step_forms, channel_name_code, symbol_name);
+ }
+}
+
+void RZ_Function_Def_Info::write_phr_signature_code_for_empty_channel(
+  QList<PGB_IR_Build::Text_With_Purpose>& step_forms, QString carrier_kind)
+{
+
+}
+
+void RZ_Function_Def_Info::write_phr_signature_code_for_type(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+  QString carrier_kind, QString type_name)
+{
+
+}
+
+void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+  QString carrier_kind, QString symbol_name)
+{
+
+}
+
+void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+  QString carrier_kind, QString symbol_name, QString type_name)
+{
+
+}

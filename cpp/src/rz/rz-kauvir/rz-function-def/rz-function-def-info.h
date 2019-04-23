@@ -20,11 +20,19 @@
 
 #include "relae-graph/relae-caon-ptr.h"
 
+#include "phr-graph-core/kernel/graph/pgb-ir-build.h"
+
 #include "rzns.h"
 
 #include "flags.h"
 
 #include <QStack>
+
+RZNS_(PhrGraphCore)
+ class PGB_IR_Build;
+_RZNS(PhrGraphCore)
+
+USING_RZNS(PhrGraphCore)
 
 RZNS_(RECore)
 
@@ -142,6 +150,18 @@ public:
 
  QString dynamo_signature_code_string();
  QString dynamo_signature_code_string_by_channel_type(Channel_Types ct);
+
+ void write_phr_signature_code(QList<PGB_IR_Build::Text_With_Purpose>& step_forms);
+ void write_phr_signature_code_by_channel_type(
+   QList<PGB_IR_Build::Text_With_Purpose>& step_forms, Channel_Types ct);
+ void write_phr_signature_code_for_empty_channel(
+   QList<PGB_IR_Build::Text_With_Purpose>& step_forms, QString carrier_kind);
+ void write_phr_signature_code_for_type(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+   QString carrier_kind, QString type_name);
+ void write_phr_signature_code_for_symbol(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+   QString carrier_kind, QString symbol_name);
+ void write_phr_signature_code_for_symbol(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+   QString carrier_kind, QString symbol_name, QString type_name);
 
 };
 

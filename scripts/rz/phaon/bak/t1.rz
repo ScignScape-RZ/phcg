@@ -7,10 +7,6 @@ penv \= (envv _$);
 
 fnd -> init penv;
 
-,test-fn ::: .(int)  $-> extern;
-
-fnd -> read  "test-fn";
-
 
 
 
