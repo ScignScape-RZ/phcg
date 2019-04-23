@@ -82,7 +82,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(add_channel_fuxe_coentry_node)
   TEMP_MACRO(make_block_info_node)
   TEMP_MACRO(add_channel_continue_block_node)
-  TEMP_MACRO(add_empty_channel)
+
  }};
 
 #undef TEMP_MACRO
@@ -232,11 +232,11 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
   };
   break;
 
- case PGB_Methods::add_empty_channel:
-  {
-   //?
-  }
-  break;
+// case PGB_Methods::add_empty_channel:
+//  {
+//   //?
+//  }
+//  break;
 
  case PGB_Methods::make_token_node:
   {

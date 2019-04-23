@@ -513,7 +513,7 @@ void PGB_IR_Build::expand_macros(QList<Text_With_Purpose>& tps)
  QList<Text_With_Purpose>::iterator it(tps.begin());
  while(it != tps.end())
  {
-  const Text_With_Purpose& tp = it.next();
+  const Text_With_Purpose& tp = *it;
   if(tp.text.startsWith("(pgb::macro"))
   {
    QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>> mgtm;
@@ -524,15 +524,18 @@ void PGB_IR_Build::expand_macros(QList<Text_With_Purpose>& tps)
 
    QList<Text_With_Purpose> itps;
    macro.write_expand(*this, itps);
-   it.next();
-   auto itc = it;
+
+   auto itn = it + 1;
 
    for(const Text_With_Purpose& tp: itps)
    {
-    auto itcc = itc;
-    it = tps.insert(itcc, tp);
+    itn = tps.insert(itn, tp);
+    ++itn;
    }
+   it = itn;
   }
+  else
+    ++it;
  }
 }
 
