@@ -352,6 +352,16 @@ Purpose_Codes& _PGB_IR_Build::add_channel_xentry_token(QString src, MG_Token_Sub
 }
 
 
+
+Purpose_Codes& _PGB_IR_Build::macro(QString carrier_kind)
+{
+ MG_Token amgt = {carrier_kind, MG_Token_Kinds::Generic};
+ qts_ << "(pgb::macro "; end_line({amgt});
+ return purpose_;
+}
+
+
+
 PGB_IR_Build::PGB_IR_Build(QString out_file)
   :  out_file_(out_file)//, qts_(&text)
 {

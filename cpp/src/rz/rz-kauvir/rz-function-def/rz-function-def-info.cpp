@@ -624,15 +624,16 @@ void RZ_Function_Def_Info::init_channels(tNode& fdef_node)
 
 
 
-void RZ_Function_Def_Info::write_phr_signature_code(QList<PGB_IR_Build::Text_With_Purpose>& step_forms)
+void RZ_Function_Def_Info::write_phr_signature_code(PGB_IR_Build& pgb,
+  QList<PGB_IR_Build::Text_With_Purpose>& step_forms)
 {
- write_phr_signature_code_by_channel_type(step_forms, Channel_Types::Sigma);
- write_phr_signature_code_by_channel_type(step_forms, Channel_Types::Lambda);
- write_phr_signature_code_by_channel_type(step_forms, Channel_Types::Return);
+ write_phr_signature_code_by_channel_type(pgb, step_forms, Channel_Types::Sigma);
+ write_phr_signature_code_by_channel_type(pgb, step_forms, Channel_Types::Lambda);
+ write_phr_signature_code_by_channel_type(pgb, step_forms, Channel_Types::Return);
 }
 
 
-void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(
+void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(PGB_IR_Build& pgb,
   QList<PGB_IR_Build::Text_With_Purpose>& step_forms, Channel_Types ct)
 {
  caon_ptr<RE_Node> sequence_node = nullptr;
@@ -677,7 +678,7 @@ void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(
    CAON_PTR_DEBUG(RZ_Lisp_Token ,rzlt)
    if(rzlt->flags.is_empty_tuple_indicator)
    {
-    write_phr_signature_code_for_empty_channel(step_forms, channel_name_code);
+    write_phr_signature_code_for_empty_channel(pgb, step_forms, channel_name_code);
    }
    QString rt = rzlt->raw_text();
    if(rt == "<-")
@@ -686,7 +687,7 @@ void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(
    }
    else if(awaiting_type_name)
    {
-    write_phr_signature_code_for_symbol(step_forms, channel_name_code, symbol_name, rt);
+    write_phr_signature_code_for_symbol(pgb, step_forms, channel_name_code, symbol_name, rt);
     symbol_name.clear();
    }
    else if(symbol_name.isEmpty())
@@ -695,8 +696,8 @@ void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(
    }
    else
    {
-    write_phr_signature_code_for_type(step_forms, channel_name_code, symbol_name);
-    write_phr_signature_code_for_type(step_forms, channel_name_code, rt);
+    write_phr_signature_code_for_type(pgb, step_forms, channel_name_code, symbol_name);
+    write_phr_signature_code_for_type(pgb, step_forms, channel_name_code, rt);
     symbol_name.clear();
    }
   }
@@ -704,29 +705,38 @@ void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(
  if(!symbol_name.isEmpty())
  {
   // left over type ...
-  write_phr_signature_code_for_type(step_forms, channel_name_code, symbol_name);
+  write_phr_signature_code_for_type(pgb, step_forms, channel_name_code, symbol_name);
  }
 }
 
-void RZ_Function_Def_Info::write_phr_signature_code_for_empty_channel(
+void RZ_Function_Def_Info::write_phr_signature_code_for_empty_channel(PGB_IR_Build& pgb,
   QList<PGB_IR_Build::Text_With_Purpose>& step_forms, QString carrier_kind)
 {
-
+ pgb(step_forms).add_empty_channel(carrier_kind);
+// QString line =
+//   QString("(pgb::add_empty_channel| )").arg(carrier_kind);
+ //return result;
 }
 
-void RZ_Function_Def_Info::write_phr_signature_code_for_type(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+void RZ_Function_Def_Info::write_phr_signature_code_for_type(PGB_IR_Build& pgb,
+  QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
   QString carrier_kind, QString type_name)
 {
-
+// QString result =
+//   QString("\n(ka::kc :|kcg_add_%1_carrier_via_type_name| kcg \"%2\")").arg(carrier_kind).arg(type_name);
+// return result;
+ pgb(step_forms).macro("add_carrier_via_type_name", carrier_kind, type_name);
 }
 
-void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(PGB_IR_Build& pgb,
+  QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
   QString carrier_kind, QString symbol_name)
 {
 
 }
 
-void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
+void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(PGB_IR_Build& pgb,
+  QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
   QString carrier_kind, QString symbol_name, QString type_name)
 {
 

@@ -66,6 +66,13 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
+ Purpose_Codes& macro(QList<MG_Token> args);
+ Purpose_Codes& macro(QStringList args)
+ {
+  //std::
+ }
+
+
  Purpose_Codes& add_type_declaration(QString arg, MG_Token_Subgroups asg,
    QString ty, MG_Token_Subgroups tsg);
  Purpose_Codes& add_type_declaration(QString arg, QString ty)
