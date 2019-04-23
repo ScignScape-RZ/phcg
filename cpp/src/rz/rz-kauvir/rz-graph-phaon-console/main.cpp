@@ -104,6 +104,8 @@ void compile_rz(QString file_name)
  rpo.build_phaon_graph(pgb);
 
  //QStringList qsl;
+ pgb.generate_premacro_file(rpo.step_forms());
+ pgb.expand_macros(rpo.step_forms());
  pgb.generate_file(rpo.step_forms());
 
  PHR_Graph phg;

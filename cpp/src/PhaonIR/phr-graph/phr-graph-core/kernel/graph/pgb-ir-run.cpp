@@ -7,6 +7,8 @@
 
 #include "pgb-ir-run.h"
 
+#include "pgb-ir-build.h"
+
 #include "phr-graph-build.h"
 
 #include "textio.h"
@@ -88,34 +90,10 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
  return static_map.value(key.toLower(), PGB_Methods::N_A);
 }
 
-QList<MG_Token> PGB_IR_Run::mgts_by_kind_group(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm,
-  MG_Token_Kind_Groups g)
-{
- QList<QPair<MG_Token, int>> qlp;
- QList<MG_Token_Kinds> ks = MG_Token_Kind_Group_to_kinds(g);
- for(MG_Token_Kinds k : ks)
-   qlp.append(mgtm.values(k));
- qSort(qlp.begin(), qlp.end(), [](const QPair<MG_Token, int>& pr1,
-   const QPair<MG_Token, int>& pr2)
- {
-  return pr1.second < pr2.second;
- });
-
- QList<MG_Token> result;
- std::transform(qlp.begin(), qlp.end(),
-                std::back_inserter(result),
-   std::bind(&QPair<MG_Token, int>::first, std::placeholders::_1)
-//   [](const QPair<MG_Token, int>& pr)
-//  {return pr.first;}
-                //std::mem_fun(&QPair<MG_Token, int>::second)
-                );
- //for(const QPair<MG_Token, int>& pr: qlp)
- return result;
-}
 
 caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_target(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
- QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Target);
+ QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Target);
  MG_Token& mgt = mgts[0];
  if(mgt.kind == MG_Token_Kinds::Ledger_Target)
    return &ledger_[mgt.raw_text];
@@ -143,7 +121,7 @@ caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_known_target(QString tr)
 
 caon_ptr<PHR_Graph_Node> PGB_IR_Run::get_arg(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
- QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
+ QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
  MG_Token& mgt = mgts[0];
  if(mgt.kind == MG_Token_Kinds::Arg_Ledger_Target)
    return ledger_[mgt.raw_text];
@@ -158,7 +136,7 @@ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
   QPair<MG_Token, int>>& mgtm, caon_ptr<PHR_Graph_Node>* extra)
 {
  caon_ptr<PHR_Graph_Node> r1, r2;
- QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
+ QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
  MG_Token& mgt0 = mgts[0];
  if(mgt0.kind == MG_Token_Kinds::Arg_Ledger_Target)
    r1 = ledger_[mgt0.raw_text];
@@ -202,14 +180,14 @@ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
 QList<MG_Token> PGB_IR_Run::get_generic_tokens(const QMultiMap<MG_Token_Kinds,
   QPair<MG_Token, int>>& mgtm)
 {
- return mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Generic);
+ return PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Generic);
 }
 
 MG_Token PGB_IR_Run::get_arg_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
- QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
+ QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
  return mgts[0];
-// QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
+// QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
 // return mgts[0];
 
 // if(mgtm.values(MG_Token_Kinds::Arg_Raw_Symbol).isEmpty())
@@ -238,7 +216,7 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
 
  case PGB_Methods::add_type_declaration:
   {
-   QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
+   QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
    if(mgts.size() < 2)
      break;
    //?caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
@@ -451,15 +429,8 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
 
 void PGB_IR_Run::run_line(QString line)
 {
- QStringList qsl = line.split(' ');
- QString fn = qsl.takeFirst();
  QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>> mgtm;
- int i = 0;
- for(QString qs: qsl)
- {
-  MG_Token mgt = MG_Token::decode_symbol(qs);
-  mgtm.insert(mgt.kind, {mgt, i++});
- }
+ QString fn = PGB_IR_Build::parse_line(line, mgtm);
  run_line(fn, mgtm);
 }
 

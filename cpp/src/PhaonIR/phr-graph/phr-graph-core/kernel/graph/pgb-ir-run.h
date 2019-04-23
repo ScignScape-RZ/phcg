@@ -52,8 +52,6 @@ class PGB_IR_Run
 
  QMap<QString, caon_ptr<PHR_Graph_Node>> ledger_;
 
- static QList<MG_Token> mgts_by_kind_group(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm,
-   MG_Token_Kind_Groups g);
 
  MG_Token get_arg_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
  QString get_string_arg(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
@@ -80,6 +78,8 @@ public:
    QPair<MG_Token, int>>& mgtm);
 
  void run_from_file(QString file);
+
+ //void run_lines(QString& lines);
 
  void run_lines(QString& lines);
 

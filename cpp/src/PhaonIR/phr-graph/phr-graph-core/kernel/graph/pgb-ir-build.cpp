@@ -7,6 +7,8 @@
 
 #include "pgb-ir-build.h"
 
+#include "pgb-ir-macro.h"
+
 #include "multigraph-token.h"
 
 #include "textio.h"
@@ -361,7 +363,7 @@ Purpose_Codes& _PGB_IR_Build::comment(QString str)
 
 Purpose_Codes& _PGB_IR_Build::macro(QStringList _args)
 {
- QList<MG_Token> args;
+ QList<MG_Token> args = {{MG_Token_Kinds::Macro_Name, _args.takeFirst()}};
  //args.resize(_args.size());
  std::transform(_args.begin(), _args.end(),
    std::back_inserter(args), [](const QString& str) -> MG_Token
@@ -450,7 +452,7 @@ _PGB_IR_Build PGB_IR_Build::insert_before_purpose(QList<Text_With_Purpose>& tps,
  return operator()(tp);
 }
 
-void PGB_IR_Build::generate_file(QList<Text_With_Purpose>& tps)
+void PGB_IR_Build::generate_file(QString path, QList<Text_With_Purpose>& tps)
 {
  if(tps.isEmpty())
    return;
@@ -458,12 +460,79 @@ void PGB_IR_Build::generate_file(QList<Text_With_Purpose>& tps)
  int i = 0;
  QListIterator<Text_With_Purpose> it(tps);
 
- save_file(out_file_, [&i, &it](QString& line)
+ save_file(path, [&i, &it](QString& line)
  {
   line = it.next().text + "\n";
   if(it.hasNext())
     return ++i;
   return 0;
  });
+}
+
+QString PGB_IR_Build::parse_line(QString line, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
+{
+ QStringList qsl = line.split(' ');
+ QString fn = qsl.takeFirst();
+ int i = 0;
+ for(QString qs: qsl)
+ {
+  MG_Token mgt = MG_Token::decode_symbol(qs);
+  mgtm.insert(mgt.kind, {mgt, i++});
+ }
+ return fn;
+}
+
+QList<MG_Token> PGB_IR_Build::mgts_by_kind_group(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm,
+  MG_Token_Kind_Groups g)
+{
+ QList<QPair<MG_Token, int>> qlp;
+ QList<MG_Token_Kinds> ks = MG_Token_Kind_Group_to_kinds(g);
+ for(MG_Token_Kinds k : ks)
+   qlp.append(mgtm.values(k));
+ qSort(qlp.begin(), qlp.end(), [](const QPair<MG_Token, int>& pr1,
+   const QPair<MG_Token, int>& pr2)
+ {
+  return pr1.second < pr2.second;
+ });
+
+ QList<MG_Token> result;
+ std::transform(qlp.begin(), qlp.end(),
+                std::back_inserter(result),
+   std::bind(&QPair<MG_Token, int>::first, std::placeholders::_1)
+//   [](const QPair<MG_Token, int>& pr)
+//  {return pr.first;}
+                //std::mem_fun(&QPair<MG_Token, int>::second)
+                );
+ //for(const QPair<MG_Token, int>& pr: qlp)
+ return result;
+}
+
+
+void PGB_IR_Build::expand_macros(QList<Text_With_Purpose>& tps)
+{
+ QList<Text_With_Purpose>::iterator it(tps.begin());
+ while(it != tps.end())
+ {
+  const Text_With_Purpose& tp = it.next();
+  if(tp.text.startsWith("(pgb::macro"))
+  {
+   QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>> mgtm;
+   PGB_IR_Build::parse_line(tp.text, mgtm);
+   MG_Token mn = mgtm.take(MG_Token_Kinds::Macro_Name).first;
+   QList<MG_Token> mgts = mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Macro);
+   PGB_IR_Macro macro(mn.raw_text, mgts);
+
+   QList<Text_With_Purpose> itps;
+   macro.write_expand(*this, itps);
+   it.next();
+   auto itc = it;
+
+   for(const Text_With_Purpose& tp: itps)
+   {
+    auto itcc = itc;
+    it = tps.insert(itcc, tp);
+   }
+  }
+ }
 }
 

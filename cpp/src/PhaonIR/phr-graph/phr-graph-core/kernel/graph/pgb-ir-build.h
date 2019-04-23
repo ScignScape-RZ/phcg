@@ -337,7 +337,24 @@ public:
  _PGB_IR_Build insert_before_purpose(QList<Text_With_Purpose>& tps,
     Purpose_Codes purpose);
 
- void generate_file(QList<Text_With_Purpose>& tps);
+ void generate_file(QString path, QList<Text_With_Purpose>& tps);
+
+ void generate_file(QList<Text_With_Purpose>& tps)
+ {
+  generate_file(out_file_, tps);
+ }
+
+
+ static QList<MG_Token> mgts_by_kind_group(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm,
+   MG_Token_Kind_Groups g);
+ static QString parse_line(QString line, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
+
+ void expand_macros(QList<Text_With_Purpose>& tps);
+
+ void generate_premacro_file(QList<Text_With_Purpose>& tps)
+ {
+  generate_file(out_file_ + "-prem", tps);
+ }
 
 // static QListIterator<Text_With_Purpose> get_iterator(QList<Text_With_Purpose>& tps,
 //   Purpose_Code purpose)

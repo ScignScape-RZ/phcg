@@ -13,7 +13,8 @@
 
 enum class MG_Token_Kind_Groups
 {
- N_A, Generic, Raw, String_Literal, Arg, Target, Arg_Target, Arg_String_Literal
+ N_A, Generic, Raw, String_Literal,
+ Arg, Target, Arg_Target, Arg_String_Literal, Macro
 };
 
 enum class MG_Token_Subgroups
@@ -26,7 +27,7 @@ enum class MG_Token_Kinds
  N_A, Generic, Raw_Symbol, Raw_Value, String_Literal,
  Arg_Raw_Symbol, Arg_Raw_Value, Ledger_Target, Known_Target,
  Arg_Ledger_Target, Arg_Known_Target, Arg_String_Literal,
- Macro_TBD
+ Macro_TBD, Macro_Name
 };
 
 inline MG_Token_Kind_Groups MG_Token_Kind_to_group(MG_Token_Kinds k)
@@ -52,6 +53,10 @@ inline MG_Token_Kind_Groups MG_Token_Kind_to_group(MG_Token_Kinds k)
  case MG_Token_Kinds::Arg_Ledger_Target:
  case MG_Token_Kinds::Arg_Known_Target:
   return MG_Token_Kind_Groups::Arg_Target;
+
+ case MG_Token_Kinds::Macro_TBD:
+ case MG_Token_Kinds::Macro_Name:
+  return MG_Token_Kind_Groups::Macro;
 
  default: return MG_Token_Kind_Groups::N_A;
  }
@@ -100,6 +105,9 @@ inline QList<MG_Token_Kinds> MG_Token_Kind_Group_to_kinds(MG_Token_Kind_Groups g
 
  case MG_Token_Kind_Groups::Arg_Target:
   return {MG_Token_Kinds::Arg_Ledger_Target, MG_Token_Kinds::Arg_Known_Target};
+
+ case MG_Token_Kind_Groups::Macro:
+  return {MG_Token_Kinds::Macro_TBD, MG_Token_Kinds::Macro_Name};
 
  default: return {MG_Token_Kinds::N_A};
  }
@@ -228,6 +236,7 @@ struct MG_Token
   TEMP_MACRO(Arg_String_Literal, "<$>")
 
   TEMP_MACRO(Macro_TBD, "...")
+  TEMP_MACRO(Macro_Name, "(&)")
 
 #undef TEMP_MACRO
   }};
@@ -265,6 +274,7 @@ struct MG_Token
   TEMP_MACRO(Arg_String_Literal, "<$>")
 
   TEMP_MACRO(Macro_TBD, "...")
+  TEMP_MACRO(Macro_Name, "(&)")
 
 #undef TEMP_MACRO
   }};
