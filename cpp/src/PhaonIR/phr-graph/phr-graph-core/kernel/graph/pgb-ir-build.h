@@ -66,10 +66,22 @@ public:
     target.mid(1), get_subgroup(target[0]));
  }
 
- Purpose_Codes& macro(QList<MG_Token> args);
- Purpose_Codes& macro(QStringList args)
+ Purpose_Codes& comment(QString str);
+
+ Purpose_Codes& macro(QList<MG_Token>& args);
+ Purpose_Codes& macro(QList<MG_Token>&& args)
  {
-  //std::
+  return macro(args);
+ }
+ Purpose_Codes& macro(QStringList _args)
+ {
+  QList<MG_Token> args;
+  args.reserve(_args.size());
+  std::transform(_args.begin(), _args.end(),
+    std::back_inserter(args), [](const QString& str) -> MG_Token
+  {
+   return {MG_Token_Kinds::Macro_TBD, str};
+  });
  }
 
 
