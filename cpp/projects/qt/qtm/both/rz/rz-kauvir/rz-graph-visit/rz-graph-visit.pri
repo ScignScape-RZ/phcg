@@ -23,6 +23,7 @@ INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR $$SRC_GROUP_DIR/rz-graph-core \
 INCLUDEPATH += $$HGDM_SRC_GROUP_DIR
 
 INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
+INCLUDEPATH += $$PHR_GRAPH_SRC_GROUP_DIR
 
 
 LIBS += -L$$TARGETSDIR -lrz-graph-build -lrz-graph-valuer -lrz-graph-core  \
