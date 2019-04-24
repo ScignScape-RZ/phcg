@@ -33,7 +33,7 @@ class Expression_Generator
 {
 
  //const PHR_Graph_Frame& fr_;
- const PHR_Graph_Query& rq_;
+ const PHR_Graph_Query& qy_;
 
  Statement_Generator* statement_generator_;
 

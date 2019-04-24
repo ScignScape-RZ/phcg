@@ -27,11 +27,13 @@ class PHR_Graph_Token;
 class Expression_Generator;
 class PHR_Graph_Statement_Info;
 
+class PHR_Graph_Signature;
+
 class Statement_Generator
 {
 
  //const PHR_Graph_Frame& fr_;
- const PHR_Graph_Query& rq_;
+ const PHR_Graph_Query& qy_;
 
  Expression_Generator& expression_generator_;
 
@@ -40,6 +42,10 @@ public:
  Statement_Generator(Expression_Generator& expression_generator);
 
  void generate_close(QTextStream& qts, PHR_Graph_Statement_Info* sin);
+
+ void generate_minimal_close(QTextStream& qts);
+
+ void generate_signature(QTextStream& qts, QString fn, PHR_Graph_Signature& sig);
 
  void generate_from_node(QTextStream& qts,
   const PHR_Graph_Node& node, PHR_Graph_Statement_Info* si);

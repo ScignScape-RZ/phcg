@@ -31,7 +31,7 @@ USING_RZNS(PhrGraphCore)
 
 
 Expression_Generator::Expression_Generator()
- :  rq_(PHR_Graph_Query::instance()), statement_generator_(nullptr)
+ :  qy_(PHR_Graph_Query::instance()), statement_generator_(nullptr)
 {
 
 }
@@ -43,7 +43,7 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
 
  caon_ptr<PHR_Graph_Connection> cion;
  QString channel_name;
- if(caon_ptr<PHR_Graph_Node> n = rq_.Channel_Entry[cion](&node))
+ if(caon_ptr<PHR_Graph_Node> n = qy_.Channel_Entry[cion](&node))
  {
   CAON_PTR_DEBUG(PHR_Graph_Node ,n)
   if(cion)
@@ -51,7 +51,7 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
   if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
     generate_from_fn_node(qts, *tokn, channel_name, *n, unw);
  }
- else if(n = rq_.Channel_Fuxe_Coentry[cion](&node))
+ else if(n = qy_.Channel_Fuxe_Coentry[cion](&node))
  {
   CAON_PTR_DEBUG(PHR_Graph_Node ,n)
   if(cion)
@@ -75,7 +75,7 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
  caon_ptr<PHR_Graph_Connection> xcion;
  QString xchannel_name;
  caon_ptr<PHR_Graph_Node> xn = &node;
- if(xn = rq_.Channel_XEntry[cion](xn))
+ if(xn = qy_.Channel_XEntry[cion](xn))
  {
   CAON_PTR_DEBUG(PHR_Graph_Node ,xn)
   if(cion)
@@ -192,7 +192,7 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  {
   CAON_PTR_DEBUG(PHR_Graph_Node ,n)
   caon_ptr<PHR_Graph_Connection> cion1;
-  if(n1 = rq_.Channel_Continue(n))
+  if(n1 = qy_.Channel_Continue(n))
   {
    if(caon_ptr<PHR_Graph_Token> tok = n1->phr_graph_token())
    {
@@ -200,14 +200,14 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
     generate_carrier(qts, *tok);
    }
   }
-  else if(n1 = rq_.Channel_Fuxe_Entry[cion1](n))
+  else if(n1 = qy_.Channel_Fuxe_Entry[cion1](n))
   {
    // // already handled ...?
 //?
 #ifdef PROB_CUT
 //   if(n == &arg_node)
 //   {
-//    n = rq_.Channel_Continue(n1);
+//    n = qy_.Channel_Continue(n1);
 //    continue;
 //   }
 #endif // PROB_CUT
@@ -219,13 +219,13 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
     generate_line(qts, "push_carrier_expression");
    }
   }
-  else if(n1 = rq_.Channel_Fuxe_Coentry[cion1](n))
+  else if(n1 = qy_.Channel_Fuxe_Coentry[cion1](n))
   {
    CAON_PTR_DEBUG(PHR_Graph_Node ,n1)
 //     // // already handled ...?
 //     if(n == &arg_node)
 //     {
-      n = rq_.Channel_Continue(n1);
+      n = qy_.Channel_Continue(n1);
       continue;
 #ifdef PROB_CUT
 //     }
@@ -237,7 +237,7 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
 //   }
 #endif // PROB_CUT
   }
-  else if(n1 = rq_.Channel_Fuxe_Cross[cion1](n))
+  else if(n1 = qy_.Channel_Fuxe_Cross[cion1](n))
   {
    CAON_PTR_DEBUG(PHR_Graph_Node ,n1)
    if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
@@ -247,7 +247,7 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
     generate_line(qts, "push_carrier_expression");
    }
   }
-  else if(n1 = rq_.Channel_Continue_Block[cion1](n))
+  else if(n1 = qy_.Channel_Continue_Block[cion1](n))
   {
    if(caon_ptr<PHR_Graph_Block_Info> bin = cion1->phr_node()->block_info())
    {
@@ -296,7 +296,7 @@ void Expression_Generator::generate_xchannel(QTextStream& qts, QString channel_n
 void Expression_Generator::check_generate_type_declaration(QTextStream& qts,
   const PHR_Graph_Node& node)
 {
- if(caon_ptr<PHR_Graph_Node> tdn = rq_.Type_Declaration(&node))
+ if(caon_ptr<PHR_Graph_Node> tdn = qy_.Type_Declaration(&node))
  {
   if(caon_ptr<PHR_Graph_Type_Declaration> td = tdn->type_declaration())
   {
@@ -322,14 +322,14 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  {
   CAON_PTR_DEBUG(PHR_Graph_Node ,n)
   caon_ptr<PHR_Graph_Connection> cion1;
-  if(n1 = rq_.Channel_Sequence(n))
+  if(n1 = qy_.Channel_Sequence(n))
   {
    if(caon_ptr<PHR_Graph_Token> tok = n1->phr_graph_token())
    {
     generate_carrier(qts, *tok);
    }
   }
-  else if(n1 = rq_.Channel_Fuxe_Entry[cion1](n))
+  else if(n1 = qy_.Channel_Fuxe_Entry[cion1](n))
   {
    if(caon_ptr<PHR_Graph_Fuxe_Entry> fen = cion1->phr_node()->fuxe_entry())
    {

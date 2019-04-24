@@ -31,11 +31,12 @@ class PHR_Graph_Signature
 {
  caon_ptr<PHR_Graph_Node> fuxe_node_;
 
- QList<MG_Token> mgts_;
+ QList<MG_Token> tokens_;
 
 public:
 
  ACCESSORS(caon_ptr<PHR_Graph_Node> ,fuxe_node)
+ ACCESSORS__RGET(QList<MG_Token> ,tokens)
 
  PHR_Graph_Signature(caon_ptr<PHR_Graph_Node> fuxe_node);
 

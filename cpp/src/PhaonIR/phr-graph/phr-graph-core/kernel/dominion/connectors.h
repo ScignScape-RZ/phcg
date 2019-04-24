@@ -29,6 +29,10 @@ DOMINION_CONNECTOR(Channel_Continue_Block, "channel-continue-block")
 
 DOMINION_CONNECTOR(Statement_Sequence, "statement-sequence")
 
+DOMINION_CONNECTOR(Signature_Node, "signature-node")
+
+
+
 DOMINION_CONNECTOR(Run_Call_Entry, "run-call-entry")
 DOMINION_CONNECTOR(Run_Data_Entry, "run-data-entry")
 DOMINION_CONNECTOR(Run_Call_Sequence, "run-call-sequence")

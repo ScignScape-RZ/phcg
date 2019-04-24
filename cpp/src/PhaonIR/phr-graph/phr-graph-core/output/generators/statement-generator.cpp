@@ -21,6 +21,9 @@
 #include "token/phr-graph-statement-info.h"
 #include "token/phr-graph-type-declaration.h"
 
+#include "token/phr-graph-signature.h"
+#include "multigraph-token.h"
+
 #include "textio.h"
 USING_KANS(TextIO)
 
@@ -29,7 +32,7 @@ USING_RZNS(PhrGraphCore)
 
 
 Statement_Generator::Statement_Generator(Expression_Generator& expression_generator)
- :  rq_(PHR_Graph_Query::instance()),
+ :  qy_(PHR_Graph_Query::instance()),
     expression_generator_(expression_generator)
 {
  expression_generator_.set_statement_generator(this);
@@ -59,6 +62,17 @@ void Statement_Generator::generate_from_node(QTextStream& qts,
  {
   generate_anchor_without_channel_group(qts, node, *sin);
  }
+ else if(caon_ptr<PHR_Graph_Node> sn = qy_.Signature_Node(&node))
+ {
+  if(caon_ptr<PHR_Graph_Token> tok = node.phr_graph_token())
+  {
+   CAON_PTR_DEBUG(PHR_Graph_Token ,tok)
+   if(caon_ptr<PHR_Graph_Signature> sig = sn->phr_graph_signature())
+   {
+    generate_signature(qts, tok->raw_text(), *sig);
+   }
+  }
+ }
  else
  {
   expression_generator_.generate_from_node(qts, node);
@@ -68,13 +82,22 @@ void Statement_Generator::generate_from_node(QTextStream& qts,
  node.debug_connections();
 
  caon_ptr<PHR_Graph_Connection> cion;
- if(caon_ptr<PHR_Graph_Node> sen = rq_.Statement_Sequence[cion](&node))
+ if(caon_ptr<PHR_Graph_Node> sen = qy_.Statement_Sequence[cion](&node))
  {
   PHR_Graph_Statement_Info* sin1 = nullptr;
   if(cion)
     sin1 = cion->phr_node()->statement_info().raw_pointer();
   generate_from_node(qts, *sen, sin1);
  }
+}
+
+void Statement_Generator::generate_minimal_close(QTextStream& qts)
+{
+ qts << "delete_temps ;.\n"
+  "delete_retired ;.\n"
+  "clear_temps ;.\n"
+  "reset_program_stack ;.\n"
+  " .; end of statement ;.\n";
 }
 
 void Statement_Generator::generate_close(QTextStream& qts, PHR_Graph_Statement_Info* sin)
@@ -91,4 +114,44 @@ void Statement_Generator::generate_close(QTextStream& qts, PHR_Graph_Statement_I
   "reset_program_stack ;.\n"
   " .; end of statement ;.\n"
         ;
+}
+
+void Statement_Generator::generate_signature(QTextStream& qts,
+  QString fn, PHR_Graph_Signature& sig)
+{
+ qts << "\n .; signature ... ;.\n";
+ QList<MG_Token>& mgts = sig.tokens();
+ QString bt;
+ for(MG_Token mgt : mgts)
+ {
+  switch (mgt.kind)
+  {
+  case MG_Token_Kinds::Sig_Channel:
+    qts << "push_carrier_stack $ " << mgt.raw_text << " ;.\n";
+   break;
+  case MG_Token_Kinds::Sig_Symbol:
+    qts << "hold_type_by_name $ auto ;.\n";
+    qts << "push_carrier_symbol $ " << mgt.raw_text << " ;.\n";
+   break;
+  case MG_Token_Kinds::Sig_Type:
+   if(bt.isEmpty())
+     qts << "push_carrier_type_holder $ " << mgt.raw_text << " ;.\n";
+   else
+   {
+    qts << "hold_type_by_name $ " << mgt.raw_text << " ;.\n";
+    qts << "push_carrier_symbol $ " << bt << " ;.\n";
+    bt.clear();
+   }
+   break;
+  case MG_Token_Kinds::Sig_Symbol_Before_Type:
+    bt = mgt.raw_text;
+   break;
+  default:
+   break;
+  }
+ }
+ qts << "coalesce_channel_group ;.\n";
+ qts << "finalize_signature $ " << fn << " ;.\n";
+ generate_close(qts, nullptr);
+ qts << "\n .; end signature ... ;.\n\n";
 }

@@ -758,6 +758,6 @@ void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(PGB_IR_Build& pgb
   QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
   QString carrier_kind, QString symbol_name, QString type_name)
 {
+ pgb.hold_token(symbol_name, MG_Token_Kinds::Sig_Symbol_Before_Type);
  pgb.hold_token(type_name, MG_Token_Kinds::Sig_Type);
- pgb.hold_token(symbol_name, MG_Token_Kinds::Sig_Symbol);
 }

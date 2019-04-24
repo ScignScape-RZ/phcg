@@ -100,6 +100,9 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_signature_node(
 {
  caon_ptr<PHR_Graph_Signature> sig = new PHR_Graph_Signature(token_node);
  caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(sig);
+
+ token_node << fr_/qy_.Signature_Node >> result;
+
  return result;
 }
 

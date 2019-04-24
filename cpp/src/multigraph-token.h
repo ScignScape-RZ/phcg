@@ -29,7 +29,7 @@ enum class MG_Token_Kinds
  Arg_Raw_Symbol, Arg_Raw_Value, Ledger_Target, Known_Target,
  Arg_Ledger_Target, Arg_Known_Target, Arg_String_Literal,
  Macro_TBD, Macro_Name,
- Sig_Channel, Sig_Type, Sig_Symbol
+ Sig_Channel, Sig_Type, Sig_Symbol, Sig_Symbol_Before_Type
 };
 
 inline MG_Token_Kind_Groups MG_Token_Kind_to_group(MG_Token_Kinds k)
@@ -63,6 +63,7 @@ inline MG_Token_Kind_Groups MG_Token_Kind_to_group(MG_Token_Kinds k)
  case MG_Token_Kinds::Sig_Channel:
  case MG_Token_Kinds::Sig_Type:
  case MG_Token_Kinds::Sig_Symbol:
+ case MG_Token_Kinds::Sig_Symbol_Before_Type:
   return MG_Token_Kind_Groups::Sig;
 
  default: return MG_Token_Kind_Groups::N_A;
@@ -125,7 +126,7 @@ inline QList<MG_Token_Kinds> MG_Token_Kind_Group_to_kinds(MG_Token_Kind_Groups g
 
  case MG_Token_Kind_Groups::Sig:
   return {MG_Token_Kinds::Sig_Channel,
-    MG_Token_Kinds::Sig_Type, MG_Token_Kinds::Sig_Symbol};
+    MG_Token_Kinds::Sig_Type, MG_Token_Kinds::Sig_Symbol, MG_Token_Kinds::Sig_Symbol_Before_Type};
 
  default: return {MG_Token_Kinds::N_A};
  }
@@ -273,6 +274,7 @@ struct MG_Token
   TEMP_MACRO(Sig_Channel, "-&-")
   TEMP_MACRO(Sig_Type, "-%-")
   TEMP_MACRO(Sig_Symbol, "-@-")
+  TEMP_MACRO(Sig_Symbol_Before_Type, "-@%")
 
 #undef TEMP_MACRO
   }};
@@ -315,6 +317,7 @@ struct MG_Token
   TEMP_MACRO(Sig_Channel, "-&-")
   TEMP_MACRO(Sig_Type, "-%-")
   TEMP_MACRO(Sig_Symbol, "-@-")
+  TEMP_MACRO(Sig_Symbol_Before_Type, "-@%")
 
 #undef TEMP_MACRO
   }};

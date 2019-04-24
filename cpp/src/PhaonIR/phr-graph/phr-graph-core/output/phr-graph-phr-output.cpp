@@ -38,7 +38,7 @@ void PHR_Graph_PHR_Output::generate_from_node(QTextStream& qts,
  const PHR_Graph_Node& node)
 {
  caon_ptr<PHR_Graph_Connection> cion;
- if(caon_ptr<PHR_Graph_Node> ben = rq_.Block_Entry[cion](&node))
+ if(caon_ptr<PHR_Graph_Node> ben = qy_.Block_Entry[cion](&node))
  {
   PHR_Graph_Statement_Info* sin = nullptr;
   PHR_Graph_Block_Info* bin = nullptr;
