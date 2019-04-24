@@ -305,6 +305,8 @@ public:
     t2.mid(1), get_subgroup(t2[0]));
  }
 
+ Purpose_Codes& write_with_tokens(QString fn, QList<MG_Token>& mgts);
+
  void end_line(QList<MG_Token>&& mgts);
 
  MG_Token_Subgroups get_subgroup(QChar c);
@@ -321,6 +323,8 @@ class PGB_IR_Build
  QString out_file_;
  //QString text_;
  QTextStream qts_;
+
+ QList<MG_Token> held_tokens_;
 
 
 public:
@@ -352,12 +356,17 @@ public:
   generate_file(out_file_, tps);
  }
 
+ Purpose_Codes& write_with_held_tokens(QString fn, QList<Text_With_Purpose>& tps);
 
  static QList<MG_Token> mgts_by_kind_group(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm,
    MG_Token_Kind_Groups g);
  static QString parse_line(QString line, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
 
  void expand_macros(QList<Text_With_Purpose>& tps);
+
+ void hold_token(const MG_Token& mgt);
+ void hold_token(QString str, MG_Token_Kinds k);
+ void clear_held_tokens();
 
  void generate_premacro_file(QList<Text_With_Purpose>& tps)
  {

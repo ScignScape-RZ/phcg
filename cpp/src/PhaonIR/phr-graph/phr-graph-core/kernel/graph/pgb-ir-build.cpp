@@ -390,7 +390,11 @@ Purpose_Codes& _PGB_IR_Build::macro(QList<MG_Token>& args)
  return purpose_;
 }
 
-
+Purpose_Codes& _PGB_IR_Build::write_with_tokens(QString fn, QList<MG_Token>& mgts)
+{
+ qts_ << "(pgb::" << fn << ' '; end_line(std::move(mgts));
+ return purpose_;
+}
 
 PGB_IR_Build::PGB_IR_Build(QString out_file)
   :  out_file_(out_file)//, qts_(&text)
@@ -443,6 +447,7 @@ _PGB_IR_Build PGB_IR_Build::insert_after_purpose(QList<Text_With_Purpose>& tps,
  Text_With_Purpose& tp = *it;
  return operator()(tp);
 }
+
 
 _PGB_IR_Build PGB_IR_Build::insert_before_purpose(QList<Text_With_Purpose>& tps,
    Purpose_Codes purpose)
@@ -521,6 +526,26 @@ QList<MG_Token> PGB_IR_Build::mgts_by_kind_group(const QMultiMap<MG_Token_Kinds,
  return result;
 }
 
+void PGB_IR_Build::hold_token(const MG_Token& mgt)
+{
+ held_tokens_.push_back(mgt);
+}
+
+void PGB_IR_Build::hold_token(QString str, MG_Token_Kinds k)
+{
+ MG_Token mgt{k, str};
+ hold_token(mgt);
+}
+
+void PGB_IR_Build::clear_held_tokens()
+{
+ held_tokens_.clear();
+}
+
+Purpose_Codes& PGB_IR_Build::write_with_held_tokens(QString fn, QList<Text_With_Purpose>& tps)
+{
+ (*this)(tps).write_with_tokens(fn, held_tokens_);
+}
 
 void PGB_IR_Build::expand_macros(QList<Text_With_Purpose>& tps)
 {

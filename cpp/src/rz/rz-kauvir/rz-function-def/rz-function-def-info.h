@@ -156,8 +156,13 @@ public:
    QList<PGB_IR_Build::Text_With_Purpose>& step_forms);
  void write_phr_signature_code_by_channel_type(PGB_IR_Build& pgb,
    QList<PGB_IR_Build::Text_With_Purpose>& step_forms, Channel_Types ct);
+
  void write_phr_signature_code_for_empty_channel(PGB_IR_Build& pgb,
    QList<PGB_IR_Build::Text_With_Purpose>& step_forms, QString carrier_kind);
+
+ void write_phr_signature_code_channel_entry(PGB_IR_Build& pgb,
+  QList<PGB_IR_Build::Text_With_Purpose>& step_forms, QString carrier_kind);
+
  void write_phr_signature_code_for_type(PGB_IR_Build& pgb,
    QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
    QString carrier_kind, QString type_name);

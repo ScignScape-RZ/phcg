@@ -69,9 +69,11 @@ caon_ptr<RPI_Type_Declaration> RPI_Stage_Form::type_declaration_on_block_entry()
 
 void RPI_Stage_Form::write_fdef_entry()
 {
- if(inner_elements_.isEmpty())
+ if(inner_elements_.size() < 2)
    return;
- RPI_Stage_Element& rse = inner_elements_.first();
+
+ // is it always here ([0] is the type-binding instruction?)
+ RPI_Stage_Element& rse = inner_elements_[1];
 
  pgb_(step_forms_).comment("Signature");
  pgb_(step_forms_).make_token_node(rse.text().prepend('@'), "&sig-fuxe-node")
