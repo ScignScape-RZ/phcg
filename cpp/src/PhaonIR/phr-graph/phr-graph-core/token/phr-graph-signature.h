@@ -17,7 +17,7 @@
 
 #include <functional>
 
-
+#include "multigraph-token.h"
 #include "relae-graph/relae-caon-ptr.h"
 
 #include "rzns.h"
@@ -31,11 +31,15 @@ class PHR_Graph_Signature
 {
  caon_ptr<PHR_Graph_Node> fuxe_node_;
 
+ QList<MG_Token> mgts_;
+
 public:
 
  ACCESSORS(caon_ptr<PHR_Graph_Node> ,fuxe_node)
 
  PHR_Graph_Signature(caon_ptr<PHR_Graph_Node> fuxe_node);
+
+ void add_tokens(QList<MG_Token>& mgts);
 
 };
 

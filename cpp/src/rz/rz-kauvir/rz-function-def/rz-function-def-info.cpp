@@ -723,7 +723,7 @@ void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(PGB_IR_Build
 void RZ_Function_Def_Info::write_phr_signature_code_channel_entry(PGB_IR_Build& pgb,
  QList<PGB_IR_Build::Text_With_Purpose>& step_forms, QString carrier_kind)
 {
- pgb.hold_token(carrier_kind, MG_Token_Kinds::Token_Channel);
+ pgb.hold_token(carrier_kind, MG_Token_Kinds::Sig_Channel);
 }
 
 void RZ_Function_Def_Info::write_phr_signature_code_for_empty_channel(PGB_IR_Build& pgb,
@@ -740,7 +740,7 @@ void RZ_Function_Def_Info::write_phr_signature_code_for_type(PGB_IR_Build& pgb,
   QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
   QString carrier_kind, QString type_name)
 {
- pgb.hold_token(type_name, MG_Token_Kinds::Token_Type);
+ pgb.hold_token(type_name, MG_Token_Kinds::Sig_Type);
 // QString result =
 //   QString("\n(ka::kc :|kcg_add_%1_carrier_via_type_name| kcg \"%2\")").arg(carrier_kind).arg(type_name);
 // return result;
@@ -751,13 +751,13 @@ void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(PGB_IR_Build& pgb
   QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
   QString carrier_kind, QString symbol_name)
 {
- pgb.hold_token(symbol_name, MG_Token_Kinds::Token_Symbol);
+ pgb.hold_token(symbol_name, MG_Token_Kinds::Sig_Symbol);
 }
 
 void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(PGB_IR_Build& pgb,
   QList<PGB_IR_Build::Text_With_Purpose>& step_forms,
   QString carrier_kind, QString symbol_name, QString type_name)
 {
- pgb.hold_token(type_name, MG_Token_Kinds::Token_Type);
- pgb.hold_token(symbol_name, MG_Token_Kinds::Token_Symbol);
+ pgb.hold_token(type_name, MG_Token_Kinds::Sig_Type);
+ pgb.hold_token(symbol_name, MG_Token_Kinds::Sig_Symbol);
 }

@@ -11,6 +11,8 @@
 
 #include "phr-graph-build.h"
 
+#include "token/phr-graph-signature.h"
+
 #include "textio.h"
 
 USING_KANS(TextIO)
@@ -83,6 +85,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(make_block_info_node)
   TEMP_MACRO(add_channel_continue_block_node)
   TEMP_MACRO(make_signature_node)
+  TEMP_MACRO(signature)
 
  }};
 
@@ -178,6 +181,12 @@ QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>
  return {r1, r2};
 }
 
+QList<MG_Token> PGB_IR_Run::get_signature_tokens(const QMultiMap<MG_Token_Kinds,
+  QPair<MG_Token, int>>& mgtm)
+{
+ return PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Sig);
+}
+
 QList<MG_Token> PGB_IR_Run::get_generic_tokens(const QMultiMap<MG_Token_Kinds,
   QPair<MG_Token, int>>& mgtm)
 {
@@ -239,6 +248,22 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
 //  }
 //  break;
 
+ case PGB_Methods::signature:
+  {
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+   if(caon_ptr<PHR_Graph_Signature> s = n->phr_graph_signature())
+   {
+    QList<MG_Token> mgts = get_signature_tokens(mgtm);
+    s->add_tokens(mgts);
+   }
+//   if(tr)
+//     *tr = graph_build_.make_signature_node(n);
+//   else
+ //?  graph_build_.make_signature_node(n);
+  };
+  break;
+
+
  case PGB_Methods::make_signature_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
@@ -250,6 +275,7 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
      graph_build_.make_signature_node(n);
   };
   break;
+
  case PGB_Methods::make_token_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
@@ -260,6 +286,7 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
      graph_build_.make_token_node(tok);
   };
   break;
+
  case PGB_Methods::make_channel_fuxe_entry_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);

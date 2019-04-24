@@ -19,4 +19,7 @@ PHR_Graph_Signature::PHR_Graph_Signature(caon_ptr<PHR_Graph_Node> fuxe_node)
 {
 }
 
-
+void PHR_Graph_Signature::add_tokens(QList<MG_Token>& mgts)
+{
+ mgts_.append(mgts);
+}

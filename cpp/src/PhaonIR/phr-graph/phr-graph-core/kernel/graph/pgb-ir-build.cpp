@@ -95,7 +95,7 @@ Purpose_Codes& _PGB_IR_Build::add_type_declaration(QString arg, MG_Token_Subgrou
 Purpose_Codes& _PGB_IR_Build::make_signature_node(QString arg, MG_Token_Subgroups asg,
   QString target, MG_Token_Subgroups tsg)
 {
- MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg, asg);
+ MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg_Target, asg);
  MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
 
  qts_ << " (pgb::make_signature_node "; end_line({amgt, tmgt});

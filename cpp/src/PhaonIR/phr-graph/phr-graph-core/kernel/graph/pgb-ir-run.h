@@ -45,7 +45,7 @@ class PGB_IR_Run
   make_statement_info_node, add_channel_fuxe_entry_node,
   add_channel_fuxe_cross_node, add_channel_fuxe_coentry_node,
   make_block_info_node, add_channel_continue_block_node,
-  make_signature_node
+  make_signature_node, signature
  };
 
  PGB_Methods parse_pgb_method(QString key);
@@ -75,6 +75,9 @@ public:
  PGB_IR_Run(PHR_Graph_Build& graph_build);
 
  QList<MG_Token> get_generic_tokens(const QMultiMap<MG_Token_Kinds,
+   QPair<MG_Token, int>>& mgtm);
+
+ QList<MG_Token> get_signature_tokens(const QMultiMap<MG_Token_Kinds,
    QPair<MG_Token, int>>& mgtm);
 
  void run_from_file(QString file);
