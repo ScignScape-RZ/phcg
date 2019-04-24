@@ -134,6 +134,9 @@ public:
  void write_signature_type_declaration(QTextStream& qts);
  void write_type_declaration(QTextStream& qts);
 
+ void write_statement_entry_qts();
+
+
  void write_fdef_entry();
 
  void write_assignment_initialization_via_token(QString key, caon_ptr<RPI_Stage_Form> prior);
@@ -154,8 +157,10 @@ public:
 
  void mark_as_statement();
 
- void write_statement_entry(QTextStream& qts);
- void write_statement_leave(QTextStream& qts);
+ void write_statement_entry_qts(QTextStream& qts);
+ void write_statement_leave_qts(QTextStream& qts);
+
+ void write_statement_entry(QString node_name, QString prior_node_name);
 
  void check_write_first_nested_is_assignment_leave(QTextStream& qts);
 

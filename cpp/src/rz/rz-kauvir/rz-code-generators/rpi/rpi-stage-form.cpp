@@ -78,7 +78,12 @@ void RPI_Stage_Form::write_fdef_entry()
  pgb_(step_forms_).comment("Signature");
  pgb_(step_forms_).make_token_node(rse.text().prepend('@'), "&sig-fuxe-node")
   = Purpose_Codes::Make_Token_Node_Fuxe_Sumbol;
+
+ write_statement_entry("last_statement_entry_node", "&sig-fuxe-node");
+
  pgb_(step_forms_).make_signature_node("&sig-fuxe-node", "&sig-node");
+
+
 
 }
 
@@ -469,13 +474,24 @@ void RPI_Stage_Form::check_init_annotation_flags()
  }
 }
 
-void RPI_Stage_Form::write_statement_entry(QTextStream& qts)
+void RPI_Stage_Form::write_statement_entry(
+  QString node_name, QString prior_node_name)
+{
+ pgb_(step_forms_).add_statement_sequence_node(prior_node_name, node_name);
+}
+
+void RPI_Stage_Form::write_statement_entry_qts()
+{
+
+}
+
+void RPI_Stage_Form::write_statement_entry_qts(QTextStream& qts)
 {
  qts << "\n;statement_\n";
  qts << "\n( ; from write_statement_entry\n";
 }
 
-void RPI_Stage_Form::write_statement_leave(QTextStream& qts)
+void RPI_Stage_Form::write_statement_leave_qts(QTextStream& qts)
 {
  if(ANNOTATION_FLAG(skip_write_command_package))
  {

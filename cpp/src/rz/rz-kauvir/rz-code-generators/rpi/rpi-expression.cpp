@@ -29,11 +29,11 @@ void RPI_Expression::write_as_statement(QTextStream& qts, caon_ptr<RPI_Stage_For
 {
  if(assignment_token_.isEmpty())
  {
-  form_.write_statement_entry(qts);
+  form_.write_statement_entry_qts();
 
   write(qts, prior);
 
-  form_.write_statement_leave(qts);
+  form_.write_statement_leave_qts(qts);
 
  }
  else
