@@ -160,7 +160,8 @@ public:
  void write_statement_entry_qts(QTextStream& qts);
  void write_statement_leave_qts(QTextStream& qts);
 
- void write_statement_entry(QString node_name, QString prior_node_name);
+ void write_statement_entry(QString node_name,
+   QString prior_node_name, QString copy = QString());
 
  void check_write_first_nested_is_assignment_leave(QTextStream& qts);
 

@@ -79,7 +79,8 @@ void RPI_Stage_Form::write_fdef_entry()
  pgb_(step_forms_).make_token_node(rse.text().prepend('@'), "&sig-fuxe-node")
   = Purpose_Codes::Make_Token_Node_Fuxe_Sumbol;
 
- write_statement_entry("last_statement_entry_node", "&sig-fuxe-node");
+ write_statement_entry("&sig-fuxe-node",
+   "!last_statement_entry_node", "!last_statement_entry_node");
 
  pgb_(step_forms_).make_signature_node("&sig-fuxe-node", "&sig-node");
 
@@ -475,9 +476,11 @@ void RPI_Stage_Form::check_init_annotation_flags()
 }
 
 void RPI_Stage_Form::write_statement_entry(
-  QString node_name, QString prior_node_name)
+  QString node_name, QString prior_node_name, QString copy)
 {
  pgb_(step_forms_).add_statement_sequence_node(prior_node_name, node_name);
+ if(!copy.isEmpty())
+   pgb_(step_forms_).copy_value(node_name, copy);
 }
 
 void RPI_Stage_Form::write_statement_entry_qts()
