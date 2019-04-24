@@ -82,6 +82,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(add_channel_fuxe_coentry_node)
   TEMP_MACRO(make_block_info_node)
   TEMP_MACRO(add_channel_continue_block_node)
+  TEMP_MACRO(make_signature_node)
 
  }};
 
@@ -238,6 +239,17 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
 //  }
 //  break;
 
+ case PGB_Methods::make_signature_node:
+  {
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+
+   if(tr)
+     *tr = graph_build_.make_signature_node(n);
+   else
+     graph_build_.make_signature_node(n);
+  };
+  break;
  case PGB_Methods::make_token_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);

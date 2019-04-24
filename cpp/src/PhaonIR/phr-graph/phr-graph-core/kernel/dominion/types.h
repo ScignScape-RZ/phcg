@@ -29,7 +29,7 @@ DOMINION_TYPE(fuxe_entry, PHR_Graph_Fuxe_Entry, PHR_Graph_Fuxe_Entry)
 DOMINION_TYPE(statement_info, PHR_Graph_Statement_Info, PHR_Graph_Statement_Info)
 DOMINION_TYPE(block_info, PHR_Graph_Block_Info, PHR_Graph_Block_Info)
 DOMINION_TYPE(type_declaration, PHR_Graph_Type_Declaration, PHR_Graph_Type_Declaration)
-
+DOMINION_TYPE(phr_graph_signature, PHR_Graph_Signature, PHR_Graph_Signature)
 #undef DOMINION_INNER_NAMESPACE
 
 #undef DOMINION_OUTER_NAMESPACE

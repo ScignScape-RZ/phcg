@@ -27,14 +27,14 @@ class PGB_IR_Macro
 {
  enum class Macros {
 
-  N_A,
-  add_empty_channel
+  N_A, add_empty_channel, add_signature_carrier_via_type_name,
+
  };
 
  Macros parse_macro(QString key);
 
  Macros macro_;
- QList<MG_Token>& mgts_;
+ QList<MG_Token> mgts_;
 
 public:
 

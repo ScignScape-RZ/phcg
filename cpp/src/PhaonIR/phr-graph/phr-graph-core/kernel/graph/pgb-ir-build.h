@@ -84,6 +84,14 @@ public:
     ty.mid(1), get_subgroup(ty[0]));
  }
 
+ Purpose_Codes& make_signature_node(QString arg, MG_Token_Subgroups asg,
+   QString target, MG_Token_Subgroups tsg);
+ Purpose_Codes& make_signature_node(QString arg, QString target)
+ {
+  return make_token_node(arg.mid(1), get_subgroup(arg[0]),
+    target.mid(1), get_subgroup(target[0]));
+ }
+
  Purpose_Codes& make_token_node(QString arg, MG_Token_Subgroups asg,
    QString target, MG_Token_Subgroups tsg);
  Purpose_Codes& make_token_node(QString arg, QString target)

@@ -92,6 +92,16 @@ Purpose_Codes& _PGB_IR_Build::add_type_declaration(QString arg, MG_Token_Subgrou
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::make_signature_node(QString arg, MG_Token_Subgroups asg,
+  QString target, MG_Token_Subgroups tsg)
+{
+ MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg, asg);
+ MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
+
+ qts_ << " (pgb::make_signature_node "; end_line({amgt, tmgt});
+ return purpose_;
+}
+
 Purpose_Codes& _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups asg,
   QString target, MG_Token_Subgroups tsg)
 {
@@ -471,6 +481,10 @@ void PGB_IR_Build::generate_file(QString path, QList<Text_With_Purpose>& tps)
 
 QString PGB_IR_Build::parse_line(QString line, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
+ if(line.startsWith('('))
+   line = line.mid(1);
+ if(line.endsWith(')'))
+   line.chop(1);
  QStringList qsl = line.split(' ');
  QString fn = qsl.takeFirst();
  int i = 0;

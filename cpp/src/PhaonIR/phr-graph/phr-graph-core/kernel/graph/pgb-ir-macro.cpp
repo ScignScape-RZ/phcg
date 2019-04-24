@@ -28,6 +28,7 @@ PGB_IR_Macro::Macros PGB_IR_Macro::parse_macro(QString key)
 
  static QMap<QString, Macros> static_map {{
   TEMP_MACRO(add_empty_channel)
+  TEMP_MACRO(add_signature_carrier_via_type_name)
  }};
 
 #undef TEMP_MACRO
@@ -44,6 +45,11 @@ void PGB_IR_Macro::write_expand(PGB_IR_Build& pgb,
  case Macros::add_empty_channel:
   break;
 
+ case Macros::add_signature_carrier_via_type_name:
+  pgb(tps).make_token_node(mgts_[0].to_target(), "$signature-token");
+  pgb(tps).add_channel_entry_token("$signature-entry",
+    mgts_[1].raw_text, mgts_[2].to_target(), "$signature-token");
+  break;
  }
 }
 

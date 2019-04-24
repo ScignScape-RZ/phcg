@@ -67,6 +67,19 @@ caon_ptr<RPI_Type_Declaration> RPI_Stage_Form::type_declaration_on_block_entry()
 }
 
 
+void RPI_Stage_Form::write_fdef_entry()
+{
+ if(inner_elements_.isEmpty())
+   return;
+ RPI_Stage_Element& rse = inner_elements_.first();
+
+ pgb_(step_forms_).comment("Signature");
+ pgb_(step_forms_).make_token_node(rse.text().prepend('@'), "&sig-fuxe-node")
+  = Purpose_Codes::Make_Token_Node_Fuxe_Sumbol;
+ pgb_(step_forms_).make_signature_node("&sig-fuxe-node", "&sig-node");
+
+}
+
 void RPI_Stage_Form::write_assignment_initialization_via_expression(
   QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {

@@ -59,7 +59,7 @@ HEADERS += \
   $$SRC_DIR/token/phr-graph-statement-info.h \
   $$SRC_DIR/token/phr-graph-block-info.h \
   $$SRC_DIR/token/phr-graph-type-declaration.h \
-
+  $$SRC_DIR/token/phr-graph-signature.h \
 
 
 SOURCES += \
@@ -84,6 +84,7 @@ SOURCES += \
   $$SRC_DIR/token/phr-graph-statement-info.cpp \
   $$SRC_DIR/token/phr-graph-block-info.cpp \
   $$SRC_DIR/token/phr-graph-type-declaration.cpp \
+  $$SRC_DIR/token/phr-graph-signature.cpp \
 
 #LIBS += -L$$TARGETSDIR  -lphr-direct-eval
 

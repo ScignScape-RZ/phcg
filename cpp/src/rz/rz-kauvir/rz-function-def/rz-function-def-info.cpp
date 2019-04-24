@@ -66,6 +66,7 @@ RZ_Function_Def_Info::RZ_Function_Def_Info(RE_Function_Def_Entry& function_def_e
 
 QString RZ_Function_Def_Info::get_label()
 {
+ CAON_PTR_DEBUG(RE_Function_Def_Entry ,function_def_entry_)
  QString result;
  if(function_def_entry_->label_node())
  {
@@ -627,6 +628,8 @@ void RZ_Function_Def_Info::init_channels(tNode& fdef_node)
 void RZ_Function_Def_Info::write_phr_signature_code(PGB_IR_Build& pgb,
   QList<PGB_IR_Build::Text_With_Purpose>& step_forms)
 {
+
+ //pgb(step_forms).
  write_phr_signature_code_by_channel_type(pgb, step_forms, Channel_Types::Sigma);
  write_phr_signature_code_by_channel_type(pgb, step_forms, Channel_Types::Lambda);
  write_phr_signature_code_by_channel_type(pgb, step_forms, Channel_Types::Return);
@@ -725,7 +728,7 @@ void RZ_Function_Def_Info::write_phr_signature_code_for_type(PGB_IR_Build& pgb,
 // QString result =
 //   QString("\n(ka::kc :|kcg_add_%1_carrier_via_type_name| kcg \"%2\")").arg(carrier_kind).arg(type_name);
 // return result;
- pgb(step_forms).macro(QStringList{"add_carrier_via_type_name", carrier_kind, type_name});
+ pgb(step_forms).macro(QStringList{"add_signature_carrier_via_type_name", carrier_kind, type_name, "__"});
 }
 
 void RZ_Function_Def_Info::write_phr_signature_code_for_symbol(PGB_IR_Build& pgb,

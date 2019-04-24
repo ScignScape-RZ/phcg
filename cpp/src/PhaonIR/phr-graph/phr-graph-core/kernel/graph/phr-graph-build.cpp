@@ -33,6 +33,8 @@
 
 #include "phr-graph-core/token/phr-graph-type-declaration.h"
 
+#include "phr-graph-core/token/phr-graph-signature.h"
+
 #include "pgb-ir-run.h"
 
 #include "multigraph-token.h"
@@ -91,6 +93,14 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_type_declaration(
 
  return result;
 
+}
+
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_signature_node(
+  caon_ptr<PHR_Graph_Node> token_node)
+{
+ caon_ptr<PHR_Graph_Signature> sig = new PHR_Graph_Signature(token_node);
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(sig);
+ return result;
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)

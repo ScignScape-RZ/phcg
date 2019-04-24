@@ -128,6 +128,19 @@ struct MG_Token
   return {raw_text.left(ind).toInt(), raw_text.mid(ind + 1).toInt()};
  }
 
+ QString to_target()
+ {
+  return raw_text.prepend('$');
+ }
+
+
+ QString to_known_target()
+ {
+  return raw_text.prepend('!');
+ }
+
+
+
  static QString get_assignment_kind_name(QString tok)
  {
   static QMap<QString, QString> static_map {{
