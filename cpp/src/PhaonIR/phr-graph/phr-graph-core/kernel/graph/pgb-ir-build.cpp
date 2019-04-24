@@ -367,7 +367,7 @@ Purpose_Codes& _PGB_IR_Build::add_channel_xentry_token(QString src, MG_Token_Sub
 
 Purpose_Codes& _PGB_IR_Build::comment(QString str)
 {
- qts_ << "(pgb::comment \"" << str << "\")\n";
+ qts_ << "(pgb::comment \"" << str << "\")";
  return purpose_;
 }
 

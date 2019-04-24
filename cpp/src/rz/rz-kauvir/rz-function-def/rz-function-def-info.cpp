@@ -629,7 +629,7 @@ void RZ_Function_Def_Info::init_channels(tNode& fdef_node)
 void RZ_Function_Def_Info::write_phr_signature_code(PGB_IR_Build& pgb,
   QList<PGB_IR_Build::Text_With_Purpose>& step_forms)
 {
-
+ pgb.hold_token("sig-node", MG_Token_Kinds::Arg_Ledger_Target);
  //pgb(step_forms).
  write_phr_signature_code_by_channel_type(pgb, step_forms, Channel_Types::Sigma);
  write_phr_signature_code_by_channel_type(pgb, step_forms, Channel_Types::Lambda);

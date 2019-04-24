@@ -88,7 +88,7 @@ public:
    QString target, MG_Token_Subgroups tsg);
  Purpose_Codes& make_signature_node(QString arg, QString target)
  {
-  return make_token_node(arg.mid(1), get_subgroup(arg[0]),
+  return make_signature_node(arg.mid(1), get_subgroup(arg[0]),
     target.mid(1), get_subgroup(target[0]));
  }
 
