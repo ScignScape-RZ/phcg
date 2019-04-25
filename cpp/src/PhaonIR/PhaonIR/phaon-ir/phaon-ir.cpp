@@ -514,6 +514,15 @@ void PhaonIR::push_carrier_anon_fn(QString fn)
  current_carrier_stack_->push(phc);
 }
 
+void PhaonIR::push_carrier_type_holder(QString sn)
+{
+ inc_channel_pos();
+ PHR_Carrier* phc = new PHR_Carrier;
+// phc->set_symbol_name(sn);
+// phc->set_phr_type(held_type_);
+ current_carrier_stack_->push(phc);
+}
+
 void PhaonIR::push_carrier_symbol(QString sn)
 {
  inc_channel_pos();
@@ -652,6 +661,7 @@ void PhaonIR::read_line(QString inst, QString arg)
   { "push_carrier_anon_fn", &push_carrier_anon_fn },
   { "type_decl", &type_decl },
   { "finalize_signature", &finalize_signature },
+  { "push_carrier_type_holder", &push_carrier_type_holder },
 
  }};
 

@@ -262,6 +262,7 @@ public:
  void push_carrier_stack(QString sp_name);
  void push_carrier_raw_value(QString rv);
  void push_carrier_symbol(QString sn);
+ void push_carrier_type_holder(QString sn);
  void push_carrier_anon_fn(QString fn);
 
  PHR_Channel_Group_Evaluator* evaluate_channel_group_by_usi_symbol(QString usi_sym,
