@@ -51,8 +51,8 @@ void PHR_Fn_Doc_Multi::init(PHR_Env* kenv)
 
 void PHR_Fn_Doc_Multi::read(QString fn)
 {
- const PHR_Type_Object* pto = fnd_->get_type_object_from_symbol_name(fn);
- if(pto)
+ PHR_Type_Object pto = fnd_->get_type_object_from_symbol_name(fn);
+ if(pto.ty())
  {
   fns_.push_back({fn, pto});
  }
@@ -61,13 +61,13 @@ void PHR_Fn_Doc_Multi::read(QString fn)
 void PHR_Fn_Doc_Multi::kph_gen_multi(QString path)
 {
  QString text;
- QListIterator<QPair<QString, const PHR_Type_Object*>> it(fns_);
+ QListIterator<QPair<QString, PHR_Type_Object>> it(fns_);
  while(it.hasNext())
  {
-  const QPair<QString, const PHR_Type_Object*>& pr = it.next();
+  const QPair<QString, PHR_Type_Object>& pr = it.next();
   QString txt;
   QString fn = pr.first;
-  const PHR_Type_Object* pto = pr.second;
+  PHR_Type_Object pto = pr.second;
   fnd_->kph_gen(pto, fn, txt);
   if(it.hasNext())
   {

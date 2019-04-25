@@ -7,6 +7,7 @@
 #include "phr-env.h"
 
 #include "phaon-ir/scopes/phr-scope-system.h"
+#include "phaon-ir/phr-code-model.h"
 
 
 #include <QDebug>
@@ -15,7 +16,7 @@ PHR_Env::PHR_Env(PHR_Code_Model* pcm)
   :  scopes_(nullptr), pcm_(pcm), report_channel_group_fn_(nullptr),
      kph_gen_fn_(nullptr)
 {
-
+ scopes_ = pcm->scopes();
 }
 
 void PHR_Env::report_channel_group(PHR_Channel_Group* kcg)

@@ -25,7 +25,7 @@ class PHR_Type_Object;
 class PHR_Code_Model
 {
  PHR_Type_System* type_system_;
- PHR_Scope_System* scope_system_;
+ PHR_Scope_System* scopes_;
  PHR_Channel_Group_Table* table_;
 
  typedef std::function<void(PHR_Code_Model* pcm,
@@ -41,7 +41,7 @@ public:
  PHR_Code_Model();
 
  ACCESSORS(PHR_Type_System* ,type_system)
- ACCESSORS(PHR_Scope_System* ,scope_system)
+ ACCESSORS(PHR_Scope_System* ,scopes)
  ACCESSORS(PHR_Channel_Group_Table* ,table)
 
  ACCESSORS(PhaonIR* ,phaon_ir)

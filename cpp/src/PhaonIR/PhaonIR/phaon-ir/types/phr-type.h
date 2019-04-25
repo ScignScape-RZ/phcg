@@ -12,6 +12,7 @@
 #include "accessors.h"
 
 class QMetaObject;
+class PHR_Channel_Group;
 
 class PHR_Type
 {
@@ -23,6 +24,8 @@ class PHR_Type
 
  int qmetatype_ptr_code_;
 
+ PHR_Channel_Group* signature_;
+
 public:
 
  PHR_Type();
@@ -32,6 +35,8 @@ public:
 
  ACCESSORS(const QMetaObject* ,qmo)
  ACCESSORS(const QMetaObject* ,pqmo)
+
+ ACCESSORS(PHR_Channel_Group* ,signature)
 
  ACCESSORS(int ,qmetatype_ptr_code)
 

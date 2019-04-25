@@ -50,11 +50,11 @@ public:
 
  Q_INVOKABLE void add_documentation(QString key_val);
 
- const PHR_Type_Object* get_type_object_from_symbol_name(QString fn);
+ PHR_Type_Object get_type_object_from_symbol_name(QString fn);
 
  QString test_summary();
 
- void kph_gen(const PHR_Type_Object* kto, QString fn, QString& text);
+ void kph_gen(PHR_Type_Object pto, QString fn, QString& text);
 
 };
 

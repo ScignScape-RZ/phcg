@@ -466,6 +466,14 @@ void PhaonIR::temp_anchor_channel_group()
  temp_anchored_channel_groups_[held_usi_symbol_] = held_channel_group_;
 }
 
+void PhaonIR::finalize_signature(QString fn)
+{
+ PHR_Type* ty = new PHR_Type;
+ //ty->set_name(fn);
+ ty->set_signature(held_channel_group_->clone());
+ scopes_.current_scope()->add_direct_value(fn, ty, 0);
+}
+
 void PhaonIR::coalesce_channel_group()
 {
  PHR_Channel_Group* pcg = new PHR_Channel_Group;
@@ -547,7 +555,7 @@ void PhaonIR::init_code_model()
  code_model_ = new PHR_Code_Model;
  code_model_->set_type_system(type_system_);
  code_model_->set_phaon_ir(this);
- code_model_->set_scope_system(&scopes_);
+ code_model_->set_scopes(&scopes_);
 }
 
 void PhaonIR::init_type(QString type_name, quint8 byte_code)
@@ -643,6 +651,8 @@ void PhaonIR::read_line(QString inst, QString arg)
   { "anchor_without_channel_group", &anchor_without_channel_group },
   { "push_carrier_anon_fn", &push_carrier_anon_fn },
   { "type_decl", &type_decl },
+  { "finalize_signature", &finalize_signature },
+
  }};
 
  auto it = static_map.find(inst);

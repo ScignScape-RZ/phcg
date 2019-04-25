@@ -245,6 +245,8 @@ public:
  PHR_Type* init_value_from_symbol(QString sym,
    PHR_Runtime_Scope::Storage_Options& so, quint64& val);
 
+ void finalize_signature(QString fn);
+
  void push_delete(void* pv);
 
  void delete_temps();

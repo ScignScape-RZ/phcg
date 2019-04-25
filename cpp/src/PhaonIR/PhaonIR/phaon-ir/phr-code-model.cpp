@@ -16,7 +16,7 @@
 
 
 PHR_Code_Model::PHR_Code_Model()
-  :  type_system_(nullptr), scope_system_(nullptr),
+  :  type_system_(nullptr), scopes_(nullptr),
      //?current_symbol_scope_(nullptr),
      table_(nullptr)
 {

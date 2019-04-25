@@ -42,7 +42,7 @@ class PHR_Fn_Doc_Multi : public QObject, public PHR_Universal_Class
 
  PHR_Fn_Doc* fnd_;
 
- QList<QPair<QString, const PHR_Type_Object*>> fns_;
+ QList<QPair<QString, PHR_Type_Object>> fns_;
 
 public:
 

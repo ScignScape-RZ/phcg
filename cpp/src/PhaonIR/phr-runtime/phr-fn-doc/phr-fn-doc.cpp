@@ -57,8 +57,8 @@ QString PHR_Fn_Doc::test_summary()
 void PHR_Fn_Doc::read(QString fn)
 {
  qDebug() << "fn: " << fn;
- const PHR_Type_Object* pto = nullptr;//scopes_->get_type_object_from_symbol_name(fn);
- if(pto)
+ PHR_Type_Object pto = get_type_object_from_symbol_name(fn);
+ if(pto.ty())
  {
   if(penv_)
   {
@@ -67,8 +67,10 @@ void PHR_Fn_Doc::read(QString fn)
  }
 }
 
-const PHR_Type_Object* PHR_Fn_Doc::get_type_object_from_symbol_name(QString fn)
+PHR_Type_Object PHR_Fn_Doc::get_type_object_from_symbol_name(QString fn)
 {
+ PHR_Type* ty = scopes_->get_type_for_symbol_name(fn);
+ return ty;
  //return scopes_->get_type_object_from_symbol_name(fn);
 }
 
@@ -99,7 +101,7 @@ void PHR_Fn_Doc::hold_function_name(QString fn)
  held_fn_ = fn;
 }
 
-void PHR_Fn_Doc::kph_gen(const PHR_Type_Object* pto, QString fn, QString& text)
+void PHR_Fn_Doc::kph_gen(PHR_Type_Object pto, QString fn, QString& text)
 {
  if(penv_)
  {

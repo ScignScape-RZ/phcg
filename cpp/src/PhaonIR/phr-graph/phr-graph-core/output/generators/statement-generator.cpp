@@ -152,6 +152,6 @@ void Statement_Generator::generate_signature(QTextStream& qts,
  }
  qts << "coalesce_channel_group ;.\n";
  qts << "finalize_signature $ " << fn << " ;.\n";
- generate_close(qts, nullptr);
+ generate_minimal_close(qts);
  qts << "\n .; end signature ... ;.\n\n";
 }
