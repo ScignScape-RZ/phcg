@@ -20,7 +20,14 @@ PHR_Code_Model::PHR_Code_Model()
      //?current_symbol_scope_(nullptr),
      table_(nullptr)
 {
+ lisp_report_synax_.flags.compress_fuxe_channel = true;
+ lisp_report_synax_.flags.merge_fuxe_and_lambda = true;
+ lisp_report_synax_.flags.expand_array_indicators = true;
 
+ detailed_report_synax_.flags.identify_channel_names = true;
+ detailed_report_synax_.flags.identify_types = true;
+ detailed_report_synax_.flags.surround_type_expressions = true;
+ detailed_report_synax_.flags.write_empty_lambda_channel = true;
 }
 
 PHR_Type_Object* PHR_Code_Model::create_and_register_type_object(QString name)

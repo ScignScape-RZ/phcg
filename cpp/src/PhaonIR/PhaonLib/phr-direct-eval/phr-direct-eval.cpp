@@ -66,7 +66,7 @@ void phr_direct_eval(PHR_Code_Model* pcm,
  }
 #endif // USING_KPH_GEN
 
- PHR_Scope_System* scope_system = pcm->scope_system();
+ PHR_Scope_System* scope_system = pcm->scopes();
  if(pcp->bind_pto())
  {
 #ifdef HIDE

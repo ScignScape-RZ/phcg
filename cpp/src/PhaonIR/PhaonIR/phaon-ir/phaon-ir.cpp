@@ -470,7 +470,7 @@ void PhaonIR::finalize_signature(QString fn)
 {
  PHR_Type* ty = new PHR_Type;
  //ty->set_name(fn);
- ty->set_signature(held_channel_group_->clone());
+ ty->set_signature_channel_group(held_channel_group_->clone());
  scopes_.current_scope()->add_direct_value(fn, ty, 0);
 }
 
@@ -514,12 +514,13 @@ void PhaonIR::push_carrier_anon_fn(QString fn)
  current_carrier_stack_->push(phc);
 }
 
-void PhaonIR::push_carrier_type_holder(QString sn)
+void PhaonIR::push_carrier_type_holder(QString ty_name)
 {
  inc_channel_pos();
  PHR_Carrier* phc = new PHR_Carrier;
+ PHR_Type* ty = type_system_->get_type_by_name(ty_name);
 // phc->set_symbol_name(sn);
-// phc->set_phr_type(held_type_);
+ phc->set_phr_type(ty);
  current_carrier_stack_->push(phc);
 }
 

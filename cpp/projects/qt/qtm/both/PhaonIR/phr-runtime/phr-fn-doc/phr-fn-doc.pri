@@ -34,4 +34,4 @@ SOURCES +=  \
 CONFIG += no_keywords
 
 
-LIBS += -L$$TARGETSDIR -lphaon-ir #-lkcm-scopes -lkcm-env
+LIBS += -L$$TARGETSDIR -lphaon-ir -lphr-env #-lkcm-scopes -lkcm-env

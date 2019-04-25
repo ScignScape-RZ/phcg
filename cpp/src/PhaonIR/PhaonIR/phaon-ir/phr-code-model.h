@@ -9,6 +9,8 @@
 
 #include <QString>
 
+#include "pcm-report-syntax.h"
+
 #include "accessors.h"
 
 class PHR_Type_System;
@@ -27,6 +29,9 @@ class PHR_Code_Model
  PHR_Type_System* type_system_;
  PHR_Scope_System* scopes_;
  PHR_Channel_Group_Table* table_;
+
+ PCM_Report_Syntax lisp_report_synax_;
+ PCM_Report_Syntax detailed_report_synax_;
 
  typedef std::function<void(PHR_Code_Model* pcm,
    PHR_Command_Package* pcp, PHR_Symbol_Scope* pss)> direct_eval_fn_type;

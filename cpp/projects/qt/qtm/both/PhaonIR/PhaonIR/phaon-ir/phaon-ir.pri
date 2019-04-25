@@ -59,6 +59,7 @@ HEADERS += \
   $$SRC_DIR/scopes/phr-scope-system.h \
   $$SRC_DIR/scopes/phr-logical-scope-info.h \
   $$SRC_DIR/phr-code-model.h \
+  $$SRC_DIR/pcm-report-syntax.h \
   $$SRC_DIR/table/phr-channel-group-table.h \
   $$SRC_DIR/table/phr-symbol-scope.h \
   $$SRC_DIR/table/phr-function.h \
@@ -93,6 +94,7 @@ SOURCES += \
   $$SRC_DIR/scopes/phr-scope-system.cpp \
   $$SRC_DIR/scopes/phr-logical-scope-info.cpp \
   $$SRC_DIR/phr-code-model.cpp \
+  $$SRC_DIR/pcm-report-syntax.cpp \
   $$SRC_DIR/table/phr-channel-group-table.cpp \
   $$SRC_DIR/table/phr-symbol-scope.cpp \
   $$SRC_DIR/table/phr-function.cpp \

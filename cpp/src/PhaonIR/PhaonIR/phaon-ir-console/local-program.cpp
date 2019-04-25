@@ -122,6 +122,18 @@ void local_program(PhaonIR& phr)
 
  pcm.create_and_register_type_object("PHR_Env*");
 
+ penv->set_report_channel_group_fn([](PHR_Code_Model* pcm, PHR_Channel_Group* pcg)
+  {
+   QString qs;
+   QTextStream qts(&qs);
+
+   pcg->report(qts, *pcm, pcm->detailed_report_synax(),
+     PCM_Channel::Code_Environments::Statement);
+
+   qDebug() << qs;
+  });
+
+
  PHR_Runtime_Scope prs(nullptr);
 
  PHR_Symbol_Scope pss(&prs);

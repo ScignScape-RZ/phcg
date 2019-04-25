@@ -4,17 +4,16 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
+#include "pcm-report-syntax.h"
 
-#include "phr-type.h"
 
-PHR_Type::PHR_Type()
-  :  byte_code_(0), signature_channel_group_(nullptr)
+PCM_Report_Syntax::PCM_Report_Syntax()
+  :  Flags(0)
 {
-
 }
 
-
-//void PHR_Carrier::init_channel_group_stack()
+//QString KCM_Report_Syntax::get_channel_kind_code(KCM_Channel::Kinds kind)
 //{
-
+// return channel_kind_codes_.value(kind);
 //}
+

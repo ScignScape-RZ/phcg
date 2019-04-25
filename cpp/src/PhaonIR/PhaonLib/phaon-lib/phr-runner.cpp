@@ -37,7 +37,7 @@ PHR_Runner::PHR_Runner()
 void PHR_Runner::init_scope_system()
 {
  scopes_ = new PHR_Scope_System;
- pcm_->set_scope_system(scopes_);
+ pcm_->set_scopes(scopes_);
  pcm_->init_scope_system();
 
  PHR_Type_System* type_system = pcm_->type_system();

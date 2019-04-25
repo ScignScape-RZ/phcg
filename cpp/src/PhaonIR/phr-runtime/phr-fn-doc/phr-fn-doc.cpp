@@ -11,6 +11,7 @@
 #include "phr-env/phr-env.h"
 
 #include "phaon-ir/types/phr-type-object.h"
+#include "phaon-ir/types/phr-type.h"
 
 
 #include "phaon-ir/phr-code-model.h"
@@ -62,7 +63,7 @@ void PHR_Fn_Doc::read(QString fn)
  {
   if(penv_)
   {
-   //penv_->report_channel_group(pto->channel_group());
+   penv_->report_channel_group(pto.ty()->signature_channel_group());
   }
  }
 }

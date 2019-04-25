@@ -24,7 +24,7 @@ class PHR_Type
 
  int qmetatype_ptr_code_;
 
- PHR_Channel_Group* signature_;
+ PHR_Channel_Group* signature_channel_group_;
 
 public:
 
@@ -36,7 +36,7 @@ public:
  ACCESSORS(const QMetaObject* ,qmo)
  ACCESSORS(const QMetaObject* ,pqmo)
 
- ACCESSORS(PHR_Channel_Group* ,signature)
+ ACCESSORS(PHR_Channel_Group* ,signature_channel_group)
 
  ACCESSORS(int ,qmetatype_ptr_code)
 
