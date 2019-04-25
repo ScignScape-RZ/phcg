@@ -39,6 +39,8 @@
 
 #include "multigraph-token.h"
 
+#include <QDebug>
+
 #include "rzns.h"
 
 USING_RZNS(PhrGraphCore)
@@ -108,8 +110,14 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_signature_node(
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
 {
- bool rv = (mgt.kind == MG_Token_Kinds::Raw_Value)
-   || (mgt.kind == MG_Token_Kinds::Arg_Raw_Value);
+ bool rv = ((mgt.kind == MG_Token_Kinds::Raw_Value)
+   || (mgt.kind == MG_Token_Kinds::Arg_Raw_Value)
+   || (mgt.kind == MG_Token_Kinds::String_Literal)
+   );
+
+ if(mgt.kind == MG_Token_Kinds::Arg_Raw_Value)
+   qDebug() << "Arg_Raw_Value...";
+
  bool sl = false;
  QString rt = mgt.raw_text;
  if(rv && rt.startsWith('"'))
@@ -127,7 +135,7 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
    tok->flags.is_string_literal = true;
 
  caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(tok);
- result->set_label(mgt.raw_text);
+ result->set_label(rt);
  return result;
 }
 

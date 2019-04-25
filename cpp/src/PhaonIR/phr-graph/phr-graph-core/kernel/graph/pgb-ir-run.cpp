@@ -196,6 +196,8 @@ QList<MG_Token> PGB_IR_Run::get_generic_tokens(const QMultiMap<MG_Token_Kinds,
 MG_Token PGB_IR_Run::get_arg_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
  QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
+ if(mgts.isEmpty())
+   mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::String_Literal);
  return mgts[0];
 // QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg_Target);
 // return mgts[0];

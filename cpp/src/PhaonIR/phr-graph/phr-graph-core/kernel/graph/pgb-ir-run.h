@@ -54,6 +54,9 @@ class PGB_IR_Run
 
 
  MG_Token get_arg_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
+ //?MG_Token get_arg_or_string_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
+
+
  QString get_string_arg(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
 
  caon_ptr<PHR_Graph_Node>* get_target(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);

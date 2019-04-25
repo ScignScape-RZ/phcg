@@ -379,7 +379,8 @@ void Expression_Generator::generate_carrier_with_raw_value(QTextStream& qts,
    qts << "hold_type_by_name $ " << ty << " ;.\n";
 
  if(tok.flags.is_string_literal)
-   qts << "push_carrier_raw_value $ \"" << tok.raw_text() << "\" ;.\n";
+ //?  qts << "push_carrier_raw_value $ \"" << tok.raw_text() << "\" ;.\n";
+   qts << "push_carrier_raw_value $ " << tok.raw_text() << " ;.\n";
  else
    qts << "push_carrier_raw_value $ " << tok.raw_text() << " ;.\n";
 }

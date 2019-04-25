@@ -340,6 +340,8 @@ struct MG_Token
  {
   switch(kind)
   {
+//  case MG_Token_Kinds::Arg_String_Literal:
+//    return QString("$%1").arg(raw_text);
   case MG_Token_Kinds::String_Literal:
     return raw_text;
    //?return QString("\"%1\"").arg(raw_text);

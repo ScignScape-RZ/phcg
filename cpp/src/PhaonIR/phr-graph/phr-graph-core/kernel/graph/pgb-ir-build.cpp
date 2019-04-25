@@ -40,7 +40,12 @@ MG_Token _PGB_IR_Build::mgtoken(QString rt, MG_Token_Kind_Groups kg, MG_Token_Su
 
  case MG_Token_Kind_Groups::Arg:
   if(sg == MG_Token_Subgroups::Value)
-    return {MG_Token_Kinds::Arg_Raw_Value, rt};
+  {
+   if(rt.startsWith('"'))
+     //?return {MG_Token_Kinds::Arg_String_Literal_Value, rt};
+     return {MG_Token_Kinds::String_Literal, rt};
+   return {MG_Token_Kinds::Arg_Raw_Value, rt};
+  }
   if(sg == MG_Token_Subgroups::Symbol)
     return {MG_Token_Kinds::Arg_Raw_Symbol, rt};
   return {MG_Token_Kinds::Generic, rt};
