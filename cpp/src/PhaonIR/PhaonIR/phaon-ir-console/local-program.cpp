@@ -127,8 +127,8 @@ void local_program(PhaonIR& phr)
    QString qs;
    QTextStream qts(&qs);
 
-   pcg->report(qts, *pcm, pcm->detailed_report_synax(),
-     PCM_Channel::Code_Environments::Statement);
+   pcm->report_channel_group(qts, *pcg, pcm->detailed_report_synax(),
+     PHR_Code_Model::Code_Environments::Statement);
 
    qDebug() << qs;
   });
