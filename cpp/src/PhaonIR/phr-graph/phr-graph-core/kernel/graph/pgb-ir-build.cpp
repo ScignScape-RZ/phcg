@@ -235,13 +235,15 @@ Purpose_Codes& _PGB_IR_Build::add_channel_entry_block_node(QString t1, MG_Token_
 }
 
 Purpose_Codes& _PGB_IR_Build::add_channel_continue_block_node(QString t1, MG_Token_Subgroups sg1,
-  QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3)
+  QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3,
+  QString t4, MG_Token_Subgroups sg4)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
  MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
  MG_Token mgt3 = mgtoken(t3, MG_Token_Kind_Groups::Arg_Target, sg3);
+ MG_Token mgt4 = mgtoken(t3, MG_Token_Kind_Groups::Target, sg4);
 
- qts_ << " (pgb::add_channel_continue_block_node "; end_line({mgt1, mgt2, mgt3});
+ qts_ << " (pgb::add_channel_continue_block_node "; end_line({mgt1, mgt2, mgt3, mgt4});
  return purpose_;
 }
 

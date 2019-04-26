@@ -459,8 +459,11 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
   {
    caon_ptr<PHR_Graph_Node> extra = nullptr;
    auto pr = get_args(mgtm, &extra);
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
    graph_build_.add_channel_continue_block_node(pr.first,
      pr.second, extra);
+   if(tr)
+     *tr = pr.second;
   }
   break;
 
@@ -469,13 +472,11 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
    caon_ptr<PHR_Graph_Node> extra = nullptr;
    QString chn = get_string_arg(mgtm);
    auto pr = get_args(mgtm, &extra);
-//   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
-//   if(tr)
-//     *tr = graph_build_.add_channel_entry_block_node(pr.first, chn,
-//     pr.second, extra);
-//   else
-     graph_build_.add_channel_entry_block_node(pr.first, chn,
-     pr.second, extra);
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   graph_build_.add_channel_entry_block_node(pr.first, chn,
+        pr.second, extra);
+   if(tr)
+     *tr = pr.second;
   }
   break;
 
