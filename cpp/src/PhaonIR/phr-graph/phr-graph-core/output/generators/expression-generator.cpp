@@ -51,6 +51,22 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
   if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
     generate_from_fn_node(qts, *tokn, channel_name, *n, unw);
  }
+ else if(n = qy_.Channel_Entry_Block[cion](&node))
+ {
+  CAON_PTR_DEBUG(PHR_Graph_Node ,n)
+  caon_ptr<PHR_Graph_Block_Info> bin;
+  caon_ptr<PHR_Graph_Statement_Info> sin;
+  if(cion)
+  {
+   channel_name = cion->channel_name();
+   bin = cion->phr_node()->block_info();
+   if(cion->phr_node(1))
+     sin = cion->phr_node(1)->statement_info();
+  }
+  if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
+    generate_from_fn_node(qts, *tokn, channel_name, *n, unw,
+    nullptr, SB_Info(sin, bin));
+ }
  else if(n = qy_.Channel_Fuxe_Coentry[cion](&node))
  {
   CAON_PTR_DEBUG(PHR_Graph_Node ,n)
@@ -160,7 +176,8 @@ void Expression_Generator::generate_comment_line(QTextStream& qts,
 
 void Expression_Generator::generate_from_fn_node(QTextStream& qts,
   PHR_Graph_Token& tok, QString channel_name,
-  const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen)
+  const PHR_Graph_Node& arg_node, int unw,
+  PHR_Graph_Fuxe_Entry* fen, SB_Info sbi)
 {
  if(unw > 0)
  {
@@ -179,7 +196,8 @@ void Expression_Generator::generate_from_fn_node(QTextStream& qts,
 }
 
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,
- QString channel_name, const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen)
+  QString channel_name, const PHR_Graph_Node& arg_node,
+  int unw, PHR_Graph_Fuxe_Entry* fen, SB_Info sbi)
 {
  qts << "push_carrier_stack $ " << channel_name << " ;.\n";
  // assume depth 1 for now ...
@@ -308,7 +326,8 @@ void Expression_Generator::check_generate_type_declaration(QTextStream& qts,
 }
 
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,
- QString channel_name, const PHR_Graph_Node& arg_node, int unw)
+  QString channel_name, const PHR_Graph_Node& arg_node,
+  int unw, SB_Info sbi)
 {
  qts << "push_carrier_stack $ " << channel_name << " ;.\n";
  if(caon_ptr<PHR_Graph_Token> tokn = arg_node.phr_graph_token())

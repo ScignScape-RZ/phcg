@@ -13,6 +13,8 @@
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
 #include "phr-graph-core/kernel/frame/phr-graph-frame.h"
 
+#include "relae-graph/relae-caon-ptr.h"
+
 #include <QTextStream>
 #include <QMap>
 
@@ -31,6 +33,15 @@ class Statement_Generator;
 
 class Expression_Generator
 {
+ struct SB_Info
+ {
+  PHR_Graph_Statement_Info* sin;
+  PHR_Graph_Block_Info* bin;
+  SB_Info() : sin(nullptr), bin(nullptr){}
+  SB_Info(caon_ptr<PHR_Graph_Statement_Info> s,
+    caon_ptr<PHR_Graph_Block_Info> b)
+    : sin(s.raw_pointer()), bin(b.raw_pointer()){}
+ };
 
  //const PHR_Graph_Frame& fr_;
  const PHR_Graph_Query& qy_;
@@ -63,19 +74,22 @@ public:
    const PHR_Graph_Node& node, PHR_Graph_Statement_Info* sin = nullptr);
 
  void generate_from_fn_node(QTextStream& qts,
-  PHR_Graph_Token& tok, QString channel_name,
-  const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen = nullptr);
+   PHR_Graph_Token& tok, QString channel_name,
+   const PHR_Graph_Node& arg_node, int unw,
+   PHR_Graph_Fuxe_Entry* fen = nullptr,
+   SB_Info sbi = SB_Info());
 
  void generate_xchannel(QTextStream& qts, QString channel_name,
   const PHR_Graph_Node& arg_node, int unw);
 
  void generate_arg_carriers(QTextStream& qts,
-  QString channel_name,
-  const PHR_Graph_Node& arg_node, int unw, PHR_Graph_Fuxe_Entry* fen);
+   QString channel_name,
+   const PHR_Graph_Node& arg_node, int unw,
+   PHR_Graph_Fuxe_Entry* fen, SB_Info sbi = SB_Info());
 
  void generate_arg_carriers(QTextStream& qts,
   QString channel_name,
-  const PHR_Graph_Node& arg_node, int unw);
+  const PHR_Graph_Node& arg_node, int unw, SB_Info sbi = SB_Info());
 
  void generate_carrier_with_symbol(QTextStream& qts,
   PHR_Graph_Token& tok);
