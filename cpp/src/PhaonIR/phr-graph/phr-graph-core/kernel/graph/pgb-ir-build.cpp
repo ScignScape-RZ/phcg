@@ -227,7 +227,7 @@ Purpose_Codes& _PGB_IR_Build::add_channel_entry_block_node(QString t1, MG_Token_
  MG_Token mgtch = {MG_Token_Kinds::Arg_String_Literal, chn};
  MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
  MG_Token mgt3 = mgtoken(t3, MG_Token_Kind_Groups::Arg_Target, sg3);
- MG_Token mgt4 = mgtoken(t3, MG_Token_Kind_Groups::Target, sg4);
+ MG_Token mgt4 = mgtoken(t4, MG_Token_Kind_Groups::Target, sg4);
 
  qts_ << " (pgb::add_channel_entry_block_node "; end_line({mgt1,
    mgtch, mgt2, mgt3, mgt4});
@@ -241,7 +241,7 @@ Purpose_Codes& _PGB_IR_Build::add_channel_continue_block_node(QString t1, MG_Tok
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
  MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
  MG_Token mgt3 = mgtoken(t3, MG_Token_Kind_Groups::Arg_Target, sg3);
- MG_Token mgt4 = mgtoken(t3, MG_Token_Kind_Groups::Target, sg4);
+ MG_Token mgt4 = mgtoken(t4, MG_Token_Kind_Groups::Target, sg4);
 
  qts_ << " (pgb::add_channel_continue_block_node "; end_line({mgt1, mgt2, mgt3, mgt4});
  return purpose_;
