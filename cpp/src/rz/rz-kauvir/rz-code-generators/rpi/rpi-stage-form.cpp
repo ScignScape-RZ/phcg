@@ -743,9 +743,12 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
       else
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
         .add_channel_continue_block_node("!last_expression_entry_node",
-        "&entry-node", "&bin",  "!last_block_entry_node");
-
+        "&entry-node", "&bin",  "&channel-seq");
+//         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+//         .add_channel_continue_block_node("!last_expression_entry_node",
+//         "&entry-node", "&bin",  "!last_block_entry_node");
       step_forms_.append(f->step_forms());
+      pgb_(step_forms_).copy_value("!last_block_entry_node", "&channel-seq");
      }
     }
     else
