@@ -314,6 +314,35 @@ void RPI_Stage_Form::add_expression_wrapper(caon_ptr<RPI_Stage_Form> form,
  wrapped_inner_elements_[form] = {text, hdcode};
 }
 
+void RPI_Stage_Form::set_prior_sibling_flags(caon_ptr<RPI_Stage_Form> prior)
+{
+ if(!prior)
+   return;
+ RPI_Stage_Element_Kinds k = prior->last_element_kind();
+ switch(k)
+ {
+ case RPI_Stage_Element_Kinds::Form:
+  flags.prior_sibling_is_expression = true;
+  break;
+ case RPI_Stage_Element_Kinds::Fuxe_Symbol:
+  flags.prior_sibling_is_fuxe_token = true;
+  break;
+ case RPI_Stage_Element_Kinds::Token:
+ case RPI_Stage_Element_Kinds::Literal:
+ case RPI_Stage_Element_Kinds::String_Literal:
+  flags.prior_sibling_is_token = true;
+ default:
+  break;
+ }
+}
+
+RPI_Stage_Element_Kinds RPI_Stage_Form::last_element_kind()
+{
+ if(inner_elements_.isEmpty())
+   return RPI_Stage_Element_Kinds::N_A;
+ return inner_elements_.last().kind();
+}
+
 void RPI_Stage_Form::add_expression(caon_ptr<RPI_Stage_Form> form)
 {
  inner_elements_.push_back(RPI_Stage_Element(form));

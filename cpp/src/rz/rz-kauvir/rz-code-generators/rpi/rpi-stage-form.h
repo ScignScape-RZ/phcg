@@ -114,6 +114,8 @@ private:
 
  RPI_Assignment_Info* get_parent_assignmnt_info();
 
+ RPI_Stage_Element_Kinds last_element_kind();
+
 public:
 
  RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Stage_Form> parent = nullptr);
@@ -146,6 +148,8 @@ public:
 // bool has_preceder_token();
 
  caon_ptr<RPI_Type_Declaration> type_declaration_on_block_entry();
+
+ void set_prior_sibling_flags(caon_ptr<RPI_Stage_Form> prior);
 
  void write(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);
  void write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior);

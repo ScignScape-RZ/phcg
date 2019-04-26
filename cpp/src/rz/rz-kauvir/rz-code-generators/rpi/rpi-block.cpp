@@ -113,7 +113,8 @@ void RPI_Block::scan(RZ_Graph_Visitor_Phaon& visitor_phaon,
 
 
 void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
-  RE_Node& entry_node, caon_ptr<RE_Block_Entry> rbe)
+  RE_Node& entry_node, caon_ptr<RE_Block_Entry> rbe,
+  caon_ptr<RPI_Stage_Form> prior_form)
 {
  if(current_form_)
  {
@@ -123,6 +124,12 @@ void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_ph
  else
  {
   current_form_ = new RPI_Stage_Form(pgb_);
+
+  if(prior_form)
+  {
+   CAON_PTR_DEBUG(RPI_Stage_Form ,prior_form)
+   current_form_->set_prior_sibling_flags(prior_form);
+  }
 
   caon_ptr<RE_Call_Entry> rce = entry_node.re_call_entry();
 
@@ -526,10 +533,14 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
 
   case RZ_Lisp_Graph_Visitor::Next_Node_Premise::Expression:
    {
+    CAON_PTR_DEBUG(RPI_Stage_Form ,current_form_)
     RPI_Stage_Form* new_form = new RPI_Stage_Form(pgb_, current_form_);
     new_form->set_parent_lambda_position(lambda_count);
     new_form->set_implicit_added_depth(implicit_added_depth);
+
+    new_form->set_prior_sibling_flags(current_form_);
     current_form_->add_expression(new_form);
+
     caon_ptr<RE_Call_Entry> rce = next_node->re_call_entry();
     CAON_PTR_DEBUG(RE_Call_Entry ,rce)
     if( (lambda_count > 0) && !last_nnp_expr )
@@ -779,9 +790,10 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
       ++lambda_count;
       if(caon_ptr<RE_Node> cen = visitor_phaon.call_entry_node_from_block_entry_node(ben))
       {
+       CAON_PTR_DEBUG(RE_Node ,cen)
        caon_ptr<RE_Block_Entry> rbe = ben->re_block_entry();
        CAON_PTR_DEBUG(RE_Block_Entry ,rbe)
-       new_block->add_form_from_call_entry_node(visitor_phaon, *cen, rbe);
+       new_block->add_form_from_call_entry_node(visitor_phaon, *cen, rbe, current_form_);
 
        caon_ptr<RE_Node> next_statement_node = cen;
        while(next_statement_node = visitor_phaon.get_next_statement_node(next_statement_node))
