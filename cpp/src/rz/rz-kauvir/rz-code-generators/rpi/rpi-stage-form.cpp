@@ -736,7 +736,12 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      {
       pgb_(step_forms_).make_block_info_node("&bin");
 
-      pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+      if(channel_count == 0)
+        pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
+        .add_channel_entry_block_node("!last_expression_entry_node", "lambda",
+        "&entry-node", "&bin");
+      else
+        pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
         .add_channel_continue_block_node("!last_expression_entry_node",
         "&entry-node", "&bin");
 

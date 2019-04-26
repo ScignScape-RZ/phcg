@@ -62,6 +62,10 @@ public:
    caon_ptr<PHR_Graph_Node> source,
    caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin = nullptr);
 
+ void add_channel_entry_block_node(
+   caon_ptr<PHR_Graph_Node> source, QString chn,
+   caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin = nullptr);
+
  caon_ptr<PHR_Graph_Node> make_channel_fuxe_entry_node(QString chn, QString ty);
 
  caon_ptr<PHR_Graph_Node> add_channel_fuxe_entry_node(

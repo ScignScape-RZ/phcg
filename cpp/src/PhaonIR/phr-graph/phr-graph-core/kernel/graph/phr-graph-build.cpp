@@ -312,6 +312,17 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_coentry_node(
    source << fr_/qy_.Channel_Fuxe_Coentry >> target;
 }
 
+void PHR_Graph_Build::add_channel_entry_block_node(
+  caon_ptr<PHR_Graph_Node> source, QString chn,
+  caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,target)
+
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(chn, bin);
+
+ source << fr_/qy_.Channel_Entry_Block(cion) >> target;
+}
 
 void PHR_Graph_Build::add_channel_continue_block_node(
   caon_ptr<PHR_Graph_Node> source,
