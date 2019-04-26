@@ -192,12 +192,12 @@ void Expression_Generator::generate_from_fn_node(QTextStream& qts,
  if(fen)
    generate_arg_carriers(qts, channel_name, arg_node, unw, fen);
  else
-   generate_arg_carriers(qts, channel_name, arg_node, unw);
+   generate_arg_carriers(qts, channel_name, arg_node, unw, sbi);
 }
 
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,
   QString channel_name, const PHR_Graph_Node& arg_node,
-  int unw, PHR_Graph_Fuxe_Entry* fen, SB_Info sbi)
+  int unw, PHR_Graph_Fuxe_Entry* fen)//, SB_Info sbi)
 {
  qts << "push_carrier_stack $ " << channel_name << " ;.\n";
  // assume depth 1 for now ...
@@ -330,11 +330,23 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
   int unw, SB_Info sbi)
 {
  qts << "push_carrier_stack $ " << channel_name << " ;.\n";
- if(caon_ptr<PHR_Graph_Token> tokn = arg_node.phr_graph_token())
+
+ if(sbi.bin)
  {
-  CAON_PTR_DEBUG(PHR_Graph_Token ,tokn)
-  generate_carrier(qts, *tokn);
+  // first arg is nested block ...
+  qts << "anticipate_nested_block " << channel_name << " ;.\n";
+  generate_block(qts, *sbi.bin, arg_node, sbi.sin);
  }
+ else
+ {
+  // no nested entry ...
+  if(caon_ptr<PHR_Graph_Token> tokn = arg_node.phr_graph_token())
+  {
+   CAON_PTR_DEBUG(PHR_Graph_Token ,tokn)
+   generate_carrier(qts, *tokn);
+  }
+ }
+
  caon_ptr<PHR_Graph_Node> n = &arg_node;
  caon_ptr<PHR_Graph_Node> n1 = nullptr;
  while(n)

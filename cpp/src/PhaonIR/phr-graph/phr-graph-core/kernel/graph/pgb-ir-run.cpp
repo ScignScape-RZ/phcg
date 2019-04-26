@@ -121,6 +121,8 @@ caon_ptr<PHR_Graph_Node>* PGB_IR_Run::get_known_target(QString tr)
    return &graph_build_.last_block_pre_entry_node_;
  if(tr == "last_expression_entry_node")
    return &graph_build_.last_expression_entry_node_;
+ if(tr == "last_block_entry_node")
+   return &graph_build_.last_block_entry_node_;
  return nullptr;
 }
 
@@ -467,7 +469,12 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
    caon_ptr<PHR_Graph_Node> extra = nullptr;
    QString chn = get_string_arg(mgtm);
    auto pr = get_args(mgtm, &extra);
-   graph_build_.add_channel_entry_block_node(pr.first, chn,
+//   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+//   if(tr)
+//     *tr = graph_build_.add_channel_entry_block_node(pr.first, chn,
+//     pr.second, extra);
+//   else
+     graph_build_.add_channel_entry_block_node(pr.first, chn,
      pr.second, extra);
   }
   break;

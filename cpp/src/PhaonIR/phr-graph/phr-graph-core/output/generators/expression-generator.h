@@ -85,7 +85,7 @@ public:
  void generate_arg_carriers(QTextStream& qts,
    QString channel_name,
    const PHR_Graph_Node& arg_node, int unw,
-   PHR_Graph_Fuxe_Entry* fen, SB_Info sbi = SB_Info());
+   PHR_Graph_Fuxe_Entry* fen); //, SB_Info sbi = SB_Info());
 
  void generate_arg_carriers(QTextStream& qts,
   QString channel_name,

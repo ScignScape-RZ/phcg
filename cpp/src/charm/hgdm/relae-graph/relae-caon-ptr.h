@@ -269,6 +269,11 @@ public:
 
  T* raw_pointer()
  {
+  if(is_checked())
+  {
+   if(value_ == tagged_null)
+     return nullptr;
+  }
   return (T*) (value_ & (~classifying_mask));
  }
 
