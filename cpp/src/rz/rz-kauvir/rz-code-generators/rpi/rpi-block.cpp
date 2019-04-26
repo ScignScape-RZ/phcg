@@ -130,12 +130,15 @@ void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_ph
 
   if(rce && rce->flags.is_statement_entry)
   {
-   current_form_->mark_as_statement();
+   current_form_->flags.is_statement = true;//mark_as_statement();
   }
 
   if(rbe)
   {
-   current_form_->mark_as_block_entry_statment();
+   if(parent_block_)
+     current_form_->flags.is_nested_block_entry_statment = true;// mark_as_nested_block_entry_statment();
+   else
+     current_form_->flags.is_block_entry_statment = true;//  mark_as_block_entry_statment();
   }
 
   forms_.push_back(current_form_);
@@ -189,6 +192,7 @@ caon_ptr<RE_Block_Entry> RPI_Block::get_block_entry()
  return nullptr;
 }
 
+// //  contrary to name, can also be expression entry ...
 void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visitor_phaon,
   RE_Node& start_node)
 {
@@ -529,7 +533,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
     caon_ptr<RE_Call_Entry> rce = next_node->re_call_entry();
     CAON_PTR_DEBUG(RE_Call_Entry ,rce)
     if( (lambda_count > 0) && !last_nnp_expr )
-      new_form->mark_preceder_token();
+      new_form->flags.has_preceder_token = true;//mark_preceder_token();
     if(rce->flags.is_deferred)
     {
      new_form->mark_deferred(0);
@@ -775,7 +779,9 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
       ++lambda_count;
       if(caon_ptr<RE_Node> cen = visitor_phaon.call_entry_node_from_block_entry_node(ben))
       {
-       new_block->add_form_from_call_entry_node(visitor_phaon, *cen);
+       caon_ptr<RE_Block_Entry> rbe = ben->re_block_entry();
+       CAON_PTR_DEBUG(RE_Block_Entry ,rbe)
+       new_block->add_form_from_call_entry_node(visitor_phaon, *cen, rbe);
 
        caon_ptr<RE_Node> next_statement_node = cen;
        while(next_statement_node = visitor_phaon.get_next_statement_node(next_statement_node))

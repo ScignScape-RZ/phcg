@@ -46,6 +46,26 @@ class RZ_Expression_Review;
 
 class RPI_Stage_Form
 {
+public:
+
+ flags_(2)
+  bool is_block_entry_statment:1;
+  bool is_nested_block_entry_statment:1;
+  bool write_type_declaration:1;
+  bool is_inferred_block_entry_statment:1;
+  bool is_statement:1;
+  bool has_preceder_token:1;
+  bool has_s1_token:1;
+
+  bool prior_sibling_is_fuxe_token:1;
+  bool prior_sibling_is_token:1;
+  bool prior_sibling_is_expression:1;
+  bool prior_sibling_is_block:1;
+ _flags
+
+private:
+
+
  PGB_IR_Build& pgb_;
 
  QList<PGB_IR_Build::Text_With_Purpose> step_forms_;
@@ -123,7 +143,7 @@ public:
  bool is_effective_block_entry_statment();
  bool is_non_block_expression();
  bool is_deferred();
- bool has_preceder_token();
+// bool has_preceder_token();
 
  caon_ptr<RPI_Type_Declaration> type_declaration_on_block_entry();
 
@@ -155,7 +175,7 @@ public:
  void init_assignment_expression(QString tok);
  void init_formula_expression(QString tok);
 
- void mark_as_statement();
+// void mark_as_statement();
 
  void write_statement_entry_qts(QTextStream& qts);
  void write_statement_leave_qts(QTextStream& qts);
@@ -167,13 +187,14 @@ public:
 
  void mark_deferred(int hdcode);
  void mark_as_assignment_expression();
- void mark_as_block_entry_statment();
+// void mark_as_block_entry_statment();
+// void mark_as_nested_block_entry_statment();
  void mark_as_fn_no_block();
  void mark_as_s1_assignment_preempts_s0();
  void mark_as_parent_s1_assignment_preempts_s0();
 
- void mark_as_inferred_block_entry_statment();
- void mark_preceder_token();
+// void mark_as_inferred_block_entry_statment();
+// void mark_preceder_token();
 
  QString get_assignment_target();
 

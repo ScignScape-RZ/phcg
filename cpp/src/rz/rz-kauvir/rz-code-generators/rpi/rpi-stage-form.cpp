@@ -32,7 +32,7 @@
 USING_RZNS(GVal)
 
 RPI_Stage_Form::RPI_Stage_Form(PGB_IR_Build& pgb, caon_ptr<RPI_Stage_Form> parent)
-  :  pgb_(pgb), parent_(parent), parent_lambda_position_(-1),
+  :  Flags(0), pgb_(pgb), parent_(parent), parent_lambda_position_(-1),
      first_nested_block_(nullptr), implicit_added_depth_(0),
      nesting_level_(0),
      type_declaration_(nullptr), expression_(nullptr),
@@ -61,7 +61,8 @@ QString RPI_Stage_Form::get_assignment_target()
 
 caon_ptr<RPI_Type_Declaration> RPI_Stage_Form::type_declaration_on_block_entry()
 {
- if(ANNOTATION_FLAG(is_block_entry_statment))
+ //if(ANNOTATION_FLAG(is_block_entry_statment))
+ if(flags.is_block_entry_statment || flags.is_nested_block_entry_statment)
    return type_declaration_;
  return nullptr;
 }
@@ -100,7 +101,7 @@ void RPI_Stage_Form::write_assignment_initialization_via_expression(
   td = prior->type_declaration_on_block_entry();
  }
  if(td)
-   f->mark_as_block_entry_statment();
+   f->flags.is_block_entry_statment = true;// mark_as_block_entry_statment();
 
  f->mark_as_assignment_expression();
 
@@ -245,8 +246,8 @@ void RPI_Stage_Form::init_type_declaration(QString cmd)
  type_declaration_ = new RPI_Type_Declaration(*this);
  type_declaration_->set_cmd(cmd);
 
- check_init_annotation();
- annotation_->flags.write_type_declaration = true;
+ //check_init_annotation();
+ flags.write_type_declaration = true;
 }
 
 void RPI_Stage_Form::init_expression()
@@ -347,34 +348,45 @@ void RPI_Stage_Form::mark_as_parent_s1_assignment_preempts_s0()
  annotation_->flags.parent_s1_assignment_preempts_s0 = true;
 }
 
-void RPI_Stage_Form::mark_as_inferred_block_entry_statment()
-{
- check_init_annotation();
- annotation_->flags.is_inferred_block_entry_statment = true;
-}
+//void RPI_Stage_Form::mark_as_inferred_block_entry_statment()
+//{
+// check_init_annotation();
+// annotation_->flags.is_inferred_block_entry_statment = true;
+//}
 
-void RPI_Stage_Form::mark_preceder_token()
-{
- check_init_annotation();
- annotation_->flags.has_preceder_token = true;
-}
+//void RPI_Stage_Form::mark_preceder_token()
+//{
+// check_init_annotation();
+// annotation_->flags.has_preceder_token = true;
+//}
 
-void RPI_Stage_Form::mark_as_statement()
-{
- check_init_annotation();
- annotation_->flags.is_statement = true;
-}
+//void RPI_Stage_Form::mark_as_statement()
+//{
+// check_init_annotation();
+// annotation_->flags.is_statement = true;
+//}
 
-void RPI_Stage_Form::mark_as_block_entry_statment()
-{
- check_init_annotation();
- annotation_->flags.is_block_entry_statment = true;
- //CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
-}
+//void RPI_Stage_Form::mark_as_block_entry_statment()
+//{
+// check_init_annotation();
+// annotation_->flags.is_block_entry_statment = true;
+// //CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
+//}
+
+//void RPI_Stage_Form::mark_as_nested_block_entry_statment()
+//{
+// check_init_annotation();
+// annotation_->flags.is_nested_block_entry_statment = true;
+// //CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
+//}
 
 bool RPI_Stage_Form::is_effective_block_entry_statment()
 {
- bool result = ANNOTATION_FLAG(is_block_entry_statment);
+ bool result = flags.is_block_entry_statment;
+
+ if(!result)
+   result = flags.is_nested_block_entry_statment;
+
  if(!result)
  {
   if(inner_elements_.isEmpty())
@@ -571,10 +583,10 @@ RPI_Assignment_Info* RPI_Stage_Form::get_parent_assignmnt_info()
  return result;
 }
 
-bool RPI_Stage_Form::has_preceder_token()
-{
- return ANNOTATION_FLAG(has_preceder_token);
-}
+//bool RPI_Stage_Form::has_preceder_token()
+//{
+// return ANNOTATION_FLAG(has_preceder_token);
+//}
 
 void RPI_Stage_Form::write_signature_type_declaration(QTextStream& qts)
 {
@@ -600,7 +612,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 
  if(type_declaration_)
  {
-  if(!ANNOTATION_FLAG(write_type_declaration))
+  if(flags.write_type_declaration)
   {
    qts << "skipping type declaration ...";
    return;
@@ -641,8 +653,8 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      pgb_(step_forms_).make_token_node(rset.prepend('@'), "&entry-node")
      = Purpose_Codes::Make_Token_Node_Fuxe_Sumbol;
 
-   if( ANNOTATION_FLAG(is_block_entry_statment)
-      || ANNOTATION_FLAG(is_inferred_block_entry_statment) )
+   if( flags.is_block_entry_statment
+      || flags.is_inferred_block_entry_statment )
    {
     if(rai)
     {
@@ -656,7 +668,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     else
       pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node", "&entry-node");
    }
-   else if(ANNOTATION_FLAG(is_inferred_block_entry_statment))
+   else if(flags.is_inferred_block_entry_statment)
    {
     if(rai)
     {
@@ -676,7 +688,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
    }
    // non block entry handled in the block ...
 
-   if(ANNOTATION_FLAG(is_statement) || ANNOTATION_FLAG(is_nested_as_assignment))
+   if(flags.is_statement || ANNOTATION_FLAG(is_nested_as_assignment))
      pgb_(step_forms_).copy_value("&entry-node", "!last_statement_entry_node")
      = Purpose_Codes::Copy_To_Last_Statement_Entry_Node;
 
@@ -767,7 +779,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
          pgb_(step_forms_).make_channel_fuxe_entry_node(
          ":result", ty.prepend(':'),  "&cfx-node");
 
-       if(f->has_preceder_token())
+       if(f->flags.has_preceder_token)
          pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
          .add_channel_fuxe_entry_node(
          "&channel-seq",
@@ -784,6 +796,8 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
          "&entry-node", ":lambda", "&cfx-node");
       }
       step_forms_.append(f->step_forms());
+      pgb_(step_forms_).copy_value( "!last_expression_entry_node",
+        "&channel-seq");
      }
     }
     ++channel_count;
