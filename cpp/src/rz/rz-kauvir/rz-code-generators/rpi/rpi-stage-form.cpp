@@ -326,7 +326,7 @@ void RPI_Stage_Form::set_prior_sibling_flags(caon_ptr<RPI_Stage_Form> prior)
  {
  case RPI_Stage_Element_Kinds::Form:
   if(prior->last_element_form_instruction("kb::write-anon-fdef"))
-    flags.prior_sibling_is_block = prior->flags.prior_sibling_is_block;
+    flags.prior_sibling_is_block = true;
   else
     flags.prior_sibling_is_expression = true;
   break;
