@@ -773,7 +773,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
    else if(last_kind == RPI_Stage_Element_Kinds::Form)
    {
 //?    pgb_(step_forms_).copy_value("!last_expression_entry_node", "&channel-seq");
-    pgb_(step_forms_).add_channel_continue_token("&channel-seq",
+    pgb_(step_forms_).add_channel_continue_token("!prior_expression_entry_node",
       rset.prepend('$'), "&channel-seq");
    }
    else
@@ -865,21 +865,46 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
        if(f->flags.write_push_expression)
          pgb_(step_forms_).push_expression_entry();
 
-       if(f->flags.has_preceder_token)
+//       if(f->flags.has_preceder_token)
+//         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
+//         .add_fsym_ground_node(
+//         "&channel-seq",
+//         "&fsym-node", ":lambda", "&fsym-ground-node");
+
+       if(f->flags.prior_sibling_is_token)
          pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
          .add_fsym_ground_node(
          "&channel-seq",
          "&fsym-node", ":lambda", "&fsym-ground-node");
-       else if(last_kind == RPI_Stage_Element_Kinds::Form)
+       else if(f->flags.prior_sibling_is_expression)
          pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
          .add_channel_fground_cross_node(
-         "!last_expression_entry_node",
+         "!prior_expression_entry_node",
          "&fsym-node", ":lambda", "&fsym-ground-node");
-       else
+       else if(f->flags.prior_sibling_is_fground_token)
          pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
          .add_channel_fground_coentry_node(
          "!last_expression_entry_node",
          "&fsym-node", ":lambda", "&fsym-ground-node");
+
+
+//       else if(last_kind == RPI_Stage_Element_Kinds::Form)
+//       {
+//        if(f->flags.prior_sibling_is_expression)
+//        {
+//         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
+//         .add_channel_fground_cross_node(
+//         "!prior_expression_entry_node",
+//         "&fsym-node", ":lambda", "&fsym-ground-node");
+//        }
+//       }
+//       else
+//         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
+//         .add_channel_fground_coentry_node(
+//         "!last_expression_entry_node",
+//         "&fsym-node", ":lambda", "&fsym-ground-node");
+
+
       }
       step_forms_.append(f->step_forms());
 
