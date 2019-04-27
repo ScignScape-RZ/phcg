@@ -39,6 +39,7 @@ class PHR_Graph_Build
  caon_ptr<PHR_Graph_Node> last_expression_entry_node_;
  caon_ptr<PHR_Graph_Node> last_block_entry_node_;
  caon_ptr<PHR_Graph_Node> prior_block_entry_node_;
+ caon_ptr<PHR_Graph_Node> prior_expression_entry_node_;
 
  QStack<caon_ptr<PHR_Graph_Node>> expression_entry_node_stack_;
  QStack<caon_ptr<PHR_Graph_Node>> block_entry_node_stack_;

@@ -154,8 +154,8 @@ void test_if_then_else(quint64 args_ptr)
   {
    if(test)
    {
-    PHR_Callable_Value* pcv = (PHR_Callable_Value*) qui;
-    pcv->run();
+    PHR_Callable_Value** pcv = (PHR_Callable_Value**) qui;
+    (*pcv)->run();
 
 //    KCM_Callable_Value** kcv = (KCM_Callable_Value**) qui;
 //    KCM_Command_Runtime_Router* kcrr = (*kcv)->kcrr();
