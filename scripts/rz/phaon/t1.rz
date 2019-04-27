@@ -1,6 +1,3 @@
 
-&test-tok-call 78 do .() ->
- &prn 79;
- ;;
-
+&prnn 24 (#+ 25 26);
 

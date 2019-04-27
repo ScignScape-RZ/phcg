@@ -761,6 +761,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      pgb_(step_forms_).copy_value("&fsym-node", "!last_statement_entry_node")
      = Purpose_Codes::Copy_To_Last_Statement_Entry_Node;
 
+//?
    pgb_(step_forms_).copy_value("&fsym-node", "!last_expression_entry_node");
    pgb_(step_forms_).copy_value("&fsym-node", "&channel-seq");
    break;
@@ -771,7 +772,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
        rset.prepend('$'), "&channel-seq");
    else if(last_kind == RPI_Stage_Element_Kinds::Form)
    {
-    pgb_(step_forms_).copy_value("!last_expression_entry_node", "&channel-seq");
+//?    pgb_(step_forms_).copy_value("!last_expression_entry_node", "&channel-seq");
     pgb_(step_forms_).add_channel_continue_token("&channel-seq",
       rset.prepend('$'), "&channel-seq");
    }
@@ -885,8 +886,9 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
       if(f->flags.write_push_expression)
         pgb_(step_forms_).pop_expression_entry();
 
-      pgb_(step_forms_).copy_value( "!last_expression_entry_node",
-        "&channel-seq");
+//?
+//      pgb_(step_forms_).copy_value( "!last_expression_entry_node",
+//        "&channel-seq");
      }
     }
     ++channel_count;
