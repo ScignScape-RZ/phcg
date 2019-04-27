@@ -25,7 +25,7 @@
 #include "relae-graph/dominion-macros.h"
 DOMINION_TYPE(phr_graph_root, PHR_Graph_Root, PHR_Graph_Root)
 DOMINION_TYPE(phr_graph_token, PHR_Graph_Token, PHR_Graph_Token)
-DOMINION_TYPE(fuxe_entry, PHR_Graph_Fuxe_Entry, PHR_Graph_Fuxe_Entry)
+DOMINION_TYPE(fground_entry, PHR_Graph_FGround_Entry, PHR_Graph_FGround_Entry)
 DOMINION_TYPE(statement_info, PHR_Graph_Statement_Info, PHR_Graph_Statement_Info)
 DOMINION_TYPE(block_info, PHR_Graph_Block_Info, PHR_Graph_Block_Info)
 DOMINION_TYPE(type_declaration, PHR_Graph_Type_Declaration, PHR_Graph_Type_Declaration)

@@ -57,7 +57,7 @@ public:
   bool has_preceder_token:1;
   bool has_s1_token:1;
 
-  bool prior_sibling_is_fuxe_token:1;
+  bool prior_sibling_is_fground_token:1;
   bool prior_sibling_is_token:1;
   bool prior_sibling_is_expression:1;
   bool prior_sibling_is_block:1;

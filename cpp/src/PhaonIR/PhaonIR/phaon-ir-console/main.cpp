@@ -23,7 +23,7 @@ extern void local_program(PhaonIR& phr);
 
 PHR_Channel_Group_Evaluator* load_evaluator(PhaonIR& phr, PHR_Channel_Group& pcg)
 {
- QString fname = phr.get_first_raw_value_string("fuxe", pcg);
+ QString fname = phr.get_first_raw_value_string("fground", pcg);
  if(fname.startsWith('#'))
  {
   PHR_Minimal_Evaluator::Kernal_Operators kop =

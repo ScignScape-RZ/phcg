@@ -29,7 +29,7 @@
 #include "phr-graph-core/kernel/query/phr-graph-query.h"
 
 #include "phr-graph-core/token/phr-graph-statement-info.h"
-#include "phr-graph-core/token/phr-graph-fuxe-entry.h"
+#include "phr-graph-core/token/phr-graph-fground-entry.h"
 
 #include "phr-graph-core/token/phr-graph-type-declaration.h"
 
@@ -256,15 +256,15 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_block_entry_token(caon_ptr<PHR_Gra
  return result;
 }
 
-caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_channel_fuxe_entry_node(QString chn, QString ty)
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_fsym_ground_node(QString chn, QString ty)
 {
- caon_ptr<PHR_Graph_Fuxe_Entry> fen = new PHR_Graph_Fuxe_Entry(chn, ty);
+ caon_ptr<PHR_Graph_FGround_Entry> fen = new PHR_Graph_FGround_Entry(chn, ty);
  caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(fen);
- result->set_label("<channel-fuxe-entry>");
+ result->set_label("<channel-fground-entry>");
  return result;
 }
 
-caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_entry_node(
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_fsym_ground_node(
   caon_ptr<PHR_Graph_Node> source,
   caon_ptr<PHR_Graph_Node> target, QString chn,
   caon_ptr<PHR_Graph_Node> cfen)
@@ -275,13 +275,13 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_entry_node(
  if(cfen)
  {
   caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(chn, cfen);
-  source << fr_/qy_.Channel_Fuxe_Entry(cion) >> target;
+  source << fr_/qy_.Channel_FGround_Entry(cion) >> target;
  }
  else
-   source << fr_/qy_.Channel_Fuxe_Entry >> target;
+   source << fr_/qy_.Channel_FGround_Entry >> target;
 }
 
-caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_cross_node(
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fground_cross_node(
   caon_ptr<PHR_Graph_Node> source,
   caon_ptr<PHR_Graph_Node> target, QString chn,
   caon_ptr<PHR_Graph_Node> cfen)
@@ -292,13 +292,13 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_cross_node(
  if(cfen)
  {
   caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(chn, cfen);
-  source << fr_/qy_.Channel_Fuxe_Cross(cion) >> target;
+  source << fr_/qy_.Channel_FGround_Cross(cion) >> target;
  }
  else
-   source << fr_/qy_.Channel_Fuxe_Cross >> target;
+   source << fr_/qy_.Channel_FGround_Cross >> target;
 }
 
-caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_coentry_node(
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fground_coentry_node(
   caon_ptr<PHR_Graph_Node> source,
   caon_ptr<PHR_Graph_Node> target, QString chn,
   caon_ptr<PHR_Graph_Node> cfen)
@@ -309,10 +309,10 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fuxe_coentry_node(
  if(cfen)
  {
   caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(chn, cfen);
-  source << fr_/qy_.Channel_Fuxe_Coentry(cion) >> target;
+  source << fr_/qy_.Channel_FGround_Coentry(cion) >> target;
  }
  else
-   source << fr_/qy_.Channel_Fuxe_Coentry >> target;
+   source << fr_/qy_.Channel_FGround_Coentry >> target;
 }
 
 void PHR_Graph_Build::add_channel_entry_block_node(

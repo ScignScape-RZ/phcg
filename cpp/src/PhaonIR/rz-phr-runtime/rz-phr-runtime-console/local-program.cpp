@@ -66,7 +66,7 @@ void local_program1(PhaonIR& phr)
 
  phr.reset_program_stack();
 
- phr.push_carrier_stack("fuxe");
+ phr.push_carrier_stack("fground");
  phr.hold_type_by_name("fbase");
  //?phr.push_carrier_raw_value("&prn");
  phr.push_carrier_symbol("&prn");
@@ -162,13 +162,13 @@ void local_program(PhaonIR& phr)
  phr.reset_program_stack();
 
 
- phr.push_carrier_stack("fuxe");
+ phr.push_carrier_stack("fground");
  phr.hold_type_by_name("fbase");
  phr.push_carrier_symbol("&prn");
 
  phr.push_unwind_scope(1, "result");
 
- phr.push_carrier_stack("fuxe");
+ phr.push_carrier_stack("fground");
  phr.hold_type_by_name("fbase");
  phr.push_carrier_raw_value("#+");
 
@@ -178,7 +178,7 @@ void local_program(PhaonIR& phr)
 
  phr.push_unwind_scope(1, "result");
 
- phr.push_carrier_stack("fuxe");
+ phr.push_carrier_stack("fground");
  phr.hold_type_by_name("fbase");
  phr.push_carrier_raw_value("#+");
 
@@ -219,7 +219,7 @@ void local_program(PhaonIR& phr)
 
  phr.reset_program_stack();
 
- phr.push_carrier_stack("fuxe");
+ phr.push_carrier_stack("fground");
  phr.hold_type_by_name("fbase");
  phr.push_carrier_raw_value("#+");
 
@@ -229,7 +229,7 @@ void local_program(PhaonIR& phr)
 
  phr.push_unwind_scope(1);
 
- phr.push_carrier_stack("fuxe");
+ phr.push_carrier_stack("fground");
  phr.hold_type_by_name("fbase");
  phr.push_carrier_raw_value("#+");
 
@@ -259,7 +259,7 @@ void local_program(PhaonIR& phr)
  phr.reset_program_stack();
 
 
- phr.push_carrier_stack("fuxe");
+ phr.push_carrier_stack("fground");
  phr.hold_type_by_name("fbase");
  phr.push_carrier_raw_value("#+");
 
@@ -277,7 +277,7 @@ void local_program(PhaonIR& phr)
 
  phr.reset_program_stack();
 
- phr.push_carrier_stack("fuxe");
+ phr.push_carrier_stack("fground");
  phr.hold_type_by_name("fbase");
  //?phr.push_carrier_raw_value("&prn");
  phr.push_carrier_symbol("&prn");

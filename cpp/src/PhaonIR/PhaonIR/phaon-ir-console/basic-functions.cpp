@@ -231,6 +231,7 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   //?
   g1.clear_all();
  }
+
  {
   PHR_Type* ty = type_system->get_type_by_name("u4");
   PHR_Carrier* phc1 = new PHR_Carrier;

@@ -112,13 +112,13 @@ public:
  Purpose_Codes& push_block_entry();
  Purpose_Codes& pop_block_entry();
 
- Purpose_Codes& make_channel_fuxe_entry_node(QString arg1,
+ Purpose_Codes& make_fsym_ground_node(QString arg1,
    MG_Token_Subgroups asg1, QString arg2,
    MG_Token_Subgroups asg2,
    QString target, MG_Token_Subgroups tsg);
- Purpose_Codes& make_channel_fuxe_entry_node(QString arg1, QString arg2, QString target)
+ Purpose_Codes& make_fsym_ground_node(QString arg1, QString arg2, QString target)
  {
-  return make_channel_fuxe_entry_node(arg1.mid(1), get_subgroup(arg1[0]),
+  return make_fsym_ground_node(arg1.mid(1), get_subgroup(arg1[0]),
     arg2.mid(1), get_subgroup(arg2[0]),
     target.mid(1), get_subgroup(target[0]));
  }
@@ -132,63 +132,63 @@ public:
 //    t2.mid(1), get_subgroup(t2[0]));
 // }
 
- Purpose_Codes& add_channel_fuxe_entry_node(QString t1, MG_Token_Subgroups sg1,
+ Purpose_Codes& add_fsym_ground_node(QString t1, MG_Token_Subgroups sg1,
    QString t2, MG_Token_Subgroups sg2,
    QString chn = QString(),
    MG_Token_Subgroups chnsg = MG_Token_Subgroups::N_A,
    QString cfen = QString(),
    MG_Token_Subgroups cfensg = MG_Token_Subgroups::N_A);
- Purpose_Codes& add_channel_fuxe_entry_node(QString t1, QString t2,
+ Purpose_Codes& add_fsym_ground_node(QString t1, QString t2,
    QString chn, QString cfen)
  {
-  return add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_fsym_ground_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]),
     chn.mid(1), get_subgroup(chn[0]),
     cfen.mid(1), get_subgroup(cfen[0]));
  }
- Purpose_Codes& add_channel_fuxe_entry_node(QString t1, QString t2)
+ Purpose_Codes& add_fsym_ground_node(QString t1, QString t2)
  {
-  return add_channel_fuxe_entry_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_fsym_ground_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
  }
 
- Purpose_Codes& add_channel_fuxe_cross_node(QString t1, MG_Token_Subgroups sg1,
+ Purpose_Codes& add_channel_fground_cross_node(QString t1, MG_Token_Subgroups sg1,
    QString t2, MG_Token_Subgroups sg2,
    QString chn = QString(),
    MG_Token_Subgroups chnsg = MG_Token_Subgroups::N_A,
    QString cfen = QString(),
    MG_Token_Subgroups cfensg = MG_Token_Subgroups::N_A);
- Purpose_Codes& add_channel_fuxe_cross_node(QString t1, QString t2,
+ Purpose_Codes& add_channel_fground_cross_node(QString t1, QString t2,
    QString chn, QString cfen)
  {
-  return add_channel_fuxe_cross_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_channel_fground_cross_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]),
     chn.mid(1), get_subgroup(chn[0]),
     cfen.mid(1), get_subgroup(cfen[0]));
  }
- Purpose_Codes& add_channel_fuxe_cross_node(QString t1, QString t2)
+ Purpose_Codes& add_channel_fground_cross_node(QString t1, QString t2)
  {
-  return add_channel_fuxe_cross_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_channel_fground_cross_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
  }
 
- Purpose_Codes& add_channel_fuxe_coentry_node(QString t1, MG_Token_Subgroups sg1,
+ Purpose_Codes& add_channel_fground_coentry_node(QString t1, MG_Token_Subgroups sg1,
    QString t2, MG_Token_Subgroups sg2,
    QString chn = QString(),
    MG_Token_Subgroups chnsg = MG_Token_Subgroups::N_A,
    QString cfen = QString(),
    MG_Token_Subgroups cfensg = MG_Token_Subgroups::N_A);
- Purpose_Codes& add_channel_fuxe_coentry_node(QString t1, QString t2,
+ Purpose_Codes& add_channel_fground_coentry_node(QString t1, QString t2,
    QString chn, QString cfen)
  {
-  return add_channel_fuxe_coentry_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_channel_fground_coentry_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]),
     chn.mid(1), get_subgroup(chn[0]),
     cfen.mid(1), get_subgroup(cfen[0]));
  }
- Purpose_Codes& add_channel_fuxe_coentry_node(QString t1, QString t2)
+ Purpose_Codes& add_channel_fground_coentry_node(QString t1, QString t2)
  {
-  return add_channel_fuxe_coentry_node(t1.mid(1), get_subgroup(t1[0]),
+  return add_channel_fground_coentry_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
  }
 

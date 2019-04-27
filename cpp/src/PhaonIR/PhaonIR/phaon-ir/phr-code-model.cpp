@@ -23,8 +23,8 @@ PHR_Code_Model::PHR_Code_Model()
      //?current_symbol_scope_(nullptr),
      table_(nullptr)
 {
- lisp_report_synax_.flags.compress_fuxe_channel = true;
- lisp_report_synax_.flags.merge_fuxe_and_lambda = true;
+ lisp_report_synax_.flags.compress_fground_channel = true;
+ lisp_report_synax_.flags.merge_fground_and_lambda = true;
  lisp_report_synax_.flags.expand_array_indicators = true;
 
  detailed_report_synax_.flags.identify_channel_names = true;
@@ -126,14 +126,14 @@ void PHR_Code_Model::report_channel_group(QTextStream& qts, PHR_Channel_Group& p
   QString chn = it.key()->name();
   report_channel(qts, parse_channel_kind(chn), chn, it.value(), pcrs, cenv);
  }
-// report({KCM_Channel::Kinds::Fuxe, KCM_Channel::Kinds::Lambda,
+// report({KCM_Channel::Kinds::FGround, KCM_Channel::Kinds::Lambda,
 //   KCM_Channel::Kinds::Sigma, KCM_Channel::Kinds::Result}, qts, kcm, kcrs, cenv);
 }
 
 PHR_Code_Model::Recognized_Channel_Kinds PHR_Code_Model::parse_channel_kind(QString name)
 {
  static QMap<QString, Recognized_Channel_Kinds> static_map {{
-   {"fuxe", Recognized_Channel_Kinds::Fuxe},
+   {"fground", Recognized_Channel_Kinds::FGround},
    {"lambda", Recognized_Channel_Kinds::Lambda},
    {"sigma", Recognized_Channel_Kinds::Sigma},
    {"array", Recognized_Channel_Kinds::Array},
@@ -263,13 +263,13 @@ void PHR_Code_Model::report_channel(QTextStream& qts, Recognized_Channel_Kinds r
   return;
  }
 
- if(pcrs.flags.merge_fuxe_and_lambda && rck == Recognized_Channel_Kinds::Lambda)
+ if(pcrs.flags.merge_fground_and_lambda && rck == Recognized_Channel_Kinds::Lambda)
  {
 
  }
- else if(rck == Recognized_Channel_Kinds::Fuxe && cenv == Code_Environments::Expression)
+ else if(rck == Recognized_Channel_Kinds::FGround && cenv == Code_Environments::Expression)
  {
-  if(pcrs.flags.merge_fuxe_and_lambda)
+  if(pcrs.flags.merge_fground_and_lambda)
   {
    qts << '(';
   }
@@ -314,11 +314,11 @@ void PHR_Code_Model::report_channel(QTextStream& qts, Recognized_Channel_Kinds r
   }
  }
 
- if(pcrs.flags.merge_fuxe_and_lambda && rck == Recognized_Channel_Kinds::Fuxe)
+ if(pcrs.flags.merge_fground_and_lambda && rck == Recognized_Channel_Kinds::FGround)
  {
   qts << ' ';
  }
- else if(rck == Recognized_Channel_Kinds::Fuxe && cenv == Code_Environments::Expression)
+ else if(rck == Recognized_Channel_Kinds::FGround && cenv == Code_Environments::Expression)
  {
 
  }

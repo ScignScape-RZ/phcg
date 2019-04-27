@@ -35,15 +35,15 @@ class PGB_IR_Run
  enum class PGB_Methods {
 
   N_A, make_root_node, make_token_node,
-  make_channel_fuxe_entry_node,
+  make_fsym_ground_node,
   add_block_entry_node, add_channel_token,
   add_channel_continue_token,
   add_channel_entry_token, add_channel_xentry_token,
   add_block_entry_token, add_type_declaration,
   add_statement_sequence_token, copy_value,
   add_statement_sequence_node,
-  make_statement_info_node, add_channel_fuxe_entry_node,
-  add_channel_fuxe_cross_node, add_channel_fuxe_coentry_node,
+  make_statement_info_node, add_fsym_ground_node,
+  add_channel_fground_cross_node, add_channel_fground_coentry_node,
   make_block_info_node, add_channel_continue_block_node,
   make_signature_node, signature, add_channel_entry_block_node,
   push_expression_entry, pop_expression_entry,

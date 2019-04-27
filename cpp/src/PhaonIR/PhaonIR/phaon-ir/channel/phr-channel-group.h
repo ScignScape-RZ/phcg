@@ -39,7 +39,7 @@ public:
  PHR_Channel* find_channel_by_name(QString n,
    PHR_Channel_Semantic_Protocol** pr = nullptr);
 
- PHR_Channel* fuxe_ch();
+ PHR_Channel* fground_ch();
  PHR_Channel* lambda_ch();
  PHR_Channel* result_ch();
  PHR_Channel* sigma_ch();

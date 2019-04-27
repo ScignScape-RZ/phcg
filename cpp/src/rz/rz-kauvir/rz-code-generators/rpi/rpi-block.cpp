@@ -294,7 +294,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
      {
       current_form_->init_inferred_s0_statement();
      }
-     current_form_->add_fn_element(RPI_Stage_Element_Kinds::Fuxe_Symbol, fn);
+     current_form_->add_fn_element(RPI_Stage_Element_Kinds::FGround_Symbol, fn);
     }
 
     // should be a flag ...

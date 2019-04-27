@@ -14,7 +14,7 @@ enum class MS_Token_Kinds
 {
  N_A, Generic, Scoped_Symbol, Scoped_Symbol_Literal_Init,
  Literal, Instruction_Symbol, String_Literal,
- Fuxe_Symbol, Raw_Symbol,
+ FGround_Symbol, Raw_Symbol,
  Bridge_Symbol, Sigma_Symbol,
  Internal_String, Skip_Token,
  Type_Symbol, Kernel_Type_Symbol,
@@ -126,7 +126,7 @@ struct MS_Token
     TEMP_MACRO(Scoped_Symbol, "@#_")
     TEMP_MACRO(String_Literal, "\"\"")
     TEMP_MACRO(Literal, "###")
-    TEMP_MACRO(Fuxe_Symbol, "@%_")
+    TEMP_MACRO(FGround_Symbol, "@%_")
     TEMP_MACRO(Raw_Symbol, "%%_")
     TEMP_MACRO(Bridge_Symbol, "")
     TEMP_MACRO(Sigma_Symbol, "@@_")
@@ -167,7 +167,7 @@ struct MS_Token
    TEMP_MACRO(Scoped_Symbol, "@#_")
    TEMP_MACRO(String_Literal, "\"\"")
    TEMP_MACRO(Literal, "###")
-   TEMP_MACRO(Fuxe_Symbol, "@%_")
+   TEMP_MACRO(FGround_Symbol, "@%_")
    TEMP_MACRO(Raw_Symbol, "%%_")
    TEMP_MACRO(Bridge_Symbol, "")
    TEMP_MACRO(Sigma_Symbol, "@@_")

@@ -14,8 +14,8 @@
 
 USING_RZNS(PhrGraphCore)
 
-PHR_Graph_Signature::PHR_Graph_Signature(caon_ptr<PHR_Graph_Node> fuxe_node)
- : fuxe_node_(fuxe_node)
+PHR_Graph_Signature::PHR_Graph_Signature(caon_ptr<PHR_Graph_Node> fground_node)
+ : fground_node_(fground_node)
 {
 }
 

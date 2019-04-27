@@ -118,9 +118,9 @@ PHR_Channel* PHR_Channel_Group::find_channel_by_name(QString n,
  return nullptr;
 }
 
-PHR_Channel* PHR_Channel_Group::fuxe_ch()
+PHR_Channel* PHR_Channel_Group::fground_ch()
 {
- return find_channel_by_name("fuxe");
+ return find_channel_by_name("fground");
 }
 
 PHR_Channel*  PHR_Channel_Group::lambda_ch()

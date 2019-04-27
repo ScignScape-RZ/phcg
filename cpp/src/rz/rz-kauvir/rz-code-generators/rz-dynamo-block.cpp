@@ -256,7 +256,7 @@ void RZ_Dynamo_Block::scan_form_from_statement_entry_node(RZ_Lisp_Graph_Visitor_
      {
       current_form_->init_inferred_s0_statement();
      }
-     current_form_->add_fn_token({MS_Token_Kinds::Fuxe_Symbol, fn});
+     current_form_->add_fn_token({MS_Token_Kinds::FGround_Symbol, fn});
     }
 
     // should be a flag ...

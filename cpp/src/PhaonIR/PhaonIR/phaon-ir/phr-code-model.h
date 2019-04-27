@@ -47,11 +47,11 @@ class PHR_Code_Model
 public:
 
  enum class Code_Environments {
-  N_A, Fuxe, Expression, Statement, File, Macro, Class
+  N_A, FGround, Expression, Statement, File, Macro, Class
  };
 
  enum class Recognized_Channel_Kinds {
-  N_A, Fuxe, Lambda, Sigma, Array, Capture, Gamma, Result, Error,
+  N_A, FGround, Lambda, Sigma, Array, Capture, Gamma, Result, Error,
   Preempt_Any, Preempt_Return, Preempt_Continue, Preempt_Break,
   CTOR_Mem, CTOR_Ret
  };

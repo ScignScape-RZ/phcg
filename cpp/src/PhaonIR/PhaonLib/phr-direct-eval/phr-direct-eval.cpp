@@ -132,7 +132,7 @@ void phr_direct_eval(PHR_Code_Model* pcm,
 // PHR_Source_Function* ksf = nullptr;
 // if(scope_system)
 // {
-//  ksf = scope_system->find_source_function_from_current_scope(pcrr.fuxe_name());
+//  ksf = scope_system->find_source_function_from_current_scope(pcrr.fground_name());
 // }
 // if(ksf)
 // {
@@ -192,7 +192,7 @@ void phr_direct_eval(PHR_Code_Model* pcm,
  KCM_Source_Function* ksf = nullptr;
  if(scope_system)
  {
-  ksf = scope_system->find_source_function_from_current_scope(kcrr.fuxe_name());
+  ksf = scope_system->find_source_function_from_current_scope(kcrr.fground_name());
  }
  if(ksf)
  {

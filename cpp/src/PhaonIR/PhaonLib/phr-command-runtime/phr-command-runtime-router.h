@@ -226,7 +226,7 @@ class PHR_Command_Runtime_Router
  QVector<Argument_Info> argument_info_;
  Reflection_Conventions reflection_convention_;
 
- QString fuxe_name_;
+ QString fground_name_;
 
  const PHR_Type_Object* result_type_object_;
 
@@ -287,7 +287,7 @@ public:
  ACCESSORS(Arg_Type_Codes ,return_type_code)
  ACCESSORS(PHR_Proxy_Scope* ,proxy_scope)
 
- ACCESSORS(QString ,fuxe_name)
+ ACCESSORS(QString ,fground_name)
  ACCESSORS__RGET(QVector<Argument_Info> ,argument_info)
  ACCESSORS(envv_fn_type ,envv_fn)
 

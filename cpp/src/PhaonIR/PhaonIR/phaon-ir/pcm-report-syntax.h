@@ -27,10 +27,10 @@ class PCM_Report_Syntax
 public:
 
  flags_(3)
-  bool compress_fuxe_channel:1;
+  bool compress_fground_channel:1;
   bool identify_channel_names:1;
   bool identify_types:1;
-  bool merge_fuxe_and_lambda:1;
+  bool merge_fground_and_lambda:1;
   bool surround_carriers:1;
   bool types_after_values:1;
   bool types_colon_separator:1;

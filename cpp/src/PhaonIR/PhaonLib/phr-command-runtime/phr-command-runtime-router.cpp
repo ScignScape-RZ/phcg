@@ -225,8 +225,8 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* pcp)
   sigma_argument_ = s1a;
  }
 
- PHR_Channel* fuxe = pcp->fuxe_ch();
- if(fuxe->isEmpty())
+ PHR_Channel* fground = pcp->fground_ch();
+ if(fground->isEmpty())
  {
   // no function name!
   return;
@@ -240,8 +240,8 @@ void PHR_Command_Runtime_Router::parse_command_package(PHR_Command_Package* pcp)
    result_type_object_ = r1->type_object();
   }
  }
- PHR_Carrier* phc = fuxe->first();
- fuxe_name_ = phc->symbol_name();
+ PHR_Carrier* phc = fground->first();
+ fground_name_ = phc->symbol_name();
 
  PHR_Channel* lambda = pcp->lambda_ch();
 
@@ -285,7 +285,7 @@ PHR_Function_Vector* PHR_Command_Runtime_Router::get_phr_function_vector(QString
 
 void PHR_Command_Runtime_Router::proceed()
 {
- PHR_Function_Vector* pfv = get_phr_function_vector(fuxe_name_);
+ PHR_Function_Vector* pfv = get_phr_function_vector(fground_name_);
 
  if(sigma_argument_)
  {
@@ -448,7 +448,7 @@ void PHR_Command_Runtime_Router::proceed_s1_2(PHR_Function_Vector* pfv, void** p
 
  //PHR_Runtime_Scope* prs = table_->get_runtime_scope(*symbol_scope_);
 
- s1_fng_type fn = table_->find_s1_declared_function_0(fuxe_name_, nullptr, &result_type_object_);
+ s1_fng_type fn = table_->find_s1_declared_function_0(fground_name_, nullptr, &result_type_object_);
  if(fn)
  {
   // //  raw_value is quint64* standing for void** ...
@@ -811,7 +811,7 @@ void PHR_Command_Runtime_Router::proceed_s1_1(PHR_Function_Vector* pfv, void** p
  }
 
 
- s1_fng_type fn = table_->find_s1_declared_function_0(fuxe_name_, nullptr, &result_type_object_);
+ s1_fng_type fn = table_->find_s1_declared_function_0(fground_name_, nullptr, &result_type_object_);
  if(fn)
  {
   // raw_value is quint64* standing for void** ...
@@ -911,7 +911,7 @@ void PHR_Command_Runtime_Router::proceed_s1_0(PHR_Function_Vector* pfv, void** p
   return;
  }
 
- s1_fng_type fn = table_->find_s1_declared_function_0(fuxe_name_, nullptr, &result_type_object_);
+ s1_fng_type fn = table_->find_s1_declared_function_0(fground_name_, nullptr, &result_type_object_);
  if(fn)
  {
   // raw_value is quint64* standing for void** ...
@@ -1597,7 +1597,7 @@ void PHR_Command_Runtime_Router::Do_Invoke_Method<Arg_Count>
    Do_Invoke_Method__Cast_Schedule__QOB__Cast_<Arg_Count>
      ::Type::template run<QObject*, typename Type_List__All_Cast_Needed<Arg_Count>::Type //,
      >
-      (this_->fuxe_name(),
+      (this_->fground_name(),
       this_->this_object(), 0, *this_,
       this_->argument_info(), args);
    break;

@@ -117,7 +117,7 @@ Purpose_Codes& _PGB_IR_Build::make_token_node(QString arg, MG_Token_Subgroups as
  return purpose_;
 }
 
-Purpose_Codes& _PGB_IR_Build::make_channel_fuxe_entry_node(QString arg1,
+Purpose_Codes& _PGB_IR_Build::make_fsym_ground_node(QString arg1,
   MG_Token_Subgroups asg1, QString arg2,
   MG_Token_Subgroups asg2,
   QString target, MG_Token_Subgroups tsg)
@@ -126,7 +126,7 @@ Purpose_Codes& _PGB_IR_Build::make_channel_fuxe_entry_node(QString arg1,
  MG_Token mgt2 = mgtoken(arg2, MG_Token_Kind_Groups::Generic, asg2);
  MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
 
- qts_ << " (pgb::make_channel_fuxe_entry_node "; end_line({mgt1, mgt2, tmgt});
+ qts_ << " (pgb::make_fsym_ground_node "; end_line({mgt1, mgt2, tmgt});
  return purpose_;
 }
 
@@ -147,7 +147,7 @@ Purpose_Codes& _PGB_IR_Build::make_statement_info_node(QString anchor_name,
  return purpose_;
 }
 
-Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_Subgroups sg1,
+Purpose_Codes& _PGB_IR_Build::add_fsym_ground_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2,
   QString chn,
   MG_Token_Subgroups chnsg,
@@ -159,19 +159,19 @@ Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_entry_node(QString t1, MG_Token_S
 
  if(cfen.isEmpty())
  {
-  qts_ << " (pgb::add_channel_fuxe_entry_node "; end_line({mgt1, mgt2});
+  qts_ << " (pgb::add_fsym_ground_node "; end_line({mgt1, mgt2});
  }
  else
  {
   MG_Token mgt3 = mgtoken(chn, MG_Token_Kind_Groups::Generic, chnsg);
   MG_Token mgt4 = mgtoken(cfen, MG_Token_Kind_Groups::Arg_Target, cfensg);
-  qts_ << " (pgb::add_channel_fuxe_entry_node ";
+  qts_ << " (pgb::add_fsym_ground_node ";
   end_line({mgt1, mgt2, mgt3, mgt4});
  }
  return purpose_;
 }
 
-Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_cross_node(QString t1, MG_Token_Subgroups sg1,
+Purpose_Codes& _PGB_IR_Build::add_channel_fground_cross_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2,
   QString chn,
   MG_Token_Subgroups chnsg,
@@ -183,19 +183,19 @@ Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_cross_node(QString t1, MG_Token_S
 
  if(cfen.isEmpty())
  {
-  qts_ << " (pgb::add_channel_fuxe_cross_node "; end_line({mgt1, mgt2});
+  qts_ << " (pgb::add_channel_fground_cross_node "; end_line({mgt1, mgt2});
  }
  else
  {
   MG_Token mgt3 = mgtoken(chn, MG_Token_Kind_Groups::Generic, chnsg);
   MG_Token mgt4 = mgtoken(cfen, MG_Token_Kind_Groups::Arg_Target, cfensg);
-  qts_ << " (pgb::add_channel_fuxe_cross_node ";
+  qts_ << " (pgb::add_channel_fground_cross_node ";
   end_line({mgt1, mgt2, mgt3, mgt4});
  }
  return purpose_;
 }
 
-Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_coentry_node(QString t1, MG_Token_Subgroups sg1,
+Purpose_Codes& _PGB_IR_Build::add_channel_fground_coentry_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2,
   QString chn,
   MG_Token_Subgroups chnsg,
@@ -207,13 +207,13 @@ Purpose_Codes& _PGB_IR_Build::add_channel_fuxe_coentry_node(QString t1, MG_Token
 
  if(cfen.isEmpty())
  {
-  qts_ << " (pgb::add_channel_fuxe_coentry_node "; end_line({mgt1, mgt2});
+  qts_ << " (pgb::add_channel_fground_coentry_node "; end_line({mgt1, mgt2});
  }
  else
  {
   MG_Token mgt3 = mgtoken(chn, MG_Token_Kind_Groups::Generic, chnsg);
   MG_Token mgt4 = mgtoken(cfen, MG_Token_Kind_Groups::Arg_Target, cfensg);
-  qts_ << " (pgb::add_channel_fuxe_coentry_node ";
+  qts_ << " (pgb::add_channel_fground_coentry_node ";
   end_line({mgt1, mgt2, mgt3, mgt4});
  }
  return purpose_;

@@ -68,7 +68,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(make_root_node)
   TEMP_MACRO(make_token_node)
   TEMP_MACRO(add_type_declaration)
-  TEMP_MACRO(make_channel_fuxe_entry_node)
+  TEMP_MACRO(make_fsym_ground_node)
   TEMP_MACRO(add_block_entry_node)
   TEMP_MACRO(add_channel_token)
   TEMP_MACRO(add_channel_continue_token)
@@ -79,9 +79,9 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(copy_value)
   TEMP_MACRO(add_statement_sequence_node)
   TEMP_MACRO(make_statement_info_node)
-  TEMP_MACRO(add_channel_fuxe_entry_node)
-  TEMP_MACRO(add_channel_fuxe_cross_node)
-  TEMP_MACRO(add_channel_fuxe_coentry_node)
+  TEMP_MACRO(add_fsym_ground_node)
+  TEMP_MACRO(add_channel_fground_cross_node)
+  TEMP_MACRO(add_channel_fground_coentry_node)
   TEMP_MACRO(make_block_info_node)
   TEMP_MACRO(add_channel_continue_block_node)
   TEMP_MACRO(make_signature_node)
@@ -301,16 +301,16 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
   };
   break;
 
- case PGB_Methods::make_channel_fuxe_entry_node:
+ case PGB_Methods::make_fsym_ground_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
    QList<MG_Token> gts = get_generic_tokens(mgtm);
    if(gts.size() < 2)
      break;
    if(tr)
-     *tr = graph_build_.make_channel_fuxe_entry_node(gts[0].raw_text, gts[1].raw_text);
+     *tr = graph_build_.make_fsym_ground_node(gts[0].raw_text, gts[1].raw_text);
    else
-     graph_build_.make_channel_fuxe_entry_node(gts[0].raw_text, gts[1].raw_text);
+     graph_build_.make_fsym_ground_node(gts[0].raw_text, gts[1].raw_text);
   };
   break;
  case PGB_Methods::make_statement_info_node:
@@ -336,39 +336,39 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
      *tr = pr.second;
   }
   break;
- case PGB_Methods::add_channel_fuxe_entry_node:
+ case PGB_Methods::add_fsym_ground_node:
   {
    caon_ptr<PHR_Graph_Node> extra = nullptr;
    auto pr = get_args(mgtm, &extra);
    QList<MG_Token> gts = get_generic_tokens(mgtm);
    if(gts.isEmpty())
-     graph_build_.add_channel_fuxe_entry_node(pr.first, pr.second);
+     graph_build_.add_fsym_ground_node(pr.first, pr.second);
    else
-     graph_build_.add_channel_fuxe_entry_node(pr.first, pr.second,
+     graph_build_.add_fsym_ground_node(pr.first, pr.second,
      gts.first().raw_text, extra);
   }
   break;
- case PGB_Methods::add_channel_fuxe_cross_node:
+ case PGB_Methods::add_channel_fground_cross_node:
   {
    caon_ptr<PHR_Graph_Node> extra = nullptr;
    auto pr = get_args(mgtm, &extra);
    QList<MG_Token> gts = get_generic_tokens(mgtm);
    if(gts.isEmpty())
-     graph_build_.add_channel_fuxe_cross_node(pr.first, pr.second);
+     graph_build_.add_channel_fground_cross_node(pr.first, pr.second);
    else
-     graph_build_.add_channel_fuxe_cross_node(pr.first, pr.second,
+     graph_build_.add_channel_fground_cross_node(pr.first, pr.second,
      gts.first().raw_text, extra);
   }
   break;
- case PGB_Methods::add_channel_fuxe_coentry_node:
+ case PGB_Methods::add_channel_fground_coentry_node:
   {
    caon_ptr<PHR_Graph_Node> extra = nullptr;
    auto pr = get_args(mgtm, &extra);
    QList<MG_Token> gts = get_generic_tokens(mgtm);
    if(gts.isEmpty())
-     graph_build_.add_channel_fuxe_coentry_node(pr.first, pr.second);
+     graph_build_.add_channel_fground_coentry_node(pr.first, pr.second);
    else
-     graph_build_.add_channel_fuxe_coentry_node(pr.first, pr.second,
+     graph_build_.add_channel_fground_coentry_node(pr.first, pr.second,
      gts.first().raw_text, extra);
   }
   break;

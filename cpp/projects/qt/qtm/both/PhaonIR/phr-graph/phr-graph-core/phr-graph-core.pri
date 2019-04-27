@@ -55,7 +55,7 @@ HEADERS += \
   $$SRC_DIR/output/phr-graph-phr-output.h \
   $$SRC_DIR/output/generators/statement-generator.h \
   $$SRC_DIR/output/generators/expression-generator.h \
-  $$SRC_DIR/token/phr-graph-fuxe-entry.h \
+  $$SRC_DIR/token/phr-graph-fground-entry.h \
   $$SRC_DIR/token/phr-graph-statement-info.h \
   $$SRC_DIR/token/phr-graph-block-info.h \
   $$SRC_DIR/token/phr-graph-type-declaration.h \
@@ -80,7 +80,7 @@ SOURCES += \
   $$SRC_DIR/output/phr-graph-phr-output.cpp \
   $$SRC_DIR/output/generators/statement-generator.cpp \
   $$SRC_DIR/output/generators/expression-generator.cpp \
-  $$SRC_DIR/token/phr-graph-fuxe-entry.cpp \
+  $$SRC_DIR/token/phr-graph-fground-entry.cpp \
   $$SRC_DIR/token/phr-graph-statement-info.cpp \
   $$SRC_DIR/token/phr-graph-block-info.cpp \
   $$SRC_DIR/token/phr-graph-type-declaration.cpp \

@@ -15,11 +15,11 @@ DOMINION_CONNECTOR(Type_Declaration, "type-declaration")
 
 DOMINION_CONNECTOR(Channel_XEntry, "channel-xentry")
 
-DOMINION_CONNECTOR(Channel_Fuxe_Entry, "channel-fuxe-entry")
+DOMINION_CONNECTOR(Channel_FGround_Entry, "channel-fground-entry")
 
-DOMINION_CONNECTOR(Channel_Fuxe_Coentry, "channel-fuxe-coentry")
+DOMINION_CONNECTOR(Channel_FGround_Coentry, "channel-fground-coentry")
 
-DOMINION_CONNECTOR(Channel_Fuxe_Cross, "channel-fuxe-cross")
+DOMINION_CONNECTOR(Channel_FGround_Cross, "channel-fground-cross")
 
 DOMINION_CONNECTOR(Channel_Sequence, "channel-sequence")
 

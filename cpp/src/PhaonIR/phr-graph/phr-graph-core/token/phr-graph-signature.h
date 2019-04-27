@@ -29,16 +29,16 @@ class PHR_Graph_Node;
 
 class PHR_Graph_Signature
 {
- caon_ptr<PHR_Graph_Node> fuxe_node_;
+ caon_ptr<PHR_Graph_Node> fground_node_;
 
  QList<MG_Token> tokens_;
 
 public:
 
- ACCESSORS(caon_ptr<PHR_Graph_Node> ,fuxe_node)
+ ACCESSORS(caon_ptr<PHR_Graph_Node> ,fground_node)
  ACCESSORS__RGET(QList<MG_Token> ,tokens)
 
- PHR_Graph_Signature(caon_ptr<PHR_Graph_Node> fuxe_node);
+ PHR_Graph_Signature(caon_ptr<PHR_Graph_Node> fground_node);
 
  void add_tokens(QList<MG_Token>& mgts);
 

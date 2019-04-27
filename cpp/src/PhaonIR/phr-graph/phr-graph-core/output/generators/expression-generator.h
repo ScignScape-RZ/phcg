@@ -25,7 +25,7 @@ RZNS_(PhrGraphCore)
 
 class PHR_Graph_Node;
 class PHR_Graph_Token;
-class PHR_Graph_Fuxe_Entry;
+class PHR_Graph_FGround_Entry;
 class PHR_Graph_Statement_Info;
 class PHR_Graph_Block_Info;
 
@@ -70,7 +70,7 @@ public:
  void generate_from_node(QTextStream& qts,
   const PHR_Graph_Node& node, int unw = 0);
 
- void generate_fuxe_entry(QTextStream& qts, PHR_Graph_Fuxe_Entry& fen,
+ void generate_fground_entry(QTextStream& qts, PHR_Graph_FGround_Entry& fen,
   const PHR_Graph_Node& node, int unw);
 
  void generate_block(QTextStream& qts, PHR_Graph_Block_Info& bin,
@@ -79,7 +79,7 @@ public:
  void generate_from_fn_node(QTextStream& qts,
    PHR_Graph_Token& tok, QString channel_name,
    const PHR_Graph_Node& arg_node, int unw,
-   PHR_Graph_Fuxe_Entry* fen = nullptr,
+   PHR_Graph_FGround_Entry* fen = nullptr,
    SB_Info sbi = SB_Info());
 
  void generate_xchannel(QTextStream& qts, QString channel_name,
@@ -88,7 +88,7 @@ public:
  void generate_arg_carriers(QTextStream& qts,
    QString channel_name,
    const PHR_Graph_Node& arg_node, int unw,
-   PHR_Graph_Fuxe_Entry* fen); //, SB_Info sbi = SB_Info());
+   PHR_Graph_FGround_Entry* fen); //, SB_Info sbi = SB_Info());
 
  void generate_arg_carriers(QTextStream& qts,
   QString channel_name,
