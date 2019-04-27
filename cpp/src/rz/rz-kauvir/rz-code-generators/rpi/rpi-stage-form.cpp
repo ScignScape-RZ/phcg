@@ -316,6 +316,7 @@ void RPI_Stage_Form::add_expression_wrapper(caon_ptr<RPI_Stage_Form> form,
 
 void RPI_Stage_Form::set_prior_sibling_flags(caon_ptr<RPI_Stage_Form> prior)
 {
+ CAON_PTR_DEBUG(RPI_Stage_Form ,prior)
  if(!prior)
    return;
  RPI_Stage_Element_Kinds k = prior->last_element_kind();
@@ -331,6 +332,17 @@ void RPI_Stage_Form::set_prior_sibling_flags(caon_ptr<RPI_Stage_Form> prior)
  case RPI_Stage_Element_Kinds::Literal:
  case RPI_Stage_Element_Kinds::String_Literal:
   flags.prior_sibling_is_token = true;
+
+ case RPI_Stage_Element_Kinds::Instruction_Symbol:
+  if(prior->instruction("kb::write-anon-fdef"))
+  {
+   // // here the prior is basically a wrapper for this form
+   flags.prior_sibling_is_block = prior->flags.prior_sibling_is_block;
+   flags.prior_sibling_is_expression = prior->flags.prior_sibling_is_expression;
+   flags.prior_sibling_is_fuxe_token = prior->flags.prior_sibling_is_fuxe_token;
+   flags.prior_sibling_is_fuxe_token = prior->flags.prior_sibling_is_token;
+  }
+  break;
  default:
   break;
  }
@@ -808,6 +820,9 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
          pgb_(step_forms_).make_channel_fuxe_entry_node(
          ":result", ty.prepend(':'),  "&cfx-node");
 
+       if(f->flags.write_push_expression)
+         pgb_(step_forms_).push_expression_entry();
+
        if(f->flags.has_preceder_token)
          pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
          .add_channel_fuxe_entry_node(
@@ -825,6 +840,10 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
          "&entry-node", ":lambda", "&cfx-node");
       }
       step_forms_.append(f->step_forms());
+
+      if(f->flags.write_push_expression)
+        pgb_(step_forms_).pop_expression_entry();
+
       pgb_(step_forms_).copy_value( "!last_expression_entry_node",
         "&channel-seq");
      }

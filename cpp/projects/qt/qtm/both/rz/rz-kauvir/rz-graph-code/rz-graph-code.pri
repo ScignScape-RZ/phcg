@@ -20,7 +20,7 @@ INCLUDEPATH += $$HGDM_SRC_GROUP_DIR
 INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 
 
-LIBS += -L$$TARGETSDIR -lrz-graph-visit -lrz-graph-sre -lrz-code-generators    \
+LIBS += -L$$TARGETSDIR -lrz-graph-visit -lrz-graph-sre  \
  -lrz-graph-core -lrz-graph-token -lrz-graph-run -lrz-graph-valuer  \
  -lrz-code-generators  -lrz-function-def
 

@@ -324,6 +324,20 @@ void PHR_Graph_Build::add_channel_entry_block_node(
  source << fr_/qy_.Channel_Entry_Block(cion) >> target;
 }
 
+void PHR_Graph_Build::push_expression_entry()
+{
+ expression_entry_node_stack_.push(last_expression_entry_node_);
+}
+
+void PHR_Graph_Build::pop_expression_entry()
+{
+ if(expression_entry_node_stack_.isEmpty())
+   last_expression_entry_node_ = nullptr; // // err?
+ else
+   last_expression_entry_node_ = expression_entry_node_stack_.pop();
+}
+
+
 void PHR_Graph_Build::add_channel_continue_block_node(
   caon_ptr<PHR_Graph_Node> source,
   caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin)

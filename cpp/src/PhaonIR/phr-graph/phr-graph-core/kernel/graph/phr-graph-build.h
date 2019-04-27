@@ -15,6 +15,7 @@
 #include "accessors.h"
 
 #include <QTextStream>
+#include <QStack>
 
 #include "rzns.h"
 
@@ -37,6 +38,8 @@ class PHR_Graph_Build
  caon_ptr<PHR_Graph_Node> last_block_pre_entry_node_;
  caon_ptr<PHR_Graph_Node> last_expression_entry_node_;
  caon_ptr<PHR_Graph_Node> last_block_entry_node_;
+
+ QStack<caon_ptr<PHR_Graph_Node>> expression_entry_node_stack_;
 
  caon_ptr<PHR_Graph_Node> held_type_declaration_node_;
 
@@ -91,6 +94,9 @@ public:
  void add_statement_sequence_node(
    caon_ptr<PHR_Graph_Node> source,
    caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> sin = nullptr);
+
+ void push_expression_entry();
+ void pop_expression_entry();
 
  caon_ptr<PHR_Graph_Node> make_token_node(MG_Token& mgt);
  caon_ptr<PHR_Graph_Node> make_token_node(MG_Token&& mgt)

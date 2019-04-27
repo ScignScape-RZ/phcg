@@ -123,6 +123,7 @@ void RPI_Block::add_form_from_call_entry_node(RZ_Graph_Visitor_Phaon& visitor_ph
  }
  else
  {
+  CAON_PTR_DEBUG(RPI_Stage_Form ,current_form_)
   current_form_ = new RPI_Stage_Form(pgb_);
 
   if(prior_form)
@@ -537,6 +538,8 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
     RPI_Stage_Form* new_form = new RPI_Stage_Form(pgb_, current_form_);
     new_form->set_parent_lambda_position(lambda_count);
     new_form->set_implicit_added_depth(implicit_added_depth);
+
+    new_form->flags.write_push_expression = true;
 
     new_form->set_prior_sibling_flags(current_form_);
     current_form_->add_expression(new_form);

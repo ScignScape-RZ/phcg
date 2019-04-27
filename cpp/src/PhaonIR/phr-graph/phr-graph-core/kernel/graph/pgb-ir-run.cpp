@@ -480,6 +480,16 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
   }
   break;
 
+ case PGB_Methods::push_expression_entry:
+  graph_build_.push_expression_entry();
+  break;
+
+ case PGB_Methods::pop_expression_entry:
+  graph_build_.pop_expression_entry();
+  break;
+
+
+
  default:
   break;
  }

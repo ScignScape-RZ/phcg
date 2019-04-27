@@ -61,6 +61,8 @@ public:
   bool prior_sibling_is_token:1;
   bool prior_sibling_is_expression:1;
   bool prior_sibling_is_block:1;
+
+  bool write_push_expression:1;
  _flags
 
 private:
