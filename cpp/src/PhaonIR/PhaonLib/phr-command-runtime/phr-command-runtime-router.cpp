@@ -581,7 +581,8 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
    }
    else if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::PCV_Ptr)
    {
-    mem = *(quint64*) kcra->raw_value();
+    //?
+    mem = *(quint64*) kcra->raw_value_as_pointer();
    }
 
    result = &mem;

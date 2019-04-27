@@ -58,6 +58,11 @@ public:
  ACCESSORS(const QMetaObject* ,pqmo)
  ACCESSORS(const QMetaType* ,qmt)
 
+ void** raw_value_as_pointer()
+ {
+  return &raw_value_;
+ }
+
 
  QString qob_reflection_type_name();
  QString qob_reflection_modifier();

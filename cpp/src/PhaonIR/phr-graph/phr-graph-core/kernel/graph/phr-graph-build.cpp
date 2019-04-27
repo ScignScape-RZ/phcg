@@ -348,12 +348,15 @@ void PHR_Graph_Build::push_block_entry()
 void PHR_Graph_Build::pop_block_entry()
 {
  prior_block_entry_node_ = last_block_entry_node_;
+ CAON_PTR_DEBUG(PHR_Graph_Node ,prior_block_entry_node_)
+
  if(block_entry_node_stack_.isEmpty())
    last_block_entry_node_ = nullptr; // // err?
  else
  {
   last_block_entry_node_ = block_entry_node_stack_.pop();
   CAON_PTR_DEBUG(PHR_Graph_Node ,last_block_entry_node_)
+  CAON_DEBUG_NOOP
  }
 }
 

@@ -819,11 +819,11 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 
       if(f->flags.prior_sibling_is_fuxe_token)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_entry_block_node("!prior_block_entry_node", "lambda",
+        .add_channel_entry_block_node("!last_expression_entry_node", "lambda",
         "&fsym-node", "&bin", "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_token)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_sequence_block_node("!last_block_entry_node",
+        .add_channel_sequence_block_node("&channel-seq",
         "&fsym-node", "&bin", "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_expression)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
