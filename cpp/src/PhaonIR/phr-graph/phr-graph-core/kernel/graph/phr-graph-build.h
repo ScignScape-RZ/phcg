@@ -62,6 +62,17 @@ public:
    caon_ptr<PHR_Graph_Node> source,
    caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> sin = nullptr);
 
+
+ void add_channel_sequence_block_node(
+   caon_ptr<PHR_Graph_Node> source,
+   caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin = nullptr);
+
+
+ void add_channel_cross_block_node(
+   caon_ptr<PHR_Graph_Node> source,
+   caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin = nullptr);
+
+
  void add_channel_continue_block_node(
    caon_ptr<PHR_Graph_Node> source,
    caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin = nullptr);

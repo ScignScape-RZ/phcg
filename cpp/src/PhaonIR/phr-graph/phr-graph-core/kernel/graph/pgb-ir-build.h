@@ -30,7 +30,7 @@ class PHR_Graph_Query;
 
 enum class Purpose_Codes
 {
- N_A, Generic, Make_Token_Node_Fuxe_Sumbol,
+ N_A, Generic, Make_Token_Node_FSym,
  Copy_To_Last_Statement_Entry_Node
 };
 
@@ -197,6 +197,30 @@ public:
    QString t2, QString t3, QString t4)
  {
   return add_channel_entry_block_node(t1.mid(1), get_subgroup(t1[0]), chn,
+    t2.mid(1), get_subgroup(t2[0]), t3.mid(1), get_subgroup(t3[0]),
+    t4.mid(1), get_subgroup(t4[0]) );
+ }
+
+
+ Purpose_Codes& add_channel_sequence_block_node(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2,
+   QString t3, MG_Token_Subgroups sg3, QString t4, MG_Token_Subgroups sg4);
+ Purpose_Codes& add_channel_sequence_block_node(QString t1, QString t2,
+   QString t3, QString t4)
+ {
+  return add_channel_sequence_block_node(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]), t3.mid(1), get_subgroup(t3[0]),
+    t4.mid(1), get_subgroup(t4[0]) );
+ }
+
+
+ Purpose_Codes& add_channel_cross_block_node(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2,
+   QString t3, MG_Token_Subgroups sg3, QString t4, MG_Token_Subgroups sg4);
+ Purpose_Codes& add_channel_cross_block_node(QString t1, QString t2,
+   QString t3, QString t4)
+ {
+  return add_channel_cross_block_node(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]), t3.mid(1), get_subgroup(t3[0]),
     t4.mid(1), get_subgroup(t4[0]) );
  }

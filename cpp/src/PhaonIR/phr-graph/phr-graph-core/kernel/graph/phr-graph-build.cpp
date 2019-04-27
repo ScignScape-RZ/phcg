@@ -338,6 +338,31 @@ void PHR_Graph_Build::pop_expression_entry()
 }
 
 
+void PHR_Graph_Build::add_channel_sequence_block_node(
+  caon_ptr<PHR_Graph_Node> source,
+  caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,target)
+
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(bin);
+
+ source << fr_/qy_.Channel_Sequence_Block(cion) >> target;
+}
+
+
+void PHR_Graph_Build::add_channel_cross_block_node(
+  caon_ptr<PHR_Graph_Node> source,
+  caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,source)
+ CAON_PTR_DEBUG(PHR_Graph_Node ,target)
+
+ caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(bin);
+
+ source << fr_/qy_.Channel_Cross_Block(cion) >> target;
+}
+
 void PHR_Graph_Build::add_channel_continue_block_node(
   caon_ptr<PHR_Graph_Node> source,
   caon_ptr<PHR_Graph_Node> target, caon_ptr<PHR_Graph_Node> bin)

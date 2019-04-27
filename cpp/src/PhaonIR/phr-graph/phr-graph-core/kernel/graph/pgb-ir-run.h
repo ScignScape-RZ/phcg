@@ -46,7 +46,8 @@ class PGB_IR_Run
   add_channel_fuxe_cross_node, add_channel_fuxe_coentry_node,
   make_block_info_node, add_channel_continue_block_node,
   make_signature_node, signature, add_channel_entry_block_node,
-  push_expression_entry, pop_expression_entry
+  push_expression_entry, pop_expression_entry,
+  add_channel_sequence_block_node, add_channel_cross_block_node
  };
 
  PGB_Methods parse_pgb_method(QString key);

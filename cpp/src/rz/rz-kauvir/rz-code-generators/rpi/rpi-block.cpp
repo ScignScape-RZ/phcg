@@ -896,12 +896,12 @@ void RPI_Block::write(QList<PGB_IR_Build::Text_With_Purpose>& tps, QTextStream& 
        rai.encode_ikind().prepend(':'), "&si-node");
      pgb_.insert_before_purpose(rsf->step_forms(),  Purpose_Codes::Copy_To_Last_Statement_Entry_Node)
        .add_statement_sequence_node("!last_statement_entry_node",
-       "&entry-node", "&si-node");
+       "&fsym-node", "&si-node");
     }
     else
       pgb_.insert_before_purpose(rsf->step_forms(),  Purpose_Codes::Copy_To_Last_Statement_Entry_Node)
       .add_statement_sequence_node("!last_statement_entry_node",
-      "&entry-node");
+      "&fsym-node");
    }
   }
 

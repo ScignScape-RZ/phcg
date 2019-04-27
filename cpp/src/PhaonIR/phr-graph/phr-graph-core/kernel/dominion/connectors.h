@@ -33,6 +33,8 @@ DOMINION_CONNECTOR(Signature_Node, "signature-node")
 
 DOMINION_CONNECTOR(Channel_Entry_Block, "channel-entry-block")
 
+DOMINION_CONNECTOR(Channel_Sequence_Block, "channel-sequence-block")
+DOMINION_CONNECTOR(Channel_Cross_Block, "channel-cross-block")
 
 
 DOMINION_CONNECTOR(Run_Call_Entry, "run-call-entry")
