@@ -87,7 +87,12 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(make_signature_node)
   TEMP_MACRO(signature)
   TEMP_MACRO(add_channel_entry_block_node)
-
+  TEMP_MACRO(add_channel_cross_block_node)
+  TEMP_MACRO(add_channel_sequence_block_node)
+  TEMP_MACRO(push_expression_entry)
+  TEMP_MACRO(pop_expression_entry)
+  TEMP_MACRO(push_block_entry)
+  TEMP_MACRO(pop_block_entry)
  }};
 
 #undef TEMP_MACRO

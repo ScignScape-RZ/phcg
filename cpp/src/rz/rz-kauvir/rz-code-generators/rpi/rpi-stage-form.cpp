@@ -819,7 +819,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 
       if(f->flags.prior_sibling_is_fuxe_token)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_entry_block_node("!last_block_entry_node", "lambda",
+        .add_channel_entry_block_node("!prior_block_entry_node", "lambda",
         "&fsym-node", "&bin", "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_token)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
@@ -827,11 +827,11 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
         "&fsym-node", "&bin", "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_expression)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_continue_block_node("!last_block_entry_node",
+        .add_channel_continue_block_node("!last_expression_entry_node",
         "&fsym-node", "&bin",  "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_block)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_cross_block_node("!last_block_entry_node",
+        .add_channel_cross_block_node("!prior_block_entry_node",
         "&fsym-node", "&bin",  "!last_block_entry_node");
 
 //         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)

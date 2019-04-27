@@ -46,8 +46,20 @@ void PHR_Graph_Node::debug_connections() const
   it.next();
   CAON_EVALUATE_DEBUG(PHR_Graph_Connectors ,key ,it.key())
   CAON_EVALUATE_DEBUG(PHR_Graph_Node ,value ,it.value())
-
+  CAON_DEBUG_NOOP
  }
+
+ annotated_targets_iterator_type ait(annotated_targets_);
+ while(ait.hasNext())
+ {
+  ait.next();
+  CAON_EVALUATE_DEBUG(PHR_Graph_Connectors ,key ,ait.key())
+  //QPair<Connection_Caon_type, Node_Caon_type> pr
+  CAON_EVALUATE_DEBUG(PHR_Graph_Node ,value ,ait.value().second)
+  CAON_DEBUG_NOOP
+ }
+
+
 }
 
 void PHR_Graph_Node::add_hyponode(caon_ptr<PHR_Graph_Node> n)

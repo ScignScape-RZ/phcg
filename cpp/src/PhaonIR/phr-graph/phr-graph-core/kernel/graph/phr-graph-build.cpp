@@ -51,6 +51,8 @@ PHR_Graph_Build::PHR_Graph_Build(PHR_Graph& graph)
    last_block_pre_entry_node_(nullptr),
    last_expression_entry_node_(nullptr),
    held_type_declaration_node_(nullptr),
+   last_block_entry_node_(nullptr),
+   prior_block_entry_node_(nullptr),
   fr_(PHR_Graph_Frame::instance()),
   qy_(PHR_Graph_Query::instance())
 {
@@ -339,15 +341,20 @@ void PHR_Graph_Build::pop_expression_entry()
 
 void PHR_Graph_Build::push_block_entry()
 {
+ CAON_PTR_DEBUG(PHR_Graph_Node ,last_block_entry_node_)
  block_entry_node_stack_.push(last_block_entry_node_);
 }
 
 void PHR_Graph_Build::pop_block_entry()
 {
+ prior_block_entry_node_ = last_block_entry_node_;
  if(block_entry_node_stack_.isEmpty())
    last_block_entry_node_ = nullptr; // // err?
  else
-   last_block_entry_node_ = block_entry_node_stack_.pop();
+ {
+  last_block_entry_node_ = block_entry_node_stack_.pop();
+  CAON_PTR_DEBUG(PHR_Graph_Node ,last_block_entry_node_)
+ }
 }
 
 void PHR_Graph_Build::add_channel_sequence_block_node(

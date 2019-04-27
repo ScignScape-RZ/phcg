@@ -66,6 +66,7 @@ struct Node_Ptr_Default_Galaxy : Node_Ptr_Basic_Galaxy
  typedef typename DOMINION::Document_type Document_type;
  typedef typename DOMINION::Root_type Root_type;
  typedef caon_ptr<Connectors_type> Connectors_Caon_type;
+ typedef caon_ptr<Annotated_Connectors_type> Annotated_Connectors_Caon_type;
  typedef caon_ptr<Connection_type> Connection_Caon_type;
  typedef caon_ptr<Node_type> Node_Caon_type;
  typedef caon_ptr<Root_type> Root_Caon_type;
@@ -246,6 +247,7 @@ protected:
  typedef typename GALAXY_Type::Type_Codes_type Type_Codes_type;
  typedef typename GALAXY_Type::Node_Caon_type Node_Caon_type;
  typedef typename GALAXY_Type::Connectors_Caon_type Connectors_Caon_type;
+ typedef typename GALAXY_Type::Annotated_Connectors_Caon_type Annotated_Connectors_Caon_type;
  typedef typename GALAXY_Type::Connection_Caon_type Connection_Caon_type;
  typedef typename GALAXY_Type::Frame_type Frame_type;
 

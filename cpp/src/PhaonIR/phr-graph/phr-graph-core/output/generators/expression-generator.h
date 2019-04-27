@@ -61,6 +61,9 @@ public:
 
  void check_generate_type_declaration(QTextStream& qts, const PHR_Graph_Node& node);
 
+ void generate_arg_carriers_follow(QTextStream& qts,
+   caon_ptr<PHR_Graph_Node> n, int unw);
+
  void generate_carrier(QTextStream& qts,
    PHR_Graph_Token& tokn);
 
