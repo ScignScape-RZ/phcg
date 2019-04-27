@@ -337,6 +337,18 @@ void PHR_Graph_Build::pop_expression_entry()
    last_expression_entry_node_ = expression_entry_node_stack_.pop();
 }
 
+void PHR_Graph_Build::push_block_entry()
+{
+ block_entry_node_stack_.push(last_block_entry_node_);
+}
+
+void PHR_Graph_Build::pop_block_entry()
+{
+ if(block_entry_node_stack_.isEmpty())
+   last_block_entry_node_ = nullptr; // // err?
+ else
+   last_block_entry_node_ = block_entry_node_stack_.pop();
+}
 
 void PHR_Graph_Build::add_channel_sequence_block_node(
   caon_ptr<PHR_Graph_Node> source,

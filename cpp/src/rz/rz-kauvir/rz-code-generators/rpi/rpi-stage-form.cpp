@@ -299,14 +299,16 @@ void RPI_Stage_Form::write(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
  }
 }
 
-bool RPI_Stage_Form::instruction(QString sym)
+QString RPI_Stage_Form::instruction()
 {
  if(inner_elements_.isEmpty())
-   return false;
+   return QString();
  if(inner_elements_.first().kind() != RPI_Stage_Element_Kinds::Instruction_Symbol)
-   return false;
- return inner_elements_.first().text() == sym;
+   return QString();
+ return inner_elements_.first().text();
 }
+
+
 
 void RPI_Stage_Form::add_expression_wrapper(caon_ptr<RPI_Stage_Form> form,
   QString text, int hdcode)
@@ -323,7 +325,10 @@ void RPI_Stage_Form::set_prior_sibling_flags(caon_ptr<RPI_Stage_Form> prior)
  switch(k)
  {
  case RPI_Stage_Element_Kinds::Form:
-  flags.prior_sibling_is_expression = true;
+  if(prior->last_element_form_instruction("kb::write-anon-fdef"))
+    flags.prior_sibling_is_block = prior->flags.prior_sibling_is_block;
+  else
+    flags.prior_sibling_is_expression = true;
   break;
  case RPI_Stage_Element_Kinds::Fuxe_Symbol:
   flags.prior_sibling_is_fuxe_token = true;
@@ -340,12 +345,25 @@ void RPI_Stage_Form::set_prior_sibling_flags(caon_ptr<RPI_Stage_Form> prior)
    flags.prior_sibling_is_block = prior->flags.prior_sibling_is_block;
    flags.prior_sibling_is_expression = prior->flags.prior_sibling_is_expression;
    flags.prior_sibling_is_fuxe_token = prior->flags.prior_sibling_is_fuxe_token;
-   flags.prior_sibling_is_fuxe_token = prior->flags.prior_sibling_is_token;
+   flags.prior_sibling_is_token = prior->flags.prior_sibling_is_token;
   }
   break;
  default:
   break;
  }
+ init_prior_description();
+}
+
+void RPI_Stage_Form::init_prior_description()
+{
+ if(flags.prior_sibling_is_block)
+   prior_description_ = "prior_sibling_is_block";
+ if(flags.prior_sibling_is_expression)
+   prior_description_ = "prior_sibling_is_expression";
+ if(flags.prior_sibling_is_fuxe_token)
+   prior_description_ = "prior_sibling_is_fuxe_token";
+ if(flags.prior_sibling_is_token)
+   prior_description_ = "prior_sibling_is_token";
 }
 
 RPI_Stage_Element_Kinds RPI_Stage_Form::last_element_kind()
@@ -353,6 +371,14 @@ RPI_Stage_Element_Kinds RPI_Stage_Form::last_element_kind()
  if(inner_elements_.isEmpty())
    return RPI_Stage_Element_Kinds::N_A;
  return inner_elements_.last().kind();
+}
+
+QString RPI_Stage_Form::last_element_form_instruction()
+{
+ RPI_Stage_Element_Kinds k = last_element_kind();
+ if(k == RPI_Stage_Element_Kinds::Form)
+   return inner_elements_.last().form()->instruction();
+ return QString();
 }
 
 void RPI_Stage_Form::add_expression(caon_ptr<RPI_Stage_Form> form)
@@ -646,6 +672,7 @@ void RPI_Stage_Form::write_type_declaration(QTextStream& qts)
 
 void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form> prior)
 {
+ CAON_PTR_DEBUG(RPI_Stage_Form ,prior)
  check_init_annotation_flags();
  QString icd = QString(implicit_added_depth_, '(');
 
@@ -791,26 +818,30 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 
       if(f->flags.prior_sibling_is_fuxe_token)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_entry_block_node("&channel-seq", "lambda",
+        .add_channel_entry_block_node("!last_block_entry_node", "lambda",
         "&fsym-node", "&bin", "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_token)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_sequence_block_node("&channel-seq",
+        .add_channel_sequence_block_node("!last_block_entry_node",
         "&fsym-node", "&bin", "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_expression)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_continue_block_node("&channel-seq",
-        "&fsym-node", "&bin",  "&channel-seq");
+        .add_channel_continue_block_node("!last_block_entry_node",
+        "&fsym-node", "&bin",  "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_block)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_cross_block_node("&channel-seq",
-        "&fsym-node", "&bin",  "&channel-seq");
+        .add_channel_cross_block_node("!last_block_entry_node",
+        "&fsym-node", "&bin",  "!last_block_entry_node");
 
 //         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_Fuxe_Sumbol)
 //         .add_channel_continue_block_node("!last_expression_entry_node",
 //         "&fsym-node", "&bin",  "!last_block_entry_node");
+
+      pgb_(step_forms_).push_block_entry();
+
       step_forms_.append(f->step_forms());
-      pgb_(step_forms_).copy_value("!last_block_entry_node", "&channel-seq");
+
+      pgb_(step_forms_).pop_block_entry();
      }
     }
     else

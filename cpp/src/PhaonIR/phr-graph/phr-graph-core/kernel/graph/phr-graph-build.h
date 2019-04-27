@@ -40,6 +40,7 @@ class PHR_Graph_Build
  caon_ptr<PHR_Graph_Node> last_block_entry_node_;
 
  QStack<caon_ptr<PHR_Graph_Node>> expression_entry_node_stack_;
+ QStack<caon_ptr<PHR_Graph_Node>> block_entry_node_stack_;
 
  caon_ptr<PHR_Graph_Node> held_type_declaration_node_;
 
@@ -108,6 +109,9 @@ public:
 
  void push_expression_entry();
  void pop_expression_entry();
+
+ void push_block_entry();
+ void pop_block_entry();
 
  caon_ptr<PHR_Graph_Node> make_token_node(MG_Token& mgt);
  caon_ptr<PHR_Graph_Node> make_token_node(MG_Token&& mgt)

@@ -109,6 +109,9 @@ public:
  Purpose_Codes& push_expression_entry();
  Purpose_Codes& pop_expression_entry();
 
+ Purpose_Codes& push_block_entry();
+ Purpose_Codes& pop_block_entry();
+
  Purpose_Codes& make_channel_fuxe_entry_node(QString arg1,
    MG_Token_Subgroups asg1, QString arg2,
    MG_Token_Subgroups asg2,

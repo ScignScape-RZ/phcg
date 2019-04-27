@@ -111,12 +111,22 @@ private:
 
  QString s1_assignment_check_;
 
+ QString prior_description_;
+
  void mark_unsurrounded_nested();
  void add_string_token(QString tok);
 
  RPI_Assignment_Info* get_parent_assignmnt_info();
 
  RPI_Stage_Element_Kinds last_element_kind();
+
+ QString last_element_form_instruction();
+ bool last_element_form_instruction(QString arg)
+ {
+  return last_element_form_instruction() == arg;
+ }
+
+ void init_prior_description();
 
 public:
 
@@ -142,7 +152,12 @@ public:
 
  bool s1_assignment_preempts_s0();
 
- bool instruction(QString sym);
+ QString instruction();
+
+ bool instruction(QString sym)
+ {
+  return instruction() == sym;
+ }
 
  bool is_effective_block_entry_statment();
  bool is_non_block_expression();

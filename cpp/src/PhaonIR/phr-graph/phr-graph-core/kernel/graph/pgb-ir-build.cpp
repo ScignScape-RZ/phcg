@@ -234,6 +234,18 @@ Purpose_Codes& _PGB_IR_Build::add_channel_entry_block_node(QString t1, MG_Token_
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::push_block_entry()
+{
+ qts_ << " (pgb::push_block_entry "; end_line({});
+ return purpose_;
+}
+
+Purpose_Codes& _PGB_IR_Build::pop_block_entry()
+{
+ qts_ << " (pgb::pop_block_entry "; end_line({});
+ return purpose_;
+}
+
 Purpose_Codes& _PGB_IR_Build::push_expression_entry()
 {
  qts_ << " (pgb::push_expression_entry "; end_line({});
