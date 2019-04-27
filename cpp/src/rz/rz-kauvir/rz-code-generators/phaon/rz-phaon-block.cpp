@@ -131,7 +131,7 @@ void RZ_Phaon_Block::add_statement_from_call_entry_node(PGB_IR_Build& pgb,
      //pen = phgb.make_token_node({MG_Token_Kinds::Raw_Symbol, rzlt->raw_text()});
 
    if(rbe)
-     pgb(header_step_forms_).add_block_entry_node(pgbs, "&fsym-node");
+     pgb(header_step_forms_).add_block_entry_node(pgbs, "&fsym-node", "!last_block_entry_node");
    else
      pgb(header_step_forms_).add_statement_sequence_node(pgbs, "&fsym-node");
    pgb(header_step_forms_).copy_value("&fsym-node", "!last_statement_entry_node");

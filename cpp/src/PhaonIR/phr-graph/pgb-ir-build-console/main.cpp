@@ -51,7 +51,7 @@ int main1(int argc, char **argv)
 
  pgb(tps).make_root_node("!last_block_pre_entry_node");
  pgb(tps).make_token_node("@&prn", "&fsym-node");
- pgb(tps).add_block_entry_node("!last_block_pre_entry_node", "&fsym-node");
+ pgb(tps).add_block_entry_node("!last_block_pre_entry_node", "&fsym-node", "!last_block_entry_node");
  pgb(tps).copy_value("&fsym-node", "!last_statement_entry_node");
  pgb(tps).add_channel_entry_token("&fsym-node",
    "lambda", "$44", "&current-channel-node");

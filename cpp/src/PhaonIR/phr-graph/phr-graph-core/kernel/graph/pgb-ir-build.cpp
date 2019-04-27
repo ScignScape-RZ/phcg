@@ -300,19 +300,21 @@ Purpose_Codes& _PGB_IR_Build::add_channel_sequence_block_node(QString t1, MG_Tok
 
 
 Purpose_Codes& _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
-  QString t2, MG_Token_Subgroups sg2, QString anchor_name, MG_Token_Subgroups ansg)
+  QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3,
+  QString anchor_name, MG_Token_Subgroups ansg)
 {
  MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
  MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
+ MG_Token mgt3 = mgtoken(t3, MG_Token_Kind_Groups::Target, sg3);
 
  if(anchor_name.isEmpty())
  {
-  qts_ << " (pgb::add_block_entry_node "; end_line({mgt1, mgt2});
+  qts_ << " (pgb::add_block_entry_node "; end_line({mgt1, mgt2, mgt3});
  }
  else
  {
-  MG_Token mgt3 = mgtoken(anchor_name, MG_Token_Kind_Groups::Arg_Target, ansg);
-  qts_ << " (pgb::add_block_entry_node "; end_line({mgt1, mgt2, mgt3});
+  MG_Token mgtan = mgtoken(anchor_name, MG_Token_Kind_Groups::Arg_Target, ansg);
+  qts_ << " (pgb::add_block_entry_node "; end_line({mgt1, mgt2, mgtan, mgt3});
  }
  return purpose_;
 }

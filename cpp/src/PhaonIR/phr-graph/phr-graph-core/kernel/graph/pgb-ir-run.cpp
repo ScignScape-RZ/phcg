@@ -321,7 +321,10 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
   {
    caon_ptr<PHR_Graph_Node> extra = nullptr;
    auto pr = get_args(mgtm, &extra);
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
    graph_build_.add_block_entry_node(pr.first, pr.second, extra);
+   if(tr)
+     *tr = pr.second;
   }
   break;
  case PGB_Methods::add_channel_fuxe_entry_node:

@@ -240,19 +240,20 @@ public:
  }
 
  Purpose_Codes& add_block_entry_node(QString t1, MG_Token_Subgroups sg1,
-   QString t2, MG_Token_Subgroups sg2, QString anchor_name = QString(),
+   QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3,
+   QString anchor_name = QString(),
    MG_Token_Subgroups ansg = MG_Token_Subgroups::N_A);
- Purpose_Codes& add_block_entry_node(QString t1, QString t2,
+ Purpose_Codes& add_block_entry_node(QString t1, QString t2, QString t3,
    QString anchor_name)
  {
   return add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
-    t2.mid(1), get_subgroup(t2[0]),
+    t2.mid(1), get_subgroup(t2[0]), t3.mid(1), get_subgroup(t3[0]),
     anchor_name.mid(1), get_subgroup(anchor_name[0]));
  }
- Purpose_Codes& add_block_entry_node(QString t1, QString t2)
+ Purpose_Codes& add_block_entry_node(QString t1, QString t2, QString t3)
  {
   return add_block_entry_node(t1.mid(1), get_subgroup(t1[0]),
-    t2.mid(1), get_subgroup(t2[0]));
+    t2.mid(1), get_subgroup(t2[0]), t3.mid(1), get_subgroup(t3[0]));
  }
 
  Purpose_Codes& add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
