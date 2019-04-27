@@ -362,6 +362,23 @@ void Expression_Generator::generate_arg_carriers_follow(QTextStream& qts,
     }
    }
   }
+  else if(n1 = qy_.Channel_Sequence_Block[cion1](n))
+  {
+   if(caon_ptr<PHR_Graph_Block_Info> bin = cion1->phr_node()->block_info())
+   {
+    if(cion1->phr_node(1))
+    {
+     if(caon_ptr<PHR_Graph_Statement_Info> sin = cion1->phr_node(1)->statement_info())
+     {
+      generate_block(qts, *bin, *n1, sin.raw_pointer());
+     }
+    }
+    else
+    {
+     generate_block(qts, *bin, *n1);
+    }
+   }
+  }
   // no coentry right? ...
   n = n1;
  }
