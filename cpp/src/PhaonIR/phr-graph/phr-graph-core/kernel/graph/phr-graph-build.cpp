@@ -291,6 +291,7 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_channel_fground_cross_node(
 
  if(cfen)
  {
+  CAON_PTR_DEBUG(PHR_Graph_Node ,cfen)
   caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(chn, cfen);
   source << fr_/qy_.Channel_FGround_Cross(cion) >> target;
  }

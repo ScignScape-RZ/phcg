@@ -825,6 +825,8 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
     caon_ptr<RPI_Stage_Form> f = rse.form();
     CAON_PTR_DEBUG(RPI_Stage_Form ,f)
 
+    CAON_PTR_DEBUG(RPI_Stage_Form ,prior_form)
+
     if(f->instruction("kb::write-anon-fdef"))
     {
      f->write_unmediated(qts, nullptr);
@@ -846,7 +848,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
         "&fsym-node", "&bin",  "!last_block_entry_node");
       else if(f->flags.prior_sibling_is_block)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
-        .add_channel_cross_block_node("!prior_block_entry_node",
+        .add_channel_fground_cross_node("!prior_block_entry_node",
         "&fsym-node", "&bin",  "!last_block_entry_node");
 
 //         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FGround_Sumbol)
@@ -900,7 +902,11 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
          .add_channel_fground_coentry_node(
          "!last_expression_entry_node",
          "&fsym-node", ":lambda", "&fsym-ground-node");
-
+       else if(f->flags.prior_sibling_is_block)
+         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
+         .add_channel_fground_cross_node(
+         "!prior_block_entry_node",
+         "&fsym-node", ":lambda", "&fsym-ground-node");
 
 //       else if(last_kind == RPI_Stage_Element_Kinds::Form)
 //       {
