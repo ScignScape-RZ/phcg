@@ -103,6 +103,10 @@ struct RE_Connectors : node_connectors<RE_Dominion>
   {
    return order > 0;
   }
+  bool operator==(const RE_Connectors& rhs) const
+  {
+   return order == rhs.order;
+  }
 };
 
 struct RE_Annotated_Connectors :

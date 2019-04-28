@@ -1388,9 +1388,42 @@ void RE_Markup_Position::add_token_node(caon_ptr<RE_Node> token_node)
   }
   pConnector = &rq_.Run_Call_Sequence; break;
 
+ case Position_States::Active_Closed_Do_Entry:
+  {
+  // // maybe a method to get the old arrow node?
+   if(current_closed_do_entry_node_)
+   {
+    CAON_PTR_DEBUG(RE_Node ,current_closed_do_entry_node_)
+    CAON_PTR_DEBUG(RE_Node ,token_node)
 
+    //?current_closed_do_entry_node_ << fr_/rq_.Run_Cross_Sequence >> token_node;
+    pConnector = &rq_.Run_Cross_Sequence;
+    current_node_ = current_closed_do_entry_node_;
+
+    if(caon_ptr<RE_Node> old_do_node = rq_.Run_Call_Entry(current_closed_do_entry_node_))
+    {
+     CAON_PTR_DEBUG(RE_Node ,old_do_node)
+     //old_do_node << fr_/rq_.Run_Fundef_Arrow_Sequence >> current_node_;
+     old_do_node->debug_connections();
+     if(caon_ptr<RE_Node> old_arrow_node = rq_.Run_Call_Sequence(old_do_node))
+     {
+      CAON_PTR_DEBUG(RE_Node ,old_arrow_node)
+
+//?      old_arrow_node << fr_/rq_.Run_Token_Arrow_Sequence >> current_node_;
+
+//        CAON_PTR_DEBUG(RE_Node ,token_node)
+//        CAON_PTR_DEBUG(RE_Node ,current_node_)
+//        caon_ptr<RE_Token> token = token_node->re_token();
+//        CAON_PTR_DEBUG(RE_Token ,token)
+
+     }
+    }
+   }
+  }
+  break;
  case Position_States::Data_Entry:
-  pConnector = &rq_.Run_Data_Entry; break;
+  pConnector = &rq_.Run_Data_Entry;
+  break;
  default:
   return;
  }
@@ -1461,40 +1494,44 @@ void RE_Markup_Position::add_token_node(caon_ptr<RE_Node> token_node)
   }
  Default:
  default:
-
-  node_frame<RZ::RECore::RE_Dominion, RZ::RECore::RE_Galaxy>::Frame_With_Connector fwc = fr_/connector;
-  node_ptr<RZ::RECore::RE_Dominion>::Node_With_Connector nwc = current_node_ << fwc;
-
-  node_frame<RZ::RECore::RE_Dominion, RZ::RECore::RE_Galaxy>::Frame_With_Connector fwc1 = nwc.frame_with_connector;
-  current_node_ << fr_/connector>> token_node;
-
-  if(connector == rq_.Run_Call_Entry)
   {
-   if(prior_current_node)
-   {
-    caon_ptr<RE_Connection> cion = new RE_Connection(entry_node);
-    prior_current_node << fr_/rq_.Run_Call_Entry_Direct(cion) >> token_node;
-   }
-   else if(aConnector_src_node)
-   {
-    caon_ptr<RE_Connection> cion = new RE_Connection(entry_node);
-    aConnector_src_node << fr_/rq_.Run_Call_Entry_Direct(cion) >> token_node;
-   }
-  }
+   CAON_PTR_DEBUG(RE_Node ,current_node_)
 
-  current_node_ = token_node;
+   node_frame<RZ::RECore::RE_Dominion, RZ::RECore::RE_Galaxy>::Frame_With_Connector fwc = fr_/connector;
+   node_ptr<RZ::RECore::RE_Dominion>::Node_With_Connector nwc = current_node_ << fwc;
 
-  if(maybe_if_entry_node)
-  {
-   if(token)
+   node_frame<RZ::RECore::RE_Dominion, RZ::RECore::RE_Galaxy>::Frame_With_Connector fwc1 = nwc.frame_with_connector;
+   current_node_ << fr_/connector>> token_node;
+
+   // why does == act wierd?
+   if( (connector == rq_.Run_Call_Entry) )
    {
-    if(token->raw_text() == "if")
+    if(prior_current_node)
     {
-     block_chiefs_ifs_.push(maybe_if_entry_node);
+     caon_ptr<RE_Connection> cion = new RE_Connection(entry_node);
+     prior_current_node << fr_/rq_.Run_Call_Entry_Direct(cion) >> token_node;
+    }
+    else if(aConnector_src_node)
+    {
+     caon_ptr<RE_Connection> cion = new RE_Connection(entry_node);
+     aConnector_src_node << fr_/rq_.Run_Call_Entry_Direct(cion) >> token_node;
     }
    }
-  }
 
+   current_node_ = token_node;
+
+   if(maybe_if_entry_node)
+   {
+    if(token)
+    {
+     if(token->raw_text() == "if")
+     {
+      block_chiefs_ifs_.push(maybe_if_entry_node);
+     }
+    }
+   }
+
+  }
 
  }
 

@@ -684,7 +684,8 @@ caon_ptr<RE_Node> RZ_Lisp_Graph_Visitor::get_code_statement_node_from_statement_
 
 RZ_Lisp_Graph_Visitor::Next_Node_Premise RZ_Lisp_Graph_Visitor::get_cross_node(caon_ptr<RE_Node> start_node, caon_ptr<RE_Node>& result)
 {
- if(result = rq_.Run_Cross_Sequence(start_node))
+ CAON_PTR_DEBUG(RE_Node ,start_node)
+ if((result = rq_.Run_Cross_Sequence(start_node)))
  {
   CAON_PTR_DEBUG(RE_Node ,result)
   if(caon_ptr<RE_Call_Entry> rce = result->re_call_entry())

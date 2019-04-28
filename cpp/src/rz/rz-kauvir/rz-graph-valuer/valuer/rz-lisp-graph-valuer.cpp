@@ -537,6 +537,14 @@ void RZ_Lisp_Graph_Valuer::check_function_def_map_sequence(caon_ptr<tNode> node,
    }
   }
  }
+
+ // // if not an arrow-to-arrow, then ...
+ else if(caon_ptr<RE_Node> tn = rq_.Run_Token_Arrow_Sequence(node))
+ {
+  CAON_PTR_DEBUG(RE_Node ,tn)
+  //?check_node_type(tn);
+ }
+
 }
 
 void RZ_Lisp_Graph_Valuer::check_monotail(caon_ptr<tNode>& node)
