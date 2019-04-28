@@ -736,7 +736,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
        assignment_info_.encode_ikind().prepend(':'), "&si-node");
        //   ":parse-literal", assignment_info_.encode_ikind().prepend(':'));   rai->text()
      pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node",
-       "&fsym-node", "&si-node", "!last_block_entry_node");
+       "&fsym-node", "!last_block_entry_node", "&si-node");
     }
     else
       pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node",
