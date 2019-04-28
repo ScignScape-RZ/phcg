@@ -1409,7 +1409,7 @@ void RE_Markup_Position::add_token_node(caon_ptr<RE_Node> token_node)
      {
       CAON_PTR_DEBUG(RE_Node ,old_arrow_node)
 
-//?      old_arrow_node << fr_/rq_.Run_Token_Arrow_Sequence >> current_node_;
+      old_arrow_node << fr_/rq_.Run_Token_Arrow_Sequence >> token_node;
 
 //        CAON_PTR_DEBUG(RE_Node ,token_node)
 //        CAON_PTR_DEBUG(RE_Node ,current_node_)

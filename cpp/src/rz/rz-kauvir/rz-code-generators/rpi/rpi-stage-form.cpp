@@ -702,6 +702,11 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
  int channel_count = 0;
  RPI_Stage_Element_Kinds last_kind = RPI_Stage_Element_Kinds::N_A;
 
+ // // note that prior_form is not always reset, so
+  //   last_form will actually be the prior element only if
+  //   last_kind is Form.
+ caon_ptr<RPI_Stage_Form> prior_form = nullptr;
+
  //QString
  for(RPI_Stage_Element& rse : inner_elements_)
  {
@@ -772,8 +777,17 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
        rset.prepend('$'), "&channel-seq");
    else if(last_kind == RPI_Stage_Element_Kinds::Form)
    {
-//?    pgb_(step_forms_).copy_value("!last_expression_entry_node", "&channel-seq");
-    pgb_(step_forms_).add_channel_continue_token("!prior_expression_entry_node",
+    QString srcn;
+    if(prior_form)
+    {
+     if(prior_form->instruction("kb::write-anon-fdef"))
+       srcn = "!prior_block_entry_node";
+     else
+       srcn = "!prior_expression_entry_node";
+    }
+    else
+      srcn = "!prior_expression_entry_node";
+    pgb_(step_forms_).add_channel_continue_token(srcn,
       rset.prepend('$'), "&channel-seq");
    }
    else
@@ -917,6 +931,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      }
     }
     ++channel_count;
+    prior_form = f;
    }
    break;
   default:
