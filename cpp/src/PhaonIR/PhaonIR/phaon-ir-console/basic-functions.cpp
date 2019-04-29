@@ -156,6 +156,12 @@ quint64 let_num(quint64 num)
  return num;
 }
 
+QString test_s_ss(QString s1, QString s2)
+{
+ qDebug() << "s1 = " << s1 << "s2 = " << s2;
+ qDebug() << "returning: s_ss";
+ return "s_ss";
+}
 
 quint32 test_find(QString outstr, QString instr)
 {
@@ -551,6 +557,27 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
 
   g1.clear_all();
  }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("str");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty);
+  g1.init_channel(lambda, 2);
+  (*g1[lambda])[0] = phc1;
+  (*g1[lambda])[1] = phc2;
+
+  PHR_Carrier* rphc = new PHR_Carrier;
+  rphc->set_phr_type(ty);
+  g1.init_channel(result, 1);
+  (*g1[result])[0] = rphc;
+
+  table.init_phaon_function(g1, pss, "test-s-ss", 600, &test_s_ss);
+
+  g1.clear_all();
+ }
+
 
  {
   PHR_Type* ty = type_system->get_type_by_name("str");

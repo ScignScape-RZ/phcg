@@ -643,6 +643,17 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
       mem = prv;
       result = &mem;
      }
+     else if(so == PHR_Runtime_Scope::Storage_Options::String_Pointer)
+     {
+      QString* qs = (QString*) prv;
+      QString** qqs = (QString**) prv;
+      *qs_mem = *(QString*) prv;
+      result = qs_mem;
+     }
+     else
+     {
+      result = (void*) prv;
+     }
      //...
     }
     else

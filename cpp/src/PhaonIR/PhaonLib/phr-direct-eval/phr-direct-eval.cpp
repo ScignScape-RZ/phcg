@@ -143,12 +143,27 @@ void phr_direct_eval(PHR_Code_Model* pcm,
   pcrr.proceed();
  }
 
- quint64 eval_result = pcrr.call_result();
+
  const PHR_Type_Object* pto = pcrr.result_type_object();
  if(pto)
  {
-  pcp->set_eval_result(eval_result);
-  pcp->set_result_type_object(pto);
+
+  if(pcrr.string_result_code())
+  {
+   quint64 eval_result = pcrr.string_result_code();
+   QString* qs = (QString*) eval_result;
+   pcp->set_eval_result(eval_result);
+   pcp->set_result_type_object(pto);
+  }
+  else
+  {
+   quint64 eval_result = pcrr.call_result();
+
+   pcp->set_eval_result(eval_result);
+   pcp->set_result_type_object(pto);
+  }
+
+
  }
 
 

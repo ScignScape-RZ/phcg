@@ -15,6 +15,7 @@ struct PHR_Scope_Value
 {
  PHR_Type* ty;
  quint64 raw_value;
+ QString string_value;
 
  PHR_Scope_Value();
  PHR_Scope_Value(PHR_Type* _ty, quint64 _raw_value);

@@ -45,6 +45,14 @@ void PHR_Runtime_Scope::check_type_decl(QString key)
  }
 }
 
+void PHR_Runtime_Scope::update_string_value(QString key, quint64 val)
+{
+ check_type_decl(key);
+ QString* qs = (QString*) val;
+ values_[key].second.string_value = *qs;
+ values_[key].second.raw_value = (quint64) &values_[key].second.string_value;
+}
+
 void PHR_Runtime_Scope::update_direct_value(QString key, quint64 val)
 {
  check_type_decl(key);

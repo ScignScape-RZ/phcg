@@ -21,6 +21,8 @@
 #include "table/phr-channel-group-table.h"
 #include "runtime/phr-command-package.h"
 
+#include "types/phr-type-object.h"
+
 #include "phr-code-model.h"
 
 #include "phr-direct-eval/phr-direct-eval.h"
@@ -229,6 +231,8 @@ void PhaonIR::type_decl(QString sym, QString type_name)
  PHR_Runtime_Scope::Storage_Options so;
  if(type_name.endsWith('*'))
    so = PHR_Runtime_Scope::Storage_Options::Pointer;
+ else if (type_name == "str")
+   so = PHR_Runtime_Scope::Storage_Options::String_Pointer;
  else
    so = PHR_Runtime_Scope::Storage_Options::Direct;
 
@@ -378,7 +382,18 @@ void PhaonIR::evaluate_channel_group()
   {
    quint64 val = pv?
       (this->*it.cofinalizer)(it, pv) : rv;
-   scope->update_direct_value(sym, val);
+
+   // // just for now ...
+   if(pto->ty()->name() == "str")
+   {
+    QString* qs = (QString*) val;
+    scope->update_string_value(sym, val);
+   }
+   else
+   {
+    scope->update_direct_value(sym, val);
+   }
+
   }
   else
   {

@@ -25,7 +25,7 @@ class PHR_Runtime_Scope
 public:
 
  enum class Storage_Options {
-   N_A, Direct, Pointer, Function_Vector, Not_Otherwise_Specified
+   N_A, Direct, Pointer, String_Pointer, Function_Vector, Not_Otherwise_Specified
  };
 
  QMap<QString, QPair<Storage_Options, PHR_Scope_Value>> values_;
@@ -50,6 +50,7 @@ public:
 
  void update_value(QString key, void* pv);
  void update_direct_value(QString key, quint64 val);
+ void update_string_value(QString key, quint64 val);
 
  template<typename T>
  T* get_pointer_value_as(QString key)
