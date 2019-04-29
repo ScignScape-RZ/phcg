@@ -271,6 +271,7 @@ public:
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
  void evaluate_channel_group();
+ void mark_void_call();
 
  void hold_symbol_scope(PHR_Symbol_Scope* pss);
 

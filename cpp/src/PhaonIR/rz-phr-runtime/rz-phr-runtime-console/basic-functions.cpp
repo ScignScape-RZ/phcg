@@ -207,6 +207,23 @@ void test_if_then_else(quint64 args_ptr)
 }
 
 
+void test_arg_vec_str(quint64 args_ptr)
+{
+ QVector<quint64>& args = *(QVector<quint64>*)(args_ptr);
+
+ for(quint64 qui: args)
+ {
+  QString** qs = (QString**) qui;
+  qDebug() << **qs;
+ }
+}
+
+void test_prss(QString str1, QString str2)
+{
+ qDebug() << str1;
+ qDebug() << str2;
+}
+
 void test_arg_vec_calls(quint64 args_ptr)
 {
  QVector<quint64>& args = *(QVector<quint64>*)(args_ptr);
@@ -257,6 +274,11 @@ void test_call_tok(PHR_Callable_Value* pcv, quint32 arg)
  pcv->run();
 }
 
+void test_void()
+{
+ qDebug() << "OK";
+}
+
 void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   PHR_Channel_Group_Table& table, PHR_Symbol_Scope& pss)
 {
@@ -284,6 +306,27 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   table.init_phaon_function(g1, pss, "prn", 700, &prn);
 
   //?
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("str");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty);
+  g1.init_channel(lambda, 2);
+  (*g1[lambda])[0] = phc1;
+  (*g1[lambda])[1] = phc2;
+
+  table.init_phaon_function(g1, pss, "test-prss", 700, &test_prss);
+
+  g1.clear_all();
+ }
+
+
+ {
+  table.init_phaon_function(g1, pss, "test-void", 700, &test_void);
   g1.clear_all();
  }
 
@@ -443,6 +486,17 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   g1.clear_all();
  }
 
+ {
+  PHR_Type* ty = type_system->get_type_by_name("argvec");
+  PHR_Carrier* phc = new PHR_Carrier;
+  phc->set_phr_type(ty);
+  g1.init_channel(lambda, 1);
+  (*g1[lambda])[0] = phc;
+
+  table.init_phaon_function(g1, pss, "test-arg-vec-str", 700, &test_arg_vec_str);
+
+  g1.clear_all();
+ }
 
  {
   PHR_Type* ty = type_system->get_type_by_name("argvec");

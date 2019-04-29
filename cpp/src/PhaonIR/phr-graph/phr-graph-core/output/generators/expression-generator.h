@@ -56,6 +56,7 @@ public:
 
 // void generate_close(QTextStream& qts);
  void generate_line(QTextStream& qts, QString ln);
+ void generate_line(QTextStream& qts, QString ln, QString arg);
  void generate_comment_line(QTextStream& qts, QString ln, int n = 0);
  void generate_empty_line(QTextStream& qts, int n = 1);
 

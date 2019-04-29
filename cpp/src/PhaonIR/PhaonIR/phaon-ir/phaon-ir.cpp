@@ -399,6 +399,11 @@ void PhaonIR::index_channel_group()
  indexed_channel_groups()[current_chief_unwind_scope_index()] = held_channel_group_;
 }
 
+void PhaonIR::mark_void_call()
+{
+
+}
+
 void PhaonIR::anchor_without_channel_group(QString sym, QString ch)
 {
  PHR_Carrier_Stack* pcs = program_stack_->top();
@@ -589,7 +594,8 @@ void PhaonIR::read_line(QString inst)
   { "temp_anchor_channel_group", &temp_anchor_channel_group },
   { "temp_anchor_channel_group_by_need", &temp_anchor_channel_group_by_need },
   { "push_carrier_expression", &push_carrier_expression },
-  { "index_channel_group", &index_channel_group }
+  { "index_channel_group", &index_channel_group },
+  { "mark_void_call", &mark_void_call }
  }};
 
  auto it = static_map.find(inst);

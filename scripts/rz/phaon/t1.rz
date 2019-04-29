@@ -1,2 +1,6 @@
 
-&test-void 5;
+,x ::: int;
+x \= test-find "abcdef" "cd";
+
+&prn x;
+

@@ -87,6 +87,18 @@ void Expression_Generator::generate_from_node(QTextStream& qts,
    }
   }
  }
+ else
+ {
+  // assume void call ...
+  if(caon_ptr<PHR_Graph_Token> tokn = node.phr_graph_token())
+  {
+   CAON_PTR_DEBUG(PHR_Graph_Token ,tokn)
+
+   generate_line(qts, "push_carrier_stack", "fground");
+   generate_line(qts, "hold_type_by_name", "fbase");
+   generate_line(qts, "push_carrier_symbol", tokn->raw_text());
+  }
+ }
 
  caon_ptr<PHR_Graph_Connection> xcion;
  QString xchannel_name;
@@ -159,6 +171,11 @@ void Expression_Generator::generate_fground_entry(QTextStream& qts,
 void Expression_Generator::generate_line(QTextStream& qts, QString ln)
 {
  qts << ln << " ;.\n";
+}
+
+void Expression_Generator::generate_line(QTextStream& qts, QString ln, QString arg)
+{
+ qts << ln << " $ " << arg << " ;.\n";
 }
 
 void Expression_Generator::generate_empty_line(QTextStream& qts, int n)
