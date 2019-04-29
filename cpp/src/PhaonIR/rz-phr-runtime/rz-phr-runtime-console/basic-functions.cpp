@@ -142,6 +142,25 @@ void prnn(qint32 arg1, qint32 arg2)
  qDebug() << arg2;
 }
 
+void prdn(quint64 num, quint64 n1)
+{
+ qDebug() << num << ", " << n1;
+}
+
+void test_dfr(quint64 arg1, quint64 arg2)
+{
+ PHR_Expression_Object* px1 = (PHR_Expression_Object*) arg1;
+ PHR_Channel_Group_Evaluator* ev1 = px1->run();
+ quint64 r1 = ev1->get_result_value_as<quint64>();
+
+ PHR_Expression_Object* px2 = (PHR_Expression_Object*) arg2;
+ PHR_Channel_Group_Evaluator* ev2 = px2->run();
+ quint64 r2 = ev2->get_result_value_as<quint64>();
+
+ qDebug() << r1;
+ qDebug() << r2;
+}
+
 void test_if_then_else(quint64 args_ptr)
 {
  QVector<quint64>& args = *(QVector<quint64>*)(args_ptr);
@@ -236,6 +255,7 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   //?
   g1.clear_all();
  }
+
  {
   PHR_Type* ty = type_system->get_type_by_name("u4");
   PHR_Carrier* phc1 = new PHR_Carrier;
@@ -246,6 +266,32 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[lambda])[0] = phc1;
   (*g1[lambda])[1] = phc2;
   table.init_phaon_function(g1, pss, "prnn", 700, &prnn);
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("u8");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty);
+  g1.init_channel(lambda, 2);
+  (*g1[lambda])[0] = phc1;
+  (*g1[lambda])[1] = phc2;
+  table.init_phaon_function(g1, pss, "prdn", 700, &prdn);
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("u8");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty);
+  g1.init_channel(lambda, 2);
+  (*g1[lambda])[0] = phc1;
+  (*g1[lambda])[1] = phc2;
+  table.init_phaon_function(g1, pss, "test-dfr", 700, &test_dfr);
   g1.clear_all();
  }
 
