@@ -143,6 +143,11 @@ void prnn(qint32 arg1, qint32 arg2)
 }
 
 
+void test_void()
+{
+ qDebug() << "OK";
+}
+
 quint64 let_num(quint64 num)
 {
  return num;
@@ -493,6 +498,11 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
 
   table.init_phaon_function(g1, pss, "test-call-tok", 700, &test_call_tok);
 
+  g1.clear_all();
+ }
+
+ {
+  table.init_phaon_function(g1, pss, "test-void", 700, &test_void);
   g1.clear_all();
  }
 

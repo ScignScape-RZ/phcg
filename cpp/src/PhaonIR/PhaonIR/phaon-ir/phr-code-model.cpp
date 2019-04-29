@@ -119,6 +119,11 @@ void PHR_Code_Model::init_scope_system()
 void PHR_Code_Model::report_channel_group(QTextStream& qts, PHR_Channel_Group& pcg,
   PCM_Report_Syntax& pcrs, Code_Environments cenv)
 {
+ if(pcg.isEmpty())
+ {
+  qts << "()";
+  return;
+ }
  QMapIterator<PHR_Channel_Semantic_Protocol*, PHR_Channel*> it(pcg);
  while(it.hasNext())
  {
