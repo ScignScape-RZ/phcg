@@ -152,7 +152,8 @@ void phr_direct_eval(PHR_Code_Model* pcm,
   {
    quint64 eval_result = pcrr.string_result_code();
    QString* qs = (QString*) eval_result;
-   pcp->set_eval_result(eval_result);
+   pcp->set_string_result(*qs);
+   pcp->set_eval_result((quint64) pcp->string_result_as_pointer());
    pcp->set_result_type_object(pto);
   }
   else

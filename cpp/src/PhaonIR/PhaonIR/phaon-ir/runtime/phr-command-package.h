@@ -25,6 +25,7 @@ class PHR_Command_Package : public PHR_Channel_Group
  quint64 eval_result_;
  const PHR_Type_Object* result_type_object_;
  QString output_symbol_name_;
+ QString string_result_;
 
 public:
 
@@ -34,6 +35,12 @@ public:
  ACCESSORS(const PHR_Type_Object* ,result_type_object)
  ACCESSORS(quint64 ,eval_result)
  ACCESSORS(QString ,output_symbol_name)
+ ACCESSORS(QString ,string_result)
+
+ QString* string_result_as_pointer()
+ {
+  return &string_result_;
+ }
 
 };
 
