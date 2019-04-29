@@ -344,6 +344,8 @@ void PhaonIR::evaluate_channel_group()
  quint64 rv = 0;
  void* pv = nullptr;
 
+ QString string_result;
+
  if(ev)
  {
   ev->run_eval();
@@ -364,6 +366,11 @@ void PhaonIR::evaluate_channel_group()
   if(!pto)
     return;
   rv = pcp.eval_result();
+  if(rv == (quint64) pcp.string_result_as_pointer())
+  {
+   string_result = pcp.string_result();
+   rv = (quint64) &string_result;
+  }
   //return;
   //? phr_direct_eval(code_model_, &pcp, held_symbol_scope_);
  }
