@@ -1,7 +1,11 @@
 
-&if-t-e \(=? 4 5) do .() ->
- &prn 78;
- ;, \(=? 4 4) do .() ->
- &prn 79;
- ;,
-
+,x ::: int;
+x \= test-find "abcdef" "cd";
+ 
+&if \(x =? -1) \do
+ &prs "Not-Found";
+;, \else
+ &prs "Found";
+ &prn x;
+ &prs "OK";
+;;

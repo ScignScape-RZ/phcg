@@ -182,7 +182,7 @@ void RE_Token::resolve_arrow_prefix(QString prefix, QString raw_text)
 //      keyword, etc.
 void RE_Token::inital_check_numeric()
 {
- QRegularExpression re("\\A\\d");
+ QRegularExpression re("\\A-?\\d");
  QRegularExpressionMatch match = re.match(raw_text_);
 
  flags.is_numeric_literal = match.hasMatch();

@@ -27,9 +27,10 @@ void PHR_KOP_Equal::run_eval(QVector<qint32>& args, qint32& result)
  switch(sz)
  {
  case 0:
-  return;
+  //?
+  result = 1;
  case 1:
-  result = args[1];
+  result = args[0];
  default:
   {
    for(int i = 1; i < sz; ++i)

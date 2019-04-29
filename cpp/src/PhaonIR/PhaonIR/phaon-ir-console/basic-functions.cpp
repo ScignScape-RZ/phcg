@@ -129,7 +129,10 @@ void* envv(void* kind)
  }
 }
 
-
+void prs(QString arg)
+{
+ qDebug() << arg;
+}
 
 void prn(qint32 arg)
 {
@@ -546,6 +549,16 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
 
   table.init_phaon_function(g1, pss, "test-prss", 700, &test_prss);
 
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("str");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  g1.init_channel(lambda, 1);
+  (*g1[lambda])[0] = phc1;
+  table.init_phaon_function(g1, pss, "prs", 700, &prs);
   g1.clear_all();
  }
 
