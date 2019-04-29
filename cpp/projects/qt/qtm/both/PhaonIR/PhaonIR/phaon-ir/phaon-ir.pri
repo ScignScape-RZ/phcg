@@ -55,6 +55,7 @@ HEADERS += \
   $$SRC_DIR/eval/kops/subtract.h \
   $$SRC_DIR/eval/kops/less-than.h \
   $$SRC_DIR/eval/kops/equal.h \
+  $$SRC_DIR/eval/kops/bool.h \
   $$SRC_DIR/scopes/phr-runtime-scope.h \
   $$SRC_DIR/scopes/phr-scope-value.h \
   $$SRC_DIR/scopes/phr-scope-system.h \
@@ -91,6 +92,7 @@ SOURCES += \
   $$SRC_DIR/eval/kops/subtract.cpp \
   $$SRC_DIR/eval/kops/less-than.cpp \
   $$SRC_DIR/eval/kops/equal.cpp \
+  $$SRC_DIR/eval/kops/bool.cpp \
   $$SRC_DIR/scopes/phr-runtime-scope.cpp \
   $$SRC_DIR/scopes/phr-scope-value.cpp \
   $$SRC_DIR/scopes/phr-scope-system.cpp \

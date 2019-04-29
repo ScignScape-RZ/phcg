@@ -183,8 +183,11 @@ void RE_Document::preprocess_raw_text()
  raw_text_.replace("\\do", "do .() -> ");
 
  // // for \t ...
- raw_text_.replace("\\t", "\\(#=? 1)");
+ raw_text_.replace("\\t", "\\(#?\\ 1)");
  // //?
+
+ // // for \t ...
+ raw_text_.replace("\\f", "\\(#?\\ 0)");
 
  // // for do blocks sharing signature ...
  {

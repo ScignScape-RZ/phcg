@@ -5,23 +5,23 @@
 //           http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "equal.h"
+#include "bool.h"
 
 
-PHR_KOP_Equal::PHR_KOP_Equal()
+PHR_KOP_Bool::PHR_KOP_Bool()
 {
 
 }
 
-void PHR_KOP_Equal::run_eval(QPair<qint32, qint32>& args, qint32& result)
+void PHR_KOP_Bool::run_eval(QPair<qint32, qint32>& args, qint32& result)
 {
  if(args.first == args.second)
-   result = 1;
+   result = args.first;
  else
    result = 0;
 }
 
-void PHR_KOP_Equal::run_eval(QVector<qint32>& args, qint32& result)
+void PHR_KOP_Bool::run_eval(QVector<qint32>& args, qint32& result)
 {
  int sz = args.size();
  switch(sz)

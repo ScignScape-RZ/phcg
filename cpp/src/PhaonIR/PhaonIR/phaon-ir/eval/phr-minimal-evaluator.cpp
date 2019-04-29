@@ -20,6 +20,7 @@
 
 #include "kops/less-than.h"
 #include "kops/equal.h"
+#include "kops/bool.h"
 
 #include <QDebug>
 
@@ -49,6 +50,7 @@ PHR_Minimal_Evaluator::Kernal_Operators PHR_Minimal_Evaluator::parse_kernel_oper
    { "#-", Kernal_Operators::Subtract },
    { "#<", Kernal_Operators::Less_Than },
    { "#=?", Kernal_Operators::Equal },
+   { "#?\\", Kernal_Operators::Bool },
  }};
 
  return static_map.value(fn, Kernal_Operators::N_A);
@@ -95,6 +97,7 @@ void PHR_Minimal_Evaluator::run_eval(QVector<qint32>& args)
    { Kernal_Operators::Subtract, new PHR_KOP_Subtract },
    { Kernal_Operators::Less_Than, new PHR_KOP_Less_Than },
    { Kernal_Operators::Equal, new PHR_KOP_Equal },
+   { Kernal_Operators::Bool, new PHR_KOP_Bool },
    }};
 
  qint32* pres = new qint32();

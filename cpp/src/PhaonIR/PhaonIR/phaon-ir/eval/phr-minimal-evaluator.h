@@ -23,7 +23,7 @@ class PHR_Minimal_Evaluator : public PHR_Channel_Group_Evaluator
 public:
 
  enum class Kernal_Operators {
-   N_A, Add, Subtract, Less_Than, Equal
+   N_A, Add, Subtract, Less_Than, Equal, Bool
  };
 
 private:
