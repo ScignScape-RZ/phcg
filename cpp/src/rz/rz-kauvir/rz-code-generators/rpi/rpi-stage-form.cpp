@@ -680,7 +680,7 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
 
  if(type_declaration_)
  {
-  if(flags.write_type_declaration)
+  if(!flags.write_type_declaration)
   {
    qts << "skipping type declaration ...";
    return;

@@ -11,6 +11,8 @@
 
 #include "phr-command-runtime-argument.h"
 
+#include "PhaonIR/phr-runtime/phr-env/phr-env.h"
+
 
 
 //?USING_KANS(CMD)
@@ -453,8 +455,12 @@ TEMP_MACRO(1)
 ////  QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
 ////    ( tnw.toLatin1(), arg1) );
 
+//  QString qs = argument_info[1].type_name_with_modifier(args[1 - 1]->qob_reflection_modifier(), args[1 - 1]->qob_reflection_type_name());//.toLatin1()
+
 //  QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
-//    ( argument_info[1].type_name_with_modifier(args[1 - 1]->qob_reflection_modifier(), args[1 - 1]->qob_reflection_type_name()).toLatin1(), arg1) );
+//    ( tnw.toLatin1(), arg1) );
+////  QMetaObject::invokeMethod(obj, method_name.toLatin1() ,QArgument<ARG1_Type>
+////    ( argument_info[1].type_name_with_modifier(args[1 - 1]->qob_reflection_modifier(), args[1 - 1]->qob_reflection_type_name()).toLatin1(), arg1) );
 
 // }
 // template<typename OBJECT_Type, typename RET_Type ,typename ARG1_Type> static void run(QString method_name, OBJECT_Type obj, QString return_type, RET_Type& ret, QVector<PHR_Command_Runtime_Argument*>& args ,ARG1_Type arg1, const QVector<PHR_Command_Runtime_Router::Argument_Info>& argument_info)
@@ -485,6 +491,8 @@ TEMP_MACRO(1)
 // {
 // case PHR_Command_Runtime_Router::Arg_Type_Codes::No_Return:
 // {
+//  PHR_Env* penv = (PHR_Env*)(argument_info[1].void_argument);
+
 //  typename Type_List_Type::Type1& arg1 = *reinterpret_cast<typename Type_List_Type::Type1*> ( argument_info[1].void_argument );
 //  Cast_1_Ready::run(method_name, obj, args ,arg1, argument_info);
 // }

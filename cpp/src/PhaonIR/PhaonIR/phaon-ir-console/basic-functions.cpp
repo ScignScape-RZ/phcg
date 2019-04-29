@@ -143,6 +143,11 @@ void prnn(qint32 arg1, qint32 arg2)
 }
 
 
+quint64 let_num(quint64 num)
+{
+ return num;
+}
+
 void prdn(quint64 num, quint64 n1)
 {
  qDebug() << num << ", " << n1;
@@ -328,6 +333,21 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   table.init_phaon_function(g1, pss, "prdn", 700, &prdn);
   g1.clear_all();
  }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("u8");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty);
+  g1.init_channel(lambda, 1);
+  g1.init_channel(result, 1);
+  (*g1[lambda])[0] = phc1;
+  (*g1[result])[0] = phc2;
+  table.init_phaon_function(g1, pss, "let_num", 700, &let_num);
+  g1.clear_all();
+ }
+
 
  {
   PHR_Type* ty = type_system->get_type_by_name("u8");
