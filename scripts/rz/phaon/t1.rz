@@ -1,10 +1,6 @@
 
-&test-calls do .() ->
+&test-if-then-else \(=? 4 5) do .() ->
  &prn 78;
- ;, do .() ->
+ ;, \(=? 4 4) do .() ->
  &prn 79;
- ;;
-
-&prnn 4 7;
-
-
+ ;,
