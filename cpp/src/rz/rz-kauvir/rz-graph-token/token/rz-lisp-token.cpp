@@ -38,6 +38,10 @@ RZ_Lisp_Token::RZ_Lisp_Token(QString raw_text, int line_number)
   {
    return;
   }
+  if(raw_text.startsWith('#'))
+  {
+   return;
+  }
   if(raw_text.startsWith('-'))
   {
    return;

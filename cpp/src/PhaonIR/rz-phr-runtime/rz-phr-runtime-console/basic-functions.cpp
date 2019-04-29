@@ -376,6 +376,8 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[lambda])[0] = phc;
 
   table.init_phaon_function(g1, pss, "if-t-e", 700, &if_t_e);
+  table.init_phaon_function(g1, pss, "test-if-then-else", 700, &test_if_then_else);
+
 
   g1.clear_all();
  }

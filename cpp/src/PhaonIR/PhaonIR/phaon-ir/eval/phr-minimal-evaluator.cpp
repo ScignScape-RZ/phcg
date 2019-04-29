@@ -19,6 +19,7 @@
 #include "phaon-ir.h"
 
 #include "kops/less-than.h"
+#include "kops/equal.h"
 
 #include <QDebug>
 
@@ -47,6 +48,7 @@ PHR_Minimal_Evaluator::Kernal_Operators PHR_Minimal_Evaluator::parse_kernel_oper
    { "#+", Kernal_Operators::Add },
    { "#-", Kernal_Operators::Subtract },
    { "#<", Kernal_Operators::Less_Than },
+   { "#=?", Kernal_Operators::Equal },
  }};
 
  return static_map.value(fn, Kernal_Operators::N_A);
@@ -92,6 +94,7 @@ void PHR_Minimal_Evaluator::run_eval(QVector<qint32>& args)
    { Kernal_Operators::Add, new PHR_KOP_Add },
    { Kernal_Operators::Subtract, new PHR_KOP_Subtract },
    { Kernal_Operators::Less_Than, new PHR_KOP_Less_Than },
+   { Kernal_Operators::Equal, new PHR_KOP_Equal },
    }};
 
  qint32* pres = new qint32();

@@ -145,10 +145,18 @@ QString RZ_Graph_Visitor_Phaon::function_name_from_token_text(QString text)
    //? {"qpr", "kb::write-qpr"},
 
    {"\\=>>", "kb::write-overloadable-fdef"},
-   {"=?", "equal"},
+
    {"&if", "&if-t-e"},
    {"??", "ka::to_bool"},
    {"!!", "ka::to_bool_not"},
+
+   // // is this the right place for these?
+   {"=?", "#=?"},
+   {"+", "#+"},
+   {"-", "#-"},
+   {"<", "#<"},
+   {">", "#>"},
+
   }};
 
  return static_map.value(text, text);
