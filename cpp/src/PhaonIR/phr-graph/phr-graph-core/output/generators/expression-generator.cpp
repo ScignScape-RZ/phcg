@@ -320,6 +320,7 @@ void Expression_Generator::generate_arg_carriers_follow(QTextStream& qts,
   }
   else if(n1 = qy_.Channel_FGround_Cross[cion1](n))
   {
+   CAON_PTR_DEBUG(PHR_Graph_Connection ,cion1)
    CAON_PTR_DEBUG(PHR_Graph_Node ,n1)
    if(caon_ptr<PHR_Graph_FGround_Entry> fen = cion1->phr_node()->fground_entry())
    {

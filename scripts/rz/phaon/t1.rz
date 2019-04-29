@@ -1,4 +1,8 @@
 
-&test-dfr \(#+ 2 3) \(#+ 5 6);
+&test-calls do .() ->
+ &prn 78;
+ ;, do .() ->
+ &prn 79;
+ ;;
 
 

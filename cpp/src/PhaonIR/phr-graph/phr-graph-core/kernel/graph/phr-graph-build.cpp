@@ -351,7 +351,8 @@ void PHR_Graph_Build::pop_expression_entry()
 void PHR_Graph_Build::push_block_entry()
 {
  CAON_PTR_DEBUG(PHR_Graph_Node ,last_block_entry_node_)
- block_entry_node_stack_.push(last_block_entry_node_);
+ CAON_PTR_DEBUG(PHR_Graph_Node ,last_statement_entry_node_)
+ block_entry_node_stack_.push({last_block_entry_node_, last_statement_entry_node_});
 }
 
 void PHR_Graph_Build::pop_block_entry()
@@ -360,11 +361,16 @@ void PHR_Graph_Build::pop_block_entry()
  CAON_PTR_DEBUG(PHR_Graph_Node ,prior_block_entry_node_)
 
  if(block_entry_node_stack_.isEmpty())
-   last_block_entry_node_ = nullptr; // // err?
+ {
+  last_block_entry_node_ = nullptr; // // err?
+ }
  else
  {
-  last_block_entry_node_ = block_entry_node_stack_.pop();
+  auto pr = block_entry_node_stack_.pop();
+  last_block_entry_node_ = pr.first;
+  last_statement_entry_node_ = pr.second;
   CAON_PTR_DEBUG(PHR_Graph_Node ,last_block_entry_node_)
+  CAON_PTR_DEBUG(PHR_Graph_Node ,last_statement_entry_node_)
   CAON_DEBUG_NOOP
  }
 }
