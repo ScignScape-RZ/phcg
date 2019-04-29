@@ -134,10 +134,12 @@ PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
     sym, pxo);
   if(ev)
   {
+   so = PHR_Runtime_Scope::Storage_Options::Direct;
    val = ev->get_result_value_as<qint32>();
   }
   else if(pxo)
   {
+   so = PHR_Runtime_Scope::Storage_Options::Pointer;
    val = (quint64) pxo;
   }
   return nullptr;

@@ -80,9 +80,9 @@ void RE_Document::finalize_raw_text()
     {
      fn.append(".rz");
     }
-   } 
+   }
   }
-  
+
   if(!fn.contains('/'))
   {
    fn.prepend(local_directory_ + '/');
@@ -91,13 +91,13 @@ void RE_Document::finalize_raw_text()
   {
    fn.prepend(local_directory_ + '/');
   }
-  
+
   QString nt;
   nt = ::load_file(fn);
   raw_text_.replace(index + diff, end, nt);
   diff += nt.size() - end;
  }
- 
+
  if(posmap.isEmpty())
  {
   report_raw_text("..raw.txt", "_");
@@ -106,7 +106,7 @@ void RE_Document::finalize_raw_text()
  {
   finalize_raw_text();
  }
- 
+
  report_raw_text("..raw.txt", "_");
 }
 
@@ -183,7 +183,8 @@ void RE_Document::preprocess_raw_text()
  raw_text_.replace("\\do", "do .() -> ");
 
  // // for \t ...
- raw_text_.replace("\\t", "\\(values t)");
+ raw_text_.replace("\\t", "\\(let_num 1)");
+ // //?
 
  // // for do blocks sharing signature ...
  {

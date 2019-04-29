@@ -1,0 +1,12 @@
+
+,x ::: int;
+x \= test-find "abcdef" "cd";
+ 
+&if \(x =? -1) \do
+ &prs "Not-Found";
+;, \else
+ &prs "Found";
+ &prn x;
+ &prs "OK";
+;;
+
