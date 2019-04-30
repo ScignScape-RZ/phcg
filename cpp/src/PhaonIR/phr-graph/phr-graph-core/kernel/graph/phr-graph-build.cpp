@@ -227,6 +227,12 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_statement_sequence_token(caon_ptr<
 
  source << fr_/qy_.Statement_Sequence(cion) >> result;
 
+ if(held_type_declaration_node_)
+ {
+  result << fr_/qy_.Type_Declaration >> held_type_declaration_node_;
+  held_type_declaration_node_ = nullptr;
+ }
+
  return result;
 }
 
@@ -453,7 +459,6 @@ void PHR_Graph_Build::add_statement_sequence_node(
  }
  else
    source << fr_/qy_.Statement_Sequence >> target;
-
 
  if(held_type_declaration_node_)
  {

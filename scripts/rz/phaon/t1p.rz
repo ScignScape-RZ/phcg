@@ -1,9 +1,5 @@
 
-&test-0-ss "abcdef" "cd";
-
-,x2 ::: str;
-x2 \= test-s-ss "abcdef" "cd";
-&prs x2;
+&test-void;
 
 ,fnd ::: PHR_Fn_Doc*;
 fnd \== default; 
