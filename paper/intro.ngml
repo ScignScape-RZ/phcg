@@ -273,7 +273,39 @@ code.
 `p`
 
 `p.
+Studying hypergraphs from a computational (and 
+`q.implementational`/) perspective %-- not just as 
+mathematical objects %-- introduces useful details 
+that can add depth to our overall understanding of 
+hypergraphs.  For example, one question is how hypergraphs 
+can be initialized %-- how software systems can build up 
+hypergraph structures, piece by piece.  This is related to the question of 
+proper serialization formats for hypergraphs.  Given some 
+specific hypergraph data aggregate `H;, it is important to 
+have a textual encoding where `H; can be mapped to a 
+character-string, shared as a document, and then reconstructed 
+with the same hypergraph structure.  This raises the question of 
+when and whether two hypergraphs are properly isomorphic 
+%-- such that serializing and then deserializing a 
+hypergraph yields `q.the same` hypergraph %-- and also the problem 
+of validating and parsing textual representations of hypergraphs.  
+The theory of parsing `i.serializations` of hypergraphs %-- 
+tectual encodings whose grammar and morphology are suitable to 
+expressing and then rebuilding hypergraph structures %-- 
+then becomes an extension of hypergraph theory itself.
+`p`
 
+`p.
+In addition to creating hypergraphs via textual 
+representations in the manner of markup languages 
+(like `XML; or `RDF;), we can also consider the incremental 
+accumulation of hypergraph structures via minimal 
+units of transformation, providing a kind of 
+`q.Intermediate Representation` embodying the form of a 
+hypergraph via a sequence of effectively (at least on one scale 
+of analysis) atomic operations.  For any variety of 
+hypergraph, then, we can consider which is a suitable 
+Intermediate Representation for 
 `p`
 
 `p.
