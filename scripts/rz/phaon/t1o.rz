@@ -7,5 +7,4 @@ penv \= (envv _$);
 
 fnd -> init penv;
 
-fnd -> test-0-S10;
-
+fnd -> test-0-S10-s "abcd";

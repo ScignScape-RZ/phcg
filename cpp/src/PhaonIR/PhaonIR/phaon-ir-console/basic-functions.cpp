@@ -145,6 +145,15 @@ void prnn(qint32 arg1, qint32 arg2)
  qDebug() << arg2;
 }
 
+void fndoc_test_0_S10_s(PHR_Fn_Doc* fnd, QString s1)
+{
+ qDebug() << "s1 = " << s1;
+}
+
+void fndoc_test_0_S10(PHR_Fn_Doc* fnd)
+{
+ qDebug() << "ok";
+}
 
 void test_void()
 {
@@ -161,6 +170,20 @@ QString test_s_ss(QString s1, QString s2)
  qDebug() << "s1 = " << s1 << "s2 = " << s2;
  qDebug() << "returning: s_ss";
  return "s_ss";
+}
+
+quint32 test_i_s(QString s1)
+{
+ qDebug() << "s1 = " << s1;
+ qDebug() << "returning: 66";
+ return 66;
+}
+
+int test_i_ss(QString s1, QString s2)
+{
+ qDebug() << "s1 = " << s1 << "s2 = " << s2;
+ qDebug() << "returning: 66";
+ return 66;
 }
 
 quint32 test_find(QString outstr, QString instr)
@@ -578,6 +601,44 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   g1.clear_all();
  }
 
+ {
+  PHR_Type* ty = type_system->get_type_by_name("str");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty);
+  g1.init_channel(lambda, 2);
+  (*g1[lambda])[0] = phc1;
+  (*g1[lambda])[1] = phc2;
+
+  PHR_Type* rty = type_system->get_type_by_name("u4");
+  PHR_Carrier* rphc = new PHR_Carrier;
+  rphc->set_phr_type(rty);
+  g1.init_channel(result, 1);
+  (*g1[result])[0] = rphc;
+
+  table.init_phaon_function(g1, pss, "test-i-ss", 700, &test_i_ss);
+
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("str");
+  PHR_Carrier* phc = new PHR_Carrier;
+  phc->set_phr_type(ty);
+  g1.init_channel(lambda, 1);
+  (*g1[lambda])[0] = phc;
+
+  PHR_Type* rty = type_system->get_type_by_name("u4");
+  PHR_Carrier* rphc = new PHR_Carrier;
+  rphc->set_phr_type(rty);
+  g1.init_channel(result, 1);
+  (*g1[result])[0] = rphc;
+
+  table.init_phaon_function(g1, pss, "test-i-s", 700, &test_i_s);
+
+  g1.clear_all();
+ }
 
  {
   PHR_Type* ty = type_system->get_type_by_name("str");
@@ -610,6 +671,39 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   g1.clear_all();
  }
 
+ {
+  PHR_Type* ty1 = type_system->get_type_by_name("PHR_Fn_Doc*");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty1);
+
+  PHR_Type* ty2 = type_system->get_type_by_name("str");
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty2);
+
+  g1.init_channel(sigma, 1);
+  (*g1[sigma])[0] = phc1;
+
+  g1.init_channel(lambda, 1);
+  (*g1[lambda])[0] = phc2;
+
+  table.init_phaon_function(g1, pss, "test-0-S10-s", 710, &fndoc_test_0_S10_s);
+
+  g1.clear_all();
+ }
+
+
+ {
+  PHR_Type* ty1 = type_system->get_type_by_name("PHR_Fn_Doc*");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty1);
+
+  g1.init_channel(sigma, 1);
+  (*g1[sigma])[0] = phc1;
+
+  table.init_phaon_function(g1, pss, "test-0-S10", 710, &fndoc_test_0_S10);
+
+  g1.clear_all();
+ }
 
  {
   table.init_phaon_function(g1, pss, "test-void", 700, &test_void);
