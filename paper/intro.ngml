@@ -305,7 +305,47 @@ units of transformation, providing a kind of
 hypergraph via a sequence of effectively (at least on one scale 
 of analysis) atomic operations.  For any variety of 
 hypergraph, then, we can consider which is a suitable 
-Intermediate Representation for 
+Intermediate Representation for conformant spaces; for 
+example, which set of primitive options can, iteratively, construct 
+any representative of the space of instantations of a 
+given kind of hypergraph.  Insofar as a software framework 
+seeks to work with sveral hypergraph varieties, we can consider 
+how several different such operation-sets can be combined.  
+`p`
+
+`p.
+Moreover, we can consider both serialization and Intermediate Representation 
+as alternative tactics for building hypergraphs, which can be combined.  
+An Intermediate Representation language can be used to carry out 
+transformations between hypergraphs %-- producing `IR; code based on 
+the first hypergraph from which the second can be created.  In conjunction 
+with serialization and parsers, a hypergraph can be realized 
+via several stages, with one form of hypergraph used as an intermediary 
+because it has a convenient grammar and works with a parsing engine; 
+from that preliminary graph a new graph can be created via `IR; code.  
+Grammars, serializaion and deserialization, and `IR; thereby become 
+part of the formal architecture defining a hypergraph ecosystem and 
+inter-graph transformations (analogous to the trio of `XML; parsers, 
+`XML; transforms, and the `XML; Document Object Model).  Continuing 
+the `XML; analogy, note that `XML; is not just a serialization specification: 
+the full `XML; technology defined requirements on a series of tools 
+operating on `XML; data, not just `XML; files: tools 
+for traversing `XML; documents (including a programming interface 
+for how traversal options are to be operationalized, e.g. 
+via Object-Oriented methods like `parentNode; and `nextSibling;); 
+for parsing `XML; files into traversable data structures (including 
+requirements on the traversals which the derived structurees 
+%-- the so-called `q.post-processing infoset` %-- must 
+support); and for intr-document mapping 
+(via `XSLT; or `XML;-FO).  The Document Object Model and 
+post-processing infoset is the structural core of the `XML; 
+format, even more than any surface-level syntax (the grammar 
+for tags, attributes, and so forth).  Analogous specifictions 
+would have to be developed for a generalized Hypergraph representation.
+`p`
+
+`p.
+The code discussed here does not purport to 
 `p`
 
 `p.
