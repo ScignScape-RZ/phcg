@@ -188,7 +188,92 @@ I suspect other scientists and engineers have
 similar intuitions, because there has been a recent uptick in 
 research on hypergraphs in various disciplines, such 
 as Category Theory, Information Management, Artificial Intelligence, 
-and 
+and Natural Language Processing.  Compared to 
+the Semantic Web, however, there is a noticeable lack 
+of standard tools or formats for expressing hypergraph 
+data or sharing hypergraph structures across multiple 
+applications and environments.  Where `RDF; and `OWL; are 
+definitely associated with the Semantic Web, so that 
+supporting these standards is a basic entry point for 
+Semantic Web technologies, there is no comparable 
+consensus on the underlying theory of hypergraph data 
+in general.    
+`p`
+
+`p.
+This situation may be explained in part by subtle differences on 
+what the word `q.hypergraph` is supposed to mean in different 
+settings, so the overal terrain of hypergraphs is 
+divided into distinct mathematical models, often without a 
+rigorous theory of their interrelationships.  
+Another problem is perhaps a failure to appreciate how hypergraphs 
+are structurally different from ordinary graphs, so that 
+hypergraph-shaped data may be imprecisely treated as 
+a mere variation upon or a special structuration within 
+ordinary graphs.  For eample, Semantic Web structures such as 
+`RDF; `q.bags` and `q.collections` introduce a kind of 
+hierarchical organization to Semantic Web graphs, and can be considered 
+a form of hypergraph, but these protocols are not described as 
+enabling a transition from a networking framework based on 
+directed labeled graphs to one based on hypergraphs.  Instead, 
+hypergraphs become `i.de facto` embedded within ordinary graphs, 
+exploiting the representational flexibility which also 
+makes the Semantic Web suitable for spreadsheets, `XML;, and 
+other structures that are not graphs at a `i.prima facie` level.
+The problem is that while hypergraphs can be `i.encoded` in 
+ordinary graphs with a suitable labeling convention, 
+the distinct structural details which make hypergraphs 
+superior to the Semantic Web no longer remain as 
+explicit architectural features once hypergraphs are 
+`q.encoded` in conventional Semantic Web formats.
+`p`
+
+`p.
+Recent (computer-science-related) research into hypergraphs 
+sems to emphasize two different topics: first, the 
+representational potential for hypergraphs as a 
+general morphology for representing structured information 
+in general; and, second, the specific possibilities 
+of using hypergraphs to model computer code and computational 
+processes.  In the second subject-area, hypergraphs are studied 
+as a medium for expressing details about computer algorithms as a 
+way to reason about executable computer code as a structured system, and 
+perhaps even design execution engines (virtual machines to 
+run computer code that is in a suitable representation).  This 
+latter research sometimes appears to present a mathematical 
+picture of hypergraphs as an abstract model 
+of computing procedures and evaluations %-- a kind of 
+graph-based rinterpretation of the lambda calculus %-- but 
+sometimes is also marshaled into implemented execution 
+environments, as in the OpenCog and lmnTal frameworks.
+`p`
+
+`p.
+My goal in this paper is to consider what a unified hypergraph 
+paradigm can look like %-- how the different strands which in their 
+own way embody hypergraph structures can be woven together 
+into a multi-purpose whole.  My emphasis is on computer implementations 
+rather than mathematics %-- that is, I will not present axioms 
+or theorems formalizing different sorts of hypergraphs, though I 
+ackowledge that such descriptions are possible.  Instead, my 
+aim is to describe what might constitute a general software 
+library or toolkit that can adapt to different hypergraph 
+models and use-cases.  This paper is accompanied by a `q.data set` 
+which involves a library (written in `Cpp;) for creating and 
+manipulating hypergraphs of different varieties, and also a 
+`q.virtual machine` for modeling and realizing 
+computatational procedures via hypergraph structures.  The 
+point of the accompanying code is to 
+demonstrate that a generalized hypergraph representation 
+is possible, and that in addition to use-cases for modeling 
+data structures such a representation can be used at the 
+core of a virtual processor.  The code includes simple tests and 
+`q.scripts` that can be executed via the provided virtual-machine 
+code.
+`p`
+
+`p.
+
 `p`
 
 `p.
