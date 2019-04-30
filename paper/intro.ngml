@@ -151,7 +151,26 @@ work better across contexts.
 `p`
 
 `p.
-
+In the plurality of representational paradigms, a significant 
+evolution has been the emergent popularity of structures 
+based on graphs.  The predominant influence on this 
+line of development has been the Semantic Web and the specific graph 
+architecture codified by `q.Web Ontologies`/, although 
+other graph-representation models (such as 
+Conceptual Graph Semantics) were also candidates for 
+potential technological `q.entrenchnment` before 
+Semantic Web formats like `RDF; and `OWL; 
+became standardized.`footnote.
+Why `RDF;/`OWL; and not, say, Conceptual 
+Graphs, or the hybrid Object-Database/Graph-Database models 
+studied in the 1990s, became canonized in the Semantic Web, is 
+an interesting question but perhaps of mostly historical 
+interest insofar as Hypergaphs can unify each of these paradigms.
+`footnote`  More recently %-- and the focus of 
+this paper %-- scientists have proposed generalizations 
+and/or alternatives to the Semantic Web based on 
+hypergraphs in lieu of ordinary (directed, labeled) 
+graphs.
 `p`
 
 `p.
