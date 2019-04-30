@@ -172,6 +172,13 @@ QString test_s_ss(QString s1, QString s2)
  return "s_ss";
 }
 
+QString test_s_s(QString s1)
+{
+ qDebug() << "s1 = " << s1;
+ qDebug() << "returning: s_s";
+ return "s_s";
+}
+
 quint32 test_i_s(QString s1)
 {
  qDebug() << "s1 = " << s1;
@@ -577,6 +584,25 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[lambda])[1] = phc2;
 
   table.init_phaon_function(g1, pss, "test-prss", 700, &test_prss);
+
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("str");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty);
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty);
+  g1.init_channel(lambda, 1);
+  (*g1[lambda])[0] = phc1;
+
+  PHR_Carrier* rphc = new PHR_Carrier;
+  rphc->set_phr_type(ty);
+  g1.init_channel(result, 1);
+  (*g1[result])[0] = rphc;
+
+  table.init_phaon_function(g1, pss, "test-s-s", 600, &test_s_s);
 
   g1.clear_all();
  }

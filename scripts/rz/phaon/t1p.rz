@@ -1,6 +1,10 @@
 
 &test-0-ss "abcdef" "cd";
 
+,x2 ::: str;
+x2 \= test-s-ss "abcdef" "cd";
+&prs x2;
+
 ,fnd ::: PHR_Fn_Doc*;
 fnd \== default; 
 
@@ -9,4 +13,5 @@ penv \= (envv _$);
 
 fnd -> init penv;
 
-fnd -> test-0-S10-s "abcd";
+fnd -> test-0-S10;
+
