@@ -157,6 +157,9 @@ QString RZ_Graph_Visitor_Phaon::function_name_from_token_text(QString text)
    {"<", "#<"},
    {">", "#>"},
    {"?\\", "#?\\"},
+
+   {"~n-to-s", "n-to-s"},
+
   }};
 
  return static_map.value(text, text);

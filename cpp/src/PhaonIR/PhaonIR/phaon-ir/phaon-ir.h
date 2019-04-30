@@ -139,7 +139,7 @@ class PhaonIR
  QMap<QString, PHR_Channel_Group*> temp_anchored_channel_groups_;
 
  QMultiMap<PHR_Channel_Group*, void*> temps_by_channel_group_;
- QStringList temp_strings_;
+ //?QStringList temp_strings_;
 
 
  QList<void*> retired_temps_;

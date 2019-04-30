@@ -179,6 +179,9 @@ void RE_Document::preprocess_raw_text()
  // // for \else ...
  raw_text_.replace("\\else", "\\t \\do");
 
+ // // for n-to-s ...
+ raw_text_.replace("\\$(", "(~n-to-s ");
+
  // // for \do ...
  raw_text_.replace("\\do", "do .() -> ");
 

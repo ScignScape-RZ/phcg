@@ -319,20 +319,14 @@ PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QStri
   evaluate_channel_group_via_direct_eval(pcg, rv,
     string_result, pto, usi_sym);
 
+  // what about non-string returns?
   if(rv == (quint64) &string_result)
   {
-   temp_strings_.push_back(string_result);
-   rv = (quint64) &temp_strings_.last();
+   rv = (quint64) new QString(string_result);
+   temps_by_channel_group_.insertMulti(pcg, (void*) rv);
   }
-
-  temps_by_channel_group_.insertMulti(pcg, (void*) rv);
-
-  QString* qs = (QString*) temps_by_channel_group_.value(pcg);
-
   pv = (void*) rv;
-
   return nullptr;
-
  }
  return nullptr;
 }
