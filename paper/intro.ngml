@@ -345,7 +345,39 @@ would have to be developed for a generalized Hypergraph representation.
 `p`
 
 `p.
-The code discussed here does not purport to 
+The code discussed here does not purport to provide a mature or 
+decisive implementation of a general-purpose hypergraph ecosystem, 
+but rather to demonstrate by example what components may comprise 
+such a framework and how they may interoperat.  The cod inclus 
+hyprgraph models but also the preliminary and 
+intermediary structures that can connct hypergraphs to 
+a surrounding computational infrastructure %-- parsers, 
+Intermediate Representation, application-integration 
+logic (such as mapping hypergraph nodes to 
+application-specific data types), and a `q.virtual machine` 
+for realizing hypergraphs as executable code.  
+`p`
+
+`p.
+The remainder of this paper will focus on thre 
+subjects: delimitating the proper range of hypergraph 
+models; execution models and the `q.virtual machine`/; and 
+a review of formal structurs (like grammars and `IR; 
+formats) which ar estructurally different 
+than hypergraphs but can help tie hypergraph 
+representations togther into a unified ecosystem.  
+I have spoken only informally about hypergraphs 
+themselves, taking for granted that we have a general 
+picture of what hypergraphs are, but this now 
+demands more rigorous treatment.  There are actually several 
+different research and engineering communities 
+that talk about hypergraphs, in each case describing 
+some sort of generalization of regular (often 
+labeled and/or directed) graphs, but these generalizations 
+fall into different kinds.  Hence there are several different 
+varieties of hypergraph, and I will try 
+to outline a general theory of hypergraphs in these 
+various forms.
 `p`
 
 `p.

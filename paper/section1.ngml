@@ -1,0 +1,35 @@
+
+`section.Varieties of Hypergraphs`
+`p.
+Any notion of hypergraphs contrasts with an 
+underlying graph model, such that some element treated as 
+singular or unstructurd in regular graphs becomes a multiplcity 
+or compound structure in the hypergraph.  So for example, an 
+edge generalizes to a hyperedge with more than two incident 
+nodes (which means, for directed graphs, more than 
+one source and/or target nodes).  Likewise, nodes can generalize 
+to complex structures containing other nodes (including, 
+potentially, nested graphs).  The `q.elements` of a graph 
+are nodes and edges, but also (for labeled/weighted 
+and/or directed graphs) things like labels, weights 
+(such as probability metrics associated with edges), and directions.  
+Potentially, each of these elements can be transformed 
+from a simple unit to a plural structure, a process 
+I will call `q.diversification`/.  That is, 
+a hypergraph emerges from a graph by `q.diversifying` 
+some elements, rendering as multiplicities what 
+had preciously been a single entity %-- nodes become node-sets, edges 
+become grouped into larger aggregates, labels generalize to 
+complex structures (which we can call `q.annotations`/), 
+etc.  Different avenues of diversification give 
+rise to different varieties of hypergraphs, which 
+I will review in the next several paragraphs.
+`p`
+
+`p.
+
+`p`
+
+`p.
+
+`p`
