@@ -56,7 +56,12 @@ void RE_Grammar::init(RE_Parser& p, RE_Graph& g, RE_Graph_Build& graph_build)
 
  add_rule( flags_all_(parse_context ,inside_string_literal), run_context,
   "string-literal-character",
-  " (?: [^\\\"] | \\\\\" )+ ",
+    // // note ++ prevents backtracking inside \\"-like strings,
+     //   which avoids rroneously matching the \'s
+     //   before the last \; the point here is to
+     //   exclude any run of \'s before " as an
+     //   atomic unit (which needs ++ rather than +).
+  " (?: [^\"\\\\]+ ) | (?: (?:\\\\++)(?!\") ) ",
   [&]
  {
   QString str = p.match_text();
@@ -67,12 +72,27 @@ void RE_Grammar::init(RE_Parser& p, RE_Graph& g, RE_Graph_Build& graph_build)
 
 
  add_rule( flags_all_(parse_context ,inside_string_literal), run_context,
-  "string-literal-end",
-  " \" ",
+  "string-literal-maybe-end",
+  " \\\\*\" ",
   [&]
  {
-  graph_build.process_string_literal();
-  parse_context.flags.inside_string_literal = false;
+  // depends on how many back-slahes ...
+  QString str = p.match_text();
+  if(str.size() % 2) // odd mans even backslashes ...
+  {
+   if(str.size() > 1)
+   {
+    str.chop(1);
+    graph_build.add_to_string_literal(str);
+   }
+   graph_build.process_string_literal();
+   parse_context.flags.inside_string_literal = false;
+  }
+  else
+  {
+   graph_build.add_to_string_literal(str);
+  }
+
  });
 
 
