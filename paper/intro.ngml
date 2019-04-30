@@ -166,11 +166,29 @@ Graphs, or the hybrid Object-Database/Graph-Database models
 studied in the 1990s, became canonized in the Semantic Web, is 
 an interesting question but perhaps of mostly historical 
 interest insofar as Hypergaphs can unify each of these paradigms.
-`footnote`  More recently %-- and the focus of 
-this paper %-- scientists have proposed generalizations 
+`footnote`  More recently, scientists have proposed generalizations 
 and/or alternatives to the Semantic Web based on 
-hypergraphs in lieu of ordinary (directed, labeled) 
-graphs.
+hypergraphs in lieu of ordinary (directed, labeled) graphs.
+`p`
+
+`p.
+As might be ascertained from hypergraphs being the focus of this paper, 
+I believe that representational paradigms based on hypergraphs can be superior to 
+other formats and need to be studied with an integrated, generalized 
+set of theories and computer tools.  I have inrododucd the 
+topic of hypergraph data structures via the general issues in 
+digital representation in part to rest claims of hypergraphs' 
+merit on explicit criteria.  In particular, I believe 
+hypergraphs can adapt to the different technological 
+contexts prerequisute to a decentralized digital ecosystem 
+%-- databases, networking, application implementation, visual/interactive 
+software design, and semantic expressiveness %-- more effeectively 
+than other paradigms, like regular graphs or `SQL;-style tables.  
+I suspect other scientists and engineers have 
+similar intuitions, because there has been a recent uptick in 
+research on hypergraphs in various disciplines, such 
+as Category Theory, Information Management, Artificial Intelligence, 
+and 
 `p`
 
 `p.
