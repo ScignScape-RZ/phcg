@@ -559,19 +559,69 @@ void PGB_IR_Build::generate_file(QString path, QList<Text_With_Purpose>& tps)
  });
 }
 
+// // utility for parse_line...
+int count_backslashes(QString s)
+{
+ if(!s.endsWith('\\'))
+   return 0;
+ if(s.size() == 1)
+   return 1;
+ for(int i = 1, j = s.size() - 2; j >= 0; ++i, --j)
+ {
+  if(s[j] != '\\')
+    return i;
+ }
+}
+
 QString PGB_IR_Build::parse_line(QString line, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
  if(line.startsWith('('))
    line = line.mid(1);
  if(line.endsWith(')'))
    line.chop(1);
- QStringList qsl = line.split(' ');
+
+ QString acc;
+ int q_count = 0;
+
+ bool quoted = false;
+
+ QStringList split = line.split('\"');
+ QStringList qsl;
+ for(QString s: split)
+ {
+  if(quoted)
+  {
+   int c = count_backslashes(s);
+   if(c % 2) // // odd
+   {
+    s.chop(1);
+    s += '\"';
+    acc += s;
+    ++q_count;
+    continue; // skip flipping quoted ...
+   }
+   else if(q_count > 0)
+   {
+    qsl.push_back(QString("\"%1%2\"").arg(acc).arg(s));
+    q_count = 0;
+    acc.clear();
+   }
+   else
+     qsl.push_back(QString("\"%1\"").arg(s));
+  }
+  else
+  { // If 's' is outside quotes ...
+   qsl.append(s.split(' ', QString::SkipEmptyParts)); // ... get the splitted string
+  }
+  quoted = !quoted;
+ }
+
  QString fn = qsl.takeFirst();
- int i = 0;
+ int count = 0;
  for(QString qs: qsl)
  {
   MG_Token mgt = MG_Token::decode_symbol(qs);
-  mgtm.insert(mgt.kind, {mgt, i++});
+  mgtm.insert(mgt.kind, {mgt, count++});
  }
  return fn;
 }
