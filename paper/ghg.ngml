@@ -1,0 +1,38 @@
+
+\documentclass[11pt,twocolumn]{article}
+
+`include<commands>;
+
+\AddToShipoutPicture{%
+  \AtPageLowerLeft{%
+    \hspace*{1em}
+ \rotatebox{90}{%
+        \begin{minipage}{\paperheight}
+   \centering
+   {\color{codegr!65}\textcopyright ~\today{} Nathaniel Christen}
+        \end{minipage} %
+      }
+    } %
+  }%
+
+`document,
+
+`title.GHG`
+
+`maketitle;
+
+`abstract,
+GHG
+`abstract`
+
+`quote,
+
+`quote`  %--  
+
+`vspace<1em>;
+
+`input<intro.ngml>;
+
+
+`document`
+

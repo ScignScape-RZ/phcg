@@ -1,0 +1,159 @@
+
+`p.
+Computational and scientific data representation intrinsically 
+balances two competing priorities: `q.semantic` expressiveness and 
+computational tractability.  On the one hand, representations should not 
+obscure important details: the formal requirements on 
+representational validity should not force representations 
+into structures that necessitate the elimination of meaningful 
+information.  On the other hand, conversely, representations 
+should have enough structural consistency that they are 
+amenable to analysis and transformations driven by 
+formal algorithms.
+`p`
+
+`p.
+I've just left a lot of loose ends: in particular, these comments need 
+to give some meaningful definition to `q.representation`/.  To be sure, there 
+are many media wherein `q.data` can be represented: via graphics 
+(e.g., charts, `q.maps` in the cartographical sense, or and `q.graphs` 
+in the sense of plotted visualizations of 
+mathematical functions), via printed documents (like the logarithmic 
+tables or astronmic records of early modern science), or via mathematical 
+equations and formulae (if a mathematical theory correctly 
+predicts and quantifies empirical data %-- e.g., fitting trajectories 
+to elliptic or parabolic shapes %-- then the numeric structures of 
+the theory are a proxy representation of the corresponding data).  
+Moreover, aside from these relatively formal modes of representation, 
+we have the capacity to indirectly describe information via 
+natural language. 
+`p`
+
+`p.
+The modern age has a further notion of representation: `i.digital` 
+representations which leverage the capabilities of 
+computer storage and processing to create persistent 
+data repositories, with the possibility of manipulating 
+data via computer programming and displying data 
+via computer software.  These digital representations incorporate 
+features of the older representational media I alluded to: 
+like Natural Language digital data often emanates from a 
+textual representation, with data structures initialized 
+from special `q.languages` like `XML; or `JSON;.  As with 
+structured `q.printed` documents (of the astronomical -table 
+or even grocery-shopping-list variety), digital representations 
+often build off of a rigid structural template, like a two-dimensional 
+table with rows and columns, or a hierarchical document 
+whose elements can be nested documents.  And as with 
+mathematical representations, digital representations can be 
+analyzed as instances of spaces or structures with certain 
+algebraic or syntactic properties and requirements.  
+It is often possible to mathematically describe the 
+full space of structures which conform to a given 
+representational protocol, or the full space of transformations 
+that can modify a given data structure while staying 
+consistent with its enforced protocols.  Also, each data 
+structure potentially has some notion of aggregateness: of 
+having different `q.parts`/, of being able to focus on one part 
+at a time, and to `q.move` focus from one part to another.
+`p`
+
+`p.
+In short, digital representations have several general criteria: 
+`i.validity` (a formal model of conformant vs. invalid 
+structures`footnote.An invalid graph might be a case where an 
+edge has no incident nodes; an invalid `XML; structure is one without 
+a single root element or (insofar as such a structure would be 
+representable) with mismatched tags, and so forth)`/); 
+`i.traversability` (a notion of parthood and iterating
+or refocusing among pats), and, let's say, `i.atomicity` 
+(a notion of unitary parts that can be represented as 
+integral wholes).  These criteria ensure that digitally 
+reprsented data structures can work within software and 
+networking representations: information is 
+presented to software users by displaying atomic 
+units (textually or graphically) and traversing through 
+data structures to fill in, via application code, a 
+visual tableau presenting compound data, with different 
+unitary displays visually separated and often organized into 
+coherent visual patterns, like the grid-pattern of a 
+spreadsheet.  Meanwhile, atomic units can be textually 
+encoded, and aggregate structure likewise notated through 
+syntactic conventions that preserve atom's boundaries, yielding 
+textual serializations of data structures that can be 
+shared between computing environments, allowing information to 
+be copied and distributed.  Finally, digital representations 
+of data structures canbe marshalled into different binary forms %-- 
+encoded in byte- and bit-patterns %-- to enable both 
+persistent storage in a database and `q.runtime` presence 
+as binary data that can be accessed by software applications.
+`p`
+
+`p.
+I take the time to lay out these basic principles because I want 
+to emphasize the different contexts where digital representations can be 
+found: in particular, textual encoding and serialization; 
+graphical/interactive displays for software users; application runtimes; 
+and long-term database storage.  A given representation will morph and 
+mutate to accommodate these different contexts.  Moreover, these 
+contexts correspond to distinct technical specializations: database engineers 
+have a different perspective on data structures than network engineers designing 
+protocols for encoding and exchanging data between network endpoints; and 
+application designers focused on optimal human-computer-application 
+understand digital representations as visual and interactive phenomena, 
+whereas application `i.developers` need to focus on how to 
+properly encode data structures for binary runtimes.  These various 
+perspectives all influence the theory and technology 
+behind digital data representation: a successful 
+representational paradigm needs to adapt to the operatoonal 
+requirements of engineers in each of these disicplines.
+`p`
+
+`p.
+Additionally, insofar as the point of digital archives is to encode 
+empirical, `q.real-world` data, a proper representational protocol 
+needs to promote a synergy between the information as humans understand 
+it and the data structures recognized bu the technology.  For instance, 
+if a published data set shares scientific data, it should be 
+represented in ways that preserve scintifically significant 
+details %-- any derivations, descriptions, or observations 
+which are intrinsic to the science's methodology, 
+theory, assumptions, and experimental results.  The data needs to 
+be structured according to the `q.semantics of the science`/, so that 
+the scientific background can be reconstructed along with future use 
+of the data, even after a circuitous journey through different 
+contexts, like through a database and over a network to 
+a scientific-software application (maye years later).   
+As formal models of data semantics have become more rigorous %-- e.g. in our 
+century with Ontologies and the `q.Semantic Web` %-- this 
+`q.semantic engineering` has become a further technical perspective 
+needing consideration in the dsign and evaluation of digital representations.
+`p`
+
+`p.
+Over the decades, many general representation strategies and 
+`q.layouts` have been envisioned, from tabular structures 
+in the manner of Relational Databases, to tree-like 
+documents whose morphology is inspired by markup languags, 
+to structurally looser variations on row/column 
+arrangements like multi-dimensional key-value spaces or 
+`q.Big Column` and other `q.`NoSQL;`-database-inspired 
+articulations.  These various paradigms are subject to 
+`q.selective` pressures based on how well the meet the 
+different engineering needs I have identified.  But the 
+multiplicity of these needs complicates the `q.competition` between 
+representational strategies: a paradigm optimized 
+for one context (e.g., persistent databases) is not necessarily 
+optiman for another (e.g., application and `GUI; development).  
+As a result, developers and computer scientists must 
+continue to explore and collaborate on new paradigms which 
+work better across contexts.
+`p`
+
+`p.
+
+`p`
+
+`p.
+
+`p`
