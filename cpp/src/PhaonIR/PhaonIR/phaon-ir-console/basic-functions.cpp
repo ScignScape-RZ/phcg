@@ -288,6 +288,11 @@ void test_if_then_else(quint64 args_ptr)
  }
 }
 
+QString n_to_s(quint32 arg)
+{
+ return QString::number(arg);
+}
+
 void test_arg_vec_str(quint64 args_ptr)
 {
  QVector<quint64>& args = *(QVector<quint64>*)(args_ptr);
@@ -506,6 +511,7 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[lambda])[0] = phc;
 
   table.init_phaon_function(g1, pss, "test-arg-vec-str", 700, &test_arg_vec_str);
+  table.init_phaon_function(g1, pss, "prss", 700, &test_arg_vec_str);
 
   g1.clear_all();
  }
@@ -603,6 +609,24 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[result])[0] = rphc;
 
   table.init_phaon_function(g1, pss, "test-s-s", 600, &test_s_s);
+
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty = type_system->get_type_by_name("u4");
+  PHR_Carrier* phc = new PHR_Carrier;
+  phc->set_phr_type(ty);
+  g1.init_channel(lambda, 1);
+  (*g1[lambda])[0] = phc;
+
+  PHR_Type* rty = type_system->get_type_by_name("str");
+  PHR_Carrier* rphc = new PHR_Carrier;
+  rphc->set_phr_type(rty);
+  g1.init_channel(result, 1);
+  (*g1[result])[0] = rphc;
+
+  table.init_phaon_function(g1, pss, "n-to-s", 600, &n_to_s);
 
   g1.clear_all();
  }

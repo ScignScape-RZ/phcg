@@ -32,6 +32,7 @@ class PHR_Channel_Group_Evaluator;
 class PHR_Channel;
 class PHR_Command_Package;
 class PHR_Expression_Object;
+class PHR_Type_Object;
 
 class PHR_Symbol_Scope;
 
@@ -138,6 +139,8 @@ class PhaonIR
  QMap<QString, PHR_Channel_Group*> temp_anchored_channel_groups_;
 
  QMultiMap<PHR_Channel_Group*, void*> temps_by_channel_group_;
+ QStringList temp_strings_;
+
 
  QList<void*> retired_temps_;
 
@@ -266,11 +269,16 @@ public:
  void push_carrier_anon_fn(QString fn);
 
  PHR_Channel_Group_Evaluator* evaluate_channel_group_by_usi_symbol(QString usi_sym,
-   PHR_Expression_Object*& pxo);
+   PHR_Expression_Object*& pxo, void*& pv);
 
  void hold_type_by_name(QString ty_name);
  void coalesce_channel_group();
  void evaluate_channel_group();
+
+ void evaluate_channel_group_via_direct_eval(PHR_Channel_Group* pcg,
+   quint64& rv, QString& string_result,
+   const PHR_Type_Object*& pto, QString anchor);
+
  void mark_void_call();
 
  void hold_symbol_scope(PHR_Symbol_Scope* pss);

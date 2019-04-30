@@ -105,8 +105,10 @@ qint32 PhaonIR::get_s4_symbol_value(QString sym)
  if(sym.startsWith('#'))
  {
   PHR_Expression_Object* pxo = nullptr;
+  void* pv = nullptr;
   //PHR_Channel_Group* pcg
-  PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(sym, pxo);
+  PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(sym,
+    pxo, pv);
   if(ev)
   {
    return ev->get_result_value_as<qint32>();
@@ -132,8 +134,9 @@ PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
  {
   //PHR_Channel_Group* pcg
   PHR_Expression_Object* pxo = nullptr;
+  void* pv = nullptr;
   PHR_Channel_Group_Evaluator* ev = evaluate_channel_group_by_usi_symbol(
-    sym, pxo);
+    sym, pxo, pv);
   if(ev)
   {
    so = PHR_Runtime_Scope::Storage_Options::Direct;
@@ -143,6 +146,11 @@ PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
   {
    so = PHR_Runtime_Scope::Storage_Options::Pointer;
    val = (quint64) pxo;
+  }
+  else if(pv)
+  {
+   so = PHR_Runtime_Scope::Storage_Options::Pointer;
+   val = (quint64) pv;
   }
   return nullptr;
  }
@@ -277,7 +285,7 @@ void PhaonIR::pop_unwind_scope()
 
 
 PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QString usi_sym,
-  PHR_Expression_Object*& pxo)
+  PHR_Expression_Object*& pxo, void*& pv)
 {
 // char by_need = 0;
 // if(usi_sym[1] == '?')
@@ -296,9 +304,35 @@ PHR_Channel_Group_Evaluator* PhaonIR::evaluate_channel_group_by_usi_symbol(QStri
   }
 
   PHR_Channel_Group_Evaluator* result = load_evaluator_fn_(*this, *pcg);
-  result->run_eval();
-  temps_by_channel_group_.insertMulti(pcg, result->get_result_value());
-  return result;
+
+  if(result)
+  {
+   result->run_eval();
+   temps_by_channel_group_.insertMulti(pcg, result->get_result_value());
+   return result;
+  }
+
+  quint64 rv = 0;
+  QString string_result;
+  const PHR_Type_Object* pto = nullptr;
+
+  evaluate_channel_group_via_direct_eval(pcg, rv,
+    string_result, pto, usi_sym);
+
+  if(rv == (quint64) &string_result)
+  {
+   temp_strings_.push_back(string_result);
+   rv = (quint64) &temp_strings_.last();
+  }
+
+  temps_by_channel_group_.insertMulti(pcg, (void*) rv);
+
+  QString* qs = (QString*) temps_by_channel_group_.value(pcg);
+
+  pv = (void*) rv;
+
+  return nullptr;
+
  }
  return nullptr;
 }
@@ -336,6 +370,27 @@ void PhaonIR::hold_symbol_scope(PHR_Symbol_Scope* pss)
  held_symbol_scope_ = pss;
 }
 
+
+void PhaonIR::evaluate_channel_group_via_direct_eval(PHR_Channel_Group* pcg,
+  quint64& rv, QString& string_result, const PHR_Type_Object*& pto, QString anchor)
+{
+ PHR_Command_Package pcp(*pcg);
+ pcp.set_output_symbol_name(anchor);
+
+ if(direct_eval_fn_)
+   direct_eval_fn_(code_model_, &pcp, held_symbol_scope_);
+
+ pto = pcp.result_type_object();
+ if(!pto)
+   return;
+ rv = pcp.eval_result();
+ if(rv == (quint64) pcp.string_result_as_pointer())
+ {
+  string_result = pcp.string_result();
+  rv = (quint64) &string_result;
+ }
+}
+
 void PhaonIR::evaluate_channel_group()
 {
  PHR_Channel_Group_Evaluator* ev = load_evaluator_fn_(*this, *held_channel_group_);
@@ -355,22 +410,8 @@ void PhaonIR::evaluate_channel_group()
  else
  {
   QString rsym = anchored_channel_groups_.value(held_channel_group_).sym;
-
-  PHR_Command_Package pcp(*held_channel_group_);
-  pcp.set_output_symbol_name(rsym);
-
-  if(direct_eval_fn_)
-    direct_eval_fn_(code_model_, &pcp, held_symbol_scope_);
-
-  pto = pcp.result_type_object();
-  if(!pto)
-    return;
-  rv = pcp.eval_result();
-  if(rv == (quint64) pcp.string_result_as_pointer())
-  {
-   string_result = pcp.string_result();
-   rv = (quint64) &string_result;
-  }
+  evaluate_channel_group_via_direct_eval(held_channel_group_,
+    rv, string_result, pto, rsym);
   //return;
   //? phr_direct_eval(code_model_, &pcp, held_symbol_scope_);
  }
