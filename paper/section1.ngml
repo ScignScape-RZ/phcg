@@ -74,9 +74,39 @@ below) can be called a `q.diversification`
 on `i.labels`/, transforming from labels as single units 
 to labels as multi-part records.
 
-\item[Channels]   
- 
+\item[Channels]   Hyperedges, which connect multiple 
+nodes, are still generally seen as single edges 
+(in contrast to multigraphs which allow multiple 
+edges between two nodes).  Analogous to the grouping 
+of nodes into hypernodes, we can also consider structures 
+where several different edges are unified into a larger 
+totality, which I will call a `i.channel`/.  
+In the canonical case, a directed graph can group 
+edges into composites (according to more fine-grained criteria 
+than just distinguishing incoming and outgoing dges) which share a 
+source or target node.  For example, the set of incoming edges 
+to the same target node may be partitioned into distinct 
+`q.channels`/, so that at one scale of consideration the network 
+structure can be analyzed via channels rather than via 
+single edges.  For a concrete example, 
+consider graphs used to model Object-Oriented programming 
+languages, where a single node can represent a 
+single function call.  The incoming edges are then 
+`q.input parameters`/, and outgoing edges are procedural 
+results or outputs.  In the Object-Oriented paradigm, however, 
+input paramters are organized into two groups: in addition 
+to any number of `q.conventional` arguments, there is 
+a single `this; or `self; object which has a distinct semantic 
+status (`visavis; name resolution, function visibiloty, and 
+polymorphism).  This calls, under the graph model, for splitting 
+incoming edges into two `q.channels`/, one reprsenting regular 
+parameters and a separate channel for the distinguished or 
+`q.receiver` object-value.
 `description`
+`p`
+
+`p.
+
 `p`
 
 `p.
