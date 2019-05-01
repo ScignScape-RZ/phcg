@@ -56,9 +56,24 @@ with their own nodes and edges.
 graphs are an important model for computational models, 
 we can also consider generalizations of labels to be 
 compound structures rather than numeric or string labels 
-(or, as in the Semantic Web, `q.predicate` annotations 
-drawn from an Ontology).  
- 
+(or, as in the Semantic Web, `q.predicate` terms,  
+drawn from an Ontology, in `q.Subject-Predicate-Object` 
+triples).  Compound labels (which I will generically call 
+`q.annotations`/) are encountered (sometimes implicitly) 
+in several different branches of mathematics and other fields.  
+In particular, compound annotations can represent the 
+rules, justifications, or `q.compatibility` which allows 
+to nodes to be connected.   In this case the annotation 
+may contain information about both incidnt nodes.  An example 
+in linguistics is morphosyntactic agreement 
+between gramatically linked words, which involves details 
+matched between both `q.ends` of a link 
+(part-of-speech, plural/singular, gender, case/declension, 
+etc.).  This general phenomenon (I will mention further examples 
+below) can be called a `q.diversification` 
+on `i.labels`/, transforming from labels as single units 
+to labels as multi-part records.
+
 \item[Channels]   
  
 `description`
