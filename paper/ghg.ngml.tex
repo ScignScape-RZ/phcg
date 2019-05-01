@@ -1,8 +1,5 @@
-
 \documentclass[11pt,twocolumn]{article}
-
-`include<commands>;
-
+\include{commands}
 \AddToShipoutPicture{%
   \AtPageLowerLeft{%
     \hspace*{1em}
@@ -14,25 +11,12 @@
       }
     } %
   }%
-
-`document,
-
-`title.GHG`
-
-`maketitle;
-
-`abstract,
-GHG
-`abstract`
-
-`quote,
-
-`quote`  %--  
-
-`vspace<1em>;
-
-`input<intro.ngml>;
-`input<section1.ngml>;
-
-`document`
-
+\begin{document}\title{GHG}
+\maketitle{}
+\begin{abstract}GHG
+\end{abstract}
+\begin{quote}\end{quote}  \mdash{}  
+\vspace{1em}
+\input{intro.ngml}
+\input{section1.ngml}
+\end{document}

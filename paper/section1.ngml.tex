@@ -1,0 +1,101 @@
+\section{Varieties of Hypergraphs}
+\p{Any notion of hypergraphs contrasts with an 
+underlying graph model, such that some element treated as 
+singular or unstructurd in regular graphs becomes a multiplcity 
+or compound structure in the hypergraph.  So for example, an 
+edge generalizes to a hyperedge with more than two incident 
+nodes (which means, for directed graphs, more than 
+one source and/or target nodes).  Likewise, nodes can generalize 
+to complex structures containing other nodes (including, 
+potentially, nested graphs).  The \q{elements} of a graph 
+are nodes and edges, but also (for labeled/weighted 
+and/or directed graphs) things like labels, weights 
+(such as probability metrics associated with edges), and directions.  
+Potentially, each of these elements can be transformed 
+from a simple unit to a plural structure, a process 
+I will call \q{diversification}.  That is, 
+a hypergraph emerges from a graph by \q{diversifying} 
+some elements, rendering as multiplicities what 
+had preciously been a single entity \mdash{} nodes become node-sets, edges 
+become grouped into larger aggregates, labels generalize to 
+complex structures (which we can call \q{annotations}), 
+etc.  Different avenues of diversification give 
+rise to different varieties of hypergraphs, which 
+I will review in the next several paragraphs.
+}
+\p{\begin{description}\item[Hyperedges]  Arguably the most common model of 
+hypergraphs involves generalizing edges to hyperedges, 
+which (potentially) connect more than two nodes.  Directed 
+hyperedges have a \q{source} node-set and a \q{target} node-set, 
+either of which can (potentially) have more than one node.  
+Note that this is actually a form of node-diversification 
+\mdash{} there is still (in this kind of hypergraph) just one 
+edge at a time, but its incident node set (or source and 
+target node-sets) are sets and not single nodes.  Another way 
+of looking at directed hyperedges is to see source and target 
+node-sets as integral comple parts, or \q{hypernodes}.  
+So a (directed) hypergraph with hyperedges can also 
+be seen as generalizing ordinary graphs by replacing 
+nodes with hypernodes.
+ 
+\item[Recursive Graphs]  Whereas hyperedges embody a relatively 
+simple node-diversification \mdash{} nodes replaced by node-sets 
+\mdash{} so-called \q{recursive} graphs allow compound nodes (hypernodes) 
+to contain entire nested graphs.  Edges in this case can still 
+connect two hypernodes as in ordinary graphs, but the 
+hypernodes internally contain other graphs, 
+with their own nodes and edges.
+ 
+\item[Hypergraph Categories and Link Grammar]   Since \i{labeled} 
+graphs are an important model for computational models, 
+we can also consider generalizations of labels to be 
+compound structures rather than numeric or string labels 
+(or, as in the Semantic Web, \q{predicate} terms,  
+drawn from an Ontology, in \q{Subject-Predicate-Object} 
+triples).  Compound labels (which I will generically call 
+\q{annotations}) are encountered (sometimes implicitly) 
+in several different branches of mathematics and other fields.  
+In particular, compound annotations can represent the 
+rules, justifications, or \q{compatibility} which allows 
+to nodes to be connected.   In this case the annotation 
+may contain information about both incidnt nodes.  An example 
+in linguistics is morphosyntactic agreement 
+between gramatically linked words, which involves details 
+matched between both \q{ends} of a link 
+(part-of-speech, plural/singular, gender, case/declension, 
+etc.).  This general phenomenon (I will mention further examples 
+below) can be called a \q{diversification} 
+on \i{labels}, transforming from labels as single units 
+to labels as multi-part records.
+\item[Channels]   Hyperedges, which connect multiple 
+nodes, are still generally seen as single edges 
+(in contrast to multigraphs which allow multiple 
+edges between two nodes).  Analogous to the grouping 
+of nodes into hypernodes, we can also consider structures 
+where several different edges are unified into a larger 
+totality, which I will call a \i{channel}.  
+In the canonical case, a directed graph can group 
+edges into composites (according to more fine-grained criteria 
+than just distinguishing incoming and outgoing dges) which share a 
+source or target node.  For example, the set of incoming edges 
+to the same target node may be partitioned into distinct 
+\q{channels}, so that at one scale of consideration the network 
+structure can be analyzed via channels rather than via 
+single edges.  For a concrete example, 
+consider graphs used to model Object-Oriented programming 
+languages, where a single node can represent a 
+single function call.  The incoming edges are then 
+\q{input parameters}, and outgoing edges are procedural 
+results or outputs.  In the Object-Oriented paradigm, however, 
+input paramters are organized into two groups: in addition 
+to any number of \q{conventional} arguments, there is 
+a single \this{} or \self{} object which has a distinct semantic 
+status (\visavis{} name resolution, function visibiloty, and 
+polymorphism).  This calls, under the graph model, for splitting 
+incoming edges into two \q{channels}, one reprsenting regular 
+parameters and a separate channel for the distinguished or 
+\q{receiver} object-value.
+\end{description}
+}
+\p{}
+\p{}
