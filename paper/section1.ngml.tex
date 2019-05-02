@@ -133,4 +133,85 @@ annotations mark linguistic criteria that tie together multiple edges
 in the guise of signals that a specific parse-graph (out of the space 
 of possible graphs that could be formed from a sentence's word set) is correct.
 }
-\p{}
+\p{Let me at this point make the further observation that ordinary directed graphs 
+(not necessarily hypergraphs) already have some sense of grouping edges together, 
+insofar as incoming and outgoing edges are distinguished.  In the theory of 
+hypergraph \i{categories}, hypernodes come into play insofar as representation 
+calls for the nodes \q{across} incoming/outgoing edges to be grouped together; 
+we distinguish an \i{incoming node-set} from an \i{outgoing node-set}.  
+\begin{quote}The term hypergraph category was introduced recently [Fon15, Kis], in reference
+to the fact that these special commutative Frobenius monoids provide precisely the
+structure required for their string diagrams to be directed graphs with \sq{hyperedges}:
+edges connecting any number of inputs to any number of outputs. ... 
+We then think of morphisms in a hypergraph category as hyperedges 
+(The Algebra of Open and
+Interconnected Systems p. 13)
+\end{quote}  
+For a general mapping of  
+categories to graphs where edges represent morphisms, this represents a 
+generalization on the notion of \i{edges} themselves.  Suppose morphisms are 
+intended to model computational procedures in a general sense (say, as 
+morphisms in an ambient program state).  Because procedures can have any 
+number (even zero) of both inputs and outputs, this implies a generalization 
+wherein directed edges can have zero, one, or multiple source (and respectively 
+target) nodes.  A corresponding hypergraph form is one where hyperedges have 
+source- and target- hypernodes, but each hypernode models variant-sized sets 
+of further \q{inner} nodes (or \q{hyponodes}); here the empty set can be 
+a hypernode with no hyponodes.  Elsewhere, apparently an equivalent 
+structure is called a \q{trivial system}:
+\begin{quote}Monoidal categories admit an elegant and powerful graphical notation 
+[wherin] an object $A$ is denoted by a wire [and] [a] 
+morphism \fAB{} is represented by a box.  The trivial system 
+$I$ is the empty diagram.  Morphisms \uIA{} and \vAI{} 
+... are referred to as \textbf{states} and \textbf{effects} 
+(Interacting Conceptual Spaces I :
+Grammatical Composition of Concepts, p. 4).
+\end{quote}
+}
+\p{The system $I$ \mdash{} which we can also see as a hypernode with an empty 
+(hypo-)node set \mdash{} may embody a procedure which has no internal 
+algorithmic or calculational structure (at least relative to the 
+domain of analysis where we might represent computer code).  In 
+Cyberphysical Systems, a function which just produces a 
+value (with no input and no intermediate computations) can also 
+be called an \i{observation}, perhaps a direct reading from a 
+physical \i{sensor} (accordingly, as in the above excerpt, a \i{state}).  
+Dually, a procedure which performs no evident calculation and produces 
+no output value, but has a cyberphysical \i{effect}, can be called an 
+\q{actuation}, potentially connected to a cyberphysical \i{actuator} 
+(an example of a sensor would be a thermostat, and an example of an 
+actuator would be a device which can activate/deactivate a furnace 
+and/or cooling system).
+}
+\p{In these examples I have mentioned hypergraphs in a linguistic (Link Grammar) 
+a mathematical (hypergraph categories) context.  Both of these 
+have some parallels insofar as a core motivation is to generalize and add 
+structure to edges, either freeing edges fron constraints on 
+nor-arity (even allowing edges to be \q{unattached}, 
+or supplying edges with structured (potentially multi-part) annotation.
+}
+\p{A somewhat different conception of hypergraphs is found in database 
+systems such as HypergraphDB.  Graphs in that context express what have 
+been called \i{recursive} graphs, wherein a hypernode \q{contains} or 
+\q{designates} its own graph.  Thebasic idea is that for each (hyper-)node we 
+can associate a separate (sub-)graph.  This can actually work two 
+ways, yielding a distinction between (I'll say) \i{nested} 
+and \q{cross-referencing} graphs.  In a \i{cross-referencing} graph, 
+subgraphs or other collections of graph elements (nodes, edges, and/or 
+annotations) can be given unique identifiers or designations and, as 
+a data point, associated with a separate node.  Consider a case where 
+nodes refer to typed values from a general-purpose type sytem; insofar 
+as subgraphs themselves may be represented as typed values, a node could 
+reference a subgraph by analogy to any other type value (textual, numeric, 
+nominal/enumerative data, etc.).  Here the (hyper)node does not 
+\q{contain} but \i{references} a subgraph; the added structure involves 
+subgraphs themselves being incorporated into the universe of values 
+which nodes nay quantify over.  Conversely, \i{nested} hypergraphs 
+model hypernodes which have other graphs \q{inside} them, thereby creating 
+an ordering among nodes (we can talk of nodes at one level belonging 
+to graphs which are contained in nodes at a higher level).  Such constructions 
+may or may not allow edges across nodes at different levels. 
+}
+\p{Note that nested hypergraphs can be seenas a special case of cross-referencing 
+graphs, 
+}

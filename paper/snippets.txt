@@ -1,0 +1,9 @@
+
+In conjunction with a further category-theoretic idea of mapping 
+categories to graphs where nodes represent morphisms, this represents a 
+generalization on the notion of `i.edges` themselves:  
+
+
+A general mapping of  
+categories to graphs where edges represent morphisms, this represents a 
+generalization on the notion of `i.edges` themselves: 
