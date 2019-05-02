@@ -55,13 +55,13 @@ consistent with its enforced protocols.  Also, each data
 structure potentially has some notion of aggregateness: of 
 having different `q.parts`/, of being able to focus on one part 
 at a time, and to `q.move` focus from one part to another.  
-Given these qualities, digital representations extend and integrate 
+Given these qualities, digital representations extend and integrate  
 the affordances of print, graphical, and linguistic media 
 %-- but they do so in an electronic environment that permits digital 
-archives to be accessed via computer software.   Given this access, 
-digital representations can inherit the formal properies of the software 
-that uses them, so we can think of digital representations as formal 
-structures themselves, amenable to omething like a mathematical analysis. 
+archives to be accessed via computer software.  With sotfware as their  
+access point, digital representations can inherit the formal properties of 
+the software that uses them, so we can think of digital representations as 
+formal structures themselves, amenable to something like a mathematical analysis. 
 `p`
 
 `p.
@@ -72,10 +72,10 @@ edge has no incident nodes; an invalid `XML; structure is one without
 a single root element or (insofar as such a structure would be 
 representable) with mismatched tags, and so forth)`/); 
 `i.traversability` (a notion of parthood and iterating
-or refocusing among pats), and, let's say, `i.atomicity` 
+or refocusing among parts), and, let's say, `i.atomicity` 
 (a notion of unitary parts that can be represented as 
 integral wholes).  These criteria ensure that digitally 
-reprsented data structures can work within software and 
+represented data structures can work within software and 
 networking representations: information is 
 presented to software users by displaying atomic 
 units (textually or graphically) and traversing through 
@@ -85,14 +85,14 @@ unitary displays visually separated and often organized into
 coherent visual patterns, like the grid-pattern of a 
 spreadsheet.  Meanwhile, atomic units can be textually 
 encoded, and aggregate structure likewise notated through 
-syntactic conventions that preserve atom's boundaries, yielding 
+syntactic conventions that preserve atoms' boundaries, yielding 
 textual serializations of data structures that can be 
 shared between computing environments, allowing information to 
 be copied and distributed.  Finally, digital representations 
-of data structures canbe marshalled into different binary forms %-- 
+of data structures can be marshalled into different binary forms %-- 
 encoded in byte- and bit-patterns %-- to enable both 
 persistent storage in a database and `q.runtime` presence 
-as binary data that can be accessed by software applications.
+as binary data that may be accessed by software applications.
 `p`
 
 `p.
@@ -105,12 +105,12 @@ mutate to accommodate these different contexts.  Moreover, these
 contexts correspond to distinct technical specializations: database engineers 
 have a different perspective on data structures than network engineers designing 
 protocols for encoding and exchanging data between network endpoints; and 
-application designers focused on optimal human-computer-application 
+application designers focused on optimal human-computer-interaction 
 understand digital representations as visual and interactive phenomena, 
 whereas application `i.developers` need to focus on how to 
 properly encode data structures for binary runtimes.  These various 
 perspectives all influence the theory and technology 
-behind digital data representation: a successful 
+behind digital data representation %-- a successful 
 representational paradigm needs to adapt to the operatoonal 
 requirements of engineers in each of these disicplines.
 `p`
@@ -119,9 +119,9 @@ requirements of engineers in each of these disicplines.
 Additionally, insofar as the point of digital archives is to encode 
 empirical, `q.real-world` data, a proper representational protocol 
 needs to promote a synergy between the information as humans understand 
-it and the data structures recognized bu the technology.  For instance, 
+it and the data structures recognized by the technology.  For instance, 
 if a published data set shares scientific data, it should be 
-represented in ways that preserve scintifically significant 
+represented in ways that preserve scientifically significant 
 details %-- any derivations, descriptions, or observations 
 which are intrinsic to the science's methodology, 
 theory, assumptions, and experimental results.  The data needs to 
@@ -133,11 +133,11 @@ a scientific-software application (maye years later).
 As formal models of data semantics have become more rigorous %-- e.g. in our 
 century with Ontologies and the `q.Semantic Web` %-- this 
 `q.semantic engineering` has become a further technical perspective 
-needing consideration in the dsign and evaluation of digital representations.
+needing consideration in the design and evaluation of digital representations.
 `p`
 
 `p.
-Over the decades, many general representation strategies and 
+Over the decades, many digital representation strategies and 
 `q.layouts` have been envisioned, from tabular structures 
 in the manner of Relational Databases, to tree-like 
 documents whose morphology is inspired by markup languags, 
@@ -145,12 +145,12 @@ to structurally looser variations on row/column
 arrangements like multi-dimensional key-value spaces or 
 `q.Big Column` and other `q.`NoSQL;`/-database-inspired 
 articulations.  These various paradigms are subject to 
-`q.selective` pressures based on how well the meet the 
+`q.selective` pressures based on how well they meet the 
 different engineering needs I have identified.  But the 
-multiplicity of these needs complicates the `q.competition` between 
+multiplicity of requirements complicates the `q.competition` between 
 representational strategies: a paradigm optimized 
 for one context (e.g., persistent databases) is not necessarily 
-optiman for another (e.g., application and `GUI; development).  
+optimal for another (e.g., application and `GUI; development).  
 As a result, developers and computer scientists must 
 continue to explore and collaborate on new paradigms which 
 work better across contexts.
@@ -181,15 +181,18 @@ hypergraphs in lieu of ordinary (directed, labeled) graphs.
 As might be ascertained from hypergraphs being the focus of this paper, 
 I believe that representational paradigms based on hypergraphs can be superior to 
 other formats and need to be studied with an integrated, generalized 
-set of theories and computer tools.  I have inrododucd the 
-topic of hypergraph data structures via the general issues in 
+set of theories and computer tools.  I have introduced the 
+topic of hypergraph data structures via general issues in 
 digital representation in part to rest claims of hypergraphs' 
 merit on explicit criteria.  In particular, I believe 
 hypergraphs can adapt to the different technological 
 contexts prerequisute to a decentralized digital ecosystem 
 %-- databases, networking, application implementation, visual/interactive 
 software design, and semantic expressiveness %-- more effeectively 
-than other paradigms, like regular graphs or `SQL;-style tables.  
+than other paradigms, like regular graphs or `SQL;-style tables.
+`p`
+
+`p.  
 I suspect other scientists and engineers have 
 similar intuitions, because there has been a recent uptick in 
 research on hypergraphs in various disciplines, such 
@@ -198,8 +201,8 @@ and Natural Language Processing.  Compared to
 the Semantic Web, however, there is a noticeable lack 
 of standard tools or formats for expressing hypergraph 
 data or sharing hypergraph structures across multiple 
-applications and environments.  Where `RDF; and `OWL; are 
-definitely associated with the Semantic Web, so that 
+applications and environments.  Whereas `RDF; and `OWL; are 
+definitively associated with the Semantic Web, so that 
 supporting these standards is a basic entry point for 
 Semantic Web technologies, there is no comparable 
 consensus on the underlying theory of hypergraph data 
@@ -218,8 +221,8 @@ hypergraph-shaped data may be imprecisely treated as
 a mere variation upon or a special structuration within 
 ordinary graphs.  For eample, Semantic Web structures such as 
 `RDF; `q.bags` and `q.collections` introduce a kind of 
-hierarchical organization to Semantic Web graphs, and can be considered 
-a form of hypergraph, but these protocols are not described as 
+hierarchical organization to Semantic Web graphs %-- qualifying as 
+a form of hypergraph %-- but these protocols are not described as 
 enabling a transition from a networking framework based on 
 directed labeled graphs to one based on hypergraphs.  Instead, 
 hypergraphs become `i.de facto` embedded within ordinary graphs, 
@@ -228,28 +231,31 @@ makes the Semantic Web suitable for spreadsheets, `XML;, and
 other structures that are not graphs at a `i.prima facie` level.
 The problem is that while hypergraphs can be `i.encoded` in 
 ordinary graphs with a suitable labeling convention, 
-the distinct structural details which make hypergraphs 
-superior to the Semantic Web no longer remain as 
+their distinct structural advantages are lost as 
 explicit architectural features once hypergraphs are 
 `q.encoded` in conventional Semantic Web formats.
 `p`
 
 `p.
-Recent (computer-science-related) research into hypergraphs 
-sems to emphasize two different topics: first, the 
+As I will outine in the first section, there are at least some half-dozen 
+different structures that may certainly be described as hypergraphs, generalizing 
+various underlying graph models (or indeed, even if we restrict attention to 
+labeled directed graphs).  Within this space of possibilities, 
+recent computer-science-related) research into hypergraphs 
+seems to emphasize two different topics: first, the 
 representational potential for hypergraphs as a 
-general morphology for representing structured information 
-in general; and, second, the specific possibilities 
-of using hypergraphs to model computer code and computational 
+general morphology for encoding structured information-resources 
+(so as a general tactic for data warehousing and modeling); and, second, the 
+specific possibilities of using hypergraphs to model computer code and computational 
 processes.  In the second subject-area, hypergraphs are studied 
 as a medium for expressing details about computer algorithms as a 
 way to reason about executable computer code as a structured system, and 
-perhaps even design execution engines (virtual machines to 
+perhaps even to design execution engines (virtual machines to 
 run computer code that is in a suitable representation).  This 
 latter research sometimes appears to present a mathematical 
 picture of hypergraphs as an abstract model 
 of computing procedures and evaluations %-- a kind of 
-graph-based rinterpretation of the lambda calculus %-- but 
+graph-based interpretation of the lambda calculus %-- but 
 sometimes is also marshaled into implemented execution 
 environments, as in the OpenCog and lmnTal frameworks.
 `p`
@@ -287,8 +293,8 @@ hypergraphs.  For example, one question is how hypergraphs
 can be initialized %-- how software systems can build up 
 hypergraph structures, piece by piece.  This is related to the question of 
 proper serialization formats for hypergraphs.  Given some 
-specific hypergraph data aggregate `H;, it is important to 
-have a textual encoding where `H; can be mapped to a 
+specific hypergraph data aggregate `Hy;, it is important to 
+have a textual encoding where `Hy; can be mapped to a 
 character-string, shared as a document, and then reconstructed 
 with the same hypergraph structure.  This raises the question of 
 when and whether two hypergraphs are properly isomorphic 
@@ -296,7 +302,8 @@ when and whether two hypergraphs are properly isomorphic
 hypergraph yields `q.the same` hypergraph %-- and also the problem 
 of validating and parsing textual representations of hypergraphs.  
 The theory of parsing `i.serializations` of hypergraphs %-- 
-tectual encodings whose grammar and morphology are suitable to 
+textual encodings constructed according to a protocol wherein their 
+grammar and morphology are suitable to 
 expressing and then rebuilding hypergraph structures %-- 
 then becomes an extension of hypergraph theory itself.
 `p`
@@ -311,29 +318,32 @@ units of transformation, providing a kind of
 hypergraph via a sequence of effectively (at least on one scale 
 of analysis) atomic operations.  For any variety of 
 hypergraph, then, we can consider which is a suitable 
-Intermediate Representation for conformant spaces; for 
-example, which set of primitive options can, iteratively, construct 
+Intermediate Representation for conformant spaces %-- in particular, 
+which set of primitive options can, iteratively, construct 
 any representative of the space of instantations of a 
 given kind of hypergraph.  Insofar as a software framework 
-seeks to work with sveral hypergraph varieties, we can consider 
+seeks to work with several hypergraph varieties, we can consider 
 how several different such operation-sets can be combined.  
 `p`
 
 `p.
 Moreover, we can consider both serialization and Intermediate Representation 
-as alternative tactics for building hypergraphs, which can be combined.  
+as parallel tactics for building hypergraphs.  
 An Intermediate Representation language can be used to carry out 
 transformations between hypergraphs %-- producing `IR; code based on 
-the first hypergraph from which the second can be created.  In conjunction 
-with serialization and parsers, a hypergraph can be realized 
+the first hypergraph from which the second can be populated.  In conjunction 
+with serialization and parsers, a hypergraph can then be realized 
 via several stages, with one form of hypergraph used as an intermediary 
 because it has a convenient grammar and works with a parsing engine; 
 from that preliminary graph a new graph can be created via `IR; code.  
 Grammars, serializaion and deserialization, and `IR; thereby become 
 part of the formal architecture defining a hypergraph ecosystem and 
 inter-graph transformations (analogous to the trio of `XML; parsers, 
-`XML; transforms, and the `XML; Document Object Model).  Continuing 
-the `XML; analogy, note that `XML; is not just a serialization specification: 
+`XML; transforms, and the `XML; Document Object Model).
+`p`
+
+`p.
+Continuing the `XML; analogy, note that `XML; is not just a serialization specification: 
 the full `XML; technology defined requirements on a series of tools 
 operating on `XML; data, not just `XML; files: tools 
 for traversing `XML; documents (including a programming interface 
@@ -342,7 +352,7 @@ via Object-Oriented methods like `parentNode; and `nextSibling;);
 for parsing `XML; files into traversable data structures (including 
 requirements on the traversals which the derived structurees 
 %-- the so-called `q.post-processing infoset` %-- must 
-support); and for intr-document mapping 
+support); and for inter-document mapping 
 (via `XSLT; or `XML;-FO).  The Document Object Model and 
 post-processing infoset is the structural core of the `XML; 
 format, even more than any surface-level syntax (the grammar 
@@ -354,7 +364,7 @@ would have to be developed for a generalized Hypergraph representation.
 The code discussed here does not purport to provide a mature or 
 decisive implementation of a general-purpose hypergraph ecosystem, 
 but rather to demonstrate by example what components may comprise 
-such a framework and how they may interoperat.  The cod inclus 
+such a framework and how they may interoperate.  The code includes 
 hyprgraph models but also the preliminary and 
 intermediary structures that can connct hypergraphs to 
 a surrounding computational infrastructure %-- parsers, 
@@ -365,13 +375,16 @@ for realizing hypergraphs as executable code.
 `p`
 
 `p.
-The remainder of this paper will focus on thre 
+The remainder of this paper will focus on three 
 subjects: delimitating the proper range of hypergraph 
 models; execution models and the `q.virtual machine`/; and 
 a review of formal structurs (like grammars and `IR; 
-formats) which ar estructurally different 
+formats) which are structurally different 
 than hypergraphs but can help tie hypergraph 
 representations togther into a unified ecosystem.  
+I will also, in conclusion, sketch arguments to the effect that 
+hypergraphs offer a plausible foundation for reasoning 
+about structured/computation data and date types in general.  
 I have spoken only informally about hypergraphs 
 themselves, taking for granted that we have a general 
 picture of what hypergraphs are, but this now 
