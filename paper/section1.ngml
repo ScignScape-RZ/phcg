@@ -93,7 +93,7 @@ single function call.  The incoming edges are then
 results or outputs.  In the Object-Oriented paradigm, however, 
 input paramters are organized into two groups: in addition 
 to any number of `q.conventional` arguments, there is 
-a single `this; or `self; object which has a distinct semantic 
+a single `this; or `self; object which has a distinct  semantic 
 status (`visavis; name resolution, function visibility, and 
 polymorphism).  This calls, under the graph model, for splitting 
 incoming edges into two `q.channels`/, one representing regular 
@@ -103,7 +103,9 @@ parameters and a separate channel for the distinguished or
 `p`
 
 `p.
-
+In each of these formulations, what makes a graph `q.hyper` is the presence of 
+supplemental information `q.attached` to parts of an underlying (labeled, directed) 
+graph.  As a concrete example, consider 
 An example 
 in linguistics is morphosyntactic agreement 
 between gramatically linked words, which involves details 
