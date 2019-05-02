@@ -64,7 +64,7 @@ triples).  Compound labels (which I will generically call
 in several different branches of mathematics and other fields.  
 In particular, compound annotations can represent the 
 rules, justifications, or `q.compatibility` which allows 
-tso nodes to be connected.   In this case the annotation 
+two nodes to be connected.   In this case the annotation 
 may contain information about both incident nodes.  
 This general phenomenon (I will mention further examples 
 below) can be called a `q.diversification` 
@@ -111,19 +111,42 @@ between gramatically linked words, which involves details
 matched between both `q.ends` of a word-to-word `q.link` 
 (part-of-speech, plural/singular, gender, case/declension, 
 etc.).  According to the theory known as `q.link grammar`/, 
-words are associated with `q.connectors` %-- a related terminology, 
+words are associated with `q.connectors` (a related useful terminology, 
 derived more in a Cognitive-Linguistic context, holds that 
 words carry `q.expectations` which must be matched by other words they 
-could connect to.  The word `q.many`/, for instance, as in `i.many dogs`/, 
+could connect to).  The word `i.many`/, for instance, in `i.many dogs`/, 
 carries an implicit expectation to be paired with a plural noun.  The actual 
 syntactic connection %-- as would be embodied by a graph-edge when a graph 
 formation is employed to model parse structures %-- therefore depends on 
 both the expectations on one word in a pair (whichever acts as a modifier, 
-like `q.many`/) and the `q.lexicomorphic` details of its `q.partner` 
-(as in `q.dog`/, as a lexical item, being a noun, with `i.dogs` being 
+like `i.many`/) and the `q.lexicomorphic` details of its `q.partner` 
+(`i.dog`/, as a lexical item, being a noun, and `i.dogs` being 
 in plural form).
+`p`
+
+`p.
+In Link Grammar terminology, both the expectations on 
+one word and the lexical and morphological state of a second are called 
+`q.connectors`/; a proper linkage between two words is then a `i.connection`/.  
+For each connection there is accordingly two sets of relevant information, 
+which might be regarded as a generalization on edge-labeling wherein edges 
+could have two or more labels.  Furthermore, the assertion of multi-part annotations 
+on edges permits edges themselves to be grouped and categorized: aside from several 
+dozen recognized link varieties between words (which can be seen as conventional 
+edge-labels drawn from a taxonomy, consistent with ordinary labeled graphs), 
+edge-annotations in this framework mark patterns of semantic and syntactic agreement 
+in force between word pairs (not just foundational grammatic matching, like 
+gender and number %-- singular/plural %-- but more nuanced compatibility at the 
+boundary between syntax and semantics, such as the stipulation that a noun in a 
+locative position must have some semantic interpretation as a place or 
+destination).  Insofar as these agreement-patterns carry over to other word-pairs, 
+annotations mark linguistic criteria that tie together multiple edges 
+in the guise of signals that a specific parse-graph (out of the space 
+of possible graphs that could be formed from a sentence's word set) is correct.
 `p`
 
 `p.
 
 `p`
+
+
