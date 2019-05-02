@@ -105,13 +105,23 @@ parameters and a separate channel for the distinguished or
 `p.
 In each of these formulations, what makes a graph `q.hyper` is the presence of 
 supplemental information `q.attached` to parts of an underlying (labeled, directed) 
-graph.  As a concrete example, consider 
-An example 
-in linguistics is morphosyntactic agreement 
+graph.  As a concrete example, consider a case from linguistics %-- specifically, 
+morphosyntactic agreement 
 between gramatically linked words, which involves details 
-matched between both `q.ends` of a link 
+matched between both `q.ends` of a word-to-word `q.link` 
 (part-of-speech, plural/singular, gender, case/declension, 
-etc.).  
+etc.).  According to the theory known as `q.link grammar`/, 
+words are associated with `q.connectors` %-- a related terminology, 
+derived more in a Cognitive-Linguistic context, holds that 
+words carry `q.expectations` which must be matched by other words they 
+could connect to.  The word `q.many`/, for instance, as in `i.many dogs`/, 
+carries an implicit expectation to be paired with a plural noun.  The actual 
+syntactic connection %-- as would be embodied by a graph-edge when a graph 
+formation is employed to model parse structures %-- therefore depends on 
+both the expectations on one word in a pair (whichever acts as a modifier, 
+like `q.many`/) and the `q.lexicomorphic` details of its `q.partner` 
+(as in `q.dog`/, as a lexical item, being a noun, with `i.dogs` being 
+in plural form).
 `p`
 
 `p.
