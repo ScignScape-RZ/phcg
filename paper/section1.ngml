@@ -240,7 +240,25 @@ may or may not allow edges across nodes at different levels.
 
 `p.
 Note that nested hypergraphs can be seen as a special case of cross-referencing 
-graphs, 
+graphs, where each hypernode `nodeN; is given an index `ix;, 
+with the restriction that when  `nodeN; designates (e.g. via 
+its corresponding typed value) a subgraph `sg;, all of 
+`sg;'s hypernodes have index `ixminusone;.  Cross-referencing 
+graphs, in turn, can be seen as special cases of an overall 
+space of hypergraphs wherein hypernodes are paired with 
+typed values from some suitable expressive type system `tys;.  
+If `tys; includes higher-order types %-- especially, lists and 
+other `q.collections` types which become concrete types in 
+conjunction with another type (as in `i.list` qua generic 
+becomes the concrete type `i.list of integers`/), then 
+hypernodes acquire aggregate structure in part by 
+acquiring values whose types encompass multiple 
+other values.  I will use the term `i.procedural` hypergraphs 
+to discuss structures that model node diversification 
+via mapping hypernodes to collections-types 
+(with the possibility for hypernodes 
+to `q.expand` or `q.contract` as values are inserted into or 
+removed from the collection).
 `p`
 
 

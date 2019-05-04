@@ -187,7 +187,7 @@ and/or cooling system).
 a mathematical (hypergraph categories) context.  Both of these 
 have some parallels insofar as a core motivation is to generalize and add 
 structure to edges, either freeing edges fron constraints on 
-nor-arity (even allowing edges to be \q{unattached}, 
+node-arity (even allowing edges to be \q{unattached}, 
 or supplying edges with structured (potentially multi-part) annotation.
 }
 \p{A somewhat different conception of hypergraphs is found in database 
@@ -196,13 +196,13 @@ been called \i{recursive} graphs, wherein a hypernode \q{contains} or
 \q{designates} its own graph.  Thebasic idea is that for each (hyper-)node we 
 can associate a separate (sub-)graph.  This can actually work two 
 ways, yielding a distinction between (I'll say) \i{nested} 
-and \q{cross-referencing} graphs.  In a \i{cross-referencing} graph, 
+and \i{cross-referencing} graphs.  In a \i{cross-referencing} graph, 
 subgraphs or other collections of graph elements (nodes, edges, and/or 
 annotations) can be given unique identifiers or designations and, as 
 a data point, associated with a separate node.  Consider a case where 
 nodes refer to typed values from a general-purpose type sytem; insofar 
 as subgraphs themselves may be represented as typed values, a node could 
-reference a subgraph by analogy to any other type value (textual, numeric, 
+reference a subgraph by analogy to any other value (textual, numeric, 
 nominal/enumerative data, etc.).  Here the (hyper)node does not 
 \q{contain} but \i{references} a subgraph; the added structure involves 
 subgraphs themselves being incorporated into the universe of values 
@@ -212,6 +212,24 @@ an ordering among nodes (we can talk of nodes at one level belonging
 to graphs which are contained in nodes at a higher level).  Such constructions 
 may or may not allow edges across nodes at different levels. 
 }
-\p{Note that nested hypergraphs can be seenas a special case of cross-referencing 
-graphs, 
+\p{Note that nested hypergraphs can be seen as a special case of cross-referencing 
+graphs, where each hypernode \nodeN{} is given an index \ix{}, 
+with the restriction that when  \nodeN{} designates (e.g. via 
+its corresponding typed value) a subgraph \sg{}, all of 
+\sg{}'s hypernodes have index \ixminusone{}.  Cross-referencing 
+graphs, in turn, can be seen as special cases of an overall 
+space of hypergraphs wherein hypernodes are paired with 
+typed values from some suitable expressive type system \tys{}.  
+If \tys{} includes higher-order types \mdash{} especially, lists and 
+other \q{collections} types which become concrete types in 
+conjunction with another type (as in \i{list} qua generic 
+becomes the concrete type \i{list of integers}), then 
+hypernodes acquire aggregate structure in part by 
+acquiring values whose types encompass multiple 
+other values.  I will use the term \i{procedural} hypergraphs 
+to discuss structures that model node diversification 
+via mapping hypernodes to collections-types 
+(with the possibility for hypernodes 
+to \q{expand} or \q{contract} as values are inserted into or 
+removed from the collection).
 }
