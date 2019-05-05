@@ -114,13 +114,13 @@ etc.).  According to the theory known as `q.link grammar`/,
 words are associated with `q.connectors` (a related useful terminology, 
 derived more in a Cognitive-Linguistic context, holds that 
 words carry `q.expectations` which must be matched by other words they 
-could connect to).  The word `i.many`/, for instance, in `i.many dogs`/, 
+could connect to).  The word `i.many`/, for instance, as in `i.many dogs`/, 
 carries an implicit expectation to be paired with a plural noun.  The actual 
 syntactic connection %-- as would be embodied by a graph-edge when a graph 
 formation is employed to model parse structures %-- therefore depends on 
 both the expectations on one word in a pair (whichever acts as a modifier, 
 like `i.many`/) and the `q.lexicomorphic` details of its `q.partner` 
-(`i.dog`/, as a lexical item, being a noun, and `i.dogs` being 
+(`q.dog`/, as a lexical item, being a noun, and `i.dogs` being 
 in plural form).
 `p`
 
@@ -147,9 +147,14 @@ of possible graphs that could be formed from a sentence's word set) is correct.
 
 
 `p.
-Let me at this point make the further observation that ordinary directed graphs 
+Ordinary directed graphs 
 (not necessarily hypergraphs) already have some sense of grouping edges together, 
-insofar as incoming and outgoing edges are distinguished.  In the theory of 
+insofar as incoming and outgoing edges are distinguished; 
+but this indirect association between edges does not 
+internally yield a concordant grouping of the nodes 
+at the sources of edges all pointing to one target node 
+(or analogously the targets of one source node).  
+In the theory of 
 hypergraph `i.categories`/, hypernodes come into play insofar as representation 
 calls for the nodes `q.across` incoming/outgoing edges to be grouped together; 
 we distinguish an `i.incoming node-set` from an `i.outgoing node-set`/.  
