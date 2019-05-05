@@ -261,5 +261,28 @@ to `q.expand` or `q.contract` as values are inserted into or
 removed from the collection).
 `p`
 
+`p.
+Cross-referencing also potentially introduces a variant derivation of 
+hypergraphs which proceeds by accumulating graph elements (nodes, 
+edges, and labels or annotations) into higher-scale posits, rather 
+than defining inner structures on elements.  Specifically, as a 
+complimentary operation to diversification, consider `q.aggregation` 
+of graph elements: the option to take a set of (hyper)nodes, 
+(hyper)edges, and/or annotations as a typed value which can then 
+be assigned to a (hyper)node.  In such a manner, higher-level 
+structures can be notated with respect to graphs, which is one 
+way to model phenomena such as `i.contexts` %-- the kind of multi-scale 
+patterns that are considered endemic to practical domains 
+like the Semantic Web.  While it is informally acknowledged that 
+a single-level interpretation of the Semantic Web is misleading 
+%-- the Semantic Web is not an undifferentiated mesh of connections, but 
+rather an aggregation of data from many sources, which implies the existence of 
+localization, contextualization, and other `q.emergent` structure %-- 
+there is no defininitive protocol for actually representing this emergenet 
+structure.  This issue, in turn, is one of arguments 
+for hypergraphs in lieu of ordinary graphs as general-purpose 
+data representations. 
+`p`
+
 
 
