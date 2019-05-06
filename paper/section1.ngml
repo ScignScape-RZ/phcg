@@ -334,9 +334,26 @@ hypernodes associated with a single unstructured value
 should have one basic update operation, while nodes with 
 list-like types would have operations to insert (and remove) 
 values at different positions.
-
 `p` 
+   
+`p.
+Separate and apart from operations modifying hypernodes' values, there 
+are also conventional graph operations %-- adding and removing 
+nodes and edges.  In combination, the graph-oriented and node-oriented 
+operations present a variegated interface for manipulating 
+procedural hypergraphs.  Such an interface then serves as a rigorous 
+characterization of the overall hypergraph model %-- the structuring 
+elements expressed by enumerating graphs' transformation operations 
+represent the particular features of each specific hypergraph 
+variety.  In the case of procedural hypergraphs, many of these transformations 
+are not graph-related per se but derive from hypernodes' collections or tuple 
+types.  I contend that this is a useful property of procedural hypergraphs 
+for reasons I alluded to in the introduction %-- hypergraphs (or at least the 
+data represented with them) need to work in a variety ofcomputational contexts.  
  
+    
+`p`
+
 `p.
  
 `p`
