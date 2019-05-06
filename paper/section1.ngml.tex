@@ -105,13 +105,13 @@ etc.).  According to the theory known as \q{link grammar},
 words are associated with \q{connectors} (a related useful terminology, 
 derived more in a Cognitive-Linguistic context, holds that 
 words carry \q{expectations} which must be matched by other words they 
-could connect to).  The word \i{many}, for instance, in \i{many dogs}, 
+could connect to).  The word \i{many}, for instance, as in \i{many dogs}, 
 carries an implicit expectation to be paired with a plural noun.  The actual 
 syntactic connection \mdash{} as would be embodied by a graph-edge when a graph 
 formation is employed to model parse structures \mdash{} therefore depends on 
 both the expectations on one word in a pair (whichever acts as a modifier, 
 like \i{many}) and the \q{lexicomorphic} details of its \q{partner} 
-(\i{dog}, as a lexical item, being a noun, and \i{dogs} being 
+(\q{dog}, as a lexical item, being a noun, and \i{dogs} being 
 in plural form).
 }
 \p{In Link Grammar terminology, both the expectations on 
@@ -133,12 +133,17 @@ annotations mark linguistic criteria that tie together multiple edges
 in the guise of signals that a specific parse-graph (out of the space 
 of possible graphs that could be formed from a sentence's word set) is correct.
 }
-\p{Let me at this point make the further observation that ordinary directed graphs 
+\p{Ordinary directed graphs 
 (not necessarily hypergraphs) already have some sense of grouping edges together, 
-insofar as incoming and outgoing edges are distinguished.  In the theory of 
+insofar as incoming and outgoing edges are distinguished; 
+but this indirect association between edges does not 
+internally yield a concordant grouping of the nodes 
+at the sources of edges all pointing to one target node 
+(or analogously the targets of one source node).  
+In the theory of 
 hypergraph \i{categories}, hypernodes come into play insofar as representation 
 calls for the nodes \q{across} incoming/outgoing edges to be grouped together; 
-we distinguish an \i{incoming node-set} from an \i{outgoing node-set}.  
+we distinguish an \i{incoming node-set} from an \i{outgoing node-set}: 
 \begin{quote}The term hypergraph category was introduced recently [Fon15, Kis], in reference
 to the fact that these special commutative Frobenius monoids provide precisely the
 structure required for their string diagrams to be directed graphs with \sq{hyperedges}:
@@ -254,3 +259,104 @@ structure.  This issue, in turn, is one of arguments
 for hypergraphs in lieu of ordinary graphs as general-purpose 
 data representations. 
 }
+\p{The multi-scale, contextualized nature of the Semantic Web also points toward 
+a conceptual duality in \i{how} graphs represent data.  On the one hand, graph 
+structures \mdash{} especially in the case of the Semantic Web, which builds off of 
+internet technology in general \mdash{} represent \i{relationships} between points 
+or structures of data in some sense; in familiar web terms, the relata linked 
+by graph edges are often \q{resources}, designated by unique web addresses.   
+A more theoretical model might take the information \q{residing} at 
+graph nodes as typed values.  But in either case a given node may stand in f
+for an aggregate of information \mdash{} a single web resources may contain a 
+theoretically unlimited supply of data, and a typed value can be of a list 
+or tuple type intlernally containing its own body of information.  
+Consequently, the full stock of data embodied in a graph may not lie 
+primarily in the graph structure itself, but rather distributed among 
+its nodes (that is, among notes' associated data). 
+}  
+\p{Conversely, graph structures (with suitable semantic specifications) are  
+also considered to be media for serializing arbitrary data structures, which 
+implies representing all details, at all levels of hierarchical organization, 
+via graph structures.  Insofar as nodes embody their own information spaces, 
+such internal structuration must then be mapped to their own graphs, 
+as part of a workflow to project arbitrary structured data onto a canonical 
+format.  The theoretical correlary to this idea would be that node data 
+(via associated typed values) has its own internal representation; 
+that it is, every typed value has a corresponding graph structure 
+that may be \q{contained} within a higher-scale node.  
+}
+\p{Different varieties of hypergraph forms complicate this picture 
+because the structuring elements of hypergraphs include 
+aggregate data within nodes as well as the space of 
+edges and incidence relations.  Given the structures I have referred to 
+as \q{procedural} hypergraphs, nodes can encompass multiple
+internal values so long as they have a suitably well-defined 
+internal structure.  We can analyze these possibilities 
+by defining, for each hypernode, an \q{interface} or list of 
+operations available for updating hypernodes' associated values.  
+Which operations are proper depends on a hypernode's type: 
+hypernodes associated with a single unstructured value 
+should have one basic update operation, while nodes with 
+list-like types would have operations to insert (and remove) 
+values at different positions.
+} 
+   
+\p{Separate and apart from operations modifying hypernodes' values, there 
+are also conventional graph operations \mdash{} adding and removing 
+nodes and edges.  In combination, the graph-oriented and node-oriented 
+operations present a variegated interface for manipulating 
+procedural hypergraphs.  Such an interface then serves as a rigorous 
+characterization of the overall hypergraph model \mdash{} the structuring 
+elements expressed by enumerating graphs' transformation operations 
+represent the particular features of each specific hypergraph 
+variety.  In the case of procedural hypergraphs, many of these transformations 
+are not graph-related per se but derive from hypernodes' collections or tuple 
+types.  I contend that this is a useful property of procedural hypergraphs 
+for reasons I alluded to in the introduction \mdash{} hypergraphs (or at least the 
+data represented with them) need to work in a variety of computational contexts.  
+The relatively unstructured form of graph data is not always appropriate 
+from one context to another; the list-of-values or value-tuple structures 
+embodied as hypernode data may be more consistent with internal representations 
+in database or language-runtime engines, for example.  Procedural hypergraphs 
+are appropriately flexible in that some data is modeled at the graph level 
+proper while other data is modeled as lists, tuples, and similar data structures 
+within individual nodes.  
+}
+\p{In many practical contexts graph structures are not implicitly used at all; 
+the importance of Semantic Web-style representation is for intermediary 
+structures, where information is routed ampong different environments 
+(database, applications, serialization, and so forth).  Transformations 
+between hypergraphs can be a central process in generic transformations 
+between data structures proper to different contexts.  In effect, where 
+there is a general need for data tranforms in routing between 
+contexts \mdash{} e.g., database to application runtime \mdash{} we can hope to 
+capture most of the relevant transform logic as specifically 
+mappings between hypergraphs, with each hypergraph possessing a structure 
+optimized for being initialized from one context (or for generating data 
+used in another context).  This progression may involve restructuring 
+wherein information modeled at the inter-hypernode level \mdash{} 
+which we can call \i{hypernode} data \mdash{} tends to be migrated 
+to the level \i{inside} hypernodes, which we can call \i{hyponode} data.  
+In broad outline, hypergraph transforms can progress from relatively 
+informal structures (with a preponderance of information expressed as 
+\i{hypernode} data) to more constrained structures \mdash{} mapping 
+hypernode to hyponode data, i.e., mapping data from structures 
+\i{between} hypernodes to those \i{within} hypernodes \mdash{} where 
+the hyponode data is regulated by hypernodes' types.
+}
+\p{In this section I identified different additions through which graph 
+structures generalize to hypergraphs; a general-purpose hypergraph 
+engine would need to support each of these variations, which entails 
+enabling the complete repository of transform-operations applicable to 
+different hypergraph varieties.  This includes generalizing 
+edges to hyperedges by \q{diversifying} nodes to encompass mutiple values; 
+representing nodes' internal structure in terms of data structures 
+such as lists, tuples, and nested graphs; and generalizing edge-labels 
+to annotations which may have multiple parts.  I have not yet discussed 
+in detail the possibility of grouping hyperedges into higher-level structures 
+which I have called \q{channels}, but I will return to 
+those details in a later section.  
+}
+\p{}
+\p{}
+ 
