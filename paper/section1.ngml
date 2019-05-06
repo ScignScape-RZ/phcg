@@ -349,9 +349,57 @@ variety.  In the case of procedural hypergraphs, many of these transformations
 are not graph-related per se but derive from hypernodes' collections or tuple 
 types.  I contend that this is a useful property of procedural hypergraphs 
 for reasons I alluded to in the introduction %-- hypergraphs (or at least the 
-data represented with them) need to work in a variety ofcomputational contexts.  
+data represented with them) need to work in a variety of computational contexts.  
+The relatively unstructured form of graph data is not always appropriate 
+from one context to another; the list-of-values or value-tuple structures 
+embodied as hypernode data may be more consistent with internal representations 
+in database or language-runtime engines, for example.  Procedural hypergraphs 
+are appropriately flexible in that some data is modeled at the graph level 
+proper while other data is modeled as lists, tuples, and similar data structures 
+within individual nodes.  
+`p`
+
+`p.
+In many practical contexts graph structures are not implicitly used at all; 
+the importance of Semantic Web-style representation is for intermediary 
+structures, where information is routed ampong different environments 
+(database, applications, serialization, and so forth).  Transformations 
+between hypergraphs can be a central process in generic transformations 
+between data structures proper to different contexts.  In effect, where 
+there is a general need for data tranforms in routing between 
+contexts %-- e.g., database to application runtime %-- we can hope to 
+capture most of the relevant transform logic as specifically 
+mappings between hypergraphs, with each hypergraph possessing a structure 
+optimized for being initialized from one context (or for generating data 
+used in another context).  This progression may involve restructuring 
+wherein information modeled at the inter-hypernode level %-- 
+which we can call `i.hypernode` data %-- tends to be migrated 
+to the level `i.inside` hypernodes, which we can call `i.hyponode` data.  
+In broad outline, hypergraph transforms can progress from relatively 
+informal structures (with a preponderance of information expressed as 
+`i.hypernode` data) to more constrained structures %-- mapping 
+hypernode to hyponode data, i.e., mapping data from structures 
+`i.between` hypernodes to those `i.within` hypernodes %-- where 
+the hyponode data is regulated by hypernodes' types.
+`p`
+
+`p.
+In this section I identified different additions through which graph 
+structures generalize to hypergraphs; a general-purpose hypergraph 
+engine would need to support each of these variations, which entails 
+enabling the complete repository of transform-operations applicable to 
+different hypergraph varieties.  This includes generalizing 
+edges to hyperedges by `q.diversifying` nodes to encompass mutiple values; 
+representing nodes' internal structure in terms of data structures 
+such as lists, tuples, and nested graphs; and generalizing edge-labels 
+to annotations which may have multiple parts.  I have not yet discussed 
+in detail the possibility of grouping hyperedges into higher-level structures 
+which I have called `q.channels`/, but I will return to 
+those details in a later section.  
+`p`
+
+`p.
  
-    
 `p`
 
 `p.
