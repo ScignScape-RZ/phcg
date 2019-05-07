@@ -1,0 +1,26 @@
+
+`section.Hypergraph Parsers and Intermediate Representation`
+`p.
+Having pointed out the features desired for a general-purpose 
+hypergraph framework, the next problem is to implement a 
+hypergraph library supporting these various features.  
+One dimension of this problem is the proper in-memory 
+representation of hypergraph structures and hypergraph elements 
+(hypernodes, hyperedges, and so forth) %-- to implement 
+the datatypes and requisite for hypergraphs as software artifacts.  
+
+`p`
+
+`p.
+
+`p`
+
+`p.
+
+`p` 
+   
+`p.
+
+`p`
+
+
