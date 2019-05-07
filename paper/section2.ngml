@@ -43,7 +43,10 @@ calls to perform operations like adding a node or
 adding an edge between nodes.  Less directly, hypergraphs can 
 be initialized from text files, given a standard format for 
 textually encoding hypergraphs.  For conventional (non hyper-) graphs, 
-standard formats include `RDF;, `GRAPHML, and Notation-3.  Analogous 
+standard formats include `RDF;, `GRAPHML, and Notation-3.`footnote.
+Some graph formats support certain hypergraph features, but 
+not the full spectrum of features I outlined in the last section
+`footnote`  Analogous 
 standards for hypergraphs would be more complex because of the 
 extra structure involved.  Nevertheless, the serialization can be 
 expressly organized to facilitate hypergraph initialization; 
@@ -59,7 +62,30 @@ hypergraph structures.
 
    
 `p.
-Similar alternatives apply to `i.output`/, 
+Similar alternatives apply to `i.output`/, in the sense of initializing 
+other structures from hypergraph data.  Output structures can be 
+compiled directly via function-calls, or indirectly via software-generated 
+text files, which in turn coul have a more low-level or more high-level 
+format.  Suppose hypergraphs are employed within publishing 
+software to generate `XML; and `Latex; output.  This can happen 
+mostly at the software level: there are many `q.`XML; builder` libraries 
+allowing `XML; documents to be constructed via function calls, rather 
+than by actually producing `XML; code.  Alternativey, the 
+software can act as a code generator, expressly composing `XML; 
+or `Latex; code by creating the requisite character strings 
+%-- a process which can be complicate by the languages' syntactic 
+requirements, such as the composition of `XML; tags and `Latex; commands 
+with the requisite braces and brackets.  Compared to higher-level 
+markup builders, code generation can be difficult because software has 
+to take responsibility for every character in the output %-- every 
+closing brace, bracket, quote, and so on.  In between these two 
+alternatives %-- using builder libraries and explicit 
+code generation %-- is the possibility of generating code in 
+alternative formats that are optimized for machine processing, 
+and consequently bypass some of the complications attending to 
+generating normal (say) `XML; or `Latex;.  
+
+    
 `p`
 
 
