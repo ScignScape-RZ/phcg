@@ -27,12 +27,47 @@ or indirectly (e.g., via code generators).  This dimension
 encompasses the overall capabilities allowing software to 
 use hypergraphs for their own data representations 
 and/or as bridge structures for sharing data between applications 
-and/or components.  
+and/or components.  In bridge cases, the strategies for building 
+hypergraphs `i.from` other kinds of data, and then building 
+other kinds of data from hypergraphs, are equally significant 
+to techniques for modelling hypergraphs themselves.
 `p`
 
 `p.
-
+On the `i.input` side, hypergraphs may be initialized via several 
+routes.  The most direct path is to program function calls that 
+can modify (and incrementally build up) hypergraphs directly.  
+If hypergraphs are expressed via a cohort of `Cpp; classes 
+(for graph, node, edge, etc.), that means using `Cpp; method 
+calls to perform operations like adding a node or 
+adding an edge between nodes.  Less directly, hypergraphs can 
+be initialized from text files, given a standard format for 
+textually encoding hypergraphs.  For conventional (non hyper-) graphs, 
+standard formats include `RDF;, `GRAPHML, and Notation-3.  Analogous 
+standards for hypergraphs would be more complex because of the 
+extra structure involved.  Nevertheless, the serialization can be 
+expressly organized to facilitate hypergraph initialization; 
+in essence, the grammar can be standardized to unambiguously map 
+test encodings to low-level function-calls via which hypergraph 
+are built directly.  A still less direct input strategy would 
+involve more flexible input languages, designed for ease of 
+use from the point of view of people composing or reading 
+serializations.  Such encodings then require more complex grammars 
+and parsers for the step of mapping input test to the intended 
+hypergraph structures.   
 `p` 
+
+   
+`p.
+Similar alternatives apply to `i.output`/, 
+`p`
+
+
+   
+`p.
+
+`p`
+
    
 `p.
 
