@@ -83,13 +83,61 @@ alternatives %-- using builder libraries and explicit
 code generation %-- is the possibility of generating code in 
 alternative formats that are optimized for machine processing, 
 and consequently bypass some of the complications attending to 
-generating normal (say) `XML; or `Latex;.  
-
+generating normal (say) `XML; or `Latex;.  For instance, 
+event-driven or `q.`SAX;` parsers understand `XML; as a sequence of 
+`q.events`/, like `i.open-tag`/, `i.close-tag`/, `i.annotation`/, 
+or `q.character data`/.  Some projects adopt this principle to 
+generate `XML; from non-`XML; sources (see for example): any 
+data source can be treated as an `XML; front-end if there is a 
+processor that can map the data to an `XML; event-stream.  
+On such a basis developers can design encoding languages that 
+model `XML; event-streams explicitly, as an alternative 
+to normal `XML; syntax.  Similar techniques work with 
+other formats, including hypergraphs (as I will discuss below).
+`p`
+   
+`p.
+Whatever the format, generating output from hypergraphs is closely 
+tied to the issue of traversing or navigating within hypergraphs.  
+In this context it is useful to consider a hypergraph as a kind 
+of `q.space`/, with a notion of `q.points` or `q.locations`/.  
+Suppose a particular graph element (hypernode, hyperedge, annotation, 
+and values which may be contained in them) can be singled 
+out as `q.foreground`/.  Technology then needs some notation for 
+moving from one foregrounded element to another %-- a hypernode to 
+an incident edge, or instance.  In conjunction with event-driven 
+output models as mentioned last paragraph, hypergraph-traversal 
+yields productive output algorithms so long as each successive 
+foreground element can be mapped to one or more output events.     
+`p`
+   
+`p.
+For this paper I will examine these and related concepts in the 
+specific context of hypergraph execution engine.  Specifically, consider 
+the challenge of building a programming language base on hypergraphs 
+as internal representations.  In this case the input format is not 
+tailored to hypergraphs, but rather to a grammar for source code which 
+reflects the language's high-level paradigms (Object Orientation, 
+Functional Programming, etc.).  Likewise, the output format 
+is not a relatively high-level markup language like `XML;, but rather 
+something like a virtual machine or intermediate language which 
+can translate to low-level (e.g., `C; or `Cpp;) function-calls.  
+The pipeline demonstrated here also includes two different 
+hypergraph formats, along with a textual serialization to marshall 
+between them.  Accordingly, the system also demonstrates 
+initialization of hypergraphs from a hypergraph-specific 
+intermediate representation. 
+`p`
     
+`p.
+
 `p`
 
-
    
+`p.
+
+`p`  
+
 `p.
 
 `p`
