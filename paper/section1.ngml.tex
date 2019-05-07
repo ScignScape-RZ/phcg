@@ -357,6 +357,25 @@ in detail the possibility of grouping hyperedges into higher-level structures
 which I have called \q{channels}, but I will return to 
 those details in a later section.  
 }
-\p{}
-\p{}
- 
+\p{For the remainder of this paper, I will attend especially to 
+hypergraphs modeling (and subsequently executing) computer code, 
+because conctructing a working runtime engine which runs source 
+code, via hypergraph intermediaries, demonstrates a variety of concepts 
+applicable to hypergraphs in general.  I will discuss a workflow 
+connecting parsers, a runtime \q{virtual machine}, intermediate representations 
+for hypergraphs, and inter-graph transforms.  Collectively 
+this workflow implicates many of the capabilities which would be 
+requisite for a general-purpose hypergraph software ecosystem.  
+}
+\p{Interested readers who would like to observe a concrete 
+unfolding of this workflow are invited to download the 
+code base accompanying this paper, where readers can examine 
+the operations of parsers and code generators working with 
+a built-in, general-purpose hypergraph library.  The downloadable 
+dataset is fully integrated with Qt Creator, a C++ Integrated Development 
+Environment, and has no further dependencies (assuming users 
+have a working Qt and C++ compiler; Qt is a popular C++ application-development 
+framework).  The dataset includes instructions for 
+experimenting with the hypergraph library via Qt Creator and examining 
+runtime structures by executing demonstration scripts in Debug mode. 
+}
