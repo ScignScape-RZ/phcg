@@ -7,12 +7,27 @@ hypergraph library supporting these various features.
 One dimension of this problem is the proper in-memory 
 representation of hypergraph structures and hypergraph elements 
 (hypernodes, hyperedges, and so forth) %-- to implement 
-the datatypes and requisite for hypergraphs as software artifacts.  
-
+the datatypes and procedures requisite for hypergraphs as software artifacts.  
+I will not emphasize these internal details directly, except for making 
+implementation-related observations when relevant to other contexts 
+(the accompanying code demonstrates one approach to building an 
+in-memory hypergraph library, though I make no claim that the 
+implementation is optimized for speed or to `q.scale up` to large 
+graphs; my priority was instead to demonstrate hypergraph semantics, 
+representing multiple hypergraph varieties, as expressively as possible).  
 `p`
 
 `p.
-
+A second stage in the implementation process, which I will 
+examine here in greater detail, involves transformations 
+and initialization of hypergraphs %-- creating hypergraphs from 
+other sources (such as text files) and using hypergraphs to 
+initialize other kinds of data structures, either directly 
+or indirectly (e.g., via code generators).  This dimension 
+encompasses the overall capabilities allowing software to 
+use hypergraphs for their own data representations 
+and/or as bridge structures for sharing data between applications 
+and/or components.  
 `p`
 
 `p.
