@@ -130,7 +130,20 @@ intermediate representation.
 `p`
     
 `p.
-
+All told, the language engine reviewed here has a pipeline 
+covering five or six steps, outlined in Figure ?.  
+The process begins by parsing source code (designed 
+as a vaguely `C;-like scripting language) yielding 
+one style of hypergraph, with graph manipulation 
+functions tied to the grammar's production rules.  
+Those hypergraphs (after some preliminary analysis) are then 
+traversed to produce an intermediate representation from which 
+a second genre of hypergraphs is initialized, one better-suited 
+for generating executable instructions.  This second 
+hypergraph is then traversed in turn, outputting code in 
+a special-purpose `q.virtual machine` language.  As a final step, 
+this last code is then evaluated by mapping instruction to 
+relatively low-level (mostly `Cpp;) function-calls.  
 `p`
 
    
