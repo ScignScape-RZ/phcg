@@ -306,7 +306,59 @@ tableau for stashing details and contexts observed in input text.
 `p`
    
 `p.
-
+With that said, the hypergraphs built directly from 
+rule-matches will still closely reflect the input text and 
+may need substantial processing to identify the proper 
+information and semantics embedded in the input.  Insofar as the 
+input is script-like computer source code, this semantic 
+interpretation includes details such as assigning data types to 
+input tokens and mapping script-level function calls to binary 
+structures that can be used at runtime to effectuate corresponding 
+`C; or `Cpp; calls.  The requisite semantic analysis depends 
+on traversing and drawing information from hypergraphs produced 
+via the parsing stages, but those graphs may need to be restructured 
+so as to make the interpretive analysis %-- rather than 
+the initial parsing %-- most convenient.  Such inter-graph transforms 
+and analytics lie outside the context of parsing itself, so 
+I will discuss these next.
+`p`
+   
+`p.
+`parlead.Hypergraph Intermediate Representation`  In the demo code, 
+the graphs produced during the parsing phase I just outlined are 
+subject to several rounds of modification.  The first stages 
+of this follow-up are performed in the context of the initial hypergraphs, 
+and invove changes that can be tacked on to those graphs without 
+substantial ateration of their structure.  For instance, many source-code 
+tokens can be assigned a provisional type just by examining 
+the token's character content (e.g., numeric literals start with a decimal 
+digit, and string literals are enclosed in quotes).  Also, certain 
+code segments can be necessarily associated with function calls and 
+can therefore be pre-emptively accommodated with calls to some internal 
+functions even at this early stage.  For example, the demo language 
+implemented in the data set has a grammar feature where a token preceded 
+(without space) by a comma %-- as in the (type-declaration) line 
+\lstinline{,fnd ::: Fn_Doc*;} %-- is usually the introduction of a 
+new lexically-scoped symbol, so it can trigger a pre-emptive call to 
+a method that keeps track of source-code scopes (the quoted line 
+also implies that the symbol \lstinline{Fn_Doc} designates a type, 
+so a function may be call registering this as a known type).    
+`p`
+   
+`p.
+Once this provisional anaysis has run its course, the system then 
+undertakes a more extreme reworking where the original hypergraph 
+is morphed into a new graph with a different vocabulary and 
+structural conventions.  Where as the earlier graph was built to 
+prioritize integration with a hypergraph parser, the new graph will 
+be built to prioritize integration with a language runtime.  
+In the demo, the first graph produces the second by emitting a 
+special kind of graph-serialization file.  This indirection 
+is useful for testing, development, and exposition because the 
+intermediate file can be studied as a (relatively human-readable) 
+artifact in its own right.  It also allows me to review the 
+general subject of a hypergraph serialization (or initialization) 
+format, which will be the focus of the next few paragraphs.
 `p`
    
 `p.
