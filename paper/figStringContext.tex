@@ -1,0 +1,73 @@
+\begin{lstlisting}[language = C++, numbers = none, escapechar = !,
+    basicstyle = \ttfamily\bfseries\scriptsize, linewidth = .9\linewidth] 
+
+ add_rule( flags_all_(parse_context ,inside_string_literal), run_context,
+  "string-literal-character",
+    // // note ++ prevents backtracking inside \\"-like groups,
+     //   which avoids erroneously matching the \'s
+     //   before the last \ -- the point here is to
+     //   exclude any run of \'s before " as an
+     //   atomic unit (which needs ++ rather than +).
+  " (?: [^\"\\\\]+ ) | (?: (?:\\\\++)(?!\") ) ",
+  [&]
+ {
+  QString str = p.match_text();
+  graph_build.add_to_string_literal(str);
+ });
+
+
+ add_rule( flags_all_(parse_context ,inside_string_literal), run_context,
+  "string-literal-maybe-end",
+  " \\\\*\" ",
+  [&]
+ {
+  // depends on how many back-slahes ...
+  QString str = p.match_text();
+  if(str.size() % 2) // odd mans even backslashes ...
+  {
+   if(str.size() > 1)
+   {
+    str.chop(1);
+    graph_build.add_to_string_literal(str);
+   }
+   graph_build.process_string_literal();
+   parse_context.flags.inside_string_literal = false;
+  }
+  else
+  {
+   graph_build.add_to_string_literal(str);
+  }
+ });
+
+ add_rule( run_context, "string-literal-start",
+  " \" ",
+   [&]
+ {
+  graph_build.string_literal_start();
+ });
+
+...
+
+void RE_Graph_Build::process_string_literal()
+{
+ caon_ptr<RE_Token> token = new RE_Token(string_literal_acc_);
+ string_literal_acc_.clear();
+ token->flags.is_string_literal = true;
+ add_run_token(*token);
+}
+
+
+void RE_Graph_Build::string_literal_start()
+{
+ parse_context_.flags.inside_string_literal = true;
+}
+
+
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay, text width=.9\linewidth]
+\draw[draw=blue,fill=DarkRed] (11,2.6) circle[radius=3mm];
+\node at (18,2.6){\ovn{1}};
+
+\draw[draw=blue,fill=DarkRed] (9,1.4) circle[radius=3mm];
+\node at (16,1.4){\ovn{2}};
+\end{tikzpicture} 
