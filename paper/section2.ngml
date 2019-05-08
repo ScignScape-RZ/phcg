@@ -67,14 +67,14 @@ other structures from hypergraph data.  Output structures can be
 compiled directly via function-calls, or indirectly via software-generated 
 text files, which in turn coul have a more low-level or more high-level 
 format.  Suppose hypergraphs are employed within publishing 
-software to generate `XML; and `Latex; output.  This can happen 
+software to generate `XML; and `LaTeX; output.  This can happen 
 mostly at the software level: there are many `q.`XML; builder` libraries 
 allowing `XML; documents to be constructed via function calls, rather 
 than by actually producing `XML; code.  Alternativey, the 
 software can act as a code generator, expressly composing `XML; 
-or `Latex; code by creating the requisite character strings 
+or `LaTeX; code by creating the requisite character strings 
 %-- a process which can be complicate by the languages' syntactic 
-requirements, such as the composition of `XML; tags and `Latex; commands 
+requirements, such as the composition of `XML; tags and `LaTeX; commands 
 with the requisite braces and brackets.  Compared to higher-level 
 markup builders, code generation can be difficult because software has 
 to take responsibility for every character in the output %-- every 
@@ -83,7 +83,7 @@ alternatives %-- using builder libraries and explicit
 code generation %-- is the possibility of generating code in 
 alternative formats that are optimized for machine processing, 
 and consequently bypass some of the complications attending to 
-generating normal (say) `XML; or `Latex;.  For instance, 
+generating normal (say) `XML; or `LaTeX;.  For instance, 
 event-driven or `q.`SAX;` parsers understand `XML; as a sequence of 
 `q.events`/, like `i.open-tag`/, `i.close-tag`/, `i.annotation`/, 
 or `q.character data`/.  Some projects adopt this principle to 
@@ -132,8 +132,8 @@ intermediate representation.
     
 `p.
 All told, the language engine reviewed here has a pipeline 
-covering five or six steps, outlined in Figure ?.  
-The process begins by parsing source code (designed 
+covering five or six steps, outlined in Figure~\ref{fig:LanguageEngine} 
+`input<figLanguageEngine>;.  The process begins by parsing source code (designed 
 as a vaguely `C;-like scripting language) yielding 
 one style of hypergraph, with graph manipulation 
 functions tied to the grammar's production rules.  
