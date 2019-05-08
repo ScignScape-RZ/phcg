@@ -198,8 +198,21 @@ matched text becoming a node, and the successful rule
 current parsing context then determines a site where 
 the new node and edge are added to an output graph under 
 construction.  This picture is very approximate; in 
-pratice, further processing is necessary to estalish correct 
-node content, edge labels, and parsing context.    
+pratice, further processing is necessary to establish correct 
+node content, edge labels, and parsing context.  But 
+it shows an intuitive parallel between parsing theory and 
+hypergraphs: parsers identify pieces of input text as anchored 
+into grammatical contexts, with relations between textual 
+elements and surrounding (or distant) text stipulated by 
+syntactic forms.  Analogously, hypernodes and hyperedges are 
+tied to the surrounding material in their hypergraphs according 
+to different patterns and contexts.  The extra detail offered 
+via hypergraphs permits contextual details to be 
+explicated more precisely and compactly.  Generalizing from 
+graphs to hypergraphcs is then analogous (and, in practice, an 
+implementation for) generalizing from contest-free grammars to 
+more nuanced, context-sensitive grammars. 
+  
 `p`
 
 `p.
