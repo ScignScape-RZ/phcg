@@ -424,11 +424,43 @@ programming with the target graph builder directly).
 `p`
   
 `p.
-
+In this section I discussed the first hypergraph %-- built 
+via input from a scripting language %-- as an `q.output` 
+graph; but more precisely the digital output of the 
+first several processing stages is a text file in the 
+intermediate language I have summarized.  This discussion therefore 
+follows the pipeline up until the second `q.generation` of hypergraph 
+is initialized, from the `IR; built off of the first graph.  
+Explaining this second graph further, and the remaining steps toward 
+a working language runtime engine, requires a discussion of 
+`i.channels` and so will be picked up in the next section.
 `p`
 
 `p.
-
+I'll remark to conclude the current section that I believe the 
+kinds of components and workflow outlined here %-- not only the 
+graph libraries but the supporting tools and code-generators %-- are 
+indicative of the sorts of infrastructural elements that would have to 
+be standardized for a common hypergraph ecosystem modeled on the 
+Semantic Web, for example.  Replacing `RDF; with an explicit 
+hypergraph paradigm is not only a project of writing code libraries 
+that structure data in a standardized hypergraph format; it is also a 
+matter of complementing such libraries with additional components 
+that send data into and pull data from hypergraphs via standardized 
+languages, as well as via a standardized interface to connect hypergraphs 
+with parsers targeting more general-purpose languages.  While this is 
+more code that has to be written (and agreed upon, if we're 
+envisioning a communally-adopted platform), it also means that 
+standardizing the supporting formats is a reasonable proxy for 
+standardizing the hypergraph models themselves.  After all, graph 
+markup languages and similar tools currently exist; the limitation 
+is they do not properly enable the full spectrum of structures and 
+data that would characterize a genuine hypergraph ecosystem.  But, consequently, 
+the formal contrast between fully general hypergraph models and the 
+limited features currently supported by (e.g.) graph serialization 
+languages can be explicated by enumerating %-- via a new hypergraph 
+serialization protocol %-- all the desired constructions in the 
+more general paradigm.
 `p`
 
   

@@ -88,7 +88,7 @@ to normal \XML{} syntax.  Similar techniques work with
 other formats, including hypergraphs (as I will discuss below).
 }
    
-\p{\parleader{test}Whatever the format, generating output from hypergraphs is closely 
+\p{Whatever the format, generating output from hypergraphs is closely 
 tied to the issue of traversing or navigating within hypergraphs.  
 In this context it is useful to consider a hypergraph as a kind 
 of \q{space}, with a notion of \q{points} or \q{locations}.  
@@ -120,7 +120,7 @@ intermediate representation.
 }
     
 \p{All told, the language engine reviewed here has a pipeline 
-covering five or six steps, outlined in Figure~\ref{fig:LanguageEngine} 
+covering five or six steps, outlined in Figure~\ref{fig:figLanguageEngine} 
 \input{figLanguageEngine}.  The process begins by parsing source code (designed 
 as a vaguely \C{}-like scripting language) yielding 
 one style of hypergraph, with graph manipulation 
@@ -135,7 +135,303 @@ this last code is then evaluated by mapping instruction to
 relatively low-level (mostly \Cpp{}) function-calls.  
 }
    
-\p{}  
-\p{}
+\p{The remainder of this section will examine some of the code 
+and techniques associated with these different processing step, 
+which hopefully can be proxies for investigation of techniques 
+related to hypergraphs in general.
+}  
+\p{\parlead{General-Purpose Hypergraph Parsers}  The parser outlined here 
+I will term \q{general-purpose} because, athough it outputs hypergraphs, 
+it assumes that the languages being processed are not consciously 
+designed for hypergraphs.  Instead, hypergraphs are useful because 
+they provide greater flexibility in capturing features of the 
+input language, which helps for designing formal 
+(e.g., sripting, query, or markup) languages to a desired level 
+of expressiveness and contest-sensitivity.  In particular, the 
+parsing capabilities and space of parsable grammars is expanded 
+relative to mechanisms like \BNF{} grammars.  (As a practical matter, 
+a further benefit of methods such as I will outline is 
+that they can be realized in a normal, e.g. \Cpp{} code library 
+rather than needing a separate code-generator as in \LEXX{}/\YACC{}.)
+}
    
+\p{I dub the actual \Cpp{} parsing library (and corresponding 
+hypergraph reprecentation) \q{RelaeGraph} (for \q{Regular Expression 
+Labelling and Annotation Engine}).  RelaeGraph grammars are 
+mostly comprised of rules that each pair a regular expression 
+(a formula describing patterns in the input stream) with 
+code that is executed in the event of a pattern match.  This 
+code, in turn, typically calls functions to modify 
+the output hypergraph by inserting a new hypernode and/or 
+hyperedge.  A common senario is that the text matched by a 
+rule's regular-expression pattern forms the basis of a hypernode, 
+while the specific rule that matched (and, for context-sensitive 
+languages, the contexts in effect for the match) determines 
+how a new hyperedge, connecting the new hypernode to the 
+existing hypergraph, is labeled and annotated (here 
+annotations are added details supplementing a basic 
+vocabulary of labels).
+}
+   
+\p{It is interesting to consider the connections between regular-expression 
+oriented grammars and graphs in general: a single regular-expression 
+pattern-match can be pictured as part of an edge, with the 
+matched text becoming a node, and the successful rule 
+(via a name or identifier) supplying an edge label.  The 
+current parsing context then determines a site where 
+the new node and edge are added to an output graph under 
+construction.  This picture is very approximate; in 
+pratice, further processing is necessary to establish correct 
+node content, edge labels, and parsing context.  But 
+it shows an intuitive parallel between parsing theory and 
+hypergraphs: parsers identify pieces of input text as anchored 
+into grammatical contexts, with relations between textual 
+elements and surrounding (or distant) text stipulated by 
+syntactic forms.  Analogously, hypernodes and hyperedges are 
+tied to the surrounding material in their hypergraphs according 
+to different patterns and contexts.  The extra detail offered 
+via hypergraphs permits contextual details to be 
+explicated more precisely and compactly.  Generalizing from 
+graphs to hypergraphcs is then analogous (and, in practice, an 
+implementation for) generalizing from contest-free grammars to 
+more nuanced, context-sensitive grammars. 
+}
+\p{In a context-senitive grammar, not every rule-match will 
+directly modify an output graph; instead, the result of a 
+match might be to alter the parsing context.  For example, 
+%?Figure~\ref{fig:figStringContext} \vsftcl{h}{figStringContext} 
+shows code sampled from the data set that works with 
+string literals in script code, via a distinct string-literal 
+parsing context (the code provisioned directly to 
+a rule-match, as at \OneOverlay{}, delegates most 
+logic to a \q{graph builder} class that acts as an intermediary 
+between the parsing-specific code and the class which 
+directly modifies the output hypergraph; cf. \ThreeOverlay{}).  
+The current parsing context is tracked by a specific 
+\lstinline{parse_context_} 
+object which is modified 
+by the graph builder (the parsing engine accesses that object 
+as well and only attempts rule-matches for rules 
+described as active for the current context).\footnote{To be precise, context is set both by the named contexts that 
+may be dynamically declared in a grammar and by boolean flags 
+which assert finer-grained contexts with conjunction, disjunction, 
+and negation operations.  A full context declaration 
+can look like at \TwoOverlay{} in Figure~\ref{fig:figStringContext}: 
+%?lstinline{flags_all_(parse_context ,inside_string_literal), run_context}.
+}  
+Overall then the parsing response operations 
+are split between three main classes: one which defines 
+rules and match-callbacks themselves; one which is 
+principally responsible for maintaining parse context and flags 
+and bridging the other two layers; and one which performs 
+most graph-transformation operations. 
+}
+   
+\p{Of these three parsing layers, one layer \q{faces} the 
+input text directly \mdash{} the layer that defines grammar rules 
+and match-callbacks.  Another layer \q{faces} the hypergraph 
+output directly \mdash{} it adds (and occasionally rearranges) 
+hypernodes and hyperedges (the third layer acts as an 
+intermediary).  Separating these layers establishes 
+a separation of concerns so that the grammar-specific 
+layer can focus on recognizing parsing structures for an 
+expressive, flexible input language, without itself 
+attending to graph operations.  Simutaneously, the 
+components which do moiy hypergraphs can be developed 
+in isolation from the syntax of the language being 
+parsed.  Figure~\ref{fig:figAddToken} \vsftcl{h}{figAddToken} samples code 
+logically following Figure~\ref{fig:figStringContext} wherein 
+a new hypernode (such as, a string literal token) is 
+inserted.  The relevant \Cpp{} class offers a variety of 
+insertion and related graph-modification routines, without 
+paying attention to the rationale for choosing 
+each particular kind of modification at each particular moment.  
+The middle \q{Graph Build} layer then receives calls from the 
+parser about rule-matches and has a range of graph-modification 
+routines it can select to handle each match (often based 
+on contextual data tracked at the middle layer).  
+So the first layer is reponsible for generating fine-grained notifications 
+about input patterns to the second layer, while the third layer 
+is reponsible for presenting a flexible set of operations from 
+which the second layer selects the proper graph-modification 
+for each match and context.
+} 
+   
+\p{While this kind of compiler architecture is not intrinsically 
+dependent on hypergraph forms at the output level, using hypergraphs 
+augments the benefits in how such a pipeline is organized.  Hypergraphs, 
+compared to other kinds of parser output (like Abstract Syntax Trees 
+or Directed Acyclic Graphs), have fewer structural 
+requirements and restrictions and therefore offer greater leeway 
+in how information about input text is preerved in the output structure.  
+This accordingly offers greater flexibility in systematizing the 
+input language's syntax and semantics.  For example, consider the 
+goal to support special built-in datatypes with special language-level 
+syntax, such as embedding \XML{} directly in source code, or \q{sugaring} 
+compound expressions within concise and readable forms (along the 
+lines of how \LINQ{} \mdash{} Language Integrated Query \mdash{} packages 
+complex method-calls into a fluid 
+syntax resembling \SQL{}).  In a context-sensitive hypergraph grammar 
+such language features can be realized by defining a parsing context 
+for the non-stanard syntax and defining special node-types, edge-labels, 
+or nested graphs to hold data parsed from input when the special 
+contexts are in effect.  The resuting data, which may have complex 
+internal structure, can be inserte into the overall graph as a single 
+node and/or edge, taking abvantage of hypergraphs' capability to 
+work with different scales of organization.  Languages designed 
+against the backdrop of this kind of parsing engine can flexibly 
+evolve to support new syntactic special cases and constructs, 
+in part because a hypergraph output format is a basically free-form 
+tableau for stashing details and contexts observed in input text.
+}
+   
+\p{With that said, the hypergraphs built directly from 
+rule-matches will still closely reflect the input text and 
+may need substantial processing to identify the proper 
+information and semantics embedded in the input.  Insofar as the 
+input is script-like computer source code, this semantic 
+interpretation includes details such as assigning data types to 
+input tokens and mapping script-level function calls to binary 
+structures that can be used at runtime to effectuate corresponding 
+\C{} or \Cpp{} calls.  The requisite semantic analysis depends 
+on traversing and drawing information from hypergraphs produced 
+via the parsing stages, but those graphs may need to be restructured 
+so as to make the interpretive analysis \mdash{} rather than 
+the initial parsing \mdash{} most convenient.  Such inter-graph transforms 
+and analytics lie outside the context of parsing itself, so 
+I will discuss these next.
+}
+   
+\p{\parlead{Hypergraph Intermediate Representation}  In the demo code, 
+the graphs produced during the parsing phase I just outlined are 
+subject to several rounds of modification.  The first stages 
+of this follow-up are performed in the context of the initial hypergraphs, 
+and invove changes that can be tacked on to those graphs without 
+substantial ateration of their structure.  For instance, many source-code 
+tokens can be assigned a provisional type just by examining 
+the token's character content (e.g., numeric literals start with a decimal 
+digit, and string literals are enclosed in quotes).  Also, certain 
+code segments can be necessarily associated with function calls and 
+can therefore be pre-emptively accommodated with calls to some internal 
+functions even at this early stage.  For example, the demo language 
+implemented in the data set has a grammar feature where a token preceded 
+(without space) by a comma \mdash{} as in the (type-declaration) line 
+\lstinline{,fnd ::: Fn_Doc*;} \mdash{} is usually the introduction of a 
+new lexically-scoped symbol, so it can trigger a pre-emptive call to 
+a method that keeps track of source-code scopes (the quoted line 
+also implies that the symbol \lstinline{Fn_Doc} designates a type, 
+so a function may be call registering this as a known type).    
+}
+   
+\p{Once this provisional anaysis has run its course, the system then 
+undertakes a more extreme reworking where the original hypergraph 
+is morphed into a new graph with a different vocabulary and 
+structural conventions.  Where as the earlier graph was built to 
+prioritize integration with a hypergraph parser, the new graph will 
+be built to prioritize integration with a language runtime.  
+In the demo, the first graph produces the second by emitting a 
+special kind of graph-serialization file.  This indirection 
+is useful for testing, development, and exposition because the 
+intermediate file can be studied as a (relatively human-readable) 
+artifact in its own right.  It also allows me to review the 
+general subject of a hypergraph serialization (or initialization) 
+format, which will be the focus of the next few paragraphs.
+}
+   
+\p{One way to conceptualize hypergraph serialization is to treat the 
+graphs as built up from an empty graph via a finite series of steps.  
+A serialization format can then be designed on the premise of 
+expressing each construction-step as a distinct instruction, and then 
+serializing a whole graph as the sequence of all its implied 
+steps.  Figure~\ref{fig:figIR} \vsftcl{h}{figIR} samples a file in the 
+demo's format, which is based on Common Lisp to leave open the 
+possibility of these files being read by a Common Lisp evaluator 
+for pre-processing.  Here though the intermediate language is 
+parsed directly in \Cpp{} \mdash{} unlike the parsers discussed earlier, 
+which aim to work with flexible scripting languages, an intermediate 
+hypergraph representation can be narrowly targeted to machine-generated 
+hypergraph stages and needs only simplistic parsers.  For this 
+language, each form (adopting the term from Lisp's name for a 
+single expression) generally correspons to a single \Cpp{} method.  
+For development, the steps described via intermediate code can 
+be analogously implemented as \Cpp{} code directly (the demo includes 
+project files for running an example of that direct construction in 
+lieu of intermediate files).  Accordingly, designing a 
+serialization format for hypergraphs can be closely tied 
+to the design of a (say, \Cpp{}) library for building 
+graphs via a set of primitive operations.
+}
+   
+\p{The demo format employs a notion of \q{multigraph tokens}, which 
+are string representations of nodes' values along with a set 
+of token kinds.  An encoding system allows the kind to be 
+notated via a signal embedded in the token string, yielding a 
+node-reprensentation which can work across different varieties 
+of hypergraphs (facilitating graphs' inter-translation).  
+Figure~\ref{fig:PGBIR} \vsftcl{h}{figPGBIR} shows some 
+code involved with routing input text to graph-build operations.  
+Unlike the earlier parse strategy, the simple input language 
+does not call for complex contextual logic to determine the correct 
+operation; instead, the requisite operation is named explicitly in the 
+input, so the parsing callback mostly reduces to a long 
+dispatch table.  Care does have to be taken, however, to 
+correctly anticipate which kinds of tokens are expected on the 
+input in light of the graph-manipulation method that will be 
+called when the tokens are parsed (some tokens hold raw data; 
+other refer to preexisting nodes that are given names in the 
+input text). 
+} 
+    
+\p{The intermediate language designed via thexe techniques is effective 
+from the point of view of machine-generating code to construct a 
+new hypergraph from some prior data (including other hypergraphs).  
+Rather than having components generate the intermediate code directly, 
+the demo library includes a \Cpp{} class which builds the 
+\IR{} via a method interface.  Figure~\ref{fig:figPGB} \vsftcl{h}{figPGB} 
+shows code using this interface, treating the \IR{} output as a 
+vector of (Lisp-style) forms and inserting forms at the end 
+(or occasionally in the middle) of the vector 
+(the methods for adding a form mostly have the same names as the 
+methods which the forms themselves cause to be called, so 
+programming via the \IR{} intermediary feels like 
+programming with the target graph builder directly). 
+}
+  
+\p{In this section I discussed the first hypergraph \mdash{} built 
+via input from a scripting language \mdash{} as an \q{output} 
+graph; but more precisely the digital output of the 
+first several processing stages is a text file in the 
+intermediate language I have summarized.  This discussion therefore 
+follows the pipeline up until the second \q{generation} of hypergraph 
+is initialized, from the \IR{} built off of the first graph.  
+Explaining this second graph further, and the remaining steps toward 
+a working language runtime engine, requires a discussion of 
+\i{channels} and so will be picked up in the next section.
+}
+\p{I'll remark to conclude the current section that I believe the 
+kinds of components and workflow outlined here \mdash{} not only the 
+graph libraries but the supporting tools and code-generators \mdash{} are 
+indicative of the sorts of infrastructural elements that would have to 
+be standardized for a common hypergraph ecosystem modeled on the 
+Semantic Web, for example.  Replacing \RDF{} with an explicit 
+hypergraph paradigm is not only a project of writing code libraries 
+that structure data in a standardized hypergraph format; it is also a 
+matter of complementing such libraries with additional components 
+that send data into and pull data from hypergraphs via standardized 
+languages, as well as via a standardized interface to connect hypergraphs 
+with parsers targeting more general-purpose languages.  While this is 
+more code that has to be written (and agreed upon, if we're 
+envisioning a communally-adopted platform), it also means that 
+standardizing the supporting formats is a reasonable proxy for 
+standardizing the hypergraph models themselves.  After all, graph 
+markup languages and similar tools currently exist; the limitation 
+is they do not properly enable the full spectrum of structures and 
+data that would characterize a genuine hypergraph ecosystem.  But, consequently, 
+the formal contrast between fully general hypergraph models and the 
+limited features currently supported by (e.g.) graph serialization 
+languages can be explicated by enumerating \mdash{} via a new hypergraph 
+serialization protocol \mdash{} all the desired constructions in the 
+more general paradigm.
+}
+  
 \p{}

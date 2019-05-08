@@ -630,6 +630,11 @@
 \newcommand{\self}{\lstinline{self}}
 \newcommand{\SQL}{\AcronymText{SQL}}
 
+\newcommand{\BNF}{\AcronymText{BNF}} 
+\newcommand{\LEXX}{\AcronymText{LEXX}} 
+\newcommand{\YACC}{\AcronymText{YACC}} 
+\newcommand{\LINQ}{\AcronymText{LINQ}} 
+
 \newcommand{\GRAPHML}{\AcronymText{GRAPHML}}
 \newcommand{\SAX}{\AcronymText{SAX}}
 
@@ -646,8 +651,19 @@
 \newcommand{\tys}{\ensuremath{\mathbb{T}}}
 
 \newcommand{\parleader}[1]{\noindent\textbf{#1}\hspace{1em}}
+\newcommand{\parlead}[1]{\parleader{#1}}
 
+\usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
+\newsavebox\lstbox
  
+ 
+\usepackage[font=small,labelfont=bf]{caption}
+
+\definecolor{BaseColor}{HTML}{8533FF}
+
+\colorlet{ftcfore}{BaseColor!60!cyan}
+\colorlet{ftcback}{BaseColor!40!cyan}
+
 \newcommand{\ftc}[3]{
 \vspace*{6mm}
 \begin{tcolorbox}
@@ -688,6 +704,8 @@ drop fuzzy shadow northeast={darkRed!70!purple},
 \pgfdeclarelayer{foreground}
 \pgfsetlayers{background,main,foreground}
 
+\newcommand{\vsinput}[1]{\vspace{1em}\input{#1}}
+
 \newcommand{\tcl}[1]{\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
 \input{#1}
 \end{minipage}\end{lrbox}
@@ -709,5 +727,27 @@ drop fuzzy shadow northeast={darkRed!70!purple},
 \end{minipage}\end{lrbox}  
 \tc{}{\hspace*{-1.68cm}\usebox\lstbox}}
 
+\definecolor{blGreen}{rgb}{.2,.7,.3}
+\definecolor{darkRed}{rgb}{.2,.0,.1}
+\definecolor{DarkRed}{rgb}{.2,.0,.1}
+ 
 
+\newcommand{\ovn}[1]{\color{yellow}{{\textbf{#1}}}}
 
+\newcommand{\dovn}[3]{\draw[draw=blue,fill=DarkRed] (#1,#2) circle[radius=3mm];
+	\node at (#1,#2){\ovn{#3}}
+}
+
+\newcommand{\sdovn}[3]{\draw[draw=blue,fill=DarkRed] (#1,#2) circle[radius=2mm];
+	\node (char) at (#1,#2) {\ovn{#3}}
+}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\sdovn{0}{0}{#1};}}
+
+\newcommand{\OneOverlay}{\circled{1}}
+\newcommand{\TwoOverlay}{\circled{2}}
+\newcommand{\ThreeOverlay}{\circled{3}}
+\newcommand{\FourOverlay}{\circled{4}}
+\newcommand{\FiveOverlay}{\circled{5}}
+\newcommand{\SixOverlay}{\circled{6}}
