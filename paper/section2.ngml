@@ -179,12 +179,27 @@ mostly comprised of rules that each pair a regular expression
 code that is executed in the event of a pattern match.  This 
 code, in turn, typically calls functions to modify 
 the output hypergraph by inserting a new hypernode and/or 
-hyperedge.  
-
+hyperedge.  A common senario is that the text matched by a 
+rule's regular-expression pattern forms the basis of a hypernode, 
+while the specific rule that matched (and, for context-sensitive 
+languages, the contexts in effect for the match) determines 
+how a new hyperedge, connecting the new hypernode to the 
+existing hypergraph, is labeled and annotated (here 
+annotations are added details supplementing a basic 
+vocabulary of labels).
 `p`
    
 `p.
-
+It is interesting to consider the connections between regular-expression 
+oriented grammars and graphs in general: a single regular-expression 
+pattern-match can be pictured as part of an edge, with the 
+matched text becoming a node, and the successful rule 
+(via a name or identifier) supplying an edge label.  The 
+current parsing context then determines a site where 
+the new node and edge are added to an output graph under 
+construction.  This picture is very approximate; in 
+pratice, further processing is necessary to estalish correct 
+node content, edge labels, and parsing context.    
 `p`
 
 `p.
