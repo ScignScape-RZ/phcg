@@ -7,3 +7,12 @@ generalization on the notion of `i.edges` themselves:
 A general mapping of  
 categories to graphs where edges represent morphisms, this represents a 
 generalization on the notion of `i.edges` themselves: 
+
+
+
+ The demo format relies on the fact that each expression notating a 
+minimal graph modification has a similar form %-- actually every 
+operation either takes no arguments or a single string argument.  
+As such the input text can be `q.compiled` into an array of 
+pairs comprised of a pointer-to-member-function and a (possibly 
+empty) argument. 

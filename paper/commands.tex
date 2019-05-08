@@ -646,3 +646,68 @@
 \newcommand{\tys}{\ensuremath{\mathbb{T}}}
 
 \newcommand{\parleader}[1]{\noindent\textbf{#1}\hspace{1em}}
+
+ 
+\newcommand{\ftc}[3]{
+\vspace*{6mm}
+\begin{tcolorbox}
+[float=t, colframe=ftcfore!20!white,boxrule=0.5pt,arc=22pt,enhanced,
+%leftrule=5pt,rightrule=3pt,toprule=0pt,
+title={{\color{black}{\protect{#1}}}},label={#2}
+toprule=0pt,bottomrule=1pt,
+drop fuzzy shadow northeast={darkRed!40!ftcback},
+%frame code={
+%        },
+     % left=6pt,right=6pt,top=6pt,bottom=6pt,
+      boxsep=3pt]\hspace{3em}\parbox{0.8\textwidth}\protect{#3}
+\end{tcolorbox}      
+\vspace*{-4mm}
+}
+
+
+\newcommand{\tc}[2]{
+\vspace*{6mm}
+\begin{tcolorbox}
+[#1 colframe=darkRed!70!BaseColor,boxrule=0.5pt,arc=22pt,enhanced,
+%leftrule=5pt,rightrule=3pt,toprule=0pt,
+toprule=0pt,bottomrule=1pt,
+drop fuzzy shadow northeast={darkRed!70!purple},
+%frame code={
+%        },
+     % left=6pt,right=6pt,top=6pt,bottom=6pt,
+      boxsep=3pt]\hspace{3em}\parbox{0.8\textwidth}\protect{#2}
+\end{tcolorbox}      
+\vspace*{-4mm}
+}
+
+\tcbuselibrary{skins}
+%\tcbuselibrary{listings,breakable}
+\usetikzlibrary{calc}
+\usetikzlibrary{shadows}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+\newcommand{\tcl}[1]{\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
+\input{#1}
+\end{minipage}\end{lrbox}
+\tc{}{\hspace*{-1.68cm}\usebox\lstbox}}
+%\usepackage[usenames,dvipsnames]{xcolor}
+
+\newcommand{\ftcl}[2]{\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
+\input{#2}
+\end{minipage}\end{lrbox}
+\tc{float=#1,}{\hspace*{-1.68cm}\usebox\lstbox}}
+
+\newcommand{\vsftcl}[2]{\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
+\vsinput{#2}
+\end{minipage}\end{lrbox}
+\tc{float=#1,}{\hspace*{-1.68cm}\usebox\lstbox}}
+
+\newcommand{\vstcl}[1]{\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
+\vsinput{#1}
+\end{minipage}\end{lrbox}  
+\tc{}{\hspace*{-1.68cm}\usebox\lstbox}}
+
+
+

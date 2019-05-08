@@ -1,0 +1,32 @@
+\begin{lstlisting}[language = lisp, numbers = none, escapechar = !,
+    basicstyle = \ttfamily\bfseries\scriptsize, linewidth = .9\linewidth] 
+
+(pgb::make_root_node :|-!>last_block_pre_entry_node|)
+(pgb::make_token_node :|>_@&prn| :|-->entry-node|)
+(pgb::add_block_entry_node :|<!>last_block_pre_entry_node| :|<->entry-node|)
+(pgb::copy_value :|<->entry-node| :|-!>last_statement_entry_node|)
+(pgb::copy_value :|<->entry-node| :|-!>last_expression_entry_node|)
+(pgb::copy_value :|<->entry-node| :|-->channel-seq|)
+(pgb::make_channel_fuxe_entry_node :|/--result| :|/--u4| :|-->cfx-node|)
+(pgb::make_token_node :|>_$#+| :|-->entry-node|)
+(pgb::add_channel_fuxe_entry_node :|<!>last_expression_entry_node| :|<->entry-node| :|/--lambda| :|<->cfx-node|)
+(pgb::copy_value :|<->entry-node| :|-!>last_expression_entry_node|)
+(pgb::copy_value :|<->entry-node| :|-->channel-seq|)
+(pgb::make_channel_fuxe_entry_node :|/--result| :|/--u4| :|-->cfx-node|)
+(pgb::make_token_node :|>_$#+| :|-->entry-node|)
+(pgb::add_channel_fuxe_entry_node :|<!>last_expression_entry_node| :|<->entry-node| :|/--lambda| :|<->cfx-node|)
+(pgb::copy_value :|<->entry-node| :|-!>last_expression_entry_node|)
+(pgb::copy_value :|<->entry-node| :|-->channel-seq|)
+(pgb::add_channel_entry_token :|<->channel-seq| :|<$>lambda| :|>_$78| :|-->channel-seq|)
+(pgb::add_channel_token :|<->channel-seq| :|>_$12| :|-->channel-seq|)
+(pgb::copy_value :|<!>last_expression_entry_node| :|-->channel-seq|)
+(pgb::add_channel_continue_token :|<->channel-seq| :|>_$3| :|-->channel-seq|)
+
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay, text width=.9\linewidth]
+\draw[draw=blue,fill=DarkRed] (11,2.6) circle[radius=3mm];
+\node at (18,2.6){\ovn{1}};
+
+\draw[draw=blue,fill=DarkRed] (9,1.4) circle[radius=3mm];
+\node at (16,1.4){\ovn{2}};
+\end{tikzpicture} 

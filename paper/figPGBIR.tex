@@ -1,0 +1,97 @@
+\begin{lstlisting}[language = C++, numbers = none, escapechar = !,
+    basicstyle = \ttfamily\bfseries\scriptsize, linewidth = .9\linewidth] 
+
+void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
+{
+ PGB_Methods md = parse_pgb_method(fn);
+
+ switch (md)
+ {
+ case PGB_Methods::make_root_node:
+  {
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   if(tr)
+     *tr = graph_build_.make_root_node();
+  };
+  break;
+
+ case PGB_Methods::add_type_declaration:
+  {
+   QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
+   if(mgts.size() < 2)
+     break;
+   graph_build_.add_type_declaration(mgts[0], mgts[1]);
+  };
+  break;
+
+ case PGB_Methods::signature:
+  {
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+   if(caon_ptr<PHR_Graph_Signature> s = n->phr_graph_signature())
+   {
+    QList<MG_Token> mgts = get_signature_tokens(mgtm);
+    s->add_tokens(mgts);
+   }
+  };
+  break;
+
+ case PGB_Methods::make_signature_node:
+  {
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+
+   if(tr)
+     *tr = graph_build_.make_signature_node(n);
+   else
+     graph_build_.make_signature_node(n);
+  };
+  break;
+
+ case PGB_Methods::make_token_node:
+  {
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   MG_Token tok = get_arg_token(mgtm);
+   if(tr)
+     *tr = graph_build_.make_token_node(tok);
+   else
+     graph_build_.make_token_node(tok);
+  };
+  break;
+...
+ case PGB_Methods::push_expression_entry:
+  graph_build_.push_expression_entry();
+  break;
+
+ case PGB_Methods::pop_expression_entry:
+  graph_build_.pop_expression_entry();
+  break;
+
+ case PGB_Methods::push_block_entry:
+  graph_build_.push_block_entry();
+  break;
+
+ case PGB_Methods::pop_block_entry:
+  graph_build_.pop_block_entry();
+  break;
+
+ default:
+  break;
+ }
+}
+
+
+void PGB_IR_Run::run_line(QString line)
+{
+ QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>> mgtm;
+ QString fn = PGB_IR_Build::parse_line(line, mgtm);
+ run_line(fn, mgtm);
+}
+
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay, text width=.9\linewidth]
+\draw[draw=blue,fill=DarkRed] (11,2.6) circle[radius=3mm];
+\node at (18,2.6){\ovn{1}};
+
+\draw[draw=blue,fill=DarkRed] (9,1.4) circle[radius=3mm];
+\node at (16,1.4){\ovn{2}};
+\end{tikzpicture} 
