@@ -164,8 +164,7 @@ to the fact that these special commutative Frobenius monoids provide precisely t
 structure required for their string diagrams to be directed graphs with `sq.hyperedges`/:
 edges connecting any number of inputs to any number of outputs. ... 
 We then think of morphisms in a hypergraph category as hyperedges 
-(The Algebra of Open and
-Interconnected Systems p. 13)
+\cite[p. 13]{BrendanFongThesis}.
 `quote`  
 
 For a general mapping of  
@@ -187,8 +186,7 @@ Monoidal categories admit an elegant and powerful graphical notation
 morphism `fAB; is represented by a box.  The trivial system 
 $I$ is the empty diagram.  Morphisms `uIA; and `vAI; 
 ... are referred to as `textbf.states` and `textbf.effects` 
-(Interacting Conceptual Spaces I :
-Grammatical Composition of Concepts, p. 4).
+\cite[p. 4]{InteractingConceptualSpaces}.
 `quote`
 `p`
 
