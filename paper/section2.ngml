@@ -146,11 +146,46 @@ a special-purpose `q.virtual machine` language.  As a final step,
 this last code is then evaluated by mapping instruction to 
 relatively low-level (mostly `Cpp;) function-calls.  
 `p`
+   
+`p.
+The remainder of this section will examine some of the code 
+and techniques associated with these different processing step, 
+which hopefully can be proxies for investigation of techniques 
+related to hypergraphs in general.
+`p`  
 
+`p.
+`parlead.General-Purpose Hypergraph Parsers`  The parser outlined here 
+I will term `q.general-purpose` because, athough it outputs hypergraphs, 
+it assumes that the languages being processed are not consciously 
+designed for hypergraphs.  Instead, hypergraphs are useful because 
+they provide greater flexibility in capturing features of the 
+input language, which helps for designing formal 
+(e.g., sripting, query, or markup) languages to a desired level 
+of expressiveness and contest-sensitivity.  In particular, the 
+parsing capabilities and space of parsable grammars is expanded 
+relative to mechanisms like `BNF; grammars.  (As a practical matter, 
+a further benefit of methods such as I will outline is 
+that they can be realized in a normal, e.g. `Cpp; code library 
+rather than needing a separate code-generator as in `LEXX;/`YACC;.)
+`p`
+   
+`p.
+I dub the actual `Cpp; parsing library (and corresponding 
+hypergraph reprecentation) `q.RelaeGraph` (for `q.Regular Expression 
+Labelling and Annotation Engine`/).  RelaeGraph grammars are 
+mostly comprised of rules that each pair a regular expression 
+(a formula describing patterns in the input stream) with 
+code that is executed in the event of a pattern match.  This 
+code, in turn, typically calls functions to modify 
+the output hypergraph by inserting a new hypernode and/or 
+hyperedge.  
+
+`p`
    
 `p.
 
-`p`  
+`p`
 
 `p.
 
