@@ -246,11 +246,63 @@ most graph-transformation operations.
 `p`
    
 `p.
-
-`p`
+Of these three parsing layers, one layer `q.faces` the 
+input text directly %-- the layer that defines grammar rules 
+and match-callbacks.  Another layer `q.faces` the hypergraph 
+output directly %-- it adds (and occasionally rearranges) 
+hypernodes and hyperedges (the third layer acts as an 
+intermediary).  Separating these layers establishes 
+a separation of concerns so that the grammar-specific 
+layer can focus on recognizing parsing structures for an 
+expressive, flexible input language, without itself 
+attending to graph operations.  Simutaneously, the 
+components which do moiy hypergraphs can be developed 
+in isolation from the syntax of the language being 
+parsed.  Figure~\ref{fig:AddToken} samples code logically 
+following Figure~\ref{fig:StringContext} wherein 
+a new hypernode (such as, a string literal token) is 
+inserted.  The relevant `Cpp; class offers a variety of 
+insertion and related graph-modification routines, without 
+paying attention to the rationale for choosing 
+each particular kind of modification at each particular moment.  
+The middle `q.Graph Build` layer then receives calls from the 
+parser about rule-matches and has a range of graph-modification 
+routines it can select to handle each match (often based 
+on contextual data tracked at the middle layer).  
+So the first layer is reponsible for generating fine-grained notifications 
+about input patterns to the second layer, while the third layer 
+is reponsible for presenting a flexible set of operations from 
+which the second layer selects the proper graph-modification 
+for each match and context.
+`p` 
    
 `p.
-
+While this kind of compiler architecture is not intrinsically 
+dependent on hypergraph forms at the output level, using hypergraphs 
+augments the benefits in how such a pipeline is organized.  Hypergraphs, 
+compared to other kinds of parser output (like Abstract Syntax Trees 
+or Directed Acyclic Graphs), have fewer structural 
+requirements and restrictions and therefore offer greater leeway 
+in how information about input text is preerved in the output structure.  
+This accordingly offers greater flexibility in systematizing the 
+input language's syntax and semantics.  For example, consider the 
+goal to support special built-in datatypes with special language-level 
+syntax, such as embedding `XML; directly in source code, or `q.sugaring` 
+compound expressions within concise and readable forms (along the 
+lines of how `LINQ; %-- Language Integrated Query %-- packages 
+complex method-calls into a fluid 
+syntax resembling `SQL;).  In a context-sensitive hypergraph grammar 
+such language features can be realized by defining a parsing context 
+for the non-stanard syntax and defining special node-types, edge-labels, 
+or nested graphs to hold data parsed from input when the special 
+contexts are in effect.  The resuting data, which may have complex 
+internal structure, can be inserte into the overall graph as a single 
+node and/or edge, taking abvantage of hypergraphs' capability to 
+work with different scales of organization.  Languages designed 
+against the backdrop of this kind of parsing engine can flexibly 
+evolve to support new syntactic special cases and constructs, 
+in part because a hypergraph output format is a basically free-form 
+tableau for stashing details and contexts observed in input text.
 `p`
    
 `p.

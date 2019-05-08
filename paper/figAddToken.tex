@@ -1,0 +1,179 @@
+\begin{lstlisting}[language = C++, numbers = none, escapechar = !,
+    basicstyle = \ttfamily\bfseries\scriptsize, linewidth = .9\linewidth] 
+
+void RE_Markup_Position::add_token_node(caon_ptr<RE_Node> token_node)
+{
+...
+
+ if(flags.active_type_indicator_node)
+ {
+  flags.active_type_indicator_node = false;
+  current_node_ << fr_/qy_.Type_Indicator >> token_node;
+  if(token)
+  {
+   token->flags.has_type_indicator = true;
+  }
+  return;
+ }
+...
+ check_add_implied_call_entry();
+
+ if(token->flags.is_do)
+ {
+  if(caon_ptr<RE_Call_Entry> rce = current_node_->re_call_entry())
+  {
+   CAON_PTR_DEBUG(RE_Node ,current_node_)
+   CAON_PTR_DEBUG(RE_Call_Entry ,rce)
+   current_node_ << fr_/qy_.Run_Cross_Do >> token_node;
+  }
+
+  add_call_entry(false);
+  CAON_PTR_DEBUG(RE_Node ,current_node_)
+  if(caon_ptr<RE_Call_Entry> rce = current_node_->re_call_entry())
+  {
+   CAON_PTR_DEBUG(RE_Call_Entry ,rce)
+   rce->flags.is_do_lambda = true;
+   rce->flags.was_added_as_pre_ghost_block = true;
+  }
+ }
+
+ caon_ptr<RE_Node> prior_current_node = nullptr;
+
+ const RE_Connectors* pConnector;
+ const RE_Connectors* aConnector = nullptr;
+ caon_ptr<RE_Node> aConnector_src_node = nullptr;
+
+ switch(position_state_)
+ {
+ case Position_States::Root:
+ case Position_States::Cross_Run_Chief:
+ case Position_States::Run_Pre_Entry:
+  pConnector = &rq_.Run_Call_Entry;
+
+  if(current_node_)
+  {
+   if(token)
+   {
+    aConnector = &rq_.Run_Call_Entry_Direct;
+    aConnector_src_node = current_node_;
+
+     //  // debug
+    CAON_PTR_DEBUG(RE_Token ,token)
+    current_node_->set_label(current_node_->label() + " (" + token->raw_text() + ")");
+   }
+  }
+  break;
+
+ case Position_States::Block_Entry:
+ {
+  CAON_PTR_DEBUG(RE_Node ,current_node_)
+  maybe_if_entry_node = current_node_;
+  if(caon_ptr<RE_Call_Entry> rce = current_node_->re_call_entry())
+  {
+   rce->set_ref_node(current_node_);
+   CAON_PTR_DEBUG(RE_Call_Entry ,rce)
+   CAON_DEBUG_NOOP
+  }
+  pConnector = &rq_.Run_Call_Entry; break;
+ }
+
+ case Position_States::Active_Run_Chief:
+  {
+   if(caon_ptr<RE_Call_Entry> rce = current_node_->re_call_entry())
+   {
+    rce->set_ref_node(current_node_);
+   }
+   pConnector = &rq_.Run_Cross_Sequence; break;
+  }
+ case Position_States::Active_Run_Token:
+...
+ case Position_States::Data_Entry:
+  pConnector = &rq_.Run_Data_Entry;
+  break;
+ default:
+  return;
+ }
+
+ const RE_Connectors& connector = *pConnector;
+
+ switch(position_state_)
+ {
+ case Position_States::Root:
+  {
+  caon_ptr<RE_Node> block_entry_node = insert_block_entry_node(rq_.Run_Block_Entry);
+  caon_ptr<RE_Block_Entry> rbe = block_entry_node->re_block_entry();
+  rbe->flags.file_default = true;
+  current_node_ = block_entry_node;
+  entry_node = insert_entry_node(rq_.Run_Call_Entry, true);
+  prior_current_node = current_node_;
+  current_node_ = entry_node;
+  maybe_if_entry_node = entry_node;
+
+  // for debug
+  if(token)
+   entry_node->set_label(entry_node->label() + " (" + token->raw_text() + ")");
+
+  goto Default;
+  }
+ case Position_States::Cross_Run_Chief:
+  {
+   // //   This needs to get whether chief is statement_entry
+   bool is_statement_entry = true;
+   if(current_node_)
+   {
+    if(caon_ptr<RE_Call_Entry> rce = current_node_->re_call_entry())
+     is_statement_entry = rce->flags.is_statement_entry;
+   }
+...
+   current_node_ = entry_node;
+   goto Default;
+  }
+ Default:
+ default:
+  {
+   CAON_PTR_DEBUG(RE_Node ,current_node_)
+
+   node_frame<RZ::RECore::RE_Dominion, RZ::RECore::RE_Galaxy>::Frame_With_Connector fwc = fr_/connector;
+   node_ptr<RZ::RECore::RE_Dominion>::Node_With_Connector nwc = current_node_ << fwc;
+
+   node_frame<RZ::RECore::RE_Dominion, RZ::RECore::RE_Galaxy>::Frame_With_Connector fwc1 = nwc.frame_with_connector;
+   current_node_ << fr_/connector>> token_node;
+...
+   current_node_ = token_node;
+
+   if(maybe_if_entry_node)
+   {
+    if(token)
+    {
+     if(token->raw_text() == "if")
+     {
+      block_chiefs_ifs_.push(maybe_if_entry_node);
+     }
+    }
+   }
+  }
+ }
+
+ // //  Handle the held mapkey possibility
+ switch(position_state_)
+ {
+ default:
+  check_held_mapkey_node(current_node_);
+ }
+
+ switch(position_state_)
+ {
+ default:
+  position_state_ = Position_States::Active_Run_Token;
+ }
+}
+
+
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay, text width=.9\linewidth]
+\draw[draw=blue,fill=DarkRed] (11,2.6) circle[radius=3mm];
+\node at (18,2.6){\ovn{1}};
+
+\draw[draw=blue,fill=DarkRed] (9,1.4) circle[radius=3mm];
+\node at (16,1.4){\ovn{2}};
+\end{tikzpicture} 
