@@ -196,10 +196,11 @@ graphs to hypergraphcs is then analogous (and, in practice, an
 implementation for) generalizing from contest-free grammars to 
 more nuanced, context-sensitive grammars. 
 }
+\vsftcl{h}{figStringContext}
 \p{In a context-senitive grammar, not every rule-match will 
 directly modify an output graph; instead, the result of a 
 match might be to alter the parsing context.  For example, 
-%?Figure~\ref{fig:figStringContext} \vsftcl{h}{figStringContext} 
+Listing~\ref{lst:figStringContext} 
 shows code sampled from the data set that works with 
 string literals in script code, via a distinct string-literal 
 parsing context (the code provisioned directly to 
@@ -208,18 +209,16 @@ logic to a \q{graph builder} class that acts as an intermediary
 between the parsing-specific code and the class which 
 directly modifies the output hypergraph; cf. \ThreeOverlay{}).  
 The current parsing context is tracked by a specific 
-\lstinline{parse_context_} 
-object which is modified 
+\lstinline{parse_context_} object which is modified 
 by the graph builder (the parsing engine accesses that object 
 as well and only attempts rule-matches for rules 
 described as active for the current context).\footnote{To be precise, context is set both by the named contexts that 
 may be dynamically declared in a grammar and by boolean flags 
 which assert finer-grained contexts with conjunction, disjunction, 
 and negation operations.  A full context declaration 
-can look like at \TwoOverlay{} in Figure~\ref{fig:figStringContext}: 
-%?lstinline{flags_all_(parse_context ,inside_string_literal), run_context}.
-}  
-Overall then the parsing response operations 
+can look like at \TwoOverlay{} in Listing~\ref{lst:figStringContext}: 
+lstinline{flags\_all\_(parse\_context ,inside\_string\_literal), run\_context}.
+}  Overall then the parsing response operations 
 are split between three main classes: one which defines 
 rules and match-callbacks themselves; one which is 
 principally responsible for maintaining parse context and flags 
@@ -227,6 +226,7 @@ and bridging the other two layers; and one which performs
 most graph-transformation operations. 
 }
    
+\vsftcl{h}{figAddToken}
 \p{Of these three parsing layers, one layer \q{faces} the 
 input text directly \mdash{} the layer that defines grammar rules 
 and match-callbacks.  Another layer \q{faces} the hypergraph 
@@ -239,8 +239,8 @@ expressive, flexible input language, without itself
 attending to graph operations.  Simutaneously, the 
 components which do moiy hypergraphs can be developed 
 in isolation from the syntax of the language being 
-parsed.  Figure~\ref{fig:figAddToken} \vsftcl{h}{figAddToken} samples code 
-logically following Figure~\ref{fig:figStringContext} wherein 
+parsed.  Listing~\ref{lst:figAddToken} samples code 
+logically following Listing~\ref{lst:figStringContext} wherein 
 a new hypernode (such as, a string literal token) is 
 inserted.  The relevant \Cpp{} class offers a variety of 
 insertion and related graph-modification routines, without 
@@ -338,12 +338,13 @@ general subject of a hypergraph serialization (or initialization)
 format, which will be the focus of the next few paragraphs.
 }
    
+\vsftcl{h}{figIR}
 \p{One way to conceptualize hypergraph serialization is to treat the 
 graphs as built up from an empty graph via a finite series of steps.  
 A serialization format can then be designed on the premise of 
 expressing each construction-step as a distinct instruction, and then 
 serializing a whole graph as the sequence of all its implied 
-steps.  Figure~\ref{fig:figIR} \vsftcl{h}{figIR} samples a file in the 
+steps.  Listing~\ref{lst:figIR} samples a file in the 
 demo's format, which is based on Common Lisp to leave open the 
 possibility of these files being read by a Common Lisp evaluator 
 for pre-processing.  Here though the intermediate language is 
@@ -362,13 +363,14 @@ to the design of a (say, \Cpp{}) library for building
 graphs via a set of primitive operations.
 }
    
+\vsftcl{h}{figPGBIR}
 \p{The demo format employs a notion of \q{multigraph tokens}, which 
 are string representations of nodes' values along with a set 
 of token kinds.  An encoding system allows the kind to be 
 notated via a signal embedded in the token string, yielding a 
 node-reprensentation which can work across different varieties 
 of hypergraphs (facilitating graphs' inter-translation).  
-Figure~\ref{fig:PGBIR} \vsftcl{h}{figPGBIR} shows some 
+Listing~\ref{lst:PGBIR} shows some 
 code involved with routing input text to graph-build operations.  
 Unlike the earlier parse strategy, the simple input language 
 does not call for complex contextual logic to determine the correct 
@@ -382,12 +384,13 @@ other refer to preexisting nodes that are given names in the
 input text). 
 } 
     
+\vsftcl{h}{figPGB}
 \p{The intermediate language designed via thexe techniques is effective 
 from the point of view of machine-generating code to construct a 
 new hypergraph from some prior data (including other hypergraphs).  
 Rather than having components generate the intermediate code directly, 
 the demo library includes a \Cpp{} class which builds the 
-\IR{} via a method interface.  Figure~\ref{fig:figPGB} \vsftcl{h}{figPGB} 
+\IR{} via a method interface.  Listing~\ref{lst:figPGB}  
 shows code using this interface, treating the \IR{} output as a 
 vector of (Lisp-style) forms and inserting forms at the end 
 (or occasionally in the middle) of the vector 
