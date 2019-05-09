@@ -1,30 +1,35 @@
 \begin{figure}
 \centering
-\begin{tikzpicture}[shorten >=2pt,>=latex,
+\begin{tikzpicture}[shorten >=2pt,>=latex,shorten <=8pt,
 triangle/.style = {draw=blue!20!black, inner sep=-9, 
 	regular polygon, regular polygon sides=3,yscale=0.5,
 	},
-border rotated/.style = {shape border rotate=180}
+border rotated/.style = {shape border rotate=180},
+hex/.style = {draw=red!20!black, inner sep=-1, 
+	regular polygon, regular polygon sides=6,yscale=0.25,
+},
 ]
 
-    \node [draw, text width=2cm, align=center] (nSrcCode) at (0,0) {Input Source Code}; 
+    \node [circle, draw=black, fill=white, inner sep=0pt,minimum size=5mm, text width=2cm, align=center] (nSrcCode) at 
+    (0,0) {Input Source Code}; 
  
     \trinode{below right = 2mm and 40mm of nSrcCode}{nRelaeGraph}{RelaeGraph}     
        
-    \node[draw, text width=2cm, align=center,below right = 10mm and -30mm of nSrcCode]  (nPGBIR)  {PGBIR}; 
+    \hexnode{below right = 10mm and -10mm of nSrcCode}{nPGBIR}{PGBIR} 
   
     \trinode{below right = 4mm and 30mm of nPGBIR}{nPhaonGraph}{PhaonGraph}     
 
-    \node[draw, text width=2cm, align=center,below right = 10mm and -2mm of nPGBIR]  (nPVMIR)  {PVMIR}; 
+    \hexnode{below right = 10mm and -2mm of nPGBIR}{nPVMIR}{PVMIR} 
   
     \node[draw, text width=4cm, align=center,below=1cm of nPVMIR]  (nPhaonRT)  {PhaonRuntime};   
 
-%    \path[->]
-   \draw (nSrcCode) edge [above, bend left = 8, ->]  node {hypergraph parser} (nRelaeGraph.north);
-   \draw (nPGBIR.north)+(5mm,0mm) edge [below, bend left = 22, <-]  node {Phaon Graph Build} (nRelaeGraph) ;
+   \draw (nRelaeGraph.north)+(-7mm,0mm) edge [yshift=1mm, bend right = 8, <-]  
+     node [yshift=3mm] {hypergraph parser} (nSrcCode);
+   \draw (nPGBIR.north)+(7mm,0mm) edge [above, bend left = 8, <-] 
+     node [yshift=-1mm,xshift=-2mm] {Phaon Graph Build} (nRelaeGraph.west) ;
    \draw (nPGBIR) edge  [bend left = 8]  node {} (nPhaonGraph.north);
    \draw (nPhaonGraph) edge   node {}  (nPVMIR)    ;
-   \draw (nPVMIR) edge  [bend right]  node {} (nPhaonRT)   ; 
+   \draw (nPVMIR) edge  [bend right, ->]  node {} (nPhaonRT)   ; 
     
     %end path 
 \end{tikzpicture}
