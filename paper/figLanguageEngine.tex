@@ -1,15 +1,32 @@
 \begin{figure}
 \centering
-\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
-    \node[]    (q_0)                   {$q_0$}; 
-    \node[]  (q_1)   [right=of q_0]  {$q_1$}; 
-    \node[]            (q_2)   [right=of q_1]  {$q_2$}; 
+\begin{tikzpicture}[shorten >=2pt,>=latex,
+triangle/.style = {draw=blue!20!black, inner sep=-9, 
+	regular polygon, regular polygon sides=3,yscale=0.5,
+	},
+border rotated/.style = {shape border rotate=180}
+]
 
-    \path[->]
-    (q_0) edge                  node {a}            (q_1)
-    (q_1) edge                  node {$\lambda$}    (q_2)
-    (q_2) edge  [bend right]    node {$\lambda$}    (q_0)
-    ; %end path 
+    \node [draw, text width=2cm, align=center] (nSrcCode) at (0,0) {Input Source Code}; 
+ 
+    \trinode{below right = 2mm and 40mm of nSrcCode}{nRelaeGraph}{RelaeGraph}     
+       
+    \node[draw, text width=2cm, align=center,below right = 10mm and -30mm of nSrcCode]  (nPGBIR)  {PGBIR}; 
+  
+    \trinode{below right = 4mm and 30mm of nPGBIR}{nPhaonGraph}{PhaonGraph}     
+
+    \node[draw, text width=2cm, align=center,below right = 10mm and -2mm of nPGBIR]  (nPVMIR)  {PVMIR}; 
+  
+    \node[draw, text width=4cm, align=center,below=1cm of nPVMIR]  (nPhaonRT)  {PhaonRuntime};   
+
+%    \path[->]
+   \draw (nSrcCode) edge [above, bend left = 8, ->]  node {hypergraph parser} (nRelaeGraph.north);
+   \draw (nPGBIR.north)+(5mm,0mm) edge [below, bend left = 22, <-]  node {Phaon Graph Build} (nRelaeGraph) ;
+   \draw (nPGBIR) edge  [bend left = 8]  node {} (nPhaonGraph.north);
+   \draw (nPhaonGraph) edge   node {}  (nPVMIR)    ;
+   \draw (nPVMIR) edge  [bend right]  node {} (nPhaonRT)   ; 
+    
+    %end path 
 \end{tikzpicture}
-\caption{M1} \label{fig:LanguageEngine}
+\caption{M1} \label{fig:figLanguageEngine}
 \end{figure}

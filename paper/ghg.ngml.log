@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  9 MAY 2019 10:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  9 MAY 2019 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -119,7 +119,386 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/setspace/setspace.s
 ty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (./pgfornament.sty
+)
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/xpatch/xpatch.sty
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2018/03/05 L3 programming layer (loader) 
+
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/l3kernel/expl3-code
+.tex
+Package: expl3 2018/03/05 L3 programming layer (code)
+\c_max_int=\count96
+\l_tmpa_int=\count97
+\l_tmpb_int=\count98
+\g_tmpa_int=\count99
+\g_tmpb_int=\count100
+\g__intarray_font_int=\count101
+\g__prg_map_int=\count102
+\c_log_iow=\count103
+\l_iow_line_count_int=\count104
+\l__iow_line_target_int=\count105
+\l__iow_one_indent_int=\count106
+\l__iow_indent_int=\count107
+\c_zero_dim=\dimen112
+\c_max_dim=\dimen113
+\l_tmpa_dim=\dimen114
+\l_tmpb_dim=\dimen115
+\g_tmpa_dim=\dimen116
+\g_tmpb_dim=\dimen117
+\c_zero_skip=\skip45
+\c_max_skip=\skip46
+\l_tmpa_skip=\skip47
+\l_tmpb_skip=\skip48
+\g_tmpa_skip=\skip49
+\g_tmpb_skip=\skip50
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+\l_keys_choice_int=\count108
+\c__fp_leading_shift_int=\count109
+\c__fp_middle_shift_int=\count110
+\c__fp_trailing_shift_int=\count111
+\c__fp_big_leading_shift_int=\count112
+\c__fp_big_middle_shift_int=\count113
+\c__fp_big_trailing_shift_int=\count114
+\c__fp_Bigg_leading_shift_int=\count115
+\c__fp_Bigg_middle_shift_int=\count116
+\c__fp_Bigg_trailing_shift_int=\count117
+\c__fp_rand_size_int=\count118
+\c__fp_rand_four_int=\count119
+\c__fp_rand_eight_int=\count120
+\l__sort_length_int=\count121
+\l__sort_min_int=\count122
+\l__sort_top_int=\count123
+\l__sort_max_int=\count124
+\l__sort_true_max_int=\count125
+\l__sort_block_int=\count126
+\l__sort_begin_int=\count127
+\l__sort_end_int=\count128
+\l__sort_A_int=\count129
+\l__sort_B_int=\count130
+\l__sort_C_int=\count131
+\l__tl_build_start_index_int=\count132
+\l__tl_build_index_int=\count133
+\l__tl_analysis_normal_int=\count134
+\l__tl_analysis_index_int=\count135
+\l__tl_analysis_nesting_int=\count136
+\l__tl_analysis_type_int=\count137
+\l__regex_internal_a_int=\count138
+\l__regex_internal_b_int=\count139
+\l__regex_internal_c_int=\count140
+\l__regex_balance_int=\count141
+\l__regex_group_level_int=\count142
+\l__regex_mode_int=\count143
+\c__regex_cs_in_class_mode_int=\count144
+\c__regex_cs_mode_int=\count145
+\l__regex_catcodes_int=\count146
+\l__regex_default_catcodes_int=\count147
+\c__regex_catcode_D_int=\count148
+\c__regex_catcode_S_int=\count149
+\c__regex_catcode_L_int=\count150
+\c__regex_catcode_O_int=\count151
+\c__regex_catcode_A_int=\count152
+\c__regex_all_catcodes_int=\count153
+\l__regex_show_lines_int=\count154
+\l__regex_min_state_int=\count155
+\l__regex_max_state_int=\count156
+\l__regex_left_state_int=\count157
+\l__regex_right_state_int=\count158
+\l__regex_capturing_group_int=\count159
+\l__regex_min_pos_int=\count160
+\l__regex_max_pos_int=\count161
+\l__regex_curr_pos_int=\count162
+\l__regex_start_pos_int=\count163
+\l__regex_success_pos_int=\count164
+\l__regex_curr_char_int=\count165
+\l__regex_curr_catcode_int=\count166
+\l__regex_last_char_int=\count167
+\l__regex_case_changed_char_int=\count168
+\l__regex_curr_state_int=\count169
+\l__regex_step_int=\count170
+\l__regex_min_active_int=\count171
+\l__regex_max_active_int=\count172
+\l__regex_replacement_csnames_int=\count173
+\l__regex_match_count_int=\count174
+\l__regex_min_submatch_int=\count175
+\l__regex_submatch_int=\count176
+\l__regex_zeroth_submatch_int=\count177
+\g__regex_trace_regex_int=\count178
+\c_empty_box=\box29
+\l_tmpa_box=\box30
+\l_tmpb_box=\box31
+\g_tmpa_box=\box32
+\g_tmpb_box=\box33
+\l__box_top_dim=\dimen118
+\l__box_bottom_dim=\dimen119
+\l__box_left_dim=\dimen120
+\l__box_right_dim=\dimen121
+\l__box_top_new_dim=\dimen122
+\l__box_bottom_new_dim=\dimen123
+\l__box_left_new_dim=\dimen124
+\l__box_right_new_dim=\dimen125
+\l__box_internal_box=\box34
+\l__coffin_internal_box=\box35
+\l__coffin_internal_dim=\dimen126
+\l__coffin_offset_x_dim=\dimen127
+\l__coffin_offset_y_dim=\dimen128
+\l__coffin_x_dim=\dimen129
+\l__coffin_y_dim=\dimen130
+\l__coffin_x_prime_dim=\dimen131
+\l__coffin_y_prime_dim=\dimen132
+\c_empty_coffin=\box36
+\l__coffin_aligned_coffin=\box37
+\l__coffin_aligned_internal_coffin=\box38
+\l_tmpa_coffin=\box39
+\l_tmpb_coffin=\box40
+\l__coffin_display_coffin=\box41
+\l__coffin_display_coord_coffin=\box42
+\l__coffin_display_pole_coffin=\box43
+\l__coffin_display_offset_dim=\dimen133
+\l__coffin_display_x_dim=\dimen134
+\l__coffin_display_y_dim=\dimen135
+\l__coffin_bounding_shift_dim=\dimen136
+\l__coffin_left_corner_dim=\dimen137
+\l__coffin_right_corner_dim=\dimen138
+\l__coffin_bottom_corner_dim=\dimen139
+\l__coffin_top_corner_dim=\dimen140
+\l__coffin_scaled_total_height_dim=\dimen141
+\l__coffin_scaled_width_dim=\dimen142
+)
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/l3kernel/l3pdfmode.
+def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count179
+))
+Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
+
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/l3packages/xparse/x
+parse.sty
+Package: xparse 2018/02/21 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count180
+\g__xparse_grabber_int=\count181
+\l__xparse_m_args_int=\count182
+\l__xparse_mandatory_args_int=\count183
+\l__xparse_v_nesting_int=\count184
+)
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/etoolbox/etoolbox.s
+ty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count185
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchcmd with sig. '' on line 125.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretocmd with sig. '' on line 126.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptocmd with sig. '' on line 127.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowcmd with sig. '' on line 128.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchbibmacro with sig. 'm' on line 131.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretobibmacro with sig. 'm' on line 133.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptobibmacro with sig. 'm' on line 135.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowbibmacro with sig. 'm' on line 137.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchfieldformat with sig. 'O{*}m' on line 139.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretofieldformat with sig. 'O{*}m' on line 141.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptofieldformat with sig. 'O{*}m' on line 143.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowfieldformat with sig. 'O{*}m' on line 145.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchnameformat with sig. 'O{*}m' on line 147.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretonameformat with sig. 'O{*}m' on line 149.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptonameformat with sig. 'O{*}m' on line 151.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshownameformat with sig. 'O{*}m' on line 153.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchlistformat with sig. 'O{*}m' on line 155.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretolistformat with sig. 'O{*}m' on line 157.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptolistformat with sig. 'O{*}m' on line 159.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowlistformat with sig. 'O{*}m' on line 161.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexfieldformat with sig. 'O{*}m' on line 163.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexfieldformat with sig. 'O{*}m' on line 165.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptoindexfieldformat with sig. 'O{*}m' on line 167.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexfieldformat with sig. 'O{*}m' on line 169.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexnameformat with sig. 'O{*}m' on line 171.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexnameformat with sig. 'O{*}m' on line 173.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptoindexnameformat with sig. 'O{*}m' on line 175.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexnameformat with sig. 'O{*}m' on line 177.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexlistformat with sig. 'O{*}m' on line 179.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexlistformat with sig. 'O{*}m' on line 181.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xappindextolistformat with sig. 'O{*}m' on line 183.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexlistformat with sig. 'O{*}m' on line 185.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchbibdriver with sig. 'm' on line 187.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretobibdriver with sig. 'm' on line 189.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptobibdriver with sig. 'm' on line 191.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowbibdriver with sig. 'm' on line 193.
+.................................................
+)
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/realboxes/realboxes
+.sty
+Package: realboxes 2011/08/08 v0.2 Change box commands to read there content as
+ real boxes
+
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/collectbox/collectb
+ox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box44
+)
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/adjustbox/adjcalc.s
+ty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/xkeyval/xkeyval.t
+ex
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/xkeyval/xkvutils.
+tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+)
+\XKV@depth=\count186
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)))) (./pgfornament.sty
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/pgf/frontendlayer/t
 ikz.sty
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/pgf/basiclayer/pgf.
@@ -128,15 +507,15 @@ sty
 s.sty
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/utilities/pgf
 util-common.tex
-\pgfutil@everybye=\toks17
-\pgfutil@tempdima=\dimen112
-\pgfutil@tempdimb=\dimen113
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen143
+\pgfutil@tempdimb=\dimen144
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/utilities/pgf
 util-common-lists.tex))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/utilities/pgf
 util-latex.def
-\pgfutil@abb=\box29
+\pgfutil@abb=\box45
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
@@ -166,8 +545,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen114
-\Gin@req@width=\dimen115
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/pgf/systemlayer/pgf
 sys.sty
@@ -177,30 +556,30 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/utilities/pgf
 keys.code.tex
-\pgfkeys@pathtoks=\toks18
-\pgfkeys@temptoks=\toks19
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/utilities/pgf
 keysfiltered.code.tex
-\pgfkeys@tmptoks=\toks20
+\pgfkeys@tmptoks=\toks22
 ))
-\pgf@x=\dimen116
-\pgf@y=\dimen117
-\pgf@xa=\dimen118
-\pgf@ya=\dimen119
-\pgf@xb=\dimen120
-\pgf@yb=\dimen121
-\pgf@xc=\dimen122
-\pgf@yc=\dimen123
+\pgf@x=\dimen147
+\pgf@y=\dimen148
+\pgf@xa=\dimen149
+\pgf@ya=\dimen150
+\pgf@xb=\dimen151
+\pgf@yb=\dimen152
+\pgf@xc=\dimen153
+\pgf@yc=\dimen154
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count96
-\c@pgf@countb=\count97
-\c@pgf@countc=\count98
-\c@pgf@countd=\count99
-\t@pgf@toka=\toks21
-\t@pgf@tokb=\toks22
-\t@pgf@tokc=\toks23
+\c@pgf@counta=\count187
+\c@pgf@countb=\count188
+\c@pgf@countc=\count189
+\c@pgf@countd=\count190
+\t@pgf@toka=\toks23
+\t@pgf@tokb=\toks24
+\t@pgf@tokc=\toks25
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/systemlayer/p
 gf.cfg
@@ -219,8 +598,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/systemlayer/p
 gfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count100
-\pgfsyssoftpath@bigbuffer@items=\count101
+\pgfsyssoftpath@smallbuffer@items=\count191
+\pgfsyssoftpath@bigbuffer@items=\count192
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/systemlayer/p
 gfsysprotocol.code.tex
@@ -238,12 +617,12 @@ alc.code.tex
 til.code.tex)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/math/pgfmathp
 arser.code.tex
-\pgfmath@dimen=\dimen124
-\pgfmath@count=\count102
-\pgfmath@box=\box30
-\pgfmath@toks=\toks24
-\pgfmath@stack@operand=\toks25
-\pgfmath@stack@operation=\toks26
+\pgfmath@dimen=\dimen155
+\pgfmath@count=\count193
+\pgfmath@box=\box46
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/math/pgfmathf
 unctions.code.tex
@@ -265,57 +644,57 @@ unctions.misc.code.tex)
 unctions.integerarithmetics.code.tex)))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/math/pgfmathf
 loat.code.tex
-\c@pgfmathroundto@lastzeros=\count103
+\c@pgfmathroundto@lastzeros=\count194
 ))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen125
-\pgf@picmaxx=\dimen126
-\pgf@picminy=\dimen127
-\pgf@picmaxy=\dimen128
-\pgf@pathminx=\dimen129
-\pgf@pathmaxx=\dimen130
-\pgf@pathminy=\dimen131
-\pgf@pathmaxy=\dimen132
-\pgf@xx=\dimen133
-\pgf@xy=\dimen134
-\pgf@yx=\dimen135
-\pgf@yy=\dimen136
-\pgf@zx=\dimen137
-\pgf@zy=\dimen138
+\pgf@picminx=\dimen156
+\pgf@picmaxx=\dimen157
+\pgf@picminy=\dimen158
+\pgf@picmaxy=\dimen159
+\pgf@pathminx=\dimen160
+\pgf@pathmaxx=\dimen161
+\pgf@pathminy=\dimen162
+\pgf@pathmaxy=\dimen163
+\pgf@xx=\dimen164
+\pgf@xy=\dimen165
+\pgf@yx=\dimen166
+\pgf@yy=\dimen167
+\pgf@zx=\dimen168
+\pgf@zy=\dimen169
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen139
-\pgf@path@lasty=\dimen140
+\pgf@path@lastx=\dimen170
+\pgf@path@lasty=\dimen171
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen141
-\pgf@shorten@start@additional=\dimen142
+\pgf@shorten@end@additional=\dimen172
+\pgf@shorten@start@additional=\dimen173
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorescopes.code.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box31
-\pgf@hbox=\box32
-\pgf@layerbox@main=\box33
-\pgf@picture@serial@count=\count104
+\pgfpic=\box47
+\pgf@hbox=\box48
+\pgf@layerbox@main=\box49
+\pgf@picture@serial@count=\count195
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen143
+\pgflinewidth=\dimen174
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen144
-\pgf@pt@y=\dimen145
-\pgf@pt@temp=\dimen146
+\pgf@pt@x=\dimen175
+\pgf@pt@y=\dimen176
+\pgf@pt@temp=\dimen177
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorequick.code.tex
@@ -332,13 +711,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorearrows.code.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen147
+\pgfarrowsep=\dimen178
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen148
-\pgf@sys@shading@range@num=\count105
+\pgf@max=\dimen179
+\pgf@sys@shading@range@num=\count196
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoreimage.code.tex
@@ -347,7 +726,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box34
+\pgfexternal@startupbox=\box50
 ))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorelayers.code.tex
@@ -364,7 +743,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/modules/pgfmo
 duleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box35
+\pgfnodeparttextbox=\box51
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/modules/pgfmo
 duleplot.code.tex
@@ -373,8 +752,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/pgf/compatibility/p
 gfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen149
-\pgf@nodesepend=\dimen150
+\pgf@nodesepstart=\dimen180
+\pgf@nodesepend=\dimen181
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/pgf/compatibility/p
 gfcomp-version-1-18.sty
@@ -396,10 +775,10 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/math/pgfmath.
 code.tex)
-\pgffor@iter=\dimen151
-\pgffor@skip=\dimen152
-\pgffor@stack=\toks27
-\pgffor@toks=\toks28
+\pgffor@iter=\dimen182
+\pgffor@skip=\dimen183
+\pgffor@stack=\toks29
+\pgffor@toks=\toks30
 ))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/frontendlayer
 /tikz/tikz.code.tex
@@ -408,32 +787,32 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/libraries/pgf
 libraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count106
-\pgfplotmarksize=\dimen153
+\pgf@plot@mark@count=\count197
+\pgfplotmarksize=\dimen184
 )
-\tikz@lastx=\dimen154
-\tikz@lasty=\dimen155
-\tikz@lastxsaved=\dimen156
-\tikz@lastysaved=\dimen157
-\tikzleveldistance=\dimen158
-\tikzsiblingdistance=\dimen159
-\tikz@figbox=\box36
-\tikz@figbox@bg=\box37
-\tikz@tempbox=\box38
-\tikz@tempbox@bg=\box39
-\tikztreelevel=\count107
-\tikznumberofchildren=\count108
-\tikznumberofcurrentchild=\count109
-\tikz@fig@count=\count110
+\tikz@lastx=\dimen185
+\tikz@lasty=\dimen186
+\tikz@lastxsaved=\dimen187
+\tikz@lastysaved=\dimen188
+\tikzleveldistance=\dimen189
+\tikzsiblingdistance=\dimen190
+\tikz@figbox=\box52
+\tikz@figbox@bg=\box53
+\tikz@tempbox=\box54
+\tikz@tempbox@bg=\box55
+\tikztreelevel=\count198
+\tikznumberofchildren=\count199
+\tikznumberofcurrentchild=\count266
+\tikz@fig@count=\count267
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/modules/pgfmo
 dulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count111
-\pgfmatrixcurrentcolumn=\count112
-\pgf@matrix@numberofcolumns=\count113
+\pgfmatrixcurrentrow=\count268
+\pgfmatrixcurrentcolumn=\count269
+\pgf@matrix@numberofcolumns=\count270
 )
-\tikz@expandcount=\count114
+\tikz@expandcount=\count271
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/frontendlayer
 /tikz/libraries/tikzlibrarytopaths.code.tex
@@ -441,17 +820,17 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks29
-\pgfopts@list@add@b@toks=\toks30
+\pgfopts@list@add@a@toks=\toks31
+\pgfopts@list@add@b@toks=\toks32
 )
 Package: pgfornament 2014/05/31 v0.11 vector ornaments
  (./pgflibraryvectorian.code.tex))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/footmisc/footmisc.s
 ty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks31
-\footnotemargin=\dimen160
-\c@pp@next@reset=\count115
+\FN@temptoken=\toks33
+\footnotemargin=\dimen191
+\c@pp@next@reset=\count272
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -474,26 +853,21 @@ Package ifvtex Info: VTeX not detected.
 ty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count116
-\Gm@cntv=\count117
-\c@Gm@tempcnt=\count118
-\Gm@bindingoffset=\dimen161
-\Gm@wd@mp=\dimen162
-\Gm@odd@mp=\dimen163
-\Gm@even@mp=\dimen164
-\Gm@layoutwidth=\dimen165
-\Gm@layoutheight=\dimen166
-\Gm@layouthoffset=\dimen167
-\Gm@layoutvoffset=\dimen168
-\Gm@dimlist=\toks32
+\Gm@cnth=\count273
+\Gm@cntv=\count274
+\c@Gm@tempcnt=\count275
+\Gm@bindingoffset=\dimen192
+\Gm@wd@mp=\dimen193
+\Gm@odd@mp=\dimen194
+\Gm@even@mp=\dimen195
+\Gm@layoutwidth=\dimen196
+\Gm@layoutheight=\dimen197
+\Gm@layouthoffset=\dimen198
+\Gm@layoutvoffset=\dimen199
+\Gm@dimlist=\toks34
 )
-\c@sentenceCounter=\count119
+\c@sentenceCounter=\count276
 
-(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/etoolbox/etoolbox.s
-ty
-Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count120
-)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/wasysym/wasysym.sty
 Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
 \symwasy=\mathgroup4
@@ -662,7 +1036,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/amsfonts/amsfonts.s
 ty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks33
+\@emptytoks=\toks35
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -671,12 +1045,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/microtype/microtype
 .sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
-\MT@toks=\toks34
-\MT@count=\count121
+\MT@toks=\toks36
+\MT@count=\count277
 LaTeX Info: Redefining \textls on input line 793.
-\MT@outer@kern=\dimen169
+\MT@outer@kern=\dimen256
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count122
+\MT@listname@count=\count278
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/microtype/microtype
 -pdftex.def
@@ -684,7 +1058,7 @@ File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 913.
 LaTeX Info: Redefining \lslig on input line 913.
-\MT@outer@space=\skip45
+\MT@outer@space=\skip51
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -692,16 +1066,16 @@ Package microtype Info: Loading configuration file microtype.cfg.
 .cfg
 File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 152.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 159.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/enumitem/enumitem.s
 ty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip46
-\enit@outerparindent=\dimen170
-\enit@toks=\toks35
-\enit@inbox=\box40
-\enitdp@description=\count123
+\labelindent=\skip52
+\enit@outerparindent=\dimen257
+\enit@toks=\toks37
+\enit@inbox=\box56
+\enitdp@description=\count279
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -710,15 +1084,15 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 y
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen171
-\captionmargin@=\dimen172
-\captionwidth=\dimen173
-\caption@tempdima=\dimen174
-\caption@indent=\dimen175
-\caption@parindent=\dimen176
-\caption@hangindent=\dimen177
+\captionmargin=\dimen258
+\captionmargin@=\dimen259
+\captionwidth=\dimen260
+\caption@tempdima=\dimen261
+\caption@indent=\dimen262
+\caption@parindent=\dimen263
+\caption@hangindent=\dimen264
 )
-\c@ContinuedFloat=\count124
+\c@ContinuedFloat=\count280
 Package caption Info: listings package is loaded.
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/frontendlayer
@@ -776,26 +1150,26 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
 pes/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 
-\pgfnodepartlowerbox=\box41
-\pgfnodeparttwobox=\box42
-\pgfnodepartthreebox=\box43
-\pgfnodepartfourbox=\box44
-\pgfnodeparttwentybox=\box45
-\pgfnodepartnineteenbox=\box46
-\pgfnodeparteighteenbox=\box47
-\pgfnodepartseventeenbox=\box48
-\pgfnodepartsixteenbox=\box49
-\pgfnodepartfifteenbox=\box50
-\pgfnodepartfourteenbox=\box51
-\pgfnodepartthirteenbox=\box52
-\pgfnodeparttwelvebox=\box53
-\pgfnodepartelevenbox=\box54
-\pgfnodeparttenbox=\box55
-\pgfnodepartninebox=\box56
-\pgfnodeparteightbox=\box57
-\pgfnodepartsevenbox=\box58
-\pgfnodepartsixbox=\box59
-\pgfnodepartfivebox=\box60
+\pgfnodepartlowerbox=\box57
+\pgfnodeparttwobox=\box58
+\pgfnodepartthreebox=\box59
+\pgfnodepartfourbox=\box60
+\pgfnodeparttwentybox=\box61
+\pgfnodepartnineteenbox=\box62
+\pgfnodeparteighteenbox=\box63
+\pgfnodepartseventeenbox=\box64
+\pgfnodepartsixteenbox=\box65
+\pgfnodepartfifteenbox=\box66
+\pgfnodepartfourteenbox=\box67
+\pgfnodepartthirteenbox=\box68
+\pgfnodeparttwelvebox=\box69
+\pgfnodepartelevenbox=\box70
+\pgfnodeparttenbox=\box71
+\pgfnodepartninebox=\box72
+\pgfnodeparteightbox=\box73
+\pgfnodepartsevenbox=\box74
+\pgfnodepartsixbox=\box75
+\pgfnodepartfivebox=\box76
 )))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/frontendlayer
 /tikz/libraries/tikzlibrarysnakes.code.tex
@@ -812,16 +1186,16 @@ Package pgf Warning: Snakes have been superseded by decorations. Please use the
 /tikz/libraries/tikzlibrarydecorations.code.tex
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/modules/pgfmo
 duledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen178
-\pgfdecoratedremainingdistance=\dimen179
-\pgfdecoratedinputsegmentcompleteddistance=\dimen180
-\pgfdecoratedinputsegmentremainingdistance=\dimen181
-\pgf@decorate@distancetomove=\dimen182
-\pgf@decorate@repeatstate=\count125
-\pgfdecorationsegmentamplitude=\dimen183
-\pgfdecorationsegmentlength=\dimen184
+\pgfdecoratedcompleteddistance=\dimen265
+\pgfdecoratedremainingdistance=\dimen266
+\pgfdecoratedinputsegmentcompleteddistance=\dimen267
+\pgfdecoratedinputsegmentremainingdistance=\dimen268
+\pgf@decorate@distancetomove=\dimen269
+\pgf@decorate@repeatstate=\count281
+\pgfdecorationsegmentamplitude=\dimen270
+\pgfdecorationsegmentlength=\dimen271
 )
-\tikz@lib@dec@box=\box61
+\tikz@lib@dec@box=\box77
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/libraries/dec
 orations/pgflibrarydecorations.pathmorphing.code.tex))
@@ -889,16 +1263,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen185
-\Hy@linkcounter=\count126
-\Hy@pagecounter=\count127
+\@linkdim=\dimen272
+\Hy@linkcounter=\count282
+\Hy@pagecounter=\count283
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count128
+\Hy@SavedSpaceFactor=\count284
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/latexconfig/hyperre
 f.cfg
@@ -912,12 +1286,12 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count129
+\c@Hy@tempcnt=\count285
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen186
-\Fld@menulength=\count130
-\Field@Width=\dimen187
-\Fld@charsize=\dimen188
+\XeTeXLinkMargin=\dimen273
+\Fld@menulength=\count286
+\Field@Width=\dimen274
+\Fld@charsize=\dimen275
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -927,17 +1301,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count131
-\c@Item=\count132
-\c@Hfootnote=\count133
+\Hy@abspage=\count287
+\c@Item=\count288
+\c@Hfootnote=\count289
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/hyperref/hpdftex.de
 f
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count134
-\c@bookmark@seq@number=\count135
+\Fld@listcount=\count290
+\c@bookmark@seq@number=\count291
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/oberdiek/rerunfilec
 heck.sty
@@ -945,14 +1319,14 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip47
+\Hy@SectionHShift=\skip53
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/oberdiek/transparen
 t.sty
 Package: transparent 2016/05/16 v1.1 Transparency via pdfTeX's color stack (HO)
 
 )
-\twolinebox=\box62
+\twolinebox=\box78
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/tcolorbox/tcolorbox
 .sty
@@ -960,8 +1334,8 @@ Package: tcolorbox 2018/03/22 version 4.13 text color boxes
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks36
-\verbatim@line=\toks37
+\every@verbatim=\toks38
+\verbatim@line=\toks39
 \verbatim@in@stream=\read2
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/environ/environ.sty
@@ -971,29 +1345,29 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 es.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks38
+\@envbody=\toks40
 )
-\tcb@titlebox=\box63
-\tcb@upperbox=\box64
-\tcb@lowerbox=\box65
-\tcb@phantombox=\box66
-\c@tcbbreakpart=\count136
-\c@tcblayer=\count137
-\tcolorbox@number=\count138
-\tcb@temp=\box67
-\tcb@temp=\box68
-\tcb@temp=\box69
-\tcb@temp=\box70
+\tcb@titlebox=\box79
+\tcb@upperbox=\box80
+\tcb@lowerbox=\box81
+\tcb@phantombox=\box82
+\c@tcbbreakpart=\count292
+\c@tcblayer=\count293
+\tcolorbox@number=\count294
+\tcb@temp=\box83
+\tcb@temp=\box84
+\tcb@temp=\box85
+\tcb@temp=\box86
 \tcb@out=\write4
 \tcb@record@out=\write5
 )
-\lstbox=\box71
-\c@lsts=\count139
+\lstbox=\box87
+\c@lsts=\count295
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/tcolorbox/tcbskins.
 code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '4.13'
-\tcb@waterbox=\box72
+\tcb@waterbox=\box88
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/tcolorbox/tcbskinsj
 igsaw.code.tex
@@ -1015,10 +1389,10 @@ File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
 libraryfadings.code.tex
 File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
 )))
-\pgf@layerbox@background=\box73
-\pgf@layerboxsaved@background=\box74
-\pgf@layerbox@foreground=\box75
-\pgf@layerboxsaved@foreground=\box76
+\pgf@layerbox@background=\box89
+\pgf@layerboxsaved@background=\box90
+\pgf@layerbox@foreground=\box91
+\pgf@layerboxsaved@foreground=\box92
 ) (./ghg.ngml.aux
 
 LaTeX Warning: Label `lbl:xxx' multiply defined.
@@ -1055,22 +1429,22 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
-\AtBeginShipoutBox=\box77
+\AtBeginShipoutBox=\box93
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/context/base/mkii/supp-pd
 f.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count140
-\scratchdimen=\dimen189
-\scratchbox=\box78
-\nofMPsegments=\count141
-\nofMParguments=\count142
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count143
-\MPscratchDim=\dimen190
-\MPnumerator=\count144
-\makeMPintoPDFobject=\count145
-\everyMPtoPDFconversion=\toks40
+\scratchcounter=\count296
+\scratchdimen=\dimen276
+\scratchbox=\box94
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen277
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks42
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/oberdiek/epstopdf-b
 ase.sty
@@ -1091,7 +1465,7 @@ f-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count146
+\c@lstlisting=\count302
  ABD: EveryShipout initializing macros
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1156,7 +1530,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 string.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count147
+\c@section@level=\count303
 )
 LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
@@ -1236,11 +1610,17 @@ Underfull \vbox (badness 2302) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
+(./figLanguageEngine.tex
+Overfull \hbox (1.34119pt too wide) in paragraph at lines 16--16
+ [][][][][] 
+ []
 
-LaTeX Warning: Reference `fig:figLanguageEngine' on page 11 undefined on input 
-line 136.
 
-(./figLanguageEngine.tex)
+Overfull \hbox (15.5577pt too wide) in paragraph at lines 30--31
+ [][] 
+ []
+
+)
 Underfull \hbox (badness 5533) in paragraph at lines 156--157
 \OT1/cmr/bx/n/10.95 General-Purpose Hy-per-graph Parsers  \OT1/cmr/m/n/10.95 (+
 20) The
@@ -1272,34 +1652,29 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 199--199
 [] $[]$| [] 
  []
 
-[11] (./figAddToken.tex
-Overfull \hbox (12.49754pt too wide) in paragraph at lines 5--6
-[][][][][][][][][][][][][][][][][][] 
- []
+[11]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \hbox (69.87387pt too wide) in paragraph at lines 36--37
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (8.67245pt too wide) in paragraph at lines 37--38
-[][][][][][][][][][][][][][][][][] 
- []
-
-)
+(./figAddToken.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 229--229
 [] $[]$| [] 
  []
 
-[12
-\pgfsyspdfmark {pgfid2}{2126776}{11123672}
-\pgfsyspdfmark {pgfid7}{20777318}{11486366}
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-(./figIR.tex
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 3460) has occurred while \output is active []
+
+ [12
+\pgfsyspdfmark {pgfid2}{20777318}{21080273}
+]
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+ [13
+\pgfsyspdfmark {pgfid7}{2126776}{25209041}
+] (./figIR.tex
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/listings/lstlang1.s
 ty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1327,46 +1702,64 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 341--341
 [] $[]$| [] 
  []
 
-(./figPGBIR.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./figPGBIR.tex
+Overfull \hbox (7.19719pt too wide) in paragraph at lines 23--24
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 366--366
 [] $[]$| [] 
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 LaTeX Warning: Reference `lst:PGBIR' on page 14 undefined on input line 385.
 
-[14
-\pgfsyspdfmark {pgfid9}{2126776}{17324630}
-\pgfsyspdfmark {pgfid11}{20777318}{7530252}
-] (./figPGB.tex
-Overfull \hbox (1.02228pt too wide) in paragraph at lines 10--11
+(./figPGB.tex
+Overfull \hbox (11.02228pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.14772pt too wide) in paragraph at lines 21--22
+Overfull \hbox (30.14772pt too wide) in paragraph at lines 21--22
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][] 
  []
 
 
-Overfull \hbox (20.14772pt too wide) in paragraph at lines 24--25
+Overfull \hbox (30.14772pt too wide) in paragraph at lines 24--25
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][] 
  []
 
 
-Overfull \hbox (27.7979pt too wide) in paragraph at lines 34--35
+Overfull \hbox (7.19719pt too wide) in paragraph at lines 33--34
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (37.7979pt too wide) in paragraph at lines 34--35
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (31.62299pt too wide) in paragraph at lines 38--39
+Overfull \hbox (41.62299pt too wide) in paragraph at lines 38--39
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (43.09825pt too wide) in paragraph at lines 42--43
+Overfull \hbox (53.09825pt too wide) in paragraph at lines 42--43
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][] 
  []
@@ -1379,7 +1772,15 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 387--387
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./biblio.tex [15] [16
+[14
+\pgfsyspdfmark {pgfid9}{20777318}{34842833}
+]
+Underfull \vbox (badness 5771) has occurred while \output is active []
+
+)
+(./biblio.tex [15
+\pgfsyspdfmark {pgfid11}{2126776}{20162769}
+] [16
 \pgfsyspdfmark {pgfid13}{2126776}{7720795}
 
 ]) [17
@@ -1404,13 +1805,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28771 strings out of 492649
- 577669 string characters out of 6122986
- 852300 words of memory out of 5000000
- 31657 multiletter control sequences out of 15000+600000
- 26345 words of font info for 172 fonts, out of 8000000 for 9000
+ 37611 strings out of 492649
+ 761480 string characters out of 6122986
+ 1023775 words of memory out of 5000000
+ 40450 multiletter control sequences out of 15000+600000
+ 552977 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,11n,85p,792b,1768s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,11n,101p,10425b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/cm-super/cm
 -super-ts1.enc}</home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmbx10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/f
@@ -1436,10 +1837,10 @@ levisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/
 cm-super/sfrm1095.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/t
 ype1/public/cm-super/sftt0800.pfb>
-Output written on ghg.ngml.pdf (17 pages, 319596 bytes).
+Output written on ghg.ngml.pdf (17 pages, 321514 bytes).
 PDF statistics:
- 530 PDF objects out of 1000 (max. 8388607)
- 470 compressed objects within 5 object streams
- 270 named destinations out of 1000 (max. 500000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 475 compressed objects within 5 object streams
+ 273 named destinations out of 1000 (max. 500000)
  27261 words of extra memory for PDF output out of 29859 (max. 10000000)
 

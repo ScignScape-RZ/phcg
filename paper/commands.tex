@@ -51,9 +51,16 @@
  	stringstyle      = \color{darkRed},    % string color
  	backgroundcolor  = \color{gray!20}, % backgroundcolor color
  	showstringspaces = false,              % do not mark spaces in strings
+ 	framexleftmargin = 8pt,
+  	xleftmargin = 10pt, 	
  	%?upquote          = true
  }
  
+\usepackage{xpatch}
+\usepackage{realboxes}
+\makeatletter
+\xpretocmd\lstinline{\Colorbox{blue!10}\bgroup\appto\lst@DeInit{\egroup}}{}{}
+\makeatother
 
 % line
 \usepackage[object=vectorian]{pgfornament} %%  http://altermundus.com/pages/tkz/ornament/index.html
@@ -827,3 +834,5 @@ drop fuzzy shadow northeast={darkRed!40!ftcback},
 \newcommand{\lstovn}[2]{\node [circle, draw=blue,text width=3mm,text centered,
 	fill=DarkRed,radius=3mm,inner sep=0pt] at (#1){\ovn{#2}};}
 
+\newcommand{\trinode}[3]{\node[triangle, border rotated, text width=21mm, align=center,
+	#1]  (#2)  {\scalebox{1}[2]{#3}};} 

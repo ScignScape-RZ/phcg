@@ -2,7 +2,8 @@
 caption={Hypergraph Modification Code},label={lst:figAddToken}, 
     basicstyle = \ttfamily\bfseries\tiny, linewidth = .95\linewidth] 
 
-void RE_Markup_Position::add_token_node(caon_ptr<RE_Node> token_node)
+void RE_Markup_Position::add_token_node(
+  caon_ptr<RE_Node> token_node)
 {
 ...
  if(flags.active_type_indicator_node)
@@ -33,15 +34,13 @@ void RE_Markup_Position::add_token_node(caon_ptr<RE_Node> token_node)
  {
  case Position_States::Root:
   {
-  caon_ptr<RE_Node> block_entry_node = insert_block_entry_node(rq_.Run_Block_Entry);
-  caon_ptr<RE_Block_Entry> rbe = block_entry_node->re_block_entry();
+  caon_ptr<RE_Node> block_entry_node = 
+    insert_block_entry_node(rq_.Run_Block_Entry);
+  caon_ptr<RE_Block_Entry> rbe = 
+    block_entry_node->re_block_entry();
   rbe->flags.file_default = true;
 ...
 \end{lstlisting}
 \begin{tikzpicture}[remember picture, overlay, text width=.9\linewidth]
-\draw[draw=blue,fill=DarkRed] (11,2.6) circle[radius=3mm];
-\node at (18,2.6){\ovn{1}};
 
-\draw[draw=blue,fill=DarkRed] (9,1.4) circle[radius=3mm];
-\node at (16,1.4){\ovn{2}};
 \end{tikzpicture} 
