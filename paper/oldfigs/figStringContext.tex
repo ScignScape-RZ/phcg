@@ -1,10 +1,15 @@
 \begin{lstlisting}[caption={Contextual Parsing for String Literals},
 language = C++, numbers = none, label={lst:figStringContext},
-    basicstyle = \ttfamily\bfseries\tiny, linewidth = .95\linewidth] 
+    basicstyle = \ttfamily\bfseries\scriptsize, linewidth = .9\linewidth] 
 
- add_rule( flags_all_(parse_context ,inside_string_literal), 
-   run_context,  "string-literal-character",
-   " (?: [^\"\\\\]+ ) | (?: (?:\\\\++)(?!\") ) ",
+ add_rule( flags_all_(parse_context ,inside_string_literal), run_context,
+  "string-literal-character",
+    // // note ++ prevents backtracking inside \\"-like groups,
+     //   which avoids erroneously matching the \'s
+     //   before the last \ -- the point here is to
+     //   exclude any run of \'s before " as an
+     //   atomic unit (which needs ++ rather than +).
+  " (?: [^\"\\\\]+ ) | (?: (?:\\\\++)(?!\") ) ",
   [&]
  {
   QString str = p.match_text();
@@ -12,8 +17,8 @@ language = C++, numbers = none, label={lst:figStringContext},
  });
 
 
- add_rule( flags_all_(parse_context ,inside_string_literal), 
-  run_context,  "string-literal-maybe-end",
+ add_rule( flags_all_(parse_context ,inside_string_literal), run_context,
+  "string-literal-maybe-end",
   " \\\\*\" ",
   [&]
  {
@@ -41,7 +46,9 @@ language = C++, numbers = none, label={lst:figStringContext},
  {
   graph_build.string_literal_start();
  });
+
 ...
+
 void RE_Graph_Build::process_string_literal()
 {
  caon_ptr<RE_Token> token = new RE_Token(string_literal_acc_);
@@ -50,21 +57,18 @@ void RE_Graph_Build::process_string_literal()
  add_run_token(*token);
 }
 
+
+void RE_Graph_Build::string_literal_start()
+{
+ parse_context_.flags.inside_string_literal = true;
+}
+
+
 \end{lstlisting}
-\begin{tikzpicture}[remember picture, overlay, text width=.95\linewidth]
+\begin{tikzpicture}[remember picture, overlay, text width=.9\linewidth]
+\draw[draw=blue,fill=DarkRed] (11,2.6) circle[radius=3mm];
+\node at (18,2.6){\ovn{1}};
 
-\lstovn{4.6,7.6}{1}
-\lstovn{8.2,9.9}{2}
-\lstovn{3.25,2.6}{3}
-
-%\node [circle, draw=blue,text width=3mm,text centered,
-%fill=DarkRed,radius=3mm,inner sep=0pt] at (3.25,2.6){\ovn{1}};
-
-
-
-%\draw[draw=blue,fill=DarkRed] (4,2.6) circle[radius=3mm] ;
-%\node at (8.25,2.6){\ovn{1}};
-
-%\draw[draw=blue,fill=DarkRed] (4,1.4) circle[radius=3mm];
-%\node at (4,1.4){\ovn{2}};
+\draw[draw=blue,fill=DarkRed] (9,1.4) circle[radius=3mm];
+\node at (16,1.4){\ovn{2}};
 \end{tikzpicture} 

@@ -1,9 +1,8 @@
 \begin{lstlisting}[language = C++, numbers = none, 
  caption={Running Hypergraph IR},label={lst:figPGBIR},
-    basicstyle = \ttfamily\bfseries\tiny, linewidth = .95\linewidth] 
+    basicstyle = \ttfamily\bfseries\scriptsize, linewidth = .9\linewidth] 
 
-void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, 
-  QPair<MG_Token, int>>& mgtm)
+void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
  PGB_Methods md = parse_pgb_method(fn);
 
@@ -16,7 +15,16 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds,
      *tr = graph_build_.make_root_node();
   };
   break;
-...
+
+ case PGB_Methods::add_type_declaration:
+  {
+   QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
+   if(mgts.size() < 2)
+     break;
+   graph_build_.add_type_declaration(mgts[0], mgts[1]);
+  };
+  break;
+
  case PGB_Methods::signature:
   {
    caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
@@ -27,23 +35,51 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds,
    }
   };
   break;
-...
+
  case PGB_Methods::make_signature_node:
   {
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
    caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+
    if(tr)
      *tr = graph_build_.make_signature_node(n);
    else
      graph_build_.make_signature_node(n);
   };
   break;
+
+ case PGB_Methods::make_token_node:
+  {
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   MG_Token tok = get_arg_token(mgtm);
+   if(tr)
+     *tr = graph_build_.make_token_node(tok);
+   else
+     graph_build_.make_token_node(tok);
+  };
+  break;
 ...
  case PGB_Methods::push_expression_entry:
   graph_build_.push_expression_entry();
-...
+  break;
+
+ case PGB_Methods::pop_expression_entry:
+  graph_build_.pop_expression_entry();
+  break;
+
+ case PGB_Methods::push_block_entry:
+  graph_build_.push_block_entry();
+  break;
+
+ case PGB_Methods::pop_block_entry:
+  graph_build_.pop_block_entry();
+  break;
+
+ default:
+  break;
  }
 }
+
 
 void PGB_IR_Run::run_line(QString line)
 {
