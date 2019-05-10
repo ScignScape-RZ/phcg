@@ -203,10 +203,90 @@ things that are representatives of types.  Most values which
 procedures encounter are produced by other procedures, either 
 passed as parameters from calling procedures to called procedures, 
 or returned as outputs from called procedures to calling procedures.  
-
 `p`
 
+`p.
+Of course, programs execute in a world of surrounding data %-- on computer 
+drives and in memory, plus `q.cyberphysical` data from devices 
+hooked up to computers (at a minimum, devices crafted to be 
+part of a computer set-up, like mice and keypads; plus often 
+`q.smart` devices which software accesses to manage an oversee).  
+From a programmer's point of view, this data is accessed by 
+calling specific functions, albeit ones which 
+(at the lowest level) programmers themselves do not 
+implement (viz., the procedures exposed in device `q.drivers`/).  
+Analogously, many values are presented directy in source-code 
+literals; but we should think of these values as likewise 
+yielded from procedures that read source tokens or strings 
+and interpret the intended type-spefic value (e.g., converting the 
+character-string `q.123` to the corresponding integer).  
+Typically these `q.reader` procedures occur behind-the-scenes; 
+although, which helps demonstrate the point that source literals 
+involve implicit function-calls, some languages support 
+`q.user-defined` literals with nonstandard syntax %-- 
+consider `Lisp; `q.reader macros` and `Cpp;'s 
+`lstinline.`operatorqq;`/.
+`p` 
 
+`p.
+Consequently, analysis of programs and computer code should 
+proceed from the perspective that all typed values are introduced 
+into a running program as results of procedure-calls.  We therefore 
+have extra detailing in any context where we would talk 
+about `q.typed values`/.  The situation could be analogously 
+compared to settings like approximation theory %-- consider an 
+analysis according to which a spatial magnitude, say, is not 
+just a real number but the result of a measurement operation.  
+By extension, quantities that on purely mathematical 
+terms might be treated as points in spaces such as the real 
+number line are `q.packed` into `i.observations` which can be 
+sites carrying further information, such as an approximation 
+factor.  My point is not that computer programs fail to work 
+with exact values %-- in a typical case a single typed value 
+does not need an approximation `q.window` unless the software 
+is manifestly interacting with physical systems where measurement 
+uncertainty is taken into consideration.  However, approximation 
+as `q.extra structure` is a useful analogy for the 
+added detail latent in programming theory given that 
+typed values are not `q.freestanding` mathematical entities 
+but are always packaged into digital structures that make 
+them available for software procedures.
+`p`
+
+`p.
+For sake of discussion, I will use the term `i.carriers` to 
+describe the structures that `q.package` typed values.  
+When a procedure returns a value, said value is embedded 
+in a carrier which `q.transports` it to other procedures.  The 
+`q.things` exchanged between proceures are actually, then, 
+carriers rather than values %-- we should picture 
+carriers travelling on `q.routes` laid out in source-code 
+hypergraphs.  Carriers, in particular, are more general 
+than values.  Consider a function which, on one occasion, 
+throws an exception rather than returning a value.  The carrier 
+arranged to hold the return value is therefore empty.  Carriers, 
+then, can be in a `i.state` other than that of holing a valid, 
+initialized value.  Some programming language accommodate these 
+cases via special `lstinline.null` or `lstinline.Nothing` values, 
+but these are still constructs inside the language's type 
+system.  Thinking in terms of carriers, instead, removes 
+certain `q.states` from the type system: an empty or 
+pre-initialized carrier does not have some special `q.empty` 
+value; it does not have a value at all.  Similar comments 
+apply to carriers which hold values which were once valid but are 
+no longer so, like deleted pointers.  Any carrier potentially has a 
+`q.career` which starts with no value then is initialized 
+with a value (and maybe gets updated over time); and may then 
+`q.retire` and cease to hold a legitimate value.  Only in the 
+middle phase of this trajectory does the carrier's range of 
+possible states correspond with potential instantiations of 
+a type (I assume here that each carrier is associated with 
+one canonical type).  
+`p`
+
+`p.
+
+`p`
 
 `p.
 
