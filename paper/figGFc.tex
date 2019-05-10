@@ -1,0 +1,14 @@
+\begin{figure}
+\centering
+\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
+    \node[]  (nn)                   {$n$}; 
+    \node[]  (fng)   [right=of nn]  {\gFun}; 
+    \node[]  (fnf)   [right=of fng]  {\fFun}; 
+
+    \path[->]
+    (nn) edge   node {\textit{input}}           (fng)
+    (fng) edge                  node {\textit{modifies}}    (fnf)
+    ; %end path 
+\end{tikzpicture}
+\caption{figGF} \label{fig:figGF}
+\end{figure}
