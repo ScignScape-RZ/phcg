@@ -371,7 +371,139 @@ in conventional category-theoretic program semantics.
 `p`
 
 `p.
+After accounting for this change in perspective, many concepts of hypergraph 
+categories appear to carry over to this theory.  Rather than morphisms 
+in a type category `tyCat;, (hyper-)nodes in this case represent 
+procedures, and their surrounding edges represent (via annotations) 
+carriers accessible (as inputs or outputs) to the procedure's 
+implementation.  Morphisms are represented `q.within` these 
+edges insofar as a procedure being called induces a change in state 
+for carriers along the procedure's incoming edges 
+(likewise, returning values induces state-changes among 
+outgoing edges).  
+`p`
 
+`p.
+In practice, procedures call other procedures.  A procedure's 
+input carriers can be augmented by a `q.lexical scope`/; 
+a repository of local carriers (syntactically speaking, 
+lexically-scoped source-code symbols) which start as uninitialized but 
+can hold outputs from other procedures called from the current 
+procedure's implementation body.  Each implementation is then a 
+sequence of further procedure call wherein the calling procedure 
+assembles the requisite local carriers to provide inputs to 
+the called procedure (via handoffs).  The calling procedure 
+must also provision carriers to hold the called procedure's 
+output.  In effect, the calling procedure must orchestrate a 
+suite of handoffs among its own carriers and the those 
+of the called procedure.  The semantics of this multi-faceted 
+sum of carrier-transfers can be represented within a source-code 
+graph; and so, the structures and semantics of these hypergrah 
+representations should be codified in a manner which 
+renders (a de-facto Ontology) the patterns of aggregate 
+carrier handoffs). 
+`p`
+
+`p.
+To illustrate, Figure~\ref{fig:figGFcomplexc},`input<figGFcomplexc>; modifies 
+Figure~\ref{fig:figGFcomplex} so as to show carriers and handoffs, 
+analogous to Figure~\ref{fig:figGFc} adding carriers to Figure~\ref{fig:figGF}.  
+Each case where one procedure calls another can be modelled via a 
+graph which groups together the carriers (seen in the context of the 
+calling procedure) that are packaged together to enable the call; 
+and concordantly the links between these carriers and those 
+in the called procedure's signature and implementation which 
+embody handoffs executed in the transition in program flow between 
+the calling procedure to the called procedure, and back.
+`p`
+
+`p.
+`parlead.Carriers and Channels`  The theory of channels comes 
+into effect insofar as we combine this carriers and handoffs 
+model with my earlier discussion of differentiating input and 
+output varieties.  For instance, inputs may be Object-Oriented 
+message-receivers or normal parameters; outputs may be 
+thrown exceptions or normal returns.  In the hypergraph framework 
+I just outlined, hyperedges carry double-annotations to 
+mark the pairs of carriers involved in a handoff within a 
+procedure-call.  Grouping carriers based on their common 
+semantics %-- separating the `this; object from non-distinguished 
+parameters, let's say %-- involves a further level of organization, 
+grouping hypereges into channels.  Taken together, then, the 
+overall hypergraph system exhibits two generalizations from 
+simpler code-graphs: double-annotations on edges (based 
+on carrier theory) and the use of channels to reflect 
+higher-level programming semantic, such as the distinct status 
+of method-receivers as non-standard input and of exceptions 
+as non-standard output.`footnote.My chapter in 
+`cite<NathanielChristenCyberphysical>; includes examples of other 
+more `q.exotic` kinds of channels as well.`  
+`p`
+
+`p.
+To develop this unified theory, we can consider a `i.channel` as 
+(semantically) a (possibly empty) collection of (one or more, 
+if not empty) carriers %-- the corresponding hypergraph representation 
+is a channel grouping edges whose annotations refer to these 
+carriers.  Each channel is then associated with a specifis 
+`q.protocol`/, an idiosyncratic method for procedures to 
+interact with carriers (and by extension with one another).  
+For example, the procol for regular input and output channels 
+is that one output carrier's value can be directly `q.handed off to` 
+an input carrier, as in `gOfF;-like composition.  In many languages a 
+procedure can have at most one output value, and also at most one 
+`q.message receiver` (`this;) object.  Accordingly,
+a procedure-call can bundle the output channels from multiple 
+other procedures to populate some further called procedure's 
+input parameters.  Since there is only one `q.`this;`/, 
+two methods can be combined (modulo type compatibility) by inserting 
+the prior method's output as the next method's message-receiver 
+(handing off the output value to the next `this; carrier), 
+giving rise to `q.method chaining` (such call-sequences can continue 
+over multiple steps).  Meanwhile `i.exceptions` cannot be treated 
+as normal values (you cannot in most cases hand off between an 
+`q.exception channel` and normal carriers).  Instead, 
+procedures which want to `q.catch` exceptions need special 
+structures, like catch-blocks, which provide the atypical 
+carriers that can actually hold exception values (and so 
+receive exception-channel handoffs.
+`p`
+
+`p.
+All of these are customary coding structures and design patterns which 
+regulate how modern programming languages handle features like 
+method-calls and exceptions.  These patterns, which I am theorizing here 
+according to channels' semantic protocols, are not primarily grounded 
+in a language's type system but rather in regulations on procedural 
+flow and program organization that are orthogonal to type restrinctions.  
+I contend that a theory of channels can unify the regulations enforced 
+by strong typing (e.g. not calling procedures with incompatible 
+arguments `visavis; expected types) and those due to inter-channel 
+semantic protocols.  What the two semantic regimes have in common 
+is that they ultimately maniest as rules on carrier-transers %-- 
+both carriers' types and the kinds of channels to which they 
+respectively belong influence whether a purported handoff 
+(needed by a call between procedures) is permissible; if not, 
+the code declaring the relevant procedure-call should not 
+be accepted (it should not compile).  So, enumerating 
+channel-semantic protocols is a way to formally model 
+what inter-procedure relations are legal accoring to the 
+program-flow and organizational principles of the 
+implementation language, analogous to how procedure 
+calls are evaluated for compliance with the 
+language's type system.  The syntactic rules for how 
+procedure-calls are notated are driven in part by 
+inter-channel protocols (for example, using a dot 
+to separate a `this; object from a method-name 
+allows method-chains to be compactly written), but 
+a rigorous model should take syntactic details as 
+epiphenomena %-- the important details for hypergraph 
+source-code models is the kinds of channels recognized 
+by a language for inter-procedure communication, and the 
+protocols associated with various channel-kind pairs 
+governing how and when carriers in one channel may be linked 
+by handoffs to carriers on other channels (of the same or 
+other kinds).
 `p`
 
 `p.
