@@ -27,7 +27,7 @@ hex/.style = {draw=red!20!black, inner sep=-1,
      node [yshift=3mm] {hypergraph parser} (nSrcCode);
    \draw (nPGBIR.north)+(7mm,0mm) edge [above, bend left = 8, <-] 
      node [yshift=-1mm,xshift=-2mm] {Phaon Graph Build} (nRelaeGraph.west) ;
-   \draw (nPGBIR) edge  [bend left = 8, ->, shorten >=.5mm]  node {} (nPhaonGraph.north);
+   \draw (nPGBIR) edge  [bend left = 8, ->, shorten >=1mm]  node {} (nPhaonGraph.north);
    \draw (nPhaonGraph) edge [->]  node {}  (nPVMIR)    ;
    \draw (nPVMIR) edge  [bend right, ->]  node {} (nPhaonRT)   ; 
     

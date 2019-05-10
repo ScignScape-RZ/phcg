@@ -1,15 +1,27 @@
 \begin{figure}
 \centering
 \begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
-    \node[]    (q_0)                   {$q_0$}; 
-    \node[]  (q_1)   [right=of q_0]  {$q_1$}; 
-    \node[]            (q_2)   [right=of q_1]  {$q_2$}; 
+    \node[]  (xy)                   {$x$,$y$}; 
+    \node[]  (fng)   [right=of xy]  {\gFun{$x$}{$y$}}; 
+    \node[]  (zz)    [right=of fng]              {$z$}; 
+    \node[]  (fnf)   [right=of zz]  {\fFun{$x$}{$y$}}; 
 
-    \path[->]
-    (q_0) edge                  node {a}            (q_1)
-    (q_1) edge                  node {$\lambda$}    (q_2)
-    (q_2) edge  [bend right]    node {$\lambda$}    (q_0)
-    ; %end path 
+ %   \path[->]
+    \draw   (xy) edge [below, bend right=10, ->]  node {\textit{input}} (fng);
+    \draw   (xy) edge [bend left=10, ->]  node {} (fng);
+    \draw   (fng) edge [below, ->]  node {\textit{output}} (zz);
+    \draw   (zz) edge [below, ->]  node {\textit{input}} (fnf);
+     %end path
+
+   \draw (fnf.north)+(-19mm,2mm) edge [yshift=5mm,
+     shorten <=-19mm, shorten >= 2mm, bend right = 41, <-]  
+     node [yshift=5mm,xshift=-12mm] {modified input} (fng);
+
+   \draw (fnf.north)+(-14mm,2mm) edge [yshift=1mm,
+     shorten <=-11mm, shorten >= 2mm, bend right = 24, <-]  
+     node [yshift=5mm,xshift=-12mm] {} (fng);
+
+ 
 \end{tikzpicture}
-\caption{figGFcomplex} \label{fig:figGFcomplex}
+\caption{figGF} \label{fig:figGF}
 \end{figure}

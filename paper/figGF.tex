@@ -1,14 +1,13 @@
 \begin{figure}
 \centering
 \begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
-    \node[]    (q_0)                   {$q_0$}; 
-    \node[]  (q_1)   [right=of q_0]  {$q_1$}; 
-    \node[]            (q_2)   [right=of q_1]  {$q_2$}; 
+    \node[]  (nn)                   {$n$}; 
+    \node[]  (fng)   [right=of nn]  {\gFun}; 
+    \node[]  (fnf)   [right=of fng]  {\fFun}; 
 
     \path[->]
-    (q_0) edge                  node {a}            (q_1)
-    (q_1) edge                  node {$\lambda$}    (q_2)
-    (q_2) edge  [bend right]    node {$\lambda$}    (q_0)
+    (nn) edge   node {\textit{input}}           (fng)
+    (fng) edge                  node {\textit{modifies}}    (fnf)
     ; %end path 
 \end{tikzpicture}
 \caption{figGF} \label{fig:figGF}
