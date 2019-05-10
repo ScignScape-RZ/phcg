@@ -1,0 +1,80 @@
+
+`section.Channels and Edge Diversification`
+`p.
+Graph representations have obvious applications 
+to modeling computer code and computations.  
+Intuitively, consider procedures as nodes; 
+edges incoming to or outgoing from nodes 
+then may represent the value passed into or 
+returned from procedures.  In order to be a 
+reasonable code representation, however, this 
+model has to capture further details via 
+edge-annotations, grouping nodes and/or edges 
+into higher-level units, or similar hypergraph 
+constructions.
+`p`
+
+`p.
+As I argued last section, hypergraphs are useful target 
+for general-purpose programming language parsers because 
+these general languages tend to have relatively complex 
+grammars and special syntactic contexts.  While 
+programming languages in a theoretical sense may 
+have an expected translation to Abstract Syntax Trees, 
+real-world languages embrace syntactic forms 
+that complicate this abstract picture.  Earier I cited 
+`Csharp;'s `LINQ; as an example of an intra-linguistic 
+special syntax; other examples include embedded `XML; in 
+Scala; attribute markings in `Csharp; and `Java;; 
+template metaprogramming in `Cpp;; regular-expression 
+syntax in languages like `Perl; and `Ruby;; and so 
+forth.  I have argued that a hypergraph (rather than 
+graph or tree) paradigm is a more natural foundation 
+for representing code in these practically evolving 
+languages, which are designed around semantic expressiveness 
+rather than an `i.a priori` commitment to theoretical 
+compilation models. 
+`p`
+
+`p.
+As I will focus on in this section, similar comments apply to the 
+semantics of procedures and function-calls.  The `q.mathematical` 
+picture of procedures as functions mapping inputs to outputs is 
+only approximately accurate in the context of modern programming 
+languages.  One issue is that the distinction between input and output 
+parameters is imprecise, given that input parameters can be 
+modifiable references.  A common `Cpp; idiom, for example, 
+is to pass a non-constant reference instead of returning 
+relatively large data structures %-- mutable references 
+are technically an input rather than output value, even 
+if the intent is for a called procedure to supply data for 
+the mutable input (this technique avoids extra copying of 
+data).  Another complication is that procedures can have multiple 
+sorts of input and output: e.g., throwing an exception rather than 
+returning a value.  Likewise, Object-Oriented languages' 
+`q.message receivers` are input parameters with distinguished 
+properties as conmpared to normal inputs.
+`p`
+
+`p.
+Since programming notation visually distinguishes procedure inputs 
+from outputs, it is easy to think of the input/output distinction 
+as mostly syntactic.  The significant differences, however, 
+are more semantic.  Consider a `Cpp; function which returns an 
+integer: it is a compiler error to return from such a function 
+without suppying a value; also, the called procedure has 
+no access to the memory which would hold the return value.  
+By contrast, a function which takes a non-constant 
+integer reference is not forced by the compiler to 
+modify that value, nor prohibited from accessing the 
+input's value.  
+`p`
+
+`p.
+
+`p`
+
+`p.
+
+`p`
+
