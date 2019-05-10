@@ -1,7 +1,5 @@
-
-`section.Channels and Edge Diversification`
-`p.
-Graph representations have obvious applications 
+\section{Channels and Edge Diversification}
+\p{Graph representations have obvious applications 
 to modeling computer code and computations.  
 Intuitively, consider procedures as nodes; 
 edges incoming to or outgoing from nodes 
@@ -12,10 +10,8 @@ model has to capture further details via
 edge-annotations, grouping nodes and/or edges 
 into higher-level units, or similar hypergraph 
 constructions.
-`p`
-
-`p.
-As I argued last section, hypergraphs are useful target 
+}
+\p{As I argued last section, hypergraphs are useful target 
 for general-purpose programming language parsers because 
 these general languages tend to have relatively complex 
 grammars and special syntactic contexts.  While 
@@ -23,44 +19,40 @@ programming languages in a theoretical sense may
 have an expected translation to Abstract Syntax Trees, 
 real-world languages embrace syntactic forms 
 that complicate this abstract picture.  Earier I cited 
-`Csharp;'s `LINQ; as an example of an intra-linguistic 
-special syntax; other examples include embedded `XML; in 
-Scala; attribute markings in `Csharp; and `Java;; 
-template metaprogramming in `Cpp;; regular-expression 
-syntax in languages like `Perl; and `Ruby;; and so 
+\Csharp{}'s \LINQ{} as an example of an intra-linguistic 
+special syntax; other examples include embedded \XML{} in 
+Scala; attribute markings in \Csharp{} and \Java{}; 
+template metaprogramming in \Cpp{}; regular-expression 
+syntax in languages like \Perl{} and \Ruby{}; and so 
 forth.  I have argued that a hypergraph (rather than 
 graph or tree) paradigm is a more natural foundation 
 for representing code in these practically evolving 
 languages, which are designed around semantic expressiveness 
-rather than an `i.a priori` commitment to theoretical 
+rather than an \i{a priori} commitment to theoretical 
 compilation models. 
-`p`
-
-`p.
-As I will focus on in this section, similar comments apply to the 
-semantics of procedures and function-calls.  The `q.mathematical` 
+}
+\p{As I will focus on in this section, similar comments apply to the 
+semantics of procedures and function-calls.  The \q{mathematical} 
 picture of procedures as functions mapping inputs to outputs is 
 only approximately accurate in the context of modern programming 
 languages.  One issue is that the distinction between input and output 
 parameters is imprecise, given that input parameters can be 
-modifiable references.  A common `Cpp; idiom, for example, 
+modifiable references.  A common \Cpp{} idiom, for example, 
 is to pass a non-constant reference instead of returning 
-relatively large data structures %-- mutable references 
+relatively large data structures \mdash{} mutable references 
 are technically an input rather than output value, even 
 if the intent is for a called procedure to supply data for 
 the mutable input (this technique avoids extra copying of 
 data).  Another complication is that procedures can have multiple 
 sorts of input and output: e.g., throwing an exception rather than 
 returning a value.  Likewise, Object-Oriented languages' 
-`q.message receivers` are input parameters with distinguished 
+\q{message receivers} are input parameters with distinguished 
 properties as conmpared to normal inputs.
-`p`
-
-`p.
-Since programming notation visually distinguishes procedure inputs 
+}
+\p{Since programming notation visually distinguishes procedure inputs 
 from outputs, it is easy to think of the input/output distinction 
 as mostly syntactic.  The significant differences, however, 
-are more semantic.  Consider a `Cpp; function which returns an 
+are more semantic.  Consider a \Cpp{} function which returns an 
 integer: it is a compiler error to return from such a function 
 without suppying a value; also, the called procedure has 
 no access to the memory which would hold the return value.  
@@ -69,8 +61,8 @@ integer reference is not forced by the compiler to
 modify that value, nor prohibited from accessing the 
 input's value.  This points to the practical differences 
 between returning values and altering input references, but it 
-also indicates that inputs can be treated as `i.de facto` 
-outputs by adhering to usage conventions %-- a reference 
+also indicates that inputs can be treated as \i{de facto} 
+outputs by adhering to usage conventions \mdash{} a reference 
 mimics the behavior of a return value to the extent that 
 procedures initialize the reference on all execution paths, and 
 refrain from using any value which the reference might 
@@ -79,86 +71,70 @@ the badic contrast between input and output can be
 seen as a semantic matter of usage protocol, rather 
 than a syntactic contrast between passing valued to a 
 function vs. accessing a function's returned result.
-`p`
-
-`p.
-Of course, input and output are usually both distinguished 
+}
+\p{Of course, input and output are usually both distinguished 
 and interconnected by how outputs are used as inputs to 
 other functions.  With respect to procedures which take 
 one parameter, the general function-composition operator 
-`fOfG; takes the output of `gFun; as the input to 
-`fFun;.  We could of course define a different operator 
-where `gFun; and then `fFun; both run, taking the same 
-value (potentially a reference-type value that `gFun; 
-could potentially modify before `fFun; runs).  The 
+\fOfG{} takes the output of \gFun{} as the input to 
+\fFun{}.  We could of course define a different operator 
+where \gFun{} and then \fFun{} both run, taking the same 
+value (potentially a reference-type value that \gFun{} 
+could potentially modify before \fFun{} runs).  The 
 former (composition) operator establishes an inevitable 
-dependence of `fFun; on `gFun;: `fFun; needs `gFun;'s 
+dependence of \fFun{} on \gFun{}: \fFun{} needs \gFun{}'s 
 output for an input value.  The second case is less obvious 
-%-- in a sequential call like `fAfterG; (`gFun; runs then 
-`fFun; runs %-- I notate the relation with an inverted 
-semi-colon to highlight the parallels with `fOfG;, but 
-the analogous case in practice would be `gThenF;), 
-there may or may not be a `gFun; side-effect that 
-infuences `fFun; (even if they are passed the same 
+\mdash{} in a sequential call like \fAfterG{} (\gFun{} runs then 
+\fFun{} runs \mdash{} I notate the relation with an inverted 
+semi-colon to highlight the parallels with \fOfG{}, but 
+the analogous case in practice would be \gThenF{}), 
+there may or may not be a \gFun{} side-effect that 
+infuences \fFun{} (even if they are passed the same 
 inputs).  So inputs and outputs are distinguished 
-by how output-to-input links %-- outputs from one procedure 
-becoming inputs to another %-- have certain semantic 
+by how output-to-input links \mdash{} outputs from one procedure 
+becoming inputs to another \mdash{} have certain semantic 
 properties in the context of functional composition, and by 
 extension the relations between precedures which 
 run in sequence.  Again, though, this call for a semantic 
 analysis which looks beyond languages' surface syntax for 
 function calls, and how usages of return valued are notated.
-`p`
-
-`p.
-Mutable references and procedures-with-side-effects expose limits 
+}
+\p{Mutable references and procedures-with-side-effects expose limits 
 in the representational expressivity of graphs (even hypergraphs) 
 for modelling inter-procedure relationships.  Consider a case 
 such as represented in Figure~\ref{fig:figGF} 
-`input<figGF>;, where `gFun; modifies 
-input $n$ that is then also input to `fFun;.  Here `gFun;'s 
-effect on `fFun;'s input is marked by a `gFun;-to-`fFun; 
+\input{figGF}, where \gFun{} modifies 
+input $n$ that is then also input to \fFun{}.  Here \gFun{}'s 
+effect on \fFun{}'s input is marked by a \gFun{}-to-\fFun{} 
 arrow, but this directed edge implies a different semantic 
-relation than `gFun;'s output being `fFun;'s input 
-(as in `fOfG;).  The specific difference can be visualized 
-in a scenario like Figure~\ref{fig:figGFcomplex},`input<figGFcomplex>; 
-based on code such as written below the 
-graph.  The situation here is that `fFun; both uses 
-`gFun;'s output return (via the symbol $z$ the value is assigned to) 
+relation than \gFun{}'s output being \fFun{}'s input 
+(as in \fOfG{}).  The specific difference can be visualized 
+in a scenario like Figure~\ref{fig:figGFcomplex} 
+\input{figGFcomplex}, based on code such as written below the 
+graph.  The situation here is that \fFun{} both uses 
+\gFun{}'s output return (via the symbol $z$ the value is assigned to) 
 and also the values held by $x$ and $y$ which are altered by 
-`gFun;.  I notate these dependencies by grouping the `gFun;-to-`fFun; 
+\gFun{}.  I notate these dependencies by grouping the \gFun{}-to-\fFun{} 
 edges through $x$ and $y$ separately from the edge 
-with $z$ %-- the latter edge conforms to the relation of 
+with $z$ \mdash{} the latter edge conforms to the relation of 
 a procedure taking another procedure's output as input 
 (although here the relation is indirect through a 
 lexically-scoped symbol), but the former edges reflect a 
 different inter-procedure pattern.  The point of this 
 example is that separating input and output edges is not 
 enough to express program-flow semantics in anything but 
-pure functional languages %-- even given the `q.hypergraph categories` 
+pure functional languages \mdash{} even given the \q{hypergraph categories} 
 strategy of grouping input an output values into hypernodes.
-`p`
-
-`p.
-For situations like these I propose a notion of `i.channels`/, which are 
+}
+\p{For situations like these I propose a notion of \i{channels}, which are 
 higher-scale groupings of edges analogous to how hyperedges 
 involve higher-scale groupings of nodes.  In Figure~\ref{fig:figGFcomplex}, 
 for instance, the $x$ and $y$ edges can be considered a separate 
-channel than the $z$ edge, because $x$ and $y$ bridge `fFun; and `gFun; 
+channel than the $z$ edge, because $x$ and $y$ bridge \fFun{} and \gFun{} 
 according to one sort of program-flow semantics (with side effects and 
 mutable inputs passed to sequential procedures) while $z$ follows a 
 different pattern (with output values and lexical symbols).  
-`p`
-
-`p.
-
-`p`
-
-`p.
-
-`p`
-
-`p.
-
-`p`
-
+}
+\p{}
+\p{}
+\p{}

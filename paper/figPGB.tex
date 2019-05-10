@@ -7,7 +7,8 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts,
 {
 ...
  RPI_Assignment_Info* rai = get_parent_assignmnt_info();
- RPI_Stage_Element_Kinds last_kind = RPI_Stage_Element_Kinds::N_A;
+ RPI_Stage_Element_Kinds last_kind = 
+   RPI_Stage_Element_Kinds::N_A;
  caon_ptr<RPI_Stage_Form> prior_form = nullptr;
  for(RPI_Stage_Element& rse : inner_elements_)
  {
@@ -18,11 +19,11 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts,
   case RPI_Stage_Element_Kinds::S1_FGround_Symbol:
   case RPI_Stage_Element_Kinds::FGround_Symbol:
    if(rset.startsWith('#'))
-     pgb_(step_forms_).make_token_node(rset.prepend('$'), "&fsym-node")
-     = Purpose_Codes::Make_Token_Node_FSym;
+     pgb_(step_forms_).make_token_node(rset.prepend('$'), 
+     "&fsym-node") = Purpose_Codes::Make_Token_Node_FSym;
    else
-     pgb_(step_forms_).make_token_node(rset.prepend('@'), "&fsym-node")
-     = Purpose_Codes::Make_Token_Node_FSym;
+     pgb_(step_forms_).make_token_node(rset.prepend('@'), 
+     "&fsym-node") = Purpose_Codes::Make_Token_Node_FSym;
    if( flags.is_block_entry_statment
       || flags.is_inferred_block_entry_statment )
    {
@@ -30,16 +31,20 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts,
     {
      pgb_(step_forms_).make_statement_info_node(
        rai->text().prepend('@'), ":result",
-       assignment_info_.encode_ikind().prepend(':'), "&si-node");
-     pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node",
+       assignment_info_.encode_ikind().prepend(':'), 
+       "&si-node");
+     pgb_(step_forms_).add_block_entry_node(
+       "!last_block_pre_entry_node",
        "&fsym-node", "!last_block_entry_node", "&si-node");
     }
     else
-      pgb_(step_forms_).add_block_entry_node("!last_block_pre_entry_node",
+      pgb_(step_forms_).add_block_entry_node(
+      "!last_block_pre_entry_node",
       "&fsym-node", "!last_block_entry_node");
    }
 ...
-   pgb_(step_forms_).copy_value("&fsym-node", "!last_expression_entry_node");
+   pgb_(step_forms_).copy_value("&fsym-node", 
+     "!last_expression_entry_node");
    pgb_(step_forms_).copy_value("&fsym-node", "&channel-seq");
    break;
 ...
