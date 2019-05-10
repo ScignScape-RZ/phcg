@@ -163,4 +163,299 @@ bearers of types, the status of special (non-)values like
 contrast programming \q{types} from mathematical sets or \q{spaces} 
 in various incarnations (sheaves, topoi, etc.).  
 }
+\p{In particular, the \q{instances} of types (at least in the programming-language 
+context) are not particularly suited to the intuitions of \q{members} of 
+sets, or \q{points} of spaces.  One reason is that there is no fixed theory 
+of types' extension, or \q{set} of possible instances,
+in a given computing enbironment.  For example, types without a fixed size 
+in memory \mdash{} say, lists of numbers \mdash{} are constrained be a computer's 
+available memory.  We cannot be certain which lists are small enough that a 
+given environment can hold them in memory, so that they are available 
+as typed values for a program.  Conceptually, then, 
+types are very different from sets of values. 
+}
+\p{More significantly, types' instances do not have a kind of 
+abstract self-sufficiency like points in a mathematical space.  
+Consider how computational procedures deal with \q{values}, the 
+things that are representatives of types.  Most values which 
+procedures encounter are produced by other procedures, either 
+passed as parameters from calling procedures to called procedures, 
+or returned as outputs from called procedures to calling procedures.  
+}
+\p{Of course, programs execute in a world of surrounding data \mdash{} on computer 
+drives and in memory, plus \q{cyberphysical} data from devices 
+hooked up to computers (at a minimum, devices crafted to be 
+part of a computer set-up, like mice and keypads; plus often 
+\q{smart} devices which software accesses to manage an oversee).  
+From a programmer's point of view, this data is accessed by 
+calling specific functions, albeit ones which 
+(at the lowest level) programmers themselves do not 
+implement (viz., the procedures exposed in device \q{drivers}).  
+Analogously, many values are presented directy in source-code 
+literals; but we should think of these values as likewise 
+yielded from procedures that read source tokens or strings 
+and interpret the intended type-spefic value (e.g., converting the 
+character-string \q{123} to the corresponding integer).  
+Typically these \q{reader} procedures occur behind-the-scenes; 
+although, which helps demonstrate the point that source literals 
+involve implicit function-calls, some languages support 
+\q{user-defined} literals with nonstandard syntax \mdash{} 
+consider \Lisp{} \q{reader macros} and \Cpp{}'s 
+\lstinlinestyle{\operatorqq{}}.
+} 
+\p{Consequently, analysis of programs and computer code should 
+proceed from the perspective that all typed values are introduced 
+into a running program as results of procedure-calls.  We therefore 
+have extra detailing in any context where we would talk 
+about \q{typed values}.  The situation could be analogously 
+compared to settings like approximation theory \mdash{} consider an 
+analysis according to which a spatial magnitude, say, is not 
+just a real number but the result of a measurement operation.  
+By extension, quantities that on purely mathematical 
+terms might be treated as points in spaces such as the real 
+number line are \q{packed} into \i{observations} which can be 
+sites carrying further information, such as an approximation 
+factor.  My point is not that computer programs fail to work 
+with exact values \mdash{} in a typical case a single typed value 
+does not need an approximation \q{window} unless the software 
+is manifestly interacting with physical systems where measurement 
+uncertainty is taken into consideration.  However, approximation 
+as \q{extra structure} is a useful analogy for the 
+added detail latent in programming theory given that 
+typed values are not \q{freestanding} mathematical entities 
+but are always packaged into digital structures that make 
+them available for software procedures.
+}
+\p{For sake of discussion, I will use the term \i{carriers} to 
+describe the structures that \q{package} typed values.  
+When a procedure returns a value, said value is embedded 
+in a carrier which \q{transports} it to other procedures.  The 
+\q{things} exchanged between proceures are actually, then, 
+carriers rather than values \mdash{} we should picture 
+carriers travelling on \q{routes} laid out in source-code 
+hypergraphs.  Carriers, in particular, are more general 
+than values.  Consider a function which, on one occasion, 
+throws an exception rather than returning a value.  The carrier 
+arranged to hold the return value is therefore empty.  Carriers, 
+then, can be in a \i{state} other than that of holing a valid, 
+initialized value.  Some programming language accommodate these 
+cases via special \lstinline{null} or \lstinline{Nothing} values, 
+but these are still constructs inside the language's type 
+system.  Thinking in terms of carriers, instead, removes 
+certain \q{states} from the type system: an empty or 
+pre-initialized carrier does not have some special \q{empty} 
+value; it does not have a value at all.  Similar comments 
+apply to carriers which hold values which were once valid but are 
+no longer so, like deleted pointers.  Any carrier potentially has a 
+\q{career} which starts with no value then is initialized 
+with a value (and maybe gets updated over time); and may then 
+\q{retire} and cease to hold a legitimate value.  Only in the 
+middle phase of this trajectory does the carrier's range of 
+possible states correspond with potential instantiations of 
+a type (I assume here that each carrier is associated with 
+one canonical type).  
+}
+\p{\parlead{Carriers and Categories of Types}.  In some contexts it is 
+useful to examine a type system \tys{} via a category \tyCat{} of 
+types (such as, the category \HaskCat{} of Haskell types).  
+Carriers are an extra structure which rest \q{on top of} 
+types, calling for the foundation (including Category-theoretic 
+treatment if applicable) to be reconsidered.  First, 
+the Haskell-like interpretation of \tyCat{} morphsims 
+should be redefined.  On the usual account, \tyOneToTyTwo{} morphisms 
+are functions mapping type \tyOne{} to \tyTwo{}.  This 
+picture is complicated by procedures deviating from pure functions: 
+as I discussed earlier in this section, the input/output discussion 
+is complex and does not precisely map to the mathematical model 
+of morphisms between Category-objects.  Instead, inter-type 
+morphisms (to the degree that these are idetified as categorial 
+morphisms establishing type systems as categories) should be restricted 
+to specialized semantic associations between types, such as 
+casts from integers to floating-point values (hence, morphisms between 
+integer types to floating-point types).
+}
+\p{Moreover, reasonable type systems have a nontrivial collection of 
+endofunctors marking inter-type associations.  A good example 
+is the \q{unreferencing} operator which recovers the underlying 
+type \ty{} from a relerence type \ty{}\&.  This operator naturally 
+translates to a function \ty{}\& $\rightarrow$ \ty{} that retrieves the 
+value held by a reference.  It is reasonable to treat this 
+function as a \ty{}\& $\rightarrow$ \ty{} morphism.
+}
+\p{In a general case, though, implemented procedures should be treated 
+apart from such basic morphisms that tie a type sytem together: a 
+general procedure which takes a \tyOne{} input and outputs \tyTwo{} 
+is not a \tyOne{} $\rightarrow$ \tyTwo{} morphism but a more complex 
+structure operating on carriers.  For each input and output parameter 
+there is a carrier accessible in the environment of the procedure 
+(its program code and its runtime environment) that provides the 
+procedure acess to an underlying value.  The specific access can be 
+modeled around different sorts of carriers \mdash{} carriers holding 
+return values should allow procedures to \q{write upon} (initialize or 
+modify) their values but not read them (conformant to the expected 
+semantics of \q{procedural output}).  In this theory, the 
+output carrier from one procedure is distinguished from the 
+input carrier for another procedure, even in a case where one's 
+output is directly used as the other's input.  To illustrate, 
+Figure~\ref{fig:figGFc} \input{figGFc} shows a modified 
+version of Figure~\ref{fig:figGF} where the \gFun{}-to-\fFun{} 
+edge is annotated by a pair of carriers (output and input 
+differentiated by solid vs. double borders).  Similar to 
+Link Grammar (see the last section), a single edge bears a 
+double-annotation to indicate that the edge depends on some 
+notion of compatibility: in particular, output-to-input 
+carriers can only be linked if they hold the same type 
+(or at least interconvertible types).  As such, a double-annotated 
+edge captures a situation where the value in one carrier is 
+transferred into a second carrier \mdash{} potentially with a type-cast or, 
+e.g. in \Cpp{}, a behind-the-scenes call to a copy-constructor.  
+I will refer to such a value-transfer as a \i{handoff}.  
+A \gFun{}-to-\fFun{} (hyper-)edge therefore expresses added details 
+because its annotations convey properties of carriers whose state 
+and compatibility determine the value-transfers that enable 
+inter-procedure relations, such as one procedure calling and/or 
+using the output from a different procedure.  
+}
+\p{In lieu of mostly theorizing type categories, then, we can 
+also consider a category \CarCatS{} of carrier \i{states}, which 
+generalize typed values.  A morphism in \CarCatS{} represents either a 
+change in state or a mapping between values.  When a carrier \cCar{} is 
+initialized, it transitions from being in a state with no value 
+to being in a state where it holds an instance of its type 
+(when a carrier is already initialized its state can change 
+by repacing its held value with another value; or by 
+becoming \q{retired}).  A \cCarOne{}-to-\cCarTwo{} \q{handoff} then 
+corresponds to a morphism in \cCarTwo{}'s state wherein 
+\cCarTwo{} (perhaps transitions out out a pre-initialized state and) 
+acauires a concrete value derived from \cCarOne{}'s.  
+This case \mdash{} I'll call it a \q{handoff-induced morphism} 
+\mdash{} plays a foundational role in analysis via carriers and 
+hypergraphs analogous to \tyOne{} $\rightarrow$ \tyTwo{} morphisms 
+in conventional category-theoretic program semantics. 
+}
+\p{After accounting for this change in perspective, many concepts of hypergraph 
+categories appear to carry over to this theory.  Rather than morphisms 
+in a type category \tyCat{}, (hyper-)nodes in this case represent 
+procedures, and their surrounding edges represent (via annotations) 
+carriers accessible (as inputs or outputs) to the procedure's 
+implementation.  Morphisms are represented \q{within} these 
+edges insofar as a procedure being called induces a change in state 
+for carriers along the procedure's incoming edges 
+(likewise, returning values induces state-changes among 
+outgoing edges).  
+}
+\p{In practice, procedures call other procedures.  A procedure's 
+input carriers can be augmented by a \q{lexical scope}; 
+a repository of local carriers (syntactically speaking, 
+lexically-scoped source-code symbols) which start as uninitialized but 
+can hold outputs from other procedures called from the current 
+procedure's implementation body.  Each implementation is then a 
+sequence of further procedure call wherein the calling procedure 
+assembles the requisite local carriers to provide inputs to 
+the called procedure (via handoffs).  The calling procedure 
+must also provision carriers to hold the called procedure's 
+output.  In effect, the calling procedure must orchestrate a 
+suite of handoffs among its own carriers and the those 
+of the called procedure.  The semantics of this multi-faceted 
+sum of carrier-transfers can be represented within a source-code 
+graph; and so, the structures and semantics of these hypergrah 
+representations should be codified in a manner which 
+renders (a de-facto Ontology) the patterns of aggregate 
+carrier handoffs). 
+}
+\p{To illustrate, Figure~\ref{fig:figGFcomplexc},\input{figGFcomplexc} modifies 
+Figure~\ref{fig:figGFcomplex} so as to show carriers and handoffs, 
+analogous to Figure~\ref{fig:figGFc} adding carriers to Figure~\ref{fig:figGF}.  
+Each case where one procedure calls another can be modelled via a 
+graph which groups together the carriers (seen in the context of the 
+calling procedure) that are packaged together to enable the call; 
+and concordantly the links between these carriers and those 
+in the called procedure's signature and implementation which 
+embody handoffs executed in the transition in program flow between 
+the calling procedure to the called procedure, and back.
+}
+\p{\parlead{Carriers and Channels}  The theory of channels comes 
+into effect insofar as we combine this carriers and handoffs 
+model with my earlier discussion of differentiating input and 
+output varieties.  For instance, inputs may be Object-Oriented 
+message-receivers or normal parameters; outputs may be 
+thrown exceptions or normal returns.  In the hypergraph framework 
+I just outlined, hyperedges carry double-annotations to 
+mark the pairs of carriers involved in a handoff within a 
+procedure-call.  Grouping carriers based on their common 
+semantics \mdash{} separating the \this{} object from non-distinguished 
+parameters, let's say \mdash{} involves a further level of organization, 
+grouping hypereges into channels.  Taken together, then, the 
+overall hypergraph system exhibits two generalizations from 
+simpler code-graphs: double-annotations on edges (based 
+on carrier theory) and the use of channels to reflect 
+higher-level programming semantic, such as the distinct status 
+of method-receivers as non-standard input and of exceptions 
+as non-standard output.\footnote{My chapter in 
+\cite{NathanielChristenCyberphysical} includes examples of other 
+more \q{exotic} kinds of channels as well.}  
+}
+\p{To develop this unified theory, we can consider a \i{channel} as 
+(semantically) a (possibly empty) collection of (one or more, 
+if not empty) carriers \mdash{} the corresponding hypergraph representation 
+is a channel grouping edges whose annotations refer to these 
+carriers.  Each channel is then associated with a specifis 
+\q{protocol}, an idiosyncratic method for procedures to 
+interact with carriers (and by extension with one another).  
+For example, the procol for regular input and output channels 
+is that one output carrier's value can be directly \q{handed off to} 
+an input carrier, as in \fOfG{}-like composition.  In many languages a 
+procedure can have at most one output value, and also at most one 
+\q{message receiver} (\this{}) object.  Accordingly,
+a procedure-call can bundle the output channels from multiple 
+other procedures to populate some further called procedure's 
+input parameters.  Since there is only one \q{\this{}}, 
+two methods can be combined (modulo type compatibility) by inserting 
+the prior method's output as the next method's message-receiver 
+(handing off the output value to the next \this{} carrier), 
+giving rise to \q{method chaining} (such call-sequences can continue 
+over multiple steps).  Meanwhile \i{exceptions} cannot be treated 
+as normal values (you cannot in most cases hand off between an 
+\q{exception channel} and normal carriers).  Instead, 
+procedures which want to \q{catch} exceptions need special 
+structures, like catch-blocks, which provide the atypical 
+carriers that can actually hold exception values (and so 
+receive exception-channel handoffs.
+}
+\p{All of these are customary coding structures and design patterns which 
+regulate how modern programming languages handle features like 
+method-calls and exceptions.  These patterns, which I am theorizing here 
+according to channels' semantic protocols, are not primarily grounded 
+in a language's type system but rather in regulations on procedural 
+flow and program organization that are orthogonal to type restrinctions.  
+I contend that a theory of channels can unify the regulations enforced 
+by strong typing (e.g. not calling procedures with incompatible 
+arguments \visavis{} expected types) and those due to inter-channel 
+semantic protocols.  What the two semantic regimes have in common 
+is that they ultimately maniest as rules on carrier-transers \mdash{} 
+both carriers' types and the kinds of channels to which they 
+respectively belong influence whether a purported handoff 
+(needed by a call between procedures) is permissible; if not, 
+the code declaring the relevant procedure-call should not 
+be accepted (it should not compile).  So, enumerating 
+channel-semantic protocols is a way to formally model 
+what inter-procedure relations are legal accoring to the 
+program-flow and organizational principles of the 
+implementation language, analogous to how procedure 
+calls are evaluated for compliance with the 
+language's type system.  The syntactic rules for how 
+procedure-calls are notated are driven in part by 
+inter-channel protocols (for example, using a dot 
+to separate a \this{} object from a method-name 
+allows method-chains to be compactly written), but 
+a rigorous model should take syntactic details as 
+epiphenomena \mdash{} the important details for hypergraph 
+source-code models is the kinds of channels recognized 
+by a language for inter-procedure communication, and the 
+protocols associated with various channel-kind pairs 
+governing how and when carriers in one channel may be linked 
+by handoffs to carriers on other channels (of the same or 
+other kinds).
+}
+\p{}
 \p{}

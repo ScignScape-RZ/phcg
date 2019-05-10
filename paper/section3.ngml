@@ -225,7 +225,7 @@ although, which helps demonstrate the point that source literals
 involve implicit function-calls, some languages support 
 `q.user-defined` literals with nonstandard syntax %-- 
 consider `Lisp; `q.reader macros` and `Cpp;'s 
-`lstinline.`operatorqq;`/.
+`lstinlinestyle.`operatorqq;`/.
 `p` 
 
 `p.
@@ -450,7 +450,7 @@ carriers.  Each channel is then associated with a specifis
 interact with carriers (and by extension with one another).  
 For example, the procol for regular input and output channels 
 is that one output carrier's value can be directly `q.handed off to` 
-an input carrier, as in `gOfF;-like composition.  In many languages a 
+an input carrier, as in `fOfG;-like composition.  In many languages a 
 procedure can have at most one output value, and also at most one 
 `q.message receiver` (`this;) object.  Accordingly,
 a procedure-call can bundle the output channels from multiple 

@@ -56,11 +56,15 @@
  	%?upquote          = true
  }
  
+\newcommand{\lstinlinestyle}[1]{\Colorbox{blue!10}{#1}}
+ 
 \usepackage{xpatch}
 \usepackage{realboxes}
 \makeatletter
-\xpretocmd\lstinline{\Colorbox{blue!10}\bgroup\appto\lst@DeInit{\egroup}}{}{}
+\xpretocmd\lstinline{\lstinlinestyle\bgroup\appto\lst@DeInit{\egroup}}{}{}
 \makeatother
+
+
 
 % line
 \usepackage[object=vectorian]{pgfornament} %%  http://altermundus.com/pages/tkz/ornament/index.html
@@ -183,7 +187,7 @@
 %\newcommand{\typeT}{\ensuremath{type\raisebox{.5pt}{\makebox[3pt][c]{-}}T}}
 \newcommand{\typeT}{\ensuremath{\mathcal{T}}}
 
-\newcommand{\ty}{\ensuremath{\mathfrak{t}}}
+%\newcommand{\ty}{\ensuremath{\mathfrak{t}}}
 
 \newcommand{\TValues}{\ensuremath{T}-values} 
 
@@ -710,6 +714,17 @@
 \newcommand{\tyCat}{\ensuremath{\mathcal{T}}}
 \newcommand{\ty}{\ensuremath{\mathfrak{t}}}
 \newcommand{\HaskCat}{\ensuremath{\mathfrak{H}}}
+
+\newcommand{\tyOne}{\ensuremath{{\ty}_1}}
+\newcommand{\tyTwo}{\ensuremath{{\ty}_2}}
+\newcommand{\tyOneToTyTwo}{\ensuremath{{\tyOne} {\rightarrow} {\tyTwo}}}
+
+%\newcommand{\oper}{opqq}
+%\newcommand{\operatorqq}{operator""}
+%
+\newcommand{\sqqq}{{\fontfamily{lmtt}\selectfont{"}}}
+\newcommand{\operatorqq}{operator\sqqq\sqqq}
+%\newcommand{\operatorqq}{\codeText{operator\sqqq\sqqq}}
 
 \newcommand{\SEMI}{{\large\textbf ;}}
 
