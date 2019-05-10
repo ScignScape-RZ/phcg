@@ -67,7 +67,91 @@ no access to the memory which would hold the return value.
 By contrast, a function which takes a non-constant 
 integer reference is not forced by the compiler to 
 modify that value, nor prohibited from accessing the 
-input's value.  
+input's value.  This points to the practical differences 
+between returning values and altering input references, but it 
+also indicates that inputs can be treated as `i.de facto` 
+outputs by adhering to usage conventions %-- a reference 
+mimics the behavior of a return value to the extent that 
+procedures initialize the reference on all execution paths, and 
+refrain from using any value which the reference might 
+have before the procedure starts.  Generalizing this point, 
+the badic contrast between input and output can be 
+seen as a semantic matter of usage protocol, rather 
+than a syntactic contrast between passing valued to a 
+function vs. accessing a function's returned result.
+`p`
+
+`p.
+Of course, input and output are usually both distinguished 
+and interconnected by how outputs are used as inputs to 
+other functions.  With respect to procedures which take 
+one parameter, the general function-composition operator 
+`fOfG; takes the output of `gFun; as the input to 
+`fFun;.  We could of course define a different operator 
+where `gFun; and then `fFun; both run, taking the same 
+value (potentially a reference-type value that `gFun; 
+could potentially modify before `fFun; runs).  The 
+former (composition) operator establishes an inevitable 
+dependence of `fFun; on `gFun;: `fFun; needs `gFun;'s 
+output for an input value.  The second case is less obvious 
+%-- in a sequential call like `fAfterG; (`gFun; runs then 
+`fFun; runs %-- I notate the relation with an inverted 
+semi-colon to highlight the parallels with `fOfG;, but 
+the analogous case in practice would be `gThenF;), 
+there may or may not be a `gFun; side-effect that 
+infuences `fFun; (even if they are passed the same 
+inputs).  So inputs and outputs are distinguished 
+by how output-to-input links %-- outputs from one procedure 
+becoming inputs to another %-- have certain semantic 
+properties in the context of functional composition, and by 
+extension the relations between precedures which 
+run in sequence.  Again, though, this call for a semantic 
+analysis which looks beyond languages' surface syntax for 
+function calls, and how usages of return valued are notated.
+`p`
+
+`p.
+Mutable references and procedures-with-side-effects expose limits 
+in the representational expressivity of graphs (even hypergraphs) 
+for modelling inter-procedure relationships.  Consider a case 
+such as represented in Figure~\ref{fig:figGF} 
+`input<figGF>;, where `gFun; modifies 
+input $n$ that is then also input to `fFun;.  Here `gFun;'s 
+effect on `fFun;'s input is marked by a `gFun;-to-`fFun; 
+arrow, but this directed edge implies a different semantic 
+relation than `gFun;'s output being `fFun;'s input 
+(as in `fOfG;).  The specific difference can be visualized 
+in a scenario like Figure~\ref{fig:figGFcomplex} 
+`input<figGFcomplex>;, based on code such as written below the 
+graph.  The situation here is that `fFun; both uses 
+`gFun;'s output return (via the symbol $z$ the value is assigned to) 
+and also the values held by $x$ and $y$ which are altered by 
+`gFun;.  I notate these dependencies by grouping the `gFun;-to-`fFun; 
+edges through $x$ and $y$ separately from the edge 
+with $z$ %-- the latter edge conforms to the relation of 
+a procedure taking another procedure's output as input 
+(although here the relation is indirect through a 
+lexically-scoped symbol), but the former edges reflect a 
+different inter-procedure pattern.  The point of this 
+example is that separating input and output edges is not 
+enough to express program-flow semantics in anything but 
+pure functional languages %-- even given the `q.hypergraph categories` 
+strategy of grouping input an output values into hypernodes.
+`p`
+
+`p.
+For situations like these I propose a notion of `i.channels`/, which are 
+higher-scale groupings of edges analogous to how hyperedges 
+involve higher-scale groupings of nodes.  In Figure~\ref{fig:figGFcomplex}, 
+for instance, the $x$ and $y$ edges can be considered a separate 
+channel than the $z$ edge, because $x$ and $y$ bridge `fFun; and `gFun; 
+according to one sort of program-flow semantics (with side effects and 
+mutable inputs passed to sequential procedures) while $z$ follows a 
+different pattern (with output values and lexical symbols).  
+`p`
+
+`p.
+
 `p`
 
 `p.
