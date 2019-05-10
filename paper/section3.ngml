@@ -285,7 +285,25 @@ one canonical type).
 `p`
 
 `p.
-
+`parlead.Carriers and Categories of Types`/.  In some contexts it is 
+useful to examine a type system `tys; via a category `tyCat; of 
+types (such as, the category `HaskCat; of Haskell types).  
+Carriers are an extra structure which rest `q.on top of` 
+types, calling for the foundation (including Category-theoretic 
+treatment if applicable) to be reconsidered.  First, 
+the Haskell-like interpretation of `tyCat; morphsims 
+should be redefined.  On the usual account, `tyOneToTyTwo; morphisms 
+are functions mapping type `tyOne; to `tyTwo;.  This 
+picture is complicated by procedures deviating from pure functions: 
+as I discussed earlier in this section, the input/output discussion 
+is complex and does not precisely map to the mathematical model 
+of morphisms between Category-objects.  Instead, inter-type 
+morphisms (to the degree that these are idetified as categorial 
+morphisms establishing type systems as categories) should be restricted 
+to specialized semantic associations between types, such as 
+casts from integers to floating-point values (hence, morphisms between 
+integer types to floating-point types.
+ 
 `p`
 
 `p.
