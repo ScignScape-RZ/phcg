@@ -148,11 +148,65 @@ channel than the $z$ edge, because $x$ and $y$ bridge `fFun; and `gFun;
 according to one sort of program-flow semantics (with side effects and 
 mutable inputs passed to sequential procedures) while $z$ follows a 
 different pattern (with output values and lexical symbols).  
+The shaded box in the figure shows the core role of channels, 
+grouping together edges that have some particular connection 
+which could not be expressly identified by other means (like 
+shared annotations) and also isolating edges and edge-groups 
+from other elements (here, isolating the $x$-and-$y$ pairing 
+from the $z$ edges).   
 `p`
 
 `p.
+This case illustrates the basic premise of channels as 
+distinguished and/or edge-groupings, and also one modelling 
+domain where I contend channels can be applied; specifically, 
+representing details in computer code (in a general hypergraph 
+representation of source code) such as program flow.  
+To discuss channels as graph elements further, I will 
+start by examining channels in the specific computer-code 
+context, which calls for a detour review of 
+certain semantic structures central to the semantic of computer programs. 
+`p`
+
+`p.
+`parlead.Typed Values and `q.Careers`/`  It is commonly accepted that a 
+theory of types %-- with at least some details adopted from mathematical 
+type theory %-- is a necessary component of a rigorous treatment of 
+computer software and programming languages.  However, we should not 
+neglect to keep in mind the specific realities of programming 
+environments that complicate such basic notions as types' 
+instances, the nature of entities that we should deem to be 
+bearers of types, the status of special (non-)values like 
+`lstinline.null` or `q.Not A Number`/, and related details that 
+contrast programming `q.types` from mathematical sets or `q.spaces` 
+in various incarnations (sheaves, topoi, etc.).  
+`p`
+
+`p.
+In particular, the `q.instances` of types (at least in the programming-language 
+context) are not particularly suited to the intuitions of `q.members` of 
+sets, or `q.points` of spaces.  One reason is that there is no fixed theory 
+of types' extension, or `q.set` of possible instances,
+in a given computing enbironment.  For example, types without a fixed size 
+in memory %-- say, lists of numbers %-- are constrained be a computer's 
+available memory.  We cannot be certain which lists are small enough that a 
+given environment can hold them in memory, so that they are available 
+as typed values for a program.  Conceptually, then, 
+types are very different from sets of values. 
+`p`
+
+`p.
+More significantly, types' instances do not have a kind of 
+abstract self-sufficiency like points in a mathematical space.  
+Consider how computational procedures deal with `q.values`/, the 
+things that are representatives of types.  Most values which 
+procedures encounter are produced by other procedures, either 
+passed as parameters from calling procedures to called procedures, 
+or returned as outputs from called procedures to calling procedures.  
 
 `p`
+
+
 
 `p.
 

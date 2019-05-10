@@ -109,8 +109,8 @@ effect on \fFun{}'s input is marked by a \gFun{}-to-\fFun{}
 arrow, but this directed edge implies a different semantic 
 relation than \gFun{}'s output being \fFun{}'s input 
 (as in \fOfG{}).  The specific difference can be visualized 
-in a scenario like Figure~\ref{fig:figGFcomplex} 
-\input{figGFcomplex}, based on code such as written below the 
+in a scenario like Figure~\ref{fig:figGFcomplex},\input{figGFcomplex} 
+based on code such as written below the 
 graph.  The situation here is that \fFun{} both uses 
 \gFun{}'s output return (via the symbol $z$ the value is assigned to) 
 and also the values held by $x$ and $y$ which are altered by 
@@ -134,7 +134,33 @@ channel than the $z$ edge, because $x$ and $y$ bridge \fFun{} and \gFun{}
 according to one sort of program-flow semantics (with side effects and 
 mutable inputs passed to sequential procedures) while $z$ follows a 
 different pattern (with output values and lexical symbols).  
+The shaded box in the figure shows the core role of channels, 
+grouping together edges that have some particular connection 
+which could not be expressly identified by other means (like 
+shared annotations) and also isolating edges and edge-groups 
+from other elements (here, isolating the $x$-and-$y$ pairing 
+from the $z$ edges).   
 }
-\p{}
-\p{}
+\p{This case illustrates the basic premise of channels as 
+distinguished and/or edge-groupings, and also one modelling 
+domain where I contend channels can be applied; specifically, 
+representing details in computer code (in a general hypergraph 
+representation of source code) such as program flow.  
+To discuss channels as graph elements further, I will 
+start by examining channels in the specific computer-code 
+context, which calls for a detour review of 
+certain semantic structures central to the semantic of computer programs. 
+}
+\p{\parlead{Typed Values and \q{Careers}}  It is commonly accepted that a 
+theory of types \mdash{} with at least some details adopted from mathematical 
+type theory \mdash{} is a necessary component of a rigorous treatment of 
+computer software and programming languages.  However, we should not 
+neglect to keep in mind the specific realities of programming 
+environments that complicate such basic notions as types' 
+instances, the nature of entities that we should deem to be 
+bearers of types, the status of special (non-)values like 
+\lstinline{null} or \q{Not A Number}, and related details that 
+contrast programming \q{types} from mathematical sets or \q{spaces} 
+in various incarnations (sheaves, topoi, etc.).  
+}
 \p{}
