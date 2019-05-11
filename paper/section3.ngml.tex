@@ -499,5 +499,50 @@ mapping the resulting structure to a binary array which mimics the
 as to produce function-calls via the virtual machine which, at the 
 binary level, appear to be the result of compiled (e.g., \Cpp{}) functions.
 }
+\vsftcl{h}{figPVM}
+\p{Listing~\ref{lst:figPVM} depicts part of a virtual machine file generated 
+by the demo from a script-like source file.  This kind of file 
+(which I call \PVMIR{}, for \q{Phaon Virtual Machine}) 
+is the final output of the compiler pipeline described in this and 
+the last section.  The basic premise behind this format is that 
+every procedure call can be associated with a \i{channel package}, 
+each of whose channels is a stack of carriers.  It is straightforward 
+to generate \PVMIR{} code tracing a series of instructions to 
+recreate a channel package held as a structure (in the demo, 
+a \Cpp{} object) in memory.  Moreover, the \q{Phaon Graph} format is 
+designed to represent information associated with channels and 
+carriers; so generating \PVMIR{} (at least on the level of 
+individual procedure calls) is facilitated by 
+constructing graphs in the \q{Phaon} format to begin with.  
+I use the term \q{RelaeGraph} for graphs generated from 
+\q{relae} parsers; in the overall pipeline then the transformation 
+from Relae-Graphs to Phaon-Graphs is the important 
+step which enables the \PVMIR{} generator to run mechanically.  
+}
+\p{As desribed, \PVMIR{} plays a limited role insofar as it is 
+generated from channel-package objects \mdash{} yielding 
+\PVMIR{} files \mdash{} and then sometime later a virtual machine 
+runs the \PVMIR{} code to recreate those objects at runtime.  
+In this role \PVMIR{} just allows the channel-package objects 
+to be encoded in a text file for later use.  
+However, \PVMIR{} is more than only a serialization format 
+for channel packages.  The extra roles for \PVMIR{} come 
+into play when defining source-code-level procedures 
+(which includes code blocks, e.g. \lstinline{if-then-else} 
+alternatives, which are implemented as anonymous procedures).  
+Because \PVMIR{} represents a seauence of minimal carrier-related 
+operations, certain such sequences may be isolated as separate 
+subroutines, which in turn can be assigned unique-identifier 
+and called within the virtual-machine runtime as 
+\q{virtual} functions.  
+}
+\p{The \PVMIR{} format relies on the fact that each minimal virtual-machine 
+operation has a similar form \mdash{} actually every 
+instruction either takes no arguments or a single string argument.  
+As such the input text can be compiled into an array of 
+pairs comprised of a pointer-to-member-function and a (possibly 
+empty) argument. 
+}
+\p{}
 \p{}
 \p{}

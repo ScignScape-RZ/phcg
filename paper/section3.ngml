@@ -552,6 +552,7 @@ as to produce function-calls via the virtual machine which, at the
 binary level, appear to be the result of compiled (e.g., `Cpp;) functions.
 `p`
 
+\vsftcl{h}{figPVM}
 `p.
 Listing~\ref{lst:figPVM} depicts part of a virtual machine file generated 
 by the demo from a script-like source file.  This kind of file 
@@ -590,6 +591,48 @@ operations, certain such sequences may be isolated as separate
 subroutines, which in turn can be assigned unique-identifier 
 and called within the virtual-machine runtime as 
 `q.virtual` functions.  
+`p`
+
+\vsftcl{h}{figPVMlines}
+`p.
+The `PVMIR; format relies on the fact that each minimal virtual-machine 
+operation has a similar form %-- actually every 
+instruction either takes no arguments or a single string argument.  
+As such the input text can be compiled into an array of 
+pairs comprised of a pointer-to-member-function and a (possibly 
+empty) argument (see Listing~\ref{lst:figPVMlines}).  The 
+code at `OneOverlay; converts a string name to a method-pointer and 
+appends to an instruction list indexed by the name of the 
+procedure currently being compiled; while `TwoOverlay; shows 
+the analogous runtime logic that loads a compiled instruction-list, 
+which may then be executed as a called procedure.  In this 
+milieu the channel packages whose structure laid out the 
+setup for a procedure-call here become itemized into the 
+creation of a local, stack-driven context where the 
+called procedure can finally be realized, as a virtual-machine 
+subroutine.   
+`p`
+
+`p.
+The final step for a Phaon Virtual Machine is to 
+`q.reduce` channel packages to emulate the normal 
+`Cpp; `ABI;.  The PhaonGraph system is intended to 
+support `q.exotic` channel packages, with channel-semantic 
+protocols that depart from the basic inputs and returns 
+(and also `this; objects and exceptions) from 
+mainstream programming langages.  The specialized 
+protocols can provide a more sophisticated basis for 
+static or runtime analysis of Phaon-structured source 
+code representations.  However, a Phaon environment eventually 
+needs to defer to `Cpp; functions to provide underlying 
+functionality, which means that packages based on exotic 
+protocols must be mapped to simpler packages shaped around 
+`Cpp;: at most one `this; and one return value; 
+a block to catch exceptions if necessary; and any remaining 
+parameters in a conventional input channel.  Mimicking a 
+`Cpp; `ABI; also requires that the byte-length of input and 
+output parameters is anticipated, based on the signature 
+of a called `Cpp; function.  
 `p`
 
 `p.

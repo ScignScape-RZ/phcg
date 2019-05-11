@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  11 MAY 2019 00:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  11 MAY 2019 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1799,11 +1799,28 @@ n input line 397.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20])
-(./biblio.tex [21] [22
-\pgfsyspdfmark {pgfid13}{2126776}{6573915}
+ [20]
+(./figPVM.tex)
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 502--502
+[] $[]$| [] 
+ []
 
-]) [23
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `lst:figPVM' on page 21 undefined on input line 521.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21])
+(./biblio.tex [22
+\pgfsyspdfmark {pgfid13}{20777318}{6573915}
+] [23
+\pgfsyspdfmark {pgfid19}{2126776}{19189595}
+
+]) [24
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
@@ -1825,11 +1842,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 37807 strings out of 492649
- 764458 string characters out of 6122986
- 1027787 words of memory out of 5000000
- 40599 multiletter control sequences out of 15000+600000
- 554027 words of font info for 186 fonts, out of 8000000 for 9000
+ 37867 strings out of 492649
+ 765328 string characters out of 6122986
+ 1027799 words of memory out of 5000000
+ 40625 multiletter control sequences out of 15000+600000
+ 554225 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,11n,101p,10425b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.
@@ -1859,10 +1876,10 @@ home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1095.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/f
 onts/type1/public/cm-super/sftt0800.pfb>
-Output written on ghg.ngml.pdf (23 pages, 380238 bytes).
+Output written on ghg.ngml.pdf (24 pages, 386273 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
- 520 compressed objects within 6 object streams
- 290 named destinations out of 1000 (max. 500000)
+ 620 PDF objects out of 1000 (max. 8388607)
+ 551 compressed objects within 6 object streams
+ 315 named destinations out of 1000 (max. 500000)
  28293 words of extra memory for PDF output out of 29859 (max. 10000000)
 

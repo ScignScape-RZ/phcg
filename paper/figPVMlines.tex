@@ -1,0 +1,69 @@
+\begin{lstlisting}[caption={PVMIR to Member-Function Pointers},
+language = C++, numbers = none, label={lst:figPVMlines},
+    basicstyle = \ttfamily\bfseries\tiny, linewidth = .95\linewidth] 
+
+void PhaonIR::read_line(QString inst, QString arg)
+{
+ static QMap<QString, void(PhaonIR::*)(QString)> static_map {{
+  { "push_carrier_stack", &push_carrier_stack },
+  { "hold_type_by_name", &hold_type_by_name },
+  { "anchor_without_channel_group", &anchor_without_channel_group },
+  { "finalize_signature", &finalize_signature },
+  { "push_carrier_symbol", &push_carrier_symbol },
+  { "push_carrier_stack", &push_carrier_stack },
+  { "push_carrier_raw_value", &push_carrier_raw_value },
+...
+ }};
+
+ auto it = static_map.find(inst);
+ if(it != static_map.end())
+ {
+  line_ops_[current_source_fn_name_].push_back(
+    {new QString(arg), fn_u{.fn1=it.value()}});
+ }
+}
+
+void PhaonIR::run_lines(QString source_fn)
+{
+ auto it = line_ops_.find(source_fn);
+ if(it == line_ops_.end())
+   return;
+ const QList<QPair<QString*, fn_u>>& lines = it.value();
+ for(auto& pr: lines)
+ {
+  if(pr.first)
+    (this->*(pr.second.fn1))(*pr.first);
+  else
+    (this->*(pr.second.fn0))();
+ }
+}
+
+void PhaonIR::run_callable_value(QString source_fn)
+{
+ run_state_stack_.push({current_source_function_scope_,
+   program_stack_, current_carrier_stack_,
+   held_channel_group_, sp_map_});
+
+ init_current_source_function_scope(source_fn);
+ init_program_stack();
+ current_carrier_stack_ = nullptr;
+ held_channel_group_ = nullptr;
+ sp_map_ = new QMap<QPair<Unwind_Scope_Index,
+   PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*>;
+ run_lines(source_fn);
+...
+ Run_State rs = run_state_stack_.pop();
+ current_source_function_scope_ = rs._source_function_scope;
+ program_stack_ = rs._program_stack;
+...
+}
+
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay, text width=.95\linewidth]
+
+\lstovn{4.6,7.6}{1}
+\lstovn{8.2,9.9}{2}
+
+%\lstovn{3.25,2.6}{3}
+
+\end{tikzpicture} 
