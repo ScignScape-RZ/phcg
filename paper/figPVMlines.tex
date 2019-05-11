@@ -7,7 +7,8 @@ void PhaonIR::read_line(QString inst, QString arg)
  static QMap<QString, void(PhaonIR::*)(QString)> static_map {{
   { "push_carrier_stack", &push_carrier_stack },
   { "hold_type_by_name", &hold_type_by_name },
-  { "anchor_without_channel_group", &anchor_without_channel_group },
+  { "anchor_without_channel_group", 
+     &anchor_without_channel_group },
   { "finalize_signature", &finalize_signature },
   { "push_carrier_symbol", &push_carrier_symbol },
   { "push_carrier_stack", &push_carrier_stack },
@@ -61,8 +62,8 @@ void PhaonIR::run_callable_value(QString source_fn)
 \end{lstlisting}
 \begin{tikzpicture}[remember picture, overlay, text width=.95\linewidth]
 
-\lstovn{4.6,7.6}{1}
-\lstovn{8.2,9.9}{2}
+\lstovn{6.95,9.9}{1}
+\lstovn{3.65,2.2}{2}
 
 %\lstovn{3.25,2.6}{3}
 

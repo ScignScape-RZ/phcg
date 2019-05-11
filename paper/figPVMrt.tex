@@ -1,8 +1,9 @@
-\begin{lstlisting}[caption={PVM Runtime --- Function Equivalence Classes},
+\begin{lstlisting}[caption={PVM Runtime: Function Equivalence Classes},
 language = C++, numbers = none, label={lst:figPVMrt},
     basicstyle = \ttfamily\bfseries\tiny, linewidth = .95\linewidth] 
 
-void PHR_Command_Runtime_Router::proceed_s0_2(PHR_Function_Vector* pfv, void** pResult)
+void PHR_Command_Runtime_Router::proceed_s0_2(
+  PHR_Function_Vector* pfv, void** pResult)
 {
  int byte_code = 0;
 
@@ -14,7 +15,8 @@ void PHR_Command_Runtime_Router::proceed_s0_2(PHR_Function_Vector* pfv, void** p
 
  if(pfv)
  {
-  if(void* fnp = pfv->match_against_codes({6002, 7002}, mc, bc, &result_type_object_))
+  if(void* fnp = pfv->match_against_codes({6002, 7002}, 
+    mc, bc, &result_type_object_))
   {
    fn = (s0_fn1_p_p_type) fnp;
    byte_code = bc;
@@ -25,22 +27,24 @@ void PHR_Command_Runtime_Router::proceed_s0_2(PHR_Function_Vector* pfv, void** p
 ... 
  if(fn)
  {
-  proceed_s0<2, s0_fn1_p_p_type>(pResult, fn, byte_code, sr, false);
+  proceed_s0<2, s0_fn1_p_p_type>(pResult, fn, 
+    byte_code, sr, false);
  }
 ...
 }
 ...
 template<>
-void PHR_Command_Runtime_Router::proceed_s0_r<2, s0_fn1_p_p_type>(QVector<quint64>& args, void*& result,
+void PHR_Command_Runtime_Router::proceed_s0_r<2, 
+  s0_fn1_p_p_type>(QVector<quint64>& args, void*& result,
   s0_fn1_p_p_type fn, int byte_code)
 {
  switch(byte_code)
  {
- case 944: tybc_<2>::run<944, s0_fn1_p_p_type>(args, result, fn); break;
- case 984: tybc_<2>::run<984, s0_fn1_p_p_type>(args, result, fn); break;
- case 948: tybc_<2>::run<948, s0_fn1_p_p_type>(args, result, fn); break;
- default:
- case 988: tybc_<2>::run<988, s0_fn1_p_p_type>(args, result, fn); break;
+ case 944: tybc_<2>::run<944, s0_fn1_p_p_type>(args, result, 
+   fn); break;
+ case 984: tybc_<2>::run<984, s0_fn1_p_p_type>(args, result, 
+   fn); break;
+...
  }
 }
 ...
@@ -48,7 +52,7 @@ struct tybc_<2>
 {
  template<int byc, typename fn_type>
  static void run(QVector<quint64>& args, void*& result,
-  fn_type fn)
+   fn_type fn)
  {
   result = ( (typename tybc<byc>::_r) fn)
     ( (typename tybc<byc>::a0) *((quint64*) args[0]),  
@@ -60,8 +64,8 @@ struct tybc_<2>
 \end{lstlisting}
 \begin{tikzpicture}[remember picture, overlay, text width=.95\linewidth]
 
-\lstovn{4.6,7.6}{1}
-\lstovn{8.2,9.9}{2}
+\lstovn{4.6,5.6}{1}
+\lstovn{6.05,1.95}{2}
 
 %\lstovn{3.25,2.6}{3}
 

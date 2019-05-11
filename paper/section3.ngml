@@ -552,7 +552,7 @@ as to produce function-calls via the virtual machine which, at the
 binary level, appear to be the result of compiled (e.g., `Cpp;) functions.
 `p`
 
-\vsftcl{h}{figPVM}
+\vsftcl{!h}{figPVM}
 `p.
 Listing~\ref{lst:figPVM} depicts part of a virtual machine file generated 
 by the demo from a script-like source file.  This kind of file 
@@ -593,7 +593,7 @@ and called within the virtual-machine runtime as
 `q.virtual` functions.  
 `p`
 
-\vsftcl{h}{figPVMlines}
+\vsftcl{!h}{figPVMlines}
 `p.
 The `PVMIR; format relies on the fact that each minimal virtual-machine 
 operation has a similar form %-- actually every 
@@ -635,7 +635,7 @@ output parameters is anticipated, based on the signature
 of a called `Cpp; function.  
 `p`
 
-\vsftcl{h}{figPVMrt}
+\vsftcl{!h}{figPVMrt}
 `p.
 So far I have talked about channel `i.packages` which are 
 structured aroud points in source-code where procedures are 
@@ -659,7 +659,7 @@ parameters which are pairwise equal in byte-length.
 In such a case the two functions may be jointly 
 represented by `lstinline.void*` function-pointers and 
 called from the same site in the `PVM; engine.  
-The low-level details are sampled in Listing~\ref{lst:figPVMlines}: 
+The low-level details are sampled in Listing~\ref{lst:figPVMrt}: 
 here `OneOverlay; marks a point where the engine 
 switches over numeric codes standing for certain 
 equivalence classes; and `TwoOverlay; shows how multiple 

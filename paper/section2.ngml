@@ -411,7 +411,6 @@ other refer to preexisting nodes that are given names in the
 input text). 
 `p` 
     
-\vsftcl{h}{figPGB}
 `p.
 The intermediate language designed via thexe techniques is effective 
 from the point of view of machine-generating code to construct a 
@@ -468,9 +467,8 @@ serialization protocol %-- all the desired constructions in the
 more general paradigm.
 `p`
 
-  
+\vsftcl{!h}{figPGB}   
 `p.
-
 `p`
 
 

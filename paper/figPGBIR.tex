@@ -20,7 +20,8 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds,
  case PGB_Methods::signature:
   {
    caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
-   if(caon_ptr<PHR_Graph_Signature> s = n->phr_graph_signature())
+   if(caon_ptr<PHR_Graph_Signature> s = 
+     n->phr_graph_signature())
    {
     QList<MG_Token> mgts = get_signature_tokens(mgtm);
     s->add_tokens(mgts);
