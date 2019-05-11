@@ -536,13 +536,98 @@ subroutines, which in turn can be assigned unique-identifier
 and called within the virtual-machine runtime as 
 \q{virtual} functions.  
 }
+\vsftcl{h}{figPVMlines}
 \p{The \PVMIR{} format relies on the fact that each minimal virtual-machine 
 operation has a similar form \mdash{} actually every 
 instruction either takes no arguments or a single string argument.  
 As such the input text can be compiled into an array of 
 pairs comprised of a pointer-to-member-function and a (possibly 
-empty) argument. 
+empty) argument (see Listing~\ref{lst:figPVMlines}).  The 
+code at \OneOverlay{} converts a string name to a method-pointer and 
+appends to an instruction list indexed by the name of the 
+procedure currently being compiled; while \TwoOverlay{} shows 
+the analogous runtime logic that loads a compiled instruction-list, 
+which may then be executed as a called procedure.  In this 
+milieu the channel packages whose structure laid out the 
+setup for a procedure-call here become itemized into the 
+creation of a local, stack-driven context where the 
+called procedure can finally be realized, as a virtual-machine 
+subroutine.   
 }
-\p{}
+\p{The final step for a Phaon Virtual Machine is to 
+\q{reduce} channel packages to emulate the normal 
+\Cpp{} \ABI{}.  The PhaonGraph system is intended to 
+support \q{exotic} channel packages, with channel-semantic 
+protocols that depart from the basic inputs and returns 
+(and also \this{} objects and exceptions) from 
+mainstream programming langages.  The specialized 
+protocols can provide a more sophisticated basis for 
+static or runtime analysis of Phaon-structured source 
+code representations.  However, a Phaon environment eventually 
+needs to defer to \Cpp{} functions to provide underlying 
+functionality, which means that packages based on exotic 
+protocols must be mapped to simpler packages shaped around 
+\Cpp{}: at most one \this{} and one return value; 
+a block to catch exceptions if necessary; and any remaining 
+parameters in a conventional input channel.  Mimicking a 
+\Cpp{} \ABI{} also requires that the byte-length of input and 
+output parameters is anticipated, based on the signature 
+of a called \Cpp{} function.  
+}
+\vsftcl{h}{figPVMrt}
+\p{So far I have talked about channel \i{packages} which are 
+structured aroud points in source-code where procedures are 
+called.  The \PVM{} system has a parallel notion of 
+channel \i{bundles} which are associated with functions' 
+signatures \mdash{} at runtime, \PVM{} can access \Cpp{} functions 
+which are described ahead of time in terms of 
+channel-bundles.\footnote{Separately, \PVM{} can also call \Qt{}-specific methods according 
+to \Qt{}'s internal reflection mechanism, the Meta-Object Protocol.
+}  When a \PVM{} instance starts up, the predefined 
+bundles are analyzed to produce a record of functions' 
+signatures from the perspective of the \Cpp{} \ABI{}.  
+The chief task of this analysis is to sort 
+\Cpp{} functions into equivalence classes, where two 
+functions are equivalent when they can be called via 
+identical function-pointer and argument-array binary 
+layouts.  In effect, functions are equivalent if 
+their argument lists are equally-sized arrays of 
+parameters which are pairwise equal in byte-length.  
+In such a case the two functions may be jointly 
+represented by \lstinline{void*} function-pointers and 
+called from the same site in the \PVM{} engine.  
+The low-level details are sampled in Listing~\ref{lst:figPVMlines}: 
+here \OneOverlay{} marks a point where the engine 
+switches over numeric codes standing for certain 
+equivalence classes; and \TwoOverlay{} shows how multiple 
+target functions, once the equivalnce class is identified 
+(and the argument array initialized accordingly), 
+may be accessed via a single function-pointer.
+}
+\p{Further details about reducing channel-packages 
+around the \Cpp{} \ABI{} are not directly concerned 
+with graph representations and so are outside the 
+scope of this paper, so with this overview I will 
+wrap up my enumeration of stages in the \PVM{} pipeline.  
+I will comment, however, that the \PVM{} engine's 
+binary manipulation of function-pointers and 
+argument-arrays enables the runtime to work with 
+complex structures derived from non-stanard channel 
+packages.  The end result is that \PVM{} 
+provides an execution engine that works with 
+sophisticated hypergraph representations of source 
+code: whereas a more conventional architecture might 
+assume that compilers will eventually reduce source 
+input to relatively simple \AST{}-style data, \PVM{} 
+assumes that the Virtual Machine runtime is operating 
+on instruction-sequences that preserve the more 
+complex, hypergraph-driven code-representation 
+semantics.  In this sense \PVM{} suggests the 
+kind of compiler and Virtual Machine architecture 
+that could be appropriate in general for the 
+overall project of standardizing hypergraph code 
+models and leveraging them directly in a runtime 
+execution engine.
+}
 \p{}
 \p{}
