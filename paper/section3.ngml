@@ -635,12 +635,46 @@ output parameters is anticipated, based on the signature
 of a called `Cpp; function.  
 `p`
 
+\vsftcl{h}{figPVMrt}
 `p.
-
+So far I have talked about channel `i.packages` which are 
+structured aroud points in source-code where procedures are 
+called.  The `PVM; system has a parallel notion of 
+channel `i.bundles` which are associated with functions' 
+signatures %-- at runtime, `PVM; can access `Cpp; functions 
+which are described ahead of time in terms of 
+channel-bundles.`footnote. 
+Separately, `PVM; can also call `Qt;-specific methods according 
+to `Qt;'s internal reflection mechanism, the Meta-Object Protocol.
+`footnote`  When a `PVM; instance starts up, the predefined 
+bundles are analyzed to produce a record of functions' 
+signatures from the perspective of the `Cpp; `ABI;.  
+The chief task of this analysis is to sort 
+`Cpp; functions into equivalence classes, where two 
+functions are equivalent when they can be called via 
+identical function-pointer and argument-array binary 
+layouts.  In effect, functions are equivalent if 
+their argument lists are equally-sized arrays of 
+parameters which are pairwise equal in byte-length.  
+In such a case the two functions may be jointly 
+represented by `lstinline.void*` function-pointers and 
+called from the same site in the `PVM; engine.  
+The low-level details are sampled in Listing~\ref{lst:figPVMlines}: 
+here `OneOverlay; marks a point where the engine 
+switches over numeric codes standing for certain 
+equivalence classes; and `TwoOverlay; shows how multiple 
+target functions, once the equivalnce class is identified 
+(and the argument array initialized accordingly), 
+may be accessed via a single function-pointer.
 `p`
 
 `p.
-
+Further details about reducing channel-packages 
+around the `Cpp; `ABI; are not directly concerned 
+with graph representations and so are outside the 
+scope of this paper, so with this overview I will 
+wrap up my enumeration of stages in the `PVM; pipeline.  
+I will comment, however, that the 
 `p`
 
 `p.
