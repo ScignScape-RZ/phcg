@@ -674,7 +674,25 @@ around the `Cpp; `ABI; are not directly concerned
 with graph representations and so are outside the 
 scope of this paper, so with this overview I will 
 wrap up my enumeration of stages in the `PVM; pipeline.  
-I will comment, however, that the 
+I will comment, however, that the `PVM; engine's 
+binary manipulation of function-pointers and 
+argument-arrays enables the runtime to work with 
+complex structures derived from non-stanard channel 
+packages.  The end result is that `PVM; 
+provides an execution engine that works with 
+sophisticated hypergraph representations of source 
+code: whereas a more conventional architecture might 
+assume that compilers will eventually reduce source 
+input to relatively simple `AST;-style data, `PVM; 
+assumes that the Virtual Machine runtime is operating 
+on instruction-sequences that preserve the more 
+complex, hypergraph-driven code-representation 
+semantics.  In this sense `PVM; suggests the 
+kind of compiler and Virtual Machine architecture 
+that could be appropriate in general for the 
+overall project of standardizing hypergraph code 
+models and leveraging them directly in a runtime 
+execution engine.
 `p`
 
 `p.
