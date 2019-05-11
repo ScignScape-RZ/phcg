@@ -507,6 +507,17 @@ other kinds).
 `p`
 
 `p.
+One benefit of the channel-based framework I have presented here is 
+that it provides an intuitive breakdown of procedure-calls into 
+smaller steps.  A procedure call generally requires a structure involving 
+multiple carriers to be present in the context of the calling procedure 
+(while, on the called side, the procedure's signature provisions a 
+set of carriers that receive values from the calling context).  
+Preparation for the call therefore entails building up a set of 
+carriers and establishing their respective links to carriers on the 
+receiving end.  It is possible to divide this process into a 
+series of minimal sets, each involving operations on a single carrier.
+ 
 
 `p`
 
