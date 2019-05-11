@@ -1,7 +1,7 @@
 \section{Conclusion}
 \p{My analysis in this paper has focused on four 
 themes: converging on a general-purpose hypergraph 
-model via a standized hypergraph serialization 
+model via a standardized hypergraph serialization 
 format at an Intermediate Representation level; 
 generalizing hypergraphs via node, edge, and 
 annotation diversification \mdash{} in particular 
@@ -16,6 +16,180 @@ strategies for implementing virtual machines that
 can offer an execution environment for the 
 resulting hypergraphs. 
 }
-\p{}
-\p{}
+\p{These issues are collectively illustrated in the Phaon-Graph 
+format, which is a compilation-target for the demonstrated 
+hypergraphs parsers and a source for generating Phaon 
+Virtual Machine code.  Phaon-Graph employs many dimensions 
+of hyper-graph modeling; last section I discussed 
+double-annotations (marking carrier handoffs) and channels 
+as generalizations of hyperedges (associated with 
+various channel-semantis protocols).  Procedural hypernodes 
+are also relevant to Phaon-Graph insofar as input source-code 
+may describe instances of collections types, like 
+stacks and queues \mdash{} these data structures become represented 
+in procedural hypernodes alongside the \q{tuple} hypernodes 
+expressing singular source-code tokens.
+}
+\p{The Phaon-Graph compilers and Phaon Virtual Machine works on 
+the assumption that Phaon-Graphs iconifying executable code 
+have a specific vocabulary, and a certain set of conventions 
+in terms of how modeling elements \mdash{} compound annotations, 
+channels, procedural hypernodes \mdash{} are employed.  De facto, 
+then, Phaon-Graphs have an implicit Ontology that structures the 
+Phaon system \mdash{} how the graph, parsing, and virtual-machine-runtime 
+components are integrated together.  So far, this Ontology 
+is not formally articulated, because we do not have a common 
+picture of how to construct \OWL{}-like Ontologies for 
+hypergraphs with this spectrum of extra structure.
+}
+\p{The use-cases for general-purpose hypergraphs extend beyond 
+representing (and providing a virtual-machine execution 
+environment for) computer code, of course.  In this sense the 
+\PVM{} is just one example of larger questions: what would 
+a general hypergraph Ontology look like?  This is partly a 
+notational issue \mdash{} what would be a convenient language 
+for expressing hypergraph Ontologies, by analogy to 
+\OWL{} being a language optimized for \RDF{} Ontologies?  
+More generally, though, these are questions about 
+what \q{Ontology} should mean in the general hypergraph 
+context: what information should these Ontologies provide 
+about relevant data structures and protocols?  What kind 
+of metadata and provable guarantees should a hypergraph 
+Ontology add to hypergraph models as compared to those 
+which are not governed by an (explicit) Ontology?
+}
+\p{I think that Phaon-Graphs help to answer these questions because 
+they are a case-study in the operational relations between 
+diverse software components, whose collective functionality 
+are a precondition for an effective hypergraph system.  
+The overall ecosystem includes parsers to initialize hypergraphs; 
+translations between different hypergraph formats 
+(here, Relae-Graph to Phaon-Graph); operations for traversing 
+and pulling data from hypergraphs; and generating other 
+code or data structures on the basis of hypergraphs 
+(here, generating \PVMIR{} code).  On this evidence, a 
+general hypergraph Ontology would describe a given class 
+of hypergraphs in a fasion that allows developers to plan 
+out the implementations for these various facets of 
+interactions with hypergraphs: parsing, intra-graph 
+navigation, inter-graph Intermediate Representations, and 
+the eventual output of (for example) Virtual Machine 
+code, or in other contexts of data structures to be 
+used by applications.  
+}
+\p{In general, hypergraphs' greater expressivity, compared to 
+other graph and/or other serialization formats, comes 
+into play at two levels.  On the one hand, hypergraphs 
+may capture data with greater detail and transparency.  
+A hypergraph representation is not just a vehicle for 
+exchanging data at a machine-readable level; potentially 
+hypergraphs can desribe the semantics and theoretical 
+foundations of provided information with a precision 
+that transcends raw digital networking.  For example, 
+when hypergraphs publish scientific data, their semantic 
+norms and how they use hypergraph modeling elements 
+(like channels, procedural hypernodes, and 
+compound annotations) can be stylized to convey 
+scientific details \mdash{} specifying empirical, experimental, 
+procedural, and theoretical background, such as 
+dimensions and ranges (for different quantities and 
+measurements), the contrast between observed and 
+calculated values (specific to a given experimental 
+setup), quantitative and qualitative modeling 
+assumptions, and so forth.
+}
+\p{Meanwhile, on the other hand, hypergraph expressivity also factors 
+in to the pipeline bringing shared data to user-facing applications.  
+Setting aside the \q{autonomous agent} ambitions of the Semantic 
+Web, most data sharing is about giving humans access to data 
+which they find useful or interesting and which they might 
+not discover, or benefit from, without a dedicated networking 
+ecosystem.  The end-point of a typical data-sharing process is, 
+then, some human user's software acquiring some new data which 
+the user in turn would then view and interact with.  In the 
+case of scientific data, this would entail in a typical scenario 
+an application \mdash{} perhaps special-purpose scientific software 
+\mdash{} obtaining data from perhaps an open-access publisher's or 
+institutional repository, and parsing the data into the 
+runtime memory structures to create appropriate visuals and 
+interactive components for the user's behalf: data describing 
+chemical morphology for molecular visualization software; 
+data describing lexemes, corpora, or parsed sentences for 
+linguistics software; and so on.  Hypergraphs in this sense 
+are intermediary structures whose expressivity and 
+protocols should prioritize the quality and interoperability 
+of application-components which, at the culmination of a 
+data-sharing workflow, present new data to application users.
+Hypergraph models are not only preoccupied with data 
+analytics and other behind-the-scenes processing; their 
+value should also come to the fore from the perspective 
+of application-developers working with components that 
+draw data from remote sources but present the associated 
+information accoring to application-specific protocols 
+and \GUI{} conventions. 
+}
+\p{Continuing to take open-access scientific data as a case in 
+point, a broad data sharing platform \mdash{} a \q{web of 
+science} \mdash{} would therefore be engineered to 
+prioritize these two dimensions.  On the one hand, 
+shared data should be annotated to capture scientific 
+details (theoretical and experimental models, experimental 
+protocols); on the other hand, shared data should be 
+targeted especially at special-purpose software that 
+fits organically into scientists' working environments 
+(their preferred applications, computational requirements, 
+conventional data-visualizations, etc.).  Hypegraphs 
+would be a successful replacement for other (simpler) 
+representations if they prove more effective at 
+capturing technical metadata in the former sense and 
+more conducive to programmatically fluid application-integration 
+in the latter sense.
+}
+\p{I believe, also, that a mature data-sharing platform and data-representation 
+protocol, along these lines, will prioritize representations 
+of procedures, algorithms, computational strategies, and in general 
+the calculational and interface qualities of data structures 
+formalized in a given scientific or technical context.  Hypergraph 
+models of computer code are not the only situations where 
+hypergraphs would have occasion to express function 
+signatures, application-interface descrip tions, or 
+executable scripts.  Instead, the sorts of functions or 
+transformations which may be applied to a data structure 
+is often an intrinsic feature of data's types and semantics.  
+Likewise, shared data may be accompanied with scripts that 
+ensure the data is properly used by applications which 
+acquire it. 
+}
+\p{For these reasons, it makes sense to organize hypergraph data sharing 
+platforms around hypergraph models whose representational 
+capacity extends to procedural signatures and implementations.  
+I would argue that the option of outputting code for a suitable 
+Hypergraph Virtual Machine would then be as intrinsic to the 
+\q{core} features of a hypegraph framework as the option of 
+initializing hypergraphs from textual input via a parsing 
+library.  The architecture around Phaon-Graph \mdash{} linked 
+to grammars via Relae-Graph, and to an execution runtime via 
+the Phaon Virtual Machine \mdash{} would then be characteristic 
+of a parsing an virtual-machine engine that in some fashion should 
+be available to all hypergraph models. 
+}
+\p{If this is accurate, it influences how hypergraph Ontologies 
+should be conceived.  In particular, hypergraph representations 
+include expressions of procedural interfaces and signatures, 
+which entails the integration of programming-language 
+type systems into Ontologies.  This in turn implies the 
+generalizaton of types expressible in each Ontology to 
+encompass higher-order types, functional-types representative 
+of languages' special features like object-methods 
+and exceptions (which, as I have argued, may be advanced by 
+hypergraph channels), Object-Orientation, and other aspects 
+of modern programming.   
+}
+\p{Hypergraph Ontologies, in short, will need to draw on a wider 
+pool of constructions and paradigms from programming practice and 
+type theory than we have hitherto seen in contexts like the 
+Semantic Web.  Potentially this very fact can make hypergraph 
+representations more effective at the application-integration 
+level than Semantic Web data structures and Ontologies are now. 
+}
 \p{}
