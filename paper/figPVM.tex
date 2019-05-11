@@ -1,0 +1,34 @@
+\begin{lstlisting}[caption={Contextual Parsing for String Literals},
+language = C++, numbers = none, label={lst:figPVM},
+    basicstyle = \ttfamily\bfseries\tiny, linewidth = .95\linewidth] 
+
+ .; generate_from_fn_node ;.
+push_carrier_stack $ fuxe ;.
+hold_type_by_name $ fbase ;.
+push_carrier_symbol $ &prn ;.
+ .; args ;.
+push_carrier_stack $ lambda ;.
+ 
+push_unwind_scope $ 1 result ;.
+
+ .; unwind_scope: 1 ;.
+
+ .; generate_from_fn_node ;.
+push_carrier_stack $ fuxe ;.
+hold_type_by_name $ fbase ;.
+push_carrier_raw_value $ #+ ;.
+ .; args ;.
+push_carrier_stack $ lambda ;.
+hold_type_by_name $ u4 ;.
+push_carrier_raw_value $ 3 ;.
+
+push_unwind_scope $ 1 result ;.
+
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay, text width=.95\linewidth]
+
+%\lstovn{4.6,7.6}{1}
+%\lstovn{8.2,9.9}{2}
+%\lstovn{3.25,2.6}{3}
+
+\end{tikzpicture} 
