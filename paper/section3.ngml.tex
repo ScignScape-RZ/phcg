@@ -457,5 +457,47 @@ governing how and when carriers in one channel may be linked
 by handoffs to carriers on other channels (of the same or 
 other kinds).
 }
+\p{One benefit of the channel-based framework I have presented here is 
+that it provides an intuitive breakdown of procedure-calls into 
+smaller steps.  A procedure call generally requires a structure involving 
+multiple carriers to be present in the context of the calling procedure 
+(while, on the called side, the procedure's signature provisions a 
+set of carriers that receive values from the calling context).  
+Preparation for the call therefore entails building up a set of 
+carriers and establishing their respective links to carriers on the 
+receiving end.  It is possible to divide this process into a 
+series of minimal sets, each involving operations on a single carrier.
+Via this interpretation, graphs modeling computer code 
+with channels an carriers can be translated into 
+sequences of minimal carrier-related instructions, which in turn can 
+be executed as a kind of virtual machine.  
+The scripting environment I am using in this paper for 
+demonstration \mdash{} which in the last chapter I covered 
+mostly from a grammar and parsing angle \mdash{} therefore 
+culminates in data structures constituting an Intermediate 
+Representation used by a runtime engine to translate the 
+compiled code to internal (mostly \Cpp{}) function-calls.  
+This involves two software components \mdash{} an algorithm to 
+walk through code graphs to generate Virtual Machine code 
+and then a runtime library to execute the code thereby 
+generated.  I will briefly summarize both components 
+as case-studies in how hypergraph code representations can 
+be transformd into concrete execution environments.
+}
+\p{\parlead{A Hypergraph-Based Virtual Machine}  According to channel theory, 
+an operational execution environment is, first an foremost, a 
+\q{virtual machine} which defines and operates on carriers, packages them 
+into channels, and then uses bundles of channels 
+as specifications for procedure-calls.  When \i{creating} virtual machine 
+code, we can then proceed by stepping through graph elements representing 
+channels and carrier, emitting data as needed to reconstruct 
+channels via minimal operations.  When \i{running} virtual machine 
+code, the important step is packaging groups of channels into a 
+single data structure (for each distinct procedure call) and then 
+mapping the resulting structure to a binary array which mimics the 
+\ABI{} (Application Binary Interface) of target procedures \mdash{} so 
+as to produce function-calls via the virtual machine which, at the 
+binary level, appear to be the result of compiled (e.g., \Cpp{}) functions.
+}
 \p{}
 \p{}
