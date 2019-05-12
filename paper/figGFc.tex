@@ -3,7 +3,7 @@
 \begin{tikzgrid}
     \node[]  (nn)                   {$n$};     
     \node[]  (ghostl)   [right=of nn]  {}; 
-    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carll)   [left=3mm of ghostl]  {}; 
+
     \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carlr)   [right=3mm of ghostl]  {}; 
         
     \node[]  (fng)   [right=of ghostl]  {\gFun}; 
@@ -14,25 +14,22 @@
     
     \node[]  (fnf)   [right=of ghostr]  {\fFun}; 
 
-    \draw[->, draw=red!40]
+    \draw[-]
     (nn) edge   node {\textit{input}}           (fng);
-    
-    \draw[-, line width=1pt]
-    (nn) edge   node {}  (ghostl);
-    \draw[->, line width=1pt]
-    (ghostl) edge   node {}  (fng);
         
-    \draw[->, draw=red!40]    (fng) edge                  node {\textit{modifies}}    (fnf); 
+    \draw[->, draw=red!40]    (fng) edge                  node {}    (fnf); 
     \draw[-, line width=1pt]
-    (fnf) edge   node {}  (ghostr);
+    (fng) edge   node {\textit{modifies}}  (ghostr);
     \draw[->, line width=1pt]
-    (ghostr) edge   node {}  (fng);    
+    (ghostr) edge   node {}  (fnf);    
     
     
-    %end path 
+    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (keyo)   [below = 11mm of nn]  {}; 
+    \node[right = 2mm of keyo.west]  {: output carriers}; 
     
-    
-    
+    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (keyi)   [below = 5mm of keyo]  {}; 
+    \node[right = 2mm of keyi.west]  {: input carriers}; 
+        
 \end{tikzgrid}
 \caption{figGFc} \label{fig:figGFc}
 \end{figure}
