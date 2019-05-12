@@ -6,17 +6,11 @@
     \node[]  (zz)    [right=of fng]              {$z$}; 
     \node[]  (fnf)   [right=of zz]  {\fFun{$x$}{$y$}}; 
 
-    \node[draw=darkRed!80,
-    fill=red!20,line width=1mm,minimum width=16mm,minimum height=5mm]  (exp)  
-    [above right=6.5mm and -5mm of fng]  {}; 
 
-    \node[draw=darkRed!80,
-       fill=red!20,thin,minimum width=42mm,minimum height=13mm]  (channel)  
-     [above right=9mm and 18.5mm of fng]  {}; 
+    \node[draw=darkRed!50,
+       fill=red!20,thin,minimum width=42mm,minimum height=9mm]  (channel)  
+     [above right=7mm and 19.5mm of fng]  {}; 
 
-    \node[
-    fill=red!20,thin,minimum width=16mm,minimum height=5mm]  (exp)  
-    [above right=6.5mm and -5mm of fng]  {{\footnotesize Channel:}}; 
 
  %   \path[->]
     \draw   (xy) edge [below, bend right=10, ->]  node {\textit{input}} (fng);
@@ -27,7 +21,7 @@
 
    \draw (fnf.north)+(-19mm,2mm) edge [yshift=5mm,
      shorten <=-19mm, shorten >= 2mm, bend right = 41, <-]  
-     node [yshift=5mm,xshift=-12mm] {modified input} (fng);
+     node [yshift=5mm,xshift=-12mm] {} (fng);
 
    \draw (fnf.north)+(-14mm,2mm) edge [yshift=1mm,
      shorten <=-11mm, shorten >= 2mm, bend right = 24, <-]  

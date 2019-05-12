@@ -4,7 +4,20 @@
     \node[]  (xy)                   {$x$,$y$}; 
     \node[]  (fng)   [right=of xy]  {\gFun{$x$}{$y$}}; 
     \node[]  (zz)    [right=of fng]              {$z$}; 
-    \node[]  (fnf)   [right=of zz]  {\fFun{$x$}{$y$}}; 
+    \node[]  (fnf)   [right=of zz]  {\fFun{$x$}{$y$}{$z$}}; 
+    
+    
+     \node[draw=darkRed!50,
+     fill=red!20,line width=1mm,minimum width=16mm,minimum height=5mm]  (exp)  
+     [above right=6.5mm and -5mm of fng]  {}; 
+     
+     \node[draw=darkRed!50,
+     fill=red!20,thin,minimum width=42mm,minimum height=13mm]  (channel)  
+     [above right=9mm and 18.5mm of fng]  {}; 
+     
+     \node[
+     fill=red!20,thin,minimum width=16mm,minimum height=5mm]  (exp)  
+     [above right=6.5mm and -5mm of fng]  {{\footnotesize Channel:}};    
 
  %   \path[->]
     \draw   (xy) edge [below, bend right=10, ->]  node {\textit{input}} (fng);
@@ -21,7 +34,7 @@
      shorten <=-11mm, shorten >= 2mm, bend right = 24, <-]  
      node [yshift=5mm,xshift=-12mm] {} (fng);
 
-    \node[]  (code)  [below=of xy]   {\lstinline{z = g(x, y); f(x, y, z)}}; 
+    \node[]  (code)  [below right = 15mm and 15mm of xy]   {\lstinline{z = g(x, y); f(x, y, z)}}; 
 
  
 \end{tikzgrid}

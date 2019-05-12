@@ -405,7 +405,7 @@ carrier handoffs).
 `p`
 
 `p.
-To illustrate, Figure~\ref{fig:figGFcomplexc},`input<figGFcomplexc>; modifies 
+To illustrate, Figure~\ref{fig:figGFcomplexc}`input<figGFcomplexc>; modifies 
 Figure~\ref{fig:figGFcomplex} so as to show carriers and handoffs, 
 analogous to Figure~\ref{fig:figGFc} adding carriers to Figure~\ref{fig:figGF}.  
 Each case where one procedure calls another can be modelled via a 

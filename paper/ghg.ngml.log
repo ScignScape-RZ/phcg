@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  11 MAY 2019 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  11 MAY 2019 23:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1750,7 +1750,7 @@ Underfull \vbox (badness 2302) has occurred while \output is active []
 LaTeX Font Warning: Command \large invalid in math mode on input line 101.
 
 (./figGF.tex) (./figGFcomplex.tex)
-Underfull \vbox (badness 1454) has occurred while \output is active []
+Underfull \vbox (badness 1205) has occurred while \output is active []
 
  [17]
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 205
@@ -1770,10 +1770,6 @@ Underfull \vbox (badness 1845) has occurred while \output is active []
  [19]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `fig:figGFComplexc' on page 20 undefined on input line
- 376.
 
 (./figGFcomplexc.tex)
 
@@ -1803,20 +1799,20 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 577--577
  []
 
 [22
-\pgfsyspdfmark {pgfid19}{2126776}{11924019}
+\pgfsyspdfmark {pgfid19}{2126776}{12815309}
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23
 \pgfsyspdfmark {pgfid21}{2126776}{16951505}
-\pgfsyspdfmark {pgfid25}{20777318}{8451717}
+\pgfsyspdfmark {pgfid25}{20777318}{9343007}
 ]
 Underfull \hbox (badness 1448) in paragraph at lines 631--632
 []\OT1/cmr/m/n/10.95 (+20) Further de-tails about re-duc-ing channel-packages
  []
 
 ) (./conclusion.ngml.tex
-Underfull \vbox (badness 2698) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
 [25]) (./biblio.tex [26]) [27
@@ -1838,10 +1834,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 38293 strings out of 492649
- 772760 string characters out of 6122986
+ 38292 strings out of 492649
+ 772741 string characters out of 6122986
  1020784 words of memory out of 5000000
- 40913 multiletter control sequences out of 15000+600000
+ 40912 multiletter control sequences out of 15000+600000
  554225 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,14n,101p,10425b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1872,10 +1868,10 @@ home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1095.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/f
 onts/type1/public/cm-super/sftt0800.pfb>
-Output written on ghg.ngml.pdf (27 pages, 418531 bytes).
+Output written on ghg.ngml.pdf (27 pages, 418687 bytes).
 PDF statistics:
- 797 PDF objects out of 1000 (max. 8388607)
- 722 compressed objects within 8 object streams
+ 798 PDF objects out of 1000 (max. 8388607)
+ 723 compressed objects within 8 object streams
  440 named destinations out of 1000 (max. 500000)
  28307 words of extra memory for PDF output out of 29859 (max. 10000000)
 
