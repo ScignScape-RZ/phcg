@@ -1,8 +1,16 @@
 \begin{figure}
 \centering
 \begin{tikzgrid}
- 
-    \node[]  (xy)                   {$x$,$y$}; 
+
+ \node[]  (xy) [ellipse,minimum width=13mm,minimum height=9mm,
+ inner sep=2pt, outer sep=0pt,draw=blue!40!cyan,fill=blue!20]                  {}; 
+    \node[]  (xl) [below left=-0.5mm and 3mm of xy, circle,minimum size=2mm,
+    inner sep=2pt, outer sep=0pt,draw=darkRed,fill=white]                  {$x$}; 
+    \node[]  (yl) [right=6mm of xl,circle,minimum size=2mm,
+    inner sep=1.5pt, outer sep=0pt,draw=darkRed,fill=white]                  {$y$}; 
+    
+
+    
   
     \node[]  (ghostll)   [below right=6mm and 2mm of xy]  {};    
     
@@ -48,6 +56,10 @@ fill=red!20,thin,minimum width=11mm,minimum height=9mm]  (channel)
 \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carrb)   
   [right= of yy, xshift = -5mm]  {};   
 
+\draw[draw=blGreen!30!black,thick,->>,>=stealth,bend left=90]  (xx) 
+to (carrt);
+
+
  %   \path[->]
     \draw   (xy) edge [below, bend right=10, ->]  node {\textit{input}} (fng);
     \draw   (xy) edge [bend left=10, ->]  node {} (fng);
@@ -57,10 +69,25 @@ fill=red!20,thin,minimum width=11mm,minimum height=9mm]  (channel)
 \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carz)   
   [below right= 12mm of fng]  {};    
     
-    \draw   (zz) edge [below, xshift=5mm, ->]  node {\textit{input}} (ghostbb);
+    \draw   (zz) edge [below, xshift=6mm, ->]  node {\textit{input}} (ghostbb);
 
 \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carzi)   
-[above right= 7mm and 19.5mm of zz]  {}; 
+[above right= 7mm and 20.5mm of zz]  {}; 
+
+    \draw   (zz) edge [->>,draw=blGreen!30!black,thick,
+      >=stealth,bend left=19]  (carzi);
+      
+%    \draw   (carz) edge [->>,draw=blGreen!30!black,thick,
+%    >=stealth,bend right=180,out=180,in=180]  (zz);
+
+
+\node (gg) [below left=-1mm of carz.south] {};
+\node (ggg) [below=3.1mm of carz.south] {};
+\draw[draw=blGreen!30!black,thick]  (gg) 
+  arc[radius=2mm,start angle=90,delta angle=200];
+  
+\draw[draw=blGreen!30!black,thick,->>,>=stealth]  (ggg) 
+ to (zz.west);
 
     \draw   (ghostt) edge [->]  node {} (xx);
     \draw   (ghostb) edge [->]  node {} (yy);
