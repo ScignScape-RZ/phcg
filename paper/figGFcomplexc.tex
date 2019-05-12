@@ -1,31 +1,81 @@
 \begin{figure}
 \centering
 \begin{tikzgrid}
+ 
     \node[]  (xy)                   {$x$,$y$}; 
-    \node[]  (fng)   [right=of xy]  {\gFun{$x$}{$y$}}; 
-    \node[]  (zz)    [right=of fng]              {$z$}; 
-    \node[]  (fnf)   [right=of zz]  {\fFun{$x$}{$y$}}; 
+  
+    \node[]  (ghostll)   [below right=6mm and 2mm of xy]  {};    
+    
+    \node[]  (fng)   [right=of ghostll]  {\gFun{$x$}{$y$}}; l
+
+    \node[]  (ghostl)   [right=8mm of fng]  {};    
+    \node[]  (ghostt)   [above right=3.5mm of fng]  {};    
+    \node[]  (ghostb)   [below right=3.5mm of fng]  {};    
 
 
-    \node[draw=darkRed!50,
-       fill=red!20,thin,minimum width=42mm,minimum height=9mm]  (channel)  
-     [above right=7mm and 19.5mm of fng]  {}; 
 
+\node[draw=darkRed!50,
+fill=red!20,thin,minimum width=11mm,minimum height=9mm]  (channel)  
+[right=12mm of fng]  {}; 
+
+
+\node[draw=darkRed!50,
+fill=red!20,thin,minimum width=11mm,minimum height=9mm]  (channel)  
+[right=34mm of fng]  {}; 
+
+    \node[circle,minimum size=2mm,
+    inner sep=2pt, outer sep=0pt,draw=darkRed,fill=white]  (xx)    [right= of ghostt]              {$x$}; 
+    \node[circle,minimum size=2mm,
+    inner sep=1.5pt, outer sep=1pt,draw=darkRed,fill=white]  (yy)    [right= of ghostb]              {$y$}; 
+
+
+
+    \node[]  (zz)    [circle,minimum size=2mm,
+    inner sep=2pt, outer sep=2pt,draw=darkRed,fill=white,below right= of fng]              {$z$}; 
+ 
+    \node[]  (ghostr)   [right= of zz]  {}; 
+     
+    \node[]  (fnf)   [above right= of ghostr]  {\fFun{$x$}{$y$}}; 
+        \node[]  (ghosttf)   [above left=3.5mm of fnf]  {};    
+        \node[]  (ghostbf)   [below left=3.5mm of fnf]  {};   
+        \node[]  (ghostbb)   [below =3mm of fnf]  {};   
+
+
+
+
+\node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carrt)   
+  [right= of xx, xshift = -5mm]  {}; 
+\node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carrb)   
+  [right= of yy, xshift = -5mm]  {};   
 
  %   \path[->]
     \draw   (xy) edge [below, bend right=10, ->]  node {\textit{input}} (fng);
     \draw   (xy) edge [bend left=10, ->]  node {} (fng);
-    \draw   (fng) edge [below, ->]  node {\textit{output}} (zz);
-    \draw   (zz) edge [below, ->]  node {\textit{input}} (fnf);
-     %end path
+   
+    \draw   (fng) edge [below, ->]  node [xshift = -10mm] {\textit{output}} (zz);
+    
+\node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carz)   
+  [below right= 12mm of fng]  {};    
+    
+    \draw   (zz) edge [below, xshift=5mm, ->]  node {\textit{input}} (ghostbb);
 
-   \draw (fnf.north)+(-19mm,2mm) edge [yshift=5mm,
-     shorten <=-19mm, shorten >= 2mm, bend right = 41, <-]  
-     node [yshift=5mm,xshift=-12mm] {} (fng);
+\node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carzi)   
+[above right= 7mm and 19.5mm of zz]  {}; 
 
-   \draw (fnf.north)+(-14mm,2mm) edge [yshift=1mm,
-     shorten <=-11mm, shorten >= 2mm, bend right = 24, <-]  
-     node [yshift=5mm,xshift=-12mm] {} (fng);
+    \draw   (ghostt) edge [->]  node {} (xx);
+    \draw   (ghostb) edge [->]  node {} (yy);
+
+    \draw   (xx) edge [->]  node {} (ghosttf);
+    \draw   (yy) edge [->]  node {} (ghostbf);
+
+
+%   \draw (fnf.north)+(-19mm,2mm) edge [yshift=5mm,
+%     shorten <=-19mm, shorten >= 2mm, bend right = 41, <-]  
+%     node [yshift=5mm,xshift=-12mm] {} (fng);
+
+%   \draw (fnf.north)+(-14mm,2mm) edge [yshift=1mm,
+%     shorten <=-11mm, shorten >= 2mm, bend right = 24, <-]  
+%     node [yshift=5mm,xshift=-12mm] {} (fng);
 
 
 
