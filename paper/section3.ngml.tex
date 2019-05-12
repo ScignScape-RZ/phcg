@@ -102,8 +102,8 @@ function calls, and how usages of return valued are notated.
 \p{Mutable references and procedures-with-side-effects expose limits 
 in the representational expressivity of graphs (even hypergraphs) 
 for modelling inter-procedure relationships.  Consider a case 
-such as represented in Figure~\ref{fig:figGF} 
-\input{figGF}, where \gFun{} modifies 
+such as represented in Figure~\ref{fig:figGF}, 
+\input{figGF} where \gFun{} modifies 
 input $n$ that is then also input to \fFun{}.  Here \gFun{}'s 
 effect on \fFun{}'s input is marked by a \gFun{}-to-\fFun{} 
 arrow, but this directed edge implies a different semantic 
@@ -326,7 +326,7 @@ to being in a state where it holds an instance of its type
 by repacing its held value with another value; or by 
 becoming \q{retired}).  A \cCarOne{}-to-\cCarTwo{} \q{handoff} then 
 corresponds to a morphism in \cCarTwo{}'s state wherein 
-\cCarTwo{} (perhaps transitions out out a pre-initialized state and) 
+\cCarTwo{} (perhaps transitions out of a pre-initialized state and) 
 acauires a concrete value derived from \cCarOne{}'s.  
 This case \mdash{} I'll call it a \q{handoff-induced morphism} 
 \mdash{} plays a foundational role in analysis via carriers and 

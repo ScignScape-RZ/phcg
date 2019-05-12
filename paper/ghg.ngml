@@ -17,18 +17,68 @@
 
 `document,
 
-`title.Every Typed Value is a Hypernode: A generalized hypergraph representation for 
-data structures and computer code`
+`title.Hypergraph Data Modeling and a Hypergraph Virtual Machine`
 
 `maketitle;
 
 `abstract,
-GHG
+This paper will argue for multi-purpose hypegraph data models as a 
+generic representation paradigm for data sharing and publication.  
+Seeking to unify disparate constructions where hypergraphs generalize 
+ordinary (labelled, directed) graphs, I propose a multi-disciplinary 
+hypergraph framework which captures hypergraph structures found 
+in mathematics, linguistics, computer science, and related disciplines.  
+I consider how to integrate these varying structures and propose an 
+overarching generalized model which I call `q.procedural` hypergraphs 
+and a `q.Procedural Hypergraph Ontology` (Phaon).    
+I then discuss hypergraph representations of computer code and 
+implementation strategies for a runtime execution environment 
+with hypergraphs as the principle internal data representation.  
+This paper is paired with a code repository demonstrating such a 
+Hypergraph Virtual Machine (Phaon Virtual Machine, or `PVM;).  
+I outline parsing and compiler techniques for `PVM; as a 
+case-study in the supporting ecosystem necessary for 
+hypergraph paradigms to be useful in lieu of, for 
+instance, Semantic Web Ontologies.
 `abstract`
 
-`quote,
+%`quote,
+%`quote`  %--  
 
-`quote`  %--  
+\begin{flushright}
+\begin{minipage}{22em}
+On conna\^{\OldI}t la c\'{e}l\`{e}bre affirmation de Claude L\'{e}vi-Strauss: 
+\q{les sciences humaines seront structurales ou ne seront pas}.  Nous aimerions lui en
+adjoindre une autre: \q{les sciences humaines seront des sciences naturelles ou ne seront pas}. 
+Evidemment, sauf \`{a} en revenir \`{a} un r\'{e}ductionnisme dogmatique, une telle
+affirmation n'est soutenable que si l'on peut suffisamment g\'{e}n\'{e}raliser le concept
+classique de \q{naturalit\'{e}}, le g\'{e}n\'{e}raliser jusqu'\`{a} pouvoir y faire droit, 
+comme \`{a} des ph\'{e}nom\`{e}nes naturels, aux ph\'{e}nom\`{e}nes d'organisation structurale.
+\\ \longdash{} Jean Petitot, \cite[p. 1]{PetitotSyntaxe}{}
+\end{minipage}
+\end{flushright}
+
+\begin{flushright}
+\begin{minipage}{22em}
+What does $M$ really do in the information system?  It acts as
+an interface between the (external) world and the control 
+system.  It structures influences to allow focused purposeful
+control.  If any sense of significance can be given
+to a particular state $m$ of $M$, it must be related
+to this interface function.  The
+significance of $m$ is neither that it
+tracks something external nor
+that it can affect the
+control mechanisms of the system,
+but that it can connect one to the
+other.  The idea of interface allows
+us to specify a notion of meaning for a datum
+in an information system ... in the whole process
+of purposeful interaction between the information system and the environment.
+\\ \longdash{} Orlin Vakarelov, \cite[p. 1]{OrlinVakarelov}{}
+\end{minipage}
+\end{flushright}
+
 
 `vspace<1em>;
 

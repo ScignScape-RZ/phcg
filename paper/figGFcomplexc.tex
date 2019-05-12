@@ -76,7 +76,7 @@ to (carrb);
 \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carz)   
   [below right= 12mm of fng]  {};    
     
-    \draw   (zz) edge [below, xshift=6mm, ->,-to]  node {\textit{input}} (ghostbb);
+    \draw   (zz) edge [below, ->,-to]  node [xshift=2mm]{\textit{input}} (ghostbb);
 
 \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carzi)   
 [above right= 7mm and 20.5mm of zz]  {}; 
@@ -107,7 +107,7 @@ to (carrb);
      {\lstinline{z = g(x, y); f(x, y, z)}}; 
 
     \node[]  (keyof)   [below left = 35mm and 3mm of xy]  {}; 
-    \node[]  (keyff)   [below right = 12mm and 89.5mm of keyof]  {}; 
+    \node[]  (keyff)   [below right = 19mm and 79.5mm of keyof]  {}; 
 
     \node[draw=yellow!25,line width=1mm,fill=cyan!8,
       fit={(keyof) (keyff)}] {};  
@@ -125,19 +125,21 @@ to (carrb);
     \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (keyi)   [right = 45mm  of keyo]  {}; 
     \node[right = 2mm of keyi.west]  {: input carriers}; 
 
-    \node (kx)   [below = 5mm of keyo,circle,minimum size=2mm,
+    \node (kx)   [below = 6mm of keyo,circle,minimum size=2mm,
     inner sep=2pt, outer sep=0pt,draw=darkRed,fill=white]  {$x$}; 
     \node (ky)   [right = 5mm of kx,circle,minimum size=2mm,
     inner sep=1.5pt, outer sep=0pt,draw=darkRed,fill=white]  {$y$};
-    \node[right = 4mm of ky.west]  {: carriers embedded in lexically-scoped symbols};     
+    \node[below right = -3.5mm and 4mm of ky.west,text width=70mm]  {:%
+    	\parbox[t][][t]{60mm}{carriers embedded in lexically-\\[-4pt]scoped symbols}};     
 
  
-    \node (keyaa)   [below = 5mm of kx]  {}; 
+    \node (keyaa)   [below = 9mm of kx]  {}; 
     \node (keyab)   [right = 5mm of keyaa]  {}; 
     \draw[draw=blGreen!30!black,thick,->>,>=stealth]  (keyaa.west) 
     to (keyab.east);
     
-    \node[right = 2mm of keyab.west] (txt)  {: handoffs (value transferred between carriers)};   
+    \node[below right = -3.5mm and 2mm of keyab.west] (txt)  {:%
+    	\parbox[t][][t]{60mm}{handoffs (value transferred between \\[-4pt]carriers)}};   
 
 %    \draw[fill=yellow,opacity=.1] (keyof) rectangle (keyff);  
 
