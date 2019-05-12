@@ -14,7 +14,7 @@
   
     \node[]  (ghostll)   [below right=6mm and 2mm of xy]  {};    
     
-    \node[]  (fng)   [right=of ghostll]  {\gFun{$x$}{$y$}}; l
+    \node[]  (fng)   [right=of ghostll]  {\gFun{$x$}{$y$}{$z$}}; l
 
     \node[]  (ghostl)   [right=8mm of fng]  {};    
     \node[]  (ghostt)   [above right=3.5mm of fng]  {};    
@@ -23,13 +23,13 @@
 
 
 \node[draw=darkRed!50,
-fill=red!20,thin,minimum width=11mm,minimum height=9mm]  (channel)  
-[right=12mm of fng]  {}; 
+fill=red!20,thin,minimum width=11mm,minimum height=11mm]  (channell)  
+[above right=1mm and 12mm of fng]  {}; 
 
 
 \node[draw=darkRed!50,
-fill=red!20,thin,minimum width=11mm,minimum height=9mm]  (channel)  
-[right=34mm of fng]  {}; 
+fill=red!20,thin,minimum width=11mm,minimum height=11mm]  (channelr)  
+[above right=1mm and 34mm of fng]  {}; 
 
     \node[circle,minimum size=2mm,
     inner sep=2pt, outer sep=0pt,draw=darkRed,fill=white]  (xx)    [right= of ghostt]              {$x$}; 
@@ -56,8 +56,11 @@ fill=red!20,thin,minimum width=11mm,minimum height=9mm]  (channel)
 \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carrb)   
   [right= of yy, xshift = -5mm]  {};   
 
-\draw[draw=blGreen!30!black,thick,->>,>=stealth,bend left=90]  (xx) 
+\draw[draw=blGreen!30!black,thick,->>,>=stealth,bend left=30]  (xx) 
 to (carrt);
+
+\draw[draw=blGreen!30!black,thick,->>,>=stealth,bend left=30]  (yy) 
+to (carrb);
 
 
  %   \path[->]
@@ -96,6 +99,42 @@ to (carrt);
     \draw   (yy) edge [->]  node {} (ghostbf);
 
 
+    \node[]  (keyof)   [below left = 28mm and 3mm of xy]  {}; 
+    \node[]  (keyff)   [below right = 16mm and 89.5mm of keyof]  {}; 
+
+    \node[draw=yellow!25,line width=1mm,fill=cyan!8,
+      fit={(keyof) (keyff)}] {};  
+
+    \node[draw=yellow!25!black,line width=.5mm,
+    fit={(keyof) (keyff)}] {};  
+
+%    \draw[draw=yellow!25!black,line width=1mm] (keyof) rectangle (keyff);  
+
+
+    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (keyo)  
+       [below right=1mm and 3mm of keyof]  {}; 
+    \node[right = 2mm of keyo.west]  {: output carriers}; 
+    
+    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (keyi)   [below = 5mm of keyo]  {}; 
+    \node[right = 2mm of keyi.west]  {: input carriers}; 
+
+    \node (kx)   [below = 5mm of keyi,circle,minimum size=2mm,
+    inner sep=2pt, outer sep=0pt,draw=darkRed,fill=white]  {$x$}; 
+    \node (ky)   [right = 5mm of kx,circle,minimum size=2mm,
+    inner sep=1.5pt, outer sep=0pt,draw=darkRed,fill=white]  {$y$};
+    \node[right = 4mm of ky.west]  {: carriers embedded in lexically-scoped symbols};     
+
+ 
+    \node (keyaa)   [below = 5mm of kx]  {}; 
+    \node (keyab)   [right = 5mm of keyaa]  {}; 
+    \draw[draw=blGreen!30!black,thick,->>,>=stealth]  (keyaa.west) 
+    to (keyab.east);
+    
+    \node[right = 2mm of keyab.west] (txt)  {: handoffs (value transferred between carriers)};   
+
+%    \draw[fill=yellow,opacity=.1] (keyof) rectangle (keyff);  
+
+    
 %   \draw (fnf.north)+(-19mm,2mm) edge [yshift=5mm,
 %     shorten <=-19mm, shorten >= 2mm, bend right = 41, <-]  
 %     node [yshift=5mm,xshift=-12mm] {} (fng);
