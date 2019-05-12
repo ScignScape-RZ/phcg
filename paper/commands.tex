@@ -749,6 +749,13 @@
 \usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
 \newsavebox\lstbox
  
+\usetikzlibrary{backgrounds} 
+
+\newenvironment{tikzgrid}{%
+\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto,
+framed,background rectangle/.style={double,ultra thick,draw=darkRed, bottom color=cyan!20, 
+	top color=black!20, rounded corners}]%
+}{\end{tikzpicture}}
  
 \usepackage[font=small,labelfont=bf]{caption}
 

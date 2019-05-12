@@ -362,7 +362,7 @@ to being in a state where it holds an instance of its type
 by repacing its held value with another value; or by 
 becoming `q.retired`/).  A `cCarOne;-to-`cCarTwo; `q.handoff` then 
 corresponds to a morphism in `cCarTwo;'s state wherein 
-`cCarTwo; (perhaps transitions out out a pre-initialized state and) 
+`cCarTwo; (perhaps transitions out of a pre-initialized state and) 
 acauires a concrete value derived from `cCarOne;'s.  
 This case %-- I'll call it a `q.handoff-induced morphism` 
 %-- plays a foundational role in analysis via carriers and 

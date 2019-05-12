@@ -1,6 +1,6 @@
 \begin{figure}
 \centering
-\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
+\begin{tikzgrid} 
     \node[]  (nn)                   {$n$}; 
     \node[]  (fng)   [right=of nn]  {\gFun}; 
     \node[]  (fnf)   [right=of fng]  {\fFun}; 
@@ -9,6 +9,6 @@
     (nn) edge   node {\textit{input}}           (fng)
     (fng) edge                  node {\textit{modifies}}    (fnf)
     ; %end path 
-\end{tikzpicture}
+\end{tikzgrid}
 \caption{figGF} \label{fig:figGF}
 \end{figure}

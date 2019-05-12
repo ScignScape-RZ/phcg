@@ -1,6 +1,6 @@
 \begin{figure}
 \centering
-\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
+\begin{tikzgrid}
     \node[]  (xy)                   {$x$,$y$}; 
     \node[]  (fng)   [right=of xy]  {\gFun{$x$}{$y$}}; 
     \node[]  (zz)    [right=of fng]              {$z$}; 
@@ -21,7 +21,9 @@
      shorten <=-11mm, shorten >= 2mm, bend right = 24, <-]  
      node [yshift=5mm,xshift=-12mm] {} (fng);
 
+    \node[]  (code)  [below=of xy]   {\lstinline{z = g(x, y); f(x, y, z)}}; 
+
  
-\end{tikzpicture}
-\caption{figGFComplex} \label{fig:figGFComplex}
+\end{tikzgrid}
+\caption{figGFComplex} \label{fig:figGFcomplex}
 \end{figure}

@@ -1,14 +1,38 @@
 \begin{figure}
 \centering
-\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
-    \node[]  (nn)                   {$n$}; 
-    \node[]  (fng)   [right=of nn]  {\gFun}; 
-    \node[]  (fnf)   [right=of fng]  {\fFun}; 
+\begin{tikzgrid}
+    \node[]  (nn)                   {$n$};     
+    \node[]  (ghostl)   [right=of nn]  {}; 
+    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carll)   [left=3mm of ghostl]  {}; 
+    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carlr)   [right=3mm of ghostl]  {}; 
+        
+    \node[]  (fng)   [right=of ghostl]  {\gFun}; 
+    
+    \node[]  (ghostr)   [right=of fng]  {}; 
+    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carrl)   [left=3mm of ghostr]  {}; 
+    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carrr)   [right=3mm of ghostr]  {};     
+    
+    \node[]  (fnf)   [right=of ghostr]  {\fFun}; 
 
-    \path[->]
-    (nn) edge   node {\textit{input}}           (fng)
-    (fng) edge                  node {\textit{modifies}}    (fnf)
-    ; %end path 
-\end{tikzpicture}
-\caption{figGF} \label{fig:figGF}
+    \draw[->, draw=red!40]
+    (nn) edge   node {\textit{input}}           (fng);
+    
+    \draw[-, line width=1pt]
+    (nn) edge   node {}  (ghostl);
+    \draw[->, line width=1pt]
+    (ghostl) edge   node {}  (fng);
+        
+    \draw[->, draw=red!40]    (fng) edge                  node {\textit{modifies}}    (fnf); 
+    \draw[-, line width=1pt]
+    (fnf) edge   node {}  (ghostr);
+    \draw[->, line width=1pt]
+    (ghostr) edge   node {}  (fng);    
+    
+    
+    %end path 
+    
+    
+    
+\end{tikzgrid}
+\caption{figGFc} \label{fig:figGFc}
 \end{figure}
