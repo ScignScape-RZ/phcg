@@ -1,35 +1,70 @@
 \begin{figure}
 \centering
 \begin{tikzgrid}
+	
+	
     \node[]  (nn)                   {$n$};     
     \node[]  (ghostl)   [right=of nn]  {}; 
-
+    
     \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carlr)   [right=3mm of ghostl]  {}; 
-        
+    
     \node[]  (fng)   [right=of ghostl]  {\gFun}; 
     
     \node[]  (ghostr)   [right=of fng]  {}; 
-    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carrl)   [left=3mm of ghostr]  {}; 
     \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carrr)   [right=3mm of ghostr]  {};     
     
     \node[]  (fnf)   [right=of ghostr]  {\fFun}; 
-
+    
     \draw[-]
     (nn) edge   node {\textit{input}}           (fng);
-        
-    \draw[->, draw=red!40]    (fng) edge                  node {}    (fnf); 
+    
+    \draw[->,thin]    (fng) edge                  node {}    (fnf); 
+%    \draw[->,-to, draw=red!60,line width=1mm,shorten 
+%    <=1pt,shorten >=-1pt]  (carrl) edge (carrr); 
     \draw[-, line width=1pt]
     (fng) edge   node {\textit{modifies}}  (ghostr);
-    \draw[->, line width=1pt]
-    (ghostr) edge   node {}  (fnf);    
+%    \draw[->, line width=1pt]
+%    (ghostr) edge   node {}  (fnf);    
+    
+    \node[]  (code)  [below right = 5mm and 1mm of nn]   {\lstinline{g(n); f(n)}};    
+    	
+%%%%%%%%%%%%%	
+	
+    \node[]  (nn1)   [below=13.5mm of nn]                 {$n$};     
+    \node[]  (ghostl1)   [right=of nn1]  {}; 
+
+    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carlr)   [right=3mm of ghostl1]  {}; 
+        
+    \node[]  (fng1)   [right=of ghostl1]  {\gFun}; 
+    
+    \node[]  (ghostr1)   [right=of fng1]  {}; 
+    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carrl1)   [left=3mm of ghostr1]  {}; 
+    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carrr1)   [right=3mm of ghostr1]  {};     
+    
+    \node[]  (fnf1)   [right=of ghostr1]  {\fFun}; 
+
+    \draw[-]
+    (nn1) edge   node {\textit{input}}           (fng1);
+        
+    \draw[->,thin]    (fng1) edge                  node {}    (fnf1); 
+    \draw[->,-to, draw=blGreen!30!black,line width=1mm,shorten 
+     <=.5pt,shorten >=.5pt]  (carrl1) edge (carrr1); 
+    \draw[-, thin]
+    (fng1) edge   node {\textit{output}}  (ghostr1);
+    \draw[->,thin]
+    (ghostr1) edge   node {}  (fnf1);    
+
+    \node[]  (code1)  [below right = 5mm and 1mm of nn1]   {\lstinline{f(g(n))}}; 
     
     
-    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (keyo)   [below = 11mm of nn]  {}; 
+    \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (keyo)   [below = 15mm of nn1]  {}; 
     \node[right = 2mm of keyo.west]  {: output carriers}; 
     
-    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (keyi)   [below = 5mm of keyo]  {}; 
+    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (keyi)   [right = 45mm of keyo]  {}; 
     \node[right = 2mm of keyi.west]  {: input carriers}; 
+    
+    
         
 \end{tikzgrid}
-\caption{figGFc} \label{fig:figGFc}
+\caption{Modification vs. Output: With Carriers} \label{fig:figGFc}
 \end{figure}

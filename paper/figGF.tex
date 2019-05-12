@@ -7,8 +7,21 @@
 
     \path[->]
     (nn) edge   node {\textit{input}}           (fng)
-    (fng) edge                  node {\textit{modifies}}    (fnf)
-    ; %end path 
+    (fng) edge                  node {\textit{modifies}}    (fnf);
+
+    \node[]  (code)  [below right = 5.5mm and 1mm of nn]   {\lstinline{g(n); f(n)}}; 
+
+    \node[]  (nn1)   [below = 21mm of nn]                {$n$}; 
+    \node[]  (fng1)   [right=of nn1]  {\gFun}; 
+    \node[]  (fnf1)   [right=of fng1]  {\fFun}; 
+    
+    \path[->]
+    (nn1) edge   node {\textit{input}}           (fng1)
+    (fng1) edge                  node {\textit{output}}    (fnf1);
+    
+    \node[]  (code1)  [below right = 5mm and 1mm of nn1]   {\lstinline{f(g(n))}}; 
+        
+
 \end{tikzgrid}
-\caption{Parameter Modification as (in lieu of) Output} \label{fig:figGF}
+\caption{Parameter Modification vs. Output} \label{fig:figGF}
 \end{figure}

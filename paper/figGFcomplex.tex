@@ -20,18 +20,18 @@
      [above right=6.5mm and -5mm of fng]  {{\footnotesize Channel:}};    
 
  %   \path[->]
-    \draw   (xy) edge [below, bend right=10, ->]  node {\textit{input}} (fng);
-    \draw   (xy) edge [bend left=10, ->]  node {} (fng);
-    \draw   (fng) edge [below, ->]  node {\textit{output}} (zz);
-    \draw   (zz) edge [below, ->]  node {\textit{input}} (fnf);
+    \draw   (xy) edge [below, bend right=10, ->,-to]  node {\textit{input}} (fng);
+    \draw   (xy) edge [bend left=10, ->,-to]  node {} (fng);
+    \draw   (fng) edge [below, ->]  node [xshift=-8pt]{\textit{output}} (zz);
+    \draw   (zz) edge [below, ->]  node [xshift=-2pt]{\textit{input}} (fnf);
      %end path
 
    \draw (fnf.north)+(-19mm,2mm) edge [yshift=5mm,
-     shorten <=-19mm, shorten >= 2mm, bend right = 41, <-]  
+     shorten <=-19mm, shorten >= 2mm, bend right = 41, <-,>=to]  
      node [yshift=5mm,xshift=-12mm] {modified input} (fng);
 
    \draw (fnf.north)+(-14mm,2mm) edge [yshift=1mm,
-     shorten <=-11mm, shorten >= 2mm, bend right = 24, <-]  
+     shorten <=-11mm, shorten >= 2mm, bend right = 24, <-,>=to]  
      node [yshift=5mm,xshift=-12mm] {} (fng);
 
     \node[]  (code)  [below right = 15mm and 15mm of xy]   {\lstinline{z = g(x, y); f(x, y, z)}}; 

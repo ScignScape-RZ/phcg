@@ -14,7 +14,7 @@
   
     \node[]  (ghostll)   [below right=6mm and 2mm of xy]  {};    
     
-    \node[]  (fng)   [right=of ghostll]  {\gFun{$x$}{$y$}{$z$}}; l
+    \node[]  (fng)   [right=of ghostll]  {\gFun{$x$}{$y$}}; 
 
     \node[]  (ghostl)   [right=8mm of fng]  {};    
     \node[]  (ghostt)   [above right=3.5mm of fng]  {};    
@@ -26,6 +26,10 @@
 fill=red!20,thin,minimum width=11mm,minimum height=11mm]  (channell)  
 [above right=1mm and 12mm of fng]  {}; 
 
+
+    \node[]  (comment)   [above right=9mm and 4.5mm of fng,
+    fill=white,draw=yellow!45!gray,text width=19.5mm,inner sep=3pt]  
+    {{\scriptsize \textit{{\gFun} may modify\\[-6pt] $x$ or $y$}}}; 
 
 \node[draw=darkRed!50,
 fill=red!20,thin,minimum width=11mm,minimum height=11mm]  (channelr)  
@@ -64,15 +68,15 @@ to (carrb);
 
 
  %   \path[->]
-    \draw   (xy) edge [below, bend right=10, ->]  node {\textit{input}} (fng);
-    \draw   (xy) edge [bend left=10, ->]  node {} (fng);
+    \draw   (xy) edge [below,  bend right=10, ->,-to]  node {\textit{input}} (fng);
+    \draw   (xy) edge [bend left=10, ->,-to]  node {} (fng);
    
     \draw   (fng) edge [below, ->]  node [xshift = -10mm] {\textit{output}} (zz);
     
 \node[draw,line width=2pt,minimum width=1mm,minimum height=1mm ]  (carz)   
   [below right= 12mm of fng]  {};    
     
-    \draw   (zz) edge [below, xshift=6mm, ->]  node {\textit{input}} (ghostbb);
+    \draw   (zz) edge [below, xshift=6mm, ->,-to]  node {\textit{input}} (ghostbb);
 
 \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (carzi)   
 [above right= 7mm and 20.5mm of zz]  {}; 
@@ -95,12 +99,15 @@ to (carrb);
     \draw   (ghostt) edge [->]  node {} (xx);
     \draw   (ghostb) edge [->]  node {} (yy);
 
-    \draw   (xx) edge [->]  node {} (ghosttf);
-    \draw   (yy) edge [->]  node {} (ghostbf);
+    \draw   (xx) edge [->,-to]  node {} (ghosttf);
+    \draw   (yy) edge [->,-to]  node {} (ghostbf);
 
 
-    \node[]  (keyof)   [below left = 28mm and 3mm of xy]  {}; 
-    \node[]  (keyff)   [below right = 16mm and 89.5mm of keyof]  {}; 
+    \node[]  (code)  [below right = 28mm and 40mm of xy]   
+     {\lstinline{z = g(x, y); f(x, y, z)}}; 
+
+    \node[]  (keyof)   [below left = 35mm and 3mm of xy]  {}; 
+    \node[]  (keyff)   [below right = 12mm and 89.5mm of keyof]  {}; 
 
     \node[draw=yellow!25,line width=1mm,fill=cyan!8,
       fit={(keyof) (keyff)}] {};  
@@ -115,10 +122,10 @@ to (carrb);
        [below right=1mm and 3mm of keyof]  {}; 
     \node[right = 2mm of keyo.west]  {: output carriers}; 
     
-    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (keyi)   [below = 5mm of keyo]  {}; 
+    \node[draw,line width=1pt,minimum width=1mm,minimum height=1mm ]  (keyi)   [right = 45mm  of keyo]  {}; 
     \node[right = 2mm of keyi.west]  {: input carriers}; 
 
-    \node (kx)   [below = 5mm of keyi,circle,minimum size=2mm,
+    \node (kx)   [below = 5mm of keyo,circle,minimum size=2mm,
     inner sep=2pt, outer sep=0pt,draw=darkRed,fill=white]  {$x$}; 
     \node (ky)   [right = 5mm of kx,circle,minimum size=2mm,
     inner sep=1.5pt, outer sep=0pt,draw=darkRed,fill=white]  {$y$};
