@@ -8,6 +8,8 @@ border rotated/.style = {shape border rotate=180},
 hex/.style = {draw=red!20!black, inner sep=-1, 
 	regular polygon, regular polygon sides=6,yscale=0.25,
 },
+framed,background rectangle/.style={thin,draw=darkRed!50, top color=blGreen!20, 
+	bottom color=yellow!10, rounded corners}
 ]
 
     \node [circle, draw=black, fill=white, inner sep=0pt,minimum size=5mm, text width=2cm, align=center] (nSrcCode) at 
@@ -15,7 +17,7 @@ hex/.style = {draw=red!20!black, inner sep=-1,
  
     \trinode{below right = 2mm and 40mm of nSrcCode}{nRelaeGraph}{RelaeGraph}     
        
-    \hexnode{below right = 10mm and -20mm of nSrcCode}{nPGBIR}{PGBIR} 
+    \hexnode{below right = 10mm and -18mm of nSrcCode}{nPGBIR}{PGBIR} 
   
     \trinode{below right = 4mm and 30mm of nPGBIR}{nPhaonGraph}{PhaonGraph}     
 
@@ -24,14 +26,14 @@ hex/.style = {draw=red!20!black, inner sep=-1,
     \node[draw, text width=4cm, align=center,below=1cm of nPVMIR]  (nPhaonRT)  {PhaonRuntime};   
 
    \draw (nRelaeGraph.north)+(-7mm,0mm) edge [yshift=1mm, bend right = 8, <-]  
-     node [yshift=3mm] {hypergraph parser} (nSrcCode);
+     node [yshift=4mm,xshift=5.5mm] {Hypergraph Parser} (nSrcCode);
    \draw (nPGBIR.north)+(7mm,0mm) edge [above, bend left = 8, <-] 
-     node [yshift=-1mm,xshift=-2mm] {Phaon Graph Build} (nRelaeGraph.west) ;
+     node [yshift=-1mm,xshift=-3.5mm] {Phaon Graph Build} (nRelaeGraph.west) ;
    \draw (nPGBIR) edge  [bend left = 8, ->, shorten >=1mm]  node {} (nPhaonGraph.north);
    \draw (nPhaonGraph) edge [->]  node {}  (nPVMIR)    ;
    \draw (nPVMIR) edge  [bend right, ->]  node {} (nPhaonRT)   ; 
     
     %end path 
 \end{tikzpicture}
-\caption{M1} \label{fig:figLanguageEngine}
+\caption{Compiler Pipeline for the Phaon Virtual Machine} \label{fig:figLanguageEngine}
 \end{figure}

@@ -114,8 +114,8 @@ function calls, and how usages of return valued are notated.
 Mutable references and procedures-with-side-effects expose limits 
 in the representational expressivity of graphs (even hypergraphs) 
 for modelling inter-procedure relationships.  Consider a case 
-such as represented in Figure~\ref{fig:figGF} 
-`input<figGF>;, where `gFun; modifies 
+such as represented in Figure~\ref{fig:figGF}, 
+`input<figGF>; where `gFun; modifies 
 input $n$ that is then also input to `fFun;.  Here `gFun;'s 
 effect on `fFun;'s input is marked by a `gFun;-to-`fFun; 
 arrow, but this directed edge implies a different semantic 
