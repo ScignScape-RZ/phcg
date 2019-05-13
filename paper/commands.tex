@@ -165,6 +165,22 @@
 
 \let\OldI\i
 
+\newenvironment{frquote}{%
+%\begin{fcolorbox}{yellow!20!gray}{red!5}
+\begin{tcolorbox}[colback=orange!6,
+	colframe=yellow!20!gray,
+	width=24em,
+	arc=3mm, auto outer arc,enhanced jigsaw,
+	]
+\begin{minipage}{22em}
+\begin{flushright}
+\begin{minipage}{22em}}{%
+\end{minipage}
+\end{flushright}
+\end{minipage}
+\end{tcolorbox}
+}
+	
 
 \newcommand{\mdash}{---}
 \newcommand{\q}[1]{``#1"}
