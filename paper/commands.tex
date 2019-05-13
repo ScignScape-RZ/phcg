@@ -167,18 +167,23 @@
 
 \newenvironment{frquote}{%
 %\begin{fcolorbox}{yellow!20!gray}{red!5}
-\begin{tcolorbox}[colback=orange!6,
+%\begin{flushright}
+\begin{tcolorbox}[
+	colback=orange!6,
 	colframe=yellow!20!gray,
-	width=24em,
+	width=1.95\linewidth,
 	arc=3mm, auto outer arc,enhanced jigsaw,
 	]
-\begin{minipage}{22em}
+\begin{scriptsize}
+\begin{minipage}{57em}
 \begin{flushright}
-\begin{minipage}{22em}}{%
+\begin{minipage}{58em}}{%
 \end{minipage}
 \end{flushright}
 \end{minipage}
+\end{scriptsize}
 \end{tcolorbox}
+%\end{flushright}
 }
 	
 
@@ -762,7 +767,7 @@
 \newcommand{\parleader}[1]{\noindent\textbf{#1}\hspace{1em}}
 \newcommand{\parlead}[1]{\parleader{#1}}
 
-\usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
+\usepackage[breakable]{tcolorbox}% http://ctan.org/pkg/tcolorbox
 \newsavebox\lstbox
  
 \usetikzlibrary{backgrounds} 
