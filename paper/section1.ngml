@@ -62,6 +62,7 @@ drawn from an Ontology, in `q.Subject-Predicate-Object`
 triples).  Compound labels (which I will generically call 
 `q.annotations` or multiple-annotations) are encountered (sometimes implicitly) 
 in several different branches of mathematics and other fields.  
+\\\hspace*{3em}
 In particular, compound annotations can represent the 
 rules, justifications, or `q.compatibility` which allows 
 two nodes to be connected.   In this case the annotation 
@@ -82,8 +83,9 @@ mark information flows between different sites `i.inside` the
 system.  A directed hyperedge `i.without` a source node-sets then 
 models information `i.entering` the system `i.ab initio`/.  
 Likewise hyperedges without target node-sets could model 
-empirical effects produce by the system, which from one 
-perspective embodies information `q.leaving` the system.  
+empirical effects produced by the system, which from one 
+perspective embodies information `q.leaving` the system.
+\\\hspace*{3em}
 Analogous models can be realized by, in lieu of 
 hyperedges `i.without` source or target node-sets at all, 
 designating special hypernodes representing empty 
@@ -110,11 +112,10 @@ components %-- is itself a fact, datapoint, or
 assertion, and as such can be on some perspectives a 
 singular element in a space of information.  
 The Semantic Web, for example, includes `q.reified` 
-edges (or reified `q.triples`/, referring to the common 
-term for Subject/Predicate/Object associations).  
+edges (Subject/Predicate/Object triples).  
 Reification permits properties to be stated about edges, 
 such as provenance data (who asserts the edge and on 
-what evidence) and context (the assertion believed true 
+what evidence) and context (the assertion is believed true 
 at a specific time or in a given context).  
 It is plausible then to allow reified edges 
 to be treated as nodes incident to other edges.  As 
@@ -142,12 +143,17 @@ source or target node.  The set of incoming and/or outgoing  edges
 to each node may be partitioned into distinct 
 `q.channels`/, so that at one scale of consideration the network 
 structure can be analyzed via channels rather than via 
-single edges.  For a concrete example, 
+single edges (this shows why channels mark edge `i.diversification` 
+as well as edge `i.aggregation`/, because the conceptual role 
+of edges is potentially replaced by channels, which are composed 
+of numerous edges).
+\\\hspace*{3em}
+For a concrete example, 
 consider graphs used to model Object-Oriented programming 
 languages, where a single node can represent a 
 single function call.  The incoming edges are then 
 `q.input parameters`/, and outgoing edges are procedural 
-results or outputs.  In the Object-Oriented paradigm, however, 
+results or `q.outputs`/.  In the Object-Oriented paradigm, however, 
 input paramters are organized into two groups: in addition 
 to any number of `q.conventional` arguments, there is 
 a single `this; or `self; object which has a distinct  semantic 
@@ -171,7 +177,15 @@ etc.).  According to the theory known as `q.link grammar`/,
 words are associated with `q.connectors` (a related useful terminology, 
 derived more in a Cognitive-Linguistic context, holds that 
 words carry `q.expectations` which must be matched by other words they 
-could connect to).  The word `i.many`/, for instance, as in `i.many dogs`/, 
+could connect to).`footnote.
+Link Grammar proper was develeped by Davy Temperley and Daniel Sleator 
+`cite<TemperleySleator>;, `cite<GoertzelPLN>;, and computer 
+scientists such as Kenneth Holmqvist and Matt Selway have adopted 
+concepts from Link Grammar as part of projects formalizing 
+Cognitive Linguistics in the tradition associated (notably) with 
+Ronald Langacker `cite<HolmqvistDiss>;, `cite<MattSelway>;.
+`footnote`
+  The word `i.many`/, for instance, as in `i.many dogs`/, 
 carries an implicit expectation to be paired with a plural noun.  The actual 
 syntactic connection %-- as would be embodied by a graph-edge when a graph 
 formation is employed to model parse structures %-- therefore depends on 
