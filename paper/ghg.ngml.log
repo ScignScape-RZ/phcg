@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  13 MAY 2019 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  13 MAY 2019 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1595,35 +1595,25 @@ Overfull \hbox (8.50012pt too wide) in paragraph at lines 58--66
 LaTeX Warning: No \author given.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
-| []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
-[]
- []
-
-
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgfornament/vecto
-rian/vectorian84.pgf) (./intro.ngml.tex [1{/home/nlevisrael/texl/texlive-instal
-l/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+rian/vectorian84.pgf) (./intro.ngml.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/home/nlevisrael/texl/texlive-install/texmf-var/fonts/map/pdftex/updmap/pdf
+tex.map}
 
 
 
 \providecommand\tcolorbox@label[2]{}
 
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
+] [2] [3] [4]
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
- [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4])
+)
 (./section1.ngml.tex [5] [6] [7] [8]
 LaTeX Font Info:    Try loading font information for U+euf on input line 308.
 
@@ -1658,15 +1648,16 @@ Overfull \hbox (8.55525pt too wide) in paragraph at lines 37--38
  []
 
 )
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
-
 Underfull \hbox (badness 5533) in paragraph at lines 156--157
 \OT1/cmr/bx/n/10.95 General-Purpose Hy-per-graph Parsers  \OT1/cmr/m/n/10.95 (+
 20) The
  []
 
-[12] (./figStringContext.tex
+
+Underfull \vbox (badness 1122) has occurred while \output is active []
+
+ [12]
+(./figStringContext.tex
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/listings/lstlang1.s
 ty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1692,22 +1683,23 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 199--199
 [] $[]$| [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13
-\pgfsyspdfmark {pgfid7}{20777318}{21080273}
+[13
+\pgfsyspdfmark {pgfid7}{20777318}{18253992}
 ] (./figAddToken.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 229--229
 [] $[]$| [] 
  []
 
-[14
-\pgfsyspdfmark {pgfid12}{2126776}{19105826}
-] (./figIR.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14
+\pgfsyspdfmark {pgfid12}{2126776}{17200001}
+]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
+(./figIR.tex
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/listings/lstlang1.s
 ty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1735,20 +1727,17 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 341--341
 [] $[]$| [] 
  []
 
-(./figPGBIR.tex)
+[15
+\pgfsyspdfmark {pgfid14}{20777318}{22000604}
+] (./figPGBIR.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 366--366
 [] $[]$| [] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `lst:PGBIR' on page 16 undefined on input line 385.
 
-
-LaTeX Warning: Reference `lst:PGBIR' on page 15 undefined on input line 385.
-
-[15
-\pgfsyspdfmark {pgfid14}{20777318}{29314451}
-] (./figPGB.tex)
+(./figPGB.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 438--438
 [] $[]$| [] 
  []
@@ -1757,7 +1746,7 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 438--438
 Underfull \vbox (badness 2302) has occurred while \output is active []
 
  [16
-\pgfsyspdfmark {pgfid16}{2126776}{19704017}
+\pgfsyspdfmark {pgfid16}{2126776}{11311681}
 ]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1775,10 +1764,9 @@ Underfull \vbox (badness 2310) has occurred while \output is active []
 
 LaTeX Font Warning: Command \large invalid in math mode on input line 101.
 
-(./figGF.tex) (./figGFcomplex.tex)
-Underfull \vbox (badness 6658) has occurred while \output is active []
+(./figGF.tex) (./figGFcomplex.tex) [18]
+Underfull \vbox (badness 1609) has occurred while \output is active []
 
- [18]
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 205
 .
 
@@ -1790,40 +1778,37 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
- [19]
-(./figGFc.tex
+[19] (./figGFc.tex
 Overfull \hbox (10.30434pt too wide) in paragraph at lines 68--69
  [][] 
  []
 
 )
-Underfull \vbox (badness 2302) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-Underfull \vbox (badness 2277) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 (./figGFcomplexc.tex)
-Underfull \vbox (badness 2302) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
 
 LaTeX Warning: Citation `NathanielChristenCyberphysical' on page 22 undefined o
 n input line 397.
 
-
+[22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
+
 (./figPVM.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 502--502
 [] $[]$| [] 
  []
 
 [23
-\pgfsyspdfmark {pgfid24}{20777318}{21092464}
+\pgfsyspdfmark {pgfid24}{20777318}{14597889}
 ] (./figPVMlines.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 539--539
 [] $[]$| [] 
@@ -1838,10 +1823,7 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 577--577
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 5345) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24
 \pgfsyspdfmark {pgfid26}{20777318}{16951505}
@@ -1850,28 +1832,26 @@ Underfull \hbox (badness 1448) in paragraph at lines 631--632
 []\OT1/cmr/m/n/10.95 (+20) Further de-tails about re-duc-ing channel-packages
  []
 
-) (./conclusion.ngml.tex [25
-\pgfsyspdfmark {pgfid30}{2126776}{16492753}
+) (./conclusion.ngml.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25
+\pgfsyspdfmark {pgfid30}{2126776}{11125587}
+] [26] [27]) (./biblio.tex [28
+
 ]
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
-
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
- [26])
-(./biblio.tex [27]
 Overfull \hbox (68.68123pt too wide) in paragraph at lines 114--117
 []  
  []
 
-) [28
+) [29
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (./ghg.ngml.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `ghg.ngml.out' has not changed.
 (rerunfilecheck)             Checksum: 5649BAF8BDA205C25CC889076D3881B7;257.
 
@@ -1883,9 +1863,9 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 39468 strings out of 492649
- 801161 string characters out of 6122986
- 1041339 words of memory out of 5000000
+ 39469 strings out of 492649
+ 801168 string characters out of 6122986
+ 1041747 words of memory out of 5000000
  42032 multiletter control sequences out of 15000+600000
  555201 words of font info for 200 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1919,10 +1899,10 @@ b></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts
 ype1/public/amsfonts/symbols/msbm10.pfb></home/nlevisrael/texl/texlive-install/
 texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></home/nlevisrael/texl/texl
 ive-install/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on ghg.ngml.pdf (28 pages, 463610 bytes).
+Output written on ghg.ngml.pdf (29 pages, 464293 bytes).
 PDF statistics:
- 864 PDF objects out of 1000 (max. 8388607)
- 785 compressed objects within 8 object streams
- 458 named destinations out of 1000 (max. 500000)
+ 868 PDF objects out of 1000 (max. 8388607)
+ 788 compressed objects within 8 object streams
+ 459 named destinations out of 1000 (max. 500000)
  28825 words of extra memory for PDF output out of 29859 (max. 10000000)
 

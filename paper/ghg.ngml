@@ -102,14 +102,16 @@ hypergraph paradigms to be useful in lieu of, for
 instance, Semantic Web Ontologies.
 `abstract`
 
+`flushright,
 \usebox{\qboxi}
 \usebox{\qboxii}
 \usebox{\qboxiii}
+`flushright`
+`decoline;
 
 \end{@twocolumnfalse}]
 
 %`vspace<1em>;
-{\EnglischeLinie}
 
 `input<intro.ngml>;
 `input<section1.ngml>;
