@@ -22,11 +22,11 @@
 `maketitle;
 
 `abstract,
-This paper will argue for multi-purpose hypegraph data models as a 
+This paper will argue for multi-purpose hypergraph data models as a 
 generic representation paradigm for data sharing and publication.  
 Seeking to unify disparate constructions where hypergraphs generalize 
-ordinary (labelled, directed) graphs, I propose a multi-disciplinary 
-hypergraph framework which captures hypergraph structures found 
+ordinary (often labeled, directed) graphs, I propose a multi-disciplinary 
+framework which captures hypergraph structures found 
 in mathematics, linguistics, computer science, and related disciplines.  
 I consider how to integrate these varying structures and propose an 
 overarching generalized model which I call `q.procedural` hypergraphs 
@@ -35,7 +35,7 @@ I then discuss hypergraph representations of computer code and
 implementation strategies for a runtime execution environment 
 with hypergraphs as the principle internal data representation.  
 This paper is paired with a code repository demonstrating such a 
-Hypergraph Virtual Machine (Phaon Virtual Machine, or `PVM;).  
+Hypergraph Virtual Machine (PhaonGraph Virtual Machine, or `PVM;).  
 I outline parsing and compiler techniques for `PVM; as a 
 case-study in the supporting ecosystem necessary for 
 hypergraph paradigms to be useful in lieu of, for 
