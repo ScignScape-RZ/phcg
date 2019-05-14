@@ -8,7 +8,7 @@ model via a standardized hypergraph serialization
 format at an Intermediate Representation level; 
 generalizing hypergraphs via node, edge, and 
 annotation diversification %-- in particular 
-`i.procedural` hypegraphs whose hypernodes can have a 
+`i.procedural` hypergraphs whose hypernodes can have a 
 data-collections interface, along with edge-diversification  
 into channels (especially in the context of code-representation) 
 and annotation-diversification into double-annotated 
@@ -28,7 +28,7 @@ Virtual Machine code.  Phaon-Graph employs many dimensions
 of hyper-graph modeling; last section I discussed 
 double-annotations (marking carrier handoffs) and channels 
 as generalizations of hyperedges (associated with 
-various channel-semantis protocols).  Procedural hypernodes 
+various channel-semantic protocols).  Procedural hypernodes 
 are also relevant to Phaon-Graph insofar as input source-code 
 may describe instances of collections types, like 
 stacks and queues %-- these data structures become represented 
@@ -80,7 +80,7 @@ and pulling data from hypergraphs; and generating other
 code or data structures on the basis of hypergraphs 
 (here, generating `PVMIR; code).  On this evidence, a 
 general hypergraph Ontology would describe a given class 
-of hypergraphs in a fasion that allows developers to plan 
+of hypergraphs in a fashion that allows developers to plan 
 out the implementations for these various facets of 
 interactions with hypergraphs: parsing, intra-graph 
 navigation, inter-graph Intermediate Representations, and 
@@ -96,7 +96,7 @@ into play at two levels.  On the one hand, hypergraphs
 may capture data with greater detail and transparency.  
 A hypergraph representation is not just a vehicle for 
 exchanging data at a machine-readable level; potentially 
-hypergraphs can desribe the semantics and theoretical 
+hypergraphs can describe the semantics and theoretical 
 foundations of provided information with a precision 
 that transcends raw digital networking.  For example, 
 when hypergraphs publish scientific data, their semantic 
@@ -140,7 +140,7 @@ analytics and other behind-the-scenes processing; their
 value should also come to the fore from the perspective 
 of application-developers working with components that 
 draw data from remote sources but present the associated 
-information accoring to application-specific protocols 
+information according to application-specific protocols 
 and `GUI; conventions. 
 `p`
 
@@ -156,7 +156,7 @@ targeted especially at special-purpose software that
 fits organically into scientists' working environments 
 (their preferred applications, computational requirements, 
 conventional data-visualizations, etc.).`footnote.
-Developing precice scientific metadata standards is 
+Developing precise scientific metadata standards is 
 outside the scope of this paper, but there is a 
 compelling community of scientists who have pressed 
 for more rigorously scientific data-sharing mechanisms 
@@ -186,7 +186,7 @@ while Conceptual Spaces are the foundation for an underlying
 semantics.  I believe a hypergraph/Conceptual-Space 
 in some fashion would be a great starting-point for a 
 bonafide `q.more semantic` and more scientific Semantic Web.  
-`footnote`  Hypegraphs 
+`footnote`  Hypergraphs 
 would be a successful replacement for other (simpler) 
 representations if they prove more effective at 
 capturing technical metadata in the former sense and 
@@ -202,7 +202,7 @@ the calculational and interface qualities of data structures
 formalized in a given scientific or technical context.  Hypergraph 
 models of computer code are not the only situations where 
 hypergraphs would have occasion to express function 
-signatures, application-interface descrip tions, or 
+signatures, application-interface descriptions, or 
 executable scripts.  Instead, the sorts of functions or 
 transformations which may be applied to a data structure 
 is often an intrinsic feature of data's types and semantics.  
@@ -217,11 +217,11 @@ platforms around hypergraph models whose representational
 capacity extends to procedural signatures and implementations.  
 I would argue that the option of outputting code for a suitable 
 Hypergraph Virtual Machine would then be as intrinsic to the 
-`q.core` features of a hypegraph framework as the option of 
+`q.core` features of a hypergraph framework as the option of 
 initializing hypergraphs from textual input via a parsing 
 library.  The architecture around Phaon-Graph %-- linked 
 to grammars via Relae-Graph, and to an execution runtime via 
-the Phaon Virtual Machine %-- would then be characteristic 
+the PhaonGraph Virtual Machine %-- would then be characteristic 
 of a parsing an virtual-machine engine that in some fashion should 
 be available to all hypergraph models. 
 `p`
@@ -232,7 +232,7 @@ should be conceived.  In particular, hypergraph representations
 include expressions of procedural interfaces and signatures, 
 which entails the integration of programming-language 
 type systems into Ontologies.  This in turn implies the 
-generalizaton of types expressible in each Ontology to 
+generalization of types expressible in each Ontology to 
 encompass higher-order types, functional-types representative 
 of languages' special features like object-methods 
 and exceptions (which, as I have argued, may be advanced by 
