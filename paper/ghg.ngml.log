@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  14 MAY 2019 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  14 MAY 2019 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -27,6 +27,10 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \openout2 = `commands.aux'.
 
 (./commands.tex
+(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/titlesec/titlesec.s
 ty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
@@ -1066,7 +1070,7 @@ Package microtype Info: Loading configuration file microtype.cfg.
 .cfg
 File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 164.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 168.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/enumitem/enumitem.s
 ty
@@ -1615,21 +1619,22 @@ Underfull \vbox (badness 6188) has occurred while \output is active []
 
  [3]
 [4]) (./section1.ngml.tex
-Underfull \vbox (badness 1616) has occurred while \output is active []
 
- [5]
-[6] [7]
-Overfull \hbox (8.505pt too wide) in paragraph at lines 248--248
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
+(Font)              size <12> substituted on input line 1.
+
+[5] [6] [7]
+Overfull \hbox (8.505pt too wide) in paragraph at lines 262--262
 []$[]$ 
  []
 
 
-Overfull \hbox (8.505pt too wide) in paragraph at lines 248--248
+Overfull \hbox (8.505pt too wide) in paragraph at lines 262--262
 []$[]$ 
  []
 
 [8]
-LaTeX Font Info:    Try loading font information for U+euf on input line 313.
+LaTeX Font Info:    Try loading font information for U+euf on input line 312.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1640,7 +1645,7 @@ File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 313.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 312.
 
 
 
@@ -1666,7 +1671,11 @@ Underfull \hbox (badness 5533) in paragraph at lines 156--157
 20) The
  []
 
-[12] (./figStringContext.tex
+
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+ [12]
+(./figStringContext.tex
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/listings/lstlang1.s
 ty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1695,22 +1704,26 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 199--199
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./figAddToken.tex)
+
+Underfull \vbox (badness 7888) has occurred while \output is active []
+
+ [13
+\pgfsyspdfmark {pgfid9}{20777318}{21539025}
+] (./figAddToken.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 229--229
 [] $[]$| [] 
  []
 
 
-Underfull \vbox (badness 2088) has occurred while \output is active []
-
- [13
-\pgfsyspdfmark {pgfid9}{20777318}{21539025}
-]
 Underfull \vbox (badness 6188) has occurred while \output is active []
 
  [14
-\pgfsyspdfmark {pgfid14}{2126776}{22561551}
-] (./figIR.tex
+\pgfsyspdfmark {pgfid14}{2126776}{18996391}
+]
+Underfull \vbox (badness 6188) has occurred while \output is active []
+
+
+(./figIR.tex
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/listings/lstlang1.s
 ty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1738,10 +1751,6 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 341--341
 [] $[]$| [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 (./figPGBIR.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 366--366
 [] $[]$| [] 
@@ -1754,7 +1763,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: Reference `lst:PGBIR' on page 15 undefined on input line 385.
 
 [15
-\pgfsyspdfmark {pgfid16}{20777318}{31998399}
+\pgfsyspdfmark {pgfid16}{20777318}{29324529}
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1809,7 +1818,7 @@ Overfull \hbox (10.30434pt too wide) in paragraph at lines 68--69
  []
 
 ) [20]
-Underfull \vbox (badness 1097) has occurred while \output is active []
+Underfull \vbox (badness 6157) has occurred while \output is active []
 
 
 (./figGFcomplexc.tex) [21]
@@ -1822,7 +1831,8 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 502--502
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \vbox (badness 6188) has occurred while \output is active []
+
 
 (./figPVMlines.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 539--539
@@ -1830,7 +1840,7 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 539--539
  []
 
 [23
-\pgfsyspdfmark {pgfid26}{20777318}{33007825}
+\pgfsyspdfmark {pgfid26}{20777318}{30029815}
 ] (./figPVMrt.tex)
 Overfull \hbox (14.81184pt too wide) in paragraph at lines 577--577
 [] $[]$| [] 
@@ -1840,20 +1850,13 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 577--577
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [24
-\pgfsyspdfmark {pgfid28}{2126776}{9074238}
+\pgfsyspdfmark {pgfid28}{2126776}{7291658}
 ]
 Underfull \hbox (badness 1448) in paragraph at lines 631--632
 []\OT1/cmr/m/n/10.95 (+20) Further de-tails about re-duc-ing channel-packages
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
-(./conclusion.ngml.tex
-Underfull \vbox (badness 3826) has occurred while \output is active []
-
- [25
+) (./conclusion.ngml.tex [25
 \pgfsyspdfmark {pgfid32}{2126776}{16492753}
 ]
 Underfull \vbox (badness 6188) has occurred while \output is active []
@@ -1861,16 +1864,24 @@ Underfull \vbox (badness 6188) has occurred while \output is active []
  [26])
 (./biblio.tex
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgfornament/vecto
-rian/vectorian84.pgf) [27]) [28
+rian/vectorian84.pgf) [27])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
- (./ghg.ngml.aux)
+
+(./ghg.ngml.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `ghg.ngml.out' has not changed.
 (rerunfilecheck)             Checksum: 5649BAF8BDA205C25CC889076D3881B7;257.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1880,10 +1891,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 39483 strings out of 492649
- 801637 string characters out of 6122986
- 1041228 words of memory out of 5000000
- 42045 multiletter control sequences out of 15000+600000
+ 39579 strings out of 492649
+ 803109 string characters out of 6122986
+ 1043103 words of memory out of 5000000
+ 42137 multiletter control sequences out of 15000+600000
  555042 words of font info for 198 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,14n,101p,10425b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1916,7 +1927,7 @@ b></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts
 ype1/public/amsfonts/symbols/msbm10.pfb></home/nlevisrael/texl/texlive-install/
 texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></home/nlevisrael/texl/texl
 ive-install/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on ghg.ngml.pdf (28 pages, 479365 bytes).
+Output written on ghg.ngml.pdf (28 pages, 479983 bytes).
 PDF statistics:
  884 PDF objects out of 1000 (max. 8388607)
  804 compressed objects within 9 object streams

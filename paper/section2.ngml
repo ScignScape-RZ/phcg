@@ -24,7 +24,7 @@ and initialization of hypergraphs %-- creating hypergraphs from
 other sources (such as text files) and using hypergraphs to 
 initialize other kinds of data structures, either directly 
 or indirectly (e.g., via code generators).  This dimension 
-encompasses the overall capabilities allowing software to 
+encompasses the overall capabilities that would permit software to 
 use hypergraphs for their own data representations 
 and/or as bridge structures for sharing data between applications 
 and/or components.  In bridge cases, the strategies for building 

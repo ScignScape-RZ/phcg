@@ -245,8 +245,7 @@ $I$ is the empty diagram.  Morphisms \uIA{} and \vAI{}
 ... are referred to as \textbf{states} and \textbf{effects} 
 \cite[p. 4]{InteractingConceptualSpaces}.
 \end{cquote}
-}
-\p{The system $I$ \mdash{} which we can also see as a hypernode with an empty 
+The system $I$ \mdash{} which we can also see as a hypernode with an empty 
 (hypo-)node set \mdash{} may embody a procedure which has no internal 
 algorithmic or calculational structure (at least relative to the 
 domain of analysis where we might represent computer code).  In 
@@ -262,10 +261,10 @@ actuator would be a device which can activate/deactivate a furnace
 and/or cooling system).
 }
 \p{In these examples I have mentioned hypergraphs in a linguistic (Link Grammar) 
-a mathematical (hypergraph categories) context.  Both of these 
-have some parallels insofar as a core motivation is to generalize and add 
+and a mathematical (hypergraph categories) context.  These 
+share some parallels insofar as a core motivation is to generalize and add 
 structure to edges, either freeing edges from constraints on 
-node-arity (even allowing edges to be \q{unattached}, 
+node-arity (even allowing edges to be \q{unattached}), 
 or supplying edges with structured (potentially multi-part) annotation.
 }
 \p{A somewhat different conception of hypergraphs is found in database 
@@ -284,7 +283,7 @@ reference a subgraph by analogy to any other value (textual, numeric,
 nominal/enumerative data, etc.).  Here the (hyper)node does not 
 \q{contain} but \i{references} a subgraph; the added structure involves 
 subgraphs themselves being incorporated into the universe of values 
-which nodes nay quantify over.  Conversely, \i{nested} hypergraphs 
+which nodes may quantify over.  Conversely, \i{nested} hypergraphs 
 model hypernodes which have other graphs \q{inside} them, thereby creating 
 an ordering among nodes (we can talk of nodes at one level belonging 
 to graphs which are contained in nodes at a higher level).  Such constructions 
@@ -292,12 +291,12 @@ may or may not allow edges across nodes at different levels.
 }
 \p{Note that nested hypergraphs can be seen as a special case of cross-referencing 
 graphs, where each hypernode \nodeN{} is given an index \ix{}, 
-with the restriction that when  \nodeN{} designates (e.g. via 
+with the restriction that when  \nodeN{} designates (e.g., via 
 its corresponding typed value) a subgraph \sg{}, all of 
 \sg{}'s hypernodes have index \ixminusone{}.  Cross-referencing 
 graphs, in turn, can be seen as special cases of an overall 
 space of hypergraphs wherein hypernodes are paired with 
-typed values from some suitable expressive type system \tys{}.  
+typed values from some suitably expressive type system \tys{}.  
 If \tys{} includes higher-order types \mdash{} especially, lists and 
 other \q{collections} types which become concrete types in 
 conjunction with another type (as in \i{list} qua generic 
@@ -339,13 +338,13 @@ internet technology in general \mdash{} represent \i{relationships} between poin
 or structures of data in some sense; in familiar web terms, the relata linked 
 by graph edges are often \q{resources}, designated by unique web addresses.   
 A more theoretical model might take the information \q{residing} at 
-graph nodes as typed values.  But in either case a given node may stand in f
+graph nodes as typed values.  But in either case a given node may stand in 
 for an aggregate of information \mdash{} a single web resources may contain a 
 theoretically unlimited supply of data, and a typed value can be of a list 
 or tuple type internally containing its own body of information.  
 Consequently, the full stock of data embodied in a graph may not lie 
 primarily in the graph structure itself, but rather distributed among 
-its nodes (that is, among notes' associated data). 
+its nodes (that is, among nodes' associated data). 
 }  
 \p{Conversely, graph structures (with suitable semantic specifications) are  
 also considered to be media for serializing arbitrary data structures, which 
@@ -371,7 +370,16 @@ Which operations are proper depends on a hypernode's type:
 hypernodes associated with a single unstructured value 
 should have one basic update operation, while nodes with 
 list-like types would have operations to insert (and remove) 
-values at different positions.
+values at different positions.  In general, procedural 
+hypergraphs should differentiate between \i{atomic} hypernodes 
+with one associated value; \i{tuple} hypernodes with a 
+fixed array of values (potentially of multiple types); 
+and \i{collections} hypernodes encompassing lists of 
+values subject to append/insert/remove actions 
+(in which case inserted values' types should 
+have a predictable pattern; 
+consider key- and value-type alternation in 
+associative arrays).
 } 
    
 \p{Separate and apart from operations modifying hypernodes' values, there 
@@ -407,11 +415,11 @@ capture most of the relevant transform logic as specifically
 mappings between hypergraphs, with each hypergraph possessing a structure 
 optimized for being initialized from one context (or for generating data 
 used in another context).  This progression may involve restructuring 
-wherein information modeled at the inter-hypernode level \mdash{} 
+wherein information modeled at the \q{inter-hypernode} level \mdash{} 
 which we can call \i{hypernode} data \mdash{} tends to be migrated 
 to the level \i{inside} hypernodes, which we can call \i{hyponode} data.  
 In broad outline, hypergraph transforms can progress from relatively 
-informal structures (with a preponderance of information expressed as 
+casual structures (with a preponderance of information expressed as 
 \i{hypernode} data) to more constrained structures \mdash{} mapping 
 hypernode to hyponode data, i.e., mapping data from structures 
 \i{between} hypernodes to those \i{within} hypernodes \mdash{} where 
@@ -426,8 +434,8 @@ edges to hyperedges by \q{diversifying} nodes to encompass mutiple values;
 representing nodes' internal structure in terms of data structures 
 such as lists, tuples, and nested graphs; and generalizing edge-labels 
 to annotations which may have multiple parts.  I have not yet discussed 
-in detail the possibility of grouping hyperedges into higher-level structures 
-which I have called \q{channels}, but I will return to 
+the possibility of grouping hyperedges into higher-level structures 
+(what I called \q{channels}), but I will return to 
 those details in a later section.  
 }
 \p{For the remainder of this paper, I will attend especially to 
@@ -444,8 +452,8 @@ requisite for a general-purpose hypergraph software ecosystem.
 unfolding of this workflow are invited to download the 
 code base accompanying this paper, where readers can examine 
 the operations of parsers and code generators working with 
-a built-in, general-purpose hypergraph library.  The downloadable 
-dataset is fully integrated with Qt Creator, a C++ Integrated Development 
+a built-in, general-purpose hypergraph library.  The demo  
+is fully integrated with Qt Creator, a C++ Integrated Development 
 Environment, and has no further dependencies (assuming users 
 have a working Qt and C++ compiler; Qt is a popular C++ application-development 
 framework).  The dataset includes instructions for 
