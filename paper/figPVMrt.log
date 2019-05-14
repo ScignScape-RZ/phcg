@@ -1,0 +1,790 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  14 MAY 2019 12:00
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**figPVMrt.tex
+(./figPVMrt.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{lstlisting}
+                      [caption={Matching Function
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{lstlisting}[
+                       caption={Matching Function
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
+! Undefined control sequence.
+l.4     basicstyle = \ttfamily\bfseries\tiny
+                                            , linewidth = .95\linewidth]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.4 ...y\bfseries\tiny, linewidth = .95\linewidth]
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.4 ...y\bfseries\tiny, linewidth = .95\linewidth]
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[]
+ []
+
+
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 1--5
+\OT1/cmtt/m/n/10 ,
+ []
+
+
+Overfull \hbox (47.24959pt too wide) in paragraph at lines 1--5
+\OT1/cmtt/m/n/10 linewidth
+ []
+
+
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 1--5
+\OT1/cmtt/m/n/10 =
+ []
+
+
+Overfull \hbox (20.99982pt too wide) in paragraph at lines 1--5
+\OT1/cmtt/m/n/10 .95] 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 v
+     oid PHR_Command_Runtime_Router::proceed_s0_2(
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6 void PHR_
+             Command_Runtime_Router::proceed_s0_2(
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 6.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.10 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (40.99982pt too wide) in paragraph at lines 6--10
+[]\OT1/cmtt/m/n/10 void
+ []
+
+
+Overfull \hbox (138.67804pt too wide) in paragraph at lines 6--10
+\OT1/cmtt/m/n/10 PHR$[]\OML/cmm/m/it/10 ommand[]untime[]outer \OT1/cmr/m/n/10 :
+:
+ []
+
+
+Overfull \hbox (150.47336pt too wide) in paragraph at lines 6--10
+\OML/cmm/m/it/10 proceed[]\OT1/cmr/m/n/10 0[](\OML/cmm/m/it/10 PHR[]unction[]ec
+tor \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (44.35718pt too wide) in paragraph at lines 6--10
+\OML/cmm/m/it/10 pfv; void \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (114.2227pt too wide) in paragraph at lines 6--10
+\OMS/cmsy/m/n/10 ^^C\OML/cmm/m/it/10 pResult\OT1/cmr/m/n/10 )[]$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11  s
+       0_fn1_p_p_type fn = nullptr;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.11  s0_
+         fn1_p_p_type fn = nullptr;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Double subscript.
+l.11  s0_fn1_p_
+               p_type fn = nullptr;
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.11  s0_fn1_p_p_
+                 type fn = nullptr;
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.13 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (96.93112pt too wide) in paragraph at lines 11--13
+[]\OT1/cmtt/m/n/10 s0$[]\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 1[][][]\OML/cmm/m/it/
+10 ypefn \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (65.38556pt too wide) in paragraph at lines 11--13
+\OML/cmm/m/it/10 nullptr\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 boolsr\OT1/cmr/m/n/1
+0 ;$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14  i
+       nt mc = 0;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (35.74986pt too wide) in paragraph at lines 14--16
+[]\OT1/cmtt/m/n/10 int
+ []
+
+
+Overfull \hbox (10.49991pt too wide) in paragraph at lines 14--16
+\OT1/cmtt/m/n/10 mc
+ []
+
+
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 14--16
+\OT1/cmtt/m/n/10 =
+ []
+
+
+Overfull \hbox (10.49991pt too wide) in paragraph at lines 14--16
+\OT1/cmtt/m/n/10 0;
+ []
+
+
+Overfull \hbox (15.74986pt too wide) in paragraph at lines 14--16
+\OT1/cmtt/m/n/10 int
+ []
+
+
+Overfull \hbox (10.49991pt too wide) in paragraph at lines 14--16
+\OT1/cmtt/m/n/10 bc
+ []
+
+
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 14--16
+\OT1/cmtt/m/n/10 =
+ []
+
+
+Overfull \hbox (10.49991pt too wide) in paragraph at lines 14--16
+\OT1/cmtt/m/n/10 0; 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17  i
+       f(pfv)
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.19   if(void* fnp = pfv->match_
+                                 against_codes({6002, 7002},
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+l.20     mc, bc, &
+                  result_type_object_))
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Double subscript.
+l.22    fn = (s0_fn1_p_
+                       p_type) fnp;
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.22    fn = (s0_fn1_p_p_
+                         type) fnp;
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Extra }, or forgotten $.
+l.27  }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Double subscript.
+l.31   proceed_s0<2, s0_fn1_p_
+                              p_type>(pResult, fn,
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.31   proceed_s0<2, s0_fn1_p_p_
+                                type>(pResult, fn,
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Extra }, or forgotten $.
+l.35 }
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Double subscript.
+l.39   s0_fn1_p_
+                p_type>(QVector<quint64>& args, void*& result,
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.39   s0_fn1_p_p_
+                  type>(QVector<quint64>& args, void*& result,
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Misplaced alignment tab character &.
+l.39   s0_fn1_p_p_type>(QVector<quint64>&
+                                          args, void*& result,
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.39 ...1_p_p_type>(QVector<quint64>& args, void*&
+                                                   result,
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Double subscript.
+l.40   s0_fn1_p_
+                p_type fn, int byte_code)
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.40   s0_fn1_p_p_
+                  type fn, int byte_code)
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.44  case 944: tybc_<2>::run<944, s0_fn1_p_
+                                            p_type>(args, result,
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.44  case 944: tybc_<2>::run<944, s0_fn1_p_p_
+                                              type>(args, result,
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.46  case 984: tybc_<2>::run<984, s0_fn1_p_
+                                            p_type>(args, result,
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.46  case 984: tybc_<2>::run<984, s0_fn1_p_p_
+                                              type>(args, result,
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Misplaced alignment tab character &.
+l.55  static void run(QVector<quint64>&
+                                        args, void*& result,
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.55 ...ic void run(QVector<quint64>& args, void*&
+                                                   result,
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (56.74968pt too wide) in paragraph at lines 17--63
+[]\OT1/cmtt/m/n/10 if(pfv)
+ []
+
+
+Overfull \hbox (41.99963pt too wide) in paragraph at lines 17--63
+\OT1/cmtt/m/n/10 if(void*
+ []
+
+
+Overfull \hbox (15.74986pt too wide) in paragraph at lines 17--63
+\OT1/cmtt/m/n/10 fnp
+ []
+
+
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 17--63
+\OT1/cmtt/m/n/10 =
+ []
+
+
+Overfull \hbox (586.28801pt too wide) in paragraph at lines 17--63
+\OT1/cmtt/m/n/10 pfv->match$[]\OML/cmm/m/it/10 gainst[]odes\OT1/cmr/m/n/10 ([]\
+OML/cmm/m/it/10 ; mc; bc; result[]ype[]bject[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/
+10 elsebyte[]ode \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (397.42265pt too wide) in paragraph at lines 17--63
+\OT1/cmr/m/n/10 0; \OML/cmm/m/it/10 :::if\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 fn\O
+T1/cmr/m/n/10 )[]\OML/cmm/m/it/10 ::::::template <>
+ []
+
+
+Overfull \hbox (166.15831pt too wide) in paragraph at lines 17--63
+\OML/cmm/m/it/10 voidPHR[]ommand[]untime[]outer \OT1/cmr/m/n/10 ::
+ []
+
+
+Overfull \hbox (57.7709pt too wide) in paragraph at lines 17--63
+\OML/cmm/m/it/10 proceed[]\OT1/cmr/m/n/10 0[] \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (73.58855pt too wide) in paragraph at lines 17--63
+\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; s\OT1/cmr/m/n/10 0[]\OML/cmm/m/it/10 n\OT1/
+cmr/m/n/10 1[][][]\OML/cmm/m/it/10 ype >
+ []
+
+
+Overfull \hbox (52.63705pt too wide) in paragraph at lines 17--63
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 QVector <
+ []
+
+
+Overfull \hbox (44.16162pt too wide) in paragraph at lines 17--63
+\OML/cmm/m/it/10 quint\OT1/cmr/m/n/10 64 \OML/cmm/m/it/10 >
+ []
+
+
+Overfull \hbox (48.03888pt too wide) in paragraph at lines 17--63
+\OML/cmm/m/it/10 args; void \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (942.01222pt too wide) in paragraph at lines 17--63
+\OML/cmm/m/it/10 result; s\OT1/cmr/m/n/10 0[]\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 
+1[][][]\OML/cmm/m/it/10 ypefn; intbyte[]ode\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 
+:::structtybc[]\OT1/cmr/m/n/10 2 \OML/cmm/m/it/10 >
+ []
+
+
+Overfull \hbox (1092.05476pt too wide) in paragraph at lines 17--63
+[]$ 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \end{lstlisting}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.65 \end{lstlisting}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 \begin{tikzpicture}
+                        [remember picture, overlay, text width=.95\linewidth]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 \begin{tikzpicture}[
+                         remember picture, overlay, text width=.95\linewidth]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.66 ...icture, overlay, text width=.95\linewidth]
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.66 ...icture, overlay, text width=.95\linewidth]
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 66--67
+[]
+ []
+
+! Undefined control sequence.
+l.68 \lstovn
+            {4.6,5.6}{1}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 \lstovn{4
+              .6,5.6}{1}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+! Undefined control sequence.
+l.69 \lstovn
+            {6.05,1.95}{2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 68--70
+[]
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{tikzpicture}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> figPVMrt.tex
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 13 strings out of 492649
+ 227 string characters out of 6122986
+ 60506 words of memory out of 5000000
+ 3995 multiletter control sequences out of 15000+600000
+ 3808 words of font info for 15 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 18i,3n,12p,100b,99s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -684,7 +684,7 @@ sophisticated hypergraph representations of source
 code: whereas a more conventional architecture might 
 assume that compilers will eventually reduce source 
 input to relatively simple `AST;-style data, `PVM; 
-assumes that the Virtual Machine runtime is operating 
+anticipates a Virtual Machine runtime operating 
 on instruction-sequences that preserve the more 
 complex, hypergraph-driven code-representation 
 semantics.  In this sense `PVM; suggests the 
