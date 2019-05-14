@@ -70,7 +70,7 @@ format.  Suppose hypergraphs are employed within publishing
 software to generate `XML; and `LaTeX; output.  This can happen 
 mostly at the software level: there are many `q.`XML; builder` libraries 
 allowing `XML; documents to be constructed via function calls, rather 
-than by actually producing `XML; code.  Alternativey, the 
+than by actually producing `XML; code.  Alternatively, the 
 software can act as a code generator, expressly composing `XML; 
 or `LaTeX; code by creating the requisite character strings 
 %-- a process which can be complicate by the languages' syntactic 
@@ -124,7 +124,7 @@ is not a relatively high-level markup language like `XML;, but rather
 something like a virtual machine or intermediate language which 
 can translate to low-level (e.g., `C; or `Cpp;) function-calls.  
 The pipeline demonstrated here also includes two different 
-hypergraph formats, along with a textual serialization to marshall 
+hypergraph formats, along with a textual serialization to marshal 
 between them.  Accordingly, the system also demonstrates 
 initialization of hypergraphs from a hypergraph-specific 
 intermediate representation. 
@@ -156,12 +156,12 @@ related to hypergraphs in general.
 
 `p.
 `parlead.General-Purpose Hypergraph Parsers`  The parser outlined here 
-I will term `q.general-purpose` because, athough it outputs hypergraphs, 
+I will term `q.general-purpose` because, although it outputs hypergraphs, 
 it assumes that the languages being processed are not consciously 
 designed for hypergraphs.  Instead, hypergraphs are useful because 
 they provide greater flexibility in capturing features of the 
 input language, which helps for designing formal 
-(e.g., sripting, query, or markup) languages to a desired level 
+(e.g., scripting, query, or markup) languages to a desired level 
 of expressiveness and contest-sensitivity.  In particular, the 
 parsing capabilities and space of parsable grammars is expanded 
 relative to mechanisms like `BNF; grammars.  (As a practical matter, 
@@ -172,14 +172,14 @@ rather than needing a separate code-generator as in `LEXX;/`YACC;.)
    
 `p.
 I dub the actual `Cpp; parsing library (and corresponding 
-hypergraph reprecentation) `q.RelaeGraph` (for `q.Regular Expression 
-Labelling and Annotation Engine`/).  RelaeGraph grammars are 
+hypergraph representation) `q.RelaeGraph` (for `q.Regular Expression 
+Labeling and Annotation Engine`/).  RelaeGraph grammars are 
 mostly comprised of rules that each pair a regular expression 
 (a formula describing patterns in the input stream) with 
 code that is executed in the event of a pattern match.  This 
 code, in turn, typically calls functions to modify 
 the output hypergraph by inserting a new hypernode and/or 
-hyperedge.  A common senario is that the text matched by a 
+hyperedge.  A common scenario is that the text matched by a 
 rule's regular-expression pattern forms the basis of a hypernode, 
 while the specific rule that matched (and, for context-sensitive 
 languages, the contexts in effect for the match) determines 
@@ -198,7 +198,7 @@ matched text becoming a node, and the successful rule
 current parsing context then determines a site where 
 the new node and edge are added to an output graph under 
 construction.  This picture is very approximate; in 
-pratice, further processing is necessary to establish correct 
+practice, further processing is necessary to establish correct 
 node content, edge labels, and parsing context.  But 
 it shows an intuitive parallel between parsing theory and 
 hypergraphs: parsers identify pieces of input text as anchored 
@@ -209,14 +209,14 @@ tied to the surrounding material in their hypergraphs according
 to different patterns and contexts.  The extra detail offered 
 via hypergraphs permits contextual details to be 
 explicated more precisely and compactly.  Generalizing from 
-graphs to hypergraphcs is then analogous (and, in practice, an 
+graphs to hypergraphs is then analogous (and, in practice, an 
 implementation for) generalizing from contest-free grammars to 
 more nuanced, context-sensitive grammars. 
 `p`
 
 \vsftcl{h}{figStringContext}
 `p.
-In a context-senitive grammar, not every rule-match will 
+In a context-sensitive grammar, not every rule-match will 
 directly modify an output graph; instead, the result of a 
 match might be to alter the parsing context.  For example, 
 Listing~\ref{lst:figStringContext} 
@@ -257,8 +257,8 @@ intermediary).  Separating these layers establishes
 a separation of concerns so that the grammar-specific 
 layer can focus on recognizing parsing structures for an 
 expressive, flexible input language, without itself 
-attending to graph operations.  Simutaneously, the 
-components which do moiy hypergraphs can be developed 
+attending to graph operations.  Simultaneously, the 
+components which do modify hypergraphs can be developed 
 in isolation from the syntax of the language being 
 parsed.  Listing~\ref{lst:figAddToken} samples code 
 logically following Listing~\ref{lst:figStringContext} wherein 
@@ -271,9 +271,9 @@ The middle `q.Graph Build` layer then receives calls from the
 parser about rule-matches and has a range of graph-modification 
 routines it can select to handle each match (often based 
 on contextual data tracked at the middle layer).  
-So the first layer is reponsible for generating fine-grained notifications 
+So the first layer is responsible for generating fine-grained notifications 
 about input patterns to the second layer, while the third layer 
-is reponsible for presenting a flexible set of operations from 
+is responsible for presenting a flexible set of operations from 
 which the second layer selects the proper graph-modification 
 for each match and context.
 `p` 
@@ -285,7 +285,7 @@ augments the benefits in how such a pipeline is organized.  Hypergraphs,
 compared to other kinds of parser output (like Abstract Syntax Trees 
 or Directed Acyclic Graphs), have fewer structural 
 requirements and restrictions and therefore offer greater leeway 
-in how information about input text is preerved in the output structure.  
+in how information about input text is preserved in the output structure.  
 This accordingly offers greater flexibility in systematizing the 
 input language's syntax and semantics.  For example, consider the 
 goal to support special built-in datatypes with special language-level 
@@ -295,11 +295,11 @@ lines of how `LINQ; %-- Language Integrated Query %-- packages
 complex method-calls into a fluid 
 syntax resembling `SQL;).  In a context-sensitive hypergraph grammar 
 such language features can be realized by defining a parsing context 
-for the non-stanard syntax and defining special node-types, edge-labels, 
+for the non-standard syntax and defining special node-types, edge-labels, 
 or nested graphs to hold data parsed from input when the special 
-contexts are in effect.  The resuting data, which may have complex 
-internal structure, can be inserte into the overall graph as a single 
-node and/or edge, taking abvantage of hypergraphs' capability to 
+contexts are in effect.  The resulting data, which may have complex 
+internal structure, can be inserted into the overall graph as a single 
+node and/or edge, taking advantage of hypergraphs' capability to 
 work with different scales of organization.  Languages designed 
 against the backdrop of this kind of parsing engine can flexibly 
 evolve to support new syntactic special cases and constructs, 
@@ -330,8 +330,8 @@ I will discuss these next.
 the graphs produced during the parsing phase I just outlined are 
 subject to several rounds of modification.  The first stages 
 of this follow-up are performed in the context of the initial hypergraphs, 
-and invove changes that can be tacked on to those graphs without 
-substantial ateration of their structure.  For instance, many source-code 
+and involve changes that can be tacked on to those graphs without 
+substantial alteration of their structure.  For instance, many source-code 
 tokens can be assigned a provisional type just by examining 
 the token's character content (e.g., numeric literals start with a decimal 
 digit, and string literals are enclosed in quotes).  Also, certain 
@@ -348,7 +348,7 @@ so a function may be call registering this as a known type).
 `p`
    
 `p.
-Once this provisional anaysis has run its course, the system then 
+Once this provisional analysis has run its course, the system then 
 undertakes a more extreme reworking where the original hypergraph 
 is morphed into a new graph with a different vocabulary and 
 structural conventions.  Where as the earlier graph was built to 
@@ -379,7 +379,7 @@ which aim to work with flexible scripting languages, an intermediate
 hypergraph representation can be narrowly targeted to machine-generated 
 hypergraph stages and needs only simplistic parsers.  For this 
 language, each form (adopting the term from Lisp's name for a 
-single expression) generally correspons to a single `Cpp; method.  
+single expression) generally corresponds to a single `Cpp; method.  
 For development, the steps described via intermediate code can 
 be analogously implemented as `Cpp; code directly (the demo includes 
 project files for running an example of that direct construction in 
@@ -395,7 +395,7 @@ The demo format employs a notion of `q.multigraph tokens`/, which
 are string representations of nodes' values along with a set 
 of token kinds.  An encoding system allows the kind to be 
 notated via a signal embedded in the token string, yielding a 
-node-reprensentation which can work across different varieties 
+node-representation which can work across different varieties 
 of hypergraphs (facilitating graphs' inter-translation).  
 Listing~\ref{lst:PGBIR} shows some 
 code involved with routing input text to graph-build operations.  
@@ -412,7 +412,7 @@ input text).
 `p` 
     
 `p.
-The intermediate language designed via thexe techniques is effective 
+The intermediate language designed via these techniques is effective 
 from the point of view of machine-generating code to construct a 
 new hypergraph from some prior data (including other hypergraphs).  
 Rather than having components generate the intermediate code directly, 

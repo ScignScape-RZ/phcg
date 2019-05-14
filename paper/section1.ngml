@@ -473,7 +473,7 @@ those details in a later section.
 `p.
 For the remainder of this paper, I will attend especially to 
 hypergraphs modeling (and subsequently executing) computer code, 
-because conctructing a working runtime engine which runs source 
+because constructing a working runtime engine which runs source 
 code, via hypergraph intermediaries, demonstrates a variety of concepts 
 applicable to hypergraphs in general.  I will discuss a workflow 
 connecting parsers, a runtime `q.virtual machine`/, intermediate representations 
