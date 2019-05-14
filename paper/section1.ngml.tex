@@ -11,13 +11,13 @@ potentially, nested graphs).  The \q{elements} of a graph
 are nodes and edges, but also (for labeled/weighted 
 and/or directed graphs) things like labels, weights 
 (such as probability metrics associated with edges), and directions 
-(in the distinction between incoming and outgoing edges incident to each node).  
+(in the distinction between incoming and outgoing edges incident to any node).  
 Potentially, each of these elements can be transformed 
 from a simple unit to a plural structure, a process 
 I will call \q{diversification}.  That is, 
 a hypergraph emerges from a graph by \q{diversifying} 
 some elements, rendering as multiplicities what 
-had preciously been a single entity \mdash{} nodes become node-sets, edges 
+had previously been a single entity \mdash{} nodes become node-sets, edges 
 become grouped into larger aggregates, labels generalize to 
 complex structures (which we can call \q{annotations}), 
 etc.  Different avenues of diversification give 
@@ -26,11 +26,12 @@ I will review in the next several paragraphs.
 }
 \p{\begin{description}\item[Hyperedges]  Arguably the most common model of 
 hypergraphs involves generalizing edges to hyperedges, 
-which (potentially) connect more than two nodes.  Directed 
-hyperedges have a \q{source} node-set and a \q{target} node-set, 
+which (potentially) connect more than two nodes.  
+For directed graphs,  
+directed hyperedges have a \q{source} node-set and a \q{target} node-set, 
 either of which can (potentially) have more than one node.  
 Note that this is actually a form of node-diversification 
-\mdash{} there is still (in this kind of hypergraph) just one 
+\mdash{} there is still (in this genre of hypergraph) just one 
 edge at a time, but its incident node set (or source and 
 target node-sets) are sets and not single nodes.  Another way 
 of looking at directed hyperedges is to see source and target 
@@ -45,7 +46,7 @@ simple node-diversification \mdash{} nodes replaced by node-sets
 to contain entire nested graphs.  Edges in this case can still 
 connect two hypernodes as in ordinary graphs, but the 
 hypernodes internally contain other graphs, 
-with their own nodes and edges.
+with their own (on another \q{level}) nodes and edges.
  
 \item[Link Grammar]   Since \i{labeled} 
 graphs are an important model for computational models, 
@@ -56,7 +57,7 @@ drawn from an Ontology, in \q{Subject-Predicate-Object}
 triples).  Compound labels (which I will generically call 
 \q{annotations} or multiple-annotations) are encountered (sometimes implicitly) 
 in several different branches of mathematics and other fields.  
-\\\hspace*{3em}
+\vspace*{.3em}\\\hspace*{3em}
 In particular, compound annotations can represent the 
 rules, justifications, or \q{compatibility} which allows 
 two nodes to be connected.   In this case the annotation 
@@ -70,7 +71,7 @@ and target-\i{sets} of nodes (possibly ordered).  Allowing
 these sets to be \i{empty} yields structures similar to 
 hypergraph categories in recent mathematical treatments, such 
 as \cite{BrendanFong}, \cite{AleksKissinger}.  Hypergraphs 
-in this characterization might be used to study sotware applications 
+in this characterization might be used to study software applications 
 and real-time monitoring systems.  Hyperedges would then 
 mark information flows between different sites \i{inside} the 
 system.  A directed hyperedge \i{without} a source node-sets then 
@@ -78,7 +79,7 @@ models information \i{entering} the system \i{ab initio}.
 Likewise hyperedges without target node-sets could model 
 empirical effects produced by the system, which from one 
 perspective embodies information \q{leaving} the system.
-\\\hspace*{3em}
+\vspace*{.3em}\\\hspace*{3em}
 Analogous models can be realized by, in lieu of 
 hyperedges \i{without} source or target node-sets at all, 
 designating special hypernodes representing empty 
@@ -116,9 +117,9 @@ a special class of hypernode: we can certainly
 consider nodes which refer to edges (perhaps via the 
 latter's label or annotation).  Such \q{referring} 
 is not necessarily an explicit further edge in graphs 
-but can be \q{semantic}, viz., an edge being the 
-\q{value} associated with a node (or likewise 
-one element in a hypernode).
+but could instea be \q{semantic} \mdash{} that is, an edge being the 
+\q{value} associated with a node (or likewise  
+one value in a multi-element hypernode).
 \item[Channels]   Hyperedges, which connect multiple 
 nodes, are still generally seen as single edges 
 (in contrast to multigraphs which allow multiple 
@@ -137,8 +138,8 @@ single edges (this shows why channels mark edge \i{diversification}
 as well as edge \i{aggregation}, because the conceptual role 
 of edges is potentially replaced by channels, which are composed 
 of numerous edges).
-\\\hspace*{3em}
-For a concrete example, 
+\vspace*{.3em}\\\hspace*{3em}
+As a concrete case, 
 consider graphs used to model Object-Oriented programming 
 languages, where a single node can represent a 
 single function call.  The incoming edges are then 
@@ -155,13 +156,14 @@ parameters and a separate channel for the distinguished or
 \end{description}
 }
 \p{In each of these formulations, what makes a graph \q{hyper} is the presence of 
-supplemental information \q{attached} to parts of an underlying (labeled, directed) 
-graph.  As a concrete example, consider a case from linguistics \mdash{} specifically, 
+supplemental information \q{attached} to parts of an underlying (potentially 
+labeled, directed) 
+graph.  For a concrete example, consider a case from linguistics \mdash{} specifically, 
 morphosyntactic agreement 
 between grammatically linked words, which involves details 
 matched between both \q{ends} of a word-to-word \q{link} 
 (part-of-speech, plural/singular, gender, case/declension, 
-etc.).  According to the theory known as \q{link grammar}, 
+etc.).  According to the theory of Link Grammar, 
 words are associated with \q{connectors} (a related useful terminology, 
 derived more in a Cognitive-Linguistic context, holds that 
 words carry \q{expectations} which must be matched by other words they 

@@ -155,8 +155,8 @@ Conceptual Graph Semantics) were also candidates for
 potential technological \q{entrenchment} before 
 Semantic Web formats like \RDF{} and \OWL{} 
 became standardized.\footnote{Why \RDF{}/\OWL{} and not, say, Conceptual 
-Graphs, or the hybrid Object-Database/Graph-Database models 
-studied in the 1990s, became canonized in the Semantic Web, is 
+Graphs, hybrid Object-Database/Graph-Database models, 
+became canonized in the Semantic Web, is 
 an interesting question but perhaps of mostly historical 
 interest insofar as Hypergraphs can unify each of these paradigms.
 }  More recently, scientists have proposed generalizations 
@@ -176,12 +176,11 @@ contexts prerequisite to a decentralized digital ecosystem
 software design, and semantic expressiveness \mdash{} more effectively 
 than other paradigms, like regular graphs or \SQL{}-style tables.
 }
-\p{I suspect other scientists and engineers have 
-similar intuitions, because there has been a recent uptick in 
-research on hypergraphs in various disciplines, such 
+\p{There has also been a recent uptick in 
+research on hypergraphs in such fields 
 as Category Theory, Information Management, Artificial Intelligence, 
 and Natural Language Processing.  Compared to 
-the Semantic Web, however, there is a noticeable lack 
+the Semantic Web, however, one observes a noticeable lack 
 of standard tools or formats for expressing hypergraph 
 data or sharing hypergraph structures across multiple 
 applications and environments.  Whereas \RDF{} and \OWL{} are 
@@ -218,10 +217,11 @@ their distinct structural advantages are lost as
 explicit architectural features once hypergraphs are 
 \q{encoded} in conventional Semantic Web formats.
 }
-\p{As I will outline in the first section, there are at least some half-dozen 
+\p{As I will outline in the first full section, 
+there are at least some half-dozen 
 different structures that may certainly be described as hypergraphs, generalizing 
 various underlying graph models (even restricting attention to 
-labeled directed graphs).  Within this space of possibilities, 
+labeled and directed graphs).  Within this space of possibilities, 
 recent computer-science-related) research into hypergraphs 
 seems to emphasize two different topics: first, the 
 representational potential for hypergraphs as a 
@@ -232,7 +232,9 @@ processes.  In the second subject-area, hypergraphs are studied
 as a medium for expressing details about computer algorithms as a 
 way to reason about executable computer code as a structured system, and 
 perhaps even to design execution engines (virtual machines to 
-run computer code that is in a suitable representation).  This 
+run computer code that is in a suitable representation).
+}
+\p{This 
 latter research sometimes appears to present a mathematical 
 picture of hypergraphs as an abstract model 
 of computing procedures and evaluations \mdash{} a kind of 
@@ -299,17 +301,20 @@ of analysis) atomic operations.  For any variety of
 hypergraph, then, we can consider which is a suitable 
 Intermediate Representation for conformant spaces \mdash{} in particular, 
 which set of primitive options can, iteratively, construct 
-any representative of the space of instantations of a 
+any representative of the space of instantiations of a 
 given kind of hypergraph.  Insofar as a software framework 
 seeks to work with several hypergraph varieties, we can consider 
 how several different such operation-sets can be combined.  
+Such is one avenue toward the goal of a general-purpose 
+specification of the space of possible hypergraph structures 
+across disciplines. 
 }
 \p{Moreover, we can consider both serialization and Intermediate Representation 
 as parallel tactics for building hypergraphs.  
 An Intermediate Representation language can be used to carry out 
 transformations between hypergraphs \mdash{} producing \IR{} code based on 
-the first hypergraph from which the second can be populated.  In conjunction 
-with serialization and parsers, a hypergraph can then be realized 
+one hypergraph, from which a second is populated.  In conjunction 
+with serialization and parsers, hypergraphs can then be realized 
 via several stages, with one form of hypergraph used as an intermediary 
 because it has a convenient grammar and works with a parsing engine; 
 from that preliminary graph a new graph can be created via \IR{} code.  
@@ -319,13 +324,13 @@ inter-graph transformations (analogous to the trio of \XML{} parsers,
 \XML{} transforms, and the \XML{} Document Object Model).
 }
 \p{Continuing the \XML{} analogy, note that \XML{} is not just a serialization specification: 
-the full \XML{} technology defined requirements on a series of tools 
+the full \XML{} technology defines requirements on a series of tools 
 operating on \XML{} data, not just \XML{} files: tools 
 for traversing \XML{} documents (including a programming interface 
 for how traversal options are to be operationalized, e.g. 
 via Object-Oriented methods like \parentNode{} and \nextSibling{}); 
 for parsing \XML{} files into traversable data structures (including 
-requirements on the traversals which the derived structurees 
+requirements on the traversals which the derived structures 
 \mdash{} the so-called \q{post-processing infoset} \mdash{} must 
 support); and for inter-document mapping 
 (via \XSLT{} or \XML{}-FO).  The Document Object Model and 
@@ -334,14 +339,14 @@ format, even more than any surface-level syntax (the grammar
 for tags, attributes, and so forth).  Analogous specifications 
 would have to be developed for a generalized Hypergraph representation.
 }
-\p{The code discussed here does not purport to provide a mature or 
+\p{The paper's demo code does not purport to provide a mature or 
 decisive implementation of a general-purpose hypergraph ecosystem, 
-but rather to demonstrate by example what components may comprise 
-such a framework and how they may interoperate.  The code includes 
-hypergraph models but also the preliminary and 
-intermediary structures that can connect hypergraphs to 
+but rather to suggest by \mbox{example} what components may comprise 
+such a framework and how they may interoperate.  The code base includes 
+preliminary and 
+intermediary structures for connecting hypergraphs to 
 a surrounding computational infrastructure \mdash{} parsers, 
-Intermediate Representation, application-integration 
+Intermediate Representation, application-in\-tegration  
 logic (such as mapping hypergraph nodes to 
 application-specific data types), and a \q{virtual machine} 
 for realizing hypergraphs as executable code.  
@@ -353,9 +358,9 @@ a review of formal structures (like grammars and \IR{}
 formats) which are structurally different 
 than hypergraphs but can help tie hypergraph 
 representations together into a unified ecosystem.  
-I will also, in conclusion, sketch arguments to the effect that 
-hypergraphs offer a plausible foundation for reasoning 
-about structured/computation data and date types in general.  
+%I will also, in conclusion, sketch arguments to the effect that 
+%hypergraphs offer a plausible foundation for reasoning 
+%about structured/computation data and data types in general.  
 I have spoken only informally about hypergraphs 
 themselves, taking for granted that we have a general 
 picture of what hypergraphs are, but this now 

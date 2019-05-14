@@ -18,6 +18,7 @@
 `document,
 
 `title.Hypergraph Data Modeling and a Hypergraph Virtual Machine`
+`author.Nathaniel Christen`
 
 \newsavebox{\qboxi}
 \newsavebox{\qboxii}
@@ -93,7 +94,7 @@ overarching generalized model which I call `q.procedural` hypergraphs
 and a `q.Procedural Hypergraph Ontology` (`q.Phaon`/).    
 I then discuss hypergraph representations of computer code and 
 implementation strategies for a runtime execution environment 
-with hypergraphs as the principal internal data representation.  
+which adopts hypergraphs as the principal internal data representation.  
 This paper is paired with a code repository demonstrating such a 
 Hypergraph Virtual Machine (PhaonGraph Virtual Machine).  
 I outline parsing and compiler techniques for this Virtual Machine as 

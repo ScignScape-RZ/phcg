@@ -470,12 +470,15 @@
 \makeatother
 
 
-%\titlespacing{\section}{.25\textwidth}{*2.8}{*-.4}[5pc]
+%
+\titlespacing{\section}{0pt}{.75em}{.5em}[5pc]
 
+%\titlespacing*{\section}
+%{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
 
 \newcommand{\p}[1]{
 	
-	\vspace{.25em}
+	\vspace{.27em}
 	#1	
 }
 
@@ -923,3 +926,15 @@ drop fuzzy shadow northeast={darkRed!40!ftcback},
 
 \newcommand{\dblhref}[1]{\href{#1}{#1}}
 \newcommand{\repeatName}{\_\_\_\_\_}
+
+\providecommand\abstractname{Abstract}
+\def\abstract{}
+\def\endabstract{}
+\renewenvironment{abstract}{%
+	\centering\small
+	\textbf\abstractname
+	\list{}{\leftmargin4.5em \rightmargin\leftmargin}
+	\item\relax
+}{%
+\endlist% \par\bigskip
+}
