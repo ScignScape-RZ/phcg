@@ -82,7 +82,7 @@ syntactic conventions that preserve atoms' boundaries, yielding
 textual serializations of data structures that can be 
 shared between computing environments, allowing information to 
 be copied and distributed.  Finally, digital representations 
-of data structures can be marshalled into different binary forms \mdash{} 
+of data structures can be marshaled into different binary forms \mdash{} 
 encoded in byte- and bit-patterns \mdash{} to enable both 
 persistent storage in a database and \q{runtime} presence 
 as binary data that may be accessed by software applications.
@@ -118,13 +118,14 @@ be structured according to the \q{semantics of the science}, so that
 the scientific background can be reconstructed along with future use 
 of the data, even after a circuitous journey through different 
 contexts, like through a database and over a network to 
-a scientific-software application (maye years later).   
+a scientific-software application (maybe years later).   
 As formal models of data semantics have become more rigorous \mdash{} e.g. in our 
 century with Ontologies and the \q{Semantic Web} \mdash{} this 
 \q{semantic engineering} has become a further technical perspective 
 needing consideration in the design and evaluation of digital representations.
 }
-\p{So these are all factors in which digital representation strategies 
+\p{So these are all factors contributing to how 
+digital representation strategies 
 become popular with scientists and engineers.   
 Over the decades, many strategies and representational 
 \q{layouts} have been envisioned, from tabular structures 
@@ -190,7 +191,7 @@ Semantic Web technologies, there is no comparable
 consensus on the underlying theory of hypergraph data 
 in general.    
 }
-\p{This situation may be explained in part by subtle differences on 
+\p{This situation may be explained in part by subtle differences in 
 what the word \q{hypergraph} is supposed to mean in different 
 settings, so the overal terrain of hypergraphs is 
 divided into distinct mathematical models, often without a 
@@ -199,7 +200,9 @@ Another problem is perhaps a failure to appreciate how hypergraphs
 are structurally different from ordinary graphs, so that 
 hypergraph-shaped data may be imprecisely treated as 
 a mere variation upon or a special structuration within 
-ordinary graphs.  For eample, Semantic Web structures such as 
+ordinary graphs.
+}
+\p{As a case in point, Semantic Web structures such as 
 \RDF{} \q{bags} and \q{collections} introduce a kind of 
 hierarchical organization to Semantic Web graphs \mdash{} qualifying as 
 a form of hypergraph \mdash{} but these protocols are not described as 
@@ -210,14 +213,14 @@ exploiting the representational flexibility which also
 makes the Semantic Web suitable for spreadsheets, \XML{}, and 
 other structures that are not graphs at a \i{prima facie} level.
 The problem is that while hypergraphs can be \i{encoded} in 
-ordinary graphs with a suitable labeling convention, 
+ordinary graphs (assuming a suitable labeling convention), 
 their distinct structural advantages are lost as 
 explicit architectural features once hypergraphs are 
 \q{encoded} in conventional Semantic Web formats.
 }
 \p{As I will outine in the first section, there are at least some half-dozen 
 different structures that may certainly be described as hypergraphs, generalizing 
-various underlying graph models (or indeed, even if we restrict attention to 
+various underlying graph models (even restricting attention to 
 labeled directed graphs).  Within this space of possibilities, 
 recent computer-science-related) research into hypergraphs 
 seems to emphasize two different topics: first, the 
@@ -235,7 +238,10 @@ picture of hypergraphs as an abstract model
 of computing procedures and evaluations \mdash{} a kind of 
 graph-based interpretation of the lambda calculus \mdash{} but 
 sometimes is also marshaled into implemented execution 
-environments, as in the OpenCog and lmnTal frameworks.
+environments.\footnote{Examples include OpenCog, which I will touch on below, 
+and LMNtal from Waseda University in Japan 
+(\dblhref{https://www.ueda.info.waseda.ac.jp/lmntal/index.php}).
+}
 }
 \p{My goal in this paper is to consider what a unified hypergraph 
 paradigm can look like \mdash{} how the different strands which in their 
