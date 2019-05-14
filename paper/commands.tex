@@ -70,6 +70,7 @@
 \usepackage[object=vectorian]{pgfornament} %%  http://altermundus.com/pages/tkz/ornament/index.html
 
 \definecolor{darkRed}{rgb}{.2,.0,.1}
+\definecolor{midRed}{rgb}{.5,.0,.25}
 
 \newcommand{\decoline}{%
 
@@ -186,6 +187,22 @@
 %\end{flushright}
 }
 	
+
+\newenvironment{cquote}{%
+	%\begin{fcolorbox}{yellow!20!gray}{red!5}
+	\begin{flushright}
+	\begin{tcolorbox}[
+		colback=gray!4,
+		colframe=midRed!20!gray,
+		width=.98\linewidth,
+		boxrule=1pt,leftrule=3pt,
+		rightrule=1pt,toprule=.5pt,arc=0pt,auto outer arc
+		]
+\begin{minipage}{21.5em}}{%
+\end{minipage}\end{tcolorbox}
+	\end{flushright}
+}
+
 
 \newcommand{\mdash}{---}
 \newcommand{\q}[1]{``#1"}

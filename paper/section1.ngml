@@ -225,23 +225,26 @@ of possible graphs that could be formed from a sentence's word set) is correct.
 `p.
 Ordinary directed graphs 
 (not necessarily hypergraphs) already have some sense of grouping edges together, 
-insofar as incoming and outgoing edges are distinguished; 
+given that incoming and outgoing edges are distinguished; 
 but this indirect association between edges does not 
 internally yield a concordant grouping of the nodes 
 at the sources of edges all pointing to one target node 
 (or analogously the targets of one source node).  
 In the theory of 
 hypergraph `i.categories`/, hypernodes come into play insofar as representation 
-calls for the nodes `q.across` incoming/outgoing edges to be grouped together; 
-we distinguish an `i.incoming node-set` from an `i.outgoing node-set`/: 
-`quote,
+calls for the nodes `q.across` (i.e., at the other end of) 
+incoming/outgoing edges to be pulled together.   
+We distinguish an `i.incoming node-set` from an `i.outgoing node-set`/; 
+then we might treat these sets as integral `q.bodies` of inputs 
+(respectively, outputs):   
+`cquote,
 The term hypergraph category was introduced recently ... in reference
 to the fact that these special commutative Frobenius monoids provide precisely the
 structure required for their string diagrams to be directed graphs with `sq.hyperedges`/:
 edges connecting any number of inputs to any number of outputs. ... 
 We then think of morphisms in a hypergraph category as hyperedges 
 \cite[p. 13]{BrendanFongThesis}.
-`quote`  
+`cquote`  
 
 For a general mapping of  
 categories to graphs where edges represent morphisms, this represents a 
@@ -256,14 +259,14 @@ of further `q.inner` nodes (or `q.hyponodes`/); here the empty set can be
 a hypernode with no hyponodes.  Elsewhere, apparently an equivalent 
 structure is called a `q.trivial system`/:
 
-`quote,
+`cquote,
 Monoidal categories admit an elegant and powerful graphical notation 
 [wherein] an object $A$ is denoted by a wire [and] [a] 
 morphism `fAB; is represented by a box.  The trivial system 
 $I$ is the empty diagram.  Morphisms `uIA; and `vAI; 
 ... are referred to as `textbf.states` and `textbf.effects` 
 \cite[p. 4]{InteractingConceptualSpaces}.
-`quote`
+`cquote`
 `p`
 
 `p.
