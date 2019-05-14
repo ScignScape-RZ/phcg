@@ -167,7 +167,7 @@ originated with work by Peter `Gardenfors; such as
 `cite<GardenforsBook>;.  This theory was extended in a 
 more explicitly meta-scientific direction by `Gardenfors;' 
 students or colleagues as in `cite<GardenforsZenker>; or 
-`cite<GregorStrle>;.  `Gardenfors; is a vocal critic of 
+`cite<GregorStrle>;.  `Gardenfors; challenges  
 Semantic Web paradigms in articles like 
 `cite<PeterGardenfors>; (`q.How to Make the Semantic Web 
 More Semantic`/), a theme taken up by Martin Raubal 
@@ -178,13 +178,20 @@ specifications such as Conceptual Space Markup Language
 `cite<RaubalAdamsCSML>;, `cite<RaubalAdams>;, proposals 
 which certainly deserve to be revived as part of a 
 hypergraph-oriented rethinking or re-engineering of the 
-Semantic Web.  More recently, Bob Coecke and others have 
+Semantic Web.  More recently, mathematicians such as 
+David Spivak have explored Category-Theoretic 
+perspectives on the Semantic Web (or its next-generation 
+alternatives), e.g. `cite<SpivakKent>;, so we can 
+point to multiple strands in the dialectic 
+critiquing/extending `q.Semantic` technologies: scientific, 
+linguistic, mathematical.  There are signs that these 
+strands may be converging.  Bob Coecke and others have 
 explored how to combine Conceptual Space Theory with 
 hypergraph categories as in `cite<InteractingConceptualSpaces>;; 
 here hypergraphs provide structural organization or syntax 
 while Conceptual Spaces are the foundation for an underlying 
-semantics.  I believe a hypergraph/Conceptual-Space 
-in some fashion would be a great starting-point for a 
+semantics.  I believe a hypergraph/Conceptual-Space unification 
+in some fashion would be a valuable launching-point for a 
 bonafide `q.more semantic` and more scientific Semantic Web.  
 `footnote`  Hypergraphs 
 would be a successful replacement for other (simpler) 

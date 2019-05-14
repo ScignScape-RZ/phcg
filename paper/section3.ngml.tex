@@ -18,7 +18,7 @@ grammars and special syntactic contexts.  While
 programming languages in a theoretical sense may 
 have an expected translation to Abstract Syntax Trees, 
 real-world languages embrace syntactic forms 
-that complicate this abstract picture.  Earier I cited 
+that complicate this abstract picture.  Earlier I cited 
 \Csharp{}'s \LINQ{} as an example of an intra-linguistic 
 special syntax; other examples include embedded \XML{} in 
 Scala; attribute markings in \Csharp{} and \Java{}; 
@@ -47,14 +47,14 @@ data).  Another complication is that procedures can have multiple
 sorts of input and output: e.g., throwing an exception rather than 
 returning a value.  Likewise, Object-Oriented languages' 
 \q{message receivers} are input parameters with distinguished 
-properties as conmpared to normal inputs.
+properties as compared to normal inputs.
 }
 \p{Since programming notation visually distinguishes procedure inputs 
 from outputs, it is easy to think of the input/output distinction 
 as mostly syntactic.  The significant differences, however, 
 are more semantic.  Consider a \Cpp{} function which returns an 
 integer: it is a compiler error to return from such a function 
-without suppying a value; also, the called procedure has 
+without supplying a value; also, the called procedure has 
 no access to the memory which would hold the return value.  
 By contrast, a function which takes a non-constant 
 integer reference is not forced by the compiler to 
@@ -67,7 +67,7 @@ mimics the behavior of a return value to the extent that
 procedures initialize the reference on all execution paths, and 
 refrain from using any value which the reference might 
 have before the procedure starts.  Generalizing this point, 
-the badic contrast between input and output can be 
+the basic contrast between input and output can be 
 seen as a semantic matter of usage protocol, rather 
 than a syntactic contrast between passing valued to a 
 function vs. accessing a function's returned result.
@@ -89,19 +89,19 @@ output for an input value.  The second case is less obvious
 semi-colon to highlight the parallels with \fOfG{}, but 
 the analogous case in practice would be \gThenF{}), 
 there may or may not be a \gFun{} side-effect that 
-infuences \fFun{} (even if they are passed the same 
+influences \fFun{} (even if they are passed the same 
 inputs).  So inputs and outputs are distinguished 
 by how output-to-input links \mdash{} outputs from one procedure 
 becoming inputs to another \mdash{} have certain semantic 
 properties in the context of functional composition, and by 
-extension the relations between precedures which 
+extension the relations between procedures which 
 run in sequence.  Again, though, this call for a semantic 
 analysis which looks beyond languages' surface syntax for 
 function calls, and how usages of return valued are notated.
 }
 \p{Mutable references and procedures-with-side-effects expose limits 
 in the representational expressivity of graphs (even hypergraphs) 
-for modelling inter-procedure relationships.  Consider a case 
+for modeling inter-procedure relationships.  Consider a case 
 such as represented in Figure~\ref{fig:figGF}, 
 \input{figGF} where \gFun{} modifies 
 input $n$ that is then also input to \fFun{}.  Here \gFun{}'s 
@@ -142,7 +142,7 @@ from other elements (here, isolating the $x$-and-$y$ pairing
 from the $z$ edges).   
 }
 \p{This case illustrates the basic premise of channels as 
-distinguished and/or edge-groupings, and also one modelling 
+distinguished and/or edge-groupings, and also one modeling 
 domain where I contend channels can be applied; specifically, 
 representing details in computer code (in a general hypergraph 
 representation of source code) such as program flow.  
@@ -167,7 +167,7 @@ in various incarnations (sheaves, topoi, etc.).
 context) are not particularly suited to the intuitions of \q{members} of 
 sets, or \q{points} of spaces.  One reason is that there is no fixed theory 
 of types' extension, or \q{set} of possible instances,
-in a given computing enbironment.  For example, types without a fixed size 
+in a given computing environment.  For example, types without a fixed size 
 in memory \mdash{} say, lists of numbers \mdash{} are constrained be a computer's 
 available memory.  We cannot be certain which lists are small enough that a 
 given environment can hold them in memory, so that they are available 
@@ -183,7 +183,7 @@ passed as parameters from calling procedures to called procedures,
 or returned as outputs from called procedures to calling procedures.  
 }
 \p{Of course, programs execute in a world of surrounding data \mdash{} on computer 
-drives and in memory, plus \q{cyberphysical} data from devices 
+drives and in memory, plus \q{CyberPhysical} data from devices 
 hooked up to computers (at a minimum, devices crafted to be 
 part of a computer set-up, like mice and keypads; plus often 
 \q{smart} devices which software accesses to manage an oversee).  
@@ -191,10 +191,10 @@ From a programmer's point of view, this data is accessed by
 calling specific functions, albeit ones which 
 (at the lowest level) programmers themselves do not 
 implement (viz., the procedures exposed in device \q{drivers}).  
-Analogously, many values are presented directy in source-code 
+Analogously, many values are presented directly in source-code 
 literals; but we should think of these values as likewise 
 yielded from procedures that read source tokens or strings 
-and interpret the intended type-spefic value (e.g., converting the 
+and interpret the intended type-specific value (e.g., converting the 
 character-string \q{123} to the corresponding integer).  
 Typically these \q{reader} procedures occur behind-the-scenes; 
 although, which helps demonstrate the point that source literals 
@@ -230,9 +230,9 @@ them available for software procedures.
 describe the structures that \q{package} typed values.  
 When a procedure returns a value, said value is embedded 
 in a carrier which \q{transports} it to other procedures.  The 
-\q{things} exchanged between proceures are actually, then, 
+\q{things} exchanged between procedures are actually, then, 
 carriers rather than values \mdash{} we should picture 
-carriers travelling on \q{routes} laid out in source-code 
+carriers traveling on \q{routes} laid out in source-code 
 hypergraphs.  Carriers, in particular, are more general 
 than values.  Consider a function which, on one occasion, 
 throws an exception rather than returning a value.  The carrier 
@@ -261,14 +261,14 @@ types (such as, the category \HaskCat{} of Haskell types).
 Carriers are an extra structure which rest \q{on top of} 
 types, calling for the foundation (including Category-theoretic 
 treatment if applicable) to be reconsidered.  First, 
-the Haskell-like interpretation of \tyCat{} morphsims 
+the Haskell-like interpretation of \tyCat{} morphims 
 should be redefined.  On the usual account, \tyOneToTyTwo{} morphisms 
 are functions mapping type \tyOne{} to \tyTwo{}.  This 
 picture is complicated by procedures deviating from pure functions: 
 as I discussed earlier in this section, the input/output discussion 
 is complex and does not precisely map to the mathematical model 
 of morphisms between Category-objects.  Instead, inter-type 
-morphisms (to the degree that these are idetified as categorial 
+morphisms (to the degree that these are identified as categorial 
 morphisms establishing type systems as categories) should be restricted 
 to specialized semantic associations between types, such as 
 casts from integers to floating-point values (hence, morphisms between 
@@ -277,7 +277,7 @@ integer types to floating-point types).
 \p{Moreover, reasonable type systems have a nontrivial collection of 
 endofunctors marking inter-type associations.  A good example 
 is the \q{unreferencing} operator which recovers the underlying 
-type \ty{} from a relerence type \ty{}\&.  This operator naturally 
+type \ty{} from a reference type \ty{}\&.  This operator naturally 
 translates to a function \ty{}\& $\rightarrow$ \ty{} that retrieves the 
 value held by a reference.  It is reasonable to treat this 
 function as a \ty{}\& $\rightarrow$ \ty{} morphism.
@@ -289,7 +289,7 @@ is not a \tyOne{} $\rightarrow$ \tyTwo{} morphism but a more complex
 structure operating on carriers.  For each input and output parameter 
 there is a carrier accessible in the environment of the procedure 
 (its program code and its runtime environment) that provides the 
-procedure acess to an underlying value.  The specific access can be 
+procedure access to an underlying value.  The specific access can be 
 modeled around different sorts of carriers \mdash{} carriers holding 
 return values should allow procedures to \q{write upon} (initialize or 
 modify) their values but not read them (conformant to the expected 
@@ -323,11 +323,11 @@ change in state or a mapping between values.  When a carrier \cCar{} is
 initialized, it transitions from being in a state with no value 
 to being in a state where it holds an instance of its type 
 (when a carrier is already initialized its state can change 
-by repacing its held value with another value; or by 
+by replacing its held value with another value; or by 
 becoming \q{retired}).  A \cCarOne{}-to-\cCarTwo{} \q{handoff} then 
 corresponds to a morphism in \cCarTwo{}'s state wherein 
 \cCarTwo{} (perhaps transitions out of a pre-initialized state and) 
-acauires a concrete value derived from \cCarOne{}'s.  
+acquires a concrete value derived from \cCarOne{}'s.  
 This case \mdash{} I'll call it a \q{handoff-induced morphism} 
 \mdash{} plays a foundational role in analysis via carriers and 
 hypergraphs analogous to \tyOne{} $\rightarrow$ \tyTwo{} morphisms 
@@ -358,7 +358,7 @@ output.  In effect, the calling procedure must orchestrate a
 suite of handoffs among its own carriers and the those 
 of the called procedure.  The semantics of this multi-faceted 
 sum of carrier-transfers can be represented within a source-code 
-graph; and so, the structures and semantics of these hypergrah 
+graph; and so, the structures and semantics of these hypergraph 
 representations should be codified in a manner which 
 renders (a de-facto Ontology) the patterns of aggregate 
 carrier handoffs). 
@@ -366,7 +366,7 @@ carrier handoffs).
 \p{To illustrate, Figure~\ref{fig:figGFcomplexc}\input{figGFcomplexc} modifies 
 Figure~\ref{fig:figGFcomplex} so as to show carriers and handoffs, 
 analogous to Figure~\ref{fig:figGFc} adding carriers to Figure~\ref{fig:figGF}.  
-Each case where one procedure calls another can be modelled via a 
+Each case where one procedure calls another can be modeled via a 
 graph which groups together the carriers (seen in the context of the 
 calling procedure) that are packaged together to enable the call; 
 and concordantly the links between these carriers and those 
@@ -385,13 +385,13 @@ mark the pairs of carriers involved in a handoff within a
 procedure-call.  Grouping carriers based on their common 
 semantics \mdash{} separating the \this{} object from non-distinguished 
 parameters, let's say \mdash{} involves a further level of organization, 
-grouping hypereges into channels.  Taken together, then, the 
+grouping hyperedges into channels.  Taken together, then, the 
 overall hypergraph system exhibits two generalizations from 
 simpler code-graphs: double-annotations on edges (based 
 on carrier theory) and the use of channels to reflect 
 higher-level programming semantic, such as the distinct status 
 of method-receivers as non-standard input and of exceptions 
-as non-standard output.\footnote{My chapter in 
+as non-standard output.\footnote{My forthcoming chapter in 
 \cite{NathanielChristenCyberphysical} includes examples of other 
 more \q{exotic} kinds of channels as well.}  
 }
@@ -399,10 +399,10 @@ more \q{exotic} kinds of channels as well.}
 (semantically) a (possibly empty) collection of (one or more, 
 if not empty) carriers \mdash{} the corresponding hypergraph representation 
 is a channel grouping edges whose annotations refer to these 
-carriers.  Each channel is then associated with a specifis 
+carriers.  Each channel is then associated with a specific 
 \q{protocol}, an idiosyncratic method for procedures to 
 interact with carriers (and by extension with one another).  
-For example, the procol for regular input and output channels 
+For example, the protocol for regular input and output channels 
 is that one output carrier's value can be directly \q{handed off to} 
 an input carrier, as in \fOfG{}-like composition.  In many languages a 
 procedure can have at most one output value, and also at most one 
@@ -432,7 +432,7 @@ I contend that a theory of channels can unify the regulations enforced
 by strong typing (e.g. not calling procedures with incompatible 
 arguments \visavis{} expected types) and those due to inter-channel 
 semantic protocols.  What the two semantic regimes have in common 
-is that they ultimately maniest as rules on carrier-transers \mdash{} 
+is that they ultimately manifest as rules on carrier-transfers \mdash{} 
 both carriers' types and the kinds of channels to which they 
 respectively belong influence whether a purported handoff 
 (needed by a call between procedures) is permissible; if not, 
@@ -482,7 +482,7 @@ walk through code graphs to generate Virtual Machine code
 and then a runtime library to execute the code thereby 
 generated.  I will briefly summarize both components 
 as case-studies in how hypergraph code representations can 
-be transformd into concrete execution environments.
+be transformed into concrete execution environments.
 }
 \p{\parlead{A Hypergraph-Based Virtual Machine}  According to channel theory, 
 an operational execution environment is, first an foremost, a 
@@ -519,7 +519,7 @@ I use the term \q{RelaeGraph} for graphs generated from
 from Relae-Graphs to Phaon-Graphs is the important 
 step which enables the \PVMIR{} generator to run mechanically.  
 }
-\p{As desribed, \PVMIR{} plays a limited role insofar as it is 
+\p{As described, \PVMIR{} plays a limited role insofar as it is 
 generated from channel-package objects \mdash{} yielding 
 \PVMIR{} files \mdash{} and then sometime later a virtual machine 
 runs the \PVMIR{} code to recreate those objects at runtime.  
@@ -560,7 +560,7 @@ subroutine.
 support \q{exotic} channel packages, with channel-semantic 
 protocols that depart from the basic inputs and returns 
 (and also \this{} objects and exceptions) from 
-mainstream programming langages.  The specialized 
+mainstream programming languages.  The specialized 
 protocols can provide a more sophisticated basis for 
 static or runtime analysis of Phaon-structured source 
 code representations.  However, a Phaon environment eventually 
@@ -576,7 +576,7 @@ of a called \Cpp{} function.
 }
 \vsftcl{!h}{figPVMrt}
 \p{So far I have talked about channel \i{packages} which are 
-structured aroud points in source-code where procedures are 
+structured around points in source-code where procedures are 
 called.  The \PVM{} system has a parallel notion of 
 channel \i{bundles} which are associated with functions' 
 signatures \mdash{} at runtime, \PVM{} can access \Cpp{} functions 
@@ -600,7 +600,7 @@ The low-level details are sampled in Listing~\ref{lst:figPVMrt}:
 here \OneOverlay{} marks a point where the engine 
 switches over numeric codes standing for certain 
 equivalence classes; and \TwoOverlay{} shows how multiple 
-target functions, once the equivalnce class is identified 
+target functions, once the equivalence class is identified 
 (and the argument array initialized accordingly), 
 may be accessed via a single function-pointer.
 }

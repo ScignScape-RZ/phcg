@@ -102,8 +102,8 @@ whereas application \i{developers} need to focus on how to
 properly encode data structures for binary runtimes.  These various 
 perspectives all influence the theory and technology 
 behind digital data representation \mdash{} a successful 
-representational paradigm needs to adapt to the operatoonal 
-requirements of engineers in each of these disicplines.
+representational paradigm needs to adapt to the operational 
+requirements of engineers in each of these disciplines.
 }
 \p{Additionally, insofar as the point of digital archives is to encode 
 empirical, \q{real-world} data, a proper representational protocol 
@@ -152,13 +152,13 @@ line of development has been the Semantic Web and the specific graph
 architecture codified by \q{Web Ontologies}, although 
 other graph-representation models (such as 
 Conceptual Graph Semantics) were also candidates for 
-potential technological \q{entrenchnment} before 
+potential technological \q{entrenchment} before 
 Semantic Web formats like \RDF{} and \OWL{} 
 became standardized.\footnote{Why \RDF{}/\OWL{} and not, say, Conceptual 
 Graphs, or the hybrid Object-Database/Graph-Database models 
 studied in the 1990s, became canonized in the Semantic Web, is 
 an interesting question but perhaps of mostly historical 
-interest insofar as Hypergaphs can unify each of these paradigms.
+interest insofar as Hypergraphs can unify each of these paradigms.
 }  More recently, scientists have proposed generalizations 
 and/or alternatives to the Semantic Web based on 
 hypergraphs in lieu of ordinary (directed, labeled) graphs.
@@ -171,9 +171,9 @@ topic of hypergraph data structures via general issues in
 digital representation in part to rest claims of hypergraphs' 
 merit on explicit criteria.  In particular, I believe 
 hypergraphs can adapt to the different technological 
-contexts prerequisute to a decentralized digital ecosystem 
+contexts prerequisite to a decentralized digital ecosystem 
 \mdash{} databases, networking, application implementation, visual/interactive 
-software design, and semantic expressiveness \mdash{} more effeectively 
+software design, and semantic expressiveness \mdash{} more effectively 
 than other paradigms, like regular graphs or \SQL{}-style tables.
 }
 \p{I suspect other scientists and engineers have 
@@ -218,7 +218,7 @@ their distinct structural advantages are lost as
 explicit architectural features once hypergraphs are 
 \q{encoded} in conventional Semantic Web formats.
 }
-\p{As I will outine in the first section, there are at least some half-dozen 
+\p{As I will outline in the first section, there are at least some half-dozen 
 different structures that may certainly be described as hypergraphs, generalizing 
 various underlying graph models (even restricting attention to 
 labeled directed graphs).  Within this space of possibilities, 
@@ -238,7 +238,8 @@ picture of hypergraphs as an abstract model
 of computing procedures and evaluations \mdash{} a kind of 
 graph-based interpretation of the lambda calculus \mdash{} but 
 sometimes is also marshaled into implemented execution 
-environments.\footnote{Examples include OpenCog, which I will touch on below, 
+environments.\footnote{Two frameworks I know of along these lines are OpenCog, which 
+I will touch on below, 
 and LMNtal from Waseda University in Japan 
 (\dblhref{https://www.ueda.info.waseda.ac.jp/lmntal/index.php}).
 }
@@ -249,14 +250,14 @@ own way embody hypergraph structures can be woven together
 into a multi-purpose whole.  My emphasis is on computer implementations 
 rather than mathematics \mdash{} that is, I will not present axioms 
 or theorems formalizing different sorts of hypergraphs, though I 
-ackowledge that such descriptions are possible.  Instead, my 
+acknowledge that such descriptions are possible.  Instead, my 
 aim is to describe what might constitute a general software 
 library or toolkit that can adapt to different hypergraph 
 models and use-cases.  This paper is accompanied by a \q{data set} 
 which involves a library (written in \Cpp{}) for creating and 
 manipulating hypergraphs of different varieties, and also a 
 \q{virtual machine} for modeling and realizing 
-computatational procedures via hypergraph structures.  The 
+computational procedures via hypergraph structures.  The 
 point of the accompanying code is to 
 demonstrate that a generalized hypergraph representation 
 is possible, and that in addition to use-cases for modeling 
@@ -330,15 +331,15 @@ support); and for inter-document mapping
 (via \XSLT{} or \XML{}-FO).  The Document Object Model and 
 post-processing infoset is the structural core of the \XML{} 
 format, even more than any surface-level syntax (the grammar 
-for tags, attributes, and so forth).  Analogous specifictions 
+for tags, attributes, and so forth).  Analogous specifications 
 would have to be developed for a generalized Hypergraph representation.
 }
 \p{The code discussed here does not purport to provide a mature or 
 decisive implementation of a general-purpose hypergraph ecosystem, 
 but rather to demonstrate by example what components may comprise 
 such a framework and how they may interoperate.  The code includes 
-hyprgraph models but also the preliminary and 
-intermediary structures that can connct hypergraphs to 
+hypergraph models but also the preliminary and 
+intermediary structures that can connect hypergraphs to 
 a surrounding computational infrastructure \mdash{} parsers, 
 Intermediate Representation, application-integration 
 logic (such as mapping hypergraph nodes to 
@@ -346,12 +347,12 @@ application-specific data types), and a \q{virtual machine}
 for realizing hypergraphs as executable code.  
 }
 \p{The remainder of this paper will focus on three 
-subjects: delimitating the proper range of hypergraph 
+subjects: delimiting the proper range of hypergraph 
 models; execution models and the \q{virtual machine}; and 
-a review of formal structurs (like grammars and \IR{} 
+a review of formal structures (like grammars and \IR{} 
 formats) which are structurally different 
 than hypergraphs but can help tie hypergraph 
-representations togther into a unified ecosystem.  
+representations together into a unified ecosystem.  
 I will also, in conclusion, sketch arguments to the effect that 
 hypergraphs offer a plausible foundation for reasoning 
 about structured/computation data and date types in general.  
