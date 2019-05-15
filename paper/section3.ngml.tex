@@ -358,7 +358,7 @@ a repository of local carriers (syntactically speaking,
 lexically-scoped source-code symbols) which start as uninitialized but 
 can hold outputs from other procedures called from the current 
 procedure's implementation body.  Each implementation is then a 
-sequence of further procedure call wherein the calling procedure 
+sequence of further procedure calls wherein the calling procedure 
 assembles the requisite local carriers to provide inputs to 
 the called procedure (via handoffs).  The calling procedure 
 must also provision carriers to hold the called procedure's 
@@ -371,14 +371,15 @@ representations should be codified in a manner which
 renders (a de-facto Ontology) the patterns of aggregate 
 carrier handoffs). 
 }
-\p{To illustrate, Figure~\ref{fig:figGFcomplexc}\input{figGFcomplexc} modifies 
+\p{In order 
+to back these ideas with pictures, Figure~\ref{fig:figGFcomplexc}\input{figGFcomplexc} modifies 
 Figure~\ref{fig:figGFcomplex} so as to show carriers and handoffs, 
 analogous to Figure~\ref{fig:figGFc} adding carriers to Figure~\ref{fig:figGF}.  
 Each case where one procedure calls another can be modeled via a 
 graph which groups together the carriers (seen in the context of the 
 calling procedure) that are packaged together to enable the call; 
 and concordantly the links between these carriers and those 
-in the called procedure's signature and implementation which 
+in the called procedure's signature and implementation \mdash{} which 
 embody handoffs executed in the transition in program flow between 
 the calling procedure to the called procedure, and back.
 }
