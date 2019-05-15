@@ -7,13 +7,9 @@ void PHR_Command_Runtime_Router::proceed_s0_2(
   PHR_Function_Vector* pfv, void** pResult)
 {
  int byte_code = 0;
-
  s0_fn1_p_p_type fn = nullptr;
  bool sr;
-
- int mc = 0;
- int bc = 0;
-
+ int mc = 0, bc = 0;
  if(pfv)
  {
   if(void* fnp = pfv->match_against_codes({6002, 7002}, 
@@ -24,14 +20,12 @@ void PHR_Command_Runtime_Router::proceed_s0_2(
    sr = mc == 6002;
   }
   else byte_code = 0;
- }
-... 
+ } ... 
  if(fn)
  {
   proceed_s0<2, s0_fn1_p_p_type>(pResult, fn, 
     byte_code, sr, false);
- }
-...
+ } ...
 }
 ...
 template<>
@@ -44,8 +38,7 @@ void PHR_Command_Runtime_Router::proceed_s0_r<2,
  case 944: tybc_<2>::run<944, s0_fn1_p_p_type>(args, result, 
    fn); break;
  case 984: tybc_<2>::run<984, s0_fn1_p_p_type>(args, result, 
-   fn); break;
-...
+   fn); break; ...
  }
 }
 ...
@@ -60,8 +53,6 @@ struct tybc_<2>
     (typename tybc<byc>::a1) *((quint64*) args[1]));
  }
 }
-
-
 \end{lstlisting}
 \begin{tikzpicture}[remember picture, overlay, text width=.95\linewidth]
 

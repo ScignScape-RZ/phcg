@@ -39,7 +39,7 @@ channels, procedural hypernodes \mdash{} are employed.  De facto,
 then, \PGVM{} graphs have an implicit Ontology that structures the 
 \PGVM{} system \mdash{} how the graph, parsing, and virtual-machine-runtime 
 components are integrated together.  So far, this Ontology 
-is not formally articulated, because we do not have a common 
+is not formally articulated \mdash{} we do not yet have a common 
 picture of how to construct \OWL{}-like Ontologies for 
 hypergraphs with this spectrum of extra structure.
 }
@@ -53,7 +53,7 @@ for expressing hypergraph Ontologies, by analogy to
 \OWL{} being a language optimized for \RDF{} Ontologies?  
 More generally, though, these are questions about 
 what \q{Ontology} should mean in the general hypergraph 
-context.  What information should these Ontologies provide 
+context.  What information should Ontologies supply 
 about relevant data structures and protocols?  What kind 
 of metadata and provable guarantees should a hypergraph 
 Ontology add to hypergraph models as compared to those 
@@ -63,7 +63,7 @@ which are not governed by an (explicit) Ontology?
 they are a case-study in the operational relations between 
 diverse software components, whose collective functionality 
 are a precondition for an effective hypergraph system.  
-The overall ecosystem includes parsers to initialize hypergraphs; 
+The overall system includes parsers to initialize hypergraphs; 
 translations between different hypergraph formats 
 (here, Relae-Graph to Phaon-Graph); operations for traversing 
 and pulling data from hypergraphs; and generating other 
@@ -110,20 +110,31 @@ then, some human user's software acquiring some new data which
 the user in turn would then view and interact with.  In the 
 case of scientific data, this would entail in a typical scenario 
 an application \mdash{} perhaps special-purpose scientific software 
-\mdash{} obtaining data from perhaps an open-access publisher's or 
-institutional repository, and parsing the data into the 
+\mdash{} obtaining data from (say) open-access publishers' or 
+institutional repositories, and parsing the data into the 
 runtime memory structures to create appropriate visuals and 
-interactive components for the user's behalf: data describing 
-chemical morphology for molecular visualization software; 
-data describing lexemes, corpora, or parsed sentences for 
-linguistics software; and so on.  Hypergraphs in this sense 
+interactive components for the user's behalf.  Data describing 
+chemical morphology would be routed to molecular visualization software; 
+data enumerating lexemes, corpora, or parsed sentences to 
+linguistics software; civic and governmental data for 
+sociological and civil engineering (\q{smart cities}) 
+research, and so on.  Whereas Semantic Web practioners 
+often reflect a web-development background in whose lights 
+networking (and browser-based access to networked resources) 
+\i{takes the place of} special-purpose applications, a 
+\q{web of science} should instead conceptualize 
+data networks as federations of dedicated software components 
+each serving a 
+distinct technical community.
+}
+\p{Hypergraphs in this sense 
 are intermediary structures whose expressivity and 
 protocols should prioritize the quality and interoperability 
 of application-components which, at the culmination of a 
 data-sharing workflow, present new data to application users.
-Hypergraph models are not only preoccupied with data 
+These models are not only preoccupied with data 
 analytics and other behind-the-scenes processing; their 
-value should also come to the fore from the perspective 
+value also comes to the fore from the perspective 
 of application-developers working with components that 
 draw data from remote sources but present the associated 
 information according to application-specific protocols 
@@ -185,17 +196,17 @@ in the latter sense.
 }
 \p{I believe, also, that a mature data-sharing platform and data-representation 
 protocol, along these lines, will prioritize representations 
-of procedures, algorithms, computational strategies, and in general 
+of procedures, algorithms, computational strategies \mdash{} in general, 
 the calculational and interface qualities of data structures 
-formalized in a given scientific or technical context.  Hypergraph 
-models of computer code are not the only situations where 
+formalized in a given scientific or technical context.  Models of 
+computer code are not the only case where 
 hypergraphs would have occasion to express function 
 signatures, application-interface descriptions, or 
-executable scripts.  Instead, the sorts of functions or 
+executable scripts.  Rather, the sorts of functions or 
 transformations which may be applied to a data structure 
-is often an intrinsic feature of data's types and semantics.  
-Likewise, shared data may be accompanied with scripts that 
-ensure the data is properly used by applications which 
+are often intrinsic features of information spaces' types and 
+semantics.  Likewise, shared data may be accompanied with scripts 
+that ensure the data is properly used by applications which 
 acquire it. 
 }
 \p{For these reasons, it makes sense to organize hypergraph data sharing 
@@ -207,7 +218,7 @@ Hypergraph Virtual Machine would then be as intrinsic to the
 initializing hypergraphs from textual input via a parsing 
 library.  The architecture around Phaon-Graph \mdash{} linked 
 to grammars via Relae-Graph, and to an execution runtime via 
-the PhaonGraph Virtual Machine \mdash{} would then be characteristic 
+the \PGVM{} \mdash{} would then be characteristic 
 of a parsing an virtual-machine engine that in some fashion should 
 be available to all hypergraph models. 
 }
@@ -217,11 +228,12 @@ include expressions of procedural interfaces and signatures,
 which entails the integration of programming-language 
 type systems into Ontologies.  This in turn implies the 
 generalization of types expressible in each Ontology to 
-encompass higher-order types, functional-types representative 
-of languages' special features like object-methods 
-and exceptions (which, as I have argued, may be advanced by 
-hypergraph channels), Object-Orientation, and other aspects 
-of modern programming.   
+encompass higher-order types, function-types representative 
+of semantic/syntactic features like methods 
+and exceptions (which, as I have argued, may be subsumed by 
+hypergraph channels), Object-Orientation, and other 
+(often not-pure-functional) aspects 
+of modern programming languages.   
 }
 \p{Hypergraph Ontologies, in short, will need to draw on a wider 
 pool of constructions and paradigms from programming practice and 
