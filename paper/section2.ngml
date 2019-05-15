@@ -156,7 +156,7 @@ relatively low-level (mostly `Cpp;) function-calls.
 `p.
 The remainder of this section will examine some of the code 
 and techniques associated with these different processing step, 
-which hopefully can be proxies for investigation of techniques 
+which hopefully can be proxies for investing techniques 
 related to hypergraphs in general.
 `p`  
 

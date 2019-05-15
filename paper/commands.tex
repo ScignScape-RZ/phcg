@@ -104,6 +104,19 @@
     \end{tikzpicture}}}}}%
     \end{center}
   }
+
+\newcommand{\sectionlinenoc}[2]{%
+	\noindent
+		{\color{#1}
+			\resizebox{#2}{1ex}
+			{{%
+					{\begin{tikzpicture}
+						\node  (C) at (0,0) {};
+						\node (D) at (9,0) {};
+						\path (C) to [ornament=84] (D);
+						\end{tikzpicture}}}}}%
+}
+
   
 \newcommand{\EnglischeLinie}{
 \sectionline{darkRed!60!cyan}
@@ -797,7 +810,7 @@
 \newcommand{\fAfterG}{\ensuremath{{\fFun}{\reflectbox{\SEMI}}{\gFun}}}
 \newcommand{\gThenF}{\ensuremath{{\gFun}{\SEMI}{\fFun}}}
 
-\newcommand{\parleader}[1]{\noindent\textbf{#1}\hspace{1em}}
+\newcommand{\parleader}[1]{\vspace*{4pt}\noindent\textbf{#1}\hspace{1em}}
 \newcommand{\parlead}[1]{\parleader{#1}}
 
 \usepackage[breakable]{tcolorbox}% http://ctan.org/pkg/tcolorbox

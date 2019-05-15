@@ -2,9 +2,15 @@
 %\vspace{.4em}
 
 %\onecolumngrid
-\vspace{.45em}
-\decoline{}
-\vspace{-.25em}
+\newsavebox{\dlbox}
+\begin{lrbox}{\dlbox}{\sectionlinenoc{darkRed!60!cyan}{0.9\linewidth}}
+\end{lrbox}
+
+{\begin{flushright}
+\raisebox{-.25em}{%\hspace*{1em}
+	\usebox{\dlbox}}
+	\end{flushright}}
+
 \onecolumn
 \begin{thebibliography}{99}
 	

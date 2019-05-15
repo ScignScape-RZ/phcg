@@ -1,0 +1,124 @@
+
+\documentclass[11pt,twocolumn]{article}
+
+`include<commands>;
+
+\AddToShipoutPicture{%
+  \AtPageLowerLeft{%
+    \hspace*{1em}
+ \rotatebox{90}{%
+        \begin{minipage}{\paperheight}
+   \centering
+   {\color{codegr!65}\textcopyright ~\today{} Nathaniel Christen}
+        \end{minipage} %
+      }
+    } %
+  }%
+
+`document,
+
+`title.Hypergraph Data Modeling and a Hypergraph Virtual Machine`
+`author.Nathaniel Christen`
+
+\newsavebox{\qboxi}
+\newsavebox{\qboxii}
+\newsavebox{\qboxiii}
+
+\begin{lrbox}{\qboxi}
+`frquote,
+What does $M$ really do in the information system?  It acts as
+an interface between the (external) world and the control 
+system.  It structures influences to allow focused purposeful
+control.  If any sense of significance can be given
+to a particular state $m$ of $M$, it must be related
+to this interface function.  The
+significance of $m$ is neither that it
+tracks something external nor
+that it can affect the
+control mechanisms of the system,
+but that it can connect one to the
+other.  The idea of interface allows
+us to specify a notion of meaning for a datum
+in an information system ... in the whole process
+of purposeful interaction between the information system and the environment.
+\\ \longdash{} Orlin Vakarelov, \cite[p. 15-16]{OrlinVakarelov}{}
+`frquote`
+\end{lrbox}	
+
+\begin{lrbox}{\qboxii}
+`frquote,
+OCP [OpenCogPrime] relies on multiple memory types 
+(all intersecting via the AtomSpace, even when also involving 
+specialized representations), including the declarative, procedural, sensory, 
+and episodic memory types that are widely discussed in cognitive 
+neuroscience ... plus attentional memory for allocating system resources
+generically, and intentional memory for allocating system resources in 
+a goal-directed way.  ...
+What's important about the AtomSpace knowledge representation is mainly 
+that it provides a flexible means for compactly representing multiple relevant forms 
+of knowledge, in a way that allows them to interoperate %-- 
+where by `q.interoperate` we [mean] that e.g. a 
+fragment of a chunk of declarative knowledge can link
+to a fragment of a chunk of attentional or procedural knowledge; 
+or a chunk of knowledge in one category
+can overlap with a chunk of knowledge in another category (as when the same link has both a (declarative) truth value and an 
+(attentional) importance value).  
+\\ \longdash{} Ben Goertzel, \cite[pp. 4-5]{GoertzelSS}{}
+`frquote`
+\end{lrbox}	
+
+\begin{lrbox}{\qboxiii}
+`frquote,
+On conna\^{\OldI}t la c\'{e}l\`{e}bre affirmation de Claude L\'{e}vi-Strauss: 
+\q{les sciences humaines seront structurales ou ne seront pas}.  Nous aimerions lui en
+adjoindre une autre: \q{les sciences humaines seront des sciences naturelles ou ne seront pas}. 
+Evidemment, sauf \`{a} en revenir \`{a} un r\'{e}ductionnisme dogmatique, une telle
+affirmation n'est soutenable que si l'on peut suffisamment g\'{e}n\'{e}raliser le concept
+classique de \q{naturalit\'{e}}, le g\'{e}n\'{e}raliser jusqu'\`{a} pouvoir y faire droit, 
+comme \`{a} des ph\'{e}nom\`{e}nes naturels, aux ph\'{e}nom\`{e}nes d'organisation structurale.
+\\ \longdash{} Jean Petitot, \cite[p. 1]{PetitotSyntaxe}{}
+`frquote`
+\end{lrbox}	
+
+\twocolumn[\begin{@twocolumnfalse}
+`maketitle;
+`abstract,
+This paper will argue for multi-purpose hypergraph data models as a 
+generic representation paradigm for data sharing and publication.  
+Seeking to unify disparate constructions where hypergraphs generalize 
+ordinary (often labeled, directed) graphs, I propose a multi-disciplinary 
+framework which captures hypergraph structures found 
+in mathematics, linguistics, computer science, and related disciplines.  
+I consider how to integrate these varying structures and propose an 
+overarching generalized model which I call `q.procedural` hypergraphs 
+and a `q.Procedural Hypergraph Ontology` (`q.Phaon`/).    
+I then discuss hypergraph representations of computer code and 
+implementation strategies for a runtime execution environment 
+which adopts hypergraphs as the principal internal data representation.  
+This paper is paired with a code repository demonstrating such a 
+Hypergraph Virtual Machine (PhaonGraph Virtual Machine).  
+I outline parsing and compiler techniques for this Virtual Machine as 
+a case-study in the supporting ecosystem necessary for 
+hypergraph paradigms to be useful in lieu of, for 
+instance, Semantic Web Ontologies.
+`abstract`
+
+`flushright,
+\usebox{\qboxi}
+\usebox{\qboxii}
+\usebox{\qboxiii}
+`flushright`
+`decoline;
+
+\end{@twocolumnfalse}]
+
+%`vspace<1em>;
+
+`input<intro.ngml>;
+`input<section1.ngml>;
+`input<section2.ngml>;
+`input<section3.ngml>;
+`input<conclusion.ngml>;
+`input<biblio>;
+`document`
+
