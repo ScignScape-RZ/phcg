@@ -21,7 +21,7 @@ framed,background rectangle/.style={thin,draw=darkRed!50, top color=blGreen!20,
   
     \trinode{below right = 4mm and 30mm of nPGBIR}{nPhaonGraph}{PhaonGraph}     
 
-    \hexnode{below right = 10mm and -2mm of nPGBIR}{nPVMIR}{PVMIR} 
+    \hexnode{below right = 10mm and -2mm of nPGBIR}{nPVMIR}{PGVM-IR} 
   
     \node[draw, text width=4cm, align=center,below=1cm of nPVMIR]  (nPhaonRT)  {Phaon Runtime};   
 
@@ -33,7 +33,6 @@ framed,background rectangle/.style={thin,draw=darkRed!50, top color=blGreen!20,
    \draw (nPhaonGraph) edge [->]  node {}  (nPVMIR)    ;
    \draw (nPVMIR) edge  [bend right, ->]  node {} (nPhaonRT)   ; 
     
-    %end path 
 \end{tikzpicture}
-\caption{Compiler Pipeline for the Phaon Virtual Machine} \label{fig:figLanguageEngine}
+\caption{Compiler Pipeline for the PhaonGraph Virtual Machine} \label{fig:figLanguageEngine}
 \end{figure}

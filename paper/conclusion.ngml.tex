@@ -1,3 +1,4 @@
+\vspace*{-1.5em}
 \section{Conclusion}
 \p{My analysis in this paper has focused on four 
 themes: converging on a general-purpose hypergraph 
@@ -18,8 +19,8 @@ resulting hypergraphs.
 }
 \p{These issues are collectively illustrated in the Phaon-Graph 
 format, which is a compilation-target for the demonstrated 
-hypergraphs parsers and a source for generating Phaon 
-Virtual Machine code.  Phaon-Graph employs many dimensions 
+hypergraphs parsers and a source for generating \PGVM{} code.  
+Phaon-Graph spans many dimensions 
 of hyper-graph modeling; last section I discussed 
 double-annotations (marking carrier handoffs) and channels 
 as generalizations of hyperedges (associated with 
@@ -30,29 +31,29 @@ stacks and queues \mdash{} these data structures become represented
 in procedural hypernodes alongside the \q{tuple} hypernodes 
 expressing singular source-code tokens.
 }
-\p{The Phaon-Graph compilers and Phaon Virtual Machine works on 
-the assumption that Phaon-Graphs iconifying executable code 
+\p{The Phaon-Graph compilers and \PGVM{} works on 
+the assumption that \PGVM{} graphs iconifying executable code 
 have a specific vocabulary, and a certain set of conventions 
 in terms of how modeling elements \mdash{} compound annotations, 
 channels, procedural hypernodes \mdash{} are employed.  De facto, 
-then, Phaon-Graphs have an implicit Ontology that structures the 
-Phaon system \mdash{} how the graph, parsing, and virtual-machine-runtime 
+then, \PGVM{} graphs have an implicit Ontology that structures the 
+\PGVM{} system \mdash{} how the graph, parsing, and virtual-machine-runtime 
 components are integrated together.  So far, this Ontology 
 is not formally articulated, because we do not have a common 
 picture of how to construct \OWL{}-like Ontologies for 
 hypergraphs with this spectrum of extra structure.
 }
-\p{The use-cases for general-purpose hypergraphs extend beyond 
+\p{\lPGVM{} is one example that points to larger questions: 
+the use-cases for general-purpose hypergraphs extend beyond 
 representing (and providing a virtual-machine execution 
-environment for) computer code, of course.  In this sense the 
-\PVM{} is just one example of larger questions: what would 
-a general hypergraph Ontology look like?  This is partly a 
-notational issue \mdash{} what would be a convenient language 
+environment for) computer code.   
+What would a general hypergraph Ontology look like?  This issue 
+is partly notational \mdash{} what would be a convenient language 
 for expressing hypergraph Ontologies, by analogy to 
 \OWL{} being a language optimized for \RDF{} Ontologies?  
 More generally, though, these are questions about 
 what \q{Ontology} should mean in the general hypergraph 
-context: what information should these Ontologies provide 
+context.  What information should these Ontologies provide 
 about relevant data structures and protocols?  What kind 
 of metadata and provable guarantees should a hypergraph 
 Ontology add to hypergraph models as compared to those 
@@ -67,7 +68,7 @@ translations between different hypergraph formats
 (here, Relae-Graph to Phaon-Graph); operations for traversing 
 and pulling data from hypergraphs; and generating other 
 code or data structures on the basis of hypergraphs 
-(here, generating \PVMIR{} code).  On this evidence, a 
+(here, generating \PGVMIR{} code).  On this evidence, a 
 general hypergraph Ontology would describe a given class 
 of hypergraphs in a fashion that allows developers to plan 
 out the implementations for these various facets of 
@@ -229,4 +230,4 @@ Semantic Web.  Potentially this very fact can make hypergraph
 representations more effective at the application-integration 
 level than Semantic Web data structures and Ontologies are now. 
 }
-\p{}
+%\p{%}
