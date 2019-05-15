@@ -290,17 +290,22 @@ one canonical type).
 `p`
 
 `p.
+Carriers are central to my treatment of channels, so 
+I will discuss carriers on their own terms in more detail.
+`p`
+
+`p.
 `parlead.Carriers and Categories of Types`  In some contexts it is 
 useful to examine a type system `tys; via a category `tyCat; of 
 types (such as, the category `HaskCat; of Haskell types).  
 Carriers are an extra structure which rest `q.on top of` 
-types, calling for the foundation (including Category-theoretic 
+types, calling for the foundation (including Category-Theoretic 
 treatment if applicable) to be reconsidered.  First, 
 the Haskell-like interpretation of `tyCat; morphims 
 should be redefined.  On the usual account, `tyOneToTyTwo; morphisms 
 are functions mapping type `tyOne; to `tyTwo;.  This 
 picture is complicated by procedures deviating from pure functions: 
-as I discussed earlier in this section, the input/output discussion 
+as I discussed earlier in this section, the input/output distinction 
 is complex and does not precisely map to the mathematical model 
 of morphisms between Category-objects.  Instead, inter-type 
 morphisms (to the degree that these are identified as categorial 
@@ -314,15 +319,15 @@ integer types to floating-point types).
 Moreover, reasonable type systems have a nontrivial collection of 
 endofunctors marking inter-type associations.  A good example 
 is the `q.unreferencing` operator which recovers the underlying 
-type `ty; from a reference type `ty;\&.  This operator naturally 
-translates to a function `ty;\& $\rightarrow$ `ty; that retrieves the 
-value held by a reference.  It is reasonable to treat this 
-function as a `ty;\& $\rightarrow$ `ty; morphism.
+type `ty; from a reference type `tyRef;.  This operator naturally 
+translates to a function `tyRef; $\mapsto$ `ty; that retrieves the 
+value held by a reference.  It is appropriate to analyze this 
+function as a `mbox.`tyRef; $\rightarrow$ `ty; morphism`/.
 `p`
 
 `p.
-In a general case, though, implemented procedures should be treated 
-apart from such basic morphisms that tie a type sytem together: a 
+In a general case, though, implemented procedures should be construed 
+apart from such basic morphisms that tie a type system together: a 
 general procedure which takes a `tyOne; input and outputs `tyTwo; 
 is not a `tyOne; $\rightarrow$ `tyTwo; morphism but a more complex 
 structure operating on carriers.  For each input and output parameter 
@@ -339,7 +344,7 @@ output is directly used as the other's input.  To illustrate,
 Figure~\ref{fig:figGFc} `input<figGFc>; shows a modified 
 version of Figure~\ref{fig:figGF} where the `gFun;-to-`fFun; 
 edge is annotated by a pair of carriers (output and input 
-differentiated by solid vs. double borders).  Similar to 
+differentiated by thick vs. thin borders).  Similar to 
 Link Grammar (see the last section), a single edge bears a 
 double-annotation to indicate that the edge depends on some 
 notion of compatibility: in particular, output-to-input 
@@ -347,7 +352,7 @@ carriers can only be linked if they hold the same type
 (or at least interconvertible types).  As such, a double-annotated 
 edge captures a situation where the value in one carrier is 
 transferred into a second carrier %-- potentially with a type-cast or, 
-e.g. in `Cpp;, a behind-the-scenes call to a copy-constructor.  
+cf. in `Cpp;, a behind-the-scenes call to a copy-constructor.  
 I will refer to such a value-transfer as a `i.handoff`/.  
 A `gFun;-to-`fFun; (hyper-)edge therefore expresses added details 
 because its annotations convey properties of carriers whose state 
@@ -370,8 +375,8 @@ corresponds to a morphism in `cCarTwo;'s state wherein
 `cCarTwo; (perhaps transitions out of a pre-initialized state and) 
 acquires a concrete value derived from `cCarOne;'s.  
 This case %-- I'll call it a `q.handoff-induced morphism` 
-%-- plays a foundational role in analysis via carriers and 
-hypergraphs analogous to `tyOne; $\rightarrow$ `tyTwo; morphisms 
+%-- should play a foundational role in analysis via carriers and 
+hypergraphs, analogous to `tyOne; $\rightarrow$ `tyTwo; morphisms 
 in conventional category-theoretic program semantics. 
 `p`
 
@@ -395,7 +400,7 @@ a repository of local carriers (syntactically speaking,
 lexically-scoped source-code symbols) which start as uninitialized but 
 can hold outputs from other procedures called from the current 
 procedure's implementation body.  Each implementation is then a 
-sequence of further procedure call wherein the calling procedure 
+sequence of further procedure calls wherein the calling procedure 
 assembles the requisite local carriers to provide inputs to 
 the called procedure (via handoffs).  The calling procedure 
 must also provision carriers to hold the called procedure's 
@@ -428,7 +433,7 @@ into effect insofar as we combine this carriers and handoffs
 model with my earlier discussion of differentiating input and 
 output varieties.  For instance, inputs may be Object-Oriented 
 message-receivers or normal parameters; outputs may be 
-thrown exceptions or normal returns.  In the hypergraph framework 
+thrown exceptions or normal returns.  In the framework 
 I just outlined, hyperedges carry double-annotations to 
 mark the pairs of carriers involved in a handoff within a 
 procedure-call.  Grouping carriers based on their common 

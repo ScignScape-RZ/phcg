@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  15 MAY 2019 10:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  15 MAY 2019 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1820,7 +1820,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
 (./figPVM.tex)
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 507--507
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 510--510
 [] $[]$| [] 
  []
 
@@ -1829,14 +1829,14 @@ Underfull \vbox (badness 6188) has occurred while \output is active []
 
 
 (./figPVMlines.tex)
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 544--544
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 547--547
 [] $[]$| [] 
  []
 
 [23
 \pgfsyspdfmark {pgfid26}{20777318}{30029815}
 ] (./figPVMrt.tex)
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 582--582
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 585--585
 [] $[]$| [] 
  []
 
@@ -1846,7 +1846,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [24
 \pgfsyspdfmark {pgfid28}{2126776}{7291658}
 ]
-Underfull \hbox (badness 1448) in paragraph at lines 636--637
+Underfull \hbox (badness 1448) in paragraph at lines 639--640
 []\OT1/cmr/m/n/10.95 (+20) Further de-tails about re-duc-ing channel-packages
  []
 
@@ -1882,11 +1882,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 39576 strings out of 492649
- 803082 string characters out of 6122986
- 1043067 words of memory out of 5000000
- 42136 multiletter control sequences out of 15000+600000
- 554976 words of font info for 197 fonts, out of 8000000 for 9000
+ 39575 strings out of 492649
+ 803071 string characters out of 6122986
+ 1043103 words of memory out of 5000000
+ 42137 multiletter control sequences out of 15000+600000
+ 554868 words of font info for 196 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,14n,101p,10425b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.
@@ -1918,7 +1918,7 @@ b></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts
 ype1/public/amsfonts/symbols/msbm10.pfb></home/nlevisrael/texl/texlive-install/
 texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></home/nlevisrael/texl/texl
 ive-install/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on ghg.ngml.pdf (28 pages, 480436 bytes).
+Output written on ghg.ngml.pdf (28 pages, 480640 bytes).
 PDF statistics:
  885 PDF objects out of 1000 (max. 8388607)
  805 compressed objects within 9 object streams
