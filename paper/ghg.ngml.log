@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  15 MAY 2019 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  15 MAY 2019 01:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1756,9 +1756,6 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 373--373
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `lst:PGBIR' on page 15 undefined on input line 392.
-
 [15
 \pgfsyspdfmark {pgfid16}{20777318}{29324529}
 ]
@@ -1766,7 +1763,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 (./figPGB.tex)
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 445--445
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 446--446
 [] $[]$| [] 
  []
 
@@ -1883,15 +1880,12 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 39579 strings out of 492649
- 803109 string characters out of 6122986
- 1043101 words of memory out of 5000000
- 42137 multiletter control sequences out of 15000+600000
+ 39578 strings out of 492649
+ 803098 string characters out of 6122986
+ 1043066 words of memory out of 5000000
+ 42136 multiletter control sequences out of 15000+600000
  555084 words of font info for 198 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,14n,101p,10425b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1924,10 +1918,10 @@ b></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts
 ype1/public/amsfonts/symbols/msbm10.pfb></home/nlevisrael/texl/texlive-install/
 texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></home/nlevisrael/texl/texl
 ive-install/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on ghg.ngml.pdf (28 pages, 480128 bytes).
+Output written on ghg.ngml.pdf (28 pages, 479933 bytes).
 PDF statistics:
- 884 PDF objects out of 1000 (max. 8388607)
- 804 compressed objects within 9 object streams
+ 885 PDF objects out of 1000 (max. 8388607)
+ 805 compressed objects within 9 object streams
  462 named destinations out of 1000 (max. 500000)
  28825 words of extra memory for PDF output out of 29859 (max. 10000000)
 

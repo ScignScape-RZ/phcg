@@ -327,7 +327,7 @@ implemented in the data set has a grammar feature where a token preceded
 new lexically-scoped symbol, so it can trigger a pre-emptive call to 
 a method that keeps track of source-code scopes (the quoted line 
 also implies that the symbol \lstinline{Fn_Doc} designates a type, 
-so a function may be call registering this as a known type).    
+so a function would be called registering this as a known type).    
 }
    
 \p{Once this provisional analysis has run its course, the system then 
@@ -352,14 +352,14 @@ A serialization format can then be designed on the premise of
 expressing each construction-step as a distinct instruction, and then 
 serializing a whole graph as the sequence of all its implied 
 steps.  Listing~\ref{lst:figIR} samples a file in the 
-demo's format, which is based on Common Lisp to leave open the 
+demo's format (which is based on Common Lisp to leave open the 
 possibility of these files being read by a Common Lisp evaluator 
-for pre-processing.  Here though the intermediate language is 
+for pre-processing).  Here though the intermediate language is 
 parsed directly in \Cpp{} \mdash{} unlike the parsers discussed earlier, 
 which aim to work with flexible scripting languages, an intermediate 
 hypergraph representation can be narrowly targeted to machine-generated 
-hypergraph stages and needs only simplistic parsers.  For this 
-language, each form (adopting the term from Lisp's name for a 
+hypergraph stages and needs only simplistic parsers.
+For this language, each form (adopting the term from Lisp's name for a 
 single expression) generally corresponds to a single \Cpp{} method.  
 For development, the steps described via intermediate code can 
 be analogously implemented as \Cpp{} code directly (the demo includes 
@@ -377,7 +377,7 @@ of token kinds.  An encoding system allows the kind to be
 notated via a signal embedded in the token string, yielding a 
 node-representation which can work across different varieties 
 of hypergraphs (facilitating graphs' inter-translation).  
-Listing~\ref{lst:PGBIR} shows some 
+Listing~\ref{lst:figPGBIR} shows some 
 code involved with routing input text to graph-build operations.  
 Unlike the earlier parse strategy, the simple input language 
 does not call for complex contextual logic to determine the correct 
@@ -387,14 +387,15 @@ dispatch table.  Care does have to be taken, however, to
 correctly anticipate which kinds of tokens are expected on the 
 input in light of the graph-manipulation method that will be 
 called when the tokens are parsed (some tokens hold raw data; 
-other refer to preexisting nodes that are given names in the 
-input text). 
+others refer to pre-existing and pre-allocated nodes that are 
+given names in the intermediate representation). 
 } 
     
 \p{The intermediate language designed via these techniques is effective 
 from the point of view of machine-generating code to construct a 
 new hypergraph from some prior data (including other hypergraphs).  
-Rather than having components generate the intermediate code directly, 
+Rather than having components emit correct 
+intermediate code directly, 
 the demo library includes a \Cpp{} class which builds the 
 \IR{} via a method interface.  Listing~\ref{lst:figPGB}  
 shows code using this interface, treating the \IR{} output as a 

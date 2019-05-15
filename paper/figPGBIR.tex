@@ -2,8 +2,8 @@
  caption={Running Hypergraph IR},label={lst:figPGBIR},
     basicstyle = \ttfamily\bfseries\tiny, linewidth = .95\linewidth] 
 
-void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, 
-  QPair<MG_Token, int>>& mgtm)
+void PGB_IR_Run::run_line(QString fn, 
+  QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm)
 {
  PGB_Methods md = parse_pgb_method(fn);
 
