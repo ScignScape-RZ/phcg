@@ -21,9 +21,9 @@ representing multiple hypergraph varieties, as expressively as possible).
 A second stage in the implementation process, which I will 
 examine here in greater detail, involves transformations 
 and initialization of hypergraphs %-- creating hypergraphs from 
-other sources (such as text files) and using hypergraphs to 
-initialize other kinds of data structures, either directly 
-or indirectly (e.g., via code generators).  This dimension 
+other sources (like text files) and using hypergraphs to 
+populate other kinds of data structures, either directly 
+or indirectly (such as, via code generators).  This dimension 
 encompasses the overall capabilities that would permit software to 
 use hypergraphs for their own data representations 
 and/or as bridge structures for sharing data between applications 
@@ -43,12 +43,12 @@ calls to perform operations like adding a node or
 adding an edge between nodes.  Less directly, hypergraphs can 
 be initialized from text files, given a standard format for 
 textually encoding hypergraphs.  For conventional (non hyper-) graphs, 
-standard formats include `RDF;, `GRAPHML;, and Notation-3.`footnote.
+popular formats include `RDF;, `GRAPHML;, and Notation-3.`footnote.
 Some graph formats support certain hypergraph features, but 
 not the full spectrum of features I outlined in the last section
 `footnote`  Analogous 
 standards for hypergraphs would be more complex because of the 
-extra structure involved.  Nevertheless, the serialization can be 
+extra structures involved.  Nevertheless, the serialization can be 
 expressly organized to facilitate hypergraph initialization; 
 in essence, the grammar can be standardized to unambiguously map 
 test encodings to low-level function-calls via which hypergraph 
@@ -65,7 +65,7 @@ hypergraph structures.
 Similar alternatives apply to `i.output`/, in the sense of initializing 
 other structures from hypergraph data.  Output structures can be 
 compiled directly via function-calls, or indirectly via software-generated 
-text files, which in turn coul have a more low-level or more high-level 
+text files, which in turn might have a more low-level or a more high-level 
 format.  Suppose hypergraphs are employed within publishing 
 software to generate `XML; and `LaTeX; output.  This can happen 
 mostly at the software level: there are many `q.`XML; builder` libraries 
@@ -73,12 +73,16 @@ allowing `XML; documents to be constructed via function calls, rather
 than by actually producing `XML; code.  Alternatively, the 
 software can act as a code generator, expressly composing `XML; 
 or `LaTeX; code by creating the requisite character strings 
-%-- a process which can be complicate by the languages' syntactic 
+%-- a process which would be complicated by the languages' syntactic 
 requirements, such as the composition of `XML; tags and `LaTeX; commands 
 with the requisite braces and brackets.  Compared to higher-level 
 markup builders, code generation can be difficult because software has 
 to take responsibility for every character in the output %-- every 
-closing brace, bracket, quote, and so on.  In between these two 
+closing brace, bracket, quote, and so on.
+`p`
+
+`p.
+In between these two 
 alternatives %-- using builder libraries and explicit 
 code generation %-- is the possibility of generating code in 
 alternative formats that are optimized for machine processing, 
@@ -93,8 +97,9 @@ data source can be treated as an `XML; front-end if there is a
 processor that can map the data to an `XML; event-stream.  
 On such a basis developers can design encoding languages that 
 model `XML; event-streams explicitly, as an alternative 
-to normal `XML; syntax.  Similar techniques work with 
-other formats, including hypergraphs (as I will discuss below).
+to normal `XML; syntax.  I will propose similar techniques 
+to derive Intermediate Representations for a hypergraph 
+builder and Virtual Machine.
 `p`
    
 `p.
@@ -114,12 +119,13 @@ foreground element can be mapped to one or more output events.
    
 `p.
 For this paper I will examine these and related concepts in the 
-specific context of hypergraph execution engine.  Specifically, consider 
-the challenge of building a programming language base on hypergraphs 
+specific context of a hypergraph execution engine.  Specifically, consider 
+the challenge of building a programming language based on hypergraphs 
 as internal representations.  In this case the input format is not 
 tailored to hypergraphs, but rather to a grammar for source code which 
 reflects the language's high-level paradigms (Object Orientation, 
-Functional Programming, etc.).  Likewise, the output format 
+Functional Programming, Actor Models, Capability-Orientation etc.).  
+Likewise, the output format 
 is not a relatively high-level markup language like `XML;, but rather 
 something like a virtual machine or intermediate language which 
 can translate to low-level (e.g., `C; or `Cpp;) function-calls.  
@@ -139,7 +145,7 @@ one style of hypergraph, with graph manipulation
 functions tied to the grammar's production rules.  
 Those hypergraphs (after some preliminary analysis) are then 
 traversed to produce an intermediate representation from which 
-a second genre of hypergraphs is initialized, one better-suited 
+a second genre of hypergraphs is initialized, one better suited 
 for generating executable instructions.  This second 
 hypergraph is then traversed in turn, outputting code in 
 a special-purpose `q.virtual machine` language.  As a final step, 
@@ -209,9 +215,9 @@ tied to the surrounding material in their hypergraphs according
 to different patterns and contexts.  The extra detail offered 
 via hypergraphs permits contextual details to be 
 explicated more precisely and compactly.  Generalizing from 
-graphs to hypergraphs is then analogous (and, in practice, an 
-implementation for) generalizing from contest-free grammars to 
-more nuanced, context-sensitive grammars. 
+graphs to hypergraphs is then analogous to (and, in practice, an 
+implementation for) generalizing from context-free grammars to 
+a class of more nuanced, context-sensitive grammars. 
 `p`
 
 \vsftcl{h}{figStringContext}
@@ -237,11 +243,12 @@ may be dynamically declared in a grammar and by boolean flags
 which assert finer-grained contexts with conjunction, disjunction, 
 and negation operations.  A full context declaration 
 can look like at `TwoOverlay; in Listing~\ref{lst:figStringContext}: 
-\lstinline[columns=fullflexible]{flags\_all\_(parse\_context ,inside\_string\_literal), run\_context}.
+\lstinline[columns=fullflexible]
+{flags\_all\_(parse\_context ,inside\_string\_literal), run\_context}.
 `footnote`  Overall then the parsing response operations 
 are split between three main classes: one which defines 
 rules and match-callbacks themselves; one which is 
-principally responsible for maintaining parse context and flags 
+responsible for maintaining parse context and flags 
 and bridging the other two layers; and one which performs 
 most graph-transformation operations. 
 `p`
@@ -260,7 +267,7 @@ expressive, flexible input language, without itself
 attending to graph operations.  Simultaneously, the 
 components which do modify hypergraphs can be developed 
 in isolation from the syntax of the language being 
-parsed.  Listing~\ref{lst:figAddToken} samples code 
+parsed.  Concretely, listing~\ref{lst:figAddToken} samples code 
 logically following Listing~\ref{lst:figStringContext} wherein 
 a new hypernode (such as, a string literal token) is 
 inserted.  The relevant `Cpp; class offers a variety of 
@@ -280,15 +287,19 @@ for each match and context.
    
 `p.
 While this kind of compiler architecture is not intrinsically 
-dependent on hypergraph forms at the output level, using hypergraphs 
-augments the benefits in how such a pipeline is organized.  Hypergraphs, 
-compared to other kinds of parser output (like Abstract Syntax Trees 
-or Directed Acyclic Graphs), have fewer structural 
-requirements and restrictions and therefore offer greater leeway 
-in how information about input text is preserved in the output structure.  
+dependent on hypergraph forms at the output level, hypergraphs 
+augment the benefits of how such a pipeline is organized.   
+Compared to other kinds of parser output (like Abstract Syntax Trees 
+or Directed Acyclic Graphs), hypergraphs have fewer structural 
+requirements and restrictions and therefore greater leeway 
+in how data about input texts is perpetuated in the output structures.  
 This accordingly offers greater flexibility in systematizing the 
-input language's syntax and semantics.  For example, consider the 
-goal to support special built-in datatypes with special language-level 
+input language's syntax and semantics.
+`p`
+
+`p.
+To illustrate this point, consider the 
+goal to support special built-in datatypes with particular language-level 
 syntax, such as embedding `XML; directly in source code, or `q.sugaring` 
 compound expressions within concise and readable forms (along the 
 lines of how `LINQ; %-- Language Integrated Query %-- packages 
