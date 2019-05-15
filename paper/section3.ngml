@@ -1,21 +1,23 @@
 
 `section.Channels and Edge Diversification`
 `p.
+From here forward I will focus on the demo 
+Virtual Machine as a case-study in multi-component 
+hypergraph ecosystems.  
 Graph representations have obvious applications 
 to modeling computer code and computations.  
 Intuitively, consider procedures as nodes; 
-edges incoming to or outgoing from nodes 
-then may represent the value passed into or 
+so edges incoming to or outgoing from nodes 
+represent values passed to or 
 returned from procedures.  In order to be a 
 reasonable code representation, however, this 
 model has to capture further details via 
-edge-annotations, grouping nodes and/or edges 
-into higher-level units, or similar hypergraph 
-constructions.
+edge-annotations; for example, grouping nodes and/or edges 
+into higher-level units.
 `p`
 
 `p.
-As I argued last section, hypergraphs are useful target 
+As I argued last section, hypergraphs are useful targets 
 for general-purpose programming language parsers because 
 these general languages tend to have relatively complex 
 grammars and special syntactic contexts.  While 
@@ -50,8 +52,11 @@ are technically an input rather than output value, even
 if the intent is for a called procedure to supply data for 
 the mutable input (this technique avoids extra copying of 
 data).  Another complication is that procedures can have multiple 
-sorts of input and output: e.g., throwing an exception rather than 
-returning a value.  Likewise, Object-Oriented languages' 
+sorts of input and output: throwing an exception, rather than 
+returning a value, signals `q.exceptional` output 
+(some %-- presumably abnormal %-- circumstance 
+prohibiting a computation from proceeding as usual).   
+Likewise, Object-Oriented languages' 
 `q.message receivers` are input parameters with distinguished 
 properties as compared to normal inputs.
 `p`
@@ -66,7 +71,7 @@ without supplying a value; also, the called procedure has
 no access to the memory which would hold the return value.  
 By contrast, a function which takes a non-constant 
 integer reference is not forced by the compiler to 
-modify that value, nor prohibited from accessing the 
+modify that value; nor is it prohibited from accessing the 
 input's value.  This points to the practical differences 
 between returning values and altering input references, but it 
 also indicates that inputs can be treated as `i.de facto` 
@@ -93,8 +98,8 @@ value (potentially a reference-type value that `gFun;
 could potentially modify before `fFun; runs).  The 
 former (composition) operator establishes an inevitable 
 dependence of `fFun; on `gFun;: `fFun; needs `gFun;'s 
-output for an input value.  The second case is less obvious 
-%-- in a sequential call like `fAfterG; (`gFun; runs then 
+output for an input value.  The second case is less obvious. 
+In a sequence like `fAfterG; (`gFun; runs then 
 `fFun; runs %-- I notate the relation with an inverted 
 semi-colon to highlight the parallels with `fOfG;, but 
 the analogous case in practice would be `gThenF;), 
@@ -107,7 +112,7 @@ properties in the context of functional composition, and by
 extension the relations between procedures which 
 run in sequence.  Again, though, this call for a semantic 
 analysis which looks beyond languages' surface syntax for 
-function calls, and how usages of return valued are notated.
+function calls and return-value usage.
 `p`
 
 `p.
@@ -142,26 +147,26 @@ strategy of grouping input an output values into hypernodes.
 `p.
 For situations like these I propose a notion of `i.channels`/, which are 
 higher-scale groupings of edges analogous to how hyperedges 
-involve higher-scale groupings of nodes.  In Figure~\ref{fig:figGFcomplex}, 
-for instance, the $x$ and $y$ edges can be considered a separate 
+span groupings of nodes.  In Figure~\ref{fig:figGFcomplex}, 
+the $x$ and $y$ edges are considered a separate 
 channel than the $z$ edge, because $x$ and $y$ bridge `fFun; and `gFun; 
 according to one sort of program-flow semantics (with side effects and 
 mutable inputs passed to sequential procedures) while $z$ follows a 
 different pattern (with output values and lexical symbols).  
-The shaded box in the figure shows the core role of channels, 
-grouping together edges that have some particular connection 
+The shaded box illustrates channels' role in 
+gathering edges that have some particular connection 
 which could not be expressly identified by other means (like 
 shared annotations) and also isolating edges and edge-groups 
-from other elements (here, isolating the $x$-and-$y$ pairing 
+from one another as appropriate (here, isolating the $x$-and-$y$ pairing 
 from the $z$ edges).   
 `p`
 
 `p.
 This case illustrates the basic premise of channels as 
-distinguished and/or edge-groupings, and also one modeling 
-domain where I contend channels can be applied; specifically, 
-representing details in computer code (in a general hypergraph 
-representation of source code) such as program flow.  
+hyperedge-groups, and also one modeling 
+domain where I contend channels can be applied: specifically, 
+representing details in computer code (in a general source-code hypergraph 
+model) such as program flow.  
 To discuss channels as graph elements further, I will 
 start by examining channels in the specific computer-code 
 context, which calls for a detour review of 
@@ -179,7 +184,7 @@ instances, the nature of entities that we should deem to be
 bearers of types, the status of special (non-)values like 
 `lstinline.null` or `q.Not A Number`/, and related details that 
 contrast programming `q.types` from mathematical sets or `q.spaces` 
-in various incarnations (sheaves, topoi, etc.).  
+in various incarnations (sheaves, topoi, discrete topologies, etc.).  
 `p`
 
 `p.
@@ -192,7 +197,7 @@ in memory %-- say, lists of numbers %-- are constrained be a computer's
 available memory.  We cannot be certain which lists are small enough that a 
 given environment can hold them in memory, so that they are available 
 as typed values for a program.  Conceptually, then, 
-types are very different from sets of values. 
+types are quite different from sets of values. 
 `p`
 
 `p.
@@ -203,15 +208,15 @@ things that are representatives of types.  Most values which
 procedures encounter are produced by other procedures, either 
 passed as parameters from calling procedures to called procedures, 
 or returned as outputs from called procedures to calling procedures.  
-`p`
-
-`p.
-Of course, programs execute in a world of surrounding data %-- on computer 
+True, programs do execute in a world of surrounding data %-- on computer 
 drives and in memory, plus `q.CyberPhysical` data from devices 
 hooked up to computers (at a minimum, devices crafted to be 
 part of a computer set-up, like mice and keypads; plus often 
-`q.smart` devices which software accesses to manage an oversee).  
-From a programmer's point of view, this data is accessed by 
+`q.smart` devices which software accesses to manage an oversee).
+`p`
+
+`p.
+Yet from a programmer's point of view, this data is accessed by 
 calling specific functions, albeit ones which 
 (at the lowest level) programmers themselves do not 
 implement (viz., the procedures exposed in device `q.drivers`/).  
@@ -270,14 +275,14 @@ initialized value.  Some programming language accommodate these
 cases via special `lstinline.null` or `lstinline.Nothing` values, 
 but these are still constructs inside the language's type 
 system.  Thinking in terms of carriers, instead, removes 
-certain `q.states` from the type system: an empty or 
-pre-initialized carrier does not have some special `q.empty` 
+certain `i.states` from the type system: an empty or 
+pre-initialized carrier does not have some special `i.empty` 
 value; it does not have a value at all.  Similar comments 
 apply to carriers which hold values which were once valid but are 
 no longer so, like deleted pointers.  Any carrier potentially has a 
-`q.career` which starts with no value then is initialized 
+`i.career` which starts with no value; then is initialized 
 with a value (and maybe gets updated over time); and may then 
-`q.retire` and cease to hold a legitimate value.  Only in the 
+`i.retire` and cease to hold a legitimate value.  Only in the 
 middle phase of this trajectory does the carrier's range of 
 possible states correspond with potential instantiations of 
 a type (I assume here that each carrier is associated with 
@@ -285,7 +290,7 @@ one canonical type).
 `p`
 
 `p.
-`parlead.Carriers and Categories of Types`/.  In some contexts it is 
+`parlead.Carriers and Categories of Types`  In some contexts it is 
 useful to examine a type system `tys; via a category `tyCat; of 
 types (such as, the category `HaskCat; of Haskell types).  
 Carriers are an extra structure which rest `q.on top of` 

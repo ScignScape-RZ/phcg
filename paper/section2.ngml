@@ -457,8 +457,8 @@ I'll remark to conclude the current section that I believe the
 kinds of components and workflow outlined here %-- not only the 
 graph libraries but the supporting tools and code-generators %-- are 
 indicative of the sorts of infrastructural elements that would have to 
-be standardized for a common hypergraph ecosystem modeled on the 
-Semantic Web, for example.  Replacing `RDF; with an explicit 
+be standardized for a common hypergraph ecosystem modeled on 
+(for example) the Semantic Web.  Replacing `RDF; with an explicit 
 hypergraph paradigm is not only a project of writing code libraries 
 that structure data in a standardized hypergraph format; it is also a 
 matter of complementing such libraries with additional components 
@@ -470,7 +470,8 @@ envisioning a communally-adopted platform), it also means that
 standardizing the supporting formats is a reasonable proxy for 
 standardizing the hypergraph models themselves.  After all, graph 
 markup languages and similar tools currently exist; the limitation 
-is they do not properly enable the full spectrum of structures and 
+is they do not properly enable and recognize 
+the full spectrum of structures and 
 data that would characterize a genuine hypergraph ecosystem.  But, consequently, 
 the formal contrast between fully general hypergraph models and the 
 limited features currently supported by (e.g.) graph serialization 
