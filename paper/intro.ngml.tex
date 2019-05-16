@@ -328,11 +328,11 @@ with serialization and parsers, hypergraphs can then be realized
 via several stages, with one form of hypergraph used as an intermediary 
 because it has a convenient grammar and works with a parsing engine; 
 from that preliminary graph a new graph can be created via \IR{} code.  
-Grammars, serializaion and deserialization, and \IR{} thereby become 
+Grammars, serialization and deserialization, and \IR{} thereby become
 part of the formal architecture defining a hypergraph ecosystem and 
 inter-graph transformations \mdash{} analogous, roughly, 
-to the trio of \XML{} parsers, 
-\mbox{\XML{} transforms/\XSLT{}}, and the \XML{} Document Object Model (\DOM{}).
+to the trio of \XML{} parsers, \mbox{\XML{} transforms/\XSLT{}}, 
+and the \XML{} Document Object Model (\DOM{}).
 }
 \p{Continuing the \XML{} analogy, note that \XML{} is not just a serialization specification: 
 the full \XML{} technology defines requirements on a series of tools 
@@ -342,11 +342,11 @@ for how traversal options are to be operationalized, e.g.
 via Object-Oriented methods like \parentNode{} and \nextSibling{}); 
 for parsing \XML{} files into traversable data structures (including 
 requirements on the traversals which the derived structures 
-\mdash{} the so-called \q{post-processing infoset} \mdash{} must 
+\mdash{} the so-called \q{Post-Processing Infoset} \mdash{} must 
 support); and for inter-document mapping 
-(via \XSLT{} or \XML{}-FO).  The Document Object Model and 
-post-processing infoset is the structural core of the \XML{} 
-format, even more than any surface-level syntax (the grammar 
+(via \XSLT{} or \XMLFO{}).  The \DOM{}, and the 
+\XML{} Infoset, is the \XML{} 
+format's structural core, even more than any surface-level syntax (the grammar 
 for tags, attributes, and so forth).  Analogous specifications 
 would have to be developed for a generalized Hypergraph representation.
 }
