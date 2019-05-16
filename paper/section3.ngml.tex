@@ -191,7 +191,7 @@ True, programs do execute in a world of surrounding data \mdash{} on computer
 drives and in memory, plus \q{CyberPhysical} data from devices 
 hooked up to computers (at a minimum, devices crafted to be 
 part of a computer set-up, like mice and keypads; plus often 
-\q{smart} devices which software accesses to manage an oversee).
+\q{smart} devices which software accesses to manage and oversee).
 }
 \p{Yet from a programmer's point of view, this data is accessed by 
 calling specific functions, albeit ones which 
@@ -201,7 +201,7 @@ Analogously, many values are presented directly in source-code
 literals; but we should think of these values as likewise 
 yielded from procedures that read source tokens or strings 
 and interpret the intended type-specific value (e.g., converting the 
-character-string \q{123} to the corresponding integer).  
+character-string \q{\lcl{6pt}{123}} to the corresponding integer).  
 Typically these \q{reader} procedures occur behind-the-scenes; 
 although, which helps demonstrate the point that source literals 
 involve implicit function-calls, some languages support 
@@ -288,10 +288,10 @@ integer types to floating-point types).
 \p{Moreover, reasonable type systems have a nontrivial collection of 
 endofunctors marking inter-type associations.  A good example 
 is the \q{unreferencing} operator which recovers the underlying 
-type \ty{} from a reference type \tyRef{}.  This operator naturally 
-translates to a function \tyRef{} $\mapsto$ \ty{} that retrieves the 
+type \tyssm{} from a reference type \tyRef{}.  This operator naturally 
+translates to a function \tyRefmapstoTy{} that retrieves the 
 value held by a reference.  It is appropriate to analyze this 
-function as a \mbox{\tyRef{} $\rightarrow$ \ty{} morphism}.
+function as a \mbox{\tyRefrightarrowTy{} morphism}.
 }
 \p{In a general case, though, implemented procedures should be construed 
 apart from such basic morphisms that tie a type system together: a 
@@ -372,7 +372,7 @@ sum of carrier-transfers can be represented within a source-code
 graph; and so, the structures and semantics of these hypergraph 
 representations should be codified in a manner which 
 renders (a de-facto Ontology) the patterns of aggregate 
-carrier handoffs). 
+carrier handoffs. 
 }
 \p{In order 
 to back these ideas with pictures, Figure~\ref{fig:figGFcomplexc}\input{figGFcomplexc} modifies 

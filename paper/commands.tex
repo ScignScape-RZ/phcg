@@ -797,16 +797,20 @@
 
 \newcommand{\AST}{\AcronymText{AST}}
 
+\definecolor{blGreen}{rgb}{.2,.7,.3}
+\definecolor{darkRed}{rgb}{.2,.0,.1}
+\definecolor{DarkRed}{rgb}{.2,.0,.1}
+
 \colorlet{orrr}{orange!40!red}
 \colorlet{orrbl}{orrr!85!blue}
-\colorlet{orrb}{orrbl!20!darkRed}
+\colorlet{orrb}{orrbl!80!DarkRed}
 
 \newcommand{\lcl}[2]{{\resizebox{!}{#1}{\color{orrb}{#2}}}}
 
-\newcommand{\Hy}{{\lcl{6pt}{\ensuremath{\mathcal{H}}}}}
+\newcommand{\Hy}{{\lcl{8pt}{\ensuremath{\mathcal{H}}}}}
 
 \newcommand{\gFun}{{\lcl{6pt}{\ensuremath{\mathfrak{g}}}}}
-\newcommand{\fFun}{{\lcl{8pt}{\ensuremath{\mathfrak{f}}}}}
+\newcommand{\fFun}{{\lcl{9pt}{\ensuremath{\mathfrak{f}}}}}
 
 \newcommand{\gFunB}{\ensuremath{\mathfrak{g}}}
 \newcommand{\fFunB}{\ensuremath{\mathfrak{f}}}
@@ -820,17 +824,24 @@
 \newcommand{\ixminusone}{{\lcl{6pt}{\ensuremath{i}%
 			\resizebox{!}{6.5pt}{\ensuremath{- 1}}}}}
 \newcommand{\sg}{{\lcl{6pt}{\ensuremath{\mathfrak{s}}}}}
-\newcommand{\tys}{{\lcl{6pt}{\ensuremath{\mathbb{T}}}}}
-\newcommand{\tyCat}{{\lcl{6pt}{\ensuremath{\mathcal{T}}}}}
-\newcommand{\ty}{{\lcl{6pt}{\ensuremath{\mathfrak{t}}}}}
-\newcommand{\HaskCat}{{\lcl{6pt}{\ensuremath{\mathfrak{H}}}}}
+\newcommand{\tys}{{\lcl{8pt}{\ensuremath{\mathbb{T}}}}}
+\newcommand{\tyCat}{{\lcl{9pt}{\ensuremath{\mathcal{T}}}}}
+\newcommand{\ty}{{\lcl{8pt}{\ensuremath{\mathfrak{t}}}}}
+\newcommand{\HaskCat}{{\lcl{9pt}{\ensuremath{\mathfrak{H}}}}}
 
-\newcommand{\tyOne}{{\lcl{6pt}{\ensuremath{{\ty}_1}}}}
-\newcommand{\tyTwo}{{\lcl{6pt}{\ensuremath{{\ty}_2}}}}
+\newcommand{\tyOne}{{\lcl{8pt}{\ensuremath{{\ty}_1}}}}
+\newcommand{\tyTwo}{{\lcl{8pt}{\ensuremath{{\ty}_2}}}}
 \newcommand{\tyOneToTyTwo}{{\lcl{6pt}{\ensuremath{{\tyOne}{\hspace{2pt}}{\rightarrow}\hspace{2pt}}{\tyTwo}}}}
 
-\newcommand{\tyRef}{{\lcl{6pt}{\ensuremath{{\ty}{\resizebox{0.6em}{!}{\&}}}}}}
+\newcommand{\tyRef}{{\lcl{8pt}{\ensuremath{{\ty}{\resizebox{0.6em}{!}{\&}}}}}}
+\newcommand{\tyRefs}{{\lcl{7pt}{\ensuremath{{\ty}{\resizebox{0.6em}{!}{\&}}}}}}
 
+\newcommand{\tysm}{{\lcl{8pt}{\ensuremath{\mathfrak{t}}}}}
+\newcommand{\tyssm}{{\lcl{7pt}{\ensuremath{\mathfrak{t}}}}}
+
+\newcommand{\tyRefmapstoTy}{\tyRefs\ensuremath{\mapsto}\tyssm}
+
+\newcommand{\tyRefrightarrowTy}{\tyRefs\ensuremath{\rightarrow}\tysm}
 
 %\newcommand{\oper}{opqq}
 %\newcommand{\operatorqq}{operator""}
@@ -841,20 +852,20 @@
 
 \newcommand{\SEMI}{{\large\textbf ;}}
 
-\newcommand{\CarCatS}{{\lcl{6pt}{\ensuremath{\mathcal{C}{\makebox[2pt][r]{%
-{\scriptsize S}}}}}}}
-\newcommand{\cCar}{{\lcl{6pt}{\ensuremath{\mathfrak{c}}}}}
-\newcommand{\cCarOne}{{\lcl{6pt}{\ensuremath{\mathfrak{c_1}}}}}
-\newcommand{\cCarTwo}{{\lcl{6pt}{\ensuremath{\mathfrak{c_2}}}}}
+\newcommand{\CarCatS}{{\lcl{9pt}{\ensuremath{\mathcal{C}{\makebox[-1pt][r]{%
+{{\raisebox{2pt}{\lcl{4pt}{S}}}}}}}}}}
+\newcommand{\cCar}{{\lcl{7pt}{\ensuremath{\mathfrak{c}}}}}
+\newcommand{\cCarOne}{{\lcl{7pt}{\ensuremath{\mathfrak{c_1}}}}}
+\newcommand{\cCarTwo}{{\lcl{7pt}{\ensuremath{\mathfrak{c_2}}}}}
 
 \newcommand{\fOfG}{\ensuremath{{\fFun}{\circ}{\gFun}}}
 \newcommand{\fAfterG}{{\lcl{6pt}{\ensuremath{{\fFun}{\reflectbox{\SEMI}}{\gFun}}}}}
 \newcommand{\gThenF}{{\lcl{6pt}{\ensuremath{{\gFun}{\SEMI}{\fFun}}}}}
 
-\newcommand{\nClrSym}{{\lcl{6pt}{\ensuremath{n}}}}
-\newcommand{\xClrSym}{{\lcl{6pt}{\ensuremath{x}}}}
-\newcommand{\yClrSym}{{\lcl{6pt}{\ensuremath{y}}}}
-\newcommand{\zClrSym}{{\lcl{6pt}{\ensuremath{z}}}}
+\newcommand{\nClrSym}{{\lcl{7pt}{\ensuremath{n}}}}
+\newcommand{\xClrSym}{{\lcl{7pt}{\ensuremath{x}}}}
+\newcommand{\yClrSym}{{\lcl{7pt}{\ensuremath{y}}}}
+\newcommand{\zClrSym}{{\lcl{7pt}{\ensuremath{z}}}}
 
 
 \newcommand{\parleader}[1]{\vspace*{4pt}\noindent\textbf{#1}\hspace{1em}}
@@ -972,10 +983,6 @@ drop fuzzy shadow northeast={darkRed!40!ftcback},
 \vsinput{#1}
 \end{minipage}\end{lrbox}  
 \tc{}{\hspace*{-1.68cm}\usebox\lstbox}}
-
-\definecolor{blGreen}{rgb}{.2,.7,.3}
-\definecolor{darkRed}{rgb}{.2,.0,.1}
-\definecolor{DarkRed}{rgb}{.2,.0,.1}
  
 %\def\circledarrow#1#2#3{ % #1 Style, #2 Center, #3 Radius
 %	\draw[#1,->] (#2) +(80:#3) arc(80:-260:#3);
