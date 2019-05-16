@@ -36,15 +36,15 @@ data repositories, with the possibility of manipulating
 data via computer programming and displaying data 
 via computer software.  These digital representations incorporate 
 features of the older representational media I alluded to. 
-First, akin to Natural Language, digital data often emanates from 
-textual representations, with data structures initialized 
-from special `q.languages` like `XML; or `JSON;.  Second, as with 
+Akin to Natural Language, digital data often arises from 
+textual representations, via 
+special `q.languages` like `XML; or `JSON;.  As with 
 structured `q.printed` documents (of the astronomical-table 
 or even grocery-shopping-list variety), digital representations 
 often build off of a rigid structural template, like a two-dimensional 
 table with rows and columns, or a hierarchical document 
-whose elements can be nested documents.  And, third, as with 
-mathematical representations, digital representations can be 
+whose elements can be nested documents.  And, as with 
+mathematical representations, their digital peers can be 
 analyzed as instances of spaces or structures with certain 
 algebraic or syntactic properties and requirements.
 `p`
@@ -96,15 +96,16 @@ encoded, and aggregate structure likewise notated through
 syntactic conventions that preserve atoms' boundaries, yielding 
 textual serializations of data structures that can be 
 shared between computing environments, allowing information to 
-be copied and distributed.  Finally, digital representations 
-of data structures can be marshaled into different binary forms %-- 
-encoded in byte- and bit-patterns %-- to enable both 
-persistent storage in a database and `q.runtime` presence 
-as binary data that may be accessed by software applications.
+be copied and distributed.  Finally, digital data-structures 
+representations can be marshaled into different binary forms 
+%-- encoded in byte- and bit-patterns %-- for both 
+database storage and live-memory  
+application access.  Ultimately, data structures map to 
+`q.typed values` manipulated by application-level runtimes. 
 `p`
 
 `p.
-I take the time to lay out these basic principles because I want 
+I take the time to lay out these basic principles because I'd like  
 to emphasize the different contexts where digital representations can be 
 found: in particular, textual encoding and serialization; 
 graphical/interactive displays for software users; application runtimes; 
@@ -232,14 +233,17 @@ a mere variation upon or a special structuration within
 ordinary graphs.
 `p`
 
-`p.  
-As a case in point, Semantic Web structures such as 
+`p.
+In the Semantic Web case, structures such as 
 `RDF; `q.bags` and `q.collections` introduce a kind of 
-hierarchical organization to Semantic Web graphs %-- qualifying as 
+hierarchical organization %-- qualifying as 
 a form of hypergraph %-- but these protocols are not described as 
 enabling a transition from a networking framework based on 
 directed labeled graphs to one based on hypergraphs.  Instead, 
-hypergraphs become `i.de facto` embedded within ordinary graphs, 
+the higher-level structure is indirectly signaled by 
+`lstinline.rdf:type` assertions on individual nodes, which 
+`i.imply` without explicitly `i.constructing` a larger graph 
+pattern.  Hypergraphs become `i.de facto` embedded within ordinary graphs, 
 exploiting the representational flexibility which also 
 makes the Semantic Web suitable for spreadsheets, `XML;, and 
 other structures that are not graphs at a `i.prima facie` level.
