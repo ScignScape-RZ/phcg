@@ -60,7 +60,29 @@
  	%?upquote          = true
  }
  
-\newcommand{\lstinlinestyle}[1]{\Colorbox{blue!10}{#1}}
+ 
+\newcommand{\CodeMinted}[1]{{\color{codegr}{{%
+				\fontfamily{lmss}\fontseries{b}\selectfont{#1}}}}}
+
+\newcommand{\CodeMintedo}[1]{{\color{orange!40!black}{{%
+				\fontfamily{lmss}\fontseries{b}\selectfont{#1}}}}}
+
+\newcommand{\CodeMintedr}[1]{{\color{red!40!black}{{%
+				\fontfamily{lmss}\fontseries{b}\selectfont{#1}}}}}
+
+\newcommand{\codeText}[1]{\CodeMinted{#1}}
+\newcommand{\codeTexto}[1]{\CodeMintedo{#1}}
+\newcommand{\codeTextr}[1]{\CodeMintedr{#1}}
+ 
+%\newcommand{\lstinlinestyle}[1]{\Colorbox{blue!10}{\codeTextr{#1}}}
+\newcommand{\lstinlinestyle}[1]{\codeTextr{#1}}
+
+\newcommand{\lstinlinebstyle}[1]{\Colorbox{blue!10}{%
+		{\fontfamily{Cabin-TLF}\fontseries{b}\fontsize{9pt}{16pt}\selectfont{{\textls[200]{#1}}}}}}
+
+%\newcommand{\lstinlinebstyle}[1]{\Colorbox{blue!10}{%
+%		{\fontfamily{ptm}\fontseries{b}\selectfont{#1}}}}
+
  
 \usepackage{xpatch}
 \usepackage{realboxes}

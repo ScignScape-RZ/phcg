@@ -103,8 +103,8 @@ to (carrb);
     \draw   (yy) edge [->,-to]  node {} (ghostbf);
 
 
-    \node[]  (code)  [below right = 28mm and 40mm of xy]   
-     {\lstinline{z = g(x, y); f(x, y, z)}}; 
+    \node[]  (code)  [below right = 28mm and 38mm of xy]   
+     {\lstinlinebstyle{z = g(x, y); f(x, y, z)}}; 
 
     \node[]  (keyof)   [below left = 35mm and 3mm of xy]  {}; 
     \node[]  (keyff)   [below right = 19mm and 79.5mm of keyof]  {}; 
@@ -129,16 +129,16 @@ to (carrb);
     inner sep=2pt, outer sep=0pt,draw=darkRed,fill=white]  {$x$}; 
     \node (ky)   [right = 5mm of kx,circle,minimum size=2mm,
     inner sep=1.5pt, outer sep=0pt,draw=darkRed,fill=white]  {$y$};
-    \node[below right = -3.5mm and 4mm of ky.west,text width=70mm]  {:%
+    \node[below right = -3.5mm and 4mm of ky.west,text width=70mm]  {: %
     	\parbox[t][][t]{60mm}{carriers embedded in lexically-\\[-4pt]scoped symbols}};     
 
  
     \node (keyaa)   [below = 9mm of kx]  {}; 
-    \node (keyab)   [right = 5mm of keyaa]  {}; 
+    \node (keyab)   [right = 6.2mm of keyaa]  {}; 
     \draw[draw=blGreen!30!black,thick,->>,>=stealth]  (keyaa.west) 
     to (keyab.east);
     
-    \node[below right = -3.5mm and 2mm of keyab.west] (txt)  {:%
+    \node[below right = -3.5mm and 2mm of keyab.west] (txt)  {: %
     	\parbox[t][][t]{60mm}{handoffs (value transferred between \\[-4pt]carriers)}};   
 
 %    \draw[fill=yellow,opacity=.1] (keyof) rectangle (keyff);  
