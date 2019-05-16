@@ -139,6 +139,23 @@
 						\end{tikzpicture}}}}}%
 }
 
+\newcommand{\thinsectionline}[1]{%
+	\noindent
+	\begin{center}
+		{\color{#1}
+			\resizebox{.2\linewidth}{1.5ex}
+			{{%
+					{\begin{tikzpicture}
+						\node  (C) at (0,0) {};
+						\node (D) at (9,0) {};
+						\path (C) to [ornament=84] (D);
+						\end{tikzpicture}}}}}%
+	\end{center}
+}
+
+\newcommand{\thindecoline}{\vspace*{-1em}\thinsectionline{blGreen!10!orange}\vspace*{-1.25em}}
+\newcommand{\thindecolineadj}[2]{\vspace*{#1}\thinsectionline{blGreen!10!orange}\vspace*{#2}}
+
   
 \newcommand{\EnglischeLinie}{
 \sectionline{darkRed!60!cyan}

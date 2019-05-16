@@ -600,12 +600,13 @@ step which enables the `PGVMIR; generator to run mechanically.
 `p`
 
 \vsftcl{!h}{figPVMlines}
+\thindecolineadj{-2em}{-1em}
 `p.
 As described, `PGVMIR; plays a limited role insofar as it is 
 generated from channel-package objects %-- yielding 
 `PGVMIR; files %-- and then sometime later a virtual machine 
 runs the `PGVMIR; code to recreate those objects at runtime.  
-In this role `PGVMIR; just allows the channel-package objects 
+In this manifestation `PGVMIR; just allows the channel-package objects 
 to be encoded in a text file for later use.  
 However, `PGVMIR; is more than only a serialization format 
 for channel packages.  The extra roles for `PGVMIR; come 
@@ -648,13 +649,14 @@ protocols that depart from the basic inputs and returns
 mainstream programming languages.  The specialized 
 protocols can provide a more sophisticated basis for 
 static or runtime analysis of Phaon-structured source 
-code representations.  However, a `PGVM; environment eventually 
-defers to `Cpp; functions for underlying 
+code representations.  However, a `PGVM; environment 
+must eventually defer to built-in (mostly `Cpp;) functions 
+to provide underlying 
 functionality, which implies that packages based on exotic 
-protocols must be mapped to simpler packages shaped around 
+protocols have to be mapped to simpler packages shaped around 
 `Cpp;: at most one `tthis; and one return value; 
 a block to catch exceptions if necessary; and any remaining 
-parameters in a conventional input channel.  Mimicking a 
+parameters in a conventional input channel.  Mimicking the 
 `Cpp; `ABI; also requires that the byte-length of input and 
 output parameters is anticipated, based on called `Cpp; 
 function-signatures.  

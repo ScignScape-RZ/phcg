@@ -482,6 +482,7 @@ pattern in such instances is mapping
 the hyponode data is regulated by hypernodes' types.
 `p`
 
+`thindecoline;
 `p.
 In this section I identified different additions through which graph 
 structures generalize to hypergraphs; a general-purpose hypergraph 
