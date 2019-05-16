@@ -116,7 +116,7 @@ protocols for encoding and exchanging data between network endpoints;
 application designers focused on optimal human-computer-interaction 
 understand digital representations as visual and interactive phenomena, 
 while application `i.developers` focus on how to 
-properly encode data structures for binary runtimes.  These varying 
+properly encode data structures for binary runtimes.  Such varying 
 perspectives all influence the theory and technology 
 behind digital data representation %-- a successful 
 representational paradigm needs to adapt to the operational 
@@ -306,11 +306,10 @@ data structures such a representation can be used at the
 core of a virtual processor.  The code includes simple tests and 
 `q.scripts` that can be executed via the provided virtual-machine 
 code.  (The demo may be obtained here: 
-\raisebox{.25em}{{\footnotesize 
-`dblhref<https://www.https://github.com/scignscape-rz/phcg>;}}.) 
+\raisebox{2pt}{{\footnotesize 
+`dblhref<https://github.com/scignscape/PGVM>;}}.) 
 `p`
 
-\vspace*{-1em}
 `p.
 Studying hypergraphs from a computational (and 
 `q.implementational`/) perspective %-- not just as 
@@ -429,6 +428,5 @@ to outline a general theory of hypergraphs in these
 various forms.
 `p`
 
-`p.
-
-`p`
+%`p.
+%`p`
