@@ -793,17 +793,20 @@
 
 \newcommand{\PGVMIR}{\AcronymText{PGVM/I{{\tiny R}}}}
 \newcommand{\PGVM}{\AcronymText{PGVM}}
-\newcommand{\lPGVM}{P\AcronymText{GVM}}
+\newcommand{\lPGVM}{{\color{orr!35!black}{P}}\AcronymText{GVM}}
 
 \newcommand{\AST}{\AcronymText{AST}}
 
 \colorlet{orrr}{orange!40!red}
-\colorlet{orrb}{orrr!60!black}
+\colorlet{orrbl}{orrr!85!blue}
+\colorlet{orrb}{orrbl!20!darkRed}
 
-\newcommand{\Hy}{{\color{orrb}{\ensuremath{\mathcal{H}}}}}
+\newcommand{\lcl}[2]{{\resizebox{!}{#1}{\color{orrb}{#2}}}}
 
-\newcommand{\gFun}{{\color{orrb}{\ensuremath{\mathfrak{g}}}}}
-\newcommand{\fFun}{{\color{orrb}{\ensuremath{\mathfrak{f}}}}}
+\newcommand{\Hy}{{\lcl{6pt}{\ensuremath{\mathcal{H}}}}}
+
+\newcommand{\gFun}{{\lcl{6pt}{\ensuremath{\mathfrak{g}}}}}
+\newcommand{\fFun}{{\lcl{8pt}{\ensuremath{\mathfrak{f}}}}}
 
 \newcommand{\gFunB}{\ensuremath{\mathfrak{g}}}
 \newcommand{\fFunB}{\ensuremath{\mathfrak{f}}}
@@ -812,21 +815,21 @@
 \newcommand{\uIA}{\ensuremath{{\mu} : I {\rightarrow} A}}
 \newcommand{\vAI}{\ensuremath{{\nu} : A {\rightarrow} I}}
 
-\newcommand{\nodeN}{{\color{orrb}{\ensuremath{\mathfrak{n}}}}}
-\newcommand{\ix}{{\color{orrb}{\ensuremath{i}}}}
-\newcommand{\ixminusone}{{\color{orrb}{\ensuremath{i}%
+\newcommand{\nodeN}{{\lcl{6pt}{\ensuremath{\mathfrak{n}}}}}
+\newcommand{\ix}{{\lcl{6pt}{\ensuremath{i}}}}
+\newcommand{\ixminusone}{{\lcl{6pt}{\ensuremath{i}%
 			\resizebox{!}{6.5pt}{\ensuremath{- 1}}}}}
-\newcommand{\sg}{{\color{orrb}{\ensuremath{\mathfrak{s}}}}}
-\newcommand{\tys}{{\color{orrb}{\ensuremath{\mathbb{T}}}}}
-\newcommand{\tyCat}{{\color{orrb}{\ensuremath{\mathcal{T}}}}}
-\newcommand{\ty}{{\color{orrb}{\ensuremath{\mathfrak{t}}}}}
-\newcommand{\HaskCat}{{\color{orrb}{\ensuremath{\mathfrak{H}}}}}
+\newcommand{\sg}{{\lcl{6pt}{\ensuremath{\mathfrak{s}}}}}
+\newcommand{\tys}{{\lcl{6pt}{\ensuremath{\mathbb{T}}}}}
+\newcommand{\tyCat}{{\lcl{6pt}{\ensuremath{\mathcal{T}}}}}
+\newcommand{\ty}{{\lcl{6pt}{\ensuremath{\mathfrak{t}}}}}
+\newcommand{\HaskCat}{{\lcl{6pt}{\ensuremath{\mathfrak{H}}}}}
 
-\newcommand{\tyOne}{{\color{orrb}{\ensuremath{{\ty}_1}}}}
-\newcommand{\tyTwo}{{\color{orrb}{\ensuremath{{\ty}_2}}}}
-\newcommand{\tyOneToTyTwo}{{\color{orrb}{\ensuremath{{\tyOne}{\hspace{2pt}}{\rightarrow}\hspace{2pt}}{\tyTwo}}}}
+\newcommand{\tyOne}{{\lcl{6pt}{\ensuremath{{\ty}_1}}}}
+\newcommand{\tyTwo}{{\lcl{6pt}{\ensuremath{{\ty}_2}}}}
+\newcommand{\tyOneToTyTwo}{{\lcl{6pt}{\ensuremath{{\tyOne}{\hspace{2pt}}{\rightarrow}\hspace{2pt}}{\tyTwo}}}}
 
-\newcommand{\tyRef}{{\color{orrb}{\ensuremath{{\ty}{\resizebox{0.6em}{!}{\&}}}}}}
+\newcommand{\tyRef}{{\lcl{6pt}{\ensuremath{{\ty}{\resizebox{0.6em}{!}{\&}}}}}}
 
 
 %\newcommand{\oper}{opqq}
@@ -838,20 +841,20 @@
 
 \newcommand{\SEMI}{{\large\textbf ;}}
 
-\newcommand{\CarCatS}{{\color{orrb}{\ensuremath{\mathcal{C}{\makebox[2pt][r]{%
+\newcommand{\CarCatS}{{\lcl{6pt}{\ensuremath{\mathcal{C}{\makebox[2pt][r]{%
 {\scriptsize S}}}}}}}
-\newcommand{\cCar}{{\color{orrb}{\ensuremath{\mathfrak{c}}}}}
-\newcommand{\cCarOne}{{\color{orrb}{\ensuremath{\mathfrak{c_1}}}}}
-\newcommand{\cCarTwo}{{\color{orrb}{\ensuremath{\mathfrak{c_2}}}}}
+\newcommand{\cCar}{{\lcl{6pt}{\ensuremath{\mathfrak{c}}}}}
+\newcommand{\cCarOne}{{\lcl{6pt}{\ensuremath{\mathfrak{c_1}}}}}
+\newcommand{\cCarTwo}{{\lcl{6pt}{\ensuremath{\mathfrak{c_2}}}}}
 
 \newcommand{\fOfG}{\ensuremath{{\fFun}{\circ}{\gFun}}}
-\newcommand{\fAfterG}{{\color{orrb}{\ensuremath{{\fFun}{\reflectbox{\SEMI}}{\gFun}}}}}
-\newcommand{\gThenF}{{\color{orrb}{\ensuremath{{\gFun}{\SEMI}{\fFun}}}}}
+\newcommand{\fAfterG}{{\lcl{6pt}{\ensuremath{{\fFun}{\reflectbox{\SEMI}}{\gFun}}}}}
+\newcommand{\gThenF}{{\lcl{6pt}{\ensuremath{{\gFun}{\SEMI}{\fFun}}}}}
 
-\newcommand{\nClrSym}{{\color{orrb}{\ensuremath{n}}}}
-\newcommand{\xClrSym}{{\color{orrb}{\ensuremath{x}}}}
-\newcommand{\yClrSym}{{\color{orrb}{\ensuremath{y}}}}
-\newcommand{\zClrSym}{{\color{orrb}{\ensuremath{z}}}}
+\newcommand{\nClrSym}{{\lcl{6pt}{\ensuremath{n}}}}
+\newcommand{\xClrSym}{{\lcl{6pt}{\ensuremath{x}}}}
+\newcommand{\yClrSym}{{\lcl{6pt}{\ensuremath{y}}}}
+\newcommand{\zClrSym}{{\lcl{6pt}{\ensuremath{z}}}}
 
 
 \newcommand{\parleader}[1]{\vspace*{4pt}\noindent\textbf{#1}\hspace{1em}}

@@ -18,10 +18,11 @@ for general-purpose programming language parsers because
 these general languages tend to have relatively complex 
 grammars and special syntactic contexts.  While 
 programming languages in a theoretical sense may 
-have an expected translation to Abstract Syntax Trees, 
+have an expected translation to \AST{} (Abstract Syntax Tree) 
+formulations (as an early-stage \IR{}), 
 real-world languages embrace syntactic forms 
 that complicate this abstract picture.  Earlier I cited 
-\Csharp{}'s \LINQ{} as an example of an intra-linguistic 
+\Csharp{}'s \LINQ{} as an instance of intra-linguistic 
 special syntax; other examples include embedded \XML{} in 
 Scala; attribute markings in \Csharp{} and \Java{}; 
 template metaprogramming in \Cpp{}; regular-expression 
@@ -163,7 +164,7 @@ computer software and programming languages.  However, we should not
 neglect to keep in mind the specific realities of programming 
 environments that complicate such basic notions as types' 
 instances, the nature of entities that we should deem to be 
-bearers of types, the status of special (non-)values like 
+bearers of types, the status of special \mbox{(non-)values} like 
 \lstinlinestyle{null} or \q{Not A Number}, and related details that
 contrast programming \q{types} from mathematical sets or \q{spaces} 
 in various incarnations (sheaves, topoi, discrete topologies, etc.).  

@@ -397,8 +397,10 @@ procedural hypergraphs.  Such an interface then serves as a rigorous
 characterization of the overall hypergraph model \mdash{} the structuring 
 elements expressed by enumerating graphs' transformation operations 
 represent the particular features of each specific hypergraph 
-variety.  In the case of procedural hypergraphs, many of these transformations 
-are not graph-related per se but derive from hypernodes' collections or tuple 
+variety.
+}
+\p{In the case of procedural hypergraphs, many of these transformations 
+are not graph-related, per se, but derive from hypernodes' collections or tuple 
 types.  I contend that this is a useful property of procedural hypergraphs 
 for reasons I alluded to in the introduction \mdash{} hypergraphs (or at least the 
 data represented with them) need to work in a variety of computational contexts.  
@@ -416,19 +418,22 @@ structures, where information is routed among different environments
 (database, applications, serialization, and so forth).  Transformations 
 between hypergraphs can be a central process in generic transformations 
 between data structures proper to different contexts.  In effect, where 
-there is a general need for data tranforms in routing between 
-contexts \mdash{} e.g., database to application runtime \mdash{} we can hope to 
-capture most of the relevant transform logic as specifically 
+there is a general need for data transforms in routing between 
+contexts \mdash{} e.g., database to application runtime \mdash{} the relevant 
+transform logic is specifically  
 mappings between hypergraphs, with each hypergraph possessing a structure 
 optimized for being initialized from one context (or for generating data 
 used in another context).  This progression may involve restructuring 
 wherein information modeled at the \q{inter-hypernode} level \mdash{} 
 which we can call \i{hypernode} data \mdash{} tends to be migrated 
-to the level \i{inside} hypernodes, which we can call \i{hyponode} data.  
-In broad outline, hypergraph transforms can progress from relatively 
-casual structures (with a preponderance of information expressed as 
-\i{hypernode} data) to more constrained structures \mdash{} mapping 
-hypernode to hyponode data, i.e., mapping data from structures 
+to the level \i{inside} hypernodes, which we can call \i{hyponode} data.
+}
+\p{In broad outline, then, hypergraph transforms will in many scenarios 
+progress from relatively 
+casual structures \mdash{} with a preponderance of information expressed as 
+\i{hypernode} data \mdash{} to more constrained structures.  The underlying  
+pattern in such instances is mapping 
+\i{hypernode} to \i{hyponode} data \mdash{} i.e., mapping data from structures 
 \i{between} hypernodes to those \i{within} hypernodes \mdash{} where 
 the hyponode data is regulated by hypernodes' types.
 }
@@ -460,10 +465,10 @@ unfolding of this workflow are invited to download the
 code base accompanying this paper, where readers can examine 
 the operations of parsers and code generators working with 
 a built-in, general-purpose hypergraph library.  The demo  
-is fully integrated with Qt Creator, a C++ Integrated Development 
+is fully integrated with \Qt{} Creator, a \Cpp{} Integrated Development
 Environment, and has no further dependencies (assuming users 
-have a working Qt and C++ compiler; Qt is a popular C++ application-development 
+have a working \Qt{} and \Cpp{} compiler; \Qt{} is a popular \Cpp{} application-development
 framework).  The dataset includes instructions for 
-experimenting with the hypergraph library via Qt Creator and examining 
+experimenting with the hypergraph library via \Qt{} Creator and examining
 runtime structures by executing demonstration scripts in Debug mode. 
 }

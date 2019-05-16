@@ -308,7 +308,8 @@ syntax, such as embedding `XML; directly in source code, or `q.sugaring`
 compound expressions within concise and readable forms (along the 
 lines of how `LINQ; %-- Language Integrated Query %-- packages 
 complex method-calls into a fluid 
-syntax resembling `SQL;).  In a context-sensitive hypergraph grammar 
+syntax resembling `SQL;).
+In a context-sensitive hypergraph grammar, 
 such language features can be realized by defining a parsing context 
 for the non-standard syntax and defining special node-types, edge-labels, 
 or nested graphs to hold data parsed from input when the special 
