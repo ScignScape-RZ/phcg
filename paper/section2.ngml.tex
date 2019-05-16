@@ -362,10 +362,12 @@ parsed directly in \Cpp{} \mdash{} unlike the parsers discussed earlier,
 which aim to work with flexible scripting languages, an intermediate 
 hypergraph representation can be narrowly targeted to machine-generated 
 hypergraph stages and needs only simplistic parsers.
-For this language, each form (adopting the term from Lisp's name for a 
+For this language, each form (adopting \Lisp{}'s term for a 
 single expression) generally corresponds to a single \Cpp{} method.  
-For development, the steps described via intermediate code can 
-be analogously implemented as \Cpp{} code directly (the demo includes 
+The steps described via intermediate code can, as a consequence,  
+be analogously implemented as \Cpp{} code directly \mdash{} 
+which could facilitate design of the \IR{} 
+instruction-set (the demo includes 
 project files for running an example of that direct construction in 
 lieu of intermediate files).  Accordingly, designing a 
 serialization format for hypergraphs can be closely tied 
