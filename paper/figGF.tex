@@ -2,8 +2,8 @@
 \centering
 \begin{tikzgrid} 
     \node[]  (nn)                   {$n$}; 
-    \node[]  (fng)   [right=of nn]  {\gFun}; 
-    \node[]  (fnf)   [right=of fng]  {\fFun}; 
+    \node[]  (fng)   [right=of nn]  {\gFunB};
+    \node[]  (fnf)   [right=of fng]  {\fFunB};
 
     \path[->]
     (nn) edge   node {\textit{input}}           (fng)
@@ -12,8 +12,8 @@
     \node[]  (code)  [below right = 5.5mm and 1mm of nn]   {\lstinlinebstyle{g(n); f(n)}}; 
 
     \node[]  (nn1)   [below = 21mm of nn]                {$n$}; 
-    \node[]  (fng1)   [right=of nn1]  {\gFun}; 
-    \node[]  (fnf1)   [right=of fng1]  {\fFun}; 
+    \node[]  (fng1)   [right=of nn1]  {\gFunB};
+    \node[]  (fnf1)   [right=of fng1]  {\fFunB};
     
     \path[->]
     (nn1) edge   node {\textit{input}}           (fng1)

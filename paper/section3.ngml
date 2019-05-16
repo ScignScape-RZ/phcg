@@ -29,8 +29,8 @@ that complicate this abstract picture.  Earlier I cited
 special syntax; other examples include embedded `XML; in 
 Scala; attribute markings in `Csharp; and `Java;; 
 template metaprogramming in `Cpp;; regular-expression 
-syntax in languages like `Perl; and `Ruby;; and so 
-forth.  I have argued that a hypergraph (rather than 
+syntax in languages like `Perl; and `Ruby;; etc.  
+I have argued that a hypergraph (rather than 
 graph or tree) paradigm is a more natural foundation 
 for representing code in these practically evolving 
 languages, which are designed around semantic expressiveness 
@@ -121,7 +121,7 @@ in the representational expressivity of graphs (even hypergraphs)
 for modeling inter-procedure relationships.  Consider a case 
 such as represented in Figure~\ref{fig:figGF}, 
 `input<figGF>; where `gFun; modifies 
-input $n$ that is then also input to `fFun;.  Here `gFun;'s 
+input `nClrSym; that is then also input to `fFun;.  Here `gFun;'s 
 effect on `fFun;'s input is marked by a `gFun;-to-`fFun; 
 arrow, but this directed edge implies a different semantic 
 relation than `gFun;'s output being `fFun;'s input 
@@ -129,11 +129,11 @@ relation than `gFun;'s output being `fFun;'s input
 in a scenario like Figure~\ref{fig:figGFcomplex},`input<figGFcomplex>; 
 based on code such as written below the 
 graph.  The situation here is that `fFun; both uses 
-`gFun;'s output return (via the symbol $z$ the value is assigned to) 
-and also the values held by $x$ and $y$ which are altered by 
+`gFun;'s output return (via the symbol `zClrSym; the value is assigned to) 
+and also the values held by `xClrSym; and `yClrSym; which are altered by 
 `gFun;.  I notate these dependencies by grouping the `gFun;-to-`fFun; 
-edges through $x$ and $y$ separately from the edge 
-with $z$ %-- the latter edge conforms to the relation of 
+edges through `xClrSym; and `yClrSym; separately from the edge 
+with `zClrSym; %-- the latter edge conforms to the relation of 
 a procedure taking another procedure's output as input 
 (although here the relation is indirect through a 
 lexically-scoped symbol), but the former edges reflect a 
@@ -148,17 +148,17 @@ strategy of grouping input an output values into hypernodes.
 For situations like these I propose a notion of `i.channels`/, which are 
 higher-scale groupings of edges analogous to how hyperedges 
 span groupings of nodes.  In Figure~\ref{fig:figGFcomplex}, 
-the $x$ and $y$ edges are considered a separate 
-channel than the $z$ edge, because $x$ and $y$ bridge `fFun; and `gFun; 
+the `xClrSym; and `yClrSym; edges are considered a separate 
+channel than the `zClrSym; edge, because `xClrSym; and `yClrSym; bridge `fFun; and `gFun; 
 according to one sort of program-flow semantics (with side effects and 
-mutable inputs passed to sequential procedures) while $z$ follows a 
+mutable inputs passed to sequential procedures) while `zClrSym; follows a 
 different pattern (with output values and lexical symbols).  
 The shaded box illustrates channels' role in 
 gathering edges that have some particular connection 
 which could not be expressly identified by other means (like 
 shared annotations) and also isolating edges and edge-groups 
-from one another as appropriate (here, isolating the $x$-and-$y$ pairing 
-from the $z$ edges).   
+from one another as appropriate (here, isolating the `xClrSym;-and-`yClrSym; pairing 
+from the `zClrSym; edges).   
 `p`
 
 `p.
@@ -182,7 +182,7 @@ neglect to keep in mind the specific realities of programming
 environments that complicate such basic notions as types' 
 instances, the nature of entities that we should deem to be 
 bearers of types, the status of special (non-)values like 
-`lstinline.null` or `q.Not A Number`/, and related details that 
+`lstinlinestyle.null` or `q.Not A Number`/, and related details that
 contrast programming `q.types` from mathematical sets or `q.spaces` 
 in various incarnations (sheaves, topoi, discrete topologies, etc.).  
 `p`
@@ -271,9 +271,13 @@ than values.  Consider a function which, on one occasion,
 throws an exception rather than returning a value.  The carrier 
 arranged to hold the return value is therefore empty.  Carriers, 
 then, can be in a `i.state` other than that of holing a valid, 
-initialized value.  Some programming language accommodate these 
-cases via special `lstinline.null` or `lstinline.Nothing` values, 
-but these are still constructs inside the language's type 
+initialized value.
+`p`
+
+`p.
+Some programming language accommodate these 
+cases with special `lstinlinestyle.null` or `lstinlinestyle.Nothing` values,
+but those are still constructs inside the language's type 
 system.  Thinking in terms of carriers, instead, removes 
 certain `i.states` from the type system: an empty or 
 pre-initialized carrier does not have some special `i.empty` 
@@ -605,7 +609,7 @@ to be encoded in a text file for later use.
 However, `PGVMIR; is more than only a serialization format 
 for channel packages.  The extra roles for `PGVMIR; come 
 into play when defining source-code-level procedures 
-(which includes code blocks, e.g. `lstinline.if-then-else` 
+(which includes code blocks, e.g. `lstinlinestyle.if-then-else`
 alternatives, which are implemented as anonymous procedures).  
 Because `PGVMIR; contains sequences of minimal carrier 
 operations, certain such sequences are subject to being isolated as 
@@ -676,7 +680,7 @@ layouts.  In effect, functions are equivalent if
 their argument lists are equally-sized arrays of 
 parameters which are pairwise equal in byte-length.  
 In such a case the two functions may be jointly 
-represented by `lstinline.void*` function-pointers and 
+represented by `lstinlinestyle.void*` function-pointers and
 called from the same site in the `PGVM; engine.  
 The low-level details are sampled in Listing~\ref{lst:figPVMrt}: 
 here `OneOverlay; marks a point where the engine 

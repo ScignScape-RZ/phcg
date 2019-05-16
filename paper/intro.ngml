@@ -241,7 +241,7 @@ a form of hypergraph %-- but these protocols are not described as
 enabling a transition from a networking framework based on 
 directed labeled graphs to one based on hypergraphs.  Instead, 
 the higher-level structure is indirectly signaled by 
-`lstinline.rdf:type` assertions on individual nodes, which 
+`lstinlinestyle.rdf:type` assertions on individual nodes, which 
 `i.imply` without explicitly `i.constructing` a larger graph 
 pattern.  Hypergraphs become `i.de facto` embedded within ordinary graphs, 
 exploiting the representational flexibility which also 
@@ -371,8 +371,9 @@ because it has a convenient grammar and works with a parsing engine;
 from that preliminary graph a new graph can be created via `IR; code.  
 Grammars, serializaion and deserialization, and `IR; thereby become 
 part of the formal architecture defining a hypergraph ecosystem and 
-inter-graph transformations (analogous to the trio of `XML; parsers, 
-`XML; transforms, and the `XML; Document Object Model).
+inter-graph transformations %-- analogous, roughly, 
+to the trio of `XML; parsers, `mbox`XML; transforms/`XSLT;`/, 
+and the `XML; Document Object Model (`DOM;).
 `p`
 
 `p.

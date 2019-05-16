@@ -179,10 +179,12 @@ rather than needing a separate code-generator as in `LEXX;/`YACC;.)
 `p.
 I dub the actual `Cpp; parsing library (and corresponding 
 hypergraph representation) `q.RelaeGraph` (for `q.Regular Expression 
-Labeling and Annotation Engine`/).  RelaeGraph grammars are 
-mostly comprised of rules that each pair a regular expression 
+Labeling and Annotation Engine`/).  Annotations 
+in this context are understood to be details supplementing a basic 
+vocabulary of labels.  RelaeGraph grammars are 
+mostly constituted by rules which each pair a regular expression 
 (a formula describing patterns in the input stream) with 
-code that is executed in the event of a pattern match.  This 
+code that is executed in response to a pattern match.  This 
 code, in turn, typically calls functions to modify 
 the output hypergraph by inserting a new hypernode and/or 
 hyperedge.  A common scenario is that the text matched by a 
@@ -190,9 +192,7 @@ rule's regular-expression pattern forms the basis of a hypernode,
 while the specific rule that matched (and, for context-sensitive 
 languages, the contexts in effect for the match) determines 
 how a new hyperedge, connecting the new hypernode to the 
-existing hypergraph, is labeled and annotated (here 
-annotations are added details supplementing a basic 
-vocabulary of labels).
+existing hypergraph, is labeled and annotated.
 `p`
    
 `p.
@@ -212,7 +212,7 @@ into grammatical contexts, with relations between textual
 elements and surrounding (or distant) text stipulated by 
 syntactic forms.  Analogously, hypernodes and hyperedges are 
 tied to the surrounding material in their hypergraphs according 
-to different patterns and contexts.  The extra detail offered 
+to various patterns and contexts.  The extra detail offered 
 via hypergraphs permits contextual details to be 
 explicated more precisely and compactly.  Generalizing from 
 graphs to hypergraphs is then analogous to (and, in practice, an 
@@ -224,7 +224,7 @@ a class of more nuanced, context-sensitive grammars.
 `p.
 In a context-sensitive grammar, not every rule-match will 
 directly modify an output graph; instead, the result of a 
-match might be to alter the parsing context.  For example, 
+match might be to alter the parsing context.  For one example, 
 Listing~\ref{lst:figStringContext} 
 shows code (sampled from the data set) that works with 
 string literals in script code, via a distinct string-literal 
@@ -234,7 +234,7 @@ logic to a `q.graph builder` class that acts as an intermediary
 between the parsing-specific code and the class which 
 directly modifies the output hypergraph; cf. `ThreeOverlay;).  
 The current parsing context is tracked by a specific 
-\lstinline{parse_context_} object which is modified 
+\lstinlinestyle{parse\_context\_} object which is modified
 by the graph builder (the parsing engine accesses that object 
 as well and only attempts rule-matches for rules 
 described as active for the current context).`footnote.
@@ -242,15 +242,15 @@ To be precise, context is set both by the named contexts that
 may be dynamically declared in a grammar and by boolean flags 
 which assert finer-grained contexts with conjunction, disjunction, 
 and negation operations.  A full context declaration 
-can look like at `TwoOverlay; in Listing~\ref{lst:figStringContext}: 
+can look like at \raisebox{-1pt}{`TwoOverlay;} in Listing~\ref{lst:figStringContext}: 
 \lstinline[columns=fullflexible]
 {flags\_all\_(parse\_context ,inside\_string\_literal), run\_context}.
 `footnote`  Overall then the parsing response operations 
 are split between three main classes: one which defines 
-rules and match-callbacks themselves; one which is 
-responsible for maintaining parse context and flags 
-and bridging the other two layers; and one which performs 
-most graph-transformation operations. 
+rules and match-callbacks themselves; one 
+responsible for maintaining parse context and flags, 
+plus bridging the other two layers; and one which conducts 
+most of the graph-transformation operations. 
 `p`
    
 \vsftcl{h}{figAddToken}
@@ -259,15 +259,19 @@ Of these three parsing layers, one layer `q.faces` the
 input text directly %-- the layer that defines grammar rules 
 and match-callbacks.  Another layer `q.faces` the hypergraph 
 output directly %-- it adds (and occasionally rearranges) 
-hypernodes and hyperedges (the third layer acts as an 
-intermediary).  Separating these layers establishes 
+hypernodes and hyperedges.  The third layer acts as an 
+intermediary.  Separating these layers establishes 
 a separation of concerns so that the grammar-specific 
 layer can focus on recognizing parsing structures for an 
 expressive, flexible input language, without itself 
-attending to graph operations.  Simultaneously, the 
-components which do modify hypergraphs can be developed 
-in isolation from the syntax of the language being 
-parsed.  Concretely, listing~\ref{lst:figAddToken} samples code 
+attending to graph operations.  Likewise, the 
+components which `i.do` modify hypergraphs are isolated 
+from the input language's parsing logic 
+and syntactic design choices.
+`p`
+
+`p.  
+Concretely, listing~\ref{lst:figAddToken} samples code 
 logically following Listing~\ref{lst:figStringContext} wherein 
 a new hypernode (such as, a string literal token) is 
 inserted.  The relevant `Cpp; class offers a variety of 
@@ -291,7 +295,7 @@ dependent on hypergraph forms at the output level, hypergraphs
 augment the benefits of how such a pipeline is organized.   
 Compared to other kinds of parser output (like Abstract Syntax Trees 
 or Directed Acyclic Graphs), hypergraphs have fewer structural 
-requirements and restrictions and therefore greater leeway 
+requirements and restrictions and therefore have greater leeway 
 in how data about input texts is perpetuated in the output structures.  
 This accordingly offers greater flexibility in systematizing the 
 input language's syntax and semantics.
@@ -351,10 +355,10 @@ can therefore be pre-emptively accommodated with calls to some internal
 functions even at this early stage.  For example, the demo language 
 implemented in the data set has a grammar feature where a token preceded 
 (without space) by a comma %-- as in the (type-declaration) line 
-\lstinline{,fnd ::: Fn_Doc*;} %-- is usually the introduction of a 
+\lstinlinestyle{,fnd ::: Fn\_Doc*;} %-- is usually the introduction of a
 new lexically-scoped symbol, so it can trigger a pre-emptive call to 
 a method that keeps track of source-code scopes (the quoted line 
-also implies that the symbol \lstinline{Fn_Doc} designates a type, 
+also implies that the symbol \lstinlinestyle{Fn\_Doc} designates a type,
 so a function would be called registering this as a known type).    
 `p`
    

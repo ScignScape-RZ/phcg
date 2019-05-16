@@ -429,9 +429,16 @@
 \let\Footnote\footnote
 \renewcommand\footnote[1]{\begingroup\footnotetrue\Footnote{#1}\endgroup}
 
-\newcommand{\AcronymText}[1]{{\iffootnote\begin{footnotesize}{\textsc{#1}}\end{footnotesize}%
-\else\begin{OldFootnoteSize}{\textsc{#1}}\end{OldFootnoteSize}\fi}}
+\colorlet{orr}{orange!60!red}
 
+\newcommand{\textscc}[1]{{\color{orr!35!black}{{%
+						\fontfamily{Cabin-TLF}\fontseries{b}\selectfont{\textsc{#1}}}}}}
+
+\newcommand{\AcronymText}[1]{{\iffootnote\begin{footnotesize}{\textsc{#1}}\end{footnotesize}%
+\else\begin{small}{\textscc{#1}}\end{small}\fi}}
+
+
+\newcommand{\DOM}{\AcronymText{DOM}}
 
 \newcommand{\NLP}{\AcronymText{NLP}}
 \newcommand{\POS}{\AcronymText{POS}}
@@ -788,29 +795,35 @@
 
 \newcommand{\AST}{\AcronymText{AST}}
 
-\newcommand{\Hy}{\ensuremath{\mathcal{H}}}
+\colorlet{orrr}{orange!40!red}
+\colorlet{orrb}{orrr!60!black}
 
-\newcommand{\gFun}{\ensuremath{\mathfrak{g}}}
-\newcommand{\fFun}{\ensuremath{\mathfrak{f}}}
+\newcommand{\Hy}{{\color{orrb}{\ensuremath{\mathcal{H}}}}}
+
+\newcommand{\gFun}{{\color{orrb}{\ensuremath{\mathfrak{g}}}}}
+\newcommand{\fFun}{{\color{orrb}{\ensuremath{\mathfrak{f}}}}}
+
+\newcommand{\gFunB}{\ensuremath{\mathfrak{g}}}
+\newcommand{\fFunB}{\ensuremath{\mathfrak{f}}}
 
 \newcommand{\fAB}{\ensuremath{f : A {\rightarrow} B}}
 \newcommand{\uIA}{\ensuremath{{\mu} : I {\rightarrow} A}}
 \newcommand{\vAI}{\ensuremath{{\nu} : A {\rightarrow} I}}
 
-\newcommand{\nodeN}{\ensuremath{\mathfrak{n}}}
-\newcommand{\ix}{\ensuremath{i}}
-\newcommand{\ixminusone}{\ensuremath{i \footnotesize{- 1}}}
-\newcommand{\sg}{\ensuremath{\mathfrak{s}}}
-\newcommand{\tys}{\ensuremath{\mathbb{T}}}
-\newcommand{\tyCat}{\ensuremath{\mathcal{T}}}
-\newcommand{\ty}{\ensuremath{\mathfrak{t}}}
-\newcommand{\HaskCat}{\ensuremath{\mathfrak{H}}}
+\newcommand{\nodeN}{{\color{orrb}{\ensuremath{\mathfrak{n}}}}}
+\newcommand{\ix}{{\color{orrb}{\ensuremath{i}}}}
+\newcommand{\ixminusone}{{\color{orrb}{\ensuremath{i \footnotesize{- 1}}}}}
+\newcommand{\sg}{{\color{orrb}{\ensuremath{\mathfrak{s}}}}}
+\newcommand{\tys}{{\color{orrb}{\ensuremath{\mathbb{T}}}}}
+\newcommand{\tyCat}{{\color{orrb}{\ensuremath{\mathcal{T}}}}}
+\newcommand{\ty}{{\color{orrb}{\ensuremath{\mathfrak{t}}}}}
+\newcommand{\HaskCat}{{\color{orrb}{\ensuremath{\mathfrak{H}}}}}
 
-\newcommand{\tyOne}{\ensuremath{{\ty}_1}}
-\newcommand{\tyTwo}{\ensuremath{{\ty}_2}}
-\newcommand{\tyOneToTyTwo}{\ensuremath{{\tyOne}{\hspace{2pt}}{\rightarrow}\hspace{2pt}}{\tyTwo}}
+\newcommand{\tyOne}{{\color{orrb}{\ensuremath{{\ty}_1}}}}
+\newcommand{\tyTwo}{{\color{orrb}{\ensuremath{{\ty}_2}}}}
+\newcommand{\tyOneToTyTwo}{{\color{orrb}{\ensuremath{{\tyOne}{\hspace{2pt}}{\rightarrow}\hspace{2pt}}{\tyTwo}}}}
 
-\newcommand{\tyRef}{\ensuremath{{\ty}{\resizebox{0.6em}{!}{\&}}}}
+\newcommand{\tyRef}{{\color{orrb}{\ensuremath{{\ty}{\resizebox{0.6em}{!}{\&}}}}}}
 
 
 %\newcommand{\oper}{opqq}
@@ -822,15 +835,21 @@
 
 \newcommand{\SEMI}{{\large\textbf ;}}
 
-\newcommand{\CarCatS}{\ensuremath{\mathcal{C}{\makebox[2pt][r]{%
-{\scriptsize S}}}}}
-\newcommand{\cCar}{\ensuremath{\mathfrak{c}}}
-\newcommand{\cCarOne}{\ensuremath{\mathfrak{c_1}}}
-\newcommand{\cCarTwo}{\ensuremath{\mathfrak{c_2}}}
+\newcommand{\CarCatS}{{\color{orrb}{\ensuremath{\mathcal{C}{\makebox[2pt][r]{%
+{\scriptsize S}}}}}}}
+\newcommand{\cCar}{{\color{orrb}{\ensuremath{\mathfrak{c}}}}}
+\newcommand{\cCarOne}{{\color{orrb}{\ensuremath{\mathfrak{c_1}}}}}
+\newcommand{\cCarTwo}{{\color{orrb}{\ensuremath{\mathfrak{c_2}}}}}
 
 \newcommand{\fOfG}{\ensuremath{{\fFun}{\circ}{\gFun}}}
-\newcommand{\fAfterG}{\ensuremath{{\fFun}{\reflectbox{\SEMI}}{\gFun}}}
-\newcommand{\gThenF}{\ensuremath{{\gFun}{\SEMI}{\fFun}}}
+\newcommand{\fAfterG}{{\color{orrb}{\ensuremath{{\fFun}{\reflectbox{\SEMI}}{\gFun}}}}}
+\newcommand{\gThenF}{{\color{orrb}{\ensuremath{{\gFun}{\SEMI}{\fFun}}}}}
+
+\newcommand{\nClrSym}{{\color{orrb}{\ensuremath{n}}}}
+\newcommand{\xClrSym}{{\color{orrb}{\ensuremath{x}}}}
+\newcommand{\yClrSym}{{\color{orrb}{\ensuremath{y}}}}
+\newcommand{\zClrSym}{{\color{orrb}{\ensuremath{z}}}}
+
 
 \newcommand{\parleader}[1]{\vspace*{4pt}\noindent\textbf{#1}\hspace{1em}}
 \newcommand{\parlead}[1]{\parleader{#1}}
