@@ -232,7 +232,7 @@ typed values are not \q{freestanding} mathematical entities
 but are always packaged into digital structures that make 
 them available for software procedures.
 }
-\p{For sake of discussion, I will use the term \i{carriers} to 
+\p{For sake of discussion, I will adopt the term \i{carriers} to 
 describe the structures that \q{package} typed values.  
 When a procedure returns a value, said value is embedded 
 in a carrier which \q{transports} it to other procedures.  The 
@@ -597,8 +597,8 @@ function-signatures.
 structured around points in source-code where procedures are 
 called.  The \PGVM{} system has a parallel notion of 
 channel \i{bundles} which are associated with functions' 
-signatures \mdash{} at runtime, \PGVM{} can access \Cpp{} functions 
-which are described ahead of time in terms of the 
+signaturesl: at runtime, \PGVM{} can access \Cpp{} functions 
+which are described ahead of time in terms of these 
 channel-bundles.\footnote{Separately, \PGVM{} can also call \Qt{}-specific methods according 
 to \Qt{}'s internal reflection mechanism, the Meta-Object Protocol.
 }  When a \PGVM{} instance starts up, the predefined 
@@ -613,7 +613,7 @@ their argument lists are equally-sized arrays of
 parameters which are pairwise equal in byte-length.  
 In such a case the two functions may be jointly 
 represented by \lstinlinestyle{void*} function-pointers and
-called from the same site in the \PGVM{} engine.  
+called from the same places in the \PGVM{} engine.  
 The low-level details are sampled in Listing~\ref{lst:figPVMrt}: 
 here \OneOverlay{} marks a point where the engine 
 switches over numeric codes standing for certain 
@@ -623,30 +623,31 @@ target functions, once the equivalence class is identified
 may be accessed via a single function-pointer.
 }
 \p{Further details about reducing channel-packages 
-around the \Cpp{} \ABI{} are not directly concerned 
-with graph representations and so are outside the 
-scope of this paper, so with this overview I will 
+around the \Cpp{} \ABI{}, which are not directly concerned 
+with graph representations, are thus outside the 
+scope of this paper; so with this overview I will 
 wrap up my enumeration of stages in the \PGVM{} pipeline.  
 I will comment, however, that the \PGVM{} engine's 
 binary manipulation of function-pointers and 
 argument-arrays enables the runtime to work with 
-complex structures derived from non-stanard channel 
+complex structures derived from non-standard channel 
 packages.  The end result is that \PGVM{} 
-provides an execution engine that works with 
-sophisticated hypergraph representations of source 
-code: whereas a more conventional architecture might 
+makes available an execution engine that works with 
+sophisticated hypergraph code representations: 
+whereas a more conventional architecture might 
 assume that compilers will eventually reduce source 
 input to relatively simple \AST{}-style data, \PGVM{} 
 anticipates a Virtual Machine runtime operating 
-on instruction-sequences that preserve the more 
+on instruction-sequences that preserve more 
 complex, hypergraph-driven code-representation 
 semantics.  In this sense \PGVM{} suggests the 
-kind of compiler and Virtual Machine architecture 
-that could be appropriate in general for the 
+kind of compiler and \VM{} architecture 
+that could be appropriate for the 
 overall project of standardizing hypergraph code 
-models and leveraging them directly in a runtime 
+models and leveraging them in a runtime 
 execution engine.
 }
+\vspace{6pt}
 \vsftcl{!h}{figPVMrt}
 %\p{%}
 %\p{%}

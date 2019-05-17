@@ -1,5 +1,6 @@
-
+`vspace<6pt>;
 `section.Hypergraph Parsers and Intermediate Representation`
+`vspace<6pt>;
 `p.
 Having pointed out the features desired for a general-purpose 
 hypergraph framework, the next problem is to implement a 
@@ -25,7 +26,7 @@ other sources (like text files) and using hypergraphs to
 populate other kinds of data structures, either directly 
 or indirectly (such as, via code generators).  This dimension 
 encompasses the overall capabilities that would permit software to 
-use hypergraphs for their own data representations 
+utilize hypergraphs for their own data representations 
 and/or as bridge structures for sharing data between applications 
 and/or components.  In bridge cases, the strategies for building 
 hypergraphs `i.from` other kinds of data, and then building 

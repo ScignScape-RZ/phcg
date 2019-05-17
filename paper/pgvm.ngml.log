@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  16 MAY 2019 19:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  17 MAY 2019 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1070,7 +1070,7 @@ Package microtype Info: Loading configuration file microtype.cfg.
 .cfg
 File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 219.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 220.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/enumitem/enumitem.s
 ty
@@ -1657,11 +1657,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
 (Font)              size <12> substituted on input line 1.
 
-
-Underfull \vbox (badness 1231) has occurred while \output is active []
-
- [5]
-[6] [7]
+[5] [6] [7]
 Overfull \hbox (8.505pt too wide) in paragraph at lines 269--269
 []$[]$ 
  []
@@ -1686,7 +1682,11 @@ Underfull \vbox (badness 6188) has occurred while \output is active []
 
  [9]
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgfornament/vecto
-rian/vectorian84.pgf)) (./section2.ngml.tex [10] [11] (./figLanguageEngine.tex
+rian/vectorian84.pgf)) (./section2.ngml.tex [10]
+Underfull \vbox (badness 1975) has occurred while \output is active []
+
+ [11]
+(./figLanguageEngine.tex
 Overfull \hbox (1.34119pt too wide) in paragraph at lines 22--22
  [][][][][] 
  []
@@ -1697,7 +1697,7 @@ Overfull \hbox (8.55525pt too wide) in paragraph at lines 36--37
  []
 
 )
-Underfull \hbox (badness 5533) in paragraph at lines 160--161
+Underfull \hbox (badness 5533) in paragraph at lines 162--163
 \OT1/cmr/bx/n/10.95 General-Purpose Hy-per-graph Parsers  \OT1/cmr/m/n/10.95 (+
 20) The
  []
@@ -1724,7 +1724,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <6> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 3.
 )
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 203--203
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 205--205
 [] $[]$| [] 
  []
 
@@ -1732,7 +1732,7 @@ Overfull \hbox (14.81184pt too wide) in paragraph at lines 203--203
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 232.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 234.
 
 
 Underfull \vbox (badness 7888) has occurred while \output is active []
@@ -1740,7 +1740,7 @@ Underfull \vbox (badness 7888) has occurred while \output is active []
  [13
 \pgfsyspdfmark {pgfid11}{20777318}{21539025}
 ] (./figAddToken.tex)
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 234--234
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 236--236
 [] $[]$| [] 
  []
 
@@ -1770,12 +1770,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 )
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 351--351
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 353--353
 [] $[]$| [] 
  []
 
 (./figPGBIR.tex)
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 378--378
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 380--380
 [] $[]$| [] 
  []
 
@@ -1789,7 +1789,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 (./figPGB.tex)
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 452--452
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 454--454
 [] $[]$| [] 
  []
 
@@ -1871,19 +1871,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgfornament/vecto
 rian/vectorian84.pgf) [23
-\pgfsyspdfmark {pgfid28}{20777318}{27572961}
+\pgfsyspdfmark {pgfid28}{20777318}{27496073}
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24
 \pgfsyspdfmark {pgfid30}{2126776}{16951505}
 ] (./figPVMrt.tex)
-Overfull \hbox (14.81184pt too wide) in paragraph at lines 649--649
+Overfull \hbox (14.81184pt too wide) in paragraph at lines 651--651
 [] $[]$| [] 
  []
 
 ) (./conclusion.ngml.tex
-Underfull \hbox (badness 1448) in paragraph at lines 648--2
+Underfull \hbox (badness 1448) in paragraph at lines 649--2
 []\OT1/cmr/m/n/10.95 (+20) Further de-tails about re-duc-ing channel-packages
  []
 
@@ -1924,10 +1924,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 39683 strings out of 492649
- 806100 string characters out of 6122986
- 1055987 words of memory out of 5000000
- 42263 multiletter control sequences out of 15000+600000
+ 39685 strings out of 492649
+ 806117 string characters out of 6122986
+ 1056037 words of memory out of 5000000
+ 42265 multiletter control sequences out of 15000+600000
  573176 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,13n,101p,10426b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1966,7 +1966,7 @@ l/texlive-install/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></h
 ome/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/cm-super/sfrm
 1095.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/c
 m-super/sftt0800.pfb>
-Output written on pgvm.ngml.pdf (28 pages, 526311 bytes).
+Output written on pgvm.ngml.pdf (28 pages, 526255 bytes).
 PDF statistics:
  892 PDF objects out of 1000 (max. 8388607)
  810 compressed objects within 9 object streams
