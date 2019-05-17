@@ -519,25 +519,25 @@ binary level, appear to be the result of compiled (e.g., \Cpp{}) functions.
 \vsftcl{!h}{figPVM}
 \p{Listing~\ref{lst:figPVM} depicts part of a virtual machine file generated 
 by the demo from a script-like source file.  This kind of file 
-(which I call \PGVMIR{}, for \q{PhaonGraph Virtual Machine}) 
+(which I call \PGVMIR{}) 
 is the final output of the compiler pipeline described in this and 
 the last section.  The basic premise behind this format is that 
 every procedure call can be associated with a \i{channel package}, 
 each of whose channels is a stack of carriers.  It is straightforward 
 to generate \PGVMIR{} code tracing a series of instructions to 
 recreate a channel package held as a structure (in the demo, 
-a \Cpp{} object) in memory.  Moreover, the \q{Phaon Graph} format is 
+a \Cpp{} object) in memory.  Moreover, the Phaon-Graph format is 
 designed to represent information associated with channels and 
 carriers; so generating \PGVMIR{} (at least on the level of 
 individual procedure calls) is facilitated by 
-constructing graphs in the \q{Phaon} format to begin with.  
+constructing graphs in the Phaon-Graph format to begin with.  
 I use the term \q{RelaeGraph} for graphs generated from 
 \q{relae} parsers; in the overall pipeline then the transformation 
 from Relae-Graphs to Phaon-Graphs is the important 
 step which enables the \PGVMIR{} generator to run mechanically.  
 }
 \vsftcl{!h}{figPVMlines}
-\thindecolineadj{-2em}{-1em}
+\thindecolineadj{-2.25em}{-.75em}
 \p{As described, \PGVMIR{} plays a limited role insofar as it is 
 generated from channel-package objects \mdash{} yielding 
 \PGVMIR{} files \mdash{} and then sometime later a virtual machine 
