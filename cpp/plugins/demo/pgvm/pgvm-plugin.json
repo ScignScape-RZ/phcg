@@ -1,0 +1,10 @@
+{
+    "Name" : "PGVM (Demo)",
+    "Version" : "0.0.1",
+    "CompatVersion" : "0.0.1",
+    "Vendor" : "Nathaniel Christen",
+    "Copyright" : "(C) Nathaniel Christen, 2019",
+    "License" : "Boost (see license with PGVM Data Set",
+    "Description" : "Intended to be used for browsing the PGVM Data Set",
+    "Url" : "https://github.com/scignscape/PGVM"
+}
