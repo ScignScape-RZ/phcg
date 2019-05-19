@@ -505,7 +505,7 @@ void PhaonIR::anchor_channel_group(QString sym, QString ch)
 void PhaonIR::copy_anchor_channel_group(QString sym, QString ch)
 {
  anchored_channel_groups_.insert(held_channel_group_,
-   {(*channel_system_)[ch], current_lexical_scope(), sym, &default_cofinalizer});
+   {(*channel_system_)[ch], current_lexical_scope(), sym, &PhaonIR::default_cofinalizer});
 }
 
 void PhaonIR::anchor_without_channel_group(QString str)
@@ -640,21 +640,21 @@ void PhaonIR::init_type(QString type_name, quint8 byte_code)
 void PhaonIR::read_line(QString inst)
 {
  static QMap<QString, void(PhaonIR::*)()> static_map {{
-  { "init_program_stack", &init_program_stack },
-  { "enter_lexical_scope", &enter_lexical_scope },
-  { "reset_program_stack", &reset_program_stack },
-  { "coalesce_channel_group", &coalesce_channel_group },
-  { "evaluate_channel_group", &evaluate_channel_group },
-  { "delete_temps", &delete_temps },
-  { "delete_retired", &delete_retired },
-  { "clear_temps", &clear_temps },
-  { "reset_program_stack", &reset_program_stack },
-  { "pop_unwind_scope", &pop_unwind_scope },
-  { "temp_anchor_channel_group", &temp_anchor_channel_group },
-  { "temp_anchor_channel_group_by_need", &temp_anchor_channel_group_by_need },
-  { "push_carrier_expression", &push_carrier_expression },
-  { "index_channel_group", &index_channel_group },
-  { "mark_void_call", &mark_void_call }
+  { "init_program_stack", &PhaonIR::init_program_stack },
+  { "enter_lexical_scope", &PhaonIR::enter_lexical_scope },
+  { "reset_program_stack", &PhaonIR::reset_program_stack },
+  { "coalesce_channel_group", &PhaonIR::coalesce_channel_group },
+  { "evaluate_channel_group", &PhaonIR::evaluate_channel_group },
+  { "delete_temps", &PhaonIR::delete_temps },
+  { "delete_retired", &PhaonIR::delete_retired },
+  { "clear_temps", &PhaonIR::clear_temps },
+  { "reset_program_stack", &PhaonIR::reset_program_stack },
+  { "pop_unwind_scope", &PhaonIR::pop_unwind_scope },
+  { "temp_anchor_channel_group", &PhaonIR::temp_anchor_channel_group },
+  { "temp_anchor_channel_group_by_need", &PhaonIR::temp_anchor_channel_group_by_need },
+  { "push_carrier_expression", &PhaonIR::push_carrier_expression },
+  { "index_channel_group", &PhaonIR::index_channel_group },
+  { "mark_void_call", &PhaonIR::mark_void_call }
  }};
 
  auto it = static_map.find(inst);
@@ -716,18 +716,18 @@ void PhaonIR::run_lines(QString source_fn)
 void PhaonIR::read_line(QString inst, QString arg)
 {
  static QMap<QString, void(PhaonIR::*)(QString)> static_map {{
-  { "push_carrier_stack", &push_carrier_stack },
-  { "hold_type_by_name", &hold_type_by_name },
-  { "push_unwind_scope", &push_unwind_scope },
-  { "push_carrier_symbol", &push_carrier_symbol },
-  { "push_carrier_stack", &push_carrier_stack },
-  { "push_carrier_raw_value", &push_carrier_raw_value },
-  { "copy_anchor_channel_group", &copy_anchor_channel_group },
-  { "anchor_without_channel_group", &anchor_without_channel_group },
-  { "push_carrier_anon_fn", &push_carrier_anon_fn },
-  { "type_decl", &type_decl },
-  { "finalize_signature", &finalize_signature },
-  { "push_carrier_type_holder", &push_carrier_type_holder },
+  { "push_carrier_stack", &PhaonIR::push_carrier_stack },
+  { "hold_type_by_name", &PhaonIR::hold_type_by_name },
+  { "push_unwind_scope", &PhaonIR::push_unwind_scope },
+  { "push_carrier_symbol", &PhaonIR::push_carrier_symbol },
+  { "push_carrier_stack", &PhaonIR::push_carrier_stack },
+  { "push_carrier_raw_value", &PhaonIR::push_carrier_raw_value },
+  { "copy_anchor_channel_group", &PhaonIR::copy_anchor_channel_group },
+  { "anchor_without_channel_group", &PhaonIR::anchor_without_channel_group },
+  { "push_carrier_anon_fn", &PhaonIR::push_carrier_anon_fn },
+  { "type_decl", &PhaonIR::type_decl },
+  { "finalize_signature", &PhaonIR::finalize_signature },
+  { "push_carrier_type_holder", &PhaonIR::push_carrier_type_holder },
 
  }};
 
@@ -761,7 +761,7 @@ void PhaonIR::parse_fn_line(QString line)
 void PhaonIR::reread_substitute(QString& key)
 {
  static QMap<QString, QString(PhaonIR::*)() const> static_map {{
-  { "last_source_fn_name", &last_source_fn_name },
+  { "last_source_fn_name", &PhaonIR::last_source_fn_name },
  }};
 
  auto it = static_map.find(key);

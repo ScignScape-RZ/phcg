@@ -1,3 +1,13 @@
 
-&prss "abc ok\\\"xx";
+,fnd ::: PHR_Fn_Doc*;
+fnd \== default;
+
+,penv ::: PHR_Env*;
+penv \= (envv _$);
+
+fnd -> init penv;
+
+,test-fn ::: .(int)  $-> extern;
+
+fnd -> read  "test-fn";
 

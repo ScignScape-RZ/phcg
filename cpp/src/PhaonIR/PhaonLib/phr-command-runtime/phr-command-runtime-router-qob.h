@@ -441,8 +441,10 @@ TEMP_MACRO_0
  #define ARGS_TEMP_MACROS \
   ARGS_TEMP_MACRO(1) \
 
- //?TEMP_MACRO(1)
+ //?
+TEMP_MACRO(1)
 
+#ifdef HIDE
 struct Cast_1_Ready
 {
  template<typename OBJECT_Type ,typename ARG1_Type> static void run
@@ -518,6 +520,7 @@ else
  {
   switch(cast_index) { case 0: Cast_1::run<OBJECT_Type, typename Interchange<Type_List_Type, 0, 1>:: template With_Type<quint64>::Result_Type> (method_name, obj, next_cast_index, kcrr, argument_info, args); break; } } break; } }
 } };
+#endif
 
   #undef TYPENAMES_typename
   #undef TYPENAMES_arg

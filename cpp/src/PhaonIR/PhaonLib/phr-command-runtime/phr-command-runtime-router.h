@@ -101,6 +101,7 @@ class PHR_Command_Runtime_Router
 
  Arg_Type_Codes return_type_code_;
 
+public:
  struct Argument_Info
  {
   void* void_argument;
@@ -160,6 +161,8 @@ class PHR_Command_Runtime_Router
    }
   }
  };
+
+private:
 
  template<int Arg_Count>
  struct Do_Invoke_Method

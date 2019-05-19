@@ -71,7 +71,7 @@ LIBS += -L$$TARGETSDIR -lrz-graph-core -lrz-graph-token -lrz-graph-visit \
   -lrz-graph-valuer -lrz-function-def -lrz-code-elements
 
 
-LIBS += -L$$TARGETSDIR -lphr-graph-core
+#?LIBS += -L$$TARGETSDIR -lphr-graph-core
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
 mkpath($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
