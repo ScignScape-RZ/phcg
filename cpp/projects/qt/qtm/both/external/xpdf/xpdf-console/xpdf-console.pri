@@ -22,7 +22,7 @@ SOURCES += \
 
 
 
-LIBS += -L$$TARGETSDIR -lxpdf -lpdf-pull -ldsmain
+LIBS += -L$$TARGETSDIR -lxpdf -lfreetype #-lpdf-pull -ldsmain
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

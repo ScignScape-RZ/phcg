@@ -3046,35 +3046,35 @@ void XpdfViewer::addTab() {
 
   connect(pdf, &XpdfWidget::customContextMenuRequested, [pdf, this](const QPoint& p)
   {
-   static QString held;
+   static QString* held = new QString;
    int page;
    QString qs = pdf->getSelectedText(&page);
 
-   bool _held = !held.isEmpty();
+   bool _held = !held->isEmpty();
    bool _qs = !qs.isEmpty();
 
    QMenu* qm = new QMenu(this);
-   if(_qs) qm->addAction("Add to data set ...", [held, qs, pdf, page]
+   if(_qs) qm->addAction("Add to data set ...", [&held, qs, pdf, page]
    {
-    add_to_data_set(held + qs, page);
-    held.clear();
+//?    add_to_data_set(held + qs, page);
+    held->clear();
     //qDebug() << qs;
    });
    if(_qs && !_held) qm->addAction("Hold", [qs]
    {
-    held = qs;
+    *held = qs;
    });
    if(_qs && _held) qm->addAction("Hold (add)", [qs]
    {
-    held += qs;
+    *held += qs;
    });
    if(_qs && _held) qm->addAction("Hold (replace)", [qs]
    {
-    held = qs;
+    *held = qs;
    });
    if(_held) qm->addAction("Unhold", []
    {
-    held.clear();
+    held->clear();
    });
    if(_qs) qm->addAction("Copy Selection to Clipboard", [qs]
    {
