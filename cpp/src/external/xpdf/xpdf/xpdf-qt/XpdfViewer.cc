@@ -55,6 +55,8 @@
 #include <QDebug>
 #include <QClipboard>
 
+#include "Annot.h"
+
 extern void add_to_data_set(QString qs, int page);
 
 #include "xpdf-component.h"
@@ -3046,43 +3048,57 @@ void XpdfViewer::addTab() {
 
   connect(pdf, &XpdfWidget::customContextMenuRequested, [pdf, this](const QPoint& p)
   {
-   static QString* held = new QString;
-   int page;
-   QString qs = pdf->getSelectedText(&page);
-
-   bool _held = !held->isEmpty();
-   bool _qs = !qs.isEmpty();
-
    QMenu* qm = new QMenu(this);
-   if(_qs) qm->addAction("Add to data set ...", [&held, qs, pdf, page]
+
+   int pg;
+   double x, y;
+
+   pdf->convertWindowToPDFCoords(p.x(), p.y(),
+          &pg, &x, &y);
+
+   XpdfAnnotHandle xh = pdf->onAnnot(pg, x, y);
+
+   QString figname;
+   QString ant;
+   Annot* annot = nullptr;
+
+   if(xh)
    {
-//?    add_to_data_set(held + qs, page);
-    held->clear();
+    ant = pdf->getAnnotType(xh);
+    //ann = pdf->getAnnotContent(xh);
+   }
+
+   if(ant == "Link")
+   {
+    annot = (Annot*) xh;
+   }
+
+   if(annot)
+   {
+    int targetPage;
+    QString targetFileName, targetDest;
+    pdf->getLinkTarget(pg, x, y, targetFileName,
+             targetPage, targetDest);
+
+    if(targetDest.endsWith(".pgvm-pdf"))
+    {
+     figname = targetDest;
+     figname.chop(9);
+    }
+
+   }
+       //                              ->currentPage());
+
+   //if(_qs)
+   qm->addAction(QString("View figure info (%1) ...").arg(figname), []
+   {
+   //?    add_to_data_set(held + qs, page);
+    //held->clear();
     //qDebug() << qs;
    });
-   if(_qs && !_held) qm->addAction("Hold", [qs]
+   //if(_qs && !_held)
+   qm->addAction("Open PGVM Project and Files for this Figure", []
    {
-    *held = qs;
-   });
-   if(_qs && _held) qm->addAction("Hold (add)", [qs]
-   {
-    *held += qs;
-   });
-   if(_qs && _held) qm->addAction("Hold (replace)", [qs]
-   {
-    *held = qs;
-   });
-   if(_held) qm->addAction("Unhold", []
-   {
-    held->clear();
-   });
-   if(_qs) qm->addAction("Copy Selection to Clipboard", [qs]
-   {
-    QApplication::clipboard()->setText(qs);
-   });
-   if(!_qs && !_held) qm->addAction("Load default file", [pdf]
-   {
-    pdf->loadFile(DEFAULT_PDF_FILE);
    });
 
 //   qm->addAction("Save Selection to File", [qs]
@@ -3569,3 +3585,43 @@ void XpdfViewer::execSaveImageDialog() {
 
   delete dialog;
 }
+
+
+//static QString* held = new QString;
+//int page;
+//QString qs = pdf->getSelectedText(&page);
+
+//bool _held = !held->isEmpty();
+//bool _qs = !qs.isEmpty();
+
+//QMenu* qm = new QMenu(this);
+//if(_qs) qm->addAction("Add to data set ...", [&held, qs, pdf, page]
+//{
+////?    add_to_data_set(held + qs, page);
+// held->clear();
+// //qDebug() << qs;
+//});
+//if(_qs && !_held) qm->addAction("Hold", [qs]
+//{
+// *held = qs;
+//});
+//if(_qs && _held) qm->addAction("Hold (add)", [qs]
+//{
+// *held += qs;
+//});
+//if(_qs && _held) qm->addAction("Hold (replace)", [qs]
+//{
+// *held = qs;
+//});
+//if(_held) qm->addAction("Unhold", []
+//{
+// held->clear();
+//});
+//if(_qs) qm->addAction("Copy Selection to Clipboard", [qs]
+//{
+// QApplication::clipboard()->setText(qs);
+//});
+//if(!_qs && !_held) qm->addAction("Load default file", [pdf]
+//{
+// pdf->loadFile(DEFAULT_PDF_FILE);
+//});

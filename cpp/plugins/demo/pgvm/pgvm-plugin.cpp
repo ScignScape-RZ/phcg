@@ -86,14 +86,14 @@ void PGVM_Plugin::triggerAction()
   for(ProjectExplorer::Project* pp : projects)
   {
    QString dn = pp->displayName();
-   if(dn == "rz-graph-phaon-console")
+   if(dn == pn)
    {
     ProjectExplorer::SessionManager::setStartupProject(pp);
     break;
    }
   }
 
-
+  Core::ICore::instance()->openFiles(qsl);
 
  };
 
