@@ -10,7 +10,14 @@ PGVM_Plugin_Broker::PGVM_Plugin_Broker()
     {"Fig1", "rz-graph-phaon-console"},
     {"Fig2", "rz-pgbir-console"},
    },
- tcp_server_(nullptr), current_tcp_msecs_(0)
+   files_by_project_{
+     {"rz-graph-phaon-console",
+     {
+      "/home/nlevisrael/hypergr/pgvm-demo/ar/cpp/src/PhaonIR/PhaonIR/phaon-ir/phaon-ir.cpp",
+      "/home/nlevisrael/hypergr/pgvm-demo/ar/cpp/src/PhaonIR/PhaonIR/phaon-ir/phaon-ir.h",
+     }},
+   },
+  tcp_server_(nullptr), current_tcp_msecs_(0), cbfn(nullptr)
 {
 
 }
@@ -108,8 +115,28 @@ void PGVM_Plugin_Broker::run_msg(QString msg, QByteArray qba)
 
 void PGVM_Plugin_Broker::run_fig(const QByteArray& qba)
 {
- qDebug() << qba;
+ QString fig = QString::fromLatin1(qba);
+ //qDebug() <<
+ QString pn = get_project_name_from_xpdf(fig);
+
+ QStringList qsl;
+ get_files_from_project_name(pn, qsl);
+
+ qDebug() << qsl;
+
+ QMessageBox::information(nullptr, "Activating Project",
+   QString("The project %1 will be activated and source files "
+     "opened to examine the functionality depicted in %2.").arg(pn).arg(fig));
+
+ if(cbfn)
+   cbfn(pn, qsl);
 }
+
+void PGVM_Plugin_Broker::get_files_from_project_name(QString pn, QStringList& qsl)
+{
+ qsl = files_by_project_.value(pn);
+}
+
 
 
 QString PGVM_Plugin_Broker::get_project_name_from_xpdf(QString key)

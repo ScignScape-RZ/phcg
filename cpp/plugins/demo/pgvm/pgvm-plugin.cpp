@@ -77,22 +77,42 @@ ExtensionSystem::IPlugin::ShutdownFlag PGVM_Plugin::aboutToShutdown()
 
 void PGVM_Plugin::triggerAction()
 {
- QMessageBox::information(Core::ICore::mainWindow(),
-                          tr("Action Triggered"),
-                          tr("This is an action from PGVM."));
+ broker_.activate_server();
 
- const QList<ProjectExplorer::Project*> projects =
-   ProjectExplorer::SessionManager::projects();
-
- for(ProjectExplorer::Project* pp : projects)
+ broker_.cbfn = [](QString pn, QStringList& qsl)
  {
-  QString dn = pp->displayName();
-  if(dn == "rz-graph-phaon-console")
+  const QList<ProjectExplorer::Project*> projects =
+    ProjectExplorer::SessionManager::projects();
+  for(ProjectExplorer::Project* pp : projects)
   {
-   ProjectExplorer::SessionManager::setStartupProject(pp);
-   break;
+   QString dn = pp->displayName();
+   if(dn == "rz-graph-phaon-console")
+   {
+    ProjectExplorer::SessionManager::setStartupProject(pp);
+    break;
+   }
   }
- }
+
+
+
+ };
+
+// QMessageBox::information(Core::ICore::mainWindow(),
+//                          tr("Action Triggered"),
+//                          tr("This is an action from PGVM."));
+
+// const QList<ProjectExplorer::Project*> projects =
+//   ProjectExplorer::SessionManager::projects();
+
+// for(ProjectExplorer::Project* pp : projects)
+// {
+//  QString dn = pp->displayName();
+//  if(dn == "rz-graph-phaon-console")
+//  {
+//   ProjectExplorer::SessionManager::setStartupProject(pp);
+//   break;
+//  }
+// }
 
 // ProjectExplorer::SessionManager::
 //   rz-graph-phaon-console
@@ -105,7 +125,7 @@ void PGVM_Plugin::triggerAction()
 //  qDebug() << fn.toString();
 // }
 
- qDebug() << "DONE.";
+// qDebug() << "DONE.";
 
  //const QStringList projectFiles = ProjectExplorer::ProjectExplorerPlugin::currentProject()->files(Project::ExcludeGeneratedFiles);
 

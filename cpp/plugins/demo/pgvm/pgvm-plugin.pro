@@ -2,11 +2,16 @@ DEFINES += PGVM_PLUGIN_LIBRARY
 
 # PGVM_PLUGIN files
 
-SOURCES += pgvm-plugin.cpp
+SOURCES += pgvm-plugin.cpp \
+  logic/pgvm-plugin-broker.cpp \
+
+
 
 HEADERS += pgvm-plugin.h \
-        pgvm-plugin_global.h \
-        pgvm-plugin_constants.h
+  logic/pgvm-plugin-broker.h \
+  pgvm-plugin_global.h \
+  pgvm-plugin_constants.h \
+
 
 #?INCLUDEPATH += c:/qtsrc/qt-creator/src/libs/ c:/qtsrc/qt-creator/src/plugins
 
