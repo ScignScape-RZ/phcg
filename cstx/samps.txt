@@ -121,6 +121,122 @@ is open %-- please close it!
 44-45
 
 
+`sentenceList,
+`sentenceItem; Grandma wants us to close the window.
+`sentenceItem; He wants a bottle opener.
+`sentenceList`
+46-47
+
+`sentenceList,
+`sentenceItem; Grandma wants us to eliminate the cold draft.
+`sentenceItem; He wants something to open that bottle.
+`sentenceList`
+48-49
+
+`sentenceList,
+`sentenceItem; I think you could do excellent work in
+this class, and I think you are doing pretty well.
+`sentenceItem; I am not going to talk about the refs because
+I don't want to get fined.
+`sentenceItem; If she wants to win the nomination she
+needs to be as charismatic on the campaign trail as
+she was during the debate.
+`sentenceList`
+50-52
+
+`sentenceList,
+`sentenceItem; \label{itm:can} Can I have some milk?
+`sentenceItem; \label{itm:close} Can you close the kitchen window?
+`sentenceList`
+53-54
+
+`sentenceList,
+`sentenceItem; If the kitchen window is closed,
+we can see if other windows are open.
+`sentenceItem; If no windows are open,
+we can see if there is a draft through the window-cracks.
+`sentenceItem; If there is no draft, we can
+ask if she wants a sweater.
+`sentenceList`
+55-57 p.26
+
+`sentenceList,
+`sentenceItem; My colleague Ms. O'Shea would like to interview
+Mr. Jones, who's an old friend of mine.  Can he take this call?
+`sentenceItem; \label{itm:Jones} I'm sorry, this is his secretary.  Mr. Jones
+is not available at the moment.
+`sentenceList`
+58-59
+
+`sentenceList,
+`sentenceItem; Mr. Jones, were you present at a meeting where
+the governer promised your employer
+a contract in exchange for campaign contributions?
+`sentenceItem; After consulting with my lawyers, I decline
+to answer that question on the grounds that it
+may incriminate me.
+`sentenceList`
+60-61
+
+`sentenceList,
+`sentenceItem; \label{itm:isJones} Is Jones there?
+`sentenceItem; \label{itm:not} He is not available.
+`sentenceList`
+62-63
+
+`sentenceList,
+`sentenceItem; \label{itm:file} File f = File.open(path, File.READ\_ONLY);
+`sentenceItem; if f.isEmpty() return 0;
+`sentenceList`
+64-65
+
+`sentenceList,
+`sentenceItem; \label{itm:wants} Grandma wants the proposition `q.the kitchen
+window is closed` to be true.
+`sentenceItem; \label{itm:cold} Grandma wants the proposition
+`q.I am cold` to be false.
+`sentenceList`
+66-67
+
+`sentenceList,
+`sentenceItem; \label{itm:rooting} Are you rooting for the Jets?
+`sentenceItem; Well, I want the Leafs to win.
+`sentenceList`
+68-69
+
+`sentenceList,
+`sentenceItem; There is a proposition (call it `POne;)
+whose propositional content is that the Jets win
+and a proposition (`PTwo;) whose content is that the Leafs win.
+`sentenceItem; \label{itm:entail} `PTwo; entails the negation of `POne;.
+`sentenceItem; He wants the content of `PTwo; to be true.
+`sentenceItem; \label{itm:false} His wishes are only consistent
+with `POne; being false.
+`sentenceItem; \label{itm:Jets} He wants the content of `POne; to be false.
+`sentenceList`
+70-74
+
+s3
+
+`sentenceList,
+`sentenceItem; \label{itm:store} Remember that wine we tasted on the Niagara 
+Peninsula last summer?  Can you find it in our 
+local liquor store?
+`sentenceItem; \label{itm:varietal} Remember that wine we tasted on the Niagara 
+Peninsula last summer?  What varietal was that again?
+`sentenceList`
+75-76
+
+`sentenceList,
+`sentenceItem; That wine was a Cabernet Franc.
+`sentenceItem; Those dogs are my neighbor's.  
+They are very sweet.
+`sentenceList`
+77-78
+
+
+
+
 
 
 
