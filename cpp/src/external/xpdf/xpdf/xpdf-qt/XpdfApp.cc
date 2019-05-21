@@ -65,7 +65,6 @@ static ArgDesc argDesc[] = {
  {NULL}
 };
 
-#ifdef HIDE
 // //  R/Z Workflow ...
 
 struct RZW
@@ -76,9 +75,9 @@ struct RZW
  QNetworkAccessManager& qnam;
 };
 
-void send_msg(RZW& rzw, QString msg)
+void send_msg(RZW& rzw, QString msg, int port = 0)
 {
- QString addr = QString("http://localhost:%1/").arg(rzw.peer_port);
+ QString addr = QString("http://localhost:%1/").arg(port?port:rzw.peer_port);
 
  QNetworkRequest req;
 
@@ -90,7 +89,6 @@ void send_msg(RZW& rzw, QString msg)
  //QString msg = QString("%1##%2").arg(name).arg(page);
  //QString msg = QString("open:%1##%2").arg(name).arg(page);
  //QString msg = QString("hello:%1").arg(myport);
-
 
  QByteArray qba = msg.toLatin1();
  qba.append("<//>");
@@ -120,23 +118,42 @@ void send_msg(RZW& rzw, QString msg)
 // });
 }
 
-void run_msg(RZW& rzw, QString msg)
+void XpdfApp::run_fig_msg(QString msg, QString fig)
 {
- rzw.current_tcp_msg = msg;
-// QMessageBox::information(nullptr, "Qt Server",
-//                          QString("received: %1")
-//                          .arg(msg));
- int index = msg.indexOf(':');
- QString key = msg.left(index);
 
- QString arg = msg.mid(index + 1);
+// qba.append("<//>");
 
-  QMessageBox::information(nullptr, "Qt Server",
-                           QString("received: %1, %2")
-                           .arg(key).arg(arg));
+ //QByteArray pre = "<<>>" + run-fig @";
 
+ QString pre = QString("%1@").arg(msg);
+
+ quint64 ms = QDateTime::currentMSecsSinceEpoch();
+ pre.append(QString::number(ms));
+ pre.append(':');
+ pre.append(fig);
+
+// qba.prepend(pre.toLatin1());
+
+// XpdfApp& xpa;
+// int peer_port;
+// QString current_tcp_msg;
+// QNetworkAccessManager& qnam;
+
+ QNetworkAccessManager* qnam = new QNetworkAccessManager;
+
+
+
+ RZW* rzw = new RZW{
+   *this, 18269, "", *qnam
+ };
+
+ send_msg(*rzw, pre, 18269);
+
+ //run_msg()
+
+//run-fig
 }
-#endif
+
 
 
 //------------------------------------------------------------------------
@@ -395,3 +412,22 @@ void XpdfApp::quit() {
  }
  QApplication::quit();
 }
+
+
+//void run_msg(RZW& rzw, QString msg)
+//{
+// rzw.current_tcp_msg = msg;
+//// QMessageBox::information(nullptr, "Qt Server",
+////                          QString("received: %1")
+////                          .arg(msg));
+// int index = msg.indexOf(':');
+// QString key = msg.left(index);
+
+// QString arg = msg.mid(index + 1);
+
+//  QMessageBox::information(nullptr, "Qt Server",
+//                           QString("received: %1, %2")
+//                           .arg(key).arg(arg));
+
+//}
+

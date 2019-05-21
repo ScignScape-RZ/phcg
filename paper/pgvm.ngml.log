@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  20 MAY 2019 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  20 MAY 2019 21:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1657,7 +1657,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
 (Font)              size <12> substituted on input line 1.
 
-[5] [6] [7]
+[5]
+Underfull \hbox (badness 1215) in paragraph at lines 164--164
+[]\OT1/cmr/m/n/10.95 (+20) A fur-ther gen-er-al-iza-tion
+ []
+
+[6] [7]
 Overfull \hbox (8.505pt too wide) in paragraph at lines 269--269
 []$[]$ 
  []
@@ -1925,50 +1930,50 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  39703 strings out of 492649
- 806396 string characters out of 6122986
- 1056830 words of memory out of 5000000
+ 806461 string characters out of 6122986
+ 1056958 words of memory out of 5000000
  42268 multiletter control sequences out of 15000+600000
  573284 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,13n,101p,10426b,1833s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figPVMrt.pgvm-pdf} has been referenced but does n
-ot exist, replaced by a fixed one
+pdfTeX warning (dest): name{lst--PVMrt--8.pgvm-pdf} has been referenced but d
+oes not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figPVMlines.pgvm-pdf} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figPVM.pgvm-pdf} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figGFcomplexc.pgvm-pdf} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figGFc.pgvm-pdf} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figGFcomplex.pgvm-pdf} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figGF.pgvm-pdf} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figPGB.pgvm-pdf} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figPGBIR.pgvm-pdf} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figIR.pgvm-pdf} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figAddToken.pgvm-pdf} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figStringContext.pgvm-pdf} has been referenced but 
+pdfTeX warning (dest): name{lst--PVMlines--7.pgvm-pdf} has been referenced but 
 does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figLanguageEngine.pgvm-pdf} has been referenced but
+pdfTeX warning (dest): name{lst--PVM--6.pgvm-pdf} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{fig--GFcomplexc--5.pgvm-pdf} has been referenced bu
+t does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{fig--GFc--4.pgvm-pdf} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{fig--GFcomplex--3.pgvm-pdf} has been referenced but
  does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{fig--GF--2.pgvm-pdf} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--PGB--5.pgvm-pdf} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--PGBIR--4.pgvm-pdf} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--IR--3.pgvm-pdf} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--AddToken--2.pgvm-pdf} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--StringContext--1.pgvm-pdf} has been referenced
+ but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{fig--LanguageEngine--1.pgvm-pdf} has been reference
+d but does not exist, replaced by a fixed one
 
 {/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.en
 c}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/cabin/cbn_g
@@ -2005,7 +2010,7 @@ texlive-install/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></hom
 e/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/cm-super/sfrm10
 95.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/cm-
 super/sftt0800.pfb>
-Output written on pgvm.ngml.pdf (28 pages, 527368 bytes).
+Output written on pgvm.ngml.pdf (28 pages, 527386 bytes).
 PDF statistics:
  936 PDF objects out of 1000 (max. 8388607)
  841 compressed objects within 9 object streams

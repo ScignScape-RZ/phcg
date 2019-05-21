@@ -68,7 +68,7 @@ int main_via_qnam(int argc, char* argv[])
 
  QNetworkAccessManager qnam;
 
- int port = 18261; // // r z 1
+ int port = 18269; // // r z 9
  QString addr = QString("http://localhost:%1/").arg(port);
 
  QNetworkRequest req;

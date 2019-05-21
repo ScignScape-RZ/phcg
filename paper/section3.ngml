@@ -340,7 +340,7 @@ there is a carrier accessible in the environment of the procedure
 (its program code and its runtime environment) that provides the 
 procedure access to an underlying value.  The specific access can be 
 modeled around different sorts of carriers %-- carriers holding 
-return values should allow procedures to `q.write upon` (initialize or 
+return values should permit procedures to `q.write upon` (initialize or 
 modify) their values but not read them (conformant to the expected 
 semantics of `q.procedural output`/).  In this theory, the 
 output carrier from one procedure is distinguished from the 

@@ -3089,22 +3089,30 @@ void XpdfViewer::addTab() {
    }
        //                              ->currentPage());
 
+   QStringList qsl = figname.split("--");
+
+   QString figkind = qsl.value(0);
+   QString fign = qsl.value(1);
+   QString fignum = qsl.value(2);
+
+   QString figk = (figkind == "lst")?"Listing":"Figure";
+
+//   if(qsl.value())
+
    //if(_qs)
-   qm->addAction(QString("View figure info (%1) ...").arg(figname), []
-   {
-   //?    add_to_data_set(held + qs, page);
-    //held->clear();
-    //qDebug() << qs;
-   });
-   //if(_qs && !_held)
-   qm->addAction("Open PGVM Project and Files for this Figure", []
+   qm->addAction(QString("View figure info for %1 %2")
+      .arg(figk).arg(fignum), []
    {
    });
 
-//   qm->addAction("Save Selection to File", [qs]
-//   {
-
-//   });
+   if(figname.startsWith("lst"))
+   {
+    qm->addAction(QString("Open PGVM Project and Files for %1 %2")
+                  .arg(figk).arg(fignum), [figname, fign, this]
+    {
+     this->app->run_fig_msg("run-fig", fign);
+    });
+   }
    QPoint g = pdf->mapToGlobal(p);
    qm->popup(g);
   });

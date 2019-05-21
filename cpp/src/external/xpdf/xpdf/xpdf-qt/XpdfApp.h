@@ -54,11 +54,11 @@ public:
 // // // rz
 //signals:
 //  void window_ready();
+  void run_fig_msg(QString msg, QString fig);
 
 private:
 
-  //run_msg(QString msg);
-
+  //
 
 
 

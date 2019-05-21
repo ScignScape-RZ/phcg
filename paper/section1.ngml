@@ -112,9 +112,9 @@ cf. `cite<JenniferPaykin>;,
 
 
 \item[Edges Incident to Edges]  A further generalization 
-allows edges to `q.point at` other edges 
+permits edges to `q.point at` other edges 
 \cite[p. 10]{BalintMolnar}; \cite[p. 13]{BenGoertzel}.
-The rationale for concordant constructions is that 
+The rationale for corresponding constructions is that 
 an edge %-- qua relation between two or more 
 components %-- is itself a fact, datapoint, or 
 assertion, and as such can be on some perspectives a 
