@@ -11,11 +11,11 @@ INCLUDEPATH += $$KAUVIR_KCM_SRC_GROUP_DIR $$KAUVIR_KCM_SRC_GROUP_DIR/kcm-lisp-br
 INCLUDEPATH += $$PHAON_GRAPH_SRC_GROUP_DIR
 
 
-exists($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/kauvir--kauvir-kcm--kcm-lisp-bridge) \#/
-{
- INCLUDEPATH += $$SEXP_DIR
- INCLUDEPATH += $$SEXP_DIR/pingus/
-}
+#exists($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/kauvir--kauvir-kcm--kcm-lisp-bridge) \#/
+#{
+# INCLUDEPATH += $$SEXP_DIR
+# INCLUDEPATH += $$SEXP_DIR/pingus/
+#}
 
 
 DEFINES += CAON_DEBUG
@@ -26,6 +26,7 @@ INCLUDEPATH += $$RZ_KAUVIR_SRC_GROUP_DIR \
   $$RZ_KAUVIR_SRC_GROUP_DIR/rz-graph-core  $$RZ_KAUVIR_SRC_GROUP_DIR/rz-graph-token  \
   $$RELAE_SRC_GROUP_DIR  $$KAUVIR_KCM_SRC_GROUP_DIR
 
+INCLUDEPATH += $$HGDM_SRC_GROUP_DIR
 
 CONFIG += no_keywords
 

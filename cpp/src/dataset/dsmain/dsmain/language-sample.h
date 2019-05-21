@@ -33,6 +33,8 @@ class Language_Sample : phaong<pg_t>::Hypernode
  int chapter_;
  int page_;
 
+ QString speaker_;
+
  Language_Sample_Group* group_;
 
  int get_group_id();
@@ -47,6 +49,8 @@ public:
  ACCESSORS(QString ,sub_index)
  ACCESSORS(int ,chapter)
  ACCESSORS(int ,page)
+
+ ACCESSORS(QString ,speaker)
 
  ACCESSORS(Language_Sample_Group* ,group)
 

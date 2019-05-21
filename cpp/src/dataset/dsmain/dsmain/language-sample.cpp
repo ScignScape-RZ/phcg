@@ -79,6 +79,8 @@ void Language_Sample::read_samples_from_file
  QStringList qsl = text.split('\n');
  QString loc_code;
 
+ QString speaker;
+
  Language_Sample_Group* current_ref_group = nullptr;
  bool awaiting_ref_group = false;
  int ref_group_id = 0;
@@ -94,8 +96,48 @@ void Language_Sample::read_samples_from_file
   if(qs.startsWith('#'))
   {
    gid = qs.mid(2).simplified().toInt();
+
+   qDebug() << "Loc code: " << loc_code;
+
+   if(loc_code.isEmpty())
+   {
+    qDebug() << "No Loc code!";
+   }
+
+   if(gid == 11)
+     continue;
+
    continue;
   }
+
+  if(qs.startsWith(':'))
+  {
+   speaker = qs.mid(2).simplified();
+   continue;
+  }
+
+  if(qs.startsWith('/'))
+  {
+   //?
+   continue;
+  }
+
+  if(qs == "++")
+  {
+   //?
+   continue;
+  }
+  if(qs == "--")
+  {
+   //?
+   continue;
+  }
+  if(qs.startsWith('?'))
+  {
+   //?
+   continue;
+  }
+
   if(loc_code.isEmpty())
   {
    loc_code = qs.simplified();
@@ -204,6 +246,12 @@ void Language_Sample::read_samples_from_file
   samp->set_sub_index(ls[1]);
   samp->set_chapter(ls[2].toInt());
   samp->set_page(ls[3].toInt());
+
+  if(!speaker.isEmpty())
+  {
+   samp->set_speaker(speaker);
+   speaker.clear();
+  }
 
   if(gid)
   {

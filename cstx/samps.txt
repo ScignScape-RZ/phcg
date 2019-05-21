@@ -1,0 +1,134 @@
+`sentenceList,
+`sentenceItem; \label{itm:ornate} He opened the wine bottle with an ornate corkscrew.
+`sentenceItem; \label{itm:butterfly} He opened the beer bottle with a butterfly corkscrew.
+`sentenceItem; He collects antique corkscrews and just bid on one online.
+`sentenceItem; \label{itm:screwtop} I thought this was a screw-top but it turns out I need a corkscrew.
+`sentenceItem; \label{itm:x3d} This X3D file shows a very realistic corkscrew created with NURBS surfaces.
+`sentenceItem; \label{itm:sendx3d} Could you send me the corkscrew (the X3D file you just mentioned)?
+`sentenceList`
+1-6
+
+
+`sentenceList,
+`sentenceItem; Do you have a bottle opener?
+`sentenceItem; Could you get me a corkscrew?
+`sentenceList`
+7-8
+
+`sentenceList,
+`sentenceItem; \label{itm:hammer} He opened the bottle of beer with a hammer.
+`sentenceItem; He pounded the nail with a lever corkscrew.
+`sentenceList`
+9-10
+
+
+`sentenceList,
+`sentenceItem; A hammer is somthing used to pound nails.
+`sentenceItem; A lever corkscrew is something used to open wine.
+`sentenceItem; A lever corkscrew can be used to pound nails.
+`sentenceList`
+11-13?
+
+`sentenceList,
+`sentenceItem; \label{itm:bucket} Can you bring me a bucket of water?
+`sentenceItem; \label{itm:glass} Can you bring me a glass of water?
+`sentenceList`
+14-15
+
+
+`sentenceList,
+`sentenceItem; The ocean is over there.
+`sentenceItem; The water is over there.
+`sentenceItem; You can see the ocean from here.
+`sentenceItem; You can see the water from here.
+`sentenceList`
+16-19
+
+`sentenceList,
+`sentenceItem; The water and the Deuterium Dioxide is over there.
+`sentenceList`
+20
+
+`sentenceList,
+`sentenceItem; Here's a glass of water (even though
+tap water is mixed with flouride).
+`sentenceItem; Bing cherries are dark red (even though
+the stem is brown).
+`sentenceList`
+21-22
+
+s2
+
+`sentenceList,
+`sentenceItem; \label{itm:put} Can you put some almond milk in my coffee?
+`sentenceItem; \label{itm:after} Is there milk in this coffee?
+`sentenceList`
+23-24
+
+
+`sentenceList,
+`sentenceItem; It's not open, but there's still some
+cold air coming through the cracks.
+`sentenceItem; It's not open, but I closed the window in
+the bedroom.
+`sentenceItem; I can't %-- it's stuck.
+`sentenceList`
+25-27
+
+`sentenceList,
+`sentenceItem; \label{itm:almond} Do you have almond milk?
+`sentenceItem; Can you get MsNBC on your TV?
+`sentenceItem; \label{itm:needcorkscrew} This isn't a screw-cap bottle: I need a corkscrew.
+`sentenceList`
+28-30
+
+`sentenceList,
+`sentenceItem; I think the window is open, can you close it?
+`sentenceItem; I see you have almond milk, can I have some?
+`sentenceItem; If you get MsNBC, can you turn on Rachel Maddow?
+`sentenceItem; If there is a corkscrew in the house, can you get it?
+`sentenceList`
+31-34
+
+`sentenceList,
+`sentenceItem; I believe you have a reservation for Jones?
+`sentenceItem; I believe this is the customer service desk?
+`sentenceItem; I believe we ordered a second basket of garlic bread?
+`sentenceItem; I believe you can help me find computer
+acessories in this section?
+`sentenceList`
+35-38
+
+`sentenceList,
+`sentenceItem; Do you have any milk?
+`sentenceItem; Yes, we have almond milk.
+`sentenceItem; No, we have almond milk.
+`sentenceList`
+39-41
+
+`sentenceList,
+`sentenceItem; Is there milk in this coffee?
+`sentenceItem; Yes, almond milk.
+`sentenceList`
+42-43
+
+`sentenceList,
+`sentenceItem; I believe the kitchen window
+is open %-- please close it!
+`sentenceItem; I believe some window
+is open %-- please close it!
+`sentenceList`
+44-45
+
+
+
+
+
+
+
+
+
+
+
+
+

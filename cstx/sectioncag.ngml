@@ -1139,7 +1139,7 @@ a function which must take a (maybe monotone)
 increasing or decreasing pair of numbes (I used the 
 monotone-decreasing example for systolic and diastolic 
 blood pressure).  Suppose we implement a procedure to 
-highlight a selection of characters in a screeen display, 
+highlight a selection of characters in a screen display,
 whose inputs are the start and end character indices in 
 some displayed text.  We want to indicate that the second number 
 (call it $y$) must be greater than the first ($x$).  
