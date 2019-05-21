@@ -7,8 +7,14 @@
 
 PGVM_Plugin_Broker::PGVM_Plugin_Broker()
  : projects_by_xpdf_{
-    {"Fig1", "rz-graph-phaon-console"},
-    {"Fig2", "rz-pgbir-console"},
+    {"StringContext", "rz-graph-phaon-console"},
+    {"AddToken", "rz-graph-phaon-console"},
+    {"IR", "rz-pgbir-console"},
+    {"PGB", "rz-graph-phaon-console"},
+    {"PGBIR", "rz-pgbir-console"},
+    {"PVM", "rz-graph-phaon-console"},
+    {"PVMlines", "rz-pgbir-console"},
+    {"PVMrt", "rz-pgbir-console"},
    },
    files_by_project_{
      {"rz-graph-phaon-console",
