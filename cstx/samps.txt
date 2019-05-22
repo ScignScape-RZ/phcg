@@ -235,6 +235,62 @@ They are very sweet.
 77-78
 
 
+`sentenceList,
+`sentenceItem; Those dogs are Staffordshires.
+`sentenceItem; What's a Staffordshire?
+`sentenceItem; It's a breed of dog.
+`sentenceList`
+ 79-81
+
+`sentenceList,
+`sentenceItem; This wine is a young Syrah.
+`sentenceItem; My cousin adopted one of my neighbor's dog's puppies.
+`sentenceList`
+82-83
+
+
+`sentenceList,
+`sentenceItem; \label{itm:maj} The majority of students polled were
+opposed to tuition increases.
+`sentenceItem; \label{itm:most} Most of the students expressed disappointment
+about tuition increases.
+`sentenceItem; \label{itm:many} Many students have protested the tuition increases.
+`sentenceList`
+84-86
+
+`sentenceList,
+`sentenceItem; Most students oppose the tuition increase.
+`sentenceItem; \label{itm:indef} Most students oppose a tuition increase.
+`sentenceList`
+87-88
+
+`sentenceList,
+`sentenceItem; \label{itm:today} Today the state university system
+announced plans to raise tuition by
+at least 10\%.  Most students oppose a tuition increase.
+`sentenceItem; \label{itm:colleges} Colleges all over the country, facing
+rising costs, have had to raise tuition, but
+most students oppose a tuition increase.
+`sentenceList`
+89-90
+
+`sentenceList,
+`sentenceItem; \label{itm:sas} Student after student came out against the tuition hikes.
+`sentenceItem; \label{itm:substantial} A substantial number of students
+have come out against the tuition hikes.
+`sentenceItem; \label{itm:mass} The number of students protesting the tuition hikes
+may soon reach a critical mass.
+`sentenceItem; \label{itm:tipping} Protests against the tuition hikes
+may have reached a tipping point.
+`sentenceList`
+91-94
+
+
+
+
+
+
+
 
 
 
