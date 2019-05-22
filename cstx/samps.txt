@@ -286,8 +286,37 @@ may have reached a tipping point.
 91-94
 
 
+`sentenceList,
+`sentenceItem; \label{itm:across} Our house is across the lake.
+`sentenceItem; \label{itm:pour} I poured wine from a decanter.
+`sentenceItem; \label{itm:spill} Some wine spilled from the decanter.
+`sentenceItem; \label{itm:puton} I put spackle on the wall with a knife.
+`sentenceItem; \label{itm:spatter} Paint spattered all over the wall after a can droppped.
+`sentenceItem; \label{itm:colorallover} There's a purple-and-blue color pattern all over the wall.
+`sentenceItem; There are drawings all over the wall.
+`sentenceItem; \label{itm:sheetallover} There's a plastic sheet all over the wall.
+`sentenceList`
+95-102
 
+`sentenceList,
+`sentenceItem; \label{itm:apartment} I'm going to a party at my brother's house (suppose
+he actually lives in an apartment).
+`sentenceItem; This restaurant has the best Hokkien noodles
+(said of a stall in a Chinaatown food court).
+`sentenceList`
+103-104
 
+`sentenceList,
+`sentenceItem; He had to cut the crusty bread with a serrated knife.
+`sentenceItem; The museum had antique butter knives with intricate carvings.
+`sentenceList`
+105-106
+
+`sentenceList,
+`sentenceItem; What time does the office open?
+`sentenceItem; \label{itm:phone} What time does train 100 depart from Newark?
+`sentenceList`
+107-108
 
 
 

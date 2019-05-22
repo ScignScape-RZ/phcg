@@ -21,7 +21,7 @@ Spaces: The Geometry of Thought` %-- but has branched
 from linguistics to disciplines like computer science
 and the Philosophy of Science.  Conceptual Space Theory
 emerges from Cognitive Linguistics, and therefore
-resists simple AI paradigms of languag
+resists simple AI paradigms of language
 following essentially mechanical rules,
 or logically decoding and processing symbols.
 But at the same time, G\"ardenfors argues that
@@ -39,7 +39,7 @@ widely used for computer graphics).
 To the extent that perceptual and spatial features can be
 quantified, it is easy to develop intuitions for prototype
 theories and conceptual similarity: for example,
-an exmplary `i.red tablecloth` would have
+an exemplary `i.red tablecloth` would have
 a certain almost-red hue and rectangular dimensions.
 Varying the color or making the shape too large or
 small, or oblong, corresponds to moving from the
@@ -82,7 +82,7 @@ has, however, examined these more situational
 and functional dimensions.  There are several tactics for
 cashing the basic `q.Geometry of Thought` metaphor
 outside the obvious geometric model of, say,
-prototypical table cloths having prototypical rectangular
+prototypical tablecloths having prototypical rectangular
 dimensions.
 `p`
 
@@ -135,7 +135,7 @@ of `q.space`/.
 `p.
 Given this possibility, I believe that the systematizing
 gambits of ITM and Conceptual Space Theory can be
-integrated; in this section I will argue that
+integrated.  In this section I will argue that
 formal attempts to implement Conceptual Spaces in computational
 settings are consistent with the ITM architecture.
 This does not mean, however, that a Conceptual Space/ITM hybrid
@@ -169,7 +169,7 @@ other structures: it can be analyzed internally
 through the lens of its own structures %-- how
 it effects translations and routing between the
 structures of other systems which the
-interfac interconnects %-- but this `q.local`
+interface interconnects %-- but this `q.local`
 analysis does not address how local structures
 fit into the `q.semantics` of the whole.
 `p`
@@ -209,7 +209,7 @@ analyze the interaction between biological and chemical
 laws/properties as an `i.interface`/,
 an `q.interface theory` of this relationship
 %-- of biology supervening on chemistry,
-for xample, goes hand-in-hand with a `i.holistic`
+for instance, goes hand-in-hand with a `i.holistic`
 theory of the worldly phenomena which
 biology and chemistry (and their interaction/reuction)
 explain.  The interface theory is not a self-contained
@@ -270,7 +270,7 @@ there is a distinctly human way of `i.being` a
 cognitive system.  Analogously, while humans
 are not the only communicative species %-- actually,
 we are not the only `i.linguistic` species;
-it seems counter-productive not call bird sounds orctacean
+it seems counter-productive not call bird sounds or cetacean
 and primate vocalizations as a kind of language %-- there
 is however a distinctly human way of `i.being`
 linguistic.  Not all language is `i.human`
@@ -316,7 +316,7 @@ in these examples, and their linguistic expression seems
 to take these as cognitive-perceptual primitives
 rather than grist for analysis (compare to a case
 like wanting the Leafs to win, when asked about the
-Jets (\ref{itm:rooting}, below)). This is consistent with the
+Jets (\ref{itm:rooting}, above)). This is consistent with the
 phenomenological intuition that consciousness includes a
 primordial structural awareness, and the role of
 intellect and attention is to focus
@@ -402,7 +402,7 @@ see the characteristics of buildings' exterior that
 fall under the concept, but more passively still.
 Merely learning the word presumably alters our perception
 of exteriors qua facades vs. `q.ordinary` exteriors, even
-if we are not currntly using the word in any
+if we are not currently using the word in any
 conversation %-- just as the word `q.hail`
 sharpens our perception to how hail differs from
 snow, since we have a compilations of beliefs specific
@@ -438,7 +438,7 @@ I use the `q.facade` example stratgically, to reference
 Martin Raubal's analysis of this word via
 Conceptual Space Theory `cite<MartinRaubal>;.
 Raubal proposes a `q.conceptual vector
-space` to  distinguish `q.facades` from other spatial
+space` to  distinguish `i.facades` from other spatial
 arrangements that (for instance) we might encounter outdoors
 in an urban setting.  His apparent goal is to
 quantitatively model the terrain of `q.facade` in
@@ -482,11 +482,11 @@ restaurant for anywhere to buy prepared meals:
 `sentenceItem; \label{itm:apartment} I'm going to a party at my brother's house (suppose
 he actually lives in an apartment).
 `sentenceItem; This restaurant has the best Hokkien noodles
-(said of a stall in a Chinaatown food court).
+(said of a stall in a Chinatown food court).
 `sentenceList`
 
 These feel (at least to my ears) like idiomatic
-exprssions, however, as if we know not to casually
+expressions, however, as if we know not to casually
 overstretch the concepts.  As I proposed earlier, our
 criteria for concept-mappings seems to be `i.mostly` functional
 but to incorporate spatial, configurational, visual, and
@@ -501,8 +501,8 @@ and depending on the context in which they are used.
 In a conceptual vector space it is possible to account
 for these changes by adding or deleting quality dimensions
 and by assigning different saliencies (as weights)
-to the existing dimensions.`
-Formalizing Conceptual Spaces, p. 5 For sure, our readiness to
+to the existing dimensions`
+\cite[p. 5]{MartinRaubal}.  For sure, our readiness to
 (continuing my example) accept `q.house` for any place
 of residence varies with context: the idiomatic
 usage in (\ref{itm:apartment}) is less proper in the contxt of
@@ -533,7 +533,7 @@ the idea `q.facade` %-- if the synergy resonates enough
 is a facade, a pasive belief which could potentially
 be `q.activated` should that become relevant.  One way this
 could happen is if a conversation partner
-says something about `q.this faacde` %--
+says something about `q.this facade` %--
 entering that referent in the `q.ledger` of dialogically
 salient things and topics.
 `p`
@@ -607,7 +607,8 @@ functionally %-- `q.Take the lexical unit
 `i.knife` is one of the parts in collections making
 up silverware.  But `i.knife` can also have `i.cut`
 as a whole, because  `i.knife` can be the agent ... of
-the cutting process` (p. 155).  As is clear, Holmqvist
+the cutting process` \cite[p. 155]{KennethHolmqvist}.
+As is clear, Holmqvist
 adopts mereology as a very broad domain of relations,
 representing different functional and aggregative
 connections as special cases of part/wholeness.
@@ -628,12 +629,12 @@ relation closer.  For instance, the relative sizes of the
 blade and knife must not deviate outside certain limits.  The
 relative spatial position of the blade and knife must also be
 correct, i.e., the blade must be correctly attached`/.
-This implies the criteria for classifying something as a knife
+This implies that the criteria for classifying something as a knife
 can be quantified, and regions on certain peceptual axes
 %-- say, the shape, length, and position of the
 handle and the blade %-- carve out (no pun intended) the
-conceptual space of `q.knife` from peer concepts like
-`q.sword`/, `q.cleaver`/, and `q.spatula`/.  Certainly
+conceptual space of `i.knife` from peer concepts like
+`i.sword`/, `i.cleaver`/, and `i.spatula`/.  Certainly
 such clusters of related lexemes suggest conceptual
 `q.terrains` that can be `q.mapped` %-- as in my earlier
 discussion of concept-mapping for water and milk %-- and
@@ -734,11 +735,14 @@ fact that it can spread butter.  The situation provides the conceptual
 slots that objects can fit into.
 `p`
 
+`shortdecoline;
 `p.
-Situational understanding does, we can say, proceed from `i.situational`
+There is, notwithstaning my suggestions to this point, a version of
+prototype theory which `i.is` broadly applicable.
+Situational understanding, we can say, `i.does` proceed from `i.situational`
 prototypes, so here is a domain where prototype theories are appropriate.
 Instead of a prototypical `i.knife` (or house, restaurant, corkscrew,
-etc.), I think we have prototypical situations where knives
+etc.), I think we have `i.prototypical situations` where knives
 (etc.) play a role.  Any particular knife is conceptualized
 against such a background: one kind of scenario is someone at
 the head of the table ceremonially carving a roast, wherein the
@@ -837,7 +841,7 @@ my reading, originating in Conceptual Space Theory and
 then pivoting to Conceptual Roles,
 also presents as a flavor of ITM.  I envision this hybird
 theory as a kind of synthesis of Conceptual Space Theory,
-Conceptual Role Semantics, and (at least some variant on)
+Conceptual Role Semantics, and (at least some variation on)
 Vakarelov's Interface Theory of Meaning.
 `p`
 
@@ -856,7 +860,7 @@ Cognitive Linguistics, a goal
 shared by some other work, like Matt Selway's
 `cite<MattSelway>;.  To this we could add certain models
 embraced by phenomenologists like Barry Smith and
-his collaborators (notably `cite<SmithDonnely>;) and
+his collaborators (notably `cite<BittnerSmithDonnelly>;) and
 Jean Petitot.  I am skeptical that
 computer implementations will ever
 achieve more than a rough approximation of human
