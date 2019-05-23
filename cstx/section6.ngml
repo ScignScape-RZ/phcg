@@ -34,7 +34,7 @@ or generically `q.process` (of either variety).
 Processes, per se, I will
 leave undefined, although a `q.computational` process
 can be considered roughly analogous to a single
-function implemented in a computer programming language.
+procedure implemented in a computer programming language.
 Th story I want to tell goes something like this: understanding
 language involves many cognitive processes, many of
 which are subtly determined by each exact language artifact
@@ -90,7 +90,7 @@ other computers on a network) where a computation is
 carried out.  Two times are different only insofar as the
 overall state at one time differs from the state at the second time.
 Time is `i.discrete` because the relevant states are discrete, and
-because beneath a certain sclae of time delta there is no
+because beneath a certain scale of time delta there is no
 possibility of state change.
 `p`
 
@@ -116,7 +116,7 @@ formally recognized in Process Algebra, this specific genre
 of relation is implicit to other models important
 to computer science, such as Type Theory and Lambda Calculus.
 If `typeT; is a type, then any computational process
-which proceduces a value of type `typeT; has a corresponding
+which produces a value of type `typeT; has a corresponding
 (`q.functional`/) type (for sake of discussion, assume a `q.value`
 is anything that can be encoded in a finite sequence of numbers
 and that `q.types` are classifications for values that introduce
@@ -128,7 +128,7 @@ Similarly a process which takes as `i.input` a value of
 `typeT; is its own type.  If two processes have these two
 types respectively %-- one outputs `typeT; and the other
 inputs `typeT; %-- then the two can be put in sequence, where
-the output from the antecedent becomes the inut to the subsequent.
+the output from the antecedent becomes the input to the subsequent.
 In this manner inter-process sequential relations become
 subsumed into `q.type systems` can can be studied using
 type-theoretic machinery rather than Process Algebras or
@@ -150,7 +150,8 @@ X` generally requires that `i.X` be a noun
 certain `i.type` of noun, something that can be interpreted
 as an idea or proposition of some kind (?`i.I believed flower`/).
 Asher and Pustejovsky point out the anomaly in a sentenc
-like `q.Bob's idea weighs five pounds` (ex. 2 p. 5), which
+like `q.Bob's idea weighs five pounds`
+\cite[example 2, p. 5]{AsherPustejovsky}, which
 possesses a flavor of unacceptability that feels akin to
 Part of Speech errors but are not in fact syntactic
 errors.  The object of `i.weigh` is `q.five pounds` and
@@ -172,8 +173,8 @@ sense of `i.to weigh`/) can be unified into an overarching theory,
 which spans both grammar and semantics %-- for instance,
 both Part of Speech rules and usage conventions of the
 kind often subtly or cleverly subverted in metaphor and
-idioms (see `q.flowers want sunshine`/, `q.my computer died`/,
-`q.neutrinos are sneaky`/, as rather elegantly compactified
+idioms (see `i.flowers want sunshine`/, `i.my computer died`/,
+`i.neutrinos are sneaky`/, as rather elegantly compactified
 by assigning sentient states to inert things).  This is one way of
 reading the type-theoretic semantic project.
 `p`

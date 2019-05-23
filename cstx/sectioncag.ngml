@@ -1220,7 +1220,7 @@ greater than $x$.
 `p.
 The larger point of this whole subsection is that 
 details about the nature and existence of types' constructors 
-can provide useful concptual information about types 
+can provide useful conceptual information about types
 themselves.  Often this information dovetails 
 with the metadata pertinent to Conceptual Space Theory 
 and CSML.  Consider a simple but representative example of 
@@ -1314,7 +1314,7 @@ On one level, very general Part of Speech classifications
 can be approached type-theoretically.  This helps 
 reinforce the intuitive idea that syntactic categories like 
 verbs, adjectives, and adverbs corresponds to 
-concptual, cognitive processes which effectuat changes 
+conceptual, cognitive processes which effectuat changes
 in beliefs, conceptualizations, or situational 
 records.  A noun by itself is an abstract concept; 
 during the course of a sentence, it is 
@@ -1424,7 +1424,7 @@ a type/set interface similar to my analysis earlier of
 `q.students polled` (\ref{itm:maj}).  And (\ref{itm:elephant}) 
 suggests an `i.intensional` filter, narrowing a type 
 for contxtual purposes into a subtype that is 
-concptually meaningful but not ntrenched: 
+conceptually meaningful but not ntrenched:
 there is no common word (peer to `q.kitten` 
 or `q.puppy`/) for `q.baby elephant`/.  
 `p`
@@ -1685,7 +1685,7 @@ type-cases work in practice in Natural Languages,
 especially in complex cases where multipl word-senss are 
 involved.  Not every type associated with a word 
 makes sense in every conceptualization.  When for instance we 
-attend to the concptual properties of a book as an 
+attend to the conceptual properties of a book as an
 intellectual object there may be physical details which 
 are conceptually incompatibl with this attitude.  It would be 
 simpler if there were a neat partition among senses, and 

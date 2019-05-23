@@ -38,7 +38,7 @@ people can coordinate situation-appropriate activity.  Given
 that there is an abstract and scehmatic dimension to
 how we understand situations, we should expect a
 partially abstract sheen to how we intellectually
-engage objcts and concepts once they are situationally
+engage objects and concepts once they are situationally
 `q.located`/.  Having identified objects as
 butter or carving knives, pitchers or glasses of
 water, wine or beer bottles, corkscrews and bottle openers %--
@@ -119,6 +119,12 @@ We can and should thereby distinguish the computational
 from the AI vision of programming computers
 not just to `i.host` but to `i.derive`
 Intermediate Representations.
+For instance, given a theory of the correct model for
+parsed Natural Language sentences, we can use computers
+to `i.study` and `i.present` parses %-- but this is
+separate from attempting to program computers to
+parse `NL; samples to such models on their own, without
+human intervention.
 I am sympathetic to the former methodology
 but skeptical of the latter.
 `p`
@@ -134,7 +140,7 @@ builds an intermediary cognitive register %--
 paricularly if we accept Vakarelov's overall
 picture of language as an interface between
 speech-givens and prelinguistic cognitive
-fsculties.  Interface theories and Intermediate
+faculties.  Interface theories and Intermediate
 Representations tend to go together %-- the IR is
 the representation of some input during
 intermediate processing yielding an
@@ -144,15 +150,14 @@ the structures as well as to activate the correct
 capabilities via the output.  This is the
 architecture of an `q.interface theory`/, in
 science or computer programming; it carries
-over to linguistics of we take Vakarelov's
+over to linguistics if we take Vakarelov's
 ITM seriously.
 `p`
-
 
 `p.
 An equally intrinsic aspect of interface theories,
 however, is that the processes operative at the intermediate
-level aree theoretically distinct from the realms which the
+level are theoretically distinct from the realms which the
 interface bridges.  For example, the theory of programming-language
 compilers and runtimes is distinct both from
 the theory of programming-language parsers and
@@ -175,10 +180,10 @@ Concerns.  There are multiple parts to a
 typical AI platform %-- modules for representing information
 (or knowledge/facts/beliefs, or the state of the system's
 physical or digital environs, etc.); for populating
-these reprsentations with data deliberately introduced
+these representations with data deliberately introduced
 by human users or absorbed via some real-time engineering
 from the outside world; for analyzing
-reprsentations to glean insights or calculate a course
+representations to glean insights or calculate a course
 of action.  Individual parts of the overall architecture
 can evince noteworthy engineering
 achievements, separate from the goals of
@@ -196,7 +201,7 @@ best understood as shorthand for a suite of
 research agendas across several aspects of
 computer science, not restricted to the
 fields %-- like Machine Learning, Robotics,
-and Artificials Neural Networks %-- that are
+and Artificial Neural Networks %-- that are
 publicly associated with the term.  This is
 not, however, how AI seems to be represented by
 companies and institutions (including in academia)
@@ -206,8 +211,8 @@ institutions understand the diversity of research
 that can be loosely aggregated under the AI umbrealla,
 but use the particularly science-fictional facets of
 this science to excite public support: visions
-of humanoid robots and conversationalists provide a compact
-story to that is more meaningful to non-experts
+of humanoid conversationalists and robots provide a compact
+story that is more meaningful to non-experts
 than technical outlines of the intermediate machinery
 beneath the hopefully-intelligent surface.
 However, a more cynical interpretation
@@ -272,7 +277,7 @@ technologies %-- AI platforms, and proof-assistants
 (or modeling frameworks in mathematically inspired 
 programming languages) %-- reflect `i.computational` 
 and `i.formal` analogies respectively: language `i.qua` 
-computational or formal system.  This generalizes to other 
+computational or `i.qua` formal system.  This generalizes to other
 applications buttressing cognitive science: most concrete 
 technology deployed in a research-oriented context 
 projects either or both of these analogy/paradigms. 
