@@ -527,6 +527,125 @@ the Trump campaign colluded with Russia.
 `sentenceList`
 184
 
+`sentenceList,
+`sentenceItem; Today is Tuesday.
+`sentenceItem; The big departmental meeting is Tuesday.
+`sentenceItem; It is very windy. 
+`sentenceItem; The lousy weather is very windy.
+`sentenceItem; They are forecasting snow.
+`sentenceItem; The latest reports are forecasting snow.
+`sentenceList`
+190-195
+
+`sentenceList,
+`sentenceItem; She is a salaried employee.
+`sentenceItem; He is an elected official. 
+`sentenceList`
+196-197
+
+`sentenceList,
+`sentenceItem; \label{itm:penguin} A penguin is a flightless bird.
+`sentenceItem; \label{itm:rhino} Rhinos in that park are threatened by poachers.
+`sentenceItem; \label{itm:elephant} Baby elephants don't have tusks.
+`sentenceList`
+198-200
+
+
+`sentenceList,
+`sentenceItem; \label{itm:koreanstore} My favorite Korean restaurant is adjacent to the bookstore.
+`sentenceItem; \label{itm:koreanclosed} My favorite Korean restaurant is closed today.
+`sentenceItem; \label{itm:koreanposter} My favorite Korean restaurant is decorated with posters from the 2002 World Cup.
+`sentenceItem; \label{itm:koreanstarted} My favorite Korean restaurant started out in a food court.
+`sentenceItem; \label{itm:koreanloyal} My favorite Korean restaurant said I'm their most loyal customer.
+`sentenceItem; \label{itm:bark} She's constantly barking at her employees.
+`sentenceItem; \label{itm:back} He's not playing well because his back is barking at him.
+`sentenceItem; \label{itm:actup} He's not playing well because his sore back is acting up.
+`sentenceItem; \label{itm:kitten} The kitten barked at the dog.
+`sentenceList`
+201-209
+
+
+`sentenceList,
+`sentenceItem; \label{itm:teaduck} Tea-smoked duck is a Sichuan delicacy.
+`sentenceItem; \label{itm:rubberduck} The baby's favorite toy is a rubber duck.
+`sentenceItem; \label{itm:weddingduck} Wedding ducks are traditional Korean gifts.
+`sentenceList`
+210-212
+
+`sentenceList,
+`sentenceItem; This book, which costs \$40, has some crazy ideas inside.
+`sentenceItem; This book, which the library classifies as young adult 
+nonfiction, has some dude's phone number scrawled inside.
+`sentenceItem; My boss barks louder than his dog does.
+`sentenceList`
+213-215
+
+`sentenceList,
+`sentenceItem; Three times, students asked an interesting question
+`sentenceList`
+216
+
+`sentenceList,
+`sentenceItem; Time after time, tourists (a tourist) walk(s) by this building
+with no idea of its history.
+
+`sentenceItem; The streets around here are confusing; often people (someone)
+will ask me for directions.
+
+`sentenceItem; Student after student came with their (his/her)
+paper to compain about my grade(s).
+
+`sentenceItem; Student after student %-- and their (his/her) parents
+%-- complained about the tuition increase.
+`sentenceList`
+217-220
+
+`sentenceList,
+`sentenceItem; The Maple Leafs failed to win in overtime for the
+first time this year.
+`sentenceItem; The Maple Leafs failed for the first time this year
+to win in overtime.
+`sentenceList`
+221-222
+
+`sentenceList,
+`sentenceItem; The Maple Leafs failed to win two consecutive games
+for the first time this year.
+`sentenceList`
+223
+
+`sentenceList,
+`sentenceItem; Rhinos in that park are threatened by poachers.`
+`sentenceItem; Young rhinos are threatened by poachers.`
+`sentenceList`
+224-225
+
+`sentenceList,
+`sentenceItem; I got glue for your daughter.
+`sentenceItem; I got glue for your coffee mug.
+`sentenceList`
+226-227
+
+`sentenceList,
+`sentenceItem; We're going to Grandma!
+`sentenceItem; Let's go to him right now.
+`sentenceItem; Let's go to the lawyers.
+`sentenceItem; Let's go to the press.
+`sentenceList`
+228-231
+
+`sentenceList,
+`sentenceItem; The newspaper you are reading is being sued.
+`sentenceItem; Liverpool, an important harbor, built new docks.
+`sentenceList`
+232-233
+
+
+
+
+
+
+
 
 
 

@@ -306,10 +306,10 @@ to win in overtime.
 
 The first can mean either that the Leafs had won `i.all` or `i.none`
 of their prior overtime games.  From a phrase-structure perspective,
-we have to image that `q.to win in overtime` can `q.migrate` so we
+we have to image that `i.to win in overtime` can `q.migrate` so we
 hear it as in the second version of the sentence.  For more inter-word
-grammars, the alternation is simpler: `q.for`/, initiating the phrase
-`q.for the first time`/, can be linked with either `i.failed` or
+grammars, the alternation is simpler: `i.for`/, initiating the phrase
+`i.for the first time`/, can be linked with either `i.failed` or
 `i.win` %-- notationally, it amounts to the presence or absence of one
 graph-edge, when the syntax is represented as a graph with
 inter-word labels for link kinds.  This could be a distinction without

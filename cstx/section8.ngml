@@ -739,7 +739,7 @@ systems take on functional organizations that can be
 abstractly described, similar to the functional
 dynamics of other systems, their behavior
 can be represented and/or simulated via generic
-code.  To the degree that thre are particular
+code.  To the degree that there are particular
 details of a system's behavior that are more
 idiosyncratic to that system, and need to be modeled
 precisely, procedures can be crafted specifically
@@ -766,7 +766,7 @@ The Semantic Web, as a large, collaborative modeling
 project, evolved largely apart from the technological
 community concerned with computer simulations and
 the programming techniques which emerged from there,
-like Object-Orientation.  This divergnce is relevant
+like Object-Orientation.  This divergence is relevant
 for linguistics and cognitive science, because I would
 argue that the more `q.dynamic` paradigm is actually
 more `q.Semantic` in a Natural Language sense.
@@ -839,7 +839,11 @@ Partiality therefore models how precedures
 be present at runtime (e.g. what specific
 values passed to a procedure as arguments),
 so procedural analysis is essentially characterized
-by a partiality of information.  When one procedure
+by a partiality of information.
+`p`
+
+`p.
+When one procedure
 calls another, the caller must build an
 `i.expression` %-- a gathering of values that provide all
 the information the callee requires %-- thereby
@@ -871,7 +875,7 @@ signatures unify multiple types into one
 profile, we can analogously define
 `q.expression types` as the aggregate of all types
 from values affecting the expression %-- note that
-this is different from the type of the exprssion's
+this is different from the type of the expression's
 calculated `i.result`/, just as the type of
 a function is different from the type of its
 return value.  Expression-types and signature-types

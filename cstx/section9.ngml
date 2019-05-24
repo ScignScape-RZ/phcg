@@ -5,8 +5,8 @@ This section will briefly introduce what I call
 `q.Channel Algebra` and how it can lead to a 
 theory (and practice, in a sense) of formal 
 and natural-language grammar.  Channel Algebra 
-is discussed in greater detail in `cite<Neustein>;.  
-It's fairly divergent from other formalizations 
+is discussed in greater detail in `cite<NathanielChristenCyberphysical>;.
+It is fairly divergent from other formalizations
 in computer science, though loosely decended from 
 Process Algebras and from the `q.sigma calculus`/, 
 which is a formal model of Object-Oriented 
@@ -29,7 +29,7 @@ mathematical axiomatic description.
 
 `p.
 In the present context I want to focus on Channel Algebra as a 
-potential theory in linguistic %-- particularly 
+potential theory in linguistics %-- particularly
 Cognitive Grammar %-- but initially I'll describe 
 the underlying theory in a more computational manner.  
 A lot of the Channel Algebra formalization carries 
@@ -423,7 +423,7 @@ might have pseudo-code like this:
 `sentenceList,
 `sentenceItem; int $x$ = 0;
 `sentenceItem; loop \{
-`sentenceItem; `hspace<1em>; if ($x$ > 10) break;
+`sentenceItem; `hspace<1em>; if ($x$ $>$ 10) break;
 `sentenceItem; `hspace<1em>; ++$x$;
 `sentenceItem; \} // end the loop
 `sentenceList`
@@ -892,7 +892,7 @@ identifying the proper `Cpp; function (or function-pointer) and
 marshaling the channels to mimic the `Cpp; ABI (Application 
 Binary Interface).  Conversely, at a higher level, 
 source-code formations are interprted in terms of the channel 
-products they imply: so in code like `i.x = y->f(z)` the 
+products they imply: so in code like `i.x = y$->$f(z)` the
 implicit channels are likely populated as follows: $z$ goes 
 into $f$'s `i.lambda`/, channel, $y$ into its `i.sigma`/, 
 and $x$ becoms bound to its `i.return` (of course whether this 

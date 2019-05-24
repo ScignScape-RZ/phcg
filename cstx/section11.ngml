@@ -257,16 +257,16 @@ refer to concept-extension, triggering a mental shift from thinking of the
 concept as a schema or prototype to thinking of its extension (maybe in some context).
 Compare these sentences:
 
-`sentenceexamples.
-`sentenceexample.Tigers in that park are threatened by poachers.`
-`sentenceexample.Young tigers are threatened by poachers.`
-`sentenceexamples`
+`sentenceList,
+`sentenceItem; Rhinos in that park are threatened by poachers.`
+`sentenceItem; Young rhinos are threatened by poachers.`
+`sentenceList`
 
-Both sentences focus a conceptual lens in greater detail than `i.tiger` in general, but
+Both sentences focus a conceptual lens in greater detail than `i.rhino` in general, but
 the second does so more intensionally, by adding an extra indicative criterion; while
 the former does so extensionally, using a phrase-structure designed to operate on
-and narrow our mental construal of `q.the set of all tigers`/, in the sense of
-`i.existing` tigers, their physical place and habitat, as opposed to
+and narrow our mental construal of `q.the set of all rhinos`/, in the sense of
+`i.existing` rhinos, their physical place and habitat, as opposed to
 the `q.abstract` (or `q.universal`/) type.  So there is a familiar semantic
 pattern which mentally transitions from a lexical type to its extension and
 then extension-narrowing %-- an interpretation that, if accepted, clearly
@@ -285,9 +285,9 @@ at their beginning and/or end.
 `footnote`  If we take this (higher-order)
 type gloss seriously, the extension of a concept is not its `i.meaning`/, but a
 different, albeit interrelated concept.  Extension is not definition.
-`q.Tiger` does not mean `i.all tigers` (or `i.all possible tigers`/) %-- though arguably
-there are concepts `i.all tigers` and `i.all restaurants` (etc.) along with the concepts
-`i.tiger` and `i.restaurant`/.  Concepts, in short, do not mentally signify sets, or
+`i.Rhino` does not mean `i.all rhinos` (or `i.all possible rhinos`/) %-- though arguably
+there are concepts `i.all rhinos` and `i.all restaurants` (etc.) along with the concepts
+`i.rhino` and `i.restaurant`/.  Concepts, in short, do not mentally signify sets, or
 extensions, or sets-of-shared-properties.  Concepts, rather, are cognitive/dialogic tools.
 Each concept-choice, as presentation device,
 invites its own follow-up.  `i.Restaurant` or `i.house` have meaning not via
@@ -409,9 +409,9 @@ I claim therefore that `i.concepts` enter language complexly, influenced by
 conceptual `i.spaces` and multi-dimensional semantic and syntactic selection-spaces.
 Concepts are not simplistically `q.encoded` by types, as if for
 each concept there is a linguistic or lexical type that just
-disquotationally references it %-- that the type `q.tiger` means the concept
-`i.tiger` (`q.type` in the sense that type-theoretic semantics would model lexical
-data according to type-theoretic rules, such as `i.tiger` as subtype of `i.animal` or
+disquotationally references it %-- that the type `q.rhino` means the concept
+`i.rhino` (`q.type` in the sense that type-theoretic semantics would model lexical
+data according to type-theoretic rules, such as `i.rhino` as subtype of `i.animal` or
 `i.living thing`/).
 Cognitive schema, at least in the terms I just laid out, select particularly
 important gestalt principles (force dynamics, spatial frames, action-intention)
@@ -543,7 +543,7 @@ these:
 of Speech) to the much narrower,
 including (at the fine end of the scale) where
 they incorporate lexical data
-(types can potentially include `i.tiger`/, `i.house`/, and so on).
+(types can potentially include `i.rhino`/, `i.house`/, and so on).
 In between are constructions related to `q.Ontology`/,
 like sentient/nonsentient, pointwise/extended, artifact/institution, among many others.
 
