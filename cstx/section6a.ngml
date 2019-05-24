@@ -1,10 +1,7 @@
 `spsubsectiontwoline.Interpretive Processes and Triggers`
 `p.
-My central thesis in this paper is that language understanding
-involves integrating diverse `q.cognitive procedures`/,
-each associated with specific words, word morphologies (plural
-forms, verb tense, etc) and sometimes phrases.
-This perspective contrasts with and adds nuance to
+The type-theory/procedural perspective I will mostly work from
+here contrasts with and adds nuance to
 a more `q.logical` or `q.truth-theoretic` paradigm which
 tends to interpret semantic phenomena via formal logic %--
 for example, singular/plural in Natural Language
@@ -43,9 +40,7 @@ events which gave them these properties occurred `i.before`
 the time frame implied (by tense) as the time of reference
 for the states of affairs discussed in the sentence
 (jokes or rhetorical flourishes can toy with these expectations,
-but that's why they `i.are`/, say, jokes; consider the dialog:
-`q.He likes to date divorced women %-- I thought they were all married?
-%-- Not after he dated them!`/). But we read `q.people fed` in
+but that's why they `i.are`/, say, jokes). But we read `q.people fed` in
 `i.People fed the rescued dogs` as occurring before the rescue;
 because we assume that `i.after` being rescued the dogs would be
 fed by veterinarians and other professionals (who would
@@ -62,15 +57,15 @@ scope/quantity/tense interactions that help us build logical models
 of situations described in language.  Thus
 `i.I fed the dogs a cheeseburger` can be read such that there
 are multiple cheeseburgers %-- each dog gets one %--
-notwithstanding the singular form on `q.a cheeseburger`/:
-the plural `q.dogs` creates a scope that can elevate
-the singular `q.cheeseburger` to an implied plural;
+notwithstanding the singular form on `i.a cheeseburger`/:
+the plural `i.dogs` creates a scope that can elevate
+the singular `i.cheeseburger` to an implied plural;
 the discourse creates multiple reference frames each
-with one cheeseburger.  Likewise this morphosyntax is
-quite correct: `i.All the rescued dogs are taken to an
+with one cheeseburger.  Likewise the morphosyntax is
+quite correct in: `i.All the rescued dogs are taken to an
 experienced vet; in fact, they all came from the same
-veterinary college`/: the singular `q.vet` is properly
-alligned with the plural `q.they` because of the scope-binding
+veterinary college` %-- the singular on `i.vet` is properly
+alligned with the plural `i.they` because of the scope-binding
 (from a syntactic perspective) and space-building
 (from a semantic perspective) effects of the `q.dogs` plural.
 Or, in the case of `i.I fed the dog a cheeseburger every day`
@@ -79,24 +74,25 @@ multiple spaces: we can refer via the spaces collectively
 using a plural (`i.I fed the dog a cheeseburger every day %--
 I made them at home with vegan cheese`/) or refer within
 one space more narrowly, switching to the singular
-(`i.Except Tuesday, when I made it out of ground turkey and swiss`/).
+(`i.Except Tuesday, when it was a turkey burger`/).
 `p`
 
 `p.
-Layers of scope, tense, and adjectives interact in comples ways that
+Layers of scope, tense, and adjectives interact in complex ways that
 leave room for common ambiguities: `i.All the rescued dogs are [/were]
 taken to an experienced [/specialist] vet` is consistent with a reading
-wherein there is exactly one vet, and she has or had treated every dog, as
-well as where there are multiple vets and each dog is or was treated
+wherein there is exactly one vet, and she has or had treated every dog.
+It is `i.also` consistent with a reading where there
+are multiple vets and each dog is or was treated
 by one or another.  Resolving such ambiguities
 tends to call for situational reasoning and a `q.feel` for situations,
 rather than brute-force logic.  If a large dog shelter describes
 their operational procedures over many years, we might assume
 there are multiple vets they work or worked with.  If instead the
-conversation centers on one specific rescue we'd be
-inclined to imagine just one vet.  Lexical and tense
+conversation centers on one specific rescue we would be
+inclined to imagine just one veterinarian.  Lexical and tense
 variation also guides these impressions: the past-tense
-form (`q....the rescued dogs were taken...`/) nudges us
+form (`i....the rescued dogs were taken...`/) nudges us
 toward assuming the discourse references one rescue (though it
 could also be a past-tense retrospective of general operations).
 Qualifying the vet as `i.specialist` rather than the vaguer
@@ -106,13 +102,20 @@ Qualifying the vet as `i.specialist` rather than the vaguer
 `p.
 What I am calling a `q.nudge`/, however, is based on situational
 models and arguably flows from a conceptual stratum outside
-of both semantics and grammar proper, maybe even prelinguistic.
+of both semantics and grammar proper; maybe it is even prelinguistic.
+Consider
+
+`sentenceList,
+`sentenceItem; \label{itm:pf} People fed the rescued dogs.
+`sentenceItem; \label{itm:ve} Vets examined the rescued dogs.
+`sentenceList`
+
 There appears to be no explicit principle either in the semantics
-of the lexeme `q.to feed`/, or in the relevant tense agreements,
-stipulating that the feeding in `i.People fed the rescued dogs`
-was prior to the rescue (or conversely that
-`i.Vets examined the rescued dogs` describes events
-`i.after` the rescue).  Instead, we interpret the discourse through
+of the lexeme `i.to feed`/, or in the relevant tense agreements,
+stipulating that the feeding in (\ref{itm:pf})
+was prior to the rescue %-- or conversely that
+(\ref{itm:ve}) describes events
+`i.after` the rescue.  Instead, we interpret the discourse through
 a narrative framework that fills in details not provided by
 the language artifacts explicitly (that abandoned dogs are
 likely to be hungry; that veterinarians treat dogs in clinics, which
@@ -135,8 +138,8 @@ the first or last reading, respectively (depending on how we
 interpret `q.everyone`/).  Technically, the
 first two sentences imply a multi-space reading and the latter two
 a single-space reading.  But the driving force
-behind these implications are the pragmatics of `q.perform` versus
-`q.sing along`/: the latter verb is bound more tightly to
+behind these implications are the pragmatics of `i.perform` versus
+`i.sing along`/: the latter verb is bound more tightly to
 its subject, so we hear it less likely that
 `i.many` singers are performing `i.one` song pair, or conversely that
 every audience member `i.sings along` to one song pair, but
@@ -165,7 +168,7 @@ performed onstage matched the lyrics they had in hand).
 `sentenceList`
 
 In short, it's not as if dictionary entries would specify that
-`q.to feed` applies to rescued dogs before they are rescued,
+`i.to feed` applies to rescued dogs before they are rescued,
 and so forth; these interpretations are driven by narrative
 construals narrowly specific to given expressions.  The
 appraisals would be very different for other uses of the verbs in
@@ -189,13 +192,13 @@ detailed mental picture where we can fill in many details by
 default, unless something in the discourse tells otherwise
 (we can assume such dogs are in need of food, medical care,
 shelter, etc., or they would not be describd as
-`q.rescued`/).  Likewise `q.sing along` carries a rich mental
+`q.rescued`/).  Likewise `i.sing along` carries a rich mental
 picture of a performer and an audience and how they interact, one
 which we understand based on having attended concerts rather than
-by any rule governing `q.along` as a modifier to `q.sing`
-%-- compare the effects of `q.along` in `q.walk along`/,
-`q.ride along`/, `q.play along`/, `q.go along`/.  Merely
-by understanding how `q.along` modifies `q.walk`/, say
+by any rule governing `i.along` as a modifier to `q.sing`
+%-- compare the effects of `i.along` in `i.walk along`/,
+`i.ride along`/, `i.play along`/, `i.go along`/.  Merely
+by understanding how `i.along` modifies `i.walk`/, say
 (which is basically straightforward; to
 `q.walk along` is basically to `q.walk alongside`/) we
 would not automatically generalize to more idiomatic
@@ -258,7 +261,7 @@ understanding proper.
 `p.
 These comments apply to both conceptual `q.background knowledge` and
 to situational particulars of which we are cognizant in
-rference to our immediate surroundings and actions.  This
+reference to our immediate surroundings and actions.  This
 is the perceptual and operational surrounding that gets
 linguistically embodied in deictic reference and other
 contextual `q.groundings`/.  Our situational awareness therefore
@@ -293,7 +296,7 @@ they point to the thematic limits of
 phenomenology and Cognitive Grammar and
 the analytic boundary where they give way to
 an overarching Cognitive Science.  In the case of
-Phnomenology, there are cognitive structures that suffuse
+phenomenology, there are cognitive structures that suffuse
 consciousness without being directly objects of attention
 or intention(ality), just as sensate hyletic experience is
 part our consciousness but not, as explicit content,
@@ -306,14 +309,14 @@ particularly.
 `p`
 
 `p.
-What Phenomnology `i.should` explicate is not background situational
+What phenomenology `i.should` explicate is not background situational
 cognition but how attention, sensate awareness, and intentionality
 structure our orientation `i.visavis` this background: how variations
 in focus and affective intensity play strategic roles in our engaged
 interactions with the world around us.  Awareness is a scale, and
 the more conscious we are of a sense-quality, an attentional focus,
 or an epistemic attitude, reflects our estimation of the
-importance of that explicit content compared to a muted experintial
+importance of that explicit content compared to a muted experiential
 background.  Hence when we describe consciousness as a stream
 of `i.intentional` relations we mean not that the intended
 noemata (whether perceived objects or abstract thoughts)
@@ -399,7 +402,7 @@ that a causal and narrative thread links the two events.
 I maintain, therefore, that the analyses which are proper to linguistics
 %-- highlighting what linguistic reasoning contributes above and beyond
 background knowledge and situational cognition %-- should focus on
-the `i.intgration` of multiple mental `q.scripts`/,
+the `i.integration` of multiple mental `q.scripts`/,
 each triggered by different parts and properties of the linguistic
 artifact.  The `i.triggers` themselves can be individual words, but
 also morphological details (like plurals or tense marking) and
@@ -415,25 +418,26 @@ In the case of isolating triggers, a wide range of linguistic features
 can trigger interpretive reasoning %-- including base lexical choice;
 word-senses carry prototypical narrativ and situational templates that
 guide interpretation of how the word is used in any given context.
-`q.Rescued`/, for example, brings on board a network of likely
+`i.Rescued`/, for example, brings on board a network of likely
 externalitis: that there are rescuers, typically understood to be
 benevolent and intending to protect the rescuees from harm; that
-the rescuees are in danger prior to the rescu but safe afterward;
+the rescuees are in danger prior to the rescue but safe afterward;
 that they need the rescuers and could not have reachd safety themselves.
-Anyone using the word `q.rescue` anticipats that their addressees will
-reason through some such interprtiv frame, so the speaker's role is
-to fill in the details descriptively or deictically: who are the rescues
-and why they are in danger, who are the rescurs and why they are benevolnt
-and able to protect the rscuees, etc.  The claim that
-the word `q.rescue`/, by virtue of its lexical properties, triggers an
-interprtive `q.script`/, is a proposal that when trying to faithfully
-reconstruct speaker intentions we will try to match the interpretive
+Anyone using the word `q.rescue` anticipates that their addressees will
+reason through some such interprtive frame, so the speaker's role is
+to fill in the details descriptively or deictically: who are the rescuees
+and why they are in danger; who are the rescuers and why they are benevolent
+and able to protect the rescuees.  The claim that
+the word `i.rescue`/, by virtue of its lexical properties, triggers an
+interprtive `q.script`/, is a proposal to the effect that when trying
+to faithfully reconstruct speaker intentions
+we will try to match the interpretive
 frame to the current situation.
 `p`
 
 `p.
 The `q.script` triggered by word-choice is not just an interpretive
-frame in the abstract but the interpretive `i.process` that matchs
+frame in the abstract, but the interpretive `i.process` that matches
 the frame to the situation.  This process can be exploited for
 metaphorical and figurative effect, broadening the semantic scope
 of the underlying lexeme.  In the case of `q.rescue` we have less

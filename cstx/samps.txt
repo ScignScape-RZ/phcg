@@ -318,6 +318,85 @@ he actually lives in an apartment).
 `sentenceList`
 107-108
 
+`sentenceList,
+`sentenceItem; I snacked on toast and coffee.
+`sentenceItem; I snacked on buttered toast and iced coffee.
+`sentenceList`
+109-110
+
+`sentenceList,
+`sentenceItem; I snacked on toast and instant coffee.
+`sentenceItem; I snacked on toast and Eritrean coffee.
+`sentenceList`
+111-112
+
+`sentenceList,
+`sentenceItem; \label{itm:pf} People fed the rescued dogs.
+`sentenceItem; \label{itm:ve} Vets examined the rescued dogs.
+`sentenceList`
+113-114
+
+
+`sentenceList,
+`sentenceItem; Every singer performed two songs.
+`sentenceItem; Everyone performed two songs.
+`sentenceItem; Everyone sang along to two songs.
+`sentenceItem; Everyone in the audience sang along to two songs.
+`sentenceList`
+115-118
+
+`sentenceList,
+`sentenceItem; The rescued dogs had been treated by vets in the past
+(but were subsequently abandoned by their owners).
+`sentenceItem; Every singer performed (the last) two songs
+(for the grand finale).
+`sentenceItem; Everyone in the audience sang along to two songs
+(they were randomnly handed lyrics to different songs when
+they came in, and we asked them to join in when the song being
+performed onstage matched the lyrics they had in hand).
+`sentenceList`
+119-121
+
+`sentenceList,
+`sentenceItem; The rescued dogs were treated by an experienced vet.
+One needed surgery and one got a blood transfusion.  We went there
+yesterday and both looked much better.
+`sentenceItem; The rescued dogs were treated by an experienced vet.
+One had been struck by a car and needed surgery on his leg.  We
+went there yesterday and saw debris from another car crash
+%-- it's a dangerous stretch of highway.
+`sentenceList`
+122-123
+
+`sentenceList,
+`sentenceItem; The rescued dogs were treated by an experienced vet.
+We saw a lot of other dogs getting medical attention.
+`sentenceItem; The rescued dogs were treated by an experienced vet.
+It looked very modern, like a human hospital.
+`sentenceItem; The rescued dogs were treated by an experienced vet.
+We looked around and realized how dangerous that road is %--
+for humans as well as dogs.
+`sentenceList`
+124-126
+
+`sentenceList,
+`sentenceItem; I'm going to rescue her from that boring conversation.
+`sentenceItem; The trade rescued a star athlete from a losing team.
+`sentenceItem; Your invitation rescued me from studying all night.
+`sentenceItem; New mathematical models rescued her original research from obscurity.
+`sentenceItem; Discovery of nearby earth-like planets rescued that
+star from its reputation as ordinary and boring and revealed that its solar
+system may actually be extraordinary.
+`sentenceItem; His latest comments rescued him from the perception that
+he never says anything controversial.
+`sentenceItem; The Soviets rescued thousands of
+people from a basically-defeated Germany and sent them to Siberia.
+`sentenceList`
+127-133
+
+
+
+
 
 
 
