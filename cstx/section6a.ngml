@@ -488,15 +488,15 @@ the rescue is in danger) comes across as excessive but
 both invoking the `q.rescue` script and exploiting mismactches between
 its template case and the current context, the speaker
 conveys both situational facts and personal opinions quite
-economically.  Similarly, `q.rescue a paper from obscurity` is
+economically.  Similarly, `i.rescue a paper from obscurity` is
 an economical way of saying that research work has been rediscovered
-in light of new science; `q.rescued from a bad team` is an economical way
+in light of new science; `i.rescued from a bad team` is an economical way
 of connoting how an athletic career is less fulfilling on a
-bad team, and so forth.
+poor team, and so forth.
 `p`
 
 `p.
-All of these interprtive effects %-- both conventional
+All of these interpretive effects %-- both conventional
 and unconventional usages %-- stem from the interpretive
 scripts bound to words (and triggered by word-choice) at
 the underlying lexical level %-- we can assess these by reference
@@ -507,7 +507,7 @@ Case in point are plurals: for each plural usage we have a conceptual
 transformation of an underlying singular to a collective, but
 how that collective is pictured varies in context.  One
 dimension of this variation lies with mass/count: the
-mass-plural `q.coffee` (as in `q.some coffee`/) figures the
+mass-plural `i.coffee` (as in `q.some coffee`/) figures the
 plurality of coffee (as liquid, or maybe coffee grounds/beans)
 in spatial and/or physical/dynamic terms.  So we have:
 
@@ -521,10 +521,10 @@ in spatial and/or physical/dynamic terms.  So we have:
 %-- should I pour it out?
 `sentenceList`
 
-These sentences use phrases associated with plurality (`q.all over`/,
-`q.a lot`/, `q.too much`/) but with referents that on perceptual and
+These sentences use phrases associated with plurality (`i.all over`/,
+`i.a lot`/, `i.too much`/) but with referents that on perceptual and
 operational grounds can be treated as singular %-- as in the
-appropriate pairing of `q.a lot` and `q.it` in the last sentence.
+appropriate pairing of `i.a lot` and `i.it` in the last sentence.
 With count-plurals the collective is figured more as an
 aggregate of discrete individuals:
 
@@ -538,7 +538,7 @@ aggregate of discrete individuals:
 
 `p.
 So mass versus count %-- the choice of which plural form to use %--
-triggers an intrepretation shaping how the plurality is pictured and
+triggers an interpretation shaping how the plurality is pictured and
 conceived (which is itself trigggered by the use of a plural to
 begin with).  But if we restrict attention to just, say,
 count-plurals, there ar still different schemata for intending
@@ -552,11 +552,11 @@ to New York City.
 `sentenceList`
 
 The first sentence is consistnt with a reading applied to
-`i.all` New Yorkers %-- the five boroughs encompass th whol
+`i.all` New Yorkers %-- the five boroughs encompass the whole
 extent of New York City.  The second sentence is only reasonable
-when applied only to the city's registered voters %-- not all
+when applied exclusively to the city's registered voters %-- not all
 residents %-- and moreover there is no implication that the
-claim applies to all such voters, only a something north of one-half.
+claim applies to all such voters, only a proportion north of one-half.
 And the final sentence, while perfectly reasonable, uses `q.New Yorkers`
 to name a population completely distinct from the
 first sentence %-- only residents from the metro
@@ -586,7 +586,7 @@ linguistic shape replicating the architecture of the intended propositional
 complexes, as these would be represented in first-order logic.  This
 view on linguistic meaning is consistent with the last three sentences,
 which are designed to map readily to logical notations (signaled by
-quasimathematical phrases like `q.the majority of`/).  But most sentences
+quasimathematical phrases like `i.the majority of`/).  But most sentences
 do not betray their logical form so readily: these latter sentences actually
 sound less fluent, more artificial, than their prior equivalents.
 `p`
@@ -605,7 +605,7 @@ technical, legal, and journalistic discourse.  But for this reason
 such discourse comes across as self-consciously removed from
 day-to-day language.  As I argued from multiple angles earlier,
 in the typical case %-- i.e., stylistically
-nutral, day-to-day language %-- syntactic
+neutral, day-to-day language %-- syntactic
 composition does not neatly recapitulate logical form.
 `p`
 
@@ -652,12 +652,12 @@ which guide us toward propositional content, but the structure
 of language is shaped around fine-tuning the activation of
 this background cognitive dynamics more than around any need to model
 predicate organization architecturally.   In the case of plurals,
-the appearance of plural forms like `q.New Yorkers` or `q.coffees`
+the appearance of plural forms like `i.New Yorkers` or `i.coffees`
 compels us to find a reasonable cognitive model for the
-signified multitude, and this modl will hav a logical form
+signified multitude, and this model will have a logical form
 %-- but the linguistic structures themselves do not in general
 model this form for us, except to the limited degree needed to
-activate prelinguistic interpertive thought-processes.
+activate prelinguistic interpretive thought-processes.
 `p`
 
 `p.
@@ -687,60 +687,65 @@ failed to surround them with enough depth.
 `sentenceItem; Many star players were drafted by that franchise, but they
 were not surrounded with enough depth.
 `sentenceItem; Many star players were drafted by that franchise, but they
-did not have enough depth.
+did not have enough depth (around them).
 `sentenceList`
 
-Plurality here is introduced not only by isolated morphology (like `q.slices`/,
-`q.players`/, `q.songs`/), but via agreements marked by
+Plurality here is introduced not only by isolated morphology (like `i.slices`/,
+`i.players`/, `i.songs`/), but via agreements marked by
 word-forms in syntactically significant pairings: was/were, it/they,
 there is/there are.  Framing all of these cases is how we can usually schematize
 collections both plurally and singularly: the same set can be cognized as a
-collection of discrete indiciduals one moment and as an intgral whole the next.
+collection of discrete individuals one moment and as an integral whole the next.
 This allows language some flexibility when designating plurals
 (as extensively analyzed by Ronald Langacker: see his discussion of examples
 like `i.Three times, students asked an interesting question`/).  A sentence
-discussing `q.slices of pizza` can schematically shift to treating
-the pizza as a mass aggregate in `q.it's all gone`/.  Here the antecedent
-of `q.it` is `i.slices` (of pizza).  In the opposite-drection, the mass-plural
-`q.toast` can be refigured as a st of individual pieces in `q.they're all gone`/.
-The single `q.band` becomes the group of musicians in the band.
+discussing `i.slices of pizza` can schematically shift to treating
+the pizza as a mass aggregate in `i.it's all gone`/.  Here the antecedent
+of `i.it` is `i.slices` (of pizza).  In the opposite direction, the mass-plural
+`q.toast` can be refigured as a set of individual pieces in `i.they're all gone`/.
+The single `i.band` becomes the group of musicians in the band.
 In short, how agreements are executed invites the addressee to reconstruct
 the speaker's conceptualization of different referents discussed by
 a sentence, at different parts of the sentence: linking
 `i.it` to `i.slices` or `i.cohort`/, or `i.they` to `i.the band` or
 `i.the toast`/, evokes a conceptual interpretation shaped in
 part by how morphosyntactic agreement overlaps with `q.semantic`
-agreement.  Matching `q.they` to `q.the band` presents agreement
+agreement.  Matching `i.they` to `i.the band` presents agreement
 in terms of how we conceive the aggregate (as a collection of
 musicians); using `q.it` would also present an agreement, but
 one schematizing other aspect of the band conecpt.
 `p`
 
 `p.
-In the last five above cases, `q.it` similarly binds (being singular) to
-`q.the franchise` seen as a single unit %-- here basic grammar and
-conceptual schema coincide %-- but `q.it` also binds
-to the `q.core of young players`/.  The
+In the last five above cases, `i.it` similarly binds (being singular) to
+`i.the franchise` seen as a single unit %-- here basic grammar and
+conceptual schema coincide %-- but `i.it` also binds
+to the `i.core of young players`/.  The
 players on a team can be figured as a unit or a multiple.  The franchise itself
 can be treated as a multiple (the various team executives and decision-makers),
-as in `q.they failed to surround the stars with enough depth`/.  The last sentence
+as in `i.they failed to surround the stars with enough depth`/.  The last sentence
 is ambiguous between both readings: `q.they` could designate either the players
 or the franchise.  Which reading we hear alters the sense of `q.have`/: asserting
 that the star `i.players` lack enough depth implies that they cannot execute
 plays during the game as effectively as with better supporting players;
 asserting that the `i.franchise` lacks depth makes the subtly different point
-that there is not enough talent over all.
+that there is not enough talent over all.  The variant which would include
+`q.around them` nudges toward the second reading; but it is
+still permissible to, according to speaker intent, parse the last
+`i.they` as designating the `i.franchise` and the last `i.them` as
+the `i.players` %-- i.e., that final `i.they`//`i.them` pair
+having different antecedents.
 `p`
 
 `p.
 The unifying theme across these cases is that when forming sentences we often
 have a choice of how we figure plurality, and moreover these choices can be
 expressed not only in individual word-forms but in patterns of agreement.
-Choosing to pronominalize `q.slices of pizza` or `q.cohort of players`
+Choosing to pronominalize `i.slices of pizza` or `i.cohort of players`
 as `i.it`/, or alternatively `i.they`/, draws attention to either the more
 singular or more multitudinal aspects of the aggregate in question.
 But this effect is not localized to the individual
-it/they choice; it depends on
+`i.it`//`i.they` choice; it depends on
 tracing the pronoun to its antecedent and construing
 how the antecedent referent has both individuating and
 multiplicity-like aspects.
@@ -756,12 +761,24 @@ interpretation to identify the proper conceptual scope of plurals.
 In `i.The band planned a tour, where they debuted new songs` we hear
 the scope of `q.they` as narrower than its antecedent `q.the band`/,
 because only the band's `i.musicians` (not stage crew, managers, etc.)
-typically actually perform.  Likewise in `i.The team flew to
-New York and they played the Yankees`/, only the athletes are referenced via
-`q.they played` but presumably many other people (trainers, coaches, staff)
-are encompassd by `q.the team flew`/.  And in `i.The city's largest theater
-company will perform `q.The Flies`/` we do not imply that the
-Board of Directors will actually take the stage (the President
+typically actually perform:
+
+`sentenceList,
+`sentenceItem; The band planned a tour, where
+they debuted new songs.
+`sentenceItem; \label{itm:teamflew} The team flew to
+New York and they played the Yankees.
+`sentenceItem; \label{itm:teamflew} The team flew to
+New York and they played the Yankees.
+`sentenceItem; \label{itm:theflies} The city’s largest theater company
+will perform `q.The Flies`/.
+`sentenceList`
+
+Likewise in (\label{ref:teamflew}), only the athletes are referenced via
+`i.they played`/; but presumably many other people (trainers, coaches, staff)
+are encompassd by `q.the team flew`/.  And in (\label{ref:theflies})
+we do not imply that the Board of Directors will
+actually take the stage (the President
 as Zeus, say).  Even in the course of one sentence, plurals
 are reinterpreted and redirected:
 
@@ -778,13 +795,13 @@ In the first sentence, the `q.space` built by the sentence is wider
 initially but narrows to encompass only the actual actors on stage.
 In the second, the `q.space` narrows in a different direction, since
 we hear a programming decision like pairing a performance with a
-lecture as made by a theater's board rather than its actors.
-I discussed similar modulation in conceptual schemas rlated to plurality
+lecture as made by a theater's administrators rather than its actors.
+I discussed similar modulation in conceptual schemas related to plurality
 and pluralization earlier; what is distinct in these last examples is how
 the interpretive processes for cognizing plurality are shaped by
 agreement-patterns (like `i.it` or `i.they` to a
 composite antecedent) as
-much as by lexical choice and morphology in isolation.
+much as by lexical choice, or morphology, in isolation.
 `p`
 
 `p.

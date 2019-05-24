@@ -394,6 +394,110 @@ people from a basically-defeated Germany and sent them to Siberia.
 `sentenceList`
 127-133
 
+`sentenceList,
+`sentenceItem; There's some coffee on your shirt.
+`sentenceItem; There's coffee all over the table.
+`sentenceItem; She poured coffee from an ornate beaker.
+`sentenceItem; There's too much coffee in the grinder.
+`sentenceItem; There's a lot of coffee left in the pot.
+`sentenceItem; There's a lot of coffee left in the pot
+%-- should I pour it out?
+`sentenceList`
+134-139
+
+`sentenceList,
+`sentenceItem; There are coffees all over the far wall at the expresso bar.
+`sentenceItem; She poured coffees from an ornate beaker.
+`sentenceItem; There are a lot of coffees left on the table
+ %-- shall I pour them out?
+`sentenceList`
+140-142
+
+`sentenceList,
+`sentenceItem; \label{itm:borough} New Yorkers live in one of five boroughs.
+`sentenceItem; New Yorkers reliably vote for Democratic presidential candidates.
+`sentenceItem; \label{itm:commute} New Yorkers constantly complain about how long it takes to commute
+to New York City.
+`sentenceList`
+143-145
+
+`sentenceList,
+`sentenceItem; All New York City residents live in one of five boroughs.
+`sentenceItem; The majority of New York voters support Democratic
+presidential candidates.
+`sentenceItem; Many New York metro area residents complain about how
+long it takes to commute to New York City.
+`sentenceList`
+146-148
+
+`sentenceList,
+`sentenceItem; My favorite band gave a free concert last night.
+They played some new songs.
+`sentenceItem; There was some pizza earlier, but it's all gone.
+`sentenceItem; There were some slices of pizza earlier, but it's all gone.
+`sentenceItem; There were some slices of toast earlier, but there's none left.
+`sentenceItem; There was some toast earlier, but they're all gone.
+`sentenceItem; That franchise had a core of talented young players, but it
+got eroded by trades and free agency.
+`sentenceItem; That franchise had a cohort of talented players, but they
+drifted away due to trades and free agency.
+`sentenceItem; Many star players were drafted by that franchise, but it
+has not won a title in decades.
+`sentenceItem; Many star players were drafted by that franchise, but they
+failed to surround them with enough depth.
+`sentenceItem; Many star players were drafted by that franchise, but they
+were not surrounded with enough depth.
+`sentenceItem; Many star players were drafted by that franchise, but they
+did not have enough depth.
+`sentenceList`
+149-159
+
+`sentenceList,
+`sentenceItem; The band planned a tour, where
+they debuted new songs.
+`sentenceItem; \label{itm:teamflew} The team flew to 
+New York and they played the Yankees.
+`sentenceItem; \label{itm:theflies} The city’s largest theater company
+will perform `q.The Flies`/.
+`sentenceList`
+160-162
+
+`sentenceList,
+`sentenceItem; The city's largest theater company
+performed `q.The Flies` in French, but everyone's accent
+sounded Quebecois.
+`sentenceItem; The city's largest theater company
+performed `q.The Flies`/; then they invited a professor
+to discuss Sartre's philosophy when the play was over.
+`sentenceList`
+163-164
+
+`sentenceList,
+`sentenceItem; John is married to a woman from his home country, but
+he had to get the marriage legally recognized here.
+`sentenceItem; John married his boyfriend in Canada, but they
+live in a state that does not recognize same-sex marriages.
+`sentenceItem; John has been married for five years, but in
+many ways he's still a bachelor.
+`sentenceItem; Every married man needs a bachelor pad somewhere,
+and wherever yours is, you need a mini-fridge.
+`sentenceList`
+165-168
+
+`sentenceList,
+`sentenceItem; People had fed the rescued dogs (i.e.: before they
+were rescued).
+`sentenceItem; New Yorkers vote democratic (i.e.: the majority
+of registered voters in New York do so).
+`sentenceItem; There is milk in that coffee (i.e.: almond milk).
+`sentenceItem; I handed him a bottle opener (i.e.: a butterfly
+corskscrew).
+`sentenceItem; That wine is Fabernet Franc (i.e.: `q.W is CF`/).
+`sentenceList`
+169-173
+
+
+
 
 
 
