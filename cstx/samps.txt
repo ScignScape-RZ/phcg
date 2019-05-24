@@ -496,6 +496,38 @@ corskscrew).
 `sentenceList`
 169-173
 
+`sentenceList,
+`sentenceItem; We learned that people fed the rescued dogs.
+`sentenceItem; No-one seriously entertained the belief that
+he would govern in a bipartisan manner.
+`sentenceList`
+174-175
+
+`sentenceList,
+`sentenceItem; \label{itm:trumpcolluded} The Trump campaign colluded with Russia.
+`sentenceItem; Several witnesses testified that
+the Trump campaign colluded with Russia.
+`sentenceItem; Reputable newspapers have reported that
+the Trump campaign colluded with Russia.
+`sentenceItem; Most Democrats believe that
+the Trump campaign colluded with Russia.
+`sentenceList`
+176-179
+
+`sentenceList,
+`sentenceItem; I believed in Father Christmas.
+`sentenceItem; I believed in Peace on Earth.
+`sentenceItem; I believed in Obama.
+`sentenceItem; I believed in lies.
+`sentenceList`
+180-183
+
+`sentenceList,
+`sentenceItem; Obama wouldn't budge on reproductive rights.
+`sentenceList`
+184
+
+
 
 
 

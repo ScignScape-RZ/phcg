@@ -494,20 +494,20 @@ of formal Ontologies that can guide software and database
 development.  Data sharing is then driven by Ontological
 alignment %-- the Semantic Web, for example, designed
 as an open repository of raw data annotatd and structured in accord
-with publishd Ontologies, data which can bereusedand integrated into
+with publishd Ontologies, data which can be reused and integrated into
 different projects more readily because it adopts these published
 models.  On the other hand, insofar as we see data sharing in terms
-of `i.procedural alignment`/, we prioritize th curation and
+of `i.procedural alignment`/, we prioritize the curation and
 publication of procedure implementations, in the form of software
 libraries, open-source code repositories, and other building-blocks
 of modular software design.  Consider again the case of data
 integration between two hospitals: to integrate data between the two,
 programmers may need to implement special `q.bridge functions` that
-reconcile their rspective formats.  This implementation is
+reconcile their respective formats.  This implementation is
 simplified insofar as the respective software systems are well-organized
-and transparent %-- so that programmers can examine inport and
+and transparent %-- so that programmers can examine import and
 export functions in the two code bases and write new procedures,
-extending thir respective capabilities, so that import functionality
+extending their respective capabilities, so that import functionality
 on one end can be aligned to export functionality on the other.
 These new procedures can then be shared so that similar
 data integration problems %-- for instance the first
@@ -543,7 +543,7 @@ given that many Semantic Web technologies are distributed
 as Open-Source software.  Despite the `i.practical`
 adoption of Open-Source norms, the Semantic Web community
 has arguably not engaged the Open-Source community
-at a deeper theoretical level, in terms of how th curation
+at a deeper theoretical level, in terms of how the curation
 of public, collaborative code libraries can promote
 data integration analogous in effect to (but arguably
 semantically more accurate than) Semantic Web Ontologies
@@ -556,7 +556,7 @@ about (in the words of Peter G\"ardenfors,
 
 `subsection.Phenomnology and the Semantic Web`
 `p.
-These questions bear directly on Phenomnology, because
+These questions bear directly on phenomenology, because
 philosophers in the phenomenological tradition have directly
 influenced the evolution of the Semantic Web %-- notably
 Barry Smith, who has both published sophisticated
@@ -564,14 +564,14 @@ theoretical work on Ontologies in the Semantic Web sense
 and also spearheaded practical initiatives like the
 OBO (Open Biological and Biomedical Ontology) Foundry.
 The OBO Foundry emerged in the mid-2000s, on the heels
-of a renewed interest in Phenomnology as a philosophical
-basis for Cognitive Scienc and other practical/technical
+of a renewed interest in phenomenology as a philosophical
+basis for Cognitive Science and other practical/technical
 disciplines, like knowledge engineering.  It is not
 hard to see practical artifacts like the OBO system as
 concrete realizations of theoretical goals articulated
 in volumes such as 1999's `i.Naturalizing Phenomnology`/.
 This association is not only at the level of scholarship
-%-- the academic papers describing OBO, for example --
+%-- the academic papers describing OBO, for example %--
 but also the design and organization of Semantic Web tools like
 the OBO Foundry, as technologies and platforms.
 `p`
@@ -589,41 +589,41 @@ phenomenological accounts of perception and cognition
 the world as well as of the facts experienced.  A case in point
 is formalizing systems of `q.mereotopology` %-- combining
 the mereological account of part vs. whole with `q.topological`
-models of spatial continuity, locality, and bounday %--
+models of spatial continuity, locality, and boundary %--
 which reflect both perceptual schema and information gestalts.
 So one the one hand the fusion of mereological and topological
 relations gives us a vocabulary for describing how we
 experientially apprehend spatial forms %-- the continuity,
 regionality, intersections, and disjunctions between
 visual (and sometimes tactile) elements that
-gives logical articulation to visual/tactil sense
-data (never experienced as `q.raw` sensation sinc we fundamentally
+gives logical articulation to visual/tactile sense
+data (never experienced only as `q.raw` sensation since we fundamentally
 experience space and visual continuity in these structured forms).
 Meanwhile, on the other hand, Mereotopology provides a
 semantic matrix for representing facts and relations in biological,
 geographical, and other scientific data, so it serves a
 practical information-management role.  In short, isolating
-logical gestalts and then codifyung them in practically useful
+logical gestalts and then codifying them in practically useful
 forms serves to `q.Naturalize` phenomenology by anchoring
 phenomenological reflection in applied science.
 `p`
 
 `p.
 The general implication of this `q.Naturalizing` strategy
-is that phenomenology becomes naturalized, or reconcild
+is that phenomenology becomes naturalized, or reconciled
 with the physical sciences, insofar as structures of consciousness
-can be aligned with logical systms.  This strategy seems to extend
+can be aligned with logical systems.  This strategy seems to extend
 beyond just the Semantic Web projects I have highlighted; it is
 likewise evident for example in Kit Fine's logical
 mereology in Barry Smith and David Woodruff Smith
-`i.Cambirdge Companion to Husserl` (`q.Part-Whole`/,
-pp. 463).  Indeed Husserl himself invites us to consider the
+`i.Cambirdge Companion to Husserl` `cite<KitFine>;.
+Indeed Husserl himself invites us to consider the
 logical formalization of phenomenological systems in works
 like the `i.Formal and Transcendental Logic`/, which appears
 to suggest that human conceptual systems are an even
 more refined manifestation of logical systems than are
 `q.formal` logics which get entangled in model-thoretic
-problems like the Lowenheim-Skolem thorem.  In other words,
+problems like the L\"owenheim-Skolem thorem.  In other words,
 systems of formal logic are codifications of a mental order
 and therefore natural cadidates for a technical representation
 of the mental realm in its structure and specificity.
@@ -706,20 +706,20 @@ polygonal meshes; shader algorithms; `q.NURBS`
 (Non-Uniform Rational Basis Spline) surfaces; textures and
 `i.uv`/-mapping; camera matrices; diffusion and stochastic
 processes %--  create a formal model of perceptual phenomena
-insofar as these can simulated `i.to a close approcimation`/:
+insofar as these can simulated `i.to a close approximation`/:
 visual phnomena artificially built with these techniques
 can be `i.almost` realistic.
 `p`
 
 `p.
 The gaps between such
-`q.virtal` scenes and real life may suggest that there are
+`q.virtual` scenes and real life may suggest that there are
 additional facets suffusing `q.real life` perception, or
 even that despite their realism the mathematical
 building-blocks of CGI-like scenes
 are fundamentally different from the formal
 structures governing nurophenomenological perception.
-But nevertheless the almost life-like realism that
+But nevertheless the almost lifelike realism that
 `i.can` be achieved via Computer Graphics is a data-point
 that phenomenology should acknowledge: that a
 perceptual world built out of certain rigorously
@@ -744,7 +744,7 @@ phenomena.
 
 `p.
 We can then observe that constructed scenes
-built entirely from mathematical carry comparable
+built entirely from mathematical structures carry comparable
 potential for intentional engagement.  Moreover, Panoramic
 Photography and Immersive Visual Reality present another
 genre of phenomenological immersion that transcends the
@@ -762,7 +762,7 @@ examine realistic simulations of visual contents as
 computational artifacts %-- not in terms of abstract
 formulations (logical or otherwise) but in
 terms of concrete computer code and software.  With
-reference to Merotopology, for example, we can
+reference to Mereotopology, for example, we can
 contrast the logical groundwork set out by
 Barry Smith (for example) with the differential-geometric
 and category-theoretic landscape considered by
@@ -804,7 +804,9 @@ or CGI/CAD technology %-- can be seen as practical
 test-beds for the realism and analytic potential
 of formal-phenomenological frameworks.  In some
 cases, like the OBO Foundary, the link between
-applied technology and Phenomnology is explicit; in
+applied technology and phenomnology is explicit
+(at least at the level of institutional and
+intellectual history); in
 others, as with VR and CGI, this link
 is more implicit and thematic (but still
 addressed by interdisciplinary research grounded in
@@ -825,16 +827,16 @@ useful resource like Biomedical Ontologies suggests an
 as a `q.Naturalizing phenomenology` project.
 On the other hand, critiques of the Semantic Web
 %-- which have emerged, among elsewhere, from Cognitive
-Linguistics %-- can accordingly be studied as potntial
+Linguistics %-- can accordingly be studied as potential
 indications of how classical logical formalism is
-limited in the phenomenological context.  Peter G\"ardenfors,
-for example, has critiqued the Semantic Web on thoretical
+limited in the phenomenological context.  Peter `Gardenfors;,
+for example, has critiqued the Semantic Web on theoretical
 grounds while also developing a model of Natural
 Language semantics (via Conceptual Space Theory)
 that we may find more phenomenologically realistic than
-the Semantic Web's (as G\"ardenfors puts it)
-`q.syllogistic` paradigms.  In this paper, I propose a
-critiquefrom a more `q.procedural` angle.
+the Semantic Web's (as `Gardenfors; puts it)
+`q.syllogistic` paradigms.  Here, I propose a
+critique from a more `q.procedural` angle.
 From my perspective, the foundational characteristic of
 `q.information systems` is the existence of `i.procedures`
 (say, cognitive and/or computational procedures) which `q.act on`
@@ -845,17 +847,17 @@ information management %-- not only in a thoretical
 sense, but also quite practically.  For example, the
 OBO Foundary does not include a mechanism for code sharing
 with the goal of curating software libraries that
-implement atatypes conformant to the various
+implement datatypes conformant to the various
 published Ontologies.  In the Semantic Web paradigm,
 defining logical formalizations of standardized concept-systems
 is considered orthogonal to implementing software
-components where these formal criteria ar eralized in practic.  In
+components where these formal criteria are realized in practic.  In
 short, `i.logical specification` is trated as distinct
 from `i.implementation`/.  This is not a universal
-approach: many trvhnological standards are published
-at least in part via `q,reference implementations` which demonstrate
+approach: many technological standards are published
+at least in part via `q.reference implementations` which demonstrate
 standardized concepts and guide other implementations,
-helping to enforce compatibiloty btween different
+helping to enforce compatibility between different
 software components.  Moreover, code sharing
 and code reuse can promote interoperability no less effectively
 than alignment relative to logically defined standards.
@@ -872,12 +874,12 @@ on phenomenology, or at least on the threads of research
 that follow the `q.Naturalizing` project and the
 reconciliation of phenomenology with Analytic Philosophy.
 Even if this effect is rather modest, it still bears on
-the topic that is my primary emphasis here, namely
+the topic that is my primary emphasis at this point, namely
 the integration of phenomenology with Cognitive Grammar.
 One of the most prominent practical domains that has
 influenced phenomenology has been the Semantic Web, insofar
 as Semantic Web technology (via Ontologies) show
-some evidence that formal models influencd by phenomenology
+some evidence that formal models influenced by phenomenology
 can be practically useful, which is one criteria to
 suggest that the models have philosophical or epistemological
 merit.  On the other hand, Cognitive Linguists have tended
@@ -888,7 +890,7 @@ Ontologies into Computational Linguistics software).
 So a potentially fertile ground for collaboration between
 phenomenology and Cognitive Linguists has arguably been
 overlooked insofar as the respective communities have
-taken competing lessons from th succsses and
+taken competing lessons from the successes and
 limitations of the Semantic Web, particularly how
 the Semantic Web leverages classical logical formalisms
 (particularly Description Logics) rather than
@@ -899,7 +901,7 @@ the Semantic Web leverages classical logical formalisms
 This problem is not intrinsic to the Semantic Web as a
 data-sharing platform, however, only to the
 paradigms through which the current Semantic Web
-has been conceptualized and implmntd.  There are competing
+has been conceptualized and implemented.  There are competing
 intellectual frameworks that embrace parallel goals but
 present alternative technical foundations, and phenomenology
 would benefit from thematizing these frameworks in a role
@@ -910,7 +912,7 @@ and a retroactive intuition-guide.
 `p.
 A case in point would be
 the OpenCog project, that presents a Hypergraph-based modeling
-paradigm related but technically distinct from Semantic Web
+paradigm related to but technically distinct from Semantic Web
 labeled graphs (one which is also consistent with
 procedural-network models) and which also embraces a specific
 linguistic model (based on Link Grammar).  Philosophically,
@@ -918,7 +920,7 @@ OpenCog appears to celebrate a vision of Artificial
 General Intelligence which I have already flagged as problemmatic;
 underestimating the context-sensitivity
 and empathic intersubjectivity intrinsic to human cognition
-and intelligence (and difficult to simulate with machins).
+and intelligence (and difficult to simulate with machines).
 Nevertheless, formal models designed to `i.replicate` intelligent
 behavior can still be useful as structural `i.models` of cognitive
 phenomena, even if we believe in a metaphysical gap between the
@@ -934,7 +936,7 @@ In the case of OpenCog, the impetus toward `q.Artificial
 General Intelligence` has motivated that project to explore
 cognitive models that coalesced around several key structures,
 including Directed Hypergraphs, Link Grammar, and
-(in my terms) Procedural Networks (as unerlying mols
+(in my terms) Procedural Networks (as underlying models
 for Information Spaces).  This aggregate of theories
 can be juxtaposed to Description Logic, Directed Labeled
 Graphs, and formal Ontologies as the groundwork for
