@@ -23,7 +23,6 @@
 \vspace{-2.25em}}
 
 
-
 \newcommand{\whdecoline}{%
 
 \vspace{-2em}
@@ -44,24 +43,6 @@
     \end{tikzpicture}}}}}%
     \end{center}
   }
-
-\newcommand{\thinsectionline}[1]{%
-	\noindent
-	\begin{center}
-		{\color{#1}
-			\resizebox{.2\linewidth}{1.5ex}
-			{{%
-					{\begin{tikzpicture}
-						\node  (C) at (0,0) {};
-						\node (D) at (9,0) {};
-						\path (C) to [ornament=84] (D);
-						\end{tikzpicture}}}}}%
-	\end{center}
-}
-
-\newcommand{\thindecoline}{\vspace*{-.65em}\thinsectionline{blGreen!10!orange}\vspace*{-.85em}}
-\newcommand{\thindecolineadj}[2]{\vspace*{#1}\thinsectionline{blGreen!10!orange}\vspace*{#2}}
-
   
 \newcommand{\EnglischeLinie}{
 \sectionline{darkRed!60!cyan}
@@ -369,7 +350,7 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{shapes,snakes}
 
-
+\newcommand{\visavis}{vis-\`a-vis}
 
 %\sectionfont{\fontsize{12}{8}\selectfont}
 
@@ -569,31 +550,29 @@
 \usetikzlibrary{decorations.pathmorphing}
 
 
-\newcommand{\kErn}{kErn}
-\newcommand{\tSys}{tSys}
-\newcommand{\procOne}{procOne}
-\newcommand{\procTwo}{procTwo}
-\newcommand{\fFunT}{fFunT}
-\newcommand{\ChaOne}{ChaOne}
-\newcommand{\ChaTwo}{ChaTwo}
-\newcommand{\CarOne}{CarOne}
-\newcommand{\CarTwo}{CarTwo}
-\newcommand{\CarHandoffCar}{CarHandoffCar}
-\newcommand{\ChpAlliedChx}{ChpAlliedChx}
-\newcommand{\Chp}{Chp}
-\newcommand{\Chx}{Chx}
-\newcommand{\ChaProductCha}{ChaProductCha}
-\newcommand{\DigammaR}{DigammaR}
-\newcommand{\stageLbl}{stageLbl}
-\newcommand{\sigmaCalc}{sigmaCalc}
-\newcommand{\voidP}{voidP}
-\newcommand{\ChaAppendCar}{ChaAppendCar}
-\newcommand{\LappendX}{LappendX}
-\newcommand{\Lprime}{Lprime}
-\newcommand{\LpreX}{LpreX}
-\newcommand{\tTyp}{tTyp}
-\newcommand{\xy}{xy}
-
-\newcommand{\visavis}{vis-\`a-vis}
+\newcommand{\kErn}{\ensuremath{\mathcal{K}}
+\newcommand{\tSys}{\ensuremath{\mathbb{T}}
+\newcommand{\procOne}{\ensuremath{\mathcal{P}_1}}
+\newcommand{\procTwo}{\ensuremath{\mathcal{P}_2}}
+\newcommand{\fFunT}{\ensuremath{\mathcal{F}_t}}
+\newcommand{\ChaOne}{\ensuremath{\mathcal{C}_1}}
+\newcommand{\ChaTwo}{\ensuremath{\mathcal{C}_2}}
+\newcommand{\CarOne}{\ensuremath{\mathfrak{c}_1}}
+\newcommand{\CarTwo}{\ensuremath{\mathfrak{c}_2}}
+\newcommand{\CarHandoffCar}{\ensuremath{\mathfrak{c}_1{\looparrowright}\mathfrak{c}_2}}
+\newcommand{\ChpAlliedChx}{\ensuremath{\mathcal{ChpAlliedChx}}}
+\newcommand{\Chp}{\ensuremath{\mathcal{Chp}}}
+\newcommand{\Chx}{\ensuremath{\mathcal{Chx}}}
+\newcommand{\ChaProductCha}{\ensuremath{\mathcal{ChaProductCha}}}
+\newcommand{\DigammaR}{\ensuremath{\mathcal{DigammaR}}}
+\newcommand{\stageLbl}{\ensuremath{\mathcal{stageLbl}}}
+\newcommand{\sigmaCalc}{\ensuremath{\varsigma} Calculus}
+\newcommand{\voidP}{void*}
+\newcommand{\ChaAppendCar}{\ensuremath{\mathcal{ChaAppendCar}}}
+\newcommand{\LappendX}{\ensuremath{\mathcal{LappendX}}}
+\newcommand{\Lprime}{\ensuremath{\mathcal{L}'}}
+\newcommand{\LpreX}{\ensuremath{\mathcal{LpreX}}}
+\newcommand{\tTyp}{\ensuremath{\mathfrak{t}}}
+\newcommand{\xy}{\ensuremath{\mathcal{xy}}}
 
 
