@@ -539,7 +539,7 @@ this conecpt/lexeme can be modified by an adjective,
 and similarly a related connector inheres to 
 the `i.output` of the `q.departmental` 
 procedure.  So there is a kind of output-channel 
-establishing which connectors ar eavailable on procedural 
+establishing which connectors are available on procedural
 outputs (connectors of the same varieties as 
 would be available on individual words), and 
 special input-channels which similarly model 
@@ -555,14 +555,14 @@ are orthogonal to the language's connector-system.
 `p`
 
 `p.
-I have, in any case, hereby prsented eight different kinds 
+I have, in any case, hereby presented eight different kinds
 of channels applicable to different programming- or 
 natural-language constructions: `i.lambda`/, `i.sigma`/, 
 `i.capture`/, and `i.input-connector` on the input 
 side; `i.return`/, `i.error`/, `i.control`/, 
-and `i.output-connector` on the output side.  
-Later I will introduce a few other channels.  
-Notice though that the range of different channels, 
+and `i.output-connector` on the output side
+(later I will introduce a few other channels).
+Notice that the range of different channels,
 each with distinct semantics and theoretical 
 roles, extends far beyond the basic intuition 
 that every procesure has some inputs and some outputs.  
@@ -584,7 +584,7 @@ on specialized `q.channels`/.
 The notion of `i.channel` is therefore closely tied to the notion 
 of `i.procedure`/, and `i.types` are similarly specified 
 via both procedures and channels.  That is, most of 
-th complex typs in a type system are functional 
+the complex types in a type system are functional
 types, which in turn are characterized in 
 part by the kind of channels used by instantiating procedures.  
 In principle, function-types are differentiated by the `i.kinds` 
@@ -657,7 +657,7 @@ Most type systems take it as self-evident that any type
 is associated with `i.values` of that type, and usually 
 `i.sets` of values.  That is, intuitively, for any 
 type (say, 16-bit signed integers) there is a 
-set of values whichba are the `q.inhabitants` of 
+set of values which are the `q.inhabitants` of
 that type.  One weakness of this picture is that 
 many types vary in terms of `i.what` set of values is actually 
 representable in a given computational context.  The 
@@ -703,14 +703,14 @@ rough analogy to `q.point-free` topology
 the notion of `i.value` is the idea of a `i.carrier`/.  
 A carrier is a computational construct %-- symbolically 
 represented by a source-code token %-- which represents an 
-instance of a type.  Each carrier is asspociatd 
-with on canonical type (though carriers may be indirectly 
-associatd with supertypes of its canonical type).  
+instance of a type.  Each carrier is associated
+with one canonical type (though carriers may `q.hold values`
+associated with supertypes of its canonical type).
 When we talk about procedures calling other 
 procedures, we really mean that the value of symbols in one 
 body of code (whre the calling procedure 
-is implemented) is sychronized with tge value of symbols in 
-anothr stretch of code (where the callee is implemented).  
+is implemented) is sychronized with the value of symbols in
+another stretch of code (where the callee is implemented).
 In short, at any stage of program execution, we can form 
 groups of source-code symbols across the code base unified by 
 the guarantee that these symbols carry `q.the same` value.  
@@ -718,20 +718,20 @@ But rather than talking of values directly we can
 take this syncronization between symbols as the deeper notion: 
 the notion `i.value` is itself defined as the correlation exhibited 
 by synchronized `q.symbols`/.  The notion of 
-`q.carrir` is then a more rigorous extension of the 
+`q.carrier` is then a more rigorous extension of the
 notion of source-code symbols or tokens.
 `p`
 
 `p.
 The difference between a `i.carrier` and a `i.type` is that 
-carrier have aditional states.  Some carriers are defind in 
+carriers have aditional states.  Some carriers are defind in
 function signatures, but others are introduced as lexical 
 symbols in a procedure implementation.  In many programming 
 languags, lexical symbols can be `i.declared` before being 
 `i.defined`/.  We can represent this scenario via a `i.carrier` 
 which is in a particular `i.state` (I'll call it 
 `i.preinitialized`/).  When a carrier is initialized, it takes on 
-a sftate of holding a specific typed value %-- `i.values` are 
+a state of holding a specific typed value %-- `i.values` are
 defined indirectly as characteristics of carriers in initialized 
 states.  At some point (consider a pointer to deleted memory) carriers 
 no long hold meaningful values, and they enter a 
@@ -741,16 +741,16 @@ the type-system: we do not have to assume a `q.preinitialized`
 `i.value` which can be an `i.instance` of some types.  In some cases, 
 type systems `i.will` reognize values which play 
 similar semantic roles to these carrier-states: for example, 
-Haskell's `q.bottom` value is an instane of ervery typ and represents a 
+Haskell's `q.bottom` value is an instance of every type and represents a
 `q.null` or `q.missing` value.  However, using semenatics of carrier-states 
 rather than type-instancs means that we do not have to introduce extra 
 structure to type systems which we may want to model via Channel Algebra.
 `p`
 
 `p.
-Carrier which can be in preinitialized, retired, or initialized states 
-are called `i.tropes` (there may be only one, or multiple, 
-initialized states for tropes).  A different class of carriers ar e
+Carriers which can be in preinitialized, retired, or initialized states
+I call `i.tropes` (there may be only one, or multiple,
+initialized states for tropes).  A different class of carriers are
 called `i.emblems`/, and represent abstract (`q.emblematic`/) 
 specfications on 
 carriers rather than carriers which hold concrete values: 
@@ -759,7 +759,7 @@ signatures.  One or more carriers in an ordered list then
 form `i.channels` (though a channel can also be `i.empty`/, 
 with no carriers).  I distinguish an `i.empty` channel, 
 which exists but has no carriers, from a 
-`i.vacant` channel which does jot exist at all.  For instance, 
+`i.vacant` channel which does not exist at all.  For instance,
 a function that `i.can` throw exceptions but, at some point, 
 has returned a normal value instead, has an `i.empty` 
 error channel; a function which can `i.never` throw 
@@ -776,7 +776,7 @@ operators, which give Channel Algebra its `q.algebraic` character.
 To present these oprators I'll also intoduce the notion 
 of `i.stages`/.  Briefly, any procedure is broken down 
 into a sequence of stages, each of which involves 
-constructing som aggregate of chanels.  The basic 
+constructing some aggregate of chanels.  The basic
 outline is as follows:
 
 `description,
@@ -806,8 +806,8 @@ number to an integer.
 can be `i.allied with` a channel `i.complex` 
 (written `ChpAlliedChx;) if carriers in `Chp; and `Chx; 
 are `q.alignable`/.  The actual description of such 
-alignment is non-trivial; in `cite<Neustein>; I address this 
-in terms of hypergraph models of computer code.  But in 
+alignment is non-trivial; in `cite<NathanielChristenCyberphysical>;
+I address this in terms of hypergraph models of computer code.  But in
 general alignment means that handoffs are possible between 
 tropes and emblems, and if there is enough alignment 
 the chanel `i.package` `Chp; can be interpreted as a call 
@@ -828,7 +828,7 @@ two different source-code graphs.
 `p.
 Each of these operators represent a step in a computational 
 process whereby channel packages are constructed and then 
-evaluated, which overbthe course of several stages 
+evaluated, which over the course of several stages
 (in general) provides implementation of procedures.  
 A single operator is associated with a `i.microstage`/, 
 for example, appending one carrier to one channel.  
@@ -847,12 +847,12 @@ direct translation of Channel Algebra oprations.
 `p.
 One of the technical challenges of using this strategy for 
 practical software developments involves mapping 
-sophisticated Channl semantics to ordinary 
+sophisticated Channel semantics to ordinary
 type systems.  Since a language like `Cpp; does not 
-support the full range of channels I have or will presented 
+support the full range of channels I have presented
 here, the more detailed channel-complees have to be mapped to 
 function-call semantics which  `Cpp; will actually 
-recognize.  In practice, alot of this work involves 
+recognize.  In practice, a lot of this work involves
 manipulating function pointers and casting carriers 
 to generic binary representations, like arrays of 
 `voidP;-pointers.  These techniques are not especially 
@@ -887,16 +887,16 @@ We are, in any case, operating here on several different
 semantic levels.  The Channel Algebra operators define 
 one, intermediate level whose main theme is building channel 
 packages.  At a `q.lower` level each package must be evaluated 
-at runtim, for instance by converting it to a 
+at runtime, for instance by converting it to a
 `Cpp; function-call, so the semantic issues there are 
 identifying the proper `Cpp; function (or function-pointer) and 
 marshaling the channels to mimic the `Cpp; ABI (Application 
 Binary Interface).  Conversely, at a higher level, 
-source-code formations are interprted in terms of the channel 
+source-code formations are interpreted in terms of the channel
 products they imply: so in code like `i.x = y$->$f(z)` the
 implicit channels are likely populated as follows: $z$ goes 
-into $f$'s `i.lambda`/, channel, $y$ into its `i.sigma`/, 
-and $x$ becoms bound to its `i.return` (of course whether this 
+into $f$'s `i.lambda` channel, $y$ into its `i.sigma`/,
+and $x$ becomes bound to its `i.return` (of course whether this
 is the actual meaning of the code depends on the 
 high-level language's formal grammar).  This implies 
 that grammars can be organized around the channel structures 
@@ -942,7 +942,7 @@ itself: for example, a program emulating a
 calculator relies on human users to type numbers 
 on a kyboard or by pushing buttons on a User Interface.   
 Other times values are literally written 
-in computer code, or 8btained from files, databases, 
+in computer code, or obtained from files, databases,
 or over a network.  
 `p`
 
@@ -1053,11 +1053,11 @@ thse to get shorter and shorter (and eventually
 empty) lists.  This means that algorithms can 
 traverse a chain of constructors `q.backward` and 
 will be guaranteed to terminate.  For example, 
-to dtermine if a list of numbers contains 
+to determine if a list of numbers contains
 the number $n$, it is easy to check if it `i.ends` 
 with $n$.  If not, `q.reverse` the construction, and 
 see if each smaller list ends with $n$.  Eventually we 
-would reach the mpty list, meaning that the 
+would reach the empty list, meaning that the
 original list did `i.not` have $n$. 
 `p`
 
@@ -1070,7 +1070,7 @@ functions and sparing use of side-effects and mutable state.
 On the other hand, pattern matching relies on some 
 simplifying assumptions that may not be consistent with 
 all type systems.  For example, `Cpp; is laxer about how 
-valus are constructed; I can obtain a list of numbers by 
+values are constructed; I can obtain a list of numbers by
 dereferencing a pointer to a list, with no information 
 about the provenance of the referenced data.  Data types in 
 `Cpp; do not usually carry around details about their 
@@ -1101,7 +1101,7 @@ are not literal) which also are neither trivial nor reversible?
 `enumerate`  
 
 Notice that a trivial constructor does not necessarily produce 
-a defaukt value.  For example, a type meant to represent 
+a default value.  For example, a type meant to represent
 days of the week could default to whichever day is current 
 when a constructor is called: if an application is run on 
 Tuesday, the day-of-week trivial constructor would return 
