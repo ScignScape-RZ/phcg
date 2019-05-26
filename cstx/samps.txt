@@ -640,6 +640,21 @@ for the first time this year.
 `sentenceList`
 232-233
 
+`sentenceList,
+`sentenceItem; The newspaper fired the reporter and fell off
+the table (?).
+`sentenceItem; Liverpool beat Tottenham and built new docks (?).
+`sentenceList`
+234-235
+
+`sentenceList,
+`sentenceItem; Liverpool wants to sign a left-footed striker.
+`sentenceItem; That newspaper plans to fire its editorial staff.
+`sentenceList`
+236-237
+
+
+
 
 
 
