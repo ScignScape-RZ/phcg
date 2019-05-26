@@ -258,8 +258,8 @@ concept as a schema or prototype to thinking of its extension (maybe in some con
 Compare these sentences (\ref{itm:rhinor} repeats \ref{itm:rhino}):
 
 `sentenceList,
-`sentenceItem; \label{itm:rhinor} Rhinos in that park are threatened by poachers.`
-`sentenceItem; Young rhinos are threatened by poachers.`
+`sentenceItem; \label{itm:rhinor} Rhinos in that park are threatened by poachers.
+`sentenceItem; Young rhinos are threatened by poachers.
 `sentenceList`
 
 Both sentences focus a conceptual lens in greater detail than `i.rhino` in general, but

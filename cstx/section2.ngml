@@ -827,7 +827,7 @@ environment where my application is hosted.
 In the general case I am not aware of which
 new state obtains.  Attempting to open a file
 may cause it to be opened, but it may also
-cause the software reprsentation of that
+cause the software representation of that
 file %-- a so-called `q.handle` %-- to acquire a flag
 indicating that the referenced file does not exist
 (i.e., its path descrribes a nonexistent location),

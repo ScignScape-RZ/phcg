@@ -53,6 +53,39 @@
 }
 % ///
 
+
+\newcommand{\sectionlinenoc}[2]{%
+	\noindent
+		{\color{#1}
+			\resizebox{#2}{1ex}
+			{{%
+					{\begin{tikzpicture}
+						\node  (C) at (0,0) {};
+						\node (D) at (9,0) {};
+						\path (C) to [ornament=84] (D);
+						\end{tikzpicture}}}}}%
+}
+
+\newcommand{\shortsectionline}[1]{%
+	\noindent
+	\begin{center}
+		{\color{#1}
+			\resizebox{.2\linewidth}{1.5ex}
+			{{%
+					{\begin{tikzpicture}
+						\node  (C) at (0,0) {};
+						\node (D) at (9,0) {};
+						\path (C) to [ornament=84] (D);
+						\end{tikzpicture}}}}}%
+	\end{center}
+}
+
+\definecolor{blGreen}{rgb}{.2,.7,.3}
+
+\newcommand{\shortdecoline}{\vspace*{-.65em}\shortsectionline{blGreen!10!orange}\vspace*{-.85em}}
+\newcommand{\shortdecolineadj}[2]{\vspace*{#1}\shortsectionline{blGreen!10!orange}\vspace*{#2}}
+
+
 \usepackage[flushmargin]{footmisc}
 
 \usepackage[letterpaper, left=.45in,right=.45in,top=1in,bottom=1in]{geometry}
@@ -552,8 +585,11 @@
 \usetikzlibrary{decorations.pathmorphing}
 
 
-\newcommand{\kErn}{\ensuremath{\mathcal{K}}
-\newcommand{\tSys}{\ensuremath{\mathbb{T}}
+\newcommand{\kErn}{\ensuremath{\mathcal{K}}}
+\newcommand{\tSys}{\ensuremath{\mathbb{T}}}
+
+%\newcommand{\tSys}{\ensuremath{T}}
+
 \newcommand{\procOne}{\ensuremath{\mathcal{P}_1}}
 \newcommand{\procTwo}{\ensuremath{\mathcal{P}_2}}
 \newcommand{\fFunT}{\ensuremath{\mathcal{F}_t}}

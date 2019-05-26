@@ -5,7 +5,7 @@
 
 \AddToShipoutPicture{%
   \AtPageLowerLeft{%
-    \hspace*{1em}
+    \hspace*{3pt}
  \rotatebox{90}{%
         \begin{minipage}{\paperheight}
    \centering

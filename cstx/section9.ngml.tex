@@ -3,8 +3,8 @@
 \q{Channel Algebra} and how it can lead to a 
 theory (and practice, in a sense) of formal 
 and natural-language grammar.  Channel Algebra 
-is discussed in greater detail in \cite{Neustein}.  
-It's fairly divergent from other formalizations 
+is discussed in greater detail in \cite{NathanielChristenCyberphysical}.
+It is fairly divergent from other formalizations
 in computer science, though loosely decended from 
 Process Algebras and from the \q{sigma calculus}, 
 which is a formal model of Object-Oriented 
@@ -25,7 +25,7 @@ implementation in lieu of a technical or
 mathematical axiomatic description.
 }
 \p{In the present context I want to focus on Channel Algebra as a 
-potential theory in linguistic \mdash{} particularly 
+potential theory in linguistics \mdash{} particularly
 Cognitive Grammar \mdash{} but initially I'll describe 
 the underlying theory in a more computational manner.  
 A lot of the Channel Algebra formalization carries 
@@ -56,7 +56,7 @@ our identification that a software system represents facts
 paragraphs in the earlier discussion) \mdash{} depends on the 
 software possessing capabilities to display the 
 information (usually visually).  In other words, 
-among the total of all procedures that can be performed by 
+among the totality of all procedures that can be performed by
 the system, only a small set of procdures are involved in 
 user-interactions where semantic intentions like 
 \q{this piece of data represents someone's full name} are 
@@ -72,7 +72,7 @@ intended to model the proposition \q{This person has full
 name Jane Doe} should not be seen as \q{meaning} anything about 
 full names.  Instead, it represents some computational 
 artifact which \i{becomes} an asserion of that fact 
-when a procedure is eventually calld which converts 
+when a procedure is eventually called which converts
 the full name to a (usually visual) representation 
 which a human user would recognize as a view 
 on a full name (and hence on the proposition).
@@ -148,7 +148,7 @@ portion of information, present in some structured system,
 can be extracted by identifying elements in 
 the system with types in a suitably developd 
 type system \tSys{}.  In the case of Natural Language 
-\mdash{} specifically Cognitiv Grammar \mdash{} this means that 
+\mdash{} specifically Cognitive Grammar \mdash{} this means that
 many syntactic and semantic details for each word 
 in a sentence can be provided by mapping words to types.  
 As I have mentioned, linguists like Luo and Pustejovsky 
@@ -181,7 +181,7 @@ defines criteria on data parameters such as ranges,
 dimensions (called \q{units} in CSML), and structural 
 protocols (including CSML \q{scales}) \cite[p. 6]{RaubalAdamsCSML}.  
 As a concrete example, the biomedical concept \q{blood pressure} 
-is usually understood as a pair of numbers whose dimnsions ar 
+is usually understood as a pair of numbers whose dimnsions are
 each in kilopascals (kPa) and whose first number 
 (systolic pressure) is necessarily greater than 
 the second (diastolic) \mdash{} technically, the pair 
@@ -207,9 +207,10 @@ criterion is an example of the structure of
 dependent-product types (in this case because the valid range for 
 the second number depends on the value of the first), 
 a construction which elsewhere is used for Natural 
-Language semanticcs, e.g. \cite[p. ?]{Luo}.
+Language semanticcs, e.g. \cite[p. 40]{ZhaohuiLuo}
+and \cite{LuoSoloviev}.
 }
-\p{Th point of this example is that many scientific concepts 
+\p{The point of this example is that many scientific concepts
 \mdash{} the semantic norms embedded in how scientific terms are defined 
 and understood and how the concepts ar used in scintific theories 
 and research \mdash{} can be rigorously specified with a suitably 
@@ -241,11 +242,11 @@ enable these flexible, multi-purpose type systems.
 \p{Another way of expressing this idea is that type systems 
 should be \i{multi-paradigm}.  Suppose we are using a 
 collection of types to model the semantics of some linguistic 
-or scientific model.  We may realize that ther are some 
+or scientific model.  We may realize that there are some
 crucial semantic formulations that need to be recognized 
 within the type system itself, if this 
 type-oriented modeling is to be comprehensive.  For 
-esample, in a link-grammar context, we may recognize 
+example, in a link-grammar context, we may recognize
 that, in addition to assigning semantic and/or 
 Part-of-Speech types to individual words, we need to 
 represent the \q{potentialities} latent in words 
@@ -270,7 +271,7 @@ theories have as their subject matter.
 \p{One virtue of organizing a type system \tSys{} around 
 \i{procedures} is that this \q{multi-paradigm} 
 flexibility becomes easier to achieve when we can directly 
-model requirements on procedures, and how procedurs 
+model requirements on procedures, and how procedures
 interact with types (for instance, each type needs 
 one or more procedures to construct elements 
 of that type).  As I said earlier in this section, we 
@@ -310,8 +311,8 @@ talk of these input and output collections as
 has an \i{input} channel \mdash{} that's where it vgets 
 its arguments from \mdash{} and an \i{output}  
 channel, where it provides a result.  The term 
-\q{channel} is usually usd in the context of 
-\q{process algebras} where procedurs can run concurrently, 
+\q{channel} is usually used in the context of
+\q{process algebras} where procedures can run concurrently,
 and channels may be two-way means of communication between 
 concurrent procedures.  For this paper, I will only 
 consider \i{sequential} procedurs \mdash{} where two 
@@ -324,7 +325,7 @@ back via the same channel (although it can \i{modify} the
 value in the channel).
 }
 \p{While type theory may conceive functions as (in effect) 
-a combination of input and ouput channels, actually programming practice 
+a combination of input and ouput channels, actual programming practice
 reveals multiple distinct \i{kinds} of input and output 
 channels.  In Object-Oriented programming, Objects are 
 passed to functions (i.e., \q{methods}) using a 
@@ -358,7 +359,7 @@ explicit documentation of which symbols are
 regular arguments are listed in parentheses, which 
 helps reinforce the idea that inputs via 
 symboo-capture are similar to inputs via argument-passing 
-(which I say in Channel Alegebr as \i{lambda} and 
+(which I say in Channel Alegebra as \i{lambda} and
 \i{capture} being both input channels).
 }
 \p{Nested procedures can also be used to represent branching and 
@@ -378,7 +379,7 @@ for this condition, e.g. in \Cpp{}, is \q{break}).
 might have pseudo-code like this:
 \begin{sentenceList}\sentenceItem{} int $x$ = 0;
 \sentenceItem{} loop \{
-\sentenceItem{} \hspace{1em} if ($x$ > 10) break;
+\sentenceItem{} \hspace{1em} if ($x$ $>$ 10) break;
 \sentenceItem{} \hspace{1em} ++$x$;
 \sentenceItem{} \} // end the loop
 \end{sentenceList}
@@ -427,16 +428,16 @@ might want to classify as nouns don't seem to:
 \sentenceItem{} The latest reports are forecasting snow.
 \end{sentenceList}
 We might want to consider \i{today}, \i{it}, 
-and \i{they} as de-facto nouns, but notic the adjctival 
+and \i{they} as de-facto nouns, but notice the adjectival
 constructions do not carry over: we can't say 
 \q{big today}, \q{lousy it}, or \q{latest they}. 
 }
 \p{In other words, some restriction on the \q{adjective} 
 and \q{noun} types must be identified which 
 blocks constructions like \q{big today} being parsed as valid 
-exampls of \i{big} as an adjective type-instance.  
+examples of \i{big} as an adjective type-instance.
 One option might be to define the adjective and noun 
-\q{types} more narrowly, which is more in the spirit of 
+\i{types} more narrowly, which is more in the spirit of
 type-theoretic semantics.  In that case, we 
 don't take adjectives, say, as \q{functions} 
 which input and output \i{any} noun, but rather 
@@ -448,14 +449,14 @@ on different noun types.  For example, the adjectives
 \end{sentenceList}
 can only be attributed to persons, so qua functions 
 these adjectives only \q{input} persons, as a subtype 
-of nouns in gneral.  Via Link Grammmar, on the other hand, 
+of nouns in general.  Via Link Grammmar, on the other hand,
 the basic theory involves adding extra conditions on 
 the adjectives and nouns involved, which are required 
 (along with the underlying type-compatibility) 
 to permit the function (the adjective) to input 
 the argument (the noun).   Then \i{today}, \i{it}, 
 and \i{they} cannot take adjectivs because they do not have 
-the proper \q{connectors}.  Of course, both idas 
+the proper \q{connectors}.  Of course, both ideas
 can be combined, so we can define 
 nouns and adjectives restricted to 
 narrower subtypes (like person, living 
@@ -480,7 +481,7 @@ this conecpt/lexeme can be modified by an adjective,
 and similarly a related connector inheres to 
 the \i{output} of the \q{departmental} 
 procedure.  So there is a kind of output-channel 
-establishing which connectors ar eavailable on procedural 
+establishing which connectors are available on procedural
 outputs (connectors of the same varieties as 
 would be available on individual words), and 
 special input-channels which similarly model 
@@ -494,14 +495,14 @@ reprsent the connector channels as distinct from
 the regular input and output channels, whose parameter-types 
 are orthogonal to the language's connector-system.  
 }
-\p{I have, in any case, hereby prsented eight different kinds 
+\p{I have, in any case, hereby presented eight different kinds
 of channels applicable to different programming- or 
 natural-language constructions: \i{lambda}, \i{sigma}, 
 \i{capture}, and \i{input-connector} on the input 
 side; \i{return}, \i{error}, \i{control}, 
-and \i{output-connector} on the output side.  
-Later I will introduce a few other channels.  
-Notice though that the range of different channels, 
+and \i{output-connector} on the output side
+(later I will introduce a few other channels).
+Notice that the range of different channels,
 each with distinct semantics and theoretical 
 roles, extends far beyond the basic intuition 
 that every procesure has some inputs and some outputs.  
@@ -521,7 +522,7 @@ on specialized \q{channels}.
 \p{The notion of \i{channel} is therefore closely tied to the notion 
 of \i{procedure}, and \i{types} are similarly specified 
 via both procedures and channels.  That is, most of 
-th complex typs in a type system are functional 
+the complex types in a type system are functional
 types, which in turn are characterized in 
 part by the kind of channels used by instantiating procedures.  
 In principle, function-types are differentiated by the \i{kinds} 
@@ -587,7 +588,7 @@ almost any practical type system
 is associated with \i{values} of that type, and usually 
 \i{sets} of values.  That is, intuitively, for any 
 type (say, 16-bit signed integers) there is a 
-set of values whichba are the \q{inhabitants} of 
+set of values which are the \q{inhabitants} of
 that type.  One weakness of this picture is that 
 many types vary in terms of \i{what} set of values is actually 
 representable in a given computational context.  The 
@@ -629,14 +630,14 @@ rough analogy to \q{point-free} topology
 the notion of \i{value} is the idea of a \i{carrier}.  
 A carrier is a computational construct \mdash{} symbolically 
 represented by a source-code token \mdash{} which represents an 
-instance of a type.  Each carrier is asspociatd 
-with on canonical type (though carriers may be indirectly 
-associatd with supertypes of its canonical type).  
+instance of a type.  Each carrier is associated
+with one canonical type (though carriers may \q{hold values}
+associated with supertypes of its canonical type).
 When we talk about procedures calling other 
 procedures, we really mean that the value of symbols in one 
 body of code (whre the calling procedure 
-is implemented) is sychronized with tge value of symbols in 
-anothr stretch of code (where the callee is implemented).  
+is implemented) is sychronized with the value of symbols in
+another stretch of code (where the callee is implemented).
 In short, at any stage of program execution, we can form 
 groups of source-code symbols across the code base unified by 
 the guarantee that these symbols carry \q{the same} value.  
@@ -644,18 +645,18 @@ But rather than talking of values directly we can
 take this syncronization between symbols as the deeper notion: 
 the notion \i{value} is itself defined as the correlation exhibited 
 by synchronized \q{symbols}.  The notion of 
-\q{carrir} is then a more rigorous extension of the 
+\q{carrier} is then a more rigorous extension of the
 notion of source-code symbols or tokens.
 }
 \p{The difference between a \i{carrier} and a \i{type} is that 
-carrier have aditional states.  Some carriers are defind in 
+carriers have aditional states.  Some carriers are defind in
 function signatures, but others are introduced as lexical 
 symbols in a procedure implementation.  In many programming 
 languags, lexical symbols can be \i{declared} before being 
 \i{defined}.  We can represent this scenario via a \i{carrier} 
 which is in a particular \i{state} (I'll call it 
 \i{preinitialized}).  When a carrier is initialized, it takes on 
-a sftate of holding a specific typed value \mdash{} \i{values} are 
+a state of holding a specific typed value \mdash{} \i{values} are
 defined indirectly as characteristics of carriers in initialized 
 states.  At some point (consider a pointer to deleted memory) carriers 
 no long hold meaningful values, and they enter a 
@@ -665,14 +666,14 @@ the type-system: we do not have to assume a \q{preinitialized}
 \i{value} which can be an \i{instance} of some types.  In some cases, 
 type systems \i{will} reognize values which play 
 similar semantic roles to these carrier-states: for example, 
-Haskell's \q{bottom} value is an instane of ervery typ and represents a 
+Haskell's \q{bottom} value is an instance of every type and represents a
 \q{null} or \q{missing} value.  However, using semenatics of carrier-states 
 rather than type-instancs means that we do not have to introduce extra 
 structure to type systems which we may want to model via Channel Algebra.
 }
-\p{Carrier which can be in preinitialized, retired, or initialized states 
-are called \i{tropes} (there may be only one, or multiple, 
-initialized states for tropes).  A different class of carriers ar e
+\p{Carriers which can be in preinitialized, retired, or initialized states
+I call \i{tropes} (there may be only one, or multiple,
+initialized states for tropes).  A different class of carriers are
 called \i{emblems}, and represent abstract (\q{emblematic}) 
 specfications on 
 carriers rather than carriers which hold concrete values: 
@@ -681,7 +682,7 @@ signatures.  One or more carriers in an ordered list then
 form \i{channels} (though a channel can also be \i{empty}, 
 with no carriers).  I distinguish an \i{empty} channel, 
 which exists but has no carriers, from a 
-\i{vacant} channel which does jot exist at all.  For instance, 
+\i{vacant} channel which does not exist at all.  For instance,
 a function that \i{can} throw exceptions but, at some point, 
 has returned a normal value instead, has an \i{empty} 
 error channel; a function which can \i{never} throw 
@@ -696,7 +697,7 @@ operators, which give Channel Algebra its \q{algebraic} character.
 To present these oprators I'll also intoduce the notion 
 of \i{stages}.  Briefly, any procedure is broken down 
 into a sequence of stages, each of which involves 
-constructing som aggregate of chanels.  The basic 
+constructing some aggregate of chanels.  The basic
 outline is as follows:
 \begin{description}\item[Carrier Append]  Any staged channel can append 
 a trope, and any abstract channel can append an 
@@ -724,8 +725,8 @@ number to an integer.
 can be \i{allied with} a channel \i{complex} 
 (written \ChpAlliedChx{}) if carriers in \Chp{} and \Chx{} 
 are \q{alignable}.  The actual description of such 
-alignment is non-trivial; in \cite{Neustein} I address this 
-in terms of hypergraph models of computer code.  But in 
+alignment is non-trivial; in \cite{NathanielChristenCyberphysical}
+I address this in terms of hypergraph models of computer code.  But in
 general alignment means that handoffs are possible between 
 tropes and emblems, and if there is enough alignment 
 the chanel \i{package} \Chp{} can be interpreted as a call 
@@ -743,7 +744,7 @@ two different source-code graphs.
 }
 \p{Each of these operators represent a step in a computational 
 process whereby channel packages are constructed and then 
-evaluated, which overbthe course of several stages 
+evaluated, which over the course of several stages
 (in general) provides implementation of procedures.  
 A single operator is associated with a \i{microstage}, 
 for example, appending one carrier to one channel.  
@@ -760,12 +761,12 @@ direct translation of Channel Algebra oprations.
 }
 \p{One of the technical challenges of using this strategy for 
 practical software developments involves mapping 
-sophisticated Channl semantics to ordinary 
+sophisticated Channel semantics to ordinary
 type systems.  Since a language like \Cpp{} does not 
-support the full range of channels I have or will presented 
+support the full range of channels I have presented
 here, the more detailed channel-complees have to be mapped to 
 function-call semantics which  \Cpp{} will actually 
-recognize.  In practice, alot of this work involves 
+recognize.  In practice, a lot of this work involves
 manipulating function pointers and casting carriers 
 to generic binary representations, like arrays of 
 \voidP{}-pointers.  These techniques are not especially 
@@ -796,16 +797,16 @@ involve stack machines at their most primitive level.
 semantic levels.  The Channel Algebra operators define 
 one, intermediate level whose main theme is building channel 
 packages.  At a \q{lower} level each package must be evaluated 
-at runtim, for instance by converting it to a 
+at runtime, for instance by converting it to a
 \Cpp{} function-call, so the semantic issues there are 
 identifying the proper \Cpp{} function (or function-pointer) and 
 marshaling the channels to mimic the \Cpp{} ABI (Application 
 Binary Interface).  Conversely, at a higher level, 
-source-code formations are interprted in terms of the channel 
-products they imply: so in code like \i{x = y->f(z)} the 
+source-code formations are interpreted in terms of the channel
+products they imply: so in code like \i{x = y$->$f(z)} the
 implicit channels are likely populated as follows: $z$ goes 
-into $f$'s \i{lambda}, channel, $y$ into its \i{sigma}, 
-and $x$ becoms bound to its \i{return} (of course whether this 
+into $f$'s \i{lambda} channel, $y$ into its \i{sigma},
+and $x$ becomes bound to its \i{return} (of course whether this
 is the actual meaning of the code depends on the 
 high-level language's formal grammar).  This implies 
 that grammars can be organized around the channel structures 
@@ -847,7 +848,7 @@ itself: for example, a program emulating a
 calculator relies on human users to type numbers 
 on a kyboard or by pushing buttons on a User Interface.   
 Other times values are literally written 
-in computer code, or 8btained from files, databases, 
+in computer code, or obtained from files, databases,
 or over a network.  
 }
 \p{For sake of discussion, we can limit attention to 
@@ -944,11 +945,11 @@ thse to get shorter and shorter (and eventually
 empty) lists.  This means that algorithms can 
 traverse a chain of constructors \q{backward} and 
 will be guaranteed to terminate.  For example, 
-to dtermine if a list of numbers contains 
+to determine if a list of numbers contains
 the number $n$, it is easy to check if it \i{ends} 
 with $n$.  If not, \q{reverse} the construction, and 
 see if each smaller list ends with $n$.  Eventually we 
-would reach the mpty list, meaning that the 
+would reach the empty list, meaning that the
 original list did \i{not} have $n$. 
 }
 \p{The possibility of \q{reversing} constructors is a familiar 
@@ -959,7 +960,7 @@ functions and sparing use of side-effects and mutable state.
 On the other hand, pattern matching relies on some 
 simplifying assumptions that may not be consistent with 
 all type systems.  For example, \Cpp{} is laxer about how 
-valus are constructed; I can obtain a list of numbers by 
+values are constructed; I can obtain a list of numbers by
 dereferencing a pointer to a list, with no information 
 about the provenance of the referenced data.  Data types in 
 \Cpp{} do not usually carry around details about their 
@@ -985,7 +986,7 @@ to \q{un-construct} the value to support pattern matching?
 are not literal) which also are neither trivial nor reversible?
 \end{enumerate}  
 Notice that a trivial constructor does not necessarily produce 
-a defaukt value.  For example, a type meant to represent 
+a default value.  For example, a type meant to represent
 days of the week could default to whichever day is current 
 when a constructor is called: if an application is run on 
 Tuesday, the day-of-week trivial constructor would return 
@@ -1019,7 +1020,7 @@ a function which must take a (maybe monotone)
 increasing or decreasing pair of numbes (I used the 
 monotone-decreasing example for systolic and diastolic 
 blood pressure).  Suppose we implement a procedure to 
-highlight a selection of characters in a screeen display, 
+highlight a selection of characters in a screen display,
 whose inputs are the start and end character indices in 
 some displayed text.  We want to indicate that the second number 
 (call it $y$) must be greater than the first ($x$).  
@@ -1094,7 +1095,7 @@ greater than $x$.
 }
 \p{The larger point of this whole subsection is that 
 details about the nature and existence of types' constructors 
-can provide useful concptual information about types 
+can provide useful conceptual information about types
 themselves.  Often this information dovetails 
 with the metadata pertinent to Conceptual Space Theory 
 and CSML.  Consider a simple but representative example of 
@@ -1109,15 +1110,15 @@ this type of object: should there be one \q{pod-tuple} constructor
 that takes all 13 values in a flat list?\footnote{\q{POD} is a 
 common coder's parlance for \q{plain old data}, and it generally 
 describes data structures conformant to \i{struct}s in the 
-C languag, rather than \Cpp{} classes.  A typical feature 
+C language, rather than \Cpp{} classes.  A typical feature
 of \i{struct}s is that they are initialized by listing all of 
 their fields in one tuple.
 }  Should there be distinct data types for 3-vector 
 colors or 4-vector colors (including transparency)?  Should the 
 top-left point be merged into one 2-vector point type?  
 The rectangle-constructor could potentially have its 13 fields 
-folded into 5: two color 4-vectors, one top-left point, 
-width, height, and border-width.  Or border width and color can 
+folded into 5: two color 4-vectors; one top-left point;
+width; height; and border-width.  Or border width and color can
 be merged into one \q{border} type.  On top of that there is the 
 question of default values: should pure black, or maybe pure 
 white, be a default color for the interior?  Should the 
@@ -1173,13 +1174,13 @@ could be at last suggestive of procedural patterns factoring
 in to natural-language understanding.
 }
 \p{Before going into detail, I think it's worth 
-distinguish different aspects of natural language 
+distinguishing different aspects of natural language
 where type theory may play a role.  
 On one level, very general Part of Speech classifications 
 can be approached type-theoretically.  This helps 
 reinforce the intuitive idea that syntactic categories like 
 verbs, adjectives, and adverbs corresponds to 
-concptual, cognitive processes which effectuat changes 
+conceptual, cognitive processes which effectuat changes
 in beliefs, conceptualizations, or situational 
 records.  A noun by itself is an abstract concept; 
 during the course of a sentence, it is 
@@ -1221,7 +1222,7 @@ nouns (as I argued in the last section), and
 so forth.  So Parts of Speech can be usefully analyzed 
 as \q{function-like} types (I will discuss 
 specific language examples arguing for this prespective 
-in the next section).  Thse are, however, very general 
+in the next section).  These are, however, very general
 types, which would be the \q{uppermost} types 
 in a natural language semantcs; I will call 
 these \i{macrotypes}.
@@ -1238,7 +1239,7 @@ criteria: neither extension nor attributes alone
 fully characterizes a concept, either cognitively 
 or extra-mentally.  In particular, practical fluency 
 in a concept involves knowing canonical examples 
-(like seing many of the medium-size, traditionally 
+(like having seen many of the medium-size, traditionally
 architected dwellings that would be prototypical 
 \i{houses}) and also the prototypical features 
 that characterize the concept (houses are 
@@ -1279,14 +1280,14 @@ a type/set interface similar to my analysis earlier of
 \q{students polled} (\ref{itm:maj}).  And (\ref{itm:elephant}) 
 suggests an \i{intensional} filter, narrowing a type 
 for contxtual purposes into a subtype that is 
-concptually meaningful but not ntrenched: 
+conceptually meaningful but not entrenched:
 there is no common word (peer to \q{kitten} 
-or \q{puppy}) for \q{baby elephant}.  
+or \q{puppy}) for \i{baby elephant}.
 }
 \p{All of these operations \mdash{} fine-tuning 
 concepts to the specific ideas salient in a 
 specific signifying act \mdash{} have plausible 
-representations based on a concepts-as-typs 
+representations based on a concepts-as-types
 analogy, and suggest another level where 
 type theory could be an effective formalizing 
 tool.  But in this case, we are discussing 
@@ -1327,12 +1328,12 @@ a restaurant as a location, a
 building (with commercial and architectural properties), or 
 an institution/organization.  Note that we can distinguish 
 the commercial/architectural sense from the institutional sense: 
-to \i{close} can be temporary (as in \label{itm:koreanclosed}), 
+to \i{close} can be temporary (as in \ref{itm:koreanclosed}),
 which we hear in conjunction with the former sense, or 
 more permanent as in \q{cease operations}, i.e., close 
 \q{qua institution}.  The former sense seems to mix 
 the institutional and location sense: while location 
-is not explicit as in \label{itm:koreanstore}, an asserion 
+is not explicit as in (\ref{itm:koreanstore}), an asserion
 that some \i{chain} restaurant is closed today would usually be 
 heard as referring to one location, not the 
 entire chain.  In (\ref{itm:bark}) through (\ref{itm:kitten}), 
@@ -1345,7 +1346,7 @@ no conventionalizing pressues.  The (\ref{itm:bark}) and
 mean.  But (\ref{itm:kitten}) does not sound right, even though 
 it is no more of a strecth to imagine a kitten's 
 hissing as argry bark-like than a boss's orders.  
-Perhaps the \i{lotral} similarity btween cats and 
+Perhaps the \i{literal} similarity between cats and
 dogs maks the figurative usage harder to accept 
 as a purported abstraction from literal situations.
 }
@@ -1385,11 +1386,11 @@ rather than personalistic \mdash{} but here we
 care operating between typs of comparable Ontological 
 granularity (anatomical part/medical ailment to 
 person/physical thing)  But semantically and 
-syntacticallly (\ref{itm:actup}) seems a lot 
-like (\label{itm:bark}), even though the ploy 
-in that cast is to compare things to a lexical 
+syntactically (\ref{itm:actup}) seems a lot
+like (\ref{itm:bark}), even though the ploy
+in that case is to compare things to a lexical
 \q{clique} (dogs).  And in (\ref{itm:koreanloyal}) 
-we infer some \i{person} complimnted the speaker, but 
+we infer that some \i{person} complimented the speaker, but
 this is more of a synecdoche than a cross-type 
 cast like (\ref{itm:koreanstarted})-(\ref{itm:koreanstarted}): 
 the point is not that a restaurant has a personhood 
@@ -1398,7 +1399,7 @@ the point is not that a restaurant has a personhood
 aspect) but that reference to the restaurant can be proxy 
 for people closely associated with it.
 }
-\p{Another complication for type-case theories is potential 
+\p{Another complication for type-cast theories is potential
 ambiguity between word-senses and coercing 
 \q{usages}, as in:
 \begin{sentenceList}\sentenceItem{} \label{itm:teaduck} Tea-smoked duck is a Sichuan delicacy.
@@ -1411,29 +1412,29 @@ Wedding ducks are made of wood;
 tea-smoked duck is a kind of food; 
 rubber ducks are toys (is the phrase descriptive 
 \mdash{} ducks which happen to be rubber \mdash{} or 
-a distinct noun-concept, like \q{decoy duck}?).  This translation 
+a distinct noun-concept, like \i{decoy duck}?).  This translation
 from one branch of sub/supertype relations to another is 
 what we would expect of type-cases, but 
 we can also see these cases as distinct lexemes, or 
-word-senses, or entrenched phrases with de facto lxical 
+word-senses, or entrenched phrases with \i{de facto} lexical
 status.  The overall picture which seems to 
 emerge is that type-coercions remain relatively 
 metaphorical or metonymic in cases like 
 (\ref{itm:bark}) or (\ref{itm:koreanloyal}); 
 become idiomatically entrenched in cases like 
 (\ref{itm:koreanstore}) and (\ref{itm:koreanstarted})
-\mdash{} especially where there is a similar sccale of 
+\mdash{} especially where there is a similar scale of
 granularity btween mesotypes in a coercion \mdash{} and can 
 become \i{lexically} entrenched in cases like 
 (\ref{itm:rubberduck})-(\ref{itm:weddingduck}).
 }
-\p{Let's assume in any case we can give a thorough 
+\p{Let's assume in any case that we can give a thorough
 analysis of type-coercions as semantic devices.  
 This is still working on the level of generalized 
-lexical use-patterns; we are not arefully studying the 
+lexical use-patterns; we are not studying the
 \i{cognitive} steps involved in actuallly 
 making whatever imagistic, situational, or 
-conceptual modifications are directed by a type-case.  
+conceptual modifications are directed by a type-cast.
 In other words, there is a cognitive process of 
 thinking of a restaurant (say) and 
 then revising this framing to accommoate senses like 
@@ -1468,7 +1469,7 @@ cross-mesotype or cross-microtype
 macro-, meso-, and microtypes are distinct thoretical 
 posits with different analytic mthodology; 
 but sometimes the boundaries between micro- and 
-meso, and thir analyses, seem to plur.  Analogous comments 
+meso, and thir analyses, seem to blur.  Analogous comments
 can apply to the meso/macro boundary as 
 evinced by issues like classifying forms 
 of pluarality, as in \cite{MeryMootRetore}'s 
@@ -1476,8 +1477,8 @@ analysis of noun plurals.
 }
 \p{This metathoretic hemming and hawing may be 
 acceptable \mdash{} even desirable \mdash{} at the philosophical 
-level.  But it causes problems if wecwant to se 
-typ thory as a formalizing (albit simplifying) 
+level.  But it causes problems if we want to see
+type theory as a formalizing (albeit simplifying)
 window onto cognitive-linguistic processes.  
 In a computational context values have one canonical 
 type; they can be cast to other types but 
@@ -1500,18 +1501,18 @@ but $y$ itself is not presented as having a dependent
 type.  In short, \i{greater than x} is not presented 
 as an \i{alternative} type for $y$, nor is $y > x$ presented 
 as an alternative \i{value} as if we are \q{casting} 
-$y$ from a wider to narrower type.  Howevercwe are 
+$y$ from a wider to narrower type.  However, we are
 asserting properties of $y$ by certifying that such 
 casts \i{would} be possible.  
 }
 \p{I think this may be a useful analogy to how 
-type-cases work in practice in Natural Languages, 
-especially in complex cases where multipl word-senss are 
+type-casts work in practice in Natural Languages,
+especially in complex cases where multiple word-senses are
 involved.  Not every type associated with a word 
-makes sense in every conceptualization.  When for instance we 
-attend to the concptual properties of a book as an 
-intellectual object there may be physical details which 
-are conceptually incompatibl with this attitude.  It would be 
+makes sense in every conceptualization.  When, for instance, we
+attend to the conceptual properties of a book as an
+intellectual object, there may be physical details which
+are conceptually incompatible with this attitude.  It would be
 simpler if there were a neat partition among senses, and 
 some overarching cognitive order \mdash{} Ok, now we're figuring 
 the book as physical; now it's an intellectual 
@@ -1519,7 +1520,7 @@ artifact; now it's a commodity \mdash{} supervises the
 coercions back and forth.  Neither semantic nor syntactic 
 evidence warrants this simpler picture: it seems more as 
 if conceptualization across types is a matter of 
-nerworked cognitive procedures taking turns operating 
+networked cognitive procedures taking turns operating
 on one conceptual package, where latent type atttributions 
 are available to each procedure whether or not they are 
 \q{usable} in the sense of involving type structures 
@@ -1527,7 +1528,7 @@ that logically fit each procedure's purpose.
 }
 \p{I will give concrete cases of word-senses that I think 
 substantiate this picture in the next section.  
-Here, though, I'l conclude as follows: 
+Here, though, I'll conclude as follows:
 Channel Algebra can perhaps model what is going 
 on insofar as procedures can take \q{rider} channels 
 that can add detail to procedural inputs.  In a 
@@ -1535,20 +1536,20 @@ cognitive-linguistic setting, we can imagine these riders as
 multifaceted and complex.  Because riders are not part 
 of procedures' actual inputs, they do not necessarily need 
 to use types that the procedure recognizes or knows about; 
-the riders may only come into plays as values are 
+the riders may only come into play as values are
 passed among procedures.  The analogous computational 
 case would be some extra data associated with a value that 
-is only relevant for certain scurity-oriented 
+is only relevant for certain security-oriented
 validations; i.e., permissions to modify a file.  Functions 
 can pass around such values without considering the security-related 
-data, except for a few procdures where scurity-sensitive 
+data, except for a few procedures where security-sensitive
 operations are attempted.  So the security details are 
 \q{part} of the data carried by a value, but only 
 become semantically salient parts in certain procedural contexts.  
 Rider channels are a way to represent this kind of 
 extra information within a type system directly.  
 I think they are a plausible analogy for 
-cognitive re-inscriptions thatboccur 
+cognitive re-inscriptions that occur
 in the evolving significations in a sentence, 
 according to analyses like I will entertain 
 in the next section.

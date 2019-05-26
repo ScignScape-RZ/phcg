@@ -407,7 +407,8 @@ just as a formal system but an interactive social reality.
 `p`
 
 `p.
-I have sketched a similar theoretical progression, starting with a theory of
+I have (in the last two sections) sketched a
+similar theoretical progression, starting with a theory of
 grammar (Link Grammar), transitioning to a form of semantics (a type-theoretic semantics
 defining type hierarchies and signatures over linkage graphs), and finally proposing a
 cognitive interpretation of the resulting semantics.  I will refer to this
@@ -460,7 +461,11 @@ believe in and practice a rigorous formalization of morphosyntactic structure,
 where the `i.pattern` of conceptual `q.side-effects` can be seen as
 unfolding in algorithmic ways, the cognitive `i.details` of these
 effects are too situational, and phenomenologically rich, for
-computability as ordinarily understood.  But the formal structure is
+computability as ordinarily understood.
+`p`
+
+`p.
+But the formal structure is
 not wholly irrelevant: to call up nuanced cognitive schema
 %-- or so I submit for consideration %-- may not be possible without
 algorithmically reproducible lexicosemantic and morphosyntactic triggers,
@@ -473,7 +478,8 @@ in context, is called into focus in conversants' minds by morphosyntactic
 invitations, by speakers' choices of, say, `mbox.`NSingToNPl;`/-pattern
 phrases.  The important balance is to take formalization as far as is reasonable
 without being seduced into logico-symbolic reductionism %-- a
-methodological pas de deux I will explore further in the next, concluding section.
+methodological pas de deux I will explore further in the next section, a brief
+concluding coda to this paper.
 `p`
 
 `p.

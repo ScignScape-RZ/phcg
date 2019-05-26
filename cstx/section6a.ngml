@@ -768,9 +768,7 @@ typically actually perform:
 they debuted new songs.
 `sentenceItem; \label{itm:teamflew} The team flew to
 New York and they played the Yankees.
-`sentenceItem; \label{itm:teamflew} The team flew to
-New York and they played the Yankees.
-`sentenceItem; \label{itm:theflies} The city’s largest theater company
+`sentenceItem; \label{itm:theflies} The city's largest theater company
 will perform `q.The Flies`/.
 `sentenceList`
 
