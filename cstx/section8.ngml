@@ -23,9 +23,13 @@ phenomena.
 
 `p.
 Link Grammar is, depending on one's perspective, either related
-to or a variant of Dependency Grammar (DG), which in turn is
+to or a variant of Dependency Grammar (DG), `cite<DebusmannThesis>;,
+`cite<Debusmann>;, `cite<DebusmannDuchierRossberg>;,
+`cite<Nivre>;, `cite<HongEisner>;, `cite<AkbikBross>;, which in turn is
 contrasted with `q.phrase structure` grammars, such as
-Head-Driven Phrase Structure Grammar (HPSG).
+Head-Driven Phrase Structure Grammar (HPSG)
+`cite<KongRushSmith>;, `cite<KepserMonnich>;,
+`cite<Schneider>;, `cite<XiaPalmer>; (for example).
 Link and Dependency Grammars define syntactic structures in
 terms of word-pairs; phrase structure may be implicit to
 inter-word relations but is not explicitly modeled by

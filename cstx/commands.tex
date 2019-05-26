@@ -584,6 +584,30 @@
 
 \usetikzlibrary{decorations.pathmorphing}
 
+\newcommand{\longdash}{---}
+
+\usepackage[breakable]{tcolorbox}% http://ctan.org/pkg/tcolorbox
+
+\newenvironment{frquote}{%
+%\begin{fcolorbox}{yellow!20!gray}{red!5}
+%\begin{flushright}
+\begin{tcolorbox}[
+	colback=orange!6,
+	colframe=yellow!20!gray,
+	width=1.95\linewidth,
+	arc=3mm, auto outer arc
+	]
+\begin{scriptsize}
+\begin{minipage}{57em}
+\begin{flushright}
+\begin{minipage}{58em}}{%
+\end{minipage}
+\end{flushright}
+\end{minipage}
+\end{scriptsize}
+\end{tcolorbox}
+%\end{flushright}
+}
 
 \newcommand{\kErn}{\ensuremath{\mathcal{K}}}
 \newcommand{\tSys}{\ensuremath{\mathbb{T}}}

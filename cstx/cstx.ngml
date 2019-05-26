@@ -19,11 +19,39 @@
 
 `title.Cognitive State Semantics and the 
 Interface Theory of Meaning`
+`author.Nathaniel Christen`
 
+\newsavebox{\qboxi}
+\newsavebox{\qboxii}
+
+\begin{lrbox}{\qboxi}
+`frquote,
+On conna\^{\OldI}t la c\'{e}l\`{e}bre affirmation de Claude L\'{e}vi-Strauss: 
+\q{les sciences humaines seront structurales ou ne seront pas}.  Nous aimerions lui en
+adjoindre une autre: \q{les sciences humaines seront des sciences naturelles ou ne seront pas}. 
+Evidemment, sauf \`{a} en revenir \`{a} un r\'{e}ductionnisme dogmatique, une telle
+affirmation n'est soutenable que si l'on peut suffisamment g\'{e}n\'{e}raliser le concept
+classique de \q{naturalit\'{e}}, le g\'{e}n\'{e}raliser jusqu'\`{a} pouvoir y faire droit, 
+comme \`{a} des ph\'{e}nom\`{e}nes naturels, aux ph\'{e}nom\`{e}nes d'organisation structurale.
+\\ \longdash{} Jean Petitot, \cite[p. 1]{PetitotSyntaxe}
+`frquote`
+\end{lrbox}	
+
+\begin{lrbox}{\qboxii}
+`frquote,
+The nature of any entity, I propose, divides into three aspects or facets, which we may call its
+	form, appearance, and substrate.  In an act of consciousness, accordingly, we must distinguish
+	three fundamentally different aspects: its form or intentional structure, its appearance or
+	subjective \q{feel}, and its substrate or origin.  In terms of this three-facet distinction, 
+	we can define the place of consciousness in the world.
+\\ \longdash{} David Woodruff Smith, \cite[p. 11]{DavidWoodruffSmith}
+`frquote`
+\end{lrbox}	
+
+\twocolumn[\begin{@twocolumnfalse}
 `maketitle;
-
 `abstract,
-\noindent Start with the question of conditions of possibility for 
+Start with the question of conditions of possibility for 
 language to exist: how spoken, written, or inscribed signs 
 differ from other kinds of things, enough to establish language as 
 something that exists in the world.  Language is a regime of 
@@ -44,8 +72,13 @@ Philosophy of Science %--
 arguing how Phenomenology and Cognitive Linguistics, while distinct traditions, can work powerfully in consort.
 `abstract`
 
+`flushright,
+\usebox{\qboxi}
+\usebox{\qboxii}
+`flushright`
+`decoline;
 
-`input<top-quotes>;
+\end{@twocolumnfalse}]
 
 `vspace<1em>;
 

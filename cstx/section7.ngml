@@ -407,7 +407,8 @@ paradigms for modeling real-world information systems %--
 particularly what has come to be called the `q.Semantic Web`
 %-- is built on a framework of description logic and
 `q.knowledge graphs` rather than (at least except very indirectly)
-anything that could be called `q.procedural data modeling`/.
+anything that could be called `q.procedural data modeling
+`cite<LaureVieu>;, `cite<BagetEtAl>;, `cite<Sowa>;.
 There is, of course, a robust ecosystem of network-based
 code-sharing that provides a viable infrastructure for
 a more procedural data-sharing paradigm.  To illustrate the contrast,
@@ -658,7 +659,8 @@ grounding rather than a logical one as ordinarily understood.
 A case in point would be how Jean Petitot situates
 phenomnological analysis in certain soecific genres of Categories,
 like sheaves and presheaves, in his `q.Morphological Eidetics`
-chapter in `i.Naturalizing Phenomenology` and elsewhere.
+chapter in `i.Naturalizing Phenomenology`
+`cite<NaturalizingPhenomenology>; and elsewhere.
 `p`
 
 `p.
@@ -698,7 +700,8 @@ computational framework %-- simulating cognitive
 processes via software or comparing artificial
 constructions of perceptual objects (via Virtual Reality,
 3D graphics, 3D printing, robotics, etc.) to lived
-exprience.  In particular, graphics engineers have a rich theory
+exprience `cite<GiuseppeRiva>;.  In particular,
+graphics engineers have a rich theory
 about how to create realistic (albeit not truly life-like) 3D
 models and scenes.  The mathematical and computational
 elements in this theory %-- triangular, quadrilateral, and

@@ -40,7 +40,8 @@ it is reasonable to build semantic formalization on top of grammar theories.
 Link Grammar, for example, explicitly derives `q.link types` %-- species of word-to-word
 relations %-- by appeal to `q.Categorial` grammars which define parts of
 speech in terms of their manner of composition with other, more `q.fundamental` parts
-of speech `cite<Kiselyov>;, `cite<Rossi>;, `cite<MartinPollard>;.  The most primordial
+of speech `cite<Kiselyov>;, `cite<Rossi>;, `cite<MartinPollard>;, `cite<EyreLawry>;;
+`cite<BoasSag>;; `cite<MaryDalrymple>;.  The most primordial
 grammatic categories are generally seen to be nouns and
 `q.propositions` (self-contained sentences or sentence-parts which assert individual states of
 affairs), and categories like verbs and adjectives are derived on their basis.  For example, a
@@ -63,8 +64,7 @@ the semantics, we can set aside Categorial Grammar notions like connecting
 With this abstracting, Categorial Grammar becomes similar
 to a Type-Theoretic Semantics which recognizes, in Natural Language, operational
 patterns that are formally studied in mathematics and computer science
-`cite<ZhaohuiLuo>;, `cite<MaillardClarkGrefenstette>;,
-`cite<ZhaohuiLuo>;, `cite<Pollard>;, `cite<MeryMootRetore>;.
+`cite<MaillardClarkGrefenstette>;, `cite<Pollard>;, `cite<MeryMootRetore>;.
 A verb, for example,
 `i.transforms` a noun into a sentence or proposition (at least an intransitive verb;
 other kinds of verbs may require two, or even three nouns).  In some schematic sense a

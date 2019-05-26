@@ -10,9 +10,10 @@ It is fairly divergent from other formalizations
 in computer science, though loosely decended from 
 Process Algebras and from the `q.sigma calculus`/, 
 which is a formal model of Object-Oriented 
-programming `cite<AbadiCardelli>;.  Channel Algebra 
-may also be seen as distantly related to Santanu 
-Paul's `q.Source Code Algebra` `cite<SantanuPaul>; 
+programming `cite<AbadiCardelli>;;
+`cite<SmithGibbons>;; `cite<Saghafi>;.
+Channel Algebra may also be seen as distantly related to
+Santanu Paul's `q.Source Code Algebra` `cite<SantanuPaul>;
 and to a network of discussions %-- not necessarily 
 coalesced into technical publications 
 %-- about how to unify Object Oriented 
