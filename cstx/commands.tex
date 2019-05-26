@@ -123,15 +123,17 @@
 \let\OldFootnoteSize\footnotesize
 \renewcommand{\footnotesize}{\scriptsize}
 	
-\newcommand{\Tnoindex}{\raisebox{-2pt}{\ensuremath{\mathcal{T}}}}
+%\newcommand{\Tnoindex}{\raisebox{-2pt}{\ensuremath{\mathfrak{t}}}}
+\newcommand{\Tnoindex}{\ensuremath{\mathfrak{t}}}
 
 \newcommand{\typeAbove}{%
 \raisebox{-1pt}{\rotatebox{90}{\begin{tiny}$\diagdown$\makebox[1pt][c]{$\diagup$}\end{tiny}}}}
 
 %\newcommand{\typeT}{\ensuremath{type\raisebox{.5pt}{\makebox[3pt][c]{-}}T}}
-\newcommand{\typeT}{\ensuremath{\mathcal{T}}}
+%\newcommand{\typeT}{\ensuremath{\mathcal{T}}}
+\newcommand{\typeT}{\ensuremath{\mathfrak{t}}}
 
-\newcommand{\TValues}{\ensuremath{T}-values} 
+\newcommand{\TValues}{\typeT{}-values} 
 
 \newcommand{\emigres}{\'emigr\'es}
 

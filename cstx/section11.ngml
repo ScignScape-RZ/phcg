@@ -16,10 +16,10 @@ from Bordeaux).  But are the distinctions between natural and constructed object
 or animate and inanimate kinds, or social institutions and natural
 systems, matters more of grammar or of lexicon?  Certainly they engender
 agreements and propriety which appear similar to
-grammatic rules.  `q.The tree wants to run away from the dog` sounds wrong %-- because
-the verb `q.want`/, suggestive of propositional attitudes, seems incompatible with
-the nonsentient `q.tree`/.  Structurally, the problem with this sentence seems analogous
-to the flawed `q.The trees wants to run away`/: the latter has incorrect singular/plural linkage,
+grammatic rules.  `i.The tree wants to run away from the dog` sounds wrong %-- because
+the verb `i.want`/, suggestive of propositional attitudes, seems incompatible with
+the nonsentient `i.tree`/.  Structurally, the problem with this sentence seems analogous
+to the flawed `i.The trees wants to run away`/: the latter has incorrect singular/plural linkage,
 the former has incorrect sentient/nonsentient linkage, so to speak.  But does this
 structural resemblance imply that singular/plural is as much part of semantics as grammar, or
 sentient/nonsentient as much part of grammar as semantics?  It is true that there are no
@@ -49,7 +49,7 @@ concept; `q.Students complained`/, tieing the noun to a verb, tethers the concep
 assertorial flesh, yielding something that expresses a belief or observation.
 Meanwhile, Categorial Grammar models not only the semantic transition from abstract to concrete, but
 surface-level composition: in English and other `SVO; language for example the verb should
-immediately follow the noun; in German and all `SVO; languages the verb tends the come
+immediately follow the noun; in German and all `SOV; languages the verb tends the come
 last in a sentence, and can be well apart from its subject.  The semantic pattern in the
 link is how the verb/noun pair yields a new semantic category (propositional) whereas the
 grammatic component lies in how the link is established relative to other words
@@ -242,7 +242,7 @@ introducing concepts into language.
 Concepts (and types also) are not cognitively the same as their
 extension %-- the concept `i.restaurant`/, I believe, is distinct from
 concepts like `i.all restaurants` or `i.the set of all restaurants`/.
-This is for several reasons.  First, Concepts can be pairwise different
+This is for several reasons.  First, concepts can be pairwise different
 not only through their instances, but because they highlight different
 sets of attributes or indicators.  The concepts `q.American President` and `q.Commander in Chief`
 refer to the same person, but the latter foregrounds a military role.
@@ -255,10 +255,10 @@ in language, clear evidence for the contrast between `i.intension` and
 `i.extension` comes from phrase structure: certain constructions specifically
 refer to concept-extension, triggering a mental shift from thinking of the
 concept as a schema or prototype to thinking of its extension (maybe in some context).
-Compare these sentences:
+Compare these sentences (\ref{itm:rhinor} repeats \ref{itm:rhino}):
 
 `sentenceList,
-`sentenceItem; Rhinos in that park are threatened by poachers.`
+`sentenceItem; \label{itm:rhinor} Rhinos in that park are threatened by poachers.`
 `sentenceItem; Young rhinos are threatened by poachers.`
 `sentenceList`
 
@@ -279,7 +279,7 @@ There is a type-theoretic correspondence between intension and
 extension %-- for a type `Tnoindex; there is a corresponding `q.higher-order` type
 of `i.sets` whose members are `Tnoindex;.`footnote.
 Related constructions are the type of `i.ordered sequences` of `Tnoindex;;
-unordered collections of `Tnoindex; allowing repetition; and stacks, queus, and
+unordered collections of `Tnoindex; allowing repetition; and stacks, queues, and
 deques (double-ended queues) as `Tnoindex;-lists that can grow or shrink
 at their beginning and/or end.
 `footnote`  If we take this (higher-order)
