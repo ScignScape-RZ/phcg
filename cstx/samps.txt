@@ -7,6 +7,7 @@
 `sentenceItem; \label{itm:sendx3d} Could you send me the corkscrew (the X3D file you just mentioned)?
 `sentenceList`
 1-6
+@9
 
 
 `sentenceList,
@@ -14,26 +15,23 @@
 `sentenceItem; Could you get me a corkscrew?
 `sentenceList`
 7-8
+@10
+
 
 `sentenceList,
 `sentenceItem; \label{itm:hammer} He opened the bottle of beer with a hammer.
 `sentenceItem; He pounded the nail with a lever corkscrew.
 `sentenceList`
 9-10
+@10
 
-
-`sentenceList,
-`sentenceItem; A hammer is somthing used to pound nails.
-`sentenceItem; A lever corkscrew is something used to open wine.
-`sentenceItem; A lever corkscrew can be used to pound nails.
-`sentenceList`
-11-13?
 
 `sentenceList,
 `sentenceItem; \label{itm:bucket} Can you bring me a bucket of water?
 `sentenceItem; \label{itm:glass} Can you bring me a glass of water?
 `sentenceList`
-14-15
+11-12
+@11
 
 
 `sentenceList,
@@ -42,12 +40,15 @@
 `sentenceItem; You can see the ocean from here.
 `sentenceItem; You can see the water from here.
 `sentenceList`
-16-19
+13-16
+@11
 
 `sentenceList,
 `sentenceItem; The water and the Deuterium Dioxide is over there.
 `sentenceList`
-20
+17
+@11
+
 
 `sentenceList,
 `sentenceItem; Here's a glass of water (even though
@@ -55,7 +56,8 @@ tap water is mixed with flouride).
 `sentenceItem; Bing cherries are dark red (even though
 the stem is brown).
 `sentenceList`
-21-22
+18-19
+@12
 
 s2
 
@@ -63,8 +65,8 @@ s2
 `sentenceItem; \label{itm:put} Can you put some almond milk in my coffee?
 `sentenceItem; \label{itm:after} Is there milk in this coffee?
 `sentenceList`
-23-24
-
+20-21
+@22
 
 `sentenceList,
 `sentenceItem; It's not open, but there's still some
@@ -73,14 +75,16 @@ cold air coming through the cracks.
 the bedroom.
 `sentenceItem; I can't %-- it's stuck.
 `sentenceList`
-25-27
+22-24
+@22
 
 `sentenceList,
 `sentenceItem; \label{itm:almond} Do you have almond milk?
 `sentenceItem; Can you get MsNBC on your TV?
 `sentenceItem; \label{itm:needcorkscrew} This isn't a screw-cap bottle: I need a corkscrew.
 `sentenceList`
-28-30
+25-27
+@23
 
 `sentenceList,
 `sentenceItem; I think the window is open, can you close it?
@@ -88,7 +92,9 @@ the bedroom.
 `sentenceItem; If you get MsNBC, can you turn on Rachel Maddow?
 `sentenceItem; If there is a corkscrew in the house, can you get it?
 `sentenceList`
-31-34
+28-31
+@23
+
 
 `sentenceList,
 `sentenceItem; I believe you have a reservation for Jones?
@@ -97,20 +103,24 @@ the bedroom.
 `sentenceItem; I believe you can help me find computer
 acessories in this section?
 `sentenceList`
-35-38
+32-35
+@23
 
 `sentenceList,
 `sentenceItem; Do you have any milk?
 `sentenceItem; Yes, we have almond milk.
 `sentenceItem; No, we have almond milk.
 `sentenceList`
-39-41
+36-38
+@24
 
 `sentenceList,
 `sentenceItem; Is there milk in this coffee?
 `sentenceItem; Yes, almond milk.
 `sentenceList`
-42-43
+39-40
+@24
+
 
 `sentenceList,
 `sentenceItem; I believe the kitchen window
@@ -118,20 +128,24 @@ is open %-- please close it!
 `sentenceItem; I believe some window
 is open %-- please close it!
 `sentenceList`
-44-45
+41-42
+@25
 
 
 `sentenceList,
 `sentenceItem; Grandma wants us to close the window.
 `sentenceItem; He wants a bottle opener.
 `sentenceList`
-46-47
+43-44
+@25
+
 
 `sentenceList,
 `sentenceItem; Grandma wants us to eliminate the cold draft.
 `sentenceItem; He wants something to open that bottle.
 `sentenceList`
-48-49
+45-46
+@25
 
 `sentenceList,
 `sentenceItem; I think you could do excellent work in
@@ -142,13 +156,16 @@ I don't want to get fined.
 needs to be as charismatic on the campaign trail as
 she was during the debate.
 `sentenceList`
-50-52
+47-49
+@25
 
 `sentenceList,
 `sentenceItem; \label{itm:can} Can I have some milk?
 `sentenceItem; \label{itm:close} Can you close the kitchen window?
 `sentenceList`
-53-54
+50-51
+@25
+
 
 `sentenceList,
 `sentenceItem; If the kitchen window is closed,
@@ -158,7 +175,8 @@ we can see if there is a draft through the window-cracks.
 `sentenceItem; If there is no draft, we can
 ask if she wants a sweater.
 `sentenceList`
-55-57 p.26
+52-54 
+@26
 
 `sentenceList,
 `sentenceItem; My colleague Ms. O'Shea would like to interview
@@ -166,7 +184,8 @@ Mr. Jones, who's an old friend of mine.  Can he take this call?
 `sentenceItem; \label{itm:Jones} I'm sorry, this is his secretary.  Mr. Jones
 is not available at the moment.
 `sentenceList`
-58-59
+55-56
+@26
 
 `sentenceList,
 `sentenceItem; Mr. Jones, were you present at a meeting where
@@ -176,19 +195,24 @@ a contract in exchange for campaign contributions?
 to answer that question on the grounds that it
 may incriminate me.
 `sentenceList`
-60-61
+57-58
+@27
 
 `sentenceList,
 `sentenceItem; \label{itm:isJones} Is Jones there?
 `sentenceItem; \label{itm:not} He is not available.
 `sentenceList`
-62-63
+59-60
+@27
+
 
 `sentenceList,
 `sentenceItem; \label{itm:file} File f = File.open(path, File.READ\_ONLY);
 `sentenceItem; if f.isEmpty() return 0;
 `sentenceList`
-64-65
+61-62
+@28
+
 
 `sentenceList,
 `sentenceItem; \label{itm:wants} Grandma wants the proposition `q.the kitchen
@@ -196,13 +220,16 @@ window is closed` to be true.
 `sentenceItem; \label{itm:cold} Grandma wants the proposition
 `q.I am cold` to be false.
 `sentenceList`
-66-67
+63-64
+@30
+
 
 `sentenceList,
 `sentenceItem; \label{itm:rooting} Are you rooting for the Jets?
 `sentenceItem; Well, I want the Leafs to win.
 `sentenceList`
-68-69
+65-66
+@31
 
 `sentenceList,
 `sentenceItem; There is a proposition (call it `POne;)
@@ -214,7 +241,8 @@ and a proposition (`PTwo;) whose content is that the Leafs win.
 with `POne; being false.
 `sentenceItem; \label{itm:Jets} He wants the content of `POne; to be false.
 `sentenceList`
-70-74
+67-71
+@31
 
 s3
 
@@ -225,29 +253,32 @@ local liquor store?
 `sentenceItem; \label{itm:varietal} Remember that wine we tasted on the Niagara 
 Peninsula last summer?  What varietal was that again?
 `sentenceList`
-75-76
+72-73
+@32
+
 
 `sentenceList,
 `sentenceItem; That wine was a Cabernet Franc.
 `sentenceItem; Those dogs are my neighbor's.  
 They are very sweet.
 `sentenceList`
-77-78
-
+74-75
+@33
 
 `sentenceList,
 `sentenceItem; Those dogs are Staffordshires.
 `sentenceItem; What's a Staffordshire?
 `sentenceItem; It's a breed of dog.
 `sentenceList`
- 79-81
+76-78
+@34
 
 `sentenceList,
 `sentenceItem; This wine is a young Syrah.
 `sentenceItem; My cousin adopted one of my neighbor's dog's puppies.
 `sentenceList`
-82-83
-
+79-80
+@40
 
 `sentenceList,
 `sentenceItem; \label{itm:maj} The majority of students polled were
@@ -256,13 +287,15 @@ opposed to tuition increases.
 about tuition increases.
 `sentenceItem; \label{itm:many} Many students have protested the tuition increases.
 `sentenceList`
-84-86
+81-83
+@40
 
 `sentenceList,
 `sentenceItem; Most students oppose the tuition increase.
 `sentenceItem; \label{itm:indef} Most students oppose a tuition increase.
 `sentenceList`
-87-88
+84-85
+@41
 
 `sentenceList,
 `sentenceItem; \label{itm:today} Today the state university system
@@ -272,7 +305,8 @@ at least 10\%.  Most students oppose a tuition increase.
 rising costs, have had to raise tuition, but
 most students oppose a tuition increase.
 `sentenceList`
-89-90
+86-87
+@41
 
 `sentenceList,
 `sentenceItem; \label{itm:sas} Student after student came out against the tuition hikes.
@@ -283,8 +317,8 @@ may soon reach a critical mass.
 `sentenceItem; \label{itm:tipping} Protests against the tuition hikes
 may have reached a tipping point.
 `sentenceList`
-91-94
-
+88-91
+@42
 
 `sentenceList,
 `sentenceItem; \label{itm:across} Our house is across the lake.
@@ -296,7 +330,8 @@ may have reached a tipping point.
 `sentenceItem; There are drawings all over the wall.
 `sentenceItem; \label{itm:sheetallover} There's a plastic sheet all over the wall.
 `sentenceList`
-95-102
+92-99
+@48
 
 `sentenceList,
 `sentenceItem; \label{itm:apartment} I'm going to a party at my brother's house (suppose
@@ -304,38 +339,44 @@ he actually lives in an apartment).
 `sentenceItem; This restaurant has the best Hokkien noodles
 (said of a stall in a Chinaatown food court).
 `sentenceList`
-103-104
+100-101
+@49
 
 `sentenceList,
 `sentenceItem; He had to cut the crusty bread with a serrated knife.
 `sentenceItem; The museum had antique butter knives with intricate carvings.
 `sentenceList`
-105-106
+102-103
+@51
 
 `sentenceList,
 `sentenceItem; What time does the office open?
 `sentenceItem; \label{itm:phone} What time does train 100 depart from Newark?
 `sentenceList`
-107-108
+104-105
+@53
+
 
 `sentenceList,
 `sentenceItem; I snacked on toast and coffee.
 `sentenceItem; I snacked on buttered toast and iced coffee.
 `sentenceList`
-109-110
+106-107
+@71
 
 `sentenceList,
 `sentenceItem; I snacked on toast and instant coffee.
 `sentenceItem; I snacked on toast and Eritrean coffee.
 `sentenceList`
-111-112
+108-109
+@71
 
 `sentenceList,
 `sentenceItem; \label{itm:pf} People fed the rescued dogs.
 `sentenceItem; \label{itm:ve} Vets examined the rescued dogs.
 `sentenceList`
-113-114
-
+110-111
+@75
 
 `sentenceList,
 `sentenceItem; Every singer performed two songs.
@@ -343,7 +384,8 @@ he actually lives in an apartment).
 `sentenceItem; Everyone sang along to two songs.
 `sentenceItem; Everyone in the audience sang along to two songs.
 `sentenceList`
-115-118
+112-115
+@75
 
 `sentenceList,
 `sentenceItem; The rescued dogs had been treated by vets in the past
@@ -355,7 +397,8 @@ he actually lives in an apartment).
 they came in, and we asked them to join in when the song being
 performed onstage matched the lyrics they had in hand).
 `sentenceList`
-119-121
+116-118
+@76
 
 `sentenceList,
 `sentenceItem; The rescued dogs were treated by an experienced vet.
@@ -366,7 +409,8 @@ One had been struck by a car and needed surgery on his leg.  We
 went there yesterday and saw debris from another car crash
 %-- it's a dangerous stretch of highway.
 `sentenceList`
-122-123
+119-120
+@77
 
 `sentenceList,
 `sentenceItem; The rescued dogs were treated by an experienced vet.
@@ -377,7 +421,8 @@ It looked very modern, like a human hospital.
 We looked around and realized how dangerous that road is %--
 for humans as well as dogs.
 `sentenceList`
-124-126
+121-123
+@78
 
 `sentenceList,
 `sentenceItem; I'm going to rescue her from that boring conversation.
@@ -392,7 +437,9 @@ he never says anything controversial.
 `sentenceItem; The Soviets rescued thousands of
 people from a basically-defeated Germany and sent them to Siberia.
 `sentenceList`
-127-133
+124-130
+@78
+
 
 `sentenceList,
 `sentenceItem; There's some coffee on your shirt.
@@ -403,7 +450,8 @@ people from a basically-defeated Germany and sent them to Siberia.
 `sentenceItem; There's a lot of coffee left in the pot
 %-- should I pour it out?
 `sentenceList`
-134-139
+131-136
+@79
 
 `sentenceList,
 `sentenceItem; There are coffees all over the far wall at the expresso bar.
@@ -411,7 +459,8 @@ people from a basically-defeated Germany and sent them to Siberia.
 `sentenceItem; There are a lot of coffees left on the table
  %-- shall I pour them out?
 `sentenceList`
-140-142
+137-139
+@79
 
 `sentenceList,
 `sentenceItem; \label{itm:borough} New Yorkers live in one of five boroughs.
@@ -419,7 +468,8 @@ people from a basically-defeated Germany and sent them to Siberia.
 `sentenceItem; \label{itm:commute} New Yorkers constantly complain about how long it takes to commute
 to New York City.
 `sentenceList`
-143-145
+140-142
+@79
 
 `sentenceList,
 `sentenceItem; All New York City residents live in one of five boroughs.
@@ -428,7 +478,8 @@ presidential candidates.
 `sentenceItem; Many New York metro area residents complain about how
 long it takes to commute to New York City.
 `sentenceList`
-146-148
+143-145
+@80
 
 `sentenceList,
 `sentenceItem; My favorite band gave a free concert last night.
@@ -450,7 +501,9 @@ were not surrounded with enough depth.
 `sentenceItem; Many star players were drafted by that franchise, but they
 did not have enough depth.
 `sentenceList`
-149-159
+146-156
+@81
+
 
 `sentenceList,
 `sentenceItem; The band planned a tour, where
@@ -460,7 +513,9 @@ New York and they played the Yankees.
 `sentenceItem; \label{itm:theflies} The city’s largest theater company
 will perform `q.The Flies`/.
 `sentenceList`
-160-162
+157-159
+@82
+
 
 `sentenceList,
 `sentenceItem; The city's largest theater company
@@ -470,7 +525,8 @@ sounded Quebecois.
 performed `q.The Flies`/; then they invited a professor
 to discuss Sartre's philosophy when the play was over.
 `sentenceList`
-163-164
+160-161
+@82
 
 `sentenceList,
 `sentenceItem; John is married to a woman from his home country, but
@@ -482,7 +538,8 @@ many ways he's still a bachelor.
 `sentenceItem; Every married man needs a bachelor pad somewhere,
 and wherever yours is, you need a mini-fridge.
 `sentenceList`
-165-168
+162-165
+@83
 
 `sentenceList,
 `sentenceItem; People had fed the rescued dogs (i.e.: before they
@@ -494,14 +551,16 @@ of registered voters in New York do so).
 corskscrew).
 `sentenceItem; That wine is Fabernet Franc (i.e.: `q.W is CF`/).
 `sentenceList`
-169-173
+166-170
+@85
 
 `sentenceList,
 `sentenceItem; We learned that people fed the rescued dogs.
 `sentenceItem; No-one seriously entertained the belief that
 he would govern in a bipartisan manner.
 `sentenceList`
-174-175
+171-172
+@96
 
 `sentenceList,
 `sentenceItem; \label{itm:trumpcolluded} The Trump campaign colluded with Russia.
@@ -512,7 +571,9 @@ the Trump campaign colluded with Russia.
 `sentenceItem; Most Democrats believe that
 the Trump campaign colluded with Russia.
 `sentenceList`
-176-179
+173-176
+@96
+
 
 `sentenceList,
 `sentenceItem; I believed in Father Christmas.
@@ -520,12 +581,16 @@ the Trump campaign colluded with Russia.
 `sentenceItem; I believed in Obama.
 `sentenceItem; I believed in lies.
 `sentenceList`
-180-183
+177-180
+@96
+
 
 `sentenceList,
 `sentenceItem; Obama wouldn't budge on reproductive rights.
 `sentenceList`
-184
+181
+@97
+
 
 `sentenceList,
 `sentenceItem; Today is Tuesday.
@@ -535,20 +600,23 @@ the Trump campaign colluded with Russia.
 `sentenceItem; They are forecasting snow.
 `sentenceItem; The latest reports are forecasting snow.
 `sentenceList`
-190-195
+182-187
+@106
 
 `sentenceList,
 `sentenceItem; She is a salaried employee.
 `sentenceItem; He is an elected official. 
 `sentenceList`
-196-197
+188-189
+@106
 
 `sentenceList,
 `sentenceItem; \label{itm:penguin} A penguin is a flightless bird.
 `sentenceItem; \label{itm:rhino} Rhinos in that park are threatened by poachers.
 `sentenceItem; \label{itm:elephant} Baby elephants don't have tusks.
 `sentenceList`
-198-200
+190-192
+@114
 
 
 `sentenceList,
@@ -562,15 +630,17 @@ the Trump campaign colluded with Russia.
 `sentenceItem; \label{itm:actup} He's not playing well because his sore back is acting up.
 `sentenceItem; \label{itm:kitten} The kitten barked at the dog.
 `sentenceList`
-201-209
-
+193-201
+@114
 
 `sentenceList,
 `sentenceItem; \label{itm:teaduck} Tea-smoked duck is a Sichuan delicacy.
 `sentenceItem; \label{itm:rubberduck} The baby's favorite toy is a rubber duck.
 `sentenceItem; \label{itm:weddingduck} Wedding ducks are traditional Korean gifts.
 `sentenceList`
-210-212
+202-204
+@115
+
 
 `sentenceList,
 `sentenceItem; This book, which costs \$40, has some crazy ideas inside.
@@ -578,12 +648,16 @@ the Trump campaign colluded with Russia.
 nonfiction, has some dude's phone number scrawled inside.
 `sentenceItem; My boss barks louder than his dog does.
 `sentenceList`
-213-215
+205-207
+@116
+
 
 `sentenceList,
 `sentenceItem; Three times, students asked an interesting question
 `sentenceList`
-216
+208
+@118
+
 
 `sentenceList,
 `sentenceItem; Time after time, tourists (a tourist) walk(s) by this building
@@ -598,7 +672,9 @@ paper to compain about my grade(s).
 `sentenceItem; Student after student %-- and their (his/her) parents
 %-- complained about the tuition increase.
 `sentenceList`
-217-220
+209-212
+@119
+
 
 `sentenceList,
 `sentenceItem; The Maple Leafs failed to win in overtime for the
@@ -606,25 +682,31 @@ first time this year.
 `sentenceItem; The Maple Leafs failed for the first time this year
 to win in overtime.
 `sentenceList`
-221-222
+213-214
+@120
 
 `sentenceList,
 `sentenceItem; The Maple Leafs failed to win two consecutive games
 for the first time this year.
 `sentenceList`
-223
+215
+@121
 
 `sentenceList,
 `sentenceItem; Rhinos in that park are threatened by poachers.`
 `sentenceItem; Young rhinos are threatened by poachers.`
 `sentenceList`
-224-225
+216-217
+@129
+
 
 `sentenceList,
 `sentenceItem; I got glue for your daughter.
 `sentenceItem; I got glue for your coffee mug.
 `sentenceList`
-226-227
+218-219
+@131
+
 
 `sentenceList,
 `sentenceItem; We're going to Grandma!
@@ -632,53 +714,31 @@ for the first time this year.
 `sentenceItem; Let's go to the lawyers.
 `sentenceItem; Let's go to the press.
 `sentenceList`
-228-231
+220-223
+@131
+
 
 `sentenceList,
 `sentenceItem; The newspaper you are reading is being sued.
 `sentenceItem; Liverpool, an important harbor, built new docks.
 `sentenceList`
-232-233
+224-225
+@136
+
 
 `sentenceList,
 `sentenceItem; The newspaper fired the reporter and fell off
 the table (?).
 `sentenceItem; Liverpool beat Tottenham and built new docks (?).
 `sentenceList`
-234-235
+226-227
+@136
+
 
 `sentenceList,
 `sentenceItem; Liverpool wants to sign a left-footed striker.
 `sentenceItem; That newspaper plans to fire its editorial staff.
 `sentenceList`
-236-237
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+228-229
+@136
 

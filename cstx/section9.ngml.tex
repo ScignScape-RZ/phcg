@@ -378,12 +378,12 @@ for this condition, e.g. in \Cpp{}, is \q{break}).
 }
 \p{To demonstrate with a trivial concrete example, we 
 might have pseudo-code like this:
-\begin{sentenceList}\sentenceItem{} int $x$ = 0;
-\sentenceItem{} loop \{
-\sentenceItem{} \hspace{1em} if ($x$ $>$ 10) break;
-\sentenceItem{} \hspace{1em} ++$x$;
-\sentenceItem{} \} // end the loop
-\end{sentenceList}
+\sentenceexamples{\sentenceexample{int $x$ = 0;}
+\sentenceexample{loop \{}
+\sentenceexample{\hspace{1em} if ($x$ $>$ 10) break;}
+\sentenceexample{\hspace{1em} ++$x$;}
+\sentenceexample{\} // end the loop}
+}
 If we want to analyze the inner code-block as a distinct 
 (but nested) procedure, we would identify how 
 the nested implementation \q{captures} the $x$ value.  

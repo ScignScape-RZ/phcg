@@ -147,11 +147,11 @@ a static set of word correspondances, like
 is used to open wine` %-- after all, you cannot conclude
 from
 
-`sentenceList,
-`sentenceItem; A hammer is somthing used to pound nails, `i.and`
-`sentenceItem; A lever corkscrew is something used to open wine, `i.and`
-`sentenceItem; A lever corkscrew can be used to pound nails
-`sentenceList`
+`sentenceexamples.
+`sentenceexample.A hammer is somthing used to pound nails, `i.and`/`
+`sentenceexample.A lever corkscrew is something used to open wine, `i.and`/`
+`sentenceexample.A lever corkscrew can be used to pound nails`
+`sentenceexamples`
 
 that a hammer is a kind of lever corkscrew and can
 therefore open wine.  What we

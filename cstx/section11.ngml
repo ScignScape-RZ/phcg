@@ -625,7 +625,7 @@ Continuations: `cite<BarkerShan>;;
 Combinators: `cite<Villadsen>;;
 Side Effects: `cite<ShanThesis>;;
 Monads: `cite<GiorgoloAsudeh>;, `cite<ShanMonads>;, `cite<Kiselyov>;;
-Topology: `cite<Petitot>;, `cite<CasatiVarzi>;.
+Topology: `cite<JeanPetitot>;, `cite<CasatiVarzi>;.
 `footnote`  Such techniques can marshal type-theoretic ideas without
 falling back on simplistic type notions that can end up collapsing a type-system into a
 one-dimensional `q.Ontological` classification, rather than exploring more advanced formulations
