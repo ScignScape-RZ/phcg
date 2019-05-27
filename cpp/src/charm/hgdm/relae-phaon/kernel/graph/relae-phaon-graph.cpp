@@ -54,6 +54,11 @@ void RPH_Graph::add_read_token(hypernode_type* hn, QString type_name,
  }
 }
 
+void RPH_Graph::array_append(hypernode_type* hn, hypernode_type* nhn)
+{
+
+}
+
 void RPH_Graph::add_read_token(hypernode_type* hn, QString type_name,
   int field_index, QPair<QString, void*> val, QString field_name)
 {

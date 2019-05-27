@@ -16,6 +16,9 @@
 
 #include "kernel/graph/relae-phaon-graph.h"
 
+#include <QStack>
+
+
 #include "kans.h"
 KANS_(HGDMCore)
 
@@ -66,6 +69,9 @@ private:
  int current_type_field_index_;
 
  hypernode_type* current_hypernode_;
+ hypernode_type* last_hypernode_;
+
+ QStack<hypernode_type*> parent_hypernodes_;
 
 public:
 
@@ -75,6 +81,7 @@ public:
 
  void init();
 
+ void array_append();
  void add_read_token(QString text);
  void prepare_field_read(QString prefix, QString field, QString suffix);
  void read_acc(QString s);

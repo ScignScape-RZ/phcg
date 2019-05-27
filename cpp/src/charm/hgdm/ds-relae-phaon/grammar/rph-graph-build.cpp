@@ -21,8 +21,9 @@ RPH_Graph_Build::RPH_Graph_Build(RPH_Document* d, RPH_Parser& p, RPH_Graph& g)
    ,parser_(p)
    ,fr_(RPH_Frame::instance())
    ,current_field_number_(0)
-   ,current_hypernode_(nullptr)
    ,current_type_field_index_(0)
+   ,current_hypernode_(nullptr)
+   ,last_hypernode_(nullptr)
 {
 
 }
@@ -158,13 +159,31 @@ void RPH_Graph_Build::add_type_field_index(QString name, int code)
 
 void RPH_Graph_Build::start_sample(QString ty)
 {
+ if(current_hypernode_)
+   parent_hypernodes_.push(current_hypernode_);
+
  current_hypernode_ = graph_.new_hypernode_by_type_name(ty);
 // phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
 // pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
 
 }
 
+
+void RPH_Graph_Build::array_append()
+{
+ if(current_hypernode_)
+ {
+  if(last_hypernode_)
+    graph_.array_append(current_hypernode_, last_hypernode_);
+ }
+}
+
 void RPH_Graph_Build::end_sample()
 {
- current_hypernode_ = nullptr;
+ last_hypernode_ = current_hypernode_;
+
+ if(parent_hypernodes_.isEmpty())
+   current_hypernode_ = nullptr;
+ else
+   current_hypernode_ = parent_hypernodes_.pop();
 }
