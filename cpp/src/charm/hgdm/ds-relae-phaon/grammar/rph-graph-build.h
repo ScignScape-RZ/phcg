@@ -14,7 +14,7 @@
 
 #include "grammar/rph-parse-context.h"
 
-#include "hgdm/phaon-graph/relae-phaon/kernel/graph/relae-phaon-graph.h"
+#include "kernel/graph/relae-phaon-graph.h"
 
 #include "kans.h"
 KANS_(HGDMCore)

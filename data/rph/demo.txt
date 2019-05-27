@@ -1,13 +1,21 @@
 
-&type LingEx {5} :t:3 ;
+- g=group id  t=text  s=start number  
+  e=end number  i=issue  p=page  
+
+  SG=sentence group
+.
+
+&type SG {6} 
+ :g:1 :s:2 :e:3 :t:4 :i:5 :p:6 ;
 
 &/
 
-!/ LingEx
-$t: Lang87
-$1# 5 29
-$$. This is a test sentence.
+!/ SG
+$i: tbd
+$1# 1 1 6 
+$$. He opened the wine bottle with an ornate corkscrew.
 .
+$$: 9
 /!
 
 /&

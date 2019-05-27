@@ -7,9 +7,9 @@
 
 #include "rph-graph-build.h"
 
-#include "hgdm/phaon-graph/relae-phaon/kernel/frame/relae-phaon-frame.h"
+#include "kernel/frame/relae-phaon-frame.h"
 
-#include "hgdm/phaon-graph/relae-phaon/kernel/graph/relae-phaon-graph.h"
+#include "kernel/graph/relae-phaon-graph.h"
 
 USING_KANS(HGDMCore)
 
