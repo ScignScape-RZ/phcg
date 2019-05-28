@@ -43,6 +43,18 @@ void RPH_Graph::add_fixed_array_type(QString name, unsigned int l,
  types_[name] = {l, {offset, -1}};
 }
 
+void RPH_Graph::update_current_field_index(QString type_name,
+  QString field_name, int& upd)
+{
+ auto it = field_indices_.find({type_name, field_name});
+
+ if(it != field_indices_.end())
+ {
+  upd = *it;
+ }
+}
+
+
 void RPH_Graph::add_read_token(hypernode_type* hn, QString type_name,
   QString field_name, QPair<QString, void*> val)
 {

@@ -58,7 +58,18 @@ void RPH_Graph_Build::end_field()
    QString qs = qsli.next();
    add_read_token(qs);
    if(qsli.hasNext())
-     ++current_field_number_;
+   {
+    if(current_field_name_ != "!#")
+    {
+     graph_.update_current_field_index(current_type_name_, current_field_name_, current_field_number_);
+     current_field_name_ = "!#";
+    }
+    ++current_field_number_;
+   }
+  }
+  if(current_field_name_ == "!#")
+  {
+   current_field_name_.clear();
   }
  }
  else
@@ -164,6 +175,11 @@ void RPH_Graph_Build::add_read_token(QString text)
  {
   graph_.add_read_token(current_hypernode_, current_type_name_,
     current_field_number_, {text, nullptr});
+ }
+ else if(current_field_name_.startsWith('!'))
+ {
+  graph_.add_read_token(current_hypernode_, current_type_name_,
+    current_field_number_, {text, nullptr}, current_field_name_);
  }
  else
  {

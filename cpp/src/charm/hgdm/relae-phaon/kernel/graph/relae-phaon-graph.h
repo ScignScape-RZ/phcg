@@ -47,6 +47,9 @@ public:
 
  RPH_Graph(RPH_Node* root_node = nullptr);
 
+ void update_current_field_index(QString type_name,
+   QString field_name, int& upd);
+
  void add_structure_type(QString name, unsigned int l,
    signed int offset = -1);
 
