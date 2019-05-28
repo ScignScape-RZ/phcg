@@ -25,8 +25,15 @@ CONFIG += no_keywords
 
 DEFINES += USE_KANS
 
+HEADERS += \
+  $$SRC_DIR/language-sample.h \
+  $$SRC_DIR/language-sample-group.h \
+
+
 SOURCES += \
   $$SRC_DIR/main.cpp \
+  $$SRC_DIR/language-sample.cpp \
+  $$SRC_DIR/language-sample-group.cpp \
 
 
 LIBS += -L$$TARGETSDIR  -lrelae-phaon  -lds-relae-phaon

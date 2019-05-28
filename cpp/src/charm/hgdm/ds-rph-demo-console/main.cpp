@@ -22,8 +22,13 @@
 
 #include "ds-relae-phaon/rph-document.h"
 
+#include "language-sample-group.h"
+#include "language-sample.h"
+
 #include "kans.h"
 USING_KANS(HGDMCore)
+
+USING_KANS(DSM)
 
 
 
@@ -36,24 +41,42 @@ int main(int argc, char **argv)
 
  RPH_Graph::hypernode_type* hn = doc.graph()->hypernodes()[0];
 
- doc.graph()->get_sf(hn, 4, [](QPair<QString, void*>& pr)
- {
-  qDebug() << pr.first;
- });
+// doc.graph()->get_sf(hn, 4, [](QPair<QString, void*>& pr)
+// {
+//  qDebug() << pr.first;
+// });
 
  QVector<RPH_Graph::hypernode_type*>& hns = doc.top_level_hypernodes();
 
- for(RPH_Graph::hypernode_type* mhn : hns)
+ QVector<Language_Sample_Group*> lsgs;
+ lsgs.resize(hns.size());
+
+ int count = 0;
+
+ std::transform(hns.begin(), hns.end(), lsgs.begin(), [&count,&doc](RPH_Graph::hypernode_type* hn)
  {
-  doc.graph()->get_sfs(mhn, {1,2,3}, [](QVector<QPair<QString, void*>>& prs)
+  Language_Sample_Group* result = new Language_Sample_Group(count);
+
+  doc.graph()->get_sfs(hn, {1,2,3}, [result](QVector<QPair<QString, void*>>& prs)
   {
    QVector<quint16> nums = {0,0,0};
    std::transform(prs.begin(), prs.end(), nums.begin(), [](QPair<QString, void*>& pr)
    {
     return pr.first.toInt();
    });
-   qDebug() << QString("s: %1 e: %2 p: %3").arg(nums[0]).arg(nums[1]).arg(nums[2]);
+   result->set_start_num(nums[0]);
+   result->set_end_num(nums[1]);
+   result->set_page(nums[2]);
   });
+
+  return result;
+ });
+
+ for(Language_Sample_Group* lsg : lsgs)
+ {
+   qDebug() << QString("s: %1 e: %2 p: %3").arg(lsg->start_num()).arg(lsg->end_num())
+               .arg(lsg->page());
+  //});
  }
 
 
