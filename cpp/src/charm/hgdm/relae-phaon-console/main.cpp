@@ -56,6 +56,12 @@ int main(int argc, char **argv)
  phaong<pg_t>::Hypernode* hn2 = pg.new_hypernode(-8);
  pg.set_af(hn2, 0, {"aa", nullptr}, {"QString", nullptr});
 
+ pg.append_af(hn2, {"aa", nullptr}, {"QString", nullptr});
+ pg.get_data(hn2, 1, [](QPair<QString, void*>& pr)
+ {
+  qDebug() << pr.first;
+ });
+
  pg.set_sf(hn, 1, {"", hn2}, {"proxy", nullptr});
 
 

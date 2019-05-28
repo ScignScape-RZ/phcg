@@ -113,16 +113,18 @@ void RPH_Graph_Build::add_type(QString name, QString length)
  QStringList ls = length.mid(1, length.size() - 2).split(';');
 
  int l = ls[0].toInt();
- signed int cs, offs;
- if(ls.size() > 1)
-   cs = ls[1].toInt();
- else
-   cs = -1;
 
- if(ls.size() > 2)
-   offs = ls[2].toInt();
+ signed int cs, offs;
+
+ if(ls.size() > 1)
+   offs = ls[1].toInt();
  else
    offs = -1;
+
+ if(ls.size() > 2)
+   cs = ls[2].toInt();
+ else
+   cs = -1;
 
  if(length.startsWith('{'))
  {
@@ -194,6 +196,10 @@ void RPH_Graph_Build::start_sample(QString ty)
 
 }
 
+void RPH_Graph_Build::top_level_append()
+{
+ top_level_hypernodes_.push_back(last_hypernode_);
+}
 
 void RPH_Graph_Build::array_append()
 {

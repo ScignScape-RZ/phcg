@@ -61,6 +61,7 @@ struct RPH_Dominion
  template<typename T>
  Type_Codes get_type_code()
  {
+  return (Type_Codes) 0;
  }
  //typedef Test_Connector Connector_Type;
  // typedef Test_Type_Codes Connector_Type;

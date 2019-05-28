@@ -10,6 +10,8 @@
 
 #include <functional>
 
+#include <QVector>
+
 #include "accessors.h"
 
 #define PASTE_EXPRESSION(...) __VA_ARGS__
@@ -147,6 +149,15 @@ public:
    return 0;
   }
 
+  numeric_index_type get_maximum_array_index()
+  {
+   if(size_ < 0)
+     return block_package_->max_index_;
+   if(size_ == 0)
+     return 0; // array_package_->max_index;
+   return 0;
+  }
+
   numeric_index_type normalized_array_index(numeric_index_type ind)
   {
    if(size_ < 0)
@@ -268,7 +279,7 @@ private:
   {
    Hypocell* hcs = new Hypocell[csize];
    hcs[0] = hc;
-   for(int i = 0; i < csize; ++i)
+   for(int i = 1; i < csize; ++i)
    {
     hcs[i] = {nullptr};
    }
@@ -483,6 +494,33 @@ public:
   _set_data(hn, ind, val, nullptr);
  }
 
+ void append_af(Hypernode* hn,
+   hyponode_value_type& val, type_descriptor_type& type_descriptor)
+ {
+  numeric_index_type ind = hn->get_maximum_array_index() + 1;
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void append_af(Hypernode* hn,
+   hyponode_value_type val, type_descriptor_type& type_descriptor)
+ {
+  numeric_index_type ind = hn->get_maximum_array_index() + 1;
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void append_af(Hypernode* hn,
+   hyponode_value_type& val, type_descriptor_type type_descriptor)
+ {
+  numeric_index_type ind = hn->get_maximum_array_index() + 1;
+  _set_data(hn, ind, val, &type_descriptor);
+ }
+
+ void append_af(Hypernode* hn,
+   hyponode_value_type val, type_descriptor_type type_descriptor)
+ {
+  numeric_index_type ind = hn->get_maximum_array_index() + 1;
+  _set_data(hn, ind, val, &type_descriptor);
+ }
 
  void get_data(Hypernode* hn, numeric_index_type ind,
    std::function<void(hyponode_value_type&)> fn)
@@ -504,6 +542,25 @@ public:
  {
   Hyponode* ho = get_hyponode(hn, ind);
   fn(ho->hypoval);
+ }
+
+ void get_sfs(Hypernode* hn, QVector<numeric_index_type>& ind,
+   std::function<void(QVector<hyponode_value_type>&)> fn)
+ {
+  QVector<hyponode_value_type> args;
+  args.resize(ind.size());
+  std::transform(ind.begin(), ind.end(), args.begin(), [this, hn](const numeric_index_type& ind)
+  {
+   Hyponode* ho = get_hyponode(hn, ind);
+   return ho->hypoval;
+  });
+  fn(args);
+ }
+
+ void get_sfs(Hypernode* hn, QVector<numeric_index_type>&& ind,
+   std::function<void(QVector<hyponode_value_type>&)> fn)
+ {
+  get_sfs(hn, ind, fn);
  }
 
  Hyperedge* new_hyperedge(Hypernode* hnh, Hypernode* hnt, Hypernode* hne = nullptr)

@@ -75,17 +75,23 @@ private:
 
  QStack<hypernode_type*> parent_hypernodes_;
 
+ QVector<hypernode_type*> top_level_hypernodes_;
+
 public:
 
  RPH_Graph_Build(RPH_Document* d, RPH_Parser& p, RPH_Graph& g);
 
  ACCESSORS__RGET(RPH_Parse_Context ,parse_context)
+ ACCESSORS__RGET(QVector<hypernode_type*> ,top_level_hypernodes)
+
 
  void init();
 
  void array_append();
  void add_read_token(QString text);
  void add_numeric_read_token(numeric_index_type val);
+
+ void top_level_append();
 
  void prepare_field_read(QString prefix, QString field, QString suffix);
  void read_acc(QString s);

@@ -27,6 +27,14 @@ RPH_Document::RPH_Document(QString path)
   load_file(path);
 }
 
+QVector<RPH_Graph::hypernode_type*>& RPH_Document::top_level_hypernodes()
+{
+ static QVector<RPH_Graph::hypernode_type*> static_default;
+ if(graph_build_)
+   return graph_build_->top_level_hypernodes();
+ return static_default;
+}
+
 void RPH_Document::load_file(QString path)
 {
  QFile file(path);

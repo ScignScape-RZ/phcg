@@ -19,7 +19,7 @@
 #include <QFile>
 #include <QTextStream>
 
-
+#include "kernel/graph/relae-phaon-graph.h"
 
 KANS_(HGDMCore)
 
@@ -59,6 +59,8 @@ public:
  RPH_Document(QString path);
 
  ~RPH_Document();
+
+ QVector<RPH_Graph::hypernode_type*>& top_level_hypernodes();
 
  void load_file(QString path);
  void report_graph(QString path);

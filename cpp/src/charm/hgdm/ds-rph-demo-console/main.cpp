@@ -8,6 +8,7 @@
 #include <QString>
 #include <QDebug>
 
+#include <QVector>
 
 #include "phaong/phaong.h"
 #include "phaong/phaong-types.h"
@@ -39,6 +40,22 @@ int main(int argc, char **argv)
  {
   qDebug() << pr.first;
  });
+
+ QVector<RPH_Graph::hypernode_type*>& hns = doc.top_level_hypernodes();
+
+ for(RPH_Graph::hypernode_type* mhn : hns)
+ {
+  doc.graph()->get_sfs(mhn, {1,2,3}, [](QVector<QPair<QString, void*>>& prs)
+  {
+   QVector<quint16> nums = {0,0,0};
+   std::transform(prs.begin(), prs.end(), nums.begin(), [](QPair<QString, void*>& pr)
+   {
+    return pr.first.toInt();
+   });
+   qDebug() << QString("s: %1 e: %2 p: %3").arg(nums[0]).arg(nums[1]).arg(nums[2]);
+  });
+ }
+
 
  return 0;
 }

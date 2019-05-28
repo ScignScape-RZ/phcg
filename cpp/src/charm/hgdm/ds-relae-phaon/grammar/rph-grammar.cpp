@@ -171,6 +171,14 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
  });
 
  add_rule(read_context,
+   "top-level-append",
+   " \\n <\\+> .single-space.* ",
+   [&]
+ {
+  graph_build.top_level_append();
+ });
+
+ add_rule(read_context,
    "read-acc-field",
    " [^\\n]+ (?= \\n ) ",
    [&]
