@@ -7,16 +7,17 @@
   SE=sentence example
 .
 
-&type SG {4} 
- :g:1 :s:2 :e:3 :p:4 ;
+&type SG [5;4;1] 
+ :g:2 :s:3 :e:4 :p:5 :c:1 :count:1 ;
 
 &type SE {5}
- :g:1 :i:2 :x:3 :t:4 :h:5 ;
+ :g:1 :i:2 :x:3 :t:4 :text:4 :h:5 ;
 
 
 &/
 
 !/ SG
+$c= 0
 !/ SE  
 $x: itm:ornate 
 $t. He opened the wine bottle with an ornate corkscrew.

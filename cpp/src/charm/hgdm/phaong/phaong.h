@@ -106,6 +106,8 @@ public:
   {
   }
 
+  ACCESSORS__RGET(type_descriptor_type ,type_descriptor)
+
   numeric_index_type cell_size()
   {
    if(size_ < 0)

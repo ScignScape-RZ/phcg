@@ -41,7 +41,14 @@ void RPH_Graph_Build::end_field()
   flags.discard_acc = false;
   return;
  }
- if(flags.split_acc)
+ //?if(flags.split_numeric_acc)
+ if(flags.numeric_acc)
+ {
+  flags.numeric_acc = false;
+  numeric_index_type i = acc_.simplified().toInt();
+  add_numeric_read_token(i);
+ }
+ else if(flags.split_acc)
  {
   flags.split_acc = false;
   QStringList qsl = acc_.simplified().split(' ');
@@ -75,6 +82,8 @@ void RPH_Graph_Build::prepare_field_read(QString prefix, QString field, QString 
    flags.split_acc = true;
  else if(suffix == ";")
    flags.discard_acc = true;
+ else if(suffix == "=")
+   flags.numeric_acc = true;
  if(prefix == "$$")
  {
   ++current_field_number_;
@@ -133,6 +142,20 @@ void RPH_Graph_Build::add_coda_data_line(QString qs)
 
 }
 
+void RPH_Graph_Build::add_numeric_read_token(numeric_index_type val)
+{
+ if(current_field_name_.isEmpty())
+ {
+  graph_.add_read_token(current_hypernode_, current_type_name_,
+    current_field_number_, {"", (void*)val});
+ }
+ else
+ {
+  graph_.add_read_token(current_hypernode_, current_type_name_,
+    current_field_name_, {"", (void*)val});
+ }
+}
+
 void RPH_Graph_Build::add_read_token(QString text)
 {
  if(current_field_name_.isEmpty())
@@ -163,6 +186,9 @@ void RPH_Graph_Build::start_sample(QString ty)
    parent_hypernodes_.push(current_hypernode_);
 
  current_hypernode_ = graph_.new_hypernode_by_type_name(ty);
+
+ current_type_name_ = ty;
+
 // phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
 // pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
 
@@ -186,4 +212,10 @@ void RPH_Graph_Build::end_sample()
    current_hypernode_ = nullptr;
  else
    current_hypernode_ = parent_hypernodes_.pop();
+
+ if(current_hypernode_)
+ {
+  current_type_name_ = current_hypernode_->type_descriptor().first;
+ }
+
 }

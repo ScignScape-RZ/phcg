@@ -102,7 +102,7 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
    "type-decl",
    " \\n &type .single-space.+ "
    "(?<name> \\S+) .single-space.+ "
-   "(?<length> [[{] \\d+ [\\]}]) ",
+   "(?<length> [[{] [\\d;]+ [\\]}]) ",
    [&]
  {
   QString name = p.matched("name");
@@ -193,7 +193,7 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
    "\\n"
    " (?<prefix> [@$]+ )"
    " (?<word> .script-word.?) "
-   " (?<suffix> [:;#.] ) ",
+   " (?<suffix> [:;#=.] ) ",
    [&]
  {
   QString prefix = p.matched("prefix");

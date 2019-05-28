@@ -53,6 +53,48 @@ int main(int argc, char **argv)
  phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
  pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
 
+ phaong<pg_t>::Hypernode* hn2 = pg.new_hypernode(-8);
+ pg.set_af(hn2, 0, {"aa", nullptr}, {"QString", nullptr});
+
+ pg.set_sf(hn, 1, {"", hn2}, {"proxy", nullptr});
+
+
+ return 0;
+}
+
+
+
+int main2(int argc, char **argv)
+{
+ phaong<pg_t> pg;
+
+ QVector<phaong<pg_t>::Hypernode*> hypernodes;
+ QVector<phaong<pg_t>::Hyperedge*> hyperedges;
+
+ QPair<QVector<phaong<pg_t>::Hypernode*>&,
+   QVector<phaong<pg_t>::Hyperedge*>&> graph {hypernodes, hyperedges};
+
+ typedef QPair<QVector<phaong<pg_t>::Hypernode*>&,
+   QVector<phaong<pg_t>::Hyperedge*>&> g_t;
+
+ pg.set_user_data(&graph);
+
+ pg.set_node_add_function([](phaong<pg_t>& _pg, phaong<pg_t>::Hypernode* hn)
+ {
+  QVector<phaong<pg_t>::Hypernode*>& hh = _pg.user_data_as<g_t>()->first;
+  hh.push_back(hn);
+ });
+
+ pg.set_edge_add_function([](phaong<pg_t>& _pgs, phaong<pg_t>::Hyperedge* he)
+ {
+  QVector<phaong<pg_t>::Hyperedge*>& hv = _pgs.user_data_as<g_t>()->second;
+  hv.push_back(he);
+ });
+
+
+ phaong<pg_t>::Hypernode* hn = pg.new_hypernode(5);
+ pg.set_sf(hn, 0, {"xx", nullptr}, {"QString", nullptr});
+
 
  RPH_Node n(hn);
 

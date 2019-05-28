@@ -44,9 +44,11 @@ public:
   bool discard_acc:1;
   bool split_acc:1;
   bool array_field:1;
+  bool numeric_acc:1;
  _flags
 
  typedef RPH_Graph::hypernode_type hypernode_type;
+ typedef RPH_Graph::numeric_index_type numeric_index_type;
 
 private:
 
@@ -83,6 +85,8 @@ public:
 
  void array_append();
  void add_read_token(QString text);
+ void add_numeric_read_token(numeric_index_type val);
+
  void prepare_field_read(QString prefix, QString field, QString suffix);
  void read_acc(QString s);
  void end_field();
