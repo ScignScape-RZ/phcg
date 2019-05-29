@@ -117,7 +117,13 @@ public:
  void leave_prelude();
  void enter_coda();
 
+ void add_prelude_comment(QString qs);
+ void add_sl_comment(QString qs);
+ void add_ml_comment(QString qs);
+
+
  void add_type_fields(QList<QStringList>& fs, int start = 0);
+ void add_type_fields(QList<QStringList>&& fs, int start = 0);
 
  void add_type_fields(QString qs, int start = 0);
 

@@ -63,11 +63,23 @@ void Language_Sample_Group::serialize_samples_to_file(
 
  RPH_Builder rphb(qts);
 
+ rphb.add_prelude_comment(
+    R"|(g=group id  t=text  s=start id
+    e=end id  i=id  p=page  x=tex label
+    h=theme
+
+    SG=sentence group
+    SE=sentence example)|");
+
  rphb.enter_array_type("SG", 8,4,2);
+ rphb.add_type_fields({{"g"},{"s"},{"e"},{"p"}});
+ //rphb.add_type_fields("g, i, x, t text, h");
+ rphb.leave_type();
+ rphb.el();
 
-// rphb.add_type_fields(QList<QStringList>({{"g"},{"i"},{"x"},{"t","text"},{"h"}}));
- rphb.add_type_fields("g, i, x, t text, h");
-
+ rphb.enter_structure_type("SE", 5);
+ rphb.add_type_fields({{"g"},{"i"},{"x"},{"t","text"},{"h"}});
+ //rphb.add_type_fields("g, i, x, t text, h");
  rphb.leave_type();
  rphb.el();
 
@@ -78,6 +90,11 @@ void Language_Sample_Group::serialize_samples_to_file(
  {
   lsg->serialize(qts);
  }
+
+ rphb.el();
+
+ rphb.enter_coda();
+ rphb.el();
 
  save_file(file, text);
 }

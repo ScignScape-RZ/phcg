@@ -1,11 +1,27 @@
 
+- g=group id  t=text  s=start id
+    e=end id  i=id  p=page  x=tex label
+    h=theme
+
+    SG=sentence group
+    SE=sentence example
+.
+
 &SG [8;4;2] 
+ :g:0 
+ :s:1 
+ :e:2 
+ :p:3 ;
+
+&SE {5} 
  :g:0 
  :i:1 
  :x:2 
  :t:3 :text:3 
  :h:4 ;
+
 &/
+
 !/SG
 $i: 1
 
@@ -2030,3 +2046,6 @@ $t. That newspaper plans to fire its editorial staff.
 $s# 136 228 229
 /!
 <+>
+
+
+/&

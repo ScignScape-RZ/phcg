@@ -103,6 +103,10 @@ void RPH_Builder::add_type_fields(QString qs, int start)
  add_type_fields(fs, start);
 }
 
+void RPH_Builder::add_type_fields(QList<QStringList>&& fs, int start)
+{
+ add_type_fields(fs, start);
+}
 
 void RPH_Builder::add_type_fields(QList<QStringList>& fs, int start)
 {
@@ -118,6 +122,20 @@ void RPH_Builder::add_type_fields(QList<QStringList>& fs, int start)
  }
 }
 
+void RPH_Builder::add_prelude_comment(QString qs)
+{
+ qts_ << "\n- " << qs << "\n.\n";
+}
+
+void RPH_Builder::add_sl_comment(QString qs)
+{
+ qts_ << ";;- " << qs << '\n';
+}
+
+void RPH_Builder::add_ml_comment(QString qs)
+{
+ qts_ << "\n;;-- " << qs << "\n --;;";
+}
 
 
 
