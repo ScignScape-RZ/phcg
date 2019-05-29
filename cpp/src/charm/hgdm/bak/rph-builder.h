@@ -39,8 +39,6 @@ public:
  void enter(QString type_name);
  void leave();
 
- void leave_type();
-
  void sf(QString field_name, QString val);
  void msf(QString field_name, QString val);
  void ssf(QString field_name, QString val);
@@ -56,8 +54,11 @@ public:
 
  void el(int i = 1);
 
+ void add_array_type_entry(QString type_name, QString codes);
+ void add_structure_type_entry(QString type_name, QString codes);
+
  template<typename... Ts>
- static QString _join(QString sep, Ts... vals)
+ static QString join(QString sep, Ts... vals)
  {
   QStringList qsl;
   std::vector<typename std::common_type<Ts...>::type> vec {vals...};
@@ -70,31 +71,16 @@ public:
  }
 
  template<typename... Ts>
- static QString join(const char* sep, Ts... vals)
+ static QString join(QChar sep, Ts... vals)
  {
-  return _join(QString(sep), vals...);
- }
-
- template<typename... Ts>
- static QString join(const QString& sep, Ts... vals)
- {
-  return _join(sep, vals...);
- }
-
- template<typename... Ts>
- static QString join(char sep, Ts... vals)
- {
-  return _join(QString(QChar(sep)), vals...);
+  join(QString(sep), vals...);
  }
 
  template<typename... Ts>
  static QString join(Ts... vals)
  {
-  return _join(QString(" "), vals...);
+  join(QString(" "), vals...);
  }
-
- void add_array_type_entry(QString type_name, QString codes);
- void add_structure_type_entry(QString type_name, QString codes);
 
  template<typename... Ts>
  void nsf(QString field_name, Ts... vals)
@@ -114,13 +100,17 @@ public:
   add_structure_type_entry(type_name, join(';', vals...));
  }
 
- void leave_prelude();
- void enter_coda();
+ void leave_type();
 
- void add_type_fields(QList<QStringList>& fs, int start = 0);
+ void _add_type_fields(QList<QStringList>& fs, int start = 0);
 
  void add_type_fields(QString qs, int start = 0);
 
+ void atf(QString& qs);
+
+
+ void leave_prelude();
+ void enter_coda();
 
 };
 

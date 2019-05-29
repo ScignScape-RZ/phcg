@@ -31,25 +31,14 @@ void RPH_Builder::leave()
  qts_ << "\n/!";
 }
 
-void RPH_Builder::leave_type()
-{
- qts_ << ';';
-}
-
 void RPH_Builder::leave_prelude()
-{
- qts_ << "\n&/";
-}
-
-void RPH_Builder::enter_coda()
 {
  qts_ << "\n/&";
 }
 
-void RPH_Builder::el(int i)
+void RPH_Builder::enter_coda()
 {
- for(int j = 0; j < i; ++j)
-   qts_ << "\n";
+ qts_ << "\n!&/";
 }
 
 void RPH_Builder::add_array_type_entry(QString type_name, QString codes)
@@ -60,6 +49,63 @@ void RPH_Builder::add_array_type_entry(QString type_name, QString codes)
 void RPH_Builder::add_structure_type_entry(QString type_name, QString codes)
 {
  qts_ << "\n&" << type_name << " {" << codes << "} ";
+}
+
+void RPH_Builder::leave_type()
+{
+ qts_ << ';';
+}
+
+void RPH_Builder::add_type_fields(QString qs, int start)
+{
+ QList<QStringList> fs;
+
+ QStringList qsl = qs.split(",", QString::SplitBehavior::SkipEmptyParts);
+
+ for(QString iqs : qsl)
+ {
+  QStringList iqsl = iqs.simplified().split(' ');
+  fs.push_back(iqsl);
+ }
+
+ _add_type_fields(fs, start);
+}
+
+void RPH_Builder::atf(QString& qs)
+{
+ QList<QStringList> fs;
+
+ QStringList qsl = qs.split(",", QString::SplitBehavior::SkipEmptyParts);
+
+ for(QString iqs : qsl)
+ {
+  QStringList iqsl = iqs.simplified().split(' ');
+  fs.push_back(iqsl);
+ }
+
+ _add_type_fields(fs, 0);
+}
+
+
+void RPH_Builder::_add_type_fields(QList<QStringList>& fs, int start)
+{
+ int i = start;
+ for(QStringList& qsl : fs)
+ {
+  for(QString qs : qsl)
+  {
+   qts_ << ':' << qs << ':' << i << ' ';
+  }
+  ++i;
+ }
+}
+
+
+
+void RPH_Builder::el(int i)
+{
+ for(int j = 0; j < i; ++j)
+   qts_ << "\n";
 }
 
 void RPH_Builder::ssf(QString field_name, QString val)
@@ -88,35 +134,6 @@ void RPH_Builder::top_append()
  qts_ << "\n<+>";
 }
 
-void RPH_Builder::add_type_fields(QString qs, int start)
-{
- QList<QStringList> fs;
-
- QStringList qsl = qs.split(",", QString::SplitBehavior::SkipEmptyParts);
-
- for(QString iqs : qsl)
- {
-  QStringList iqsl = iqs.simplified().split(' ');
-  fs.push_back(iqsl);
- }
-
- add_type_fields(fs, start);
-}
-
-
-void RPH_Builder::add_type_fields(QList<QStringList>& fs, int start)
-{
- int i = start;
- for(QStringList& qsl : fs)
- {
-  qts_ << "\n ";
-  for(QString qs : qsl)
-  {
-   qts_ << ':' << qs << ':' << i << ' ';
-  }
-  ++i;
- }
-}
 
 
 

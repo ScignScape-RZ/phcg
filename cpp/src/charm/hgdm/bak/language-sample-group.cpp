@@ -63,21 +63,21 @@ void Language_Sample_Group::serialize_samples_to_file(
 
  RPH_Builder rphb(qts);
 
- rphb.enter_array_type("SG", 8,4,2);
-
-// rphb.add_type_fields(QList<QStringList>({{"g"},{"i"},{"x"},{"t","text"},{"h"}}));
- rphb.add_type_fields("g, i, x, t text, h");
-
- rphb.leave_type();
- rphb.el();
-
  rphb.leave_prelude();
- rphb.el();
+
+ rphb.enter_array_type("SG", 8,4,2);
+// rphb.add_type_fields(QList<QStringList>({{"g"},{"i"},{"x"},{"t","text"},{"h"}}));
+//? rphb.add_type_fields("g, i, x, t text, h");
+// QString fs = "g, i, x, t text, h";
+// rphb.atf(fs);
+ rphb.leave_type();
 
  for(Language_Sample_Group* lsg: lsgs)
  {
   lsg->serialize(qts);
  }
+
+ rphb.enter_coda();
 
  save_file(file, text);
 }
