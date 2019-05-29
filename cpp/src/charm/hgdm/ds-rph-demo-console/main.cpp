@@ -30,6 +30,13 @@ USING_KANS(HGDMCore)
 
 USING_KANS(DSM)
 
+bool check(QPair<QString, void*>& pr)
+{
+ if(pr.first.isEmpty())
+   return pr.second;
+ return true;
+};
+
 
 
 int main(int argc, char **argv)
@@ -55,6 +62,7 @@ int main(int argc, char **argv)
 
  std::transform(hns.begin(), hns.end(), lsgs.begin(), [&count,&doc](RPH_Graph::hypernode_type* hn)
  {
+  ++count;
   Language_Sample_Group* result = new Language_Sample_Group(count);
 
   doc.graph()->get_sfs(hn, {1,2,3}, [result](QVector<QPair<QString, void*>>& prs)
@@ -69,15 +77,22 @@ int main(int argc, char **argv)
    result->set_page(nums[2]);
   });
 
-  doc.graph()->all_afs(hn, [&doc](QPair<QString, void*>& pr)
+  doc.graph()->all_afs(hn, [&doc, result](QPair<QString, void*>& pr)
   {
    RPH_Graph::hypernode_type* ihn = (RPH_Graph::hypernode_type*) pr.second;
    if(pr.second)
    {
-    doc.graph()->get_sf(ihn, 3, [](QPair<QString, void*>& ipr)
+    Language_Sample* ls = nullptr;
+    doc.graph()->get_sf(ihn, 3, [result, &ls](QPair<QString, void*>& ipr)
     {
-     qDebug() << ipr.first;
+     ls = new Language_Sample(result, ipr.first);
     });
+    doc.graph()->get_sf(ihn, 2, [ls](QPair<QString, void*>& ipr)
+    {
+     if(check(ipr))
+       ls->set_latex_label(ipr.first);
+    });
+    result->push_back(ls);
    }
    else
    {

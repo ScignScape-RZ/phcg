@@ -31,6 +31,12 @@ void RPH_Builder::leave()
  qts_ << "\n/!";
 }
 
+void RPH_Builder::el(int i)
+{
+ for(int j = 0; j < i; ++j)
+   qts_ << "\n";
+}
+
 void RPH_Builder::ssf(QString field_name, QString val)
 {
  qts_ << "\n$" << field_name << "# " << val;

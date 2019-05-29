@@ -1,381 +1,1724 @@
 
 !/SG
-$i: 0
-$i: 9 1 6
-$S: 
-/!
-!/SG
-$i: 0
-$i: 10 7 8
-$S: 
-/!
-!/SG
-$i: 0
-$i: 10 9 10
-$S: 
-/!
-!/SG
-$i: 0
-$i: 11 11 12
-$S: 
-/!
-!/SG
-$i: 0
-$i: 11 13 16
-$S: 
-/!
-!/SG
-$i: 0
-$i: 11 17 17
-$S: 
-/!
-!/SG
-$i: 0
-$i: 12 18 19
-$S: 
-/!
-!/SG
-$i: 0
-$i: 22 20 21
-$S: 
-/!
-!/SG
-$i: 0
-$i: 22 22 24
-$S: 
-/!
-!/SG
-$i: 0
-$i: 23 25 27
-$S: 
-/!
-!/SG
-$i: 0
-$i: 23 28 31
-$S: 
-/!
-!/SG
-$i: 0
-$i: 23 32 35
-$S: 
-/!
-!/SG
-$i: 0
-$i: 24 36 38
-$S: 
-/!
-!/SG
-$i: 0
-$i: 24 39 40
-$S: 
-/!
-!/SG
-$i: 0
-$i: 25 41 42
-$S: 
-/!
-!/SG
-$i: 0
-$i: 25 43 44
-$S: 
-/!
-!/SG
-$i: 0
-$i: 25 45 46
-$S: 
-/!
-!/SG
-$i: 0
-$i: 25 47 49
-$S: 
-/!
-!/SG
-$i: 0
-$i: 25 50 51
-$S: 
-/!
-!/SG
-$i: 0
-$i: 26 52 54
-$S: 
-/!
-!/SG
-$i: 0
-$i: 26 55 56
-$S: 
-/!
-!/SG
-$i: 0
-$i: 27 57 58
-$S: 
-/!
-!/SG
-$i: 0
-$i: 27 59 60
-$S: 
-/!
-!/SG
-$i: 0
-$i: 28 61 62
-$S: 
-/!
-!/SG
-$i: 0
-$i: 30 63 64
-$S: 
-/!
-!/SG
-$i: 0
-$i: 31 65 66
-$S: 
-/!
-!/SG
-$i: 0
-$i: 31 67 71
-$S: 
-/!
-!/SG
-$i: 0
-$i: 32 72 73
-$S: 
-/!
-!/SG
-$i: 0
-$i: 33 74 75
-$S: 
-/!
-!/SG
-$i: 0
-$i: 34 76 78
-$S: 
-/!
-!/SG
-$i: 0
-$i: 40 79 80
-$S: 
-/!
-!/SG
-$i: 0
-$i: 40 81 83
-$S: 
-/!
-!/SG
-$i: 0
-$i: 41 84 85
-$S: 
-/!
-!/SG
-$i: 0
-$i: 41 86 87
-$S: 
-/!
-!/SG
-$i: 0
-$i: 42 88 91
-$S: 
-/!
-!/SG
-$i: 0
-$i: 48 92 99
-$S: 
-/!
-!/SG
-$i: 0
-$i: 49 100 101
-$S: 
-/!
-!/SG
-$i: 0
-$i: 51 102 103
-$S: 
-/!
-!/SG
-$i: 0
-$i: 53 104 105
-$S: 
-/!
-!/SG
-$i: 0
-$i: 71 106 107
-$S: 
-/!
-!/SG
-$i: 0
-$i: 71 108 109
-$S: 
-/!
-!/SG
-$i: 0
-$i: 75 110 111
-$S: 
-/!
-!/SG
-$i: 0
-$i: 75 112 115
-$S: 
-/!
-!/SG
-$i: 0
-$i: 76 116 118
-$S: 
-/!
-!/SG
-$i: 0
-$i: 77 119 120
-$S: 
-/!
-!/SG
-$i: 0
-$i: 78 121 123
-$S: 
-/!
-!/SG
-$i: 0
-$i: 78 124 130
-$S: 
-/!
-!/SG
-$i: 0
-$i: 79 131 136
-$S: 
-/!
-!/SG
-$i: 0
-$i: 79 137 139
-$S: 
-/!
-!/SG
-$i: 0
-$i: 79 140 142
-$S: 
-/!
-!/SG
-$i: 0
-$i: 80 143 145
-$S: 
-/!
-!/SG
-$i: 0
-$i: 81 146 156
-$S: 
-/!
-!/SG
-$i: 0
-$i: 82 157 159
-$S: 
-/!
-!/SG
-$i: 0
-$i: 82 160 161
-$S: 
-/!
-!/SG
-$i: 0
-$i: 83 162 165
-$S: 
-/!
-!/SG
-$i: 0
-$i: 85 166 170
-$S: 
-/!
-!/SG
-$i: 0
-$i: 96 171 172
-$S: 
-/!
-!/SG
-$i: 0
-$i: 96 173 176
-$S: 
-/!
-!/SG
-$i: 0
-$i: 96 177 180
-$S: 
-/!
-!/SG
-$i: 0
-$i: 97 181 181
-$S: 
-/!
-!/SG
-$i: 0
-$i: 106 182 187
-$S: 
-/!
-!/SG
-$i: 0
-$i: 106 188 189
-$S: 
-/!
-!/SG
-$i: 0
-$i: 114 190 192
-$S: 
-/!
-!/SG
-$i: 0
-$i: 114 193 201
-$S: 
-/!
-!/SG
-$i: 0
-$i: 115 202 204
-$S: 
-/!
-!/SG
-$i: 0
-$i: 116 205 207
-$S: 
-/!
-!/SG
-$i: 0
-$i: 118 208 208
-$S: 
-/!
-!/SG
-$i: 0
-$i: 119 209 212
-$S: 
-/!
-!/SG
-$i: 0
-$i: 120 213 214
-$S: 
-/!
-!/SG
-$i: 0
-$i: 121 215 215
-$S: 
-/!
-!/SG
-$i: 0
-$i: 129 216 217
-$S: 
-/!
-!/SG
-$i: 0
-$i: 131 218 219
-$S: 
-/!
-!/SG
-$i: 0
-$i: 131 220 223
-$S: 
-/!
-!/SG
-$i: 0
-$i: 136 224 225
-$S: 
-/!
-!/SG
-$i: 0
-$i: 136 226 227
-$S: 
-/!
-!/SG
-$i: 0
-$i: 136 228 229
-$S: 
+$i: 1
+
+!/SE
+$x: itm:ornate
+$t. He opened the wine bottle with an ornate corkscrew.
+.
+/!
+
+!/SE
+$x: itm:butterfly
+$t. He opened the beer bottle with a butterfly corkscrew.
+.
+/!
+
+!/SE
+$t. He collects antique corkscrews and just bid on one online.
+.
+/!
+
+!/SE
+$x: itm:screwtop
+$t. I thought this was a screw-top but it turns out I need a corkscrew.
+.
+/!
+
+!/SE
+$x: itm:x3d
+$t. This X3D file shows a very realistic corkscrew created with NURBS surfaces.
+.
+/!
+
+!/SE
+$x: itm:sendx3d
+$t. Could you send me the corkscrew (the X3D file you just mentioned)?
+.
+/!
+
+
+$s# 9 1 6
+/!
+
+!/SG
+$i: 2
+
+!/SE
+$t. Do you have a bottle opener?
+.
+/!
+
+!/SE
+$t. Could you get me a corkscrew?
+.
+/!
+
+
+$s# 10 7 8
+/!
+
+!/SG
+$i: 3
+
+!/SE
+$x: itm:hammer
+$t. He opened the bottle of beer with a hammer.
+.
+/!
+
+!/SE
+$t. He pounded the nail with a lever corkscrew.
+.
+/!
+
+
+$s# 10 9 10
+/!
+
+!/SG
+$i: 4
+
+!/SE
+$x: itm:bucket
+$t. Can you bring me a bucket of water?
+.
+/!
+
+!/SE
+$x: itm:glass
+$t. Can you bring me a glass of water?
+.
+/!
+
+
+$s# 11 11 12
+/!
+
+!/SG
+$i: 5
+
+!/SE
+$t. The ocean is over there.
+.
+/!
+
+!/SE
+$t. The water is over there.
+.
+/!
+
+!/SE
+$t. You can see the ocean from here.
+.
+/!
+
+!/SE
+$t. You can see the water from here.
+.
+/!
+
+
+$s# 11 13 16
+/!
+
+!/SG
+$i: 6
+
+
+$s# 11 17 17
+/!
+
+!/SG
+$i: 7
+
+!/SE
+$t. tap water is mixed with flouride).
+.
+/!
+
+!/SE
+$t. the stem is brown).
+.
+/!
+
+
+$s# 12 18 19
+/!
+
+!/SG
+$i: 8
+
+!/SE
+$x: itm:put
+$t. Can you put some almond milk in my coffee?
+.
+/!
+
+!/SE
+$x: itm:after
+$t. Is there milk in this coffee?
+.
+/!
+
+
+$s# 22 20 21
+/!
+
+!/SG
+$i: 9
+
+!/SE
+$t. cold air coming through the cracks.
+.
+/!
+
+!/SE
+$t. the bedroom.
+.
+/!
+
+!/SE
+$t. I can't %-- it's stuck.
+.
+/!
+
+
+$s# 22 22 24
+/!
+
+!/SG
+$i: 10
+
+!/SE
+$x: itm:almond
+$t. Do you have almond milk?
+.
+/!
+
+!/SE
+$t. Can you get MsNBC on your TV?
+.
+/!
+
+!/SE
+$x: itm:needcorkscrew
+$t. This isn't a screw-cap bottle: I need a corkscrew.
+.
+/!
+
+
+$s# 23 25 27
+/!
+
+!/SG
+$i: 11
+
+!/SE
+$t. I think the window is open, can you close it?
+.
+/!
+
+!/SE
+$t. I see you have almond milk, can I have some?
+.
+/!
+
+!/SE
+$t. If you get MsNBC, can you turn on Rachel Maddow?
+.
+/!
+
+!/SE
+$t. If there is a corkscrew in the house, can you get it?
+.
+/!
+
+
+$s# 23 28 31
+/!
+
+!/SG
+$i: 12
+
+!/SE
+$t. I believe you have a reservation for Jones?
+.
+/!
+
+!/SE
+$t. I believe this is the customer service desk?
+.
+/!
+
+!/SE
+$t. I believe we ordered a second basket of garlic bread?
+.
+/!
+
+!/SE
+$t. acessories in this section?
+.
+/!
+
+
+$s# 23 32 35
+/!
+
+!/SG
+$i: 13
+
+!/SE
+$t. Do you have any milk?
+.
+/!
+
+!/SE
+$t. Yes, we have almond milk.
+.
+/!
+
+!/SE
+$t. No, we have almond milk.
+.
+/!
+
+
+$s# 24 36 38
+/!
+
+!/SG
+$i: 14
+
+!/SE
+$t. Is there milk in this coffee?
+.
+/!
+
+!/SE
+$t. Yes, almond milk.
+.
+/!
+
+
+$s# 24 39 40
+/!
+
+!/SG
+$i: 15
+
+!/SE
+$t. is open %-- please close it!
+.
+/!
+
+!/SE
+$t. is open %-- please close it!
+.
+/!
+
+
+$s# 25 41 42
+/!
+
+!/SG
+$i: 16
+
+!/SE
+$t. Grandma wants us to close the window.
+.
+/!
+
+!/SE
+$t. He wants a bottle opener.
+.
+/!
+
+
+$s# 25 43 44
+/!
+
+!/SG
+$i: 17
+
+!/SE
+$t. Grandma wants us to eliminate the cold draft.
+.
+/!
+
+!/SE
+$t. He wants something to open that bottle.
+.
+/!
+
+
+$s# 25 45 46
+/!
+
+!/SG
+$i: 18
+
+!/SE
+$t. this class, and I think you are doing pretty well.
+.
+/!
+
+!/SE
+$t. I don't want to get fined.
+.
+/!
+
+!/SE
+$t. she was during the debate.
+.
+/!
+
+
+$s# 25 47 49
+/!
+
+!/SG
+$i: 19
+
+!/SE
+$x: itm:can
+$t. Can I have some milk?
+.
+/!
+
+!/SE
+$x: itm:close
+$t. Can you close the kitchen window?
+.
+/!
+
+
+$s# 25 50 51
+/!
+
+!/SG
+$i: 20
+
+!/SE
+$t. we can see if other windows are open.
+.
+/!
+
+!/SE
+$t. we can see if there is a draft through the window-cracks.
+.
+/!
+
+!/SE
+$t. ask if she wants a sweater.
+.
+/!
+
+
+$s# 26 52 54
+/!
+
+!/SG
+$i: 21
+
+!/SE
+$t. Mr. Jones, who's an old friend of mine.  Can he take this call?
+.
+/!
+
+!/SE
+$x: itm:Jones
+$t. is not available at the moment.
+.
+/!
+
+
+$s# 26 55 56
+/!
+
+!/SG
+$i: 22
+
+!/SE
+$t. a contract in exchange for campaign contributions?
+.
+/!
+
+!/SE
+$t. may incriminate me.
+.
+/!
+
+
+$s# 27 57 58
+/!
+
+!/SG
+$i: 23
+
+!/SE
+$x: itm:isJones
+$t. Is Jones there?
+.
+/!
+
+!/SE
+$x: itm:not
+$t. He is not available.
+.
+/!
+
+
+$s# 27 59 60
+/!
+
+!/SG
+$i: 24
+
+!/SE
+$x: itm:file
+$t. File f = File.open(path, File.READ\_ONLY);
+.
+/!
+
+!/SE
+$t. if f.isEmpty() return 0;
+.
+/!
+
+
+$s# 28 61 62
+/!
+
+!/SG
+$i: 25
+
+!/SE
+$x: itm:wants
+$t. window is closed` to be true.
+.
+/!
+
+!/SE
+$x: itm:cold
+$t. `q.I am cold` to be false.
+.
+/!
+
+
+$s# 30 63 64
+/!
+
+!/SG
+$i: 26
+
+!/SE
+$x: itm:rooting
+$t. Are you rooting for the Jets?
+.
+/!
+
+!/SE
+$t. Well, I want the Leafs to win.
+.
+/!
+
+
+$s# 31 65 66
+/!
+
+!/SG
+$i: 27
+
+!/SE
+$t. and a proposition (`PTwo;) whose content is that the Leafs win.
+.
+/!
+
+!/SE
+$x: itm:entail
+$t. `PTwo; entails the negation of `POne;.
+.
+/!
+
+!/SE
+$t. He wants the content of `PTwo; to be true.
+.
+/!
+
+!/SE
+$x: itm:false
+$t. with `POne; being false.
+.
+/!
+
+!/SE
+$x: itm:Jets
+$t. He wants the content of `POne; to be false.
+.
+/!
+
+
+$s# 31 67 71
+/!
+
+!/SG
+$i: 28
+
+!/SE
+$x: itm:store
+$t. local liquor store?
+.
+/!
+
+!/SE
+$x: itm:varietal
+$t. Peninsula last summer?  What varietal was that again?
+.
+/!
+
+
+$s# 32 72 73
+/!
+
+!/SG
+$i: 29
+
+!/SE
+$t. That wine was a Cabernet Franc.
+.
+/!
+
+!/SE
+$t. They are very sweet.
+.
+/!
+
+
+$s# 33 74 75
+/!
+
+!/SG
+$i: 30
+
+!/SE
+$t. Those dogs are Staffordshires.
+.
+/!
+
+!/SE
+$t. What's a Staffordshire?
+.
+/!
+
+!/SE
+$t. It's a breed of dog.
+.
+/!
+
+
+$s# 34 76 78
+/!
+
+!/SG
+$i: 31
+
+!/SE
+$t. This wine is a young Syrah.
+.
+/!
+
+!/SE
+$t. My cousin adopted one of my neighbor's dog's puppies.
+.
+/!
+
+
+$s# 40 79 80
+/!
+
+!/SG
+$i: 32
+
+!/SE
+$x: itm:maj
+$t. opposed to tuition increases.
+.
+/!
+
+!/SE
+$x: itm:most
+$t. about tuition increases.
+.
+/!
+
+!/SE
+$x: itm:many
+$t. Many students have protested the tuition increases.
+.
+/!
+
+
+$s# 40 81 83
+/!
+
+!/SG
+$i: 33
+
+!/SE
+$t. Most students oppose the tuition increase.
+.
+/!
+
+!/SE
+$x: itm:indef
+$t. Most students oppose a tuition increase.
+.
+/!
+
+
+$s# 41 84 85
+/!
+
+!/SG
+$i: 34
+
+!/SE
+$x: itm:today
+$t. at least 10\%.  Most students oppose a tuition increase.
+.
+/!
+
+!/SE
+$x: itm:colleges
+$t. most students oppose a tuition increase.
+.
+/!
+
+
+$s# 41 86 87
+/!
+
+!/SG
+$i: 35
+
+!/SE
+$x: itm:sas
+$t. Student after student came out against the tuition hikes.
+.
+/!
+
+!/SE
+$x: itm:substantial
+$t. have come out against the tuition hikes.
+.
+/!
+
+!/SE
+$x: itm:mass
+$t. may soon reach a critical mass.
+.
+/!
+
+!/SE
+$x: itm:tipping
+$t. may have reached a tipping point.
+.
+/!
+
+
+$s# 42 88 91
+/!
+
+!/SG
+$i: 36
+
+!/SE
+$x: itm:across
+$t. Our house is across the lake.
+.
+/!
+
+!/SE
+$x: itm:pour
+$t. I poured wine from a decanter.
+.
+/!
+
+!/SE
+$x: itm:spill
+$t. Some wine spilled from the decanter.
+.
+/!
+
+!/SE
+$x: itm:puton
+$t. I put spackle on the wall with a knife.
+.
+/!
+
+!/SE
+$x: itm:spatter
+$t. Paint spattered all over the wall after a can droppped.
+.
+/!
+
+!/SE
+$x: itm:colorallover
+$t. There's a purple-and-blue color pattern all over the wall.
+.
+/!
+
+!/SE
+$t. There are drawings all over the wall.
+.
+/!
+
+!/SE
+$x: itm:sheetallover
+$t. There's a plastic sheet all over the wall.
+.
+/!
+
+
+$s# 48 92 99
+/!
+
+!/SG
+$i: 37
+
+!/SE
+$x: itm:apartment
+$t. he actually lives in an apartment).
+.
+/!
+
+!/SE
+$t. (said of a stall in a Chinaatown food court).
+.
+/!
+
+
+$s# 49 100 101
+/!
+
+!/SG
+$i: 38
+
+!/SE
+$t. He had to cut the crusty bread with a serrated knife.
+.
+/!
+
+!/SE
+$t. The museum had antique butter knives with intricate carvings.
+.
+/!
+
+
+$s# 51 102 103
+/!
+
+!/SG
+$i: 39
+
+!/SE
+$t. What time does the office open?
+.
+/!
+
+!/SE
+$x: itm:phone
+$t. What time does train 100 depart from Newark?
+.
+/!
+
+
+$s# 53 104 105
+/!
+
+!/SG
+$i: 40
+
+!/SE
+$t. I snacked on toast and coffee.
+.
+/!
+
+!/SE
+$t. I snacked on buttered toast and iced coffee.
+.
+/!
+
+
+$s# 71 106 107
+/!
+
+!/SG
+$i: 41
+
+!/SE
+$t. I snacked on toast and instant coffee.
+.
+/!
+
+!/SE
+$t. I snacked on toast and Eritrean coffee.
+.
+/!
+
+
+$s# 71 108 109
+/!
+
+!/SG
+$i: 42
+
+!/SE
+$x: itm:pf
+$t. People fed the rescued dogs.
+.
+/!
+
+!/SE
+$x: itm:ve
+$t. Vets examined the rescued dogs.
+.
+/!
+
+
+$s# 75 110 111
+/!
+
+!/SG
+$i: 43
+
+!/SE
+$t. Every singer performed two songs.
+.
+/!
+
+!/SE
+$t. Everyone performed two songs.
+.
+/!
+
+!/SE
+$t. Everyone sang along to two songs.
+.
+/!
+
+!/SE
+$t. Everyone in the audience sang along to two songs.
+.
+/!
+
+
+$s# 75 112 115
+/!
+
+!/SG
+$i: 44
+
+!/SE
+$t. (but were subsequently abandoned by their owners).
+.
+/!
+
+!/SE
+$t. (for the grand finale).
+.
+/!
+
+!/SE
+$t. performed onstage matched the lyrics they had in hand).
+.
+/!
+
+
+$s# 76 116 118
+/!
+
+!/SG
+$i: 45
+
+!/SE
+$t. yesterday and both looked much better.
+.
+/!
+
+!/SE
+$t. %-- it's a dangerous stretch of highway.
+.
+/!
+
+
+$s# 77 119 120
+/!
+
+!/SG
+$i: 46
+
+!/SE
+$t. We saw a lot of other dogs getting medical attention.
+.
+/!
+
+!/SE
+$t. It looked very modern, like a human hospital.
+.
+/!
+
+!/SE
+$t. for humans as well as dogs.
+.
+/!
+
+
+$s# 78 121 123
+/!
+
+!/SG
+$i: 47
+
+!/SE
+$t. I'm going to rescue her from that boring conversation.
+.
+/!
+
+!/SE
+$t. The trade rescued a star athlete from a losing team.
+.
+/!
+
+!/SE
+$t. Your invitation rescued me from studying all night.
+.
+/!
+
+!/SE
+$t. New mathematical models rescued her original research from obscurity.
+.
+/!
+
+!/SE
+$t. system may actually be extraordinary.
+.
+/!
+
+!/SE
+$t. he never says anything controversial.
+.
+/!
+
+!/SE
+$t. people from a basically-defeated Germany and sent them to Siberia.
+.
+/!
+
+
+$s# 78 124 130
+/!
+
+!/SG
+$i: 48
+
+!/SE
+$t. There's some coffee on your shirt.
+.
+/!
+
+!/SE
+$t. There's coffee all over the table.
+.
+/!
+
+!/SE
+$t. She poured coffee from an ornate beaker.
+.
+/!
+
+!/SE
+$t. There's too much coffee in the grinder.
+.
+/!
+
+!/SE
+$t. There's a lot of coffee left in the pot.
+.
+/!
+
+!/SE
+$t. %-- should I pour it out?
+.
+/!
+
+
+$s# 79 131 136
+/!
+
+!/SG
+$i: 49
+
+!/SE
+$t. There are coffees all over the far wall at the expresso bar.
+.
+/!
+
+!/SE
+$t. She poured coffees from an ornate beaker.
+.
+/!
+
+!/SE
+$t. %-- shall I pour them out?
+.
+/!
+
+
+$s# 79 137 139
+/!
+
+!/SG
+$i: 50
+
+!/SE
+$x: itm:borough
+$t. New Yorkers live in one of five boroughs.
+.
+/!
+
+!/SE
+$t. New Yorkers reliably vote for Democratic presidential candidates.
+.
+/!
+
+!/SE
+$x: itm:commute
+$t. to New York City.
+.
+/!
+
+
+$s# 79 140 142
+/!
+
+!/SG
+$i: 51
+
+!/SE
+$t. All New York City residents live in one of five boroughs.
+.
+/!
+
+!/SE
+$t. presidential candidates.
+.
+/!
+
+!/SE
+$t. long it takes to commute to New York City.
+.
+/!
+
+
+$s# 80 143 145
+/!
+
+!/SG
+$i: 52
+
+!/SE
+$t. They played some new songs.
+.
+/!
+
+!/SE
+$t. There was some pizza earlier, but it's all gone.
+.
+/!
+
+!/SE
+$t. There were some slices of pizza earlier, but it's all gone.
+.
+/!
+
+!/SE
+$t. There were some slices of toast earlier, but there's none left.
+.
+/!
+
+!/SE
+$t. There was some toast earlier, but they're all gone.
+.
+/!
+
+!/SE
+$t. got eroded by trades and free agency.
+.
+/!
+
+!/SE
+$t. drifted away due to trades and free agency.
+.
+/!
+
+!/SE
+$t. has not won a title in decades.
+.
+/!
+
+!/SE
+$t. failed to surround them with enough depth.
+.
+/!
+
+!/SE
+$t. were not surrounded with enough depth.
+.
+/!
+
+!/SE
+$t. did not have enough depth.
+.
+/!
+
+
+$s# 81 146 156
+/!
+
+!/SG
+$i: 53
+
+!/SE
+$t. they debuted new songs.
+.
+/!
+
+!/SE
+$x: itm:teamflew
+$t. New York and they played the Yankees.
+.
+/!
+
+!/SE
+$x: itm:theflies
+$t. will perform `q.The Flies`/.
+.
+/!
+
+
+$s# 82 157 159
+/!
+
+!/SG
+$i: 54
+
+!/SE
+$t. sounded Quebecois.
+.
+/!
+
+!/SE
+$t. to discuss Sartre's philosophy when the play was over.
+.
+/!
+
+
+$s# 82 160 161
+/!
+
+!/SG
+$i: 55
+
+!/SE
+$t. he had to get the marriage legally recognized here.
+.
+/!
+
+!/SE
+$t. live in a state that does not recognize same-sex marriages.
+.
+/!
+
+!/SE
+$t. many ways he's still a bachelor.
+.
+/!
+
+!/SE
+$t. and wherever yours is, you need a mini-fridge.
+.
+/!
+
+
+$s# 83 162 165
+/!
+
+!/SG
+$i: 56
+
+!/SE
+$t. were rescued).
+.
+/!
+
+!/SE
+$t. of registered voters in New York do so).
+.
+/!
+
+!/SE
+$t. There is milk in that coffee (i.e.: almond milk).
+.
+/!
+
+!/SE
+$t. corskscrew).
+.
+/!
+
+!/SE
+$t. That wine is Fabernet Franc (i.e.: `q.W is CF`/).
+.
+/!
+
+
+$s# 85 166 170
+/!
+
+!/SG
+$i: 57
+
+!/SE
+$t. We learned that people fed the rescued dogs.
+.
+/!
+
+!/SE
+$t. he would govern in a bipartisan manner.
+.
+/!
+
+
+$s# 96 171 172
+/!
+
+!/SG
+$i: 58
+
+!/SE
+$x: itm:trumpcolluded
+$t. The Trump campaign colluded with Russia.
+.
+/!
+
+!/SE
+$t. the Trump campaign colluded with Russia.
+.
+/!
+
+!/SE
+$t. the Trump campaign colluded with Russia.
+.
+/!
+
+!/SE
+$t. the Trump campaign colluded with Russia.
+.
+/!
+
+
+$s# 96 173 176
+/!
+
+!/SG
+$i: 59
+
+!/SE
+$t. I believed in Father Christmas.
+.
+/!
+
+!/SE
+$t. I believed in Peace on Earth.
+.
+/!
+
+!/SE
+$t. I believed in Obama.
+.
+/!
+
+!/SE
+$t. I believed in lies.
+.
+/!
+
+
+$s# 96 177 180
+/!
+
+!/SG
+$i: 60
+
+
+$s# 97 181 181
+/!
+
+!/SG
+$i: 61
+
+!/SE
+$t. Today is Tuesday.
+.
+/!
+
+!/SE
+$t. The big departmental meeting is Tuesday.
+.
+/!
+
+!/SE
+$t. It is very windy.
+.
+/!
+
+!/SE
+$t. The lousy weather is very windy.
+.
+/!
+
+!/SE
+$t. They are forecasting snow.
+.
+/!
+
+!/SE
+$t. The latest reports are forecasting snow.
+.
+/!
+
+
+$s# 106 182 187
+/!
+
+!/SG
+$i: 62
+
+!/SE
+$t. She is a salaried employee.
+.
+/!
+
+!/SE
+$t. He is an elected official.
+.
+/!
+
+
+$s# 106 188 189
+/!
+
+!/SG
+$i: 63
+
+!/SE
+$x: itm:penguin
+$t. A penguin is a flightless bird.
+.
+/!
+
+!/SE
+$x: itm:rhino
+$t. Rhinos in that park are threatened by poachers.
+.
+/!
+
+!/SE
+$x: itm:elephant
+$t. Baby elephants don't have tusks.
+.
+/!
+
+
+$s# 114 190 192
+/!
+
+!/SG
+$i: 64
+
+!/SE
+$x: itm:koreanstore
+$t. My favorite Korean restaurant is adjacent to the bookstore.
+.
+/!
+
+!/SE
+$x: itm:koreanclosed
+$t. My favorite Korean restaurant is closed today.
+.
+/!
+
+!/SE
+$x: itm:koreanposter
+$t. My favorite Korean restaurant is decorated with posters from the 2002 World Cup.
+.
+/!
+
+!/SE
+$x: itm:koreanstarted
+$t. My favorite Korean restaurant started out in a food court.
+.
+/!
+
+!/SE
+$x: itm:koreanloyal
+$t. My favorite Korean restaurant said I'm their most loyal customer.
+.
+/!
+
+!/SE
+$x: itm:bark
+$t. She's constantly barking at her employees.
+.
+/!
+
+!/SE
+$x: itm:back
+$t. He's not playing well because his back is barking at him.
+.
+/!
+
+!/SE
+$x: itm:actup
+$t. He's not playing well because his sore back is acting up.
+.
+/!
+
+!/SE
+$x: itm:kitten
+$t. The kitten barked at the dog.
+.
+/!
+
+
+$s# 114 193 201
+/!
+
+!/SG
+$i: 65
+
+!/SE
+$x: itm:teaduck
+$t. Tea-smoked duck is a Sichuan delicacy.
+.
+/!
+
+!/SE
+$x: itm:rubberduck
+$t. The baby's favorite toy is a rubber duck.
+.
+/!
+
+!/SE
+$x: itm:weddingduck
+$t. Wedding ducks are traditional Korean gifts.
+.
+/!
+
+
+$s# 115 202 204
+/!
+
+!/SG
+$i: 66
+
+!/SE
+$t. This book, which costs \$40, has some crazy ideas inside.
+.
+/!
+
+!/SE
+$t. nonfiction, has some dude's phone number scrawled inside.
+.
+/!
+
+!/SE
+$t. My boss barks louder than his dog does.
+.
+/!
+
+
+$s# 116 205 207
+/!
+
+!/SG
+$i: 67
+
+
+$s# 118 208 208
+/!
+
+!/SG
+$i: 68
+
+!/SE
+$t. with no idea of its history.
+.
+/!
+
+!/SE
+$t. will ask me for directions.
+.
+/!
+
+!/SE
+$t. paper to compain about my grade(s).
+.
+/!
+
+!/SE
+$t. %-- complained about the tuition increase.
+.
+/!
+
+
+$s# 119 209 212
+/!
+
+!/SG
+$i: 69
+
+!/SE
+$t. first time this year.
+.
+/!
+
+!/SE
+$t. to win in overtime.
+.
+/!
+
+
+$s# 120 213 214
+/!
+
+!/SG
+$i: 70
+
+
+$s# 121 215 215
+/!
+
+!/SG
+$i: 71
+
+!/SE
+$t. Rhinos in that park are threatened by poachers.`
+.
+/!
+
+!/SE
+$t. Young rhinos are threatened by poachers.`
+.
+/!
+
+
+$s# 129 216 217
+/!
+
+!/SG
+$i: 72
+
+!/SE
+$t. I got glue for your daughter.
+.
+/!
+
+!/SE
+$t. I got glue for your coffee mug.
+.
+/!
+
+
+$s# 131 218 219
+/!
+
+!/SG
+$i: 73
+
+!/SE
+$t. We're going to Grandma!
+.
+/!
+
+!/SE
+$t. Let's go to him right now.
+.
+/!
+
+!/SE
+$t. Let's go to the lawyers.
+.
+/!
+
+!/SE
+$t. Let's go to the press.
+.
+/!
+
+
+$s# 131 220 223
+/!
+
+!/SG
+$i: 74
+
+!/SE
+$t. The newspaper you are reading is being sued.
+.
+/!
+
+!/SE
+$t. Liverpool, an important harbor, built new docks.
+.
+/!
+
+
+$s# 136 224 225
+/!
+
+!/SG
+$i: 75
+
+!/SE
+$t. the table (?).
+.
+/!
+
+!/SE
+$t. Liverpool beat Tottenham and built new docks (?).
+.
+/!
+
+
+$s# 136 226 227
+/!
+
+!/SG
+$i: 76
+
+!/SE
+$t. Liverpool wants to sign a left-footed striker.
+.
+/!
+
+!/SE
+$t. That newspaper plans to fire its editorial staff.
+.
+/!
+
+
+$s# 136 228 229
 /!

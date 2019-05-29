@@ -30,15 +30,22 @@ void Language_Sample_Group::serialize(QTextStream& qts)
 {
  RPH_Builder rphb(qts);
  rphb.enter("SG");
-
  rphb.nsf("i", id_);
 
- rphb.nsf("i", page_, start_num_, end_num_);
+ rphb.el();
+ for(Language_Sample* ls : *this)
+ {
+  ls->serialize(qts);
+  rphb.el();
+ }
+ rphb.el();
 
 
- rphb.sf("S", QString());
+ rphb.nsf("s", page_, start_num_, end_num_);
 
  rphb.leave();
+
+ rphb.el();
 
 // qts << "!/ SE";
 

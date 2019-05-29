@@ -52,6 +52,8 @@ public:
   sf(field_name, QString::number(val));
  }
 
+ void el(int i = 1);
+
  template<typename... Ts>
  void nsf(QString field_name, Ts... vals)
  {
@@ -62,7 +64,7 @@ public:
   {
    return QString::number(val);
   });
-  sf(field_name, qsl.join(' '));
+  ssf(field_name, qsl.join(' '));
  }
 
 
