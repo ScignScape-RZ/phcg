@@ -172,8 +172,11 @@ public:
    if(size_ < 0)
    {
     numeric_index_type minin = block_package_->min_index_;
+    numeric_index_type maxin = block_package_->max_index_;
+
     ind += minin;
-    if(ind > block_package_->max_index_)
+    maxin += minin;
+    if(ind > maxin)
       ind = minin;
    }
    else if(size_ == 0)
