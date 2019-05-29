@@ -69,6 +69,17 @@ int main(int argc, char **argv)
    result->set_page(nums[2]);
   });
 
+  doc.graph()->all_afs(hn, [&doc](QPair<QString, void*>& pr)
+  {
+   RPH_Graph::hypernode_type* ihn = (RPH_Graph::hypernode_type*) pr.second;
+   doc.graph()->get_sf(ihn, 3, [](QPair<QString, void*>& ipr)
+   {
+    qDebug() << ipr.first;
+   });
+   //Language_Sample* ls = ()
+   //qDebug() << pr.first;
+  });
+
   return result;
  });
 

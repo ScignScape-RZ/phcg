@@ -149,6 +149,15 @@ public:
    return 0;
   }
 
+  void set_maximum_array_index(numeric_index_type ind)
+  {
+   if(size_ < 0)
+     block_package_->max_index_ = ind;
+//   if(size_ == 0)
+//     return 0; // array_package_->max_index;
+//   return 0;
+  }
+
   numeric_index_type get_maximum_array_index()
   {
    if(size_ < 0)
@@ -512,13 +521,24 @@ public:
    hyponode_value_type& val, type_descriptor_type type_descriptor)
  {
   numeric_index_type ind = hn->get_maximum_array_index() + 1;
-  _set_data(hn, ind, val, &type_descriptor);
+  _set_af(hn, ind, val, &type_descriptor);
+ }
+
+ void all_afs(Hypernode* hn,
+   std::function<void(hyponode_value_type&)> fn)
+ {
+//  numeric_index_type min = hn->get_minimum_array_index();
+  numeric_index_type max = hn->get_maximum_array_index();
+  for(auto i = 1; i <= max; ++i)
+    get_af(hn, i, fn);
  }
 
  void append_af(Hypernode* hn,
    hyponode_value_type val, type_descriptor_type type_descriptor)
  {
   numeric_index_type ind = hn->get_maximum_array_index() + 1;
+  hn->set_maximum_array_index(ind);
+  ind += hn->get_minimum_array_index();
   _set_data(hn, ind, val, &type_descriptor);
  }
 
