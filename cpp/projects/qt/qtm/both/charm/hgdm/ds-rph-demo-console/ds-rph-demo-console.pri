@@ -25,15 +25,18 @@ CONFIG += no_keywords
 
 DEFINES += USE_KANS
 
+
 HEADERS += \
   $$SRC_DIR/language-sample.h \
   $$SRC_DIR/language-sample-group.h \
+  $$SRC_DIR/rph-builder.h \
 
 
 SOURCES += \
   $$SRC_DIR/main.cpp \
   $$SRC_DIR/language-sample.cpp \
   $$SRC_DIR/language-sample-group.cpp \
+  $$SRC_DIR/rph-builder.cpp \
 
 
 LIBS += -L$$TARGETSDIR  -lrelae-phaon  -lds-relae-phaon

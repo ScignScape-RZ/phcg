@@ -14,6 +14,7 @@
 #include <QVector>
 #include <QString>
 
+class QTextStream;
 
 KANS_(DSM)
 
@@ -37,6 +38,10 @@ public:
 
  ACCESSORS(int ,start_num)
  ACCESSORS(int ,end_num)
+
+ void serialize(QTextStream& qts);
+
+ static void serialize_samples_to_file(QVector<Language_Sample_Group*>& lsgs, QString file);
 
 };
 

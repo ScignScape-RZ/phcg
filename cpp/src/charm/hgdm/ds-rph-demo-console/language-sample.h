@@ -19,6 +19,8 @@
 #include <QVector>
 #include <QString>
 
+class QTextStream;
+
 
 KANS_(DSM)
 
@@ -36,7 +38,11 @@ public:
  Language_Sample(Language_Sample_Group* group, QString text);
 
  ACCESSORS(QString ,text)
+ ACCESSORS(QString ,latex_label)
+
  ACCESSORS(Language_Sample_Group* ,group)
+
+ void serialize(QTextStream& qts);
 
 };
 

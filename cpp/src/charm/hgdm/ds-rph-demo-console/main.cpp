@@ -91,12 +91,16 @@ int main(int argc, char **argv)
   return result;
  });
 
- for(Language_Sample_Group* lsg : lsgs)
- {
-   qDebug() << QString("s: %1 e: %2 p: %3").arg(lsg->start_num()).arg(lsg->end_num())
-               .arg(lsg->page());
-  //});
- }
+ Language_Sample_Group::serialize_samples_to_file(lsgs, DEFAULT_RPH_FOLDER  "/samples.out.txt");
+
+// QTextStream
+
+// for(Language_Sample_Group* lsg : lsgs)
+// {
+//   qDebug() << QString("s: %1 e: %2 p: %3").arg(lsg->start_num()).arg(lsg->end_num())
+//               .arg(lsg->page());
+//  //});
+// }
 
 
  return 0;
