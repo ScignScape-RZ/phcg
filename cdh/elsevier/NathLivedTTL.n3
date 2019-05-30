@@ -1,0 +1,21 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/stuff/1.0/> .
+
+# Turtle (explicit)
+ex:Nath ex:lived-in [
+  rdf:first ex:Bkln ;
+  rdf:rest [
+    rdf:first ex:Buff ;
+    rdf:rest [
+      rdf:first ex:Mtl ;
+      rdf:rest ]]] .
+
+# Turtle (simplified)
+ex:Nath ex:lived-in [
+  a rdf:Seq ;
+  rdf:_1 ex:Bkln ;
+  rdf:_2 ex:Buff ;
+  rdf:_2 ex:Mtl ; ] .
+
+#N3
+ex:Nath ex:lived-in ( ex:Bkln, ex:Buff, ex:Mtl ) .

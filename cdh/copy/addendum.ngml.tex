@@ -1,0 +1,29 @@
+%\OldSection*{Addendum}
+\spsubsection{Addendum}
+\p{The following are more inclusive code samples
+demonstrating compilation and evaluation at both
+a syntactic and semantic level.  Figure \ref{lst:rzsyn}
+shows a list of \q{prerules} (\OneOverlay{}) in a special parser-definition
+format for Context-Sensitive grammars,
+which translate to Regular Expression code, and
+full-fledged \q{rules} which combine Regular Expressions,
+named captures (\TwoOverlay{}),
+contextual tests (\ThreeOverlay{}, \FourOverlay{}, \FiveOverlay{}), and \Cpp{}
+callbacks (\SixOverlay{}).
+Figure \ref{lst:rzsem} samples the code which leads up to dynamic
+method-invocations, and then the actual invocation-points (\OneOverlay{}):
+the latter is
+wrapped in macros, for the code to work with various numbers
+of arguments.  A key feature of this code is various sets
+of \q{conventions} \mdash{} for input arguments, return values, binary
+encoding, etc. \mdash{} which deal with differences in how the
+\Qt{} Meta-Object System (and generic function pointers) can
+handle the encoding of disparate data types into
+a small set of fundamental binary structures, such as
+\QString{}s; \QObject{}- and \ptrv{}-pointers; and
+64-bit unsigned integers.
+}
+\itcl{rzsyn}
+\vspace{-1em}
+\itcl{rzsem}
+\vspace{-2em}

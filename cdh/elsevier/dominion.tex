@@ -1,0 +1,96 @@
+\begin{lstlisting}[caption={Mapping Vertex Types to Node Constructors}, 
+  language = C++, numbers = none, escapechar = !,label={lst:dominion},
+    basicstyle = \ttfamily\bfseries\footnotesize, linewidth = \linewidth]
+
+// // in relae-node-ptr.h
+template<typename DOMINION_Type, typename GALAXY_Type = 
+    typename DOMINION_Type::Galaxy_type, 
+  typename VERTEX_Type =
+    typename GALAXY_Type::Root_Vertex_type>
+class node_ptr
+{
+ ...
+ VERTEX_Type vertex_;
+
+ template<typename T>
+ node_ptr(caon_ptr<T> v) : 
+   type_code_(
+     dominion_get_type_code<DOMINION_Type, T>()),
+   vertex_(
+     v.template caon_cast<VERTEX_Type>())
+ {
+ }
+
+public:
+ 
+ template<typename T>
+ caon_ptr<T> as()
+ {
+  return vertex_.template as<T>();
+ }
+ ...
+};
+
+// //  in rz-re-node.h
+class RE_Node : public node_ptr<RE_Dominion>
+{
+ // //  These fields are used for structuring graphs as 
+  //    Directed Hypergraph -- this node class is used 
+  //    for both hyper- and hyponodes.  Client code can
+  //    enforce the hypo/hyper distinction by ensuring 
+  //    at least one of these fields is empty/null -- 
+  //    or else create multi-scale graphs by allowing 
+  //    nodes to be both hyper and hypo (with both a  
+  //    parent, and a non-empty hyponode vector).
+ QVector<caon_ptr<RE_Node>> hyponodes_;
+ caon_ptr<RE_Node> parent_;
+
+public:
+
+ #define DOMINION_TYPE DOMINION_NODE_CONSTRUCTOR
+ #include "kernel/dominion/types.h"
+ #undef DOMINION_TYPE
+ ...
+};
+
+// //  in dominion-macros.h
+#define DOMINION_TYPE_METHOD(node_method_name, \
+  cpp_type_name, type_code_name) \
+ caon_ptr<DOMINION_NAMESPACED(cpp_type_name)> \
+ node_method_name() const \
+ { \
+  if(type_code_ == Type_Codes_type::type_code_name) \
+    return vertex_.ptr_cast< \
+      DOMINION_NAMESPACED(cpp_type_name)>(); \
+  return caon_ptr< \
+    DOMINION_NAMESPACED(cpp_type_name)>(); \
+ }
+#endif
+
+#define DOMINION_NODE_ONE_WAY_CONSTRUCTOR( \
+   node_method_name, cpp_type_name, type_code_name) \
+ DOMINION_NODE_ONE_WAY_CONSTRUCTOR_ \
+  (DOMINION_NODE_TYPE, node_method_name, \
+    cpp_type_name, type_code_name)
+#endif
+
+#define DOMINION_NODE_ONE_WAY_CONSTRUCTOR_( \
+   node_type, node_method_name, \
+   cpp_type_name, type_code_name) \
+ node_type(caon_ptr< \
+   DOMINION_NAMESPACED(cpp_type_name)> v) \
+   : node_type::node_ptr_base_type(v) {}
+#endif
+
+#ifndef DOMINION_NODE_CONSTRUCTOR
+#define DOMINION_NODE_CONSTRUCTOR(node_method_name, \
+   cpp_type_name, type_code_name) \
+  DOMINION_NODE_ONE_WAY_CONSTRUCTOR(node_method_name, \
+    cpp_type_name, type_code_name); \
+  DOMINION_TYPE_METHOD(node_method_name, \
+    cpp_type_name, type_code_name);
+#endif
+\end{lstlisting}
+\begin{tikzpicture}[remember picture, overlay]
+\dovn{5.2}{9.77}{1};
+\end{tikzpicture} 

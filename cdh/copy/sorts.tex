@@ -1,0 +1,36 @@
+\begin{lstlisting}[caption={Templates and Explicit Specialization}, 
+  language = C++, numbers = none, escapechar = !,label={lst:sorts},
+    basicstyle = \ttfamily\bfseries\footnotesize, linewidth = \linewidth]
+	
+template<typename LIST_Type, typename VAL_Type, 
+  typename COMPARISON_FN_Type>
+void _sort(LIST_Typ<VAL_Type>& list, COMPARISON_FN_Type fn)
+{
+ // ...  generic implementation
+}
+
+template<typename LIST_Type, typename VAL_Type>
+void sort(LIST_Typ<VAL_Type>& list)
+{
+ _sort(list, [](const VAL_Type& lhs, const VAL_Type& rhs)
+   -> bool
+ {
+  return lhs < rhs;
+ });
+}
+
+template<>
+void sort(QVector<QString>& list)
+{
+ _sort(list, [](const QString& lhs, const QString& rhs)
+   -> bool
+ {
+  return lhs.toLower() < rhs.toLower();
+ });
+}
+ 
+\end{lstlisting}
+
+\begin{tikzpicture}[remember picture, overlay]
+%\dovn{3.8}{9.83}{1};
+\end{tikzpicture} 

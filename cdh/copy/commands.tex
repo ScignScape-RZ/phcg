@@ -1,0 +1,2001 @@
+
+%\usepackage{sectsty}
+\usepackage{titlesec}
+\usepackage{url}
+
+\newsavebox{\tempbox}
+\sbox{\tempbox}{\raisebox{-4.5pt}%
+{\parbox{3cm}{\textit{\textbf{{\large ``Channel \hspace{1em} Abstractions"}}}}}}
+
+\newsavebox{\sstwolinebox}
+\sbox{\sstwolinebox}{\raisebox{-5pt}%
+{\parbox{7.4cm}{\textit{\textbf{{\large %
+Range-Bounded Types, Value Constructors, and Addressability}}}}}}
+
+\newcommand{\sstwoline}{\usebox{\sstwolinebox}}
+
+
+\newsavebox{\twolinebox}
+
+\newcommand{\stwoline}[1]{%
+\sbox{\twolinebox}{\raisebox{-3pt}%
+{\parbox{7.4cm}{\linespread{1.25}\selectfont\raggedleft{\textit{\textbf{{\large #1}}}}}}}}
+
+\newcommand{\twoline}{\usebox{\twolinebox}}
+
+\newcommand{\subsectiontwoline}[1]{\stwoline{#1}\subsection{\twoline}}
+
+\newcommand{\spsubsection}[1]{%
+\vspace{-.25em}
+\subsection{#1}
+\vspace{.3em}
+}
+\newcommand{\spsubsectiontwoline}[1]{%
+\subsectiontwoline{#1}
+\vspace{-1.3em}
+}
+
+\usepackage{csquotes}
+
+\usepackage{booktabs}
+
+\usepackage{amssymb}
+
+\usepackage{titlesec}
+
+\usepackage{transparent}
+
+\usepackage{setspace}
+%\doublespacing
+%\onehalfspacing
+
+\usepackage{graphicx}
+%:\graphicspath{ {/ext_root/openshift-oc3/mmui-caf-local/web/mmui/public/pics/} }
+
+\newcommand{\sectionGraphics}{
+
+\vspace{2em}\centerline{\includegraphics[scale=0.125]{logo-deco.png}}\vspace{-1em}}
+
+\usepackage[flushmargin]{footmisc}
+
+\setlength{\parindent}{30pt}
+
+%\usepackage{bigfoot}
+
+%\DeclareNewFootnote[para]{R}[Roman]
+%\DeclareNewFootnote[para]{N}
+
+%.\usepackage[letterpaper, left=1.3in,right=1in,top=1in,bottom=1in]{geometry}
+
+\usepackage[letterpaper, left=.65in,right=.65in,top=1in,bottom=1in]{geometry}
+
+\usepackage{etoolbox}
+
+\AtBeginEnvironment{thebibliography}{\linespread{1}\selectfont}
+
+\usepackage{mathptmx}
+%\usepackage{euler}
+%\usepackage{amsmath}
+
+%\usepackage[LGRgreek]{mathastext}
+
+%\sectionfont{\fontsize{12}{15}\selectfont}
+%\subsectionfont{\fontsize{11}{12}\selectfont}
+
+\titleformat*{\subsection}{\small\bfseries}
+
+%\usepackage{eufrak}
+\usepackage{wasysym}
+\usepackage{textcomp}
+\usepackage{amssymb}
+
+\usepackage{microtype}
+
+
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+%\usepackage{euler}
+
+\let\OldI\i
+
+\newcommand{\secvspace}{\vspace{-0.3em}}
+\newcommand{\asecvspace}{\vspace{-0.05em}}
+
+\newcommand{\mdash}{---}
+\newcommand{\q}[1]{``#1"}
+\newcommand{\sq}[1]{`#1'}
+\renewcommand{\i}[1]{\textit{#1}}
+
+\newcommand{\nl}{
+
+}
+
+\newcommand{\T}[1]{\raisebox{-2pt}{\ensuremath{\mathcal{T}}}\textit{\tiny #1}}
+%\newcommand{\T}{\ensuremath{\mathscr{T2}}}
+
+\newcommand{\biburl}[1]{ {\fontfamily{gar}\selectfont{\textcolor[rgb]{.2,.6,0}%
+{\scriptsize \textls*[-70]{\url{#1}}}}}}
+
+%\newcommand{\vbiburl}[1]{\biburl{\verb{#1}}}
+
+\newcommand{\TSupT}{\ensuremath{{\T2}\makebox[4pt][r]{\raisebox{5pt}{{\scalebox{.6}{\T1}}}}}}
+
+\let\OldFootnoteSize\footnotesize
+\renewcommand{\footnotesize}{\scriptsize}
+	
+\newcommand{\Tnoindex}{\raisebox{-2pt}{\ensuremath{\mathcal{T}}}}
+
+\newcommand{\typeAbove}{%
+\raisebox{-1pt}{\rotatebox{90}{\begin{tiny}$\diagdown$\makebox[1pt][c]{$\diagup$}\end{tiny}}}}
+
+\newcommand{\typeT}{\ensuremath{type\raisebox{.5pt}{\makebox[3pt][c]{-}}\mathcal{T}}}
+\newcommand{\TValues}{\ensuremath{\mathcal{T}}-values} 
+
+\newcommand{\emigres}{\'emigr\'es}
+
+\newcommand{\SExpressions}{S-Expressions}
+\newcommand{\SExpression}{S-Expression}
+
+\newcommand{\cq}[1]{{\fontfamily{gar}\selectfont ``}#1{\fontfamily{gar}\selectfont "}}
+
+\newcommand{\Retore}{Retor\'e}
+\newcommand{\Aurelie}{Aur\'elie}
+\newcommand{\Descles}{D\'escles}
+
+\newcommand{\SG}{\ensuremath{\mathbb{SG}}}
+\newcommand{\tLa}{\ensuremath{\mathbb{A}_\lambda}}
+
+\newcommand{\lt}{\ensuremath{<}}
+\newcommand{\ancestorLt}{\ensuremath{\lll}}
+\newcommand{\aALTb}{\ensuremath{a {\lll} b}}
+\newcommand{\aLTb}{\ensuremath{a {\lt} b}}
+\newcommand{\aLTcLtb}{\ensuremath{a {\lt} b {\lt} c}}
+\newcommand{\aDLTb}{\ensuremath{a {\lessdot} b}}
+
+\newcommand{\aMath}{\ensuremath{a}}
+\newcommand{\bMath}{\ensuremath{b}}
+\newcommand{\cMath}{\ensuremath{c}}
+
+\newcommand{\ala}{\`a la}
+
+\newcommand{\br}{
+
+}
+
+\newcommand{\Saarbrucken}{Saarbr\"ucken}
+
+
+\newcommand{\picalculus}{\ensuremath{\pi}-calculus}
+
+\newcommand{\qmarkdubious}{\raisebox{.2cm}{{\footnotesize ?}}}
+
+\newcommand{\TypeCat}{\ensuremath{\mathcal{T}}}
+
+
+\newcommand{\ADJplusNPeqNP}{\ensuremath{ADJ + NP = NP}}
+
+%\newcommand{\outarrow}{\ensuremath{\overset{..}{\rightarrow}}}
+
+\newcommand{\outarrow}{\makebox[-2pt][l]{%
+\raisebox{4pt}{..}}\ensuremath{\rightarrow}}
+
+\newcommand{\argarrow}{\hspace{1pt} \makebox[-2pt][l]{%
+		\raisebox{4pt}{.}}\ensuremath{\rightarrow} \hspace{1pt}}
+
+
+\newcommand{\smoutarrow}{\makebox[-1pt][l]{%
+		\raisebox{3pt}{..}}\ensuremath{\rightarrow}}
+
+\newcommand{\smargarrow}{\hspace{1pt} \makebox[-2pt][l]{%
+		\raisebox{3pt}{.}}\ensuremath{\rightarrow} \hspace{1pt}}
+
+
+
+%\newcommand{\NounToNoun}{N \outarrow N}
+%\newcommand{\VisNtoS}{V :: N \outarrow N}
+
+\newcommand{\mmbox}[1]{#1}
+
+\newcommand{\NtoN}{\mmbox{\ensuremath{N} \outarrow{} \ensuremath{N}}}
+\newcommand{\NounToNoun}{\mmbox{\ensuremath{N} \outarrow{} \ensuremath{N}}}
+\newcommand{\VisNtoS}{\mmbox{\ensuremath{V :: N} \outarrow{} \Prop}}
+\newcommand{\AdjisNtoN}{\mmbox{\hspace{2pt}\ensuremath{\mathcal{A}
+\scalebox{.7}{\ensuremath{\mathcal{DJ}}} :: N} \outarrow{} \Prop}}
+
+
+\newcommand{\thatPhrase}{\AcronymText{that}-phrase}
+\newcommand{\thatPhrases}{\AcronymText{that}-phrases}
+
+\newcommand{\Oz}{\AcronymText{Oz}}
+\newcommand{\CppFourteen}{{\Cpp}14}
+\newcommand{\CppEleven}{{\Cpp}11}
+
+\usepackage{graphicx}
+
+\newcommand{\rzauthor}[3]{{
+{\vspace{-4em}}{\fontfamily{gar}\fontseries{b}\selectfont% 
+{\begin{center}\textls*[103]{#1}\\ \vspace{-2em}%
+{\scalebox{.7}{\fontfamily{phv}\fontshape{it}\selectfont\footnotesize #3}}#2\end{center}}
+
+{\vspace{-2.25em}}
+{\hfill\small\today}
+
+{\vspace{.25em}}
+}}}			 
+
+
+\newcommand{\rzauth}[3]{{
+		{\vspace{-1em}}{\fontfamily{gar}\fontseries{b}\selectfont% 
+			{\begin{center}\textls*[103]{#1}\\ \vspace{1em}%
+					{\scalebox{.7}{\fontfamily{phv}\fontshape{it}\selectfont\footnotesize #3}}#2\end{center}}
+			
+			{\vspace{-6em}}
+			{\hfill\small {\raisebox{1em}{\today}}}
+			
+			{\vspace{0em}}
+		}}}			 
+
+\usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
+\newsavebox\lstbox
+
+\newcommand{\rztitle}[1]{\begin{center}\fontfamily{phv}\fontseries{b}\selectfont #1\end{center}}
+
+
+\newcommand{\Jorgen}{J{\o}rgen}
+
+\newcommand{\Prop}{\ensuremath{\mathcal{P}}}
+
+\newcommand{\NN}{\ensuremath{N}\hspace{-1pt}\argarrow\hspace{-1pt}\ensuremath{N}}
+\newcommand{\Npl}{%
+\ensuremath{N}\raisebox{8pt}{\hspace{-1pt}\ensuremath{\rotatebox{180}{{\begin{footnotesize}$\dotplus$\end{footnotesize}}}}}}
+\newcommand{\NPl}{\Npl}
+\newcommand{\NtoNpl}{%
+\mmbox{\ensuremath{N} \outarrow{} \Npl}}
+\newcommand{\NpltoNpl}{\mmbox{\Npl{} \outarrow{} \Npl}}
+\newcommand{\PropToN}{\mmbox{\Prop \hspace{1pt} \outarrow{} \N}}
+
+\newcommand{\VisNNtoProp}{\mmbox{\ensuremath{V :: N} \argarrow \ensuremath{N} \outarrow{} \Prop}}
+\newcommand{\VisNProptoProp}{\mmbox{\ensuremath{V :: N} \argarrow  \Prop{} \hspace{2pt} \outarrow{} \Prop}}
+
+\newcommand{\triesNVtoProp}{tries \mmbox{\ensuremath{:: N} \argarrow  \ensuremath{V} \hspace{2pt} \outarrow{} \Prop}}
+
+\newcommand{\setHawkeyeBlake}{\{Hawkeye, Blake\}}
+
+
+\newcommand{\NNVtoProp}{\mmbox{\ensuremath{N}  \argarrow  \ensuremath{N}  \argarrow  
+   \ensuremath{V}  {} \outarrow  {} \Prop}}
+\newcommand{\VtoV}{\mmbox{\ensuremath{V}  \outarrow  \ensuremath{V}}}
+
+\newcommand{\proces}{proc\`es}
+\newcommand{\epoche}{epoch\'e}
+
+
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+
+\newcommand{\VPpNPeqS}{\ensuremath{VP + NP = S}}
+\newcommand{\NSingToNPl}{\mmbox{\NSing{} \outarrow{} \Npl}}
+
+\newcommand{\NNtoS}{\mmbox{\NN{} \outarrow{} \Prop}}
+\newcommand{\NNtoN}{\mmbox{\NN{} \outarrow{} \ensuremath{N}}}
+\newcommand{\N}{\mmbox{\ensuremath{N}}}
+\newcommand{\NtoProp}{\mmbox{\N{} \outarrow{} \Prop}}
+\newcommand{\NNtoProp}{\mmbox{\NN{} \outarrow{} \Prop{}}}
+\newcommand{\ProptoN}{\mmbox{\Prop{} \outarrow{} \N}}
+
+
+\newcommand{\PropToNYieldsN}{\PropToN{} \raisebox{1pt}{\ensuremath{\textgreater\hspace{-5pt}\raisebox{.15pt}{\ensuremath{\Rightarrow}}}}{} \N}
+
+\newcommand{\SeqNPplVP}{\mmbox{{\small\texttt{S = NP + VP}}}}
+
+\newcommand{\Arg}{\ensuremath{A}\tiny{rg}}
+\newcommand{\argsToReturn}{\mbox{\ensuremath{{\Arg}_0} \hspace{-4pt} \smargarrow 
+		\hspace{-3pt}
+\ensuremath{{\Arg}_1} 
+\hspace{-4pt} \smargarrow \hspace{-2pt} \ensuremath{\cdot\cdot\cdot} \hspace{0pt} \smoutarrow  \hspace{1pt} \textit{Result}}}
+
+\newcommand{\lowBlank}{\raisebox{-1pt}{\textthreequartersemdash\textthreequartersemdash\textthreequartersemdash}}
+
+\newcommand{\BlankAfterBlank}{\lowBlank\texttt{after}\lowBlank}
+\newcommand{\AfterNSingAndNSingToNPl}{\mbox{\texttt{after} :: %
+\NSing \argarrow \NSing \hspace{1pt} \outarrow \hspace{1pt} \Npl}}
+
+\newcommand{\archiveDate}[1]{{\footnotesize #1}}
+
+\newcommand{\sentenceExample}[1]{
+\begin{noindent}
+{{\raisebox{2pt}{{\scriptsize {\color{green!30!yellow!40!black}  
+\rotatebox{20}{\RIGHTarrow}}}}} \hspace{10pt} #1
+	
+}
+\end{noindent}
+}
+
+\newcommand{\sentenceExamples}[1]{
+	
+\vspace{1em}		
+{\setstretch{1.0}	
+#1
+}
+\vspace{.7em}		
+
+\noindent\hspace{-4pt}}
+
+\newcommand{\biarrow}{\ensuremath{\Leftrightarrow}}
+
+\newcommand{\verbSubject}{verb {\biarrow} subject}
+\newcommand{\subjectObject}{subject {\biarrow} object}
+
+\newcommand{\FeqMtimesA}{\hspace{-2pt}{\small \ensuremath{F}=\ensuremath{M}{\texttimes}\ensuremath{A}}}
+\newcommand{\piCalculus}{\ensuremath{\pi}-calculus}
+\newcommand{\threeary}{3-ary}
+\newcommand{\forSlashTo}{\textit{for}/\textit{to}}
+\newcommand{\POSwise}{\POS{}-wise}
+
+\newif\iffootnote
+\let\Footnote\footnote
+\renewcommand\footnote[1]{\begingroup\footnotetrue\Footnote{#1}\endgroup}
+
+\newcommand{\AcronymText}[1]{{\iffootnote\begin{scriptsize}{\textsc{#1}}\end{scriptsize}%
+\else\begin{OldFootnoteSize}{\textsc{#1}}\end{OldFootnoteSize}\fi}}
+
+
+\newcommand{\AcronymTextInitialCap}[1]{{\iffootnote\begin{scriptsize}{\textsc{#1}}\end{scriptsize}%
+		\else\begin{normalsize}{\textsc{#1}}\end{normalsize}\fi}}
+
+
+\newcommand{\rel}[1]{\raisebox{0.25pt}{%
+	{\iffootnote\begin{footnotesize}{\textsc{#1}}\end{footnotesize}%
+		\else\begin{OldFootnoteSize}{\textsc{#1}}\end{OldFootnoteSize}\fi}}}
+
+\newcommand{\vs}{
+
+\vspace*{0.2em}}
+
+
+\newcommand{\HTML}{\AcronymText{HTML}}
+
+\newcommand{\UX}{\AcronymText{UX}}
+
+\newcommand{\Csh}{\AcronymText{C\#}}
+
+\newcommand{\PHP}{\AcronymText{PHP}}
+\newcommand{\IDE}{\AcronymText{IDE}}
+
+\newcommand{\AND}{\AcronymText{AND}}
+\newcommand{\DX}{\AcronymText{DX}}
+
+\newcommand{\RelaeGraph}{\AcronymText{RelaeGraph}}
+\newcommand{\PDF}{\AcronymText{PDF}}
+
+\newcommand{\NDP}{\AcronymText{NDP}}
+\newcommand{\UML}{\AcronymText{UML}}
+\newcommand{\GIT}{\AcronymText{GIT}}
+\newcommand{\EHR}{\AcronymText{EHR}}
+\newcommand{\HLSeven}{\AcronymText{HL7}}
+
+\newcommand{\UI}{\AcronymText{UI}}
+\newcommand{\QML}{\AcronymText{QML}}
+
+\newcommand{\AWS}{\AcronymText{AWS}}
+\newcommand{\NaCl}{\AcronymText{NaCl}}
+
+\newcommand{\PPNAN}{\AcronymText{P2P-NAN}}
+\newcommand{\MoND}{\AcronymText{MoND}}
+\newcommand{\MoNDUI}{\AcronymText{MoND-UI}}
+
+\newcommand{\MSME}{\AcronymText{MSME}}
+\newcommand{\SPARQL}{\AcronymText{SPARQL}}
+\newcommand{\OWL}{\AcronymText{OWL}}
+\newcommand{\JSON}{\AcronymText{JSON}}
+
+\newcommand{\const}{\AcronymText{const}}
+\newcommand{\GeCODE}{\AcronymText{GeCODE}}
+
+\newcommand{\Python}{\AcronymText{Python}}
+
+\newcommand{\Minion}{\AcronymText{Minion}}
+\newcommand{\LCpp}{\AcronymText{LC++}}
+\newcommand{\Castor}{\AcronymText{Castor}}
+\newcommand{\VTK}{\AcronymText{VTK}}
+\newcommand{\GLUT}{\AcronymText{GLUT}}
+\newcommand{\CAF}{\AcronymText{CAF}}
+\newcommand{\SKE}{\AcronymText{SKE}}
+
+\newcommand{\MND}{\AcronymText{MND}}
+\newcommand{\FHIR}{\AcronymText{FHIR}}
+\newcommand{\DICOM}{\AcronymText{DICOM}}
+\newcommand{\CDA}{\AcronymText{CDA}}
+
+\newcommand{\GUI}{\AcronymText{GUI}}
+\newcommand{\BNF}{\AcronymText{BNF}}
+
+\newcommand{\ASK}{\AcronymText{ASK}}
+
+\newcommand{\quasiSectionSpace}{\vspace{1em}}
+
+
+%\newcommand{\FOmega}{F_\ensuremath{\omega}}
+
+\newcommand{\FOmega}{F\ensuremath{_\omega}}
+
+\newcommand{\Clasp}{\AcronymText{Clasp}}
+%\newcommand{\DICOM}{\AcronymText{DICOM}}
+%\newcommand{\HLSeven}{\AcronymText{HL7}}
+
+\newcommand{\ParseTalk}{\AcronymText{ParseTalk}}
+\newcommand{\TurboParser}{\AcronymText{TurboParser}}
+
+
+\newcommand{\NLP}{\AcronymText{NLP}}
+\newcommand{\POS}{\AcronymText{POS}}
+
+\newcommand{\Francois}{Fran\c{}cois}
+
+
+\newcommand{\Gardenfors}{G\"ardenfors}
+
+
+\newcommand{\Haskell}{\AcronymText{Haskell}}
+%.\newcommand{\C}{\AcronymText{C}}
+\newcommand{\NP}{\AcronymText{NP}}
+\newcommand{\Cpp}{\AcronymText{C++}}
+\newcommand{\RDF}{\AcronymText{RDF}}
+\newcommand{\Java}{\AcronymText{Java}}
+\newcommand{\IT}{\AcronymText{IT}}
+\newcommand{\IBMinc}{\AcronymText{IBM}}
+\newcommand{\XDG}{\AcronymText{XDG}}
+\newcommand{\AI}{\AcronymText{AI}}
+
+\newcommand{\HPSG}{\AcronymText{HPSG}}
+\newcommand{\CAG}{\AcronymText{CAG}}
+\newcommand{\Lisp}{\AcronymText{Lisp}}
+
+\newcommand{\Scheme}{\AcronymText{Scheme}}
+\newcommand{\SCA}{\AcronymText{SCA}}
+
+\newcommand{\TS}{\AcronymText{TS}}
+
+\newcommand{\ThreeD}{\AcronymText{3D}}
+
+
+%.\usepackage[font=small,labelfont=bf]{caption}
+
+\definecolor{BaseColor}{HTML}{8533FF}
+
+\colorlet{ftcfore}{BaseColor!60!cyan}
+\colorlet{ftcback}{BaseColor!40!cyan}
+
+%\usepackage{relsize}
+
+\newcommand{\ftc}[3]{
+\vspace*{6mm}
+\begin{tcolorbox}
+[float=t, colframe=ftcfore!20!white,boxrule=0.5pt,arc=22pt,enhanced,
+%leftrule=5pt,rightrule=3pt,toprule=0pt,
+title={{\color{black}{\protect{#1}}}},label={#2}
+toprule=0pt,bottomrule=1pt,
+drop fuzzy shadow northeast={darkRed!40!ftcback},
+%frame code={
+%        },
+     % left=6pt,right=6pt,top=6pt,bottom=6pt,
+      boxsep=3pt]\hspace{3em}\parbox{0.8\textwidth}\protect{#3}
+\end{tcolorbox}      
+\vspace*{-4mm}
+}
+
+
+\newcommand{\tc}[2]{
+\vspace*{6mm}
+\begin{tcolorbox}
+[#1 colframe=darkRed!70!BaseColor,boxrule=0.5pt,arc=22pt,enhanced,
+%leftrule=5pt,rightrule=3pt,toprule=0pt,
+toprule=0pt,bottomrule=1pt,
+drop fuzzy shadow northeast={darkRed!70!purple},
+%frame code={
+%        },
+     % left=6pt,right=6pt,top=6pt,bottom=6pt,
+      boxsep=3pt]\hspace{3em}\parbox{0.8\textwidth}\protect{#2}
+\end{tcolorbox}      
+\vspace*{-4mm}
+}
+
+\tcbuselibrary{skins}
+%\tcbuselibrary{listings,breakable}
+\usetikzlibrary{calc}
+\usetikzlibrary{shadows}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+
+
+\newcommand{\tclY}[1]{%\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
+\input{#1}
+%\end{minipage}\end{lrbox}
+%\usebox\lstbox
+}
+\newcommand{\ftclY}[2]{%\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
+\input{#2}
+%\end{minipage}\end{lrbox}
+%\usebox\lstbox
+}
+\newcommand{\vstclY}[1]{%\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
+\input{#1}
+%\end{minipage}\end{lrbox}
+%\usebox\lstbox
+}
+\newcommand{\vsftclY}[2]{%\begin{lrbox}{\lstbox}\begin{minipage}{\linewidth}
+\input{#2}
+%\end{minipage}\end{lrbox}
+%\usebox\lstbox
+}
+
+\usetikzlibrary{fit}
+\usepackage{caption}
+
+%\usepackage{float}
+%\newfloat{Diagram}{htbp}{loa}
+\renewcommand{\figurename}{Diagram}
+%\addto\captionsenglish{\renewcommand{\figurename}{Diagram}}
+%\renewcommand{\listingname}{Sample}
+
+
+\usepackage[object=vectorian]{pgfornament} %%  http://altermundus.com/pages/tkz/ornament/index.html
+
+\newcommand{\decoline}{%
+
+\vspace{-2em}
+{\color{darkRed!60!cyan}\noindent\hfil{\EnglischeLinie}\hfil}
+%{\color{darkRed!60!cyan}\noindent\hfil\rule{0.5\textwidth}{.8pt}\hfil}
+\vspace{-2.25em}}
+
+
+\newcommand{\whdecoline}{%
+
+\vspace{-2em}
+{\color{white}\noindent\hfil{\whEnglischeLinie}\hfil}
+%{\color{darkRed!60!cyan}\noindent\hfil\rule{0.5\textwidth}{.8pt}\hfil}
+\vspace{-2.25em}}
+
+\newcommand{\sectionline}[1]{%
+  \noindent
+  \begin{center}
+  {\color{#1}
+    \resizebox{0.5\linewidth}{1ex}
+    {{%
+    {\begin{tikzpicture}
+    \node  (C) at (0,0) {};
+    \node (D) at (9,0) {};
+    \path (C) to [ornament=84] (D);
+    \end{tikzpicture}}}}}%
+    \end{center}
+  }
+  
+\newcommand{\EnglischeLinie}{
+\sectionline{darkRed!60!cyan}
+}
+
+\newcommand{\whEnglischeLinie}{
+\sectionline{white}
+}
+
+\newlength{\mplength}
+\setlength{\mplength}{1.05\linewidth}
+
+\newlength{\hslength}
+\setlength{\hslength}{-1.45cm}
+
+\newcommand{\tcl}[1]{\begin{lrbox}{\lstbox}\begin{minipage}{\mplength}
+\input{#1}
+\end{minipage}\end{lrbox}
+\tc{}{\hspace*{\hslength}\usebox\lstbox}}
+%\usepackage[usenames,dvipsnames]{xcolor}
+
+\newcommand{\itcl}[1]{
+\input{#1}
+}
+
+%\newcommand{\itcl}[1]{\lstset{ basicstyle=\LSTfont, columns=fullflexible, xleftmargin=5mm, 
+%framexleftmargin=5mm, numbers=left, stepnumber=1, breaklines=true, breakatwhitespace=false, numberstyle=\footnotesize, numbersep=5pt, tabsize=2, 
+%frame=lines, captionpos=b, caption={Your caption}} }
+%    \lstinputlisting{#1}}
+
+\newcommand{\ftcl}[2]{\begin{lrbox}{\lstbox}\begin{minipage}{\mplength}
+\input{#2}
+\end{minipage}\end{lrbox}
+\tc{float=#1,}{\hspace*{\hslength}\usebox\lstbox}}
+
+
+
+\newcommand{\vsftcl}[2]{\begin{lrbox}{\lstbox}\begin{minipage}{\mplength}
+\vsinput{#2}
+\end{minipage}\end{lrbox}
+\tc{float=#1,}{\hspace*{\hslength}\usebox\lstbox}}
+
+\newcommand{\vstcl}[1]{\begin{lrbox}{\lstbox}\begin{minipage}{\mplength}
+\vsinput{#1}
+\end{minipage}\end{lrbox}  
+\tc{}{\hspace*{\hslength}\usebox\lstbox}}
+
+
+\definecolor{blGreen}{rgb}{.2,.7,.3}
+\definecolor{darkRed}{rgb}{.2,.0,.1}
+
+%\definecolor{darkRedSemi}{rgba}{.2,.0,.1,0.5}
+
+\definecolor{darkBlGreen}{rgb}{.1,.3,.2}
+
+\definecolor{oldBlColor}{rgb}{.2,.7,.3}
+
+\definecolor{blColor}{rgb}{.1,.3,.2}
+
+\definecolor{elColor}{rgb}{.2,.1,0}
+\definecolor{flColor}{rgb}{0.7,0.3,0.3}
+
+\definecolor{logoOrange}{RGB}{108, 18, 30}
+\definecolor{logoGreen}{RGB}{85, 153, 89}
+\definecolor{logoPurple}{RGB}{200, 208, 30}
+
+\definecolor{logoBlue}{RGB}{4, 2, 25}
+\definecolor{logoPeach}{RGB}{255, 159, 102}
+\definecolor{logoCyan}{RGB}{66, 206, 244}
+\definecolor{logoRed}{rgb}{.3,0,0}
+
+
+\definecolor{Bkg}{RGB}{250,245,252}
+\newcommand{\leader}[2]{\hspace{#1}\colorbox{Bkg}{#2}}
+
+
+\newcommand{\saying}[1]{\vspace{2ex}\noindent{%%
+				\leader{2em}{\begin{minipage}{.93\textwidth}{\footnotesize #1}\end{minipage}}\vspace{2ex}}}
+
+\newcommand{\sayingsrc}[1]{\vspace{0ex}\\\hspace{2pt} --- {\footnotesize #1}}
+
+\renewcommand{\labelitemi}{{\raisebox{4pt}{{\footnotesize{$\bullet$}}}}}
+
+\newcommand{\itemmark}{\raisebox{-4pt}{\rotatebox{90}{{\Large $\bracevert$}}}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes,snakes}
+
+\newcommand{\visavis}{vis-\`a-vis}
+
+%\sectionfont{\fontsize{12}{8}\selectfont}
+
+
+\newcommand{\underlines}{{\normalsize \lowBlank\hspace{.1em}}}
+%\newcommand{\underlines}{{\normalsize \lowBlank\lowBlank\lowBlank\hspace{.5em}}}
+
+\newcommand{\XAcrossY}{\mbox{\ensuremath{x} \texttt{across} \ensuremath{y}}}
+
+\newcommand{\Rel}{\raisebox{.5pt}{\texttt{{\OldFootnoteSize r}}}}
+
+\newcommand{\XRelY}{\mbox{\ensuremath{x} \Rel{} \ensuremath{y}}}
+
+\newcommand{\tinyurl}[1]{{\raisebox{2pt}{{\scriptsize \url{#1}}}}} 
+
+\usepackage[colorlinks=true]{hyperref}
+%\usepackage[bookmarksnumbered,unicode,colorlinks=true]{hyperref}
+%\usepackage[colorlinks=true]{hyperref}
+%.\usepackage[hidelinks]{hyperref}
+
+\usepackage{eso-pic}
+
+\colorlet{urlclr}{red!40!magenta!50!orange}
+
+%\hypersetup{
+% urlcolor = urlclr,
+% urlbordercolor = cyan!60!black,
+% linkcolor = red!30!black,
+% citecolor = orange!30!black,
+% citebordercolor = yellow!30!black,
+%} 
+
+
+%\makeatletter
+%\Hy@AtBeginDocument{%
+%	\def\@pdfborder{0 0 0}% Overrides border definition set with colorlinks=true
+%	\def\@pdfborderstyle{/S/U/W .25}% Overrides border style set with colorlinks=true
+	% Hyperlink border style will be underline of width 1pt
+%}%
+%\makeatother
+
+
+%\titlespacing{\section}{.25\textwidth}{*2.8}{*-.4}[5pc]
+
+\newcommand{\pn}[1]{
+	
+	\vspace{.4em}
+	\-\hspace{30pt} #1	
+}
+
+
+\newcommand{\p}[1]{
+	
+	\vspace{.65em}
+	#1	
+}
+
+
+\renewenvironment{abstract}
+{\small
+	\begin{center}
+		\bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+	\end{center}
+	\list{}{%
+		\setlength{\leftmargin}{.43in}% <---------- CHANGE HERE
+		\setlength{\rightmargin}{\leftmargin}%
+	}%
+	\item\relax}
+{\endlist}
+
+
+%
+\let\OldEnumerate\enumerate
+  
+%
+%\newenvironment{colorEnumerate}{\begin{enumerate}[label=\textcolor{blue}{\arabic*}]}{\end{enumerate}}
+
+%\renewenvironment{enumerate}{\begin{OldEnumerate}[label=\color{blue}\theenumi]}{\end{OldEnumerate}}
+
+%\newcommand*{\MyCircle}{\tikz \draw [baseline, ball color=red, draw=red] circle (2pt);}
+
+\newcommand*{\MyDiamond}{%
+	\begin{tikzpicture}{baseline}
+	
+	\node [draw, shape=diamond, %shape border rotate=100,
+	line width=.2mm, left color=flColor, right color=darkRed, draw=logoPurple, aspect=1,
+	draw opacity=0.6, fill opacity=0.8, xscale=0.5, yscale=0.5,
+	minimum width=1mm, 
+	] 
+	at (2, 0) {};
+	
+	\end{tikzpicture}
+	
+}
+
+
+\newcommand*{\MyCircle}{\begin{tikzpicture}{baseline}
+	\node [draw, shape=regular polygon, regular polygon sides = 5, shape border rotate=180,
+	line width=.2mm, left color=blGreen, right color=darkBlGreen, draw=darkRed, aspect=1,
+	draw opacity=0.6, fill opacity=0.8, xscale=0.5, yscale=0.5,
+	minimum width=1mm, 
+	] 
+	at (0, 0) {};
+	\end{tikzpicture}}
+
+
+\newcommand*{\MyLabel}{%
+ %\MyBall	
+ %{\tikz \draw [baseline, ball color=red, draw=red] circle (3pt);} 	
+ \protect\MyCircle{\hspace{4pt}}\color{flColor}\LARGE{\textbf{\protect\raisebox{-3pt}{\theenumi}}}
+}
+
+\newenvironment{colorEnumerate}{\vspace{1em}\begin{enumerate}[label=\MyLabel]}{\end{enumerate}}
+
+
+%\newenvironment{colorItemize}{\begin{itemize}[label=\color{blue}\theenumi]}{\end{enumerate}}
+
+%\newlist{coloritemize}{itemize}{1}
+%\setlist[coloritemize]{label=\textcolor{blue}{\textbullet}}
+
+%\setbeamercolor{item}{fg=green}
+
+%
+%\newcommand*{\MyBall}{\tikz \draw [baseline, fill=blue,draw=blue,circular drop shadow] circle (2pt);}
+%\newcommand*{\MyBall}{\tikz \draw [baseline, ball color=red, draw=red] diamond (2pt);}
+
+
+%\newcommand*{\MyBall}{\tikz \draw [baseline, shape=diamond, %shape border rotate=100,
+%	line width=.2mm, left color=flColor, right color=darkRed, draw=logoPurple, aspect=1,
+%	draw opacity=0.6, fill opacity=0.8, xscale=1.25, yscale=1.25,
+%	minimum width=1mm]
+%}
+
+\newenvironment{colorItemize}{\vspace{1em}\begin{itemize}[label={\MyDiamond}]}{\end{itemize}}
+
+
+
+\let\OldSection\section
+
+\renewcommand\section[1]{
+	\vspace{12pt}
+	
+	\scalebox{1.3}{\colorbox{logoPurple!50}{\hspace{1em}}}
+				
+	%\hspace{-1.1cm}{\protect\includegraphics[width=1cm]{e-logo.png}}	
+	{\protect\transparent{0.5}{\colorbox{logoPeach}{%
+			\begin{minipage}{\linewidth}
+				    \vspace{.5em}
+				
+	\protect\transparent{1}{\OldSection{#1%
+		%{\transparent{0.5}{
+		%	\protect\includegraphics[width=1cm]{e-logo.png}
+		%}
+	    %}
+     }}
+	    \end{minipage}}} }
+    
+    \vspace{-5em}
+    	{\protect\transparent{0.3}{\colorbox{logoPeach}{%
+    		\begin{minipage}{\linewidth}
+    			\hspace{\linewidth}
+    	\end{minipage}}} } 
+    
+    \vspace{5em}
+    
+	\vspace{-6pt}
+}
+
+
+\newcommand\tabltxt[1]{\footnotesize{#1}}
+\renewcommand\section[1]{\OldSection{#1}}
+
+%\subsectionfont{\Large}
+%\subsectionfont{\fontsize{12}{15}\selectfont}
+
+\titleformat*{\subsection}{\Large\bfseries}
+
+\let\OldSubsection\subsection
+\renewcommand\subsection[1]{
+
+	\vspace{12pt}
+	
+    %{\LARGE
+	%\colorbox{logoCyan}{%
+	%\begin{minipage}{\linewidth}
+		\OldSubsection{% 	
+			\hspace{-2.75em}
+			%\begin{minipage}{}
+			\protect\raisebox{-5pt}{%
+			\colorbox{logoCyan!50}{\hspace{2.1em}}}%
+			\hspace{-5pt}{\protect\transparent{0.3}{\colorbox{logoBlue!80}{\protect\transparent{1}{%
+						   \protect\raisebox{1pt}{\textit{{\large #1}}} }}}}
+			%\end{minipage}
+		}
+	%\end{minipage}
+    %}
+    %}
+	\vspace{-6pt}
+}
+
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+\let\section\OldSection
+\setlength{\leftmargin}{-4pt}
+\vspace{.1em}
+\OLDthebibliography{#1}
+\vspace{.7em}
+\OldFootnoteSize 
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{1pt plus 0ex}
+\raggedright
+}
+
+%\let\OLDitemize\itemize
+%\renewcommand\itemize[1]{
+%\setlength{\itemsep}{1.9pt plus 0ex}
+%\itemize{1}
+%}
+
+\makeatletter
+%\def\@biblabel#1{\hspace{-6pt}[#1]}
+\def\@biblabel#1{\hspace{-6pt}#1}
+\makeatother
+
+\newcommand{\bibtitle}[1]{{\small \textit{#1}}}
+\newcommand{\intitle}[1]{{\hspace{3pt}\textls*[-80]{\texttt{\textit{#1}}}}\hspace{-1pt}}
+
+\renewcommand{\i}[1]{\textit{#1}}
+
+\usepackage{enumitem}
+\setlist{leftmargin=1mm}
+
+
+
+\newcommand{\itemtitle}[1]{{\color{green!10!red!40!black} \textls*[-80]{\texttt{#1}}}}
+
+\newcommand{\acronymText}[1]{\AcronymText{#1}}
+\newcommand{\acronymTextInitialCap}[1]{\AcronymTextInitialCap{#1}}
+\newcommand{\acronymTextSS}[1]{\textsc{#1}}
+
+
+
+\newcommand{\MIT}{\AcronymText{MIT}}
+
+\newcommand{\nulltt}{\AcronymText{\texttt{null}}}
+\newcommand{\Maybe}{\codeText{Maybe}}
+\newcommand{\bind}{\codeText{bind}}
+\newcommand{\return}{\codeText{return}}
+
+\newcommand{\elseif}{\codeText{else if}}
+
+\newcommand{\IDL}{\AcronymText{IDL}}
+
+\newcommand{\XML}{\AcronymText{XML}}
+\newcommand{\XQuery}{\AcronymText{XQuery}}
+\newcommand{\XQueries}{\AcronymText{XQueries}}
+\newcommand{\API}{\AcronymText{API}}
+\newcommand{\IR}{\AcronymText{IR}}
+\newcommand{\Clang}{\AcronymText{Clang}}
+\newcommand{\DAG}{\AcronymText{DAG}}
+\newcommand{\DAGs}{\AcronymText{DAG}s}
+
+\newcommand{\CAKR}{\AcronymText{CAKR}}
+
+\newcommand{\FIFO}{\AcronymText{FIFO}}
+\newcommand{\LIFO}{\AcronymText{LIFO}}
+
+\newcommand{\RGB}{\AcronymText{RGB}}
+\newcommand{\HSV}{\AcronymText{HSV}}
+
+\newcommand{\HCI}{\AcronymText{HCI}}
+\newcommand{\HTTP}{\AcronymText{HTTP}}
+\newcommand{\CSS}{\AcronymText{CSS}}
+
+\newcommand{\RSS}{\AcronymText{RSS}}
+\newcommand{\STL}{\AcronymText{STL}}
+
+\newcommand{\APIs}{\AcronymText{API}s}
+
+\newcommand{\NDPCloud}{\AcronymText{NDP-Cloud}}
+\newcommand{\WhiteDB}{\AcronymText{WhiteDB}}
+
+\newcommand{\Qt}{\AcronymText{Qt}}
+\newcommand{\NL}{\AcronymText{NL}}
+\newcommand{\langC}{\AcronymText{C}}
+\newcommand{\SDK}{\AcronymText{SDK}}
+
+\newcommand{\TensorFlow}{\AcronymText{TensorFlow}}
+\newcommand{\SyntaxNet}{\AcronymText{SyntaxNet}}
+
+\newcommand{\braceAlgAri}{$\langle$\q{Algebra},\q{Arithmetic}$\rangle$}
+
+
+\newcommand{\vsinput}[1]{\vspace{1em}\input{#1}}
+
+\newcommand{\SOV}{\AcronymText{SOV}}
+\newcommand{\SVO}{\AcronymText{SVO}}
+
+\newcommand{\YtwoK}{\AcronymText{Y2K}}
+
+\newcommand{\qi}[1]{\q{\textit{#1}}}
+
+\newcommand{\CSharp}{\AcronymText{C\#}}
+\newcommand{\IoT}{\AcronymText{IoT}}
+\newcommand{\Tesniere}{Tesni\`ere}
+
+%\newcommand{\sentenceExample}[1]{``#1"}
+
+
+\usetikzlibrary{decorations.pathmorphing}
+
+\usepackage{listings}
+
+\renewcommand{\lstlistingname}{Sample}
+
+%%%%%%%%
+
+%\newcommand{\Cpp}{C++}
+
+\newcommand{\EGO}{\AcronymText{EGO}}
+\newcommand{\OO}{\AcronymText{OO}}
+\newcommand{\SQL}{\AcronymText{SQL}}
+\newcommand{\QtCpp}{\AcronymText{Qt/C++}}
+\newcommand{\JavaScript}{\AcronymText{JavaScript}}
+
+\newcommand{\RWM}{\AcronymText{RWM}}
+\newcommand{\WHERE}{\AcronymText{WHERE}}
+%\newcommand{\QObject}{\AcronymText{QObject}}
+\newcommand{\LINQ}{\AcronymText{LINQ}}
+\newcommand{\Rattr}{\AcronymText{Rattr}}
+\newcommand{\Wattr}{\AcronymText{Wattr}}
+\newcommand{\Mattr}{\AcronymText{Mattr}}
+\newcommand{\other}{\AcronymText{other}}
+\newcommand{\this}{\codeText{this}}
+\newcommand{\MOC}{\AcronymText{MOC}}
+
+\newcommand{\WHEREMSgtEighty}{\AcronymText{WHEREMSgtEighty}}
+
+\newcommand{\TwoOclockPM}{\AcronymText{TwoOclockPM}}
+\newcommand{\First}{\AcronymText{First}}
+
+\newcommand{\sampleLispQuery}{\AcronymText{sampleLispQuery}}
+\newcommand{\ECL}{\AcronymText{ECL}}
+
+\newcommand{\ovn}[1]{\color{yellow}{{\textbf{#1}}}}
+
+\newcommand{\sovn}[1]{\color{yellow}{{\textbf{#1}}}}
+
+\newcommand{\dovn}[3]{\draw[draw=blue,fill=DarkRed] (#1,#2) circle[radius=3mm];
+\node at (#1,#2){\ovn{#3}}
+}
+
+\newcommand{\sdovn}[3]{\draw[draw=blue,fill=DarkRed] (#1,#2) circle[radius=1.4mm];
+\node (char) at (#1,#2) {\sovn{#3}}
+}
+
+\newcommand{\sdovnz}[3]{\raisebox{-1pt}{{\draw[draw=blue,fill=DarkRed] (#1,#2) circle[radius=1.4mm];
+\node (char) at (#1,#2) {\sovn{#3}}
+}}}
+
+\newcommand*\circledx[1]{\tikz[baseline=(char.base), inner sep=0]{
+            \sdovn{0}{0}{#1};}}
+
+\newcommand{\circled}[1]{\raisebox{-.5pt}{\circledx{#1}}}
+
+\newcommand{\circledup}[1]{\circledx{#1}}
+
+\newcommand{\circledd}[1]{\raisebox{-2pt}{\circledx{#1}}}
+			
+\newcommand{\OneOverlay}{\circled{1}}
+\newcommand{\TwoOverlay}{\circled{2}}
+\newcommand{\ThreeOverlay}{\circled{3}}
+\newcommand{\FourOverlay}{\circled{4}}
+\newcommand{\FiveOverlay}{\circled{5}}
+\newcommand{\SixOverlay}{\circled{6}}
+
+\newcommand{\OneOverlayu}{\circledup{1}}
+\newcommand{\TwoOverlayu}{\circledup{2}}
+\newcommand{\ThreeOverlayu}{\circledup{3}}
+\newcommand{\FourOverlayu}{\circledup{4}}
+\newcommand{\FiveOverlayu}{\circledup{5}}
+\newcommand{\SixOverlayu}{\circledup{6}}
+
+\newcommand{\FourOverlayd}{\circledd{4}}
+
+
+\newcommand{\ComparisonTemporal}{\AcronymText{ComparisonTemporal}}
+\newcommand{\ComparisonNominal}{\AcronymText{ComparisonNominal}}
+\newcommand{\A}{\AcronymText{A}}
+\newcommand{\B}{\AcronymText{B}}
+\newcommand{\beforeAnd}{\AcronymText{beforeAnd}}
+\newcommand{\beforeDo}{\AcronymText{beforeDo}}
+\newcommand{\ltAnd}{\AcronymText{ltAnd}}
+\newcommand{\ComparisonTemporalBeforeDo}{\AcronymText{ComparisonTemporalBeforeDo}}
+\newcommand{\studentId}{\AcronymText{studentId}}
+
+\newcommand{\classTestResult}{\AcronymText{classTestResult}}
+\newcommand{\classQVariantObservation}{\AcronymText{classQVariantObservation}}
+\newcommand{\classQVariantEventNexus}{\AcronymText{classQVariantEventNexus}}
+
+%
+\newcommand{\TestResults}{\codeText{TestResults}}
+\newcommand{\Tutoring}{\codeText{Tutoring}}
+
+\newcommand{\ifAge}{\AcronymText{ifAge}}
+
+
+\newcommand{\ComparisonOrdinal}{\AcronymText{ComparisonOrdinal}}
+
+\newcommand{\ComparisonOrdinalLtDo}{\AcronymText{ComparisonOrdinalLtDo}}
+
+\newcommand{\POST}{\AcronymText{POST}}
+\newcommand{\BaseTT}{\AcronymText{Base32}}
+\newcommand{\BaseSX}{\AcronymText{Base64}}
+
+\newcommand{\true}{\codeText{true}}
+
+
+
+%\newcommand{\braceAlgAri}{??}
+\colorlet{codegr}{black!80!blue}
+
+
+%\newcommand{\codeText}[1]{\AcronymText{#1}}
+
+\newcommand{\class}[1]{\AcronymText{#1}}
+\newcommand{\method}[1]{\AcronymText{#1}}
+\newcommand{\interface}[1]{\AcronymText{#1}}
+
+\newcommand{\QCohortObservable}{\codeText{QCohortObservable}}
+\newcommand{\QInvokable}{\codeText{QInvokable}}
+
+
+\newcommand{\private}{\codeText{private}}
+
+\newcommand{\FnDoc}{\codeText{Fn\_Doc}}
+
+\newcommand{\KCMEnv}{\codeText{KCM\_Env}}
+
+\newcommand{\envv}{\codeText{envv}}
+
+\newcommand{\kprom}{\codeText{kcm\_promote\_type\_binding\_to%
+\_statement\_via\_type\_de\-fault\_literal\_\_let}}
+\newcommand{\kcmde}{\codeText{kcm\_direct\_eval}}
+
+\newcommand{\dbleq}{\codeText{==}}
+\newcommand{\Sdbleq}{\codeText{$\backslash$==}}
+\newcommand{\Seq}{\codeText{$\backslash $=}}
+
+\newcommand{\classQVariant}{\codeText{QVariant}}
+\newcommand{\QVariant}{\codeText{QVariant}}
+
+\newcommand{\NexusTrip}{\codeText{NexusTrip}}
+\newcommand{\NexusTripTmpl}{\codeText{NexusTripTmpl}}
+
+\newcommand{\protectedC}{\codeText{protectedC}}
+
+
+\newcommand{\DimensionOfComparisonMismatchException}{\codeText{DimensionOfComparisonMismatchException}}
+
+\newcommand{\qRegisterMetaType}{\codeText{qRegisterMetaType}}
+\newcommand{\QDECLAREMETATYPE}{\codeText{QDECLAREMETATYPE}}
+\newcommand{\qRegisterMetaTypeStreamOperators}{\codeText{qRegisterMetaTypeStreamOperators}}
+\newcommand{\classTutoringTopic}{\codeText{classTutoringTopic}}
+
+\newcommand{\classPhoto}{\codeText{classPhoto}}
+
+
+%\newcommand{\classQVariantEventNexus}{\codeText{classQVariantEventNexus}}
+\newcommand{\classDimensionsOfComparison}{\codeText{classDimensionsOfComparison}}
+\newcommand{\classQPair}{\codeText{classQPair}}
+\newcommand{\classQDataStream}{\codeText{classQDataStream}}
+\newcommand{\classQMap}{\codeText{classQMap}}
+
+\usepackage[utf8]{inputenc}
+ 
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+%\lstset{style=mystyle}
+\usetikzlibrary{positioning}
+
+\usepackage{listings}
+\lstset{%
+  frame            = tb,    % draw frame at top and bottom of code block
+  tabsize          = 1,     % tab space width
+  numbers          = left,  % display line numbers on the left
+  framesep         = 3pt,   % expand outward
+  framerule        = 0.4pt, % expand outward 
+  commentstyle     = \color{Green},      % comment color
+  keywordstyle     = \color{blue},       % keyword color
+  stringstyle      = \color{DarkRed},    % string color
+  backgroundcolor  = \color{gray!20}, % backgroundcolor color
+  showstringspaces = false,              % do not mark spaces in strings
+  upquote          = true
+}
+
+
+
+\newcommand{\yeqfxz}{\codeText{y=f(x,z)}}
+
+
+
+\newcommand{\try}{\codeText{try}}
+\renewcommand{\DH}{\AcronymText{DH}}
+\newcommand{\CH}{\AcronymText{CH}}
+
+\newcommand{\vecrgbt}{\AcronymText{RGBT}}
+\newcommand{\vecrgb}{\AcronymText{RGB}}
+
+\newcommand{\TTL}{\AcronymText{TTL}}
+
+\newcommand{\URL}{\AcronymText{URL}}
+\newcommand{\RRF}{\AcronymText{RRF}}
+\newcommand{\SPO}{\angla{\AcronymText{Subject}, %
+\AcronymText{Predicate}, \AcronymText{Object}}}
+
+\newcommand{\Turtle}{\AcronymText{Turtle}}
+
+\newcommand{\CLang}{\AcronymText{C}}
+
+ 
+\newcommand{\intxeqninety}{\codeText{int x = 90}}
+
+\newcommand{\tyFile}{\codeText{file}}
+\newcommand{\idrisText}[1]{\codeText{#1}}
+\newcommand{\openFn}{\codeText{open}}
+
+\newcommand{\ML}{\acronymText{ML}}
+
+\newcommand{\largeRDF}{RDF}
+
+\newcommand\Small{\fontsize{8}{10}\selectfont}
+\newcommand*\LSTfont{%
+  \Small\ttfamily\SetTracking{encoding=*}{-50}\lsstyle}
+
+	
+\newcommand{\NathLivedTTL}{\lstset{ basicstyle=\LSTfont, columns=fullflexible, xleftmargin=5mm, framexleftmargin=5mm, numbers=left, stepnumber=1, breaklines=true, breakatwhitespace=false, numberstyle=\footnotesize, numbersep=5pt, 
+tabsize=2, frame=lines, captionpos=b, caption={Turtle Formats}}
+    \lstinputlisting{NathLivedTTL.n3}}
+	
+
+	
+		
+
+\newcommand{\TyS}{\codeTextr{${\Upsilon}$}}
+
+\newcommand{\TXLTyS}{$\codeTextr{\mathfrak{L}_\codeTextr{\Upsilon}}$}
+
+\newcommand{\TXLTySChi}{$\codeTextr{\mathfrak{L}_\codeTextr{\Upsilon}\chiussr}$}
+
+
+\newcommand{\ageFF}{\codeTexto{${\lceil}45{\rceil}$}}
+\newcommand{\Nath}{\codeTexto{${\lceil}$Nathaniel${\rceil}$}}
+
+\newcommand{\nodeNOne}{$N_1$}
+\newcommand{\nodeNTwo}{$N_2$}
+
+\newcommand{\NThree}{\AcronymText{N3}}
+
+\newcommand{\ceila}[1]{${\lceil}$#1${\rceil}$}
+\newcommand{\angla}[1]{${\langle}$#1${\rangle}$}
+
+\newcommand{\NathFF}{\codeTexto{\angla{\ceila{Nathaniel}, \ceila{45}}}}
+\newcommand{\NathFFBD}{\codeTexto{\angla{\ceila{Nathaniel}, \ceila{45}, %
+\ceila{Brooklyn}, \ceila{Democrat}}}}
+
+\newcommand{\BrookDem}{\codeTexto{\angla{\ceila{Brooklyn}, \ceila{Democrat}}}}
+
+\newcommand{\nameAge}{\codeTexto{${\langle}$\codeText{name}, \codeText{age}${\rangle}$}}
+
+\newcommand{\suigeneris}{\i{sui generis}}
+ 
+\newcommand{\struct}{\codeText{struct}}
+\newcommand{\CStructs}{\codeText{struct}s}
+\newcommand{\CStructsArrays}{\codeText{struct}s/arrays}
+
+\newcommand{\CStrucst}{C\codeText{struct}}
+
+\newcommand{\throw}{\codeText{throw}}
+\newcommand{\exception}{\codeText{exception}}
+
+%\newcommand{\lxrTotal}{\codeText{lxrTotal}}
+
+
+\newcommand{\float}{\codeText{float}}
+%\newcommand{\int}{\codeText{int}}
+
+\newcommand{\chiuss}{\raisebox{-1pt}{$^\chiu$}}
+\newcommand{\chiussr}{\raisebox{-1pt}{$^\chiur$}}
+
+\newcommand{\chiur}{\codeTextr{\ensuremath{\chi}}}
+\newcommand{\chiu}{\codeText{\ensuremath{\chi}}}
+
+\newcommand{\TySChi}{\TyS\chiussr}
+
+
+
+
+\newcommand{\lCh}{\chsnt{lam}}
+\newcommand{\rCh}{\chsnt{ret}}
+\newcommand{\xCh}{\chsnt{exc}}
+
+\newcommand{\lrCh}[1]{\chsnt{lam, ret, #1}}
+
+\newcommand{\lrChwow}[1]{\chsnt{lam!, ret!, #1}}
+
+\newcommand{\lsrxCh}{\chsnt{lam, sig, ret, exc}}
+
+\newcommand{\lrChblank}{\chsnt{lam, ret}}
+
+\newcommand{\rChSize}{\chsntsz{ret}}
+\newcommand{\chChSize}{\chsntsz{ch}}
+
+\newcommand{\rNoMixx}{\rCh{\chcolor{$\nshortparallel$}}\xCh}
+\newcommand{\rOneOrx}{\rCh{\chcolor{$\asymp$\xCh}}}
+
+\newcommand{\rChSizeleOne}{\codeText{\rChSize{} $\leq$ 1}}
+\newcommand{\rChSizeLe}{\codeText{rChSizele}}
+\newcommand{\Ch}{\chsnt{ch}}
+
+\newcommand{\lrxSimple}{\lrChwow{exc?}}
+
+\newcommand{\lrxDetailed}{\makebox{%
+\chsnt{lam!*},\chnt{ret!\%},\chnt{exc?\%}}}
+
+\newcommand{\excl}{\chcolor{\ensuremath{\asymp}}}
+
+\newcommand{\lrxTotal}{\makebox{%
+\lrCh{exc} {\colonblg} %
+\chnt{lam!*},\chnt{ret!\%},\chnt{exc?\%}%
+{ }{\colonblg}{\colonblg} \chnt{ret}{\excl}\chnt{exc}}}
+
+\newcommand{\lr}{\makebox{%
+\lrChblank{}{ }{\colonblg} \chnt{lam!*},\chnt{ret!\%}}}
+
+\newcommand{\lsrx}{\makebox{\makebox{\lsrxCh}%
+{ }{\colonblg} \chnt{lam!*},\chnt{sig?\%},\chnt{ret!\%},\chnt{exc?\%}}}
+
+%\newcommand{\lr}{\codeText{lr}}
+\newcommand{\sCh}{\chsnt{sig}}
+
+
+\newcommand{\lrx}{\makebox{%
+\lrCh{exc}}}
+
+%\newcommand{\lrCh}[1]{\chsnt{lam, ret, #1}}
+
+
+\let\OldLambda\lambda
+
+\renewcommand{\lambda}{\codeText{lambda}}
+\renewcommand{\return}{\codeText{return}}
+\newcommand{\lxr}{\codeText{lxr}}
+
+\newcommand{\fnote}[1]{\codeText{#1}}
+
+\newcommand{\codeinclude}{\codeText{\#include}}
+\newcommand{\codeconstruct}{\codeText{construct}}
+
+\newcommand{\USH}{\acronymText{USH}}
+
+\newcommand{\fxy}{\codeText{\makebox{f(x, y)}}}
+\newcommand{\fSym}{\codeText{f}}
+
+\newcommand{\fofx}{\codeText{\makebox{f(x)}}}
+\newcommand{\fofy}{\codeText{\makebox{f(y)}}}
+
+\newcommand{\fFuns}{\codeText{f}}
+\newcommand{\hFun}{\codeText{h}}
+\newcommand{\hfx}{\codeText{h(f(x))}}
+\newcommand{\fxdoth}{\codeText{f(x).h()}}
+
+\newcommand{\typesH}{\codeText{types.h}}
+
+\newcommand{\QDataStream}{\codeText{QDataStream}}
+
+\newcommand{\CATSet}{$\mathbb{S}$}
+
+\newcommand{\DSL}{\AcronymText{DSL}}
+\newcommand{\TXL}{\AcronymText{TXL}}
+\newcommand{\CXL}{\AcronymText{CXL}}
+
+\newcommand{\IntZToOH}{\codeText{int\ranged{0,100}}}
+
+\newcommand{\OH}{\codeText{100}}
+
+\newcommand{\codebreak}{\codeText{break}}
+\newcommand{\codecontinue}{\codeText{continue}}
+
+
+\newcommand{\TVOneToVTwo}{\codeText{T\ranged{$V_1$,$V_2$}}}
+
+%\newcommand{\ranged}[1]{\codeText{\rrsb{{\tiny{$\lgroup$}}}#1\rrsb{{\tiny{$\rgroup$}}}}}
+\newcommand{\RangeLTEVal}{\codeText{ranged\_lte}}
+\newcommand{\RangeLTEOHxeqOHone}{\codeText{ranged\_lte{$<$100$>$} x = 101}}
+\newcommand{\RangeLTEValV}{\codeText{\codeText{ranged\_lte{$<$V$>$}}}}
+
+\newcommand{\MIpair}{\codeText{mi\_pair}} 
+\newcommand{\fmipair}{\codeText{int f(mi\_pair pr)}}
+
+\newcommand{\fileTy}{\codeText{file}} 
+\newcommand{\pairOfLists}{\codeText{pair$<$list$<$...$>>$}}
+
+
+\newcommand{\VOne}{\codeText{$V_1$}}
+\newcommand{\VTwo}{\codeText{$V_2$}}
+
+\newcommand{\TType}{\codeText{T}}
+
+\newcommand{\crVOverRTwo}{\codeTextr{$\sqrt{3}\sqrt[3]{V}$}}
+
+%\newcommand{\volSphCube}{\codeTextr{$\frac{4}{3}\pi 3^{\frac{3}{2}}V$}}
+
+\newcommand{\volSphCube}{\codeTextr{$\frac{4}{3}\sqrt{27}\pi V$}}
+
+\newcommand{\rRad}{\codeTextr{$R$}}
+\newcommand{\vVol}{\codeTextr{$V$}}
+
+
+\newcommand{\TMyList}{\codeText{MyList$<$T$>$}}
+
+\newcommand{\MyList}{\codeText{MyList}}
+
+%\newcommand{\templateTMyList}{\codeText{template\<T\>My\_List}}
+%\newcommand{\MyListInt}{\codeText{My\_List\<int\>}}
+
+\newcommand{\templateTMyList}{\codeText{template$<$T$>$MyList}}
+\newcommand{\MyListInt}{\codeText{MyList$<$int$>$}}
+
+\newcommand{\listsize}{\codeText{list.size()}}
+\newcommand{\sizelist}{\codeText{size(list)}}
+
+\newcommand{\SLE}{\AcronymText{SLE}}
+
+\newcommand{\tCat}{\TyS}
+\newcommand{\DBH}{\AcronymText{DBH}}
+
+\newcommand{\cCat}{$\mathbb{C}$}
+\newcommand{\eOneToeTwo}{$e_1 \rightarrow e_2$}
+\newcommand{\eOne}{$e_1$}
+\newcommand{\eTwo}{$e_2$}
+
+\newcommand{\VolSphere}{\codeTextr{$\frac{{4\pi R^3 }}{3}$}}
+
+\newcommand{\livedinup}{\raisebox{6pt}{\colorbox{blGreen!20}{lived-in}}}
+
+\newcommand{\rdfrestup}{\raisebox{4pt}{\colorbox{blGreen!20}{rdf:rest}}}
+
+
+\newcommand{\CArray}{\AcronymText{C} array}
+\newcommand{\CStruct}{\AcronymText{C} \codeText{struct}}
+
+
+\newcommand{\Chi}{$\codeTextr{\chi}$}
+
+\newcommand{\NTrips}{\AcronymText{N-Triples}}
+\newcommand{\NTrip}{\AcronymText{N-Triple}}
+
+\renewcommand{\GeCODE}{\AcronymText{GeCODE}}
+\newcommand{\ITK}{\AcronymText{ITK}}
+
+ 
+
+\newcommand{\SSI}{\AcronymText{SSI}}
+\newcommand{\GSI}{\AcronymText{GSI}}
+
+\newcommand{\ISBN}{\AcronymText{ISBN}}
+\newcommand{\GIS}{\AcronymText{GIS}}
+
+
+\newcommand{\CodeMinted}[1]{{\color{codegr}{{%
+\fontfamily{lmss}\fontseries{b}\selectfont{#1}}}}}
+
+\newcommand{\CodeMintedo}[1]{{\color{orange!40!black}{{%
+\fontfamily{lmss}\fontseries{b}\selectfont{#1}}}}}
+
+\newcommand{\CodeMintedr}[1]{{\color{red!40!black}{{%
+\fontfamily{lmss}\fontseries{b}\selectfont{#1}}}}}
+
+\newcommand{\codeText}[1]{\CodeMinted{#1}}
+\newcommand{\codeTexto}[1]{\CodeMintedo{#1}}
+\newcommand{\codeTextr}[1]{\CodeMintedr{#1}}
+
+\newcommand{\FactPP}{\AcronymText{Fact++}}
+
+
+%\newcommand{\lXY}{\codeText{${\OldLambda}x.{\OldLambda}y}$}
+%\newcommand{\CHlXY}{\codeText{${\lambda}xy$}}
+
+\newcommand{\chname}[1]{\AcronymText{\textbf{#1}}}
+
+\newcommand{\chsym}{\raisebox{3pt}{\rotatebox{-45}{$\Arrowvert$}}\hspace{-5pt}%
+\raisebox{1pt}{\rotatebox{-45}{\tiny{$\gg$}}}\hspace{-1pt}}  %\searrow
+
+\newcommand{\chsymt}{\raisebox{3pt}{\rotatebox{-45}{$\Arrowvert$}}\hspace{-5pt}%
+\raisebox{1pt}{\rotatebox{-45}{\tiny{$\gg$}}}\hspace{-1pt}}  %\searrow \Rightarrow
+
+\newcommand{\chsnt}[1]{{\color{blGreen!40!black}{\chsymt\chname{#1}}}}
+\newcommand{\chnt}[1]{{\color{blGreen!40!black}{\chname{#1}}}}
+
+\newcommand{\colonblg}{{\color{blGreen!40!black}{:}}}
+
+\newcommand{\chcolor}[1]{{\color{blGreen!40!black}{#1}}}
+
+\newcommand{\chsntsz}[1]{{\color{blGreen!40!black}{\makebox{\#\chsymt\chname{#1}}}}}
+
+
+\newcommand{\chsn}[1]{\chsym\chname{#1.}}
+
+%\newcommand{\chsn}[1]{\chsymchname{#1.}}
+
+\newcommand{\lXY}{\codeTexto{${\OldLambda}x.{\OldLambda}y$}}
+
+
+\newcommand{\CHlXY}{\chcolor{\chsn{lam}$xy$}}
+
+
+
+\newcommand{\Tvar}{\codeText{T}}
+\newcommand{\TrRan}{\codeText{T\ranged{r}}}
+\newcommand{\rRan}{\codeText{\ranged{r}}}
+
+\newcommand{\jFunction}{\ensuremath{j}-function}
+
+\newcommand{\xVal}{\codeText{x}}
+\newcommand{\xeqyplusz}{\codeText{x $=$ y $+$ z}}
+
+\newcommand{\fOfG}{\codeText{$f{\circ}g$}}
+\newcommand{\Ofop}{\codeText{$\circ$}}
+
+\newcommand{\inc}{\codeText{inc}}
+
+\newcommand{\zeroNum}{\codeText{$0$}}
+
+
+\newcommand{\enumleft}{\codeText{$\langle$}}
+\newcommand{\enumright}{\codeText{$\rangle$}}
+
+\newcommand{\closed}{\codeText{closed}}
+\newcommand{\open}{\codeText{open}}
+\newcommand{\nonexistent}{\codeText{nonexistent}}
+
+\newcommand{\codeDH}{\codeText{code}-{\DH}}
+
+
+\newcommand{\fOfg}{\codeText{$f{\circ}g$}}  
+
+
+\newcommand{\cfFun}{\codeText{Cf}}
+\newcommand{\cf}{\codeText{Cf}}
+\newcommand{\zToOH}{\codeText{\ranged{0, 100}}}
+\newcommand{\C}{\codeText{C}}
+\newcommand{\yplusz}{\codeText{y $+$ z}}
+\newcommand{\iVal}{\codeText{$i$}}
+\renewcommand{\le}{\codeText{$\leq$}}
+
+\renewcommand{\int}{\codeText{int}}
+
+\newcommand{\tTy}{\codeText{T}}
+
+\newcommand{\rrRanOfTVV}{\codeText{ranged$<$T, t1, t2$>$}}
+
+%\newcommand{\nVal}{\codeText{$n$}}
+\newcommand{\nVal}{$n$}
+
+\newcommand{\zTon}{\codeText{\ranged{0, n}}} 
+
+\newcommand{\fOneTwoxeq}{\codeText{$f_1(x)=f_2(x)$}}
+
+\newcommand{\fOne}{\codeText{$f_1$}}
+\newcommand{\fTwo}{\codeText{$f_2$}}
+
+\newcommand{\xVar}{\codeText{$x$}}
+
+\newcommand{\fx}{\codeText{f(x)}}
+
+\newcommand{\tOne}{\codeText{$\mathcal{T}_1$}}
+\newcommand{\tTwo}{\codeText{$\mathcal{T}_2$}}
+
+\newcommand{\gSym}{\codeText{g}}
+\newcommand{\gradeFn}{\codeText{grade}}
+\newcommand{\iSym}{\codeText{i}}
+
+\newcommand{\xninetyyonehgrade}{\codeText{x $=$ 90; y $=$ 100; g $=$ grade(x, y)}}
+%\newcommand{\xninetyyonehgrade}{\codeText{xninetyyonehgrade}}
+
+\newcommand{\tOneTotTwo}{\codeText{$\mathcal{T}_1 \Rightarrow \mathcal{T}_2$}}
+
+\newcommand{\zeroToOH}{\codeText{\ranged{0,100}}}
+
+\newcommand{\rrsb}[1]{\raisebox{5pt}{#1}}
+\newcommand{\ranged}[1]{\codeText{\rrsb{{\tiny{$\lgroup$}}}#1\rrsb{{\tiny{$\rgroup$}}}}}
+
+\newcommand{\ftytwoh}{\codeTextr{{$\big[40-200\big]$}}}
+
+\newcommand{\ZeroToOneHundred}{\codeText{\ranged{0,100}}}
+
+
+
+\newcommand{\rRanOfT}{\codeText{ranged$<$T$>$}}
+
+
+%\newcommand{\xSym}{\codeText{$x$}}
+%\newcommand{\ySym}{\codeText{$y$}}
+%\newcommand{\zSym}{\codeText{$z$}}
+%\newcommand{\fFun}{\codeText{$f$}}
+
+\newcommand{\xSym}{\codeText{x}}
+\newcommand{\ySym}{\codeText{y}}
+\newcommand{\zSym}{\codeText{z}}
+\newcommand{\fFun}{\codeText{f}}
+
+%%% SLE
+\newcommand{\addressOf}{\codeText{address-of}}
+\newcommand{\fofg}{\codeText{$f{\circ}g$}}
+
+\newcommand{\smsp}{\hspace{2pt}}
+
+\newcommand{\tOnetoTwotoThree}{\codeText{$\mathcal{T}_1$\smsp%
+$\rightarrow$\smsp$\mathcal{T}_2$\smsp$\rightarrow$\smsp$\mathcal{T}_3$}}
+ 
+\newcommand{\tOnetoTwoTOThree}{\codeText{$\mathcal{T}_1$\smsp%
+$\rightarrow$\smsp\smsp($\mathcal{T}_2$\smsp$\rightarrow$\smsp$\mathcal{T}_3$)}} 
+ 
+\newcommand{\pimath}{\ensuremath{\pi}}
+
+\newcommand{\SCO}{\AcronymText{SCO}}
+
+\newcommand{\lambdaxfgx}{\codeTextr{$\OldLambda{}x.fgx$}} 
+\newcommand{\lambdaxfx}{\codeTextr{$\OldLambda{}x.fx$}} 
+
+%\newcommand{\fFun}{\codeText{$f$}}
+\newcommand{\gFun}{\codeText{g}}  
+
+\newcommand{\nodex}{\codeText{$x$}}
+\newcommand{\nodef}{\codeText{$f$}}
+
+\newcommand{\sqqq}{{\fontfamily{lmtt}\selectfont{"}}}
+\newcommand{\operatorqq}{\codeText{operator\sqqq\sqqq}}
+
+\newcommand{\carOne}{\codeTextr{$\mathfrak{C}_1$}}
+%\newcommand{\carrTwo}{\codeTextr{$\mathfrak{C}_2$}}
+
+\newcommand{\carTwo}{\codeTextr{$\mathfrak{C}_2$}} 
+
+\newcommand{\carOnetoTwos}{\carOne \codeTextr{$\twoheadrightarrow$} \carTwo}
+\newcommand{\carOnetoTwof}{\carOne \codeTextr{$\rightarrowtail$} \carTwo}
+
+
+\newcommand{\intieqzero}{\codeText{int i = 0}}
+
+\newcommand{\intthrtwo}{\codeText{int32}}
+
+\newcommand{\aeqb}{\codeText{a = b}}
+
+\newcommand{\aceqb}{\codeText{a := b}}
+
+\newcommand{\thisc}{\codeText{this}}
+
+\newcommand{\lambdaCalculus}{$\OldLambda$-Calculus}
+
+\newcommand{\lamdbas}{$\OldLambda$s} 
+\newcommand{\lambdas}{$\OldLambda$s}
+
+\newcommand{\fntoch}{\codeTextr{$f_n$ $\rightarrow$ $\chi$}}
+
+\newcommand{\sigmac}{\codeTextr{sigma}}
+\newcommand{\sigmach}{\codeTextr{sigma}} 
+
+\newcommand{\sigmaCalculi}{$\varsigma$-calculi}
+\newcommand{\sigmaCalculii}{$\varsigma$-calculi}
+\newcommand{\sigmaCalculus}{$\varsigma$-calculus}
+
+\newcommand{\returnc}{\codeTextr{return}}
+
+\newcommand{\lambdach}{\codeTextr{lambda}}
+
+\newcommand{\catchddd}{\codeTextr{catch(...)}}
+
+\newcommand{\sectsym}{\S}
+
+\newcommand{\error}{\codeTextr{exception}}
+\newcommand{\errorc}{\codeTextr{exception}}
+\newcommand{\errorrc}{\codeTextr{exception}}
+\newcommand{\returnrc}{\codeTextr{return}}
+
+\newcommand{\returnch}{\codeTextr{return}}
+
+\newcommand{\lambdac}{\codeTextr{lambda}}
+\newcommand{\capturec}{\codeTextr{capture}}
+\newcommand{\capturech}{\codeTextr{capture}}
+
+\newcommand{\errorch}{\codeTextr{exception}}
+\newcommand{\breakch}{\codeTextr{break}}
+ 
+\renewcommand{\break}{\codeText{break}}
+\newcommand{\breakct}{\codeText{break}}
+
+\newcommand{\yeqfx}{\codeText{y = f(x)}} 
+\newcommand{\frcchoprctocy}{\codeText{frcchoprctocy}} 
+
+\newcommand{\frc}{\codeText{frc}} 
+\newcommand{\fFn}{\codeText{fFn}} 
+
+\newcommand{\bindFn}{\codeText{bindFn}} 
+
+\newcommand{\lookupch}{\codeTextr{lookup}} 
+
+
+\newcommand{\stdFuture}{\codeText{std::future}} 
+ 
+ 
+\newcommand{\doH}{\codeText{do}}
+
+\newcommand{\ifthenelse}{\codeText{if...then...else}}
+
+\newcommand{\tyListOfInt}{\codeText{list$<$int$>$}}
+\newcommand{\tyint}{\codeText{int}}
+
+\let\OldGamma\Gamma
+
+\renewcommand{\Gamma}{\codeTextr{$\OldGamma$}}
+\newcommand{\gammaOne}{\codeTextr{$\OldGamma_1$}}
+\newcommand{\gamaTwo}{\codeTextr{$\OldGamma_2$}}
+\newcommand{\gammaTwo}{\codeTextr{$\OldGamma_2$}}
+
+%\newcommand{\pfx}{\codeText{fx}}
+%
+\newcommand{\pfx}{\codeText{(*f)(x)}}
+
+\newcommand{\oprctoc}{\codeText{oprctoc}}
+\newcommand{\oprctoch}{\codeText{oprctoch}}
+\newcommand{\choprctoc}{\codeText{choprctoc}}
+
+\newcommand{\carOnetoTwofOP}{\codeText{carOnetoTwofOP}}
+
+\newcommand{\thisob}{\codeText{this}}
+\newcommand{\selfob}{\codeText{self}}
+
+% \lam. <=< int    
+
+\newcommand{\typetoch}{\codeTextr{%
+\raisebox{2pt}{$\leftharpoonup$}\hspace{-.9em}\raisebox{1pt}{$\leftharpoondown$}}}
+
+\newcommand{\nodeT}{\codeTextr{T$_{Node}$}}
+\newcommand{\predTY}{\codeTextr{T$_{Pred}$}}
+\newcommand{\predTYOp}{\codeTextr{\lambdach. \typetoch T$_{Pred}$ %
+\returnch. \typetoch T$_{Pred}$}}
+
+\newcommand{\predTYsig}{\sigmach\codeTextr{\%}\returnch\codeTextr{\%}}
+
+\newcommand{\QFile}{\codeText{QFile}}
+  
+
+\newcommand{\xCommaY}{\codeText{$x,y$}}  
+\newcommand{\xlty}{\codeText{x $<$ y}}   
+\newcommand{\unsignedint}{\codeText{unsigned int}}
+ 
+\newcommand{\subjectPredicateObject}{\codeTexto{Subject Predicate Object}}
+\newcommand{\rdfType}{\codeTexto{rdf:type}}
+
+\newcommand{\parentOf}{\codeTexto{parentOf}}
+\newcommand{\childOf}{\codeTexto{childOf}}
+
+%\newcommand{\predTY}{\codeTexto{predTY}}
+\newcommand{\inverseOp}{\codeTexto{inverseOp}}
+
+\newcommand{\capabilitych}{\codeTextr{capability}} 
+ 
+\newcommand{\addFun}{\codeText{add}} 
+
+\newcommand{\sortFun}{\codeText{sort}}
+\newcommand{\sortfn}{\codeText{sort}} 
+
+\newcommand{\incimpl}{\codeText{int inc(int x)\{return add(x,1)\}}} 
+ 
+\newcommand{\addOne}{$\langle$\codeText{\&add, 1}$\rangle$}
+
+\newcommand{\Cfr}{$\langle$\codeText{\&Cf, r$_1$, r$_2$}$\rangle$}
+
+ 
+\newcommand{\fsVal}{\codeText{fs}} 
+\newcommand{\static}{\codeText{static}}
+\newcommand{\QFileOpen}{\codeText{QFileOpen}} 
+ 
+\newcommand{\vVal}{\codeText{V}}  
+\newcommand{\lte}{\codeText{$\leq$}}
+\newcommand{\lteVal}{\codeText{$\leq{ }$V}}
+
+\newcommand{\intXeqOPointFive}{\codeText{int x = $0.5$}} 
+
+\newcommand{\RangeGTVal}{\codeText{ranged\_gt}}
+\newcommand{\RangeGTValx}{\codeText{ranged\_gt{$<$x$>$}}}
+
+\newcommand{\cFun}{\codeText{C}}
+
+\newcommand{\st}{\codeTextr{s.t}} 
+
+\newcommand{\prVal}{\codeText{pr}}
+
+\newcommand{\parach}{\codeTextr{para}}
+
+\newcommand{\fxypreqMIpairxy}{\codeText{f(int x, int y, mi\_pair pr = mi\_pair(x, y))}}
+\newcommand{\fxypreqMIpairZeroOne}{\codeText{f(x, y, mi\_pair(0, 1))}}
+ 
+ 
+%\newcommand{\fxypreqMIpairxy}{\codeText{f int x, int y, mi\_pair pr = mi\_pair x, y}}
+%\newcommand{\fxypreqMIpairZeroOne}{\codeText{def}}
+ 
+ 
+ 
+\newcommand{\yVal}{\codeText{y}}
+\newcommand{\xSymbol}{\codeText{x}}
+ 
+\newcommand{\subjectnd}{\codeTexto{SUBJECT}}
+\newcommand{\predicatend}{\codeTexto{PREDICATE}}
+\newcommand{\objectnd}{\codeTexto{OBJECT}}
+ 
+\newcommand{\doNotation}{\codeText{do}-notation}
+
+\newcommand{\Onef}{\codeText{$f_1$}}
+
+\newcommand{\Twof}{\codeText{$f_2$}}
+
+\newcommand{\CLng}{\AcronymText{C}}
+
+\newcommand{\qOneTwoThree}{\q{\codeText{123}}} 
+\newcommand{\oneTwoThree}{\codeText{123}}
+\newcommand{\ascii}{\AcronymText{ASCII}}
+ 
+ 
+\newcommand{\opTransfer}{\codeTextr{$\looparrowright$}}
+\newcommand{\carrOne}{\codeTextr{$\mathfrak{C}_1$}}
+\newcommand{\carrTwo}{\codeTextr{$\mathfrak{C}_2$}}
+
+\newcommand{\catchexce}{\codeText{catch(Exception e)}}
+
+\newcommand{\carrOneOpTransferTwo}{\carrOne{}{\opTransfer}\carrTwo}
+\newcommand{\carrOneOpTransferTwolambda}{\carrOne{}{\opTransfer}%
+{\textsuperscript{\hspace{-.8em}{\lambdach}}}\carrTwo}
+
+
+\newcommand{\carrOneOpTransferTworeturn}{\carrOne{}{\opTransfer}%
+{\textsuperscript{\hspace{-.8em}{\returnch}}}\carrTwo}
+
+\newcommand{\carrTwoOpTransferOnereturn}{\carrTwo{}{\opTransfer}%
+{\textsuperscript{\hspace{-.8em}{\returnch}}}\carrOne}
+
+\newcommand{\exceptionch}{\codeTextr{exception}}
+%\newcommand{\capturech}{\codeTextr{capture}}
+
+\newcommand{\chanOne}{\codeTextr{$\chi_1$}} 
+\newcommand{\chanTwo}{\codeTextr{$\chi_2$}} 
+
+\newcommand{\chanOneOpTransferTwo}{\chanOne{}{\opTransfer}\chanTwo}
+
+\newcommand{\objfx}{\codeText{obj.f(x)}}
+\newcommand{\obj}{\codeText{obj}}
+
+%\newcommand{\chanyOne}{\codeTextr{$\chi_1$}} 
+%\newcommand{\changTwo}{\codeTextr{$\chi_2$}} 
+%\newcommand{\chanyOneOpTransferTwo}{\chanOne{}{\opTransfer}\chanTwo}
+
+
+
+\newcommand{\gOpTransferOneOneF}{\codeText{g:}\codeTextr{return$_1$}{\opTransfer}%
+\codeText{f:}\codeTextr{lambda$_1$}}
+ 
+\newcommand{\fDotOfg}{\codeText{f$\circ$g}}
+\newcommand{\fDotOfGX}{\codeText{(f.g)(x)}}
+\newcommand{\fOfGx}{\codeText{f(g(x))}}
+
+\newcommand{\fgx}{\codeText{f(g(x))}}
+
+\newcommand{\funG}{\codeText{g}}
+\newcommand{\funF}{\codeText{f}} 
+
+\newcommand{\tyOne}{\codeText{$\mathcal{T}_1$}}
+\newcommand{\tyTwo}{\codeText{$\mathcal{T}_2$}}
+
+\newcommand{\tyOneTotyTwo}{\tyOne \codeText{$\rightarrow$} \tyTwo}
+
+\newcommand{\chK}{\codeText{$\mathcal{K}$}}
+
+\newcommand{\tOneTimesTTwo}{\codeText{$\mathcal{T}_1$ $\times$ $\mathcal{T}_2$}}
+\newcommand{\tOneTimesTOne}{\codeText{$\mathcal{T}_1$ $\times$ $\mathcal{T}_1$}}
+\newcommand{\tyOneTimesTyTwo}{\codeText{$\mathcal{T}_1$ $\times$ $\mathcal{T}_2$}}
+
+\newcommand{\tOneTimesTTwoToTOneOntoTTwo}{\codeText{$\mathcal{T}_1$ $\times$ $\mathcal{T}_2$ %
+$\Longrightarrow$ $\mathcal{T}_1$ $\rightarrow$ $\mathcal{T}_2$}}
+
+\newcommand{\unitTy}{\codeText{Unit}} 
+\newcommand{\unitVal}{\codeText{unit}} 
+
+\newcommand{\unitTyToty}{\unitTy{}{ }%
+\codeText{$\rightarrow$ $\mathcal{T}$}}
+\newcommand{\ty}{\codeText{$\mathcal{T}$}}
+
+\newcommand{\tyOneToTyTwo}{\codeText{$\mathcal{T}_1$ $\rightarrow$ $\mathcal{T}_2$}}
+
+\newcommand{\tyE}{\codeText{$E$}}
+\newcommand{\tyTotyE}{\codeText{$\mathcal{T}$ $\rightarrow$ $E$}}
+\newcommand{\tyToTyE}{\codeText{$\mathcal{T}$ $\rightarrow$ $E$}}
+ 
+\newcommand{\tyValues}{\codeText{$\mathcal{T}$-}values}
+
+
+\newcommand{\li}{\codeText{li}}
+
+\newcommand{\tyNoun}{\codeText{Noun}}
+\newcommand{\tyProposition}{\codeText{Proposition}}
+
+\newcommand{\unicode}{\AcronymText{UNICODE}}
+\newcommand{\AOP}{\AcronymText{AOP}} 
+
+\newcommand{\chPkg}{\codeTextr{chPkg}}
+\newcommand{\tCatChK}{\codeTextr{tCatChK}}
+
+\newcommand{\sigmaTrans}{\codeText{sigmaTrans}} 
+
+\newcommand{\chan}{\codeText{chan}}  
+
+\newcommand{\carr}{\codeText{$\mathfrak{C}$}}
+\newcommand{\tyEE}{\codeText{$\mathcal{E}$}}
+
+\newcommand{\zero}{\codeText{0}} 
+\newcommand{\szEqSizeFile}{\codeText{sz = size(file)}}
+
+\newcommand{\sizeFn}{\codeText{size}} 
+
+\newcommand{\openFileType}{\codeText{Open\_File}} 
+
+\newcommand{\fileSym}{\codeText{file}} 
+\newcommand{\szSym}{\codeText{sz}} 
+
+\newcommand{\fileExistsFn}{\codeText{file\_exists}} 
+
+\newcommand{\eli}{\item}
+
+
+\newcommand{\yEqFx}{\codeText{y = f(x)}}
+
+\newcommand{\bindFnSig}{\makebox{\codeText{($>>=$) :: m a $\Rightarrow$ %
+(a $\rightarrow$ m b) $\rightarrow$ m b}}}
+
+\renewcommand{\bindFn}{\codeText{$>>=$}}
+
+\newcommand{\monadA}{\codeText{m a}}
+
+\newcommand{\litOne}{\codeText{1}}
+\newcommand{\litOnePtZ}{\codeText{1.0}}
+\newcommand{\litOnePtO}{\codeText{1.1}}
+
+\newcommand{\piOne}{\ensuremath{\pi_1}}
+\newcommand{\piTwo}{\ensuremath{\pi_2}}
+\newcommand{\piThree}{\ensuremath{\pi_3}}
+
+\newcommand{\arrbl}{\ensuremath{\longrightarrow\hspace{-1.32em}\bullet}\hspace{.82em}}
+\newcommand{\arrfo}{\ensuremath{\longrightarrow\hspace{-1.52em}\lhd}\hspace{.72em}}
+
+\newcommand{\mGamma}{\ensuremath{\gamma}}
+
+\newcommand{\pisbl}{\piOne{} \arrbl{} \piTwo{}}
+\newcommand{\pisfo}{\piOne{} \arrfo{} $\ulcorner\piTwo{},\piThree{}\lrcorner$}
+
+
+
+\newcommand{\OHO}{\codeText{101}}
+\newcommand{\litOHO}{\codeText{101}}
+\newcommand{\litOH}{\codeText{100}}
+\newcommand{\litFive}{\codeText{5}}
+\newcommand{\five}{\codeText{5}}
+
+\newcommand{\nth}{{$n$}th}
+%\newcommand{\nVal}{{$n$}}
+
+\newcommand{\listval}{\codeText{list}}
+
+\newcommand{\rlstsize}{\codeText{\ranged{0, list.size()-1}}}
+\newcommand{\intrlstsize}{\codeText{int\ranged{0, list.size()-1}}}
+
+\newcommand{\fIntG}{\codeText{int f(int g)}}
+\newcommand{\fIntI}{\codeText{int f(int i)}}
+
+\newcommand{\retFive}{\codeText{return 5}}
+
+\newcommand{\QString}{\codeText{QString}}
+\newcommand{\QObject}{\codeText{QObject}}
+\newcommand{\ptrv}{\codeText{void*}}
+
+\newcommand{\aVal}{\codeText{a}}
+
+\newcommand{\switch}{\codeText{switch}}
+
+\newcommand{\ztooh}{\codeText{0-100}}
+
+\newcommand{\mOldLambda}{\ensuremath{\OldLambda}}
+
+
+
+\renewenvironment{abstract}
+ {\small
+  \begin{center}
+  \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+  \end{center}
+  \list{}{%
+    \setlength{\leftmargin}{4mm}% <---------- CHANGE HERE
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \item\relax}
+ {\endlist}
+
+

@@ -1,0 +1,28 @@
+\vspace{-1em}
+\begin{lstlisting}[caption={Polymorphic Operators and Overloading}, 
+  language = C++, numbers = none, escapechar = !,label={lst:maxima},
+    basicstyle = \ttfamily\bfseries\footnotesize, linewidth = \linewidth]
+
+template<typename LIST_Type, typename VAL_Type>
+int monotone_increasing(const LIST_Typ<VAL_Type>& list)
+{
+ if(list.length() == 0)
+ {
+  return 0;
+ }
+ VAL_Type current_maximum = list[0];
+ int result = 1;
+ for(int i = 1; i < list.length(); ++i)
+ {
+  if (list[i] > current_maximum)
+  {
+   current_maximum = list[i];
+   ++result;
+  }
+ }
+}
+\end{lstlisting}
+
+\begin{tikzpicture}[remember picture, overlay]
+\dovn{1.35}{2.72}{1};
+\end{tikzpicture} 

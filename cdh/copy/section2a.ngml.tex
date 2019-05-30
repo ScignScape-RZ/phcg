@@ -1,0 +1,500 @@
+\spsubsection{Described Types and Actual Types}
+\p{I consider it a maxim of the kind of type system I
+propose here that each system is grounded in a universe of typed values;
+that for each system there is a Category \tCat{} of types which in principle
+satisfies Category Theoretic axioms; that \q{to be a value with a type}
+means to be the image of a morphism from a type with one sole
+inhabitant (modeling the phenomenon of \q{initializing} a symbol, or
+variable, or temporary rvalue, or holder, or as I'll generically call it a
+\q{carrier} holding a value); that each inhabitable type has at least one
+\q{data}- or (the term I'll prefer) \q{value}-constructor, which is a
+function returning a value of that type, and that at least one of these value
+constructors does not in turn require a value of the type (more generally that
+the system of value-constructors is \q{acyclic} in a sense I'll define later);
+and that functions (in the sense of procedures that
+are implemented in code and can be called from other functions) are themselves
+typed values.  These last two assumptions contain the seed of a debate
+with \q{ordinary} type theories: most Category-flavored work on types seems
+to take as a general principle that morphisms (which must have a nontrivial
+structure if \tCat{} is a nontrivial Category) are analogous to functions (i.e.,
+\i{implemented} functions, as opposed to mathematical constructs at one remove from
+an actual programming language), to the degree that such a distinction is recognized.
+}
+\p{The notion of \q{type systems} I adopt here sees them not
+logical abstractions but as engineered artifacts (as are
+languages themselves).  Types are not \i{sets} (or some Constructive or
+intuitionistic Category that can stand in for sets, adding
+mathematical structure or logical discipline to
+sets' notorious philosophical haziness \cite{Jubien}).  In the
+general case there is no \i{a priori} association between a type and
+the sets of values it can house (on any particular computing
+environment).  \phantomsection\label{pointerlist}As a matter of logic, we can say,
+for example, that allocating memory and appending the resulting
+pointer to a pointer-list yields a new pointer-list \mdash{}
+but there is no guarantee that this operation will succeed
+(there may, among other issues, be no memory available).
+An expression, as in this case, which appears to logically describe a plausible
+value of a type (an \q{inhabitant}) may not actually be constructable
+or representable at some computing environment and some time
+(or even any time).  Similar issues are sometimes addressed by a
+\i{modal} type theory (cf., e.g., \cite{MurdochGabbay})
+where (in one interpretation) a \i{logical}
+assertion about a type may be \i{possible} but not necessary
+(the modality ranging over \q{computing environments}, which
+act like \q{possible worlds}).
+}
+\p{Along similar lines, a logical description of a plausible type
+\mdash{} say, the type of all functions that take equal-sized lists
+of integers \mdash{} may not correspond to a type that can be
+concretely implemented in a given programming languages and
+environment.  There is no ambient mathematics which makes a
+type available for practical use as soon as it is unambiguously
+described \mdash{} alongside inferences driven by the Curry-Howard
+isomorphism that there are some \i{necessarily uninhabited} types,
+we can say in the present setting that there may be \i{contingently}
+uninhabited types, types which cannot be inhabited
+\i{in some particular computing environment} because there are no
+constructors implemented; or because the environment has
+no compile-time or run-time mechanism for enforcing the
+requirements stipulated by the type \mdash{} insofar as they are used
+either to describe values or as an element in typing judgments.
+}
+\p{In this context, then, a \i{type} is conceptually a set of
+guarantees on function-call resolution (for overloaded function
+symbols) and gatekeeping (for preventing code from executing with
+unwarranted assumptions), and a type can only be inhabited if those
+guarantees can be met.  In particular, the \q{witness} to a type's
+being inhabited is always one (or more) functions \mdash{} either a constructor
+(a \q{value constructor}) which creates a value of the type from
+other values or from character-string literals; or, for function types,
+a function body implementing a function with the appropriate signature.
+}
+\p{A consequence of this framing is that defining what exactly constitutes
+a type \mdash{} via an expression notating a type description and
+a corresponding type implementation \mdash{} depends intrinsically
+on defining what constitutes a \i{function}, and particularly
+an \i{implementation} or \i{function body}.  Moreover, since
+functions are implemented in terms of other functions,
+another primordial concept is a function \i{call}.  Reasoning
+abstractly about functions needs to be differentiated from
+reasoning about available, implemented functions.  For example,
+a common functional-programming idiom is to treat the composition
+of two unary functions as itself a function-typed value to pass
+to contexts expecting other function-typed values.  In my perspective
+here, \fofg{} may be a \i{plausible} value, but it is
+not an \i{actual} value without being implemented,
+whether via a code graph (spelling out the equivalent of \lambdaxfgx{})
+or some indirect/behavioral description (analogous to \inc{}
+represented as \addOne{}).
+Consider function pointers: what is the address of \fofg{}
+if that expression is interpreted in and of itself
+as evaluating to a functional value?  This suggests
+that a composition operator does not work in function-like
+types quite like arithmetic operators in numeric types
+(which is not unexpected insofar as functional values,
+internally, are more like pointers than numbers-with-arithmetic).
+Of course, languages are free to implement
+functions behind the scenes to expand (say) \fofg{}, but
+then \fofg{} is just syntactic sugar (even if its purpose
+is not just to neaten source code, but also to inspire programmers
+toward thinking of function-composition in quasi-arithmetic ways).
+%They are also free to behaviorally emulate \fofg{} via a data
+%structure standing in for the function-value in lieu of a code
+%graph.
+To put it differently, an \addressOf{} operator
+\i{may} be available for \fofg{} if it is available for \fFun{} and
+\gFun{}, but this depends on language design; it is not an
+abstract property of type systems.
+}
+\p{A similar discussion applies to \q{Currying} \mdash{} the proposal
+that types \tOnetoTwotoThree{} and  \tOnetoTwoTOThree{} are
+equivalent, in that fixing one value as argument to a
+binary function yields a new unary function.  Again,
+since the Curried function is not necessarily implemented,
+there is a \i{modal} difference between \tOnetoTwotoThree{}
+and  \tOnetoTwoTOThree{}.  Languages \i{may} be engineered
+to silently Curry any function on demand, but purported
+\tOnetoTwotoThree{} and \tOnetoTwoTOThree{} (\q{Curry})
+equivalence is not a \i{necessary} feature of type systems.
+}
+\p{Aside from showing a concrete case of type-theoretic assertions which
+may be refined via modal operators (giving us means
+to assert possible but not necessary \q{Curry equivalence}), this
+example also points to how formal criteria of what, in fact,
+constitutes a function, influences our notion of
+what in fact constitutes a type.  Exploring this relation, I contend,
+is one way to consider the relations and variation between
+formulations like \mOldLambda{} and \pimath{} (process) calculi.
+}
+\p{In a mathematical type-theoretic context \mdash{} such as Typed
+\mOldLambda{}-Calculus \mdash{} there is a prior notion of
+\q{function application} or \q{term} \mdash{} so terms (which may be
+arbitrarily nested) denote function calls, while lambda-abstracting
+symbols within terms forms the basis of notating function bodies.
+For serious programming languages, however, there are (as I have
+stressed) many \mOldLambda{}-calculi \mdash{} adding forms of
+abstraction for objects,
+exceptions, permissions, mutable state, and any other mechanism
+through which functions may pass values to and from other
+contexts.  This variation intersects with type theory
+insofar as, for example, type operators (abstracting to bind
+symbols to types rather than values) combine with
+other variations on the lambda theme.  There are many
+\q{lambda cubes} because the Barendregt construction
+can be duplicated for many variations of the underlying
+lambda calculus \mdash{} of the calculus for value-abstraction
+irrespective of what type-abstractions are allowed; e.g.,
+abstracting objects apart from function arguments.
+}
+\p{To the extent that both mathematical and programming concepts have a place here, we
+find a certain divergence in how the word \q{function} is used.  If I say that
+\q{there exists a function from \tOne{} to \tTwo{}}, where \tOne{} and \tTwo{} are
+(not necessarily different) types, then this statement has two possible interpretations.
+One is that, mathematically, I can assume the existence of a \tOneTotTwo{} mapping
+by appeal to some sort of logic; the other is that a \tOneTotTwo{} function actually
+exists in code.  This is not just a \q{metalanguage} difference projected
+from how the discourse of mathematical type theory is used to different ends than discourses
+about engineered programming languages, which are social as well as digital-technical
+artifacts.  Instead, we can make the difference exact: when a function is
+implemented, it becomes a \i{value} of a type, something created by a
+value constructor: the image of a morphism, not itself a morphism.
+}
+\p{To be precise, consider how \q{carriers} of values \mdash{} the holders, bound to
+symbols in source code, which designate internal runtime representations of
+values and so make them accessible for computations \mdash{} become initialized.
+Consider first symbols being initialized from source-code literals,
+like \intxeqninety{}.  The value-constructor in this case must take a value
+representing a \q{literal}, some sort of character string obtained
+directly from source code.  In other cases, initialization can unfold
+over several
+steps.  Consider \xninetyyonehgrade{}: the \q{\gSym{}} is initialized from a function
+return, so the actual value constructor whose result initializes \gSym{}
+is inside \gradeFn{}, and a chain of intermediary carriers brings the result to
+its target.  But we can assume that by following the chain of carriers and
+value constructors we can eventually reach a value constructor which works on a
+raw source code literal.  Call a type \q{acyclic} (in the context of
+constructors) if it has either a default constructor (a value constructor which
+takes no arguments), or a value constructor which takes one
+argument of a single global type that includes (representations of) raw source
+code literals, or a value constructor which only takes other acyclic types,
+such that a call diagram whose nodes are types and whose
+edges are value constructors meeting these criteria forms a Directed Acyclic Graph.
+Call a type system acyclic if every inhabitable type in the system is acyclic
+in this sense.  Intuitively, this means that every type can be built up from source code literals by
+a chain of value constructors.
+}
+\p{Notice, however, that \i{function} values seem, at least
+in the canonical cases \mdash{} see item \hyperref[funconstr]{1}
+on page \pageref{funconstr} \mdash{} to be defined
+from \q{bodies} which are not single literals, but
+rather aggregate code-spans
+with semantically and syntactically regulated internal structure.  I assume that
+code is written in a specific language and that, in the context of that language,
+any sufficiently complete code-span can be compiled to an Abstract Semantic Graph
+(or similar graph-like Intermediate Representation).  The logic of this
+representation may vary among languages and/or type systems \mdash{} optimal
+graph representation of source code is an active area of research, not only for
+compiler technologies but also for code analyzers and \q{queries} and for
+code deployment on the Semantic Web.  In this chapter, I assume that
+an adequate graph representation will be isomorphic to a Directed Hypergraph.
+So, assume that there is a \q{code-\DH{}} type such that every code-span
+suitable for compilation into a function-implementation is a value of that type.
+Assume also that every source code literal is a \codeDH{} graph with one hypernode
+and no edges.  In that case, initializing carriers from literals is one example
+of initializing carriers from code-graph instances more generally,
+including initializing \q{function} values.
+}
+\p{This approach \mdash{} using \DH{} or \CH{} graphs as the formal
+ground of type-theoretic statements \mdash{} influences how we
+can analyze types.  For every \q{function-like} type, instances
+of the type are given through implementations suitable to
+graph representation.  Many nodes in these graphs represent
+values which the function receives from and/or passes to
+other functions.  Therefore, assertions about functions' behavior
+often take the form of assertions about values
+functions receive from other functions, and conditions
+for their properly sending values to other functions
+in turn.  Insofar as we seek to express conditions on
+functions' behavior through a type system,
+we can then interpret type systems as
+\i{leveraging} taxonomies of node-to-node
+relations \mdash{} modeled via Source Code Ontologies \mdash{} to define
+notations where descriptions of functions'
+\i{behavior} can be interpreted or converted
+to descriptions of types themselves.
+}
+\p{Notice that one single literal may initialize carriers of multiple types;
+the number \q{\zeroNum{}} could become a signed or unsigned integer, a float, etc.
+Similarly, a code-span can be compiled multiples times, as in \Cpp{} templates.
+So, there is not necessarily a one-to-one correspondence
+between code-graphs and function values.  Nevertheless, we can assume that
+each function implementation is uniquely determined by the function type
+together with its function-body implementation-graph, whose potential
+\q{template parameters} are fixed according to the produced type.  So, each
+function \i{implementation} is fully determined by a type-and-code-graph
+pair.  This formally expresses how \i{implemented functions} are different
+phenomena than what we might call \q{functions} 
+mathematical context \mdash{} referring back to the 
+\i{morphism} versus \i{function-value} distinction I made 
+on the last page.  
+%in a mathematically inclined
+%discussion of the relevant type system, including morphisms.  
+If there is a
+meaningful type Category than we must have nontrivial morphisms, which I
+would argue should be those that abstractly capture type-level semantics,
+such as predefined conversion operators or the
+\q{initialization} morphism.  But morphisms are not affixed to
+the code-graph and value-constructor machinery, though of course some morphisms
+may coincide with implemented functions.
+}
+\p{Given this distinction, we can start to explore why some advanced constructs in
+Dependent Type Theory, or other features of very expressive type systems,
+may be hard to implement in practice.  I suggested earlier in this
+section that \q{range-bounded} types are a good case-study in
+implementational complications that can befall described types;
+I will now return to that discussion and pursue the \q{ranged-type}
+case further.
+}
+%\vspace{-.5em}
+\spsubsectiontwoline{Range-Bounded Types, Value Constructors, and Addressability}
+%\vspace{-.5em}
+\p{Consider a function \fFun{} which takes
+values that must be in a specified range \rRan{} (say, an integer between
+\zeroToOH{}).  By extension, suppose we want to overload \fFun{} based on
+whether its argument (say, \xSym{}) falls inside or outside \rRan{}.
+This is not hard to achieve if \fFun{}'s \i{type} internally references
+a \i{fixed} \rRan{}.  Let \Tvar{} be a symbol that quantifies over the typeclass
+of types with magnitude/comparison operators, and \rRanOfT{} be a type
+formed from \Tvar{} and two  \Tvar{}-values, implementing the semantics
+of closed intervals over \Tvar{}: so \rrRanOfTVV{} is a \q{type-expression}
+mapped to a type constructor yielding a single type
+(not a type family, typeclass, or higher-order type).  According to my \q{maxims},
+a type is concretely inhabitable if it has an acyclic value constructor,
+which in turn is a value of a function type.  So, each acyclic type is
+associated with one or more \i{values} that are in a vague Curry-Howard sense
+\q{proofs} of its inhabitability.  Note that \q{inhabitable} does
+not in this context mean the abstract complement of
+\q{uninhabitable} types whose \q{corresponding} propositions would
+be paradoxical if the type had a value.  Rather, \q{inhabitable} means that
+value constructors are available to be called and type-instances can be
+used computationally, e.g., passed to other functions.
+}
+\p{For any type-with-intervals \Tvar{} and \Tvar{}-range \rRan{}, a compiler
+(for instance by specializing a template) can produce a value constructor that takes
+\Tvar{}-values and tests (or coerces) them such that the constructor only returns
+a value in \rRan{}.  This can then be the input type for a function which
+requires \rRan{}-bounded input (see Figure \ref{lst:range}).  What to do when a values \i{fails} the
+range-test is another question which I set aside for now.  We can similarly define
+a \q{non-range} type which only accepts values \i{not} in \rRan{}; and, since these
+two types (the in-range and the out-of-range) are different, we can overload
+\fFun{} on them.  So, assuming we accept \rRan{} being fixed, we can achieve
+something semantically \mdash{} \q{overload-wise} \mdash{}
+like dependent typing.  Of course, Dependent Types
+as a programming construct are more powerful than this: an example
+of \q{real} dependent typing would be something like an \fFun{} which takes
+\i{two} arguments: the first a range, and the second a value within
+the range.  We want the type system to be engineered allowing the condition
+on the second argument to be verified as part of \i{typechecking}.
+}
+\itcl{range}
+\p{Using the \rRan{}-type as before, the type of \fFun{}'s second parameter
+would then be \Tvar{} restricted to the \rRan{} interval, but here
+\rRan{} is not fixed in \fFun{}'s declaration but rather passed in to
+\fFun{} as a parameter; the type of the second parameter depends on the
+\i{value} of the first one.  Unless we know \i{a priori} that only
+a specific set of \rRan{}s in the first parameter will ever be encountered,
+how should a compiler identify the value constructor to use for
+\xSym{}?  This evidently demands either that a value constructor be automatically
+created at runtime, for each \rRan{} encountered \mdash{} 
+\mbox{so, i.e., that the compiler 
+has to insert some runtime} mechanism which creates and calls a value constructor
+for \xSym{} before \fFun{}'s body is entered \mdash{}  or else that a
+single value constructor is used for all \xSym{}s, regardless of \rRan{}.
+As I argued, each (concretely) inhabitable type has at least
+one associated acyclic value constructor which is unique to that
+type: a type-plus-code-graph pair.  This allows one code graph to be
+mapped to multiple value constructors.  But it does not allow
+one value constructor to service many types, although we
+can implement functions that would be semantically analogous to
+such a value constructor.
+}
+\p{We could certainly write a function that takes a range and a value and
+ensures that the value fits the range \mdash{} perhaps by throwing an
+exception if not, or mapping the value to the closest point in the range.
+Such a function would provide common functionality for a family of
+constructors each associated with a given range.  But a function (\cfFun{}, say)
+providing \q{common functionality} for value constructors is not necessarily
+itself a value constructor.  If we'd want to treat such a function as a
+\i{real} value constructor we'd have to add contextual modifiers:
+\cfFun{} is a value constructor for range-type \rRan{} when \rRan{} as a range
+is supplied as one parameter.  The value constructor itself would have to
+be dependently typed, its result type varying with the value of its arguments
+\mdash{} but a result-type-polymorphic value constructor is no longer an actual
+value constructor; at best we can say it is a function which can dynamically
+\i{create} value constructors.  In the present case, Currying \cf{} on any given
+\rRan{} probably does yield a bonafide value constructor, but a function
+which when Curried yields a value constructor is not, or at least
+not necessarily, a value constructor itself.
+}
+\p{It appears that language designers \mdash{} at least considering pureblood Dependent
+Types \mdash{} have two options: either modify the notion of value constructor
+such that one \i{true} value constructor is understood as a possible constructor
+for multiple types, and on behalf of which type it is constructing is something
+dynamically determined at runtime; or value constructors are allowed to be
+transient values created and recycled at runtime.
+This is not just an internal-implementation question
+because value-constructors also need to be \i{exposed} for reflection (which
+in turn involves some notion of addressability: the most straightforward
+reflection tactic is to maintain a map of identifiers to function addresses).
+Either option complicates the relation between types'
+realizability and their value constructor: instead of each inhabitable type
+having at least one value constructor which is itself a value, and as such itself results
+from a value constructor taking a code graph, we have to associate types either with
+dynamically created temporary value-constructor values or we have to map value
+constructors not to singular values but to a compound structure.  For example, if the
+purported value constructor for a range type \TrRan{} is to be the
+\q{common functionality} base function \i{plus} a range-argument to be
+passed to it \mdash{} some sort of \Cfr{} compound data structure,
+again by analogy to \inc{} and
+\addOne{} \mdash{}
+then the \q{value} of the value constructor no longer has a single part,
+but becomes a function-and-range pair.
+Let me dub this the \q{metaconstructor}
+problem: what are allowable \i{value constructors for the value constructors} of
+allowable types?
+}
+\p{If we ignore templates, a reasonable baseline assumption is that
+\q{metaconstructors} must only accept one sort of argument: code graphs.
+That is, for each metaconstructor \mdash{} again, a value constructor
+whose result is a value constructor whose result is a value of some type \tTy{}
+\mdash{} there must be exactly one code-span notating the value constructor's implementation.
+As I just outlined, dependent typing can complicate the picture because
+metaconstructors then have to have possible alternative signatures: e.g.
+the value constructor for \q{integers between zero and one hundred (inclusive)} has
+to combine a \q{common functionality} function body with another
+part that specifies the desired
+\zToOH{} range.  If we \i{don't} ignore templates, we can speculate that
+each actual metaconstructor is a specialization of a template, so each
+one goes back to the one-argument-code-graph signature \mdash{} but we then have
+an entire family of metaconstructors (or possible metaconstructors) which
+share functionality and differ only according to a criterion that varies
+over values of a type.  Consider just the simpler case of integer
+ranges with lower bound zero: for any \iVal{} of an integer type
+(64-bit unsigned, say) there is a reasonable type of \int{}s \le{} \iVal{}.
+The collection of \q{reasonable} types formed in this manner is therefore
+co-extensive with \int{} itself.  But on both philosophical
+and practical grounds, we may argue that \q{reasonable} types are not
+the same thing as types \i{full stop}.
+}
+\p{Philosophically, programming types lie at the intersection of mathematics and
+human concepts: a datatype typically avatars in digital environments some
+human concepts.  There are particular arithmetic intervals that have
+legitimate conceptual status: let's say, 
+\zToOH{} for percentages; the maximum speed of
+a car; the dial range of a thermostat.  So, conceptually, we can
+implement an abstract family of range types which might be concretized
+for a handful of conceptually meaningful specializations.  Moreover,
+we can conceptualize a general-purpose structure which is a range \rRan{}
+together with a range-bounded value, but then we are conceptualizing
+\i{one} type, not a whole family of types.  So the basic \q{Ontology}
+of Dependent Types \mdash{} of whole type-families indexed over values of some
+other type \mdash{} does not correspond with the nature of concepts: while
+there is a \i{reasonable type} for intervals \zTon{} for any \nVal{}, there
+is not necessarily a corresponding \i{concept}, \i{a priori}
+(similarly, we have a capacity to conceptualize any number \mdash{} assuming
+it has some distinct conceptual status, like \q{the first nontrivial Fourier
+coefficient of the \jFunction{}} \mdash{} but reasonably we do not have a
+distinct concept for every number).
+}
+\p{Meanwhile, practically, it is not computationally feasible to have an
+exponential explosion in the order of \i{actual} types \mdash{} such as,
+one unique type
+for each 64-bit integer.  For example, it is reasonable for a
+language engine to assume that most function values support an address-of
+operator.  This is one property whereby function values differ from, say,
+integers: we cannot take the address of the number \litFive{} (by contrast, 
+we \i{could} form a pointer to a file-scoped \CLang{} function that 
+just trivially returns \litFive{}).  
+But allowing type families to be indexed on 64-bit integers
+\i{and} providing a distinct address for each such type's value-constructors
+would be mathematically equivalent to providing a unique address for each
+64-bit integer.
+}
+\p{A reasonable language, conversely,
+may have \q{non-addressable} function values: for example, suppose a
+lambda passed to a function is defined just via an operator, like an
+\fOfG{}.  Say, sorting two lists of strings on a comparison which calls a
+\q{to lowercase} function before invoking a less-than operator.  This could
+be notated with a lambda block, but some languages may allow a more
+\q{algebraic} expression, something meaning \q{lower-case then less-than}, with
+the idea that function values can be composed by rough analogy to
+numbers being added (see item \hyperref[ops]{3} on page \pageref{ops}).
+In this case, the \i{value constructor for the
+function type} does not take a code graph, at least not one visible
+near the \fOfg{} expression, just as the value constructor for \xVal{} in
+\xeqyplusz{} is hidden somewhere in the \q{\yplusz{}} implementation.
+A language can reasonably forbid taking the address of (or forming pointers to)
+\q{temporary} function values derived algebraically from other
+functions.  Indeed, the concepts of \q{constructed from a code graph}
+and \q{addressable} may coincide: a compiler may allocate long-term memory for
+just those function-implementations it has compiled from code-graphs.
+}
+\p{But value-constructors are not just any function-value: they have a privileged
+status \visavis{} types, and may be invoked whenever an appropriately-typed
+value is used.  Allowing large type families (like one type
+for each \int{} \mdash{} similar to \q{inductive typing} as
+discussed by Edwin Brady in the context of the Idris language
+\cite[p. 14]{EdwinBradyImpl}) effectively forces a language to accept
+non-addressable value-constructors.  Conversely, forcing value constructors to be
+addressable prohibits \q{large} type families \mdash{} like types indexed
+over other (non-enumerative) types \mdash{} at least as \i{actual} types.
+A language engine may declare that value constructors, in short,
+cannot be \q{temporary} values.
+This apparently precludes full-fledged Dependent Types, since
+dependent-typed values invariably require in general some extra
+contextual data \mdash{} not just a function-pointer \mdash{} to designate the
+desired value constructor at the point where a value,
+attributed to the relevant dependent type,
+is needed.  It may be infeasible to add the requisite contextual
+information at every point where a dependent-typed value has to be constructed
+\mdash{} unless, perhaps, a description of the context can be packaged and
+carried around with the value, sharing the value's lifetime.
+}
+\p{A value can, indeed, actually be an aggregate data structure including
+functions to call when
+the value is created or modified \mdash{} behaving as if it were dependently typed
+\mdash{} but this is more a matter of one type supporting a range of different behaviors,
+rather than a family of distinct types.  A single range-plus-value
+type can behave \i{as if} it were actually instantiating a type belonging
+to a family where every possible range corresponds to a different type \mdash{}
+at least with respect to value constructors and accessors, which can implement
+hidden gatekeeping code.  But the type is still just one type from the
+point of view of overloading: the behavioral constraints are code evaluated
+behind-the-scenes at runtime, and cannot in themselves be a basis for compile-time
+overload decisions.  In other words, they are more like \i{typestate} than type families.
+}
+\p{Consider a function to remove the \nth{} value from a \listval{}.
+For this to work properly, the \nVal{} has to be less than
+the size of \listval{}; i.e., it has to be in the range \rlstsize{}.
+The relevant range-expression \i{looks} like the example I used
+earlier \mdash{} \IntZToOH{} \mdash{} but in place of a \i{fixed} \ztooh{} range, here
+we have a range that can potentially be different each time the
+function is called (assuming each \listval{} can be a different
+size).  So while it may be a well-formed type-expression to
+say that \nVal{} has \i{type} \intrlstsize{}, the net result is that
+\nVal{}'s type is then not known until runtime.  Since its type is
+not known, nor is the proper value constructor to call when
+\nVal{} has to be provided to a \lambdach{} channel, at least
+not \i{a priori}.  Instead, the value constructor has to be
+determined on-the-fly.  As such, the \q{constructed} value constructor
+acts like a kind of supplemental function called prior to the main function
+being called.  But there are several ways of arranging for such
+gatekeeping functions to be called, apart from via explicitly
+declaring types whose value constructors implement the desired
+functionality.  In the current example, there are ways to
+ensure that a gateekeping function is called whose runtime checks
+mimic the \intrlstsize{} value constructor without actually
+stipulating that \nVal{}'s \i{type} is \intrlstsize{}.  Some
+of these involve typestate, which I will now review briefly.
+Other options will be discussed later in the chapter.
+}

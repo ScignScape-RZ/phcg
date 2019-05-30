@@ -1,0 +1,792 @@
+
+\documentclass[svgnames,twocolumn]{article}
+
+\setlength{\columnsep}{0.35in}
+
+
+
+`input<commands>;
+
+
+%% I want this one separator outside the text flow ...
+\AddToShipoutPicture{%
+\ifnum\value{page}=16
+\AtPageLowerLeft{\makebox[199.38mm][r]{
+      \raisebox{23.5mm}{\parbox{87mm}{\decoline}}}}
+\fi
+}
+%%
+
+
+\AddToShipoutPicture{%
+  \AtPageLowerLeft{%
+    \hspace*{.5em}
+ \rotatebox{90}{%
+        \begin{minipage}{\paperheight}
+   \centering
+   {\color{codegr!65}\textcopyright ~\today{} Nathaniel Christen}
+        \end{minipage} %
+      }
+    } %
+  }%
+
+
+`document,
+
+`title.Hypergraph Type Theory for
+Specifications-Conformant Code and
+Generalized Lambda Calculus`
+
+`author.Nathaniel Christen`
+
+`maketitle;
+
+`abstract,
+This chapter will develop a theoretical framework
+for the practical problem of introducing complex type-theoretic
+constructs such as Dependent Types and Typestate into
+mainstream programming languages.  All programming
+languages have some form of type system, wherein types
+are associated with symbols in computer code and
+their corresponding runtime values.  Type
+systems differ according to their level of detail or `q.expressiveness`/.
+In general, the more expressive a type system,
+the more information is implied by the fact that a symbol or value is
+associated with a type.  Types help to both document and enforce
+the assumptions which are made as code is written.  Accordingly,
+more expressive type systems describe more detailed coding
+assumptions, increasing the likelihood that programming errors are
+discovered before code is deployed, and improving the technology
+for evaluating computer code's conformance to
+safety, security, and privacy standards.  However,
+despite these benefits
+of types' expressiveness, there are several constructions for
+very expressive type systems that emerge from mathematical
+type theory and have been incorporated into academic and
+special-purpose programming languages, but not
+mainstream, general-purpose languages.  This chapter will consider
+some explanations for this situation and present an
+essentially new foundation for type theory from which
+emerges strategies for practically realizing `q.expressive`
+constructs %-- such as Dependent Types and Typestate %-- while
+avoiding the pitfalls that have blocked practical adoption
+of these constructs in the past.
+`abstract`
+
+`p.
+A fundamental aspect of programming is asserting specifications on when
+bodies of code should be executed %-- criteria which can be coarse-grained
+(like requiring that numbers passed to a function must be
+integers), or finer (like stipulating that a number must lie in a fixed
+range, or that two lists of numbers must have the same size).  Logically
+separating code which `i.makes` assumptions %-- in the course
+of performing operations (which may have concrete, even physical
+effects, as in CyberPhysical Systems) %-- from code which
+`i.checks` assumptions (to ensure that effectual code is not improperly
+called), simplifies the design and maintenance of both
+kinds of code %-- which I'll call `q.fragile` and `q.gatekeeper`/.
+Fragile code is code which can fail (for instance, throw an
+exception or cause a software crash) when used improperly.  The canonical
+example of fragile code is a function which can fail when called with the wrong
+sort of arguments %-- arguments that have the correct `i.type` but are not
+in the proper range, or use incorrect scales of measurements,
+or do not obey expected inter-argument relationships.
+Gatekeeper code is then code which examines the arguments intended
+for fragile functions, preventing the fragile code from executing
+when it might be unsafe or improper to do so.
+`p`
+
+`p.
+While stretches of code may informally be identified as
+`q.fragile` or `q.gatekeeper`/, it is a good idea to make this
+distinction explicit and deliberate, as a design pattern.
+Distinguishing gatekeeper and fragile code is a good example of
+`q.separation of concerns`/: the maxim that
+code serving different purposes should
+be logically separated.  Gatekeeper and fragile code
+have distinct roles, and tend to involve different programming
+techniques.  Both kinds of code therefore tend to be clearer
+and easier to maintain insofar as they are logically separated.
+`p`
+
+`p.
+To demonstrate the real-world importance of properly planning and
+co-ordinating fragile and gatekeeper code, consider the
+model of `q.Ubiquitous Computing` pertinent to the
+book series to which this volume (and hence
+this chapter) belongs.  As explained in the
+series introduction,
+the preeminent `q.Ubiquitous Sensing for Healthcare` (`USH;) principles
+include `q.transparency` (openness about how `USH; systems are designed
+and operationalized) and `q.trustworthiness` (demonstrably secure
+engineering, particularly in the context of personal privacy and
+protecting access to personal medical data).`footnote.
+`url<https://sites.google.com/view/series-title-ausah/home?authuser=0>;
+`footnote`  Data in the `USH;
+context is generated by physical biomedical devices, and the
+shape and properties of this data %-- including details such as
+its numeric dimensions, scales of measurement, and possible range
+for component values %-- are closely tied to the scientific purpose
+and manufacturing of particular devices.
+`p`
+
+`p.
+Therefore, applications
+which process `USH; data need to rigorously organize their functionality
+around specific devices' data profiles.  The functions that directly interact
+with devices %-- receiving data from and perhaps sending instructions
+to each one %-- will in many instances be `q.fragile` in the sense
+I invoke in this chapter.  Each of these functions may make assumptions
+legislated by the relevant device's
+specifications, to the extent that using any function too broadly
+constitutes a system error.  Furthermore, CyberPhysical devices that are
+not full-fledged computers may
+exhibit errors due to mechanical malfunction, hostile attacks,
+or one-off errors in electrical-computing operations, causing
+performance anomalies which look like software mistakes even if the code is
+entirely correct (see `cite<MichaelEngel>; and
+`cite<LavanyaRamapantulu>;, for example).  As a
+consequence, `i.error classification` is especially
+important %-- distinguishing kinds of software errors
+and even which problems are software errors to begin with.
+`p`
+
+`p.
+To cite concrete examples,
+a heart-rate sensor generates continuously-sampled integer values
+whose understood Dimension of Measurement is in `q.beats per minute`
+and whose maximum sensible range (inclusive of both
+rest and exercise) corresponds roughly
+to the `ftytwoh; interval.  Meanwhile, an accelerometer
+presents data as voltage changes in two or three directional
+axes, data which may only produce signals when a change occurs
+(and therefore is not continuously varying), and which is
+mathematically converted to yield information about physical
+objects' (including a person's) movement and incline.  The
+pairwise combination of heart-rate and acceleration data
+(common in wearable devices) is then a mixture of these
+two measurement profiles %-- partly continuous and
+partly discrete sampling, with variegated axes and
+inter-axial relationships.
+`p`
+
+`p.
+These data profiles need to be integrated with `USH; code from a
+perspective that cuts across multiple dimensions of project scale and
+lifetime.  Do we design for biaxial or triaxial accelerometers, or both,
+and may this change?  Is heart rate to be sampled in a context where
+the range considered normal is based on `q.resting` rate or is it
+expanded to factor in subjects who are exercising?  These kinds
+of questions point to the multitude of subtle and project-specific
+specifications that have to be established when implementing and then
+deploying software systems in a domain like Ubiquitous Computing.
+It is unreasonable to expect that all relevant standards will be
+settled `i.a priori` by sufficiently monolithic and comprehensive
+data models (like Ontologies, or database schema).  Instead,
+developers and end-users need to acquire trust in a development process
+which is ordered to make standardization questions become apparent
+and capable of being followed-up in system-wide ways.
+`p`
+
+`p.
+For instance, the hypothetical questions I pondered in
+the last paragraph %-- about biaxial vs.
+triaxial accelerometers and about at-rest vs. exercise
+heart-rate ranges %-- would not
+necessarily be evident to software engineers or project architects when the
+system is first conceived.  These are the kind of modeling questions that tend
+to emerge from the ground up as individual functions and datatypes are
+implemented.  For this reason, code development serves a role beyond just
+providing the software which a system, once placed in operation, will use.
+The code at fine-grained scales also reveals questions that need to be
+asked at larger scales, and then the larger answers reflected back in the
+fine-grained coding assumptions, plus annotations
+and documentation.  The overall
+project community needs to recognize software implementation as a crucial
+source for insights into the specifications that have to be established
+to make the operationalized system correct and resilient.
+`p`
+
+`p.
+For these reasons, code-writing %-- especially at the smallest scales %--
+should proceed via paradigms disposed to maximize
+the `q.discovery of questions` effect that I just
+highlighted.  Deployed systems will be
+more trustworthy when and insofar as their software bears witness to a project
+evolution that has been well-poised to unearth questions
+that could otherwise diminish the system's trustworthiness.
+Lest this seem like common sense and unworthy of being emphasized
+so lengthily, I'd comment that literature on `USH;, for
+example, appears to place much greater emphasis on Ontologies or Modeling
+Languages whose goal is to predetermine software design at such
+detail that the actual code merely enacts a preformulated schema,
+rather than incorporate subjects (like type Theory and
+Software Language Engineering) whose insights can
+help ensure that code development plays a more proactive role.
+`p`
+
+`p.
+`q.Proactiveness`/, like transparency and trustworthiness, has been
+identified as a core `USH; principle, referring (again in
+the series intro, as above)
+to `q.data transmission to healthcare providers
+... `i.to enable necessary interventions`/` (my emphasis).  In
+other words %-- or so this language implies, as an
+unstated axiom %--
+patients need to be confident in deployed `USH; products
+to such degree that they are comfortable with clinical/logistical
+procedures %-- the functional design of medical spaces; decisions about
+course of treatment %-- being grounded in part on data generated from
+a `USH; ecosystem.  This level of trust, or so I would argue,
+is only warranted if patients feel
+that the preconceived notions of a `USH; project have been vetted against
+operational reality %-- which can happen through the interplay between
+the domain experts who germinally envision a project and the programmers
+(software and software-language engineers) who, in the end, produce its
+digital substratum.
+`p`
+
+`p.
+`q.Transparency` in this environment means that `USH; code needs
+to explicitly declare its operational assumptions, on the
+zoomed-in function-by-function scale, and also exhibit its
+Quality Assurance strategies, on the zoomed-out system-wide scale.  It
+needs to demonstrate, for example, that the code base has sufficiently
+strong typing and thorough testing that devices are always matched to
+the proper processing and/or management functions: e.g., that there are no
+coding errors or version-control mismatches which might cause situations
+where functions are assigned to the wrong devices, or the wrong
+versions of correct devices.  Furthermore, insofar as most `USH; data
+qualifies as patient-centered information that may be personal and
+sensitive, there needs to be well-structured transparency concerning
+how sensitive data is allowed to `q.leak` across the system.  Because
+functions handling `USH; devices are inherently fragile,
+the overall system needs extensive and openly documented
+gatekeeping code that both validates their input/output and controls
+access to potentially sensitive patient data.
+`p`
+
+`decoline;
+
+`p.
+Fragile code is not necessarily a sign of poor design.  Sometimes
+implementations can be optimized for special circumstances, and
+optimizations are valuable and should be used wherever possible.  Consider an
+optimized algorithm that works with two lists that must be the same size.
+Such an algorithm should be preferred over a less efficient
+one whenever possible %-- which is to say, whenever dealing with two
+lists which are indeed the same size.  Suppose this algorithm is
+included in an open-source library intended to be shared among many different
+projects.  The library's engineer might, quite reasonably, deliberately
+choose not to check that the algorithm is invoked on same-sized lists
+%-- checks that would complicate the code, and sometimes slow the
+algorithm unnecessarily.  It is then the responsibility of code that
+`i.calls` whatever function implements the algorithm to ensure that it
+is being employed correctly %-- specifically, that this
+`q.client` code does `i.not` try
+to use the algorithm with `i.different-sized` lists.  Here `q.fragility` is
+probably well-motivated: accepting that algorithms are sometimes
+implemented in fragile code can make the code cleaner, its intentions
+clearer, and permits their being optimized for speed.
+`p`
+
+
+`p.
+The opposite of fragile code is sometimes called `q.robust` code.
+While robustness is desirable in principle, code which simplistically
+avoids fragility may be harder to maintain than deliberately fragile but
+carefully documented code.  Robust code often has to check for many
+conditions to ensure that it is being used properly, which can make
+the code harder to maintain and understand.  The hypothetical
+algorithm that I contemplated last paragraph
+could be made robust by `i.checking`
+(rather than just `i.assuming`/) that it is invoked with same-sized lists.
+But if it has other requirements %-- that the lists are non-empty,
+and so forth %-- the implementation can get padded with a chain of
+preliminary `q.gatekeeper` code.  In such cases the gatekeeper
+code may be better factored into a different function, or expressed
+as a specification which engineers must study before attempting to
+use the implementation itself.
+`p`
+
+`p.
+Such transparent declaration of coding assumptions and specifications can
+inspire developers using the code to proceed attentively,
+which can be safer in the long run than trying to avoid fragile code
+through engineering alone.  The takeaway is that while `q.robust` is
+contrasted with `q.fragile` at the smallest scales (such as
+ a single function),
+the overall goal is systems and components that are robust at the
+largest scale %-- which often means accepting `i.locally` fragile
+code.  Architecturally, the ideal design may combine
+individual, `i.locally fragile` units with rigorous documentation and gatekeeping.
+So defining and declaring specifications is
+an intrinsic part of implementing code bases which are both robust
+and maintainable.
+`p`
+
+`p.
+Unfortunately, specifications are often created
+only as human-readable documents, which might have a semi-formal
+structure but are not actually machine-readable.
+There is then a disconnect between features `i.in the code itself` that
+promote robustness, and specifications intended for `i.human` readers
+%-- developers and engineers.  The code-level and
+human-level features promoting robustness will tend to overlap partially
+but not completely, demanding a complex evaluation of where gatekeeping
+code is needed and how to double-check via
+unit tests and other post-implementation examinations.  This is the
+kind of situation %-- an impasse, or partial but incomplete overlap,
+between formal and semi-formal specifications %-- which many programmers
+hope to avoid via strong type systems.
+`p`
+
+`p.
+Most programming language will provide some basic (typically relatively
+coarse-grained) specification semantics, usually
+through type systems and straightforward code observations
+(like compiler warnings about unused or uninitialized variables).
+For sake of discussion, assume that all languages have distinct
+compile-time and run-time stages (though these may be opaque to
+the codewriter).  We can therefore distinguish compile-time
+tests/errors from run-time tests and errors/exceptions.
+Via Software Language Engineering (`SLE;), we can study
+questions like: how
+should code requirements be expressed?  How and to
+what extent should requirements be tested by the language
+engine itself %-- and beyond that how can the language help coders implement
+more sophisticated gatekeepers than the language natively offers?
+What checks can and should be compile-time or run-time?  How
+does `q.gatekeeping` integrate with the overall semantics and
+syntax of a language?
+`p`
+
+`p.
+Most type systems provide only relatively coarse classification
+of a universe of typed values %-- even though many functions require their
+arguments to fit more precise specifications than practical
+type systems allow.  This is unfortunate given the premise of
+`q.separation of concerns` and the maxim that
+functions should have single and narrow roles: `i.validating` input
+is actually a different role than `i.doing` calculations.  Maximwise, then,
+functions with fine requirements can be split into two: a
+gatekeeper that validates input before a fragile function is called,
+and separate from that the function's own implementation itself.
+A related idea is overloading fragile functions: for example,
+a function which takes one value can be overloaded in terms
+of whether the value fits in some prespecified range.  These two
+can be combined: gatekeepers can test inputs and call one of several
+overloaded functions, based on which overload's specifications are
+satisfied by the input.
+`p`
+
+`p.
+Despite their potential elegance, most practical programming languages
+do not supply much language-level support for expressing
+groups of fine-grained functions along these lines.  Dependent Types,
+typestate, and effect-systems are each models or paradigms which
+can document function implementation requirements with more precision
+than can be achieved via conventional type systems alone.  Integrating these
+paradigms into type systems %-- which is done, at least incompletely,
+at least in some versions of some programming languages %-- allows requirements
+to be confirmed by general type checking, without the need for
+static analyzers or other `q.third party` tools (that is, projects maintained
+orthogonally to the actual language engineering; i.e., to
+compiler and runtime implementations).  So there are no intractable `i.formal` obstacles to
+augmenting the expressiveness of practical languages' type systems.  Nevertheless,
+such enhancements appear to be either sufficiently difficult to `q.language
+engineer`/, and/or to adversely affect language performance, enough that
+the benefits of type-expressiveness do not on net improve the language.
+Or at least, it is reasonable to assume that those responsible for
+maintaining languages and language tools (specifications, compilers, standard libraries)
+believe as much, so that Dependent Types (for example) are only
+internally supported by a few (mostly academic) languages.
+`p`
+
+`p.
+This impasse is frustrating not only for practical reasons %-- common
+programming languages lack features which would make developers more
+productive %-- but, also, more philosophically.  I would
+argue that the most `i.philosophically` well-grounded and
+justifiable style of
+language %-- a collection of `SLE; norms whose paradigms carry the most weight when
+considerations from multiple disciplines and theories are
+factored in, like linguistics, mathematics, and cognitive science
+%-- would feature default `q.lazy` evaluation as in Haskell
+(expressions are not evaluated until their results are needed),
+Dependent Types as in Idris, and `q.effect typing`/, of a genre
+hesitant to single out effect-free functions as preferable
+but which `i.does` recognize effect-capabilities as a discriminating
+factor in a mature type system.  However, that particular trio of
+features or approaches has not been embraced by any
+realistic language, certainly not any in widespread use.  We can debate
+whether this reflects technical language-implementation difficulties
+%-- and whether this trio of paradigms is superior to alternatives
+%-- but the overarching point is that Software Language Implementation should
+be flexible enough to support multiple paradigms %-- precisely because
+we'd like to embrace `SLE; paradigms for reasons not
+exclusively driven by engineering feasibility.
+`p`
+
+`p.
+Programming languages
+and the code written in them are a kind of structural creole, partly
+engineered artifacts and machinery existing in virtual/digital spaces,
+and partly human texts and conventions.  The structure and
+elemental form (grammar, data layout) of these artifacts similarly
+joins human and engineering concerns.  Language design should therefore
+be informed
+by human as well as mathematical and computing sciences %-- after all, a
+programming language is a `i.language`/, a vehicle of human
+expression and communication.  Code `q.expresses` routines for computer
+processing rather than address to other humans, but as programmers we also
+write code to be understood by others, communicating indirectly via
+our shared understanding of how computer languages work.  So programming
+languages are indeed communicative media of a certain sort.
+As human artifacts rigid enough for a digital environment, they
+are an exceptional forum for exploring human cognition and
+signification in a structured, formally tractable milieu.
+Software Language design should be based on human cognitive and
+communicative structures, as well as on structural mathematics,
+and philosophy centered on human thought and experience should be able
+to guide (and learn from) Software Language Engineering
+(William Rapaport `cite<WilliamRapaport>; has an interesting discussion
+along these lines, which is intriguing to read alongside
+overviews of the OpenCog project I will cite later).
+`p`
+
+`p.
+This makes `SLE; implementational limitations especially troubling:
+language design should be guided by philosophy and mathematics, not by
+estimations of which language features are practical given the state
+of current programming languages.
+`p`
+
+`p.
+If these observations are correct, I maintain that it is a worthwhile
+endeavor to return to the theoretical drawing board and explore how type theory
+itself can shed light on the implementational obstacles that we observe in practice.
+I will argue that topics which influence the feasibility of concrete
+language-level implementations are insufficiently modeled by conventional type
+theory; so grounding analyses on Software Language Engineering practice
+can potentially extend the theory.  Certain language-specific
+phenomena do not have evident conceptualizations in the kind of formal
+type theory whose `q.language` is more of an abstraction, like a
+Lambda (written `mOldLambda;-) Calculus,
+than a physically realized complex system.
+`p`
+
+`decoline;
+
+`p.
+Of the many approaches to specifications and verification, we might recognize two
+distinct tendencies.  On the one hand, some languages and projects
+prioritize specifications that are intrinsic to the language and integrate
+seamlessly and operationally into the language's foundational
+compile-and-run sequence.  Improper code (relative to specifications)
+should not compile, or, as a last resort, should fail gracefully at run-time.
+Moreover, in terms of programmers' thought processes, the
+description of specifications should be intellectually continuous
+with other cognitive processes involved in composing code, such
+as designing types or implementing algorithms.
+`p`
+
+`p.
+The attitude I just summarized %-- which perhaps can be called
+`q.internalist` %-- is evident in passages like this (describing
+the Ivory programming language):
+`q.Ivory's type system is shallowly embedded within Haskell's
+type system, taking advantage of the extensions provided by [the
+Glasgow Haskell Compiler].  Thus, well-typed Ivory programs
+are guaranteed to produce memory safe executables, `i.all without
+writing a stand-alone type-checker`/` \cite[p. 1]{ivory} (my
+emphasis).  In other words, the creators of Ivory are promoting the
+fact that their language buttresses via its type system
+code guarantees that for most languages require external
+analysis tools.
+`p`
+
+`p.
+Contrary to this `q.internalist` philosophy, other approaches
+(perhaps I can call them `q.externalist`/) favor a neater separation
+of specification, declaration and testing from the `q.core` programming language
+and coding activity.  In particular, most of the more important or complex
+safety-checking does not natively integrate with the
+underlying language, but instead requires
+some external source code analyzer, or runtime libraries.  Moreover, it is unrealistic
+to expect all programming errors to be avoided with enough proactive planning,
+strong typing, and safety-focused paradigms: any complex
+code base requires some retroactive design, some combination
+of unit-testing and mechanisms (including those
+third-party to both the language and the projects whose code is
+implemented in the language) for externally
+analyzing, observing, and higher-scale testing for the code,
+plus post-deployment monitoring.
+`p`
+
+`p.
+As a counterpoint to the features cited as benefits to the
+Ivory language, consider Santanu Paul's Source Code Algebra (`SCA;)
+system described in `cite<SantanuPaul>; and
+`cite<GiladMishne>;, `cite<TillyEtAl>;:
+`displayquote,
+Source code Files are processed using
+tools such as parsers, static analyzers, etc. and the necessary information
+(according to the SCA data model) is stored in a repository.  A user interacts
+with the system, in principle, through a variety of high-level languages, or
+by specifying SCA expressions directly.  Queries are mapped to SCA expressions,
+the SCA optimizer tries to simplify the expressions, and finally, the SCA
+evaluator evaluates the expression and returns the results to the user.`nl;
+We expect that many source code queries will be expressed using high-level
+query languages or invoked through graphical user interfaces.  High-level queries
+in the appropriate form (e.g., graphical, command-line, relational, or
+pattern-based) will be translated into equivalent SCA expressions.  An SCA
+expression can then be evaluated using a standard SCA evaluator, which
+will serve as a common query processing engine.  The analogy from
+relational database systems is the translation of SQL to expressions based on
+relational algebra. \cite[p. 15]{SantanuPaul}
+`displayquote`
+
+So the `i.algebraic` representation of source code is favored
+here because it makes computer code available
+as a data structure that can be processed via `i.external`
+technologies, like `q.high-level languages`/, query languages, and
+graphical tools.  The vision of an optimal development environment
+guiding this kind of project is opposite, or at least
+complementary, to a project like Ivory: the whole point
+of Source Code Algebra is to pull code verification %-- the
+analysis of code to build trust in its safety and robustness
+%-- `i.outside` the language itself and into the surrounding
+Development Environment ecosystem.
+`p`
+
+`p.
+These philosophical differences are normative as well as descriptive:
+they influence language design and how languages influence
+coding practices.  For Functional Programmers %-- taking them
+as representative of an influential but not dominant
+mindset %-- sufficiently expressive type systems and a preference for
+side-effect-free function types yields code which has fewer locations
+where erroneous run-time behavior can occur, and so is easier to
+evaluate and maintain.  Nonetheless, advocates for Object-Oriented
+architectures might reply, paradigms like `OO; provide more
+conceptually accurate and intuitive models, in terms of the cross-fit
+between digital representations and real-world phenomena.
+If it requires greater structural alteration to translate conceptual
+models into functional-programming designs, this undermines the
+apparent benefits of Functional Programming in the areas of
+code evaluation and maintenance.
+`p`
+
+`p.
+A conceptual/modeling rejoinder along these lines %--
+that is, as a counter to functional-programming advocacy
+if it becomes too dogmatic %--
+might be weakened if the kinds of performative
+guarantees that can be made in Functional contexts had no equivalents
+`visavis; other paradigms.  But even in an `OO; context, say, there
+`i.are` analyses focused on detecting code which (via constructs
+that Functional Programming avoids) threatens problematic
+behavior.  What is different in the `OO; context compared to
+Functional Programming is that the safety-critical analyses
+(to find `q.dangling pointers`/, race conditions, and so forth) are
+not so much tools within the language but
+external projects which take source code as a data structure to be
+traversed and queried (and/or running program instances as empirical
+phenomena to be observed).  Insofar as code anomalies
+can be found through rigorous methods, source code and live
+software have formally tractable layers of organization that
+are not exhausted by the mathematical concepts internal to
+programming languages and language engines (compilers and runtimes)
+themselves.  Errors in imperative or Object-Oriented
+code may be detectable through a sufficiently powerful analytic
+framework (or at least a sufficiently thorough test suite) even
+if they are not `i.formal` errors `visavis; the type system
+or `visavis; a `q.programs are proofs` `SLE; implementation strategy.
+`p`
+
+`p.
+To be sure, functional programmers might argue that strong type
+systems and functional idioms (algebraic datatypes, pattern
+matching as a control flow device, by-need/`q.lazy` evaluation,
+immutable but cheaply copyable data structures) produce
+more elegant and practical formalizations than `q.externalist`
+analyses, which are more likely to be ad-hoc and trial-end-error
+%-- and, perhaps significantly, require maintaining or updating
+dependencies on an entirely separate code base for
+testing/evaluation tools, with origins distinct from both
+the language and the projects that use it.  Just because
+external analysis of an `OO; code base is `i.possible`/, they
+might argue, it does
+not follow that `OO; design is a better choice, compared to a
+Functional design whose `i.external` analytic needs may be
+simpler and more cost-effective.  These are plausible
+but rather subjective assessments.  In cases where `OO; designs
+lead to computational models of human or scientific realms which
+are `i.conceptually` more accurate, but also require more
+investment in external analysis tools for safety and review, is the
+added difficulty of retroactive code analysis an acceptable
+trade-off?  That question can depend on many factors: a
+responsible Software Language Engineer may have to accept
+that different programming paradigms (plus multi-paradigm
+combinations) are best suited for different projects and
+circumstances, and that the broadest tools and languages need
+multi-paradigm orientations.
+`p`
+
+
+`p.
+Language engineers, then %-- particularly for general-purpose,
+multi-paradigm programming languages %-- have to work with
+two rather different constituencies.  One community of
+programmers tends to prefer that specification and validation be
+integral to/integrated with the language's type system and
+compile-run cycle (and standard runtime environment); whereas
+a different community prefers to treat code evaluation
+as a distinct part of the development process, something logically, operationally,
+and cognitively separate from hand-to-screen codewriting
+(and may chafe at languages restricting certain code constructs
+because they can theoretically produce coding errors, even when
+the anomalies involved are trivial enough to be tractable for
+even barely adequate code review).  If this gloss
+(which I admit rests on some speculation and mind-reading) has
+any merit, it implies that one challenge for language engineers is
+to serve both communities.  For example, we can aspire to
+implement type systems which are sufficiently
+expressive to model many specification, validation, and
+gatekeeping scenarios, while also anticipating that language code
+should be syntactically and semantic designed to be
+useful in the context of external tools (like
+static analyzers) and models (like Source Code
+Algebras and Source Code Ontologies).
+`p`
+
+`p.
+The techniques I discuss here work toward these goals on two levels.  First, I
+propose a general-purpose representation of computer code in terms
+of Directed Hypergraphs, sufficiently rigorous to codify a
+theory of `q.functional types` as types whose values are initialized from
+formal representations of source code %-- which is to say, in the present
+context, code graphs.  Next, I
+analyze different kinds of `q.lambda abstraction` %-- the idea of
+converting closed expressions to open-ended formulae by asserting that
+some symbols are `q.input parameters` rather than fixed values, as in
+`mOldLambda;-Calculus %-- from the perspective of
+axioms regulating
+how inputs and outputs may be passed to and obtained from
+computational procedures.  I bridge these topics %-- Hypergraphs
+and Generalized `mOldLambda;-Calculi %-- by taking abstraction as a
+feature of code graphs wherein some hypernodes are singled out
+as procedural
+`q.inputs` or `q.outputs`/.  The basic form of this model
+%-- combining what are essentially two otherwise unrelated
+mathematical formations, Directed Hypergraphs and
+(typed) Lambda Calculus %-- is laid out in
+Sections `sectsym;\hyperref[sectOne]{I}
+and `sectsym;\hyperref[sectTwo]{II}.
+`p`
+
+`p.
+Following that sketch-out, I engage a more rigorous study of
+code-graph hypernodes as `q.carriers` of runtime values, some of
+which collectively form `q.channels` concerning values which
+vary at runtime between different executions of a function body.
+Carriers and channels piece together to form
+`q.Channel Complexes` that describe structures with meaning both
+within source code as an organized system (at `q.compile time`
+and during static code analysis) and at runtime.  Channel Complexes
+have four different semantic interpretations, varying via the
+distinctions between runtime and compile-time and between
+`i.expressions` and (function) `i.signatures`/.
+I use the framework of Channel Complexes to identify
+design patterns that achieve many goals of
+`q.expressive` type systems while being implementationally
+feasible given the constraints of mainstream programming
+languages and compilers, such as `Cpp;.
+`p`
+
+`p.
+After this mostly theoretical prelude, I conclude this
+chapter with a discussion of code annotation, particularly
+in the context of CyberPhysical Systems.  Because CyberPhysical applications
+directly manage physical devices, it is especially important that they be
+vetted to ensure that they do not convey erroneous instructions
+to devices, do not fail in ways that leave devices uncontrolled, and
+do not incorrectly process the data obtained from devices.
+Moreover, CyberPhysical devices are intrinsically `i.networked`/,
+enlarging the `q.surface area` for vulnerability, and often worn by people
+or used in a domestic setting, so they tend carry personal (e.g., location)
+information, making network security protocols especially important
+(`cite<RonaldAshri>;, `cite<LalanaKagal>;,
+`cite<LavanyaRamapantulu>;, `cite<TakeshiTakahashi>;,
+`cite<MozhganTavakolifard>;).  The dangers
+of coding errors and software vulnerabilities, in CyberPhysical
+Systems like the Internet of Things (`IoT;), are even more pronounced
+than in other application domains.  While it is
+unfortunate if a software crash causes someone to lose data,
+for example, it is even more serious if a CyberPhysical `q.dashboard`
+application were to malfunction and leave physical, networked
+devices in a dangerous state.
+`p`
+
+`p.
+To put it differently, computer code which directly interacts with
+CyberPhysical Systems will typically have many fragile pieces, which
+means that applications providing user portals to maintain and control
+CyberPhysical Systems need a lot of gatekeeping code.  Consequently,
+code verification is an important part of preparing CyberPhysical Systems
+for deployment.  The `q.Channelized Hypergraph` framework I develop here
+can be practically expressed in terms of code annotations that benefit
+code-validation pipelines.  This use case is shown in demo code
+published as a data set alongside this chapter (available for
+download at \url{https://github.com/APDL-DynamoIR/kauv-rz}).
+These techniques are not designed to substitute for Test Suites or
+Test-Driven Development,
+though they can help to clarify the breadth of coverage of
+a test suite %-- in other
+words, to justify claims about tests being thorough enough that
+the code base passing all tests actually does argue for the code
+being safe and reliable.  Nor are code annotations intended to
+automatically verify that code is safe or
+standards-compliant, or to substitute for
+more purely mathematical code analysis using proof-assistants.
+But the constructions presented here,
+I claim, can be used as part of a
+code-review process that will enhance stakeholders' trust
+in safety-critical computer code, in cost-effective, practically
+effective ways.
+`p`
+
+`p.
+In particular, to take an example especially relevant for this volume,
+the code which directly interacts with `USH; devices needs particularly
+thorough documentation, review, and (perhaps, as a way to
+achieve these) annotations.  Code designed and annotated via
+techniques reviewed in this chapter will not be guaranteed to
+protect privacy, block malware, or detect all device-related errors.
+But such code `i.will` be amenable to analytic processes which
+should increase different parties' (doctors, patients,
+application developers) assessment of its transparency and
+trustworthiness.  In the end, components earn trust not through
+one monolithic show of robustness but via designs judged
+to reflect quality according to multiple standards and
+paradigms, with each approach to code evaluation adding its
+own measure to stakeholders' overall trust in the system.
+`p`
+
+`input<section1.ngml>;
+`input<section2.ngml>;
+`input<section2a.ngml>;
+`input<section2b.ngml>;
+`input<section3.ngml>;
+
+`input<section3a.ngml>;
+`input<section3b.ngml>;
+`input<addendum.ngml>;
+`input<conclusion.ngml>;
+
+
+`input<biblio>;
+
+
+`document`

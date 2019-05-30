@@ -1,0 +1,437 @@
+
+`subsubsection.Channelized-Type Interpretations of
+Larger-Scale Source Code Elements`
+
+`p.
+By intent, Channel Algebras provide a machinery for modeling
+function-call semantics more complex than `q.pure` functions
+which have only one sort of input parameter (as in lambda
+abstraction) %-- note that this is unrelated to
+parameters' `i.types` %-- and one sort of (single-value) return.
+%As just discussed,
+Examples of a more complex paradigm
+come from Object-Oriented code, where there are two varieties of
+input parameters (`q.lambda` and `q.sigma`/).
+Consider method calls in Object-Oriented languages: these
+typically have a special syntax with one
+distinguished carrier.  This
+carrier is in a sense privileged: the type of
+the `q.`thisc;` carrier establishes the class to which
+function belongs, influencing when the function may be
+called and how polymorphism is resolved.  Moreover,
+`q.chaining` method calls means that the result of
+one method becomes an object that may then receive 
+another method (the following one in the chain).  Such 
+chaining allows for an unambiguous function-composition operator:
+since functions in general take multiple arguments, there is
+no single operator to pass the result of one function to
+another; but since most methods have one return value and
+one `thisc; object, it is straightforward to
+define a method-chain operator.
+`p`
+
+`p.
+Another case-study
+is offered by exceptions.  The option to `q.throw` an exception
+can be considered an alternative kind of output channel.
+A function throws an exception instead of returning a value.
+As a result, `returnc; and `errorc; channels typically
+evince a semantic requirement (which earlier %-- see
+the notations on page \hyperref[retexc]{\pageref{retexc}} %-- I sketched
+as an algebra stipulation): when functions
+have both kinds of channels, only one
+may have an initialized carrier after the function
+returns.
+;;~ These kinds of channels
+;;~ also differ in how they can initialize values
+;;~ via an operator like `fntoch;.
+Usually, thrown-exception values can only be bound to carriers
+in `catchddd; formations %-- once held in a carrier
+they can be used normally, but carriers in `exceptionch;
+channels themselves can only transfer values to
+other carriers in narrow circumstances
+(this in turn depends on things like code
+blocks, which in turn will be reviewed below).
+So `errorc; channels are not a sugared
+form of ordinary returns, any more than objects are sugar for
+functions' first parameter; there are axiomatic criteria
+defining possible formations of `errorrc; and `returnrc;
+channels and carriers, criteria which are more transparently
+rendered by recognizing `errorrc; and `returnrc; as
+distinct channels of communication available
+within function bodies.
+`p`
+
+`p.
+%This terminology serves as a basis for exploring the
+%variation in how functions receive and share values.
+In general, extensions to `lambdaCalculus; are
+meaningful because they model semantics other than
+ordinary lambda abstraction.  For example, method-calls
+(usually) have different syntax than non-method-calls,
+but `sigmaCalculi; aren't trivial extensions or
+syntactic sugar for `lambdach;s; the more significant difference is
+that sigma-abstracted symbols and types have different
+consequences for overload resolution and function
+composition than `lambdach;-abstractions.  Similarly,
+exceptions interact with calling code differently
+than return values.  These differences do not belong precisely
+to `lambdaCalculus;, because they are consequential more
+in the calling context than in the called implementation ---
+though not entirely, since (for example) throwing exceptions
+aborts lexical finalization.  Nor do they belong
+precisely to process calculi, because they are most complex
+in the context of sequential procedures
+(for example, a function cannot catch exceptions thrown from
+functions it has spawned in new threads).  As intended here,
+`q.Channel Algebra` suggests an intermediate formalization
+combining features of both (generalized) lambda and
+process calculi (or algebras).  Instead of scattered
+`mOldLambda;-extensions, Channel Algebra unifies multiple
+expansions by endowing functions (their signatures,
+in the abstract, and function-calls, in the concrete)
+with multiple channels, each of which can be
+independently modeled by some `mOldLambda;-extension
+(objects, exceptions, captures, and so forth).
+`p`
+
+`p.
+Specific examples of unorthodox `lamdbas; (objects, exceptions, captures) 
+suggest a general case: relations or operators between
+functions can be modeled as relations between their respective
+channels, subject to certain semantic restrictions.  A `i.method` can
+be described as a function with several different channels:
+say, a `q.`lambdach;` channel with ordinary arguments (as in
+`mOldLambda;-calculus); a `q.`sigmach;` channel with a distinguished
+`thisc; carrier (formally studied via `q.`sigmaCalculus;`/); and
+a `returnc; channel representing the return value.  Because the contrast between
+these channels is first and foremost `i.semantic` %-- they have different
+meanings in the semantics of the programs where they appear %--
+channels may therefore have restrictions governed by
+programs' semantics.  For example, as I mentioned
+in the context of `q.method chaining`/, it may be stipulated that both
+`sigmac; and `returnc; channels can have at most one carrier;
+as a result, a special channel-to-channel operator can be defined which
+is specific to passing values between the carriers of
+`returnc; and `sigmac; channels.  This operator is available because
+of the intended semantics of the channel system.
+`p`
+
+`p.
+In general, a Channel Algebra identifies
+several `i.kinds` of channels which
+each have their own semantic interpretation, and accompanying axioms
+or restrictions.  On the basis of these semantic details,
+channel-to-channel operators can be defined, derived from
+underlying carrier-to-carrier operators.  A Channel Algebra in this sense
+is not a single fixed system, but an outline for modeling
+function-call semantics in the context of different programming
+languages and environments.
+`p`
+
+`p.
+As the preceding paragraphs have presupposed, different
+functions may have different kinds of channels, which may
+or may not be reflected in functions'
+types (recall the question, can
+two functions have the same type, if
+only one may throw an exception)?  This may vary between type
+systems; but in any case the contrast between channel `q.structures`
+is `i.available` as a criteria for modeling type descriptions.
+On this basis, as I will now argue, we can provide type-system
+interpretations to source code structures beyond just
+values and symbols.
+`p`
+
+`subsubsection.Statements, Blocks, and Control Flow`  `
+
+`p.
+The previous paragraphs discussed expanded channel structures %-- with,  
+for example,  
+objects and exceptions %-- that model call semantics more complex
+than the basic lambda-and-return (of classical `mOldLambda;-Calculus).  
+A variation on this theme, in the
+opposite direction, is to `i.simplify` call structures: functions
+which lack a return channel have to communicate solely through
+side-effects, whose rigorous analysis demands a
+`q.type-and-effect` system.  Even further, consider functions
+with neither `lambdac; nor `returnc; (nor `sigmac;
+nor, maybe, `errorc;).
+As an alternate channel of communication, suppose function bodies
+are nested in overarching bodies, and can
+`q.capture` carriers scoped to the enclosing function.  `q.Capture semantics`
+specifications in `Cpp; are a useful example, because
+`Cpp; (unlike most languages that support anonymous or `q.intra-expression`
+function-definitions) mandates that symbols are explicitly captured
+(in a `q.capture clause`/), rather than allowing functions to access
+surrounding lexically-scoped with no further notation:
+;;~ %-- arguably `q.anonymous` is a misnomer because ...
+this helps visualize the idea that captured symbols are a kind of
+`q.input channel` analogous to `lambdac; and `sigmac;.
+`p`
+
+`p.
+I contend this works just as well for code blocks.  Any language which has
+blocks can treat them as unnamed function bodies, with
+a `q.`capturech;` channel (but not `lambdach; or `returnch;).
+When (by language design) blocks `i.can` throw exceptions, it is reasonable to
+give them `q.`exceptionch;` channels (further work, that I put off for
+now, is needed for loop-blocks, with `codebreak; and `codecontinue;).
+Blocks can then be typed as function-like values, under
+the convention that function-types can be expressed through
+descriptions of their channels (or lack thereof).
+`p`
+
+`p.
+Consider ordinary source-code
+expressions to represent a transfer of values between graph structures: let
+`gammaOne; and `gamaTwo; be code-graphs compiled
+from source at a call site and at the callee's implementation,
+respectively.  The function call transfers values from carriers
+marked by `gammaOne; nodes to `gammaTwo; carriers; with the further
+detail of `q.Channel Packages` we can additionally say that the
+recipient `gammaTwo; carriers are situated in a graph structure which
+translates to a channel description.  So the morphology of
+`gammaOne; has to be consistent with the channel structure of `gammaTwo;.
+For regular (`q.value`/) expressions, we can introduce a new kind
+of channel (which I'll call `q.lookup`/) acknowledging that the function
+called by an expression may itself be evaluated by its own expression, rather
+than named as a single symbol (as in a pointer-to-function call
+like `pfx; in `CLng;).  A segment of source code represents a
+value-expression insofar as an equivalent graph representation
+comprises a `Gamma; semantically and morphologically
+consistent with the provision of values to channels required
+by a function call %-- including the lookup channel on the
+basis of which the proper implementation (for overloaded functions)
+is selected.  How the graph-structure maps to the appropriate
+channels varies by channel kind: for instance the `returnc; channel
+is not passed `i.to` the callee, but rather bound to a carrier as the
+right-hand-side of an assignment (an `i.rvalue`/) %-- or else passed to
+a different function (thus an example of channel-to-channel connection
+without an intervening carrier).  A well-formed `Gamma; represents
+part of a function implementation's code graph, specifically that
+describing how a Channel Package is concretely provisioned with values
+(i.e., a payload).
+`p`
+
+`p.
+I will use the term `i.call-clause` to designate the
+portion of a code graph, and the associated collection of
+source code elements, describing a Channel Payload.
+Term a call-clause `i.grounded` if its
+resulting value is held in a carrier (as
+in `yeqfx;), and `i.transient` if this value
+is instead passed on (immediately) to another function
+(as in `hfx;); moreover a call-clause
+can be `i.standalone` if it has no result value or this
+value is not used; and `i.multiply-grounded` if it has
+several grounded result values %-- i.e., a multi-carrier
+`returnc; channel, assuming the type system allows as much.
+Grounded and standalone call-clauses can, in turn, model `i.statements`/;
+specifically, `q.assignment` and `q.standalone` statements, respectively.
+`p`
+
+`p.
+This vocabulary can be useful for interpreting program flow.
+Assignment statements with no other side effects can be delayed
+until their grounding carrier is convoluted with some other carrier.
+Of course, the default choice of `q.eager` or `q.lazy` evaluation is
+programming-language-specific, but for abstract discussion
+of source code graphs, we have no `i.a priori` idea of temporality;
+of a program executing in time.  This is not a matter of
+concurrency %-- we have no `i.a priori` idea of procedures running
+at the `i.same` time any more than of them running sequentially
+(cf. `q.detached`
+evaluation as on page \hyperref[detachedeval]{\pageref{detachedeval}}).
+`mbox<Any temporal>; direction through a graph is an interpretation
+`i.of` the graph, and as such it is useful to assume that
+graphs in and of themselves assert no temporal
+ordering among their nodes or edges.  When modeling
+eager-evaluation languages, particular edge-types
+can be designated as forcing a temporal order or else
+edges can be annotated with additional temporalizing
+details.  Without this extra documentation, however,
+execution order among graph elements can be
+evaluated based on other criteria.
+`p`
+
+`p.
+In the case of statements, an assignment without side effects
+has temporalizing relations only with other statements
+using its grounding carrier.  In particular, the order
+of statements' runtime need not replicate the order in which
+they are written in source code.  For sake of argument, consider
+this the default case: Channel Algebras, in principle, model
+`q.lazy` evaluation languages, in the absence of any
+temporalizing factors.  The actual runtime order among
+sibling statements %-- those in the same block %-- then depends,
+in the absence of further information, on how their grounding carriers are
+used; this in turn works backward from a function's return channel
+(in the absence of exceptions or effectual calls).  That is,
+runtime order works backward from statements that initialize
+carriers in the return channel, then carriers used in those
+statements, etc.
+`p`
+
+`p.
+This order needs to broken, of course, for statements with side-effects.
+A case in point is the expansion of `q.`doNotation;` in Haskell: without
+an `i.a priori` temporality, Haskell source code relies on
+the asymmetric order of values passed into lambda abstractions to
+enforce requirements that effectual expressions evaluate before other
+expressions (Haskell does not have `q.statements` per se).  Haskell's
+`doH; `q.blocks` can be modeled (in the techniques used here) as
+a series of assignment statements where the grounding carrier of each
+statement becomes (i.e., transfers its value to) the sole occupant of a
+`lambdach; channel marking a new function body, which includes all the
+following statements (and so on recursively).  There are two concepts
+in play here: interpreting any sequence of statements (plus one
+terminating expression, which becomes a statement
+initializing a `returnch; carrier) as a function body (not just those covering
+the extent of a `q.block`/); and interpreting assignment statements
+as passing values into `q.hidden` lambda channels.  Of course,
+Haskell backs this syntactic convention with monad semantics %--
+the value passed is not the actual value of the monad-typed
+carrier but its `q.contained` value.
+For sake of discussion, let's call this a `i.monad-subblock` formation.
+`p`
+
+`p.
+The temporalizing elements in this formation are the `q.hidden lambdas`/.
+In a multi-channel paradigm, we can therefore consider
+`q.monad-subblocks` with respect to other channels.  Consider how
+individual statements can be typed: like blocks, statements can
+select from symbols in scope and can potentially
+result in thrown expressions, so their channel structure is something
+like `capturech; plus `errorch;.  Even without hidden lambdas, observe
+that the runtime order of statements can be fixed in situations
+where an earlier statement can affect the value (via non-constant capture)
+of a carrier whose value is then used by a later statement.  So
+for languages with a more liberal treatment of side-effects than Haskell,
+we can interpret chains of statements `i.in fixed order` as successively
+capturing (and maybe modifying) symbols which occur in multiple
+statements.  Having discussed convoluted `i.carriers`/,
+extend this to channels: in particular, say two `capturech; channels are
+convoluted if there is a modifiable carrier in the first
+which is convoluted with a carrier in the second (this is an ordered relation).
+One statement must run before a second
+if their `capturech; channels are convoluted, in that order.
+`p`
+
+`p.
+This is approaching toward a `q.monad-subblock` formation using `i.`capturech;`
+in place of `lambdach;.  To be sure,
+Haskell monad-subblock does have the added gatekeeping
+dimension that the symbol occurring after its appearance as grounding
+an assignment statement is no longer the symbol with a monad
+type, but a different (albeit visually identical) symbol
+taken from the monad.  Between two statements, if the
+prior is grounded by a monad, the implementation of
+its `bind; function is silently called, with the subsequent
+(and all further) statements grouped into a block passed in
+to `bindFn;, which in turn (by design) both extracts its
+wrapped value and (if appropriate) calls the passed function.
+But this architecture can certainly be emulated on
+non-`lambdach; channels %-- a transform that would belong to the
+larger topic of treating blocks as function-values
+passed to other functions, to which I now turn.
+`p`
+
+`subsubsection.Code Blocks as Typed Values`
+`p.
+Insofar as blocks can be typed as functions (in a sense),
+they may readily be passed around: so loops, `ifthenelse;,
+and other control flow structures can plausibly be modeled
+as ordinary function calls.  This requires some extra semantic
+devices: consider the case of `ifthenelse; (I'll use this
+also to designate code sequences with potential `q.`elseif;`/s), which
+has to become an associative array of expressions and functions
+with `q.block` type (e.g., with only `capturech; and `errorch;
+channels).  We need, however, a mechanism to suppress
+expression evaluation.  Recall that expressions are
+concretized channel-structures which include a
+`lookupch; channel providing the actual implementation to call.
+Assume that `lookupch; can be assigned a flag which suppresses
+evaluation.  Assume also that carriers can be declared which
+hold (or somehow point to) `i.expressions` that evaluate
+to typed values,
+in lieu of holding these values directly
+(note that this is by intent orthogonal
+to a type system: the point is not that carriers can hold values
+whose type is designed to encapsulate potential
+computations yielding another type, like `stdFuture; in `Cpp;).
+Consider again the nested-expression variant of
+`carrOneOpTransferTwo;: when the result
+of one function call becomes a parameter to another
+function, the value in the former's
+`returnch; carrier (assume there is just one) gets
+transferred to a carrier in the latter's `lambdach; channel
+(or `sigmach;, say).  This handoff can be described before being
+effectuated: a language runtime is free to vary the
+order of expression-evaluation no less than of statements.
+The semantics of a carrier-transfer between `Twof;'s return
+and `Onef;'s lambda does not stipulate
+that `Twof; has to `i.run` before `Onef;; language
+engines can provide semantics for `carrOneOpTransferTwo; ;;~ `carOnetoTwofOP;
+allowing `carOne; to hold a delayed capability to
+evaluate the `Twof; expression.  Insofar as this is an
+option, functions can be given a signature %-- this
+would be included in the relevant `TXL; %-- where
+some carriers are of this `q.delayed` kind.
+Functions like `ifthenelse; can then be declared in
+terms of these carriers.
+`p`
+
+`p.
+To properly capture `ifthenelse; semantics, it is also
+appropriate to notate conditions on how blocks
+passed as function values are used.  In the
+case of `ifthenelse;, the implementation
+will receive multiple function values with the caller
+expecting `i.exactly one` function to be called.
+This constitutes a requirement on how carriers are
+used, analogous to mandating that a `returnch;
+(or either `returnch; or `errorch;) carrier be initialized,
+or that mutable references passed
+to a function for initialization (as an alternative
+to returning multiple values) are initialized.
+While such requirements can potentially be
+described as annotations on carriers/channels,
+this is a general issue outside the scope of
+blocks-as-function-values.
+`p`
+
+`p.
+A thorough treatment of blocks-as-functions also needs to
+consider standard procedural affordances like `codebreak;
+and `codecontinue; statements.  Since blocks
+can be nested, some languages allow inner blocks to express the
+codewriter's intention to `q.break out of` an outer block from
+an inner block.  One way to model this via Channel Algebra is
+to introduce a special kind of return channel for blocks
+(called a `q.`breakch;`/, perhaps) which, when it has
+an initialized carrier, uses this channel to hold a value that the
+enclosing block interprets in turn: by examining the
+inner `breakch; the immediately outer block can decide whether it
+itself needs to `q.break` and, if so, whether its own
+`breakch; channel needs to have an initialized carrier.  The
+presence of such a `breakch; can type-theoretically
+distinguish loop blocks from blocks in (say)
+`ifthenelse; contexts.
+`p`
+
+
+`p.
+Further discussion of code models via Channel Complexes and
+Channel Algebras is outside the scope of this chapter, but
+is demonstrated in greater detail in the accompanying code-set.
+Hopefully, the best way to present Channel Semantics outside
+the basic `lambdach;/`sigmach;/`returnch;/`exceptionch;
+quartet is via demonstrations in live code.
+In that spirit, the demo code-set focuses more
+on practical engineering and problem-solving where Channel models
+can be useful, and I'll briefly review its structure and its
+organizing rationales in the Conclusion.
+`p`
+
+

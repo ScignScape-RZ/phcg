@@ -1,0 +1,48 @@
+
+
+\resizebox {\columnwidth} {!} {
+
+\begin{tikzpicture}
+
+%\node at (21.49,2){1};
+
+\node (llcorner) at (0,0) {};
+
+
+\node (lnath) at (1,2.5) [draw,minimum width=11mm,minimum height=5mm] {Nath};
+\node (lff) [right=2mm of lnath.east,draw,minimum width=11mm,minimum height=5mm] {45};
+\node (lnf) [draw,densely dashed,fit=(lnath) (lff)] {};
+
+\node (lbr) at (1,0) [draw,minimum width=11mm,minimum height=5mm] {Bkln};
+\node (ldem) [right=2mm of lbr.east,draw,minimum width=11mm,minimum height=5mm] {Dem};
+\node (lbd) [draw,densely dashed,fit=(lbr) (ldem)] {};
+
+\draw [shorten >=1mm,shorten <=1mm,thick, ->] 
+(lnf) -- (lbd) node [midway] {\colorbox{blGreen!20}{lives-in}};
+
+\node (rnath) at (4.5,1.75) [draw,minimum width=11mm,minimum height=5mm] {Nath};
+\node (rff) [above right=6mm and 5mm of rnath.east,draw,minimum width=11mm,minimum height=5mm] {45};
+\node (rnh) [draw,densely dashed,fit=(rnath)] {};
+\node (rfh) [draw,densely dashed,fit=(rff)] {};
+
+\node (rbr) at (5,0) [draw,minimum width=11mm,minimum height=5mm] {Bkln};
+\node (rdem) [right=2mm of rbr.east,draw,minimum width=11mm,minimum height=5mm] {Dem};
+\node (rbdh) [draw,densely dashed,fit=(rbr) (rdem)] {};
+
+\draw [shorten >=.5mm,shorten <=.5mm,thick, ->] 
+(rnh) -- (rbdh) node [midway] {\colorbox{blGreen!20}{lives-in}};
+
+\draw [shorten >=.5mm,shorten <=.5mm,
+thick, ->] 
+(rnh.east) -| (rfh.south) node [midway] {\colorbox{blGreen!20}{age}};
+
+\draw [shorten >=-.5mm,shorten <=-.5mm,densely dotted, ->] 
+(lff) -- (rff);
+
+%
+%\draw[draw=blue,fill=DarkRed] (6,2.2) circle[radius=3mm];
+%\node at (6,1.4){2};
+
+\end{tikzpicture}
+%\captionof{figure}{Unplugging a Node.}
+}

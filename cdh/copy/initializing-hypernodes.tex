@@ -1,0 +1,117 @@
+\begin{lstlisting}[caption={Initializing Hypernodes}, 
+  language = C++, numbers = none, escapechar = !, 
+  label={lst:initializing-hypernodes},
+    basicstyle = \ttfamily\bfseries\footnotesize, 
+	linewidth = 1.01\linewidth]
+
+caon_ptr<RE_Node> RE_Graph_Build::make_new_node(
+  caon_ptr<RE_Token> token)
+{
+ caon_ptr<RE_Node> result = new RE_Node(token);
+ RELAE_SET_NODE_LABEL(result, token->string_summary());
+ return result;
+}
+
+caon_ptr<RE_Node> RE_Graph_Build::make_new_node(
+  caon_ptr<RE_Call_Entry> rce)
+{
+ caon_ptr<RE_Node> result = new RE_Node(rce);
+ RELAE_SET_NODE_LABEL(result, QString("<call %1>")
+   .arg(rce->call_id()));
+ return result;
+}
+
+caon_ptr<RE_Node> RE_Graph_Build::make_new_node(
+  caon_ptr<RE_Function_Def_Entry> fdef)
+{
+ caon_ptr<RE_Node> result = new RE_Node(fdef);
+ RELAE_SET_NODE_LABEL(result, "<fdef>");
+ return result;
+}
+
+caon_ptr<RE_Node> RE_Graph_Build::make_new_node(
+  caon_ptr<RE_Block_Entry> rbe)
+{
+ caon_ptr<RE_Node> result = new RE_Node(rbe);
+ RELAE_SET_NODE_LABEL (result, QString("<block %1>")
+   .arg(rbe->call_id()));
+ return result;
+}
+
+caon_ptr<RE_Node> RE_Graph_Build::
+  new_function_def_entry_node(RE_Node& prior_node,
+  RE_Function_Def_Kinds kind, 
+  caon_ptr<RE_Node> label_node)
+{
+ caon_ptr<RE_Function_Def_Entry> fdef = new 
+   RE_Function_Def_Entry(&prior_node, kind, label_node);
+ caon_ptr<RE_Node> result = make_new_node(fdef);
+ fdef->set_node(result);
+ return result;
+}
+
+caon_ptr<RE_Node> RE_Graph_Build::create_tuple(
+  RE_Tuple_Info::Tuple_Formations tf,
+  RE_Tuple_Info::Tuple_Indicators ti, 
+  RE_Tuple_Info::Tuple_Formations sf, bool increment_id)
+{
+ int tuple_id = increment_id? ++tuple_entry_count_:0;
+
+ caon_ptr<RE_Tuple_Info> tinfo = new RE_Tuple_Info(
+   tf, ti, tuple_id);
+ caon_ptr<RE_Node> result = new RE_Node(tinfo);
+
+ return result;
+}
+...
+
+if(caon_ptr<RE_Call_Entry> rce = 
+  current_node_->re_call_entry())
+{
+ if(last_pre_entry_node_)
+ {
+  caon_ptr<RE_Node> fdef_node = graph_build_->
+    new_function_def_entry_node(
+     *last_pre_entry_node_, kind);
+  last_pre_entry_node_->delete_relation(
+    rq_.Run_Call_Entry, current_node_);
+  current_function_def_entry_node_ = fdef_node;
+
+  caon_ptr<RE_Node> tuple_info_node = graph_build_->
+    create_tuple_node(
+      RE_Tuple_Info::Tuple_Formations::Indicates_Input,
+      RE_Tuple_Info::Tuple_Indicators::Enter_Array, 
+      RE_Tuple_Info::Tuple_Formations::N_A);
+	
+  caon_ptr<RE_Node> entry_node = 
+    rq_.Run_Call_Entry(current_node_);
+  result = current_node_;
+  fdef_node << fr_/rq_.Run_Call_Entry >> current_node_;
+  
+  current_node_ << fr_/rq_.Run_Data_Entry >> 
+    tuple_info_node;
+  tuple_info_node << fr_/rq_.Run_Data_Entry >> 
+    entry_node;
+	
+  current_node_->delete_relation(
+    rq_.Run_Call_Entry, entry_node);
+  caon_ptr<RE_Node> tuple_leave_node = graph_build_->
+    create_tuple_node(
+      RE_Tuple_Info::Tuple_Formations::N_A,
+      RE_Tuple_Info::Tuple_Indicators::Leave_Array, 
+      RE_Tuple_Info::Tuple_Formations::N_A, false);
+  tuple_info_node << fr_/rq_.Run_Data_Leave >> 
+    tuple_leave_node;
+ }
+}
+
+\end{lstlisting}
+
+
+\begin{tikzpicture}[remember picture, overlay]
+\dovn{6.24}{21.33}{1};
+\dovn{6}{18.15}{2};
+\dovn{6.17}{5.33}{3};
+\dovn{5.192}{6.53}{4};
+\dovn{4.74}{3.9}{5};
+\end{tikzpicture} 

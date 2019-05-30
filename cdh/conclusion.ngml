@@ -1,0 +1,146 @@
+`section.Conclusion`
+`vspace<-.5em>;
+`p.
+There are several tactics to practically employ techniques I have 
+reviewed here in concrete projects.  For sake of discussion, I will focus 
+on the approach used by the demo code-set provided with this chapter.  
+This code actually has multiple dimensions, because it has been designed 
+to integrate with data sets accompanying other chapters in the 
+present volume, not merely this chapter.  This has led to the code being 
+planned as follows: code published with `i.this` chapter directly uses 
+its Hypergraph and Channel Complex libraries to parse Interface Definition 
+files associated with `i.other` chapters.  Those chapters' data sets in 
+turn employ `Cpp; code whose 
+construction is influenced by Channel Algebra 
+%-- notably in the design of function groups which are overloaded 
+via types that are reasonable for `q.hidden channels`/, 
+and in how functions are exposed to external scripting and reflection.  
+The implementations are in normal `Cpp;, 
+but the associated `IDL; annotations 
+describe them via more sophisticated channel formations, which are 
+mimicked (in terms of conventional input parameters) in 
+the production code.
+`p`
+
+`p.
+The `q.hidden` values constructed while routing between logically 
+related functions, as seen in the various code-sets, tend to 
+fit into two classifications.  On the one hand, these may be values 
+constructed as a test that function arguments conform to protocol: 
+for instance, one way to check that a numeric value falls within some 
+desired range is to cast this value to a range-checked type 
+%-- whether or not the second value is actually used.  
+Alternatively, in some places supplemental values are 
+enumerations of typestates %-- allowing function bodies 
+to achieve something resembling pattern-matching as a 
+code-branching structure (by `switch;ing on enum values).
+`p`
+
+`p.
+Manually creating residual values along these lines is 
+admittedly cruder than pure type-level engineering, as exemplified 
+by Idris's synthesis of Dependent Types, typestate, and 
+effect-typing.  The solutions chosen for the present context are 
+less automated; they require deliberate choice by developers.  
+Nevertheless, the Interface Definition technology makes these choices 
+explicit and documented, which can help guide developers toward 
+embracing these more fine-grained coding conventions and 
+confirming that they have done so consistently.
+`p`
+
+`p.
+It is a legitimate question whether establishing coding paradigms 
+%-- in a data set management context, for example %-- in this 
+convention-driven spirit is better or more maintainable than 
+approaching data sets in a language like Haskell or Idris whose 
+rigors are more formal than conventional.  But the 
+`Cpp;-based approach has the benefit of more immediate integration 
+with `GUI; code, reflected in the `Qt; components published 
+as wrappers and visualizers for data-set-specific datatypes.  
+`p`
+
+`p.
+In the best-case scenario, `GUI; code is a natural extension 
+of programming languages' and individual languages' 
+type systems %-- with rigorous mapping between value types and 
+visual-object types that graphically display associated 
+values.  So long as Functional Programming languages remain 
+operationally separated from `GUI; drivers %-- needing a 
+`q.smoke binding` or foreign-function 
+interface to marshal data between a 
+`CLang;-oriented User Interface and the non-visual data 
+(and database) management components of a project %-- the strongly-typed 
+rigor of Functional Programming environments will be 
+incomplete.  
+`p`
+
+`p.
+Whether or not by technical necessity or just entrenched culture, 
+`GUI; frameworks are still predominantly built in procedural 
+or `OO; languages like `CLang;, `Java;, and `Cpp;.  It seems likely 
+that a truly integrated type system, covering User Interface as 
+well as data management logic, will need a hybrid functional/procedural 
+paradigm at some stratum %-- either the underlying `GUI; framework or 
+at application-level code.  So long as `GUI; frameworks remain 
+committedly procedural, the most likely site for such hybrid 
+paradigms to emerge is at the application level, and in the 
+context of application-development `SLE; tools.
+`p`
+
+`p.
+Implementing `GUI; layers in a Functional environment is usually 
+approached from the perspective of `i.functional reactive` 
+programming, which emphasizes how the interface between visual 
+components and controller logic can be structured in terms 
+of `i.event-driven` programming.  In this paradigm, there is 
+no `i.immediate` linkage between `GUI; events and the 
+functions called in response %-- for example, no 
+single function that automatically gets called when the user 
+clicks a mouse button.  Instead, events are entered into a pool 
+wherein each event may have a varying number of handlers 
+(including being ignored entirely).  This style of 
+programming accords well with paradigms that try to minimize 
+the number of functions with side effects.  Event-handlers are free 
+to post new signals (these are interpreted as events) which 
+may in turn be handled by other functions %-- so that 
+signals may be routed between multiple functions entirely 
+without side-effects.  That said, most events `i.should` cause 
+side effects eventually %-- for instance, after all, 
+a user does not typically 
+initiate an action (triggering an event) without intending 
+to change something in the application data or display.  But 
+events can be routed between pure functions until an eventful 
+handler is called, so side-effects can be localized in a 
+proportionately small group of functions.
+`p`
+
+`p.
+Moreover, certain qualities of `GUI; design can be expressed as 
+logical constraints rather than as application-level state enforced 
+by procedural code.  For example, optimal design may stipulate that some 
+graphical component must automatically be resized and repositioned to remain 
+centered in its parent window, sustaining that geometry even when 
+the window itself is resized.  
+Functional-Reactive frameworks allow many of these constraints to be 
+declared as logical axioms on the overall visual layout and properties 
+of an application, constructing the procedures to maintain this 
+state behind-the-scenes %-- which minimizes the extent of 
+procedural code needing to be explicitly maintained by application developers.
+`p`
+
+`p.
+But while Functional Reactive Programming is a strategy for 
+providing `GUI; layers on a Functional code base, it can equally 
+be treated as an Event-Driven enhancement to Object-Oriented 
+programming.  In an `OO; context, events and signals constitute an 
+alternative form of non-deterministic method-call, where signal-emitting 
+objects send messages to receiver functions %-- except indirectly, 
+passing through event-pools.  Indeed, as documented 
+by the demo code, events and signals 
+have a natural expression in terms of Channel Algebra, where both signal 
+emitters and receivers are represented via special `q.Sigma` channels.  
+On this evidence, Functional Reactive Programming should be assessed not 
+just as a `GUI; strategy for Functional languages but as a 
+hybrid methodology where Functional and Object-Oriented 
+methodologies can be fused, and integrated.
+`p`

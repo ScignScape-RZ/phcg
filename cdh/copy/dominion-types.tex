@@ -1,0 +1,72 @@
+\begin{lstlisting}[caption={Asserting Vertex Types}, 
+  language = C++, numbers = none, escapechar = !,label={lst:dominion-types},
+    basicstyle = \ttfamily\bfseries\footnotesize, linewidth = \linewidth]
+
+struct RE_Dominion
+{
+ ...
+ enum class Type_Codes { N_A,
+  #define DOMINION_TYPE DOMINION_TYPE_ENUM
+  #include "dominion/types.h"
+  #undef DOMINION_TYPE
+ };
+ ...
+}
+ 
+// // in types.h
+#ifndef DOMINION_HIDE_NO_NAMESPACE
+// // No namespace
+#include "relae-graph/dominion-macros.h"
+DOMINION_TYPE(qstring, QString, QStr)
+...
+#endif
+
+#define DOMINION_OUTER_NAMESPACE RZ
+
+#define DOMINION_INNER_NAMESPACE RECore
+#include "relae-graph/dominion-macros.h"
+DOMINION_TYPE(re_root, RE_Root, RE_Root)
+DOMINION_TYPE(re_token, RE_Token, RE_Token)
+DOMINION_TYPE(proxy, RE_Node_Proxy, Proxy)
+DOMINION_TYPE(re_tuple_info, RE_Tuple_Info, 
+  RE_Tuple_Info)
+DOMINION_TYPE(re_call_entry, RE_Call_Entry, 
+  RE_Call_Entry)
+DOMINION_TYPE(re_block_entry, RE_Block_Entry, 
+  RE_Block_Entry)
+DOMINION_TYPE(re_function_def_entry, 
+  RE_Function_Def_Entry, RE_Function_Def_Entry)
+...
+#undef DOMINION_INNER_NAMESPACE
+
+
+#define DOMINION_INNER_NAMESPACE GBuild
+#include "relae-graph/dominion-macros.h"
+DOMINION_TYPE(core_function, 
+  RZ_Lisp_Graph_Core_Function, Graph_CoreFun)
+DOMINION_TYPE(empty_tuple, RZ_Lisp_Empty_Tuple, 
+  EmptyTuple)
+...
+#undef DOMINION_INNER_NAMESPACE
+
+#define DOMINION_INNER_NAMESPACE GVal
+#include "relae-graph/dominion-macros.h"
+DOMINION_TYPE(block_info, RZ_Lisp_Graph_Block_Info, 
+  Block_Info)
+DOMINION_TYPE(rz_function_def_info, 
+  RZ_Function_Def_Info, RZ_Function_Def_Info)
+DOMINION_TYPE(rz_code_statement, RZ_Code_Statement, 
+  RZ_Code_Statement)
+DOMINION_TYPE(rz_expression_review, 
+  RZ_Expression_Review, RZ_Expression_Review)
+...
+#undef DOMINION_INNER_NAMESPACE
+
+#undef DOMINION_OUTER_NAMESPACE
+#undef DOMINION_NODE_TYPE
+
+\end{lstlisting}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\end{tikzpicture} 

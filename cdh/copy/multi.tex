@@ -1,0 +1,29 @@
+\begin{lstlisting}[caption={Addressable vs. Multi-Addressable Initializers}, 
+  language = C++, numbers = none, escapechar = !,label={lst:multi},
+    basicstyle = \ttfamily\bfseries\footnotesize, linewidth = \linewidth]
+template<typename VAL_Type>
+struct My_List {
+// hide the constructor so client code must use an initializer
+ static My_List construct();
+private:
+ My_List() ... 
+};
+
+template<>
+struct My_List<int> {
+ static My_List construct();
+private:
+ My_List() ... 
+};
+
+int main(int argc, char *argv[])
+{
+ auto test1 = &My_List<int>::construct(); //  ok
+ auto test2 = &My_List::construct(); // compile error
+}
+\end{lstlisting}
+
+\begin{tikzpicture}[remember picture, overlay]
+%\dovn{3.8}{9.83}{1};
+\end{tikzpicture} 
+\vspace{-1em}
