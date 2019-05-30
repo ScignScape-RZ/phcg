@@ -444,7 +444,7 @@ forms.\phantomsection\label{unplug}
 
 `tcl<unplug>;
 \begingroup\captionof{figure}{\q{Unplugging} a Node}\endgroup
-`vspace<1em>;
+`vspace<1.5em>;
 `p.
 Notice that information present `i.within` a hypernode can also be expressed as
 relations `i.between` hypernodes.  For example, consider the information that

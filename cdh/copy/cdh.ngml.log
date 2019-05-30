@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  30 MAY 2019 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  30 MAY 2019 12:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2424,12 +2424,16 @@ y
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 5.
+nput line 6.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 5.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <7> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 5.
-) [11] (./dominion-types.tex) (./dominion.tex
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 6.
+)
+Underfull \vbox (badness 1571) has occurred while \output is active []
+
+ [11]
+(./dominion-types.tex) (./dominion.tex
 LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 17.
 
 
@@ -2446,9 +2450,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 [12])
-Underfull \vbox (badness 6428) has occurred while \output is active []
-
-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 572.
@@ -8641,48 +8642,81 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31900 strings out of 492649
- 624160 string characters out of 6122986
- 1114749 words of memory out of 5000000
- 33779 multiletter control sequences out of 15000+600000
+ 31915 strings out of 492649
+ 624465 string characters out of 6122986
+ 1115177 words of memory out of 5000000
+ 33783 multiletter control sequences out of 15000+600000
  115934 words of font info for 498 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,20n,105p,814b,1932s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.
-enc}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-ts1
-.enc}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-rm
-.enc}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/cm-super
-/cm-super-ts1.enc}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/d
-vips/base/8r.enc}</home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmex10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/nlevisrael/texl/texlive-insta
-ll/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/nlevisrael/texl/t
-exlive-install/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/nlevis
-rael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmtt10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmtt8.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/font
-s/type1/public/amsfonts/euler/eufm10.pfb></home/nlevisrael/texl/texlive-install
-/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></home/nlevisrael/texl/texlive-i
-nstall/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></home/nlevisrael/texl/tex
-live-install/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></home/nlevisrael/texl
-/texlive-install/texmf-dist/fonts/type1/public/lm/lmtt8.pfb></home/nlevisrael/t
-exl/texlive-install/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></home/nlevisr
-ael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.
-pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/t
-ype1/public/cm-super/sftt0800.pfb></home/nlevisrael/texl/texlive-install/texmf-
-dist/fonts/type1/urw/symbol/usyr.pfb></home/nlevisrael/texl/texlive-install/tex
-mf-dist/fonts/type1/urw/symbol/usyr.pfb></home/nlevisrael/texl/texlive-install/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/nlevisrael/texl/texlive-inst
-all/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></home/nlevisrael/texl/texlive
--install/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/nlevisrael/texl/tex
-live-install/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></home/nlevisrael/tex
-l/texlive-install/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on cdh.ngml.pdf (46 pages, 667884 bytes).
+pdfTeX warning (dest): name{lst--rzsem--12.pgvm-pdf} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--rzsyn--11.pgvm-pdf} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--rzd--10.pgvm-pdf} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--rz--9.pgvm-pdf} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--range--8.pgvm-pdf} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--multi--7.pgvm-pdf} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--maxima--6.pgvm-pdf} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--sorts--5.pgvm-pdf} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--dominion--3.pgvm-pdf} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--dominion-types--2.pgvm-pdf} has been reference
+d but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lst--initializing-hypernodes--1.pgvm-pdf} has been 
+referenced but does not exist, replaced by a fixed one
+
+{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.en
+c}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-ts1.e
+nc}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-rm.e
+nc}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/cm-super/c
+m-super-ts1.enc}{/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvi
+ps/base/8r.enc}</home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></home/nlevisrael/texl/texlive-install
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/nlevisrael/texl/tex
+live-install/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/nlevisra
+el/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmtt8.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/
+type1/public/amsfonts/euler/eufm10.pfb></home/nlevisrael/texl/texlive-install/t
+exmf-dist/fonts/type1/public/lm/lmssbo10.pfb></home/nlevisrael/texl/texlive-ins
+tall/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></home/nlevisrael/texl/texli
+ve-install/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></home/nlevisrael/texl/t
+exlive-install/texmf-dist/fonts/type1/public/lm/lmtt8.pfb></home/nlevisrael/tex
+l/texlive-install/texmf-dist/fonts/type1/public/lm/lmtti10.pfb></home/nlevisrae
+l/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pf
+b></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/typ
+e1/public/cm-super/sftt0800.pfb></home/nlevisrael/texl/texlive-install/texmf-di
+st/fonts/type1/urw/symbol/usyr.pfb></home/nlevisrael/texl/texlive-install/texmf
+-dist/fonts/type1/urw/symbol/usyr.pfb></home/nlevisrael/texl/texlive-install/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/nlevisrael/texl/texlive-instal
+l/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></home/nlevisrael/texl/texlive-i
+nstall/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/nlevisrael/texl/texli
+ve-install/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></home/nlevisrael/texl/
+texlive-install/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
+Output written on cdh.ngml.pdf (46 pages, 667409 bytes).
 PDF statistics:
- 1545 PDF objects out of 1728 (max. 8388607)
- 1443 compressed objects within 15 object streams
- 841 named destinations out of 1000 (max. 500000)
+ 1578 PDF objects out of 1728 (max. 8388607)
+ 1465 compressed objects within 15 object streams
+ 852 named destinations out of 1000 (max. 500000)
  69909 words of extra memory for PDF output out of 74296 (max. 10000000)
 

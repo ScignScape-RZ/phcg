@@ -120,6 +120,7 @@ void send_msg(RZW& rzw, QString msg, int port = 0)
 
 void XpdfApp::run_fig_msg(QString msg, QString fig)
 {
+ qDebug() << fig;
 
 // qba.append("<//>");
 
