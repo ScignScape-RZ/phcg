@@ -1,0 +1,254 @@
+
+`spsubsection.Dependent Types and Typestate`
+`p.
+Typestates are finer-grained classifications than types.  However, just
+as it is `q.reasonable` to consider each range as its own type %-- in
+the sense that a coherent `TXL; should allow range-value types, even
+if in practice a language may limit how such types are actualized %--
+it is also `q.reasonable` to factor typestates into types as well.
+A canonical example of typestate is restricting how functions are
+called which operate on files.  A single `q.file` type actually covers several
+cases, including files that are open or closed, and even files that
+are nonexistent %-- they may be described by a path on a filesystem
+which does not actually point to a file (perhaps in preparation for
+creating such a file).  Instead of `i.one` type covering
+each of these cases, we can envision `i.different` types for nonexistent,
+closed, or open files.  With these more detailed types, constraints
+like `q.don't try to create an already-existing file`
+or `q.don't try to modify a closed or nonexistent file` are enforced by
+type-checking.
+`p`
+
+`p.
+While this kind of gatekeeping is valuable in theory, it raises
+questions in practice.  Reifying `q.cases` %-- i.e., `i.typestates`
+like open, closed, or nonexistent %-- to distinct `i.types`
+implies that a `q.file` value can go through different
+types between construction and destruction.  If this is literally true, it
+violates the convention that types are an intrinsic and fixed aspect of
+typed values.  It is true that, as part of a type cast, values can be
+reinterpreted (like treating an `int; as a `float;), but this
+typically assumes a mathematical
+overlap where one type can be considered as subsumed by a different type
+for some calculation, `i.without this changing anything`/:
+any integer is equally a ratio with unit denominator, say.
+`q.Casting` a closed file to an open one is the opposite effect,
+using disjunctures between types to capture the fact that state
+`i.has`/ changed; to capture a trajectory of states for one
+value %-- which must then have different types at
+different times, since this is the whole point of modeling successive
+states via alternations in type-attribution.
+`p`
+
+`p.
+An alternative interpretation is that the `q.trajectory` is not a
+single mutated value but a chain of interrelated
+values, wherein each successive value is obtained via a state-change
+from its predecessor.  But a weakness of this chain-of-values
+model is that it assumes only one value in the chain is currently
+correct: a file can't be both open and closed, so if one value
+with type `q.closed file` is succeeded by a different value with
+type  `q.opened file`/, the latter value will be correct only
+if the file was in fact opened, and the former otherwise %-- but
+a compiler can't know which is which, `i.a priori`/.  Or,
+instead of a `q.chain` of differently-typed values we can employ a
+single general `q.file` type and then `q.cast` the value to
+an `q.open file` type when a function needs specifically
+an `i.open` file, and so forth.   The effect in that case is to
+insert the cast operator as a `q.gatekeeper` function preventing
+the function receiving the casted value from receiving nonconformant
+input.  Again, though, the compiler cannot make any assumptions about
+whether the `q.casts` will work (e.g., whether the attempt to open
+a file will succeed).
+`p`
+
+`p.
+A good real-world example of the overlap between Dependent Types and
+typestate (also grounded on file input/output) comes
+from the `q.Dependent Effects` tutorial from the Idris
+(programming language) documentation `cite<IdrisEffects>;:
+%http://docs.idris-lang.org/en/latest/effects/depeff.html
+`displayquote,
+A practical use for dependent effects is in specifying resource usage
+protocols and verifying that they are executed correctly.  For example,
+file management follows a resource usage protocol with ... requirements
+[that] can be expressed formally in [Idris] by creating a
+`idrisText.FILE\_IO` effect parameterised over a file handle state,
+which is either empty, open for reading, or open for writing.
+In particular, consider the type of [a function
+to open files]: This returns a `idrisText.Bool` which indicates
+whether opening the file was successful.  The resulting state
+depends on whether the
+operation was successful; if so, we have a file handle open for the
+stated purpose, and if not, we have no file handle.  By case analysis
+on the result, we continue the protocol accordingly. ...
+If we fail to follow the protocol correctly (perhaps by forgetting to
+close the file, failing to check that open succeeded, or opening the
+file for writing [when given a read-only file handle]) then we will
+get a compile-time error.
+`displayquote`
+So how does Idris mitigate the type-vs.-typestate conundrum?  Apparently
+the key notion is that there is one single `tyFile; `i.type`/, but
+a more fine-grained type-`i.state`/; and, moreover, an
+`i.effect system `q.parametrized over` these typestates`/.
+In other words, the `i.effect` of `tyFile; operations is to
+modify `i.typestates` (not types) of a `tyFile; value.
+Moreover, Dependent Typing ensures that functions cannot be called
+sequentially in ways which `q.violate the protocol`/, because
+functions are prohibited from having effects that are incompatible
+with the potentially affected values' current states.
+This elegant syntheses of Dependent Types, typestate, and
+Effectual Typing brings together three of the key
+features of `q.fine-grained` or `q.very expressive` type systems.
+`p`
+
+`p.
+But the synthesis achieved by Idris relies on Dependent Typing:
+typestate can be enforced because Idris functions can support
+restrictions which `i.depend` on values' current typestate to
+satisfy effect-requirements in a type-checking way.  In effect,
+Idris requires that all possible variations in values' unfolding
+typestate are handled by calling code, because otherwise the
+handlers will not type-check.  An analogous tactic in a language like
+`Cpp; would be to provide an `q.open file` function only with a
+signature that takes two callbacks, one for when the `openFn;
+succeeds and a second for when it fails (to mimic the Idris tutorial's
+`q.case analysis`/).  But that `Cpp; version still requires convention
+to enforce that the two callbacks behave differently: via Dependent Types
+Idris can confirm that the `q.open file` callback, for example, is only
+actually supplied as a callback for files that have actually been
+opened.  A better `Cpp; approximation to this design would be
+to cast files to separate types %-- not only
+typestates %-- after all, but only when passing these values to the callback
+functions; this is similar to the approach I endorse
+here to approximate Dependent Typing via (sometimes hidden)
+channels rather than constructs (like typed-checked
+typestate-parametrized effects) which require a language
+to implement a full Dependent Type system.
+`p`
+
+`p.
+In the case of Idris, Dependent Types are feasible because the final
+`q.reduction` of expressions to evaluable representations occurs at
+runtime.  In the language of the Idris tutorial:
+
+`displayquote,
+In Idris, types are first class, meaning that they can be computed and
+manipulated (and passed to functions) just like any other language construct.
+For example, we could write a function which computes a type [and]
+use this function to calculate a type anywhere that a type can be used.
+For example, it can be used to calculate a return type [or]
+to have varying input types.
+`displayquote`
+
+More technically, Edwin Brady (and, here, Mat\'u\v{s} Teji\v{s}\v{c}\'ak)
+elaborate that
+
+`displayquote,
+`i.Full-spectrum` dependent types ... treat types as first-class language
+constructs.  This means that types can be built by computation just like
+any other value, leading to powerful techniques for generic programming.
+Furthermore, it means that types can be parameterised on values,
+meaning that strong, explicit, checkable relationships can be stated
+between values and used to verify properties of programs at compile-time.
+This expressive power brings new challenges, however, when
+compiling programs. ... The challenge, in short, is to identify a
+phase distinction between compile-time and run-time objects.
+Traditionally, this is simple: types are compile-time only, values are
+run-time, and erasure consists simply of erasing types. In a dependently
+typed language, however, erasing types alone is not
+enough \cite[page 1]{BradyMatus}.
+`displayquote`
+
+To summarize, Idris works by `q.erasing` some, but not all, of the
+extra contextual detail needed to ensure that dependent-typed
+functions are used (i.e., called) correctly (see also `cite<Christiansen>;,
+and \cite[page 210]{RichardEisenberg}).  This means that a lot
+of contextual detail is `i.not` erased; Idris provides machinery to
+join executable code and user specifications onto
+`i.types` so that they take effect whenever affected types' values are
+constructed or passed to functions.  Despite a divergent technical 
+background, the net result is arguably not vastly
+different from an Aspect-Oriented approach wherein constructors
+and function calls are `q.pointcuts` setting anchors upon 
+source locations or logical run-points, where extra code can be
+added to program flow (see e.g. `cite<KatharinaMehner>;,
+`cite<DineshGopalani>;, `cite<CharlesZhang>;).  Recall my contrast of
+`q.internalist` and `q.externalist` paradigms, sketched at the
+top of this chapter: Aspect-Oriented Programming involves
+extra code added by external tools (that `q.modify` code by
+`q.weaving` extra code providing extra features or gatekeeping).
+Implementations like Idris pursue what often are in effect similar
+ends from a more `q.internalist` angle, using the type system
+to host added code and specifications without resorting to some
+external tool that introduces this code in a manner orthogonal
+to the language proper.  But Idris relies on Haskell 
+to provide its operational environment; it is not clear
+how Idris's strategies (or those of other Haskell and `ML;-style
+Dependent Type languages) for attaching runtime expressions to
+type constructs would work in an imperative or
+Object-Oriented environment, like `Cpp; as a host language.
+`p`
+
+`p.
+This discussion emanated from Idris examples based on file-management
+typestate, but it generalizes to other cases, such as range-delimited
+types or states.
+Practically, working with scenarios like range-bounded values %-- which
+in principle exemplifies programming tasks where Dependent Types can be a
+useful idiom %-- in practice arguably ends up more like typestate
+management as exemplified by gatekeeping `visavis;, say, files (only
+call `i.this` function if `i.that` file is open).  A range-interval 
+is typestate-like in that the practical intent is to affix certain gatekeeper
+functions to an accompanying value so that it will never be incorrectly used
+%-- for instance, that it will never be modified to lie outside
+its assigned range.  Conforming to a range
+restriction is more like a typestate than a type: indeed, a range-plus-value pair
+has an obvious covering via two typestates
+(the value is either in or out of its closed interval).`footnote.
+Although a more detailed range typestate might have a few
+more enumeration values: representing `q.on the border` or
+distinguishing `q.too large` from `q.too small`/.
+`footnote`  So the semantics of Dependent Types can practically be
+captured via a typestate framework %-- and perhaps vice-versa, since
+typestates can be seen as type families indexed over (possibly enumerative)
+types; file typestates as a family indexed over `enumleft;`closed;,
+`open;, `nonexistent;`enumright;, for example.
+`p`
+
+`p.
+Adding validation code at runtime %-- to dynamically
+enforce typestate constraints %-- fits the profile of Aspect-Oriented
+Programming more than type-system expressiveness, however.  I propose
+therefore to outline a framework which in its engineering works effectively
+by code-insertion but expresses a more type-theoretic orientation.
+To begin, recall that the implementational problem with Dependent Types
+is maintaining entire families of value constructors; but we can
+perform computations to assess whether a value meeting stated criteria
+`i.could` be constructed without actually constructing the value.  In
+this spirit, assume that value constructors can potentially be
+associated with `i.preconstructors` which run before the constructor proper
+and assess whether the proposed construction is reasonable.  These
+preconstructors may be binary-valued but may also have a larger result
+type, such as a typestate enumeration.  Given a range-bounded type, for example,
+the preconstructor can classify a value as `i.in range`/, `i.too small`/, or
+`i.too large`/, returning an enumerated value which the actual constructor
+then uses to refine its behavior.  The key point about preconstructors
+is that they can be used even without a value constructor present to
+receive its value: instead, the preconstructor can test that a value
+of a narrowly defined type `i.could` be constructed, even if the
+actual value used belongs to a broader type.
+`p`
+
+`p.
+Similar to preconstructors, I will also introduce a
+concept of `i.co-channels`/, which are `q.behind the
+scenes` channels that create values from functions'
+channels, but whose values are passed to functions
+implicitly; they are not visible at function-call sites.
+I will return to the discussion of Preconstructors and
+Co-channels after developing a theory of Channel Complexes
+more substantially.
+`p`
+
+

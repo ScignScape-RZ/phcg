@@ -1,0 +1,168 @@
+\spsubsectiontwoline{Channels for Dependent Types and
+Larger-Scale Code Structures}  
+\p{This chapter has focused on modeling specifications captured entirely
+via a type system, so at
+this point I'll return to that topic in the specific context
+of Dependent Types.  Consider first a function which must receive a
+signed integer no greater than \litOH{}.  This is a dependent type
+in the mild sense that the type expression depends on a value:
+for the range criterion to be \TXL{}-expressible we must assume that
+the relevant \TXL{} includes type expressions whose
+elements can be values which are not themselves types.
+For instance \RangeLTEVal{} can be a type class such that
+\RangeLTEValV{} is a type-expression (with \vVal{} a
+value, not a type), designating types whose
+inhabitants all compare \lte{} to \vVal{}.  As I have alluded to,
+we do not have an \i{a priori} set-theoretic machinery
+at the implementation level; our ability to express criteria
+like \q{the set of unsigned \int{}s \lte{} \litOH{}} depends
+on an explicit type implementation \mdash{} and, in particular, a
+value constructor.  Assuming we have generic programming,
+we can implement \RangeLTEValV{} via a constructor/initializer which takes
+an arbitrary (hitherto unchecked) \int{} and verifies
+that it falls in the range \lteVal{}.
+This leaves unspecified what to do if the check fails \mdash{} throw an
+exception?  Silently covert the input to \vVal{}, maybe logging a
+warning?  But that choice can be left to the discretion of
+the type implementation; the fixed criterion is that any carrier
+purporting to hold \RangeLTEValV{} values guarantees that any
+initialized value has been range-checked.
+}
+\p{Note that this checking may be mostly runtime: we might not actually
+prohibit code like \RangeLTEOHxeqOHone{} since the value constructor
+will be called with \litOHO{} (and have to decide what to do with it) only
+at runtime.  Compilers can do basic arithmetic \mdash{} they can
+warn, say, that in \intXeqOPointFive{} the decimal is
+truncated to an integer \mdash{} but compilers for most languages
+allow only primitive number-related checks; certainly they cannot
+enforce axioms such as an \q{insert} operation on a list
+increasing the list's size by one.
+That is, enforcing
+restrictions like range-checks via gatekeeper value
+constructors does not realize the vision of compile-time type-checking
+to sniff out anomalies, but it does serve the goal
+of guaranteeing properties of values prior to
+functions being called so that these do not have to be checked in
+the implementation itself.
+}
+\p{Type classes like  \RangeLTEValV{} also have the feature that they will
+only be instantiated in a handful of concrete types; they are
+simpler than real dependent-type constructs such as, consider,
+a possible function taking two \i{increasing} integer values:
+\fxy{} where \xlty{}.  How can we express the \xlty{} condition
+within \fFun{}'s signature, assuming the signature can only
+express semantics pertinent to \fFun{}'s type attribution?
+On the face of it, we know that the desired \q{increasing}
+condition is equivalent to \yVal{} having a type like
+\RangeGTValx{}, where this \q{\xVal{}} is the \xVal{} preceding
+\yVal{} in \fFun{}'s signature.  But using such 
+directly as \yVal{}'s type-attribution means that
+from the perspective of \fFun{}'s own type-attribution,
+\yVal{} does not have a single, fixed type; its type
+varies according to the value of \xVal{}.  As a consequence,
+the proper value-constructor for \yVal{} cannot be
+known at until runtime.  Moreover, for reasons I reviewed
+above in the context of \q{indexed} types, \yVal{}'s
+value constructor would have to be some temporary value
+(you couldn't have directly-addressable constructors
+indexed over non-enumerative types like \int{}).  Here again
+we encounter a \q{metaconstructor} problem: in order
+for the \xlty{} condition to be modeled \i{directly} by
+\yVal{}'s type-attribution we would need the
+constructor for \yVal{}'s value-constructor to
+be some operation that produces a temporary function-value
+\mdash{} not simply the compilation of a code-graph to a
+non-temporary implementation that can be
+directly-addressable via a function-pointer.
+}
+\p{These issues go away if, instead of working with a function
+taking \i{two} integers, we instead consider a function taking \i{one}
+value which is a monotone-increasing pair (something like
+\fmipair{}).  A type like
+\MIpair{}, based on ordered pairs \xCommaY{} of \int{}s, solves the
+metaconstructor problem for \yVal{} because \xVal{} and \yVal{}
+are no longer distinct \fFun{} parameters with distinct value-constructors;
+they are subsumed into one pair, whose own value-constructor
+can check the \xlty{} condition.  The \i{requirements} for the
+original (two-valued) \fFun{} may then be \i{described} as
+\xVal{} and \yVal{} being convertable into a pair \prVal{}
+which is an instance of \MIpair{} (so that \xlty{}).  This
+\i{description} is not a \i{type}, but elevating the
+description to type-level can be at least approximated with
+a signature like \fxypreqMIpairxy{}, which when called as
+\fxy{} will silently call the \MIpair{} constructor.  This is only
+approximate because it allows anomalies like \fxypreqMIpairZeroOne{},
+defeating the purpose \mdash{} how well this \q{hidden values} technique
+(similar to what is sometimes called \q{passkey} parameters)
+approximates dependent-typed protocols depends on how well
+client code can be forbidden from calling the
+three-argument form directly.
+}
+\p{A Channel-based solution is to introduce a \i{hidden} channel of values which
+are initialized from values in the other channels (rather than passed
+in from the call site).  A variation on this theme is to
+construct hidden values that classify values within types
+more precisely than types themselves.  Such finer classification
+is a feature of \q{typestate} systems \mdash{} the distinction between
+closed and open files, for instance, being a variation in typestate
+within an overall \fileTy{} type.  For typical typestates, it
+is possible in principle to implement types whose constructors
+only accept values in the associated state \mdash{} e.g., a
+constructor for an \q{open file} type that takes \fileTy{} values
+but only returns a value if the passed file is open.  Despite their
+greater guarantees, these narrower types may have limited
+usefulness because it is presumably impossible to
+know at compile-time if (say) a file is (going to be)
+open.  On the other hand, creating an open-file value is a
+way to gatekeep specifications that a function body
+only be entered if the relevant file is open.  Placing
+tests in value-constructors is a way to express them
+through a vehicle more central to a type system and \TXL{}.
+}
+\p{Aside from typestate as exclusionary \mdash{} preventing
+function bodies from running without specific criteria being
+met \mdash{} typestates can also \q{overload} functions on
+finer-grained criteria (relative to the type system itself).
+Consider a function which works on two lists, but needs different
+implementation depending on which is larger, or both equal-sized.
+Functions cannot typically be overloaded based on such runtime
+criteria alone, but via \q{hidden} channels we can assign them
+different signatures: one takes a type whose constructor only
+succeeds if it is passed two lists of increasing size; another's
+hidden type only gets initialized if the sizes are \i{decreasing};
+and a third only if the sizes are equal.  But notice that these three
+\q{hidden} types can also be interpreted as typestates of a
+pair-of-lists type; every \pairOfLists{} value can be sorted into
+one of three states (size-increasing, or decreasing, or equal).
+That is: apply passkey techniques like those discussed above
+for a hidden \MIpair{}
+argument, only to test an \q{increasing} condition not on
+values but on list-sizes.
+Suppose we have three list-pair functions overloaded on variants
+of \MIpair{}, which collectively span the size-comparison
+typestates of
+a \q{pair-of-lists}.  A compiler \mdash{} or perhaps some
+supplemental code-generation tool \mdash{} could plausibly default-implement
+an associated function (visible to client code,
+without the hidden channel) that delegates to
+one of these overloads, automating the
+size-comparison check without extra
+code either at the call site or in the implementations.
+More than just a device for inserting runtime checks at
+useful \q{pointcuts} (using Aspect-Oriented terms),
+such compiler enhancements, working through hidden
+channels, allow automatic dispatching to
+implementations who may declare but not test assumptions
+and make type-systems allowing these functions closer
+to bonafide dependent-type engines.
+}
+\p{These examples do not exhaust the topic of type-system-level
+articulation and enforcement of runtime specifications,
+but they perhaps pose ideas that with suitable variation can
+apply in other contexts and unify subjects I have
+discussed: if a larger class of specifications can be integrated
+within type systems, then perhaps a larger class of
+source code features (blocks, statements, etc.) can be
+interpreted as typed values.
+}
+\p{}

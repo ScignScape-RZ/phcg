@@ -203,103 +203,25 @@ Range-Bounded Types, Value Constructors, and Addressability}}}}}}
 \scalebox{.7}{\ensuremath{\mathcal{DJ}}} :: N} \outarrow{} \Prop}}
 
 
-\newcommand{\thatPhrase}{\AcronymText{that}-phrase}
-\newcommand{\thatPhrases}{\AcronymText{that}-phrases}
+%\newcommand{\thatPhrase}{\AcronymText{that}-phrase}
+%\newcommand{\thatPhrases}{\AcronymText{that}-phrases}
 
-\newcommand{\Oz}{\AcronymText{Oz}}
-\newcommand{\CppFourteen}{{\Cpp}14}
+%\newcommand{\Oz}{\AcronymText{Oz}}
+%\newcommand{\CppFourteen}{{\Cpp}14}
+%
+
 \newcommand{\CppEleven}{{\Cpp}11}
 
 \usepackage{graphicx}
 
-\newcommand{\rzauthor}[3]{{
-{\vspace{-4em}}{\fontfamily{gar}\fontseries{b}\selectfont% 
-{\begin{center}\textls*[103]{#1}\\ \vspace{-2em}%
-{\scalebox{.7}{\fontfamily{phv}\fontshape{it}\selectfont\footnotesize #3}}#2\end{center}}
-
-{\vspace{-2.25em}}
-{\hfill\small\today}
-
-{\vspace{.25em}}
-}}}			 
-
-
-\newcommand{\rzauth}[3]{{
-		{\vspace{-1em}}{\fontfamily{gar}\fontseries{b}\selectfont% 
-			{\begin{center}\textls*[103]{#1}\\ \vspace{1em}%
-					{\scalebox{.7}{\fontfamily{phv}\fontshape{it}\selectfont\footnotesize #3}}#2\end{center}}
-			
-			{\vspace{-6em}}
-			{\hfill\small {\raisebox{1em}{\today}}}
-			
-			{\vspace{0em}}
-		}}}			 
-
 \usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
 \newsavebox\lstbox
 
-\newcommand{\rztitle}[1]{\begin{center}\fontfamily{phv}\fontseries{b}\selectfont #1\end{center}}
 
+%\newcommand{\Jorgen}{J{\o}rgen}
 
-\newcommand{\Jorgen}{J{\o}rgen}
+%\newcommand{\Prop}{\ensuremath{\mathcal{P}}}
 
-\newcommand{\Prop}{\ensuremath{\mathcal{P}}}
-
-\newcommand{\NN}{\ensuremath{N}\hspace{-1pt}\argarrow\hspace{-1pt}\ensuremath{N}}
-\newcommand{\Npl}{%
-\ensuremath{N}\raisebox{8pt}{\hspace{-1pt}\ensuremath{\rotatebox{180}{{\begin{footnotesize}$\dotplus$\end{footnotesize}}}}}}
-\newcommand{\NPl}{\Npl}
-\newcommand{\NtoNpl}{%
-\mmbox{\ensuremath{N} \outarrow{} \Npl}}
-\newcommand{\NpltoNpl}{\mmbox{\Npl{} \outarrow{} \Npl}}
-\newcommand{\PropToN}{\mmbox{\Prop \hspace{1pt} \outarrow{} \N}}
-
-\newcommand{\VisNNtoProp}{\mmbox{\ensuremath{V :: N} \argarrow \ensuremath{N} \outarrow{} \Prop}}
-\newcommand{\VisNProptoProp}{\mmbox{\ensuremath{V :: N} \argarrow  \Prop{} \hspace{2pt} \outarrow{} \Prop}}
-
-\newcommand{\triesNVtoProp}{tries \mmbox{\ensuremath{:: N} \argarrow  \ensuremath{V} \hspace{2pt} \outarrow{} \Prop}}
-
-\newcommand{\setHawkeyeBlake}{\{Hawkeye, Blake\}}
-
-
-\newcommand{\NNVtoProp}{\mmbox{\ensuremath{N}  \argarrow  \ensuremath{N}  \argarrow  
-   \ensuremath{V}  {} \outarrow  {} \Prop}}
-\newcommand{\VtoV}{\mmbox{\ensuremath{V}  \outarrow  \ensuremath{V}}}
-
-\newcommand{\proces}{proc\`es}
-\newcommand{\epoche}{epoch\'e}
-
-
-\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
-
-\newcommand{\VPpNPeqS}{\ensuremath{VP + NP = S}}
-\newcommand{\NSingToNPl}{\mmbox{\NSing{} \outarrow{} \Npl}}
-
-\newcommand{\NNtoS}{\mmbox{\NN{} \outarrow{} \Prop}}
-\newcommand{\NNtoN}{\mmbox{\NN{} \outarrow{} \ensuremath{N}}}
-\newcommand{\N}{\mmbox{\ensuremath{N}}}
-\newcommand{\NtoProp}{\mmbox{\N{} \outarrow{} \Prop}}
-\newcommand{\NNtoProp}{\mmbox{\NN{} \outarrow{} \Prop{}}}
-\newcommand{\ProptoN}{\mmbox{\Prop{} \outarrow{} \N}}
-
-
-\newcommand{\PropToNYieldsN}{\PropToN{} \raisebox{1pt}{\ensuremath{\textgreater\hspace{-5pt}\raisebox{.15pt}{\ensuremath{\Rightarrow}}}}{} \N}
-
-\newcommand{\SeqNPplVP}{\mmbox{{\small\texttt{S = NP + VP}}}}
-
-\newcommand{\Arg}{\ensuremath{A}\tiny{rg}}
-\newcommand{\argsToReturn}{\mbox{\ensuremath{{\Arg}_0} \hspace{-4pt} \smargarrow 
-		\hspace{-3pt}
-\ensuremath{{\Arg}_1} 
-\hspace{-4pt} \smargarrow \hspace{-2pt} \ensuremath{\cdot\cdot\cdot} \hspace{0pt} \smoutarrow  \hspace{1pt} \textit{Result}}}
-
-\newcommand{\lowBlank}{\raisebox{-1pt}{\textthreequartersemdash\textthreequartersemdash\textthreequartersemdash}}
-
-\newcommand{\BlankAfterBlank}{\lowBlank\texttt{after}\lowBlank}
-\newcommand{\AfterNSingAndNSingToNPl}{\mbox{\texttt{after} :: %
-\NSing \argarrow \NSing \hspace{1pt} \outarrow \hspace{1pt} \Npl}}
-
-\newcommand{\archiveDate}[1]{{\footnotesize #1}}
 
 \newcommand{\sentenceExample}[1]{
 \begin{noindent}
@@ -1050,36 +972,6 @@ drop fuzzy shadow northeast={darkRed!70!purple},
 
 \newcommand{\FourOverlayd}{\circledd{4}}
 
-
-\newcommand{\ComparisonTemporal}{\AcronymText{ComparisonTemporal}}
-\newcommand{\ComparisonNominal}{\AcronymText{ComparisonNominal}}
-\newcommand{\A}{\AcronymText{A}}
-\newcommand{\B}{\AcronymText{B}}
-\newcommand{\beforeAnd}{\AcronymText{beforeAnd}}
-\newcommand{\beforeDo}{\AcronymText{beforeDo}}
-\newcommand{\ltAnd}{\AcronymText{ltAnd}}
-\newcommand{\ComparisonTemporalBeforeDo}{\AcronymText{ComparisonTemporalBeforeDo}}
-\newcommand{\studentId}{\AcronymText{studentId}}
-
-\newcommand{\classTestResult}{\AcronymText{classTestResult}}
-\newcommand{\classQVariantObservation}{\AcronymText{classQVariantObservation}}
-\newcommand{\classQVariantEventNexus}{\AcronymText{classQVariantEventNexus}}
-
-%
-\newcommand{\TestResults}{\codeText{TestResults}}
-\newcommand{\Tutoring}{\codeText{Tutoring}}
-
-\newcommand{\ifAge}{\AcronymText{ifAge}}
-
-
-\newcommand{\ComparisonOrdinal}{\AcronymText{ComparisonOrdinal}}
-
-\newcommand{\ComparisonOrdinalLtDo}{\AcronymText{ComparisonOrdinalLtDo}}
-
-\newcommand{\POST}{\AcronymText{POST}}
-\newcommand{\BaseTT}{\AcronymText{Base32}}
-\newcommand{\BaseSX}{\AcronymText{Base64}}
-
 \newcommand{\true}{\codeText{true}}
 
 
@@ -1088,17 +980,6 @@ drop fuzzy shadow northeast={darkRed!70!purple},
 \colorlet{codegr}{black!80!blue}
 
 
-%\newcommand{\codeText}[1]{\AcronymText{#1}}
-
-\newcommand{\class}[1]{\AcronymText{#1}}
-\newcommand{\method}[1]{\AcronymText{#1}}
-\newcommand{\interface}[1]{\AcronymText{#1}}
-
-\newcommand{\QCohortObservable}{\codeText{QCohortObservable}}
-\newcommand{\QInvokable}{\codeText{QInvokable}}
-
-
-\newcommand{\private}{\codeText{private}}
 
 \newcommand{\FnDoc}{\codeText{Fn\_Doc}}
 
@@ -1114,30 +995,14 @@ drop fuzzy shadow northeast={darkRed!70!purple},
 \newcommand{\Sdbleq}{\codeText{$\backslash$==}}
 \newcommand{\Seq}{\codeText{$\backslash $=}}
 
-\newcommand{\classQVariant}{\codeText{QVariant}}
-\newcommand{\QVariant}{\codeText{QVariant}}
+%\newcommand{\classQVariant}{\codeText{QVariant}}
+%\newcommand{\QVariant}{\codeText{QVariant}}
 
-\newcommand{\NexusTrip}{\codeText{NexusTrip}}
-\newcommand{\NexusTripTmpl}{\codeText{NexusTripTmpl}}
+%\newcommand{\NexusTrip}{\codeText{NexusTrip}}
+%\newcommand{\NexusTripTmpl}{\codeText{NexusTripTmpl}}
 
-\newcommand{\protectedC}{\codeText{protectedC}}
+%\newcommand{\protectedC}{\codeText{protectedC}}
 
-
-\newcommand{\DimensionOfComparisonMismatchException}{\codeText{DimensionOfComparisonMismatchException}}
-
-\newcommand{\qRegisterMetaType}{\codeText{qRegisterMetaType}}
-\newcommand{\QDECLAREMETATYPE}{\codeText{QDECLAREMETATYPE}}
-\newcommand{\qRegisterMetaTypeStreamOperators}{\codeText{qRegisterMetaTypeStreamOperators}}
-\newcommand{\classTutoringTopic}{\codeText{classTutoringTopic}}
-
-\newcommand{\classPhoto}{\codeText{classPhoto}}
-
-
-%\newcommand{\classQVariantEventNexus}{\codeText{classQVariantEventNexus}}
-\newcommand{\classDimensionsOfComparison}{\codeText{classDimensionsOfComparison}}
-\newcommand{\classQPair}{\codeText{classQPair}}
-\newcommand{\classQDataStream}{\codeText{classQDataStream}}
-\newcommand{\classQMap}{\codeText{classQMap}}
 
 \usepackage[utf8]{inputenc}
  
@@ -1234,11 +1099,11 @@ tabsize=2, frame=lines, captionpos=b, caption={Turtle Formats}}
 	
 		
 
-\newcommand{\TyS}{\codeTextr{${\Upsilon}$}}
+\newcommand{\TyS}{\codeTextr{$\mathbb{T}$}}
 
-\newcommand{\TXLTyS}{$\codeTextr{\mathfrak{L}_\codeTextr{\Upsilon}}$}
+\newcommand{\TXLTyS}{$\codeTextr{\mathfrak{L}_\codeTextr{\mathbb{T}}}$}
 
-\newcommand{\TXLTySChi}{$\codeTextr{\mathfrak{L}_\codeTextr{\Upsilon}\chiussr}$}
+\newcommand{\TXLTySChi}{$\codeTextr{\mathfrak{L}_\codeTextr{\mathbb{T}}\chiussr}$}
 
 
 \newcommand{\ageFF}{\codeTexto{${\lceil}45{\rceil}$}}
@@ -1651,8 +1516,8 @@ $\rightarrow$\smsp\smsp($\mathcal{T}_2$\smsp$\rightarrow$\smsp$\mathcal{T}_3$)}}
 
 \newcommand{\lambdaCalculus}{$\OldLambda$-Calculus}
 
-\newcommand{\lamdbas}{$\OldLambda$s} 
 \newcommand{\lambdas}{$\OldLambda$s}
+
 
 \newcommand{\fntoch}{\codeTextr{$f_n$ $\rightarrow$ $\chi$}}
 

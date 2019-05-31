@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  30 MAY 2019 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  31 MAY 2019 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8642,10 +8642,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31915 strings out of 492649
- 624465 string characters out of 6122986
- 1115177 words of memory out of 5000000
- 33783 multiletter control sequences out of 15000+600000
+ 31839 strings out of 492649
+ 623623 string characters out of 6122986
+ 1113435 words of memory out of 5000000
+ 33707 multiletter control sequences out of 15000+600000
  115934 words of font info for 498 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,20n,105p,814b,1932s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -8713,7 +8713,7 @@ l/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></home/nlevisrael/texl/texlive-i
 nstall/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/nlevisrael/texl/texli
 ve-install/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></home/nlevisrael/texl/
 texlive-install/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on cdh.ngml.pdf (46 pages, 667409 bytes).
+Output written on cdh.ngml.pdf (46 pages, 666150 bytes).
 PDF statistics:
  1578 PDF objects out of 1728 (max. 8388607)
  1465 compressed objects within 15 object streams
