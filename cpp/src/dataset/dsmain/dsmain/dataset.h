@@ -41,7 +41,7 @@ class Dataset
 
 public:
 
- Dataset(QString file);
+ Dataset();//QString file);
 
  ACCESSORS__RGET(QVector<Language_Sample*> ,samples)
 //? ACCESSORS__RGET(groups_by_text_type ,groups_by_text)
@@ -56,6 +56,10 @@ public:
 
  void save_to_file();
  void get_serialization(QString& text, QString& gtext);
+
+ void load_from_file(QString path);
+
+
 };
 
 

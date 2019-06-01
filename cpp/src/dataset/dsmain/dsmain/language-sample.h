@@ -19,48 +19,30 @@
 #include <QVector>
 #include <QString>
 
+class QTextStream;
+
 
 KANS_(DSM)
 
 class Language_Sample_Group;
 
-class Language_Sample : phaong<pg_t>::Hypernode
+class Language_Sample //: phaong<pg_t>::Hypernode
 {
  QString text_;
- QString source_title_;
- int index_;
- QString sub_index_;
- int chapter_;
- int page_;
-
- QString speaker_;
+ QString latex_label_;
 
  Language_Sample_Group* group_;
 
- int get_group_id();
-
 public:
 
- Language_Sample(QString text, phaong<pg_t>& phg);
+ Language_Sample(Language_Sample_Group* group, QString text);
 
  ACCESSORS(QString ,text)
- ACCESSORS(QString ,source_title)
- ACCESSORS(int ,index)
- ACCESSORS(QString ,sub_index)
- ACCESSORS(int ,chapter)
- ACCESSORS(int ,page)
-
- ACCESSORS(QString ,speaker)
+ ACCESSORS(QString ,latex_label)
 
  ACCESSORS(Language_Sample_Group* ,group)
 
- static void read_samples_from_file(phaong<pg_t>& phg, QString path,
-   QVector<Language_Sample*>& result,
-  QVector<Language_Sample_Group*>& groups);
-
- QString get_serialization();
-
- Language_Sample_Group* get_ref_group();
+ void serialize(QTextStream& qts);
 
 };
 

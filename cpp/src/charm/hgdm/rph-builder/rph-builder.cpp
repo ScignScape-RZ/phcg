@@ -13,7 +13,7 @@
 
 
 
-USING_KANS(DSM)
+USING_KANS(RPH)
 
 RPH_Builder::RPH_Builder(QTextStream& qts)
   : qts_(qts)

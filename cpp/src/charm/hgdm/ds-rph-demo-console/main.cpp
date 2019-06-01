@@ -22,8 +22,8 @@
 
 #include "ds-relae-phaon/rph-document.h"
 
-#include "language-sample-group.h"
-#include "language-sample.h"
+#include "dsmain/language-sample-group.h"
+#include "dsmain/language-sample.h"
 
 #include "kans.h"
 USING_KANS(HGDMCore)

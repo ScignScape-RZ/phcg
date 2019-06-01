@@ -24,9 +24,9 @@
 class QTextStream;
 
 
-KANS_(DSM)
+KANS_(RPH)
 
-class Language_Sample_Group;
+//class Language_Sample_Group;
 
 class RPH_Builder //: phaong<pg_t>::Hypernode
 {
@@ -131,6 +131,6 @@ public:
 };
 
 
-_KANS(DSM)
+_KANS(RPH)
 
 #endif // RPH_BUILDER__H

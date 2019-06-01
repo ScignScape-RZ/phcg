@@ -14,6 +14,7 @@
 #include <QVector>
 #include <QString>
 
+class QTextStream;
 
 KANS_(DSM)
 
@@ -22,48 +23,25 @@ class Language_Sample;
 class Language_Sample_Group : public QVector<Language_Sample*>
 {
  int id_;
- int chapter_;
  int page_;
 
- int rg_id_;
-
- QString classification_;
- QString text_id_;
-
- Language_Sample_Group* ref_group_;
-
- QString main_text_;
+ int start_num_;
+ int end_num_;
 
 public:
 
- Language_Sample_Group(int id, QString text_id);
+ Language_Sample_Group(int id);
 
 
  ACCESSORS(int ,id)
- ACCESSORS(int ,chapter)
  ACCESSORS(int ,page)
- ACCESSORS(QString ,text_id)
- ACCESSORS(QString ,classification)
- ACCESSORS(Language_Sample_Group* ,ref_group)
- ACCESSORS(int ,rg_id)
- ACCESSORS(QString ,main_text)
 
- QString get_serialization(int& rgc);
+ ACCESSORS(int ,start_num)
+ ACCESSORS(int ,end_num)
 
- QString get_form();
- QString get_issue();
+ void serialize(QTextStream& qts);
 
- bool match_classification(const QSet<QString>& qset);
-
- void check_set_form(QString f);
-
- static void read_groups_from_file(QString path,
-  QVector<Language_Sample_Group*>& result);
-
- QStringList all_sample_text();
- QString first_sample_text();
-
- QString get_main_text();
+ static void serialize_samples_to_file(QVector<Language_Sample_Group*>& lsgs, QString file);
 
 };
 

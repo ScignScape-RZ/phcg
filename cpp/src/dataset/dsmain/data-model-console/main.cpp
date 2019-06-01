@@ -22,7 +22,17 @@
 
 USING_KANS(DSM)
 
+int main(int argc, char **argv)
+{
+ Dataset ds;// (DEFAULT_RPH_FOLDER  "/samples.txt");
+ ds.load_from_file(DEFAULT_RPH_FOLDER  "/samples.txt");
 
+
+
+ return 0;
+}
+
+#ifdef HIDE
 int main(int argc, char **argv)
 {
  phaong<pg_t> pg;
@@ -122,3 +132,4 @@ int main1(int argc, char* argv[])
 
  return 0;
 }
+#endif// def HIDE
