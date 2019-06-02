@@ -41,6 +41,20 @@ void RPH_Graph_Build::end_field()
   flags.discard_acc = false;
   return;
  }
+ if(flags.define_replacement)
+ {
+  flags.define_replacement = false;
+  replacements_[current_field_name_] = acc_.simplified();
+  current_field_name_.clear();
+  acc_.clear();
+  return;
+ }
+ if(flags.replace_acc)
+ {
+  if(acc_.simplified().startsWith('%'))
+    acc_ = replacements_.value(acc_.simplified().mid(1));
+ }
+
  //?if(flags.split_numeric_acc)
  if(flags.numeric_acc)
  {
@@ -95,6 +109,16 @@ void RPH_Graph_Build::prepare_field_read(QString prefix, QString field, QString 
    flags.discard_acc = true;
  else if(suffix == "=")
    flags.numeric_acc = true;
+ else if(suffix == "/")
+   flags.replace_acc = true;
+ else if(suffix == "*")
+   flags.wildcard_acc = true;
+ else if(suffix == "&")
+ {
+  flags.wildcard_acc = true;
+  parse_context_.flags.multiline_field = true;
+ }
+
  if(prefix == "$$")
  {
   ++current_field_number_;
@@ -115,6 +139,13 @@ void RPH_Graph_Build::prepare_field_read(QString prefix, QString field, QString 
  {
   current_field_number_ = field.toInt();
   current_field_name_.clear();
+ }
+ else if(prefix.startsWith('%'))
+ {
+  flags.define_replacement = true;
+  current_field_name_ = field;
+//  flags.array_field = false;
+//  return;
  }
  flags.array_field = prefix.startsWith('@');
 }

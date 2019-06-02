@@ -54,8 +54,20 @@ bool check(QPair<QString, void*>& pr)
  return true;
 };
 
+void Dataset::save_to_file(QString path)
+{
+ Language_Sample_Group::serialize_samples_to_file(groups_, path);
+}
+
+void Dataset::save_to_file()
+{
+ save_to_file(file_ + ".out.txt");
+}
+
 void Dataset::load_from_file(QString path)
 {
+ file_ = path;
+
  RPH_Document doc(path);
 
  doc.parse();
@@ -64,12 +76,11 @@ void Dataset::load_from_file(QString path)
 
  QVector<RPH_Graph::hypernode_type*>& hns = doc.top_level_hypernodes();
 
- QVector<Language_Sample_Group*> lsgs;
- lsgs.resize(hns.size());
+ groups_.resize(hns.size());
 
  int count = 0;
 
- std::transform(hns.begin(), hns.end(), lsgs.begin(), [&count,&doc](RPH_Graph::hypernode_type* hn)
+ std::transform(hns.begin(), hns.end(), groups_.begin(), [&count,&doc](RPH_Graph::hypernode_type* hn)
  {
   ++count;
   Language_Sample_Group* result = new Language_Sample_Group(count);
@@ -165,19 +176,19 @@ void Dataset::get_serialization(QString& text, QString& gtext)
 
 }
 
-void Dataset::save_to_file()
-{
- QString text;
- QString gtext;
- get_serialization(text, gtext);
- QString dt = QDateTime::currentDateTime().toString("dd-MM-yy--hh-mm");
- QString path = QString("%1.%2.txt").arg(file_).arg(dt);
- save_file(path, text);
+//void Dataset::save_to_file()
+//{
+// QString text;
+// QString gtext;
+// get_serialization(text, gtext);
+// QString dt = QDateTime::currentDateTime().toString("dd-MM-yy--hh-mm");
+// QString path = QString("%1.%2.txt").arg(file_).arg(dt);
+// save_file(path, text);
 
- QString gpath = QString("%1.%2.g.txt").arg(file_).arg(dt);
- save_file(gpath, gtext);
+// QString gpath = QString("%1.%2.g.txt").arg(file_).arg(dt);
+// save_file(gpath, gtext);
 
-}
+//}
 
 void Dataset::parse_to_samples(QString text, int page,
   int num, phaong<pg_t>& phg)

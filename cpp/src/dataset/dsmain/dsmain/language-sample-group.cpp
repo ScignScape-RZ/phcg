@@ -22,7 +22,7 @@ USING_KANS(RPH)
 USING_KANS(TextIO)
 
 Language_Sample_Group::Language_Sample_Group(int id)
-  :  id_(id), page_(0), start_num_(0), end_num_(0)
+  :  id_(id), page_(0), section_num_(0), start_num_(0), end_num_(0)
 {
 
 }
@@ -52,8 +52,15 @@ void Language_Sample_Group::serialize(QTextStream& qts)
 
 // qts << "!/ SE";
 
-
 }
+
+QString Language_Sample_Group::get_main_text()
+{
+ if(isEmpty())
+   return QString();
+ return first()->text();
+}
+
 
 void Language_Sample_Group::serialize_samples_to_file(
   QVector<Language_Sample_Group*>& lsgs, QString file)

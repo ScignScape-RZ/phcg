@@ -35,15 +35,16 @@
 #include "ScignStage-ling/xpdf-bridge.h"
 
 
-#include "lexpair/lexpair-dialog.h"
+//?#include "lexpair/lexpair-dialog.h"
 
 #include "dsmain/language-sample.h"
 
-#include "kauvir-code-model/kauvir-code-model.h"
+//?#include "kauvir-code-model/kauvir-code-model.h"
 
 #include "PhaonLib/phaon-runner.h"
 
-#include "kcm-direct-eval/kcm-direct-eval.h"
+//?#include "kcm-direct-eval/kcm-direct-eval.h"
+
 #include "PhaonLib/phaon-symbol-scope.h"
 #include "test-functions.h"
 
@@ -55,6 +56,8 @@
 #include "application-model/application-model.h"
 
 #include "config-dialog/config-dialog.h"
+
+
 
 #include "kans.h"
 
@@ -72,7 +75,7 @@ USING_KANS(PhaonLib)
 #endif
 USING_QSNS(ScignStage)
 
-
+#ifdef HIDE
 void launch_config_dialog(Config_Dialog*& dlg, QWidget* parent)
 {
  if(!dlg)
@@ -141,23 +144,28 @@ void launch_config_dialog(Config_Dialog*& dlg, QWidget* parent)
 
  dlg->show();
 }
+#endif //def HIDE
+
 
 int main(int argc, char **argv)
 {
  QApplication qapp(argc, argv);
  qapp.setWindowIcon(QIcon(DEFAULT_ICON_FOLDER "/app-icon.png"));
 
- Dataset ds (DATA_FOLDER "/chapters/all.txt");
- QVector<Language_Sample*>& samps = ds.samples();
+// Dataset ds (DATA_FOLDER "/chapters/all.txt");
+// QVector<Language_Sample*>& samps = ds.samples();
 
- phaong<pg_t> pg;
+// phaong<pg_t> pg;
 
- QVector<Language_Sample_Group*>& groups = ds.groups();
- Language_Sample_Group::read_groups_from_file
-   (DATA_FOLDER "/chapters/all.g.txt", groups);
+// QVector<Language_Sample_Group*>& groups = ds.groups();
+// Language_Sample_Group::read_groups_from_file
+//   (DATA_FOLDER "/chapters/all.g.txt", groups);
 
- Language_Sample::read_samples_from_file
-   (pg, DATA_FOLDER "/chapters/all.txt", samps, groups);
+// Language_Sample::read_samples_from_file
+//   (pg, DATA_FOLDER "/chapters/all.txt", samps, groups);
+
+ Dataset ds;// (DEFAULT_RPH_FOLDER  "/samples.txt");
+ ds.load_from_file(DEFAULT_RPH_FOLDER  "/samples.txt");
 
 
 
@@ -180,13 +188,14 @@ int main(int argc, char **argv)
  });
 #endif
 
- Application_Model apm(&dlg);
- dlg.set_application_model(&apm);
+//?
+// Application_Model apm(&dlg);
+// dlg.set_application_model(&apm);
 
  dlg.set_launch_lexpair_dialog_function([](QString s)
  {
-  Lexpair_Dialog* dlg = new Lexpair_Dialog(Lexpair_Dialog::split(s), nullptr);
-  dlg->show();
+//  Lexpair_Dialog* dlg = new Lexpair_Dialog(Lexpair_Dialog::split(s), nullptr);
+//  dlg->show();
  });
 
  dlg.set_screenshot_function([&dlg, &qapp]()
@@ -215,7 +224,7 @@ int main(int argc, char **argv)
 
  dlg.set_launch_config_function([&cdlg, &dlg]()
  {
-  launch_config_dialog(cdlg, &dlg);
+  //?launch_config_dialog(cdlg, &dlg);
  });
 
  dlg.show();

@@ -1,20 +1,23 @@
 
 - g=group id  t=text  s=start id  
   e=end id  i=id  p=page  x=tex label
-  h=theme
+  h=theme n=section
 
   SG=sentence group
   SE=sentence example
 .
 
-&type SG [8;4;2] 
- :g:0 :s:1 :e:2 :p:3 ;
+&type SG [8;5;2] 
+ :g:0 :n:1 :s:2 :e:3 :p:4 ;
 
 &type SE {5}
  :g:0 :i:1 :x:2 :t:3 :text:3 :h:4 ;
 
 
 &/
+
+%section: 5
+
 
 !/ SG
 
@@ -59,6 +62,7 @@ $t. Could you send me the corkscrew (the X3D file you just mentioned)?
 /!
 <>>
 
+$n/ %section
 $s# 1 6 9
 /!
 <+>
@@ -76,6 +80,7 @@ $t. Could you get me a corkscrew?
 /!
 <>>
 
+$n/ %section
 $s# 7 8 10
 /!
 <+>
@@ -94,6 +99,7 @@ $t. He pounded the nail with a lever corkscrew.
 /!
 <>>
 
+$n/ %section
 $s# 9 10 10
 /!
 <+>
@@ -113,6 +119,7 @@ $t. Can you bring me a glass of water?
 /!
 <>>
 
+$n/ %section
 $s# 11 12 11
 /!
 <+>
@@ -142,6 +149,7 @@ $t. You can see the water from here.
 /!
 <>>
 
+$n/ %section
 $s# 13 16 11
 /!
 <+>
@@ -151,6 +159,7 @@ $s# 13 16 11
 $t. The water and the Deuterium Dioxide is over there.
 .
 /!
+$n/ %section
 $s# 17 17 11
 /!
 <+>
@@ -159,18 +168,19 @@ $s# 17 17 11
 !/ SG
 !/ SE  
 $t. Here's a glass of water (even though
-.
 tap water is mixed with flouride).
+.
 /!
 <>>
 
 !/ SE  
 $t. Bing cherries are dark red (even though
-.
 the stem is brown).
+.
 /!
 <>>
 
+$n/ %section
 $s# 18 19 12
 /!
 <+>
@@ -192,30 +202,32 @@ $t. Is there milk in this coffee?
 /!
 <>>
 
+$n/ %section
 $s# 20 21 22
 /!
 <+>
 !/ SG
 !/ SE  
 $t. It's not open, but there's still some
-.
 cold air coming through the cracks.
+.
 /!
 <>>
 
 !/ SE  
 $t. It's not open, but I closed the window in
-.
 the bedroom.
+.
 /!
 <>>
 
 !/ SE  
-$t. I can't %-- it's stuck.
+$t. I can't -- it's stuck.
 .
 /!
 <>>
 
+$n/ %section
 $s# 22 24 22
 /!
 <+>
@@ -240,6 +252,7 @@ $t. This isn't a screw-cap bottle: I need a corkscrew.
 /!
 <>>
 
+$n/ %section
 $s# 25 27 23
 /!
 <+>
@@ -268,6 +281,7 @@ $t. If there is a corkscrew in the house, can you get it?
 /!
 <>>
 
+$n/ %section
 $s# 28 31 23
 /!
 <+>
@@ -298,6 +312,7 @@ acessories in this section?
 /!
 <>>
 
+$n/ %section
 $s# 32 35 23
 /!
 <+>
@@ -320,6 +335,7 @@ $t. No, we have almond milk.
 /!
 <>>
 
+$n/ %section
 $s# 36 38 24
 /!
 <+>
@@ -336,6 +352,7 @@ $t. Yes, almond milk.
 /!
 <>>
 
+$n/ %section
 $s# 39 40 24
 /!
 <+>
@@ -343,18 +360,19 @@ $s# 39 40 24
 !/ SG
 !/ SE  
 $t. I believe the kitchen window
+is open -- please close it!
 .
-is open %-- please close it!
 /!
 <>>
 
 !/ SE  
 $t. I believe some window
+is open -- please close it!
 .
-is open %-- please close it!
 /!
 <>>
 
+$n/ %section
 $s# 41 42 25
 /!
 <+>
@@ -372,6 +390,7 @@ $t. He wants a bottle opener.
 /!
 <>>
 
+$n/ %section
 $s# 43 44 25
 /!
 <+>
@@ -389,32 +408,34 @@ $t. He wants something to open that bottle.
 /!
 <>>
 
+$n/ %section
 $s# 45 46 25
 /!
 <+>
 !/ SG
 !/ SE  
 $t. I think you could do excellent work in
-.
 this class, and I think you are doing pretty well.
+.
 /!
 <>>
 
 !/ SE  
 $t. I am not going to talk about the refs because
-.
 I don't want to get fined.
+.
 /!
 <>>
 
 !/ SE  
 $t. If she wants to win the nomination she
-.
 needs to be as charismatic on the campaign trail as
 she was during the debate.
+.
 /!
 <>>
 
+$n/ %section
 $s# 47 49 25
 /!
 <+>
@@ -433,6 +454,7 @@ $t. Can you close the kitchen window?
 /!
 <>>
 
+$n/ %section
 $s# 50 51 25
 /!
 <+>
@@ -440,64 +462,67 @@ $s# 50 51 25
 !/ SG
 !/ SE  
 $t. If the kitchen window is closed,
-.
 we can see if other windows are open.
+.
 /!
 <>>
 
 !/ SE  
 $t. If no windows are open,
-.
 we can see if there is a draft through the window-cracks.
+.
 /!
 <>>
 
 !/ SE  
 $t. If there is no draft, we can
-.
 ask if she wants a sweater.
+.
 /!
 <>>
 
+$n/ %section
 $s# 52 54 26
 /!
 <+>
 !/ SG
 !/ SE  
 $t. My colleague Ms. O'Shea would like to interview
-.
 Mr. Jones, who's an old friend of mine.  Can he take this call?
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:Jones 
 $t. I'm sorry, this is his secretary.  Mr. Jones
-.
 is not available at the moment.
+.
 /!
 <>>
 
+$n/ %section
 $s# 55 56 26
 /!
 <+>
 !/ SG
 !/ SE  
 $t. Mr. Jones, were you present at a meeting where
-.
 the governer promised your employer
 a contract in exchange for campaign contributions?
+.
 /!
 <>>
 
 !/ SE  
 $t. After consulting with my lawyers, I decline
-.
 to answer that question on the grounds that it
 may incriminate me.
+.
 /!
 <>>
 
+$n/ %section
 $s# 57 58 27
 /!
 <+>
@@ -516,6 +541,7 @@ $t. He is not available.
 /!
 <>>
 
+$n/ %section
 $s# 59 60 27
 /!
 <+>
@@ -534,6 +560,7 @@ $t. if f.isEmpty() return 0;
 /!
 <>>
 
+$n/ %section
 $s# 61 62 28
 /!
 <+>
@@ -541,20 +568,21 @@ $s# 61 62 28
 !/ SG
 !/ SE  
 $x: itm:wants 
-$t. Grandma wants the proposition `q.the kitchen
+$t. Grandma wants the proposition "the kitchen
+window is closed" to be true.
 .
-window is closed` to be true.
 /!
 <>>
 
 !/ SE  
 $x: itm:cold 
 $t. Grandma wants the proposition
+"I am cold" to be false.
 .
-`q.I am cold` to be false.
 /!
 <>>
 
+$n/ %section
 $s# 63 64 30
 /!
 <+>
@@ -573,27 +601,28 @@ $t. Well, I want the Leafs to win.
 /!
 <>>
 
+$n/ %section
 $s# 65 66 31
 /!
 <+>
 !/ SG
 !/ SE  
-$t. There is a proposition (call it `POne;)
-.
+$t. There is a proposition (call it P1)
 whose propositional content is that the Jets win
-and a proposition (`PTwo;) whose content is that the Leafs win.
+and a proposition (P2) whose content is that the Leafs win.
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:entail 
-$t. `PTwo; entails the negation of `POne;.
+$t. P2 entails the negation of P1.
 .
 /!
 <>>
 
 !/ SE  
-$t. He wants the content of `PTwo; to be true.
+$t. He wants the content of P2 to be true.
 .
 /!
 <>>
@@ -601,18 +630,19 @@ $t. He wants the content of `PTwo; to be true.
 !/ SE  
 $x: itm:false 
 $t. His wishes are only consistent
+with P1 being false.
 .
-with `POne; being false.
 /!
 <>>
 
 !/ SE  
 $x: itm:Jets 
-$t. He wants the content of `POne; to be false.
+$t. He wants the content of P1 to be false.
 .
 /!
 <>>
 
+$n/ %section
 $s# 67 71 31
 /!
 <+>
@@ -625,20 +655,21 @@ $s# 67 71 31
 !/ SE  
 $x: itm:store 
 $t. Remember that wine we tasted on the Niagara 
-.
 Peninsula last summer?  Can you find it in our 
 local liquor store?
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:varietal 
 $t. Remember that wine we tasted on the Niagara 
-.
 Peninsula last summer?  What varietal was that again?
+.
 /!
 <>>
 
+$n/ %section
 $s# 72 73 32
 /!
 <+>
@@ -652,11 +683,12 @@ $t. That wine was a Cabernet Franc.
 
 !/ SE  
 $t. Those dogs are my neighbor's.  
-.
 They are very sweet.
+.
 /!
 <>>
 
+$n/ %section
 $s# 74 75 33
 /!
 <+>
@@ -679,6 +711,7 @@ $t. It's a breed of dog.
 /!
 <>>
 
+$n/ %section
 $s# 76 78 34
 /!
 <+>
@@ -695,6 +728,7 @@ $t. My cousin adopted one of my neighbor's dog's puppies.
 /!
 <>>
 
+$n/ %section
 $s# 79 80 40
 /!
 <+>
@@ -702,16 +736,16 @@ $s# 79 80 40
 !/ SE  
 $x: itm:maj 
 $t. The majority of students polled were
-.
 opposed to tuition increases.
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:most 
 $t. Most of the students expressed disappointment
-.
 about tuition increases.
+.
 /!
 <>>
 
@@ -722,6 +756,7 @@ $t. Many students have protested the tuition increases.
 /!
 <>>
 
+$n/ %section
 $s# 81 83 40
 /!
 <+>
@@ -739,6 +774,7 @@ $t. Most students oppose a tuition increase.
 /!
 <>>
 
+$n/ %section
 $s# 84 85 41
 /!
 <+>
@@ -746,21 +782,22 @@ $s# 84 85 41
 !/ SE  
 $x: itm:today 
 $t. Today the state university system
-.
 announced plans to raise tuition by
 at least 10\%.  Most students oppose a tuition increase.
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:colleges 
 $t. Colleges all over the country, facing
-.
 rising costs, have had to raise tuition, but
 most students oppose a tuition increase.
+.
 /!
 <>>
 
+$n/ %section
 $s# 86 87 41
 /!
 <+>
@@ -775,27 +812,28 @@ $t. Student after student came out against the tuition hikes.
 !/ SE  
 $x: itm:substantial 
 $t. A substantial number of students
-.
 have come out against the tuition hikes.
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:mass 
 $t. The number of students protesting the tuition hikes
-.
 may soon reach a critical mass.
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:tipping 
 $t. Protests against the tuition hikes
-.
 may have reached a tipping point.
+.
 /!
 <>>
 
+$n/ %section
 $s# 88 91 42
 /!
 <+>
@@ -855,6 +893,7 @@ $t. There's a plastic sheet all over the wall.
 /!
 <>>
 
+$n/ %section
 $s# 92 99 48
 /!
 <+>
@@ -862,18 +901,19 @@ $s# 92 99 48
 !/ SE  
 $x: itm:apartment 
 $t. I'm going to a party at my brother's house (suppose
-.
 he actually lives in an apartment).
+.
 /!
 <>>
 
 !/ SE  
 $t. This restaurant has the best Hokkien noodles
-.
 (said of a stall in a Chinaatown food court).
+.
 /!
 <>>
 
+$n/ %section
 $s# 100 101 49
 /!
 <+>
@@ -890,6 +930,7 @@ $t. The museum had antique butter knives with intricate carvings.
 /!
 <>>
 
+$n/ %section
 $s# 102 103 51
 /!
 <+>
@@ -907,6 +948,7 @@ $t. What time does train 100 depart from Newark?
 /!
 <>>
 
+$n/ %section
 $s# 104 105 53
 /!
 <+>
@@ -924,6 +966,7 @@ $t. I snacked on buttered toast and iced coffee.
 /!
 <>>
 
+$n/ %section
 $s# 106 107 71
 /!
 <+>
@@ -940,6 +983,7 @@ $t. I snacked on toast and Eritrean coffee.
 /!
 <>>
 
+$n/ %section
 $s# 108 109 71
 /!
 <+>
@@ -958,6 +1002,7 @@ $t. Vets examined the rescued dogs.
 /!
 <>>
 
+$n/ %section
 $s# 110 111 75
 /!
 <+>
@@ -986,6 +1031,7 @@ $t. Everyone in the audience sang along to two songs.
 /!
 <>>
 
+$n/ %section
 $s# 112 115 75
 /!
 <+>
@@ -1006,60 +1052,63 @@ $t. Every singer performed (the last) two songs
 
 !/ SE  
 $t. Everyone in the audience sang along to two songs
-.
 (they were randomnly handed lyrics to different songs when
 they came in, and we asked them to join in when the song being
 performed onstage matched the lyrics they had in hand).
+.
 /!
 <>>
 
+$n/ %section
 $s# 116 118 76
 /!
 <+>
 !/ SG
 !/ SE  
 $t. The rescued dogs were treated by an experienced vet.
-.
 One needed surgery and one got a blood transfusion.  We went there
 yesterday and both looked much better.
+.
 /!
 <>>
 
 !/ SE  
 $t. The rescued dogs were treated by an experienced vet.
-.
 One had been struck by a car and needed surgery on his leg.  We
 went there yesterday and saw debris from another car crash
-%-- it's a dangerous stretch of highway.
+-- it's a dangerous stretch of highway.
+.
 /!
 <>>
 
+$n/ %section
 $s# 119 120 77
 /!
 <+>
 !/ SG
 !/ SE  
 $t. The rescued dogs were treated by an experienced vet.
-.
 We saw a lot of other dogs getting medical attention.
+.
 /!
 <>>
 
 !/ SE  
 $t. The rescued dogs were treated by an experienced vet.
-.
 It looked very modern, like a human hospital.
+.
 /!
 <>>
 
 !/ SE  
 $t. The rescued dogs were treated by an experienced vet.
-.
-We looked around and realized how dangerous that road is %--
+We looked around and realized how dangerous that road is --
 for humans as well as dogs.
+.
 /!
 <>>
 
+$n/ %section
 $s# 121 123 78
 /!
 <+>
@@ -1090,26 +1139,27 @@ $t. New mathematical models rescued her original research from obscurity.
 
 !/ SE  
 $t. Discovery of nearby earth-like planets rescued that
-.
 star from its reputation as ordinary and boring and revealed that its solar
 system may actually be extraordinary.
+.
 /!
 <>>
 
 !/ SE  
 $t. His latest comments rescued him from the perception that
-.
 he never says anything controversial.
+.
 /!
 <>>
 
 !/ SE  
 $t. The Soviets rescued thousands of
-.
 people from a basically-defeated Germany and sent them to Siberia.
+.
 /!
 <>>
 
+$n/ %section
 $s# 124 130 78
 /!
 <+>
@@ -1148,10 +1198,11 @@ $t. There's a lot of coffee left in the pot.
 !/ SE  
 $t. There's a lot of coffee left in the pot
 .
-%-- should I pour it out?
+-- should I pour it out?
 /!
 <>>
 
+$n/ %section
 $s# 131 136 79
 /!
 <+>
@@ -1171,10 +1222,11 @@ $t. She poured coffees from an ornate beaker.
 !/ SE  
 $t. There are a lot of coffees left on the table
 .
- %-- shall I pour them out?
+ -- shall I pour them out?
 /!
 <>>
 
+$n/ %section
 $s# 137 139 79
 /!
 <+>
@@ -1195,11 +1247,12 @@ $t. New Yorkers reliably vote for Democratic presidential candidates.
 !/ SE  
 $x: itm:commute 
 $t. New Yorkers constantly complain about how long it takes to commute
-.
 to New York City.
+.
 /!
 <>>
 
+$n/ %section
 $s# 140 142 79
 /!
 <+>
@@ -1219,19 +1272,20 @@ presidential candidates.
 
 !/ SE  
 $t. Many New York metro area residents complain about how
-.
 long it takes to commute to New York City.
+.
 /!
 <>>
 
+$n/ %section
 $s# 143 145 80
 /!
 <+>
 !/ SG
 !/ SE  
 $t. My favorite band gave a free concert last night.
-.
 They played some new songs.
+.
 /!
 <>>
 
@@ -1261,46 +1315,48 @@ $t. There was some toast earlier, but they're all gone.
 
 !/ SE  
 $t. That franchise had a core of talented young players, but it
-.
 got eroded by trades and free agency.
+.
 /!
 <>>
 
 !/ SE  
 $t. That franchise had a cohort of talented players, but they
-.
+
 drifted away due to trades and free agency.
+.
 /!
 <>>
 
 !/ SE  
 $t. Many star players were drafted by that franchise, but it
-.
 has not won a title in decades.
+.
 /!
 <>>
 
 !/ SE  
 $t. Many star players were drafted by that franchise, but they
-.
 failed to surround them with enough depth.
+.
 /!
 <>>
 
 !/ SE  
 $t. Many star players were drafted by that franchise, but they
-.
 were not surrounded with enough depth.
+.
 /!
 <>>
 
 !/ SE  
 $t. Many star players were drafted by that franchise, but they
-.
 did not have enough depth.
+.
 /!
 <>>
 
+$n/ %section
 $s# 146 156 81
 /!
 <+>
@@ -1308,27 +1364,28 @@ $s# 146 156 81
 !/ SG
 !/ SE  
 $t. The band planned a tour, where
-.
 they debuted new songs.
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:teamflew 
 $t. The team flew to 
-.
 New York and they played the Yankees.
+.
 /!
 <>>
 
 !/ SE  
 $x: itm:theflies 
-$t. The city’s largest theater company
+$t. The city's largest theater company
+will perform "The Flies".
 .
-will perform `q.The Flies`/.
 /!
 <>>
 
+$n/ %section
 $s# 157 159 82
 /!
 <+>
@@ -1336,67 +1393,69 @@ $s# 157 159 82
 !/ SG
 !/ SE  
 $t. The city's largest theater company
-.
-performed `q.The Flies` in French, but everyone's accent
+performed "The Flies" in French, but everyone's accent
 sounded Quebecois.
+.
 /!
 <>>
 
 !/ SE  
 $t. The city's largest theater company
-.
-performed `q.The Flies`/; then they invited a professor
+performed "The Flies"; then they invited a professor
 to discuss Sartre's philosophy when the play was over.
+.
 /!
 <>>
 
+$n/ %section
 $s# 160 161 82
 /!
 <+>
 !/ SG
 !/ SE  
 $t. John is married to a woman from his home country, but
-.
 he had to get the marriage legally recognized here.
+.
 /!
 <>>
 
 !/ SE  
 $t. John married his boyfriend in Canada, but they
-.
 live in a state that does not recognize same-sex marriages.
+.
 /!
 <>>
 
 !/ SE  
 $t. John has been married for five years, but in
-.
 many ways he's still a bachelor.
+.
 /!
 <>>
 
 !/ SE  
 $t. Every married man needs a bachelor pad somewhere,
-.
 and wherever yours is, you need a mini-fridge.
+.
 /!
 <>>
 
+$n/ %section
 $s# 162 165 83
 /!
 <+>
 !/ SG
 !/ SE  
 $t. People had fed the rescued dogs (i.e.: before they
-.
 were rescued).
+.
 /!
 <>>
 
 !/ SE  
 $t. New Yorkers vote democratic (i.e.: the majority
-.
 of registered voters in New York do so).
+.
 /!
 <>>
 
@@ -1408,17 +1467,18 @@ $t. There is milk in that coffee (i.e.: almond milk).
 
 !/ SE  
 $t. I handed him a bottle opener (i.e.: a butterfly
-.
 corskscrew).
+.
 /!
 <>>
 
 !/ SE  
-$t. That wine is Fabernet Franc (i.e.: `q.W is CF`/).
+$t. That wine is Fabernet Franc (i.e.: "W is CF").
 .
 /!
 <>>
 
+$n/ %section
 $s# 166 170 85
 /!
 <+>
@@ -1431,11 +1491,12 @@ $t. We learned that people fed the rescued dogs.
 
 !/ SE  
 $t. No-one seriously entertained the belief that
-.
 he would govern in a bipartisan manner.
+.
 /!
 <>>
 
+$n/ %section
 $s# 171 172 96
 /!
 <+>
@@ -1449,25 +1510,26 @@ $t. The Trump campaign colluded with Russia.
 
 !/ SE  
 $t. Several witnesses testified that
-.
 the Trump campaign colluded with Russia.
+.
 /!
 <>>
 
 !/ SE  
 $t. Reputable newspapers have reported that
-.
 the Trump campaign colluded with Russia.
+.
 /!
 <>>
 
 !/ SE  
 $t. Most Democrats believe that
-.
 the Trump campaign colluded with Russia.
+.
 /!
 <>>
 
+$n/ %section
 $s# 173 176 96
 /!
 <+>
@@ -1497,6 +1559,7 @@ $t. I believed in lies.
 /!
 <>>
 
+$n/ %section
 $s# 177 180 96
 /!
 <+>
@@ -1507,6 +1570,7 @@ $t. Obama wouldn't budge on reproductive rights.
 .
 /!
 
+$n/ %section
 $s# 181 181 97
 /!
 <+>
@@ -1549,6 +1613,7 @@ $t. The latest reports are forecasting snow.
 /!
 <>>
 
+$n/ %section
 $s# 182 187 106
 /!
 <+>
@@ -1565,6 +1630,7 @@ $t. He is an elected official.
 /!
 <>>
 
+$n/ %section
 $s# 188 189 106
 /!
 <+>
@@ -1590,6 +1656,7 @@ $t. Baby elephants don't have tusks.
 /!
 <>>
 
+$n/ %section
 $s# 190 192 114
 /!
 <+>
@@ -1658,6 +1725,7 @@ $t. The kitten barked at the dog.
 /!
 <>>
 
+$n/ %section
 $s# 193 201 114
 /!
 <+>
@@ -1683,6 +1751,7 @@ $t. Wedding ducks are traditional Korean gifts.
 /!
 <>>
 
+$n/ %section
 $s# 202 204 115
 /!
 <+>
@@ -1696,8 +1765,8 @@ $t. This book, which costs \$40, has some crazy ideas inside.
 
 !/ SE  
 $t. This book, which the library classifies as young adult 
-.
 nonfiction, has some dude's phone number scrawled inside.
+.
 /!
 <>>
 
@@ -1707,6 +1776,7 @@ $t. My boss barks louder than his dog does.
 /!
 <>>
 
+$n/ %section
 $s# 205 207 116
 /!
 <+>
@@ -1716,6 +1786,7 @@ $s# 205 207 116
 $t. Three times, students asked an interesting question
 .
 /!
+$n/ %section
 $s# 208 208 118
 /!
 <+>
@@ -1724,35 +1795,34 @@ $s# 208 208 118
 !/ SG
 !/ SE  
 $t. Time after time, tourists (a tourist) walk(s) by this building
-.
 with no idea of its history.
+.
 
 /!
 <>>
 
 !/ SE  
 $t. The streets around here are confusing; often people (someone)
-.
 will ask me for directions.
-
+.
 /!
 <>>
 
 !/ SE  
 $t. Student after student came with their (his/her)
-.
 paper to compain about my grade(s).
-
+.
 /!
 <>>
 
 !/ SE  
-$t. Student after student %-- and their (his/her) parents
+$t. Student after student -- and their (his/her) parents
+-- complained about the tuition increase.
 .
-%-- complained about the tuition increase.
 /!
 <>>
 
+$n/ %section
 $s# 209 212 119
 /!
 <+>
@@ -1760,28 +1830,30 @@ $s# 209 212 119
 !/ SG
 !/ SE  
 $t. The Maple Leafs failed to win in overtime for the
-.
 first time this year.
+.
 /!
 <>>
 
 !/ SE  
 $t. The Maple Leafs failed for the first time this year
-.
 to win in overtime.
+.
 /!
 <>>
 
+$n/ %section
 $s# 213 214 120
 /!
 <+>
 !/ SG
 !/ SE  
 $t. The Maple Leafs failed to win two consecutive games
-.
 for the first time this year.
+.
 /!
 
+$n/ %section
 $s# 215 215 121
 /!
 <+>
@@ -1799,6 +1871,7 @@ $t. Young rhinos are threatened by poachers.`
 /!
 <>>
 
+$n/ %section
 $s# 216 217 129
 /!
 <+>
@@ -1816,6 +1889,7 @@ $t. I got glue for your coffee mug.
 /!
 <>>
 
+$n/ %section
 $s# 218 219 131
 /!
 <+>
@@ -1845,6 +1919,7 @@ $t. Let's go to the press.
 /!
 <>>
 
+$n/ %section
 $s# 220 223 131
 /!
 <+>
@@ -1862,6 +1937,7 @@ $t. Liverpool, an important harbor, built new docks.
 /!
 <>>
 
+$n/ %section
 $s# 224 225 136
 /!
 <+>
@@ -1869,8 +1945,8 @@ $s# 224 225 136
 !/ SG
 !/ SE  
 $t. The newspaper fired the reporter and fell off
-.
 the table (?).
+.
 /!
 <>>
 
@@ -1880,6 +1956,7 @@ $t. Liverpool beat Tottenham and built new docks (?).
 /!
 <>>
 
+$n/ %section
 $s# 226 227 136
 /!
 <+>
@@ -1897,6 +1974,7 @@ $t. That newspaper plans to fire its editorial staff.
 /!
 <>>
 
+$n/ %section
 $s# 228 229 136
 /!
 <+>

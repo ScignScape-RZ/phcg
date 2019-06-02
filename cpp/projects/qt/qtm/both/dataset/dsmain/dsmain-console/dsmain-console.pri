@@ -28,6 +28,7 @@ INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
 
 INCLUDEPATH += $$HGDM_SRC_GROUP_DIR
 
+DEFINES += DEFAULT_RPH_FOLDER=\\\"$$DATA_ROOT_DIR/rph\\\"
 
 DEFINES += CAON_DEBUG
 DEFINES += RELAE_LABEL_NODES
@@ -57,9 +58,11 @@ SOURCES += \
 
 
 LIBS += -L$$TARGETSDIR  -ldsmain  -lScignStage-ling \
-  -lapplication-model  -lconfig-dialog
+  -lrph-builder -lrelae-phaon    -lds-relae-phaon
 
-LIBS += -L$$TARGETSDIR -llexpair
+#? -lapplication-model  -lconfig-dialog
+
+#? LIBS += -L$$TARGETSDIR -llexpair
 
 
 contains(CHOICE_FEATURES, "xpdf") \#/

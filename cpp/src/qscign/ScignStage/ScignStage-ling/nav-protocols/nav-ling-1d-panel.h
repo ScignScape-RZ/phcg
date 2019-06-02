@@ -70,11 +70,11 @@ class NAV_Ling1D_Panel : public QFrame
  QPushButton* peer_up_button_;
  QPushButton* peer_down_button_;
 
- QPushButton* chapter_up_button_;
- QPushButton* chapter_down_button_;
+ QPushButton* section_up_button_;
+ QPushButton* section_down_button_;
 
- QPushButton* chapter_start_button_;
- QPushButton* chapter_end_button_;
+ QPushButton* section_start_button_;
+ QPushButton* section_end_button_;
 
 // QVBoxLayout* first_auto_expand_note_layout_;
  QVBoxLayout* first_auto_expand_layout_;
@@ -103,13 +103,13 @@ class NAV_Ling1D_Panel : public QFrame
  QButtonGroup* peer_up_down_button_group_;
 
 
- QVBoxLayout* chapter_up_down_layout_;
- QGroupBox* chapter_up_down_group_box_;
- QButtonGroup* chapter_up_down_button_group_;
+ QVBoxLayout* section_up_down_layout_;
+ QGroupBox* section_up_down_group_box_;
+ QButtonGroup* section_up_down_button_group_;
 
- QVBoxLayout* chapter_se_layout_;
- QGroupBox* chapter_se_group_box_;
- QButtonGroup* chapter_se_button_group_;
+ QVBoxLayout* section_se_layout_;
+ QGroupBox* section_se_group_box_;
+ QButtonGroup* section_se_button_group_;
 
 
 // QVBoxLayout* zoom_sample_distractor_layout_;
@@ -151,11 +151,11 @@ Q_SIGNALS:
  void filtered_up_requested();
  void filtered_down_requested();
 
- void chapter_up_requested();
- void chapter_down_requested();
+ void section_up_requested();
+ void section_down_requested();
 
- void chapter_start_requested();
- void chapter_end_requested();
+ void section_start_requested();
+ void section_end_requested();
 
  void sample_up_requested();
  void sample_down_requested();

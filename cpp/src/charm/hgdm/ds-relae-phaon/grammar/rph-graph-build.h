@@ -45,6 +45,9 @@ public:
   bool split_acc:1;
   bool array_field:1;
   bool numeric_acc:1;
+  bool replace_acc:1;
+  bool wildcard_acc:1;
+  bool define_replacement:1;
  _flags
 
  typedef RPH_Graph::hypernode_type hypernode_type;
@@ -76,6 +79,8 @@ private:
  QStack<hypernode_type*> parent_hypernodes_;
 
  QVector<hypernode_type*> top_level_hypernodes_;
+
+ QMap<QString, QString> replacements_;
 
 public:
 

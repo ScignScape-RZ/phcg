@@ -58,6 +58,7 @@ public:
  void get_serialization(QString& text, QString& gtext);
 
  void load_from_file(QString path);
+ void save_to_file(QString path);
 
 
 };

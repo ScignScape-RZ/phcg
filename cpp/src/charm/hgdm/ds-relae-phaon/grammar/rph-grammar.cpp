@@ -199,9 +199,9 @@ void RPH_Grammar::init(RPH_Parser& p, RPH_Graph& g, RPH_Graph_Build& graph_build
 
  add_rule( read_context, "prepare-field",
    "\\n"
-   " (?<prefix> [@$]+ )"
+   " (?<prefix> [@$%]+ )"
    " (?<word> .script-word.?) "
-   " (?<suffix> [:;#=.] ) ",
+   " (?<suffix> [:;#=&/*.] ) ",
    [&]
  {
   QString prefix = p.matched("prefix");

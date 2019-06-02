@@ -82,32 +82,32 @@ NAV_Ling1D_Panel::NAV_Ling1D_Panel(int vmn, int vmx, int v, QWidget* parent)
  connect(filtered_up_button_, SIGNAL(clicked()),
    this, SIGNAL(filtered_up_requested()));
 
- chapter_start_button_ = new QPushButton(this);
- chapter_end_button_ = new QPushButton(this);
+ section_start_button_ = new QPushButton(this);
+ section_end_button_ = new QPushButton(this);
 
- chapter_start_button_->setIcon(QIcon(DEFAULT_ICON_FOLDER "/Gtk-go-up.svg"));
- chapter_end_button_->setIcon(QIcon(DEFAULT_ICON_FOLDER "/Gtk-go-down.svg"));
+ section_start_button_->setIcon(QIcon(DEFAULT_ICON_FOLDER "/Gtk-go-up.svg"));
+ section_end_button_->setIcon(QIcon(DEFAULT_ICON_FOLDER "/Gtk-go-down.svg"));
 
- connect(chapter_start_button_, SIGNAL(clicked()),
-   this, SIGNAL(chapter_start_requested()));
+ connect(section_start_button_, SIGNAL(clicked()),
+   this, SIGNAL(section_start_requested()));
 
- connect(chapter_end_button_, SIGNAL(clicked()),
-   this, SIGNAL(chapter_end_requested()));
-
-
+ connect(section_end_button_, SIGNAL(clicked()),
+   this, SIGNAL(section_end_requested()));
 
 
- chapter_up_button_ = new QPushButton(this);
- chapter_down_button_ = new QPushButton(this);
 
- chapter_up_button_->setIcon(QIcon(DEFAULT_ICON_FOLDER "/Gtk-go-up.svg"));
- chapter_down_button_->setIcon(QIcon(DEFAULT_ICON_FOLDER "/Gtk-go-down.svg"));
 
- connect(chapter_up_button_, SIGNAL(clicked()),
-   this, SIGNAL(chapter_up_requested()));
+ section_up_button_ = new QPushButton(this);
+ section_down_button_ = new QPushButton(this);
 
- connect(chapter_down_button_, SIGNAL(clicked()),
-   this, SIGNAL(chapter_down_requested()));
+ section_up_button_->setIcon(QIcon(DEFAULT_ICON_FOLDER "/Gtk-go-up.svg"));
+ section_down_button_->setIcon(QIcon(DEFAULT_ICON_FOLDER "/Gtk-go-down.svg"));
+
+ connect(section_up_button_, SIGNAL(clicked()),
+   this, SIGNAL(section_up_requested()));
+
+ connect(section_down_button_, SIGNAL(clicked()),
+   this, SIGNAL(section_down_requested()));
 
 
 
@@ -173,41 +173,41 @@ NAV_Ling1D_Panel::NAV_Ling1D_Panel(int vmn, int vmx, int v, QWidget* parent)
  navigation_layout_->addWidget(peer_up_down_group_box_);
 
 
- chapter_se_layout_ = new QVBoxLayout;
+ section_se_layout_ = new QVBoxLayout;
 
- chapter_se_layout_->addWidget(chapter_start_button_);
- chapter_se_layout_->addWidget(chapter_end_button_);
- chapter_se_layout_->addStretch();
+ section_se_layout_->addWidget(section_start_button_);
+ section_se_layout_->addWidget(section_end_button_);
+ section_se_layout_->addStretch();
 
- chapter_se_group_box_ = new QGroupBox("Chapter Start/End", this);
- chapter_se_button_group_ = new QButtonGroup(this);
-
-
- chapter_se_button_group_->addButton(chapter_start_button_);
- chapter_se_button_group_->addButton(chapter_end_button_);
-
- chapter_se_group_box_->setLayout(chapter_se_layout_);
-
- navigation_layout_->addWidget(chapter_se_group_box_);
+ section_se_group_box_ = new QGroupBox("section Start/End", this);
+ section_se_button_group_ = new QButtonGroup(this);
 
 
+ section_se_button_group_->addButton(section_start_button_);
+ section_se_button_group_->addButton(section_end_button_);
 
- chapter_up_down_layout_ = new QVBoxLayout;
+ section_se_group_box_->setLayout(section_se_layout_);
 
- chapter_up_down_layout_->addWidget(chapter_up_button_);
- chapter_up_down_layout_->addWidget(chapter_down_button_);
- chapter_up_down_layout_->addStretch();
-
- chapter_up_down_group_box_ = new QGroupBox("Chapter Up/Down", this);
- chapter_up_down_button_group_ = new QButtonGroup(this);
+ navigation_layout_->addWidget(section_se_group_box_);
 
 
- chapter_up_down_button_group_->addButton(chapter_up_button_);
- chapter_up_down_button_group_->addButton(chapter_down_button_);
 
- chapter_up_down_group_box_->setLayout(chapter_up_down_layout_);
+ section_up_down_layout_ = new QVBoxLayout;
 
- navigation_layout_->addWidget(chapter_up_down_group_box_);
+ section_up_down_layout_->addWidget(section_up_button_);
+ section_up_down_layout_->addWidget(section_down_button_);
+ section_up_down_layout_->addStretch();
+
+ section_up_down_group_box_ = new QGroupBox("section Up/Down", this);
+ section_up_down_button_group_ = new QButtonGroup(this);
+
+
+ section_up_down_button_group_->addButton(section_up_button_);
+ section_up_down_button_group_->addButton(section_down_button_);
+
+ section_up_down_group_box_->setLayout(section_up_down_layout_);
+
+ navigation_layout_->addWidget(section_up_down_group_box_);
 
 
 

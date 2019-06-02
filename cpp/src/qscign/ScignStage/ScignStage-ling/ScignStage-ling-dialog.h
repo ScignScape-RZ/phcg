@@ -145,17 +145,17 @@ class ScignStage_Ling_Dialog : public QDialog
  QGroupBox* show_original_version_group_box_;
 
 
- QFrame* select_chapter_frame_;
- QLabel* select_chapter_label_;
- QComboBox* select_chapter_combo_box_;
- QHBoxLayout* select_chapter_layout_;
+ QFrame* select_section_frame_;
+ QLabel* select_section_label_;
+ QComboBox* select_section_combo_box_;
+ QHBoxLayout* select_section_layout_;
 
  QStack<QMenu*> popped_up_menus_;
 
  void show_full_sentence(Language_Sample_Group* g);
  void show_full_sentence(Language_Sample* samp);
 
- void chapter_to_string(QString& result, bool wl);
+ void section_to_string(QString& result, bool wl);
  void group_to_string(QString& result, bool wl);
 
  void save_to_user_select_file(QString text);
@@ -199,8 +199,8 @@ class ScignStage_Ling_Dialog : public QDialog
  void* no_auto_expand_;
  int current_peer_index_;
 
- int current_chapter_number_;
- QMap<int, QPair<int, int>> chapter_groups_first_last_;
+ int current_section_number_;
+ QMap<int, QPair<int, int>> section_groups_first_last_;
 
  bool xpdf_is_ready();
  void check_phr();
@@ -226,7 +226,7 @@ class ScignStage_Ling_Dialog : public QDialog
  void set_child_group_foreground(QTreeWidgetItem* twi);
  void clear_child_group_foreground(QTreeWidgetItem* twi);
 
- void run_chapter_message(const QPoint& p, int col);
+ void run_section_message(const QPoint& p, int col);
  void run_group_message(const QPoint& p, int col);
 
  void check_expand(QTreeWidgetItem* twi);
@@ -318,11 +318,11 @@ public Q_SLOTS:
  void handle_peer_down();
  void handle_peer_up();
 
- void handle_chapter_down();
- void handle_chapter_up();
+ void handle_section_down();
+ void handle_section_up();
 
- void handle_chapter_start();
- void handle_chapter_end();
+ void handle_section_start();
+ void handle_section_end();
 
 };
 

@@ -27,7 +27,7 @@ int main(int argc, char **argv)
  Dataset ds;// (DEFAULT_RPH_FOLDER  "/samples.txt");
  ds.load_from_file(DEFAULT_RPH_FOLDER  "/samples.txt");
 
-
+ ds.save_to_file();
 
  return 0;
 }
