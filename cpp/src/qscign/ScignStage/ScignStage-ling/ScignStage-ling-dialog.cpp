@@ -453,6 +453,7 @@ ScignStage_Ling_Dialog::ScignStage_Ling_Dialog(XPDF_Bridge* xpdf_bridge,
 
   qsl.push_back(mt);
 
+//?
 //  qsl.push_back(group->get_form());
 //  qsl.push_back(QString::number(group->first()->index()));
 //  qsl.push_back(group->get_issue());
@@ -464,7 +465,8 @@ ScignStage_Ling_Dialog::ScignStage_Ling_Dialog(XPDF_Bridge* xpdf_bridge,
   qsl.push_back("");
   qsl.push_back("");
   qsl.push_back("");
-  qsl.push_back("");
+  int sn = group->section_num();
+  qsl.push_back(QString::number(sn));
 
 
 //  QPair<int, int>& pr = section_groups_first_last_[chn];
@@ -721,7 +723,8 @@ void ScignStage_Ling_Dialog::highlight(QTreeWidgetItem* twi)
  }
  current_open_group_ = twi->data(0, Qt::UserRole).value<Language_Sample_Group*>();
  show_full_sentence(current_open_group_);
-//? current_section_number_ = current_open_group_->section();
+//?
+ current_section_number_ = current_open_group_->section_num();
  //set_group_foreground(twi_by_group_[current_open_group_]);
  set_group_foreground(twi);
 }
@@ -749,7 +752,8 @@ void ScignStage_Ling_Dialog::highlight(QTreeWidgetItem* twi,
  current_open_group_ = g;
  show_full_sentence(g);
 
-//? current_section_number_ = g->section();
+//?
+ current_section_number_ = g->section_num();
 
  // ensure last subitem is visible
  QTreeWidgetItem* stwi = twi->child(twi->childCount() - 1);
@@ -1112,10 +1116,10 @@ void ScignStage_Ling_Dialog::handle_section_down()
   {
    Language_Sample_Group* g  = groups_->constLast();
 //?
-//   if(current_section_number_ == g->section())
-//     current_section_number_ = 1;
-//   else
-//     ++current_section_number_;
+   if(current_section_number_ == g->section_num())
+     current_section_number_ = 1;
+   else
+     ++current_section_number_;
   }
   if(section_groups_first_last_.contains(current_section_number_))
   {
@@ -1138,13 +1142,13 @@ void ScignStage_Ling_Dialog::handle_section_up()
  while(true)
  {
 //?
-//  if(current_section_number_ == 0 || current_section_number_ == 1)
-//  {
-//   Language_Sample_Group* g  = groups_->constLast();
-//   current_section_number_ = g->section();
-//  }
-//  else
-//    --current_section_number_;
+  if(current_section_number_ == 0 || current_section_number_ == 1)
+  {
+   Language_Sample_Group* g  = groups_->constLast();
+   current_section_number_ = g->section_num();
+  }
+  else
+    --current_section_number_;
   if(section_groups_first_last_.contains(current_section_number_))
   {
    handle_section_start();

@@ -23,7 +23,7 @@ put real (cow) milk in the coffee.  In responding
 to his question I mentally substitute what
 he almost certainly `i.meant` for how
 (taken out of context) (\ref{itm:after}) would usually
-be interprted.  In this current
+be interpreted.  In this current
 dialog, the `i.milk` concept not only
 includes vegan milks, apparently, but
 `i.excludes` actual milk.
@@ -32,7 +32,7 @@ includes vegan milks, apparently, but
 `p.
 It seems as if when we are dealing with
 illocutionary force we are obliqued to subject
-what we hear to extra interprtation, rather
+what we hear to extra interpretation, rather
 than resting only within `q.literal` meanings
 of sentences, conventionally understood.
 This point is worth emphasizing because it complicates
@@ -78,7 +78,7 @@ overlap:
 `sentenceList`
 
 These `i.can` be read as bare directives, and would
-be interprted as such if the hearer believed the
+be interpreted as such if the hearer believed the
 speaker already knew that yes, he has almond milk, and yes,
 he gets MsNBC.  In (\ref{itm:needcorkscrew}), if both parties
 know there's one corkscrew in the house,
@@ -105,7 +105,7 @@ two, as if people expressed themselves like this:
 `p.
 I think the mixed case is the most prototypical, and pure
 directives or inquiries should be treated as degenerate
-structures whre either directive or inquisitive content
+structures where either directive or inquisitive content
 has dropped out.  After all, even a dictatorial
 command includes the implicit assumption that the order
 both makes sense and is not impossible.  On
@@ -188,7 +188,7 @@ that may become relevant in the future).
 
 `p.
 In sum, when we engage pragmatically with other
-language-users, we tend to do so coopratively,
+language-users, we tend to do so cooperatively,
 sensitive to what they wish to achieve with
 language as well as to the propositional
 details of their discourse.  But this often means
@@ -716,7 +716,7 @@ should be called, and others where a different one, etc.
 in each scenario.  But, as I will argue,
 the structures determining how this multiplicity
 is resolved are not logical structures.  They have
-formal (e.g., type theortic) aspects, but
+formal (e.g., type theoretic) aspects, but
 these are not the `i.kinds` of formal aspects
 that simply manifest a logical systm.
 `p`
@@ -1161,7 +1161,7 @@ when there is some `q.delay` between processing
 steps %-- essentially, when there is some
 explicit sense that a given idea stands in some
 well-defined logical reoation to some other idea.
-Computer programers can crate `q.trivial` monads
+Computer programers can create `q.trivial` monads
 whose behaviors do not deviate at all from an
 imperative style of programming, but any code
 written with `q.trivial` monads can be refactored
@@ -1184,7 +1184,7 @@ meanings in terms of propositions is `i.sometimes`
 appropriate, in the general case it is merely
 circular or tautological.  We certainly should not
 put forth a theory that the `q.meaning` of an
-idea is its proposition %-- the turth is more
+idea is its proposition %-- the truth is more
 the opposite.  The meaning of a proposition is
 its propositional content.  So, if we want a
 truth-theoretic semantics that is

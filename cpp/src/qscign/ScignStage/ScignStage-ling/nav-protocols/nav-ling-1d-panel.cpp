@@ -179,7 +179,7 @@ NAV_Ling1D_Panel::NAV_Ling1D_Panel(int vmn, int vmx, int v, QWidget* parent)
  section_se_layout_->addWidget(section_end_button_);
  section_se_layout_->addStretch();
 
- section_se_group_box_ = new QGroupBox("section Start/End", this);
+ section_se_group_box_ = new QGroupBox("Section Start/End", this);
  section_se_button_group_ = new QButtonGroup(this);
 
 
@@ -198,7 +198,7 @@ NAV_Ling1D_Panel::NAV_Ling1D_Panel(int vmn, int vmx, int v, QWidget* parent)
  section_up_down_layout_->addWidget(section_down_button_);
  section_up_down_layout_->addStretch();
 
- section_up_down_group_box_ = new QGroupBox("section Up/Down", this);
+ section_up_down_group_box_ = new QGroupBox("Section Up/Down", this);
  section_up_down_button_group_ = new QButtonGroup(this);
 
 

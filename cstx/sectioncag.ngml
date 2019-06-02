@@ -707,7 +707,7 @@ with on canonical type (though carriers may be indirectly
 associatd with supertypes of its canonical type).  
 When we talk about procedures calling other 
 procedures, we really mean that the value of symbols in one 
-body of code (whre the calling procedure 
+body of code (where the calling procedure 
 is implemented) is sychronized with tge value of symbols in 
 anothr stretch of code (where the callee is implemented).  
 In short, at any stage of program execution, we can form 
@@ -891,7 +891,7 @@ at runtim, for instance by converting it to a
 identifying the proper `Cpp; function (or function-pointer) and 
 marshaling the channels to mimic the `Cpp; ABI (Application 
 Binary Interface).  Conversely, at a higher level, 
-source-code formations are interprted in terms of the channel 
+source-code formations are interpreted in terms of the channel 
 products they imply: so in code like `i.x = y->f(z)` the 
 implicit channels are likely populated as follows: $z$ goes 
 into $f$'s `i.lambda`/, channel, $y$ into its `i.sigma`/, 
@@ -1401,7 +1401,7 @@ juxtapose cabins and mansions with ordinary houses.
 `p.
 If this gloss on the nature of concepts is accurate, 
 it helps explain why the lexical entrenchment of 
-concepts often has a type-theortic feel.  In the 
+concepts often has a type-theoretic feel.  In the 
 more logical aspects of semantics, lexicalized 
 concepts do present operationally as types: 
 

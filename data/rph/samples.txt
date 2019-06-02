@@ -16,7 +16,7 @@
 
 &/
 
-%section: 5
+%section: 1
 
 
 !/ SG
@@ -185,7 +185,7 @@ $s# 18 19 12
 /!
 <+>
 
-;- s2
+%section: 2
 
 !/ SG
 !/ SE  
@@ -647,8 +647,8 @@ $s# 67 71 31
 /!
 <+>
 
-;- s3
 
+%section: 3
 
 
 !/ SG
@@ -715,7 +715,9 @@ $n/ %section
 $s# 76 78 34
 /!
 <+>
+
 !/ SG
+
 !/ SE  
 $t. This wine is a young Syrah.
 .
@@ -732,7 +734,9 @@ $n/ %section
 $s# 79 80 40
 /!
 <+>
+
 !/ SG
+
 !/ SE  
 $x: itm:maj 
 $t. The majority of students polled were
@@ -760,7 +764,9 @@ $n/ %section
 $s# 81 83 40
 /!
 <+>
+
 !/ SG
+
 !/ SE  
 $t. Most students oppose the tuition increase.
 .
@@ -778,7 +784,9 @@ $n/ %section
 $s# 84 85 41
 /!
 <+>
+
 !/ SG
+
 !/ SE  
 $x: itm:today 
 $t. Today the state university system
@@ -801,7 +809,9 @@ $n/ %section
 $s# 86 87 41
 /!
 <+>
+
 !/ SG
+
 !/ SE  
 $x: itm:sas 
 $t. Student after student came out against the tuition hikes.
@@ -837,7 +847,11 @@ $n/ %section
 $s# 88 91 42
 /!
 <+>
+
+%section: 4
+
 !/ SG
+
 !/ SE  
 $x: itm:across 
 $t. Our house is across the lake.
@@ -952,6 +966,8 @@ $n/ %section
 $s# 104 105 53
 /!
 <+>
+
+%section: 6
 
 !/ SG
 !/ SE  
@@ -1411,7 +1427,11 @@ $n/ %section
 $s# 160 161 82
 /!
 <+>
+
+%section: 7
+
 !/ SG
+
 !/ SE  
 $t. John is married to a woman from his home country, but
 he had to get the marriage legally recognized here.
@@ -1482,7 +1502,11 @@ $n/ %section
 $s# 166 170 85
 /!
 <+>
+
+%section: 8
+
 !/ SG
+
 !/ SE  
 $t. We learned that people fed the rescued dogs.
 .
@@ -1575,8 +1599,10 @@ $s# 181 181 97
 /!
 <+>
 
+%section: 9
 
 !/ SG
+
 !/ SE  
 $t. Today is Tuesday.
 .
@@ -1781,6 +1807,8 @@ $s# 205 207 116
 /!
 <+>
 
+%section: 10
+
 !/ SG
 !/ SE  
 $t. Three times, students asked an interesting question
@@ -1857,6 +1885,8 @@ $n/ %section
 $s# 215 215 121
 /!
 <+>
+
+%section: 11
 
 !/ SG
 !/ SE  

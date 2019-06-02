@@ -85,16 +85,17 @@ void Dataset::load_from_file(QString path)
   ++count;
   Language_Sample_Group* result = new Language_Sample_Group(count);
 
-  doc.graph()->get_sfs(hn, {1,2,3}, [result](QVector<QPair<QString, void*>>& prs)
+  doc.graph()->get_sfs(hn, {1,2,3,4}, [result](QVector<QPair<QString, void*>>& prs)
   {
-   QVector<quint16> nums = {0,0,0};
+   QVector<quint16> nums = {0,0,0,0};
    std::transform(prs.begin(), prs.end(), nums.begin(), [](QPair<QString, void*>& pr)
    {
     return pr.first.toInt();
    });
-   result->set_start_num(nums[0]);
-   result->set_end_num(nums[1]);
-   result->set_page(nums[2]);
+   result->set_section_num(nums[0]);
+   result->set_start_num(nums[1]);
+   result->set_end_num(nums[2]);
+   result->set_page(nums[3]);
   });
 
   doc.graph()->all_afs(hn, [&doc, result](QPair<QString, void*>& pr)
