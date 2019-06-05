@@ -45,6 +45,8 @@ public:
  void msf(QString field_name, QString val);
  void ssf(QString field_name, QString val);
 
+ void add_replacement(QString key, QString val);
+
  void array_append();
  void top_append();
 

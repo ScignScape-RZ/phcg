@@ -39,6 +39,30 @@ Language_Sample::Language_Sample(Language_Sample_Group* group, QString text)
 
 }
 
+QString Language_Sample::get_form()
+{
+ if(classification_.isEmpty())
+   return "Text";
+ int index = classification_.indexOf(':');
+ if(index == -1)
+ {
+  return classification_;
+ }
+ return classification_.left(index);
+}
+
+QString Language_Sample::get_issue()
+{
+ if(classification_.isEmpty())
+   return "(N_A)";
+ int index = classification_.indexOf(':');
+ if(index == -1)
+ {
+  return "(N_A)";
+ }
+ return classification_.mid(index + 1);
+}
+
 void Language_Sample::serialize(QTextStream& qts)
 {
  RPH_Builder rphb(qts);

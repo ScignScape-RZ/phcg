@@ -29,6 +29,8 @@ class Language_Sample_Group : public QVector<Language_Sample*>
  int start_num_;
  int end_num_;
 
+ QString classification_;
+
 public:
 
  Language_Sample_Group(int id);
@@ -41,12 +43,17 @@ public:
 
  ACCESSORS(int ,start_num)
  ACCESSORS(int ,end_num)
+ ACCESSORS(QString ,classification)
 
  void serialize(QTextStream& qts);
 
  static void serialize_samples_to_file(QVector<Language_Sample_Group*>& lsgs, QString file);
 
  QString get_main_text();
+
+ QString get_form();
+ QString get_issue();
+
 
 };
 

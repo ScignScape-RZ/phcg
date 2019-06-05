@@ -454,17 +454,17 @@ ScignStage_Ling_Dialog::ScignStage_Ling_Dialog(XPDF_Bridge* xpdf_bridge,
   qsl.push_back(mt);
 
 //?
-//  qsl.push_back(group->get_form());
+  qsl.push_back(group->first()->get_form());
 //  qsl.push_back(QString::number(group->first()->index()));
 //  qsl.push_back(group->get_issue());
 //  qsl.push_back(QString::number(group->first()->page()));
 //  int chn = group->first()->section();
 //  qsl.push_back(QString::number(chn));
 
-  qsl.push_back("");
-  qsl.push_back("");
-  qsl.push_back("");
-  qsl.push_back("");
+  int id = group->id();
+  qsl.push_back(QString::number(id));
+  qsl.push_back(group->get_issue());
+  qsl.push_back(QString::number(group->page()));
   int sn = group->section_num();
   qsl.push_back(QString::number(sn));
 
@@ -483,6 +483,7 @@ ScignStage_Ling_Dialog::ScignStage_Ling_Dialog(XPDF_Bridge* xpdf_bridge,
   twi_by_group_[group] = twi;
   twi->setData(0, Qt::UserRole, QVariant::fromValue(group));
 
+  QString gf = group->get_form();
 
   for(Language_Sample* samp: *group)
   {
@@ -500,7 +501,14 @@ ScignStage_Ling_Dialog::ScignStage_Ling_Dialog(XPDF_Bridge* xpdf_bridge,
    else
      qsl.push_back(QString("Speaker %1:").arg(sp));
 
-   qsl.push_back(QString());
+   QString sf = samp->get_form();
+
+   if(sf != gf)
+     qsl.push_back(sf);
+   else
+     qsl.push_back(QString());
+
+//   qsl.push_back(QString());
    QString si;
    QString sbi;// = samp->sub_index();
 

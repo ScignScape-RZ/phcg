@@ -27,6 +27,39 @@ Language_Sample_Group::Language_Sample_Group(int id)
 
 }
 
+QString Language_Sample_Group::get_form()
+{
+ if(classification_.isEmpty())
+ {
+  if(isEmpty())
+    return "Text";
+  return first()->get_form();
+ }
+ int index = classification_.indexOf(':');
+ if(index == -1)
+ {
+  return classification_;
+ }
+ return classification_.left(index);
+}
+
+QString Language_Sample_Group::get_issue()
+{
+ if(classification_.isEmpty())
+ {
+  if(isEmpty())
+    return "(N_A)";
+  return first()->get_issue();
+ }
+ int index = classification_.indexOf(':');
+ if(index == -1)
+ {
+  return "(N_A)";
+ }
+ return classification_.mid(index + 1);
+}
+
+
 void Language_Sample_Group::serialize(QTextStream& qts)
 {
  RPH_Builder rphb(qts);
@@ -94,8 +127,17 @@ void Language_Sample_Group::serialize_samples_to_file(
  rphb.leave_prelude();
  rphb.el();
 
+ int current_section  = 0;
+
  for(Language_Sample_Group* lsg: lsgs)
  {
+  if(lsg->section_num() > current_section)
+  {
+   current_section = lsg->section_num();
+   rphb.el();
+   rphb.add_replacement("section", QString::number(current_section));
+   rphb.el();
+  }
   lsg->serialize(qts);
  }
 

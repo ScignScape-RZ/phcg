@@ -22,6 +22,9 @@
 
 &/
 
+
+%section: 1
+
 !/SG
 $i: 1
 
@@ -178,13 +181,15 @@ $s# 11 17 17
 $i: 7
 
 !/SE
-$t. tap water is mixed with flouride).
+$t. Here's a glass of water (even though
+tap water is mixed with flouride).
 .
 /!
 <>>
 
 !/SE
-$t. the stem is brown).
+$t. Bing cherries are dark red (even though
+the stem is brown).
 .
 /!
 <>>
@@ -193,6 +198,9 @@ $t. the stem is brown).
 $s# 12 18 19
 /!
 <+>
+
+
+%section: 2
 
 !/SG
 $i: 8
@@ -220,19 +228,21 @@ $s# 22 20 21
 $i: 9
 
 !/SE
-$t. cold air coming through the cracks.
+$t. It's not open, but there's still some
+cold air coming through the cracks.
 .
 /!
 <>>
 
 !/SE
-$t. the bedroom.
+$t. It's not open, but I closed the window in
+the bedroom.
 .
 /!
 <>>
 
 !/SE
-$t. I can't %-- it's stuck.
+$t. I can't -- it's stuck.
 .
 /!
 <>>
@@ -384,13 +394,15 @@ $s# 24 39 40
 $i: 15
 
 !/SE
-$t. is open %-- please close it!
+$t. I believe the kitchen window
+is open -- please close it!
 .
 /!
 <>>
 
 !/SE
-$t. is open %-- please close it!
+$t. I believe some window
+is open -- please close it!
 .
 /!
 <>>
@@ -444,19 +456,23 @@ $s# 25 45 46
 $i: 18
 
 !/SE
-$t. this class, and I think you are doing pretty well.
+$t. I think you could do excellent work in
+this class, and I think you are doing pretty well.
 .
 /!
 <>>
 
 !/SE
-$t. I don't want to get fined.
+$t. I am not going to talk about the refs because
+I don't want to get fined.
 .
 /!
 <>>
 
 !/SE
-$t. she was during the debate.
+$t. If she wants to win the nomination she
+needs to be as charismatic on the campaign trail as
+she was during the debate.
 .
 /!
 <>>
@@ -492,19 +508,22 @@ $s# 25 50 51
 $i: 20
 
 !/SE
-$t. we can see if other windows are open.
+$t. If the kitchen window is closed,
+we can see if other windows are open.
 .
 /!
 <>>
 
 !/SE
-$t. we can see if there is a draft through the window-cracks.
+$t. If no windows are open,
+we can see if there is a draft through the window-cracks.
 .
 /!
 <>>
 
 !/SE
-$t. ask if she wants a sweater.
+$t. If there is no draft, we can
+ask if she wants a sweater.
 .
 /!
 <>>
@@ -518,14 +537,16 @@ $s# 26 52 54
 $i: 21
 
 !/SE
-$t. Mr. Jones, who's an old friend of mine.  Can he take this call?
+$t. My colleague Ms. O'Shea would like to interview
+Mr. Jones, who's an old friend of mine.  Can he take this call?
 .
 /!
 <>>
 
 !/SE
 $x: itm:Jones
-$t. is not available at the moment.
+$t. I'm sorry, this is his secretary.  Mr. Jones
+is not available at the moment.
 .
 /!
 <>>
@@ -539,13 +560,17 @@ $s# 26 55 56
 $i: 22
 
 !/SE
-$t. a contract in exchange for campaign contributions?
+$t. Mr. Jones, were you present at a meeting where
+the governer promised your employer
+a contract in exchange for campaign contributions?
 .
 /!
 <>>
 
 !/SE
-$t. may incriminate me.
+$t. After consulting with my lawyers, I decline
+to answer that question on the grounds that it
+may incriminate me.
 .
 /!
 <>>
@@ -603,14 +628,16 @@ $i: 25
 
 !/SE
 $x: itm:wants
-$t. window is closed` to be true.
+$t. Grandma wants the proposition "the kitchen
+window is closed" to be true.
 .
 /!
 <>>
 
 !/SE
 $x: itm:cold
-$t. `q.I am cold` to be false.
+$t. Grandma wants the proposition
+"I am cold" to be false.
 .
 /!
 <>>
@@ -645,34 +672,37 @@ $s# 31 65 66
 $i: 27
 
 !/SE
-$t. and a proposition (`PTwo;) whose content is that the Leafs win.
+$t. There is a proposition (call it P1)
+whose propositional content is that the Jets win
+and a proposition (P2) whose content is that the Leafs win.
 .
 /!
 <>>
 
 !/SE
 $x: itm:entail
-$t. `PTwo; entails the negation of `POne;.
+$t. P2 entails the negation of P1.
 .
 /!
 <>>
 
 !/SE
-$t. He wants the content of `PTwo; to be true.
+$t. He wants the content of P2 to be true.
 .
 /!
 <>>
 
 !/SE
 $x: itm:false
-$t. with `POne; being false.
+$t. His wishes are only consistent
+with P1 being false.
 .
 /!
 <>>
 
 !/SE
 $x: itm:Jets
-$t. He wants the content of `POne; to be false.
+$t. He wants the content of P1 to be false.
 .
 /!
 <>>
@@ -682,19 +712,25 @@ $s# 31 67 71
 /!
 <+>
 
+
+%section: 3
+
 !/SG
 $i: 28
 
 !/SE
 $x: itm:store
-$t. local liquor store?
+$t. Remember that wine we tasted on the Niagara 
+Peninsula last summer?  Can you find it in our 
+local liquor store?
 .
 /!
 <>>
 
 !/SE
 $x: itm:varietal
-$t. Peninsula last summer?  What varietal was that again?
+$t. Remember that wine we tasted on the Niagara 
+Peninsula last summer?  What varietal was that again?
 .
 /!
 <>>
@@ -714,7 +750,8 @@ $t. That wine was a Cabernet Franc.
 <>>
 
 !/SE
-$t. They are very sweet.
+$t. Those dogs are my neighbor's.  
+They are very sweet.
 .
 /!
 <>>
@@ -775,14 +812,16 @@ $i: 32
 
 !/SE
 $x: itm:maj
-$t. opposed to tuition increases.
+$t. The majority of students polled were
+opposed to tuition increases.
 .
 /!
 <>>
 
 !/SE
 $x: itm:most
-$t. about tuition increases.
+$t. Most of the students expressed disappointment
+about tuition increases.
 .
 /!
 <>>
@@ -825,14 +864,18 @@ $i: 34
 
 !/SE
 $x: itm:today
-$t. at least 10\%.  Most students oppose a tuition increase.
+$t. Today the state university system
+announced plans to raise tuition by
+at least 10\%.  Most students oppose a tuition increase.
 .
 /!
 <>>
 
 !/SE
 $x: itm:colleges
-$t. most students oppose a tuition increase.
+$t. Colleges all over the country, facing
+rising costs, have had to raise tuition, but
+most students oppose a tuition increase.
 .
 /!
 <>>
@@ -854,21 +897,24 @@ $t. Student after student came out against the tuition hikes.
 
 !/SE
 $x: itm:substantial
-$t. have come out against the tuition hikes.
+$t. A substantial number of students
+have come out against the tuition hikes.
 .
 /!
 <>>
 
 !/SE
 $x: itm:mass
-$t. may soon reach a critical mass.
+$t. The number of students protesting the tuition hikes
+may soon reach a critical mass.
 .
 /!
 <>>
 
 !/SE
 $x: itm:tipping
-$t. may have reached a tipping point.
+$t. Protests against the tuition hikes
+may have reached a tipping point.
 .
 /!
 <>>
@@ -877,6 +923,9 @@ $t. may have reached a tipping point.
 $s# 42 88 91
 /!
 <+>
+
+
+%section: 4
 
 !/SG
 $i: 36
@@ -946,13 +995,15 @@ $i: 37
 
 !/SE
 $x: itm:apartment
-$t. he actually lives in an apartment).
+$t. I'm going to a party at my brother's house (suppose
+he actually lives in an apartment).
 .
 /!
 <>>
 
 !/SE
-$t. (said of a stall in a Chinaatown food court).
+$t. This restaurant has the best Hokkien noodles
+(said of a stall in a Chinaatown food court).
 .
 /!
 <>>
@@ -1002,6 +1053,9 @@ $t. What time does train 100 depart from Newark?
 $s# 53 104 105
 /!
 <+>
+
+
+%section: 6
 
 !/SG
 $i: 40
@@ -1113,7 +1167,10 @@ $t. (for the grand finale).
 <>>
 
 !/SE
-$t. performed onstage matched the lyrics they had in hand).
+$t. Everyone in the audience sang along to two songs
+(they were randomnly handed lyrics to different songs when
+they came in, and we asked them to join in when the song being
+performed onstage matched the lyrics they had in hand).
 .
 /!
 <>>
@@ -1127,13 +1184,18 @@ $s# 76 116 118
 $i: 45
 
 !/SE
-$t. yesterday and both looked much better.
+$t. The rescued dogs were treated by an experienced vet.
+One needed surgery and one got a blood transfusion.  We went there
+yesterday and both looked much better.
 .
 /!
 <>>
 
 !/SE
-$t. %-- it's a dangerous stretch of highway.
+$t. The rescued dogs were treated by an experienced vet.
+One had been struck by a car and needed surgery on his leg.  We
+went there yesterday and saw debris from another car crash
+-- it's a dangerous stretch of highway.
 .
 /!
 <>>
@@ -1147,19 +1209,23 @@ $s# 77 119 120
 $i: 46
 
 !/SE
-$t. We saw a lot of other dogs getting medical attention.
+$t. The rescued dogs were treated by an experienced vet.
+We saw a lot of other dogs getting medical attention.
 .
 /!
 <>>
 
 !/SE
-$t. It looked very modern, like a human hospital.
+$t. The rescued dogs were treated by an experienced vet.
+It looked very modern, like a human hospital.
 .
 /!
 <>>
 
 !/SE
-$t. for humans as well as dogs.
+$t. The rescued dogs were treated by an experienced vet.
+We looked around and realized how dangerous that road is --
+for humans as well as dogs.
 .
 /!
 <>>
@@ -1197,19 +1263,23 @@ $t. New mathematical models rescued her original research from obscurity.
 <>>
 
 !/SE
-$t. system may actually be extraordinary.
+$t. Discovery of nearby earth-like planets rescued that
+star from its reputation as ordinary and boring and revealed that its solar
+system may actually be extraordinary.
 .
 /!
 <>>
 
 !/SE
-$t. he never says anything controversial.
+$t. His latest comments rescued him from the perception that
+he never says anything controversial.
 .
 /!
 <>>
 
 !/SE
-$t. people from a basically-defeated Germany and sent them to Siberia.
+$t. The Soviets rescued thousands of
+people from a basically-defeated Germany and sent them to Siberia.
 .
 /!
 <>>
@@ -1253,7 +1323,7 @@ $t. There's a lot of coffee left in the pot.
 <>>
 
 !/SE
-$t. %-- should I pour it out?
+$t. -- should I pour it out?
 .
 /!
 <>>
@@ -1279,7 +1349,7 @@ $t. She poured coffees from an ornate beaker.
 <>>
 
 !/SE
-$t. %-- shall I pour them out?
+$t. -- shall I pour them out?
 .
 /!
 <>>
@@ -1307,7 +1377,8 @@ $t. New Yorkers reliably vote for Democratic presidential candidates.
 
 !/SE
 $x: itm:commute
-$t. to New York City.
+$t. New Yorkers constantly complain about how long it takes to commute
+to New York City.
 .
 /!
 <>>
@@ -1333,7 +1404,8 @@ $t. presidential candidates.
 <>>
 
 !/SE
-$t. long it takes to commute to New York City.
+$t. Many New York metro area residents complain about how
+long it takes to commute to New York City.
 .
 /!
 <>>
@@ -1347,7 +1419,8 @@ $s# 80 143 145
 $i: 52
 
 !/SE
-$t. They played some new songs.
+$t. My favorite band gave a free concert last night.
+They played some new songs.
 .
 /!
 <>>
@@ -1377,37 +1450,44 @@ $t. There was some toast earlier, but they're all gone.
 <>>
 
 !/SE
-$t. got eroded by trades and free agency.
+$t. That franchise had a core of talented young players, but it
+got eroded by trades and free agency.
 .
 /!
 <>>
 
 !/SE
-$t. drifted away due to trades and free agency.
+$t. That franchise had a cohort of talented players, but they
+
+drifted away due to trades and free agency.
 .
 /!
 <>>
 
 !/SE
-$t. has not won a title in decades.
+$t. Many star players were drafted by that franchise, but it
+has not won a title in decades.
 .
 /!
 <>>
 
 !/SE
-$t. failed to surround them with enough depth.
+$t. Many star players were drafted by that franchise, but they
+failed to surround them with enough depth.
 .
 /!
 <>>
 
 !/SE
-$t. were not surrounded with enough depth.
+$t. Many star players were drafted by that franchise, but they
+were not surrounded with enough depth.
 .
 /!
 <>>
 
 !/SE
-$t. did not have enough depth.
+$t. Many star players were drafted by that franchise, but they
+did not have enough depth.
 .
 /!
 <>>
@@ -1421,21 +1501,24 @@ $s# 81 146 156
 $i: 53
 
 !/SE
-$t. they debuted new songs.
+$t. The band planned a tour, where
+they debuted new songs.
 .
 /!
 <>>
 
 !/SE
 $x: itm:teamflew
-$t. New York and they played the Yankees.
+$t. The team flew to 
+New York and they played the Yankees.
 .
 /!
 <>>
 
 !/SE
 $x: itm:theflies
-$t. will perform `q.The Flies`/.
+$t. The city's largest theater company
+will perform "The Flies".
 .
 /!
 <>>
@@ -1449,13 +1532,17 @@ $s# 82 157 159
 $i: 54
 
 !/SE
-$t. sounded Quebecois.
+$t. The city's largest theater company
+performed "The Flies" in French, but everyone's accent
+sounded Quebecois.
 .
 /!
 <>>
 
 !/SE
-$t. to discuss Sartre's philosophy when the play was over.
+$t. The city's largest theater company
+performed "The Flies"; then they invited a professor
+to discuss Sartre's philosophy when the play was over.
 .
 /!
 <>>
@@ -1465,29 +1552,36 @@ $s# 82 160 161
 /!
 <+>
 
+
+%section: 7
+
 !/SG
 $i: 55
 
 !/SE
-$t. he had to get the marriage legally recognized here.
+$t. John is married to a woman from his home country, but
+he had to get the marriage legally recognized here.
 .
 /!
 <>>
 
 !/SE
-$t. live in a state that does not recognize same-sex marriages.
+$t. John married his boyfriend in Canada, but they
+live in a state that does not recognize same-sex marriages.
 .
 /!
 <>>
 
 !/SE
-$t. many ways he's still a bachelor.
+$t. John has been married for five years, but in
+many ways he's still a bachelor.
 .
 /!
 <>>
 
 !/SE
-$t. and wherever yours is, you need a mini-fridge.
+$t. Every married man needs a bachelor pad somewhere,
+and wherever yours is, you need a mini-fridge.
 .
 /!
 <>>
@@ -1501,13 +1595,15 @@ $s# 83 162 165
 $i: 56
 
 !/SE
-$t. were rescued).
+$t. People had fed the rescued dogs (i.e.: before they
+were rescued).
 .
 /!
 <>>
 
 !/SE
-$t. of registered voters in New York do so).
+$t. New Yorkers vote democratic (i.e.: the majority
+of registered voters in New York do so).
 .
 /!
 <>>
@@ -1519,13 +1615,14 @@ $t. There is milk in that coffee (i.e.: almond milk).
 <>>
 
 !/SE
-$t. corskscrew).
+$t. I handed him a bottle opener (i.e.: a butterfly
+corskscrew).
 .
 /!
 <>>
 
 !/SE
-$t. That wine is Fabernet Franc (i.e.: `q.W is CF`/).
+$t. That wine is Fabernet Franc (i.e.: "W is CF").
 .
 /!
 <>>
@@ -1534,6 +1631,9 @@ $t. That wine is Fabernet Franc (i.e.: `q.W is CF`/).
 $s# 85 166 170
 /!
 <+>
+
+
+%section: 8
 
 !/SG
 $i: 57
@@ -1545,7 +1645,8 @@ $t. We learned that people fed the rescued dogs.
 <>>
 
 !/SE
-$t. he would govern in a bipartisan manner.
+$t. No-one seriously entertained the belief that
+he would govern in a bipartisan manner.
 .
 /!
 <>>
@@ -1566,19 +1667,22 @@ $t. The Trump campaign colluded with Russia.
 <>>
 
 !/SE
-$t. the Trump campaign colluded with Russia.
+$t. Several witnesses testified that
+the Trump campaign colluded with Russia.
 .
 /!
 <>>
 
 !/SE
-$t. the Trump campaign colluded with Russia.
+$t. Reputable newspapers have reported that
+the Trump campaign colluded with Russia.
 .
 /!
 <>>
 
 !/SE
-$t. the Trump campaign colluded with Russia.
+$t. Most Democrats believe that
+the Trump campaign colluded with Russia.
 .
 /!
 <>>
@@ -1627,6 +1731,9 @@ $i: 60
 $s# 97 181 181
 /!
 <+>
+
+
+%section: 9
 
 !/SG
 $i: 61
@@ -1831,7 +1938,8 @@ $t. This book, which costs \$40, has some crazy ideas inside.
 <>>
 
 !/SE
-$t. nonfiction, has some dude's phone number scrawled inside.
+$t. This book, which the library classifies as young adult 
+nonfiction, has some dude's phone number scrawled inside.
 .
 /!
 <>>
@@ -1847,6 +1955,9 @@ $s# 116 205 207
 /!
 <+>
 
+
+%section: 10
+
 !/SG
 $i: 67
 
@@ -1859,25 +1970,29 @@ $s# 118 208 208
 $i: 68
 
 !/SE
-$t. with no idea of its history.
+$t. Time after time, tourists (a tourist) walk(s) by this building
+with no idea of its history.
 .
 /!
 <>>
 
 !/SE
-$t. will ask me for directions.
+$t. The streets around here are confusing; often people (someone)
+will ask me for directions.
 .
 /!
 <>>
 
 !/SE
-$t. paper to compain about my grade(s).
+$t. Student after student came with their (his/her)
+paper to compain about my grade(s).
 .
 /!
 <>>
 
 !/SE
-$t. %-- complained about the tuition increase.
+$t. Student after student -- and their (his/her) parents
+-- complained about the tuition increase.
 .
 /!
 <>>
@@ -1891,13 +2006,15 @@ $s# 119 209 212
 $i: 69
 
 !/SE
-$t. first time this year.
+$t. The Maple Leafs failed to win in overtime for the
+first time this year.
 .
 /!
 <>>
 
 !/SE
-$t. to win in overtime.
+$t. The Maple Leafs failed for the first time this year
+to win in overtime.
 .
 /!
 <>>
@@ -1914,6 +2031,9 @@ $i: 70
 $s# 121 215 215
 /!
 <+>
+
+
+%section: 11
 
 !/SG
 $i: 71
@@ -2011,7 +2131,8 @@ $s# 136 224 225
 $i: 75
 
 !/SE
-$t. the table (?).
+$t. The newspaper fired the reporter and fell off
+the table (?).
 .
 /!
 <>>

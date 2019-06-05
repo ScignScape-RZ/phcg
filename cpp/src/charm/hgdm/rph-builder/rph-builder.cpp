@@ -46,6 +46,11 @@ void RPH_Builder::enter_coda()
  qts_ << "\n/&";
 }
 
+void RPH_Builder::add_replacement(QString key, QString val)
+{
+ qts_ << "\n%" << key << ": " << val;
+}
+
 void RPH_Builder::el(int i)
 {
  for(int j = 0; j < i; ++j)

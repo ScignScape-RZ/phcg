@@ -32,6 +32,7 @@ class Language_Sample //: phaong<pg_t>::Hypernode
  QString latex_label_;
 
  Language_Sample_Group* group_;
+ QString classification_;
 
 public:
 
@@ -39,8 +40,12 @@ public:
 
  ACCESSORS(QString ,text)
  ACCESSORS(QString ,latex_label)
+ ACCESSORS(QString ,classification)
 
  ACCESSORS(Language_Sample_Group* ,group)
+
+ QString get_form();
+ QString get_issue();
 
  void serialize(QTextStream& qts);
 
