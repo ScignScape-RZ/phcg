@@ -818,7 +818,7 @@ operator `DigammaR;, meaning that the package `Chp; is
 `q.evaluated` and then control passes to the stage 
 labeled `stageLbl;.`footnote.
 The motivation for the term `q.digamma` is first that the `q.sigma` in 
-`sigmaCalc; looksblike a smaller version of th Greek letter Digamma, 
+`sigmaCalc; looksblike a smaller version of the Greek letter Digamma,
 and second that `q.gamma` is often used to represent graphs, and 
 `q.digamma reduction` can be sen as a relationship between 
 two different source-code graphs.
@@ -966,7 +966,7 @@ from source code literals.  I'll call these
 In `Cpp;, similar constructor-functions are called `i.literal 
 operators`/.  This terminology only applies to `q.user-defined` 
 constructors; the compiler itself handles initialization 
-for built-in typs like integer and floats.  However th 
+for built-in typs like integer and floats.  However the
 overarching term `q.literal-constructors` is helpful for 
 theory-focused languag-agnostic discussion about types and 
 constructors.
@@ -1231,7 +1231,7 @@ an object exhibiting core Conceptual Space
 graphics environment.  This object could have some 13 dimensions: 
 colors for the shape's interior and border (including 3-dimensional 
 color vectors plus transparency factors); the top-left position,  
-width, and height of the rectangle; and the width of th border.  
+width, and height of the rectangle; and the width of the border.
 A software engineer has numerous constructor options for 
 this type of object: should there be one `q.pod-tuple` constructor 
 that takes all 13 values in a flat list?`footnote.

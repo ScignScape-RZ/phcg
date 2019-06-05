@@ -233,7 +233,7 @@ Language semanticcs, e.g. \cite[p. ?]{Luo}.
 `p`
 
 `p.
-Th point of this example is that many scientific concepts 
+The point of this example is that many scientific concepts
 %-- the semantic norms embedded in how scientific terms are defined 
 and understood and how the concepts ar used in scintific theories 
 and research %-- can be rigorously specified with a suitably 
@@ -583,7 +583,7 @@ on specialized `q.channels`/.
 The notion of `i.channel` is therefore closely tied to the notion 
 of `i.procedure`/, and `i.types` are similarly specified 
 via both procedures and channels.  That is, most of 
-th complex typs in a type system are functional 
+the complex typs in a type system are functional
 types, which in turn are characterized in 
 part by the kind of channels used by instantiating procedures.  
 In principle, function-types are differentiated by the `i.kinds` 

@@ -1,0 +1,403 @@
+
+`section.Truth-Theoretic Semantics and Enaction`
+
+`p.
+I will start by reviewing illocutionary pragmatics, to 
+identify some of the contextual and interpretive 
+transformations that pertain to mapping surface language 
+to propositional contents.  My point is to establish 
+what should be a common theory of logicality that can be
+shared by both critics and defenders of `q.truth-theoretic` 
+paradigms, on which basis their legitimate disputes 
+can be investigated.
+`p`
+
+`p.
+Many linguists (on both sides, I would say, of my 
+central truth-theoretic pro/con), 
+seem to analyze hedges like `q.could you please`
+as merely dressing over crude commands: we don't
+want to come across as giving people orders, but
+sometimes we do intend to ask pople to do specific
+things.  As a result, we feel obliged to couch the
+request in conversational gestures that signal
+our awareness of how bald commands may lie outside
+the conversational norms.  These ritualistic
+`q.could you please`/-like gestures may have
+metalinguistic content, but %-- so the theory
+goes %-- they do not `i.semantically` alter
+the speech-act's directive nature.
+`p`
+
+`p.
+The problem with this analysis is that sometimes
+directive and `q.inquisitive` dimensions can
+overlap:
+
+`sentenceList,
+`sentenceItem; \label{itm:almond} Do you have almond milk?
+`sentenceItem; Can you get MsNBC on your TV?
+`sentenceItem; \label{itm:needcorkscrew} This isn't a screw-cap bottle: I need a corkscrew.
+`sentenceList`
+
+These `i.can` be read as bare directives, and would
+be interpreted as such if the hearer believed the
+speaker already knew that yes, he has almond milk, and yes,
+he gets MsNBC.  In (\ref{itm:needcorkscrew}), if both parties
+know there's one corkscrew in the house,
+the statement implies a directive to fetch `i.that` corkscrew.
+But, equally, (\ref{itm:almond})-(\ref{itm:needcorkscrew}) can `i.also` be read as bare
+questions with no implicature: say, as fans of
+almond milk and MsNBC endorsing those selections,
+or pointing out that opening the bottle
+will need `i.some` corkscrew.
+And, meanwhile, (\ref{itm:almond})-(\ref{itm:needcorkscrew})
+can `i.also` be read as a mixture of the
+two, as if people expressed themselves like this:
+
+
+`sentenceList,
+`sentenceItem; I think the window is open, can you close it?
+`sentenceItem; I see you have almond milk, can I have some?
+`sentenceItem; If you get MsNBC, can you turn on Rachel Maddow?
+`sentenceItem; If there is a corkscrew in the house, can you get it?
+`sentenceList`
+
+`p`
+
+`p.
+I think the mixed case is the most prototypical, and pure
+directives or inquiries should be treated as degenerate
+structures where either directive or inquisitive content
+has dropped out.  After all, even a dictatorial
+command includes the implicit assumption that the order
+both makes sense and is not impossible.  On
+the other hand, we don't ask questions for no
+reason: `q.do you have almond milk` may be a
+suggestion rather than a request, but it still
+carries an implicature (e.g., that the addressee
+`i.should` get almond milk).
+`p`
+
+`p.
+Ordinary requests carry the assumption that addressees
+can follow through without undue inconvenience,
+which includes a package of assumptions about both
+what is currently the case and what is possible.
+`q.Close the window` only has literal force if the
+window is open.  So when making a request speakers
+have to signal that they recognize the request involves
+certain assumptions and are rational enough to
+accept modifications of these assumptions in
+lieu of literal compliance.  This is why
+interrogative forms like `q.can you` or
+`q.could you` are both semantically nontrivial
+and metadiscursively polite: they leave open the
+possibility of subsequent discourse framing the original
+request just as a belief-assertion.  Developments
+like `q.can you open the window` %-- `q.no, it's closed`
+are not ruled out.  At the same time, interrogative forms
+connote that the speaker assumes the addressees can
+fulfill the request without great effort: an implicit
+assumption is that they `i.can` and also `i.are
+willing to` satisfy the directive.  This is an
+assumption, not a presumption: the speaker
+would seem like a bully if he acted as if he
+gave no thought to his demands being too much
+of an imposition %-- as if he were taking
+the answer to `q.can you` quesions for granted.
+This is another reason why requests
+should be framed as questions.  So, in short,
+`q.commands` are framed as questions because the speaker
+literally does not know for sure whether the command is
+possible; given this uncertainty a command `i.is` a question,
+and the interrogative form is not just a non-semantic
+exercise in politesse.
+`p`
+
+`p.
+Sometimes the link between directives and
+belief assertions is made explicit.  A common
+pattern is to use `q.I believe that` as an
+implicature analogous to interrogatives:
+
+`sentenceList,
+`sentenceItem; I believe you have a reservation for Jones?
+`sentenceItem; I believe this is the customer service desk?
+`sentenceItem; I believe we ordered a second basket of garlic bread?
+`sentenceItem; I believe you can help me find computer
+acessories in this section?
+`sentenceList`
+
+These speakers are indirectly signaling what they want
+someone to do by openly stating the requisite
+assumptions %-- `i.I believe you can` in place
+of `i.can you?`/.  The implication is that
+such assumptions translate clearly to a
+subsequent course of action %-- the guest who
+`i.does` have that reservation should be checked in;
+the cashier who `i.can` help a customer find
+accessories should do so.  But underlying these
+performances is recognition that
+illocutionary force is tied to background
+assumptions, and conversants are reacting to
+the propositional content of those assumptions
+as well as the force itself.  If I `i.do` close the
+window I am not only fulfilling
+the request but also confirming that the window
+`i.could` be closed (a piece of information
+that may become relevant in the future).
+`p`
+
+`p.
+In sum, when we engage pragmatically with other
+language-users, we tend to do so cooperatively,
+sensitive to what they wish to achieve with
+language as well as to the propositional
+details of their discourse.  But this often means
+that I have to interpret propositional
+content in light of contexts and implicatures.
+Note that both of these are possible:
+
+`sentenceList,
+`sentenceItem; Do you have any milk?
+`sentenceItem; Yes, we have almond milk.
+`sentenceItem; No, we have almond milk.
+`sentenceList`
+
+A request for milk in a vegan restaurant could plausibly be
+interpreted as a request for a vegan milk-substitute.
+So the concept `i.milk` in that context may actually be
+interpreted as the concept `i.vegan milk`/.  
+Responding to the force of speech-acts
+compels me to treat them as not `i.wholly`
+illocutionary %-- they are in part statements of
+belief (like ordinary assertions).  One reason I need
+to adopt an epistemic (and not just obligatory)
+attitude to illocutionary acts is that I need to
+clarify what meanings the speaker intends, which
+depends on what roles she is assigning to
+constituent concepts.
+`p`
+
+`p.
+Suppose my friend says this, before and after:
+
+`sentenceList,
+`sentenceItem; \label{itm:put} Can you put some almond milk in my coffee?
+`sentenceItem; \label{itm:after} Is there milk in this coffee?
+`sentenceList`
+
+Between (\ref{itm:put}) and (\ref{itm:after}) I do put almond milk
+in his coffee and affirm `q.yes` to (\ref{itm:after}).  I feel it
+proper to read (\ref{itm:after})'s `q.milk` as really meaning
+`q.almond milk`/, in light of (\ref{itm:put}).  Actually
+I should be `i.less` inclined to say `q.yes`
+if (maybe as a prank) someone had instead
+put real (cow) milk in the coffee.  In responding
+to his question I mentally substitute what
+he almost certainly `i.meant` for how
+(taken out of context) (\ref{itm:after}) would usually
+be interpreted.  In this current
+dialog, the `i.milk` concept not only
+includes vegan milks, apparently, but
+`i.excludes` actual milk.
+`p`
+
+`p.
+It seems %-- on the evidence of cases like this one %--
+as if when we are dealing with
+illocutionary force we are obliged to subject
+what we hear to extra interpretation, rather
+than resting only within `q.literal` meanings
+of sentences, conventionally understood.
+This point is worth emphasizing because it complicates
+our attempts to link illocution with propositional
+content.  Suppose grandma asks us to close the
+kitchen window.  Each of these are plausible and
+basically polite responses:
+
+`sentenceList,
+`sentenceItem; It's not open, but there's still some
+cold air coming through the cracks.
+`sentenceItem; It's not open, but I closed the window in
+the bedroom.
+`sentenceItem; I can't %-- it's stuck.
+`sentenceList`
+
+In each case I have not fulfilled her request `visavis;
+its literal meaning, but I `i.have` acted benevolently
+in terms of conversational maxims.  
+`p`
+
+`p.
+Part of reading propositional content is
+syncing our conceptual schemas with our fellow
+conversants.  The illocutionary
+dimension of a request like `i.can I have some milk?`
+makes this interpretation especially important,
+because the addressee wants to make a good-faith effort
+to cooperate with the pragmatic intent of the
+spech-act.  But cooperation requires the
+cooperating parties' conceptual schemas to
+be properly aligned.  I therefore have to
+suspend the illocutionary force of a directive
+temporarily and treat it as locutionary
+statement of belief, interpret its apparent
+conceptual underpinnings in that mode, and
+then add the illocutionary force back in: if I
+brought `i.real` milk to a vegan customer who
+asked for `q.milk` I would be `i.un`/-cooprative.
+`p`
+
+`p.
+The upshot is that conversational implicatures
+help us contextualize the conceptual negotiations
+that guarantee our grasping the correct
+propositional contents, and vice-versa.  This means
+that propositionality is woven throughout both
+assertive and all other modes of language, but it
+also means that propositional content can be
+indecipherable without a detailed picture
+of the current context (including illocutionary
+content).  The proposional content of,
+say, `i.there is milk in this coffee` has to be
+judged sensitive to contexts like `i.milk`
+meaning `i.vegan milk` %-- and this
+propagates from a direct propositional
+to any propositional attitudes which may
+be directed towards it, including requsts like
+`i.please put milk in this coffee`/.
+`p`
+
+`p.
+Suppose the grandkids close grandma's bedroom window
+when she asks them to close the kitchen window.
+The propositional content at the core of grandma's
+request is that the kitchen window be closed; the
+content attached to it is an unstated belief that
+this window is open.  Thus, the truth-conditions
+satisfying her implicit understanding would be
+that the kitchen window went from being open to being
+closed.  As it happens, that window is already
+closed.  So the truth-conditions that would satisfy
+grandma's initial belief-state do not obtain %-- her
+beliefs are false %-- but the truth conditions satisfying
+her desired result `i.do` obtain.  The window
+`i.is` closed.  Yet the grandkids should not thereby
+assume that her request has been properly responded to;
+it is more polite to guess at the motivation behind
+the request, e.g., thay she felt a draft
+of cold air.  In short, they should look outside
+the truth conditions of her original
+request taken literally, and `i.interpret`
+her request, finding different content
+with different truth-conditions that are both consistent
+with fact and address whatever pragmatic goals
+grandma had when making her request.  They might
+infer her goal is to prevent an uncomfortable
+draft, and so a reasonable `q.substitute content` is
+the proposition that `i.some` window is open,
+and they should close `i.that` one.
+`p`
+
+`p.
+So the grandkids should reason as if translating
+between these two implied meanings:
+
+`sentenceList,
+`sentenceItem; I believe the kitchen window
+is open %-- please close it!
+`sentenceItem; I believe some window
+is open %-- please close it!
+`sentenceList`
+
+They have to revise the simplest reading of
+the implicit propositional content of grandma's
+`i.actual` request, because the actual request is
+inconsistent with pertinent facts.  In short, they
+feel obliged to explore propositional alternatives
+so as to find an alternative, implicit request whose
+propositional content `i.is` consistent with
+fact and also meets the original request's illocutionary
+force cooperatively.
+`p`
+
+`p.
+In essence, we need to express a requester's desire as
+itslf, in its totality, a specific propositional content,
+thinking to ourselves (or even saying to others) things
+like
+
+`sentenceList,
+`sentenceItem; Grandma wants us to close the window.
+`sentenceItem; He wants a bottle opener.
+`sentenceList`
+
+But to respond politely we need to modify
+the parse of their requests to capture the
+`q.essential` content:
+
+`sentenceList,
+`sentenceItem; Grandma wants us to eliminate the cold draft.
+`sentenceItem; He wants something to open that bottle.
+`sentenceList`
+
+We have to read outside the literal interpretation
+of what they are saying.  This re-reading is something
+that may be appropriate to do with respect to
+other forms of speech also; 
+but our conversational responsibilty to infer
+some unstated content is especially pronounced
+when we are rsponding to an explicit
+request for something.
+`p`
+
+`p.
+Certainly, in any case, meanings are not literal.
+But how then do we understand what people are saying?
+Trying to formulate a not-entirely-haphazard
+account of this process, we can speculate
+that interpreting what someone is `q.really` saying
+involves systematically mapping their apparent
+concepts and references to some superimposed
+inventory designed to mitigate false beliefs or
+conceptual misalignments among language users in some
+context.  That means, we are looking for mappings
+like `i.milk` to `i.almond milk` in (\ref{itm:can}) from a
+vegan restaurant, or `i.kitchen window` to
+`i.bedroom window` in (\ref{itm:close}) if it is the latter
+that is open:
+
+`sentenceList,
+`sentenceItem; \label{itm:can} Can I have some milk?
+`sentenceItem; \label{itm:close} Can you close the kitchen window?
+`sentenceList`
+
+The point of these `q.mappings` is that they
+preserve the possibility of
+modeling the `i.original` propositional content
+by identifying truth conditions
+for that content to be satisfied.
+`p`
+
+`p.
+A `i.literal` truth-condition model doesn't work in
+cases like (\ref{itm:can}) and (\ref{itm:close}): the diner's request
+is `i.not` satisfied if it is the case
+that there is now (real) milk in her coffee; and
+grandma's request is not necessarily satisfied if it is
+the case that the kitchen window is closed.  The
+proposition `q.the kitchen window is closed` only bears on
+grandma's utterance insofar as she believes that
+this window is open and causing a draft.  So if we want
+to interpret the underlying locutionary content
+of (\ref{itm:can}) and (\ref{itm:close}) truth-theoreticaly, we need to
+map the literal concepts appearing
+in these sentences to an appropriate translation,
+a kind of `q.coordinate transformation` that
+can map concepts onto others, like milk/almond milk
+and kitchen window/bedroom window.
+`p`
+
+
