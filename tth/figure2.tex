@@ -1,0 +1,98 @@
+\begin{figure*}
+\caption{Dependency-style graph with argument repetition}	
+\label{fig:ESA}
+\vspace{1em}
+\hspace{0.15\textwidth}	
+\begin{minipage}{0.7\textwidth}
+\begin{tikzpicture}
+
+%\tikzset{snake it/.style={decorate, decoration=snake, segment length=5mm, amplitude=15mm}}
+
+%\draw
+
+%\node [s1] at (0,0) {Student};
+
+\node (s1) at (1,1) {\textbf{Student}};
+\node (after) [right=5mm of s1] {\textbf{after}};
+\node (s2) [right=5mm of after] {\textbf{student}};
+\node (complained) [right=5mm of s2] {\textbf{complained}};
+
+\node (s1Rep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=3.5cm of s1] {};
+\node (afterRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=2cm of after] {};
+\node (s2Rep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=3.5cm of s2] {};
+\node (complainedRep) [double,draw=black,shape=circle,thick,fill=gray!50,inner sep=.5em,below=2.5cm of complained] {};
+
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70, 
+ dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+ (s1) to (s1Rep);
+
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70, 
+ dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(after) to (afterRep);
+ 
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70,  
+ dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(s2) to (s2Rep);
+
+\draw [ |-,-|, <->, line width = .8mm, draw=gray!70, 
+ dashed, double equal sign distance, >= stealth, shorten <= .25cm, shorten >= .25cm ]
+(complained) to (complainedRep);
+ 
+\draw [shorten <= .25cm, shorten >= .25cm ] 
+(afterRep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm, above] {1} (s1Rep);
+
+\draw [shorten <= .25cm, shorten >= .25cm ] 
+(afterRep) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm,above] {1} (s2Rep);
+
+\node (s1E) [left=-2mm of s1Rep.east]{};
+\node (s2E) [left=1mm of s2Rep.west]{};
+
+\draw [shorten <= 2cm, shorten >= .3cm, double, % bend left = 5, 
+decorate, decoration={snake, segment length=5mm, amplitude=.5mm}] %, amplitude=15mm]  
+(s1E) to node [draw=black,shape = star,star points=4,thick,inner sep = 0mm, below] {2} (s2E);
+
+\draw [shorten <= .5cm, shorten >= .5cm ] 
+(afterRep) edge [bend left=20,looseness=1] node [draw=black,shape = star,star points=4,thick,inner sep = 0mm, 
+ above, near end ] {3} (complainedRep);
+
+\node (frameTopLeft) [below left = 1.5cm and -.65 cm of s1] {};
+\node (frameBottomLeft) [below = 2.5cm of frameTopLeft] {};
+\node (frameBottomRight) [right = 3.95cm of frameBottomLeft] {};
+\node (frameTopRight) [above = 2.5cm of frameBottomRight] {};
+
+\draw [shorten <= 0.15cm, shorten >= 0.15cm ] 
+(frameTopLeft) edge [bend right=30,looseness=1] (frameBottomLeft);
+
+\draw [shorten <= 0.15cm, shorten >= 0.15cm ] 
+(frameBottomLeft) edge [bend right=30,looseness=1] (frameBottomRight);
+
+\draw [shorten <= 0.15cm, shorten >= 0.15cm ] 
+(frameBottomRight) edge [bend right=35,looseness=1] (frameTopRight);
+
+\draw [shorten <= 0.15cm, shorten >= 0.45cm ] 
+(frameTopRight) edge [bend right=30,looseness=1]
+node [draw=black,shape = regular polygon,regular polygon sides=3,thick,inner sep = .2mm, 
+above, near start, shape border rotate = 180] {4} (frameTopLeft);
+
+%node [draw=black,shape = star,star points=4,thick,inner sep = 0mm, above, 
+%bend left=100,looseness=3] {3}
+
+%;
+
+
+\end{tikzpicture}
+\end{minipage}
+
+\hspace{0.1\textwidth}
+\begin{minipage}{0.8\textwidth}
+			\renewcommand{\labelitemi}{$\blacklozenge$}
+	
+\begin{itemize}\setlength\itemsep{-.3em}
+\item 1 \hspace{12pt}  Head/dependent relation
+\item 2 \hspace{12pt}  Argument repetition ({}\BlankAfterBlank{} idiom)
+\item 3 \hspace{12pt}  Propositional completion ({}\VisNtoS{})	
+			\renewcommand{\labelitemi}{$\blacktriangledown$}
+\item 4 \hspace{12pt}  Phrase (modeled as applicative structure), typed as {}\NPl{} 
+\end{itemize}
+\end{minipage}
+\end{figure*}

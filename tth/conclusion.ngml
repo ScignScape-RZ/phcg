@@ -1,0 +1,208 @@
+
+`section.Conclusion`
+`p.
+Of the three type levels I have proposed, the macrotype `q.functional` level is the most
+quasi-mathematical; for other levels, formal type theory may provide interpretive
+tools and methodological guides, but formally representable framings and
+transformations may be only approximations of how people actually think, while
+they are understanding language.  From this perspective, we are left with the
+metatheoretical question of clarifying how different kinds of analyses, which
+put different degrees of weight on formal or on interpretive argumentation,
+are to be joined in overarching theories.  In particular, are the
+linguistic phenomena which seem to demand more `q.interpretive` treatment actually
+beyond formalization, or is it just impractical (but possible in theory) to provide
+formal analysis of each individual case-study, each real-world language formation?
+Is Natural Language actually no less formal than (for example) computer programming
+languages, except that the former have a much larger set of semantic and syntactic
+rules such that any analysis can uncover them only partially?  Or is any rule-based
+model of language, no matter how complete, necessarily partial relative to real language?
+`p`
+
+
+`p.
+Computer languages are a good case-study in what I might call `q.semiotic computability`/.
+This designates the question of whether the
+operations of sign-systems %-- how sign-users express intentions by forming or modifying
+structured networks of signs that explicitly exhibit or are understood to have been
+formed according to collectively recognized signifying rules %-- can be modeled,
+at least to some substantial degree, by computable algorithms.  Our
+notion of computation can be based on modern computer code, not just academic
+topics like pure functions: the behavior of computing systems
+where many functions run concurrently, with possible side-effects, is often
+non-computable via static analysis; such systems can only be understood by
+actually running them.  Nevertheless the capabilities of software programmed
+in modern languages certainly deserve to be characterized as `q.computable`
+behaviors.  A single function, which embodies a computable
+calculation, may be part of a process space whose evolution through
+time is nondeterministic, and computing environments which employ
+functional side-effects are difficult or impossible to evaluate in the abstract.
+I use `q.computability` therefore in this wider sense: operationally implementable
+according to theories underlying mainstream programming languages, which is
+conceptually (if perhaps not mathematically) distinct from `q.computability` in
+subjects like algorithm analysis.
+`p`
+
+`p.
+Natural Langauge Processing, working with human languages from a computing platform,
+is then a step further, continuing beyond logico-mathematic abstractions and toward
+empirical language-use.  We can consider at what point formal and computational methods reach a limit,
+beyond which they fail to capture
+the richess and expressiveness of Natural Language, or whether this limit itself
+is an illusion %-- whether even fully human
+language competence is (perhaps in principle if not in practice) no less reducible
+to formalizable patterns.  Using the wording I just proposed, we can speculate on
+whether all language is `q.semiotically computable` or whether language merely
+depends on faculties which in some neurological and/or presentational sense are
+`q.computable` in those terms %-- faculties that, measured against linguistic fluency,
+are necessary but not sufficient.
+Whatever one's beliefs on this last question,
+a progression of subdisciplines %-- from formal-logical semantics through programming
+langauges and computational Natural Langauge Processing %-- is a reasonable
+scaffolding for a universe of formal methods that can build up, by progressive theoretical
+sophistication or assembly of distinct analyses which piece together jigsaw-like, to model
+real-world language understanding.  Perhaps real language is an `q.emergent property` of
+many distinct algorithms that run and combine in the mind; or perhaps the relevant
+algorithms are a precondition, presenting cognition with essential signifying givens
+but fleshed out in other, more holistic ways, as we become conscious of language not
+just as a formal system but an interactive social reality.
+`p`
+
+`p.
+I have (in the last two sections) sketched a
+similar theoretical progression, starting with a theory of
+grammar (Link Grammar), transitioning to a form of semantics (a type-theoretic semantics
+defining type hierarchies and signatures over linkage graphs), and finally proposing a
+cognitive interpretation of the resulting semantics.  I will refer to this
+`i.interpretation` as  `q.Cognitive State Semantics`/, meaning that such a theory
+adopts its `i.formal` structures from Link Grammar and type-theory but also attempts
+to `i.motivate` these structures by appeal to cognitive considerations.  Both Link Grammar
+(through its specific Category of labeled graphs modeling sentence linkage-structures) and
+Type-Theoretic Semantics work with rigorous, algebraically formal models satisfying criteria
+I referenced at the end of the last section: translation of language content into these
+formats and subsequent review or transformation of the target structures can be programmed
+as a purely mechnical space of operations.
+`p`
+
+`p.
+By itself, the superposition of
+type-theoretic semantics on link-grammar graphs does not cross a hypothetical `q.barrier` between
+the formal and the cognitive.  But I intend here to suggest a cognitive `i.interpretation`
+for the formal structures; that they represent an outline of cognitive schema, or progressions,
+or represent linguistic `q.triggers` that a cognitive language ability (taking language
+as part of an environing world and produced by others, in rule-bound social situations,
+to communicate ideas and sentiments) responds to.  This range of interpretations is
+deliberately open-ended: we can say that a formal infrastructure grounds the cognitive
+reception of language givens, without arguing specifically that formal structures identified
+in language therefore model cognitive operations directly, or that these are instead
+patterns identified in language that trigger a cognitive response, or any other
+paradigm for mapping cognition as process and activity to language structure as model and
+prototype.  Leaving these options open, however, I will focus in the remainder of this
+paper on one interpretation, considering formal structures as `q.triggers` which
+get absorbed into language understanding via observatory propensities: as language
+users (on this proposal) we are disposed to identify certain formal structurations
+operating in language as we encounter it, and respond to these observations by building
+or refining mental models of the situations and signifying intentions we believe have been
+implied by the discourse, in evolving and intersubjective dialogic settings that involve
+joint practical activity as well as communication.
+`p`
+
+`p.
+In this sense, I believe natural language reveals mutually-modifying juxtapositions
+of concepts whose full semantic effects
+are probably non-computable: I would work on the assumption that language
+`i.as a whole` and as human social phenomena is not `q.computable` in a
+semiotic sense, or any related practical sense (although
+I make no metaphysical claims about the `q.abstract` computability of mental
+processes merely by virtue of their neurophysical materiality).
+The aforementioned `q.linguistic side effects` can be `i.modeled` by tracing our reception
+of linguistic meaning through syntactic and semantic formations, like Link Grammar
+and Type Theory, but I argue for such models not as models `i.of` cognitive processes,
+but rather models of `i.observations` which trigger cognitive follow-up.  Even if we
+believe in and practice a rigorous formalization of morphosyntactic structure,
+where the `i.pattern` of conceptual `q.side-effects` can be seen as
+unfolding in algorithmic ways, the cognitive `i.details` of these
+effects are too situational, and phenomenologically rich, for
+computability as ordinarily understood.
+`p`
+
+`p.
+But the formal structure is
+not wholly irrelevant: to call up nuanced cognitive schema
+%-- or so I submit for consideration %-- may not be possible without
+algorithmically reproducible lexicosemantic and morphosyntactic triggers,
+at least modulo some approximation.  A (perhaps non-computable) space
+of cognitive schema may be projected onto a (perhaps computable)
+set of affiliated morphological patterns, using notations like
+link-grammar pairs and type signatures to catalog them.  For example, there may be a non-computable
+expanse of possible construals of pluralization; but any such construal,
+in context, is called into focus in conversants' minds by morphosyntactic
+invitations, by speakers' choices of, say, `mbox.`NSingToNPl;`/-pattern
+phrases.  The important balance is to take formalization as far as is reasonable
+without being seduced into logico-symbolic reductionism %-- a
+methodological pas de deux I will explore further in the next section, a brief
+concluding coda to this paper.
+`p`
+
+`p.
+Any word or usage invites various facets to either
+emphasize or deemphasize, and these subsumed concepts or foci are
+latent in potential meanings, brought into linguistic space
+by the play of differentiation `footnote.
+Alluding, in part, to Sausurrean `q.system of differences`
+\cite[p. 15]{EfePeker} %-- to choose a reference which introduces
+Sausurre in a rather unexpected context.
+`footnote`: `i.baked`/, not `i.made`/; `i.flew`/, not `i.traveled`/;
+`i.spill`/, not `i.pour`/.
+These under-currents of subsidiary concepts and foci are selectively hooked onto by
+morphosyntactic selection, so in analyzing phrase
+structure we also have to consider how using syntax
+which constructs a given structure also brings to the forefront certain
+nested concepts and construals, which are latent in word-sense options;
+in the topos of lexicosemantic possibilia.
+`p`
+
+`p.
+So, any talk about `q.side effects` of morphosyntactic functions
+%-- mapping verb-space to adjective-space, noun-space to
+proposition-space, singularity to plurality, and so forth %-- should consider
+a type-theoretic gloss like `NtoN; as sketching just the motivating
+scaffold around an act of cognitive refocusing.  The interesting semantics
+lies with `i.how` a sense crosses over, in conversants' minds,
+to some other sense or concept, wherein other aspects are foregrounded
+%-- for example, within temporal event plurality: multiplicity as
+frequency, or episodic distribution relative to some time span;
+or suggesting something that is typical
+or predominant; or relative count against some other
+totality %-- each such refocusing triggered by a phrasal construction
+of the form `NtoNpl; or `mbox.`NpltoNpl;`/.
+Or we can map singulars, or count plurals, to mass nouns, and vice-versa (`i.shrubs` become `i.foliage`/;
+`i.water` becomes `i.a glass of water`/).
+The plural and the singular are a coarse-grained semantic that has not yet arrived as `i.meaning`/.
+Conceptual spaces guide attention to classes and properties, defining a path of ascending
+precision as speakers add descriptive detail;
+cognitive construals negotiate relations between different kinds
+of aggregates/individuals; individuality, aggregation and multiplicity as phenomena and
+disposition.  These construals are practical and embodied, `i.and`
+phenomenological %-- they direct attention (`i.qua` transcendental universal of
+mentality, if we like), to and fro, but in the course of intersubjective and
+goal-driven practical action (and in that sense particular, world-bound, historicized).
+`p`
+
+`p.
+Given these considerations, I propose a `q.Cognitive State Semantics`
+%-- understanding phrase structure in terms of (or analogous to) functional effects
+(like `cite<ShanThesis>;), but cognitive: word and syntax choice effectually
+steering cognitive appraisals of jointly experienced situations
+in specific directions.  Cognitive State Semantics also has formal implications:
+the inner structuration of data `q.spaces`/,
+including unknown and undefined values, and including (side-effects-bearing) function types,
+can be understood as dynamic `i.states of knowledge` and their changes, grounding datatype semantics in human
+use/interactions.  Linguistically, the `q.effects` of language `q.functions` are
+mutations/modifications in cognitive state, respondant to concrete
+or abstract scenarios which are topics of dialog.  Sometimes, effects may
+tolerate mathematical analysis; but such analytical thematics tend to peter out into the
+ambient, chaotic worldliness of human consciousness.
+`p`
+
+
+

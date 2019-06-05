@@ -1,0 +1,341 @@
+`subsection.Three tiers of linguistic type theory`
+`p.
+By three `q.tiers` of linguistic organization, I am thinking of
+different levels of granularity, distinguished by relative scales of
+resolution, amongst the semantic implications of
+putative type representations for linguistic phenomena.
+As I argued earlier,
+type-related observations can be grouped (not necessarily
+exclusively or exhaustively) into those I will call
+`i.macrotypes` %-- relating mostly to Parts of Speech and the functional treatment
+of phrases as applicative structures; `i.mesotypes` %-- engaged with
+existential/experiential qualities and `q.Ontological` classifications
+like sentient/nonsentient, rigid/nonrigid, and
+others I have discussed; and `i.microtypes` %-- related to lexemes and word-senses.
+This lexical level can include  `q.microclassification`/, or
+gathering nouns and verbs by the auxiliary prepositions they allow and
+constructions they participate in (such as, different cases), and
+especially how through this they compel various spatial and
+force-dynamic readings; their morphosyntactic resources for describing states
+of affairs; and, within semantics, when we look toward even more fine-grained classifications
+of particular word-senses, to reason through contrasts in usage.`footnote.
+So, conceiving microclasses similar in spirit to Steven Pinker in
+Chapter 2 of `cite<Pinker>;, though I'm not committing to using the
+term only in the way Pinker uses it.  Cf. also `cite<AnneVilnat>;, which
+combines a microclass theory I find reminiscent of `i.The Stuff of Thought` with
+formal strategies like Unification Grammar.
+`footnote`  Microclasses can point out similarities
+in mental `q.pictures` that explain words' similar behaviors, or
+study why different senses of one word succeed or fail to be acceptable in particular phrases.
+There are `i.stains all over the tablecloth` and `i.paint splattered all over the tablecloth`/,
+but not (or not as readily) `i.dishes all over the tablecloth`/.  While `q.stains` is count-plural and
+`q.paint` is mass-aggregate, they work in similar phrase-structures because both
+imply extended but not rigid spatial presence; whereas `q.dishes` can work for
+this schema only by mentally adjusting to that perspective, spatial construal shifting
+from visual/perceptual to practical/operational (we might think of dishes `q.all over` the
+tablecloth if we have the chore of clearing them).  Such observations support
+microclassification of nouns (and verbs, etc.) via Ontological and
+spatial/dynamic/configuration criteria.
+`p`
+
+`p.
+Type-theoretic semantics can also apply Ontological tropes to unpack the overlapping mesh of word-senses,
+like `i.material object` or `i.place` or `i.institution`/.
+This mode of analysis is especially well illustrated when competing senses
+collide in the same sentence.  Slightly modifying two examples:`footnote.
+\cite[p. 40]{ChatzikyriakidisLuo} (former) and
+\cite[p. 4]{MeryMootRetore} (latter).
+`footnote`
+
+`sentenceList,
+`sentenceItem; The newspaper you are reading is being sued.
+`sentenceItem; Liverpool, an important harbor, built new docks.
+`sentenceList`
+
+Both have a mid-sentence shift between senses, which is analyzed
+in terms of `q.type coercions`/.  The interesting detail of this treatment
+is how it correctly predicts that such coercions are not guaranteed to
+be accepted:
+
+`sentenceList,
+`sentenceItem; The newspaper fired the reporter and fell off
+the table (?).
+`sentenceItem; Liverpool beat Tottenham and built new docks (?).
+`sentenceList`
+
+(again, slightly modifying the counter-examples).  Type coercions are
+`i.possible` but not `i.inevitable`/.  Some word-senses `q.block` certain coercions
+%-- that is, certain sense combinations, or juxtapositions, are disallowed.
+These preliminary, motivating analyses carry to more
+complex and higher-scale types, like plurals (the plural of a type-coercion
+works as a type-coercion of the plural, so to speak).
+As it becomes structurally established that type rules at the
+simpler levels have correspondents at more complex levels, the use of
+type notions `i.per se` (rather than just `q.word senses` or other
+classifications) becomes more well-motivated.
+`p`
+
+`p.
+Clearly, for example,
+only certain kinds of agents may have beliefs or desires, so
+attributing mental states forces us to conceive of their referents
+in those terms:
+
+`sentenceList,
+`sentenceItem; Liverpool wants to sign a left-footed striker.
+`sentenceItem; That newspaper plans to fire its editorial staff.
+`sentenceList`
+
+This `i.can` be analyzed as `q.type coercions`/; but the type-theoretic machinery should contribute
+more than just obliquely stating linguistic wisdom, such as
+maintaining consistent conceptual frames or joining only suitably
+related word senses.  The sense of `i.sign` as in `q.employ to play on
+a sports team` can only be linked to a sense of Liverpool as the
+Football Club; or `i.fire` as in
+`q.relieve from duty` is only compatible with newspapers as
+institutions.  These dicta can be expressed in multiple ways.
+But the propagation of classifications
+(like `q.inanimate objects` compared to
+`q.mental agents`/) through complex type structures lends credence to the
+notion that type-theoretic perspectives are more than just an expository tool;
+they provide an analytic framework which integrates grammar and semantics, and
+various scales of linguistic structuration.
+For instance, we are prepared to accept some examples of dual-framing
+or frame-switching, like thinking of a newspaper as a physical object and a city government
+(but we reject other cases, like `i.Liverpool voted in a new city government and signed a
+new striker` %-- purporting to switch from the city to the Football Club).  The rules for
+such juxtapositions appear to reveal a system of types with some parallels to
+those in formal settings, like computer languages.
+`p`
+
+`p.
+In short, `q.Ontological` types like `i.institution` or `i.place` serve in some
+examples to partition senses of one multi-faceted word.  Here they reveal
+similar cognitive dynamics to reframing-examples like `i.to the press`/, where
+Ontological criteria (like reading something as a place) are triggered by
+phrase-scale structure.  But there are also interesting contrasts:
+the `i.newspaper` and `i.Liverpool` examples
+imply that some words have multiple framings which are well-conventionalized;
+newspaper-as-institution feels less idiomatic and metaphorical than
+press-as-place.  So these examples suggest two `q.axes` of variation.
+First, whether the proper Ontological framing follows from other word-choices
+(like `q.fire` in `i.the newspaper fired the reporter`/, which has
+its own semantic needs), or from morphosyntax
+(like the locative in `i.to the press`/); and, second, whether triggered framings work
+by selecting from established word senses or by something more metaphorical.
+Metaphors like `i.to the press` do have an element of standardization;
+but apparently not so much so to be distinct senses: note how `i.the press` as metaphorical place
+does not work in general: `qmarkdubious;`i.at the press`/, `qmarkdubious;`i.near the press`
+(but `i.at the newspaper`/, `i.near the newspaper`
+%-- imagine two journalists meeting outside the paper's offices %-- sound quite reasonable).
+`p`
+
+`p.
+The `q.type coercion` analysis works for mid-sentence frame-shifts; but other
+examples suggest a more gradual conceptual `q.blending`/.  For example, the
+place/institution dynamic is particularly significant for `i.restaurant`
+(whose spatial location is, more so, an intrinsic part of its
+identity).  Being a `i.place` implies both location and extension; most places are not single
+points but have an inside where particular kinds of things happen.  I am not convinced
+that restaurant as place and as institution are separate word senses; perhaps, instead,
+conversations can emphasize one aspect or another, non-exclusively.  As I have argued,
+we need not incorporate all framing effects via `q.subtypes` (restaurant as either
+subtype of hypothetical `q.types of all` places or institutions, respectively).  But
+`q.placehood`/, the Ontological quality of being a place %-- or analogously being
+a social institution %-- identify associations that factor into cognitive frames; types
+can then be augmented with criteria of tolerating or requiring one association or another.
+So if `q.restaurant` is a type, one of its properties is an institutionality that `i.may`
+be associated with its instances.  In conversation,
+a restaurant may be talked about as a business or community, foregrounding this
+dimension.  Or (like in asking for directions) its spatial dimension may be foregrounded.
+The availability of these foregroundings is a feature of a hypothetical restaurant type,
+whether or not these phenomena are modeled by subtyping or something more sophisticated.
+The `q.newspaper` examples suggest how Ontological considerations
+clearly partition distinct senses marked by properties like objecthood or
+institutionality (respectively).  For `q.newspaper` the dimensions are less available for
+foregrounding from a blended construal, than `q.unblended` by conventional usage; that
+is why reframings evince a type `i.coercion` and not a gentler shift of emphasis.
+The example of `i.restaurant`/, in contrast, shows that competing routes for
+cognitive framing need not solidify into competing senses, though they trace
+various paths which dialogs may follow.
+But both kinds of examples put into evidence an underlying
+cognitive-Ontological dynamic which has potential type-oriented models.
+`p`
+
+`p.
+At the most general level %-- what I called `i.macrotype` modeling %-- a type
+system recognizes initially only the grammatical backbone of expressions, and
+then further type nuances can be seen as shadings and interpretations which add substance
+to the syntactic form.  So in type-theoretical analysis at this more grammatic level,
+to which I now turn, we can still keep the more fine-grained theory in mind:
+the relation of syntax to semantics is like the relation of a spine to its flesh,
+which is a somewhat different paradigm than treating syntax as a logical or temporal
+stage of processing.  Instead of a step-by-step algorithm where grammatical parsing
+is followed by semantic interpretation, the syntax/semantics interface can be seen
+as more analogous to stimulus-and-response: observation that a certain grammatic
+configuration appears to hold, in the present langauge artifact, triggers a marshaling
+of conceptual and cognitive resources so that the syntactic backbone can be filled in.
+Perhaps a useful metaphor is grammar as gravitation, or the structure of a gravitational
+field, and semantics is like the accretion of matter through the interplay of multiple
+gravitational centers and orbits.  For this analogy, imagine typed lambda
+reductions like `PropToNYieldsN; taking the place of gravitational equations;
+and sentences' grammatic spine taking the place of curvature pulling mass into a planetary center.
+`p`
+
+`p.
+Parts of speech have `q.type signatures`
+notionally similar to the signatures of function types in programming languages: a verb
+needing a direct object, for example, `q.transforms` two nouns (Subject and Object)
+to a proposition, which I have been notatating with something like `NNtoS;.
+At the most basic level, the relation of Parts of Speech to `q.type signatures`
+seems little more than notational variants of conventional linguistic
+wisdom like a sentence requiring a noun and a verb (`SeqNPplVP;).
+Even at this level, however, type-theoretic intuitions
+offer techniques for making sense of more complex, layered sentences,
+where integrating link and phrase structures can be complex.
+Even the most broadly scoped analysis of type signatures, dealing only with
+generic Parts of Speech like nouns and verbs, can lead to surprising
+complications.  One example I have alluded to several times, and will return to shortly:
+the problem of applying Dependency Grammar where phrases do not seem
+to have an obviously `q.most significant` word for linkage with other phrases.
+`p`
+
+`p.
+A tendency in both dependency and phrase-oriented perspectives is to define
+structures around the most `q.semantically significant` words %-- so that a phrase
+like `i.many students` becomes in some sense collapsible to its semantic
+core, `i.students`/.  Some of my earlier examples, however, argued that
+phrases cannot just be studied as replacements for semantic units.  Incorporating
+type theory, we can instead model phrases through the perspective of
+type signatures: given Part of Speech annotations for phrasal units and then for
+some of their parts, the signatures of other parts, like verbs or adjectives
+linked to nouns, or adverbs linked to verbs, tend to follow automatically.
+A successful analysis yields a formal tree, where if (in an act of semantic
+abstraction) words are replaced by their types, the `q.root` type is something like
+`Prop; and the rest of a tree is formally a reducible structure in
+Typed Lambda Calculus: `NNtoProp; `q.collapses` to `Prop;, `ProptoN; collapses
+to `N;, and so forth, with the tree `q.folding inward` like a
+fan until only the root remains %-- though a more subtle analysis would
+replace the single `Prop; type with variants that recognize different
+forms of speech acts, like questions and commands.  In Figure ~`ref<fig:Iknow>;,
+this can be seen via the type annotations: from right to left `NtoN; yields the
+`N; as second argument for `i.is`/, which in turn yields a `Prop; that is mapped
+(by `i.that`/) to `N;, finally becoming the second argument to `i.know`/.  This calculation
+only considers the most coarse-grained classification (noun, verb, proposition) %-- as I
+have emphasized, a purely formal reduction can introduce finer-grained grammatical or
+lexico-semantic classes (like `i.at` needing an `q.argument` which is somehow an expression
+of place %-- or time, as in `i.at noon`/).  Just as useful, however, may be analyses
+which leave the formal type scaffolding at a very basic level and introduce
+finer type or type-instance qualifications at a separate stage.
+`p`
+
+`p.
+In either case, Parts of Speech are modeled as (somehow analogous to) functions, but the important
+analogy is that they have `i.type signatures` which formally resemble functions'.
+Phrases are modeled via a `q.function-like` Parts of Speech along with one or more
+additional words whose own types match its signature; the type calculations
+`q.collapsing` these phrases can mimic semantic simplifications
+like `i.many students` to `i.students`/, but here the theory is explicit
+that the simplification is grammatic and not semantic: the collapse
+is acknowledged at the level of `i.types`/, not `i.meanings`/.  In addition,
+tree structures can be modeled purely in terms of inter-word relations
+(this is an example of embedding lambda calculii in process algebras),
+so a type-summary of a sentence's phrase structure can be notated and
+analyzed without leaving the Link Grammar paradigm.
+`p`
+
+`p.
+As a concrete example, in the case of `q.many students`/,
+both `q.students` and the semantic role of
+the phrase are nouns (count-plural nouns, for where that's relevant).  Accordingly,
+`q.many` has a signature `NtoN; (or `NpltoNpl;, dependending on how
+narrowly we want to notate the types in context).
+Once we assign types and signatures to all words in a sentence, we can also see a
+natural hierarchy resembling an expression in typed lambda calculus, where some words
+appear as `q.functions` and others as `q.arguments`/.  Often the less
+semantically significant words appear as `q.higher` in the structure,
+because they serve to modify and lend detail to more significant words.
+The kind of structure or `i.Charpente` which falls out of a sentence %--
+adopting a term from `Tesniere;
+(cf. \cite[p. 181]{ElkeTeich}) %-- is typically different from a link-grammar
+`q.linkage`/, although the two structures can be usefully combined.
+`p`
+
+`p.
+To return to the example of `i.Student after student`/, where designating
+one word to `q.represent` the phrase seemed arbitrary, we can analyze the
+situation via type-signatures.  I have teased a proposed solution repeatedly;
+here's what I had in mind.  Insofar as `i.after` is the only non-noun,
+the natural conclusion is that `q.after` should be typed `NNtoN;
+(which implies that `q.after` is analogous to the `q.functional` position, and
+in a lambda-calculus style reconstruction would be considered the `q.head`
+%-- Figure ~`ref<fig:ESA>; is an example of how
+the sentence could be annotated, for sake of discussion).
+This particular idiom depends however
+on the two constituent nouns being the same word (a pattern I've also alluded to with
+idioms like `i.time after time`/), which can be accommodated by invoking the (computationally rather complex
+and topical) concept of `i.dependent types` `cite<BernardyEtAl>;, `cite<TanakaEtAl>;
+%-- in other words the parameters
+for `i.after` are a dependent type pair satisfied by an identity comparison between
+the two nouns.  The signature for `q.after` has this added complication, but
+the nuances of this example can still be accommodated within the overall
+architecture of type theory.  I would pair this argument with my earlier
+analysis of `q.many` variations which suggested how apparent complications
+can be accommodated largely within the extant theoretical resources of
+Link Grammar, and in combination suggest that the union of Link Grammar
+with Type-Theoretic Semantics seems poised to accommodate many
+complex real-world linguistic cases with a coherent abstract perspective.
+`p`
+
+`p.
+Consider alternatives for `q.many students`/.  The phrase as
+written suggests a type signature (with `q.many` as the `q.function-like` or
+derivative type) `NpltoNpl;, yielding a syntactic interpretation of the phrase; this
+interpretation also suggests a semantic progression, an accretion of intended detail.
+From `i.students` to `i.many students` is a conversion between two plural nouns
+(at the level of concepts and semantic roles); but it also implies relative size,
+so it implies some `i.other` plural, some still larger group of students from which
+`q.many` are selected.  While rather abstract and formal, the `NpltoNpl; representation
+points toward a more cognitive grounding which considers this `q.function` as a form
+of thought-operation; a refinement of a situational model, descriptive resolution,
+and so forth.  If we are prepared to accept a cognitive underpinning to semantic
+classification, we can make the intuition of part of speech signatures as `q.functions`
+more concrete: in response to what `q.many` (for example) is a function `i.of`/,
+we can say a function of propositional attitude, cognitive schema, or attentional
+focus.  The schema which usefully captures the sense and picture of `i.students` is
+distinct (but arguably a variation on) that for `i.many students`/, and there is a
+`q.mental operation` triggered by the `i.many students` construction which
+`q.maps` the first to the second.  Similarly, `i.student after student` triggers a
+`q.scheme evolution` which involves a more explicit temporal unfolding
+(in contrast to how `i.many students` instead involves a more explicit
+quantitative `i.many/all` relation).  What these examples show is that
+associating parts of speech with type signatures is not just a formal
+fiat, which `q.works` representationally but does not necessarily capture
+deeper patterns of meaning.  Instead, I would argue, type signatures
+and their resonance into linkage acceptability structures
+(like singular/plural and mass/count agreement) `i.point toward` the
+effects of cognitive schema on what we consider meaningful.
+`p`
+
+`p.
+In `i.Student after student came out against the proposal`/,
+to `i.come out`/, for/against, lies in the semantic frame of attitude and expression
+(it requires a mental agent, for example), but its reception
+carries a trace of spatial form: to come out `i.to` a public place, to
+go on record with an opinion (I analyzed this case in Section 6).  Usually
+`q.come out [for/against]`/, in the context of a policy or idea, is similarly
+metaphorical.  But the concrete spatial interpretation remains latent, as a kind
+of residue on even this abstract rendition, and there sustains a chance that this
+undercurrent will actually figure in conversants' mutual understanding %-- if
+there were not just columns being written and opinions voiced but demonstrations
+on the quad.  The spatial undercurrent is poised to emerge
+as more literal, should the context warrant.  However literally or metaphorically
+the `q.space` of the `q.coming out` is
+understood, however explicit or latent its cogitative figuration,
+is not something internal to the language; it is a potentiality which
+will present in different ways in different circumstances.  This is not to say that
+it is something apart from linguistic meaning, but it shows how linguistic meaning
+lies neither in abstract structure alone, nor contextual pragmatics, but in their cross-reference.
+`p`
+
+

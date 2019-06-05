@@ -715,7 +715,7 @@ essential core of the `q.semantics` of programming
 languages: data structures manipulated by computer code do
 not `i.intrinsically` represent real-world,
 non-digital phenomena, though they
-ar enginered to model external data when used properly.
+are enginered to model external data when used properly.
 However a code base does `i.internally` posess a space
 of implemented functions, and a symbol at one
 place in source code can match to some set of other

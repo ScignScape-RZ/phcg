@@ -1,0 +1,407 @@
+`spsubsectiontwoline.Semantics and Logical Underdetermination`
+
+`p.
+I believe similar effects of underdeterminism 
+can be found even in straightforward, locutionary speech-acts.  Consider
+
+`sentenceList,
+`sentenceItem; The Maple Leafs failed to win in overtime for the
+first time this year.
+`sentenceItem; The Maple Leafs failed for the first time this year
+to win in overtime.
+`sentenceList`
+
+The first can mean either that the Leafs had won `i.all` or `i.none`
+of their prior overtime games.  From a phrase-structure perspective,
+we have to image that `i.to win in overtime` can `q.migrate` so we
+hear it as in the second version of the sentence.  For more inter-word
+grammars, the alternation is simpler: `q.for`/, initiating the phrase
+`i.for the first time`/, can be linked with either `i.failed` or
+`i.win` %-- notationally, it amounts to the presence or absence of one
+graph-edge, when the syntax is represented as a graph with
+inter-word labels for link kinds.  This could be a distinction without
+a real difference, since choosing which inter-word link to recognize
+triggers linking in the rest of the phrase along with it.
+But perhaps reflecting on how we process the ambiguity %-- realizing
+that there are two competing parses and deciding which is the one
+intended %-- we picture the alternatives more as `q.horizontal`
+options for connecting threads across the sentence,
+more so than a `q.vertical` organization where
+we hear `i.for the first time` as `q.contained` in a larger phrase.
+My own feeling is of exploring competing relational patterns more than
+exploring different ways that the phrases can be nested inside each
+other.
+`p`
+
+`p.
+That being said, how much of our sense of ambiguity (or clarity, for
+that matter) is driven by meaning, not form?  The `q.double parse`
+just examined does not always generalize to similar cases:
+
+`sentenceList,
+`sentenceItem; The Maple Leafs failed to win two consecutive games
+for the first time this year.
+`sentenceList`
+
+The reading as in `q.this is the first time they failed to win two
+consecutive games` makes no sense %-- unless you've won every game,
+but perhaps the first, you've at some point lost after a win.  Is this
+case anomalous, where a syntactic ambiguity idiosyncratically fails to
+yield logically plausible readings?
+The ambiguity is found in `i.failed to make the playoffs
+for the first time since 2013`/, and many `i.for the first time this
+season` cases, like `i.beat the Habs`/, `i.sell out the arena`/,
+`i.score a goal in the first period`/.  But `q.failed to score a goal`
+is almost surely read that they `i.did` score in every prior game.
+Do we hear the construction as intrinsically ambiguous, and reject one
+reading only when it is clearly flawed pragmatically?
+`p`
+
+`p.
+If we believe that language understanding unfolds in a predictable
+operational sequence, then we should assume that both parses are
+deemed plausible, and semantic considerations only retroactively
+eschew one reading (if they do so at all).  This would explain why in
+many cases the ambiguity persists enough to cast the practically
+intended meaning in doubt.  But that account does not consider the
+temporality of language itself; the hearer does not know in advance
+that a trailing phrase like `i.for the first time this season` is coming,
+and starts to make sense of the sentence up to there; once then hearing or
+reading the addendum, the audience instinctively has to interpret the
+final phrase as deliberately inserted to modify an already-complete
+idea.  On this analysis, the addendum is initially approached as a
+performative detail, something said for a reason to be determined %--
+it is not structurally necessary to make the sentence well-formed.
+Perhaps we then try to fit the last phrase into the sentence both
+syntactically and semantically, together, triggered by a pragmatic
+phenomenon (the speaker's choice to add on to a seemingly complete
+thought) which then becomes logically prior to both syntax and
+semantics.  If this is plausible, it supports an inter-word relational
+model because we are forming a picture of language structure
+relationally, assimilating new words and phrases to those already
+heard by linkings referring back in time, rather than waiting until we
+are sure we have a complete sentence and then treating it as a static
+structure to vertically reconstruct.
+`p`
+
+`p.
+Of course, then, a host of further effects
+are bound to morphological details once we have a complete sentence.
+Case in point are plurals: for each plural usage we have a conceptual
+transformation of an underlying singular to a collective, but
+how that collective is pictured varies in context.  One
+dimension of this variation lies with mass/count: the
+mass-plural `i.coffee` (as in `q.some coffee`/) figures the
+plurality of coffee (as liquid, or maybe coffee grounds/beans)
+in spatial and/or physical/dynamic terms.  So we have:
+
+`sentenceList,
+`sentenceItem; There's coffee all over the table.
+`sentenceItem; She poured coffee from an ornate beaker.
+`sentenceItem; There's too much coffee in the grinder.
+`sentenceItem; There's a lot of coffee left in the pot
+%-- should I pour it out?
+`sentenceList`
+
+These sentences use phrases associated with plurality (`i.all over`/,
+`i.a lot`/, `i.too much`/) but with referents that on perceptual and
+operational grounds can be treated as singular %-- as in the
+appropriate pairing of `i.a lot` and `i.it` in the last sentence.
+With count-plurals the collective is figured more as an
+aggregate of discrete individuals:
+
+`sentenceList,
+`sentenceItem; There are coffees all over the far wall at the expresso bar.
+`sentenceItem; She poured coffees from an ornate beaker.
+`sentenceItem; There are a lot of coffees left on the table
+ %-- shall I pour them out?
+`sentenceList`
+`p`
+
+`p.
+So mass versus count %-- the choice of which plural form to use %--
+triggers an interpretation shaping how the plurality is pictured and
+conceived (which is itself trigggered by the use of a plural to
+begin with).  But if we restrict attention to just, say,
+count-plurals, there are still different schemata for intending
+collections:
+
+`sentenceList,
+`sentenceItem; \label{itm:borough} New Yorkers live in one of five boroughs.
+`sentenceItem; New Yorkers reliably vote for Democratic presidential candidates.
+`sentenceItem; \label{itm:commute} New Yorkers constantly complain about how long it takes to commute
+to New York City.
+`sentenceList`
+
+The first sentence is consistent with a reading applied to
+`i.all` New Yorkers %-- the five boroughs encompass the whole
+extent of New York City.  The second sentence is only reasonable
+when applied exclusively to the city's registered voters %-- not all
+residents %-- and moreover there is no implication that the
+claim applies to all such voters, only a proportion north of one-half.
+And the final sentence, while perfectly reasonable, uses `q.New Yorkers`
+to name a population completely distinct from the
+first sentence %-- only residents from the metro
+area, but not the city itself, commute `i.to` the city.
+`p`
+
+`p.
+These examples demonstrate that we need
+prelinguistic
+background knowledge to understand what `i.sort` of plurality
+the speaker intends.  To be sure, the more subtle plurals can
+still be read in logical terms, and we can imagine sentences that
+hew more crisply to a logical articulation:
+
+`sentenceList,
+`sentenceItem; All New York City residents live in one of five boroughs.
+`sentenceItem; The majority of New York voters support Democratic
+presidential candidates.
+`sentenceItem; Many New York metro area residents complain about how
+long it takes to commute to New York City.
+`sentenceList`
+
+According to truth-theoretic semantics, sentences compel addressees to believe
+(or at least consider) logically structured propositions `i.by virtue of`
+linguistic shape replicating the architecture of the intended propositional
+complexes, as these would be represented in first-order logic.  This
+view on linguistic meaning is consistent with the last three sentences,
+which are designed to map readily to logical notations (signaled by
+quasimathematical phrases like `i.the majority of`/).  But most sentences
+do not betray their logical form so readily: these latter sentences actually
+sound less fluent, more artificial, than their prior equivalents.
+`p`
+
+`p.
+It is also true that the more `q.logical` versions are more, we might say,
+dialectically generalized because they do not assume the same level
+of background knowledge.  Someone who knew little about
+New York geography could probably make sense of the latter
+sentences but might misinterpret, or at least have to consciously
+think over, the former ones.  So we may grant that exceptionally
+logically-constructed sentences can be clearer for a broad
+audience, less subject to potential confusion, and indeed such
+logically cautious language is a normal stylistic feature of
+technical, legal, and journalistic discourse.  But for this reason
+such discourse comes across as self-consciously removed from
+day-to-day language.  As I argued from multiple angles earlier,
+in the typical case %-- i.e., stylistically
+neutral, day-to-day language %-- syntactic
+composition does not neatly recapitulate logical form.
+`p`
+
+`p.
+My prior analysis demonstrated warrants for this idea by
+highlighting narrative and imagistic aspects
+of language used to convey ideas, like `q.come out against`
+providing the verb-phrases in reports of people
+criticizing something.  Here, examples like
+(\ref{itm:borough})-(\ref{itm:commute}) point to a similar
+conclusion, but from a more lexico-semantic orientation:
+words like `i.borough` and `i.commute` carry a space
+of logical details that tend to force logical
+interpretations one way or another
+(e.g., the detail that the territory of a city
+is fully partitioned by boroughs, `i.so`/, it
+is `i.all` citizens who live in a borough).  This part of the
+logic is however not reflected in sentence-structure; it is,
+rather, latent
+in lexical norms and assumed part of understanding
+relevant sentences only because linguistic
+competence is understood to include
+familiarity with the logical
+implications of the lexicalized concepts:
+e.g. that the quantification in `q.New Yorkers
+live in one of five boroughs` is `i.all`/,
+but the quantification in `q.New Yorkers
+vote democratic` is `i.most`/.
+`p`
+
+`p.
+Here I'll also add the
+following: the current examples show
+how if addressees `i.have` the requisite background knowledge,
+linguistic structure does not have to replicate logical structure very
+closely to be understood.  The content which addressees undrstand may
+have a logical form, and language evokes this form %-- guides
+addressees toward considering specific propositional content %-- but
+this does not happen because linguistic structure in any precise way mimics,
+replicates, reconstructs, or is otherwise organized propositionally.  Instead,
+the relation of language to predicate structures is evidently
+oblique and indirect: language triggers interpretive processes
+which guide us toward propositional content, but the structure
+of language is shaped around fine-tuning the activation of
+this background cognitive dynamics more than around any need to model
+predicate organization architecturally.   In the case of plurals,
+the appearance of plural forms like `i.New Yorkers` or `i.coffees`
+compels us to find a reasonable cognitive model for the
+signified multitude, and this model will have a logical form
+%-- but the linguistic structures themselves do not in general
+model this form for us, except to the limited degree needed to
+activate prelinguistic interpretive thought-processes.
+`p`
+
+`p.
+I make this point in terms of plural `i.forms`/, and earlier made
+similar claims in terms of lexical details.  A third group of triggers I
+outlined involved morphosyntactic `i.agreement`/, which establishes
+inter-word connections which themselves trigger interpretive processing.
+Continuing the topic of plurals, how words agree with other words
+in singular or plural forms evokes schema which guide situational
+interpretations.  So for instance:
+
+`sentenceList,
+`sentenceItem; My favorite band gave a free concert last night.
+They played some new songs.
+`sentenceItem; There was some pizza earlier, but it's all gone.
+`sentenceItem; There were some slices of pizza earlier, but it's all gone.
+`sentenceItem; There were some slices of toast earlier, but there's none left.
+`sentenceItem; There was some toast earlier, but they're all gone.
+`sentenceItem; That franchise had a core of talented young players, but it
+got eroded by trades and free agency.
+`sentenceItem; That franchise had a cohort of talented players, but they
+drifted away due to trades and free agency.
+`sentenceItem; Many star players were drafted by that franchise, but it
+has not won a title in decades.
+`sentenceItem; Many star players were drafted by that franchise, but they
+failed to surround them with enough depth.
+`sentenceItem; Many star players were drafted by that franchise, but they
+were not surrounded with enough depth.
+`sentenceItem; Many star players were drafted by that franchise, but they
+did not have enough depth (around them).
+`sentenceList`
+
+Plurality here is introduced not only by isolated morphology (like `i.slices`/,
+`i.players`/, `i.songs`/), but via agreements marked by
+word-forms in syntactically significant pairings: was/were, it/they,
+there is/there are.  Framing all of these cases is how we can usually schematize
+collections both plurally and singularly: the same set can be cognized as a
+collection of discrete individuals one moment and as an integral whole the next.
+This allows language some flexibility when designating plurals
+(as extensively analyzed by Ronald Langacker: see his discussion of examples
+like `i.Three times, students asked an interesting question`/).  A sentence
+discussing `i.slices of pizza` can schematically shift to treating
+the pizza as a mass aggregate in `i.it's all gone`/.  Here the antecedent
+of `i.it` is `i.slices` (of pizza).  In the opposite direction, the mass-plural
+`q.toast` can be refigured as a set of individual pieces in `i.they're all gone`/.
+The single `i.band` becomes the group of musicians in the band.
+In short, how agreements are executed invites the addressee to reconstruct
+the speaker's conceptualization of different referents discussed by
+a sentence, at different parts of the sentence: linking
+`i.it` to `i.slices` or `i.cohort`/, or `i.they` to `i.the band` or
+`i.the toast`/, evokes a conceptual interpretation shaped in
+part by how morphosyntactic agreement overlaps with `q.semantic`
+agreement.  Matching `i.they` to `i.the band` presents agreement
+in terms of how we conceive the aggregate (as a collection of
+musicians); using `q.it` would also present an agreement, but
+one schematizing other aspect of the band conecpt.
+`p`
+
+`p.
+In the last five above cases, `i.it` similarly binds (being singular) to
+`i.the franchise` seen as a single unit %-- here basic grammar and
+conceptual schema coincide %-- but `i.it` also binds
+to the `i.core of young players`/.  The
+players on a team can be figured as a unit or a multiple.  The franchise itself
+can be treated as a multiple (the various team executives and decision-makers),
+as in `i.they failed to surround the stars with enough depth`/.  The last sentence
+is ambiguous between both readings: `q.they` could designate either the players
+or the franchise.  Which reading we hear alters the sense of `q.have`/: asserting
+that the star `i.players` lack enough depth implies that they cannot execute
+plays during the game as effectively as with better supporting players;
+asserting that the `i.franchise` lacks depth makes the subtly different point
+that there is not enough talent over all.  The variant which would include
+`q.around them` nudges toward the second reading; but it is
+still permissible to, according to speaker intent, parse the last
+`i.they` as designating the `i.franchise` and the last `i.them` as
+the `i.players` %-- i.e., that final `i.they`//`i.them` pair
+having different antecedents.
+`p`
+
+`p.
+The unifying theme across these cases is that when forming sentences we often
+have a choice of how we figure plurality, and moreover these choices can be
+expressed not only in individual word-forms but in patterns of agreement.
+Choosing to pronominalize `i.slices of pizza` or `i.cohort of players`
+as `i.it`/, or alternatively `i.they`/, draws attention to either the more
+singular or more multitudinal aspects of the aggregate in question.
+But this effect is not localized to the individual
+`i.it`//`i.they` choice; it depends on
+tracing the pronoun to its antecedent and construing
+how the antecedent referent has both individuating and
+multiplicity-like aspects.
+Thus both individuation and plurality are latent in phrases like
+`i.slices of` or `i.cohort of`/, and this singular/plural co-conceiving
+is antecedently figured by how subsequent morphosyntax agrees
+with the singular or, alternatively, the plural.
+`p`
+
+`p.
+Moreover, these patterns of agreement invoke new layers of
+interpretation to identify the proper conceptual scope of plurals.
+In `i.The band planned a tour, where they debuted new songs` we hear
+the scope of `q.they` as narrower than its antecedent `q.the band`/,
+because only the band's `i.musicians` (not stage crew, managers, etc.)
+typically actually perform:
+
+`sentenceList,
+`sentenceItem; The band planned a tour, where
+they debuted new songs.
+`sentenceItem; \label{itm:teamflew} The team flew to
+New York and they played the Yankees.
+`sentenceItem; \label{itm:theflies} The city's largest theater company
+will perform `q.The Flies`/.
+`sentenceList`
+
+Likewise in (\ref{itm:teamflew}), only the athletes are referenced via
+`i.they played`/; but presumably many other people (trainers, coaches, staff)
+are encompassd by `q.the team flew`/.  And in (\ref{itm:theflies})
+we do not imply that the Board of Directors will
+actually take the stage (the President
+as Zeus, say).  Even in the course of one sentence, plurals
+are reinterpreted and redirected:
+
+`sentenceList,
+`sentenceItem; The city's largest theater company
+performed `q.The Flies` in French, but everyone's accent
+sounded Quebecois.
+`sentenceItem; The city's largest theater company
+performed `q.The Flies`/; then they invited a professor
+to discuss Sartre's philosophy when the play was over.
+`sentenceList`
+
+In the first sentence, the `q.space` built by the sentence is wider
+initially but narrows to encompass only the actual actors on stage.
+In the second, the `q.space` narrows in a different direction, since
+we hear a programming decision like pairing a performance with a
+lecture as made by a theater's administrators rather than its actors.
+I discussed similar modulation in conceptual schemas related to plurality
+and pluralization earlier; what is distinct in these last examples is how
+the interpretive processes for cognizing plurality are shaped by
+agreement-patterns (like `i.it` or `i.they` to a
+composite antecedent) as
+much as by lexical choice, or morphology, in isolation.
+`p`
+
+`p.
+I have accordingly outlined a theory where lexical, morphological, and
+morphosyntactic layers all introduce `q.triggers` for cognitive processes,
+and it is these procsses which (via substantially prelinguistic perception
+and conceptualization) ultimately deliver linguistic meaning.  What is
+`i.linguistic` about these phenomena is how specifically linguistic
+formations %-- word choice, word forms, inter-word agreements in form %--
+trigger these (in no small measure pre- or extra-linguistic) interpretations.
+But as I suggested this account is only preliminary to analysis of
+how multiple interpretive processes are `i.integrated`/.  Linguistic
+`i.structure` contributes the arrangements through which the
+crossing and intersecting between interpretive
+`q.scripts` are orchestrated.  Hence at the higher linguistic scales and
+levels of complexity, the substance of linguistic research, on this view,
+should gravitate toward structural intgration of interpretive
+processes, even more than individual interpretive triggers themslves.
+`p`
+
+`p.
+
+`p`
+

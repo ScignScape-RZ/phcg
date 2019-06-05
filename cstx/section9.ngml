@@ -237,7 +237,7 @@ and `cite<LuoSoloviev>;.
 `p.
 The point of this example is that many scientific concepts
 %-- the semantic norms embedded in how scientific terms are defined 
-and understood and how the concepts ar used in scintific theories 
+and understood and how the concepts are used in scintific theories
 and research %-- can be rigorously specified with a suitably 
 expressive type system.  Therefore, a sophisticated 
 system `tSys; is both a practical tool for scientific data 
@@ -310,7 +310,7 @@ of that type).  As I said earlier in this section, we
 can start from any `q.kernel` of types and procedures 
 and build new types by describing procedures which 
 create, and/or operate on, values of 
-`kErn;-types.  However, there ar many different ways that 
+`kErn;-types.  However, there are many different ways that
 procedures can act on values and call other procedures.  
 This means there is a lot of room for extending 
 type systems to represent different kinds of inter-procedural 
@@ -648,7 +648,7 @@ that could potentially be distinguished).  Therefore, the
 fundamental fabric of the type system is dependent on 
 modeling channels, because this determines how 
 function-types themselves are miodeled; and, as I will now 
-explicate, function-types ar ethe logical core of 
+explicate, function-types are the logical core of
 almost any practical type system
 `p`
 

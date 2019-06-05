@@ -1,23 +1,9 @@
 
-`subsection.The illogic of syntax`
-`p.
-Let us agree that %-- beneath surface-level
-co-framing complexity %-- many language acts have a
-transparent content as `q.doxa` that gets conveyed between
-people with sufficiently resonant
-cognitive frames.  This is still not enough to
-elevate doxa to the `i.meaning` of such language-acts.
-For a logic-driven theory, we have
-to thematize not only `i.that` expressions refer
-to or convey propositional content, but `i.how` they
-do so.  It is not only the content itself but the
-`q.how` that should be analyzed through a logical structure.
-`p`
-
+`subsection.Syntax and Holistic Meaning`
 `p.
 Since it is widely understood that the essence of language
 is compositionality, the clearest path to
-a logic-based theory would be via the
+a truth-theoretic semantics would be via the
 `q.syntax of semantics`/: a theory of how
 language designates propositional content by
 emulating or iconifying propositional structure
@@ -651,24 +637,21 @@ proscription on scientific practice, on the other %-- for a
 In the specific context of linguistics, one consequence is
 that any linguistic structuring element becomes an
 intermediary eventually handed off to interpretive-imaginative
-cognitive processes %-- analogous, in the
-computational realm, to application-level function
-implementions setting up kernel system calls.  On
-this comparison, intermediate structures of language
-understanding are like source code, and interpretive-imaginative
-cognition corresponds to the system kernel.  Insofar
-as intermediate linguistic structures are analyzed
-via type theory, we can accordingly model this
-situation as type properties modulating how
-language elements carry over to the interpretive-imaginative
-cognitive `q.kernel` %-- which is a faithful analogy
-to how types work when applied to, say, `Cpp;
-coding structures.  Insofar as linguistic understanding
-is viewed through the lense of Conceptual Roles,
-we can analyze how the `i.conceptual role`
-which some referent plays %-- more than its specific
-referenced nature %-- determines how it is `q.communicated`
-to the `q.interpretive-imaginative kernel`/.  In fact,
-this last topic is an analysis I will now consider further.
+cognitive processes.  A related picture perhaps emerges from 
+the `q.Interface Theory of Meeting`/, developed over several 
+papers by Orlin Vakarelov.  This theory formalizes the intuition 
+that language `q.bridges` several cognitive/intellectual registers, 
+and I will briefly review Vakarelov's perspective 
+below, after considering the implication of logical 
+`i.underdetermination` for semantics and illocutionary structure.
 `p`
+
+`p.
+
+`p`
+
+`p.
+
+`p`
+
 
