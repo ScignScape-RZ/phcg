@@ -62,7 +62,6 @@ two, as if people expressed themselves like this:
 `sentenceItem; If you get MsNBC, can you turn on Rachel Maddow?
 `sentenceItem; If there is a corkscrew in the house, can you get it?
 `sentenceList`
-
 `p`
 
 `p.
@@ -85,7 +84,7 @@ can follow through without undue inconvenience,
 which includes a package of assumptions about both
 what is currently the case and what is possible.
 `q.Close the window` only has literal force if the
-window is open.  So when making a request speakers
+window is open.  So, when making a request, speakers
 have to signal that they recognize the request involves
 certain assumptions and are rational enough to
 accept modifications of these assumptions in
@@ -95,7 +94,7 @@ interrogative forms like `q.can you` or
 and metadiscursively polite: they leave open the
 possibility of subsequent discourse framing the original
 request just as a belief-assertion.  Developments
-like `q.can you open the window` %-- `q.no, it's closed`
+like `i.can you open the window` %-- `i.no, it's closed`
 are not ruled out.  At the same time, interrogative forms
 connote that the speaker assumes the addressees can
 fulfill the request without great effort: an implicit
@@ -118,7 +117,7 @@ exercise in politesse.
 `p.
 Sometimes the link between directives and
 belief assertions is made explicit.  A common
-pattern is to use `q.I believe that` as an
+pattern is to use `i.I believe` or `i.I believe that` as an
 implicature analogous to interrogatives:
 
 `sentenceList,
@@ -354,7 +353,7 @@ request for something.
 `p`
 
 `p.
-Certainly, in any case, meanings are not literal.
+Certainly, in many cases, meanings are not literal.
 But how then do we understand what people are saying?
 Trying to formulate a not-entirely-haphazard
 account of this process, we can speculate
@@ -398,6 +397,16 @@ in these sentences to an appropriate translation,
 a kind of `q.coordinate transformation` that
 can map concepts onto others, like milk/almond milk
 and kitchen window/bedroom window.
+`p`
+
+`p.
+In sum, a theory of sentences' logical nexus can only 
+be complete with some model of discursive context 
+`i.structured in such a way` that we can repesent the 
+interpretations and concept-transforms internal to 
+parsing sentences to their propositional core.  
+I will now consider what such a `q.theory of context` 
+might look like.
 `p`
 
 
