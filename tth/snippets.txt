@@ -1,0 +1,80 @@
+`p.
+Clearly the two phrases are therefore semantically different; but notice also that the
+semantic properties of the first phrase are due explicitly to its internal structure.
+The temporality implicatures could be expressed in a more `q.purely` semantic
+fasion with a choice of wording, like `i.a procession of students complained`/.  This
+would rely on the conventional meaning of `i.procession` (or `i.stream`/, `i.sequence`/,
+etc.) to provide the expressive `q.time` dimension.  But the `i.student after student`
+phraseology achieves this effect more economically and with more `q.oomph` because the
+internal repetition in the phrase itself effectively models the recurrence it
+seeks to feature semantically.  Here linguistic form actually does reproduce
+factual structure, like a syntactic version of onomatopoeia.  This fact of internal structure
+clearly can only be fully modeled by taking seriously the exact composition of the phrase, not
+treating the phrase-structure as a convention fully subsumed by a semantic role.
+`p`
+
+`p.
+In addition, aside from the expressive detail which depends on the actual phrase
+structure (which therefore cannot be summarized away), this inner structure also
+governs morphosyntactic possibilities over all.  `i.A procession of students`
+captures a similar temporal progression but also fully absorbs `i.student` in a plural
+guise, and `i.A procession of students complained about `qmark-dubious;his grade` is straightforwardly
+ungrammatical.  In Langacker's `q.Three times` example, the inter-word
+`q.linkage` captures the aforementioned complexities in a reasonably non-arbitrary
+way, I believe.  `i.Student` is linked as subject-to-verb with `i.asked`/, and as
+subject-to-object with `i.question`/.  It is true that these link-pairs seem to
+violate agreement norms, but there is nothing in the Link Grammar paradigm %-- which
+practices Dependency Grammar with a rather detailed and intricate
+inventory of inter-word relations, or `q.links` %-- mandating that
+`i.all` link-pairs exhibit forced agreement (like singular/plural).  Agreement, when it
+applies, is a property `i.of` link pairs.  There is also an implicit
+(cross-phrasal) link between `i.student` and `i.Three` %-- clarifying that, considered
+in its entirely, the sentence is about three students precisely %-- and the presence of
+this kind of link alters how the other links connecting to the word `i.student` are
+assessed.  In particular, this latter link stipulates that the word `i.student` is being
+simultaneously understood in both a plural and a singular sense, so it permits
+singular `i.and` plural link forms which, more commonly, could only be
+singular `i.or` plural.  So link grammar can offer an elegant analysis of
+singular/plural `q.underdeterminism`/, expressed in the
+same underlying graph-context terminology as most other link-grammar theorizing.
+It would be unfair to use this as a case against Phrase Structure grammars without a
+detailed presentation of how these grammars would handle such a case in turn, but
+I'd argue that link grammar accommodates this complex example with relatively little
+departure from its underlying theoretical and notational or presentational commitments.
+`p`
+
+
+  So `i.a student complained` focuses not
+on the numeric count of one, but on a singular event (unlike
+`q.`i.only one` student complained`/); `i.students complained` focuses not on the
+plural measure of students involved, but on the fact that a certain type
+of event happened several times.  `i.Many students complained`
+focuses not on sheer number (unlike `i.a large number of students complained`/),
+but rather on the implication that complaints were widespread enough to represent
+a significant sample, perhaps a majority sentiment, among the student body.
+The semantics of the former two forms seems to focus attention
+on the `i.events` of complaining, while the `i.many students` construction seems
+to focus more on their suggesting a prevailing attitude.  `i.Students complained`
+appears to single out each event as distinct, even though there are several of
+them; whereas `i.Many students complained` appears to construe the
+events as each resembling the other, to the point where they partly
+lose their individuality.  `q.Isolated events`/,
+in the English idiom, are those which are atypical; as we cognitively
+shift from the events as discrete to recurring patterns, they become
+suggestive of a larger state of affairs.  By implication, if many students
+complained, many other students may be unhappy; the extent of students'
+unrest is no longer measurable by the multiplicity of the complaining-events.
+
+
+Formal models of syntax and semantics often borrow notation from formal
+language theory; for example, notations for Parts of Speech lifted
+from functional programming languages.`footnote.
+A note on notation: I adopt the Haskell convention (referring to the Haskell
+programming language and other functional languages) of using arrows both between
+parameters and before output notation, but for visual cue I add one dot above the
+arrow in the former case, and two dots in the latter: `argsToReturn;.
+I use `N; for the broadest designation of nouns (the broadest
+noun type, assuming we are using type-theoretic principles),
+with extra markings for more specific types (in principle
+similar notation could be adopted for verbs, propositions, and so on).
+`footnote`
