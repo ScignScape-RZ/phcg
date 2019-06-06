@@ -1,5 +1,5 @@
 
-`spsubsectiontwoline.Link Grammar and Type Theoretic Semantics`
+`section.Link Grammar and Type Theoretic Semantics`
 
 `p.
 From one perspective, grammar is just a
@@ -26,12 +26,6 @@ sentient/nonsentient as much part of grammar as semantics?  It is true that ther
 morphological markers for `q.sentience` or its absence, at least in English %-- except
 perhaps for `q.it` vs. `q.him/her` %-- but is this an accident of English or revealing
 something deeper?
-`p`
-
-`p.
-To explore these questions it is first necessary to consider how a grammar theory can be
-extended to and/or connected with a formal or, to some measure, informal semantics.
-Here I will present one approach to make this extension `visavis; Link Grammar.
 `p`
 
 `p.
@@ -73,6 +67,6 @@ and `q.yields` propositions, much like the `q.square` function takes a real numb
 yields a non-negative real number.  To make this analogy useful, however,
 it is necessary to clarify how `q.types` in a mathematical or computational
 context may serve as appropriate metaphors for syntactic and/or semantic groupings in language.  
-This will be the focus of the next section.
+This will be the focus of the current section.
 `p`
 

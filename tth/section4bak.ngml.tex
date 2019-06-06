@@ -339,6 +339,113 @@ We need to analyze syntactic details like noun case and
 forms of articles, but also finer-grained (though not purely lexicosemantic) classifications
 like sentient/nonsentient or spatial/institutional.
 }
+\p{One way to engage in classification in this kind of example is just to consider subtyping:
+divide nouns into sentient and non-sentient, the former into human and animal and the latter
+into artifacts and natural things, and so forth.  But other options are less blunt.
+For example, notions like sentient/nonsentient can be construed as \q{higher-order types},
+meaning that for broadly-hewed types like nouns or verbs, there are sentient (and non-sentient) variants,
+just as for a type \TypeCat{} there are mass-plural and count-plural collections of \TypeCat{},
+ordered and unordered \TypeCat{} collections, and so on.  Subtyping, higher-order types, inter-type
+associations and various other formal combinations are options for encoding grammatic and
+semantic classification in something like a formal type theory.  The key properties of
+type systems are not only meanings atttached to individual types but notions of functionality
+(according to the central notion that a type system includes \q{function}
+types which are mappings between other types; in Category Theory, any
+formal type system is \q{Cartesian Closed}, meaning that if \T1{} and \T2{} are
+types, there is necessarily a type \TSupT{} of functions between them).
+So if adjectives, say, are most basically \NtoN{} (they modify nouns and yield noun-role phrases),
+we can then consider how adjectives should be modeled when their modified nouns
+are associated with or attributed sentience, mass-plural, or any other variation (whether
+via subtyping or some other association).  How these \q{variations} are modeled in accord
+with one single type is less important than how they \q{propagate} via applicative
+structures, where \q{function-like} types apply transformations and produce phrases.
+}
+\p{To build up a linguistic type theory, I assume, then, a framework of
+types and type associations with a few underlying properties, such as
+these:
+\renewcommand{\labelitemi}{$\bullet$}
+\begin{itemize}\item{} Types have a spectrum of granularity, from the very broad (Parts
+of Speech) to the much narrower,
+including (at the fine end of the scale) where
+they incorporate lexical data
+(types can potentially include \i{rhino}, \i{house}, and so on).
+In between are constructions related to \q{Ontology},
+like sentient/nonsentient, pointwise/extended, artifact/institution, among many others.
+\item{} Types are neither strictly grammatic nor strictly semantic, but
+their gradations of precision cross between grammar and semantics.
+\item{}  Returning to \q{Ontology}: types have associated qualities like sentient/nonsentient;
+spatially (and/or temporally) extended, pointwise, or non-spatial
+(/non-temporal); caused, self-causing, self-determining, affected by
+other things, affecting other things; objects, events, processes, or
+institutions; abstracta or spatetime present things; observables
+or subjectives like emotions or sensations, which are temporally present
+for someone but not (directly) encountered by others.  These are qualities
+pertaining to the manner of referents' appearing, causing, and extending
+in the world and in consciousness, and to a \q{classification} of kinds
+of entities (like a metaphysical Ontology, though the point is not
+to reproduce Medieval philosophy but, more modestly, to catalog word senses).
+I will refer to these qualities generically as \q{associations}.  They may be
+introduced via subtyping or more complex type operators.
+\item{}  Some types are \q{function like}: this means that they are
+\i{applied} to senses which have their own types.  This introduces one
+form of head/dependent relation, where a head word instances a
+function-like type and is applied to one or more \q{dependents}.
+\item{}  Type information \q{distributes over} Link Grammar pairs.  For
+any pair of words which have a meaningful inter-word relation, we can
+consider types which may be applicable to both words, and how these
+types affect and are affected by the significance of the particular
+kind of link.  Some kinds of links mandate particular type
+interpretations of the links elements: \TS{} links,\footnote{http://www.link.cs.cmu.edu/link/dict/section-TS.html
+} to cite a narrow
+example, would only be formed between verb and \Prop{} types (at least
+this is a plausible interpretation of the relevant Link Grammar rules.
+Other type/link combinations are more
+open-ended.
+\item{}  Type information similarly \q{distributes} over clusters of
+link-pairs, where the presence of one such link influences how a
+connected link is understood (or whether it is allowed).  Type-related
+qualifications can propagate from one link-pair to connected
+link-pairs.\footnote{For example, we can say that the linkage structure in
+\q{Three times students asked an interesting question} alters the
+normal type-attribution of \q{students} as just a plural noun;
+relative to the connected structure linking \q{three times} through
+\q{students} to \q{a question}, we can say that \i{three times}
+modifies \q{students} so that it may function, as subject of
+\q{asked}, as if typed as singular, because \i{three times} acts as a
+\q{space builder} and creates a mental frame wherein the students are
+singular, even if the word is plural.  Because of this frame
+phenomenon, the singular/plural status of students does not propagate
+to \q{a question}; collectively they presumably did  not all ask just
+one question.  Type annotation for \q{students} has to be defined,
+in this case, relative to multiple \q{cognitive frames}.
+}
+\item{}  Type information also \q{distributes over} applicative
+structures.  Given a function-like type we can consider how
+associations for the head and dependent elements propagate to
+associations on the resulting phrase \mdash{} again, via subtyping or some
+other mechanism.
+\end{itemize}
+Such a \q{linguistic type theory} needs to model (at the least) these
+aforementioned associations, the \q{distribution} of type details over
+link and applicative structures, and the \q{propagation} of
+associations and other type details.  While informal analyses in any
+single case may be clear, integrating many case-studies into a unified
+theory can be advanced by drawing ideas from rigorous, quasi-mathematical
+type theories \mdash{} relevant research has adopted technical
+formations like \q{dot-types}, higher-order types, dependent types,
+Monoidal Categories, Tensors, Continuations, \q{Linguistic Side Effects},
+Monads, Combinatory Logic, and (Mereo)Topology/Geometry.\footnote{Monoids: \cite{DelpeuchPreller};
+Tensors: \cite{MaillardClarkGrefenstette};
+Continuations: \cite{BarkerShan};
+Combinators: \cite{Villadsen};
+Side Effects: \cite{ShanThesis};
+Monads: \cite{GiorgoloAsudeh}, \cite{ShanMonads}, \cite{Kiselyov};
+Topology: \cite{JeanPetitot}, \cite{CasatiVarzi}.
+}  Such techniques can marshal type-theoretic ideas without
+falling back on simplistic type notions that can end up collapsing a type-system into a
+one-dimensional \q{Ontological} classification, rather than exploring more advanced formulations
+like higher-order types and (what I am callling) \q{associations}.
+}
 \p{With respect to Type Theory related to Link Grammar, consider again the \TS{} links
 (there are dozens of potential link-grammar pairs, of which \TS{} are among the
 less common, but they provide a useful example).  First, note that \Prop{} provides a

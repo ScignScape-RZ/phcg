@@ -18,13 +18,44 @@ rules such that any analysis can uncover them only partially?  Or is any rule-ba
 model of language, no matter how complete, necessarily partial relative to real language?
 `p`
 
+
 `p.
-We can consider at what point formal and computational methods reach a limit,
+Computer languages are a good case-study in what I might call `q.semiotic computability`/.
+This designates the question of whether the
+operations of sign-systems %-- how sign-users express intentions by forming or modifying
+structured networks of signs that explicitly exhibit or are understood to have been
+formed according to collectively recognized signifying rules %-- can be modeled,
+at least to some substantial degree, by computable algorithms.  Our
+notion of computation can be based on modern computer code, not just academic
+topics like pure functions: the behavior of computing systems
+where many functions run concurrently, with possible side-effects, is often
+non-computable via static analysis; such systems can only be understood by
+actually running them.  Nevertheless the capabilities of software programmed
+in modern languages certainly deserve to be characterized as `q.computable`
+behaviors.  A single function, which embodies a computable
+calculation, may be part of a process space whose evolution through
+time is nondeterministic, and computing environments which employ
+functional side-effects are difficult or impossible to evaluate in the abstract.
+I use `q.computability` therefore in this wider sense: operationally implementable
+according to theories underlying mainstream programming languages, which is
+conceptually (if perhaps not mathematically) distinct from `q.computability` in
+subjects like algorithm analysis.
+`p`
+
+`p.
+Natural Langauge Processing, working with human languages from a computing platform,
+is then a step further, continuing beyond logico-mathematic abstractions and toward
+empirical language-use.  We can consider at what point formal and computational methods reach a limit,
 beyond which they fail to capture
 the richess and expressiveness of Natural Language, or whether this limit itself
 is an illusion %-- whether even fully human
 language competence is (perhaps in principle if not in practice) no less reducible
-to formalizable patterns.  Whatever one's beliefs on this last question,
+to formalizable patterns.  Using the wording I just proposed, we can speculate on
+whether all language is `q.semiotically computable` or whether language merely
+depends on faculties which in some neurological and/or presentational sense are
+`q.computable` in those terms %-- faculties that, measured against linguistic fluency,
+are necessary but not sufficient.
+Whatever one's beliefs on this last question,
 a progression of subdisciplines %-- from formal-logical semantics through programming
 langauges and computational Natural Langauge Processing %-- is a reasonable
 scaffolding for a universe of formal methods that can build up, by progressive theoretical
@@ -78,9 +109,11 @@ joint practical activity as well as communication.
 `p.
 In this sense, I believe natural language reveals mutually-modifying juxtapositions
 of concepts whose full semantic effects
-are probably not `q.computable`/: I would work on the assumption that language
-`i.as a whole` and as human social phenomena are the precinct of a 
-cultural fluency `i.beyond` Natural Language Processing.   
+are probably non-computable: I would work on the assumption that language
+`i.as a whole` and as human social phenomena is not `q.computable` in a
+semiotic sense, or any related practical sense (although
+I make no metaphysical claims about the `q.abstract` computability of mental
+processes merely by virtue of their neurophysical materiality).
 The aforementioned `q.linguistic side effects` can be `i.modeled` by tracing our reception
 of linguistic meaning through syntactic and semantic formations, like Link Grammar
 and Type Theory, but I argue for such models not as models `i.of` cognitive processes,
@@ -156,7 +189,15 @@ goal-driven practical action (and in that sense particular, world-bound, histori
 `p`
 
 `p.
-Linguistically, the `q.effects` of language `q.functions` are
+Given these considerations, I propose a `q.Cognitive State Semantics`
+%-- understanding phrase structure in terms of (or analogous to) functional effects
+(like `cite<ShanThesis>;), but cognitive: word and syntax choice effectually
+steering cognitive appraisals of jointly experienced situations
+in specific directions.  Cognitive State Semantics also has formal implications:
+the inner structuration of data `q.spaces`/,
+including unknown and undefined values, and including (side-effects-bearing) function types,
+can be understood as dynamic `i.states of knowledge` and their changes, grounding datatype semantics in human
+use/interactions.  Linguistically, the `q.effects` of language `q.functions` are
 mutations/modifications in cognitive state, respondant to concrete
 or abstract scenarios which are topics of dialog.  Sometimes, effects may
 tolerate mathematical analysis; but such analytical thematics tend to peter out into the
