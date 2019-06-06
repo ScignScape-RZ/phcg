@@ -96,10 +96,10 @@ plurality of coffee (as liquid, or maybe coffee grounds/beans)
 in spatial and/or physical/dynamic terms.  So we have:
 
 `sentenceList,
-`sentenceItem; There's coffee all over the table.
+`sentenceItem; \label{itm:coffeetable} There's coffee all over the table.
 `sentenceItem; She poured coffee from an ornate beaker.
 `sentenceItem; There's too much coffee in the grinder.
-`sentenceItem; There's a lot of coffee left in the pot
+`sentenceItem; \label{itm:coffeepot} There's a lot of coffee left in the pot
 %-- should I pour it out?
 `sentenceList`
 
