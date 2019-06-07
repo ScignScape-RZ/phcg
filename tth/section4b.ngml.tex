@@ -1,465 +1,324 @@
-\subsection{Types, Sets, and Concepts}
-\p{In formal/computational contexts, types can be defined as sets of both values and
-\q{expectations} \cite{MathieuBouchard} (meaning assumptions which may be made about
-all values covered by the type); alternatively, we can (perhaps better) consider types as
-\i{spaces} of values.  Types' extensions have internal structure; there
-can be \q{null} or \q{invalid} values, default-constructed values, and
-so forth, which are \q{regions} of type-space and can
-be the basis of topological or Category-Theoretic rather than
-set-based analyses of type-extension.  Also, expectations intrinsically include
-functions which may be \q{called on} types.  There is definitional interdependence
-between types and functions: a function is defined in terms of the types it accepts as parameters and
-returns \mdash{} rather than its entire set of possible inputs and outputs, which can
-vary across computing environments.  These are some reasons why in theoretical
-Computer Science types are not \q{reduced} to underlying sets; instead, extensions
-are sometimes complex spaces that model states of, or internal organization of comparisons
-among, type instances.
+\spsubsectiontwoline{Three tiers of linguistic type theory}
+\p{From one perspective, grammar is just a
+most top-level semantics, the primordial Ontological division of language into designations of
+things or substances (nouns), events or processes (verbs), qualities and attributes (adjectives),
+and so forth.  Further distinctions like count, mass, and plural nouns add
+semantic precision but arguably remain in the orbit of grammar (singular/plural
+agreement rules, for example); the question is whether semantic detail gets
+increasingly fine-grained and somewhere therein lies a \q{boundary} between syntax and
+semantics.  The mass/count distinction is perhaps a topic in grammar more so than
+semantics, because its primary manifestation in language is via agreement
+(\i{some} wine in a glass; \i{a} wine that won a prize; \i{many} wines
+from Bordeaux).  But are the distinctions between natural and constructed objects,
+or animate and inanimate kinds, or social institutions and natural
+systems, matters more of grammar or of lexicon?  Certainly they engender
+agreements and propriety which appear similar to
+grammatic rules.  \i{The tree wants to run away from the dog} sounds wrong \mdash{} because
+the verb \i{want}, suggestive of propositional attitudes, seems incompatible with
+the nonsentient \i{tree}.  Structurally, the problem with this sentence seems analogous
+to the flawed \i{The trees wants to run away}: the latter has incorrect singular/plural linkage,
+the former has incorrect sentient/nonsentient linkage, so to speak.  But does this
+structural resemblance imply that singular/plural is as much part of semantics as grammar, or
+sentient/nonsentient as much part of grammar as semantics?  It is true that there are no
+morphological markers for \q{sentience} or its absence, at least in English \mdash{} except
+perhaps for \q{it} vs. \q{him/her} \mdash{} but is this an accident of English or revealing
+something deeper?
 }
-\p{An obvious paradigm is organizing type-extensions around prototype/borderline
-cases \mdash{} there are instances which are clear examples of types and
-ones whose classification is dubious.  I will
-briefly argue later, however, that common resemblance is not always a good marker
-for types being well-conceived \mdash{} many useful concepts are common
-precisely because they cover many cases, which makes defining
-\q{prototypes} or \q{common properties} misleading; this reasoning
-arguably carries over to types as well.  Also, sometimes the clearest
-\q{representative} example of a type or concept is actually not a
-\i{typical} example: a sample latter or model home is actually not (in
-many cases) a real letter or home.  So resemblance-to-prototype is at
-best one kind of \q{inner organization} of concepts' and types' spaces
-of extension.  
-Type \i{spaces} have potentially complex patterns of regions and equivalence classes of
-inter-value mappings (in the sense of behavioral equivalence relative to
-code analysis, testing, or security)
-\mdash{} the \i{conceptual} properties of types are expressed in the
-\i{internal structuration} of their associated state-space.  Putting this in mathematical
-language, an in-depth treatment of types cannot work \q{in the Category} of
-sets, even for basic type-extension, but rather (for instance) the
-Category of Topological Spaces.
+\p{I will argue that type-related observations can be grouped (not necessarily
+exclusively or exhaustively) into 
+three \q{tiers} of linguistic organization \mdash{} three 
+different levels of granularity, distinguished by relative scales of
+resolution, amongst the semantic implications of
+putative type representations for linguistic phenomena.
+These tiers I term  
+\i{macrotypes} \mdash{} relating mostly to Parts of Speech and the functional treatment
+of phrases as applicative structures; \i{mesotypes} \mdash{} engaged with
+existential/experiential qualities and \q{Ontological} classifications
+like sentient/nonsentient, rigid/nonrigid, and
+others I have discussed; and \i{microtypes} \mdash{} related to lexemes and word-senses.
+This lexical level can include  \q{microclassification}, or
+gathering nouns and verbs by the auxiliary prepositions they allow and
+constructions they participate in (such as, different cases), and
+especially how through this they compel various spatial and
+force-dynamic readings; their morphosyntactic resources for describing states
+of affairs; and, within semantics, when we look toward even more fine-grained classifications
+of particular word-senses, to reason through contrasts in usage.\footnote{So, conceiving microclasses similar in spirit to Steven Pinker in
+Chapter 2 of \cite{Pinker}, though I'm not committing to using the
+term only in the way Pinker uses it.  Cf. also \cite{AnneVilnat}, which
+combines a microclass theory I find reminiscent of \i{The Stuff of Thought} with
+formal strategies like Unification Grammar.
+}  Microclasses can point out similarities
+in mental \q{pictures} that explain words' similar behaviors, or
+study why different senses of one word succeed or fail to be acceptable in particular phrases.
+There are \i{stains all over the tablecloth} and \i{paint splattered all over the tablecloth},
+but not (or not as readily) \i{dishes all over the tablecloth}.  While \q{stains} is count-plural and
+\q{paint} is mass-aggregate, they work in similar phrase-structures because both
+imply extended but not rigid spatial presence; whereas \q{dishes} can work for
+this schema only by mentally adjusting to that perspective, spatial construal shifting
+from visual/perceptual to practical/operational (we might think of dishes \q{all over} the
+tablecloth if we have the chore of clearing them).  Such observations support
+microclassification of nouns (and verbs, etc.) via Ontological and
+spatial/dynamic/configuration criteria.
 }
-\p{Moreover, expectations in a particular case
-may be more precise than what is implied by the type itself \mdash{} it is erroneous
-to assume that a proper type system will allow a correct \q{set of values} to
-be stipulated for each point in a computation (the kind of contract enforced via
-by documentation and unit testing).  So state-space in a given context may include many
-\q{unreasonable} values, implying that within the overall space there is a \q{reasonable}
-subspace, except that this subspace may not be crisply defined.
+\p{Type-theoretic semantics can also apply Ontological tropes to unpack the overlapping mesh of word-senses,
+like \i{material object} or \i{place} or \i{institution}.
+This mode of analysis is especially well illustrated when competing senses
+collide in the same sentence.  Slightly modifying two examples:\footnote{\cite[p. 40]{ChatzikyriakidisLuo} (former) and
+\cite[p. 4]{MeryMootRetore} (latter).
 }
-\p{Sets, concepts, and types represent three different primordial thought-vehicles for
-grounding notions of logic and meaning.  To organize systems around \i{sets} is
-to forefront notions of inclusion, exclusion, extension, and intersection,
-which are also formally essential to mathematical logic and undergird the
-classical interdependence of sets, logic, and mathematics.
-To organize systems around \i{concepts} is to forefront practical engagement
-and how we mold conceptual profiles, as collections of ideas and pragmas,
-to empirical situations.  To organize systems around \i{types} is to forefront
-\q{functions} or transformations which operate on typed values, the interrelationships
-between different types (like subtypes and inclusion \mdash{} a type can itself
-encompass multiple values of other types), and the conceptual abstraction
-of types themselves from the actual sets of values they may exhibit
-in different environments.  Sets and types are
-formal, abstract phenomena; whereas concepts are characterized by
-gradations of applicability, and play flexible roles in thought and language.
-The cognitive role of concepts can be discussed with some rigor, but there is a
-complex interplay of cognitive schema and practical engagements which
-would have to be meticulously sketched in many real-world scenarios, if
-our goal were to translate conceptual reasoning to formal structures
-on a case-by-case basis.  We can, however, consider in general
-terms how type-theoretic semantics can capture conceptual structures
-as part of the overall transitioning of thoughts to langauge.
-}
-\p{A concept does not merely package up a definition, like \q{restaurant} as
-\q{a place to order food}; instead concepts link up with other concepts
-as tools for describing and participating in situations.  Concepts are
-associated with \q{scripts} of discourse and action, and find their
-range of application through a variegated pragmatic scope.
-We should be careful not to overlook these pragmatics, and
-assume that conceptual structures can be simplistically
-translated to formal models.
-Cognitive Linguistics critiques
-Set-Theoretic or Modal Logic reductionism (where a concept is just a set
-of instances, or an extension across different possible worlds) \mdash{} George Lakoff and Mark Johnson,
-prominently, argue for concepts' organization around
-prototypes (\cite[p. 18]{LakoffJohnson}; \cite[p. 171, or p. \textit{xi}]{Johnson})
-and embodied/enactive patterns of interaction (\cite[p. 90]{LakoffJohnson};
-\cite[p. 208]{Johnson}).
-Types, by contrast, at least in linguistic applications of type theory, are abstractions
-defined in large part by quasi-functional notions of phrase struture.
-Nevertheless, the \i{patterns} of how types may inter-relate
-(mass-noun or count-noun, sentient or non-sentient, and so forth)
-provide an infrastructure for conceptual understandings to be
-encoded in language \mdash{} specifically, to be signaled by which typed
-articulations conversants choose to use.  A concept like
-\i{restaurant} enters language with a collection of understood
-qualities (social phenomena, with some notion of spatial location and
-being a \q{place}, etc.) that in turn can be marshaled by sets of
-allowed or disallowed phrasal combinations, whose parameters
-can be given type-like descriptions.  Types, in this sense,
-are not direct expressions of concepts but vehicles for
-introducing concepts into language.
-}
-\p{Concepts (and types also) are not cognitively the same as their
-extension \mdash{} the concept \i{restaurant}, I believe, is distinct from
-concepts like \i{all restaurants} or \i{the set of all restaurants}.
-This is for several reasons.  First, concepts can be pairwise different
-not only through their instances, but because they highlight different
-sets of attributes or indicators.  The concepts \q{American President} and \q{Commander in Chief}
-refer to the same person, but the latter foregrounds a military role.
-Formal Concept Analysis considers \i{extensions} and \q{properties}
-\mdash{} suggestive indicators that inhere in each
-instance \mdash{} as jointly (and co-dependently) determinate: concepts
-are formally a synthesis of instance-sets and property-sets \cite{YiyuYao},
-\cite{Belohlavek}, \cite{Wille}.  Second,
-in language, clear evidence for the contrast between \i{intension} and
-\i{extension} comes from phrase structure: certain constructions specifically
-refer to concept-extension, triggering a mental shift from thinking of the
-concept as a schema or prototype to thinking of its extension (maybe in some context).
-Compare these sentences (\ref{itm:rhinor} repeats \ref{itm:rhino}):
-\begin{sentenceList}\sentenceItem{} \label{itm:rhinor} Rhinos in that park are threatened by poachers.
-\sentenceItem{} Young rhinos are threatened by poachers.
+\begin{sentenceList}\sentenceItem{} The newspaper you are reading is being sued.
+\sentenceItem{} Liverpool, an important harbor, built new docks.
 \end{sentenceList}
-Both sentences focus a conceptual lens in greater detail than \i{rhino} in general, but
-the second does so more intensionally, by adding an extra indicative criterion; while
-the former does so extensionally, using a phrase-structure designed to operate on
-and narrow our mental construal of \q{the set of all rhinos}, in the sense of
-\i{existing} rhinos, their physical place and habitat, as opposed to
-the \q{abstract} (or \q{universal}) type.  So there is a familiar semantic
-pattern which mentally transitions from a lexical type to its extension and
-then extension-narrowing \mdash{} an interpretation that, if accepted, clearly
-shows a different mental role for concepts of concepts' \i{extension} than the
-concepts themselves.
-}
-\p{There is a type-theoretic correspondence between intension and
-extension \mdash{} for a type \Tnoindex{} there is a corresponding \q{higher-order} type
-of \i{sets} whose members are \Tnoindex{}.\footnote{Related constructions are the type of \i{ordered sequences} of \Tnoindex{};
-unordered collections of \Tnoindex{} allowing repetition; and stacks, queues, and
-deques (double-ended queues) as \Tnoindex{}-lists that can grow or shrink
-at their beginning and/or end.
-}  If we take this (higher-order)
-type gloss seriously, the extension of a concept is not its \i{meaning}, but a
-different, albeit interrelated concept.  Extension is not definition.
-\i{Rhino} does not mean \i{all rhinos} (or \i{all possible rhinos}) \mdash{} though arguably
-there are concepts \i{all rhinos} and \i{all restaurants} (etc.) along with the concepts
-\i{rhino} and \i{restaurant}.  Concepts, in short, do not mentally signify sets, or
-extensions, or sets-of-shared-properties.  Concepts, rather, are cognitive/dialogic tools.
-Each concept-choice, as presentation device,
-invites its own follow-up.  \i{Restaurant} or \i{house} have meaning not via
-idealized mental pictures, or proto-schema, but via kinds of things
-we do (eat, live), of conversations we have, of qualities we deem relevant.  Concepts do not
-have to paint a complete picture, because we use them as part of ongoing situations
-\mdash{} in language, ongoing conversations.  Narrow concepts \mdash{} which may best exemplify
-\q{logical} models of concepts as resemblance-spaces or as rigid designators to
-natural kinds \mdash{} have, in practice, fewer use-cases \i{because} there
-are fewer chances for elaboration.  Very broad concepts, on the other hand, can have,
-in context, too \i{little} built-in \i{a priori} detail.
-(We say \q{restaurant} more often than \i{eatery}, and
-more often than \i{diner}, \i{steakhouse}, or \i{taqueria}).  Concepts dynamically play
-against each other, making \q{spaces} where different niches of meaning, including
-levels of precision, converge as site for one or another.  Speakers need freedom to choose
-finer or coarser grain, so concepts are profligate, but the most oft-used trend toward middle
-ground, neither too narrow nor too broad.  \i{Restaurant} or \i{house} are useful because they are noncommittal, inviting more detail.
-These dynamics govern the flow of inter-concept relations (disjointness, subtypes, partonymy, etc.).
-}
-\p{Concepts are not rigid formulae (like instance-sets or even attributes fixing when
-they apply); they are mental gadgets to initiate and
-guide dialog.  Importantly, this
-contradicts the idea that concepts are unified around instances' similarity (to each other or
-to some hypothetical prototype): concepts have avenues for contrasting
-different examples, invoking a \q{script} for further elaboration, or for building temporary filters
-(\q{Let's find a restaurant that's family-friendly}; allowing such one-off narrowing is a feature
-of the concept's flexibility).
-No less important, than acknowledged similarities across all instances, are well-rehearsed ways
-\visavis{} each concept to narrow scope by marshaling lines of \i{contrast}, of \i{dissimilarity}.
-A \i{house} is obviously different from a \i{skyscraper}
-or a \i{tent}, and better resembles other houses; but there are also more nontrivial \i{comparisons}
-between houses, than between a house and a skyscraper
-or a tent.  Concepts are not only spaces of similarity, but of \i{meaningful kinds of differences}.
-}
-\p{To this account of conceptual spaces we can add the conceptual matrix spanned by
-various (maybe overlapping) word-senses: to \i{fly}, for example, names
-not a single concept, but a family of concepts all related to airborn
-travel.  Variations highlight different features: the path of flight (\i{fly to Korea}, \i{fly over the mountain});
-the means (\i{fly Korean air}, \i{that model flew during World War II});
-the cause (\i{sent flying (by an explosion)}, \i{the bird flew away (after a loud noise)},
-\i{leaves flying in the wind}).  Words allow different use-contexts
-to the degree that their various \i{senses} offer an inventory of aspects for
-highlighting by \i{morphosyntactic} convention.  Someone who says \i{I hate to fly} is not
-heard to dislike hand-gliding or jumping off mountains.\footnote{People, unlike birds, do not fly \mdash{} so the verb, used intransitively
-(not flying \i{to} somewhere in particular or \i{in} something in particular),
-is understood to refer less to the physical motion and more to the socially
-sanctioned phenomenon of buying a seat on a scheduled flight on an airplane. The construction
-highlights the procedural and commercial dimension, not the physical mechanism and
-spatial path.  But it does so \i{because} we know human flight is
-unnatural: we can poetically describe how the sky is filled with flying leaves or birds,
-but not \q{flying people}, even if we are nearby an airport.
-Were \q{flying people} used jokingly, it would be in bad taste, like
-\q{cat all over all over the driveway} from Pinker
-\cite{Pinker} on page 119 and Langacker's \q{Nouns and Verbs} \cite{Langacker87} on page 67.
-}  Accordant variations
-of cognitive construal (attending more to mode of action, or path, or motives, etc.),
-which are elsewhere signaled by grammatic choices, are also spanned by a conceptual
-space innate to a given word: senses are finer-grained meanings availing themselves to one construal or another.
-}
-\p{So situational construals can be signaled by word- and/or
-syntactic form choice (locative, benefactive, direct and indirect
-object constructions, and so forth).  Whereas conceptual organization
-often functions by establishing classifications, and/or invoking
-\q{scripts} of dialogic elaboration, cognitive structure tends to apply more
-to our attention focusing on particular objects, sets of objects, events, or
-aspects of events or situations.  \i{Conceptual} is more abstract and belief-oriented;
-\i{Cognitive} is more concrete and phenomenological.  Concepts organize our
-\q{background knowledge} \cite{SmithMcIntyre}; cognitions allow it to be latent
-against the disclosures of material consciousness
-\cite{DavidWoodruffSmith}, \cite{DavidWoodruffSmithChapter},
-\cite{JordanZlatev}, \cite{SeanDorranceKelley}.
-So the contrast between singular, mass-multiples, and count-multiples,
-among nouns, depends on cognitive
-construal of the behavior of the referent in question (if singular, its
-propensity to act or be conceived as an integral whole; if multiple, its
-disposition to either be divisible into discrete units, or not).
-Or, events can be construed in terms of their causes
-(their conditions at the outset), or their goals (their conditions at
-the conclusion), or their means (their conditions in the interim).
-Compare \i{attaching} something to a wall (means-focused) to
-\i{hanging} something on a wall (ends-focused); \i{baking} a cake
-(cause-focus: putting a cake in the oven with deliberate intent to cook it)
-to \i{burning} a cake (accidentally overcooking it).\footnote{We can express
-an intent to bake someone a cake, but not (well, maybe comedically) to
-\i{burn} someone a cake (\q{burn}, at least in this context, implies
-something not intended); however, we \i{can} say
-\q{I burnt your cake}, while it is a little jarring to say
-\q{I baked your cake} \mdash{} the possessive implies that some
-specific cake is being talked about, and there is less apparent reason
-to focus on one particular stage of its preparation (the baking) once
-it is done.  I \i{will} bake a cake, in the future, uses
-\q{bake} to mean also other steps in preparation (like \q{make}), while,
-in the present, \q{the cake \i{is} baking} emphasizes more its
-actual time in the oven.  I \i{baked your cake} seems to focus
-(rather unexpectedly) on this specific stage even after it is completed,
-whereas \i{I baked you a cake}, which is worded as if the recipient
-did not know about the cake ahead of time, apparently uses \q{bake} in
-the broader sense of \q{made}, not just \q{cooked in an oven}.
-Words' senses mutate in relation to the kinds of situations where they are used
-\mdash{} why else would \i{bake} mean \q{make}/\q{prepare} in the past or future tense but
-\q{cook}/\q{heat} in the present?
-}
-These variations are not random assortments of polysemous words' senses:
-they are, instead, rather predictably distributed according
-to speakers' context-specific knowledge and motives.
-}
-\p{I claim therefore that \i{concepts} enter language complexly, influenced by
-conceptual \i{spaces} and multi-dimensional semantic and syntactic selection-spaces.
-Concepts are not simplistically \q{encoded} by types, as if for
-each concept there is a linguistic or lexical type that just
-disquotationally references it \mdash{} that the type \q{rhino} means the concept
-\i{rhino} (\q{type} in the sense that type-theoretic semantics would model lexical
-data according to type-theoretic rules, such as \i{rhino} as subtype of \i{animal} or
-\i{living thing}).
-Cognitive schema, at least in the terms I just laid out, select particularly
-important gestalt principles (force dynamics, spatial frames, action-intention)
-and isolate these from a conceptual matrix.  On this basis, we can argue that
-these schemata form a precondition for concept-to-type association; or,
-in the opposite logical direction, that language users' choices to employ
-particular type articulations follow forth from their prelinguistic
-cognizing of practical scenarios as this emerges out of collections
-of concepts used to form a basic understanding of and self-positioning within them.
-}
-\p{In this sense I called types \q{vehicles} for concepts: not that types \i{denote}
-concepts but that they (metaphorically) \q{carry} concepts into language, as a bus
-carries people into a city.  \q{Carrying} is enabled by types' semi-formal rule-bound
-interactions with other types, which are positioned to capture concepts' variations and
-relations with other concepts.
-To express a noun in the benefactive case, for example, which can be seen as attributing to
-it a linguistic type consistent with being the target of a benefactive,
-is to capture the concept in a type-theoretic gloss.
-It tells us, I'm thinking about this thing in such a way that it
-\i{can} take a benefactive (the type formalism attempting to capture
-that \q{such a way}).
-A concept-to-type \q{map}, as I just
-suggested, is mediated (in experience and practical reasoning) by
-cognitive organizations; when (social, embodied) enactions take
-linguistic form, these organizing principles can be encoded in how
-speakers apply morphosyntactic rules.  So the linguistic structures,
-which I propose can be formally modeled by a kind of type theory, work
-communicatively as carriers and thereby signifiers of cognitive
-attitudes. The type is a vehicle for the concept because it takes part in constructions
-which express conceptual details \mdash{} the details
-don't emerge merely by virtue of the type itself.
-I am not arguing for a neat concept-to-type correspondence; instead, a type system provides a
-\q{formal substrate} that models (with some abstraction and simplification) how
-properties of individual concepts translate
-(via cognitive-schematic intermediaries) to their
-manifestation in both semantics and syntax.
-}
-\p{Continuing with benefactive case as a case study (no pun intended),
-consider how an ontology of word senses (which could plausibly be
-expressed by types and subtypes) can interrelate with the benefactive.
-A noun as a benefactive target most often is a person or some other
-sentient/animate being; an inanimate benefactive is most likely
-something artificial and constructed (cf., \i{I got the car new tires}).
-How readily hearers accept a sentence -- and the path they
-take to construing its meaning so as to make it grammatically acceptable
--- involves interlocking morphological and type-related considerations;
-in the current example, the mixture of benefactive case and which noun
-\q{type} (assuming a basic division of nouns into e.g.
-animate/constructed/natural) forces a broader or narrower
-interpretation.  A benefactive with an \q{artifact} noun, for example,
-almost forces the thing to be heard as somehow disrepaired:
-\begin{sentenceList}\sentenceItem{} I got glue for your daughter.
-\sentenceItem{} I got glue for your coffee mug.
+Both have a mid-sentence shift between senses, which is analyzed
+in terms of \q{type coercions}.  The interesting detail of this treatment
+is how it correctly predicts that such coercions are not guaranteed to
+be accepted:
+\begin{sentenceList}\sentenceItem{} The newspaper fired the reporter and fell off
+the table (?).
+\sentenceItem{} Liverpool beat Tottenham and built new docks (?).
 \end{sentenceList}
-We gather (in the second case) that the mug is broken \mdash{} but this is never spelled out
-by any lexical choice.  It is implied indirectly by benefactive case along with
-notions of classification, on the grammar/semantic border, that have a potential
-type-theoretic treatment.  It is easy to design similar examples with other cases:
-a locative construction rarely targets \q{sentient} nouns, so in
-\begin{sentenceList}\sentenceItem{} We're going to Grandma!
-\sentenceItem{} Let's go to him right now.
-\sentenceItem{} Let's go to the lawyers.
-\sentenceItem{} Let's go to the press.
+(again, slightly modifying the counter-examples).  Type coercions are
+\i{possible} but not \i{inevitable}.  Some word-senses \q{block} certain coercions
+\mdash{} that is, certain sense combinations, or juxtapositions, are disallowed.
+These preliminary, motivating analyses carry to more
+complex and higher-scale types, like plurals (the plural of a type-coercion
+works as a type-coercion of the plural, so to speak).
+As it becomes structurally established that type rules at the
+simpler levels have correspondents at more complex levels, the use of
+type notions \i{per se} (rather than just \q{word senses} or other
+classifications) becomes more well-motivated.
+}
+\p{Clearly, for example,
+only certain kinds of agents may have beliefs or desires, so
+attributing mental states forces us to conceive of their referents
+in those terms:
+\begin{sentenceList}\sentenceItem{} Liverpool wants to sign a left-footed striker.
+\sentenceItem{} That newspaper plans to fire its editorial staff.
 \end{sentenceList}
-we mentally substitute the person with the place where they live or work.  Morphosyntactic
-considerations are also at play: \i{to the lawyers} makes \q{go} sound more like \q{consult with},
-partly because of the definite article (\i{the} lawyers implies conversants have some prior involvement
-with specific lawyers or else are using the phrase metonymically, as in \q{go to court} or
-\q{to the courts}, for
-legal institutions generally; either reading draws attention away from literal spatial implications of
-\q{go}). \i{Go to him} implies that \q{he} needs
-some kind of help, because if the speaker just meant going to wherever he's at, she probably would
-have said that instead.  Similarly, the locative in \i{to the press} forces the mind to
-reconfigure the landmark/trajector structure, where \i{going} is thought not as a literal
-spatial path and \i{press} not a literal destination \mdash{} in other words, the phrase must be
-read as a metaphor.  But the \q{metaphor} here is not \q{idiomatic} or removed from linguistic rules
-(based on mental resemblance, not language structure); here it
-clearly works off of formal language patterns: the landmark/trajector
-relation is read abstracted from literal spatial movement because the locative is applied
-to an expression (\i{the press}) which does not (simplistically) meet
-the expected interpretation as \q{designation of place}.
-We need to analyze syntactic details like noun case and
-forms of articles, but also finer-grained (though not purely lexicosemantic) classifications
-like sentient/nonsentient or spatial/institutional.
+This \i{can} be analyzed as \q{type coercions}; but the type-theoretic machinery should contribute
+more than just obliquely stating linguistic wisdom, such as
+maintaining consistent conceptual frames or joining only suitably
+related word senses.  The sense of \i{sign} as in \q{employ to play on
+a sports team} can only be linked to a sense of Liverpool as the
+Football Club; or \i{fire} as in
+\q{relieve from duty} is only compatible with newspapers as
+institutions.  These dicta can be expressed in multiple ways.
+But the propagation of classifications
+(like \q{inanimate objects} compared to
+\q{mental agents}) through complex type structures lends credence to the
+notion that type-theoretic perspectives are more than just an expository tool;
+they provide an analytic framework which integrates grammar and semantics, and
+various scales of linguistic structuration.
+For instance, we are prepared to accept some examples of dual-framing
+or frame-switching, like thinking of a newspaper as a physical object and a city government
+(but we reject other cases, like \i{Liverpool voted in a new city government and signed a
+new striker} \mdash{} purporting to switch from the city to the Football Club).  The rules for
+such juxtapositions appear to reveal a system of types with some parallels to
+those in formal settings, like computer languages.
 }
-\p{With respect to Type Theory related to Link Grammar, consider again the \TS{} links
-(there are dozens of potential link-grammar pairs, of which \TS{} are among the
-less common, but they provide a useful example).  First, note that \Prop{} provides a
-type attribution for sentences, but also for sentence parts: \i{he is at school},
-for example, presents a complete idea, either as its own sentence or part of a
-larger one.  In the latter case, a \Prop{} phrase would typically be preceded with a
-word like \i{that}; in the case of Link Grammar, we can define words relative
-to their semantic and/or syntactic role, which often lies primarily in linking
-with other parts of a sentence or helping those parts link with each other.
-Type-theoretically, however, we may want to assign types to every word, even those
-which seem auxiliary and lacking much or any semantic content of their own.
-Arguably, \i{that} serves to \q{package} an assertion, encapsulating
-a proposition as a presumed fact designated as
-one idea, for the sake of making further comments, as if \q{making a noun} out
-of it: \PropToN{}.  Perhaps our intuitions are more as if \i{that he is at school}
-is also a proposition, maybe a subtly different kind, by analogy to how
-questions and commands are also potentially \Prop{} variants.  Since \thatPhrases{} are \q{arguments} for verbs,
-the choice then becomes whether it is useful to expand our type picture of verbs
-so that they may act on propositions as well as nouns,
-or rather type \q{encapsulated} propositions as just nouns
-(maybe special kinds of nouns).
+\p{In short, \q{Ontological} types like \i{institution} or \i{place} serve in some
+examples to partition senses of one multi-faceted word.  Here they reveal
+similar cognitive dynamics to reframing-examples like \i{to the press}, where
+Ontological criteria (like reading something as a place) are triggered by
+phrase-scale structure.  But there are also interesting contrasts:
+the \i{newspaper} and \i{Liverpool} examples
+imply that some words have multiple framings which are well-conventionalized;
+newspaper-as-institution feels less idiomatic and metaphorical than
+press-as-place.  So these examples suggest two \q{axes} of variation.
+First, whether the proper Ontological framing follows from other word-choices
+(like \q{fire} in \i{the newspaper fired the reporter}, which has
+its own semantic needs), or from morphosyntax
+(like the locative in \i{to the press}); and, second, whether triggered framings work
+by selecting from established word senses or by something more metaphorical.
+Metaphors like \i{to the press} do have an element of standardization;
+but apparently not so much so to be distinct senses: note how \i{the press} as metaphorical place
+does not work in general: \qmarkdubious{}\i{at the press}, \qmarkdubious{}\i{near the press}
+(but \i{at the newspaper}, \i{near the newspaper}
+\mdash{} imagine two journalists meeting outside the paper's offices \mdash{} sound quite reasonable).
 }
-\p{In either case, \i{I know that ...} clearly involves a verb with subject and direct
-object: so either \VisNNtoProp{} or \VisNProptoProp{}.  Consider the role of a \TS{}-link here:
-specifically, \TS{} connects the verb to the assertorial direct object (most
-directly, to \i{that}).  The purely formal consideration is ensuring that
-types are consistent: either the \TS{} target is \Prop{}, as I suggested
-above, with the verb type modified accordingly; or the \TS{} target is a noun,
-though here it is fair to narrow scope.  For this particular kind of
-link, the target must express a proposition: either typed directly as
-such or typed as, say, a noun \q{packaging} a proposition, which would then
-be a higher-order type relation (just as \q{redness} is a noun \q{packaging}
-an adjective, or \q{running} is an adjective packaging a verb).  In other words,
-it is difficult to state the type restrictions on the link-pair without employing
-more complex or higher-order type formations.
+\p{The \q{type coercion} analysis works for mid-sentence frame-shifts; but other
+examples suggest a more gradual conceptual \q{blending}.  For example, the
+place/institution dynamic is particularly significant for \i{restaurant}
+(whose spatial location is, more so, an intrinsic part of its
+identity).  Being a \i{place} implies both location and extension; most places are not single
+points but have an inside where particular kinds of things happen.  I am not convinced
+that restaurant as place and as institution are separate word senses; perhaps, instead,
+conversations can emphasize one aspect or another, non-exclusively.  As I have argued,
+we need not incorporate all framing effects via \q{subtypes} (restaurant as either
+subtype of hypothetical \q{types of all} places or institutions, respectively).  But
+\q{placehood}, the Ontological quality of being a place \mdash{} or analogously being
+a social institution \mdash{} identify associations that factor into cognitive frames; types
+can then be augmented with criteria of tolerating or requiring one association or another.
+So if \q{restaurant} is a type, one of its properties is an institutionality that \i{may}
+be associated with its instances.  In conversation,
+a restaurant may be talked about as a business or community, foregrounding this
+dimension.  Or (like in asking for directions) its spatial dimension may be foregrounded.
+The availability of these foregroundings is a feature of a hypothetical restaurant type,
+whether or not these phenomena are modeled by subtyping or something more sophisticated.
+The \q{newspaper} examples suggest how Ontological considerations
+clearly partition distinct senses marked by properties like objecthood or
+institutionality (respectively).  For \q{newspaper} the dimensions are less available for
+foregrounding from a blended construal, than \q{unblended} by conventional usage; that
+is why reframings evince a type \i{coercion} and not a gentler shift of emphasis.
+The example of \i{restaurant}, in contrast, shows that competing routes for
+cognitive framing need not solidify into competing senses, though they trace
+various paths which dialogs may follow.
+But both kinds of examples put into evidence an underlying
+cognitive-Ontological dynamic which has potential type-oriented models.
 }
-\p{On the other hand, this is
-another example of the fuzzy boundary between syntax and semantics: given a sentence
-which seems to link a verb calling for a belief or assertion (like \q{know},
-\q{think}, \q{suggest}, \q{to be glad}) to something that is not proposition-like, is such a
-configuration ungrammatical, or just hard to understand?  Clearly, the
-\i{semantic} norms around verbs like \q{know} is that their \i{subject}
-has some quality of sentience (or can be meaningfully attributed
-belief-states, even if speakers know not to take it literally: \q{The function
-doesn't know that this number will never be zero}); and their \i{object} should
-be somehow propositional.  But applying type theory (or type theory in conjunction
-with Dependency Grammar) leaves open various analytic preferences: these
-requirements can be presented as rigid grammatic rules or as \q{post-parsing}
-semantic regulations.  How to model the qualities of sentience (or at least of having
-propositional attitudes broadly conceived), for the noun, and of propositionality,
-for the direct object, are again at the discretion
-of the analysis (subtypes, quality-associations, or etc.) \mdash{} Figure ~\ref{fig:Iknow} shows one potential,
-rather simplified unpacking of the sentence; from this structure details
-can be added perhaps as extra syntax constraints or perhaps more as cues
-to interpretation.\input{figure.tex}  If these
-requirements are seen as more syntactic, so qualities are incorporated into
-data like Part of Speech (say, a noun designating something with propositional attitudes
-being a subtype of of a generic \N{} type), then we are more likely to analyze
-violations as simply incorrect (recall \q{The tree wants to run away from the dog}
-\mdash{} ungrammatical or just somehow \q{exotic}?).
-Some examples suggest less incorrectness as clever or poetic usage \mdash{} so a
-richer analysis may recognize expressions as type- and link-wise acceptable, but
-showing incongruities (which is not the same as impropriety)
-at a more fine-grained type level.  That \i{to want} takes a subject
-\i{associated} with sentience does not force type annotations to inscribe this
-in grammatic or lexical laws; instead, these associations can be
-introduced as potential \q{side effects}, \i{triggering} re-associations
-such as forcing hearers to ascribe sentience to something (like a tree) where
-such ascription is not instinctive.  The type effect in this case lies more
-at the conceptual level, the language-user sifting conceptual
-backgrounds to find a configuration proper to the type requirements (in what
-sense can a tree \q{want} something?).  In this \q{tree} case we probably
-appeal to concepts of \q{as if}: if the tree \i{were} sentient, it
-would be nervous of the dog sniffing around \mdash{} a humorous way of calling
-attention to the dog's actions (obliquely maybe alluding to people's background
-knowledge that dogs sometimes do things, like pee, in inconvenient
-places, from humans' perspectives).
+\p{At the most general level \mdash{} what I called \i{macrotype} modeling \mdash{} a type
+system recognizes initially only the grammatical backbone of expressions, and
+then further type nuances can be seen as shadings and interpretations which add substance
+to the syntactic form.  So in type-theoretical analysis at this more grammatic level,
+to which I now turn, we can still keep the more fine-grained theory in mind:
+the relation of syntax to semantics is like the relation of a spine to its flesh,
+which is a somewhat different paradigm than treating syntax as a logical or temporal
+stage of processing.  Instead of a step-by-step algorithm where grammatical parsing
+is followed by semantic interpretation, the syntax/semantics interface can be seen
+as more analogous to stimulus-and-response: observation that a certain grammatic
+configuration appears to hold, in the present langauge artifact, triggers a marshaling
+of conceptual and cognitive resources so that the syntactic backbone can be filled in.
+Perhaps a useful metaphor is grammar as gravitation, or the structure of a gravitational
+field, and semantics is like the accretion of matter through the interplay of multiple
+gravitational centers and orbits.  For this analogy, imagine typed lambda
+reductions like \PropToNYieldsN{} taking the place of gravitational equations;
+and sentences' grammatic spine taking the place of curvature pulling mass into a planetary center.
 }
-\p{In brief, it is certainly possible \mdash{} though by no means mandatory \mdash{} to model
-type requirements with greater flexibility at a provisional grammatical layer,
-and then narrow in on subtypes or extra accumulations of qualifications on
-type-instances in a transition from grammar to semantics.  Perhaps cognitive
-schema occupy an intermediary role: progressing from basic recognition of
-grammaticality, through cognitive schema, to conceptual framing, with type
-machinery capturing some of the thought-processes at each \q{step}
-(not that such \q{steps} are necessarily in a temporal sequence).  The basic
-verb-subject-direct object articulation sets up an underlying cognitive
-attitude (represented by a basic type-framing of verb, noun, and proposition,
-like the \VisNNtoProp{} signature).  Cognitive ascriptions fill this out
-by adding detail to the broader-hewed typing, associating sentience with the
-subject and propositionality with the object (sub- or higher-order typing
-modeling this stage).  And how the actual lexical choices fit these cognitive
-expectations \mdash{} I call them cognitive because they are intrinsically tied
-to structurational schema in the type, morphology, and word-order givens
-in the encountered language \mdash{} compels conversants to dip into background
-beliefs, finding concepts for the signified meanings that hew to the
-intermediary cognitive manipulations (finding ways to conceptualize the
-subject as sentient, for example).  This also has a potential type model,
-perhaps as forcing a type conversion from a lexical element which does
-not ordinarily fit the required framing (such as giving inanimate things
-some fashion of sentience).  Type theory
-can give a window onto unfolding intellection at these multiple stages,
-although we need not conclude that the mind subconsciously doing this thinking
-mimics a computer that churns through type transformations mechanically and exactly.
+\p{Parts of speech have \q{type signatures}
+notionally similar to the signatures of function types in programming languages: a verb
+needing a direct object, for example, \q{transforms} two nouns (Subject and Object)
+to a proposition, which I have been notatating with something like \NNtoS{}.
+At the most basic level, the relation of Parts of Speech to \q{type signatures}
+seems little more than notational variants of conventional linguistic
+wisdom like a sentence requiring a noun and a verb (\SeqNPplVP{}).
+Even at this level, however, type-theoretic intuitions
+offer techniques for making sense of more complex, layered sentences,
+where integrating link and phrase structures can be complex.
+Even the most broadly scoped analysis of type signatures, dealing only with
+generic Parts of Speech like nouns and verbs, can lead to surprising
+complications.  One example I have alluded to several times, and will return to shortly:
+the problem of applying Dependency Grammar where phrases do not seem
+to have an obviously \q{most significant} word for linkage with other phrases.
 }
-\p{I envision the unfolding that I have just sketched out as something Phenomenological
-\mdash{} it arises from a unified and subjective consciousness, one marked by
-embodied personal identity and social situation.  If there are structural stases
-that can be found in this temporality of experience, these are not constitutive
-of conscious reality but a mesh of rationality that supports it, like the veins in
-a leaf.  Stuctural configurations can be lifted from language insofar as it is a
-conscious, formally governed activity, and lifted from the ambient situations which
-lend language context and meaning intents.  So any analytic emphasis on
-structural fixpoints threaded through the lived temporality of consciousness is an
-abstraction, but one that is deliberate and necessary if we want to make scientific
-or in any other manner disputatable claims about how language and congition works.
-In that spirit, then, I will try to condense the three \q{layers} of unfolding
-understanding, which as I have sketched them are posited in the metaphysical order
-of temporal experience \mdash{} \q{unfolding} in likely overlapping, blending ways
-\mdash{} I will \q{read into} them a more static and logically stacked meta-structure.
-Where I have sketched three layers or stages of unfolding language understanding,
-I will transition to proposing three \q{tiers} of language organization, in particular
-three levels where type-theoretic models can be applied.
+\p{My earlier analysis of phrasal units like 
+\i{student after student} argued that
+phrases cannot be treated, in general, as one-to-one replacements for semantic units.  Incorporating
+type theory, we can instead model phrases through the perspective of
+type signatures: given Part of Speech annotations for phrasal units and then for
+some of their parts, the signatures of other parts, like verbs or adjectives
+linked to nouns, or adverbs linked to verbs, tend to follow automatically.
+A successful analysis yields a formal tree, where if (in an act of semantic
+abstraction) words are replaced by their types, the \q{root} type is something like
+\Prop{} and the rest of a tree is formally a reducible structure in
+Typed Lambda Calculus: \NNtoProp{} \q{collapses} to \Prop{}, \ProptoN{} collapses
+to \N{}, and so forth, with the tree \q{folding inward} like a
+fan until only the root remains \mdash{} though a more subtle analysis would
+replace the single \Prop{} type with variants that recognize different
+forms of speech acts, like questions and commands.  In Figure ~\ref{fig:Iknow},
+this can be seen via the type annotations: from right to left \NtoN{} yields the
+\N{} as second argument for \i{is}, which in turn yields a \Prop{} that is mapped
+(by \i{that}) to \N{}, finally becoming the second argument to \i{know}.  This calculation
+only considers the most coarse-grained classification (noun, verb, proposition) \mdash{} as I
+have emphasized, a purely formal reduction can introduce finer-grained grammatical or
+lexico-semantic classes (like \i{at} needing an \q{argument} which is somehow an expression
+of place \mdash{} or time, as in \i{at noon}).  Even with such refinements the 
+macrotype-level \q{lambda reduction} remains however a useful summary of 
+the structural core of a sentence.
+}
+\p{In either case, Parts of Speech are modeled as (somehow analogous to) functions, but the important
+analogy is that they have \i{type signatures} which formally resemble functions'.
+Phrases are modeled via a \q{function-like} Parts of Speech along with one or more
+additional words whose own types match its signature; the type calculations
+\q{collapsing} these phrases can mimic semantic simplifications
+like \i{many students} to \i{students}, but here the theory is explicit
+that the simplification is grammatic and not semantic: the collapse
+is acknowledged at the level of \i{types}, not \i{meanings}.  In addition,
+tree structures can be modeled purely in terms of inter-word relations
+(this is an example of embedding lambda calculii in process algebras),
+so a type-summary of a sentence's phrase structure can be notated and
+analyzed without leaving the Link Grammar paradigm.
+}
+\p{As a concrete example, in the case of \q{many students},
+both \q{students} and the semantic role of
+the phrase are nouns (count-plural nouns, for where that's relevant).  Accordingly,
+\q{many} has a signature \NtoN{} (or \NpltoNpl{}, dependending on how
+narrowly we want to notate the types in context).
+Once we assign types and signatures to all words in a sentence, we can also see a
+natural hierarchy resembling an expression in typed lambda calculus, where some words
+appear as \q{functions} and others as \q{arguments}.  Often the less
+semantically significant words appear as \q{higher} in the structure,
+because they serve to modify and lend detail to more significant words.
+The kind of structure or \i{Charpente} which falls out of a sentence \mdash{}
+adopting a term from \Tesniere{}
+(cf. \cite[p. 181]{ElkeTeich}) \mdash{} is typically different from a link-grammar
+\q{linkage}, although the two structures can be usefully combined.
+}
+\p{To return to the example of \i{Student after student}, where designating
+one word to \q{represent} the phrase seemed arbitrary, we can analyze the
+situation via type-signatures.  I have teased a proposed solution repeatedly;
+here's what I had in mind.  Insofar as \i{after} is the only non-noun,
+the natural conclusion is that \q{after} should be typed \NNtoN{}
+(which implies that \q{after} is analogous to the \q{functional} position, and
+in a lambda-calculus style reconstruction would be considered the \q{head}
+\mdash{} Figure ~\ref{fig:ESA} is an example of how
+the sentence could be annotated, for sake of discussion).
+This particular idiom depends however
+on the two constituent nouns being the same word (a pattern I've also alluded to with
+idioms like \i{time after time}), which can be accommodated by invoking the (computationally rather complex
+and topical) concept of \i{dependent types} \cite{BernardyEtAl}, \cite{TanakaEtAl}
+\mdash{} in other words the parameters
+for \i{after} are a dependent type pair satisfied by an identity comparison between
+the two nouns.  The signature for \q{after} has this added complication, but
+the nuances of this example can still be accommodated within the overall
+architecture of type theory.  I would pair this argument with my earlier
+analysis of \q{many} variations which suggested how apparent complications
+can be accommodated largely within the extant theoretical resources of
+Link Grammar, and in combination suggest that the union of Link Grammar
+with Type-Theoretic Semantics seems poised to accommodate many
+complex real-world linguistic cases with a coherent abstract perspective.
+}
+\p{Consider alternatives for \q{many students}.  The phrase as
+written suggests a type signature (with \q{many} as the \q{function-like} or
+derivative type) \NpltoNpl{}, yielding a syntactic interpretation of the phrase; this
+interpretation also suggests a semantic progression, an accretion of intended detail.
+From \i{students} to \i{many students} is a conversion between two plural nouns
+(at the level of concepts and semantic roles); but it also implies relative size,
+so it implies some \i{other} plural, some still larger group of students from which
+\q{many} are selected.  While rather abstract and formal, the \NpltoNpl{} representation
+points toward a more cognitive grounding which considers this \q{function} as a form
+of thought-operation; a refinement of a situational model, descriptive resolution,
+and so forth.  If we are prepared to accept a cognitive underpinning to semantic
+classification, we can make the intuition of part of speech signatures as \q{functions}
+more concrete: in response to what \q{many} (for example) is a function \i{of},
+we can say a function of propositional attitude, cognitive schema, or attentional
+focus.  The schema which usefully captures the sense and picture of \i{students} is
+distinct (but arguably a variation on) that for \i{many students}, and there is a
+\q{mental operation} triggered by the \i{many students} construction which
+\q{maps} the first to the second.  Similarly, \i{student after student} triggers a
+\q{scheme evolution} which involves a more explicit temporal unfolding
+(in contrast to how \i{many students} instead involves a more explicit
+quantitative \i{many/all} relation).  What these examples show is that
+associating parts of speech with type signatures is not just a formal
+fiat, which \q{works} representationally but does not necessarily capture
+deeper patterns of meaning.  Instead, I would argue, type signatures
+and their resonance into linkage acceptability structures
+(like singular/plural and mass/count agreement) \i{point toward} the
+effects of cognitive schema on what we consider meaningful.
+}
+\p{In \i{Student after student came out against the proposal},
+to \i{come out}, for/against, lies in the semantic frame of attitude and expression
+(it requires a mental agent, for example), but its reception
+carries a trace of spatial form: to come out \i{to} a public place, to
+go on record with an opinion (I analyzed this case in Section 2).  Usually
+\q{come out [for/against]}, in the context of a policy or idea, is similarly
+metaphorical.  But the concrete spatial interpretation remains latent, as a kind
+of residue on even this abstract rendition, and the spatial 
+undercurrent is poised to emerge
+as more literal, should the context warrant.  However literally or metaphorically
+the \q{space} of the \q{coming out} is
+understood, however explicit or latent its cogitative figuration,
+is not something internal to the language; it is a potentiality which
+will present in different ways in different circumstances.  This is not to say that
+it is something apart from linguistic meaning, but it shows how linguistic meaning
+lies neither in abstract structure alone, nor contextual pragmatics, but in their cross-reference.
 }

@@ -78,3 +78,46 @@ noun type, assuming we are using type-theoretic principles),
 with extra markings for more specific types (in principle
 similar notation could be adopted for verbs, propositions, and so on).
 `footnote`
+
+
+`p.
+Insofar as grammatic categories do provide a very basic `q.Ontological` viewpoint,
+it is reasonable to build semantic formalization on top of grammar theories.
+Link Grammar, for example, explicitly derives `q.link types` %-- species of word-to-word
+relations %-- by appeal to `q.Categorial` grammars which define parts of
+speech in terms of their manner of composition with other, more `q.fundamental` parts
+of speech `cite<Kiselyov>;, `cite<Rossi>;, `cite<MartinPollard>;, `cite<EyreLawry>;;
+`cite<BoasSag>;; `cite<MaryDalrymple>;.  The most primordial
+grammatic categories are generally seen to be nouns and
+`q.propositions` (self-contained sentences or sentence-parts which assert individual states of
+affairs), and categories like verbs and adjectives are derived on their basis.  For example, a
+verb `q.combines` with a noun to produce a proposition.  `i.Students` is an abstract
+concept; `q.Students complained`/, tieing the noun to a verb, tethers the concept to an
+assertorial flesh, yielding something that expresses a belief or observation.
+Meanwhile, Categorial Grammar models not only the semantic transition from abstract to concrete, but
+surface-level composition: in English and other `SVO; language for example the verb should
+immediately follow the noun; in German and all `SOV; languages the verb tends the come
+last in a sentence, and can be well apart from its subject.  The semantic pattern in the
+link is how the verb/noun pair yields a new semantic category (propositional) whereas the
+grammatic component lies in how the link is established relative to other words
+(to the left and not the right, for example, and whether or not the words are adjacent).
+`p`
+
+`p.
+Assuming that surface-level details can be treated as grammar rules and abstracted from
+the semantics, we can set aside Categorial Grammar notions like connecting
+`q.left` vs. `q.right` or `q.adjacent` (near) vs. `q.nonadjacent` (far).
+With this abstracting, Categorial Grammar becomes similar
+to a Type-Theoretic Semantics which recognizes, in Natural Language, operational
+patterns that are formally studied in mathematics and computer science
+`cite<MaillardClarkGrefenstette>;, `cite<Pollard>;, `cite<MeryMootRetore>;.
+A verb, for example,
+`i.transforms` a noun into a sentence or proposition (at least an intransitive verb;
+other kinds of verbs may require two, or even three nouns).  In some schematic sense a
+verb is analogous to a mathematical `q.function`/, which `q.takes` one or more nouns
+and `q.yields` propositions, much like the `q.square` function takes a real number and
+yields a non-negative real number.
+`p`
+
+
+
