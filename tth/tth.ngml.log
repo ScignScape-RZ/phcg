@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  7 JUN 2019 00:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  7 JUN 2019 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4385,12 +4385,22 @@ Underfull \hbox (badness 3179) in paragraph at lines 1--1
 |[]\OT1/cmr/bx/n/14.4 Cognitive Gram-mar and Type
  []
 
-[31] [32] (./figure2.tex
+[31]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [32]
+Underfull \vbox (badness 1478) has occurred while \output is active []
+
+ [33]
+Underfull \vbox (badness 1122) has occurred while \output is active []
+
+
+(./figure2.tex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [33]) (./section4a.ngml.tex
+) [34]) (./section4a.ngml.tex
 Underfull \vbox (badness 8075) has occurred while \output is active []
 
 
@@ -4918,11 +4928,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-[34] [35]
 
-LaTeX Warning: Reference `itm:rhino' on page 36 undefined on input line 131.
+LaTeX Warning: Citation `Strle' on page 35 undefined on input line 34.
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 162.
+[35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+
+LaTeX Warning: Reference `itm:rhino' on page 37 undefined on input line 137.
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 168.
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
@@ -4930,17 +4946,25 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 g
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-) [36] [37] [38] (./figure.tex)
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+[38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39]
+(./figure.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 (./section4b.ngml.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
+ [41]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 1.
@@ -5473,12 +5497,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\z@' on input line 1.
 
-[41]
+[42]
 Underfull \hbox (badness 1688) in paragraph at lines 168--186
 \OT1/cmr/m/n/10.95 (+20) frame-shifts; but other ex-am-ples sug-gest a more
  []
 
-[42]
+[43]
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 186.
 
@@ -5496,21 +5520,23 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 186.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
-[44]) (./conclusion.ngml.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45])
+(./conclusion.ngml.tex
 Overfull \hbox (0.9705pt too wide) in paragraph at lines 17--33
 \OT1/cmr/m/n/10.95 (-20) ``in-ter-pre-tive" treat-ment ac-tu-ally be-yond for-m
 al-iza-tion, or
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [45]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [46])
-(./biblio.tex
+[46] [47]) (./biblio.tex
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 3.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/lm/ot1lmtt.fd
@@ -5520,19 +5546,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OT1+gar on input line 10.
-LaTeX Font Info:    No file OT1gar.fd. on input line 10.
 
+Overfull \hbox (77.26201pt too wide) in paragraph at lines 7--10
+[]  
+ []
+
+
+Overfull \hbox (168.01329pt too wide) in paragraph at lines 12--15
+[]  
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+gar on input line 20.
+LaTeX Font Info:    No file OT1gar.fd. on input line 20.
 
 LaTeX Font Warning: Font shape `OT1/gar/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 10.
+(Font)              using `OT1/cmr/m/n' instead on input line 20.
 
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `gar' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 87.
-
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 103
+.
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -5549,10 +5584,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package microtype Info: Character `texttrademark ' is missing
 (microtype)             in font `TS1/lmtt/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
- [47]
+ [48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [48]
+) [49]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
 
@@ -5570,11 +5605,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 26063 strings out of 492649
- 528634 string characters out of 6122986
- 663189 words of memory out of 5000000
- 28893 multiletter control sequences out of 15000+600000
- 36333 words of font info for 218 fonts, out of 8000000 for 9000
+ 25958 strings out of 492649
+ 526534 string characters out of 6122986
+ 664618 words of memory out of 5000000
+ 28804 multiletter control sequences out of 15000+600000
+ 30971 words of font info for 196 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,13n,78p,792b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/lm/lm-ts1.e
@@ -5610,10 +5645,10 @@ l/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></home/nlevisrael/te
 xl/texlive-install/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></home/n
 levisrael/texl/texlive-install/texmf-dist/fonts/type1/public/cm-super/sfrm1095.
 pfb>
-Output written on tth.ngml.pdf (48 pages, 600180 bytes).
+Output written on tth.ngml.pdf (49 pages, 615222 bytes).
 PDF statistics:
- 822 PDF objects out of 1000 (max. 8388607)
- 739 compressed objects within 8 object streams
- 269 named destinations out of 1000 (max. 500000)
- 39541 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 848 PDF objects out of 1000 (max. 8388607)
+ 764 compressed objects within 8 object streams
+ 277 named destinations out of 1000 (max. 500000)
+ 28789 words of extra memory for PDF output out of 29859 (max. 10000000)
 

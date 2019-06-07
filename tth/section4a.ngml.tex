@@ -4,13 +4,30 @@
 all values covered by the type); alternatively, we can (perhaps better) consider types as
 \i{spaces} of values.  Types' extensions have internal structure; there
 can be \q{null} or \q{invalid} values, default-constructed values, and
-so forth, which are \q{regions} of type-space and can
-be the basis of topological or Category-Theoretic rather than
-set-based analyses of type-extension.  Also, expectations intrinsically include
-functions which may be \q{called on} types.  There is definitional interdependence
+so forth, which are \q{regions} of the conceptual space spanned or 
+encompassing types.\footnote{Conceptual Space theory is outside the scope of this paper, but I'll note that 
+it suggests a promising link between natural linguistics and formal/computational 
+type theory, as suggested by computational or scientific expositions of 
+the original Conceptual Space account developed by Peter \Gardenfors{}: 
+cf. \cite{Zenker}, \cite{RaubalAdams} \cite{RaubalAdamsCSML}, 
+\cite{Strle}.  Meanwhile, projects to develop formal models for 
+Cognitive Grammar have also adopted Conceptual Space theory as an 
+underlying semantics: \cite{KennethHolmqvist}, \cite{HolmqvistDiss}, 
+\cite{MattSelway}, \cite{InteractingConceptualSpaces}.    
+}
+There is definitional interdependence
 between types and functions: a function is defined in terms of the types it accepts as parameters and
 returns \mdash{} rather than its entire set of possible inputs and outputs, which can
-vary across computing environments.  These are some reasons why in theoretical
+vary across computing environments.
+\footnote{Moreover, expectations in a particular case
+may be more precise than what is implied by the type itself \mdash{} it is erroneous
+to assume that a proper type system will allow a correct \q{set of values} to
+be stipulated for each point in a computation (the kind of contract enforced via
+by documentation and unit testing).  So state-space in a given context may include many
+\q{unreasonable} values, implying that within the overall space there is a \q{reasonable}
+subspace, except that this subspace may not be crisply defined.
+}  
+These are some reasons why in theoretical
 Computer Science types are not \q{reduced} to underlying sets; instead, extensions
 are sometimes complex spaces that model states of, or internal organization of comparisons
 among, type instances.
@@ -32,18 +49,7 @@ Type \i{spaces} have potentially complex patterns of regions and equivalence cla
 inter-value mappings (in the sense of behavioral equivalence relative to
 code analysis, testing, or security)
 \mdash{} the \i{conceptual} properties of types are expressed in the
-\i{internal structuration} of their associated state-space.  Putting this in mathematical
-language, an in-depth treatment of types cannot work \q{in the Category} of
-sets, even for basic type-extension, but rather (for instance) the
-Category of Topological Spaces.
-}
-\p{Moreover, expectations in a particular case
-may be more precise than what is implied by the type itself \mdash{} it is erroneous
-to assume that a proper type system will allow a correct \q{set of values} to
-be stipulated for each point in a computation (the kind of contract enforced via
-by documentation and unit testing).  So state-space in a given context may include many
-\q{unreasonable} values, implying that within the overall space there is a \q{reasonable}
-subspace, except that this subspace may not be crisply defined.
+\i{internal structuration} of their associated state-space.
 }
 \p{Sets, concepts, and types represent three different primordial thought-vehicles for
 grounding notions of logic and meaning.  To organize systems around \i{sets} is
