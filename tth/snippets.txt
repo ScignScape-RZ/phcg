@@ -119,5 +119,14 @@ and `q.yields` propositions, much like the `q.square` function takes a real numb
 yields a non-negative real number.
 `p`
 
+%Were `q.flying people` used jokingly, it would be in bad taste, like
+%`q.cat all over all over the driveway` from Pinker
+%`cite<Pinker>; on page 119 and Langacker's `q.Nouns and Verbs` `cite<Langacker87>; on page 67.
 
+`i.Conceptual` is more abstract and belief-oriented;
+`i.Cognitive` is more concrete and phenomenological.  Concepts organize our
+`q.background knowledge` `cite<SmithMcIntyre>;; cognitions allow it to be latent
+against the disclosures of material consciousness
+`cite<DavidWoodruffSmith>;, `cite<DavidWoodruffSmithChapter>;,
+`cite<JordanZlatev>;, `cite<SeanDorranceKelley>;.
 
