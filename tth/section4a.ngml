@@ -450,10 +450,8 @@ or rather type `q.encapsulated` propositions as just nouns
 `p.
 In either case, `i.I know that ...` clearly involves a verb with subject and direct
 object: so either `VisNNtoProp; or `VisNProptoProp;.  
-Using `i.link grammar`/, 
-Consider the role of a `TS;-link here:
-specifically, `TS; connects the verb to the assertorial direct object (most
-directly, to `i.that`/).`footnote.
+In Link Grammar, the connection between a verb and its 
+assertorial direct object is labeled `TS;.`footnote.
 Link Grammar models parses via interword relations classified according to 
 some four dozen recognized syntactic and semantic connectors; 
 a complete parse yields a labeled `q.graph` of each sentence, similar to 
@@ -474,7 +472,8 @@ links to be formed; the link/dependency comparison is investigated in
 and other writings compare both grammatic schools to 
 more hierarchical phrase-structure grammars: 
 `cite<Schneider>;, `cite<XiaPalmer>;. 
-`footnote`  The purely formal consideration is ensuring that
+`footnote`  Consider the role of a `TS;-link here %-- 
+the purely formal consideration is ensuring that
 types are consistent: either the `TS; target is `Prop;, 
 with the verb type modified accordingly; or the `TS; target is a noun,
 though here it is fair to narrow scope.  For this particular kind of

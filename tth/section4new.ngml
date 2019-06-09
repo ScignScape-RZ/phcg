@@ -1,0 +1,53 @@
+
+`section.Channel State Grammar and Cognitive State Semantics`
+
+`p.
+Having presented objections and, I believe, counter-examples to 
+`q.truth-theoretic` semantics, I now want to present some ideas 
+for an alternative theory which retains some formal or logical 
+(or at least mathamtical) structuration %-- but not so as 
+to `q.reduce away` linguistic nuances; nor structures in language 
+whose semiotic foundation draws from a spectrum of cognitive 
+(perceptual, situational, narrative, empathic) facilities, which cannot be 
+reduced to deterministic logic.  My plan is to describe a grammar 
+framework which integrates such perspectives as Link Grammar, 
+Combinatory-Applicative Grammar, and Type Logical Grammar, but 
+with a distinct underlying formal model.  Like other theories, 
+this model proposes a broad categorization for semantics by 
+identifying a small set of primitive types, and defining other types 
+as functional or combinatory derivates on those base types 
+(from which the type system overall is `q.generated`/).     
+`p`
+
+`p.
+A common paradigm is to consider natural-language types as generated 
+by just two bases %-- a noun type `N; and a proposition type 
+`Prop;, the type of sentences and of sentence-parts which are 
+complete ideas %-- having in themselves a propositional content 
+(see e.g. `cite<BarkerShanTG>; or `cite<KubotaLevine>;).    
+Different models derive new types on this basis in different ways.
+
+`p`
+
+`p.
+
+`p`
+
+`p.
+
+`p`
+
+`p.
+
+`p`
+
+
+`p.
+
+`p`
+
+`p.
+
+`p`
+
+
