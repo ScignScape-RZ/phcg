@@ -1,5 +1,5 @@
 
-`section.Channel State Grammar and Cognitive State Semantics`
+`section.Channel Hypergraph Grammar and Cognitive State Semantics`
 
 `p.
 Having presented objections and, I believe, counter-examples to 
@@ -74,7 +74,7 @@ Procedures can draw information from many sources
 component; e.g., writing text to a monitor).  
 These sources and effects lie alongside explicit 
 inputs and outputs, as in $x$ as input to $f$ 
-(and $y$ carrying $f$'s output).  Modern programming 
+(and $y$ carrying $f$'s output) in `yeqfx;.  Modern programming 
 languages also have special features, like `q.objects` 
 and exceptions (special kinds of inputs and outputs 
 respectively) which complicate the picture of functions 
@@ -88,20 +88,77 @@ a procedure is defined by the types of data carried
 in each of the channel associated with each procedure.  
 A formal model of channels can then play a role analogous 
 to input-to-output maps in lambda-calculus inspired grammars, 
-and to adacent-word left-or-right pairs in pregroup grammars.    
+and to adjacent-word left-or-right pairs in pregroup grammars.    
 `p`
 
 `p.
+Complementary to a `q.channel-oriented` theory of 
+procedures is the idea of channel `i.states`/, representing 
+procedural effects on any data accessed or modified 
+by procedures via different channels.  The data in an 
+output channel, for instance, is in a `q.pre-initialized` state 
+until the procedure terminates and control returns to a
+calling procedure, where that output data is then 
+typically used as input data to other procedures and/or 
+held in a `q.carrier`/, embodied by a source-code symbol 
+like $y$ in `yeqfx;.  Channels as such can be formally 
+defined as higher-scale structures on (labeled and directed) 
+hypergraphs (where procedures are expressed via hypernodes, 
+making this a variation on `q.hypergraph grammars` as in 
+`cite<BrendanFongThesis>; or `cite<BrendanFong>;).  
+Transforms in channel state are, 
+in this framework, informally analogous to `q.beta-reduction` in 
+the lambda calculus and to `q.identity laws` in pregroup grammars  
+A detailed outline of channels is beyond the scope of this 
+paper (I have written about `q.channel algebra` in 
+`cite<NathanielChristenCyberphysical>; and `cite<NathanielChristen>;).  
+Briefly, though, I believe that this `q.Channel Hypergraph Grammar` 
+(formulated in particular to analyze `i.computer` languages) can 
+be applied to `i.natural` language because of how 
+the entirety of a sentence can influence our interpretation of 
+specific word-pairs and inter-word relations.  Assuming we accept 
+the intuitive analogy of words as `i.procedures` 
+(maybe scripts or conceptualizing operations in some cognitive 
+processing space), then `q.non-local` semantic effects correspond 
+to alternative procedural `q.channel`/.  
+`p` 
 
+`p.
+For this model, assume we have a baseline lamba-calculus like 
+functional summary of sentences and derived types.  That is, 
+any sentence can be rewritten as if a sequence of `q.function calls`/, 
+assuming an underlying representational vocabulary of a typed 
+lambda calculus, with sentences having overall `Prop; types:
+
+`sentenceList,
+`sentenceItem; I believe that he is at school.
+`sentenceItem; (believe I (that (is he (at school))))
+`sentenceItem; Student after student complained about tuition hikes.
+`sentenceItem; ((about (tuition hikes) complained) (after student student))
+`sentenceItem; Three times, students asked an interesting question.
+`sentenceItem; ((three times) (asked students (an (interesting question))))
+`sentenceList`
+
+In this representation `q.function-like` types (verbs, adjectives, 
+adverbs, and so on) are notated preceding one or more words or 
+expressions which are functional `q.arguments` 
+(sometimes the `q.functions` are expressions with their own 
+inner function-argument structure, as in `i.about (tuition hikes) complained` 
+qua verb-phrase).  This reconstruction presents one layer of structure 
+%-- for example, the connection of verbs to their one, two, or three arguments 
+%-- which can then be overlaid with Link-Grammar style pairs, 
+like verb-to-subject and verb-to-direct-object. 
 `p`
 
 `p.
-
-`p`
-
-
-`p.
-
+These word-links are then `q.local` connections in that they nest within 
+a functionally reconstructed phrase hierarchy.  We can call them 
+`i.local` channels.  Meanwhile, semantic effects outside the 
+local phrase structure %-- like anaphora or `q.space-building` insofar 
+as it influences nonlocal morphosyntax %-- can then be 
+modeled via `i.nonlocal` channels.  To clarify these claims I will 
+demonstrate this style of analysis with respect to examples like 
+I have just cited.  
 `p`
 
 `p.

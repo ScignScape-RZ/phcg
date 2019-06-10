@@ -1,0 +1,145 @@
+\section{Channel Hypergraph Grammar and Cognitive State Semantics}
+\p{Having presented objections and, I believe, counter-examples to 
+\q{truth-theoretic} semantics, I now want to present some ideas 
+for an alternative theory which retains some formal or logical 
+(or at least mathamtical) structuration \mdash{} but not so as 
+to \q{reduce away} linguistic nuances; nor structures in language 
+whose semiotic foundation draws from a spectrum of cognitive 
+(perceptual, situational, narrative, empathic) facilities, which cannot be 
+reduced to deterministic logic.  My plan is to describe a grammar 
+framework which integrates such perspectives as Link Grammar, 
+Combinatory-Applicative Grammar, and Type Logical Grammar, but 
+with a distinct underlying formal model.  Like other theories, 
+this model proposes a broad categorization for semantics by 
+identifying a small set of primitive types, and defining other types 
+as functional or combinatory derivates on those base types 
+(from which the type system overall is \q{generated}).     
+}
+\p{A common paradigm is to consider natural-language types as generated 
+by just two bases \mdash{} a noun type \N{} and a proposition type 
+\Prop{}, the type of sentences and of sentence-parts which are 
+complete ideas \mdash{} having in themselves a propositional content 
+(see e.g. \cite{BarkerShanTG} or \cite{KubotaLevine}).    
+Different models derive new types on this basis in different ways.
+One approach, inspired by mathematical \q{pregroups}, establishes 
+derivative types in terms of word pairs \mdash{} an adjective followed 
+by a noun yields another noun (a noun-phrase, but \N{} is the phrases 
+\i{type}) \mdash{} e.g., \i{rescued dogs}, like \i{dogs}, is conceptually 
+a noun.  Adjectives themselves then have the type of words which form 
+nouns when paired with a following noun, often written as 
+\NOverN{}.  Pregroup grammars distinguish left-hand and right-hand 
+adacency: \i{bark loudly}, say, demonstrates an adverb \i{after} a 
+verb, yielding a verb phrase: so \q{loudly} here has the type of a 
+word producing a verb in combination with a verb to its \i{left} 
+(sometimes written \VUnderV{}); by contrast adjectives combine with 
+nouns to their \i{right}.
+}
+\p{A related formalization, whose formal 
+analogs lie in Typed Lambda Calculus, abstracts from left-or-right 
+word order and models derived types as \q{functions}.  So an 
+adverb becomes a function which takes a verb and produces another verb; 
+an adjective takes a noun and produces another noun; 
+and a verb takes a noun and produces a proposition 
+(see \i{students complained}).  By \q{function} we can consider 
+some kind of conceptual tranformation: \i{loudly} transforms the 
+concept \i{bark} into the concept \i{loud bark}.  Another 
+feature of this \q{function type} interpretation is that 
+words can be treated as functions taking multiple arguments 
+\mdash{} a verb, for example, can have as many as three 
+\q{inputs} (subject, direct object, and indirect object).    
+}
+\p{Instead of pregroups or lambda calculus, 
+the type system I propose is inspired by 
+computer programming languages, and specifically 
+by frameworks for assigning types to 
+computational procedures.  Implemented \q{functions} in 
+this sense are different than functions in mathematical 
+contexts, like the lambda calculus.  Mathematical 
+functions have input and output parameters, but 
+\i{procedures} (functions implemented in computer code) 
+have different \i{kinds} of input and output.  
+Procedures can draw information from many sources 
+\mdash{} e.g. files, databases, and network resources 
+\mdash{} and likewise can produce many sorts of effects 
+(changing the state of some software or physical 
+component; e.g., writing text to a monitor).  
+These sources and effects lie alongside explicit 
+inputs and outputs, as in $x$ as input to $f$ 
+(and $y$ carrying $f$'s output) in \yeqfx{}.  Modern programming 
+languages also have special features, like \q{objects} 
+and exceptions (special kinds of inputs and outputs 
+respectively) which complicate the picture of functions 
+\q{mapping} inputs to outputs.  One strategy for 
+analyzing computer code is to take all procedural 
+inputs and outputs \mdash{} including any means by which 
+a procedure can obtain data or cause effects outside 
+its own internal execution environment \mdash{} as 
+\q{channels of communication}, so the \i{type} of 
+a procedure is defined by the types of data carried 
+in each of the channel associated with each procedure.  
+A formal model of channels can then play a role analogous 
+to input-to-output maps in lambda-calculus inspired grammars, 
+and to adjacent-word left-or-right pairs in pregroup grammars.    
+}
+\p{Complementary to a \q{channel-oriented} theory of 
+procedures is the idea of channel \i{states}, representing 
+procedural effects on any data accessed or modified 
+by procedures via different channels.  The data in an 
+output channel, for instance, is in a \q{pre-initialized} state 
+until the procedure terminates and control returns to a
+calling procedure, where that output data is then 
+typically used as input data to other procedures and/or 
+held in a \q{carrier}, embodied by a source-code symbol 
+like $y$ in \yeqfx{}.  Channels as such can be formally 
+defined as higher-scale structures on (labeled and directed) 
+hypergraphs (where procedures are expressed via hypernodes, 
+making this a variation on \q{hypergraph grammars} as in 
+\cite{BrendanFongThesis} or \cite{BrendanFong}).  
+Transforms in channel state are, 
+in this framework, informally analogous to \q{beta-reduction} in 
+the lambda calculus and to \q{identity laws} in pregroup grammars  
+A detailed outline of channels is beyond the scope of this 
+paper (I have written about \q{channel algebra} in 
+\cite{NathanielChristenCyberphysical} and \cite{NathanielChristen}).  
+Briefly, though, I believe that this \q{Channel Hypergraph Grammar} 
+(formulated in particular to analyze \i{computer} languages) can 
+be applied to \i{natural} language because of how 
+the entirety of a sentence can influence our interpretation of 
+specific word-pairs and inter-word relations.  Assuming we accept 
+the intuitive analogy of words as \i{procedures} 
+(maybe scripts or conceptualizing operations in some cognitive 
+processing space), then \q{non-local} semantic effects correspond 
+to alternative procedural \q{channel}.  
+} 
+\p{For this model, assume we have a baseline lamba-calculus like 
+functional summary of sentences and derived types.  That is, 
+any sentence can be rewritten as if a sequence of \q{function calls}, 
+assuming an underlying representational vocabulary of a typed 
+lambda calculus, with sentences having overall \Prop{} types:
+\begin{sentenceList}\sentenceItem{} I believe that he is at school.
+\sentenceItem{} (believe I (that (is he (at school))))
+\sentenceItem{} Student after student complained about tuition hikes.
+\sentenceItem{} ((about (tuition hikes) complained) (after student student))
+\sentenceItem{} Three times, students asked an interesting question.
+\sentenceItem{} ((three times) (asked students (an (interesting question))))
+\end{sentenceList}
+In this representation \q{function-like} types (verbs, adjectives, 
+adverbs, and so on) are notated preceding one or more words or 
+expressions which are functional \q{arguments} 
+(sometimes the \q{functions} are expressions with their own 
+inner function-argument structure, as in \i{about (tuition hikes) complained} 
+qua verb-phrase).  This reconstruction presents one layer of structure 
+\mdash{} for example, the connection of verbs to their one, two, or three arguments 
+\mdash{} which can then be overlaid with Link-Grammar style pairs, 
+like verb-to-subject and verb-to-direct-object. 
+}
+\p{These word-links are then \q{local} connections in that they nest within 
+a functionally reconstructed phrase hierarchy.  We can call them 
+\i{local} channels.  Meanwhile, semantic effects outside the 
+local phrase structure \mdash{} like anaphora or \q{space-building} insofar 
+as it influences nonlocal morphosyntax \mdash{} can then be 
+modeled via \i{nonlocal} channels.  To clarify these claims I will 
+demonstrate this style of analysis with respect to examples like 
+I have just cited.  
+}
+\p{}
