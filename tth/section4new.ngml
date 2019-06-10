@@ -26,11 +26,69 @@ by just two bases %-- a noun type `N; and a proposition type
 complete ideas %-- having in themselves a propositional content 
 (see e.g. `cite<BarkerShanTG>; or `cite<KubotaLevine>;).    
 Different models derive new types on this basis in different ways.
-
+One approach, inspired by mathematical `q.pregroups`/, establishes 
+derivative types in terms of word pairs %-- an adjective followed 
+by a noun yields another noun (a noun-phrase, but `N; is the phrases 
+`i.type`/) %-- e.g., `i.rescued dogs`/, like `i.dogs`/, is conceptually 
+a noun.  Adjectives themselves then have the type of words which form 
+nouns when paired with a following noun, often written as 
+`NOverN;.  Pregroup grammars distinguish left-hand and right-hand 
+adacency: `i.bark loudly`/, say, demonstrates an adverb `i.after` a 
+verb, yielding a verb phrase: so `q.loudly` here has the type of a 
+word producing a verb in combination with a verb to its `i.left` 
+(sometimes written `VUnderV;); by contrast adjectives combine with 
+nouns to their `i.right`/.
 `p`
 
 `p.
+A related formalization, whose formal 
+analogs lie in Typed Lambda Calculus, abstracts from left-or-right 
+word order and models derived types as `q.functions`/.  So an 
+adverb becomes a function which takes a verb and produces another verb; 
+an adjective takes a noun and produces another noun; 
+and a verb takes a noun and produces a proposition 
+(see `i.students complained`/).  By `q.function` we can consider 
+some kind of conceptual tranformation: `i.loudly` transforms the 
+concept `i.bark` into the concept `i.loud bark`/.  Another 
+feature of this `q.function type` interpretation is that 
+words can be treated as functions taking multiple arguments 
+%-- a verb, for example, can have as many as three 
+`q.inputs` (subject, direct object, and indirect object).    
+`p`
 
+`p.
+Instead of pregroups or lambda calculus, 
+the type system I propose is inspired by 
+computer programming languages, and specifically 
+by frameworks for assigning types to 
+computational procedures.  Implemented `q.functions` in 
+this sense are different than functions in mathematical 
+contexts, like the lambda calculus.  Mathematical 
+functions have input and output parameters, but 
+`i.procedures` (functions implemented in computer code) 
+have different `i.kinds` of input and output.  
+Procedures can draw information from many sources 
+%-- e.g. files, databases, and network resources 
+%-- and likewise can produce many sorts of effects 
+(changing the state of some software or physical 
+component; e.g., writing text to a monitor).  
+These sources and effects lie alongside explicit 
+inputs and outputs, as in $x$ as input to $f$ 
+(and $y$ carrying $f$'s output).  Modern programming 
+languages also have special features, like `q.objects` 
+and exceptions (special kinds of inputs and outputs 
+respectively) which complicate the picture of functions 
+`q.mapping` inputs to outputs.  One strategy for 
+analyzing computer code is to take all procedural 
+inputs and outputs %-- including any means by which 
+a procedure can obtain data or cause effects outside 
+its own internal execution environment %-- as 
+`q.channels of communication`/, so the `i.type` of 
+a procedure is defined by the types of data carried 
+in each of the channel associated with each procedure.  
+A formal model of channels can then play a role analogous 
+to input-to-output maps in lambda-calculus inspired grammars, 
+and to adacent-word left-or-right pairs in pregroup grammars.    
 `p`
 
 `p.
