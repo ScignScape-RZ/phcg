@@ -2,10 +2,30 @@
 `section.Channel Hypergraph Grammar and Cognitive State Semantics`
 
 `p.
+In my opinion, a well-motivated philosophy of language will be oriented 
+to other sciences, both formal and humanistic %-- language as a 
+`q.bridge` between multiple disciplines.  Linguistics should not 
+aspire to analytic completeness, or explanatory autonomy: language 
+understanding requires many cognitive faculties which are `i.not` 
+governed by linguistic theories; and the pragmatic and situational 
+contexts surrounding discourse likewise need extra-linguistic 
+sociological treatments.  So a valid goal for a philosophy of language 
+is to establish which theories `i.are` proper to language.  
+Ideally, these theories should engender both philosophical 
+analysis and formal models: there is a systematic, structural 
+dimension to language whose properties can be revealed through 
+rigorous (even computational) representations.  At the same time, 
+there is also a subtlety and intersubjectivity to language 
+which call for analyses grounded in philosophy rather than any 
+computational or logicomathematical commitments.
+`p`
+
+
+`p.
 Having presented objections and, I believe, counter-examples to 
 `q.truth-theoretic` semantics, I now want to present some ideas 
 for an alternative theory which retains some formal or logical 
-(or at least mathamtical) structuration %-- but not so as 
+(or at least mathematical) structuration %-- but not so as 
 to `q.reduce away` linguistic nuances; nor structures in language 
 whose semiotic foundation draws from a spectrum of cognitive 
 (perceptual, situational, narrative, empathic) facilities, which cannot be 
@@ -28,12 +48,12 @@ complete ideas %-- having in themselves a propositional content
 Different models derive new types on this basis in different ways.
 One approach, inspired by mathematical `q.pregroups`/, establishes 
 derivative types in terms of word pairs %-- an adjective followed 
-by a noun yields another noun (a noun-phrase, but `N; is the phrases 
+by a noun yields another noun (a noun-phrase, but `N; is the phrase's 
 `i.type`/) %-- e.g., `i.rescued dogs`/, like `i.dogs`/, is conceptually 
 a noun.  Adjectives themselves then have the type of words which form 
 nouns when paired with a following noun, often written as 
 `NOverN;.  Pregroup grammars distinguish left-hand and right-hand 
-adacency: `i.bark loudly`/, say, demonstrates an adverb `i.after` a 
+adacency %-- `i.bark loudly`/, say, demonstrates an adverb `i.after` a 
 verb, yielding a verb phrase: so `q.loudly` here has the type of a 
 word producing a verb in combination with a verb to its `i.left` 
 (sometimes written `VUnderV;); by contrast adjectives combine with 
@@ -43,7 +63,8 @@ nouns to their `i.right`/.
 `p.
 A related formalization, whose formal 
 analogs lie in Typed Lambda Calculus, abstracts from left-or-right 
-word order and models derived types as `q.functions`/.  So an 
+word order to models derived types as equivalent (at least 
+for purposes of type attribution) to `q.functions`/.  So an 
 adverb becomes a function which takes a verb and produces another verb; 
 an adjective takes a noun and produces another noun; 
 and a verb takes a noun and produces a proposition 
@@ -58,7 +79,7 @@ words can be treated as functions taking multiple arguments
 
 `p.
 Instead of pregroups or lambda calculus, 
-the type system I propose is inspired by 
+the type system I propose here is inspired by 
 computer programming languages, and specifically 
 by frameworks for assigning types to 
 computational procedures.  Implemented `q.functions` in 
@@ -85,7 +106,7 @@ a procedure can obtain data or cause effects outside
 its own internal execution environment %-- as 
 `q.channels of communication`/, so the `i.type` of 
 a procedure is defined by the types of data carried 
-in each of the channel associated with each procedure.  
+in each of its channels.  
 A formal model of channels can then play a role analogous 
 to input-to-output maps in lambda-calculus inspired grammars, 
 and to adjacent-word left-or-right pairs in pregroup grammars.    
@@ -95,7 +116,7 @@ and to adjacent-word left-or-right pairs in pregroup grammars.
 Complementary to a `q.channel-oriented` theory of 
 procedures is the idea of channel `i.states`/, representing 
 procedural effects on any data accessed or modified 
-by procedures via different channels.  The data in an 
+by procedures.  The data in an 
 output channel, for instance, is in a `q.pre-initialized` state 
 until the procedure terminates and control returns to a
 calling procedure, where that output data is then 
@@ -108,7 +129,10 @@ making this a variation on `q.hypergraph grammars` as in
 `cite<BrendanFongThesis>; or `cite<BrendanFong>;).  
 Transforms in channel state are, 
 in this framework, informally analogous to `q.beta-reduction` in 
-the lambda calculus and to `q.identity laws` in pregroup grammars  
+the lambda calculus and to `q.identity laws` in pregroup grammars.
+`p`
+
+`p.  
 A detailed outline of channels is beyond the scope of this 
 paper (I have written about `q.channel algebra` in 
 `cite<NathanielChristenCyberphysical>; and `cite<NathanielChristen>;).  
@@ -120,11 +144,11 @@ specific word-pairs and inter-word relations.  Assuming we accept
 the intuitive analogy of words as `i.procedures` 
 (maybe scripts or conceptualizing operations in some cognitive 
 processing space), then `q.non-local` semantic effects correspond 
-to alternative procedural `q.channel`/.  
+to alternative procedural channels.  
 `p` 
 
 `p.
-For this model, assume we have a baseline lamba-calculus like 
+For this model, assume we have a baseline lamba-calculus-like 
 functional summary of sentences and derived types.  That is, 
 any sentence can be rewritten as if a sequence of `q.function calls`/, 
 assuming an underlying representational vocabulary of a typed 
@@ -132,18 +156,18 @@ lambda calculus, with sentences having overall `Prop; types:
 
 `sentenceList,
 `sentenceItem; I believe that he is at school.
-`sentenceItem; (believe I (that (is he (at school))))
+`sentenceExample.(believe I (that (is he (at school))))`
 `sentenceItem; Student after student complained about tuition hikes.
-`sentenceItem; ((about (tuition hikes) complained) (after student student))
+`sentenceExample.((about (tuition hikes) complained) (after student student))`
 `sentenceItem; Three times, students asked an interesting question.
-`sentenceItem; ((three times) (asked students (an (interesting question))))
+`sentenceExample.((three times) (asked students (an (interesting question))))`
 `sentenceList`
 
 In this representation `q.function-like` types (verbs, adjectives, 
 adverbs, and so on) are notated preceding one or more words or 
 expressions which are functional `q.arguments` 
 (sometimes the `q.functions` are expressions with their own 
-inner function-argument structure, as in `i.about (tuition hikes) complained` 
+inner function-argument structure, as in `i.(about (tuition hikes) complained)` 
 qua verb-phrase).  This reconstruction presents one layer of structure 
 %-- for example, the connection of verbs to their one, two, or three arguments 
 %-- which can then be overlaid with Link-Grammar style pairs, 
@@ -160,6 +184,94 @@ modeled via `i.nonlocal` channels.  To clarify these claims I will
 demonstrate this style of analysis with respect to examples like 
 I have just cited.  
 `p`
+
+`p.
+My overall goal is to embrace a hybrid methodology %-- 
+accepting formal analyses when they shed light on linguistic 
+processes, but not going so far as to treat logical, mathematical, 
+or computational models as full explanations for linguistic 
+rationality qua scientific phenomenon.  
+The path toward such a hybrid methodology, as I will sketch it 
+here, takes its inspiration and orientation from Cognitive Grammar.  
+This perspective, in particular, challenges our assumption that 
+grammar and semantics are methodologically separate.  Received 
+wisdom suggests that grammar concerns the `q.form` of sentences 
+whereas semantics considers the meaning of words %-- implicitly 
+assuming that `i.word combinations` produce new meanings, and 
+that the `i.order` by which words are combines determines how 
+new meanings are produced.  This notion, in turn, is allied 
+with the essentially logical or propositional picture of 
+signifying via doxa: the idea that inter-word relations cue up 
+different logically salient transformations of an underlying 
+predicate model.  Thus `i.many students` as a phrase is 
+more significatorily precise than `i.students` as a word, because 
+the phrase (with intimations of quantitative comparison) has 
+more logical detail.  Similarly `i.many students complained` 
+is more logically complete because, provisioning both a verb-idea 
+and a noun-idea, it represents a whole proposition. 
+`p`
+
+`p.
+In general, then, phrases are more complete than words because 
+they pack together more elements which have some logical role, 
+establishing individuals, sets, spatiotemporal setting, and 
+predicates which collectively establish sufficiently 
+completed propositional attitudes.  On this account the 
+key role of phrase-structure is to establish phrases as 
+signifying units on a logical level analogous to 
+how lexemes are signifying units on a referential or conceptual 
+level.  Moreover, phrases' internal structure are understood 
+to be governed by rule defining `i.how` word-combinations 
+draw in extra logical detail.  A link between words is not a 
+random synthesis of concepts, but rather implies a certain 
+logical connective which acts as a de facto `q.third party` in 
+a double-word link, proscribing with orientation to predicate 
+structures `i.how` the words' semantic concepts are to be 
+joined.  In `i.many students` the implied connector is 
+the propositional act of conceiving a certain quantitative 
+scale to a conceptualized set; in `i.students complained` the 
+implied connector is a subject-plus-verb-equals-proposition 
+assertiveness.  Phrases acquire logical specificity by 
+building up word-to-word connections into 
+more complex aggregates.
+`p`
+
+`p.
+One implication of this model is that phrases are semantically 
+substitutable with individual lexemes that carry similar meanings, 
+having been entrenched by convention to capture a multipart concept 
+which would otherwise be conveyed with the aggregation of a 
+phrase: consider `q.MP` for `i.member of parliament`/, or 
+`q.primaried` for `i.subject without your own party to a primary 
+challenge`/.  Conversely, phrases can be repeatedly used in a 
+specific context until they function as quasi lexical units in 
+their own right.  These patterns of entrenchment imply that we 
+hear language in term of phrases bearing semantic content; and 
+insofar as we are comfortable with how we parse a sentence, each 
+word sited in its specific phrasal hierarchy, we do not tend to 
+consider individual words semantically outside of their 
+constituent phrases.
+`p`
+
+`p.
+This theory of the syntax-to-semantic relationship is a paradigmatic 
+partner, at the grammatic level, to truth-theoretic semantics and as
+such, I maintain, is subject to similar critiques as I developed 
+semantically in the last two sections.  A critique of grammatic theories 
+based on, let's say, `q.`i.proprositional semantics of phrase-structure`/` 
+can address two concerns: first, the idea that lexemes retain some 
+syntactic and semantic autonomy even within clearly defined phrases 
+where they are included; and, second, that the shape of phrases 
+insofar as they are perceived as holistic signifying units 
+is often driven by figurative or `q.gestalt` principles rather than 
+neat logical structuration.  I'll call the former the issue of 
+`q.phrasal isolation` (or lack thereof): syntactic and semantic effect 
+often cross phrasal boundaries, even outside the overarching hierarchy 
+whose apex is the whole sentence.  Both of these lines of reasoning 
+%-- arguably especially the second %-- are developed in 
+Cognitive Grammar literature.   
+`p`
+
 
 `p.
 

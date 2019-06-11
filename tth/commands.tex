@@ -575,8 +575,6 @@
 
 \newcommand{\Tesniere}{Tesni\`ere}
 
-\newcommand{\sentenceExample}[1]{``#1"}
-
 
 \newcommand{\expose}{expos\'e}
 \newcommand{\ExistsX}{\ensuremath{{\exists}X:Hugo(X){\wedge}Cat(X)%
@@ -641,7 +639,7 @@
 \newcommand{\tTyp}{\ensuremath{\mathfrak{t}}}
 \newcommand{\xy}{\ensuremath{xy}}
 
-\newcommand{\NOverN}{\ensuremath{N/N}}
+\newcommand{\NOverN}{\ensuremath{N{\textfractionsolidus}N}}
 \newcommand{\VUnderV}{\ensuremath{V{\setminus}N}}
 \newcommand{\yeqfx}{\ensuremath{y = fx}}
 
@@ -654,5 +652,12 @@
 			{\scriptsize \textls*[-70]{\url{#1}}}}}}
 
 \newcommand{\cq}[1]{{\fontfamily{gar}\selectfont ``}#1{\fontfamily{gar}\selectfont "}}
+
+%\newcommand{\sentenceExample}[1]{``#1"}
+\newcommand{\sentenceExample}[1]{\\
+	\begin{noindent}
+		{\hspace{10pt} #1}
+	\end{noindent}
+}
 
 
