@@ -38,6 +38,8 @@ HEADERS += \
    $$SRC_DIR/scope/rz-lisp-graph-scope-token.h \
    $$SRC_DIR/scope/rz-lisp-graph-lexical-scope.h \
    $$SRC_DIR/scope/rz-lisp-graph-block-info.h \
+   $$SRC_DIR/scope/rz-phaon-user-type.h \
+   $$SRC_DIR/scope/rz-phaon-precycle.h \
    $$SRC_DIR/rz-lisp-graph-rvalue.h \
    $$SRC_DIR/valuer/rz-opaque-call.h \
    $$SRC_DIR/valuer/rz-opaque-type-symbol.h \
@@ -55,6 +57,8 @@ SOURCES += \
    $$SRC_DIR/scope/rz-lisp-graph-scope-token.cpp \
    $$SRC_DIR/scope/rz-lisp-graph-lexical-scope.cpp \
    $$SRC_DIR/scope/rz-lisp-graph-block-info.cpp \
+   $$SRC_DIR/scope/rz-phaon-user-type.cpp \
+   $$SRC_DIR/scope/rz-phaon-precycle.cpp \
    $$SRC_DIR/rz-lisp-graph-rvalue.cpp \
    $$SRC_DIR/valuer/rz-opaque-call.cpp \
    $$SRC_DIR/valuer/rz-opaque-type-symbol.cpp \

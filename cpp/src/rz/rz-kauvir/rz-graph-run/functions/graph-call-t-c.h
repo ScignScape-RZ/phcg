@@ -32,6 +32,27 @@ _RZ_LISP_GRAPH_FUNCTION_CODES
 
 #undef RZ_LISP_GRAPH_FUNCTION_DECLARE
 
+RZ_GCALL_IMPLEMENT <RZ_GCALL_TC(Precycle, Core_Class)>
+{
+ template<typename T1, typename T2>
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& t1, T2& t2)
+ {
+  tString str = t1.string_value();
+  rh.valuer().register_user_precycle(str);
+  rh.mark_continue_statement(t1.pRestore<tNode>());
+ }
+
+ template<typename T1, typename T2>
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, T1& t1, T2& t2)
+ {
+
+ };
+
+};
+
+
+
+
 
 _RZNS(GRun)
 

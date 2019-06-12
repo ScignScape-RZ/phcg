@@ -91,6 +91,8 @@ class RZ_Lisp_Symbol;
 class RZ_Lisp_Graph_Rvalue;
 class RZ_Lisp_Graph_Scope_Token;
 
+class RZ_Phaon_User_Type;
+
 class RZ_Code_Statement;
 
 class RZ_Lisp_Graph_Block_Info;
@@ -135,6 +137,8 @@ class RZ_Lisp_Graph_Valuer
  caon_ptr<RZ_Lisp_Graph_Block_Info> current_block_info_;
 
  int current_core_pair_nodes_generation_;
+
+ QMap<QString, caon_ptr<RZ_Phaon_User_Type>> user_type_names_;
 
 public:
 
@@ -292,6 +296,8 @@ public:
  void set_token_as_symbol(caon_ptr<RZ_Lisp_Token> token, caon_ptr<tNode> node);
 
  QString form_type_expression(caon_ptr<RE_Node> entry_node);
+
+ void register_user_precycle(QString name);
 
  caon_ptr<RE_Node> register_lexical_symbol
   (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Type_Symbol& ots);

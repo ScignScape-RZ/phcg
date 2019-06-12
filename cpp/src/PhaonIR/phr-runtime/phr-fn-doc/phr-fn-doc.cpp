@@ -43,7 +43,7 @@ void PHR_Fn_Doc::init(PHR_Env* penv)
 {
  penv_ = penv;
  scopes_ = penv->scopes();
- qDebug() << "init...";
+ qDebug() << "init ...";
 }
 
 

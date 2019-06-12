@@ -53,6 +53,8 @@
 #include "string/rz-match-literal.h"
 #include "rz-function-def/rz-function-def-info.h"
 
+#include "scope/rz-phaon-user-type.h"
+
 #include <QRegularExpression>
 
 
@@ -2104,5 +2106,16 @@ void RZ_Lisp_Graph_Valuer::init_caserun_block(RZ_Lisp_Graph_Result_Holder& rh,
   }
  }
  rh.flags.skip_redirect = true;
+}
+
+void RZ_Lisp_Graph_Valuer::register_user_precycle(QString name)
+{
+ if(!user_type_names_.contains(name))
+ {
+  caon_ptr<RZ_Phaon_User_Type> uty = new RZ_Phaon_User_Type(name);
+  user_type_names_[name] = uty;
+ }
+
+ user_type_names_[name]->set_declaration_mode(RZ_Phaon_User_Type::Declaration_Mode::Precycle);
 }
 
