@@ -25,7 +25,7 @@ whose semiotic foundation draws from a spectrum of cognitive
 (perceptual, situational, narrative, empathic) facilities, which cannot be 
 reduced to deterministic logic.  My plan is to describe a grammar 
 framework which integrates such perspectives as Link Grammar, 
-Combinatory-Applicative Grammar, and Type Logical Grammar, but 
+Applicative and Cognitive Grammar (\ACG{}), and Type Logical Grammar, but 
 with a distinct underlying formal model.  Like other theories, 
 this model proposes a broad categorization for semantics by 
 identifying a small set of primitive types, and defining other types 
@@ -54,8 +54,22 @@ nouns to their \i{right}.
 \p{A related formalization, whose formal 
 analogs lie in Typed Lambda Calculus, abstracts from left-or-right 
 word order to models derived types as equivalent (at least 
-for purposes of type attribution) to \q{functions}.  So an 
-adverb becomes a function which takes a verb and produces another verb; 
+for purposes of type attribution) to \q{functions}.  
+This engenders a fundamental notion of functional \i{application} 
+and operator/operand distinctions: 
+\begin{quote}\i{Categorial Grammars} make the connection between the 
+first and the second level of the ACG.  These models are 
+typed applicative systems that verify if a linguistic 
+expression is syntactically well-formed, and then construct 
+its functional semantic interpretation.  They use the 
+\i{fundamental operation of application} of an operator to an 
+operand.  The result is a new operand or a new operator. 
+This operation can be repeated as many times as necessary 
+to construct the linguistic expressions' functional semantic 
+representation.
+\cite[p. 1]{AurelieRossi}
+\end{quote}
+So, e.g., an adverb becomes a function which takes a verb and produces another verb; 
 an adjective takes a noun and produces another noun; 
 and a verb takes a noun and produces a proposition 
 (see \i{students complained}).  By \q{function} we can consider 
@@ -64,9 +78,10 @@ concept \i{bark} into the concept \i{loud bark}.  Another
 feature of this \q{function type} interpretation is that 
 words can be treated as functions taking multiple arguments 
 \mdash{} a verb, for example, can have as many as three 
-\q{inputs} (subject, direct object, and indirect object).    
+\q{inputs} (subject, direct object, and indirect object).  
 }
-\p{Instead of pregroups or lambda calculus, 
+\p{While informed by the aforementioned theories, 
+instead of pregroups or lambda calculus, 
 the type system I propose here is inspired by 
 computer programming languages, and specifically 
 by frameworks for assigning types to 
@@ -216,7 +231,7 @@ phrase: consider \q{MP} for \i{member of parliament}, or
 \q{primaried} for \i{subject without your own party to a primary 
 challenge}.  Conversely, phrases can be repeatedly used in a 
 specific context until they function as quasi lexical units in 
-their own right.  These pattern of entrenchment imply that we 
+their own right.  These patterns of entrenchment imply that we 
 hear language in term of phrases bearing semantic content; and 
 insofar as we are comfortable with how we parse a sentence, each 
 word sited in its specific phrasal hierarchy, we do not tend to 
