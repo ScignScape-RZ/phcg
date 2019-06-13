@@ -37,14 +37,42 @@ _RZ_LISP_GRAPH_FUNCTION_CODES
 
 #undef RZ_LISP_GRAPH_FUNCTION_DECLARE
 
+//#define RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(count) \
+// RZ_GCALL_IMPLEMENT <RZ_GCALL_S(Leave_Logical_Scope_##count, Internal)> \
+// { \
+//  static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& start_token, caon_ptr<tNode> pass_node) \
+//  { \
+//   start_token.redirect_paste("#_rz-class"); \
+//  } \
+// }; \
+
 #define RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(count) \
  RZ_GCALL_IMPLEMENT <RZ_GCALL_S(Leave_Logical_Scope_##count, Internal)> \
  { \
   static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& start_token, caon_ptr<tNode> pass_node) \
   { \
-   start_token.redirect_paste("#_rz-class"); \
+   rh.valuer().leave_logical_scope(count, rh); \
   } \
  }; \
+
+
+RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(3)
+RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(4)
+RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(5)
+
+
+
+//RZ_GCALL_IMPLEMENT <RZ_GCALL_S(Leave_Logical_Scope_4, Internal)>
+//{
+// static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& start_token, caon_ptr<tNode> pass_node)
+// {
+//  //QString scope_kind =
+//  rh.valuer().leave_logical_scope(4, rh);
+////  scope_kind.prepend("#_rz-");
+////  rh.function_token()->redirect_paste(scope_kind);
+// }
+//};
+
 
 
 #undef RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION

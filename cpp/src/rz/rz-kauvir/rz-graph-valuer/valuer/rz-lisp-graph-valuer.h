@@ -90,6 +90,7 @@ class RZ_Opaque_Type_Symbol;
 class RZ_Lisp_Symbol;
 class RZ_Lisp_Graph_Rvalue;
 class RZ_Lisp_Graph_Scope_Token;
+class RZ_Lisp_Graph_Logical_Scope;
 
 class RZ_Phaon_User_Type;
 
@@ -113,6 +114,7 @@ struct RZ_Lisp_Graph_Valuer_Core_Pair
  caon_ptr<RE_Node> rhs_node;
  caon_ptr<RE_Node> right_new_node;
  caon_ptr<RE_Node> arity_value_node;
+ caon_ptr<RE_Node>* holding_fnode;
 };
 
 class RZ_Lisp_Graph_Valuer
@@ -131,6 +133,8 @@ class RZ_Lisp_Graph_Valuer
  typedef RE_Node tNode;
 
  caon_ptr<tNode> the_monotail_;
+
+ caon_ptr<RZ_Lisp_Graph_Logical_Scope> current_logical_scope_;
 
  caon_ptr<RZ_Lisp_Graph_Lexical_Scope> current_lexical_scope_;
  caon_ptr<RZ_Lisp_Graph_Lexical_Scope> root_lexical_scope_;
@@ -203,6 +207,8 @@ public:
 
  QMap<QString, Callback_Codes> callback_defer_code_map_;
 
+ caon_ptr<tNode> core_pair_function_node_;
+
 
 public:
 
@@ -214,12 +220,15 @@ public:
 
  ACCESSORS(caon_ptr<RZ_Lisp_Graph_Lexical_Scope> ,root_lexical_scope)
  ACCESSORS(caon_ptr<RZ_Lisp_Graph_Lexical_Scope> ,current_lexical_scope)
+ ACCESSORS(caon_ptr<tNode> ,core_pair_function_node)
 
 
  RZ_Lisp_Graph_Valuer(RZ_Lisp_Graph_Visitor& rz_lisp_graph_visitor,
   caon_ptr<RZ_Graph_Run_Embedder> = nullptr);
 
  rz_lisp_core_function_finder_type rz_lisp_core_function_finder;
+
+ caon_ptr<RZ_Lisp_Graph_Valuer_Core_Pair> check_release_core_pair();
 
  QString get_cpp_type_name(QString name);
 
@@ -290,6 +299,8 @@ public:
 
  void enter_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh,
    RZ_Phaon_User_Type& uty);
+
+ void leave_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh);
 
  void enter_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh,
    RZ_Opaque_Type_Symbol& ots);

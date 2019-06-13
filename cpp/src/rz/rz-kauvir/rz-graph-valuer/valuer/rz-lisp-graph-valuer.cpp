@@ -65,6 +65,7 @@
 #include "scope/rz-lisp-graph-block-info.h"
 
 #include "scope/rz-lisp-graph-lexical-scope.h"
+#include "scope/rz-lisp-graph-logical-scope.h"
 
 
 #include <QStringList>
@@ -80,8 +81,9 @@ RZ_Lisp_Graph_Valuer::RZ_Lisp_Graph_Valuer(RZ_Lisp_Graph_Visitor& rz_lisp_graph_
  caon_ptr<RZ_Graph_Run_Embedder> embedder)
  : rz_lisp_graph_visitor_(rz_lisp_graph_visitor),
    embedder_(embedder), fr_(RE_Frame::instance()),
-    rq_(RE_Query::instance()),
-    current_block_info_(nullptr), current_core_pair_nodes_generation_(0)
+    rq_(RE_Query::instance()), current_logical_scope_(nullptr),
+    current_block_info_(nullptr), current_core_pair_nodes_generation_(0),
+    core_pair_function_node_(nullptr)
 {
  init_type_objects();
 
@@ -337,7 +339,15 @@ void RZ_Lisp_Graph_Valuer::enter_new_lexical_scope()
 void RZ_Lisp_Graph_Valuer::enter_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Phaon_User_Type& uty)
 {
+ CAON_PTR_DEBUG(RZ_Lisp_Graph_Logical_Scope ,current_logical_scope_)
+ current_logical_scope_ = new RZ_Lisp_Graph_Logical_Scope(current_logical_scope_);
+ current_logical_scope_->set_user_type(&uty);
+}
 
+void RZ_Lisp_Graph_Valuer::leave_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh)
+{
+ if(current_logical_scope_)
+   current_logical_scope_ = current_logical_scope_->parent_scope();
 }
 
 void RZ_Lisp_Graph_Valuer::enter_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh,
@@ -1657,11 +1667,13 @@ void RZ_Lisp_Graph_Valuer::mark_core_function_call_entry(
   caon_ptr<tNode> rhs_node,
   caon_ptr<tNode> right_new_node, caon_ptr<tNode> arity_value_node)
 {
+ CAON_PTR_DEBUG(tNode ,function_node)
+
  RZ_Lisp_Graph_Valuer_Core_Pair* cp = new RZ_Lisp_Graph_Valuer_Core_Pair
    {generation, &cf,
    function_node,
    lhs_node,
-   left_new_node, rhs_node, right_new_node, arity_value_node};
+   left_new_node, rhs_node, right_new_node, arity_value_node, nullptr};
  caon_ptr<tNode> cpn = new tNode(cp);
  function_node << fr_/rq_.Run_Core_Pair >> cpn;
 
@@ -1671,6 +1683,28 @@ void RZ_Lisp_Graph_Valuer::mark_core_function_call_entry(
  }
 
  core_pair_nodes_[generation].push_back(function_node);
+
+ if(arity_value_node)
+ {
+  core_pair_function_node_ = function_node;
+  cp->holding_fnode = &core_pair_function_node_;
+ }
+
+}
+
+caon_ptr<RZ_Lisp_Graph_Valuer_Core_Pair> RZ_Lisp_Graph_Valuer::check_release_core_pair()
+{
+ if(core_pair_function_node_)
+ {
+  caon_ptr<tNode> prn = rq_.Run_Core_Pair(core_pair_function_node_);
+  if(!prn)
+    prn = rq_.Run_Nested_Core_Pair(core_pair_function_node_);
+  core_pair_function_node_ = nullptr;
+  if(!prn)
+    return nullptr;
+  return prn->core_pair();
+ }
+ return nullptr;
 }
 
 

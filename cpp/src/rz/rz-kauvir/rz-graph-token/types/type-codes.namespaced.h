@@ -25,7 +25,8 @@ RZ_RUN_TYPE_NS(GVal, Map, map, RZ_Lisp_Map, RZ_Map, Core_Class)
 
 RZ_RUN_TYPE_NS(GVal, FnDefInfo, fdef, RZ_Function_Def_Info, RZ_Function_Def_Info, Core_Class)
 
+RZ_RUN_TYPE_NS(GVal, UserType, uty, RZ_Phaon_User_Type, RZ_Phaon_User_Type, Core_Class)
 
 
-#define RZ_TEMP_CASES_TYPECODE_NAMESPACED 13
+#define RZ_TEMP_CASES_TYPECODE_NAMESPACED 15
 

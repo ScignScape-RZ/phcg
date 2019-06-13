@@ -1652,6 +1652,11 @@ int RZ_Lisp_Graph_Visitor::run_core_pairs(int generation)
   if(!ppr)
     continue;
 
+  CAON_PTR_DEBUG(RZ_Lisp_Graph_Valuer_Core_Pair ,ppr)
+
+  if(ppr->holding_fnode)
+    continue;
+
   run_core_pair(*ppr);
  }
  return valuer_->core_pair_nodes().size();
@@ -1676,13 +1681,17 @@ void RZ_Lisp_Graph_Visitor::write_core_pairs(int generation, QString& text)
 
   RZ_Lisp_Graph_Valuer_Core_Pair& pr = *ppr;
   tNode& fn = *pr.fnode;
-  tNode& ln = *pr.lhs_node;
+  //tNode& ln = *pr.lhs_node;
 
   if(caon_ptr<RE_Token> tfn = fn.re_token())
   {
    text += tfn->raw_text() + " == ";
-   if(caon_ptr<RE_Token> tln = ln.re_token())
-     text += tln->raw_text();
+   if(pr.lhs_node)
+   {
+    tNode& ln = *pr.lhs_node;
+    if(caon_ptr<RE_Token> tln = ln.re_token())
+      text += tln->raw_text();
+   }
    if(pr.left_new_node)
    {
     if(caon_ptr<RE_Token> tlnn = pr.left_new_node->re_token())
@@ -1747,6 +1756,12 @@ void RZ_Lisp_Graph_Visitor::run_core_pair(RZ_Lisp_Graph_Valuer_Core_Pair& pr)
   check_anticipate(pr.generation + 1, rh, *pr.fnode);
 //  if(rh.arity_node())
 //  {   caon_ptr<tNode> function_node = rh.arity_node() }
+ }
+
+ caon_ptr<RZ_Lisp_Graph_Valuer_Core_Pair> vpr = valuer_->check_release_core_pair();
+ if(vpr)
+ {
+  run_core_pair(*vpr);
  }
 
 }

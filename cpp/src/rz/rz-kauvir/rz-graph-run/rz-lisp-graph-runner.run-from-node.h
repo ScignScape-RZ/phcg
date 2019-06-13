@@ -723,6 +723,8 @@ void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(RZ_Lisp_Graph_Result_Holder&
 
  rh.hold(&start_node);
 
+ static RZ_Lisp_Graph_Value_Holder null_vh;
+
  switch(cf.info().Core_Function_Family)
  {
  case RZ_Graph_Call_C:
@@ -731,24 +733,24 @@ void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(RZ_Lisp_Graph_Result_Holder&
    rh.flags.has_held_value = false;
    RZ_Lisp_Graph_Core_Runner::run<RZ_Graph_Call_C>
     (rh, cf.info().Core_Function_Code,
-     rh.value_holder(), rh.value_holder());
+     rh.value_holder(), null_vh);
   }
-  else if(rh.arity_value_node())
+  else if(arity_value_node)
   {
    RZ_Lisp_Graph_Value_Holder vh;
    caon_ptr<RZ_Type_Object> tobj =
-    valuer_->get_node_type_object(*rh.arity_value_node());
+    valuer_->get_node_type_object(*arity_value_node);
    // //   Should this be (as it once was) a function in RE_Node?
    vh.set_type_object(tobj);
-   vh.set_value(rh.arity_value_node()->vertex());
+   vh.set_value(arity_value_node->vertex());
    RZ_Lisp_Graph_Core_Runner::run<RZ_Graph_Call_C>
     (rh, cf.info().Core_Function_Code,
-     vh, vh );
+     vh, lhs_token->vh() );
   }
   else
    RZ_Lisp_Graph_Core_Runner::run<RZ_Graph_Call_C>
     (rh, cf.info().Core_Function_Code,
-     lhs_token->vh(), lhs_token->vh() );
+     lhs_token->vh(), null_vh );
   break;
 
  case RZ_Graph_Call_Tc:
