@@ -21,6 +21,8 @@
 
 class PHR_Type_Object;
 
+RZNS_CLASS_DECLARE(RECore, RE_Node)
+
 #include "rzns.h"
 RZNS_(GVal)
 
@@ -33,6 +35,7 @@ class RZ_Phaon_User_Type
  RZ_Phaon_Precycle precycle_;
  RZ_Phaon_Precycle cocycle_;
 
+ caon_ptr<RE_Node> node_;
 
 public:
 
@@ -53,6 +56,8 @@ public:
  ACCESSORS(caon_ptr<RZ_Lisp_Graph_Logical_Scope> ,scope)
 
  ACCESSORS(Declaration_Mode ,declaration_mode)
+
+ ACCESSORS(caon_ptr<RE_Node> ,node)
 
  ACCESSORS__RGET(RZ_Phaon_Precycle ,precycle)
  ACCESSORS__RGET(RZ_Phaon_Precycle ,cocycle)

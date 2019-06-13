@@ -8,7 +8,7 @@
 USING_RZNS(GVal)
 
 RZ_Phaon_User_Type::RZ_Phaon_User_Type(QString name)
- : name_(name), declaration_mode_(Declaration_Mode::None)
+ : name_(name), node_(nullptr), declaration_mode_(Declaration_Mode::None)
 {}
 
 

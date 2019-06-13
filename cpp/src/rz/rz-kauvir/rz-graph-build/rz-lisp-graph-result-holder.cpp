@@ -18,7 +18,7 @@
 USING_RZNS(GBuild)
 
 RZ_Lisp_Graph_Result_Holder::RZ_Lisp_Graph_Result_Holder(RZ_Lisp_Graph_Valuer& valuer)
- : Flags(0), valuer_(valuer), arity_node_(nullptr),
+ : Flags(0), valuer_(valuer), arity_node_(nullptr), arity_value_node_(nullptr),
    pass_node_(nullptr), lead_function_node_(nullptr)
 {
 }
@@ -43,12 +43,20 @@ RZ_Lisp_Graph_Result_Holder::pull_pass_node()
 
 void RZ_Lisp_Graph_Result_Holder::continue_proceed(caon_ptr<tNode> n)
 {
+ CAON_PTR_DEBUG(tNode ,n)
  flags.continue_proceed = true;
  flags.continue_statement = false;
- pass_node_ = arity_node_;
+
+// if(arity_value_node_)
+// {
+//  pass_node_ = arity_node_;// = arity_value_node_;
+//  arity_value_node_ = nullptr;
+// }
+// else
+   pass_node_ = arity_node_;
  arity_node_ = n;
  if(lead_function_node_)
-  return;
+   return;
  lead_function_node_ = function_node();
 }
 
@@ -70,6 +78,15 @@ caon_ptr<RZ_Lisp_Graph_Result_Holder::tNode>
  return current_start_nodes_.top();
 }
 
+void RZ_Lisp_Graph_Result_Holder::mark_continue_statement(caon_ptr<tNode> n, caon_ptr<tNode> vn)
+{
+ CAON_PTR_DEBUG(tNode ,n)
+ flags.continue_statement = true;
+ arity_node_ = n;
+ arity_value_node_ = vn;
+
+ //valuer_.define_proxy(n, vn);
+}
 
 void RZ_Lisp_Graph_Result_Holder::mark_continue_statement(caon_ptr<tNode> n)
 {

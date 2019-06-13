@@ -80,6 +80,8 @@ private:
  caon_ptr<tNode> arity_node_;
  caon_ptr<tNode> pass_node_;
 
+ caon_ptr<tNode> arity_value_node_;
+
  std::stack<caon_ptr<tNode>> current_start_nodes_;
 
  RZ_Lisp_Graph_Value_Holder value_holder_;
@@ -93,6 +95,7 @@ public:
  ACCESSORS(caon_ptr<tNode> ,pass_node)
  ACCESSORS__RGET(RZ_Lisp_Graph_Value_Holder ,value_holder)
  ACCESSORS__GET(RZ_Lisp_Graph_Valuer& ,valuer)
+ ACCESSORS(caon_ptr<tNode> ,arity_value_node)
 
  RZ_Lisp_Graph_Result_Holder(RZ_Lisp_Graph_Valuer& valuer);
 
@@ -119,7 +122,7 @@ public:
  }
 
  void mark_continue_statement(caon_ptr<tNode> n);
-
+ void mark_continue_statement(caon_ptr<tNode> n, caon_ptr<tNode> vn);
 
  caon_ptr<RZ_Lisp_Token> get_lead_function_token();
 

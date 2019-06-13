@@ -286,6 +286,12 @@ public:
  void enter_new_lexical_scope();
  void leave_lexical_scope();
 
+ void enter_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh,
+   RZ_Phaon_User_Type& uty);
+
+ void enter_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh,
+   RZ_Opaque_Type_Symbol& ots);
+
  void set_preinit_equal_to_type(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
   RZ_Lisp_Graph_Value_Holder& lhs, RZ_Lisp_Graph_Value_Holder& rhs);
 
@@ -297,7 +303,7 @@ public:
 
  QString form_type_expression(caon_ptr<RE_Node> entry_node);
 
- void register_user_precycle(QString name);
+ caon_ptr<tNode> register_user_precycle(QString name);
 
  caon_ptr<RE_Node> register_lexical_symbol
   (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Type_Symbol& ots);
@@ -395,6 +401,9 @@ public:
 
  void run_Caserun(RZ_Lisp_Graph_Result_Holder& rh,
   tNode& start_node);
+
+ void define_proxy(caon_ptr<tNode> n1, caon_ptr<tNode> n2);
+ void define_proxy(RZ_Lisp_Graph_Result_Holder& rh);
 
 };
 

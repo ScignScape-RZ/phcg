@@ -334,6 +334,18 @@ void RZ_Lisp_Graph_Valuer::enter_new_lexical_scope()
  current_lexical_scope_ = new RZ_Lisp_Graph_Lexical_Scope(current_lexical_scope_);
 }
 
+void RZ_Lisp_Graph_Valuer::enter_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Phaon_User_Type& uty)
+{
+
+}
+
+void RZ_Lisp_Graph_Valuer::enter_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Opaque_Type_Symbol& ots)
+{
+
+}
+
 void RZ_Lisp_Graph_Valuer::leave_lexical_scope()
 {
  CAON_PTR_DEBUG(RZ_Lisp_Graph_Lexical_Scope ,current_lexical_scope_)
@@ -2108,14 +2120,32 @@ void RZ_Lisp_Graph_Valuer::init_caserun_block(RZ_Lisp_Graph_Result_Holder& rh,
  rh.flags.skip_redirect = true;
 }
 
-void RZ_Lisp_Graph_Valuer::register_user_precycle(QString name)
+void RZ_Lisp_Graph_Valuer::define_proxy(caon_ptr<tNode> n1, caon_ptr<tNode> n2)
 {
+ n1 << fr_/rq_.Run_Proxy_Value >> n2;
+}
+
+void RZ_Lisp_Graph_Valuer::define_proxy(RZ_Lisp_Graph_Result_Holder& rh)
+{
+ define_proxy(rh.arity_node(), rh.arity_value_node());
+}
+
+caon_ptr<tNode> RZ_Lisp_Graph_Valuer::register_user_precycle(QString name)
+{
+ caon_ptr<RZ_Phaon_User_Type> uty;
+
  if(!user_type_names_.contains(name))
  {
-  caon_ptr<RZ_Phaon_User_Type> uty = new RZ_Phaon_User_Type(name);
+  uty = new RZ_Phaon_User_Type(name);
   user_type_names_[name] = uty;
  }
+ else
+   uty = user_type_names_[name];
 
- user_type_names_[name]->set_declaration_mode(RZ_Phaon_User_Type::Declaration_Mode::Precycle);
+ if(!uty->node())
+   uty->set_node(new tNode(uty));
+
+ uty->set_declaration_mode(RZ_Phaon_User_Type::Declaration_Mode::Precycle);
+ return uty->node();
 }
 

@@ -33,6 +33,11 @@ class RZ_Null_Value;
 
 _RZNS(GBuild)
 
+RZNS_(GVal)
+
+class RZ_Phaon_User_Type;
+
+_RZNS(GVal)
 
 USING_RZNS(GBuild)
 
@@ -121,6 +126,42 @@ RZ_GCALL_IMPLEMENT <RZ_GCALL_C(Elsif, Core_Class)>
 RZ_GCALL_IMPLEMENT <RZ_GCALL_C(Enter_Logical_Scope_##count, Core_Class)> \
 { \
  template<typename T1, typename T2> \
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Phaon_User_Type& uty, RZ_Lisp_Graph_Value_Holder& vh) \
+ { \
+  rh.valuer().enter_logical_scope(count, rh, uty); \
+ } \
+ template<typename T1, typename T2> \
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Opaque_Type_Symbol& ots, RZ_Lisp_Graph_Value_Holder& vh) \
+ { \
+  rh.valuer().enter_logical_scope(count, rh, ots); \
+ } \
+ template<typename T1, typename T2> \
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, T1& t1, T2& t2) \
+ { \
+ } \
+}; \
+
+
+RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(3)
+RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(4)
+RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(5)
+RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION(6)
+
+
+#undef RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION
+
+_RZNS(GRun)
+
+
+#endif //GRAPH_CALL_C__H
+
+
+
+#ifdef HIDE
+
+RZ_GCALL_IMPLEMENT <RZ_GCALL_C(Enter_Logical_Scope_##count, Core_Class)> \
+{ \
+ template<typename T1, typename T2> \
  static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_User_Class& cl, RZ_Lisp_Graph_Value_Holder& vh) \
  { \
   rh.valuer().enter_logical_scope(count, rh, cl); \
@@ -147,10 +188,4 @@ RZ_GCALL_IMPLEMENT <RZ_GCALL_C(Enter_Logical_Scope_##count, Core_Class)> \
 }; \
 
 
-
-#undef RZ_GCALL_TEMP_DEFAULT_IMPLEMENTATION
-
-_RZNS(GRun)
-
-
-#endif //GRAPH_CALL_C__H
+#endif // HIDE

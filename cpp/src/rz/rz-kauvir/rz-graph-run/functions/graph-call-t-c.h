@@ -38,8 +38,14 @@ RZ_GCALL_IMPLEMENT <RZ_GCALL_TC(Precycle, Core_Class)>
  static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& t1, T2& t2)
  {
   tString str = t1.string_value();
-  rh.valuer().register_user_precycle(str);
-  rh.mark_continue_statement(t1.pRestore<tNode>());
+  caon_ptr<tNode> utyn = rh.valuer().register_user_precycle(str);
+ //
+  rh.mark_continue_statement(t1.pRestore<tNode>(), utyn);
+
+  rh.valuer().define_proxy(rh);
+
+  //rh.mark_continue_statement(t1.pRestore<tNode>());
+  //rh.hold(uty);
  }
 
  template<typename T1, typename T2>

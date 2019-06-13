@@ -39,7 +39,7 @@ USING_RZNS(RECore)
 #include "rzns.h"
 USING_RZNS(RECore)
 
-USING_RZNS(Text)
+//?USING_RZNS(Text)
 
 RE_Graph_Build::RE_Graph_Build(RE_Document* d,
   RE_Parser& p, RE_Graph& g)

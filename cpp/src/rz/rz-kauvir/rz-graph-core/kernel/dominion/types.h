@@ -35,10 +35,10 @@ DOMINION_TYPE(string_plex_builder, RZ_String_Plex_Builder, StrPlexBuilder)
 
 
 
-#define DOMINION_INNER_NAMESPACE Text
-#include "relae-graph/dominion-macros.h"
-DOMINION_TYPE(text_punctuation, RZ_Text_Punctuation, RZ_Text_Punctuation)
-#undef DOMINION_INNER_NAMESPACE
+//#define DOMINION_INNER_NAMESPACE Text
+//#include "relae-graph/dominion-macros.h"
+//DOMINION_TYPE(text_punctuation, RZ_Text_Punctuation, RZ_Text_Punctuation)
+//#undef DOMINION_INNER_NAMESPACE
 
 #define DOMINION_INNER_NAMESPACE GEmbed
 #include "relae-graph/dominion-macros.h"
@@ -81,6 +81,7 @@ DOMINION_TYPE(rz_function_def_info, RZ_Function_Def_Info, RZ_Function_Def_Info)
 DOMINION_TYPE(rz_code_statement, RZ_Code_Statement, RZ_Code_Statement)
 DOMINION_TYPE(rz_expression_review, RZ_Expression_Review, RZ_Expression_Review)
 DOMINION_TYPE(core_pair, RZ_Lisp_Graph_Valuer_Core_Pair, RZ_Lisp_Graph_Valuer__Core_Pair)
+DOMINION_TYPE(ucer_type, RZ_Phaon_User_Type, Uty)
 #undef DOMINION_INNER_NAMESPACE
 
 #undef DOMINION_OUTER_NAMESPACE
