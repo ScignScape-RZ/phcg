@@ -39,10 +39,10 @@ RZ_GCALL_IMPLEMENT <RZ_GCALL_TC(Precycle, Core_Class)>
  {
   tString str = t1.string_value();
   caon_ptr<tNode> utyn = rh.valuer().register_user_precycle(str);
- //
+ //  rh.mark_continue_statement(t1.pRestore<tNode>(), utyn);
   rh.mark_continue_statement(t1.pRestore<tNode>(), utyn);
-
-  rh.valuer().define_proxy(rh);
+//  rh.hold(utyn);
+  rh.valuer().define_pass_proxy(rh);
 
   //rh.mark_continue_statement(t1.pRestore<tNode>());
   //rh.hold(uty);

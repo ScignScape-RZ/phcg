@@ -619,14 +619,20 @@ USING_RZNS(GRun)
 RZNS_(GRun)
 
 
+//template<>
+//void RZ_Lisp_Graph_Runner::proceed_run_from_node<0>(int generation,
+//  RZ_Lisp_Graph_Result_Holder& rh,
+//  RZ_Lisp_Graph_Core_Function& cf,
+//  tNode& start_node, caon_ptr<tNode> next_node,
+//  caon_ptr<tNode> left_new_node,
+//  caon_ptr<tNode> second_node, caon_ptr<tNode> right_new_node)
+
 template<>
-void RZ_Lisp_Graph_Runner::proceed_run_from_node<0>(int generation,
-  RZ_Lisp_Graph_Result_Holder& rh,
-  RZ_Lisp_Graph_Core_Function& cf,
-  tNode& start_node, caon_ptr<tNode> next_node,
-  caon_ptr<tNode> left_new_node,
-  caon_ptr<tNode> second_node, caon_ptr<tNode> right_new_node)
+void RZ_Lisp_Graph_Runner::proceed_run_from_node<0>(RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Valuer_Core_Pair& cp)
 {
+ RZ_Lisp_Graph_Core_Function& cf = *cp.cf;
+ tNode& start_node = *cp.fnode;
  rh.hold(&start_node);
  RZ_Lisp_Graph_Function_Code code = cf.info().Core_Function_Code;
  switch(cf.info().Core_Function_Family)
@@ -673,18 +679,34 @@ void RZ_Lisp_Graph_Runner::check_run_from_node<0>(int generation,
   RZ_Lisp_Graph_Result_Holder& rh,
   RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
- valuer_->mark_core_function_call_entry(generation, cf, &start_node, nullptr, nullptr, nullptr, nullptr);
- prepare_run_from_node<0>(generation, rh, cf, start_node, nullptr, nullptr, nullptr, nullptr);
+ valuer_->mark_core_function_call_entry(generation, cf, &start_node, nullptr, nullptr, nullptr, nullptr, nullptr);
+ prepare_run_from_node<0>(generation, rh, cf, start_node, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
 }
 
+//template<>
+//void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(int generation,
+//  RZ_Lisp_Graph_Result_Holder& rh,
+//  RZ_Lisp_Graph_Core_Function& cf,
+//  tNode& start_node, caon_ptr<tNode> next_node,
+//  caon_ptr<tNode> left_new_node,
+//  caon_ptr<tNode> second_node, caon_ptr<tNode> right_new_node)
+
 template<>
-void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(int generation,
-  RZ_Lisp_Graph_Result_Holder& rh,
-  RZ_Lisp_Graph_Core_Function& cf,
-  tNode& start_node, caon_ptr<tNode> next_node,
-  caon_ptr<tNode> left_new_node,
-  caon_ptr<tNode> second_node, caon_ptr<tNode> right_new_node)
+void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Valuer_Core_Pair& cp)
 {
+
+ RZ_Lisp_Graph_Core_Function& cf = *cp.cf;
+ tNode& start_node = *cp.fnode;
+
+ caon_ptr<tNode> next_node = cp.lhs_node;
+ caon_ptr<tNode> left_new_node = cp.left_new_node;
+ caon_ptr<tNode> second_node = cp.rhs_node;
+ caon_ptr<tNode> right_new_node = cp.right_new_node;
+ caon_ptr<tNode> arity_value_node = cp.arity_value_node;
+
+ //  caon_ptr<tNode> left_new_node,
+ //  caon_ptr<tNode> second_node, caon_ptr<tNode> right_new_node
  caon_ptr<RZ_Lisp_Token> lhs_token;
 
  if(left_new_node)
@@ -710,6 +732,18 @@ void RZ_Lisp_Graph_Runner::proceed_run_from_node<1>(int generation,
    RZ_Lisp_Graph_Core_Runner::run<RZ_Graph_Call_C>
     (rh, cf.info().Core_Function_Code,
      rh.value_holder(), rh.value_holder());
+  }
+  else if(rh.arity_value_node())
+  {
+   RZ_Lisp_Graph_Value_Holder vh;
+   caon_ptr<RZ_Type_Object> tobj =
+    valuer_->get_node_type_object(*rh.arity_value_node());
+   // //   Should this be (as it once was) a function in RE_Node?
+   vh.set_type_object(tobj);
+   vh.set_value(rh.arity_value_node()->vertex());
+   RZ_Lisp_Graph_Core_Runner::run<RZ_Graph_Call_C>
+    (rh, cf.info().Core_Function_Code,
+     vh, vh );
   }
   else
    RZ_Lisp_Graph_Core_Runner::run<RZ_Graph_Call_C>
@@ -784,7 +818,7 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<1>(int generation,
  CAON_PTR_DEBUG(tNode ,right_new_node)
 
  valuer_->mark_core_function_call_entry(generation, cf, &start_node,
-   next_node, left_new_node, second_node, right_new_node);
+   next_node, left_new_node, second_node, right_new_node, rh.arity_value_node());
 
  //!
 // proceed_run_from_node<1>(generation, rh, cf, start_node,
@@ -894,14 +928,30 @@ void RZ_Lisp_Graph_Runner::check_run_from_node<1>(int generation,
 }
 
 
+//template<>
+//void RZ_Lisp_Graph_Runner::proceed_run_from_node<2>(int generation,
+//  RZ_Lisp_Graph_Result_Holder& rh,
+//  RZ_Lisp_Graph_Core_Function& cf,
+//  tNode& start_node, caon_ptr<tNode> lhs_node,
+//  caon_ptr<tNode> left_new_node,
+//  caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node)
+
 template<>
-void RZ_Lisp_Graph_Runner::proceed_run_from_node<2>(int generation,
-  RZ_Lisp_Graph_Result_Holder& rh,
-  RZ_Lisp_Graph_Core_Function& cf,
-  tNode& start_node, caon_ptr<tNode> lhs_node,
-  caon_ptr<tNode> left_new_node,
-  caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node)
+void RZ_Lisp_Graph_Runner::proceed_run_from_node<2>(RZ_Lisp_Graph_Result_Holder& rh,
+  RZ_Lisp_Graph_Valuer_Core_Pair& cp)
 {
+
+ RZ_Lisp_Graph_Core_Function& cf = *cp.cf;
+ tNode& start_node = *cp.fnode;
+
+ caon_ptr<tNode> lhs_node = cp.lhs_node;
+ caon_ptr<tNode> left_new_node = cp.left_new_node;
+ caon_ptr<tNode> rhs_node = cp.rhs_node;
+ caon_ptr<tNode> right_new_node = cp.right_new_node;
+ caon_ptr<tNode> arity_value_node = cp.arity_value_node;
+
+ int generation = cp.generation;
+
  caon_ptr<RZ_Lisp_Token> lhs_token;
 
  if(left_new_node)
@@ -1125,7 +1175,7 @@ void RZ_Lisp_Graph_Runner::prepare_run_from_node<2>(int generation,
  caon_ptr<RZ_Lisp_Token> lhs_token;
 
  valuer_->mark_core_function_call_entry(generation, cf, &start_node,
-   lhs_node, left_new_node, rhs_node, right_new_node);
+   lhs_node, left_new_node, rhs_node, right_new_node, rh.arity_value_node());
 
  //!
 // proceed_run_from_node<2>(generation, rh, cf, start_node,

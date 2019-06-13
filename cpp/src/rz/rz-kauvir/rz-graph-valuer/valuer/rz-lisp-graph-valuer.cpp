@@ -1654,13 +1654,14 @@ void RZ_Lisp_Graph_Valuer::mark_core_function_call_entry(
   int generation, RZ_Lisp_Graph_Core_Function& cf,
   caon_ptr<tNode> function_node, caon_ptr<tNode> lhs_node,
   caon_ptr<tNode> left_new_node,
-  caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node)
+  caon_ptr<tNode> rhs_node,
+  caon_ptr<tNode> right_new_node, caon_ptr<tNode> arity_value_node)
 {
  RZ_Lisp_Graph_Valuer_Core_Pair* cp = new RZ_Lisp_Graph_Valuer_Core_Pair
    {generation, &cf,
    function_node,
    lhs_node,
-   left_new_node, rhs_node, right_new_node};
+   left_new_node, rhs_node, right_new_node, arity_value_node};
  caon_ptr<tNode> cpn = new tNode(cp);
  function_node << fr_/rq_.Run_Core_Pair >> cpn;
 
@@ -2120,14 +2121,14 @@ void RZ_Lisp_Graph_Valuer::init_caserun_block(RZ_Lisp_Graph_Result_Holder& rh,
  rh.flags.skip_redirect = true;
 }
 
-void RZ_Lisp_Graph_Valuer::define_proxy(caon_ptr<tNode> n1, caon_ptr<tNode> n2)
+void RZ_Lisp_Graph_Valuer::define_pass_proxy(caon_ptr<tNode> n1, caon_ptr<tNode> n2)
 {
- n1 << fr_/rq_.Run_Proxy_Value >> n2;
+ n1 << fr_/rq_.Run_Pass_Proxy_Value >> n2;
 }
 
-void RZ_Lisp_Graph_Valuer::define_proxy(RZ_Lisp_Graph_Result_Holder& rh)
+void RZ_Lisp_Graph_Valuer::define_pass_proxy(RZ_Lisp_Graph_Result_Holder& rh)
 {
- define_proxy(rh.arity_node(), rh.arity_value_node());
+ define_pass_proxy(rh.arity_node(), rh.arity_value_node());
 }
 
 caon_ptr<tNode> RZ_Lisp_Graph_Valuer::register_user_precycle(QString name)

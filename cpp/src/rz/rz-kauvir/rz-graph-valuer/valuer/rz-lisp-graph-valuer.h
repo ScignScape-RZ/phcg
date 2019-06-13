@@ -112,6 +112,7 @@ struct RZ_Lisp_Graph_Valuer_Core_Pair
  caon_ptr<RE_Node> left_new_node;
  caon_ptr<RE_Node> rhs_node;
  caon_ptr<RE_Node> right_new_node;
+ caon_ptr<RE_Node> arity_value_node;
 };
 
 class RZ_Lisp_Graph_Valuer
@@ -249,7 +250,8 @@ public:
    RZ_Lisp_Graph_Core_Function& cf,
    caon_ptr<tNode> start_node, caon_ptr<tNode> lhs_node,
    caon_ptr<tNode> left_new_node,
-   caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node);
+   caon_ptr<tNode> rhs_node, caon_ptr<tNode> right_new_node,
+   caon_ptr<tNode> arity_value_node);
 
 
  void init_if_block(RZ_Lisp_Graph_Result_Holder& rh, RZ_Opaque_Type_Symbol& ots);
@@ -402,8 +404,8 @@ public:
  void run_Caserun(RZ_Lisp_Graph_Result_Holder& rh,
   tNode& start_node);
 
- void define_proxy(caon_ptr<tNode> n1, caon_ptr<tNode> n2);
- void define_proxy(RZ_Lisp_Graph_Result_Holder& rh);
+ void define_pass_proxy(caon_ptr<tNode> n1, caon_ptr<tNode> n2);
+ void define_pass_proxy(RZ_Lisp_Graph_Result_Holder& rh);
 
 };
 

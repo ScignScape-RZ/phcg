@@ -1716,21 +1716,25 @@ void RZ_Lisp_Graph_Visitor::run_core_pair(RZ_Lisp_Graph_Valuer_Core_Pair& pr)
  switch(pr.cf->arity())
  {
  case 0:
-  lisp_graph_runner_->proceed_run_from_node<0>(pr.generation, rh, *pr.cf,
-    *pr.fnode, pr.lhs_node, pr.left_new_node,
-    pr.rhs_node, pr.right_new_node);
+  lisp_graph_runner_->proceed_run_from_node<0>(rh, pr);
+//     pr.generation, rh, *pr.cf,
+//    *pr.fnode, pr.lhs_node, pr.left_new_node,
+//    pr.rhs_node, pr.right_new_node);
   break;
 
  case 1:
-  lisp_graph_runner_->proceed_run_from_node<1>(pr.generation, rh, *pr.cf,
+  lisp_graph_runner_->proceed_run_from_node<1>(rh, pr);
+     /*pr.generation, rh, *pr.cf,
     *pr.fnode, pr.lhs_node, pr.left_new_node,
-    pr.rhs_node, pr.right_new_node);
+    pr.rhs_node, pr.right_new_node);*/
   break;
 
  case 2:
-  lisp_graph_runner_->proceed_run_from_node<2>(pr.generation, rh, *pr.cf,
-    *pr.fnode, pr.lhs_node, pr.left_new_node,
-    pr.rhs_node, pr.right_new_node);
+  lisp_graph_runner_->proceed_run_from_node<2>(rh, pr);
+
+//     pr.generation, rh, *pr.cf,
+//    *pr.fnode, pr.lhs_node, pr.left_new_node,
+//    pr.rhs_node, pr.right_new_node);
   break;
 
  default:
