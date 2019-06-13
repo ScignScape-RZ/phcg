@@ -680,7 +680,7 @@ void RZ_Lisp_Graph_Runner::check_run_from_node<0>(int generation,
   RZ_Lisp_Graph_Core_Function& cf, tNode& start_node)
 {
  valuer_->mark_core_function_call_entry(generation, cf, &start_node, nullptr, nullptr, nullptr, nullptr, nullptr);
- prepare_run_from_node<0>(generation, rh, cf, start_node, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr);
+ prepare_run_from_node<0>(generation, rh, cf, start_node, nullptr, nullptr, nullptr, nullptr);
 }
 
 //template<>
