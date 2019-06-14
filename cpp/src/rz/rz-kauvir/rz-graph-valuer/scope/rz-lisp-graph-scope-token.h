@@ -53,6 +53,8 @@ class RZ_Lisp_Graph_Scope_Token
 
  RZ_Lisp_Graph_Value_Holder vh_;
 
+ QString index_key_;
+
 public:
 
 
@@ -62,9 +64,9 @@ public:
   caon_ptr<RZ_Lisp_Token> d = nullptr, caon_ptr<RE_Node> n = nullptr);
 
  RZ_Lisp_Graph_Scope_Token(RZ_Lisp_Token& f,
-  RZ_Lisp_Token& d, QString dtn, caon_ptr<RE_Node> n = nullptr);
+  RZ_Lisp_Token& d, QString dtn, caon_ptr<RE_Node> n);
 
- RZ_Lisp_Graph_Scope_Token(RZ_Lisp_Token& f, RZ_Lisp_Token& d);
+ RZ_Lisp_Graph_Scope_Token(RZ_Lisp_Token& f, RZ_Lisp_Token& d, QString index_key);
 
 
 
@@ -72,6 +74,7 @@ public:
  ACCESSORS(caon_ptr<RZ_Lisp_Token> ,declaration_token)
  ACCESSORS(caon_ptr<RE_Node> ,value_node)
  ACCESSORS(QString ,declared_type_name)
+ ACCESSORS(QString ,index_key)
 
  ACCESSORS(RZ_Lisp_Graph_Value_Holder ,vh)
 

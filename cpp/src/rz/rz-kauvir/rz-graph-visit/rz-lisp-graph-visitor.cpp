@@ -54,6 +54,9 @@
 
 #include "rz-graph-core/kernel/graph/rz-re-connection.h"
 
+#include "rz-graph-valuer/scope/rz-lisp-graph-logical-scope.h"
+#include "rz-graph-valuer/scope/rz-lisp-graph-scope-token.h"
+
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
@@ -196,6 +199,23 @@ caon_ptr<RZ_Lisp_Graph_Visitor::tNode> RZ_Lisp_Graph_Visitor::call_entry_from_no
  return rq_.Run_Call_Entry(node);
 }
 
+QString RZ_Lisp_Graph_Visitor::get_field_index_key(caon_ptr<RE_Node> n, QString sym)
+{
+ if(caon_ptr<RE_Node> nn = rq_.Symbol_To_Scope(n))
+ {
+  if(caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs = nn->logs())
+  {
+   RZ_Lisp_Graph_Scope_Token& st = logs->symbols()[sym];
+   QString result = st.index_key();
+   if(result.startsWith('!'))
+   {
+    result.prepend(logs->name());
+   }
+   return result;
+  }
+ }
+ return "?";
+}
 
 
 caon_ptr<RZ_Lisp_Graph_Visitor::tNode> RZ_Lisp_Graph_Visitor::entry_from_call_entry(caon_ptr<tNode> node)

@@ -257,6 +257,11 @@ caon_ptr<RE_Node> RZ_Graph_Visitor_Phaon::get_next_statement_node(caon_ptr<RE_No
  return result;
 }
 
+QString RZ_Graph_Visitor_Phaon::get_field_index_key(caon_ptr<RE_Node> n, QString sym)
+{
+ return visitor_.get_field_index_key(n, sym);
+}
+
 
 caon_ptr<RE_Node> RZ_Graph_Visitor_Phaon::leave_nested_block(caon_ptr<RZ_Lisp_Graph_Block_Info> rbi, caon_ptr<RZ_Lisp_Graph_Block_Info>& nn_bi)
 {

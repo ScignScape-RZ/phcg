@@ -81,3 +81,5 @@ DOMINION_CONNECTOR(Retval_Follow, "retval-follow")
 DOMINION_CONNECTOR(Assignment_Annotation, "assignment-annotation")
 
 DOMINION_CONNECTOR(Run_Pass_Proxy_Value, "run-pass-proxy-value")
+
+DOMINION_CONNECTOR(Symbol_To_Scope, "symbol-to-scope")

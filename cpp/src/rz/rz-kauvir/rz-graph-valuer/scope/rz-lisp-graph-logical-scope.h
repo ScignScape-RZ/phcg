@@ -46,6 +46,7 @@ class RZ_Lisp_Graph_Logical_Scope : public RZ_Lisp_Graph_Lexical_Scope
 
  caon_ptr<RZ_Lisp_Graph_Logical_Scope> parent_scope_;
  caon_ptr<RZ_Phaon_User_Type> user_type_;
+ caon_ptr<RE_Node> node_;
 
 public:
 
@@ -54,7 +55,11 @@ public:
  ACCESSORS(QString ,name)
  ACCESSORS(caon_ptr<RZ_Lisp_Graph_Logical_Scope> ,parent_scope)
  ACCESSORS(caon_ptr<RZ_Phaon_User_Type> ,user_type)
+ ACCESSORS(caon_ptr<RE_Node> ,node)
 
+ QString get_index_key();
+
+ void increment_field_count();
 
 };
 

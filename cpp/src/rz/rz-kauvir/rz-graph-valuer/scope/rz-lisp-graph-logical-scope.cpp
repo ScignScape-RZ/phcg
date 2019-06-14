@@ -11,15 +11,36 @@
 
 #include "rz-lisp-graph-logical-scope.h"
 
+#include "rz-phaon-user-type.h"
+
 
 USING_RZNS(GVal)
 
 RZ_Lisp_Graph_Logical_Scope::RZ_Lisp_Graph_Logical_Scope(caon_ptr<RZ_Lisp_Graph_Logical_Scope> p)
- :  RZ_Lisp_Graph_Lexical_Scope(nullptr), parent_scope_(p), user_type_(nullptr)
+ :  RZ_Lisp_Graph_Lexical_Scope(nullptr), parent_scope_(p), user_type_(nullptr), node_(nullptr)
 {
  if(p)
  {
   set_parent(p.raw_pointer());
  }
+}
+
+void RZ_Lisp_Graph_Logical_Scope::increment_field_count()
+{
+ user_type_->increment_field_count();
+}
+
+QString RZ_Lisp_Graph_Logical_Scope::get_index_key()
+{
+ if(user_type_)
+ {
+  int c = user_type_->field_count_for_current_declaration_mode();
+  if(c == 0)
+    return QString("!%1:%2").arg(user_type_->get_declaration_mode_string())
+     .arg(c);
+  return QString("%1:%2").arg(user_type_->get_declaration_mode_string())
+    .arg(c);
+ }
+ return QString();
 }
 

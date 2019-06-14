@@ -81,10 +81,10 @@ public:
  RZ_Lisp_Graph_Scope_Token* contains_function_symbol_without_parent(QString symbol_name);
 
  void add_type_named_symbol(RZ_Lisp_Token& function_token,
-  RZ_Lisp_Token& tok, QString type_name);
+   RZ_Lisp_Token& tok, QString type_name);
 
  void add_symbol(RZ_Lisp_Token& function_token,
-  RZ_Lisp_Token& tok);
+   RZ_Lisp_Token& tok, QString index_key);
 
  QStringList get_annotations(RZ_Lisp_Token& tok);
  QStringList get_annotations(QString key);

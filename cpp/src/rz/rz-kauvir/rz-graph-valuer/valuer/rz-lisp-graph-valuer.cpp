@@ -342,6 +342,14 @@ void RZ_Lisp_Graph_Valuer::enter_logical_scope(int level, RZ_Lisp_Graph_Result_H
  CAON_PTR_DEBUG(RZ_Lisp_Graph_Logical_Scope ,current_logical_scope_)
  current_logical_scope_ = new RZ_Lisp_Graph_Logical_Scope(current_logical_scope_);
  current_logical_scope_->set_user_type(&uty);
+ current_logical_scope_->set_name(uty.name());
+
+ caon_ptr<RE_Node> n = new RE_Node(current_logical_scope_);
+ current_logical_scope_.set_node(n);
+
+ caon_ptr<RZ_Lisp_Token> tok = rh.get_lead_function_token();
+ CAON_PTR_DEBUG(RZ_Lisp_Token ,tok)
+ tok->flags.skip_phaon_out = true;
 }
 
 void RZ_Lisp_Graph_Valuer::leave_logical_scope(int level, RZ_Lisp_Graph_Result_Holder& rh)
@@ -767,7 +775,8 @@ caon_ptr<RZ_Type_Object>
 
 
 caon_ptr<RE_Node> RZ_Lisp_Graph_Valuer::register_lexical_symbols
- (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Vector& symvec)
+ (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
+  RZ_Lisp_Token& tok, RZ_Lisp_Vector& symvec, caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs)
 {
  for(caon_ptr<tNode> n : symvec.nodes())
  {
@@ -775,21 +784,36 @@ caon_ptr<RE_Node> RZ_Lisp_Graph_Valuer::register_lexical_symbols
   QString str = node.label();
   caon_ptr<RZ_Lisp_Token> symtok = node.lisp_token();
 
-  current_lexical_scope_->add_symbol(*symtok);
+  if(logs)
+    logs->add_symbol(*symtok);
+  else
+    current_lexical_scope_->add_symbol(*symtok);
  }
  // //  Return for continuing run call
  return symvec.get_call_entry_node();
 }
 
 caon_ptr<RE_Node> RZ_Lisp_Graph_Valuer::register_lexical_symbol
- (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Symbol& sym)
+ (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
+  RZ_Lisp_Token& tok, RZ_Lisp_Symbol& sym, caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs)
 {
-
- current_lexical_scope_->add_symbol(function_token, tok);
+ if(logs)
+ {
+  logs->add_symbol(function_token, tok, logs->get_index_key());
+  logs->increment_field_count();
+ }
+ else
+   current_lexical_scope_->add_symbol(function_token, tok, QString());
 
  tok.flags.is_untyped_symbol_declaration = true;
 
  caon_ptr<RE_Node> result = caon_reinterpret_cast<RE_Node>(&sym);
+
+ if(logs)
+ {
+  if(logs.node())
+    result << fr_/rq_.Symbol_To_Scope >> logs.node();
+ }
 
  QStringList qsl;
  caon_ptr<RE_Node> result_fwd = check_skip_symbol_dep_nodes(result, qsl);
@@ -804,6 +828,34 @@ caon_ptr<RE_Node> RZ_Lisp_Graph_Valuer::register_lexical_symbol
 
  return result;
 }
+
+
+//caon_ptr<RE_Node> RZ_Lisp_Graph_Valuer::register_logical_symbol
+// (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Symbol& sym)
+//{
+// if(!current_logical_scope_)
+//   return;
+
+// current_logical_scope_->add_symbol(function_token, tok);
+
+// tok.flags.is_untyped_symbol_declaration = true;
+
+// caon_ptr<RE_Node> result = caon_reinterpret_cast<RE_Node>(&sym);
+
+// QStringList qsl;
+// caon_ptr<RE_Node> result_fwd = check_skip_symbol_dep_nodes(result, qsl);
+
+// if(!qsl.isEmpty())
+// {
+//  result = result_fwd;
+// }
+
+
+// CAON_PTR_DEBUG(RE_Node ,result)
+
+// return result;
+//}
+
 
 
 caon_ptr<RE_Node> RZ_Lisp_Graph_Valuer::check_skip_symbol_dep_nodes(caon_ptr<RE_Node> start_node,
@@ -896,7 +948,8 @@ QString RZ_Lisp_Graph_Valuer::form_type_expression(caon_ptr<RE_Node> entry_node)
 
 caon_ptr<RZ_Lisp_Graph_Valuer::tNode>
 RZ_Lisp_Graph_Valuer::register_lexical_symbol
- (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Call& opc)
+ (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Call& opc,
+  caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs)
 {
  caon_ptr<tNode> result = nullptr;
  caon_ptr<tNode> en = opc.entry_node();
@@ -914,7 +967,11 @@ RZ_Lisp_Graph_Valuer::register_lexical_symbol
     {
      result = declaration_node;
      QString type = form_type_expression(en);
-     current_lexical_scope_->add_type_named_symbol(function_token, *declaration_token, type);
+
+     if(logs)
+       logs->add_type_named_symbol(function_token, *declaration_token, type);
+     else
+       current_lexical_scope_->add_type_named_symbol(function_token, *declaration_token, type);
     }
    }
   }
@@ -925,7 +982,8 @@ RZ_Lisp_Graph_Valuer::register_lexical_symbol
 
 caon_ptr<RZ_Lisp_Graph_Valuer::tNode>
 RZ_Lisp_Graph_Valuer::register_lexical_symbol
- (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Type_Symbol& ots)
+ (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok,
+  RZ_Opaque_Type_Symbol& ots, caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs)
 {
  caon_ptr<tNode> result = nullptr;
  QString type = ots.get_name();
@@ -955,7 +1013,11 @@ RZ_Lisp_Graph_Valuer::register_lexical_symbol
  if(declaration_token)
  {
   CAON_PTR_DEBUG(RZ_Lisp_Token ,declaration_token)
-  current_lexical_scope_->add_type_named_symbol(function_token, *declaration_token, type);
+
+  if(logs)
+    logs->add_type_named_symbol(function_token, *declaration_token, type);
+  else
+    current_lexical_scope_->add_type_named_symbol(function_token, *declaration_token, type);
   tok.flags.is_type_symbol_in_declaration = true;
  }
 
@@ -2180,7 +2242,7 @@ caon_ptr<tNode> RZ_Lisp_Graph_Valuer::register_user_precycle(QString name)
  if(!uty->node())
    uty->set_node(new tNode(uty));
 
- uty->set_declaration_mode(RZ_Phaon_User_Type::Declaration_Mode::Precycle);
+ uty->set_declaration_mode(RZ_Phaon_User_Type::Declaration_Modes::Precycle);
  return uty->node();
 }
 

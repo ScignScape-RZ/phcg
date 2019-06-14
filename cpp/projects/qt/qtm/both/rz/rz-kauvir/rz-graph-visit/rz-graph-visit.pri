@@ -52,7 +52,7 @@ SOURCES += \
     $$SRC_DIR/rz-graph-visitor-phaon.cpp \
 
 
-LIBS += -L$$TARGETSDIR -lrz-code-elements
+LIBS += -L$$TARGETSDIR -lrz-code-elements -lrz-graph-valuer
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)
 mkpath($$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

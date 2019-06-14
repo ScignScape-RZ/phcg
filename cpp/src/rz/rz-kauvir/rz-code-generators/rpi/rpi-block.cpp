@@ -319,6 +319,8 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
 
  //?bool need_to_hold_type = false;
 
+ QString field_index_key;
+
  while(current_node)
  {
   last_nnp_expr = nnp == RZ_Lisp_Graph_Visitor::Next_Node_Premise::Expression;
@@ -400,6 +402,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
         next_tok->flags.is_symbol_matched_to_declaration)
      {
       mstk = MS_Token_Kinds::Scoped_Symbol;
+      field_index_key = visitor_phaon.get_field_index_key(next_node, lt);
      }
      else if(next_tok->flags.is_string_literal)
      {

@@ -95,6 +95,69 @@ RZ_GCALL_IMPLEMENT <RZ_GCALL_Tc(My, Core_Class)>
 };
 
 
+RZ_GCALL_IMPLEMENT <RZ_GCALL_Tc(Our, Core_Class)>
+{
+ template<typename T1, typename T2>
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& token, T2& t2)
+ {
+
+ }
+ template<typename T1, typename T2>
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& token, RZ_Opaque_Call& opc)
+ {
+  caon_ptr<RZ_Lisp_Token> ft = rh.function_token();
+
+  if(ft)
+  {
+   caon_ptr<tNode> n = rh.valuer().register_lexical_symbol(*ft, token, opc,
+     rh.valuer().current_logical_scope());
+   rh.mark_continue_statement(n);
+  }
+
+ }
+
+ template<typename T1, typename T2>
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& token, RZ_Opaque_Type_Symbol& ots)
+ {
+  caon_ptr<RZ_Lisp_Token> ft = rh.function_token();
+
+  if(ft)
+  {
+   caon_ptr<tNode> n = rh.valuer().register_lexical_symbol(*ft, token, ots,
+     rh.valuer().current_logical_scope());
+   rh.mark_continue_statement(n);
+  }
+ }
+
+ template<typename T1, typename T2>
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& token,
+  RZ_Lisp_Symbol& sym)
+ {
+  caon_ptr<RZ_Lisp_Token> ft = rh.function_token();
+  if(ft)
+  {
+   caon_ptr<tNode> n = rh.valuer().register_lexical_symbol(rh, *ft, token, sym,
+     rh.valuer().current_logical_scope());
+   rh.mark_continue_statement(n);
+  }
+ }
+
+ template<typename T1, typename T2>
+ static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& token,
+  RZ_Lisp_Vector& symvec)
+ {
+  caon_ptr<RZ_Lisp_Token> ft = rh.function_token();
+  if(ft)
+  {
+   caon_ptr<tNode> n = rh.valuer().register_lexical_symbols(rh, *ft, token, symvec,
+     rh.valuer().current_logical_scope());
+   rh.mark_continue_statement(n);
+  }
+ }
+};
+
+
+
 _RZNS(GRun)
 
 

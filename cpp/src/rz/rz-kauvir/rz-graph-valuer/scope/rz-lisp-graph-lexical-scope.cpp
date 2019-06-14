@@ -32,9 +32,9 @@ QString RZ_Lisp_Graph_Lexical_Scope::channel_code_for_symbol_name(QString name)
 }
 
 void RZ_Lisp_Graph_Lexical_Scope::add_symbol(RZ_Lisp_Token& function_token,
- RZ_Lisp_Token& tok)
+ RZ_Lisp_Token& tok, QString index_key)
 {
- symbols_.insert(tok.raw_text(), RZ_Lisp_Graph_Scope_Token(function_token, tok));
+ symbols_.insert(tok.raw_text(), RZ_Lisp_Graph_Scope_Token(function_token, tok, index_key));
  symbol_order_.push_back(tok.raw_text());
 }
 

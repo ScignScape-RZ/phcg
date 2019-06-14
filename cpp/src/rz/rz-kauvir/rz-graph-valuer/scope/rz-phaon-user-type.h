@@ -39,14 +39,16 @@ class RZ_Phaon_User_Type
 
 public:
 
- enum class Declaration_Mode
+ enum class Declaration_Modes
  {
   None, Precycle, Cocycle, Class
  };
 
 private:
 
- Declaration_Mode declaration_mode_;
+ Declaration_Modes declaration_mode_;
+
+ QMap<Declaration_Modes, int> field_count_;
 
 public:
 
@@ -55,13 +57,17 @@ public:
  ACCESSORS(QString ,name)
  ACCESSORS(caon_ptr<RZ_Lisp_Graph_Logical_Scope> ,scope)
 
- ACCESSORS(Declaration_Mode ,declaration_mode)
+ ACCESSORS(Declaration_Modes ,declaration_mode)
 
  ACCESSORS(caon_ptr<RE_Node> ,node)
 
  ACCESSORS__RGET(RZ_Phaon_Precycle ,precycle)
  ACCESSORS__RGET(RZ_Phaon_Precycle ,cocycle)
 
+ int field_count_for_current_declaration_mode();
+ QString get_declaration_mode_string();
+
+ void increment_field_count();
 
 // QList<caon_ptr<PHR_Type_Object>>
 

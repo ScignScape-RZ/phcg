@@ -169,6 +169,8 @@ public:
  caon_ptr<RE_Node> call_entry_node_from_block_entry_node(caon_ptr<RE_Node> start_node);
 
  caon_ptr<RZ_Function_Def_Info> get_function_def_info_from_entry(caon_ptr<RE_Function_Def_Entry> fde);
+
+ QString get_field_index_key(caon_ptr<RE_Node> n, QString sym);
 };
 
 _RZNS(GBuild)

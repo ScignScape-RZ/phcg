@@ -225,6 +225,8 @@ public:
  caon_ptr<tNode> nested_block_entry_from_node(caon_ptr<tNode> node);
  caon_ptr<tNode> call_entry_from_node(caon_ptr<tNode> node);
 
+ QString get_field_index_key(caon_ptr<RE_Node> n, QString sym);
+
 
  caon_ptr<tNode> find_run_block_entry(caon_ptr<tNode> node, caon_ptr<tNode>* call_entry_node = nullptr);
  caon_ptr<tNode> find_run_call_entry(caon_ptr<tNode> node);

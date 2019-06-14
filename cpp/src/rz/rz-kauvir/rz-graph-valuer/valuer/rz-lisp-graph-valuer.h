@@ -219,9 +219,10 @@ public:
  ACCESSORS(caon_ptr<RZ_Graph_Run_Embedder> ,embedder)
 
  ACCESSORS(caon_ptr<RZ_Lisp_Graph_Lexical_Scope> ,root_lexical_scope)
- ACCESSORS(caon_ptr<RZ_Lisp_Graph_Lexical_Scope> ,current_lexical_scope)
- ACCESSORS(caon_ptr<tNode> ,core_pair_function_node)
+ ACCESSORS__GET(caon_ptr<RZ_Lisp_Graph_Lexical_Scope> ,current_lexical_scope)
+ ACCESSORS__GET(caon_ptr<RZ_Lisp_Graph_Logical_Scope> ,current_logical_scope)
 
+ ACCESSORS(caon_ptr<tNode> ,core_pair_function_node)
 
  RZ_Lisp_Graph_Valuer(RZ_Lisp_Graph_Visitor& rz_lisp_graph_visitor,
   caon_ptr<RZ_Graph_Run_Embedder> = nullptr);
@@ -319,16 +320,35 @@ public:
  caon_ptr<tNode> register_user_precycle(QString name);
 
  caon_ptr<RE_Node> register_lexical_symbol
-  (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Type_Symbol& ots);
+  (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Type_Symbol& ots,
+   caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs = nullptr);
 
  caon_ptr<RE_Node> register_lexical_symbol
-  (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Call& ots);
+  (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Call& ots,
+   caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs = nullptr);
 
  caon_ptr<RE_Node> register_lexical_symbol
-  (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Symbol& sym);
+  (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Symbol& sym,
+   caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs = nullptr);
 
  caon_ptr<RE_Node> register_lexical_symbols
-  (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Vector& symvec);
+  (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Vector& symvec,
+   caon_ptr<RZ_Lisp_Graph_Logical_Scope> logs = nullptr);
+
+
+// caon_ptr<RE_Node> register_logical_symbol
+//  (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Type_Symbol& ots);
+
+// caon_ptr<RE_Node> register_logical_symbol
+//  (RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Opaque_Call& ots);
+
+// caon_ptr<RE_Node> register_logical_symbol
+//  (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Symbol& sym);
+
+// caon_ptr<RE_Node> register_logical_symbols
+//  (RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token, RZ_Lisp_Token& tok, RZ_Lisp_Vector& symvec);
+
+
 
  caon_ptr<RE_Node> check_skip_symbol_dep_nodes(caon_ptr<RE_Node> start_node, QStringList& qsl);
 

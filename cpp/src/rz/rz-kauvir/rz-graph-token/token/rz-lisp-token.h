@@ -53,7 +53,7 @@ class RZ_Lisp_Token
 {
 public:
 
-  // // 63 flags ...
+  // // 62 flags ...
 
  flags_(8)
   bool is_core_function_symbol:1;
@@ -118,6 +118,7 @@ public:
   bool is_elsif_with_elsif:1;
   bool precedes_call_arrow:1;
   bool is_if_with_else:1;
+  bool skip_phaon_out:1;
  _flags
 
 private:

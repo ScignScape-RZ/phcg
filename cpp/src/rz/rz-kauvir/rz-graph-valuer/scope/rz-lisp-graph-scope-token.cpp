@@ -27,8 +27,10 @@ RZ_Lisp_Graph_Scope_Token::RZ_Lisp_Graph_Scope_Token(caon_ptr<RZ_Lisp_Token> f,
 
 }
 
-RZ_Lisp_Graph_Scope_Token::RZ_Lisp_Graph_Scope_Token(RZ_Lisp_Token& f, RZ_Lisp_Token& d)
- :  function_token_(&f), declaration_token_(&d), value_node_(nullptr)
+RZ_Lisp_Graph_Scope_Token::RZ_Lisp_Graph_Scope_Token(RZ_Lisp_Token& f,
+  RZ_Lisp_Token& d, QString index_key)
+ :  function_token_(&f), declaration_token_(&d),
+    value_node_(nullptr), index_key_(index_key)
 {
 
 }
