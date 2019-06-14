@@ -47,7 +47,7 @@ enum class RPI_Stage_Element_Kinds
  Type_Default_Marker,
 
  Instruction_Symbol, Literal, String_Literal, Kernel_Type_Symbol,
- Raw_Symbol, Bridge_Symbol,
+ Raw_Symbol, Bridge_Symbol, Field_Index_Key,
 };
 
 class RPI_Stage_Element

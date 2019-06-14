@@ -505,6 +505,11 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        }
        else
        {
+        if(!field_index_key.isEmpty())
+        {
+         current_form_->add_argument_element(RPI_Stage_Element_Kinds::Field_Index_Key, field_index_key);
+         field_index_key.clear();
+        }
         current_form_->add_argument_element(RPI_Stage_Element_Kinds::Raw_Symbol, lt);
            //MS_Token::check_as(mstk, MS_Token_Kinds::Raw_Symbol, lt));
        }

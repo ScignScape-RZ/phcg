@@ -97,6 +97,19 @@ Purpose_Codes& _PGB_IR_Build::add_type_declaration(QString arg, MG_Token_Subgrou
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::add_indexed_type_declaration(QString arg, MG_Token_Subgroups asg,
+  QString ty, MG_Token_Subgroups tsg, QString ix, MG_Token_Subgroups ixsg)
+{
+ MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg, asg);
+ MG_Token tmgt = mgtoken(ty, MG_Token_Kind_Groups::Arg, tsg);
+ MG_Token imgt = mgtoken(ix, MG_Token_Kind_Groups::Arg, ixsg);
+
+ qts_ << " (pgb::add_indexed_type_declaration "; end_line({imgt, amgt, tmgt});
+ return purpose_;
+}
+
+
+
 Purpose_Codes& _PGB_IR_Build::make_signature_node(QString arg, MG_Token_Subgroups asg,
   QString target, MG_Token_Subgroups tsg)
 {

@@ -84,6 +84,14 @@ public:
     ty.mid(1), get_subgroup(ty[0]));
  }
 
+ Purpose_Codes& add_indexed_type_declaration(QString arg, MG_Token_Subgroups asg,
+   QString ty, MG_Token_Subgroups tsg, QString ix, MG_Token_Subgroups ixsg);
+ Purpose_Codes& add_indexed_type_declaration(QString arg, QString ty, QString ix)
+ {
+  return add_indexed_type_declaration(arg.mid(1), get_subgroup(arg[0]),
+    ty.mid(1), get_subgroup(ty[0]), ix.mid(1), get_subgroup(ix[0]));
+ }
+
  Purpose_Codes& make_signature_node(QString arg, MG_Token_Subgroups asg,
    QString target, MG_Token_Subgroups tsg);
  Purpose_Codes& make_signature_node(QString arg, QString target)

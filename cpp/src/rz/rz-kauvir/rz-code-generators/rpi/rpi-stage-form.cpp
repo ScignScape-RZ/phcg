@@ -665,8 +665,18 @@ void RPI_Stage_Form::write_type_declaration(QTextStream& qts)
  RPI_Stage_Element& rse1 = inner_elements_[1];
  RPI_Stage_Element& rse2 = inner_elements_[2];
 
- pgb_(step_forms_).add_type_declaration(rse1.text().prepend('@'),
-   rse2.text().prepend('@'));
+ if( (rse1.kind() == RPI_Stage_Element_Kinds::Field_Index_Key) && (inner_elements_.size() > 3) )
+ {
+  RPI_Stage_Element& rse3 = inner_elements_[3];
+  pgb_(step_forms_).add_indexed_type_declaration(rse2.text().prepend('@'),
+    rse3.text().prepend('@'), rse1.text().prepend(':'));
+ }
+ else
+ {
+  pgb_(step_forms_).add_type_declaration(rse1.text().prepend('@'),
+    rse2.text().prepend('@'));
+ }
+
 }
 
 

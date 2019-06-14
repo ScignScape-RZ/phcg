@@ -345,7 +345,7 @@ void RZ_Lisp_Graph_Valuer::enter_logical_scope(int level, RZ_Lisp_Graph_Result_H
  current_logical_scope_->set_name(uty.name());
 
  caon_ptr<RE_Node> n = new RE_Node(current_logical_scope_);
- current_logical_scope_.set_node(n);
+ current_logical_scope_->set_node(n);
 
  caon_ptr<RZ_Lisp_Token> tok = rh.get_lead_function_token();
  CAON_PTR_DEBUG(RZ_Lisp_Token ,tok)
@@ -811,8 +811,8 @@ caon_ptr<RE_Node> RZ_Lisp_Graph_Valuer::register_lexical_symbol
 
  if(logs)
  {
-  if(logs.node())
-    result << fr_/rq_.Symbol_To_Scope >> logs.node();
+  if(logs->node())
+    result << fr_/rq_.Symbol_To_Scope >> logs->node();
  }
 
  QStringList qsl;

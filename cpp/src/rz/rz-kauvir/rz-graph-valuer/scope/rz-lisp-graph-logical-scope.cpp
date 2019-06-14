@@ -37,9 +37,9 @@ QString RZ_Lisp_Graph_Logical_Scope::get_index_key()
   int c = user_type_->field_count_for_current_declaration_mode();
   if(c == 0)
     return QString("!%1:%2").arg(user_type_->get_declaration_mode_string())
-     .arg(c);
+     .arg(c + 1);
   return QString("%1:%2").arg(user_type_->get_declaration_mode_string())
-    .arg(c);
+    .arg(c + 1);
  }
  return QString();
 }
