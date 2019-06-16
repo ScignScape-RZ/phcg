@@ -22,6 +22,7 @@
 #include "token/phr-graph-fground-entry.h"
 #include "token/phr-graph-block-info.h"
 #include "token/phr-graph-type-declaration.h"
+#include "token/phr-graph-cocyclic-type.h"
 
 #include "textio.h"
 USING_KANS(TextIO)
@@ -34,6 +35,24 @@ Expression_Generator::Expression_Generator()
  :  qy_(PHR_Graph_Query::instance()), statement_generator_(nullptr)
 {
 
+}
+
+void Expression_Generator::generate_cocyclic_type_definition(QTextStream& qts,
+  PHR_Graph_Cocyclic_Type& coy)
+{
+ qts << "\nenter_cocyclic_type $ " << coy.type_name() << " ;.\n";
+
+ for(caon_ptr<PHR_Graph_Node> n : coy.precycle_fields())
+ {
+  generate_type_declaration(qts, *n);
+ }
+ for(caon_ptr<PHR_Graph_Node> n : coy.cocycle_fields())
+ {
+  generate_type_declaration(qts, *n);
+ }
+
+ qts << "\nleave_cocyclic_type $ " << coy.type_name() << " ;.\n";
+ generate_empty_line(qts);
 }
 
 void Expression_Generator::generate_from_node(QTextStream& qts,
@@ -251,17 +270,23 @@ void Expression_Generator::generate_xchannel(QTextStream& qts, QString channel_n
  generate_arg_carriers(qts, channel_name, arg_node, unw);
 }
 
+void Expression_Generator::generate_type_declaration(QTextStream& qts,
+  const PHR_Graph_Node& node)
+{
+ if(caon_ptr<PHR_Graph_Type_Declaration> td = node.type_declaration())
+ {
+  CAON_PTR_DEBUG(PHR_Graph_Type_Declaration ,td)
+  qts << "\ntype_decl $ " <<
+     td->symbol_name() << ' ' << td->type_name() << " ;.\n";
+ }
+}
+
 void Expression_Generator::check_generate_type_declaration(QTextStream& qts,
   const PHR_Graph_Node& node)
 {
  if(caon_ptr<PHR_Graph_Node> tdn = qy_.Type_Declaration(&node))
  {
-  if(caon_ptr<PHR_Graph_Type_Declaration> td = tdn->type_declaration())
-  {
-   CAON_PTR_DEBUG(PHR_Graph_Type_Declaration ,td)
-   qts << "\ntype_decl $ " <<
-     td->symbol_name() << ' ' << td->type_name() << " ;.\n";
-  }
+  generate_type_declaration(qts, *tdn);
  }
 }
 

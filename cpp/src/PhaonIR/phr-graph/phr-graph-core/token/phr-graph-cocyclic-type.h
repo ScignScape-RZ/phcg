@@ -37,11 +37,14 @@ class PHR_Graph_Cocyclic_Type
  QVector<caon_ptr<PHR_Graph_Node>> precycle_fields_;
  QVector<caon_ptr<PHR_Graph_Node>> cocycle_fields_;
 
+ caon_ptr<PHR_Graph_Node> node_;
+
 public:
 
  ACCESSORS(QString ,type_name)
  ACCESSORS__RGET(QVector<caon_ptr<PHR_Graph_Node>> ,precycle_fields)
  ACCESSORS__RGET(QVector<caon_ptr<PHR_Graph_Node>> ,cocycle_fields)
+ ACCESSORS(caon_ptr<PHR_Graph_Node> ,node)
 
  PHR_Graph_Cocyclic_Type(QString type_name);
 

@@ -134,6 +134,9 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_indexed_type_declaration(
  if(!uty_name.isEmpty())
  {
   current_cocyclic_type_ = new PHR_Graph_Cocyclic_Type(uty_name);
+  caon_ptr<PHR_Graph_Node> cn = new PHR_Graph_Node(current_cocyclic_type_);
+  current_cocyclic_type_->set_node(cn);
+  add_statement_sequence_node(sn, cn);
  }
 
  caon_ptr<PHR_Graph_Type_Declaration> td = new
@@ -148,8 +151,12 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_indexed_type_declaration(
  else if(decl_mode == "Co")
    current_cocyclic_type_->add_cocycle_field(index.toInt(), result);
 
- return result;
+ // //  expect this always to be defined ...
+ if(current_cocyclic_type_)
+   return current_cocyclic_type_->node();
 
+ // //  i.e., we shouldn't be here ...
+ return result;
 }
 
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_signature_node(

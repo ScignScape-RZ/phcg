@@ -73,6 +73,10 @@ void Statement_Generator::generate_from_node(QTextStream& qts,
    }
   }
  }
+ else if(caon_ptr<PHR_Graph_Cocyclic_Type> coy = node.cocyclic_type())
+ {
+  expression_generator_.generate_cocyclic_type_definition(qts, *coy);
+ }
  else
  {
   expression_generator_.generate_from_node(qts, node);

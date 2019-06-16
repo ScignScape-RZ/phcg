@@ -30,6 +30,7 @@ class PHR_Graph_Statement_Info;
 class PHR_Graph_Block_Info;
 
 class Statement_Generator;
+class PHR_Graph_Cocyclic_Type;
 
 class Expression_Generator
 {
@@ -60,7 +61,12 @@ public:
  void generate_comment_line(QTextStream& qts, QString ln, int n = 0);
  void generate_empty_line(QTextStream& qts, int n = 1);
 
+ void generate_cocyclic_type_definition(QTextStream& qts,
+   PHR_Graph_Cocyclic_Type& coy);
+
  void check_generate_type_declaration(QTextStream& qts, const PHR_Graph_Node& node);
+ void generate_type_declaration(QTextStream& qts,
+   const PHR_Graph_Node& node);
 
  void generate_arg_carriers_follow(QTextStream& qts,
    caon_ptr<PHR_Graph_Node> n, int unw);
