@@ -26,6 +26,7 @@ RZNS_(PhrGraphCore)
 class PHR_Graph;
 class PHR_Graph_Frame;
 class PHR_Graph_Query;
+class PHR_Graph_Cocyclic_Type;
 
 class PHR_Graph_Build
 {
@@ -45,6 +46,8 @@ class PHR_Graph_Build
  QStack<QPair<caon_ptr<PHR_Graph_Node>, caon_ptr<PHR_Graph_Node>>> block_entry_node_stack_;
 
  caon_ptr<PHR_Graph_Node> held_type_declaration_node_;
+ caon_ptr<PHR_Graph_Cocyclic_Type> current_cocyclic_type_;
+
 
  PHR_Graph_Frame& fr_;
  const PHR_Graph_Query& qy_;
@@ -127,6 +130,9 @@ public:
 
  caon_ptr<PHR_Graph_Node> add_type_declaration(
    MG_Token& amgt, MG_Token& tmgt);
+
+ caon_ptr<PHR_Graph_Node> add_indexed_type_declaration(
+   MG_Token& imgt, MG_Token& amgt, MG_Token& tmgt, caon_ptr<PHR_Graph_Node> sn);
 
  caon_ptr<PHR_Graph_Node> add_channel_token(caon_ptr<PHR_Graph_Node> source,
    MG_Token& mgt);

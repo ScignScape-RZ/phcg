@@ -68,6 +68,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(make_root_node)
   TEMP_MACRO(make_token_node)
   TEMP_MACRO(add_type_declaration)
+  TEMP_MACRO(add_indexed_type_declaration)
   TEMP_MACRO(make_fsym_ground_node)
   TEMP_MACRO(add_block_entry_node)
   TEMP_MACRO(add_channel_token)
@@ -253,6 +254,24 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
 //     *tr = graph_build_.add_type_declaration(gts[0], gts[1]);
 //   else
    graph_build_.add_type_declaration(mgts[0], mgts[1]);
+  };
+  break;
+
+ case PGB_Methods::add_indexed_type_declaration:
+  {
+   QList<MG_Token> mgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Arg);
+   if(mgts.size() < 2)
+     break;
+   QList<MG_Token> gmgts = PGB_IR_Build::mgts_by_kind_group(mgtm, MG_Token_Kind_Groups::Generic);
+   if(mgts.size() == 0)
+     break;
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   caon_ptr<PHR_Graph_Node> sn = get_arg(mgtm);
+
+   if(tr)
+     *tr = graph_build_.add_indexed_type_declaration(gmgts[0], mgts[0], mgts[1], sn);
+   else
+     graph_build_.add_indexed_type_declaration(gmgts[0], mgts[0], mgts[1], sn);
   };
   break;
 

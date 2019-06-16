@@ -98,13 +98,16 @@ Purpose_Codes& _PGB_IR_Build::add_type_declaration(QString arg, MG_Token_Subgrou
 }
 
 Purpose_Codes& _PGB_IR_Build::add_indexed_type_declaration(QString arg, MG_Token_Subgroups asg,
-  QString ty, MG_Token_Subgroups tsg, QString ix, MG_Token_Subgroups ixsg)
+  QString ty, MG_Token_Subgroups tysg, QString ix, MG_Token_Subgroups ixsg,
+  QString source, MG_Token_Subgroups ssg, QString target, MG_Token_Subgroups tsg)
 {
  MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg, asg);
- MG_Token tmgt = mgtoken(ty, MG_Token_Kind_Groups::Arg, tsg);
+ MG_Token tymgt = mgtoken(ty, MG_Token_Kind_Groups::Arg, tysg);
  MG_Token imgt = mgtoken(ix, MG_Token_Kind_Groups::Arg, ixsg);
+ MG_Token smgt = mgtoken(source, MG_Token_Kind_Groups::Arg_Target, ssg);
+ MG_Token tmgt = mgtoken(source, MG_Token_Kind_Groups::Target, ssg);
 
- qts_ << " (pgb::add_indexed_type_declaration "; end_line({imgt, amgt, tmgt});
+ qts_ << " (pgb::add_indexed_type_declaration "; end_line({imgt, amgt, tymgt, smgt, tmgt});
  return purpose_;
 }
 

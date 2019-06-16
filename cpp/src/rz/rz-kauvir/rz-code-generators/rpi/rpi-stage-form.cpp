@@ -669,7 +669,8 @@ void RPI_Stage_Form::write_type_declaration(QTextStream& qts)
  {
   RPI_Stage_Element& rse3 = inner_elements_[3];
   pgb_(step_forms_).add_indexed_type_declaration(rse2.text().prepend('@'),
-    rse3.text().prepend('@'), rse1.text().prepend(':'));
+    rse3.text().prepend('@'), rse1.text().prepend(':'),
+    "!last_statement_entry_node", "!last_statement_entry_node");
  }
  else
  {

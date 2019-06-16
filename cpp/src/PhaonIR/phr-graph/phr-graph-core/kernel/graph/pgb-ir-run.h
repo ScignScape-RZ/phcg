@@ -40,6 +40,7 @@ class PGB_IR_Run
   add_channel_continue_token,
   add_channel_entry_token, add_channel_xentry_token,
   add_block_entry_token, add_type_declaration,
+  add_indexed_type_declaration,
   add_statement_sequence_token, copy_value,
   add_statement_sequence_node,
   make_statement_info_node, add_fsym_ground_node,

@@ -15,6 +15,9 @@
 
 #include "token/phr-graph-block-info.h"
 
+#include "token/phr-graph-cocyclic-type.h"
+
+
 //#include "tuple/rz-re-tuple-info.h"
 //#include "code/rz-re-call-entry.h"
 //#include "code/rz-re-block-entry.h"
@@ -54,8 +57,9 @@ PHR_Graph_Build::PHR_Graph_Build(PHR_Graph& graph)
    last_block_entry_node_(nullptr),
    prior_block_entry_node_(nullptr),
    prior_expression_entry_node_(nullptr),
-  fr_(PHR_Graph_Frame::instance()),
-  qy_(PHR_Graph_Query::instance())
+   current_cocyclic_type_(nullptr),
+   fr_(PHR_Graph_Frame::instance()),
+   qy_(PHR_Graph_Query::instance())
 {
 
 }
@@ -95,6 +99,54 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_type_declaration(
  result->set_label(QString("<type-decl:%1%2>").arg(sym).arg(ty));
 
  held_type_declaration_node_ = result;
+
+ return result;
+
+}
+
+
+caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_indexed_type_declaration(
+  MG_Token& imgt, MG_Token& amgt, MG_Token& tmgt, caon_ptr<PHR_Graph_Node> sn)
+{
+ CAON_PTR_DEBUG(PHR_Graph_Node ,sn)
+
+ QString index = imgt.raw_text;
+ QString sym = amgt.raw_text;
+ QString ty = tmgt.raw_text;
+
+ QString uty_name;
+ QString decl_mode;
+
+ if(index.contains('!'))
+ {
+  QStringList qsl = index.split('!');
+  uty_name = qsl[0];
+  index = qsl[1];
+ }
+
+ if(index.contains(':'))
+ {
+  QStringList qsl = index.split(':');
+  decl_mode = qsl[0];
+  index = qsl[1];
+ }
+
+ if(!uty_name.isEmpty())
+ {
+  current_cocyclic_type_ = new PHR_Graph_Cocyclic_Type(uty_name);
+ }
+
+ caon_ptr<PHR_Graph_Type_Declaration> td = new
+   PHR_Graph_Type_Declaration(sym, ty);
+
+ caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(td);
+ result->set_label(QString("<type-decl:%1%2>").arg(sym).arg(ty));
+
+ //held_type_declaration_node_ = result;
+ if(decl_mode == "Pr")
+   current_cocyclic_type_->add_precycle_field(index.toInt(), result);
+ else if(decl_mode == "Co")
+   current_cocyclic_type_->add_cocycle_field(index.toInt(), result);
 
  return result;
 

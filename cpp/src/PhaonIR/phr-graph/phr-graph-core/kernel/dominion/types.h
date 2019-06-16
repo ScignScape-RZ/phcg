@@ -30,6 +30,7 @@ DOMINION_TYPE(statement_info, PHR_Graph_Statement_Info, PHR_Graph_Statement_Info
 DOMINION_TYPE(block_info, PHR_Graph_Block_Info, PHR_Graph_Block_Info)
 DOMINION_TYPE(type_declaration, PHR_Graph_Type_Declaration, PHR_Graph_Type_Declaration)
 DOMINION_TYPE(phr_graph_signature, PHR_Graph_Signature, PHR_Graph_Signature)
+DOMINION_TYPE(cocyclic_type, PHR_Graph_Cocyclic_Type, PHR_Graph_Cocyclic_Type)
 #undef DOMINION_INNER_NAMESPACE
 
 #undef DOMINION_OUTER_NAMESPACE

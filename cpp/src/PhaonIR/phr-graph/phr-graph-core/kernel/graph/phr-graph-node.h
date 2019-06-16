@@ -37,6 +37,7 @@ class PHR_Graph_FGround_Entry;
 class PHR_Graph_Block_Info;
 class PHR_Graph_Type_Declaration;
 class PHR_Graph_Signature;
+class PHR_Graph_Cocyclic_Type;
 
 class PHR_Graph_Node : public node_ptr<PHR_Graph_Dominion>
 {
