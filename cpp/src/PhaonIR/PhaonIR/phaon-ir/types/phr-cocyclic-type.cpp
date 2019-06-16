@@ -5,15 +5,10 @@
 //           http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "kcm-type-object.h"
+#include "phr-cocyclic-type.h"
 
-KCM_Type_Object::KCM_Type_Object(PHR_Type* ty)
-  :  ty_(ty)
+PHR_Cocyclic_Type::PHR_Cocyclic_Type(QString name)
+  :  name_(name)
 {
 
 }
-
-//void PHR_Carrier::init_channel_group_stack()
-//{
-
-//}

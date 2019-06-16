@@ -214,7 +214,7 @@ QString RZ_Lisp_Graph_Visitor::get_field_index_key(caon_ptr<RE_Node> n, QString 
    return result;
   }
  }
- return "?";
+ return QString();
 }
 
 

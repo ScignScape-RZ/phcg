@@ -68,6 +68,9 @@ public:
  void generate_type_declaration(QTextStream& qts,
    const PHR_Graph_Node& node);
 
+ void generate_type_field_declaration(QTextStream& qts,
+   const PHR_Graph_Node& node, QString modifier);
+
  void generate_arg_carriers_follow(QTextStream& qts,
    caon_ptr<PHR_Graph_Node> n, int unw);
 

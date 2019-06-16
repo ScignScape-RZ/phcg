@@ -8,6 +8,8 @@
 #include "phaon-ir.h"
 
 #include "types/phr-type-system.h"
+#include "types/phr-cocyclic-type.h"
+
 #include "channel/phr-program-stack.h"
 #include "channel/phr-channel-semantic-protocol.h"
 #include "channel/phr-carrier-stack.h"
@@ -48,7 +50,7 @@ PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
    //?current_chief_unwind_scope_index_({0,0,0,0}),
   //current_lexical_scope()(nullptr),
   held_symbol_scope_(nullptr), direct_eval_fn_(nullptr),
-  source_fn_anon_count_(0),
+  source_fn_anon_count_(0), current_cocyclic_type_(nullptr),
   sp_map_(new QMap<QPair<Unwind_Scope_Index,
     PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*>)
 {
@@ -231,6 +233,32 @@ void PhaonIR::push_unwind_scope(QString level_delta)
  push_unwind_scope(qsl[0].toInt(), qsl[1]);
 }
 
+void PhaonIR::enter_cocyclic_type(QString name)
+{
+ //PHR_Cocyclic_Type* coy =
+ current_cocyclic_type_ = new PHR_Cocyclic_Type(name);
+}
+
+void PhaonIR::leave_cocyclic_type(QString name)
+{
+
+}
+
+void PhaonIR::type_field_decl(QString modifier, QString sym, QString type_name)
+{
+ PHR_Type* ty = type_system_->get_type_by_name(type_name);
+ if(modifier == "pr")
+ {
+
+ }
+ else if(modifier == "co")
+ {
+
+ }
+
+
+}
+
 void PhaonIR::type_decl(QString sym, QString type_name)
 {
  PHR_Type* ty = type_system_->get_type_by_name(type_name);
@@ -251,6 +279,12 @@ void PhaonIR::type_decl(QString sym_ty)
 {
  QStringList qsl = sym_ty.simplified().split(' ');
  type_decl(qsl[0], qsl[1]);
+}
+
+void PhaonIR::type_field_decl(QString m_sym_ty)
+{
+ QStringList qsl = m_sym_ty.simplified().split(' ');
+ type_field_decl(qsl[0], qsl[1], qsl[2]);
 }
 
 void PhaonIR::push_unwind_scope(int level_delta, QString chn)
@@ -612,6 +646,8 @@ void PhaonIR::enter_lexical_scope()
  scopes_.set_current_scope(new PHR_Runtime_Scope(current_lexical_scope()));
 }
 
+
+
 void PhaonIR::create_channel_semantic_protocol(QString name)
 {
  PHR_Channel_Semantic_Protocol* pcsp = new PHR_Channel_Semantic_Protocol;
@@ -726,8 +762,12 @@ void PhaonIR::read_line(QString inst, QString arg)
   { "anchor_without_channel_group", &PhaonIR::anchor_without_channel_group },
   { "push_carrier_anon_fn", &PhaonIR::push_carrier_anon_fn },
   { "type_decl", &PhaonIR::type_decl },
+  { "type_field_decl", &PhaonIR::type_field_decl },
   { "finalize_signature", &PhaonIR::finalize_signature },
   { "push_carrier_type_holder", &PhaonIR::push_carrier_type_holder },
+
+  { "enter_cocyclic_type", &PhaonIR::enter_cocyclic_type },
+  { "leave_cocyclic_type", &PhaonIR::leave_cocyclic_type },
 
  }};
 

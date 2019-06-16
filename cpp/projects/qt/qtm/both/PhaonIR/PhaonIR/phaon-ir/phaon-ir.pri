@@ -48,6 +48,7 @@ HEADERS += \
   $$SRC_DIR/types/phr-type-object.h \
   $$SRC_DIR/types/phr-universal-class.h \
   $$SRC_DIR/types/phr-type-system.h \
+  $$SRC_DIR/types/phr-cocyclic-type.h \
   $$SRC_DIR/eval/phr-channel-group-evaluator.h \
   $$SRC_DIR/eval/phr-minimal-evaluator.h \
   $$SRC_DIR/eval/kop-base.h \
@@ -86,6 +87,7 @@ SOURCES += \
   $$SRC_DIR/types/phr-type-object.cpp \
   $$SRC_DIR/types/phr-universal-class.cpp \
   $$SRC_DIR/types/phr-type-system.cpp \
+  $$SRC_DIR/types/phr-cocyclic-type.cpp \
   $$SRC_DIR/eval/phr-channel-group-evaluator.cpp \
   $$SRC_DIR/eval/phr-minimal-evaluator.cpp \
   $$SRC_DIR/eval/kops/add.cpp \

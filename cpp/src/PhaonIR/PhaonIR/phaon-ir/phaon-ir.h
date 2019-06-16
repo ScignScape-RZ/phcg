@@ -33,9 +33,9 @@ class PHR_Channel;
 class PHR_Command_Package;
 class PHR_Expression_Object;
 class PHR_Type_Object;
+class PHR_Cocyclic_Type;
 
 class PHR_Symbol_Scope;
-
 
 class PHR_Runtime_Scope;
 class PHR_Scope_Value;
@@ -183,6 +183,7 @@ class PhaonIR
  std::function<void(PHR_Code_Model* pcm,
    PHR_Command_Package* pcp, PHR_Symbol_Scope* pss)> direct_eval_fn_;
 
+ PHR_Cocyclic_Type* current_cocyclic_type_;
 
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
  {
@@ -297,6 +298,13 @@ public:
  void push_unwind_scope(int level_delta, QString chn);
 
  void push_unwind_scope(QString level_delta);
+
+ void type_field_decl(QString modifier, QString sym, QString type_name);
+ void type_field_decl(QString m_sym_ty);
+
+ void enter_cocyclic_type(QString name);
+ void leave_cocyclic_type(QString name);
+
 
  void type_decl(QString sym, QString type_name);
  void type_decl(QString sym_ty);

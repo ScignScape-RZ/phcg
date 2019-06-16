@@ -4,26 +4,24 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
-#ifndef KCM_TYPE_OBJECT__H
-#define KCM_TYPE_OBJECT__H
+#ifndef PHR_COCYCLIC_TYPE__H
+#define PHR_COCYCLIC_TYPE__H
 
 #include <QString>
 
 #include "accessors.h"
 
-class PHR_Type;
-
-class KCM_Type_Object
+class PHR_Cocyclic_Type
 {
- PHR_Type* ty_;
+ QString name_;
 
 public:
 
- KCM_Type_Object(PHR_Type* ty);
+ PHR_Cocyclic_Type(QString name);
 
- ACCESSORS(PHR_Type* ,ty)
+// ACCESSORS(PHR_Type* ,ty)
 
 
 };
 
-#endif // KCM_TYPE_OBJECT__H
+#endif // PHR_COCYCLIC_TYPE__H

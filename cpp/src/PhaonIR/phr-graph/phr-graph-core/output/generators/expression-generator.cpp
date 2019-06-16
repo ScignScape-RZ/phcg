@@ -44,11 +44,11 @@ void Expression_Generator::generate_cocyclic_type_definition(QTextStream& qts,
 
  for(caon_ptr<PHR_Graph_Node> n : coy.precycle_fields())
  {
-  generate_type_declaration(qts, *n);
+  generate_type_field_declaration(qts, *n, "pr");
  }
  for(caon_ptr<PHR_Graph_Node> n : coy.cocycle_fields())
  {
-  generate_type_declaration(qts, *n);
+  generate_type_field_declaration(qts, *n, "co");
  }
 
  qts << "\nleave_cocyclic_type $ " << coy.type_name() << " ;.\n";
@@ -268,6 +268,17 @@ void Expression_Generator::generate_xchannel(QTextStream& qts, QString channel_n
  const PHR_Graph_Node& arg_node, int unw)
 {
  generate_arg_carriers(qts, channel_name, arg_node, unw);
+}
+
+void Expression_Generator::generate_type_field_declaration(QTextStream& qts,
+  const PHR_Graph_Node& node, QString modifier)
+{
+ if(caon_ptr<PHR_Graph_Type_Declaration> td = node.type_declaration())
+ {
+  CAON_PTR_DEBUG(PHR_Graph_Type_Declaration ,td)
+  qts << "\ntype_field_decl $ " << modifier << ' ' <<
+     td->symbol_name() << ' ' << td->type_name() << " ;.\n";
+ }
 }
 
 void Expression_Generator::generate_type_declaration(QTextStream& qts,
