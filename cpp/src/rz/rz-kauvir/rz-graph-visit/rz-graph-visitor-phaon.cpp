@@ -76,7 +76,7 @@ MS_Token RZ_Graph_Visitor_Phaon::lisp_token_from_token_text(QString text,
    {":::", {MS_Token_Kinds::Skip_Token, ":TYPE-DECL"}},
    {"=>>", {MS_Token_Kinds::Skip_Token, ":TYPE-DECL"}},
    {"->", {MS_Token_Kinds::Instruction_Symbol, QString()}},
-   {"\\->", {MS_Token_Kinds::Instruction_Symbol, QString()}},
+   {"\\->", {MS_Token_Kinds::Skipped_Flag_Symbol, "FN"}},
    {"@->", {MS_Token_Kinds::Instruction_Symbol, QString()}},
   }};
 

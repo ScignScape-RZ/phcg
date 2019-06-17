@@ -403,6 +403,13 @@ void RPI_Stage_Form::mark_as_fn_no_block()
  CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
 }
 
+void RPI_Stage_Form::mark_as_fn()
+{
+ check_init_annotation();
+ annotation_->flags.is_fn = true;
+ CAON_PTR_DEBUG(RPI_Stage_Form_Annotation ,annotation_)
+}
+
 void RPI_Stage_Form::mark_as_s1_assignment_preempts_s0()
 {
  check_init_annotation();
@@ -697,6 +704,11 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
    return;
   }
   if(ANNOTATION_FLAG(is_fn_no_block))
+  {
+   if(inner_elements_.size() >= 2)
+     write_signature_type_declaration(qts);
+  }
+  else if(ANNOTATION_FLAG(is_fn_no_block))
   {
    if(inner_elements_.size() >= 2)
      write_signature_type_declaration(qts);

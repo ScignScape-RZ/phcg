@@ -687,7 +687,7 @@ void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(PGB_IR_Build
    {
     write_phr_signature_code_for_empty_channel(pgb, step_forms, channel_name_code);
    }
-   else
+   else if(position_count == 0)
    {
     write_phr_signature_code_channel_entry(pgb, step_forms, channel_name_code);
    }
@@ -699,17 +699,20 @@ void RZ_Function_Def_Info::write_phr_signature_code_by_channel_type(PGB_IR_Build
    else if(awaiting_type_name)
    {
     write_phr_signature_code_for_symbol(pgb, step_forms, channel_name_code, symbol_name, rt);
+    ++position_count;
     symbol_name.clear();
    }
    else if(symbol_name.isEmpty())
    {
     symbol_name = rt;
+    ++position_count;
    }
    else
    {
     write_phr_signature_code_for_type(pgb, step_forms, channel_name_code, symbol_name);
     write_phr_signature_code_for_type(pgb, step_forms, channel_name_code, rt);
     symbol_name.clear();
+    ++position_count;
    }
   }
  }

@@ -12,3 +12,13 @@ PHR_Cocyclic_Type::PHR_Cocyclic_Type(QString name)
 {
 
 }
+
+void PHR_Cocyclic_Type::add_precycle_field(QString sym, PHR_Type* ty)
+{
+ precycle_fields_.push_back({sym, ty});
+}
+
+void PHR_Cocyclic_Type::add_cocycle_field(QString sym, PHR_Type* ty)
+{
+ cocycle_fields_.push_back({sym, ty});
+}

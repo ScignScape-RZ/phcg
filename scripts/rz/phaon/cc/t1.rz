@@ -1,11 +1,10 @@
 
-precycle PGVM_Demo
-----
+,ct ::: .(u4  u4) \->
+  &prn 77;
+  ;;
 
- our ,xax ::: u4;
 
- our ,yax ::: u4;
-
-;;;;
-
+;;- \-> 
+;;- &prn 77;
+;;- ;;
 

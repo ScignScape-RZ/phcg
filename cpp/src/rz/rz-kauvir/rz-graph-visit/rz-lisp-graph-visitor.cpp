@@ -185,8 +185,12 @@ caon_ptr<RZ_Lisp_Graph_Visitor::tNode> RZ_Lisp_Graph_Visitor::nested_block_entry
 {
  // // explain this...
  caon_ptr<tNode> en = rq_.Run_Call_Sequence(node);
- CAON_PTR_DEBUG(tNode ,en)
- return rq_.Run_Block_Entry(en);
+ if(en)
+ {
+  CAON_PTR_DEBUG(tNode ,en)
+  return rq_.Run_Block_Entry(en);
+ }
+ return nullptr;
 }
 
 caon_ptr<RZ_Lisp_Graph_Visitor::tNode> RZ_Lisp_Graph_Visitor::nested_block_entry_from_node(caon_ptr<tNode> node)
@@ -657,7 +661,7 @@ QString RZ_Lisp_Graph_Visitor::identify_function(QString name,
 
 RZ_Lisp_Graph_Visitor::Next_Node_Premise RZ_Lisp_Graph_Visitor::get_next_node(caon_ptr<RE_Node> start_node, caon_ptr<RE_Node>& result)
 {
-
+ CAON_PTR_DEBUG(RE_Node ,start_node)
  if(result = rq_.Run_Call_Sequence(start_node))
  {
   return Next_Node_Premise::Normal;

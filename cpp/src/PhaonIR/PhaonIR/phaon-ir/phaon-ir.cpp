@@ -246,17 +246,18 @@ void PhaonIR::leave_cocyclic_type(QString name)
 
 void PhaonIR::type_field_decl(QString modifier, QString sym, QString type_name)
 {
+ if(!current_cocyclic_type_)
+   return;
+
  PHR_Type* ty = type_system_->get_type_by_name(type_name);
  if(modifier == "pr")
  {
-
+  current_cocyclic_type_->add_precycle_field(sym, ty);
  }
  else if(modifier == "co")
  {
-
+  current_cocyclic_type_->add_cocycle_field(sym, ty);
  }
-
-
 }
 
 void PhaonIR::type_decl(QString sym, QString type_name)

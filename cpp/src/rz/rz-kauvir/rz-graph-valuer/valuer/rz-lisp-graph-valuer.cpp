@@ -1055,7 +1055,7 @@ void RZ_Lisp_Graph_Valuer::set_preinit_to_equal(RZ_Lisp_Graph_Result_Holder& rh,
 }
 
 
-void RZ_Lisp_Graph_Valuer::preinit_assign_to_type_overloadable(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
+void RZ_Lisp_Graph_Valuer::preinit_assign_overloadable(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
  RZ_Lisp_Graph_Value_Holder& lhs, RZ_Lisp_Graph_Value_Holder& rhs)
 {
  rh.skip_redirect();
@@ -1069,6 +1069,46 @@ void RZ_Lisp_Graph_Valuer::add_statement_element_node(caon_ptr<tNode> node, caon
  node << fr_/rq_.Element_Association >> stn;
 }
 
+void RZ_Lisp_Graph_Valuer::assign_overloadable(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
+ RZ_Lisp_Graph_Value_Holder& lhs, RZ_Lisp_Graph_Value_Holder& rhs)
+{
+ rh.skip_redirect();
+
+ caon_ptr<RZ_Type_Object> lto = lhs.type_object();
+ caon_ptr<RZ_Type_Object> rto = rhs.type_object();
+
+ CAON_PTR_DEBUG(RZ_Type_Object ,lto)
+ CAON_PTR_DEBUG(RZ_Type_Object ,rto)
+
+ // //  check for statement kind ...
+ if(caon_ptr<RE_Node> lfn = rh.get_lead_function_node())
+ {
+  check_identify_statement_kind(RZ_Code_Statement::Statement_Kinds::Type_Declaration,
+    "my", lfn);
+
+ }
+
+ if(lhs.type_is(Sym))
+ {
+  caon_ptr<RZ_Lisp_Symbol> sym = lhs.pRestore<RZ_Lisp_Symbol>();
+  caon_ptr<RE_Node> n = sym.caon_reinterpret_cast<RE_Node>();
+  if(n)
+  {
+   caon_ptr<RZ_Lisp_Token> tok = n->lisp_token();
+   CAON_PTR_DEBUG(RE_Node ,n)
+   CAON_PTR_DEBUG(RZ_Lisp_Token ,tok)
+   CAON_DEBUG_NOOP
+
+   if(rhs.type_is(FnDefInfo))
+   {
+    caon_ptr<RZ_Function_Def_Info> fdi = rhs.pRestore<RZ_Function_Def_Info>();
+    CAON_PTR_DEBUG(RZ_Function_Def_Info ,fdi)
+//    token->flags.is_type_symbol_in_declaration = true;
+//    current_lexical_scope_->mark_type_assertion(*tok, rt);
+   }
+  }
+ }
+}
 
 void RZ_Lisp_Graph_Valuer::assign_to_type(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
  RZ_Lisp_Graph_Value_Holder& lhs, RZ_Lisp_Graph_Value_Holder& rhs)

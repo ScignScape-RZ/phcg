@@ -213,6 +213,8 @@ public:
  void mark_as_fn_no_block();
  void mark_as_s1_assignment_preempts_s0();
  void mark_as_parent_s1_assignment_preempts_s0();
+ void mark_as_fn();
+
 
 // void mark_as_inferred_block_entry_statment();
 // void mark_preceder_token();

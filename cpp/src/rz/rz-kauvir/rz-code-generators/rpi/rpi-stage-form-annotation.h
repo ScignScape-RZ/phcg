@@ -57,6 +57,7 @@ public:
   bool s1_assignment_preempts_s0:1;
   bool parent_s1_assignment_preempts_s0:1;
   bool first_inner_element_is_s1_assignment_preempts_s0:1;
+  bool is_fn:1;
 
 
  _flags

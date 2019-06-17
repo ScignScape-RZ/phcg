@@ -76,7 +76,7 @@ RZ_GCALL_IMPLEMENT
 // //  currently this is identical to Assign_To_Type;
  //    any difference enforced by code generators ...
 RZ_GCALL_IMPLEMENT
-<RZ_GCALL_VV(Assign_To_Type_Overloadable, Internal)>
+<RZ_GCALL_VV(Assign_Overloadable, Internal)>
 {
  static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Graph_Value_Holder& v1,
                  RZ_Lisp_Graph_Value_Holder& v2)
@@ -84,14 +84,14 @@ RZ_GCALL_IMPLEMENT
   caon_ptr<RZ_Lisp_Token> ft = rh.get_lead_function_token();
   if(ft)
   {
-   rh.valuer().assign_to_type(rh, *ft, v1, v2);
+   rh.valuer().assign_overloadable(rh, *ft, v1, v2);
   }
  }
 };
 
 
 RZ_GCALL_IMPLEMENT
-<RZ_GCALL_VV(Preinit_Assign_To_Type_Overloadable, Internal)>
+<RZ_GCALL_VV(Preinit_Assign_Overloadable, Internal)>
 {
  static void run(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Graph_Value_Holder& v1,
                  RZ_Lisp_Graph_Value_Holder& v2)
@@ -99,7 +99,7 @@ RZ_GCALL_IMPLEMENT
   caon_ptr<RZ_Lisp_Token> ft = rh.get_lead_function_token();
   if(ft)
   {
-   rh.valuer().preinit_assign_to_type_overloadable(rh, *ft, v1, v2);
+   rh.valuer().preinit_assign_overloadable(rh, *ft, v1, v2);
   }
  }
 };

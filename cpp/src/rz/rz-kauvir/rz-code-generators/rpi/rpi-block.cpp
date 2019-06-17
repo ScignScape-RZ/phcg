@@ -495,6 +495,10 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
         {
          current_form_->mark_as_fn_no_block();
         }
+        else if(lt == "FN")
+        {
+         current_form_->mark_as_fn();
+        }
        }
        else if(mstk == MS_Token_Kinds::Skip_Token ||
          lt == ":TYPE-DECL")

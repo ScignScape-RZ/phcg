@@ -1,0 +1,21 @@
+
+precycle PGVM_Demo
+----
+
+ our ,xax ::: u4;
+
+ our ,yax ::: u4;
+
+;;;;
+
+
+,ct =>> .(x <- u4  y <- u4)  @..(PGVM_Demo) -> 
+  @xax \= x;
+  @yax \= y;
+ ;;
+
+,test ::: PGVM_Demo;
+
+test \==  PGVM_Demo 7 9;
+
+

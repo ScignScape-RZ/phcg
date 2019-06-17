@@ -387,8 +387,10 @@ public:
  void assign_to_type(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
   RZ_Lisp_Graph_Value_Holder& lhs, RZ_Lisp_Graph_Value_Holder& rhs);
 
+ void assign_overloadable(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
+  RZ_Lisp_Graph_Value_Holder& lhs, RZ_Lisp_Graph_Value_Holder& rhs);
 
- void preinit_assign_to_type_overloadable(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
+ void preinit_assign_overloadable(RZ_Lisp_Graph_Result_Holder& rh, RZ_Lisp_Token& function_token,
   RZ_Lisp_Graph_Value_Holder& lhs, RZ_Lisp_Graph_Value_Holder& rhs);
 
 

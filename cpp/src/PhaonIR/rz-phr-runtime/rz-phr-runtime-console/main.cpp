@@ -223,7 +223,7 @@ void run_phaon()
 
 int main(int argc, char *argv[])
 {
- compile_rz(RZ_DIR "/phaon/cc/t1.rz");
+ compile_rz(RZ_DIR "/phaon/t1.rz");
 
  run_phaon();
 

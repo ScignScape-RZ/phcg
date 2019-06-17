@@ -641,7 +641,7 @@ void RE_Markup_Position::add_arrow_node(caon_ptr<RE_Node> token_node, RE_Functio
  if(current_function_def_entry_node_)
  {
   // //  This confirms the arrow is a function definition not a
-   //    function call, e.g., "\->" rather than "\->".
+   //    function call, e.g., "\->" rather than "/->".
 
   if(last_function_definition_arrow_node_)
   {
