@@ -363,6 +363,17 @@ Purpose_Codes& _PGB_IR_Build::copy_value(QString t1, MG_Token_Subgroups sg1,
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::cond_copy(QString t1, MG_Token_Subgroups sg1,
+  QString t2, MG_Token_Subgroups sg2)
+{
+ MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
+ MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Target, sg2);
+
+ qts_ << " (pgb::cond_copy "; end_line({mgt1, mgt2});
+ return purpose_;
+}
+
+
 void _PGB_IR_Build::end_line(QList<MG_Token>&& mgts)
 {
  QListIterator<MG_Token> it(mgts);

@@ -361,6 +361,15 @@ public:
     t2.mid(1), get_subgroup(t2[0]));
  }
 
+ Purpose_Codes& cond_copy(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2);
+ Purpose_Codes& cond_copy(QString t1, QString t2)
+ {
+  return copy_value(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]));
+ }
+
+
  Purpose_Codes& write_with_tokens(QString fn, QList<MG_Token>& mgts);
 
  void end_line(QList<MG_Token>&& mgts);

@@ -78,6 +78,7 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(add_block_entry_token)
   TEMP_MACRO(add_statement_sequence_token)
   TEMP_MACRO(copy_value)
+  TEMP_MACRO(cond_copy)
   TEMP_MACRO(add_statement_sequence_node)
   TEMP_MACRO(make_statement_info_node)
   TEMP_MACRO(add_fsym_ground_node)
@@ -403,6 +404,14 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
    caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
    if(tr)
+     *tr = n;
+  }
+  break;
+ case PGB_Methods::cond_copy:
+  {
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+   if(tr && !*tr)
      *tr = n;
   }
   break;

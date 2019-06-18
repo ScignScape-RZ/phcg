@@ -162,6 +162,8 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_indexed_type_declaration(
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_signature_node(
   caon_ptr<PHR_Graph_Node> token_node)
 {
+ CAON_PTR_DEBUG(PHR_Graph_Node ,token_node)
+
  caon_ptr<PHR_Graph_Signature> sig = new PHR_Graph_Signature(token_node);
  caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(sig);
 
@@ -198,6 +200,8 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_token_node(MG_Token& mgt)
 
  caon_ptr<PHR_Graph_Node> result = new PHR_Graph_Node(tok);
  result->set_label(rt);
+ CAON_PTR_DEBUG(PHR_Graph_Node ,result)
+
  return result;
 }
 

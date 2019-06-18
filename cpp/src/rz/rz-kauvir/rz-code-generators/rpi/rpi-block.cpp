@@ -733,6 +733,14 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
     if(caon_ptr<RE_Function_Def_Entry> fde = next_node->re_function_def_entry())
     {
      CAON_PTR_DEBUG(RE_Function_Def_Entry ,fde)
+     caon_ptr<RE_Node> prior_node = fde->prior_node();
+     CAON_PTR_DEBUG(RE_Node ,prior_node)
+
+     if(caon_ptr<RE_Token> tok = prior_node->re_token())
+     {
+      CAON_PTR_DEBUG(RE_Token ,tok)
+      CAON_DEBUG_NOOP
+     }
 
      if(fde->kind() == RE_Function_Def_Kinds::Call_Arrow_Note)
      {
@@ -765,11 +773,31 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        QString signature_code = function_def_info->dynamo_signature_code_string();
        MS_Token note {MS_Token_Kinds::Note_Symbol, ":fdef"};
        //?current_form_->add_prin1_quoted_form(signature_code, note);
+
+       caon_ptr<RE_Node> prior_node = fde->prior_node();
+       CAON_PTR_DEBUG(RE_Node ,prior_node)
+
+       if(caon_ptr<RE_Token> tok = prior_node->re_token())
+       {
+        if(!tok->flags.is_do)
+        {
+         current_form_->write_fdef_entry();
+         function_def_info->write_phr_signature_code(pgb_, current_form_->step_forms());
+        }
+       }
+
+//?
+//       current_form_->write_fdef_entry();
+//       function_def_info->write_phr_signature_code(pgb_, current_form_->step_forms());
+
+        //?signature_code  = function_def_info->dynamo_signature_code_string();
+        //?MS_Token note {MS_Token_Kinds::Note_Symbol, ":fdef"};
+        //?current_form_->add_prin1_quoted_form(signature_code, note);
       }
      }
 
-     caon_ptr<RE_Node> prior_node = fde->prior_node();
-     CAON_PTR_DEBUG(RE_Node ,prior_node)
+//     caon_ptr<RE_Node> prior_node = fde->prior_node();
+//     CAON_PTR_DEBUG(RE_Node ,prior_node)
 
      caon_ptr<RE_Node> fdi_node = fde->node();
      CAON_PTR_DEBUG(RE_Node ,fdi_node)

@@ -1,8 +1,7 @@
 
-,ct ::: .(u4  u4) \->
-  &prn 77;
-  ;;
+,test-fn ::: .(u4)  $-> extern;
 
+fnd -> read  "test-fn";
 
 ;;- \-> 
 ;;- &prn 77;
