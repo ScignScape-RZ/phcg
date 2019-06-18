@@ -204,6 +204,10 @@ public:
  void write_statement_entry(QString node_name,
    QString prior_node_name, QString copy = QString());
 
+ void write_cond_statement_entry(QString node_name,
+   QString prior_node_name, QString alt_prior_node_name, QString copy = QString());
+
+
  void check_write_first_nested_is_assignment_leave(QTextStream& qts);
 
  void mark_deferred(int hdcode);

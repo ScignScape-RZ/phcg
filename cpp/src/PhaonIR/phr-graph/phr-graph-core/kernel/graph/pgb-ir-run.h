@@ -42,6 +42,7 @@ class PGB_IR_Run
   add_block_entry_token, add_type_declaration,
   add_indexed_type_declaration,
   add_statement_sequence_token, copy_value, cond_copy,
+  cond_block_entry_or_statement_sequence,
   add_statement_sequence_node,
   make_statement_info_node, add_fsym_ground_node,
   add_channel_fground_cross_node, add_channel_fground_coentry_node,

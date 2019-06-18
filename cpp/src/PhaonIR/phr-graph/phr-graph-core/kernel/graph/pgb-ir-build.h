@@ -365,8 +365,16 @@ public:
    QString t2, MG_Token_Subgroups sg2);
  Purpose_Codes& cond_copy(QString t1, QString t2)
  {
-  return copy_value(t1.mid(1), get_subgroup(t1[0]),
+  return cond_copy(t1.mid(1), get_subgroup(t1[0]),
     t2.mid(1), get_subgroup(t2[0]));
+ }
+
+ Purpose_Codes& cond_block_entry_or_statement_sequence(QString t1, MG_Token_Subgroups sg1,
+   QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3);
+ Purpose_Codes& cond_block_entry_or_statement_sequence(QString t1, QString t2, QString t3)
+ {
+  return cond_block_entry_or_statement_sequence(t1.mid(1), get_subgroup(t1[0]),
+    t2.mid(1), get_subgroup(t2[0]), t3.mid(1), get_subgroup(t3[0]));
  }
 
 

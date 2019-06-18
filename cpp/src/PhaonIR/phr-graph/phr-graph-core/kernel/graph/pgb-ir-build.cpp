@@ -335,6 +335,16 @@ Purpose_Codes& _PGB_IR_Build::add_block_entry_node(QString t1, MG_Token_Subgroup
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::cond_block_entry_or_statement_sequence(QString t1, MG_Token_Subgroups sg1,
+  QString t2, MG_Token_Subgroups sg2, QString t3, MG_Token_Subgroups sg3)
+{
+ MG_Token mgt1 = mgtoken(t1, MG_Token_Kind_Groups::Arg_Target, sg1);
+ MG_Token mgt2 = mgtoken(t2, MG_Token_Kind_Groups::Arg_Target, sg2);
+ MG_Token mgt3 = mgtoken(t3, MG_Token_Kind_Groups::Arg_Target, sg3);
+
+ qts_ << " (pgb::cond_block_entry_or_statement_sequence "; end_line({mgt1, mgt2, mgt3});
+}
+
 Purpose_Codes& _PGB_IR_Build::add_statement_sequence_node(QString t1, MG_Token_Subgroups sg1,
   QString t2, MG_Token_Subgroups sg2, QString anchor_name, MG_Token_Subgroups ansg)
 {

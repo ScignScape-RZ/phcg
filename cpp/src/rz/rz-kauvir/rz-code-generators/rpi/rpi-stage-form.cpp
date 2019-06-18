@@ -80,11 +80,10 @@ void RPI_Stage_Form::write_fdef_entry()
  pgb_(step_forms_).make_token_node(rse.text().prepend('@'), "&sig-fground-node")
   = Purpose_Codes::Make_Token_Node_FSym;
 
- pgb_(step_forms_).cond_copy("!last_block_pre_entry_node", "!last_statement_entry_node");
+// pgb_(step_forms_).cond_copy("!last_block_pre_entry_node", "!last_statement_entry_node");
 
-
- write_statement_entry("&sig-fground-node",
-   "!last_statement_entry_node", "!last_statement_entry_node");
+ write_cond_statement_entry("&sig-fground-node",
+   "!last_statement_entry_node", "!last_block_pre_entry_node", "!last_statement_entry_node");
 
  pgb_(step_forms_).make_signature_node("&sig-fground-node", "&sig-node");
 
@@ -571,6 +570,15 @@ void RPI_Stage_Form::write_statement_entry(
  if(!copy.isEmpty())
    pgb_(step_forms_).copy_value(node_name, copy);
 }
+
+void RPI_Stage_Form::write_cond_statement_entry(
+  QString node_name, QString prior_node_name, QString alt_prior_node_name, QString copy)
+{
+ pgb_(step_forms_).cond_block_entry_or_statement_sequence(prior_node_name, alt_prior_node_name, node_name);
+ if(!copy.isEmpty())
+   pgb_(step_forms_).copy_value(node_name, copy);
+}
+
 
 void RPI_Stage_Form::write_statement_entry_qts()
 {

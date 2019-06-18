@@ -315,6 +315,12 @@ void test_call(PHR_Callable_Value* pcv)
  pcv->run();
 }
 
+void test_def(QString fn, PHR_Callable_Value* pcv)
+{
+ qDebug() << fn;
+ pcv->run();
+}
+
 void test_dfr_call(quint64 arg, PHR_Callable_Value* pcv)
 {
  PHR_Expression_Object* pxo = (PHR_Expression_Object*) arg;
@@ -720,6 +726,23 @@ void init_test_functions(PhaonIR& phr, PHR_Code_Model& pcm,
   (*g1[lambda])[0] = phc;
 
   table.init_phaon_function(g1, pss, "test-call", 700, &test_call);
+
+  g1.clear_all();
+ }
+
+ {
+  PHR_Type* ty1 = type_system->get_type_by_name("str");
+  PHR_Carrier* phc1 = new PHR_Carrier;
+  phc1->set_phr_type(ty1);
+
+  PHR_Type* ty2 = type_system->get_type_by_name("pcv");
+  PHR_Carrier* phc2 = new PHR_Carrier;
+  phc2->set_phr_type(ty2);
+  g1.init_channel(lambda, 2);
+  (*g1[lambda])[0] = phc1;
+  (*g1[lambda])[1] = phc2;
+
+  table.init_phaon_function(g1, pss, "test-def", 700, &test_def);
 
   g1.clear_all();
  }
