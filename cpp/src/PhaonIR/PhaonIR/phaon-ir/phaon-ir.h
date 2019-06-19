@@ -185,6 +185,9 @@ class PhaonIR
 
  PHR_Cocyclic_Type* current_cocyclic_type_;
 
+ QMap<QString, QString> named_source_fns_;
+
+
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
  {
   if(lhs.chief_channel_pos != rhs.chief_channel_pos)
@@ -224,6 +227,8 @@ public:
 
  void create_channel_semantic_protocol(QString name);
 
+ QString find_source_fn(QString name);
+
  PHR_Channel_Group* get_select_channel_group()
  {
   return held_channel_group_;
@@ -240,6 +245,9 @@ public:
  void temp_anchor_channel_group_by_need();
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
+
+ void register_callable_value(QString source_fn, QString name);
+
 
  void anchor_without_channel_group(QString sym, QString ch);
  void anchor_without_channel_group(QString str);

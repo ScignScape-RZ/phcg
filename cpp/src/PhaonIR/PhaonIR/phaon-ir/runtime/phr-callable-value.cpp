@@ -17,6 +17,12 @@ PHR_Callable_Value::PHR_Callable_Value(PhaonIR* phaon_ir, QString name)
 
 }
 
+void PHR_Callable_Value::register_with_name(QString name)
+{
+ phaon_ir_->register_callable_value(name_, name);
+}
+
+
 void PHR_Callable_Value::run()
 {
  qDebug() << name_;

@@ -708,6 +708,18 @@ void PhaonIR::init_current_source_function_scope(QString source_fn)
  });
 }
 
+
+void PhaonIR::register_callable_value(QString source_fn, QString name)
+{
+ named_source_fns_[name] = source_fn;
+}
+
+QString PhaonIR::find_source_fn(QString name)
+{
+ return named_source_fns_.value(name);
+}
+
+
 void PhaonIR::run_callable_value(QString source_fn)
 {
  run_state_stack_.push({current_source_function_scope_,

@@ -24,6 +24,7 @@ public:
  PHR_Callable_Value(PhaonIR* phaon_ir, QString name);
 
  void run();
+ void register_with_name(QString name);
 
 };
 

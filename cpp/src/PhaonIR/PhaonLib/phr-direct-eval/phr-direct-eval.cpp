@@ -10,6 +10,7 @@
 
 #include "defines.h"
 
+#include "phaon-ir/phaon-ir.h"
 
 //#include "kauvir-code-model/kauvir-code-model.h"
 //#include "kcm-lisp-bridge/kcm-lisp-bridge.h"
@@ -127,8 +128,12 @@ void phr_direct_eval(PHR_Code_Model* pcm,
    string_result);
  //?pcrr.set_envv_fn(pcm->envv_fn());
  pcrr.parse_command_package(pcp);
- if(false)
- {}
+ //
+ QString sfn = pcm->phaon_ir()->find_source_fn(pcrr.fground_name());
+ if(!sfn.isEmpty())
+ {
+  pcm->phaon_ir()->run_callable_value(sfn);
+ }
 // PHR_Source_Function* ksf = nullptr;
 // if(scope_system)
 // {

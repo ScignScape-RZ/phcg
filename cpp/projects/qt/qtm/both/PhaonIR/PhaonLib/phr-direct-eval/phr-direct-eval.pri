@@ -29,7 +29,7 @@ SOURCES +=  \
   $$SRC_DIR/phr-direct-eval.cpp \
 
 
-LIBS += -L$$TARGETSDIR -lphr-command-runtime
+LIBS += -L$$TARGETSDIR -lphaon-ir -lphr-command-runtime
 
 #LIBS += -L$$TARGETSDIR -lkcm-command-package  -lkcm-scopes \
 #  -lkauvir-code-model -lkcm-command-runtime

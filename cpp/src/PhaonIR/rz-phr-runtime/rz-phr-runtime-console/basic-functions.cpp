@@ -318,7 +318,7 @@ void test_call(PHR_Callable_Value* pcv)
 void test_def(QString fn, PHR_Callable_Value* pcv)
 {
  qDebug() << fn;
- pcv->run();
+ pcv->register_with_name(fn);
 }
 
 void test_dfr_call(quint64 arg, PHR_Callable_Value* pcv)
