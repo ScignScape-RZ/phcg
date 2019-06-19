@@ -47,7 +47,9 @@ class PGB_IR_Run
   make_statement_info_node, add_fsym_ground_node,
   add_channel_fground_cross_node, add_channel_fground_coentry_node,
   make_block_info_node, add_channel_continue_block_node,
-  make_signature_node, signature, add_channel_entry_block_node,
+  make_signature_node, signature,
+  enter_anon_signature, leave_anon_signature,
+  add_channel_entry_block_node,
   push_expression_entry, pop_expression_entry,
   add_channel_sequence_block_node, add_channel_cross_block_node,
   push_block_entry, pop_block_entry,
@@ -57,6 +59,8 @@ class PGB_IR_Run
 
  QMap<QString, caon_ptr<PHR_Graph_Node>> ledger_;
 
+ caon_ptr<PHR_Graph_Node> current_signature_block_node_;
+ caon_ptr<PHR_Graph_Node> last_signature_block_node_;
 
  MG_Token get_arg_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);
  //?MG_Token get_arg_or_string_token(const QMultiMap<MG_Token_Kinds, QPair<MG_Token, int>>& mgtm);

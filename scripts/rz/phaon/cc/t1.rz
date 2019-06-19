@@ -1,13 +1,10 @@
 
-,ct ::: .(u4 u4)  $-> extern;
-
-
-&test-def "ct" do .(x y) ->
- &prn 78;
+&test-pass-call  do .(x <- u4) ->
+ &prn 77;
  ;;
 
 
-ct 19 22;
+;;- ct 19 22;
 
 
 

@@ -44,7 +44,7 @@ RPI_Block::RPI_Block(PGB_IR_Build& pgb, caon_ptr<RPI_Block> parent_block)
      parent_block_(parent_block), block_sequence_mode_(Block_Sequence_Modes::N_A),
      current_form_(nullptr), last_form_(nullptr), continue_block_(nullptr),
      block_info_(nullptr), pending_block_info_(nullptr),
-     lexical_scope_(nullptr),
+     lexical_scope_(nullptr), function_def_info_(nullptr),
      parent_lambda_position_(-1)
 {
 
@@ -820,6 +820,7 @@ void RPI_Block::scan_form_from_statement_entry_node(RZ_Graph_Visitor_Phaon& visi
        {
         CAON_PTR_DEBUG(RZ_Function_Def_Info ,function_def_info)
         entry_code = function_def_info->kauvir_entry_code_string(*ls);
+        new_block->set_function_def_info(function_def_info);
        }
 
 

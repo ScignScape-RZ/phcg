@@ -79,6 +79,24 @@ Purpose_Codes& _PGB_IR_Build::make_root_node(QString target, MG_Token_Subgroups 
  return purpose_;
 }
 
+Purpose_Codes& _PGB_IR_Build::enter_anon_signature(QString arg, MG_Token_Subgroups asg,
+  QString target, MG_Token_Subgroups tsg)
+{
+ MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg_Target, asg);
+ MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);
+
+ qts_ << " (pgb::enter_anon_signature "; end_line({amgt, tmgt});
+ return purpose_;
+}
+
+Purpose_Codes& _PGB_IR_Build::leave_anon_signature(QString arg, MG_Token_Subgroups asg)
+{
+ MG_Token amgt = mgtoken(arg, MG_Token_Kind_Groups::Arg_Target, asg);
+
+ qts_ << " (pgb::leave_anon_signature "; end_line({amgt});
+ return purpose_;
+}
+
 Purpose_Codes& _PGB_IR_Build::make_block_info_node(QString target, MG_Token_Subgroups tsg)
 {
  MG_Token tmgt = mgtoken(target, MG_Token_Kind_Groups::Target, tsg);

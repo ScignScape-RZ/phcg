@@ -392,6 +392,16 @@ void PHR_Graph_Build::add_channel_entry_block_node(
  CAON_PTR_DEBUG(PHR_Graph_Node ,source)
  CAON_PTR_DEBUG(PHR_Graph_Node ,target)
 
+ if(bin)
+ {
+  CAON_PTR_DEBUG(PHR_Graph_Node ,bin)
+  if(caon_ptr<PHR_Graph_Block_Info> bi = bin->block_info())
+  {
+   CAON_PTR_DEBUG(PHR_Graph_Block_Info ,bi)
+   CAON_DEBUG_NOOP
+  }
+ }
+
  caon_ptr<PHR_Graph_Connection> cion = new PHR_Graph_Connection(chn, bin);
 
  source << fr_/qy_.Channel_Entry_Block(cion) >> target;

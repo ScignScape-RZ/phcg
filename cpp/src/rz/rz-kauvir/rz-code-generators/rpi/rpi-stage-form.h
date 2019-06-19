@@ -164,6 +164,8 @@ public:
  bool is_deferred();
 // bool has_preceder_token();
 
+ void check_write_block_signature(QList<PGB_IR_Build::Text_With_Purpose>& step_forms);
+
  caon_ptr<RPI_Type_Declaration> type_declaration_on_block_entry();
 
  void set_prior_sibling_flags(caon_ptr<RPI_Stage_Form> prior);

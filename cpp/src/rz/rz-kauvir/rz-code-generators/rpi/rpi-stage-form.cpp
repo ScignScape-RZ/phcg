@@ -17,6 +17,8 @@
 #include "rpi-stage-form-annotation.h"
 #include "rpi-stage-element.h"
 
+#include "rz-function-def/rz-function-def-info.h"
+
 #include "rz-code-elements/rz-code-statement.h"
 #include "rz-code-elements/rz-expression-review.h"
 
@@ -678,6 +680,22 @@ void RPI_Stage_Form::write_signature_type_declaration(QTextStream& qts)
 
 }
 
+void RPI_Stage_Form::check_write_block_signature(QList<PGB_IR_Build::Text_With_Purpose>& step_forms)
+{
+ if(!first_nested_block_)
+   return;
+
+ caon_ptr<RZ_Function_Def_Info> fdi = first_nested_block_->function_def_info();
+
+ CAON_PTR_DEBUG(RZ_Function_Def_Info ,fdi)
+
+ pgb_(step_forms).enter_anon_signature("&bin", "&sig-node");
+ fdi->write_phr_signature_code(pgb_, step_forms);
+ pgb_(step_forms).leave_anon_signature("&bin");
+
+}
+
+
 void RPI_Stage_Form::write_type_declaration(QTextStream& qts)
 {
  RPI_Stage_Element& rse1 = inner_elements_[1];
@@ -868,6 +886,8 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
      {
       pgb_(step_forms_).make_block_info_node("&bin");
 
+      f->check_write_block_signature(step_forms_);
+
       if(f->flags.prior_sibling_is_fground_token)
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
         .add_channel_entry_block_node("!last_expression_entry_node", "lambda",
@@ -884,6 +904,9 @@ void RPI_Stage_Form::write_unmediated(QTextStream& qts, caon_ptr<RPI_Stage_Form>
         pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
         .add_channel_cross_block_node("!prior_block_entry_node",
         "&fsym-node", "&bin",  "!last_block_entry_node");
+
+
+
 //      pgb_.insert_after_purpose(f->step_forms(), Purpose_Codes::Make_Token_Node_FSym)
 //      .add_channel_fground_cross_node("!prior_block_entry_node",
 //      "&fsym-node", "&bin",  "!last_block_entry_node");

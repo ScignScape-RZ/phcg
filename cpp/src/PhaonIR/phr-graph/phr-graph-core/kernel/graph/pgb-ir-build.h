@@ -118,6 +118,19 @@ public:
   return make_block_info_node(target.mid(1), get_subgroup(target[0]));
  }
 
+ Purpose_Codes& enter_anon_signature(QString arg, MG_Token_Subgroups asg,
+   QString target, MG_Token_Subgroups tsg);
+ Purpose_Codes& enter_anon_signature(QString arg, QString target)
+ {
+  return enter_anon_signature(arg.mid(1), get_subgroup(arg[0]), target.mid(1), get_subgroup(target[0]));
+ }
+
+ Purpose_Codes& leave_anon_signature(QString arg, MG_Token_Subgroups asg);
+ Purpose_Codes& leave_anon_signature(QString arg)
+ {
+  return leave_anon_signature(arg.mid(1), get_subgroup(arg[0]));
+ }
+
  Purpose_Codes& push_expression_entry();
  Purpose_Codes& pop_expression_entry();
 

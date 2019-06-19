@@ -54,6 +54,8 @@ class RZ_Lisp_Graph_Lexical_Scope;
 class RZ_Function_Def_Syntax;
 class RZ_Lisp_Graph_Block_Info;
 class RZ_Code_Statement;
+class RZ_Function_Def_Info;
+
 
 class RPI_Block
 {
@@ -101,7 +103,7 @@ private:
  Block_Sequence_Modes block_sequence_mode_;
 
  QVector<caon_ptr<RZ_Code_Statement>> code_statements_;
-
+ caon_ptr<RZ_Function_Def_Info> function_def_info_;
 
  //?QString held_type_name_;
 
@@ -125,7 +127,7 @@ public:
  ACCESSORS(Block_Sequence_Modes ,block_sequence_mode)
 
  ACCESSORS(caon_ptr<RZ_Lisp_Graph_Lexical_Scope> ,lexical_scope)
-
+ ACCESSORS(caon_ptr<RZ_Function_Def_Info> ,function_def_info)
 
 
 

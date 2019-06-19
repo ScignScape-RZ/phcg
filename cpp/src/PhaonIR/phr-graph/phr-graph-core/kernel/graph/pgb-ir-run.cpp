@@ -24,7 +24,8 @@ USING_KANS(TextIO)
 USING_RZNS(PhrGraphCore)
 
 PGB_IR_Run::PGB_IR_Run(PHR_Graph_Build& graph_build)
- : graph_build_(graph_build)
+ : graph_build_(graph_build), current_signature_block_node_(nullptr),
+   last_signature_block_node_(nullptr)
 {
 
 }
@@ -89,6 +90,8 @@ PGB_IR_Run::PGB_Methods PGB_IR_Run::parse_pgb_method(QString key)
   TEMP_MACRO(add_channel_continue_block_node)
   TEMP_MACRO(make_signature_node)
   TEMP_MACRO(signature)
+  TEMP_MACRO(enter_anon_signature)
+  TEMP_MACRO(leave_anon_signature)
   TEMP_MACRO(add_channel_entry_block_node)
   TEMP_MACRO(add_channel_cross_block_node)
   TEMP_MACRO(add_channel_sequence_block_node)
@@ -283,6 +286,27 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
 //  }
 //  break;
 
+ case PGB_Methods::enter_anon_signature:
+  {
+   caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+   if(tr)
+     *tr = graph_build_.make_signature_node(n);
+   else
+     graph_build_.make_signature_node(n);
+   current_signature_block_node_ = n;
+  }
+  break;
+
+ case PGB_Methods::leave_anon_signature:
+  {
+   caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+   last_signature_block_node_ = nullptr;
+   current_signature_block_node_ = nullptr;
+   //graph_build_.
+  }
+  break;
+
  case PGB_Methods::signature:
   {
    caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
@@ -295,7 +319,7 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
 //     *tr = graph_build_.make_signature_node(n);
 //   else
  //?  graph_build_.make_signature_node(n);
-  };
+  }
   break;
 
 
@@ -308,7 +332,7 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
      *tr = graph_build_.make_signature_node(n);
    else
      graph_build_.make_signature_node(n);
-  };
+  }
   break;
 
  case PGB_Methods::make_token_node:
@@ -319,7 +343,7 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
      *tr = graph_build_.make_token_node(tok);
    else
      graph_build_.make_token_node(tok);
-  };
+  }
   break;
 
  case PGB_Methods::make_fsym_ground_node:
@@ -549,7 +573,7 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
    auto pr = get_args(mgtm, &extra);
    caon_ptr<PHR_Graph_Node>* tr = get_target(mgtm);
    graph_build_.add_channel_entry_block_node(pr.first, chn,
-        pr.second, extra);
+     pr.second, extra);
    if(tr)
      *tr = pr.second;
   }
