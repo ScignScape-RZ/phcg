@@ -80,6 +80,8 @@ class PhaonIR
 
  Unwind_Scope_Index& current_chief_unwind_scope_index()
  {
+  if(temp_held_program_stack_)
+    return *alt_usi_;
   return current_source_function_scope_->_current_chief_unwind_scope_index;
  }
 
@@ -123,12 +125,17 @@ class PhaonIR
 
  PHR_Channel_System* channel_system_;
  QMap<QPair<Unwind_Scope_Index, PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*>* sp_map_;
+
  PHR_Type_System* type_system_;
  PHR_Program_Stack* program_stack_;
  PHR_Type* held_type_;
  PHR_Carrier_Stack* current_carrier_stack_;
  PHR_Channel_Group* held_channel_group_;
  PHR_Channel_Group_Table* table_;
+
+ PHR_Program_Stack* alt_program_stack_;
+ PHR_Program_Stack* temp_held_program_stack_;
+ Unwind_Scope_Index* alt_usi_;
 
  QString held_usi_symbol_;
 
@@ -245,6 +252,10 @@ public:
  void temp_anchor_channel_group_by_need();
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
+
+ void load_alt_program_stack();
+ void finalize_block_signature();
+ void reload_program_stack();
 
  void register_callable_value(QString source_fn, QString name);
 

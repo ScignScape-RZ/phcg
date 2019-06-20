@@ -48,7 +48,8 @@ SOURCES += \
 
 
 LIBS += -L$$TARGETSDIR -lphaon-ir -lphr-direct-eval \
-  -lphr-fn-doc   -lphr-env
+  -lphr-fn-doc   -lphr-env  -lphr-command-runtime
+
 
 
 

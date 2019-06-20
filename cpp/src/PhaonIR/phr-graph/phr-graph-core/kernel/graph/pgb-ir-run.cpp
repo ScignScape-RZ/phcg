@@ -301,6 +301,9 @@ void PGB_IR_Run::run_line(QString fn, QMultiMap<MG_Token_Kinds, QPair<MG_Token, 
  case PGB_Methods::leave_anon_signature:
   {
    caon_ptr<PHR_Graph_Node> n = get_arg(mgtm);
+
+   graph_build_.finalize_block_signature(n);
+
    last_signature_block_node_ = nullptr;
    current_signature_block_node_ = nullptr;
    //graph_build_.

@@ -89,6 +89,10 @@ public:
 
  caon_ptr<PHR_Graph_Node> make_fsym_ground_node(QString chn, QString ty);
 
+ void finalize_block_signature(
+   caon_ptr<PHR_Graph_Node> bin_node);
+
+
  caon_ptr<PHR_Graph_Node> add_fsym_ground_node(
    caon_ptr<PHR_Graph_Node> source,
    caon_ptr<PHR_Graph_Node> target,

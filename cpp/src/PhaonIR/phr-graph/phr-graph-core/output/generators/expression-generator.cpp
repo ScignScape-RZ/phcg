@@ -23,6 +23,9 @@
 #include "token/phr-graph-block-info.h"
 #include "token/phr-graph-type-declaration.h"
 #include "token/phr-graph-cocyclic-type.h"
+#include "token/phr-graph-signature.h"
+
+#include "multigraph-token.h"
 
 #include "textio.h"
 USING_KANS(TextIO)
@@ -301,6 +304,66 @@ void Expression_Generator::check_generate_type_declaration(QTextStream& qts,
  }
 }
 
+void Expression_Generator::generate_minimal_signature(QTextStream& qts,
+  PHR_Graph_Signature& sig)
+{
+ QList<MG_Token>& mgts = sig.tokens();
+ QString bt;
+ for(MG_Token mgt : mgts)
+ {
+  switch (mgt.kind)
+  {
+  case MG_Token_Kinds::Sig_Channel:
+    qts << "push_carrier_stack $ " << mgt.raw_text << " ;.\n";
+   break;
+  case MG_Token_Kinds::Sig_Symbol:
+    qts << "hold_type_by_name $ auto ;.\n";
+    qts << "push_carrier_symbol $ " << mgt.raw_text << " ;.\n";
+   break;
+  case MG_Token_Kinds::Sig_Type:
+   if(bt.isEmpty())
+     qts << "push_carrier_type_holder $ " << mgt.raw_text << " ;.\n";
+   else
+   {
+    qts << "hold_type_by_name $ " << mgt.raw_text << " ;.\n";
+    qts << "push_carrier_symbol $ " << bt << " ;.\n";
+    bt.clear();
+   }
+   break;
+  case MG_Token_Kinds::Sig_Symbol_Before_Type:
+    bt = mgt.raw_text;
+   break;
+  default:
+   break;
+  }
+ }
+ qts << "coalesce_channel_group ;.\n";
+
+}
+
+void Expression_Generator::generate_alt_entry(QTextStream& qts)
+{
+ qts << "load_alt_program_stack ;.\n";
+}
+
+void Expression_Generator::generate_alt_close(QTextStream& qts)
+{
+ qts << "reload_program_stack ;.\n";
+}
+
+void Expression_Generator::generate_block_signature(QTextStream& qts,
+  PHR_Graph_Signature& sig)
+{
+ qts << "\n .; block signature ... ;.\n";
+ //qts << "hold_program_stack ;.\n";
+ generate_alt_entry(qts);
+
+ generate_minimal_signature(qts, sig);
+ qts << "finalize_block_signature ;.\n";
+ generate_alt_close(qts);
+ qts << "\n .; end block signature ... ;.\n\n";
+}
+
 void Expression_Generator::generate_arg_carriers(QTextStream& qts,
   QString channel_name, const PHR_Graph_Node& arg_node,
   int unw, SB_Info sbi)
@@ -311,6 +374,12 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  {
   // first arg is nested block ...
   qts << "anticipate_nested_block " << channel_name << " ;.\n";
+
+  if(PHR_Graph_Signature* sig = sbi.bin->signature())
+  {
+   generate_block_signature(qts, *sig);
+  }
+
   generate_block(qts, *sbi.bin, arg_node, sbi.sin);
  }
  else

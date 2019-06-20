@@ -83,12 +83,33 @@ void PhaonIR::reinit_program_stack()
 void PhaonIR::init_program_stack()
 {
  program_stack_ = new PHR_Program_Stack;
+ alt_program_stack_ = new PHR_Program_Stack;
+ temp_held_program_stack_ = nullptr;
+ alt_usi_ = new Unwind_Scope_Index{0,0,0,0,0,""};
 }
 
 void PhaonIR::reset_program_stack()
 {
  program_stack_->clear();
 }
+
+void PhaonIR::load_alt_program_stack()
+{
+ temp_held_program_stack_ = program_stack_;
+ program_stack_ = alt_program_stack_;
+}
+
+void PhaonIR::finalize_block_signature()
+{
+}
+
+void PhaonIR::reload_program_stack()
+{
+ program_stack_ = temp_held_program_stack_;
+ temp_held_program_stack_ = nullptr;
+ current_carrier_stack_ = program_stack_->top();
+}
+
 
 void PhaonIR::check_semantic_protocol(QString sp_name)
 {
@@ -685,7 +706,11 @@ void PhaonIR::read_line(QString inst)
   { "delete_temps", &PhaonIR::delete_temps },
   { "delete_retired", &PhaonIR::delete_retired },
   { "clear_temps", &PhaonIR::clear_temps },
-  { "reset_program_stack", &PhaonIR::reset_program_stack },
+
+  { "reload_program_stack", &PhaonIR::reload_program_stack },
+  { "load_alt_program_stack", &PhaonIR::load_alt_program_stack },
+  { "finalize_block_signature", &PhaonIR::finalize_block_signature },
+
   { "pop_unwind_scope", &PhaonIR::pop_unwind_scope },
   { "temp_anchor_channel_group", &PhaonIR::temp_anchor_channel_group },
   { "temp_anchor_channel_group_by_need", &PhaonIR::temp_anchor_channel_group_by_need },

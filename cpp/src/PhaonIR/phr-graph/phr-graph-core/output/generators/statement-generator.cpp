@@ -124,37 +124,7 @@ void Statement_Generator::generate_signature(QTextStream& qts,
   QString fn, PHR_Graph_Signature& sig)
 {
  qts << "\n .; signature ... ;.\n";
- QList<MG_Token>& mgts = sig.tokens();
- QString bt;
- for(MG_Token mgt : mgts)
- {
-  switch (mgt.kind)
-  {
-  case MG_Token_Kinds::Sig_Channel:
-    qts << "push_carrier_stack $ " << mgt.raw_text << " ;.\n";
-   break;
-  case MG_Token_Kinds::Sig_Symbol:
-    qts << "hold_type_by_name $ auto ;.\n";
-    qts << "push_carrier_symbol $ " << mgt.raw_text << " ;.\n";
-   break;
-  case MG_Token_Kinds::Sig_Type:
-   if(bt.isEmpty())
-     qts << "push_carrier_type_holder $ " << mgt.raw_text << " ;.\n";
-   else
-   {
-    qts << "hold_type_by_name $ " << mgt.raw_text << " ;.\n";
-    qts << "push_carrier_symbol $ " << bt << " ;.\n";
-    bt.clear();
-   }
-   break;
-  case MG_Token_Kinds::Sig_Symbol_Before_Type:
-    bt = mgt.raw_text;
-   break;
-  default:
-   break;
-  }
- }
- qts << "coalesce_channel_group ;.\n";
+ expression_generator_.generate_minimal_signature(qts, sig);
  qts << "finalize_signature $ " << fn << " ;.\n";
  generate_minimal_close(qts);
  qts << "\n .; end signature ... ;.\n\n";

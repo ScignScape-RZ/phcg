@@ -28,6 +28,7 @@ class PHR_Graph_Token;
 class PHR_Graph_FGround_Entry;
 class PHR_Graph_Statement_Info;
 class PHR_Graph_Block_Info;
+class PHR_Graph_Signature;
 
 class Statement_Generator;
 class PHR_Graph_Cocyclic_Type;
@@ -63,6 +64,17 @@ public:
 
  void generate_cocyclic_type_definition(QTextStream& qts,
    PHR_Graph_Cocyclic_Type& coy);
+
+ void generate_block_signature(QTextStream& qts,
+   PHR_Graph_Signature& sig);
+
+ void generate_minimal_signature(QTextStream& qts,
+   PHR_Graph_Signature& sig);
+
+ void generate_alt_entry(QTextStream& qts);
+ void generate_alt_close(QTextStream& qts);
+
+
 
  void check_generate_type_declaration(QTextStream& qts, const PHR_Graph_Node& node);
  void generate_type_declaration(QTextStream& qts,

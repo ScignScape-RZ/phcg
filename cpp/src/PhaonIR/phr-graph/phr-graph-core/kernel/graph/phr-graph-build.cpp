@@ -159,6 +159,23 @@ caon_ptr<PHR_Graph_Node> PHR_Graph_Build::add_indexed_type_declaration(
  return result;
 }
 
+void PHR_Graph_Build::PHR_Graph_Build::finalize_block_signature(
+  caon_ptr<PHR_Graph_Node> bin_node)
+{
+ if(caon_ptr<PHR_Graph_Block_Info> bin = bin_node->block_info())
+ {
+  CAON_PTR_DEBUG(PHR_Graph_Block_Info ,bin)
+  if(caon_ptr<PHR_Graph_Node> sn = qy_.Signature_Node(bin_node))
+  {
+   if(caon_ptr<PHR_Graph_Signature> sig = sn->phr_graph_signature())
+   {
+    bin->set_signature(sig.raw_pointer());
+   }
+  }
+  CAON_DEBUG_NOOP
+ }
+}
+
 caon_ptr<PHR_Graph_Node> PHR_Graph_Build::make_signature_node(
   caon_ptr<PHR_Graph_Node> token_node)
 {
