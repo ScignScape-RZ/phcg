@@ -359,7 +359,7 @@ void Expression_Generator::generate_block_signature(QTextStream& qts,
  generate_alt_entry(qts);
 
  generate_minimal_signature(qts, sig);
- qts << "finalize_block_signature ;.\n";
+ qts << "finalize_block_signature @ last_source_fn_name ;.\n";
  generate_alt_close(qts);
  qts << "\n .; end block signature ... ;.\n\n";
 }
@@ -373,14 +373,15 @@ void Expression_Generator::generate_arg_carriers(QTextStream& qts,
  if(sbi.bin)
  {
   // first arg is nested block ...
-  qts << "anticipate_nested_block " << channel_name << " ;.\n";
+  qts << "anticipate_nested_block $ " << channel_name << " ;.\n";
+
+  generate_block(qts, *sbi.bin, arg_node, sbi.sin);
 
   if(PHR_Graph_Signature* sig = sbi.bin->signature())
   {
    generate_block_signature(qts, *sig);
   }
 
-  generate_block(qts, *sbi.bin, arg_node, sbi.sin);
  }
  else
  {

@@ -99,7 +99,20 @@ void PhaonIR::load_alt_program_stack()
  program_stack_ = alt_program_stack_;
 }
 
-void PhaonIR::finalize_block_signature()
+void PhaonIR::finalize_block_signature(QString sfn)
+{
+ block_signature_channel_groups_[sfn] = held_channel_group_->clone();
+ delete held_channel_group_;
+ held_channel_group_ = nullptr;
+
+// PHR_Type* ty = new PHR_Type;
+// //ty->set_name(fn);
+// ty->set_signature_channel_group(held_channel_group_->clone());
+// //scopes_.current_scope()->add_direct_value(fn, ty, 0);
+
+}
+
+void PhaonIR::anticipate_nested_block(QString chn)
 {
 }
 
@@ -709,7 +722,6 @@ void PhaonIR::read_line(QString inst)
 
   { "reload_program_stack", &PhaonIR::reload_program_stack },
   { "load_alt_program_stack", &PhaonIR::load_alt_program_stack },
-  { "finalize_block_signature", &PhaonIR::finalize_block_signature },
 
   { "pop_unwind_scope", &PhaonIR::pop_unwind_scope },
   { "temp_anchor_channel_group", &PhaonIR::temp_anchor_channel_group },
@@ -750,6 +762,8 @@ void PhaonIR::run_callable_value(QString source_fn)
  run_state_stack_.push({current_source_function_scope_,
    program_stack_, current_carrier_stack_,
    held_channel_group_, sp_map_});
+
+ check_init_block_signature_lexical(source_fn);
 
  init_current_source_function_scope(source_fn);
  init_program_stack();
@@ -803,7 +817,8 @@ void PhaonIR::read_line(QString inst, QString arg)
   { "type_field_decl", &PhaonIR::type_field_decl },
   { "finalize_signature", &PhaonIR::finalize_signature },
   { "push_carrier_type_holder", &PhaonIR::push_carrier_type_holder },
-
+  { "finalize_block_signature", &PhaonIR::finalize_block_signature },
+  { "anticipate_nested_block", &PhaonIR::anticipate_nested_block },
   { "enter_cocyclic_type", &PhaonIR::enter_cocyclic_type },
   { "leave_cocyclic_type", &PhaonIR::leave_cocyclic_type },
 
@@ -817,6 +832,15 @@ void PhaonIR::read_line(QString inst, QString arg)
  }
 }
 
+void PhaonIR::check_init_block_signature_lexical(QString source_fn)
+{
+ PHR_Channel_Group* pcg = block_signature_channel_groups_.value(source_fn);
+ if(!pcg)
+   return;
+
+// block_signature_channel_group_ = nullptr;
+}
+
 void PhaonIR::parse_fn_line(QString line)
 {
  if(line[3] == 'p')
@@ -824,6 +848,7 @@ void PhaonIR::parse_fn_line(QString line)
   ++source_fn_anon_count_;
   source_fn_names_.push(current_source_fn_name_);
   current_source_fn_name_ = QString::number(source_fn_anon_count_).prepend(';');
+  //check_init_block_signature_lexical();
  }
  else if(line[3] == 'e')
  {

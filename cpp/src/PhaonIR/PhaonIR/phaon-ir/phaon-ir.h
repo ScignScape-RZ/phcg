@@ -155,6 +155,8 @@ class PhaonIR
 
  PHR_Symbol_Scope* held_symbol_scope_;
 
+ //PHR_Type* current_bloc
+
  int source_fn_anon_count_;
 
  struct anchor_channel_link
@@ -194,6 +196,7 @@ class PhaonIR
 
  QMap<QString, QString> named_source_fns_;
 
+ QMap<QString, PHR_Channel_Group*> block_signature_channel_groups_;
 
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
  {
@@ -253,8 +256,11 @@ public:
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
 
+ void check_init_block_signature_lexical(QString source_fn);
+ void anticipate_nested_block(QString chn);
+
  void load_alt_program_stack();
- void finalize_block_signature();
+ void finalize_block_signature(QString sfn);
  void reload_program_stack();
 
  void register_callable_value(QString source_fn, QString name);
