@@ -29,6 +29,8 @@
 #include "phaon-ir/runtime/phr-expression-object.h"
 
 #include "phaon-ir/eval/phr-channel-group-evaluator.h"
+#include "phaon-ir/types/phr-type-object.h"
+#include "phaon-ir/types/phr-type.h"
 
 
 #include <QTextStream>
@@ -317,7 +319,14 @@ void test_call(PHR_Callable_Value* pcv)
 
 void test_pass_call(PHR_Callable_Value* pcv)
 {
- pcv->run();
+ pcv->run([](QString chn, QString& sym,
+          PHR_Type_Object* pto, PHR_Carrier& phc, PHR_Scope_Value*& psv)
+ {
+  if(sym == "x")
+  {
+   psv = new PHR_Scope_Value(pto->ty(), 79);
+  }
+ });
 }
 
 void test_def(QString fn, PHR_Callable_Value* pcv)

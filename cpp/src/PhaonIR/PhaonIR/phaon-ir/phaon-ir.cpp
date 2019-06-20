@@ -51,6 +51,7 @@ PhaonIR::PhaonIR(PHR_Channel_System* channel_system) :  type_system_(nullptr),
   //current_lexical_scope()(nullptr),
   held_symbol_scope_(nullptr), direct_eval_fn_(nullptr),
   source_fn_anon_count_(0), current_cocyclic_type_(nullptr),
+  current_channel_lexical_scope_(nullptr),
   sp_map_(new QMap<QPair<Unwind_Scope_Index,
     PHR_Channel_Semantic_Protocol*>, PHR_Carrier_Stack*>)
 {
@@ -757,13 +758,13 @@ QString PhaonIR::find_source_fn(QString name)
 }
 
 
-void PhaonIR::run_callable_value(QString source_fn)
+void PhaonIR::run_callable_value(QString source_fn, PHR_Callable_Value::fn_type fn)
 {
  run_state_stack_.push({current_source_function_scope_,
    program_stack_, current_carrier_stack_,
    held_channel_group_, sp_map_});
 
- check_init_block_signature_lexical(source_fn);
+ check_init_block_signature_lexical(source_fn, fn);
 
  init_current_source_function_scope(source_fn);
  init_program_stack();
@@ -832,11 +833,43 @@ void PhaonIR::read_line(QString inst, QString arg)
  }
 }
 
-void PhaonIR::check_init_block_signature_lexical(QString source_fn)
+void PhaonIR::check_init_block_signature_lexical(QString source_fn, PHR_Callable_Value::fn_type fn)
 {
+ if(!fn)
+   return;
+
  PHR_Channel_Group* pcg = block_signature_channel_groups_.value(source_fn);
  if(!pcg)
    return;
+
+ if(current_channel_lexical_scope_)
+   parent_channel_lexical_scopes_.push(current_channel_lexical_scope_);
+
+ current_channel_lexical_scope_ = new QMap<QString, PHR_Scope_Value*>;
+
+ QMapIterator<PHR_Channel_Semantic_Protocol*, PHR_Channel*> it(*pcg);
+
+ while(it.hasNext())
+ {
+  it.next();
+  QString chn = it.key()->name();
+  PHR_Channel* pch = it.value();
+
+  for(PHR_Carrier* phc : *pch)
+  {
+   PHR_Scope_Value* psv;
+   QString sym = phc->symbol_name();
+   PHR_Type_Object pto(phc->phr_type());
+   fn(chn, sym, &pto, *phc, psv);
+
+   if(!sym.isEmpty())
+   {
+    current_channel_lexical_scope_->insert(sym, psv);
+   }
+  }
+
+ }
+
 
 // block_signature_channel_group_ = nullptr;
 }

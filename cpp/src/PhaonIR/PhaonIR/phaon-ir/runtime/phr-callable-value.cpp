@@ -23,8 +23,8 @@ void PHR_Callable_Value::register_with_name(QString name)
 }
 
 
-void PHR_Callable_Value::run()
+void PHR_Callable_Value::run(fn_type fn)
 {
  qDebug() << name_;
- phaon_ir_->run_callable_value(name_);
+ phaon_ir_->run_callable_value(name_, fn);
 }

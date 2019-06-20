@@ -19,6 +19,8 @@
 #include "scopes/phr-runtime-scope.h"
 #include "scopes/phr-scope-system.h"
 
+#include "runtime/phr-callable-value.h"
+
 #define PASTE_EXPRESSION(...) __VA_ARGS__
 
 
@@ -198,6 +200,10 @@ class PhaonIR
 
  QMap<QString, PHR_Channel_Group*> block_signature_channel_groups_;
 
+ QMap<QString, PHR_Scope_Value*>* current_channel_lexical_scope_;
+ QStack<QMap<QString, PHR_Scope_Value*>*> parent_channel_lexical_scopes_;
+
+
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)
  {
   if(lhs.chief_channel_pos != rhs.chief_channel_pos)
@@ -256,7 +262,7 @@ public:
  void anchor_channel_group(QString sym, QString ch);
  void copy_anchor_channel_group(QString sym, QString ch);
 
- void check_init_block_signature_lexical(QString source_fn);
+ void check_init_block_signature_lexical(QString source_fn, PHR_Callable_Value::fn_type fn);
  void anticipate_nested_block(QString chn);
 
  void load_alt_program_stack();
@@ -316,7 +322,7 @@ public:
 
  void run_lines(QString source_fn);
 
- void run_callable_value(QString source_fn);
+ void run_callable_value(QString source_fn, PHR_Callable_Value::fn_type fn = nullptr);
 
  void enter_lexical_scope();
 

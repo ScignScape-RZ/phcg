@@ -11,8 +11,13 @@
 
 #include "accessors.h"
 
+#include <functional>
+
 
 class PhaonIR;
+class PHR_Type_Object;
+class PHR_Scope_Value;
+class PHR_Carrier;
 
 class PHR_Callable_Value
 {
@@ -21,9 +26,12 @@ class PHR_Callable_Value
 
 public:
 
+ typedef std::function<void(QString, QString&,
+   PHR_Type_Object*, PHR_Carrier&, PHR_Scope_Value*&)> fn_type;
+
  PHR_Callable_Value(PhaonIR* phaon_ir, QString name);
 
- void run();
+ void run(fn_type fn = nullptr);
  void register_with_name(QString name);
 
 };
