@@ -520,25 +520,25 @@ QString PHR_Command_Runtime_Router::output_type_string()
  return QString();
 }
 
-PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_value(PHR_Command_Runtime_Argument* kcra,
+PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_value(PHR_Command_Runtime_Argument* pcra,
   FN_Codes fnc, quint64& mem, QPair<PHR_Scope_System*, QPair<int, quint64>>& qclo_value,
   QString* const& qs_mem, void*& result, int& ptr_depth)
 {
  const PHR_Type_Object* pto;
- if(kcra->bind_code().isEmpty())
+ if(pcra->bind_code().isEmpty())
  {
-  QString* qs = (QString*) kcra->raw_value();
+  QString* qs = (QString*) pcra->raw_value();
 
-  int* pi = (int*) kcra->raw_value();
+  int* pi = (int*) pcra->raw_value();
 
-  QString tn = kcra->type_name();
+  QString tn = pcra->type_name();
   if(tn.isEmpty())
   {
-   if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
+   if(pcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
      tn = "str";
   }
 
-  if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
+  if(pcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
   {
    if(qs->startsWith('"'))
      *qs = qs->mid(1);
@@ -550,7 +550,7 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
   {
 
    // //  account for how scopes store strings ...
-   if(kcra->value_classification() ==
+   if(pcra->value_classification() ==
      PHR_Command_Runtime_Argument::Value_Classification::QObject_Ptr)
    {
     qs = (QString*) *(quint64*) qs;
@@ -564,25 +564,25 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
   }
   else
   {
-   if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
+   if(pcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Raw_Value_String_Ptr)
    {
     int i = qs->toInt();
     mem = qs->toLongLong();
    }
 
    // //  are these value classifications misleading?
-   if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr)
+   if(pcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::Generic_Ptr)
    {
     mem = qs->toLongLong();
    }
-   else if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::QObject_Ptr)
+   else if(pcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::QObject_Ptr)
    {
-    mem = *(quint64*) kcra->raw_value();
+    mem = *(quint64*) pcra->raw_value();
    }
-   else if(kcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::PCV_Ptr)
+   else if(pcra->value_classification() == PHR_Command_Runtime_Argument::Value_Classification::PCV_Ptr)
    {
     //?
-    mem = *(quint64*) kcra->raw_value_as_pointer();
+    mem = *(quint64*) pcra->raw_value_as_pointer();
    }
 
    result = &mem;
@@ -590,7 +590,7 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
    return add_ptr_cast_to_fn_code(fnc);
   }
  }
- else if(kcra->bind_code() == "_$")
+ else if(pcra->bind_code() == "_$")
  {
   QString rs = output_type_string();
   if(rs.isEmpty() && !result_type_object_)
@@ -606,7 +606,7 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
   }
  }
 #ifdef HIDE
- else if(quint64 temp = scopes_->find_temporary_bridge_value(kcra->bind_code(), pto))
+ else if(quint64 temp = scopes_->find_temporary_bridge_value(pcra->bind_code(), pto))
  {
   // // actually need to check of pto is anon fdef ...
   PHR_Callable_Value* kcv = (PHR_Callable_Value*) temp;
@@ -622,17 +622,17 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
   QString encoded_value;
 
   const PHR_Type_Object* xpto;
-  QString proxy_coords_code;// = proxy_scope_->find_proxy_coords_for_symbol_name(kcra->bind_code(), xpto);
+  QString proxy_coords_code;// = proxy_scope_->find_proxy_coords_for_symbol_name(pcra->bind_code(), xpto);
 
   if(proxy_coords_code.isEmpty())
   {
-   quint64* rv;//? = scopes_->find_raw_value_from_current_scope(kcra->bind_code(), envv_fn_, PHR_expression_,
+   quint64* rv;//? = scopes_->find_raw_value_from_current_scope(pcra->bind_code(), envv_fn_, PHR_expression_,
      //pto, cpto, encoded_value, qclo_value.second);
 
    quint64 prv;
    PHR_Runtime_Scope::Storage_Options so;
 
-   PHR_Type* ty = phaon_ir_->init_value_from_symbol(kcra->bind_code(), so, prv);
+   PHR_Type* ty = phaon_ir_->init_value_from_symbol(pcra->bind_code(), so, prv);
 
    if(so != PHR_Runtime_Scope::Storage_Options::N_A)
    {
@@ -710,7 +710,7 @@ PHR_Command_Runtime_Router::FN_Codes PHR_Command_Runtime_Router::check_init_raw_
 
     if(mem == 0)
     {
-     QString exc = QString("Unrecognized Symbol: %1 -- Exception Will Be Thrown").arg(kcra->bind_code());
+     QString exc = QString("Unrecognized Symbol: %1 -- Exception Will Be Thrown").arg(pcra->bind_code());
      qDebug() << "\n\n" << exc << "\n";
      throw exc;
     }

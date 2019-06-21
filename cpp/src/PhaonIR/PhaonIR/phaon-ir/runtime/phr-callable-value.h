@@ -13,6 +13,7 @@
 
 #include <functional>
 
+#include "phaon-ir/scopes/phr-runtime-scope.h"
 
 class PhaonIR;
 class PHR_Type_Object;
@@ -27,7 +28,8 @@ class PHR_Callable_Value
 public:
 
  typedef std::function<void(QString, QString&,
-   PHR_Type_Object*, PHR_Carrier&, PHR_Scope_Value*&)> fn_type;
+   PHR_Type_Object*, PHR_Carrier&, PHR_Scope_Value*&,
+   PHR_Runtime_Scope::Storage_Options& so)> fn_type;
 
  PHR_Callable_Value(PhaonIR* phaon_ir, QString name);
 

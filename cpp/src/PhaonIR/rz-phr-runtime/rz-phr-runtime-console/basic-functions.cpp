@@ -320,11 +320,13 @@ void test_call(PHR_Callable_Value* pcv)
 void test_pass_call(PHR_Callable_Value* pcv)
 {
  pcv->run([](QString chn, QString& sym,
-          PHR_Type_Object* pto, PHR_Carrier& phc, PHR_Scope_Value*& psv)
+   PHR_Type_Object* pto, PHR_Carrier& phc,
+   PHR_Scope_Value*& psv, PHR_Runtime_Scope::Storage_Options& so)
  {
   if(sym == "x")
   {
    psv = new PHR_Scope_Value(pto->ty(), 79);
+   so = PHR_Runtime_Scope::Storage_Options::Direct;
   }
  });
 }

@@ -191,6 +191,16 @@ PHR_Type* PhaonIR::init_value_from_symbol(QString sym,
   }
   return nullptr;
  }
+
+ auto it = current_channel_lexical_scope_->find(sym);
+ if(it != current_channel_lexical_scope_->end())
+ {
+  PHR_Scope_Value* psv = it->first;
+  so = it->second;
+  val = psv->raw_value;
+  return psv->ty;
+ }
+
  //quint64 val;
  //PHR_Runtime_Scope::Storage_Options so;
  //PHR_Type* ty = current_lexical_scope()->find_value(sym, val, so);
@@ -845,7 +855,7 @@ void PhaonIR::check_init_block_signature_lexical(QString source_fn, PHR_Callable
  if(current_channel_lexical_scope_)
    parent_channel_lexical_scopes_.push(current_channel_lexical_scope_);
 
- current_channel_lexical_scope_ = new QMap<QString, PHR_Scope_Value*>;
+ current_channel_lexical_scope_ = new QMap<QString, QPair<PHR_Scope_Value*, PHR_Runtime_Scope::Storage_Options>>;
 
  QMapIterator<PHR_Channel_Semantic_Protocol*, PHR_Channel*> it(*pcg);
 
@@ -860,11 +870,12 @@ void PhaonIR::check_init_block_signature_lexical(QString source_fn, PHR_Callable
    PHR_Scope_Value* psv;
    QString sym = phc->symbol_name();
    PHR_Type_Object pto(phc->phr_type());
-   fn(chn, sym, &pto, *phc, psv);
+   PHR_Runtime_Scope::Storage_Options so = PHR_Runtime_Scope::Storage_Options::String_Pointer;
+   fn(chn, sym, &pto, *phc, psv, so);
 
    if(!sym.isEmpty())
    {
-    current_channel_lexical_scope_->insert(sym, psv);
+    current_channel_lexical_scope_->insert(sym, {psv, so});
    }
   }
 

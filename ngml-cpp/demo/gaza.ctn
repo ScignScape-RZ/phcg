@@ -11,7 +11,7 @@
 \pagenumbering
 {roman}
 \setcounter
-{page}{7}
+{page}{5}
 \fancyhead
 [RO,LE]{{\small
 \textrm
@@ -50,7 +50,7 @@
 \setlength\contentsentryoverrun{\contentsindenttwoamount }
 \begin{contentsentryenvironment}
 \contentsindentone
-{\contentssequencetitlefont
+{\contentspoemtitlefont
 THINKING
 OF
 GAZA
@@ -59,8 +59,21 @@ THOUSANDS
 OF
 MILES
 AWAY}
-\relax
-
+\contentsleaders
+\pageref{poem3}
+\end{contentsentryenvironment}
+\par
+\setlength\contentsentryoverrun{\contentsindentoneamount}
+\setlength\contentsentryoverrun{\contentsindenttwoamount }
+\begin{contentsentryenvironment}
+\contentsindentone
+{\contentspoemtitlefont
+BURLESQUE
+AT
+THE
+BARRIER}
+\contentsleaders
+\pageref{poem4}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}

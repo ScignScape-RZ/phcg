@@ -80,3 +80,12 @@ THOUSANDS
 OF
 MILES
 AWAY}
+\notespoemclubpenalty
+\par\argpageref{poem4}\unskip
+\setcounterfrompageref{notepageholdertitle}{poem4}\unskip
+\mark{\thenotepageholdertitle}
+\textbf
+{BURLESQUE
+AT
+THE
+BARRIER}

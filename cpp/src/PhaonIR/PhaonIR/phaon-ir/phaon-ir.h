@@ -200,8 +200,8 @@ class PhaonIR
 
  QMap<QString, PHR_Channel_Group*> block_signature_channel_groups_;
 
- QMap<QString, PHR_Scope_Value*>* current_channel_lexical_scope_;
- QStack<QMap<QString, PHR_Scope_Value*>*> parent_channel_lexical_scopes_;
+ QMap<QString, QPair<PHR_Scope_Value*, PHR_Runtime_Scope::Storage_Options>>* current_channel_lexical_scope_;
+ QStack<QMap<QString, QPair<PHR_Scope_Value*, PHR_Runtime_Scope::Storage_Options>>*> parent_channel_lexical_scopes_;
 
 
  friend bool operator<(const Unwind_Scope_Index& lhs, const Unwind_Scope_Index& rhs)

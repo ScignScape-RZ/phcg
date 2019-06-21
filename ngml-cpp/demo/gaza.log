@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  20 JUN 2019 13:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  21 JUN 2019 00:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -315,34 +315,30 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \poemcontents=\write7
 \openout7 = `gaza.ctn'.
 
+ [1
 
-Overfull \hbox (7.73099pt too wide) in paragraph at lines 32--32
-[]\OT1/ptm/m/n/16 THINKING OF GAZA FROM THOUSANDS
- []
-
-[1
-
-] [2]
+] [2] [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
- (./gaza.emd) [3
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 159.
+ (./gaza.emd [4
 
 
-] (./gaza.enx [4
+]) [5] (./gaza.enx
+[6
 
 
-]) [5] (./gaza.ent [6
+]) [7] (./gaza.ent [8
 
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
-) [7] (./gaza.aux) ) 
+) [9] (./gaza.aux) ) 
 Here is how much of TeX's memory you used:
- 2296 strings out of 492649
- 37962 string characters out of 6122986
- 111409 words of memory out of 5000000
- 6190 multiletter control sequences out of 15000+600000
+ 2299 strings out of 492649
+ 37995 string characters out of 6122986
+ 112423 words of memory out of 5000000
+ 6193 multiletter control sequences out of 15000+600000
  21355 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  24i,11n,43p,189b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -351,10 +347,10 @@ Here is how much of TeX's memory you used:
 1/urw/times/utmb8a.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></home/nlevisrael/texl/texlive-install/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on gaza.pdf (10 pages, 40617 bytes).
+Output written on gaza.pdf (12 pages, 42159 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

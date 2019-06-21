@@ -355,7 +355,7 @@ public:
  void proceed_s1_1_uc(PHR_Function_Vector* pfv, void** pResult, void* raw_value);
  void proceed_s1_2_uc(PHR_Function_Vector* pfv, void** pResult, void* raw_value);
 
- FN_Codes check_init_raw_value(PHR_Command_Runtime_Argument* kcra,
+ FN_Codes check_init_raw_value(PHR_Command_Runtime_Argument* pcra,
    FN_Codes fnc, quint64& mem, QPair<PHR_Scope_System*, QPair<int, quint64>>& qclo_value,
    QString* const& qs_mem, void*& result, int& ptr_depth);
 

@@ -1,6 +1,6 @@
 
 &test-pass-call  do .(x <- u4) ->
- &prn 77;
+ &prn x;
  ;;
 
 
