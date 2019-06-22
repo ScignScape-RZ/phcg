@@ -1,3 +1,40 @@
+\documentclass[10pt,twoside]{book}
+\usepackage{fancyhdr,geometry,keyval,ifthen,makeidx,multicol,mparhack,poemscol}
+\usepackage{times}
+\geometry{textwidth=4in,textheight=6.75in}
+\makeverselinenumbers
+\global\includeaccidentalstrue
+\global\includetypescriptstrue
+\global\redundantemendationsfalse
+\stanzaatbottom{*}
+\nostanzaatbottom{\relax}
+\reversemarginpar
+
+\newcommand{\cq}[1]{{``}#1{''}}
+\newcommand{\poemnewpage}{\newpage}
+
+
+\begin{document}
+\maketextnotes
+\makeemendations
+\makeexplanatorynotes
+\resetpagestyle
+\normalsize
+\raggedbottom
+\leftheader{KADDISH FOR GAZA}
+\rightheader{KADDISH FOR GAZA}
+\setcounter{lineindexrepeat}{4}
+\begin{volumetitlepage}
+\volumetitle{KADDISH FOR GAZA}
+\volumeheader{KADDISH FOR GAZA}
+\volumesubtitle{by Michael Lesher}
+\volumededication{There is a relationship between war and words; there is a relationship between love and war.}
+\end{volumetitlepage}
+\putpoemcontents
+\pagenumbering{arabic}
+\makepoemcontents
+
+%{\poemnewpage}
 \poemtitle{THINKING OF GAZA FROM THOUSANDS OF MILES AWAY}
 \begin{poem}
 
@@ -115,9 +152,8 @@ their silence my breath will trace.
 \end{poem}
 
 
-\poemtitle{BURLESQUE AT THE BARRIER}
+{\poemnewpage}\poemtitle{BURLESQUE AT THE BARRIER}
 \begin{poem}
-
 
 
 
@@ -204,8 +240,11 @@ and I lose my chance;\verseline
 I gather he thought I meant something else.
 \end{stanza}
 
-\poemtitle{DRINKING IT}
-\poemsubtitle{(for Amira Hass)}
+\end{poem}
+
+
+{\poemnewpage}\poemtitle{DRINKING IT}
+\poemdedication{(for Amira Hass)}
 \begin{poem}
 
 
@@ -260,19 +299,14 @@ a mouthing rape that makes a fool of care.
 \end{poem}
 
 
-\poemtitle{SILENT MOVIE}
+{\poemnewpage}\poemtitle{SILENT MOVIE}
+\epigraph{Every where at the approach of the white man {\lbrack}the Indians{\rbrack} fade away.... We hear the rustling of their footsteps, like that of the withered leaves of autumn, and they are gone for ever.
+\\\textnormal{--- Joseph Story, U.S. Supreme Court justice}}
+\epigraph{We never really conquered Lydda.... {\lbrack}T{\rbrack}here was really no city to conquer. The whole place...was empty.
+\\\textnormal{--- Amos Kenan, writing about the scene of a notorious massacre by Zionist forces in 1948}}
+
 \begin{poem}
 
-
-\begin{stanza}
-Every where at the approach of the white man \[the Indians\] fade away.... We hear the rustling of their footsteps, like that of the withered leaves of autumn, and they are gone for ever.\verseline
---- Joseph Story, U.S. Supreme Court justice
-\end{stanza}
-
-\begin{stanza}
-We never really conquered Lydda.... \[T\]here was really no city to conquer. The whole place...was empty.\verseline
---- Amos Kenan, writing about the scene of a notorious massacre by Zionist forces in 1948
-\end{stanza}
 
 \begin{stanza}
 Soundless on aging acetate,\verseline
@@ -302,8 +336,7 @@ him as he pirouetted down.
 
 \end{poem}
 
-
-\poemtitle{JEWISH JOURNAL AND BAD DREAMS}
+{\poemnewpage}\poemtitle{JEWISH JOURNAL AND BAD DREAMS}
 \begin{poem}
 
 
@@ -356,7 +389,6 @@ and there is danger in the gimlet stars.
 
 
 \begin{stanza}
-\verseline
 July 24
 \end{stanza}
 
@@ -372,7 +404,7 @@ What have I given?\verseline
 I remember now, \cq{New Jersey} was the name\verseline
 of the battleship that mauled Beirut for\verseline
 Ronnie the Ripper and his friends...\verseline
-Sixteen-inch guns!\verseline
+	Sixteen-inch guns!\verseline
 the newspapers kvelled, while\verseline
 boys and girls choked on their guts and\verseline
 hearts zipped shut, once and for all,\verseline
@@ -407,7 +439,6 @@ the War is Fun.
 
 
 \begin{stanza}
-\verseline
 July 26
 \end{stanza}
 
@@ -452,7 +483,7 @@ at an unpictured sun.
 \end{poem}
 
 
-\poemtitle{KADDISH}
+{\poemnewpage}\poemtitle{KADDISH}
 \begin{poem}
 
 
@@ -472,7 +503,7 @@ What would happen if I forgot my address, and had to shelter under the sky?
 The Law: ten men have scoured its pages, ten men owe\verseline
 thanks to the Creator. Might as well say it, then ---\verseline
 except that we say, Magnified and hallowed may His great name be!\verseline
-Yisgadal v'yisqadash...but\verseline
+\textit{Yisgadal v'yisqadash}...but\verseline
 who are we? What name do we mean?
 \end{stanza}
 
@@ -520,7 +551,6 @@ with dread I see a fog spread in dusk-light, descending, closing in.
 \end{stanza}
 
 \begin{stanza}
-\verseline
 At various times I try to think about its name.\verseline
 Each instance brings me closer to the ultimate ignorance ---\verseline
 but the words run on, and it's only the same\verseline
@@ -536,7 +566,7 @@ always the same echo drying against the tide.
 \end{poem}
 
 
-\poemtitle{ORANGES}
+{\poemnewpage}\poemtitle{ORANGES}
 \begin{poem}
 
 
@@ -620,8 +650,7 @@ dies, forgotten and unseen.
 
 \end{poem}
 
-
-\poemtitle{LECTURE}
+{\poemnewpage}\poemtitle{LECTURE}
 \begin{poem}
 
 
@@ -686,21 +715,21 @@ Get moving --- don't be late.
 \end{poem}
 
 
-\poemtitle{THREE WORDS FOR THE DEAD}
+{\poemnewpage}\poemtitle{THREE WORDS FOR THE DEAD}
 \begin{poem}
 
 
 \begin{stanza}
 I saw young men scramble from an earthen tunnel\verseline
 bootless, unhelmeted, guns in their hands. They meant\verseline
-to strike Israeli tanks attacking Gaza --- & they were doomed\verseline
+to strike Israeli tanks attacking Gaza --- \& they were doomed\verseline
 from the start, it was the army that had made the film\verseline
-I watched (black & white, with white\verseline
+I watched (black \& white, with white\verseline
 cross-hairs stenciled over the middle of the frame,\verseline
 so we'd know\verseline
 the invaders had those brave ones in their sights) ---\verseline
-& soon, sure enough, explosions\verseline
-buffeted them, & (when they tried\verseline
+\& soon, sure enough, explosions\verseline
+buffeted them, \& (when they tried\verseline
 to retreat) destroyed their tunnel too.
 \end{stanza}
 
@@ -712,17 +741,17 @@ But I had time for three thoughts while the picture lasted.
 First: wonder at the freshness of their hearts --- \verseline
 running (not marching, thank the Lord)\verseline
 so eagerly into battle, not to die really, but to contend\verseline
-proudly for their homes, their mothers & their fate,\verseline
-& to sacrifice (just as proudly) if need be, but not to mourn.\verseline
+proudly for their homes, their mothers \& their fate,\verseline
+\& to sacrifice (just as proudly) if need be, but not to mourn.\verseline
 Too often jaded by the joyless human carnival\verseline
-of lies, cruelty & folly, I caught my breath\verseline
+of lies, cruelty \& folly, I caught my breath\verseline
 at such hope, such carefree license with the gift of lives ---\verseline
 my heart rose at their generosity, but not, alas, for long.
 \end{stanza}
 
 \begin{stanza}
 Next I knew deep sadness. I saw\verseline
-that the young were lost, & saw, what's more,\verseline
+that the young were lost, \& saw, what's more,\verseline
 how such young loves were lost for nothing;\verseline
 no child survived because of them, no prisoner escaped,\verseline
 no one would visit their graves with thanks from the living.\verseline
@@ -739,10 +768,9 @@ with pointless tears to decorate a crime.
 
 
 \begin{stanza}
-\verseline
-Then anger came; it elbowed grief aside &\verseline
+Then anger came; it elbowed grief aside \&\verseline
 stared me down. \cq{How dare you mourn?} it said,\verseline
-\cq{& reproach yourself with mourning?\verseline
+\cq{\& reproach yourself with mourning?\verseline
 Do you scorn the spurned\verseline
 when he rises, just to be kicked again?\verseline
 Do you blame the face that yields to blows\verseline
@@ -754,25 +782,26 @@ either to cowardice or to death?}
 \end{stanza}
 
 \begin{stanza}
-Then I knew that I must rage, & knew\verseline
+Then I knew that I must rage, \& knew\verseline
 the curse of silence, for I saw\verseline
 I could not say what I felt.\verseline
 Why must generosity run unheeded into death?\verseline
-Why a tunnel, not a grateful eye, to draw such fruits & sorrows in?\verseline
+Why a tunnel, not a grateful eye, to draw such fruits \& sorrows in?\verseline
 Why this squalid power over fragile youth?\verseline
 Why such puny sunsets before\verseline
 the immensity of night?
 \end{stanza}
 
 \begin{stanza}
-The picture faded, & without a sound\verseline
-those young men, buried & unspeaking,\verseline
+The picture faded, \& without a sound\verseline
+those young men, buried \& unspeaking,\verseline
 left me without words, bereft of time.
 \end{stanza}
 
 \end{poem}
 
 
+{\poemnewpage}
 \poemtitle{CLOWNS WITH SWASTIKAS}
 \begin{poem}
 
@@ -785,13 +814,15 @@ But massacres germinate in a comic school.
 
 \begin{stanza}
 2\verseline
-With bagels, litterateurs wolf down the crimes\verseline
-the IDF parades in the New York Times.
+With bagels, \textit{litterateurs} wolf down the crimes\verseline
+the IDF parades in the \textit{New York Times}.
 \end{stanza}
+\end{poem}
 
-\begin{stanza}
-DEAD GOD, DYING GOD
-\end{stanza}
+
+{\poemnewpage}
+\poemtitle{DEAD GOD, DYING GOD}
+\begin{poem}
 
 \begin{stanza}
 This one's on a pedestal,\verseline
@@ -839,6 +870,7 @@ doomed every tomorrow with tomorrow's bomb.
 \end{poem}
 
 
+{\poemnewpage}
 \poemtitle{AN UNTIMELY MAN}
 \begin{poem}
 
@@ -882,15 +914,11 @@ of all I choose.
 \end{poem}
 
 
-\poemtitle{CYRANO DE MARIANNE}
+{\poemnewpage}\poemtitle{CYRANO DE MARIANNE}
+\epigraph{Welcome to Israel!  It seems you got lost. Perhaps you meant to sail to a place not far from here --- Syria. There the Assad regime slaughters his people every day with the support of the murderous Iranian regime.\\\textnormal{--- Israeli Prime Minister Benjamin Netanyahu, in a letter delivered to humanitarian activists when they were kidnapped by IDF sailors from their fishing boat, the Marianne, while attempting to break Israel's siege of Gaza and deliver medicine to the inhabitants (June 2015)}}
+
 \begin{poem}
 
-
-\begin{stanza}
-Welcome to Israel!\verseline
-It seems you got lost. Perhaps you meant to sail to a place not far from here --- Syria. There the Assad regime slaughters his people every day with the support of the murderous Iranian regime.\verseline
---- Israeli Prime Minister Benjamin Netanyahu, in a letter delivered to humanitarian activists when they were kidnapped by IDF sailors from their fishing boat, the Marianne, while attempting to break Israel's siege of Gaza and deliver medicine to the inhabitants (June 2015)
-\end{stanza}
 
 \begin{stanza}
 Ah no, sir, you are too simple! Why, you might have said --- oh,\verseline
@@ -1008,7 +1036,8 @@ One might have known.
 \end{poem}
 
 
-\poemtitle{DRONE}
+
+{\poemnewpage}\poemtitle{DRONE}
 \begin{poem}
 
 
@@ -1052,10 +1081,11 @@ And yet I can't quite believe in soul,\verseline
 knowing I'm spread across some private's bombsight.
 \end{stanza}
 
-\begin{stanza}
-THE STORM SCENE\verseline
-(after James Merrill)
-\end{stanza}
+\end{poem}
+
+{\poemnewpage}\poemtitle{THE STORM SCENE}
+\poemdedication{(after James Merrill)}
+\begin{poem}
 
 \begin{stanza}
 Last night I dreamed about a place called Sabbath.\verseline
@@ -1079,7 +1109,7 @@ despair those vowels drenched every shard of autumn.
 \end{poem}
 
 
-\poemtitle{CRIME SCENE}
+{\poemnewpage}\poemtitle{CRIME SCENE}
 \begin{poem}
 
 
@@ -1152,61 +1182,63 @@ one wheel still spinning free.
 \end{poem}
 
 
-\poemtitle{THE SURVIVOR}
+{\poemnewpage}\poemtitle{THE SURVIVOR}
 \begin{poem}
 
 
 \begin{stanza}
-After the dancing stopped, & she\verseline
+After the dancing stopped, \& she\verseline
 (her cool daydreams on her cheeks)\verseline
 could slowly drift around\verseline
 the busy eddying of air\verseline
 (that might have turned her bridal gown\verseline
 to something less\verseline
 than time had wanted it to be),\verseline
-& setting sun from windows left motes & flecks\verseline
+\& setting sun from windows left motes \& flecks\verseline
 across the curtain of her hair ---
 \end{stanza}
 
 \begin{stanza}
-& late came forward then, alone, to show\verseline
+\& late came forward then, alone, to show\verseline
 my eager eyes (that hardly seemed to know\verseline
-her) what she was, & hid ---\verseline
+her) what she was, \& hid ---\verseline
 what was the veil that slid before my eyes	\verseline
 to baffle surprise\verseline
 when the spun white gauze that made the gown\verseline
 gave pause\verseline
 as night looked down\verseline
 when to me she raised her head,\verseline
-& I, the shadow of a doubt undid?
+\& I, the shadow of a doubt undid?
 \end{stanza}
 
 \begin{stanza}
 Did her hair lying flat,\verseline
-& that enigma of lips underneath\verseline
+\& that enigma of lips underneath\verseline
 (that made me strain for breath)\verseline
 know how the last act lay,\verseline
 when death would guarantee\verseline
 that no more deliberate play\verseline
 of discovered things could resurrect a fact\verseline
 to rise with clarity\verseline
-from the tidal shadow of a woman's face?\verseline
-	\verseline
+from the tidal shadow of a woman's face?
+\end{stanza}
+
+\begin{stanza}
 A moment poised to fall ---\verseline
-& did,\verseline
+\& did,\verseline
 where in the graveyard slid\verseline
-& angled down the mouth that swallowed,\verseline
+\& angled down the mouth that swallowed,\verseline
 with its alien dream,\verseline
 all, till down it went\verseline
-replete & silent\verseline
+replete \& silent\verseline
 closed up against the word\verseline
 I forgot to ask in time\verseline
-& never heard.
+\& never heard.
 \end{stanza}
 
 
 \begin{stanza}
-Impregnable now. & nothing tames\verseline
+Impregnable now. \& nothing tames\verseline
 the brute of unperception here\verseline
 or drought\verseline
 (with always the factual meaningless air\verseline
@@ -1219,14 +1251,14 @@ shadows or remainder.
 \begin{stanza}
 Was I so ignorant?\verseline
 Will it help now if I lament ---\verseline
-& what else anyway\verseline
-& what exclaim for?
+\& what else anyway\verseline
+\& what exclaim for?
 \end{stanza}
 
 \end{poem}
 
 
-\poemtitle{THE WALLS}
+{\poemnewpage}\poemtitle{THE WALLS}
 \begin{poem}
 
 
@@ -1273,7 +1305,7 @@ who've seen so much future vanishing?
 \end{poem}
 
 
-\poemtitle{MY DEVIL CURSES ME}
+{\poemnewpage}\poemtitle{MY DEVIL CURSES ME}
 \begin{poem}
 
 
@@ -1367,7 +1399,7 @@ blind Jew?
 \end{poem}
 
 
-\poemtitle{DELIRIUM}
+{\poemnewpage}\poemtitle{DELIRIUM}
 \begin{poem}
 
 
@@ -1453,7 +1485,7 @@ as ignorant as they are poor.
 \end{poem}
 
 
-\poemtitle{FAREWELL}
+{\poemnewpage}\poemtitle{FAREWELL}
 \begin{poem}
 
 
@@ -1500,6 +1532,7 @@ that might clutch, vaguely, the darkening scene.
 \end{poem}
 
 
+{\poemnewpage}
 \poemtitle{FANATICS}
 \begin{poem}
 
@@ -1556,15 +1589,16 @@ Surviving members of the Fogel family, including a 12-year-old daughter, have pl
 In 2014, Israel's activities in the Gaza Strip, West Bank and East Jerusalem resulted in the deaths of 2,314 Palestinians and 17,125 injuries, compared with 39 deaths and 3,964 injuries in 2013, according to the annual report by the U.N. Office for the Coordination of Humanitarian Affairs.
 \end{stanza}
 
-\begin{stanza}
-PINES IN THE SUICIDES' WOOD\verseline
-(see Inferno, Canto XIII)
-\end{stanza}
+\end{poem}
 
-\begin{stanza}
-If there is no future, there is no hope.\verseline
---- Adel Hamdona, speaking of his son's suicide attack on the Jewish settlement of Netzarim
-\end{stanza}
+
+{\poemnewpage}
+\poemtitle{PINES IN THE SUICIDES' WOOD}
+\dedication{(see Inferno, Canto XIII)}
+\epigraph{If there is no future, there is no hope.
+\\\textnormal{--- Adel Hamdona, speaking of his son's suicide attack on the Jewish settlement of Netzarim}}
+
+\begin{poem}
 
 \begin{stanza}
 Tread lightly, stoic, these needles bleed.\verseline
@@ -1575,15 +1609,16 @@ If the mute corpses shock, it's you that need
 \begin{stanza}
 more than they can bear: not even groans\verseline
 from them but move in fresh wounds, flow of pain ---\verseline
-their grief has no words, their night no moon\verseline
-	\verseline
+their grief has no words, their night no moon
+\end{stanza}
+
+\begin{stanza}
 and souls that died with them won't rise again,\verseline
 for death's all those who die for death can know.\verseline
 Revenge is their root, blood their only rain.
 \end{stanza}
 
 \begin{stanza}
-\verseline
 Mortal, you dare not follow where they go,\verseline
 nor they explain themselves except in pain\verseline
 written in a language known to the few
@@ -1602,7 +1637,6 @@ in shame, as you in shame invade their wounds.
 \end{stanza}
 
 \begin{stanza}
-\verseline
 Who are you to tease out the final flame\verseline
 of souls that burned, to thumb shut eyes\verseline
 whose tears you've never touched? Your home
@@ -1623,7 +1657,7 @@ the grieving that kills, the hopes that hate.
 \end{poem}
 
 
-\poemtitle{DEATH IN PALESTINE}
+{\poemnewpage}\poemtitle{DEATH IN PALESTINE}
 \begin{poem}
 
 
@@ -1682,19 +1716,14 @@ Over us, the pitch and curse of day.
 \end{poem}
 
 
-\poemtitle{WHY IT MATTERED}
+{\poemnewpage}\poemtitle{WHY IT MATTERED}
+\epigraph{On Tuesday, August 19 [2014], the Israel Defense Forces...announced that Cpl. David Menachem Gordon...was found dead in central Israel, his weapon at his side.... We understood from the code phrase, \cq{weapon at his side,} that Gordon had committed suicide.\\\textnormal{--- Rabbi Yehoshua Looks}}
+\epigraph{Unable to disclose his mortifying secret, the boy can only fantasize revenge on those vile men whose twisted lustful current raged through their veins.... He dreams of an escape from his Hell... As much as he tried, he could not ignore the scattered scars that sexual abuse left on his Soul.%
+\\\textnormal{--- David Menachem Gordon, writing of himself as an Orthodox Jewish child}}
+
+
 \begin{poem}
 
-
-\begin{stanza}
-On Tuesday, August 19 [2014], the Israel Defense Forces...announced that Cpl. David Menachem Gordon...was found dead in central Israel, his weapon at his side.... We understood from the code phrase, \cq{weapon at his side,} that Gordon had committed suicide.\verseline
---- Rabbi Yehoshua Looks
-\end{stanza}
-
-\begin{stanza}
-Unable to disclose his mortifying secret, the boy can only fantasize revenge on those vile men whose twisted lustful current raged through their veins.... He dreams of an escape from his Hell... As much as he tried, he could not ignore the scattered scars that sexual abuse left on his Soul.\verseline
---- David Menachem Gordon, writing of himself as an Orthodox Jewish child
-\end{stanza}
 
 \begin{stanza}
 If I try to understand a dead man I never knew\verseline
@@ -1732,7 +1761,6 @@ Could there have been guilt, as his fire raged out in agony?
 \end{stanza}
 
 \begin{stanza}
-\verseline
 Or did his binoculars reveal a frightened boy\verseline
 who offered only terror against the ugly threat\verseline
 	(a barrel shaft upright, burning to invade\verseline
@@ -1770,20 +1798,18 @@ closed, forever, over his trailing grief.
 \end{poem}
 
 
-\poemtitle{MY KADDISH}
+{\poemnewpage}\poemtitle{MY KADDISH}
+
+\epigraph{Magnified and sanctified may His great name be
+in the world He created according to His will; and may His kingship reign,
+in our lives and in our days, and within the life of the whole house of Israel,
+speedily and soon, amen!
+May His great name be blessed always, forever and ever!...
+He who makes peace in his high places --- may He bestow peace
+upon us and upon all Israel, and let us say, Amen.
+\\\textnormal{--- From the Mourner's Kaddish}}
+
 \begin{poem}
-
-
-\begin{stanza}
-	Magnified and sanctified may His great name be\verseline
-	in the world He created according to His will; and may His kingship reign,\verseline
-	in our lives and in our days, and within the life of the whole house of Israel,\verseline
-	speedily and soon, amen!\verseline
-	May His great name be blessed always, forever and ever!...\verseline
-	He who makes peace in his high places --- may He bestow peace\verseline
-	upon us and upon all Israel, and let us say, Amen.\verseline
-	--- From the Mourner's Kaddish
-\end{stanza}
 
 \begin{stanza}
 Magnify his name I dare not.\verseline
@@ -1890,7 +1916,10 @@ for the sake of love alone ---
 and let me say, Amen.
 \end{stanza}
 
-\poemtitle{ELEGY FOR A CHILD}
+\end{poem}
+
+
+{\poemnewpage}\poemtitle{ELEGY FOR A CHILD}
 \poemdedication{(in memory of Mo'ayyad al-A'raj, aged three, killed at Khan Yunis on August 24, 2014)}
 
 \begin{poem}
@@ -1931,5 +1960,18 @@ Dishonored in silence, do I wound your silence\verseline
 now with words unasked, unheard? Is it pride\verseline
 that pricks my hurt, makes helplessness my penitence?\verseline
 I only know each word falls farther from your side ---\verseline
-thieving my grief, a dull heart's unsacred rite.\verseline
+thieving my grief, a dull heart's unsacred rite.
+\end{stanza}
+
+\end{poem}
+
+
+
+\putemendations
+
+\putexplanatory
+
+\puttextnotes
+
+\end{document}
 
