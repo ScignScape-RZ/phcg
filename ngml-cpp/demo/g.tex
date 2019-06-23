@@ -1,7 +1,7 @@
-\documentclass[10pt,twoside]{book}
+\documentclass[oneside,11pt]{book}
 \usepackage{fancyhdr,geometry,keyval,ifthen,makeidx,multicol,mparhack,poemscol}
 \usepackage{times}
-\geometry{textwidth=4in,textheight=6.75in}
+\geometry{textwidth=6in,textheight=7.75in}
 \makeverselinenumbers
 \global\includeaccidentalstrue
 \global\includetypescriptstrue
@@ -10,8 +10,15 @@
 \nostanzaatbottom{\relax}
 \reversemarginpar
 
+\usepackage{needspace}
+
 \newcommand{\cq}[1]{{``}#1{''}}
+\newcommand{\q}[1]{{``}#1{''}}
+
+
 \newcommand{\poemnewpage}{\newpage}
+
+\newenvironment{prestanza}{\needspace{3\baselineskip}\hspace{-1em}}{}
 
 
 \begin{document}
@@ -21,21 +28,55 @@
 \resetpagestyle
 \normalsize
 \raggedbottom
+
 \leftheader{KADDISH FOR GAZA}
 \rightheader{KADDISH FOR GAZA}
+
 \setcounter{lineindexrepeat}{4}
+
 \begin{volumetitlepage}
 \volumetitle{KADDISH FOR GAZA}
 \volumeheader{KADDISH FOR GAZA}
 \volumesubtitle{by Michael Lesher}
 \volumededication{There is a relationship between war and words; there is a relationship between love and war.}
 \end{volumetitlepage}
+
+
 \putpoemcontents
 \pagenumbering{arabic}
 \makepoemcontents
 
-%{\poemnewpage}
-\poemtitle{THINKING OF GAZA FROM THOUSANDS OF MILES AWAY}
+
+%\prosesectiontitle{Introduction}
+\prosesectiontitlenotitle{Introduction}
+{\begin{center}{INTRODUCTION\\
+A Few Words about Writing and Resistance}\end{center}}
+
+\begin{pmsection}
+
+{\pmpara}
+I have written the poems that follow with tormented thoughts of Gaza. And if anyone asks why I, an American Jew, should have written so much about a place I have never been, my short answer is that I write about Gaza because I cannot write any other way. For me, to think of Gaza is to touch the drama of human resistance: not only resistance to oppression but resistance to the most insidious powers of intellectual and spiritual destruction, the lying and the sophistry that modern communication technology has honed to something almost ineffably sinister. In this respect all human beings are equally vulnerable. The dehumanizing of Gaza by way of propaganda has its counterpart in the deafening blandishments of modern media, replete with militarism and consumerism: both aim to corrupt the moral core of their hearers, and neither gives any quarter.
+
+{\pmpara}
+If language is the most distinctively human capability, it's easy to understand why the contamination of language must accompany the most inhuman actions of governments and their corporate masters. And the reverse holds true as well. With humanity under such fundamental threat, poetry, the most intense form of language, is itself an act of resistance --- in fact, it is a means of human survival, the ultimate index of freedom.
+
+{\pmpara}
+How well these poems live up to such standards is for others to decide. But I don't think anyone can question the urgency of the threats we face as human beings in a world of propaganda. And it seems obvious to me that there is, and must be, an indelible bond between each individual's battle to retain his or her humanity and the battle to secure a place like Gaza from the assaults that target every aspect of its people, from its children’s lives to the visibility of their faces on American television. If Israeli PR experts can get away with speaking as if nothing but \q{terrorists} existed in Gaza; if the Hillary Clintons of the world can get away with blaming Gaza's government for its death toll at the very moment Israeli shells are obliterating apartment buildings, mosques, schools, hospitals and U.N. shelters; if a Nobel Peace laureate like Elie Wiesel can get away with castigating Gazans for \q{child sacrifice} while an illegal occupying power kills hundreds of their little ones; then something irretrievable will have been lost.
+
+{\pmpara}
+What can we do to prevent it? That depends a good deal on who we are, and where we either have or can cultivate the kind of power that can bring justice. But as the great singer/songwriter and activist Phil Ochs said, during the Vietnam carnage, \q{in such an ugly time the true protest is beauty.} And true beauty, one might add, is protest.
+
+Michael Lesher
+\end{pmsection}
+
+
+	
+{\poemnewpage}
+\poemtitleonlycontents{Thinking of Gaza from Thousands of Miles Away}
+\poemtitlenocontents{THINKING OF GAZA FROM THOUSANDS OF MILES AWAY}
+
+%\poemonlycontents{Thinking of Gaza FROM THOUSANDS OF MILES AWAY}
+
 \begin{poem}
 
 
@@ -152,7 +193,9 @@ their silence my breath will trace.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{BURLESQUE AT THE BARRIER}
+{\poemnewpage}
+\poemtitleonlycontents{Burlesque at the Barrier}
+\poemtitlenocontents{BURLESQUE AT THE BARRIER}
 \begin{poem}
 
 
@@ -243,7 +286,9 @@ I gather he thought I meant something else.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{DRINKING IT}
+{\poemnewpage}
+\poemtitleonlycontents{Drinking It}
+\poemtitlenocontents{DRINKING IT}
 \poemdedication{(for Amira Hass)}
 \begin{poem}
 
@@ -299,7 +344,9 @@ a mouthing rape that makes a fool of care.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{SILENT MOVIE}
+{\poemnewpage}
+\poemtitleonlycontents{Silent Movie}
+\poemtitlenocontents{SILENT MOVIE}
 \epigraph{Every where at the approach of the white man {\lbrack}the Indians{\rbrack} fade away.... We hear the rustling of their footsteps, like that of the withered leaves of autumn, and they are gone for ever.
 \\\textnormal{--- Joseph Story, U.S. Supreme Court justice}}
 \epigraph{We never really conquered Lydda.... {\lbrack}T{\rbrack}here was really no city to conquer. The whole place...was empty.
@@ -336,13 +383,15 @@ him as he pirouetted down.
 
 \end{poem}
 
-{\poemnewpage}\poemtitle{JEWISH JOURNAL AND BAD DREAMS}
+{\poemnewpage}
+\poemtitleonlycontents{Jewish Journal and Bad Dreams}
+\poemtitlenocontents{JEWISH JOURNAL AND BAD DREAMS}
 \begin{poem}
 
 
-\begin{stanza}
+\begin{prestanza}
 July 22, 2014
-\end{stanza}
+\end{prestanza}
 
 \begin{stanza}
 Summer has its clammy skin against my window.\verseline
@@ -367,9 +416,9 @@ about an alarm that shrieks,\verseline
 	Begin, begin, begin!
 \end{stanza}
 
-\begin{stanza}
+\begin{prestanza}
 July 23
-\end{stanza}
+\end{prestanza}
 
 \begin{stanza}
 I'm afraid to leave my room.\verseline
@@ -388,9 +437,9 @@ and there is danger in the gimlet stars.
 \end{stanza}
 
 
-\begin{stanza}
+\begin{prestanza}
 July 24
-\end{stanza}
+\end{prestanza}
 
 \begin{stanza}
 I'm lying, of course. I'm not afraid,\verseline
@@ -416,9 +465,9 @@ I'm another Israeli, wild child,\verseline
 I will destroy where I cannot climb back in.
 \end{stanza}
 
-\begin{stanza}
+\begin{prestanza}
 July 25
-\end{stanza}
+\end{prestanza}
 
 \begin{stanza}
 Heat is hate. The sun's the angry\verseline
@@ -438,9 +487,9 @@ the War is Fun.
 \end{stanza}
 
 
-\begin{stanza}
+\begin{prestanza}
 July 26
-\end{stanza}
+\end{prestanza}
 
 \begin{stanza}
 Sabbath. Forbidden to write until after dark,\verseline
@@ -461,9 +510,9 @@ in a swim of pain.)\verseline
 Whose?
 \end{stanza}
 
-\begin{stanza}
+\begin{prestanza}
 July 27
-\end{stanza}
+\end{prestanza}
 
 \begin{stanza}
 In dawn is the sputum of defeat.\verseline
@@ -483,7 +532,9 @@ at an unpictured sun.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{KADDISH}
+{\poemnewpage}
+\poemtitleonlycontents{Kaddish}
+\poemtitlenocontents{KADDISH}
 \begin{poem}
 
 
@@ -566,7 +617,9 @@ always the same echo drying against the tide.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{ORANGES}
+{\poemnewpage}
+\poemtitleonlycontents{Oranges}
+\poemtitlenocontents{ORANGES}
 \begin{poem}
 
 
@@ -650,7 +703,9 @@ dies, forgotten and unseen.
 
 \end{poem}
 
-{\poemnewpage}\poemtitle{LECTURE}
+{\poemnewpage}
+\poemtitleonlycontents{Lecture}
+\poemtitlenocontents{LECTURE}
 \begin{poem}
 
 
@@ -699,7 +754,7 @@ the Arabs will be fooled.
 \end{stanza}
 
 \begin{stanza}
-Couldn't ask for more than that.\verseline
+Couldn't ask for more than \textit{that}.\verseline
 You're anybody now, you're blessed, you're everywhere.\verseline
 Today a steel helmet, tomorrow you'll scare\verseline
 them all, just wait.
@@ -715,7 +770,9 @@ Get moving --- don't be late.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{THREE WORDS FOR THE DEAD}
+{\poemnewpage}
+\poemtitleonlycontents{Three Words for the Dead}
+\poemtitlenocontents{THREE WORDS FOR THE DEAD}
 \begin{poem}
 
 
@@ -802,18 +859,25 @@ left me without words, bereft of time.
 
 
 {\poemnewpage}
-\poemtitle{CLOWNS WITH SWASTIKAS}
+\poemtitleonlycontents{Clowns with Swastikas}
+\poemtitlenocontents{CLOWNS WITH SWASTIKAS}
 \begin{poem}
 
+\begin{prestanza}
+1
+\end{prestanza}
 
 \begin{stanza}
-1\verseline
 Ink that \cq{bomb,} Netanyahu, play the public fool!\verseline
 But massacres germinate in a comic school.
 \end{stanza}
 
+\begin{prestanza}
+2
+\end{prestanza}
+
+
 \begin{stanza}
-2\verseline
 With bagels, \textit{litterateurs} wolf down the crimes\verseline
 the IDF parades in the \textit{New York Times}.
 \end{stanza}
@@ -821,7 +885,8 @@ the IDF parades in the \textit{New York Times}.
 
 
 {\poemnewpage}
-\poemtitle{DEAD GOD, DYING GOD}
+\poemtitleonlycontents{Dead God, Dying God}
+\poemtitlenocontents{DEAD GOD, DYING GOD}
 \begin{poem}
 
 \begin{stanza}
@@ -871,7 +936,8 @@ doomed every tomorrow with tomorrow's bomb.
 
 
 {\poemnewpage}
-\poemtitle{AN UNTIMELY MAN}
+\poemtitleonlycontents{An Untimely Man}
+\poemtitlenocontents{AN UNTIMELY MAN}
 \begin{poem}
 
 
@@ -914,7 +980,9 @@ of all I choose.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{CYRANO DE MARIANNE}
+{\poemnewpage}
+\poemtitleonlycontents{Cyrano de Marianne}
+\poemtitlenocontents{CYRANO DE MARIANNE}
 \epigraph{Welcome to Israel!  It seems you got lost. Perhaps you meant to sail to a place not far from here --- Syria. There the Assad regime slaughters his people every day with the support of the murderous Iranian regime.\\\textnormal{--- Israeli Prime Minister Benjamin Netanyahu, in a letter delivered to humanitarian activists when they were kidnapped by IDF sailors from their fishing boat, the Marianne, while attempting to break Israel's siege of Gaza and deliver medicine to the inhabitants (June 2015)}}
 
 \begin{poem}
@@ -964,17 +1032,16 @@ Forthright: \cq{Since you came in peace, it's clear you came to the wrong addres
 \end{stanza}
 
 \begin{stanza}
-Comic: \cq{Human rights? Did you say human rights? I mean,\verseline
+Comic: \cq{Human rights? Did you say \textit{human rights}? I mean,\verseline
 what kind of school did you graduate from? Do you\verseline
-know where you are? Have you ever, like, visited\verseline
+know where you \textit{are}? Have you ever, like, visited\verseline
 one of our prisons for Palestinians?\verseline
-Oh my God, human rights??}
+Oh my God, \textit{human rights}??}
 \end{stanza}
 
 
-
 \begin{stanza}
-Pedantic: \cq{Does not the legal maxim res ipsa loquitur\verseline
+Pedantic: \cq{Does not the legal maxim \textit{res ipsa loquitur}\verseline
 impute demonstration of intent to an act's own form?\verseline
 Then, given your demonstrable impotence against Israel's might,\verseline
 surely you meant to accomplish nothing here at all!}
@@ -1019,7 +1086,7 @@ you understand, don't you?}
 \begin{stanza}
 Or even --- since you mention \cq{the murderous Iranian regime} ---\verseline
 \cq{You know Iran's navy never killed unarmed civilians\verseline
-the way ours does; why couldn't you sail there\verseline
+the way ours does; why couldn't you sail \textit{there}\verseline
 and teach them some sort of lesson?}
 \end{stanza}
 
@@ -1037,7 +1104,9 @@ One might have known.
 
 
 
-{\poemnewpage}\poemtitle{DRONE}
+{\poemnewpage}
+\poemtitleonlycontents{Drone}
+\poemtitlenocontents{DRONE}
 \begin{poem}
 
 
@@ -1083,7 +1152,9 @@ knowing I'm spread across some private's bombsight.
 
 \end{poem}
 
-{\poemnewpage}\poemtitle{THE STORM SCENE}
+{\poemnewpage}
+\poemtitleonlycontents{The Storm Scene}
+\poemtitlenocontents{THE STORM SCENE}
 \poemdedication{(after James Merrill)}
 \begin{poem}
 
@@ -1109,7 +1180,9 @@ despair those vowels drenched every shard of autumn.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{CRIME SCENE}
+{\poemnewpage}
+\poemtitleonlycontents{Crime Scene}
+\poemtitlenocontents{CRIME SCENE}
 \begin{poem}
 
 
@@ -1182,7 +1255,9 @@ one wheel still spinning free.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{THE SURVIVOR}
+{\poemnewpage}
+\poemtitleonlycontents{The Survivor}
+\poemtitlenocontents{THE SURVIVOR}
 \begin{poem}
 
 
@@ -1258,7 +1333,9 @@ Will it help now if I lament ---\verseline
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{THE WALLS}
+{\poemnewpage}
+\poemtitleonlycontents{The Walls}
+\poemtitlenocontents{THE WALLS}
 \begin{poem}
 
 
@@ -1296,7 +1373,7 @@ penned in dark rain,
 
 \begin{stanza}
 waiting at a checkpoint\verseline
-out of Gaza. They're not wishing\verseline
+out of Gaza. \textit{They're} not wishing\verseline
 for love or even life any more; but where am I\verseline
 going, with my curse of freedom, I\verseline
 who've seen so much future vanishing?
@@ -1305,7 +1382,9 @@ who've seen so much future vanishing?
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{MY DEVIL CURSES ME}
+{\poemnewpage}
+\poemtitleonlycontents{My Devil Curses Me}
+\poemtitlenocontents{MY DEVIL CURSES ME}
 \begin{poem}
 
 
@@ -1359,7 +1438,7 @@ But what they see is my distorted face,\verseline
 aborting the glow like a horrid moon\verseline
 usurping every civilized room ---\verseline
 the audience is gone\verseline
-from your Laocoön.
+from your Laoco\"on.
 \end{stanza}
 
 \begin{stanza}
@@ -1399,7 +1478,9 @@ blind Jew?
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{DELIRIUM}
+{\poemnewpage}
+\poemtitleonlycontents{Delirium}
+\poemtitlenocontents{DELIRIUM}
 \begin{poem}
 
 
@@ -1485,7 +1566,9 @@ as ignorant as they are poor.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{FAREWELL}
+{\poemnewpage}
+\poemtitleonlycontents{Farewell}
+\poemtitlenocontents{FAREWELL}
 \begin{poem}
 
 
@@ -1533,12 +1616,13 @@ that might clutch, vaguely, the darkening scene.
 
 
 {\poemnewpage}
-\poemtitle{FANATICS}
+\poemtitleonlycontents{Fanatics}
+\poemtitlenocontents{FANATICS}
 \begin{poem}
 
 
 \begin{stanza}
-Occupied Palestine, March 2011. Ehud \cq{Udi} Fogel was killed in his home in the West Bank settlement of Itamar, along with his wife and three young children, on the night of March 11, 2011.
+\textit{Occupied Palestine, March 2011}. Ehud \cq{Udi} Fogel was killed in his home in the West Bank settlement of Itamar, along with his wife and three young children, on the night of March 11, 2011.
 \end{stanza}
 
 \begin{stanza}
@@ -1570,7 +1654,7 @@ Jewish media expressed deep sympathy for Udi Fogel's father, who lamented that P
 \end{stanza}
 
 \begin{stanza}
-Jewish Week editor Gary Rosenblatt suggested that international media had refused to treat the Fogels' murder as their lead story because \cq{we expect Palestinians to act in inhuman ways in expressing their hatred of Jews.} Rosenblatt also blamed Israeli newspapers for treating the Fogels as \cq{second-class Jews} because they were \cq{religious.}
+\textit{Jewish Week} editor Gary Rosenblatt suggested that international media had refused to treat the Fogels' murder as their lead story because \cq{we expect Palestinians to act in inhuman ways in expressing their hatred of Jews.} Rosenblatt also blamed Israeli newspapers for treating the Fogels as \cq{second-class Jews} because they were \cq{religious.}
 \end{stanza}
 
 \begin{stanza}
@@ -1593,7 +1677,8 @@ In 2014, Israel's activities in the Gaza Strip, West Bank and East Jerusalem res
 
 
 {\poemnewpage}
-\poemtitle{PINES IN THE SUICIDES' WOOD}
+\poemtitleonlycontents{Pines in the Suicides' Wood}
+\poemtitlenocontents{PINES IN THE SUICIDES' WOOD}
 \dedication{(see Inferno, Canto XIII)}
 \epigraph{If there is no future, there is no hope.
 \\\textnormal{--- Adel Hamdona, speaking of his son's suicide attack on the Jewish settlement of Netzarim}}
@@ -1657,7 +1742,9 @@ the grieving that kills, the hopes that hate.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{DEATH IN PALESTINE}
+{\poemnewpage}
+\poemtitleonlycontents{Death in Palestine}
+\poemtitlenocontents{DEATH IN PALESTINE}
 \begin{poem}
 
 
@@ -1716,7 +1803,9 @@ Over us, the pitch and curse of day.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{WHY IT MATTERED}
+{\poemnewpage}
+\poemtitleonlycontents{Why It Mattered}
+\poemtitlenocontents{WHY IT MATTERED}
 \epigraph{On Tuesday, August 19 [2014], the Israel Defense Forces...announced that Cpl. David Menachem Gordon...was found dead in central Israel, his weapon at his side.... We understood from the code phrase, \cq{weapon at his side,} that Gordon had committed suicide.\\\textnormal{--- Rabbi Yehoshua Looks}}
 \epigraph{Unable to disclose his mortifying secret, the boy can only fantasize revenge on those vile men whose twisted lustful current raged through their veins.... He dreams of an escape from his Hell... As much as he tried, he could not ignore the scattered scars that sexual abuse left on his Soul.%
 \\\textnormal{--- David Menachem Gordon, writing of himself as an Orthodox Jewish child}}
@@ -1798,7 +1887,9 @@ closed, forever, over his trailing grief.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{MY KADDISH}
+{\poemnewpage}
+\poemtitleonlycontents{My Kaddish}
+\poemtitlenocontents{MY KADDISH}
 
 \epigraph{Magnified and sanctified may His great name be
 in the world He created according to His will; and may His kingship reign,
@@ -1919,7 +2010,9 @@ and let me say, Amen.
 \end{poem}
 
 
-{\poemnewpage}\poemtitle{ELEGY FOR A CHILD}
+{\poemnewpage}
+\poemtitleonlycontents{Elegy for a Child}
+\poemtitlenocontents{ELEGY FOR A CHILD}
 \poemdedication{(in memory of Mo'ayyad al-A'raj, aged three, killed at Khan Yunis on August 24, 2014)}
 
 \begin{poem}
