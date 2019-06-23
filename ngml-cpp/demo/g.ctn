@@ -53,7 +53,7 @@
 {\contentspoemtitlefont
 Introduction}
 \contentsleaders
-\pageref{poem3}
+\mypageref{poem3}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -68,9 +68,11 @@ from
 Thousands
 of
 Miles
-Away}
+Away(\hyperlink
+{item:b}{item
+b})}
 \contentsleaders
-\pageref{poem3}
+\mypageref{poem4}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -83,7 +85,7 @@ at
 the
 Barrier}
 \contentsleaders
-\pageref{poem4}
+\mypageref{poem5}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -94,7 +96,7 @@ Barrier}
 Drinking
 It}
 \contentsleaders
-\pageref{poem5}
+\mypageref{poem6}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -105,7 +107,7 @@ It}
 Silent
 Movie}
 \contentsleaders
-\pageref{poem6}
+\mypageref{poem7}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -119,7 +121,7 @@ and
 Bad
 Dreams}
 \contentsleaders
-\pageref{poem7}
+\mypageref{poem8}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -129,7 +131,7 @@ Dreams}
 {\contentspoemtitlefont
 Kaddish}
 \contentsleaders
-\pageref{poem8}
+\mypageref{poem9}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -139,7 +141,7 @@ Kaddish}
 {\contentspoemtitlefont
 Oranges}
 \contentsleaders
-\pageref{poem9}
+\mypageref{poem10}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -149,7 +151,7 @@ Oranges}
 {\contentspoemtitlefont
 Lecture}
 \contentsleaders
-\pageref{poem10}
+\mypageref{poem11}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -163,7 +165,7 @@ for
 the
 Dead}
 \contentsleaders
-\pageref{poem11}
+\mypageref{poem12}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -175,7 +177,7 @@ Clowns
 with
 Swastikas}
 \contentsleaders
-\pageref{poem12}
+\mypageref{poem13}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -188,7 +190,7 @@ God,
 Dying
 God}
 \contentsleaders
-\pageref{poem13}
+\mypageref{poem14}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -200,7 +202,7 @@ An
 Untimely
 Man}
 \contentsleaders
-\pageref{poem14}
+\mypageref{poem15}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -212,7 +214,7 @@ Cyrano
 de
 Marianne}
 \contentsleaders
-\pageref{poem15}
+\mypageref{poem16}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -222,7 +224,7 @@ Marianne}
 {\contentspoemtitlefont
 Drone}
 \contentsleaders
-\pageref{poem16}
+\mypageref{poem17}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -234,7 +236,7 @@ The
 Storm
 Scene}
 \contentsleaders
-\pageref{poem17}
+\mypageref{poem18}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -245,7 +247,7 @@ Scene}
 Crime
 Scene}
 \contentsleaders
-\pageref{poem18}
+\mypageref{poem19}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -256,7 +258,7 @@ Scene}
 The
 Survivor}
 \contentsleaders
-\pageref{poem19}
+\mypageref{poem20}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -267,7 +269,7 @@ Survivor}
 The
 Walls}
 \contentsleaders
-\pageref{poem20}
+\mypageref{poem21}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -280,7 +282,7 @@ Devil
 Curses
 Me}
 \contentsleaders
-\pageref{poem21}
+\mypageref{poem22}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -290,7 +292,7 @@ Me}
 {\contentspoemtitlefont
 Delirium}
 \contentsleaders
-\pageref{poem22}
+\mypageref{poem23}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -300,7 +302,7 @@ Delirium}
 {\contentspoemtitlefont
 Farewell}
 \contentsleaders
-\pageref{poem23}
+\mypageref{poem24}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -310,7 +312,7 @@ Farewell}
 {\contentspoemtitlefont
 Fanatics}
 \contentsleaders
-\pageref{poem24}
+\mypageref{poem25}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -324,7 +326,7 @@ the
 Suicides'
 Wood}
 \contentsleaders
-\pageref{poem25}
+\mypageref{poem26}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -336,7 +338,7 @@ Death
 in
 Palestine}
 \contentsleaders
-\pageref{poem26}
+\mypageref{poem27}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -348,7 +350,7 @@ Why
 It
 Mattered}
 \contentsleaders
-\pageref{poem27}
+\mypageref{poem28}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -359,7 +361,7 @@ Mattered}
 My
 Kaddish}
 \contentsleaders
-\pageref{poem28}
+\mypageref{poem29}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -372,7 +374,7 @@ for
 a
 Child}
 \contentsleaders
-\pageref{poem29}
+\mypageref{poem30}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
