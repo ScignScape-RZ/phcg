@@ -16,22 +16,39 @@
 \colorlet{lineColor}{blineColor!80!white}
 
 
+\colorlet{bheadColor}{blineColor!80!blue}
+
+\colorlet{headColor}{bheadColor!30!black}
+
+
 \renewcommand{\footnoterule}{%
   \kern 5pt
   {\color{blineColor!60!black}{\hrule width \textwidth height 2pt}}
   \kern 4pt
 }
 
+\newcommand{\ardagbotrot}{{\rotatebox{-90}{$\blacktriangleright$}}}
+
+\newcommand{\lowardag}{{\raisebox{-3pt}{\makebox[.5pt][l]{\ardagbotrot}}\dag}}
+
+\newcommand{\ardag}{{\raisebox{3pt}{\lowardag}}}
+
+\let\oldciterange\citerange
+\renewcommand{\citerange}{line \oldciterange}
+
+\usepackage{amssymb}
+\usepackage{graphicx}
+
 \newcounter{xmargrefnumber}
 \setcounter{xmargrefnumber}{1}
 \newtoks{\xmargrefmarker}
-\xmargrefmarker={dag}
+\xmargrefmarker={\ardag}
 \newcommand{\setxmargrefmarker}[1]{\xmargrefmarker={#1}}
 \newcommand{\makexmargreflabel}{xmargref}
 \newif{\ifxmargrefstomargin}
 \xmargrefstomargintrue
 \newcommand{\setxmargref}[1]{%
-\marginpar{\ifxmargrefstomargin\hspace*{.5\leftmargin}\fi\scriptsize {\hyperlink{#1}{\dag}}}}
+\marginpar{\ifxmargrefstomargin\hspace*{.5\leftmargin}\fi\scriptsize {\hyperlink{#1}{\ardag}}}}
 
 \usepackage{calc}
 
@@ -45,11 +62,10 @@
 }
 
 \newcommand{\xtextnote}[2]{\textnote{\hypertarget{#1}%
-%\makeatletter\Hy@raisedlink{\protect\hypertarget{#1}}\makeatother
 \protect\raisebox{-6pt}{\protect\parbox{\textwidth}{{\color{lineColor}{%
 \setlength{\rulelen}{\textwidth}
 \setlength{\negrulelen}{\widthof{\citerange: }}
-\addtolength{\rulelen}{-\negrulelen}  %1\widthof{42:}}
+\addtolength{\rulelen}{-\negrulelen}  
 \rule{\rulelen}{0.1pt}}}\\#2}}
 }}
 
@@ -59,7 +75,7 @@
 \usepackage{wasysym}
 
 
-\geometry{textwidth=6in,textheight=7.6in}
+\geometry{textwidth=6in,textheight=7.6in,headsep=32pt}
 \makeverselinenumbers
 \global\includeaccidentalstrue
 \global\includetypescriptstrue
@@ -132,6 +148,54 @@ pdfview={FitH 0}
 \usepackage[ruled,para*]{manyfoot}
 \textnotesatfoot
 
+\usepackage{tcolorbox}
+
+\newcommand{\xvolumeheadervalue}{\parbox{\textwidth}{%
+\begin{tcolorbox}[colframe=headColor,
+                  boxsep=4pt,
+                  left=0pt,
+                  right=0pt,arc=1pt,outer arc=1pt
+                  top=0pt,colback=red!5!white,
+        boxrule=0.5pt,bottomrule=0pt,rightrule=2pt
+                  ]%%
+  \hfill\volumeheadervalue
+\end{tcolorbox}}
+\vspace{28pt}
+}
+	
+	
+\usepackage{mdframed}
+	
+\colorlet{ob}{orange!30!gray}	
+\colorlet{oy}{orange!80!yellow}	
+\colorlet{oyr}{oy!40!red}	
+\colorlet{bluegr}{blue!80!green}	
+
+
+\setlength{\fboxsep}{1.5pt}
+
+\usepackage{microtype}
+
+\newcommand{\xtheverselinenumber}{\protect\raisebox{-1pt}{\protect\parbox{1cm}{
+\begin{tcolorbox}[colframe=oyr!50!black,
+	boxsep=-4pt,
+	colback=white,
+	hbox,
+	sharp corners,
+	boxrule=1pt,rightrule=0pt,
+	toprule=0pt,leftrule=2pt,
+	]%%
+{\centering{\color{bluegr!35!black}{\textbf{\textls*[120]{\theverselinenumber}}}}}
+\end{tcolorbox}	
+}}}
+	
+%\newcommand{\xtheverselinenumber}{%
+%\fcolorbox{orange!50!black}{white}{\fcolorbox{orange!50!gray}{white}{\theverselinenumber}}}	
+
+
+%\newcommand{\xtheverselinenumber}{%
+%\begin{mdframed}[style=MyFrame,nobreak=true,align=center]\raisebox{1em}{\theverselinenumber}\end{mdframed}}
+
 \begin{document}
 \maketextnotes
 %\makeemendations
@@ -140,9 +204,9 @@ pdfview={FitH 0}
 \normalsize
 \raggedbottom
 
-\leftheader{KADDISH FOR GAZA}
-\rightheader{KADDISH FOR GAZA}
-
+%\leftheader{{KADDISH FOR GAZA}}
+%\rightheader{{KADDISH FOR GAZA}}
+%\protect\color{blue}
 
 \setcontentsleaders{ }
 
@@ -675,7 +739,8 @@ What would happen if I forgot my address, and had to shelter under the sky?
 The Law: ten men have scoured its pages, ten men owe\verseline
 thanks to the Creator. Might as well say it, then ---\verseline
 except that we say, Magnified and hallowed may His great name be!\verseline
-\textit{Yisgadal v'yisqadash}...but\verseline
+\textit{Yisgadal v'yisqadash}...but\xmargreftextnote{bot:Glorified}\verseline%
+\xtextnote{bot:Glorified}{From the Mourner's Kaddish: \q{Glorified and sanctified be God's name ...}}
 who are we? What name do we mean?
 \end{stanza}
 
