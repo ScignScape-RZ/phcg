@@ -60,7 +60,7 @@ OF
 MILES
 AWAY}
 \contentsleaders
-\pageref{poem3}
+\mypageref{poem3}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
@@ -73,7 +73,7 @@ AT
 THE
 BARRIER}
 \contentsleaders
-\pageref{poem4}
+\mypageref{poem4}
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}

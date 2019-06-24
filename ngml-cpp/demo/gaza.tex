@@ -9,6 +9,12 @@
 \stanzaatbottom{*}
 \nostanzaatbottom{\relax}
 \reversemarginpar
+
+\newcommand{\mypageref}[1]{\pageref{#1}}
+
+\usepackage{hyperref}
+
+
 \begin{document}
 \maketextnotes
 \makeemendations
@@ -124,7 +130,7 @@ in the child's breast,
 \end{stanza}
 
 \begin{stanza}
-and cannot touch the sky\verseline
+and cannot touch the sky\margrefemendation\verseline\emendation{Ronald Reagan}
 that is all that's left\verseline
 to the last boy's famished eyes.
 \end{stanza}

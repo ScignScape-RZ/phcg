@@ -48,3 +48,8 @@
 {\parindent
 }{-10pt}
 
+\label{margref2}
+\par\argpageref{poem3}\setcounterfrompageref{notepageholdertitle}{poem3}\textbf{\ THINKING OF GAZA FROM THOUSANDS OF MILES AWAY}
+\setcounter{notepageholdernote}{2}\ifhmode\unskip\fi\ifthenelse{\value{notepageholdernote}>\value{notepageholdertitle}}{\mark{\thenotepageholdernote}}{\mark{\thenotepageholdertitle}}\unskip\unskip\relax\ 44:~\nolinebreak
+Ronald
+Reagan
