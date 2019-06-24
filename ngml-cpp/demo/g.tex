@@ -4,6 +4,7 @@
 
 \newenvironment{minipagestanza}{\begin{stanza}\begin{minipage}{13cm}}{\end{minipage}\end{stanza}}
 
+\usepackage{caption}
 
 \usepackage[rgb]{xcolor}
 
@@ -19,6 +20,21 @@
 \colorlet{bheadColor}{blineColor!80!blue}
 
 \colorlet{headColor}{bheadColor!30!black}
+
+
+\usepackage{eso-pic}
+\usepackage[nolinks]{qrcode}
+
+\colorlet{br}{blue!30!red}	
+
+\AddToShipoutPicture{%
+	\AtPageLowerLeft{%
+		\raisebox{3cm}{\hypersetup{
+				colorlinks=false}
+			\hspace{16cm}{\textcolor{br!40!black}{\qrcode[height=2cm]{MichaelLesher2019-\thepage}}
+				%\includegraphics[width=5cm]{example-image}
+			}}}}
+			
 
 
 \renewcommand{\footnoterule}{%
@@ -122,15 +138,19 @@
 %\definecolor{bmainColor}{rgb}{.2,.7,.3}
 %\colorlet{mainColor}{bmainColor!50!black}
 
+%	colorlinks,
+
 \hypersetup{
 	colorlinks,
 	linkcolor={mainColor},
-	citecolor={blue!50!black},
-	urlcolor={blue!80!black},
+	urlcolor=black,
 pdfstartpage={1},
 pdfstartview={FitH \hypercalcbp{\paperheight-\topmargin-1in}},
 pdfview={FitH 0}
 }
+
+%	citecolor={blue!50!black},
+%	urlcolor={red!80!black},
 
 \newcommand{\poemtitlear}[3]{\hypertarget{#1}{}\basicpoemtitlear{#1}{#2}{#3}}
 
@@ -165,8 +185,19 @@ pdfview={FitH 0}
 	
 	
 \usepackage{mdframed}
-	
+
+\definecolor{logoGreen}{RGB}{85, 153, 89}
+\definecolor{logoCyan}{RGB}{66, 206, 244}
+
+\newenvironment{ccframed}{\begin{mdframed}[backgroundcolor=logoGreen!5,linecolor=logoCyan!50!black,linewidth=3pt,topline=false]}{\end{mdframed}}
+
 \colorlet{ob}{orange!30!gray}	
+
+\newenvironment{cframed}{\begin{mdframed}[linecolor=ob,
+leftline=false,
+  rightline=false,
+linewidth=2pt]}{\end{mdframed}}
+	
 \colorlet{oy}{orange!80!yellow}	
 \colorlet{oyr}{oy!40!red}	
 \colorlet{bluegr}{blue!80!green}	
@@ -188,13 +219,11 @@ pdfview={FitH 0}
 {\centering{\color{bluegr!35!black}{\textbf{\textls*[120]{\theverselinenumber}}}}}
 \end{tcolorbox}	
 }}}
+
+\newcommand{\vrsindent}{\hspace{3em}}
 	
-%\newcommand{\xtheverselinenumber}{%
-%\fcolorbox{orange!50!black}{white}{\fcolorbox{orange!50!gray}{white}{\theverselinenumber}}}	
+\newcommand{\divider}{\vspace{.5em}{\vrsindent}***\vspace{.5em}}
 
-
-%\newcommand{\xtheverselinenumber}{%
-%\begin{mdframed}[style=MyFrame,nobreak=true,align=center]\raisebox{1em}{\theverselinenumber}\end{mdframed}}
 
 \begin{document}
 \maketextnotes
@@ -257,9 +286,9 @@ What can we do to prevent it? That depends a good deal on who we are, and where 
 
 %\setcounter{page}{1}	
 {\poemnewpage}
-%\hypertarget{item:b}{}
-\poemtitlear{item:Thinking}{Thinking of Gaza from Thousands of Miles Away}{THINKING OF GAZA FROM THOUSANDS OF MILES AWAY}
-%poemtitlear{item:}{X}{THINKING OF GAZA FROM THOUSANDS OF MILES AWAY}
+%\hypertarget{ctg:b}{}
+\poemtitlear{ctg:Thinking}{Thinking of Gaza from Thousands of Miles Away}{THINKING OF GAZA FROM THOUSANDS OF MILES AWAY}
+%poemtitlear{ctg:}{X}{THINKING OF GAZA FROM THOUSANDS OF MILES AWAY}
 
 %\poemonlycontents{Thinking of Gaza FROM THOUSANDS OF MILES AWAY}
 
@@ -379,7 +408,7 @@ their silence my breath will trace.
 
 
 {\poemnewpage}
-\poemtitlear{item:Burlesque}{Burlesque at the Barrier}{BURLESQUE AT THE BARRIER}
+\poemtitlear{ctg:Burlesque}{Burlesque at the Barrier}{BURLESQUE AT THE BARRIER}
 \begin{poem}
 
 
@@ -472,7 +501,7 @@ I gather he thought I meant something else.
 
 
 {\poemnewpage}
-\poemtitlear{item:Drinking}{Drinking It}{DRINKING IT}
+\poemtitlear{ctg:Drinking}{Drinking It}{DRINKING IT}
 \poemdedication{(for Amira Hass)}
 \begin{poem}
 
@@ -529,7 +558,7 @@ a mouthing rape that makes a fool of care.
 
 
 {\poemnewpage}
-\poemtitlear{item:Silent}{Silent Movie}{SILENT MOVIE}
+\poemtitlear{ctg:Silent}{Silent Movie}{SILENT MOVIE}
 \epigraph{Every where at the approach of the white man {\lbrack}the Indians{\rbrack} fade away.... We hear the rustling of their footsteps, like that of the withered leaves of autumn, and they are gone for ever.
 \\\textnormal{--- Joseph Story, U.S. Supreme Court justice}}
 \epigraph{We never really conquered Lydda.... {\lbrack}T{\rbrack}here was really no city to conquer. The whole place...was empty.
@@ -567,7 +596,7 @@ him as he pirouetted down.
 \end{poem}
 
 {\poemnewpage}
-\poemtitlear{item:Jewish}{Jewish Journal and Bad Dreams}{JEWISH JOURNAL AND BAD DREAMS}
+\poemtitlear{ctg:Jewish}{Jewish Journal and Bad Dreams}{JEWISH JOURNAL AND BAD DREAMS}
 \begin{poem}
 
 
@@ -595,7 +624,7 @@ I've swallowed a stench of silence and cannot cough it up.\verseline
 Awakening today, I could not at first remember\verseline
 the reason of my dread. There's something maniacal\verseline
 about an alarm that shrieks,\verseline
-	Begin, begin, begin!
+{\vrsindent}Begin, begin, begin!
 \end{stanza}
 
 \begin{prestanza}
@@ -630,14 +659,14 @@ it's an outrage not to be afraid.\verseline
 What ought I to feel? Do the dead\verseline
 turn in their sleep, those ghostly child faces\verseline
 averted as they pass the word, row on silent row,\verseline
-	It's nothing, never mind?\verseline
+{\vrsindent}It's nothing, never mind?\verseline
 What have I given?\verseline
 I remember now, \cq{New Jersey} was the name\xmargreftextnote{bot:beirut}\verseline%
 \xtextnote{bot:beirut}{The USS New Jersey fired on Beirut in December 1983}
 of the battleship that mauled Beirut for\verseline
 Ronnie the Ripper and his friends...\xmargreftextnote{bot:reagan}\verseline%
 \xtextnote{bot:reagan}{Ronald Reagan}
-	Sixteen-inch guns!\verseline
+{\vrsindent}Sixteen-inch guns!\verseline
 the newspapers kvelled, while\verseline
 boys and girls choked on their guts and\verseline
 hearts zipped shut, once and for all,\verseline
@@ -684,7 +713,7 @@ I've lost touch with the use of words,\verseline
 they're insects on my skin as they scurry away, unheard,\verseline
 a mystery to me, all of them.\verseline
 I try to say to the dead,\verseline
-	I have tasted your unmoving air, and retched.\verseline
+{\vrsindent}I have tasted your unmoving air, and retched.\verseline
 Will anyone answer me?\verseline
 How I wish I were really sick! It would feel better than this dull ache,\verseline
 I would have an occupation of sorts.\verseline
@@ -719,7 +748,7 @@ at an unpictured sun.
 
 
 {\poemnewpage}
-\poemtitlear{item:Kaddish}{Kaddish}{KADDISH}
+\poemtitlear{ctg:Kaddish}{Kaddish}{KADDISH}
 \begin{poem}
 
 
@@ -804,7 +833,7 @@ always the same echo drying against the tide.
 
 
 {\poemnewpage}
-\poemtitlear{item:Oranges}{Oranges}{ORANGES}
+\poemtitlear{ctg:Oranges}{Oranges}{ORANGES}
 \begin{poem}
 
 
@@ -889,7 +918,7 @@ dies, forgotten and unseen.
 \end{poem}
 
 {\poemnewpage}
-\poemtitlear{item:Lecture}{Lecture}{LECTURE}
+\poemtitlear{ctg:Lecture}{Lecture}{LECTURE}
 \begin{poem}
 
 
@@ -955,7 +984,7 @@ Get moving --- don't be late.
 
 
 {\poemnewpage}
-\poemtitlear{item:Three}{Three Words for the Dead}{THREE WORDS FOR THE DEAD}
+\poemtitlear{ctg:Three}{Three Words for the Dead}{THREE WORDS FOR THE DEAD}
 \begin{poem}
 
 
@@ -1042,7 +1071,7 @@ left me without words, bereft of time.
 
 
 {\poemnewpage}
-\poemtitlear{item:Clowns}{Clowns with Swastikas}{CLOWNS WITH SWASTIKAS}
+\poemtitlear{ctg:Clowns}{Clowns with Swastikas}{CLOWNS WITH SWASTIKAS}
 \begin{poem}
 
 \begin{prestanza}
@@ -1067,7 +1096,7 @@ the IDF parades in the \textit{New York Times}.
 
 
 {\poemnewpage}
-\poemtitlear{item:Dead}{Dead God, Dying God}{DEAD GOD, DYING GOD}
+\poemtitlear{ctg:Dead}{Dead God, Dying God}{DEAD GOD, DYING GOD}
 \begin{poem}
 
 \begin{stanza}
@@ -1117,7 +1146,7 @@ doomed every tomorrow with tomorrow's bomb.
 
 
 {\poemnewpage}
-\poemtitlear{item:AnUntimely}{An Untimely Man}{AN UNTIMELY MAN}
+\poemtitlear{ctg:AnUntimely}{An Untimely Man}{AN UNTIMELY MAN}
 \begin{poem}
 
 
@@ -1161,7 +1190,7 @@ of all I choose.
 
 
 {\poemnewpage}
-\poemtitlear{item:Cyrano}{Cyrano de Marianne}{CYRANO DE MARIANNE}
+\poemtitlear{ctg:Cyrano}{Cyrano de Marianne}{CYRANO DE MARIANNE}
 \epigraph{Welcome to Israel!  It seems you got lost. Perhaps you meant to sail to a place not far from here --- Syria. There the Assad regime slaughters his people every day with the support of the murderous Iranian regime.\\\textnormal{--- Israeli Prime Minister Benjamin Netanyahu, in a letter delivered to humanitarian activists when they were kidnapped by IDF sailors from their fishing boat, the Marianne, while attempting to break Israel's siege of Gaza and deliver medicine to the inhabitants (June 2015)}}
 
 \begin{poem}
@@ -1284,7 +1313,7 @@ One might have known.
 
 
 {\poemnewpage}
-\poemtitlear{item:Drone}{Drone}{DRONE}
+\poemtitlear{ctg:Drone}{Drone}{DRONE}
 \begin{poem}
 
 
@@ -1331,7 +1360,7 @@ knowing I'm spread across some private's bombsight.
 \end{poem}
 
 {\poemnewpage}
-\poemtitlear{item:TheStorm}{The Storm Scene}{THE STORM SCENE}
+\poemtitlear{ctg:TheStorm}{The Storm Scene}{THE STORM SCENE}
 \poemdedication{(after James Merrill)}
 \begin{poem}
 
@@ -1358,12 +1387,12 @@ despair those vowels drenched every shard of autumn.
 
 
 {\poemnewpage}
-\poemtitlear{item:CrimeScene}{Crime Scene}{CRIME SCENE}
+\poemtitlear{ctg:CrimeScene}{Crime Scene}{CRIME SCENE}
 \begin{poem}
 
 
 \begin{stanza}
-Item: one wreck of a car.\verseline
+ctg: one wreck of a car.\verseline
 Split open, like a crowbar\verseline
 had wrenched the roof.
 \end{stanza}
@@ -1433,7 +1462,7 @@ one wheel still spinning free.
 
 
 {\poemnewpage}
-\poemtitlear{item:TheSurvivor}{The Survivor}{THE SURVIVOR}
+\poemtitlear{ctg:TheSurvivor}{The Survivor}{THE SURVIVOR}
 \begin{poem}
 
 
@@ -1453,7 +1482,7 @@ across the curtain of her hair ---
 \& late came forward then, alone, to show\verseline
 my eager eyes (that hardly seemed to know\verseline
 her) what she was, \& hid ---\verseline
-what was the veil that slid before my eyes	\verseline
+what was the veil that slid before my eyes\verseline
 to baffle surprise\verseline
 when the spun white gauze that made the gown\verseline
 gave pause\verseline
@@ -1510,7 +1539,7 @@ Will it help now if I lament ---\verseline
 
 
 {\poemnewpage}
-\poemtitlear{item:TheWalls}{The Walls}{THE WALLS}
+\poemtitlear{ctg:TheWalls}{The Walls}{THE WALLS}
 \begin{poem}
 
 
@@ -1558,7 +1587,7 @@ who've seen so much future vanishing?
 
 
 {\poemnewpage}
-\poemtitlear{item:MyDevil}{My Devil Curses Me}{MY DEVIL CURSES ME}
+\poemtitlear{ctg:MyDevil}{My Devil Curses Me}{MY DEVIL CURSES ME}
 \begin{poem}
 
 
@@ -1653,7 +1682,7 @@ blind Jew?
 
 
 {\poemnewpage}
-\poemtitlear{item:Delirium}{Delirium}{DELIRIUM}
+\poemtitlear{ctg:Delirium}{Delirium}{DELIRIUM}
 \begin{poem}
 
 
@@ -1740,7 +1769,7 @@ as ignorant as they are poor.
 
 
 {\poemnewpage}
-\poemtitlear{item:Farewell}{Farewell}{FAREWELL}
+\poemtitlear{ctg:Farewell}{Farewell}{FAREWELL}
 \begin{poem}
 
 
@@ -1788,7 +1817,7 @@ that might clutch, vaguely, the darkening scene.
 
 
 {\poemnewpage}
-\poemtitlear{item:Fanatics}{Fanatics}{FANATICS}
+\poemtitlear{ctg:Fanatics}{Fanatics}{FANATICS}
 \begin{poem}
 
 
@@ -1848,7 +1877,7 @@ In 2014, Israel's activities in the Gaza Strip, West Bank and East Jerusalem res
 
 
 {\poemnewpage}
-\poemtitlear{item:Pines}{Pines in the Suicides' Wood}{PINES IN THE SUICIDES' WOOD}
+\poemtitlear{ctg:Pines}{Pines in the Suicides' Wood}{PINES IN THE SUICIDES' WOOD}
 \dedication{(see Inferno, Canto XIII)}
 \epigraph{If there is no future, there is no hope.
 \\\textnormal{--- Adel Hamdona, speaking of his son's suicide attack on the Jewish settlement of Netzarim}}
@@ -1913,7 +1942,7 @@ the grieving that kills, the hopes that hate.
 
 
 {\poemnewpage}
-\poemtitlear{item:DeathInPalestine}{Death in Palestine}{DEATH IN PALESTINE}
+\poemtitlear{ctg:DeathInPalestine}{Death in Palestine}{DEATH IN PALESTINE}
 \begin{poem}
 
 
@@ -1973,7 +2002,7 @@ Over us, the pitch and curse of day.
 
 
 {\poemnewpage}
-\poemtitlear{item:WhyItMattered}{Why It Mattered}{WHY IT MATTERED}
+\poemtitlear{ctg:WhyItMattered}{Why It Mattered}{WHY IT MATTERED}
 \epigraph{On Tuesday, August 19 [2014], the Israel Defense Forces...announced that Cpl. David Menachem Gordon...was found dead in central Israel, his weapon at his side.... We understood from the code phrase, \cq{weapon at his side,} that Gordon had committed suicide.\\\textnormal{--- Rabbi Yehoshua Looks}}
 \epigraph{Unable to disclose his mortifying secret, the boy can only fantasize revenge on those vile men whose twisted lustful current raged through their veins.... He dreams of an escape from his Hell... As much as he tried, he could not ignore the scattered scars that sexual abuse left on his Soul.%
 \\\textnormal{--- David Menachem Gordon, writing of himself as an Orthodox Jewish child}}
@@ -2004,14 +2033,14 @@ Perhaps the boy dreamed of lining up\verseline
 his tormentors in that olive-drab gunsight;\verseline
 maybe he saw old lechers, not panicking women and their\verseline
 sons, when his brigade's guns were torching houses with\verseline
-	\cq{repeated shelling} as the victims fled...\verseline
+{\vrsindent}\cq{repeated shelling} as the victims fled...\verseline
 maybe he believed his colonel when that maniac\verseline
-	pronounced Palestinians the enemies of God.\verseline
+{\vrsindent}pronounced Palestinians the enemies of God.\verseline
 Or, maybe he was maddened with the mumbling myth\verseline
-	of soldiers who believe themselves invincible,\verseline
+{\vrsindent}of soldiers who believe themselves invincible,\verseline
 though of course he wasn't --- no more than the \cq{six men}\verseline
 his unit killed in a \cq{summary execution} in Khuza'a\verseline
-	one August day, nor the hundred or more helpless who fell\verseline
+{\vrsindent}one August day, nor the hundred or more helpless who fell\verseline
 to his brigade's artillery in Rafah.\verseline
 But how much, then, did the young sufferer see?\verseline
 Could there have been guilt, as his fire raged out in agony?
@@ -2020,17 +2049,17 @@ Could there have been guilt, as his fire raged out in agony?
 \begin{stanza}
 Or did his binoculars reveal a frightened boy\verseline
 who offered only terror against the ugly threat\verseline
-	(a barrel shaft upright, burning to invade\verseline
-	 a child, impale his innocence)...\verseline
+{\vrsindent}(a barrel shaft upright, burning to invade\verseline
+{\vrsindent} a child, impale his innocence)...\verseline
 Did he hear his own voice in the collective cry of pain?\verseline
 I hardly dare conceive how conscience,\verseline
 seeping over the scene, might have enlarged the stain:\verseline
 \cq{You did well, for larger men than you have doomed the young ---\verseline
 though once the victim, you are among the strong.}\verseline
-	(Some who were his friends now carried suspect memories\verseline
-	and had to go.) Or, heard in a whisper, a taunt in his ear,\verseline
+{\vrsindent}(Some who were his friends now carried suspect memories\verseline
+{\vrsindent}and had to go.) Or, heard in a whisper, a taunt in his ear,\verseline
 \cq{Have no pride. What men did to you, you've done.}\verseline
-	(And would do again, for no slogan could shatter\verseline
+{\vrsindent}(And would do again, for no slogan could shatter\verseline
 that circle of guilt.)\verseline
 Or perhaps the voice framed the eeriest, most sinister words of all:\verseline
 \cq{Nothing matters, all is death, and in death there is no difference\verseline
@@ -2056,7 +2085,7 @@ closed, forever, over his trailing grief.
 
 
 {\poemnewpage}
-\poemtitlear{item:MyKaddish}{My Kaddish}{MY KADDISH}
+\poemtitlear{ctg:MyKaddish}{My Kaddish}{MY KADDISH}
 
 \epigraph{Magnified and sanctified may His great name be
 in the world He created according to His will; and may His kingship reign,
@@ -2075,13 +2104,13 @@ For if great, where is his saving power?\verseline
 Sanctify it?\verseline
 Shall I then join the killers who murder children in that name?\verseline
 And may he reign\verseline
-	(if anything should reign)\verseline
+{\vrsindent}(if anything should reign)\verseline
 in a world he first made differently,\verseline
 I hope,\verseline
 from what he might have willed...\verseline
 may a better one come soon,\verseline
 in our lifetime, within our days! ---\verseline
-	in this I join.
+{\vrsindent}in this I join.
 \end{stanza}
 
 \begin{stanza}
@@ -2096,9 +2125,7 @@ though we lack a tongue to try\verseline
 variations on the final, inimitable phrase.
 \end{stanza}
 
-\begin{stanza}
-	* * *
-\end{stanza}
+{\divider}
 
 \begin{stanza}
 Every inward cupboard hides a space\verseline
@@ -2115,8 +2142,8 @@ That is what it means to be \cq{ourselves.}
 
 \begin{stanza}
 I cannot cast it out, but I can rant,\verseline
- 	(and ranting, raise a pure shout\verseline
-	heavenward),\verseline
+{\vrsindent}(and ranting, raise a pure shout\verseline
+{\vrsindent}heavenward),\verseline
 and I can say: life must be found somewhere apart\verseline
 from age and staleness and waste, without\verseline
 cruelty, without cant.
@@ -2178,7 +2205,7 @@ and let me say, Amen.
 
 
 {\poemnewpage}
-\poemtitlear{item:Elegy}{Elegy for a Child}{ELEGY FOR A CHILD}
+\poemtitlear{ctg:Elegy}{Elegy for a Child}{ELEGY FOR A CHILD}
 \poemdedication{(in memory of Mo'ayyad al-A'raj, aged three, killed at Khan Yunis on August 24, 2014)}
 
 \begin{poem}
@@ -2223,6 +2250,63 @@ thieving my grief, a dull heart's unsacred rite.
 \end{stanza}
 
 \end{poem}
+
+\newpage
+%\raisebox{-6em}
+%{\parbox{0.5\textwidth}{%
+\vspace*{3em}
+\parbox{0.5\textwidth}{\begin{cframed}
+{\centering {\textit{\textbf{Review of Accompanying Data}}}}
+\end{cframed}}
+%}}
+
+\vspace{-1em}
+\hspace*{-3em}\begin{minipage}{1.1\textwidth}
+\begin{ccframed}
+\begin{description}\item[QR Code]
+QR Codes on each page can be used by readers switching 
+between print and digital versions of this document.  The QR figures 
+encode bibliographic and page information which can be used by 
+conformant PDF software to show the interactive PDF version of each page.
+\item[Embedded Data]
+For users with conformant cross-referencing software, 
+this page has an embedded file in TxHSL (Type Expression and Hypergraph 
+Serialization Language) format.  The contents of this file can 
+also be viewed here: (TBD).
+\item[Data Description]
+The following TxHSL excerpt indicates 
+the type interface and sample values of the embedded data.
+\begin{scriptsize}
+\begin{verbatim}
+&type CiteGroup [8;5;2] 
+:i:1 :t:2 :p:3 :dp:4 :x:5;
+
+&type DataCite {6} 
+:i:1 :x:2 :p:3 :dp:4 :ln:5 :t:6 ;
+
+&/
+!/ CiteGroup
+!/ DataCite
+$i: 1 
+$x: bot:write
+$p# 6 4
+$ln: 1
+$t. Alludes to the wall surrounding and partitioning Gaza from Israel.
+.
+/!
+<>>
+$i: 1 
+$t: Burlesque at the Barrier 
+$p# 6 4
+$x: ctg:Burlesque 
+/!
+<+>
+/&
+\end{verbatim}
+\end{scriptsize}
+\end{description}
+\end{ccframed}
+\end{minipage}
 
 
 

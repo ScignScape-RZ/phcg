@@ -71,7 +71,7 @@ Miles
 Away
 \hspace
 {2em}\hyperlink
-{item:Thinking}{\rar
+{ctg:Thinking}{\rar
 }}
 \contentsleaders
 \mypageref{poem4}
@@ -88,7 +88,7 @@ the
 Barrier
 \hspace
 {2em}\hyperlink
-{item:Burlesque}{\rar
+{ctg:Burlesque}{\rar
 }}
 \contentsleaders
 \mypageref{poem5}
@@ -103,7 +103,7 @@ Drinking
 It
 \hspace
 {2em}\hyperlink
-{item:Drinking}{\rar
+{ctg:Drinking}{\rar
 }}
 \contentsleaders
 \mypageref{poem6}
@@ -118,7 +118,7 @@ Silent
 Movie
 \hspace
 {2em}\hyperlink
-{item:Silent}{\rar
+{ctg:Silent}{\rar
 }}
 \contentsleaders
 \mypageref{poem7}
@@ -136,7 +136,7 @@ Bad
 Dreams
 \hspace
 {2em}\hyperlink
-{item:Jewish}{\rar
+{ctg:Jewish}{\rar
 }}
 \contentsleaders
 \mypageref{poem8}
@@ -150,7 +150,7 @@ Dreams
 Kaddish
 \hspace
 {2em}\hyperlink
-{item:Kaddish}{\rar
+{ctg:Kaddish}{\rar
 }}
 \contentsleaders
 \mypageref{poem9}
@@ -164,7 +164,7 @@ Kaddish
 Oranges
 \hspace
 {2em}\hyperlink
-{item:Oranges}{\rar
+{ctg:Oranges}{\rar
 }}
 \contentsleaders
 \mypageref{poem10}
@@ -178,7 +178,7 @@ Oranges
 Lecture
 \hspace
 {2em}\hyperlink
-{item:Lecture}{\rar
+{ctg:Lecture}{\rar
 }}
 \contentsleaders
 \mypageref{poem11}
@@ -196,7 +196,7 @@ the
 Dead
 \hspace
 {2em}\hyperlink
-{item:Three}{\rar
+{ctg:Three}{\rar
 }}
 \contentsleaders
 \mypageref{poem12}
@@ -212,7 +212,7 @@ with
 Swastikas
 \hspace
 {2em}\hyperlink
-{item:Clowns}{\rar
+{ctg:Clowns}{\rar
 }}
 \contentsleaders
 \mypageref{poem13}
@@ -229,7 +229,7 @@ Dying
 God
 \hspace
 {2em}\hyperlink
-{item:Dead}{\rar
+{ctg:Dead}{\rar
 }}
 \contentsleaders
 \mypageref{poem14}
@@ -245,7 +245,7 @@ Untimely
 Man
 \hspace
 {2em}\hyperlink
-{item:AnUntimely}{\rar
+{ctg:AnUntimely}{\rar
 }}
 \contentsleaders
 \mypageref{poem15}
@@ -261,7 +261,7 @@ de
 Marianne
 \hspace
 {2em}\hyperlink
-{item:Cyrano}{\rar
+{ctg:Cyrano}{\rar
 }}
 \contentsleaders
 \mypageref{poem16}
@@ -275,7 +275,7 @@ Marianne
 Drone
 \hspace
 {2em}\hyperlink
-{item:Drone}{\rar
+{ctg:Drone}{\rar
 }}
 \contentsleaders
 \mypageref{poem17}
@@ -291,7 +291,7 @@ Storm
 Scene
 \hspace
 {2em}\hyperlink
-{item:TheStorm}{\rar
+{ctg:TheStorm}{\rar
 }}
 \contentsleaders
 \mypageref{poem18}
@@ -306,7 +306,7 @@ Crime
 Scene
 \hspace
 {2em}\hyperlink
-{item:CrimeScene}{\rar
+{ctg:CrimeScene}{\rar
 }}
 \contentsleaders
 \mypageref{poem19}
@@ -321,7 +321,7 @@ The
 Survivor
 \hspace
 {2em}\hyperlink
-{item:TheSurvivor}{\rar
+{ctg:TheSurvivor}{\rar
 }}
 \contentsleaders
 \mypageref{poem20}
@@ -336,7 +336,7 @@ The
 Walls
 \hspace
 {2em}\hyperlink
-{item:TheWalls}{\rar
+{ctg:TheWalls}{\rar
 }}
 \contentsleaders
 \mypageref{poem21}
@@ -353,7 +353,7 @@ Curses
 Me
 \hspace
 {2em}\hyperlink
-{item:MyDevil}{\rar
+{ctg:MyDevil}{\rar
 }}
 \contentsleaders
 \mypageref{poem22}
@@ -367,7 +367,7 @@ Me
 Delirium
 \hspace
 {2em}\hyperlink
-{item:Delirium}{\rar
+{ctg:Delirium}{\rar
 }}
 \contentsleaders
 \mypageref{poem23}
@@ -381,7 +381,7 @@ Delirium
 Farewell
 \hspace
 {2em}\hyperlink
-{item:Farewell}{\rar
+{ctg:Farewell}{\rar
 }}
 \contentsleaders
 \mypageref{poem24}
@@ -395,7 +395,7 @@ Farewell
 Fanatics
 \hspace
 {2em}\hyperlink
-{item:Fanatics}{\rar
+{ctg:Fanatics}{\rar
 }}
 \contentsleaders
 \mypageref{poem25}
@@ -413,7 +413,7 @@ Suicides'
 Wood
 \hspace
 {2em}\hyperlink
-{item:Pines}{\rar
+{ctg:Pines}{\rar
 }}
 \contentsleaders
 \mypageref{poem26}
@@ -429,7 +429,7 @@ in
 Palestine
 \hspace
 {2em}\hyperlink
-{item:DeathInPalestine}{\rar
+{ctg:DeathInPalestine}{\rar
 }}
 \contentsleaders
 \mypageref{poem27}
@@ -445,7 +445,7 @@ It
 Mattered
 \hspace
 {2em}\hyperlink
-{item:WhyItMattered}{\rar
+{ctg:WhyItMattered}{\rar
 }}
 \contentsleaders
 \mypageref{poem28}
@@ -460,7 +460,7 @@ My
 Kaddish
 \hspace
 {2em}\hyperlink
-{item:MyKaddish}{\rar
+{ctg:MyKaddish}{\rar
 }}
 \contentsleaders
 \mypageref{poem29}
@@ -477,7 +477,7 @@ a
 Child
 \hspace
 {2em}\hyperlink
-{item:Elegy}{\rar
+{ctg:Elegy}{\rar
 }}
 \contentsleaders
 \mypageref{poem30}

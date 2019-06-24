@@ -1,0 +1,114 @@
+
+- i=id  t=text/title
+  x=tex label ln=line number p=page dp=document page
+.
+
+&type CiteGroup [8;5;2] 
+ :i:1 :t:2 :p:3 :dp:4 :x:5;
+
+
+&type DataCite {6} 
+ :i:1 :x:2 :p:3 :dp:4 :ln:5 :t:6 ;
+
+&/
+
+!/ CiteGroup
+
+!/ DataCite
+$i: 1 
+$x: bot:write
+$p# 6 4
+$ln: 1
+$t. Alludes to the wall surrounding and partitioning Gaza from Israel.
+.
+/!
+<>>
+
+$i: 1 
+$t: Burlesque at the Barrier 
+$p# 6 4
+$x: ctg:Burlesque 
+/!
+<+>
+
+
+!/ CiteGroup
+
+!/ DataCite
+$i: 1 
+$x: bot:beirut
+$p# 11 9
+$ln: 42
+$t. The USS New Jersey fired on Beirut in December 1983.
+.
+/!
+<>>
+
+!/ DataCite
+$i: 2 
+$x: bot:reagan
+$p# 11 9
+$ln: 44
+$t. Ronald Reagan.
+.
+/!
+<>>
+
+!/ DataCite
+$i: 3 
+$x: bot:hear
+$p# 12 10
+$ln: 68
+$t. A play on the liturgical 
+\q{Hear, O Israel: the Lord is our God, the Lord is One} (Sh'ma Yisra'el).
+.
+/!
+<>>
+
+$i: 2 
+$t: Jewish Journal and Bad Dreams 
+$p# 10 8
+$x: ctg:Jewish 
+/!
+<+>
+
+!/ CiteGroup
+
+!/ DataCite
+$i: 1
+$x: bot:Glorified
+$p# 13 11
+$ln: 10
+$t. From the Mourner's Kaddish: \q{Glorified and sanctified be God's name ...}
+.
+/!
+<>>
+
+$i: 4 
+$t: Kaddish
+$p# 13 11
+$x: ctg:Kaddish
+/!
+<+>
+
+!/ CiteGroup
+
+!/ DataCite
+$i: 1
+$x: bot:KhanYunis
+$p# 27 25
+$ln: 1
+$t. Site of a massacre by Israel Defense Forces on November 3, 1956.
+.
+/!
+<>>
+
+$i: 4
+$t: Crime Scene
+$p# 27 25
+$x: ctg:CrimeScene
+/!
+<+>
+
+
+/&

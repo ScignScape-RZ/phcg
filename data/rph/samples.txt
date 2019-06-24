@@ -22,8 +22,8 @@
 !/ SG
 
 !/ SE  
-$x: itm:ornate 
-$t. He opened the wine bottle with an ornate corkscrew.
+$x: bot:write 
+$t. Alludes to the wall surrounding and partitioning Gaza from Israel.
 .
 /!
 <>>
