@@ -11,10 +11,16 @@
 %\colorlet{LightBlue}{BlueLUH!20!white}
 \colorlet{mainColor}{bmainColor!50!black}
 
-\definecolor{blineColor}{rgb}{.2,.7,.3}
+\definecolor{blineColor}{rgb}{.2,.7,.7}
 %\colorlet{LightBlue}{BlueLUH!20!white}
-\colorlet{lineColor}{blineColor!70!black}
+\colorlet{lineColor}{blineColor!80!white}
 
+
+\renewcommand{\footnoterule}{%
+  \kern 5pt
+  {\color{blineColor!60!black}{\hrule width \textwidth height 2pt}}
+  \kern 4pt
+}
 
 \newcounter{xmargrefnumber}
 \setcounter{xmargrefnumber}{1}
@@ -27,6 +33,11 @@
 \newcommand{\setxmargref}[1]{%
 \marginpar{\ifxmargrefstomargin\hspace*{.5\leftmargin}\fi\scriptsize {\hyperlink{#1}{\dag}}}}
 
+\usepackage{calc}
+
+\newlength{\rulelen}
+\newlength{\negrulelen}
+
 \newcommand{\xmargreftextnote}[1]{%
 \iftextnoteson\addtocounter{xmargrefnumber}{1}%
 \immediate\write\textnotes{\makexmargreflabel}%
@@ -35,10 +46,14 @@
 
 \newcommand{\xtextnote}[2]{\textnote{\hypertarget{#1}%
 %\makeatletter\Hy@raisedlink{\protect\hypertarget{#1}}\makeatother
-\protect\raisebox{-6pt}{\protect\parbox{17cm}{{\color{lineColor}{\rule{11cm}{0.1pt}}}\\#2}}
+\protect\raisebox{-6pt}{\protect\parbox{\textwidth}{{\color{lineColor}{%
+\setlength{\rulelen}{\textwidth}
+\setlength{\negrulelen}{\widthof{\citerange: }}
+\addtolength{\rulelen}{-\negrulelen}  %1\widthof{42:}}
+\rule{\rulelen}{0.1pt}}}\\#2}}
 }}
 
-\usepackage[raiselinks=true]{hyperref}
+\usepackage[raiselinks=true,pdftex]{hyperref}
 %\hypersetup{linktocpage}
 
 \usepackage{wasysym}
@@ -95,13 +110,23 @@
 	colorlinks,
 	linkcolor={mainColor},
 	citecolor={blue!50!black},
-	urlcolor={blue!80!black}
+	urlcolor={blue!80!black},
+pdfstartpage={1},
+pdfstartview={FitH \hypercalcbp{\paperheight-\topmargin-1in}},
+pdfview={FitH 0}
 }
 
 \newcommand{\poemtitlear}[3]{\hypertarget{#1}{}\basicpoemtitlear{#1}{#2}{#3}}
 
 
 \newcommand{\mypageref}[1]{\hfill\getpagerefnumber{#1}\hspace*{10em}}
+
+\newcommand{\paraspace}{
+
+\vspace{12pt}}
+
+\let\oldpmpara\pmpara
+\renewcommand{\pmpara}{\paraspace\oldpmpara}
 
 
 \usepackage[ruled,para*]{manyfoot}
@@ -161,7 +186,8 @@ How well these poems live up to such standards is for others to decide. But I do
 {\pmpara}
 What can we do to prevent it? That depends a good deal on who we are, and where we either have or can cultivate the kind of power that can bring justice. But as the great singer/songwriter and activist Phil Ochs said, during the Vietnam carnage, \q{in such an ugly time the true protest is beauty.} And true beauty, one might add, is protest.
 
-Michael Lesher
+{\paraspace}
+{\noindent}Michael Lesher
 \end{pmsection}
 
 
@@ -295,7 +321,8 @@ their silence my breath will trace.
 
 
 \begin{stanza}
-What do you write on a wall?\verseline
+What do you write on a wall?\xmargreftextnote{bot:write}\verseline%
+\xtextnote{bot:write}{Alludes to the wall surrounding and partitioning Gaza from Israel.}
 What can you smear that will fall\verseline
 upwards of your fist, and sting\verseline
 sharper than a tear?
@@ -575,9 +602,11 @@ Charred wings float away from me still.\verseline
 Lines distort in swimming eyes,\verseline
 sense gone, prayer nothing but hallucination\verseline
 as here and now, all words betray us:\verseline
-Hear, O Israel, the War is our God,\verseline
-the War is Fun.
-\end{stanza}
+Hear, O Israel, the War is our God,\verseline%
+the War is Fun.\xmargreftextnote{bot:hear}
+\end{stanza}\xtextnote{bot:hear}{A play on the liturgical 
+\q{Hear, O Israel: the Lord is our God, the Lord is One} (Sh'ma Yisra'el)}
+
 
 
 \begin{prestanza}
