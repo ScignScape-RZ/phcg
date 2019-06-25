@@ -484,3 +484,16 @@ Child
 \end{contentsentryenvironment}
 \par
 \setlength\contentsentryoverrun{\contentsindentoneamount}
+\setlength\contentsentryoverrun{\contentsindenttwoamount }
+\begin{contentsentryenvironment}
+\contentsindentone
+{\contentspoemtitlefont
+Index
+of
+First
+Lines}
+\contentsleaders
+\mypageref{poem31}
+\end{contentsentryenvironment}
+\par
+\setlength\contentsentryoverrun{\contentsindentoneamount}

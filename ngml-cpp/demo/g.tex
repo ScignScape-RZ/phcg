@@ -4,7 +4,7 @@
 
 \newenvironment{minipagestanza}{\begin{stanza}\begin{minipage}{13cm}}{\end{minipage}\end{stanza}}
 
-\usepackage{caption}
+%\usepackage{caption}
 
 \usepackage[rgb]{xcolor}
 
@@ -121,6 +121,11 @@
 
 \newcommand{\rar}{{\raisebox{-2pt}{{\Large$\Rightarrow$}}}}
 
+\newcommand{\poemfl}[2]{\item[#2] %
+ \hspace*{2em} \raisebox{2pt}{\hyperlink{#1}{\rar}} \hfill \getpagerefnumber{#1} %
+ \hspace*{6em} }
+
+
 \makeatletter
 \newcommand{\basicpoemtitlear}[3]{%
 	\set@p@emtitle{#3}{\poemtitlepenalty}{\poemtitlefont}%
@@ -161,7 +166,7 @@ pdfview={FitH 0}
 %	citecolor={blue!50!black},
 %	urlcolor={red!80!black},
 
-\newcommand{\poemtitlear}[3]{\hypertarget{#1}{}\basicpoemtitlear{#1}{#2}{#3}}
+\newcommand{\poemtitlear}[3]{\hypertarget{#1}{\label{#1}}\basicpoemtitlear{#1}{#2}{#3}}
 
 
 \newcommand{\mypageref}[1]{\hfill\getpagerefnumber{#1}\hspace*{10em}}
@@ -241,8 +246,16 @@ linewidth=2pt]}{\end{mdframed}}
 \embeddedfile{txh}{gaza.txh}
 
 
+%\usepackage{makeidx}
+%\makeindex
+
 \begin{document}
 \maketextnotes
+
+%\indexingontrue
+
+%\makepoemindex
+
 %\makeemendations
 %\makeexplanatorynotes
 \resetpagestyle
@@ -285,6 +298,7 @@ michaellesher@optonline.net
 \pagenumbering{arabic}%
 \makepoemcontents
 
+%\putpoemindex
 
 %\setcounter{prosepage}{4}
 
@@ -1426,7 +1440,7 @@ despair those vowels drenched every shard of autumn.
 
 
 \begin{stanza}
-ctg: one wreck of a car.\verseline
+Item: one wreck of a car.\verseline
 Split open, like a crowbar\verseline
 had wrenched the roof.
 \end{stanza}
@@ -2285,6 +2299,48 @@ thieving my grief, a dull heart's unsacred rite.
 \end{stanza}
 
 \end{poem}
+
+\newpage
+\vspace*{1em}
+\prosesectiontitlenotitle{Index of First Lines}
+
+\poemtitlebaretitle{INDEX OF FIRST LINES}
+\poemsubtitle{(links via arrows)}
+
+\begin{pmsection}
+\begin{description}
+
+\setlength{\itemsep}{0pt}
+\poemfl{ctg:Thinking}{If I were to be born again,}
+\poemfl{ctg:Burlesque}{What do you write on a wall?}
+\poemfl{ctg:Drinking}{The sea is lover to the sand,}
+\poemfl{ctg:Silent}{Soundless on aging acetate,}
+\poemfl{ctg:Jewish}{Summer has its clammy skin against my window.}
+\poemfl{ctg:Kaddish}{Sometimes it makes sense to think about God.}
+\poemfl{ctg:Oranges}{Piled in slanting supermarket bins,}
+\poemfl{ctg:Lecture}{First, is there anything wrong with you?}
+\poemfl{ctg:Three}{I saw young men scramble from an earthen tunnel}
+\poemfl{ctg:Clowns}{Ink that \cq{bomb,} Netanyahu, play the public fool!}
+\poemfl{ctg:Dead}{This one's on a pedestal,}
+\poemfl{ctg:AnUntimely}{I could not die at twelve.}
+\poemfl{ctg:Cyrano}{Ah no, sir, you are too simple! Why, you might have said --- oh,}
+\poemfl{ctg:Drone}{We believe in what knows us,}
+\poemfl{ctg:TheStorm}{Last night I dreamed about a place called Sabbath.}
+\poemfl{ctg:CrimeScene}{Item: one wreck of a car.}
+\poemfl{ctg:TheSurvivor}{After the dancing stopped, \& she}
+\poemfl{ctg:TheWalls}{From Gaza they can't touch it,}
+\poemfl{ctg:MyDevil}{Thought I was gone, did you?}
+\poemfl{ctg:Delirium}{Where does dreaming end}
+\poemfl{ctg:Farewell}{Each time you leave could be the last.}
+\poemfl{ctg:Fanatics}{Occupied Palestine, March 2011}
+\poemfl{ctg:Pines}{Tread lightly, stoic, these needles bleed.}
+\poemfl{ctg:DeathInPalestine}{Where blood drowns}
+\poemfl{ctg:WhyItMattered}{If I try to understand a dead man I never knew}
+\poemfl{ctg:MyKaddish}{Magnify his name I dare not.}
+\poemfl{ctg:Elegy}{You were the child whose life closed before your youth.}
+\end{description}
+\end{pmsection}
+
 
 \newpage
 %\raisebox{-6em}

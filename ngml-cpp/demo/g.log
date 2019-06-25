@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  25 JUN 2019 09:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  25 JUN 2019 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -254,25 +254,7 @@ less on input line 267.
 \epigraphquoterightmargin=\skip66
 ) (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-)
-(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
-
-(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/caption/caption3.st
-y
-Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen131
-\captionmargin@=\dimen132
-\captionwidth=\dimen133
-\caption@tempdima=\dimen134
-\caption@indent=\dimen135
-\caption@parindent=\dimen136
-\caption@hangindent=\dimen137
-)
-\c@ContinuedFloat=\count128
-)
-(/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/graphics-cfg/color.
@@ -323,34 +305,34 @@ tex
 \XKV@toks=\toks62
 \XKV@tempa@toks=\toks63
 )
-\XKV@depth=\count129
+\XKV@depth=\count128
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@qr@i=\count130
-\c@qr@j=\count131
-\qr@a=\count132
-\qr@b=\count133
-\qr@c=\count134
-\qr@for@depth=\count135
-\qr@for@maxdepth=\count136
-\qr@for@start=\count137
-\qr@for@end=\count138
-\qr@for@step=\count139
+\c@qr@i=\count129
+\c@qr@j=\count130
+\qr@a=\count131
+\qr@b=\count132
+\qr@c=\count133
+\qr@for@depth=\count134
+\qr@for@maxdepth=\count135
+\qr@for@start=\count136
+\qr@for@end=\count137
+\qr@for@step=\count138
+\qr@newforcount=\count139
 \qr@newforcount=\count140
-\qr@newforcount=\count141
 \qr@desiredheight=\skip67
 \qr@modulesize=\skip68
 \qr@minipagewidth=\skip69
-\c@maski=\count142
-\c@maskj=\count143
-\c@totalones=\count144
-\c@penaltyi=\count145
-\c@penaltyii=\count146
-\c@penaltyiii=\count147
-\c@penaltyiv=\count148
-\c@qr@hexchars=\count149
-\qr@newforcount=\count150
-\c@qr@divisionsremaining=\count151
+\c@maski=\count141
+\c@maskj=\count142
+\c@totalones=\count143
+\c@penaltyi=\count144
+\c@penaltyii=\count145
+\c@penaltyiii=\count146
+\c@penaltyiv=\count147
+\c@qr@hexchars=\count148
+\qr@newforcount=\count149
+\c@qr@divisionsremaining=\count150
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/amsfonts/amssymb.st
 y
@@ -382,23 +364,23 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen138
-\Gin@req@width=\dimen139
+\Gin@req@height=\dimen131
+\Gin@req@width=\dimen132
 )
-\c@xmargrefnumber=\count152
+\c@xmargrefnumber=\count151
 \xmargrefmarker=\toks65
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count153
-\calc@Bcount=\count154
-\calc@Adimen=\dimen140
-\calc@Bdimen=\dimen141
+\calc@Acount=\count152
+\calc@Bcount=\count153
+\calc@Adimen=\dimen133
+\calc@Bdimen=\dimen134
 \calc@Askip=\skip70
 \calc@Bskip=\skip71
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count155
+\calc@Ccount=\count154
 \calc@Cskip=\skip72
 )
 \rulelen=\skip73
@@ -461,16 +443,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen142
-\Hy@linkcounter=\count156
-\Hy@pagecounter=\count157
+\@linkdim=\dimen135
+\Hy@linkcounter=\count155
+\Hy@pagecounter=\count156
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count158
+\Hy@SavedSpaceFactor=\count157
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/latexconfig/hyperre
 f.cfg
@@ -484,16 +466,16 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count159
+\c@Hy@tempcnt=\count158
  (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen143
-\Fld@menulength=\count160
-\Field@Width=\dimen144
-\Fld@charsize=\dimen145
+\XeTeXLinkMargin=\dimen136
+\Fld@menulength=\count159
+\Field@Width=\dimen137
+\Fld@charsize=\dimen138
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -503,17 +485,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count161
-\c@Item=\count162
-\c@Hfootnote=\count163
+\Hy@abspage=\count160
+\c@Item=\count161
+\c@Hfootnote=\count162
 )
 Package hyperref Info: Driver: hpdftex.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/hyperref/hpdftex.de
 f
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count164
-\c@bookmark@seq@number=\count165
+\Fld@listcount=\count163
+\c@bookmark@seq@number=\count164
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/oberdiek/rerunfilec
 heck.sty
@@ -533,7 +515,7 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 .sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 159.
+Package hyperref Info: Option `colorlinks' set `true' on input line 164.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/ncctools/manyfoot.s
 ty
@@ -543,13 +525,13 @@ Package: manyfoot 2005/09/11 v1.10 Many Footnote Levels Package (NCC)
 ty
 Package: nccfoots 2005/02/03 v1.2 NCC Footnotes Package (NCC)
 )
-\MFL@columnwidth=\dimen146
+\MFL@columnwidth=\dimen139
 \footglue=\skip76
 )
 \footinsA=\insert199
-\c@footnoteA=\count166
+\c@footnoteA=\count165
 \footinsB=\insert198
-\c@footnoteB=\count167
+\c@footnoteB=\count166
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/tcolorbox/tcolorbox
 .sty
@@ -562,8 +544,8 @@ s.sty
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/utilities/pgf
 util-common.tex
 \pgfutil@everybye=\toks66
-\pgfutil@tempdima=\dimen147
-\pgfutil@tempdimb=\dimen148
+\pgfutil@tempdima=\dimen140
+\pgfutil@tempdimb=\dimen141
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/utilities/pgf
 util-common-lists.tex))
@@ -597,20 +579,20 @@ keys.code.tex
 keysfiltered.code.tex
 \pgfkeys@tmptoks=\toks69
 ))
-\pgf@x=\dimen149
-\pgf@y=\dimen150
-\pgf@xa=\dimen151
-\pgf@ya=\dimen152
-\pgf@xb=\dimen153
-\pgf@yb=\dimen154
-\pgf@xc=\dimen155
-\pgf@yc=\dimen156
+\pgf@x=\dimen142
+\pgf@y=\dimen143
+\pgf@xa=\dimen144
+\pgf@ya=\dimen145
+\pgf@xb=\dimen146
+\pgf@yb=\dimen147
+\pgf@xc=\dimen148
+\pgf@yc=\dimen149
 \w@pgf@writea=\write4
 \r@pgf@reada=\read1
-\c@pgf@counta=\count168
-\c@pgf@countb=\count169
-\c@pgf@countc=\count170
-\c@pgf@countd=\count171
+\c@pgf@counta=\count167
+\c@pgf@countb=\count168
+\c@pgf@countc=\count169
+\c@pgf@countd=\count170
 \t@pgf@toka=\toks70
 \t@pgf@tokb=\toks71
 \t@pgf@tokc=\toks72
@@ -632,8 +614,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/systemlayer/p
 gfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count172
-\pgfsyssoftpath@bigbuffer@items=\count173
+\pgfsyssoftpath@smallbuffer@items=\count171
+\pgfsyssoftpath@bigbuffer@items=\count172
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/systemlayer/p
 gfsysprotocol.code.tex
@@ -651,8 +633,8 @@ alc.code.tex
 til.code.tex)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/math/pgfmathp
 arser.code.tex
-\pgfmath@dimen=\dimen157
-\pgfmath@count=\count174
+\pgfmath@dimen=\dimen150
+\pgfmath@count=\count173
 \pgfmath@box=\box53
 \pgfmath@toks=\toks73
 \pgfmath@stack@operand=\toks74
@@ -678,37 +660,37 @@ unctions.misc.code.tex)
 unctions.integerarithmetics.code.tex)))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/math/pgfmathf
 loat.code.tex
-\c@pgfmathroundto@lastzeros=\count175
+\c@pgfmathroundto@lastzeros=\count174
 ))
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen158
-\pgf@picmaxx=\dimen159
-\pgf@picminy=\dimen160
-\pgf@picmaxy=\dimen161
-\pgf@pathminx=\dimen162
-\pgf@pathmaxx=\dimen163
-\pgf@pathminy=\dimen164
-\pgf@pathmaxy=\dimen165
-\pgf@xx=\dimen166
-\pgf@xy=\dimen167
-\pgf@yx=\dimen168
-\pgf@yy=\dimen169
-\pgf@zx=\dimen170
-\pgf@zy=\dimen171
+\pgf@picminx=\dimen151
+\pgf@picmaxx=\dimen152
+\pgf@picminy=\dimen153
+\pgf@picmaxy=\dimen154
+\pgf@pathminx=\dimen155
+\pgf@pathmaxx=\dimen156
+\pgf@pathminy=\dimen157
+\pgf@pathmaxy=\dimen158
+\pgf@xx=\dimen159
+\pgf@xy=\dimen160
+\pgf@yx=\dimen161
+\pgf@yy=\dimen162
+\pgf@zx=\dimen163
+\pgf@zy=\dimen164
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen172
-\pgf@path@lasty=\dimen173
+\pgf@path@lastx=\dimen165
+\pgf@path@lasty=\dimen166
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen174
-\pgf@shorten@start@additional=\dimen175
+\pgf@shorten@end@additional=\dimen167
+\pgf@shorten@start@additional=\dimen168
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorescopes.code.tex
@@ -716,19 +698,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box54
 \pgf@hbox=\box55
 \pgf@layerbox@main=\box56
-\pgf@picture@serial@count=\count176
+\pgf@picture@serial@count=\count175
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen176
+\pgflinewidth=\dimen169
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen177
-\pgf@pt@y=\dimen178
-\pgf@pt@temp=\dimen179
+\pgf@pt@x=\dimen170
+\pgf@pt@y=\dimen171
+\pgf@pt@temp=\dimen172
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorequick.code.tex
@@ -745,13 +727,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcorearrows.code.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen180
+\pgfarrowsep=\dimen173
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen181
-\pgf@sys@shading@range@num=\count177
+\pgf@max=\dimen174
+\pgf@sys@shading@range@num=\count176
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/pgf/basiclayer/pg
 fcoreimage.code.tex
@@ -786,8 +768,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/pgf/compatibility/p
 gfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen182
-\pgf@nodesepend=\dimen183
+\pgf@nodesepstart=\dimen175
+\pgf@nodesepend=\dimen176
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/pgf/compatibility/p
 gfcomp-version-1-18.sty
@@ -811,15 +793,15 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/etoolbox/etoolbox.s
 ty
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count178
+\etb@tempcnta=\count177
 )
 \tcb@titlebox=\box59
 \tcb@upperbox=\box60
 \tcb@lowerbox=\box61
 \tcb@phantombox=\box62
-\c@tcbbreakpart=\count179
-\c@tcblayer=\count180
-\tcolorbox@number=\count181
+\c@tcbbreakpart=\count178
+\c@tcblayer=\count179
+\tcolorbox@number=\count180
 \tcb@temp=\box63
 \tcb@temp=\box64
 \tcb@temp=\box65
@@ -839,24 +821,24 @@ Package: expl3 2018/03/05 L3 programming layer (loader)
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/l3kernel/expl3-code
 .tex
 Package: expl3 2018/03/05 L3 programming layer (code)
-\c_max_int=\count182
-\l_tmpa_int=\count183
-\l_tmpb_int=\count184
-\g_tmpa_int=\count185
-\g_tmpb_int=\count186
-\g__intarray_font_int=\count187
-\g__prg_map_int=\count188
-\c_log_iow=\count189
-\l_iow_line_count_int=\count190
-\l__iow_line_target_int=\count191
-\l__iow_one_indent_int=\count192
-\l__iow_indent_int=\count193
-\c_zero_dim=\dimen184
-\c_max_dim=\dimen185
-\l_tmpa_dim=\dimen186
-\l_tmpb_dim=\dimen187
-\g_tmpa_dim=\dimen188
-\g_tmpb_dim=\dimen189
+\c_max_int=\count181
+\l_tmpa_int=\count182
+\l_tmpb_int=\count183
+\g_tmpa_int=\count184
+\g_tmpb_int=\count185
+\g__intarray_font_int=\count186
+\g__prg_map_int=\count187
+\c_log_iow=\count188
+\l_iow_line_count_int=\count189
+\l__iow_line_target_int=\count190
+\l__iow_one_indent_int=\count191
+\l__iow_indent_int=\count192
+\c_zero_dim=\dimen177
+\c_max_dim=\dimen178
+\l_tmpa_dim=\dimen179
+\l_tmpb_dim=\dimen180
+\g_tmpa_dim=\dimen181
+\g_tmpb_dim=\dimen182
 \c_zero_skip=\skip77
 \c_max_skip=\skip78
 \l_tmpa_skip=\skip79
@@ -869,99 +851,99 @@ Package: expl3 2018/03/05 L3 programming layer (code)
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count194
-\c__fp_leading_shift_int=\count195
-\c__fp_middle_shift_int=\count196
-\c__fp_trailing_shift_int=\count197
-\c__fp_big_leading_shift_int=\count266
-\c__fp_big_middle_shift_int=\count267
-\c__fp_big_trailing_shift_int=\count268
-\c__fp_Bigg_leading_shift_int=\count269
-\c__fp_Bigg_middle_shift_int=\count270
-\c__fp_Bigg_trailing_shift_int=\count271
-\c__fp_rand_size_int=\count272
-\c__fp_rand_four_int=\count273
-\c__fp_rand_eight_int=\count274
-\l__sort_length_int=\count275
-\l__sort_min_int=\count276
-\l__sort_top_int=\count277
-\l__sort_max_int=\count278
-\l__sort_true_max_int=\count279
-\l__sort_block_int=\count280
-\l__sort_begin_int=\count281
-\l__sort_end_int=\count282
-\l__sort_A_int=\count283
-\l__sort_B_int=\count284
-\l__sort_C_int=\count285
-\l__tl_build_start_index_int=\count286
-\l__tl_build_index_int=\count287
-\l__tl_analysis_normal_int=\count288
-\l__tl_analysis_index_int=\count289
-\l__tl_analysis_nesting_int=\count290
-\l__tl_analysis_type_int=\count291
-\l__regex_internal_a_int=\count292
-\l__regex_internal_b_int=\count293
-\l__regex_internal_c_int=\count294
-\l__regex_balance_int=\count295
-\l__regex_group_level_int=\count296
-\l__regex_mode_int=\count297
-\c__regex_cs_in_class_mode_int=\count298
-\c__regex_cs_mode_int=\count299
-\l__regex_catcodes_int=\count300
-\l__regex_default_catcodes_int=\count301
-\c__regex_catcode_D_int=\count302
-\c__regex_catcode_S_int=\count303
-\c__regex_catcode_L_int=\count304
-\c__regex_catcode_O_int=\count305
-\c__regex_catcode_A_int=\count306
-\c__regex_all_catcodes_int=\count307
-\l__regex_show_lines_int=\count308
-\l__regex_min_state_int=\count309
-\l__regex_max_state_int=\count310
-\l__regex_left_state_int=\count311
-\l__regex_right_state_int=\count312
-\l__regex_capturing_group_int=\count313
-\l__regex_min_pos_int=\count314
-\l__regex_max_pos_int=\count315
-\l__regex_curr_pos_int=\count316
-\l__regex_start_pos_int=\count317
-\l__regex_success_pos_int=\count318
-\l__regex_curr_char_int=\count319
-\l__regex_curr_catcode_int=\count320
-\l__regex_last_char_int=\count321
-\l__regex_case_changed_char_int=\count322
-\l__regex_curr_state_int=\count323
-\l__regex_step_int=\count324
-\l__regex_min_active_int=\count325
-\l__regex_max_active_int=\count326
-\l__regex_replacement_csnames_int=\count327
-\l__regex_match_count_int=\count328
-\l__regex_min_submatch_int=\count329
-\l__regex_submatch_int=\count330
-\l__regex_zeroth_submatch_int=\count331
-\g__regex_trace_regex_int=\count332
+\l_keys_choice_int=\count193
+\c__fp_leading_shift_int=\count194
+\c__fp_middle_shift_int=\count195
+\c__fp_trailing_shift_int=\count196
+\c__fp_big_leading_shift_int=\count197
+\c__fp_big_middle_shift_int=\count266
+\c__fp_big_trailing_shift_int=\count267
+\c__fp_Bigg_leading_shift_int=\count268
+\c__fp_Bigg_middle_shift_int=\count269
+\c__fp_Bigg_trailing_shift_int=\count270
+\c__fp_rand_size_int=\count271
+\c__fp_rand_four_int=\count272
+\c__fp_rand_eight_int=\count273
+\l__sort_length_int=\count274
+\l__sort_min_int=\count275
+\l__sort_top_int=\count276
+\l__sort_max_int=\count277
+\l__sort_true_max_int=\count278
+\l__sort_block_int=\count279
+\l__sort_begin_int=\count280
+\l__sort_end_int=\count281
+\l__sort_A_int=\count282
+\l__sort_B_int=\count283
+\l__sort_C_int=\count284
+\l__tl_build_start_index_int=\count285
+\l__tl_build_index_int=\count286
+\l__tl_analysis_normal_int=\count287
+\l__tl_analysis_index_int=\count288
+\l__tl_analysis_nesting_int=\count289
+\l__tl_analysis_type_int=\count290
+\l__regex_internal_a_int=\count291
+\l__regex_internal_b_int=\count292
+\l__regex_internal_c_int=\count293
+\l__regex_balance_int=\count294
+\l__regex_group_level_int=\count295
+\l__regex_mode_int=\count296
+\c__regex_cs_in_class_mode_int=\count297
+\c__regex_cs_mode_int=\count298
+\l__regex_catcodes_int=\count299
+\l__regex_default_catcodes_int=\count300
+\c__regex_catcode_D_int=\count301
+\c__regex_catcode_S_int=\count302
+\c__regex_catcode_L_int=\count303
+\c__regex_catcode_O_int=\count304
+\c__regex_catcode_A_int=\count305
+\c__regex_all_catcodes_int=\count306
+\l__regex_show_lines_int=\count307
+\l__regex_min_state_int=\count308
+\l__regex_max_state_int=\count309
+\l__regex_left_state_int=\count310
+\l__regex_right_state_int=\count311
+\l__regex_capturing_group_int=\count312
+\l__regex_min_pos_int=\count313
+\l__regex_max_pos_int=\count314
+\l__regex_curr_pos_int=\count315
+\l__regex_start_pos_int=\count316
+\l__regex_success_pos_int=\count317
+\l__regex_curr_char_int=\count318
+\l__regex_curr_catcode_int=\count319
+\l__regex_last_char_int=\count320
+\l__regex_case_changed_char_int=\count321
+\l__regex_curr_state_int=\count322
+\l__regex_step_int=\count323
+\l__regex_min_active_int=\count324
+\l__regex_max_active_int=\count325
+\l__regex_replacement_csnames_int=\count326
+\l__regex_match_count_int=\count327
+\l__regex_min_submatch_int=\count328
+\l__regex_submatch_int=\count329
+\l__regex_zeroth_submatch_int=\count330
+\g__regex_trace_regex_int=\count331
 \c_empty_box=\box67
 \l_tmpa_box=\box68
 \l_tmpb_box=\box69
 \g_tmpa_box=\box70
 \g_tmpb_box=\box71
-\l__box_top_dim=\dimen190
-\l__box_bottom_dim=\dimen191
-\l__box_left_dim=\dimen192
-\l__box_right_dim=\dimen193
-\l__box_top_new_dim=\dimen194
-\l__box_bottom_new_dim=\dimen195
-\l__box_left_new_dim=\dimen196
-\l__box_right_new_dim=\dimen197
+\l__box_top_dim=\dimen183
+\l__box_bottom_dim=\dimen184
+\l__box_left_dim=\dimen185
+\l__box_right_dim=\dimen186
+\l__box_top_new_dim=\dimen187
+\l__box_bottom_new_dim=\dimen188
+\l__box_left_new_dim=\dimen189
+\l__box_right_new_dim=\dimen190
 \l__box_internal_box=\box72
 \l__coffin_internal_box=\box73
-\l__coffin_internal_dim=\dimen256
-\l__coffin_offset_x_dim=\dimen257
-\l__coffin_offset_y_dim=\dimen258
-\l__coffin_x_dim=\dimen259
-\l__coffin_y_dim=\dimen260
-\l__coffin_x_prime_dim=\dimen261
-\l__coffin_y_prime_dim=\dimen262
+\l__coffin_internal_dim=\dimen191
+\l__coffin_offset_x_dim=\dimen192
+\l__coffin_offset_y_dim=\dimen193
+\l__coffin_x_dim=\dimen194
+\l__coffin_y_dim=\dimen195
+\l__coffin_x_prime_dim=\dimen196
+\l__coffin_y_prime_dim=\dimen197
 \c_empty_coffin=\box74
 \l__coffin_aligned_coffin=\box75
 \l__coffin_aligned_internal_coffin=\box76
@@ -970,28 +952,28 @@ Package: expl3 2018/03/05 L3 programming layer (code)
 \l__coffin_display_coffin=\box79
 \l__coffin_display_coord_coffin=\box80
 \l__coffin_display_pole_coffin=\box81
-\l__coffin_display_offset_dim=\dimen263
-\l__coffin_display_x_dim=\dimen264
-\l__coffin_display_y_dim=\dimen265
-\l__coffin_bounding_shift_dim=\dimen266
-\l__coffin_left_corner_dim=\dimen267
-\l__coffin_right_corner_dim=\dimen268
-\l__coffin_bottom_corner_dim=\dimen269
-\l__coffin_top_corner_dim=\dimen270
-\l__coffin_scaled_total_height_dim=\dimen271
-\l__coffin_scaled_width_dim=\dimen272
+\l__coffin_display_offset_dim=\dimen256
+\l__coffin_display_x_dim=\dimen257
+\l__coffin_display_y_dim=\dimen258
+\l__coffin_bounding_shift_dim=\dimen259
+\l__coffin_left_corner_dim=\dimen260
+\l__coffin_right_corner_dim=\dimen261
+\l__coffin_bottom_corner_dim=\dimen262
+\l__coffin_top_corner_dim=\dimen263
+\l__coffin_scaled_total_height_dim=\dimen264
+\l__coffin_scaled_width_dim=\dimen265
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/l3kernel/l3pdfmode.
 def
 File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count333
+\l__driver_color_stack_int=\count332
 ))
 Package: xparse 2018/02/21 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count334
-\g__xparse_grabber_int=\count335
-\l__xparse_m_args_int=\count336
-\l__xparse_mandatory_args_int=\count337
-\l__xparse_v_nesting_int=\count338
+\l__xparse_current_arg_int=\count333
+\g__xparse_grabber_int=\count334
+\l__xparse_m_args_int=\count335
+\l__xparse_mandatory_args_int=\count336
+\l__xparse_v_nesting_int=\count337
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/oberdiek/zref-abspa
 ge.sty
@@ -1004,11 +986,11 @@ Package zref Info: New property list: main on input line 759.
 Package zref Info: New property: default on input line 760.
 Package zref Info: New property: page on input line 761.
 )
-\c@abspage=\count339
+\c@abspage=\count338
 Package zref Info: New property: abspage on input line 62.
 )
 \mdf@templength=\skip83
-\c@mdf@globalstyle@cnt=\count340
+\c@mdf@globalstyle@cnt=\count339
 \mdf@skipabove@length=\skip84
 \mdf@skipbelow@length=\skip85
 \mdf@leftmargin@length=\skip86
@@ -1085,7 +1067,7 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@horizontalspaceofbox=\skip147
 \mdfsubtitleheight=\skip148
 \mdfsubsubtitleheight=\skip149
-\c@mdfcountframes=\count341
+\c@mdfcountframes=\count340
 
 ****** mdframed patching \endmdf@trivlist
 
@@ -1101,21 +1083,21 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 . 
 . Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
 .................................................
-\mdf@envdepth=\count342
-\c@mdf@env@i=\count343
-\c@mdf@env@ii=\count344
-\c@mdf@zref@counter=\count345
+\mdf@envdepth=\count341
+\c@mdf@env@i=\count342
+\c@mdf@env@ii=\count343
+\c@mdf@zref@counter=\count344
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/microtype/microtype
 .sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks79
-\MT@count=\count346
+\MT@count=\count345
 LaTeX Info: Redefining \textls on input line 793.
-\MT@outer@kern=\dimen273
+\MT@outer@kern=\dimen266
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count347
+\MT@listname@count=\count346
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/microtype/microtype
 -pdftex.def
@@ -1141,9 +1123,9 @@ or.tex
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/generic/texapi/texapi.tex
 \pi@temp_tokenA=\toks80
 \pi@temp_tokenB=\toks81
-\pi@dofor_count=\count348
+\pi@dofor_count=\count347
 ))
-\nav@outline_count=\count349
+\nav@outline_count=\count348
 ))<<gaza.txh>> (./g.aux
 <Reading QR code for "MichaelLesher2019-1" at level 2-Q from aux file.>
 <Reading QR code for "MichaelLesher2019-v" at level 2-Q from aux file.>
@@ -1190,24 +1172,25 @@ or.tex
 <Reading QR code for "MichaelLesher2019-42" at level 2-Q from aux file.>
 <Reading QR code for "MichaelLesher2019-43" at level 2-Q from aux file.>
 <Reading QR code for "MichaelLesher2019-44" at level 2-Q from aux file.>
+<Reading QR code for "MichaelLesher2019-45" at level 2-Q from aux file.>
 )
 \openout1 = `g.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 244.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 252.
+LaTeX Font Info:    ... okay on input line 252.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 252.
+LaTeX Font Info:    ... okay on input line 252.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 252.
+LaTeX Font Info:    ... okay on input line 252.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 252.
+LaTeX Font Info:    ... okay on input line 252.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 252.
+LaTeX Font Info:    ... okay on input line 252.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 252.
+LaTeX Font Info:    ... okay on input line 252.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 252.
+LaTeX Font Info:    ... okay on input line 252.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 252.
 
  (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -1246,23 +1229,20 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * \@reversemargintrue
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: hyperref package is loaded.
-Package caption Info: End \AtBeginDocument code.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/context/base/mkii/supp-pd
 f.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count350
-\scratchdimen=\dimen274
+\scratchcounter=\count349
+\scratchdimen=\dimen267
 \scratchbox=\box87
-\nofMPsegments=\count351
-\nofMParguments=\count352
+\nofMPsegments=\count350
+\nofMParguments=\count351
 \everyMPshowfont=\toks82
-\MPscratchCnt=\count353
-\MPscratchDim=\dimen275
-\MPnumerator=\count354
-\makeMPintoPDFobject=\count355
+\MPscratchCnt=\count352
+\MPscratchDim=\dimen268
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
 \everyMPtoPDFconversion=\toks83
 )
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/oberdiek/epstopdf-b
@@ -1285,7 +1265,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box88
-Package hyperref Info: Link coloring ON on input line 244.
+Package hyperref Info: Link coloring ON on input line 252.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/hyperref/nameref.st
 y
@@ -1295,17 +1275,17 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 string.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count356
+\c@section@level=\count355
 )
-LaTeX Info: Redefining \ref on input line 244.
-LaTeX Info: Redefining \pageref on input line 244.
-LaTeX Info: Redefining \nameref on input line 244.
+LaTeX Info: Redefining \ref on input line 252.
+LaTeX Info: Redefining \pageref on input line 252.
+LaTeX Info: Redefining \nameref on input line 252.
  (./g.out) (./g.out)
 \@outlinefile=\write7
 \openout7 = `g.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \microtypecontext on input line 244.
+LaTeX Info: Redefining \microtypecontext on input line 252.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1326,29 +1306,29 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 
 
 Package Fancyhdr Warning: \fancyhfoffset's `E' option without twoside option is
- useless on input line 248.
+ useless on input line 261.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 248.
+less on input line 261.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 248.
+less on input line 261.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 248.
+less on input line 261.
 
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 277.
+ mdframed uses option nobreak mdframed on input line 290.
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/microtype/mt-cmr.cf
 g
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 278.
+LaTeX Font Info:    Try loading font information for U+msa on input line 291.
  (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1356,7 +1336,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 g
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 278.
+LaTeX Font Info:    Try loading font information for U+msb on input line 291.
  (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1364,13 +1344,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 g
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 278.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 291.
  (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 281.
+(hyperref)                setting the option has no effect on input line 294.
 
 
 
@@ -1396,7 +1376,7 @@ less on input line 31.
 )
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 284.
+(hyperref)                setting the option has no effect on input line 297.
 
 
 
@@ -1412,27 +1392,27 @@ culated.>
 ]
 
 Package Fancyhdr Warning: \fancyhfoffset's `E' option without twoside option is
- useless on input line 284.
+ useless on input line 297.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 284.
+less on input line 297.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 284.
+less on input line 297.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 284.
+less on input line 297.
 
 \poemcontents=\write9
 \openout9 = `g.ctn'.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 300.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 314.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 300.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 314.
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -1465,7 +1445,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 317.
+(hyperref)                setting the option has no effect on input line 331.
 
 
 
@@ -1478,24 +1458,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.317 {\poemnewpage
+l.331 {\poemnewpage
                    } [1
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 345.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 359.
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 345--345
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 359--359
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 367--367
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 381--381
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 384--384
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 398--398
 [][] 
  []
 
@@ -1531,7 +1511,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 395.
+(hyperref)                setting the option has no effect on input line 409.
 
 
 
@@ -1541,12 +1521,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-2" in version 2-Q as previously cal
 culated.>
 [2]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 409--409
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 423--423
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 430--430
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 444--444
 [][] 
  []
 
@@ -1582,7 +1562,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 439.
+(hyperref)                setting the option has no effect on input line 453.
 
 
 
@@ -1592,31 +1572,31 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-3" in version 2-Q as previously cal
 culated.>
 [3]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 446.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 460.
 
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 446.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 460.
 
-Overfull \hbox (32.81535pt too wide) in paragraph at lines 446--446
+Overfull \hbox (32.81535pt too wide) in paragraph at lines 460--460
 []| [][][][][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 459--459
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 473--473
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 478--478
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 492--492
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 494--494
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 508--508
 [][] 
  []
 
@@ -1662,7 +1642,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 504.
+(hyperref)                setting the option has no effect on input line 518.
 
 
 
@@ -1672,12 +1652,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-4" in version 2-Q as previously cal
 culated.>
 [4]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 510--510
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 524--524
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 527--527
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 541--541
 [][] 
  []
 
@@ -1713,7 +1693,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 532.
+(hyperref)                setting the option has no effect on input line 546.
 
 
 
@@ -1723,12 +1703,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-5" in version 2-Q as previously cal
 culated.>
 [5]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 557--557
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 571--571
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 576--576
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 590--590
 [][] 
  []
 
@@ -1764,7 +1744,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 589.
+(hyperref)                setting the option has no effect on input line 603.
 
 
 
@@ -1774,12 +1754,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-6" in version 2-Q as previously cal
 culated.>
 [6]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 615--615
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 629--629
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 628--628
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 642--642
 [][] 
  []
 
@@ -1815,7 +1795,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 632.
+(hyperref)                setting the option has no effect on input line 646.
 
 
 
@@ -1825,17 +1805,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-7" in version 2-Q as previously cal
 culated.>
 [7]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 651--651
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 665--665
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 662--662
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 676--676
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 678--678
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 692--692
 [][] 
  []
 
@@ -1871,7 +1851,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 693.
+(hyperref)                setting the option has no effect on input line 707.
 
 
 
@@ -1881,32 +1861,32 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-8" in version 2-Q as previously cal
 culated.>
 [8]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 696--696
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 710--710
 [][] 
  []
 
 
-Overfull \hbox (32.81535pt too wide) in paragraph at lines 698--698
+Overfull \hbox (32.81535pt too wide) in paragraph at lines 712--712
 []| [][][][][] 
  []
 
 
-Overfull \hbox (32.81535pt too wide) in paragraph at lines 701--701
+Overfull \hbox (32.81535pt too wide) in paragraph at lines 715--715
 []| [][][][][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 708--708
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 722--722
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 725--725
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 739--739
 [][] 
  []
 
 
-Overfull \hbox (32.81535pt too wide) in paragraph at lines 733--733
+Overfull \hbox (32.81535pt too wide) in paragraph at lines 747--747
 []| [][][][][] 
  []
 
@@ -1961,7 +1941,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 739.
+(hyperref)                setting the option has no effect on input line 753.
 
 
 
@@ -1971,17 +1951,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-9" in version 2-Q as previously cal
 culated.>
 [9]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 745--745
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 759--759
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 755--755
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 769--769
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 772--772
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 786--786
 [][] 
  []
 
@@ -2027,7 +2007,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 784.
+(hyperref)                setting the option has no effect on input line 798.
 
 
 
@@ -2037,22 +2017,22 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-10" in version 2-Q as previously ca
 lculated.>
 [10]
-Overfull \hbox (32.81535pt too wide) in paragraph at lines 805--805
+Overfull \hbox (32.81535pt too wide) in paragraph at lines 819--819
 []| [][][][][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 805--805
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 819--819
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 825--825
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 839--839
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 844--844
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 858--858
 [][] 
  []
 
@@ -2098,7 +2078,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 853.
+(hyperref)                setting the option has no effect on input line 867.
 
 
 
@@ -2108,7 +2088,7 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-11" in version 2-Q as previously ca
 lculated.>
 [11]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 864--864
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 878--878
 [][] 
  []
 
@@ -2144,7 +2124,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 869.
+(hyperref)                setting the option has no effect on input line 883.
 
 
 
@@ -2154,17 +2134,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-12" in version 2-Q as previously ca
 lculated.>
 [12]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 893--893
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 907--907
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 912--912
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 926--926
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 932--932
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 946--946
 [][] 
  []
 
@@ -2200,7 +2180,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 942.
+(hyperref)                setting the option has no effect on input line 956.
 
 
 
@@ -2243,7 +2223,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 954.
+(hyperref)                setting the option has no effect on input line 968.
 
 
 
@@ -2253,17 +2233,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-14" in version 2-Q as previously ca
 lculated.>
 [14]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 975--975
-[][] 
- []
-
-
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 994--994
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 989--989
 [][] 
  []
 
 
 Overfull \hbox (10.45274pt too wide) in paragraph at lines 1008--1008
+[][] 
+ []
+
+
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1022--1022
 [][] 
  []
 
@@ -2299,7 +2279,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1020.
+(hyperref)                setting the option has no effect on input line 1034.
 
 
 
@@ -2309,17 +2289,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-15" in version 2-Q as previously ca
 lculated.>
 [15]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1035--1035
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1049--1049
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1051--1051
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1065--1065
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1064--1064
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1078--1078
 [][] 
  []
 
@@ -2355,7 +2335,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1084.
+(hyperref)                setting the option has no effect on input line 1098.
 
 
 
@@ -2365,12 +2345,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-16" in version 2-Q as previously ca
 lculated.>
 [16]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1084--1084
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1098--1098
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1093--1093
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1107--1107
 [][] 
  []
 
@@ -2406,7 +2386,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1107.
+(hyperref)                setting the option has no effect on input line 1121.
 
 
 
@@ -2449,7 +2429,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1132.
+(hyperref)                setting the option has no effect on input line 1146.
 
 
 
@@ -2459,12 +2439,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-18" in version 2-Q as previously ca
 lculated.>
 [18]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1149--1149
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1163--1163
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1162--1162
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1176--1176
 [][] 
  []
 
@@ -2500,7 +2480,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1182.
+(hyperref)                setting the option has no effect on input line 1196.
 
 
 
@@ -2510,12 +2490,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-19" in version 2-Q as previously ca
 lculated.>
 [19]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1200--1200
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1214--1214
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1216--1216
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1230--1230
 [][] 
  []
 
@@ -2551,7 +2531,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1226.
+(hyperref)                setting the option has no effect on input line 1240.
 
 
 
@@ -2561,12 +2541,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-20" in version 2-Q as previously ca
 lculated.>
 [20]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1256--1256
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1270--1270
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1281--1281
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1295--1295
 [][] 
  []
 
@@ -2602,7 +2582,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1296.
+(hyperref)                setting the option has no effect on input line 1310.
 
 
 
@@ -2612,17 +2592,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-21" in version 2-Q as previously ca
 lculated.>
 [21]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1301--1301
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1315--1315
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1325--1325
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1339--1339
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1333--1333
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1347--1347
 [][] 
  []
 
@@ -2658,7 +2638,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1349.
+(hyperref)                setting the option has no effect on input line 1363.
 
 
 
@@ -2668,12 +2648,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-22" in version 2-Q as previously ca
 lculated.>
 [22]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1370--1370
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1384--1384
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1389--1389
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1403--1403
 [][] 
  []
 
@@ -2709,7 +2689,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1396.
+(hyperref)                setting the option has no effect on input line 1410.
 
 
 
@@ -2719,7 +2699,7 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-23" in version 2-Q as previously ca
 lculated.>
 [23]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1411--1411
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1425--1425
 [][] 
  []
 
@@ -2755,7 +2735,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1423.
+(hyperref)                setting the option has no effect on input line 1437.
 
 
 
@@ -2765,22 +2745,22 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-24" in version 2-Q as previously ca
 lculated.>
 [24]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1444--1444
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1458--1458
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1461--1461
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1475--1475
 [][] 
  []
 
 
-Overfull \hbox (32.81535pt too wide) in paragraph at lines 1470--1470
+Overfull \hbox (32.81535pt too wide) in paragraph at lines 1484--1484
 []| [][][][][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1486--1486
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1500--1500
 [][] 
  []
 
@@ -2826,7 +2806,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1494.
+(hyperref)                setting the option has no effect on input line 1508.
 
 
 
@@ -2869,7 +2849,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1498.
+(hyperref)                setting the option has no effect on input line 1512.
 
 
 
@@ -2879,17 +2859,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-26" in version 2-Q as previously ca
 lculated.>
 [26]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1516--1516
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1530--1530
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1529--1529
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1543--1543
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1542--1542
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1556--1556
 [][] 
  []
 
@@ -2925,7 +2905,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1556.
+(hyperref)                setting the option has no effect on input line 1570.
 
 
 
@@ -2935,12 +2915,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-27" in version 2-Q as previously ca
 lculated.>
 [27]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1556--1556
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1570--1570
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1570--1570
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1584--1584
 [][] 
  []
 
@@ -2976,7 +2956,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1575.
+(hyperref)                setting the option has no effect on input line 1589.
 
 
 
@@ -2986,12 +2966,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-28" in version 2-Q as previously ca
 lculated.>
 [28]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1594--1594
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1608--1608
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1610--1610
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1624--1624
 [][] 
  []
 
@@ -3027,7 +3007,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1623.
+(hyperref)                setting the option has no effect on input line 1637.
 
 
 
@@ -3037,17 +3017,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-29" in version 2-Q as previously ca
 lculated.>
 [29]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1644--1644
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1658--1658
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1660--1660
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1674--1674
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1676--1676
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1690--1690
 [][] 
  []
 
@@ -3083,7 +3063,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1693.
+(hyperref)                setting the option has no effect on input line 1707.
 
 
 
@@ -3093,7 +3073,7 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-30" in version 2-Q as previously ca
 lculated.>
 [30]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1702--1702
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1716--1716
 [][] 
  []
 
@@ -3129,7 +3109,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1718.
+(hyperref)                setting the option has no effect on input line 1732.
 
 
 
@@ -3139,63 +3119,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-31" in version 2-Q as previously ca
 lculated.>
 [31]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1742--1742
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1756--1756
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1761--1761
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1775--1775
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1781--1781
-[][] 
- []
-
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 77.4409pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-
-Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1791.
-
-
-
-<QR code requested for "MichaelLesher2019-32" in version 0-M.>
-<Error-correction level increased from M to Q at no cost.>
-
-<Copying the QR code for "MichaelLesher2019-32" in version 2-Q as previously ca
-lculated.>
-[32]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1800--1800
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1795--1795
 [][] 
  []
 
@@ -3235,18 +3169,13 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 
 
 
-<QR code requested for "MichaelLesher2019-33" in version 0-M.>
+<QR code requested for "MichaelLesher2019-32" in version 0-M.>
 <Error-correction level increased from M to Q at no cost.>
 
-<Copying the QR code for "MichaelLesher2019-33" in version 2-Q as previously ca
+<Copying the QR code for "MichaelLesher2019-32" in version 2-Q as previously ca
 lculated.>
-[33]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1824--1824
-[][] 
- []
-
-
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1840--1840
+[32]
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1814--1814
 [][] 
  []
 
@@ -3282,7 +3211,58 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1853.
+(hyperref)                setting the option has no effect on input line 1819.
+
+
+
+<QR code requested for "MichaelLesher2019-33" in version 0-M.>
+<Error-correction level increased from M to Q at no cost.>
+
+<Copying the QR code for "MichaelLesher2019-33" in version 2-Q as previously ca
+lculated.>
+[33]
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1838--1838
+[][] 
+ []
+
+
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1854--1854
+[][] 
+ []
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 77.4409pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+
+Package hyperref Warning: Option `colorlinks' has already been used,
+(hyperref)                setting the option has no effect on input line 1867.
 
 
 
@@ -3325,7 +3305,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1894.
+(hyperref)                setting the option has no effect on input line 1908.
 
 
 
@@ -3335,7 +3315,7 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-35" in version 2-Q as previously ca
 lculated.>
 [35]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1896--1896
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1910--1910
 [][] 
  []
 
@@ -3371,7 +3351,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1913.
+(hyperref)                setting the option has no effect on input line 1927.
 
 
 
@@ -3381,12 +3361,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-36" in version 2-Q as previously ca
 lculated.>
 [36]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1940--1940
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1954--1954
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1959--1959
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 1973--1973
 [][] 
  []
 
@@ -3422,7 +3402,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 1978.
+(hyperref)                setting the option has no effect on input line 1992.
 
 
 
@@ -3432,17 +3412,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-37" in version 2-Q as previously ca
 lculated.>
 [37]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 1999--1999
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2013--2013
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2018--2018
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2032--2032
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2031--2031
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2045--2045
 [][] 
  []
 
@@ -3478,7 +3458,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 2038.
+(hyperref)                setting the option has no effect on input line 2052.
 
 
 
@@ -3488,17 +3468,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-38" in version 2-Q as previously ca
 lculated.>
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 2040--2040
+Underfull \hbox (badness 10000) in paragraph at lines 2054--2054
 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2059--2059
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2073--2073
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2072--2072
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2086--2086
 [][] 
  []
 
@@ -3534,7 +3514,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 2081.
+(hyperref)                setting the option has no effect on input line 2095.
 
 
 
@@ -3544,17 +3524,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-39" in version 2-Q as previously ca
 lculated.>
 [39]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2085--2085
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2099--2099
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2095--2095
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2109--2109
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2108--2108
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2122--2122
 [][] 
  []
 
@@ -3590,7 +3570,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 2122.
+(hyperref)                setting the option has no effect on input line 2136.
 
 
 
@@ -3600,12 +3580,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-40" in version 2-Q as previously ca
 lculated.>
 [40]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2146--2146
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2160--2160
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2167--2167
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2181--2181
 [][] 
  []
 
@@ -3641,7 +3621,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 2180.
+(hyperref)                setting the option has no effect on input line 2194.
 
 
 
@@ -3651,17 +3631,17 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-41" in version 2-Q as previously ca
 lculated.>
 [41]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2181--2181
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2195--2195
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2197--2197
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2211--2211
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2214--2214
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2228--2228
 [][] 
  []
 
@@ -3697,7 +3677,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 2242.
+(hyperref)                setting the option has no effect on input line 2256.
 
 
 
@@ -3707,12 +3687,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-42" in version 2-Q as previously ca
 lculated.>
 [42]
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2261--2261
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2275--2275
 [][] 
  []
 
 
-Overfull \hbox (10.45274pt too wide) in paragraph at lines 2277--2277
+Overfull \hbox (10.45274pt too wide) in paragraph at lines 2291--2291
 [][] 
  []
 
@@ -3748,7 +3728,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 2289.
+(hyperref)                setting the option has no effect on input line 2303.
 
 
 
@@ -3758,12 +3738,55 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 <Copying the QR code for "MichaelLesher2019-43" in version 2-Q as previously ca
 lculated.>
 [43]
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 77.4409pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+
+Package hyperref Warning: Option `colorlinks' has already been used,
+(hyperref)                setting the option has no effect on input line 2345.
+
+
+
+<QR code requested for "MichaelLesher2019-44" in version 0-M.>
+<Error-correction level increased from M to Q at no cost.>
+
+<Copying the QR code for "MichaelLesher2019-44" in version 2-Q as previously ca
+lculated.>
+[44]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 2295.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 2351.
 
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 2295.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 2316
+ mdframed uses option nobreak mdframed on input line 2351.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 2372
 .
 
 (/home/nlevisrael/texl/texlive-install/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -3774,9 +3797,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 2344.
+ mdframed uses option nobreak mdframed on input line 2400.
 
-Overfull \hbox (22.51465pt too wide) in paragraph at lines 2299--2346
+Overfull \hbox (22.51465pt too wide) in paragraph at lines 2355--2402
 []| $[]$ 
  []
 
@@ -3812,18 +3835,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 2355.
+(hyperref)                setting the option has no effect on input line 2411.
 
 
 
-<QR code requested for "MichaelLesher2019-44" in version 0-M.>
+<QR code requested for "MichaelLesher2019-45" in version 0-M.>
 <Error-correction level increased from M to Q at no cost.>
 
-<Copying the QR code for "MichaelLesher2019-44" in version 2-Q as previously ca
+<Copying the QR code for "MichaelLesher2019-45" in version 2-Q as previously ca
 lculated.>
-[44]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2355.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2355.
+[45]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2411.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2411.
  (./g.aux
 <Reading QR code for "MichaelLesher2019-1" at level 2-Q from aux file.>
 <Reading QR code for "MichaelLesher2019-v" at level 2-Q from aux file.>
@@ -3870,20 +3893,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 2355.
 <Reading QR code for "MichaelLesher2019-42" at level 2-Q from aux file.>
 <Reading QR code for "MichaelLesher2019-43" at level 2-Q from aux file.>
 <Reading QR code for "MichaelLesher2019-44" at level 2-Q from aux file.>
+<Reading QR code for "MichaelLesher2019-45" at level 2-Q from aux file.>
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2355.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2355.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2411.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2411.
 
 Package rerunfilecheck Info: File `g.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2355.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2411.
  ) 
 Here is how much of TeX's memory you used:
- 31861 strings out of 492649
- 609392 string characters out of 6122986
- 748500 words of memory out of 5000000
- 35109 multiletter control sequences out of 15000+600000
- 569614 words of font info for 183 fonts, out of 8000000 for 9000
+ 30885 strings out of 492649
+ 591176 string characters out of 6122986
+ 738781 words of memory out of 5000000
+ 34128 multiletter control sequences out of 15000+600000
+ 571437 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,17n,73p,10390b,870s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/nlevisrael/texl/texlive-install/texmf-dist/fonts/enc/dvips/base/8r.enc
@@ -3896,10 +3920,10 @@ e-install/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/nlevisrael/texl/te
 xlive-install/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></home/nlevisrael/te
 xl/texlive-install/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/nlevisrae
 l/texl/texlive-install/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on g.pdf (46 pages, 241873 bytes).
+Output written on g.pdf (47 pages, 251886 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 30761 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 34857 words of extra memory for PDF output out of 35830 (max. 10000000)
 

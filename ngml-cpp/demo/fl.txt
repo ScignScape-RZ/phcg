@@ -1,0 +1,28 @@
+\poemfl{ctg:Thinking}{If I were to be born again,}
+\poemfl{ctg:Burlesque}{What do you write on a wall?}
+\poemfl{ctg:Drinking}{The sea is lover to the sand,}
+\poemfl{ctg:Silent}{Soundless on aging acetate,}
+\poemfl{ctg:Jewish}{Summer has its clammy skin against my window.}
+\poemfl{ctg:Kaddish}{Sometimes it makes sense to think about God.}
+\poemfl{ctg:Oranges}{Piled in slanting supermarket bins,}
+\poemfl{ctg:Lecture}{First, is there anything wrong with you?}
+\poemfl{ctg:Three}{I saw young men scramble from an earthen tunnel}
+\poemfl{ctg:Clowns}{Ink that \cq{bomb,} Netanyahu, play the public fool!}
+\poemfl{ctg:Dead}{This one's on a pedestal,}
+\poemfl{ctg:AnUntimely}{I could not die at twelve.}
+\poemfl{ctg:Cyrano}{Ah no, sir, you are too simple! Why, you might have said --- oh,}
+\poemfl{ctg:Drone}{We believe in what knows us,}
+\poemfl{ctg:TheStorm}{Last night I dreamed about a place called Sabbath.}
+\poemfl{ctg:CrimeScene}{Item: one wreck of a car.}
+\poemfl{ctg:TheSurvivor}{After the dancing stopped, \& she}
+\poemfl{ctg:TheWalls}{From Gaza they can't touch it,}
+\poemfl{ctg:MyDevil}{Thought I was gone, did you?}
+\poemfl{ctg:Delirium}{Where does dreaming end}
+\poemfl{ctg:Farewell}{Each time you leave could be the last.}
+\poemfl{ctg:Fanatics}{Occupied Palestine, March 2011}
+\poemfl{ctg:Pines}{Tread lightly, stoic, these needles bleed.}
+\poemfl{ctg:DeathInPalestine}{Where blood drowns}
+\poemfl{ctg:WhyItMattered}{If I try to understand a dead man I never knew}
+\poemfl{ctg:MyKaddish}{Magnify his name I dare not.}
+\poemfl{ctg:Elegy}{You were the child whose life closed before your youth.}
+
