@@ -93,14 +93,20 @@
 
 \usepackage{wasysym}
 
-
 \geometry{textwidth=6in,textheight=7.8in,headsep=32pt}
 \makeverselinenumbers
 \global\includeaccidentalstrue
 \global\includetypescriptstrue
 \global\redundantemendationsfalse
-\stanzaatbottom{*}
+
+
+\newcommand{\lX}{\Large{X}}
+
+\stanzaatbottom{$\curlyeqprec$end stanza$\curlyeqsucc$}
+
+
 \nostanzaatbottom{\relax}
+
 \reversemarginpar
 
 \usepackage{needspace}
@@ -162,7 +168,7 @@ pdfview={FitH 0}
 
 \newcommand{\paraspace}{
 
-\vspace{12pt}}
+\vspace{9pt}}
 
 \let\oldpmpara\pmpara
 \renewcommand{\pmpara}{\paraspace\oldpmpara}
@@ -196,6 +202,10 @@ pdfview={FitH 0}
 
 \colorlet{ob}{orange!30!gray}	
 
+\newenvironment{cctframed}
+{\begin{mdframed}[backgroundcolor=logoGreen!5,linecolor=logoCyan!50!ob,linewidth=8pt]}{\end{mdframed}}
+
+
 \newenvironment{cframed}{\begin{mdframed}[linecolor=ob,
 leftline=false,
   rightline=false,
@@ -227,6 +237,9 @@ linewidth=2pt]}{\end{mdframed}}
 	
 \newcommand{\divider}{\vspace{.5em}{\vrsindent}***\vspace{.5em}}
 
+\usepackage{navigator}
+\embeddedfile{txh}{gaza.txh}
+
 
 \begin{document}
 \maketextnotes
@@ -252,6 +265,19 @@ linewidth=2pt]}{\end{mdframed}}
 \volumeheader{KADDISH FOR GAZA}
 \volumesubtitle{by Michael Lesher}
 \volumededication{There is a relationship between war and words; there is a relationship between love and war.}
+
+\vfill
+\hfill\begin{minipage}{.5\textwidth}
+\begin{cctframed}
+Michael Lesher\\
+285 Aycrigg Avenue, Apt. 21C\\
+Passaic NJ 07055\\
+(862) 290-7806\\
+michaellesher@optonline.net
+\end{cctframed}
+\end{minipage}\hfill
+
+
 \end{volumetitlepage}
 
 
@@ -270,7 +296,7 @@ A Few Words about Writing and Resistance}\end{center}}
 
 
 \begin{pmsection}
-
+{\linespread{1.2}\selectfont\parindent32pt 
 {\pmpara}
 I have written the poems that follow with tormented thoughts of Gaza. And if anyone asks why I, an American Jew, should have written so much about a place I have never been, my short answer is that I write about Gaza because I cannot write any other way. For me, to think of Gaza is to touch the drama of human resistance: not only resistance to oppression but resistance to the most insidious powers of intellectual and spiritual destruction, the lying and the sophistry that modern communication technology has honed to something almost ineffably sinister. In this respect all human beings are equally vulnerable. The dehumanizing of Gaza by way of propaganda has its counterpart in the deafening blandishments of modern media, replete with militarism and consumerism: both aim to corrupt the moral core of their hearers, and neither gives any quarter.
 {\pmpara}
@@ -284,7 +310,7 @@ What can we do to prevent it? That depends a good deal on who we are, and where 
 
 {\paraspace}
 {\noindent}Michael Lesher
-\end{pmsection}
+}\end{pmsection}
 
 
 %\setcounter{page}{1}	
@@ -1828,7 +1854,7 @@ that might clutch, vaguely, the darkening scene.
 \poemtitlear{ctg:Fanatics}{Fanatics}{FANATICS}
 \begin{poem}
 
-
+\vspace{1em}
 \begin{minipagestanza}
 \textit{Occupied Palestine, March 2011}. Ehud \cq{Udi} Fogel was killed in his home in the West Bank settlement of Itamar, along with his wife and three young children, on the night of March 11, 2011.
 \end{minipagestanza}
@@ -2263,7 +2289,7 @@ thieving my grief, a dull heart's unsacred rite.
 \newpage
 %\raisebox{-6em}
 %{\parbox{0.5\textwidth}{%
-\vspace*{3em}
+\vspace*{6em}
 \parbox{0.5\textwidth}{\begin{cframed}
 {\centering {\textit{\textbf{Review of Accompanying Data}}}}
 \end{cframed}}
@@ -2281,14 +2307,15 @@ conformant PDF software in showing the interactive PDF version of each page.
 For users with conformant cross-referencing software, 
 this page has an embedded file in TxHSL (Type Expression and Hypergraph 
 Serialization Language) format.  The contents of this file can 
-also be viewed here: (TBD).
+also be accessed \openfilelink{txh.pdf}{{\color{logoCyan!60!black}{here}} 
+(if your PDF viewer can read embedded files)}.
 \item[Data Description]
 The following TxHSL excerpt indicates 
 the type interface and sample values of the embedded data.
 \begin{scriptsize}
 \begin{verbatim}
 &type CiteGroup [8;5;2] 
-:i:1 :t:2 :p:3 :dp:4 :x:5;
+:i:1 :t:2 :p:3 :dp:4 :x:5 ;
 
 &type DataCite {6} 
 :i:1 :x:2 :p:3 :dp:4 :ln:5 :t:6 ;
