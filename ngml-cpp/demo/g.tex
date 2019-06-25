@@ -43,6 +43,9 @@
   \kern 4pt
 }
 
+\newcommand{\xepigraph}[1]{\hspace*{3.5em}\begin{minipage}{13cm}\epigraph{#1}\vspace*{1em}\end{minipage}}
+\newcommand{\xfepigraph}[1]{\hspace*{3.5em}\begin{minipage}{13cm}\epigraph{#1}\vspace*{-.5em}\end{minipage}}
+
 \newcommand{\ardagbotrot}{{\rotatebox{-90}{$\blacktriangleright$}}}
 
 \newcommand{\lowardag}{{\raisebox{-3pt}{\makebox[.5pt][l]{\ardagbotrot}}\dag}}
@@ -91,7 +94,7 @@
 \usepackage{wasysym}
 
 
-\geometry{textwidth=6in,textheight=7.6in,headsep=32pt}
+\geometry{textwidth=6in,textheight=7.8in,headsep=32pt}
 \makeverselinenumbers
 \global\includeaccidentalstrue
 \global\includetypescriptstrue
@@ -559,10 +562,15 @@ a mouthing rape that makes a fool of care.
 
 {\poemnewpage}
 \poemtitlear{ctg:Silent}{Silent Movie}{SILENT MOVIE}
-\epigraph{Every where at the approach of the white man {\lbrack}the Indians{\rbrack} fade away.... We hear the rustling of their footsteps, like that of the withered leaves of autumn, and they are gone for ever.
+
+\begin{minipage}{14cm}%
+\xfepigraph{Every where at the approach of the white man {\lbrack}the Indians{\rbrack} fade away.... We hear the rustling of their footsteps, like that of the withered leaves of autumn, and they are gone for ever.
 \\\textnormal{--- Joseph Story, U.S. Supreme Court justice}}
-\epigraph{We never really conquered Lydda.... {\lbrack}T{\rbrack}here was really no city to conquer. The whole place...was empty.
+\vspace{1em}
+
+\xepigraph{We never really conquered Lydda.... {\lbrack}T{\rbrack}here was really no city to conquer. The whole place...was empty.
 \\\textnormal{--- Amos Kenan, writing about the scene of a notorious massacre by Zionist forces in 1948}}
+\end{minipage}
 
 \begin{poem}
 
@@ -1191,7 +1199,7 @@ of all I choose.
 
 {\poemnewpage}
 \poemtitlear{ctg:Cyrano}{Cyrano de Marianne}{CYRANO DE MARIANNE}
-\epigraph{Welcome to Israel!  It seems you got lost. Perhaps you meant to sail to a place not far from here --- Syria. There the Assad regime slaughters his people every day with the support of the murderous Iranian regime.\\\textnormal{--- Israeli Prime Minister Benjamin Netanyahu, in a letter delivered to humanitarian activists when they were kidnapped by IDF sailors from their fishing boat, the Marianne, while attempting to break Israel's siege of Gaza and deliver medicine to the inhabitants (June 2015)}}
+\xepigraph{Welcome to Israel!  It seems you got lost. Perhaps you meant to sail to a place not far from here --- Syria. There the Assad regime slaughters his people every day with the support of the murderous Iranian regime.\\\textnormal{--- Israeli Prime Minister Benjamin Netanyahu, in a letter delivered to humanitarian activists when they were kidnapped by IDF sailors from their fishing boat, the Marianne, while attempting to break Israel's siege of Gaza and deliver medicine to the inhabitants (June 2015)}}
 
 \begin{poem}
 
@@ -1879,7 +1887,7 @@ In 2014, Israel's activities in the Gaza Strip, West Bank and East Jerusalem res
 {\poemnewpage}
 \poemtitlear{ctg:Pines}{Pines in the Suicides' Wood}{PINES IN THE SUICIDES' WOOD}
 \dedication{(see Inferno, Canto XIII)}
-\epigraph{If there is no future, there is no hope.
+\xepigraph{If there is no future, there is no hope.
 \\\textnormal{--- Adel Hamdona, speaking of his son's suicide attack on the Jewish settlement of Netzarim}}
 
 \begin{poem}
@@ -2003,8 +2011,9 @@ Over us, the pitch and curse of day.
 
 {\poemnewpage}
 \poemtitlear{ctg:WhyItMattered}{Why It Mattered}{WHY IT MATTERED}
-\epigraph{On Tuesday, August 19 [2014], the Israel Defense Forces...announced that Cpl. David Menachem Gordon...was found dead in central Israel, his weapon at his side.... We understood from the code phrase, \cq{weapon at his side,} that Gordon had committed suicide.\\\textnormal{--- Rabbi Yehoshua Looks}}
-\epigraph{Unable to disclose his mortifying secret, the boy can only fantasize revenge on those vile men whose twisted lustful current raged through their veins.... He dreams of an escape from his Hell... As much as he tried, he could not ignore the scattered scars that sexual abuse left on his Soul.%
+\xfepigraph{On Tuesday, August 19 [2014], the Israel Defense Forces...announced that Cpl. David Menachem Gordon...was found dead in central Israel, his weapon at his side.... We understood from the code phrase, \cq{weapon at his side,} that Gordon had committed suicide.\\\textnormal{--- Rabbi Yehoshua Looks}\\}
+
+\xepigraph{Unable to disclose his mortifying secret, the boy can only fantasize revenge on those vile men whose twisted lustful current raged through their veins.... He dreams of an escape from his Hell... As much as he tried, he could not ignore the scattered scars that sexual abuse left on his Soul.%
 \\\textnormal{--- David Menachem Gordon, writing of himself as an Orthodox Jewish child}}
 
 
@@ -2087,7 +2096,7 @@ closed, forever, over his trailing grief.
 {\poemnewpage}
 \poemtitlear{ctg:MyKaddish}{My Kaddish}{MY KADDISH}
 
-\epigraph{Magnified and sanctified may His great name be
+\xepigraph{Magnified and sanctified may His great name be
 in the world He created according to His will; and may His kingship reign,
 in our lives and in our days, and within the life of the whole house of Israel,
 speedily and soon, amen!
@@ -2263,11 +2272,11 @@ thieving my grief, a dull heart's unsacred rite.
 \vspace{-1em}
 \hspace*{-3em}\begin{minipage}{1.1\textwidth}
 \begin{ccframed}
-\begin{description}\item[QR Code]
+\begin{description}\item[QR Codes]
 QR Codes on each page can be used by readers switching 
 between print and digital versions of this document.  The QR figures 
-encode bibliographic and page information which can be used by 
-conformant PDF software to show the interactive PDF version of each page.
+encode bibliographic and page information which can orient 
+conformant PDF software in showing the interactive PDF version of each page.
 \item[Embedded Data]
 For users with conformant cross-referencing software, 
 this page has an embedded file in TxHSL (Type Expression and Hypergraph 
