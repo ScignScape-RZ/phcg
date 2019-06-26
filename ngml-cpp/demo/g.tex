@@ -5,6 +5,7 @@
 \newenvironment{minipagestanza}{\begin{stanza}\begin{minipage}{13cm}}{\end{minipage}\end{stanza}}
 
 %\usepackage{caption}
+\usepackage{enumitem}
 
 \usepackage[rgb]{xcolor}
 
@@ -35,11 +36,14 @@
 				%\includegraphics[width=5cm]{example-image}
 			}}}}
 			
+\newlength{\footnoterulelen}
+\setlength{\footnoterulelen}{\textwidth}
+\addtolength{\footnoterulelen}{-4pt}
 
 
 \renewcommand{\footnoterule}{%
   \kern 5pt
-  {\color{blineColor!60!black}{\hrule width \textwidth height 2pt}}
+  {\color{blineColor!60!black}{\hrule width \footnoterulelen height 2pt}}
   \kern 4pt
 }
 
@@ -80,13 +84,31 @@
 \setxmargref{#1}\else\relax\fi%
 }
 
-\newcommand{\xtextnote}[2]{\textnote{\hypertarget{#1}%
-\protect\raisebox{-6pt}{\protect\parbox{\textwidth}{{\color{lineColor}{%
-\setlength{\rulelen}{\textwidth}
-\setlength{\negrulelen}{\widthof{\citerange: }}
-\addtolength{\rulelen}{-\negrulelen}  
+\newlength{\xtextnotelen}
+\setlength{\xtextnotelen}{\textwidth}
+%\addtolength{\xtextnotelen}{-4em}
+
+
+\newcommand{\xtextnote}[2]{%
+\textnote{\hypertarget{#1}%
+\protect\raisebox{-6pt}{\protect\parbox{\xtextnotelen}{{\color{lineColor}{%
+\setlength{\rulelen}{\footnoterulelen}%
+\setlength{\negrulelen}{\widthof{\citerange:}}%
+\addtolength{\negrulelen}{1.5pt}%
+\addtolength{\rulelen}{-\negrulelen}%	
 \rule{\rulelen}{0.1pt}}}\\#2}}
 }}
+
+\newcommand{\dxtextnote}[2]{%
+	\textnote{\hypertarget{#1}%
+		\protect\raisebox{-6pt}{\protect\parbox{\xtextnotelen}{{\color{lineColor}{%
+						\setlength{\rulelen}{\footnoterulelen}%
+						\setlength{\negrulelen}{\widthof{\citerange:}}%
+						%\addtolength{\negrulelen}{1.5pt}%
+						\addtolength{\rulelen}{-\negrulelen}%	
+						\rule{\rulelen}{0.1pt}}}\\#2}}
+	}}
+
 
 \usepackage[raiselinks=true,pdftex]{hyperref}
 %\hypersetup{linktocpage}
@@ -119,18 +141,22 @@
 
 \newenvironment{prestanza}{\needspace{3\baselineskip}\hspace{-1em}}{}
 
+\newenvironment{itprestanza}{\begin{prestanza}\begin{itshape}}{\end{itshape}\end{prestanza}}
+
 \newcommand{\rar}{{\raisebox{-2pt}{{\Large$\Rightarrow$}}}}
 
 \newcommand{\poemfl}[2]{\item[#2] %
- \hspace*{2em} \raisebox{2pt}{\hyperlink{#1}{\rar}} \hfill \getpagerefnumber{#1} %
- \hspace*{6em} }
+ \hspace*{1.5em} \raisebox{2pt}{\hyperlink{#1}{\rar}} \hfill \getpagerefnumber{#1} %
+ \hspace*{5em} }
 
+\renewcommand{\contentspoemtitlefont}{\fontsize{11}{14}\fontseries{b}\selectfont}
 
 \makeatletter
 \newcommand{\basicpoemtitlear}[3]{%
 	\set@p@emtitle{#3}{\poemtitlepenalty}{\poemtitlefont}%
 	{\relax}{\nobreak\par\nobreak\afterpoemtitleskip\nobreak}{\z@}%
-	\c@ntentsinfo{#2 \hspace{2em}\hyperlink{#1}{\rar}}{\contentsindentone}{\contentspoemtitlefont}%
+	\c@ntentsinfo{#2\hspace{1.5em}\hyperlink{#1}{\rar}}%
+	{\contentsindentone}{\contentspoemtitlefont}%
 	{\contentsindenttwoamount}%
 	\t@xtnotesinfo{#2}%
 }
@@ -169,7 +195,7 @@ pdfview={FitH 0}
 \newcommand{\poemtitlear}[3]{\hypertarget{#1}{\label{#1}}\basicpoemtitlear{#1}{#2}{#3}}
 
 
-\newcommand{\mypageref}[1]{\hfill\getpagerefnumber{#1}\hspace*{10em}}
+\newcommand{\mypageref}[1]{\hfill\getpagerefnumber{#1}\hspace*{6em}}
 
 \newcommand{\paraspace}{
 
@@ -277,7 +303,8 @@ linewidth=2pt]}{\end{mdframed}}
 \volumetitle{KADDISH FOR GAZA}
 \volumeheader{KADDISH FOR GAZA}
 \volumesubtitle{by Michael Lesher}
-\volumededication{There is a relationship between war and words; there is a relationship between love and war.}
+\volumededication{There is a relationship between war and words; there is a relationship between love and war.\\
+\textnormal{\hspace*{2.8em}--- Yehia Jaber}}
 
 \vfill
 \hfill\begin{minipage}{.5\textwidth}
@@ -648,9 +675,9 @@ him as he pirouetted down.
 \begin{poem}
 
 
-\begin{prestanza}
+\begin{itprestanza}
 July 22, 2014
-\end{prestanza}
+\end{itprestanza}
 
 \begin{stanza}
 Summer has its clammy skin against my window.\verseline
@@ -675,9 +702,9 @@ about an alarm that shrieks,\verseline
 {\vrsindent}Begin, begin, begin!
 \end{stanza}
 
-\begin{prestanza}
+\begin{itprestanza}
 July 23
-\end{prestanza}
+\end{itprestanza}
 
 \begin{stanza}
 I'm afraid to leave my room.\verseline
@@ -696,9 +723,9 @@ and there is danger in the gimlet stars.
 \end{stanza}
 
 
-\begin{prestanza}
+\begin{itprestanza}
 July 24
-\end{prestanza}
+\end{itprestanza}
 
 \begin{stanza}
 I'm lying, of course. I'm not afraid,\verseline
@@ -726,9 +753,9 @@ I'm another Israeli, wild child,\verseline
 I will destroy where I cannot climb back in.
 \end{stanza}
 
-\begin{prestanza}
+\begin{itprestanza}
 July 25
-\end{prestanza}
+\end{itprestanza}
 
 \begin{stanza}
 Heat is hate. The sun's the angry\verseline
@@ -750,9 +777,9 @@ the War is Fun.\xmargreftextnote{bot:hear}
 
 
 
-\begin{prestanza}
+\begin{itprestanza}
 July 26
-\end{prestanza}
+\end{itprestanza}
 
 \begin{stanza}
 Sabbath. Forbidden to write until after dark,\verseline
@@ -773,14 +800,15 @@ in a swim of pain.)\verseline
 Whose?
 \end{stanza}
 
-\begin{prestanza}
+\begin{itprestanza}
 July 27
-\end{prestanza}
+\end{itprestanza}
 
 \begin{stanza}
 In dawn is the sputum of defeat.\verseline
 No point pretending, even trying to speak.\verseline
-Today I watched a film made in the ruins of Shuja'ya\verseline
+Today I watched a film made in the ruins of Shuja'iya\xmargreftextnote{bot:Shuja}\verseline%
+\xtextnote{bot:Shuja}{Historic Gaza City neighborhood, just outside the Old City.}
 after artillery flattened the town. I saw\verseline
 the arm of a young man, trapped, bleeding to death,\verseline
 extended from the rubble in helpless appeal\verseline
@@ -817,7 +845,7 @@ The Law: ten men have scoured its pages, ten men owe\verseline
 thanks to the Creator. Might as well say it, then ---\verseline
 except that we say, Magnified and hallowed may His great name be!\verseline
 \textit{Yisgadal v'yisqadash}...but\xmargreftextnote{bot:Glorified}\verseline%
-\xtextnote{bot:Glorified}{From the Mourner's Kaddish: \q{Glorified and sanctified be God's name ...}}
+\xtextnote{bot:Glorified}{From the Mourner's Kaddish: \q{Exalted and sanctified be God's name ...}}
 who are we? What name do we mean?
 \end{stanza}
 
@@ -1138,8 +1166,9 @@ But massacres germinate in a comic school.
 
 \begin{stanza}
 With bagels, \textit{litterateurs} wolf down the crimes\verseline
-the IDF parades in the \textit{New York Times}.
-\end{stanza}
+the IDF parades in the \textit{New York Times}.\xmargreftextnote{bot:parade}
+\end{stanza}\xtextnote{bot:parade}{The Israel Defense Forces conducted 
+several parades, meant to display its military force, up until 1973.}
 \end{poem}
 
 
@@ -1349,7 +1378,9 @@ and teach them some sort of lesson?}
 \begin{stanza}
 All this you might have said, if you had one tenth\verseline
 the virtue of the average gangster, or at least\verseline
-some of Goebbels' graceful prose.\verseline
+some of Goebbels' graceful prose.\xmargreftextnote{bot:Goebbels}\verseline%
+\xtextnote{bot:Goebbels}{Alludes to Nazi-era German minister Joseph 
+Goebbels's talents for public speaking and propaganda.}
 But no,\verseline
 even propaganda stales with overuse,\verseline
 and the rotten net shreds in the wind.\verseline
@@ -1689,8 +1720,11 @@ But what they see is my distorted face,\verseline
 aborting the glow like a horrid moon\verseline
 usurping every civilized room ---\verseline
 the audience is gone\verseline
-from your Laoco\"on.
-\end{stanza}
+from your Laoco\"on.\xmargreftextnote{bot:laocoon}
+\end{stanza}\dxtextnote{bot:laocoon}{Greek and Roman mythological 
+figure during the Trojan war; in several stories, he 
+was attacked by snakes sent by Athena (or another god) 
+in retaliation for his suspicions toward the Trojan Horse.}
 
 \begin{stanza}
 I tell them your Promise is misery,\verseline
@@ -1807,7 +1841,8 @@ without hope or fear,
 \end{stanza}
 
 \begin{stanza}
-the Lethe poured in\verseline
+the Lethe poured in\xmargreftextnote{bot:lethe}\verseline%
+\xtextnote{bot:lethe}{Underworld river in Greek mythology, whose waters caused forgetfulness.}
 between anonymous lips,\verseline
 relieved of time,\verseline
 as ignorant as they are poor.
@@ -2308,8 +2343,7 @@ thieving my grief, a dull heart's unsacred rite.
 \poemsubtitle{(links via arrows)}
 
 \begin{pmsection}
-\begin{description}
-
+\begin{description}[labelindent=2.5em]
 \setlength{\itemsep}{0pt}
 \poemfl{ctg:Thinking}{If I were to be born again,}
 \poemfl{ctg:Burlesque}{What do you write on a wall?}
@@ -2354,7 +2388,9 @@ thieving my grief, a dull heart's unsacred rite.
 \vspace{-1em}
 \hspace*{-3em}\begin{minipage}{1.1\textwidth}
 \begin{ccframed}
-\begin{description}\item[QR Codes]
+\vspace{2em}	
+\begin{description}[labelindent=\parindent,itemsep=10pt]
+\item[QR Codes]
 QR Codes on each page can be used by readers switching 
 between print and digital versions of this document.  The QR figures 
 encode bibliographic and page information which can orient 
