@@ -5,39 +5,56 @@
 
 \usepackage{hyperref}
 
+\usepackage{tikz-dependency}
+
 \begin{document}
 
-Page1
-\newpage
 
-Page2
-\newpage
+\begin{dependency}
+	\begin{deptext}
+		My \& dog \& also \& likes \& eating \& sausage \\
+	\end{deptext}
+	\depedge{2}{1}{poss}
+	\depedge{4}{2}{nsubj}
+	\depedge{4}{3}{advmod}
+	\depedge{4}{5}{xcomp}
+	\depedge{5}{6}{dobj}
+\end{dependency}
+	
 
-Page3
-a\\
-b\\
-c\\
-a\\
-b\\
-c\\
-a\\
-b\\
-c\\
-Test label: the \hypertarget{mc:test}{\label{mc:test}} target.
-XXXX
-a\\
-b\\
-c\\
-a\\
-b\\
-c\\
 
-\newpage
-Page4
-\hyperlink{mc:test}{go} \pageref{mc:test}
 
-\immediate\write\txhslFile{\getpagerefnumber{mc:test}}
 
-\closeout\txhslFile
+	Page1
+	\newpage
+	
+	Page2
+	\newpage
+	
+	Page3
+	a\\
+	b\\
+	c\\
+	a\\
+	b\\
+	c\\
+	a\\
+	b\\
+	c\\
+	Test label: the \hypertarget{mc:test}{\label{mc:test}} target.
+	XXXX
+	a\\
+	b\\
+	c\\
+	a\\
+	b\\
+	c\\
+	
+	\newpage
+	Page4
+	\hyperlink{mc:test}{go} \pageref{mc:test}
+	
+	\immediate\write\txhslFile{\getpagerefnumber{mc:test}}
+	
+	\closeout\txhslFile
 \end{document}
-

@@ -99,13 +99,19 @@
 \rule{\rulelen}{0.1pt}}}\\#2}}
 }}
 
+
+\newlength{\dxtextnotelen}
+\setlength{\dxtextnotelen}{\textwidth}
+\addtolength{\dxtextnotelen}{-3em}
+\addtolength{\dxtextnotelen}{-3pt}
+
 \newcommand{\dxtextnote}[2]{%
 	\textnote{\hypertarget{#1}%
-		\protect\raisebox{-6pt}{\protect\parbox{\xtextnotelen}{{\color{lineColor}{%
-						\setlength{\rulelen}{\footnoterulelen}%
-						\setlength{\negrulelen}{\widthof{\citerange:}}%
-						%\addtolength{\negrulelen}{1.5pt}%
-						\addtolength{\rulelen}{-\negrulelen}%	
+		\protect\raisebox{-12pt}{\protect\parbox{\dxtextnotelen}{{\color{lineColor}{%
+						\setlength{\rulelen}{\footnoterulelen}
+						\setlength{\negrulelen}{\widthof{\citerange:}}
+						\addtolength{\negrulelen}{2.5pt}
+						\addtolength{\rulelen}{-\negrulelen}
 						\rule{\rulelen}{0.1pt}}}\\#2}}
 	}}
 
@@ -125,9 +131,9 @@
 \newcommand{\lX}{\Large{X}}
 
 \stanzaatbottom{$\curlyeqprec$end stanza$\curlyeqsucc$}
+\nostanzaatbottom{$\preccurlyeq$stanza continues$\succcurlyeq$}
 
-
-\nostanzaatbottom{\relax}
+%\nostanzaatbottom{\relax}
 
 \reversemarginpar
 
@@ -1842,7 +1848,8 @@ without hope or fear,
 
 \begin{stanza}
 the Lethe poured in\xmargreftextnote{bot:lethe}\verseline%
-\xtextnote{bot:lethe}{Underworld river in Greek mythology, whose waters caused forgetfulness.}
+\xtextnote{bot:lethe}{Underworld river in Greek mythology, 
+whose waters caused forgetfulness when consumed.}
 between anonymous lips,\verseline
 relieved of time,\verseline
 as ignorant as they are poor.
