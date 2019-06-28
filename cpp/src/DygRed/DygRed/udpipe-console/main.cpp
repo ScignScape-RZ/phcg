@@ -7,6 +7,8 @@
 #include "udpipe.h"
 
 #include <QDebug>
+#include <QFile>
+
 
 #include "dygred/dygred-sentence.h"
 #include "dygred/dygred-corpus.h"
@@ -14,29 +16,55 @@
 
 #include "dygred/dygred-deprel-callbacks.h"
 
+#include <QDir>
 
-int main(int argc, char* argv[])
+void save_file(QString path, DygRed_Corpus& dgc)
 {
- QString root = "&" CONLLU_DIR ;
+ QFile outfile(path);
+ if (!outfile.open(QIODevice::WriteOnly | QIODevice::Text))
+   return;
+ QTextStream outstream(&outfile);
+ dgc.report_sentence_texts(outstream);
+ outfile.close();
+}
 
+void parse_corpus(QString root, QString f)
+{
  DygRed_Corpus dgc(root);
 
 
  int result = 0;
 
- QStringList infiles{"@en_pud.conllu"};
- QString outfile = "@out/t1.txt";
+ QStringList infiles{QString("@%1").arg(f)};
+ QString outfile = QString("@out/%1.txt").arg(f);
 
  dgc.add_files(infiles);
  result = dgc.detokenize(outfile);
 
-// dgc.init_sentences();
+ dgc.init_sentences();
 
- dgc.report_sentence_texts();
+// QTextStream qts;
+ save_file(dgc.expand_external_file(outfile), dgc);
+}
 
+int main(int argc, char* argv[])
+{
+ QString root = "&" CONLLU_DIR ;
 
+ QDir cdir(CONLLU_DIR);
+ QStringList filters = {"*.conllu"};
+ cdir.setNameFilters(filters);
+ QStringList qsl = cdir.entryList();
 
- return result;
+ for(QString qs : qsl)
+ {
+  qDebug()<< qs;
+
+  parse_corpus(root, qs);
+ }
+ //dgc.report_sentence_texts(qts);
+
+ return 0;//result;
 }
 
 

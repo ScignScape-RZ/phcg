@@ -8,6 +8,9 @@
 
 #include "dygred/dygred-deprel-callbacks.h"
 
+#include <QTextStream>
+
+
 DygRed_Corpus::DygRed_Corpus(QString root_folder)
   :  QRing_File_Structure(root_folder)
 {
@@ -17,13 +20,13 @@ DygRed_Corpus::DygRed_Corpus(QString root_folder)
 
 void DygRed_Corpus::init_sentences()
 {
- for(DygRed_Sentence dgs : *this)
+ for(DygRed_Sentence& dgs : *this)
  {
-  QMap<QString, QList<DygRed_Word_Pos*>> m;
+  QMap<QString, QList<DygRed_Word_Pos*>> m;// = new QMap<QString, QList<DygRed_Word_Pos*>> ;
 
   DygRed_Word_Pos* rvb = dgs.normalize_deps(m);
 
-  DygRed_Deprel_Callbacks cbs;
+  DygRed_Deprel_Callbacks cbs;// = new DygRed_Deprel_Callbacks;
   DygRed_Sentence::init_callbacks(cbs);
 
 
@@ -35,25 +38,20 @@ void DygRed_Corpus::init_sentences()
  }
 }
 
+void DygRed_Corpus::report_sentence_texts(QTextStream& qts)
+{
+ for(DygRed_Sentence& dgs : *this)
+ {
+  dgs.report_text(qts);
+  qts << '\n';
+ }
+}
+
+
 void DygRed_Corpus::report_sentence_texts()
 {
- for(DygRed_Sentence dgs : *this)
+ for(DygRed_Sentence& dgs : *this)
  {
-  QMap<QString, QList<DygRed_Word_Pos*>> m;
-
-  DygRed_Word_Pos* rvb = dgs.normalize_deps(m);
-
-  DygRed_Deprel_Callbacks cbs;
-  DygRed_Sentence::init_callbacks(cbs);
-
-
-  dgs.init_pairs();
-  dgs.init_groups(cbs);
-  dgs.init_group_reps();
-
-  dgs.resolve_internal_group_parents();
-
-
   dgs.report_text();
  }
 }

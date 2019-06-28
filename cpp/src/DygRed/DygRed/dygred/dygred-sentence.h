@@ -18,6 +18,8 @@ class DygRed_Deprel_Callbacks;
 class DygRed_Word_Pair;
 class DygRed_Word_Group;
 
+class QTextStream;
+
 class DygRed_Sentence
 {
  sentence* udp_sentence_;
@@ -98,6 +100,7 @@ public:
    int lvl, int pos);
 
  void report_text();
+ void report_text(QTextStream& qts);
 
 // void set_verb_to_subject(int v, int s, int lvl);
 // int get_adj(int n);

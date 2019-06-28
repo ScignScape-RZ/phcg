@@ -11,7 +11,7 @@
 #include "dygred-word-pair.h"
 
 #include <QDebug>
-
+#include <QTextStream>
 
 #include "dygred-word-group.h"
 
@@ -20,6 +20,17 @@ DygRed_Sentence::DygRed_Sentence(sentence* udp_sentence)
   : udp_sentence_(udp_sentence)
 {
 
+}
+
+void DygRed_Sentence::report_text(QTextStream& qts)
+{
+ QString rep;
+ for(word w : udp_sentence_->words)
+ {
+  DygRed_Word_Pos& wp = word_poss_[w.id];
+  rep += wp.text() + ' ';
+ }
+ qts << rep << "\n";
 }
 
 void DygRed_Sentence::report_text()
@@ -414,7 +425,9 @@ DygRed_Word_Pos* DygRed_Sentence::find_group_rep_of_kind(QString k, DygRed_Word_
 {
  if(groups_map_.contains(dgw))
  {
-  return groups_map_[dgw].value(k)->rep();
+  DygRed_Word_Group* wg = groups_map_[dgw].value(k);
+  if(wg)
+    return wg->rep();
  }
  return nullptr;
 }

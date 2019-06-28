@@ -1,0 +1,1828 @@
+<root> If you plot multiple charts , you will see a drop area for multi-chart fields . 
+
+<root> This type of drop area is not displayed for single charts . 
+
+<root> Drop areas 
+
+<root> Moving fields to the category and series areas 
+
+<root> When you move a field to the series area , the unique items of data within the field are displayed as data series in the chart . 
+
+<root> These series are represented by colored data markers , and their names appear in the chart legend . 
+
+<root> When you move a field to the category area , the unique items of data are displayed as categories , or related groups of data . 
+
+<root> Each category consists of one point from each data series . 
+
+<root> Category labels usually appear across the x axis of the chart , although this can vary depending on the type of chart you are using . 
+
+<root> Moving fields to the data area 
+
+<root> Data fields provide the values to be summarized in the chart . 
+
+<root> When you move a field to the data area , the values from the field are used as the data that is measured in the chart . 
+
+<root> A filter field is similar to a page field in a Microsoft Excel PivotTable report . 
+
+<root> For example , when you move a Product field to the filter area , you can have the chart display category and series values for one product at a time . 
+
+<root> Moving fields to the MultiChart area 
+
+<root> For example , if you move the Salesperson field to the MultiChart area , a chart is created based on data for each salesperson in that field . 
+
+<root> In the following example , the Salesperson field is in the MultiChart area , but it 's filtered so it displays individual charts for Buchanan and Davolio . 
+
+<root> Filtered Salesperson field in MultiChart area 
+
+<root> Moving the category or series fields to inner or outer levels 
+
+<root> When a chart contains multiple series or category fields , the fields that are closest to the data are referred to as inner fields . 
+
+<root> In the following example , Year is the outer field and Salesperson is the inner field . 
+
+<root> The inner field items are displayed as salespeople 's names , and the outer field items are displayed as the years 1997 and 1998 . 
+
+<root> Multiple fields in a chart 
+
+<root> 1 Inner field items 
+
+<root> 2 Outer field items 
+
+<root> You can expand and collapse multiple fields to show more or less information in a particular field . 
+
+<root> For example , you can collapse the outer field ( Year ) in the example so that the inner field items are no longer displayed . 
+
+<root> Chart with collapsed field 
+
+<root> The layout of a chart does not have to include all fields that are available from the source data . 
+
+<root> If more data is available , you can add fields to the chart . 
+
+<root> For example , if the chart summarizes sales revenue , and the source data also includes sales quantities , you might add the Quantity field as a data field to summarize both revenue and quantity of products sold . 
+
+<root> You can also remove fields from the chart layout that you no longer want to see . 
+
+<root> Impact of changing layout on filtering 
+
+<root> Filter settings are retained when you move or remove a field . 
+
+<root> This means that when you move a series or category field to the filter area and back , previously hidden items are again hidden . 
+
+<root> If you remove a field and later add the field back to the layout , the same items are again hidden . 
+
+<root> Restricting use of a chart 
+
+<root> When you design a chart for other users , you can restrict the user 's ability to change the layout of the chart by preventing fields from being added and moved . 
+
+<root> About the data outline 
+
+<root> The data outline displays a tree view of the data model of a data access page . 
+
+<root> It lists the record sources , fields , and calculated controls of a page . 
+
+<root> Because the field list of a page does not show the contents specific to a page , you can use the data outline to review the structure of a page . 
+
+<root> You can also select the objects displayed in the data outline , set their properties , define and edit relationships between record sources , and delete fields and record sources . 
+
+<root> The following illustration shows the Orders page with two group levels . 
+
+<root> The inner group level contains fields from the OrderDetails table and a calculated control named Value . 
+
+<root> In the outer group level , the header section contains fields from the Orders table and the footer section contains a calculated total control named OrderValue . 
+
+<root> Data access page with two group levels 
+
+<root> The following illustration shows the data outline for the Orders page . 
+
+<root> Data outline for Orders page 
+
+<root> 1 The RecordsetDef object , which contains one or more record sources 
+
+<root> 2 The underlying record sources 
+
+<root> 3 Primary key fields 
+
+<root> 4 Data fields 
+
+<root> 5 Aggregate field 
+
+<root> 6 Calculated field 
+
+<root> About enabling the System Administrator ( SA ) user name in an Access project 
+
+<root> Note 
+
+<root> The hyperlink in this topic goes to the Web . 
+
+<root> You can switch back to Help at any time . 
+
+<root> When the Microsoft SQL Server 2000 Desktop Engine ( formerly called the Microsoft Database Engine or MSDE ) is installed on Microsoft Windows NT computers , it is installed with Windows NT Authentication implemented ( this feature is also known as integrated security ) . 
+
+<root> Text fields 
+
+<root> You can group based on the first n characters of the individual items . 
+
+<root> For example , you can group the LastName field by first letter to create groups , such as A , B , and so on . 
+
+<root> You can specify the start and end values for the grouping range . 
+
+<root> For example , if you specify the start range as 01-Jul-1999 while grouping the ShippedDate field in weekly intervals , the following groups will be created : 
+
+<root> 01-Jul-1999 , 01-Jul-1999 , 08-Jul-1999 , . 
+
+<root> Dates prior to 01-Jul-1999 are grouped into a single group titled 01-Jul-1999 . 
+
+<root> If you also specify the end value as 31-Dec-1999 , the following groups will be created : 
+
+<root> 31-Dec-1999 
+
+<root> 31-Dec-1999 , 31-Dec-1999 
+
+<root> Dates that fall after 31-Dec-1999 are grouped into a single group titled 31-Dec-1999 . 
+
+<root> Custom grouping in PivotTable view 
+
+<root> You can randomly select items from a row or column field and group them into higher-level groups . 
+
+<root> For example , you can select from the Promotions row field all the promotions that run for a specific period and create a group . 
+
+<root> This would add a new row field named Promotions 2 above the Promotions row field with two members : Group1 and Other . 
+
+<root> You can change the caption of Group 1 to Fixed and Promotions 2 to Category in the Properties dialog box . 
+
+<root> The Other group will contain all items that you did not include in the Fixed custom group . 
+
+<root> You can then select all the popular promotions from the Other group and create a new custom group that will be captioned Popular . 
+
+<root> After you do this , the Category field will have three members : Fixed , Popular , and Other . 
+
+<root> The following illustration shows how the PivotTable view will look after the captions of the custom group field and custom groups have been changed . 
+
+<root> PivotTable view with custom groups 
+
+<root> A custom group field . 
+
+<root> Contains custom groups as its items and appears as the parent of the field whose items you grouped . 
+
+<root> Custom groups . 
+
+<root> Appear as the parents of items you explicitly selected to create the groups . 
+
+<root> 3 The Other group is the parent of the items you did not assign to any specific custom group . 
+
+<root> Creating and deleting custom groups and custom group fields 
+
+<root> You can not group items that belong to different fields or items that belong to parent items into a custom group . 
+
+<root> When you create the first custom group for a field , a custom group field is automatically added as the field 's parent . 
+
+<root> Similarly , when you delete the last custom group for a field , the custom group field is automatically deleted . 
+
+<root> When you delete a custom group that is not the last custom group in the field , the deleted group 's members automatically move to the Other group . 
+
+<root> The groups you create do not affect source data . 
+
+<root> Moving a field whose parent is a custom group field 
+
+<root> When you move a field that has custom groups between row and column areas , the custom group fields that are based on the field move with the field . 
+
+<root> If you move the field to the filter area , the custom group fields are hidden . 
+
+<root> However , the bound field will show the custom group hierarchy in the drop-down list , so you can filter data by selecting custom groups or individual values . 
+
+<root> When you move the field back to a row or column area , the custom group fields will appear again . 
+
+<root> You can not move a field with custom groups to the detail area . 
+
+<root> Adding and removing nested custom groups 
+
+<root> You can select two or more custom groups to create a higher-level grouping . 
+
+<root> For example , you can group the members of the Category field into two groups : high priority promotions and low priority promotions . 
+
+<root> The following illustration shows how the row area will look with nested custom groups . 
+
+<root> PivotTable view with nested custom groups 
+
+<root> 1 A custom group field that appears as the parent of the Category custom group field . 
+
+<root> You can also remove a lower-level custom group . 
+
+<root> The following illustration shows what the data will look like after the Category field has been removed . 
+
+<root> Use a grid of grouped lines as a table for displaying data 
+
+<root> In Design view of a form or report , create a grid of lines . 
+
+<root> For example , your grid might look like following : 
+
+<root> A more complex grid made of seven lines 
+
+<root> Click outside of the grid of lines and drag a rectangle over the grid . 
+
+<root> On the Format menu , click Group . 
+
+<root> Move a line in a grid of grouped lines 
+
+<root> Click the grid of grouped lines . 
+
+<root> While holding down the ALT key , click the line you want to move . 
+
+<root> When the pointer changes to a double-headed arrow , you can drag the line to a new location . 
+
+<root> Rules for moving an interior vertical line 
+
+<root> If you move the line to the right , the distance between the moving line and the nearest parallel line to the right remains constant , and the perpendicular line to the left of the moving line lengthens . 
+
+<root> If you move the line to the left , the distance between the moving line and the nearest parallel line to the right remains constant , and the perpendicular line to the left of the moving line contracts . 
+
+<root> At the back table sat two old men in shabby clothes , one very fat and the other very thin , intently studying the racing forms . 
+
+<root> Two empty coffee cups sat on the table between them . 
+
+<root> In the foreground , facing the magazine rack , a young student stood with an open magazine in his hands , staring at a picture of a naked woman . 
+
+<root> Quinn sat down at the counter and ordered a hamburger and a coffee . 
+
+<root> As the counterman swung into action , he spoke over his shoulder to Quinn . 
+
+<root> Did you see game tonight , man ? 
+
+<root> I missed it . Anything good to report ? 
+
+<root> What do you think ? 
+
+<root> For several years Quinn had been having the same conversation with this man , whose name he did not know . 
+
+<root> Once , when he had been in the luncheonette , they had talked about baseball , and now , each time Quinn came in , they continued to talk about it . 
+
+<root> In the winter , the talk was of trades , predictions , memories . 
+
+<root> During the seasons , it was always the most recent game . 
+
+<root> They were both Mets fans , and the hopelessness of that passion had created a bond between them . 
+
+<root> The counterman shook his head . 
+
+<root> First two times up , Kingsman hits solo shots , he said . Boom , boom . Big mothers – all the way to the moon . 
+
+<root> Jones is pitching good for once and things do n't look too bad . 
+
+<root> It 's two to one , bottom of the ninth . 
+
+<root> Pittsburgh gets men on second and third , one out , so the Mets go to the bullpen for Allen . 
+
+<root> He walks the next guy to load them up . 
+
+<root> The Mets bring the corners in for a force at home , or maybe they can get the double play if it 's hit up the middle . 
+
+<root> Pena comes up and chicken-shits a little grounder to first and the fucker goes through Kingman 's legs . 
+
+<root> Two men score , and that 's it , bye-bye New York . 
+
+<root> Dave Kingman is a turd , said Quinn , biting into his hamburger . 
+
+<root> But watch out for Foster , said the counterman . 
+
+<root> Foster 's washed up . A has-been . A mean-faced bozo . Quinn chewed his food carefully , feeling with his tongue for stray bits of bone . 
+
+<root> They should ship him back to Cincinatti by express mail . 
+
+<root> Yeah , said the counterman . 
+
+<root> But they 'll be tough . Better than last year , anyway . 
+
+<root> I do n't know , said Quinn , taking another bite . 
+
+<root> It looks good on paper , but what do they really have ? 
+
+<root> Stearns is always getting hurt . 
+
+<root> They have minor leaguers at second and short , and Brooks ca n't keep his mind on the game . 
+
+<root> Mookie 's good , but he 's raw , and they ca n't even decide who to put in right . 
+
+<root> There 's still Rusty , of course , but he 's too fat to run anymore . 
+
+<root> And as for the pitching , forget it . 
+
+<root> You and I could go over to Shea tomorrow and get hired as the top two starters . 
+
+<root> Maybe I make you the manager , said the counterman . 
+
+<root> You could tell those fuckers where to get off . 
+
+<root> You bet your bottom dollar , said Quinn . 
+
+<root> After he finished eating , Quinn wandered over to the stationery shelves . 
+
+<root> A shipment of new notebooks had come in , and the pile was impressive , a beautiful array of blues and greens and reds and yellows . 
+
+<root> He picked one up and saw that the pages had the narrow lines he preferred . 
+
+<root> Quinn did all his writing with a pen , using a typewriter only for final drafts , and he was always on the lookout for good spiral notebooks . 
+
+<root> Now that he had embarked on the Stillman case , he felt that a new notebook was in order . 
+
+<root> It would be helpful to have a separate place to record his thoughts , his observations , and his questions . 
+
+<root> In that way , perhaps , things might not get out of control . 
+
+<root> He looked through the pile , trying to decide which one to pick . 
+
+<root> For reasons that were never made clear to him , he suddenly felt an irresistible urge for a particular red notebook at the bottom . 
+
+<root> He pulled it out and examined it , gingerly fanning the pages with his thumb . 
+
+<root> He was at a loss to explain to himself why he found it so appealing . 
+
+<root> It was a standard eight-and-a-half-by-eleven notebook with one hundred pages . 
+
+<root> But something about it seemed to call out to him – as if its unique destiny in the world was to hold the words that came from his pen . 
+
+<root> Almost embarrassed by the intensity of his feelings , Quinn tucked the red notebook under his arm , walked over to the cash register , and bought it . 
+
+<root> He made it to Grand Central well in advance . 
+
+<root> Stillman 's train was not due to arrive until six-forty-one , but Quinn wanted time to study the geography of the place , to make sure that Stillman would not be able to slip away from him . 
+
+<root> As he emerged from the subway and entered the great hall , he saw by the clock that it was just past four . 
+
+<root> Already the station had begun to fill with the rush-hour crowd . 
+
+<root> Making his way through the press of oncoming bodies , Quinn made a tour of the numbered gates , looking for hidden staircases , unmarked exits , dark alcoves . 
+
+<root> He concluded that a man determined to disappear could do so without much trouble . 
+
+<root> He would have to hope that Stillman had not been warned that he would be there . 
+
+<root> If that were the case , and Stillman managed to elude him , it would mean that Virginia Stillman was responsible . 
+
+<root> There was no one else . 
+
+<root> It solaced him to know that he had an alternate plan if things went awry . 
+
+<root> If Stillman did not show up , Quinn would go straight to 69th Street and confront Virginia Stillman with what he knew . 
+
+<root> As he wandered through the station , he reminded himself of who he was supposed to be . 
+
+<root> The effect of being Paul Auster , he had begun to learn , was not altogether unpleasant . 
+
+<root> Although he still had the same body , the same mind , the same thoughts , he felt as though he had somehow been taken out of himself , as if he no longer had to walk around with the burden of his own consciousness . 
+
+<root> By a simple trick of the intelligence , a deft little twist of naming , he felt incomparably lighter and freer . 
+
+<root> At the same time , he knew it was all an illusion . 
+
+<root> But there was a certain comfort in that . 
+
+<root> He had not really lost himself ; he was merely pretending , and he could return to being Quinn whenever he wished . 
+
+<root> The fact that there was now a purpose to his being Paul Auster – a purpose that was becoming more and more important to him – served as a kind of moral justification for the charade and absolved him of having to defend his lie . 
+
+<root> For imagining himself as Auster had become synonymous in his mind with doing good in the world . 
+
+<root> He wandered through the station , then , as if inside the body of Paul Auster , waiting for Stillman to appear . 
+
+<root> He looked up at the vaulted ceiling of the great hall and studied the fresco of constellations . 
+
+<root> There were light bulbs representing the stars and line drawings of the celestial figures . 
+
+<root> Quinn had never been able to grasp the connection between the constellations and their names . 
+
+<root> As a boy he had spent many hours under the night sky trying to tally the clusters of pinprick lights with the shapes of bears , bulls , archers , and water carriers . 
+
+<root> But nothing had ever come of it , and he had felt stupid , as though there were a blind spot in the center of his brain . 
+
+<root> In spite of everything , it was impossible for Quinn not to feel glad of this . 
+
+<root> They sat there for a short time without saying anything . 
+
+<root> At last , Auster gave a little shrug , which seemed to acknowledge that they had come to an impasse . 
+
+<root> He stood up and said , I was about to make some lunch for myself . 
+
+<root> It 's no trouble making it for two . 
+
+<root> Quinn hesitated . 
+
+<root> It was as though Auster had read his thoughts , divining the thing he wanted most – to eat , to have an excuse to stay a while . 
+
+<root> I really should be going , he said . 
+
+<root> But yes , thank you . A little food ca n't do any harm . 
+
+<root> How does a ham omelette sound ? 
+
+<root> Sounds good . 
+
+<root> Auster retreated to the kitchen to prepare the food . 
+
+<root> Quinn would have liked to offer to help , but he could not budge . 
+
+<root> His body felt like a stone . 
+
+<root> For want of any other idea , he closed his eyes . 
+
+<root> In the past , it had sometimes comforted him to make the world disappear . 
+
+<root> This time , however , Quinn found nothing interesting inside his head . 
+
+<root> It seemed as though things had ground to a halt in there . 
+
+<root> Then , from the darkness , he began to hear a voice , a chanting , idiotic voice that sang the same sentence over and over again : You ca n't make an omelette without breaking eggs . 
+
+<root> He opened his eyes to make the words stop . 
+
+<root> There was bread and butter , more beer , knives and forks , salt and pepper , napkins , and omelettes , two of them , oozing on white plates . 
+
+<root> Quinn ate with crude intensity , polishing off the meal in what seemed a matter of seconds . 
+
+<root> After that , he made a great effort to be calm . 
+
+<root> Tears lurked mysteriously behind his eyes , and his voice seemed to tremble as he spoke , but somehow he managed to hold his own . 
+
+<root> To prove that he was not a self-obsessed ingrate , he began to question Auster about his writing . 
+
+<root> Auster was somewhat reticent about it , but at last he conceded that he was working on a book of essays . The current piece was about Don Quixote . 
+
+<root> One of my favourite books , said Quinn . 
+
+<root> Yes , mine too . 
+
+<root> There 's nothing like it . 
+
+<root> Quinn asked him about the essay . 
+
+<root> I suppose you can call it speculative , since I 'm not really out to prove anything . 
+
+<root> In fact , it 's all done tounge-in-cheek . 
+
+<root> An imaginative reading , I guess you could say . 
+
+<root> What 's the gist ? 
+
+<root> It mostly has to do with the authorship of the book . Who wrote it , and how it was written . 
+
+<root> Is there any question ? 
+
+<root> Of course not . But I mean the book inside the book Cervantes wrote , the one he imagined he was writing . 
+
+<root> Ah . 
+
+<root> It 's quite simple . 
+
+<root> Cervantes , if you remember , goes to great lengths to convince the reader that he is not the author . 
+
+<root> The book , he says , was written in Arabic by Cid Hamete Benengali . 
+
+<root> Cervantes describes how he discovered the manuscript by chance one day in the market at Toledo . 
+
+<root> He hires someone to translate it for him into Spanish , 
+
+<root> and thereafter he presents himself as no more than the editor of the translation . 
+
+<root> In fact , he can not even vouch for the accuracy of the translation itself . 
+
+<root> And yet he goes on to say , Quinn added , that Cid Hamete Benengali 's is the only true version of Don Quixote 's story . 
+
+<root> All the other versions are frauds , written by impostors . 
+
+<root> He makes a great point of insisting that everything in the book really happened in the world . 
+
+<root> Exactly . 
+
+<root> Because the book after all is an attack on the dangers of the make-believe . 
+
+<root> He could n't very well offer a work of the imagination to do that , could he ? 
+
+<root> He had to claim that it was real . 
+
+<root> Still , I 've always suspected that Cervantes devoured those old romances . 
+
+<root> You ca n't hate something so violently unless a part of you also loves it . 
+
+<root> In some sense , Don Quixote was just a stand-in for himself . 
+
+<root> I agree with you . 
+
+<root> What better portrait of a writer than to show a man who has been bewitched by books ? 
+
+<root> Precisely . 
+
+<root> In any case , since the book is supposed to be real , it follows that the story has to be written by an eyewitness to the events that take place in it . 
+
+<root> But Cid Hamete , the acknowledged author , never makes an appearance . 
+
+<root> Not once does he claim to be present at what happens . 
+
+<root> So , my question is this : who is Cid Hamete Benengali ? 
+
+<root> Yes , I see what you 're getting at . 
+
+<root> The theory I present in the essay is that he is actually a combination of four different people . 
+
+<root> Sancho Panza is of course the witness . 
+
+<root> There 's no other candidate – since he is the only one who accompanies Don Quixote on all his adventures . 
+
+<root> But Sancho can neither read nor write . 
+
+<root> Therefore , he can not be the author . 
+
+<root> On the other hand , we know that Sancho has a great gift for language . 
+
+<root> In spite of his inane malapropisms , he can talk circles around everyone else in the book . 
+
+<root> It seems perfectly possible to me that he dictated the story to someone else – namely , to the barber and the priest , Don Quixote 's good friends . 
+
+<root> They put the story into proper literary form – in Spanish – and then turned the manuscript over to Samson Carrasco , the bachelor from Salamanca , who proceeded to translate it into Arabic . 
+
+<root> Cervantes found the translation , had it rendered back into Spanish , and then published the book The Adventures of Don Quixote . 
+
+<root> But why would Sancho and the others go to all that trouble ? 
+
+<root> To cure Don Quixote of his madness . 
+
+<root> They want to save their friend . 
+
+<root> Remember , at the beginning they burn his books of chivalry , but that has no effect . 
+
+<root> The Knight of the Sad Countenance does not give up his obsessions . 
+
+<root> Then , at one time or another , they all go out looking for him in various disguises – as a woman in distress , as the Knight of the Mirrors , as the Knight of the White Moon – in order to lure Don Quixote back home . 
+
+<root> Do you know what a physicist is ? 
+
+<root> Do you recognize the name of Einstein ? " 
+
+<root> " Never . 
+
+<root> Who is he ? " 
+
+<root> This is too much for me . 
+
+<root> Silent , I give his case some thought . 
+
+<root> Busy-minded people , with their head-culture that touches all surfaces , have heard of Einstein . 
+
+<root> But do they know what they have heard ? 
+
+<root> A majority do not . 
+
+<root> These Hasidim choose not to know . 
+
+<root> By and by I open a paperback and try to lose myself in mere politics . 
+
+<root> A dozen Hasidim in the lavatory queue stare down at us . 
+
+<root> We land and spill out and go our separate ways . 
+
+<root> At the baggage carousel I see my youthful Hasid again and we take a final look at each other . 
+
+<root> In me he sees what deformities the modern age can produce in the seed of Abraham . 
+
+<root> In him I see a piece of history , an antiquity . 
+
+<root> It is rather as if Puritans in seventeenth-century dress and observing seventeenth-century customs were to be found still living in Boston or Plymouth . 
+
+<root> Israel , which receives us impartially , is accustomed to strange arrivals . 
+
+<root> But then Israel is something else again . 
+
+<root> We are staying in Jerusalem as guests of the Mishkenot Sha'ananim , the dwellings of serenity . 
+
+<root> Mayor Teddy Kollek , irrepressible organizer of wonderful events ( some of them too rich for my blood ) , takes us to dinner with one of the Armenian Archbishops in the Old City . 
+
+<root> On the rooftop patio of the opulent apartment are tubs of fragrant flowers . 
+
+<root> The moon is nearly full . 
+
+<root> Below is the church , portions of which go back to the fourth century . 
+
+<root> The Archbishop is , to use an old word , a portly man . 
+
+<root> His cassock , dark red , swells with the body . 
+
+<root> On his breast two ball-point pens are clipped between the buttons . 
+
+<root> He has a full youthful clever face ; a black beard , small and tidy . 
+
+<root> The eyes are green . 
+
+<root> Present are Isaac Stern ; Alexander Schneider , formerly of the Budapest String Quartet ; Kollek 's son , Amos ; two Israeli couples whom I can not identify ; and the foreign-news editor of Le Monde , Michel Tatu . 
+
+<root> In the Archbishop 's drawing room are golden icons . 
+
+<root> In illuminated cases are ancient objects . 
+
+<root> I can seldom get up much interest in such cases and objects . 
+
+<root> Middle-aged Armenians serve drinks and wait on us . 
+
+<root> They wear extremely loud shirts , blue-green sprigged with red berries , but they strike me as good fellows and are neat and nimble about the table . 
+
+<root> The conversation is quick and superknowledgeable . 
+
+<root> In French , in English , in Hebrew , and occasionally in Russian . 
+
+<root> ( Tatu , who lived for years in Moscow , chats in Russian with Stern and Schneider . ) 
+
+<root> The Archbishop , who has himself cooked the eggplant and the leg of lamb , tells the company his recipes . 
+
+<root> He and Kollek discuss seasonings . 
+
+<root> Schneider recalls a great Armenian musician and teacher ( his own teacher ) named Dirian Alexanian , editor of Bach 's Suites for Cello Unaccompanied and the most intolerant perfectionist 
+
+<root> " Just as particular about music as other people are about seasonings . 
+
+<root> Alexanian said to Pablo Casals after a performance of some of the suites , You made three bad mistakes . 
+
+<root> Terrible . 
+
+<root> Casals did not answer . 
+
+<root> He knew Alexanian was right . " 
+
+<root> Pale , with black hair in abundance , Tatu is one of those short men who have learned to hold their ground against big ones . 
+
+<root> He sits with the ease that disguises this sort of tension . 
+
+<root> His paper is not friendly to Israel . 
+
+<root> Two or three times I consider whether to mention to him a letter I sent Le Monde during the 1973 war about the position being taken by France . 
+
+<root> I want to ask him why it was n't printed . 
+
+<root> But I succeed in suppressing this a triumph over myself . 
+
+<root> Besides , Tatu does not have the look of a man whose life is easy and I do n't see why I should spoil his Jerusalem dinner for him in his diary it would probably be entered as " An enchanted evening in Le Proche Orient with an Armenian archbishop . " 
+
+<root> I decide to let him enjoy his dinner . 
+
+<root> Seeking common ground with my wife ( a laudable desire ) , he tells her that he too is Rumanian by origin . 
+
+<root> He can safely say this , for his family came to France in the seventeenth century . 
+
+<root> What is all important is to be French , or to have been French for a good long time . 
+
+<root> And French he definitely is . 
+
+<root> But I can see that the Archbishop gives him bad marks for lighting up after the main course . 
+
+<root> People of real culture do not smoke at dinner tables . 
+
+<root> You never know whom you have asked to your palace . 
+
+<root> Dostoevski , no mean judge of such matters , thought there was much to be said for the murderer 's point of view . 
+
+<root> Navrozov extends the position . 
+
+<root> Liberal democracy is as brief as a bubble . 
+
+<root> Now-and-then history treats us to an interval of freedom and civilization and we make much of it . 
+
+<root> We forget , he seems to think , that as a species we are generally close to the " state of nature , " as Thomas Hobbes described it a nasty , brutish , pitiless condition in which men are too fearful of death to give much thought to freedom . 
+
+<root> If Hobbes is too nifty an authority , let us think of the social views of Jimmy Hoffa . 
+
+<root> Or of the Godfather . 
+
+<root> Or of Lenin , as Navrozov accurately characterizes him . 
+
+<root> And this is what America , bubbling with political illusions , is up against . 
+
+<root> So , at least , Navrozov thinks . 
+
+<root> Perhaps Alexander Solzhenitsyn agrees with him in part . 
+
+<root> Apparently Russians are all inclined to see us in this way . 
+
+<root> My own cousin , Nota Gordon , two years out of the Soviet Union , says to me , " You are no match for them . 
+
+<root> You do not understand with whom you are dealing . " 
+
+<root> Nota held the rank of captain in the Russian army and fought the Germans until 1945 . 
+
+<root> He was three times seriously wounded . 
+
+<root> He has the family look the brown eyes , arched brows , dark coloring , and white hair . 
+
+<root> He has , besides , the gold crowns of Russian dental art . 
+
+<root> Criminals released from prison during the war served in his company . 
+
+<root> Nota has no swagger but he is war-hardened . 
+
+<root> There was no food sent to the front lines . 
+
+<root> You ate frozen potatoes , you foraged , and you stole . 
+
+<root> You could depend on your criminal soldiers to bring in provisions . 
+
+<root> " I myself had absolute authority to kill anyone in my command . 
+
+<root> At my discretion . 
+
+<root> No explanations necessary , " says Nota . 
+
+<root> We are first cousins but he is Russian , I am an American , and in his Russian eyes an American is amiable , good-natured , attractive perhaps , but undeveloped , helpless : all that Dostoevski was to his fellow convict the murderer . 
+
+<root> Nevertheless , I see that in a book called Things to Come two Americans who think themselves anything but undeveloped and helpless , Herman Kahn and B Bruce-Briggs , are not impressed by Russian achievements . 
+
+<root> " Most striking is the disappointing performance of Soviet foreign and domestic policy since the late 1950s , " they wrote in 1972 . 
+
+<root> " In the foreign policy field the Soviets have had an almost uninterrupted series of defeats and disappointments . 
+
+<root> They have failed to extend their influence in Europe . 
+
+<root> Their attempts to ingratiate themselves with India and other neutralist nations have gained them little . 
+
+<root> For fifteen years the Soviet Union has been supporting the Arabs against Israel in the Middle East and all they have to show for it is the humiliation of their proteges and the capture and destruction of their equipment by Israel . 
+
+<root> The Arabs have shown no inclination toward Communist ideology and their oil continues to flow to the West . 
+
+<root> ( The only other choice for the Arabs is to leave their oil in the ground . ) " 
+
+<root> I copy this out for my own entertainment a specimen of illusionless American political analysis . 
+
+<root> These views , no substitute for common sense , are based upon careful staff work at the Hudson Institute . 
+
+<root> The Messrs. Kahn and Bruce Briggs say in a prefatory note that their book is " basically an organizational product . 
+
+<root> All of the staff at Hudson have contributed in some way to this work , as have the thousands of people with whom we have discussed these issues at meetings , seminars , and briefings at the Institute and other locations around the world . " 
+
+<root> What the literary imagination faces in these political times . 
+
+<root> One of the finest Israeli writers , A B Yehoshua , speaks about this in an excellent book of interviews , Unease in zion , edited by Ehud ben Ezer . 
+
+<root> " It is true , " Yehoshua writes , " that because our spiritual life today can not revolve around anything but these questions [ political questions ] , when you engage in them without end you can not spare yourself , spiritually , for other things . 
+
+<root> Nor can you attain the true solitude that is a condition and prerequisite of creation , the source and its strength . 
+
+<root> Rather , you are continuously summoned to solidarity , summoned from within yourself rather than by any external compulsion , because you live from one newscast to the next , and it becomes a solidarity that is technical , automatic from the standpoint of its emotional reaction , because by now you are completely built to react that way and to live in tension . 
+
+<root> Your emotional reactions to any piece of news about an Israeli casualty , a plane shot down , are pre-determined . 
+
+<root> Hence the lack of solitude , the inability to be alone in the spiritual sense , and to arrive at a life of intellectual creativity . " 
+
+<root> During the Six Day War , Yehoshua says that he felt himself linked to a great event , that he was within a historic wave and at one with its flow . 
+
+<root> This was a pleasant and elevating feeling . 
+
+<root> But today , unable to see the end of war , he has lost the sensation of being borne upon any such wave . 
+
+<root> " You do not achieve peace from history , " he says . 
+
+<root> The feeling of being swept along and of uncertainty as regards the future prevents you from seeing things in any perspective whatsoever . 
+
+<root> You live the moment , without any perspective , but you can not break free of the moment , forget the moment . 
+
+<root> You can not cut yourself off and not read newspapers or stop hearing the news over the radio for weeks on end , as you could six or seven years ago . " 
+
+<root> It is slightly different with us . 
+
+<root> Our media make crisis chatter out of news and fill our minds with anxious phantoms of the real thing a summit in Helsinki , a treaty in Egypt , a constitutional crisis in India , a vote in the UN , the financial collapse of New York . 
+
+<root> We ca n't avoid being politicized ( to use a word as murky as the condition it describes ) because it is necessary after all to know what is going on . 
+
+<root> Worse yet , what is going on will not let us alone . 
+
+<root> Neither the facts nor the deformations , the insidious platitudes of the media ( tormenting because the underlying realities are so huge and so terrible ) , can be screened out . 
+
+<root> The study of literature is itself heavily " politicized . " 
+
+<root> There is a clever , persistent young woman who writes to me often from Italy , who insists upon giving the most ordinary occurrences in my novels a political interpretation . 
+
+<root> A cafeteria lunch in New York actually refers to a meeting in Canada between Churchill and Roosevelt , and a tussle with a drunk in the hallway of a rooming house corresponds to D-Day . 
+
+<root> I am sorry to own I began to worry them . 
+
+<root> This was already a fresh departure for me . 
+
+<root> I was not used to get things that way , you know . 
+
+<root> I always went my own road and on my own legs where I had a mind to go . 
+
+<root> I would n't have believed it of myself ; but , then – you see – I felt somehow I must get there by hook or by crook . 
+
+<root> So I worried them . 
+
+<root> The men said ' My dear fellow ' and did nothing . 
+
+<root> Then – would you believe it ? – I tried the women . 
+
+<root> I , Charlie Marlow , set the women to work – to get a job . Heavens ! 
+
+<root> Well , you see , the notion drove me . 
+
+<root> I had an aunt , a dear enthusiastic soul . She wrote : ' It will be delightful . I am ready to do anything , anything for you . 
+
+<root> It is a glorious idea . I know the wife of a very high personage in the Administration , and also a man who has lots of influence with , &c. , &c . 
+
+<root> She was determined to make no end of fuss to get me appointed skipper of a river steamboat , if such was my fancy . 
+
+<root> I got my appointment – of course ; and I got it very quick . 
+
+<root> It appears the Company had received news that one of their captains had been killed in a scuffle with the natives . 
+
+<root> This was my chance , and it made me the more anxious to go . 
+
+<root> It was only months and months afterwards , when I made the attempt to recover what was left of the body , that I heard the original quarrel arose from a misunderstanding about some hens . 
+
+<root> Yes , two black hens . 
+
+<root> Fresleven – that was the fellow 's name , a Dane – thought himself wronged somehow in the bargain , so he went ashore and started to hammer the chief of the village with a stick . 
+
+<root> Oh , it did n't surprise me in the least to hear this , and at the same time to be told that Fresleven was the gentlest , quietest creature that ever walked on two legs . 
+
+<root> No doubt he was ; but he had been a couple of years already out there engaged in the noble cause , you know , and he probably felt the need at last of asserting his self-respect in some way . 
+
+<root> Therefore he whacked the old nigger mercilessly , while a big crowd of his people watched him , thunderstruck , till some man , – I was told the chief 's son , – in desperation at hearing the old chap yell , made a tentative jab with a spear at the white man – and of course it went quite easy between the shoulder-blades . 
+
+<root> Then the whole population cleared into the forest , expecting all kinds of calamities to happen , while , on the other hand , the steamer Fresleven commanded left also in a bad panic , in charge of the engineer , I believe . 
+
+<root> Afterwards nobody seemed to trouble much about Fresleven 's remains , till I got out and stepped into his shoes . 
+
+<root> I could n't let it rest , though ; but when an opportunity offered at last to meet my predecessor , the grass growing through his ribs was tall enough to hide his bones . 
+
+<root> They were all there . 
+
+<root> The supernatural being had not been touched after he fell . 
+
+<root> And the village was deserted , the huts gaped black , rotting , all askew within the fallen enclosures . 
+
+<root> A calamity had come to it , sure enough . The people had vanished . 
+
+<root> Mad terror had scattered them , men , women , and children , through the bush , and they had never returned . 
+
+<root> What became of the hens I do n't know either . 
+
+<root> I should think the cause of progress got them , anyhow . 
+
+<root> However , through this glorious affair I got my appointment , before I had fairly begun to hope for it . 
+
+<root> I flew around like mad to get ready , and before forty-eight hours I was crossing the Channel to show myself to my employers , and sign the contract . 
+
+<root> In a very few hours I arrived in a city that always makes me think of a whited sepulcher . 
+
+<root> Prejudice no doubt . 
+
+<root> I had no difficulty in finding the Company 's offices . 
+
+<root> It was the biggest thing in the town , and everybody I met was full of it . 
+
+<root> They were going to run an over-sea empire , and make no end of coin by trade . 
+
+<root> A narrow and deserted street in deep shadow , high houses , innumerable windows with venetian blinds , a dead silence , grass sprouting between the stones , imposing carriage archways right and left , immense double doors standing ponderously ajar . 
+
+<root> I slipped through one of these cracks , went up a swept and ungarnished staircase , as arid as a desert , and opened the first door I came to . 
+
+<root> Two women , one fat and the other slim , sat on straw-bottomed chairs , knitting black wool . 
+
+<root> The slim one got up and walked straight at me – still knitting with downcast eyes – and only just as I began to think of getting out of her way , as you would for a somnambulist , stood still , and looked up . Her dress was as plain as an umbrella-cover , and she turned round without a word and preceded me into a waiting-room . 
+
+<root> I gave my name , and looked about . 
+
+<root> Deal table in the middle , plain chairs all round the walls , on one end a large shining map , marked with all the colors of a rainbow . 
+
+<root> There was a vast amount of red – good to see at any time , because one knows that some real work is done in there , a deuce of a lot of blue , a little green , smears of orange , and , on the East Coast , a purple patch , to show where the jolly pioneers of progress drink the jolly lager-beer . 
+
+<root> However , I was n't going into any of these . 
+
+<root> I was going into the yellow . Dead in the center . 
+
+<root> And the river was there – fascinating – deadly – like a snake . Ough ! 
+
+<root> A door opened , a white-haired secretarial head , but wearing a compassionate expression , appeared , and a skinny forefinger beckoned me into the sanctuary . 
+
+<root> Its light was dim , and a heavy writing-desk squatted in the middle . 
+
+<root> From behind that structure came out an impression of pale plumpness in a frock-coat . The great man himself . 
+
+<root> He was five feet six , I should judge , and had his grip on the handle-end of ever so many millions . 
+
+<root> He shook hands , I fancy , murmured vaguely , was satisfied with my French . 
+
+<root> Bon voyage . 
+
+<root> In about forty-five seconds I found myself again in the waiting-room with the compassionate secretary , who , full of desolation and sympathy , made me sign some document . 
+
+<root> I believe I undertook amongst other things not to disclose any trade secrets . 
+
+<root> Well , I am not going to . 
+
+<root> I began to feel slightly uneasy . 
+
+<root> You know I am not used to such ceremonies , and there was something ominous in the atmosphere . 
+
+<root> It was just as though I had been let into some conspiracy – I do n't know – something not quite right ; and I was glad to get out . 
+
+<root> In the outer room the two women knitted black wool feverishly . 
+
+<root> A caravan had come in . 
+
+<root> A violent babble of uncouth sounds burst out on the other side of the planks . 
+
+<root> All the carriers were speaking together , and in the midst of the uproar the lamentable voice of the chief agent was heard ' giving it up ' tearfully for the twentieth time that day ... 
+
+<root> He rose slowly . 
+
+<root> ' What a frightful row , ' he said . 
+
+<root> He crossed the room gently to look at the sick man , and returning , said to me , ' He does not hear . ' 
+
+<root> ' What ! Dead ? ' I asked , startled . 
+
+<root> ' No , not yet , ' he answered , with great composure . 
+
+<root> Then , alluding with a toss of the head to the tumult in the station-yard , ' When one has got to make correct entries , one comes to hate those savages – hate them to the death . ' 
+
+<root> He remained thoughtful for a moment . 
+
+<root> ' When you see Mr. Kurtz , he went on , tell him from me that everything here – he glanced at the desk – is very satisfactory . 
+
+<root> I do n't like to write to him – with those messengers of ours you never know who may get hold of your letter – at that Central Station . 
+
+<root> He stared at me for a moment with his mild , bulging eyes . 
+
+<root> ' Oh , he will go far , very far , ' he began again . 
+
+<root> ' He will be a somebody in the Administration before long . 
+
+<root> They , above – the Council in Europe , you know – mean him to be . 
+
+<root> He turned to his work . 
+
+<root> The noise outside had ceased , and presently in going out I stopped at the door . 
+
+<root> In the steady buzz of flies the homeward-bound agent was lying flushed and insensible ; the other , bent over his books , was making correct entries of perfectly correct transactions ; and fifty feet below the doorstep I could see the still tree-tops of the grove of death . 
+
+<root> Next day I left that station at last , with a caravan of sixty men , for a two-hundred-mile tramp . 
+
+<root> No use telling you much about that . 
+
+<root> Paths , paths , everywhere ; a stamped-in network of paths spreading over the empty land , through long grass , through burnt grass , through thickets , down and up chilly ravines , up and down stony hills ablaze with heat ; and a solitude , a solitude , nobody , not a hut . 
+
+<root> The population had cleared out a long time ago . 
+
+<root> Well , if a lot of mysterious niggers armed with all kinds of fearful weapons suddenly took to traveling on the road between Deal and Gravesend , catching the yokels right and left to carry heavy loads for them , I fancy every farm and cottage thereabouts would get empty very soon . 
+
+<root> Only here the dwellings were gone too . 
+
+<root> Still I passed through several abandoned villages . 
+
+<root> There 's something pathetically childish in the ruins of grass walls . 
+
+<root> Day after day , with the stamp and shuffle of sixty pair of bare feet behind me , each pair under a 60-lb. load . 
+
+<root> Camp , cook , sleep , strike camp , march . 
+
+<root> Now and then a carrier dead in harness , at rest in the long grass near the path , with an empty water-gourd and his long staff lying by his side . 
+
+<root> A great silence around and above . 
+
+<root> Perhaps on some quiet night the tremor of far-off drums , sinking , swelling , a tremor vast , faint ; a sound weird , appealing , suggestive , and wild – and perhaps with as profound a meaning as the sound of bells in a Christian country . 
+
+<root> Once a white man in an unbuttoned uniform , camping on the path with an armed escort of lank Zanzibaris , very hospitable and festive – not to say drunk . 
+
+<root> Was looking after the upkeep of the road , he declared . 
+
+<root> Ca n't say I saw any road or any upkeep , unless the body of a middle-aged negro , with a bullet-hole in the forehead , upon which I absolutely stumbled three miles farther on , may be considered as a permanent improvement . 
+
+<root> I had a white companion too , not a bad chap , but rather too fleshy and with the exasperating habit of fainting on the hot hillsides , miles away from the least bit of shade and water . 
+
+<root> Annoying , you know , to hold your own coat like a parasol over a man 's head while he is coming-to . 
+
+<root> I could n't help asking him once what he meant by coming there at all . 
+
+<root> ' To make money , of course . ' 
+
+<root> What do you think ? he said , scornfully . 
+
+<root> Then he got fever , and had to be carried in a hammock slung under a pole . 
+
+<root> As he weighed sixteen stone I had no end of rows with the carriers . 
+
+<root> They jibbed , ran away , sneaked off with their loads in the night – quite a mutiny . 
+
+<root> So , one evening , I made a speech in English with gestures , not one of which was lost to the sixty pairs of eyes before me , and the next morning I started the hammock off in front all right . 
+
+<root> An hour afterwards I came upon the whole concern wrecked in a bush – man , hammock , groans , blankets , horrors . 
+
+<root> The heavy pole had skinned his poor nose . 
+
+<root> He was very anxious for me to kill somebody , but there was n't the shadow of a carrier near . 
+
+<root> I remembered the old doctor , – ' It would be interesting for science to watch the mental changes of individuals , on the spot . 
+
+<root> I felt I was becoming scientifically interesting . 
+
+<root> However , all that is to no purpose . 
+
+<root> On the fifteenth day I came in sight of the big river again , and hobbled into the Central Station . 
+
+<root> It was on a back water surrounded by scrub and forest , with a pretty border of smelly mud on one side , and on the three others inclosed by a crazy fence of rushes . A neglected gap was all the gate it had , 
+
+<root> and the first glance at the place was enough to let you see the flabby devil was running that show . 
+
+<root> White men with long staves in their hands appeared languidly from amongst the buildings , strolling up to take a look at me , and then retired out of sight somewhere . 
+
+<root> One of them , a stout , excitable chap with black mustaches , informed me with great volubility and many digressions , as soon as I told him who I was , that my steamer was at the bottom of the river . 
+
+<root> I was thunderstruck . 
+
+<root> What , how , why ? 
+
+<root> Oh , it was all right . 
+
+<root> The manager himself was there . 
+
+<root> All quite correct . 
+
+<root> ' Everybody had behaved splendidly ! splendidly ! 
+
+<root> – ' you must , ' he said in agitation , ' go and see the general manager at once . 
+
+<root> The proposal put forward by the Commission is to be welcomed from the consumers ' point of view . 
+
+<root> Affected parties have also criticized the fact that the manufacturer 's public declarations are also included in the defect definition . 
+
+<root> Ultimately that would be a disadvantage for the consumer . 
+
+<root> They were voted down and the reasons will no doubt be put once again by Mrs Bonino . 
+
+<root> One is the question of second-hand goods . 
+
+<root> I believe that with this hierarchy we have solved many of the problems for small and medium enterprises . 
+
+<root> At the same time it could result in job losses in the labour intensive repair services sector . 
+
+<root> In practise it turns out that it is sometimes impossible to answer this question . 
+
+<root> He is not to blame . 
+
+<root> But on the other hand a good reputation will benefit him , both with respect to the product and to his service . 
+
+<root> The shopkeeper will need right of recourse which he can use to recover his costs from the manufacturer . 
+
+<root> Madam President , I do not have a script , just two observations . 
+
+<root> That is an utterly ridiculous assumption . 
+
+<root> But a degree of protection is not the same as absolute cover against a host of things at the expense of something similar . 
+
+<root> What , for instance , is ' appropriate after-sales service ' ? 
+
+<root> The same applies to a whole series of other examples we can give . 
+
+<root> This is a sine-qua-non , and it would seem unnecessary to keep stressing it . 
+
+<root> I believe that this would be a lot easier if consumers were involved . 
+
+<root> There must be strict rules in abattoirs to maintain the highest levels of hygiene . 
+
+<root> Good farming practice and animal welfare can not be considered in isolation from food legislation as a whole . 
+
+<root> We have to sustain the European Union as a major food producer and a major exporter . 
+
+<root> Please allow me to say that the present report can be judged very positively . 
+
+<root> And I would not want the opposite view to arise through any misunderstanding in the present report . 
+
+<root> So we need to know the results of this debate and put them into effect . 
+
+<root> Commissioner , ladies and gentlemen , I would like to read her speech to you . 
+
+<root> Public opinion still has no faith in the Commission 's ability to exercise control . 
+
+<root> Mr President , the European consumer needs to have increased confidence in food , not least after the BSE crisis . 
+
+<root> In Holland and other countries the original nature of national identity is being stripped away in the name of chicken and pig feed . 
+
+<root> Would that not be better than total harmonization , which is fundamentally a commercial rule aimed at promoting commercial interests , not food quality ? 
+
+<root> The framework directive is part of this process . 
+
+<root> I have just another brief comment on the foreign trade aspect . 
+
+<root> If we are a member of an international rights community , then we must stay with it . 
+
+<root> The vote will be taken at 12.00 noon tomorrow . 
+
+<root> It is complicated because it deals with all nine separately and it is necessary to submit amendments in nine sets . 
+
+<root> Upon which safeguards are we insisting ? 
+
+<root> With the help of their financial controller proper arrangements will now be legislated for . 
+
+<root> That is the problem : you can not comment on things that you have not read . 
+
+<root> They were set up by the European Union for a specific purpose . 
+
+<root> Our research has shown that these agencies do not need more controls . 
+
+<root> Let us hope , therefore , that the proposals of the Commission will be sufficient to make sure this job will be done effectively . 
+
+<root> To a certain extent , this reminds me of my previous activity in the Committee on Budgets and in the Committee on Budgetary Control . 
+
+<root> We regret this and reaffirm our commitment to inform Parliament of all important agency decisions that have a financial impact . 
+
+<root> We take note of that , Mr von Habsburg , and I should be grateful if you could provide us with this letter . 
+
+<root> I have it here with me , Madam President . 
+
+<root> If that facility is available to Vice-President – and good luck to him – is it available to other Members ? 
+
+<root> Ladies and gentlemen , you are persistently confusing the Minutes with the Report of Proceedings . 
+
+<root> I have therefore voted against the report . 
+
+<root> The measures you described could be improved and there are others which you did not mention . 
+
+<root> Does the Commission have any sort of long-term policy in mind here ? 
+
+<root> The situation is also explained by the Asian and Russian crises , which also deprive the European Union of a potential market . 
+
+<root> Secondly , a promotion campaign should be swiftly launched within the Community to increase awareness amongst the general public and boost consumption in Europe . 
+
+<root> The taxpayer who has to pay for it , the smaller undertakings and species-friendly stock rearing all fall by the wayside . 
+
+<root> Nor have I expanded my production . 
+
+<root> What representation did the Commissioner receive from the United Kingdom Government about this dire emergency ? 
+
+<root> The whole industry is in crisis . 
+
+<root> In a case like this , those governments that are still recommending increased production are being irresponsible . 
+
+<root> Measures should be the same throughout the EU to ensure no Member State gets an unfair advantage . 
+
+<root> Through you I urge the Commission and the Council to reach decisions and take urgent action following the meeting on 14 October . 
+
+<root> Europe 's farmers need help now . 
+
+<root> That just goes to show the possibilities in our country ! 
+
+<root> But we do not take the view that including a corresponding reference to this in a recital can produce that result . 
+
+<root> For generic drugs at the end of a patent or other protection period are of course useful . 
+
+<root> Further improvements were made to the proposal in the Committee on the Environment , Public Health and Consumer Protection . 
+
+<root> It will be resumed at 3 p.m . 
+
+<root> First there is the paragraph inviting the Commission to withdraw its proposal . 
+
+<root> It is very important for us to know that . 
+
+<root> Madam President , in the Swedish version of Amendment No-4 there is an unfortunate mistake . 
+
+<root> It is therefore very odd that the original text has been retained in this amendment . 
+
+<root> The authentic text is ' under certain conditions ' . 
+
+<root> That needs to be made very clear . 
+
+<root> But business in the audiovisual sector is essentially done by small and medium-sized enterprises . 
+
+<root> Katiforis report ( A4-0090/99 ) 
+
+<root> At some stage in their development all SMEs experience problems arising from their weak capital resources . 
+
+<root> Finance and mentorship should go hand in hand . 
+
+<root> If demand were to increase , so too would risk capital , regardless of whether the markets are fragmented or not . 
+
+<root> This document reflects our group 's main concerns about the future of the ACP-EU link . 
+
+<root> Areas vital to the health of Europeans certainly ought to be prioritised for intensified action and initiative by the European Union . 
+
+<root> Parliament has demonstrated its great interest in this area on a number of occasions . 
+
+<root> Second Hautala report ( A4-0029/99 ) 
+
+<root> However , I can not support the reference to abortion . 
+
+<root> But the harmful psychological effects that abortions have on women are deliberately and constantly concealed . 
+
+<root> Entitlement to free abortions equates with women having the right to manage their lives and make decisions about their own bodies . 
+
+<root> There is no easy answer to the painful issue of abortion . 
+
+<root> I am thinking here , amongst other things , of issues such as the law on abortion . 
+
+<root> This objective requires a comprehensive approach to policy making and the mobilisation of all policy actors . 
+
+<root> To a certain extent , ensuring equal opportunities for men and women is like trying to attain the unattainable . 
+
+<root> I would very much like to know on what kind of scientific evidence the Greens are basing all these amendments . 
+
+<root> Children and workers at power stations were both studied . 
+
+<root> We have evidence , Mr President , but we apparently do not have proof . 
+
+<root> This is an issue which affects aspects of everyday life . 
+
+<root> The guidelines and exposure proposed by the Commissioner are based on those recently published by the International Convention on Non-Ionising Radiation Protection . 
+
+<root> Mr Tamino 's proposals are therefore greatly disproportionate . 
+
+<root> There are limited resources for public health and we must see to it that they are exploited effectively . 
+
+<root> The Commission 's estimates of what would be health-endangering values reflect the outcome of the research carried out . 
+
+<root> However , it is essential that the rules should be reasonable . 
+
+<root> Electromagnetic fields and their effect on people are subjects that have come up for debate with increasing frequency in recent years . 
+
+<root> In point of fact , we still do not have any precise answers to the questions which they raise . 
+
+<root> We should be establishing limit values on a Europe-wide basis , but they should be reasonable as well . 
+
+<root> Sweden has been mentioned in the discussion as one of the countries with satisfactory limit values . 
+
+<root> These are concentrated rays , but they do not penetrate down to where we usually are . 
+
+<root> For one thing , there is increasing concern , and that is undoubtedly true , on the part of experts too . 
+
+<root> Then there is Amendment No-12 . 
+
+<root> If necessary , the Commission will act at once . 
+
+<root> We must work to end that in a sensible way . 
+
+<root> It is also hard , on the other hand , to expect countries to surrender sovereignty over their national health systems . 
+
+<root> So what should be done ? 
+
+<root> The current policy is ripe for review and the financial resources are regrettably very limited . 
+
+<root> It is only if the disadvantages equal the advantages that we should use the precautionary principle . 
+
+<root> The Needle report on the European Union 's new public health policy seems to ignore this fact completely . 
+
+<root> Mr President , ladies and gentlemen , Mr Needle has gone to great trouble with the hearing in committee . 
+
+<root> I also believe that the regional authorities are not all in a position to establish contacts with the Commission . 
+
+<root> The report mentions best practice and standards in health care . 
+
+<root> That is in fact the point of departure we have chosen here and I am very glad all this has been properly understood . 
+
+<root> Unfortunately , at its last vote on the subject Parliament approved these subsidies by a majority . 
+
+<root> But Europe will not stand by while the world 's trade rules are flouted . 
+
+<root> The dispute is becoming increasingly bitter and is beginning to look like a trade war . 
+
+<root> The European Union put a new and revised banana regime in place on 1 January 1999 . 
+
+<root> For that and many other reasons we support the motion for a resolution . 
+
+<root> The United States has shown that it holds negotiations in contempt . 
+
+<root> If we do not achieve our objective of resolving this dispute , then I fear the WTO will slip on a banana skin . 
+
+<root> He made a resigned grimace assuming understanding ... My wife and I decided we could n't stick it any longer . 
+
+<root> So we try it out here . 
+
+<root> I do n't know ; we 'll see . 
+
+<root> I read you were coming back , there was an article in the paper , my wife Margot sent it to me in Switzerland , so I thought it was you . 
+
+<root> You were just in front of me when we got out in Rome . 
+
+<root> Yes , I suppose I wo n't know my way around when I get into town . 
+
+<root> Oh , it 's still not New York or London , do n't worry . 
+
+<root> The man spoke with an accent , and a certain European kind of resignation . 
+
+<root> They laughed . 
+
+<root> Well , in that case , we 'll probably bump into each other in Great Lakes Road . 
+
+<root> Please Nkrumah Road . 
+
+<root> I said I should have to learn my way round all over again . 
+
+<root> The man looked about quickly and lowered his voice . 
+
+<root> This country can do with a few more white people like you , take it from me . 
+
+<root> People with some faith . 
+
+<root> Sometimes I even think I 'm down South again , that 's a fact . 
+
+<root> I 've said it to my wife . 
+
+<root> A young black man with sunglasses and a thick , springy mat of hair shaped to a crew-cut by topiary rather than barbering had cut through the crowd with the encircling movement of authority . 
+
+<root> This way , Colonel , sir . 
+
+<root> Your luggage will be brought to the entrance , if you 'll just give me the tickets ... 
+
+<root> The other man , bobbing in the wash of this activity yet smiling at it in hostly assumption of his own established residence in the country , was talking across the black man and the exchange of pleasantries , tickets , thanks : 
+
+<root> at the Silver Rhino , of course , you remember the place . 
+
+<root> Any time ... we 'd be very pleased ... 
+
+<root> He thanked him , listening to the two men at once and hearing neither , and followed the firm rump in white shorts past barriers and through the reception hall . 
+
+<root> That 's all right , officer , this is Colonel Bray . 
+
+<root> I 'm looking after Colonel Bray , no need to bother him . 
+
+<root> A youthful black official at passport control said uncertainly , Just a minute . 
+
+<root> I do n't know about this ... but the pale Cockney who was teaching him to take over his job said , That 's okay , chum , it 's our ole friend Mr. Kabata . 
+
+<root> The luggage was not waiting at the flag-draped and bunting-swathed entrance , where a picture of a huge Roman emperor Mweta , in a toga , smiled as he did in the old photograph of the Gala village football team . 
+
+<root> Mr. Kabata said , What 's the matter with these people . Excuse me , I 'll get a boy , and returned with the cases on the head of one of the stringy , splay-footed peasants who had always constituted the portering personnel . 
+
+<root> The porter addressed both men as Mukwayi , the respectful term became servile during the long time when it was used indiscriminately for any white man . 
+
+<root> There was an official pennant on the Volkswagen . 
+
+<root> Beside him , Kabata 's strong thighs filled the seat . 
+
+<root> It 's not too comfortable for a man your height , Colonel . 
+
+<root> The President will be expecting me to have come for you with the Mercedes , but , honestly , if I 'd have waited to get it I would have turned up I do n't know when . 
+
+<root> You know how it is just at the moment . 
+
+<root> Mrs. Indira Gandhi arrives this afternoon and yesterday it was United Nations and Sekou Toure . 
+
+<root> There were gilded arches over the old airport road to town ; several men on bicycles wore shirts with Mweta 's face printed in yellow and puce on their backs . 
+
+<root> He said , All very festive , but it was distraction ; he had the feeling of listening inwardly , watching for something else . 
+
+<root> The young man said , You are from Gala district . 
+
+<root> I was . 
+
+<root> Why , are you from there ? 
+
+<root> From Umsalongwe . 
+
+<root> But my mother is a Gala . 
+
+<root> I have visited that place . 
+
+<root> Oh have you ? 
+
+<root> Recently or when you were a child ? 
+
+<root> Perhaps I was still there then ? 
+
+<root> I think they 'll be very pleased to see you back there . 
+
+<root> He laughed . 
+
+<root> I wonder if I 'll get that far . 
+
+<root> Oh , you must make trip the young man said proudly . 
+
+<root> I do it to Umsalongwe in ten hours . 
+
+<root> The road is much improved , much improved . 
+
+<root> You 'll see . 
+
+<root> You could make it to Matoko in , say , six or seven . 
+
+<root> My car is a little tiny thing , a second-hand crock . 
+
+<root> Near the bridge the women were going for water with paraffin tins on their heads . 
+
+<root> Advertisement hoardings had gone up , there was a cement works , smart factories put together out of jutting glassy sections and , in between , the patches scratched in the bush where women and children were hoeing crooked rows of beans and maize . 
+
+<root> The children ( an excuse to dawdle , of course ) stopped and waved . 
+
+<root> He found himself waving back urgently , bending his head under the low roof of the car , smiling and craning to hold their faces when they were already out of sight . 
+
+<root> The car was approaching , was carrying him through the market quarter of the town . 
+
+<root> Under the mango trees , barbers ' mirrors set up a flash in the shade , and live chickens lay in heaps with their legs tied . 
+
+<root> It was the mango season , and there were the saffron-yellow sabres of the pips , sucked hairy , everywhere where people passed . 
+
+<root> The bird was on the roof of the round , thatched guest room in the garden of his old friend Roland Dando – a Welshman – newly appointed as Attorney-General . 
+
+<root> When Bray was delivered to the house there was no one at home but servants well primed to welcome him . 
+
+<root> They gave him the African cook 's special lunch that he remembered so well : slightly burned meat soup with lots of barley , overdone steak with fried onions , a pudding frothy on top and gelatinous underneath , tasting of eggs and granadilla juice . 
+
+<root> Roly rang up to see if he had arrived , and explained again – he had done so in advance by letter – that he had an official lunch to attend . 
+
+<root> Bray 's ears were filled with the strange echoes of exhaustion and , stoked up by the hot lunch , his body threatened to suffocate him with waves of heat . 
+
+<root> He went into the room kept darkened by drawn curtains and slept . 
+
+<root> There was no ceiling and he looked up into the pattern of a spider 's web made by the supporting beams of the roof . 
+
+<root> The underside of thatch that rested on it was smooth and straight , grey where it was old , blond where it had been replaced , and , like a tidy head , here and there showed a single stray strand out of place . 
+
+<root> The bird was probably balancing on the little porcelain conductor through which the electricity wire led to the light dangling above him . 
+
+<root> The bird was gone ; he knew , almost as if the breath 's weight of claws had pressed down the roof and now the pressure was released . 
+
+<root> The sun had come round and the curtains glowed like the sky above a fire . 
+
+<root> Bray felt he must be somewhere about ; it was difficult to imagine this time without him . 
+
+<root> It was his as much as Mweta 's . 
+
+<root> But no one seemed to have seen him , or to know whether he was , or had been , in the capital . 
+
+<root> There were other faces from the past ; 
+
+<root> William Clough , the Governor , lifting his bristly eyebrows in exaggerated greeting at Mweta 's banquet , the way he used to do on the tennis court in Dar-es-Salaam . 
+
+<root> James , you must come and say hello to Dorothy before we leave . 
+
+<root> I dare n't say dine – we 're homeless , you know ... 
+
+<root> Uncle Willie 's Independence Joke , Vivien said . Produces a hearty , man-of-the-world laugh from Africans . 
+
+<root> The kind of laugh they 've picked up from people like Uncle Willie said Neil . 
+
+<root> Still , the Cloughs pursued Bray through Vivien . 
+
+<root> Aunt Dorothy says her secretary 's been trying to get hold of you . 
+
+<root> They want you for drinks on Monday . 
+
+<root> I 'd go if I were you , or she 'll tell everyone in London you were buttering up to the Africans and did n't want to see them . 
+
+<root> He laughed . 
+
+<root> No , it 's true 
+
+<root> She says that about me , to my mother . 
+
+<root> And she knows quite well that we 'd never see each other in London either . 
+
+<root> The Cloughs had moved into the British Consulate for the last week or two before their departure , a large , glassy , contemporary house placed to show off the umbrella thorn-trees of the site , just as in an architect 's scale model . 
+
+<root> The consul and his wife had been swept into some back room by the presence of aides , secretaries , and the necessity to keep their cats out of the way of Lady Dorothy 's dog . 
+
+<root> There was some sort of scuffle when Bray arrived ... 
+
+<root> he saw the consul 's wife , whom he had met briefly , disappearing upstairs with her head bent consolingly to a Siamese . 
+
+<root> Flower arrangements were placed everywhere , as if there were illness in the house . 
+
+<root> Well , the job is done , one asks nothing more but to fold one 's tents . 
+
+<root> He 's a good chap , if they 'll let him alone , he 's learnt a lot , and one 's done what one could ... 
+
+<root> if he keeps his head , and that one ca n't be sure of , not even with him , mmh ? not even with him . 
+
+<root> An elderly servant came in with a silver tray of glasses and bottles , and Clough interrupted himself to say with the sweet forbearance of one who does not spare himself , encouraging where others would give way to exasperation , It would be so nice if we could have a few slices of lemon ... and more ice ? 
+
+<root> Yes , all I 've said to Mweta , again and again ... make your own pace . 
+
+<root> Make your own pace and stick to it . 
+
+<root> He knows his own mind but he 's not an intransigent fellow at all ... 
+
+<root> well , of course , you know . 
+
+<root> Some time ago ... a word in your ear , I said , you 'd be unwise to lose Brigadier Radcliffe . 
+
+<root> Well , they 've been clamouring away , of course , but he 's refused to touch the army . 
+
+<root> Oh , I think I can say we 've come out of it quite good friends . 
+
+<root> It was a modest disclaimer , with the effect of assuming in common the ease with Africans that he believed Bray to have . 
+
+<root> He looked pleasantly into the martini jug and put it down again patiently . 
+
+<root> The elderly servant who brought ice and lemon had the nicks at the outer corner of the eyes that Northern Gala people wore . 
+
+<root> That 's perfect . 
+
+<root> Thank you so much . 
+
+<root> Bray greeted the servant in Gala with the respectful form of address for elders and the man dumped the impersonality of a servant as if it had been the tray in his hands and grinned warmly , showing some pigmentation abnormality in a pink inner lip spotted like a Dalmatian . 
+
+<root> The ex-Governor looked on , smiling . 
+
+<root> The servant bowed confusedly at him , walking backwards , in the tribal way before rank , and then recovering himself and leaving the room with an anonymous lope . 
+
+<root> I 'll pour Dorothy 's martini as well , maybe that 'll bring her . 
+
+<root> If only one could be transported on a magic carpet ... 
+
+<root> anyway , we shall have three months in London now , with perhaps a week or two in Ireland . 
+
+<root> What 've you been doing all these years in your ivory tower in Wiltshire ? 
+
+<root> Were you a golfer , I ca n't quite remember ... ? 
+
+<root> Dorothy Clough came in and Clough cried out , Does it fit ? 
+
+<root> Come and have a drink with James ... 
+
+<root> My dear James ... it must be a hundred years ... 
+
+<root> We 've had a crate made to transport Fritzi , and she 's been trying it on him . 
+
+<root> My niece Vivien found a carpenter . 
+
+<root> She has the most extraordinary contacts , that girl . 
+
+<root> It 's very useful ! 
+
+<root> William Clough took a pecking sip at his martini . He said with gallant good humour , Reposting was child 's play compared with this . 
+
+<root> One has had to learn how to camp out ... 
+
+<root> I 'm sure it 's terribly good , keeps the mind flexible . 
+
+<root> Denis thinks your angle lamp 's been left at Government House , did he tell you ? 
+
+<root> Dorothy Clough sat forward in her chair , as if she had alighted only for a moment . 
+
+<root> For heaven 's sake , let them have it , it 's someone else 's turn to burn the midnight oil there , now ... 
+
+<root> wha' d' you say , James ... 
+
+<root> Roly Dando asked with grudging interest about the visit . 
+
+<root> He 's never been sent anywhere where there was anything left to do , he said . 
+
+<root> Clough only goes in for the last year , after self-government 's been granted and the date for independence 's been given . 
+
+<root> An early date . 
+
+<root> Bray was slightly embarrassed by gossip , when quite sober , and said hesitantly , smiling , 
+
+<root> The impression was that he and his wife were slipping away quietly after the field of battle . 
+
+<root> Since he arrived eighteen months ago there 's been damn all for him to do except go fishing up at Rinsala . 
+
+<root> At the Pettigrews ' house that night , Dando 's voice came from the group round someone basting a sheep on the home-made spit : ... damn all except go fishing with his secretary acting ghillie ... 
+
+<root> Rebecca Edwards had just told Neil Bayley that Felix Pasilis , the Pettigrews ' Greek friend , was furious with her because she 'd forgotten some essential herb that he wanted for his sheep ... 
+
+<root> If I were Felix I 'd make you go back home and get it , my girl , Neil said , and the look of inattentive exhaustion on her rather heavy young face moved Bray in fellow-feeling to distract attention from her , saying , My God , I 'm afraid I behaved like a child at Cloughs ' ! 
+
+<root> I showed off by making a point of speaking to the servant in Gala . 
+
+<root> Neil and Rebecca Edwards laughed . 
+
+<root> Poor Uncle Willie . 
+
+<root> He was quite a nice young man in Dar-es-Salaam . 
+
+<root> He took Swahili lessons conscientiously and he certainly spoke it better than I did . 
+
+<root> To his horror , the elf burst into tears – very noisy tears . 
+
+<root> S-sit down ! he wailed . 
+
+<root> Harry thought he heard the voices downstairs falter . 
+
+<root> Harry , trying to say Shh ! and look comforting at the same time , ushered Dobby back onto the bed where he sat hiccoughing , looking like a large and very ugly doll . 
+
+<root> At last he managed to control himself , and sat with his great eyes fixed on Harry in an expression of watery adoration . 
+
+<root> You ca n't have met many decent wizards , said Harry , trying to cheer him up . 
+
+<root> Dobby shook his head . 
+
+<root> Hedwig had woken up with a particularly loud screech and was beating her wings wildly against the bars of her cage . 
+
+<root> Dobby almost spoke ill of his family , sir . 
+
+<root> Dobby shuddered . 
+
+<root> Oh no , sir , no Dobby will have to punish himself most grievously for coming to see you , sir . 
+
+<root> Dobby will have to shut his ears in the oven door for this . 
+
+<root> Dobby is always having to punish himself for something , sir . 
+
+<root> They lets Dobby get on with it , sir . 
+
+<root> But why do n't you leave ? 
+
+<root> And the family will never set Dobby free . 
+
+<root> Harry stared . 
+
+<root> This makes the Dursleys sound almost human . 
+
+<root> Ca n't anyone help you ? 
+
+<root> Almost at once , Harry wished he had n't spoken . 
+
+<root> Dobby dissolved again into wails of gratitude . 
+
+<root> Dobby has heard of your greatness , sir , but of your goodness , Dobby never knew 
+
+<root> But he stopped quickly , because thinking about Hermione was painful . 
+
+<root> Voldemort ? said Harry . 
+
+<root> He stopped again . 
+
+<root> Thinking about Ron was painful , too . 
+
+<root> Dobby leaned towards Harry , his eyes wide as headlamps . 
+
+<root> Dobby heard tell , he said hoarsely , that Harry Potter met the Dark Lord for a second time just weeks ago . that Harry Potter escaped yet again . 
+
+<root> Harry nodded and Dobby 's eyes suddenly shone with tears . 
+
+<root> He has braved so many dangers already ! 
+
+<root> But Dobby has come to protect Harry Potter , to warn him , even if he does have to shut his ears in the oven door later . 
+
+<root> There was a silence broken only by the chink of knives and forks from downstairs and the distant rumble of Uncle Vernon 's voice . 
+
+<root> But I 've got to go back – term starts on September the first . 
+
+<root> It 's all that 's keeping me going . 
+
+<root> You do n't know what it 's like here . 
+
+<root> I do n't belong here . 
+
+<root> He is too great , too good , to lose . 
+
+<root> " Why ? " said Harry in surprise . 
+
+<root> Harry Potter must not put himself in peril . 
+
+<root> What terrible things ? said Harry at once . 
+
+<root> Dobby made a funny choking noise and then banged his head madly against the wall . 
+
+<root> A sudden , unpleasant thought struck him . 
+
+<root> Hang on – this has n't got anything to do with Vol – sorry – with You Know Who , has it ? 
+
+<root> Slowly , Dobby shook his head . 
+
+<root> But Dobby 's eyes were wide and he seemed to be trying to give Harry a hint . 
+
+<root> Harry , however , was completely at sea . 
+
+<root> Dobby shook his head , his eyes wider than ever . 
+
+<root> Dobby bowed his head . 
+
+<root> Albus Dumbledore is the greatest Headmaster Hogwarts has ever had . 
+
+<root> Dobby knows it , sir . 
+
+<root> Dobby has heard Dumbledore 's powers rival those of He Who Must Not Be Named at the height of his strength . 
+
+<root> And before Harry could stop him , Dobby bounded off the bed , seized Harry 's desk lamp , and started beating himself around the head with ear-splitting yelps . 
+
+<root> A sudden silence fell downstairs . 
+
+<root> What – the – devil – are – you – doing ? said Uncle Vernon through gritted teeth , his face horribly close to Harry 's . 
+
+<root> He stomped flat-footed from the room . 
+
+<root> Shaking , Harry let Dobby out of the wardrobe . 
+
+<root> Friends who do n't even write to Harry Potter ? said Dobby slyly . 
+
+<root> Dobby shuffled his feet . 
+
+<root> Dobby has them here , sir , said the elf . 
+
+<root> Stepping nimbly out of Harry 's reach , he pulled a thick wad of envelopes from the inside of the pillowcase he was wearing . 
+
+<root> Harry could make out Hermione 's neat writing , Ron 's untidy scrawl and even a scribble that looked as though it was from the Hogwarts gamekeeper , Hagrid . 
+
+<root> The moment she saw Harry , Ginny accidentally knocked her porridge bowl to the floor with a loud clatter . 
+
+<root> Ginny seemed very prone to knocking things over whenever Harry entered a room . 
+
+<root> She dived under the table to retrieve the bowl and emerged with her face glowing like the setting sun . 
+
+<root> Pretending he had n't noticed this , Harry sat down and took the toast Mrs Weasley offered him . 
+
+<root> For a few minutes there was silence as they all read their letters . 
+
+<root> Harry 's told him to catch the Hogwarts Express as usual from King 's Cross station on September the first . 
+
+<root> There was also a list of the new books he 'd need for the coming year . 
+
+<root> SECOND-YEAR STUDENTS WILL REQUIRE : 
+
+<root> The Standard Book of Spells , Grade 2 by Miranda Goshawk 
+
+<root> Break with a Banshee by Gilderoy Lockhart 
+
+<root> Gadding with Ghouls by Gilderoy Lockhart 
+
+<root> Holidays with Hags by Gilderoy Lockhart 
+
+<root> Travels with Trolls by Gilderoy Lockhart 
+
+<root> Voyages with Vampires by Gilderoy Lockhart 
+
+<root> Wanderings with Werewolves by Gilderoy Lockhart 
+
+<root> Year with the Yeti by Gilderoy Lockhart 
+
+<root> Fred , who had finished his own list , peered over at Harry 's . 
+
+<root> The new Defense Against the Dark Arts teacher must be a fan – bet it 's a witch . 
+
+<root> At this point , Fred caught his mother 's eye and quickly busied himself with the marmalade . 
+
+<root> Oh , are you starting at Hogwarts this year ? Harry asked Ginny . 
+
+<root> She nodded , blushing to the roots of her flaming hair , and put her elbow in the butter dish . 
+
+<root> Fortunately no one saw this except Harry , because just then Ron 's elder brother Percy walked in . 
+
+<root> He was already dressed , his Hogwarts prefect badge pinned to his knitted tank top . 
+
+<root> He sat down in the only remaining chair but leapt up again almost immediately , pulling from underneath him a moulting , grey feather duster – at least , that was what Harry thought it was , until he saw that it was breathing . 
+
+<root> I wrote to her saying we were going to try and rescue you from the Dursleys . 
+
+<root> Then he ripped open Hermione 's letter and read it out loud : 
+
+<root> Dear Ron , and Harry if you 're there , 
+
+<root> I hope everything went all right and that Harry is okay and that you did n't do anything illegal to get him out , Ron , because that would get Harry into trouble , too . 
+
+<root> I 've been really worried and if Harry is all right , will you please let me know at once , but perhaps it would be better if you used a different owl , because I think another delivery might finish your one off . 
+
+<root> I 'm very busy with schoolwork , of course – 
+
+<root> – and we 're going to London next Wednesday to buy my new books . 
+
+<root> Why do n't we meet in Diagon Alley ? 
+
+<root> Let me know what 's happening as soon as you can , love from Hermione . 
+
+<root> Harry , Ron , Fred and George were planning to go up the hill to a small paddock the Weasleys owned . 
+
+<root> It was surrounded by trees that blocked it from view of the village below , meaning that they could practise Quidditch there , as long as they did n't fly too high . 
+
+<root> They could n't use real Quidditch balls , which would have been hard to explain if they had escaped and flown away over the village ; instead they threw apples for each other to catch . 
+
+<root> They took turns to ride Harry 's Nimbus Two Thousand , which was easily the best broom ; Ron 's old Shooting Star was often outstripped by passing butterflies . 
+
+<root> Five minutes later they were marching up the hill , broomsticks over their shoulders . 
+
+<root> They had asked Percy if he wanted to join them , but he had said he was busy . 
+
+<root> Harry had only seen Percy at meal-times so far ; he stayed shut in his room the rest of the time . 
+
+<root> Wish I knew what he was up to , said Fred , frowning . 
+
+<root> If we 're not careful , we 'll have another Head Boy in the family . 
+
+<root> I do n't think I could stand the shame . 
+
+<root> Bill was the oldest Weasley brother . 
+
+<root> He and the next brother , Charlie , had already left Hogwarts . 
+
+<root> Harry had never met either of them , but knew that Charlie was in Romania , studying dragons , and Bill in Egypt , working for the wizard 's bank , Gringotts . 
+
+<root> Harry said nothing . 
+
+<root> He felt a bit awkward . 
+
+<root> Stored in an underground vault at Gringotts in London was a small fortune that his parents had left him . 
+
+<root> of course , it was only in the wizarding world that he had money ; you could n't use Galleons , Sickles , and Knuts in Muggle shops . 
+
+<root> He had never mentioned his Gringotts bank account to the Dursleys ; he did n't think their horror of anything connected with magic would stretch to a large pile of gold . 
+
+<root> Mrs Weasley woke them all early the following Wednesday . 
+
+<root> After a quick half-a-dozen bacon sandwiches each , they pulled on their coats and Mrs Weasley took a flowerpot off the kitchen mantelpiece and peered inside . 
+
+<root> We 'll have to buy some more today ah well , guests first ! 
+
+<root> And she offered him the flowerpot . 
+
+<root> Harry stared at them all watching him . 
+
+<root> Never ? said Mr Weasley . 
+
+<root> How exactly – 
+
+<root> He took a pinch of glittering powder out of the flowerpot , stepped up to the fire , and threw the powder into the flames . 
+
+<root> With a roar , the fire turned emerald green and rose higher than Fred , who stepped right into it , shouted , Diagon Alley ! and vanished . 
+

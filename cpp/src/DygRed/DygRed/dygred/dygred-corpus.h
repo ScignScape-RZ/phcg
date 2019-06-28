@@ -14,6 +14,8 @@
 
 #include "qring/qring-file-structure.h"
 
+class QTextStream;
+
 class DygRed_Corpus : public QVector<DygRed_Sentence>,
   public QRing_File_Structure
 {
@@ -25,6 +27,8 @@ public:
  int detokenize(QString outfile);
 
  void report_sentence_texts();
+
+ void report_sentence_texts(QTextStream& qts);
 
  void init_sentences();
 
