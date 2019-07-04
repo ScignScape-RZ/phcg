@@ -1,4 +1,71 @@
 
+#en_gum-ud-train.conllu
+# sent_id = GUM_academic_art-19
+# text = Our experience of art develops from the interaction of several cognitive and affective processes; the beginning of which is a visual scan of the artwork.
+# s_type=decl
+1	Our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	_	_
+2	experience	experience	NOUN	NN	Number=Sing	5	nsubj	_	_
+3	of	of	ADP	IN	_	4	case	_	_
+4	art	art	NOUN	NN	Number=Sing	2	nmod	_	_
+5	develops	develop	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	from	from	ADP	IN	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	interaction	interaction	NOUN	NN	Number=Sing	5	obl	_	_
+9	of	of	ADP	IN	_	14	case	_	_
+10	several	several	ADJ	JJ	Degree=Pos	14	amod	_	_
+11	cognitive	cognitive	ADJ	JJ	Degree=Pos	14	amod	_	_
+12	and	and	CCONJ	CC	_	13	cc	_	_
+13	affective	affective	ADJ	JJ	Degree=Pos	11	conj	_	_
+14	processes	process	NOUN	NNS	Number=Plur	8	nmod	_	SpaceAfter=No
+15	;	;	PUNCT	:	_	23	punct	_	_
+16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
+17	beginning	beginning	NOUN	NN	Number=Sing	23	nsubj	_	_
+18	of	of	ADP	IN	_	19	case	_	_
+19	which	which	PRON	WDT	PronType=Int	17	nmod	_	_
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	_	_
+21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	_	_
+22	visual	visual	ADJ	JJ	Degree=Pos	23	amod	_	_
+23	scan	scan	NOUN	NN	Number=Sing	5	parataxis	_	_
+24	of	of	ADP	IN	_	26	case	_	_
+25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
+26	artwork	artwork	NOUN	NN	Number=Sing	23	nmod	_	SpaceAfter=No
+27	.	.	PUNCT	.	_	5	punct	_	_
+
+
+#en_gum-ud-train.conllu
+# sent_id = GUM_voyage_merida-20
+# text = The city's ambiance is colonial and the climate is tropical.
+# s_type=decl
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
+2	city	city	NOUN	NN	Number=Sing	4	nmod:poss	_	SpaceAfter=No
+3	's	's	PART	POS	_	2	case	_	_
+4	ambiance	ambiance	NOUN	NN	Number=Sing	6	nsubj	_	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
+6	colonial	colonial	ADJ	JJ	Degree=Pos	0	root	_	_
+7	and	and	CCONJ	CC	_	11	cc	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+9	climate	climate	NOUN	NN	Number=Sing	11	nsubj	_	_
+10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	_	_
+11	tropical	tropical	ADJ	JJ	Degree=Pos	6	conj	_	SpaceAfter=No
+12	.	.	PUNCT	.	_	6	punct	_	_
+
+
+#en_gum-ud-train.conllu
+# sent_id = GUM_voyage_socotra-16
+# text = The most popular lodging is actually camping on the beaches.
+# s_type=decl
+1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+2	most	most	ADV	RBS	_	3	advmod	_	_
+3	popular	popular	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	lodging	lodging	NOUN	NN	Number=Sing	7	nsubj	_	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	_	_
+6	actually	actually	ADV	RB	_	7	advmod	_	_
+7	camping	camp	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	_
+8	on	on	ADP	IN	_	10	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
+10	beaches	beach	NOUN	NNS	Number=Plur	7	obl	_	SpaceAfter=No
+11	.	.	PUNCT	.	_	7	punct	_	_
+
 
 #en_ewt-ud-train.conllu
 # sent_id = weblog-juancole.com_juancole_20030911085700_ENG_20030911_085700-0007
@@ -184,6 +251,60 @@
 16	medium	medium	NOUN	NN	Number=Sing	8	conj	2:ccomp|8:conj:and	SpaceAfter=No
 17	.	.	PUNCT	.	_	2	punct	2:punct	_
 
+
+#en_ewt-ud-train.conllu 
+# sent_id = email-enronsent03_01-0143
+# text = We understand that the pipe fitters are also planning to picket the Lake Worth, Florida project as well.
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+2	understand	understand	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	that	that	SCONJ	IN	_	9	mark	9:mark	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
+5	pipe	pipe	NOUN	NN	Number=Sing	6	compound	6:compound	_
+6	fitters	fitter	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj|11:nsubj:xsubj	_
+7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
+8	also	also	ADV	RB	_	9	advmod	9:advmod	_
+9	planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	2	ccomp	2:ccomp	_
+10	to	to	PART	TO	_	11	mark	11:mark	_
+11	picket	picket	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
+12	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
+13	Lake	Lake	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+14	Worth	Worth	PROPN	NNP	Number=Sing	17	compound	17:compound	SpaceAfter=No
+15	,	,	PUNCT	,	_	14	punct	14:punct	_
+16	Florida	Florida	PROPN	NNP	Number=Sing	14	appos	14:appos	_
+17	project	project	NOUN	NN	Number=Sing	11	obj	11:obj	_
+18	as	as	ADV	RB	_	11	advmod	11:advmod	_
+19	well	well	ADV	RB	Degree=Pos	18	fixed	18:fixed	SpaceAfter=No
+20	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+
+#en_ewt-ud-train.conllu 
+# sent_id = email-enronsent05_02-0027
+# text = We look forward to answering your questions and receiving your feedback.
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+2	look	look	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	forward	forward	ADV	RB	_	2	advmod	2:advmod	_
+4	to	to	SCONJ	IN	_	5	mark	5:mark	_
+5	answering	answer	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:to	_
+6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+7	questions	question	NOUN	NNS	Number=Plur	5	obj	5:obj	_
+8	and	and	CCONJ	CC	_	9	cc	9:cc	_
+9	receiving	receive	VERB	VBG	VerbForm=Ger	5	conj	2:advcl:to|5:conj:and	_
+10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+11	feedback	feedback	NOUN	NN	Number=Sing	9	obj	9:obj	SpaceAfter=No
+12	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+
+#en_ewt-ud-train.conllu 
+# newdoc id = reviews-135010
+# sent_id = reviews-135010-0001
+# text = The New Italian Kid on the Block
+1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
+2	New	new	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+3	Italian	italian	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+4	Kid	kid	NOUN	NN	Number=Sing	0	root	0:root	_
+5	on	on	ADP	IN	_	7	case	7:case	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
+7	Block	block	NOUN	NN	Number=Sing	4	nmod	4:nmod:on	_
 
 
 # en_partut-ud-train.conllu
