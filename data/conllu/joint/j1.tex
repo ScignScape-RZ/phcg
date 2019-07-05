@@ -1,0 +1,18 @@
+\documentclass{article}
+
+\newwrite\txhslFile
+\immediate\openout\txhslFile=\jobname.txh
+
+\usepackage{hyperref}
+
+\usepackage{tikz-dependency}
+
+\usepackage[paperwidth=22in,textwidth=20in,paperheight=11in]{geometry}
+
+\begin{document}
+
+\include{j} 
+	
+	\closeout\txhslFile
+
+\end{document}

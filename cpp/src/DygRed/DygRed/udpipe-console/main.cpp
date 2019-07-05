@@ -18,6 +18,152 @@
 
 #include <QDir>
 
+#include "textio.h"
+
+USING_KANS(TextIO)
+
+
+int main(int argc, char* argv[])
+{
+ QString root = "&" CONLLU_DIR ;
+// parse_corpus(root, qs);
+ DygRed_Corpus dgc(root);
+
+ int result = 0;
+
+ QStringList infiles{"@/joint/j.conllu"};
+ QString outfile = "@/joint/j.txt";
+
+ dgc.add_files(infiles);
+ result = dgc.detokenize(outfile);
+
+ dgc.init_sentences();
+
+ QString latex;
+ QTextStream qts(&latex);
+
+ for(DygRed_Sentence& dgs : dgc)
+ {
+  qts << "\n\\begin{dependency}\n\\begin{deptext}\n";
+
+  dgs.join_text(qts, " \\& ", " \\\\");
+  qts << "\n";
+  dgs.join_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::UPOS);
+  qts << "\n";
+  dgs.join_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::XPOS);
+//  qts << "\n";
+  qts << "\n\\end{deptext}\n\n";
+
+  dgs.write_edges(qts, "\\depedge{%1}{%2}{%3}\n", "\\deproot{%1}{%2}\n");
+
+//  \depedge{1}{2}{det}
+
+
+  qts << "\n\n\\end{dependency}\n";
+ }
+
+ save_file(dgc.expand_external_file("@/joint/j.tex"), latex);
+
+ return 0;
+
+}
+
+#ifdef HIDE
+QString parse_to_outfile(int argc, char* argv[], DygRed_Corpus& dgc, QString model_file)
+{
+ QString root = dgc.root_folder();
+
+ QStringList infiles{ root + "/t1.txt" };
+
+ QString outfile = "@t2.txt";
+ QString outf = root + "/t2.txt";
+
+ int result = main_parse(argc, argv,
+   model_file,
+   infiles, outf);
+ if(result != 0)
+ {
+  qDebug() << "Error code: " << result;
+ }
+ return outfile;
+}
+
+QString parse_to_outfile(DygRed_Corpus& dgc, QString model_file)
+{
+ QString root = dgc.root_folder();
+
+ QStringList infiles{ root + "/t1.txt" };
+
+ QString outfile = "@t2.txt";
+ QString outf = root + "/t2.txt";
+
+ int result = main_parse(model_file,
+   infiles, outf);
+ if(result != 0)
+ {
+  qDebug() << "Error code: " << result;
+ }
+ return outfile;
+}
+
+int main(int argc, char* argv[])
+{
+ //QString root = "C:/repos/kauv-rz/data/udpipe/examples";
+
+//? QString root = "&" RZ_DIR "/../../udpipe/examples";
+ QString root = "&" CONLLU_DIR ;
+
+ DygRed_Corpus dgc(root);
+
+ QString model_file = dgc.expand_external_file("@en_pud.conllu");
+
+ //"C:/repos/kauv-rz/data/udpipe/eng/udpipe-ud-2.0-170801/english-lines-ud-2.0-170801.udpipe";
+
+ //
+ //
+ QString parsefile = parse_to_outfile(dgc, model_file);
+ //QString parsefile = "@t2.txt";
+
+ int result = 0;
+
+ QStringList infiles{parsefile};
+ QString outfile = "@out/t1.txt";
+
+ dgc.add_files(infiles);
+ result = dgc.detokenize(outfile);
+
+ DygRed_Deprel_Callbacks cbs;
+ DygRed_Sentence::init_callcacks(cbs);
+
+
+ DygRed_Sentence& dgs = dgc.first();
+
+ QMap<QString, QList<DygRed_Word_Pos*>> m;
+
+ DygRed_Word_Pos* rvb = dgs.normalize_deps(m);
+
+ dgs.init_pairs();
+ dgs.init_groups(cbs);
+ dgs.init_group_reps();
+
+ dgs.resolve_internal_group_parents();
+
+ DygRed_Word_Pos* rr = dgs.get_adv_rep(rvb);
+
+ //DygRed_Word_Pos* rr = dgs.guess_dock_parents(cbs);
+
+// DygRed_Word_Pos* rr = dgs.guess_dock_parents(cbs);
+// dgs.resolve_parent_claims();
+//
+ qDebug() << dgs.to_vstring(rr);
+
+ return 0;
+}
+#endif //def HIDE
+
+#ifdef HIDE
+
+
 void save_file(QString path, DygRed_Corpus& dgc)
 {
  QFile outfile(path);
@@ -67,6 +213,7 @@ int main(int argc, char* argv[])
  return 0;//result;
 }
 
+#endif //def HIDE
 
 #ifdef HIDE
 

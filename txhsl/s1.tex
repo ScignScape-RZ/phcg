@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\newwrite\txhslFile
+\immediate\openout\txhslFile=\jobname.txh
+
+\usepackage{hyperref}
+
+\usepackage{tikz-dependency}
+
+\begin{document}
+
+
+\begin{dependency}
+	\begin{deptext}
+	  The \& city \& 's \& ambiance \& is \& colonial \& and \& the
+		 \& climate \& is \& tropical \& . \\	 
+	  DET \& NOUN \& PART \& NOUN \& AUX \& ADJ \& CCONJ \& DET
+	     \& NOUN \& AUX \& ADJ \& PUNCT \\
+	\end{deptext}
+	
+	
+	\depedge{1}{2}{det}
+	\depedge{2}{4}{nmod:poss}
+	\depedge{3}{2}{case}
+	\depedge{4}{6}{nsubj}
+	\depedge{5}{6}{cop}
+	
+	\deproot{6}{root}
+	\depedge{7}{11}{cc}
+	\depedge{8}{9}{det}
+	\depedge{9}{11}{nsubj}
+	\depedge{10}{11}{cop}
+	
+	\depedge{11}{6}{conj}
+	\depedge{12}{6}{punc}
+	
+\end{dependency}
+	
+
+
+
+
+	Page1
+	\newpage
+	
+	Page2
+	\newpage
+	
+	Page3
+	a\\
+	b\\
+	c\\
+	a\\
+	b\\
+	c\\
+	a\\
+	b\\
+	c\\
+	Test label: the \hypertarget{mc:test}{\label{mc:test}} target.
+	XXXX
+	a\\
+	b\\
+	c\\
+	a\\
+	b\\
+	c\\
+	
+	\newpage
+	Page4
+	\hyperlink{mc:test}{go} \pageref{mc:test}
+	
+	\immediate\write\txhslFile{\getpagerefnumber{mc:test}}
+	
+	\closeout\txhslFile
+\end{document}

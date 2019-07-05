@@ -36,6 +36,10 @@ class DygRed_Sentence
 
 public:
 
+ enum Join_Field_Codes {
+   Text, UPOS, XPOS
+ };
+
  explicit DygRed_Sentence(sentence* udp_sentence = nullptr);
 
  static void init_callbacks(DygRed_Deprel_Callbacks& cbs);
@@ -101,6 +105,11 @@ public:
 
  void report_text();
  void report_text(QTextStream& qts);
+
+ void join_text(QTextStream& qts, QString sep, QString end, Join_Field_Codes j = Join_Field_Codes::Text);
+
+ void write_edges(QTextStream& qts, QString templat, QString rtemplat);
+
 
 // void set_verb_to_subject(int v, int s, int lvl);
 // int get_adj(int n);

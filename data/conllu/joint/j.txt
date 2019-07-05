@@ -1,0 +1,587 @@
+#en_gum-ud-train.conllu
+# sent_id = GUM_academic_art-19
+# text = Our experience of art develops from the interaction of several cognitive and affective processes; the beginning of which is a visual scan of the artwork.
+# s_type=decl
+1	Our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	_	_
+2	experience	experience	NOUN	NN	Number=Sing	5	nsubj	_	_
+3	of	of	ADP	IN	_	4	case	_	_
+4	art	art	NOUN	NN	Number=Sing	2	nmod	_	_
+5	develops	develop	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	from	from	ADP	IN	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	interaction	interaction	NOUN	NN	Number=Sing	5	obl	_	_
+9	of	of	ADP	IN	_	14	case	_	_
+10	several	several	ADJ	JJ	Degree=Pos	14	amod	_	_
+11	cognitive	cognitive	ADJ	JJ	Degree=Pos	14	amod	_	_
+12	and	and	CCONJ	CC	_	13	cc	_	_
+13	affective	affective	ADJ	JJ	Degree=Pos	11	conj	_	_
+14	processes	process	NOUN	NNS	Number=Plur	8	nmod	_	_
+15	;	;	PUNCT	:	_	23	punct	_	_
+16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
+17	beginning	beginning	NOUN	NN	Number=Sing	23	nsubj	_	_
+18	of	of	ADP	IN	_	19	case	_	_
+19	which	which	PRON	WDT	PronType=Int	17	nmod	_	_
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	_	_
+21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	_	_
+22	visual	visual	ADJ	JJ	Degree=Pos	23	amod	_	_
+23	scan	scan	NOUN	NN	Number=Sing	5	parataxis	_	_
+24	of	of	ADP	IN	_	26	case	_	_
+25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
+26	artwork	artwork	NOUN	NN	Number=Sing	23	nmod	_	_
+27	.	.	PUNCT	.	_	5	punct	_	_
+
+#en_gum-ud-train.conllu
+# sent_id = GUM_voyage_merida-20
+# text = The city's ambiance is colonial and the climate is tropical.
+# s_type=decl
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
+2	city	city	NOUN	NN	Number=Sing	4	nmod:poss	_	_
+3	's	's	PART	POS	_	2	case	_	_
+4	ambiance	ambiance	NOUN	NN	Number=Sing	6	nsubj	_	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
+6	colonial	colonial	ADJ	JJ	Degree=Pos	0	root	_	_
+7	and	and	CCONJ	CC	_	11	cc	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+9	climate	climate	NOUN	NN	Number=Sing	11	nsubj	_	_
+10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	_	_
+11	tropical	tropical	ADJ	JJ	Degree=Pos	6	conj	_	_
+12	.	.	PUNCT	.	_	6	punct	_	_
+
+#en_gum-ud-train.conllu
+# sent_id = GUM_voyage_socotra-16
+# text = The most popular lodging is actually camping on the beaches.
+# s_type=decl
+1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+2	most	most	ADV	RBS	_	3	advmod	_	_
+3	popular	popular	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	lodging	lodging	NOUN	NN	Number=Sing	7	nsubj	_	_
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	_	_
+6	actually	actually	ADV	RB	_	7	advmod	_	_
+7	camping	camp	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	_
+8	on	on	ADP	IN	_	10	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
+10	beaches	beach	NOUN	NNS	Number=Plur	7	obl	_	_
+11	.	.	PUNCT	.	_	7	punct	_	_
+
+#en_ewt-ud-train.conllu
+# sent_id = weblog-juancole.com_juancole_20030911085700_ENG_20030911_085700-0007
+# text = Musharraf held elections in October of 2002, in which center-right parties did well, but in which nearly 20 percent of parliament seats went to the fundamentalist religious party coalition, MMA.
+1	Musharraf	Musharraf	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	_
+2	held	hold	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	elections	election	NOUN	NNS	Number=Plur	2	obj	2:obj|15:obl	_
+4	in	in	ADP	IN	_	5	case	5:case	_
+5	October	October	PROPN	NNP	Number=Sing	2	obl	2:obl:in	_
+6	of	of	ADP	IN	_	7	case	7:case	_
+7	2002	2002	NUM	CD	NumType=Card	5	nmod	5:nmod:of	_
+8	,	,	PUNCT	,	_	2	punct	2:punct	_
+9	in	in	ADP	IN	_	10	case	10:case	_
+10	which	which	PRON	WDT	PronType=Rel	15	obl	3:ref	_
+11	center	center	NOUN	NN	Number=Sing	14	compound	14:compound	_
+12	-	-	PUNCT	HYPH	_	11	punct	11:punct	_
+13	right	right	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
+14	parties	party	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
+15	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+16	well	well	ADV	RB	Degree=Pos	15	advmod	15:advmod	_
+17	,	,	PUNCT	,	_	27	punct	27:punct	_
+18	but	but	CCONJ	CC	_	27	cc	27:cc	_
+19	in	in	ADP	IN	_	20	case	20:case	_
+20	which	which	PRON	WDT	PronType=Int	27	obl	27:obl:in	_
+21	nearly	nearly	ADV	RB	_	22	advmod	22:advmod	_
+22	20	20	NUM	CD	NumType=Card	23	nummod	23:nummod	_
+23	percent	percent	NOUN	NN	Number=Sing	27	nsubj	27:nsubj	_
+24	of	of	ADP	IN	_	26	case	26:case	_
+25	parliament	parliament	NOUN	NN	Number=Sing	26	compound	26:compound	_
+26	seats	seat	NOUN	NNS	Number=Plur	23	nmod	23:nmod:of	_
+27	went	go	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	conj	3:acl:relcl|15:conj:but	_
+28	to	to	ADP	IN	_	33	case	33:case	_
+29	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	_
+30	fundamentalist	fundamentalist	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
+31	religious	religious	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
+32	party	party	NOUN	NN	Number=Sing	33	compound	33:compound	_
+33	coalition	coalition	NOUN	NN	Number=Sing	27	obl	27:obl:to	_
+34	,	,	PUNCT	,	_	33	punct	33:punct	_
+35	MMA	MMA	PROPN	NNP	Number=Sing	33	appos	33:appos	_
+36	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+#en_ewt-ud-train.conllu
+# sent_id = weblog-juancole.com_juancole_20030911085700_ENG_20030911_085700-0021
+# text = This terrorist organization can now only pull off far less sophisticated bombings and attacks.
+1	This	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
+2	terrorist	terrorist	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+3	organization	organization	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
+4	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
+5	now	now	ADV	RB	_	7	advmod	7:advmod	_
+6	only	only	ADV	RB	_	7	advmod	7:advmod	_
+7	pull	pull	VERB	VB	VerbForm=Inf	0	root	0:root	_
+8	off	off	ADP	RP	_	7	compound:prt	7:compound:prt	_
+9	far	far	ADV	RB	Degree=Pos	10	advmod	10:advmod	_
+10	less	less	ADV	RBS	_	11	advmod	11:advmod	_
+11	sophisticated	sophisticated	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
+12	bombings	bombing	NOUN	NNS	Number=Plur	7	obj	7:obj	_
+13	and	and	CCONJ	CC	_	14	cc	14:cc	_
+14	attacks	attack	NOUN	NNS	Number=Plur	12	conj	7:obj|12:conj:and	_
+15	.	.	PUNCT	.	_	7	punct	7:punct	_
+
+#en_ewt-ud-train.conllu
+# sent_id = weblog-juancole.com_juancole_20030911085700_ENG_20030911_085700-0022
+# text = It should continue to be defanged.
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|6:nsubj:xsubj	_
+2	should	should	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
+3	continue	continue	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	to	to	PART	TO	_	6	mark	6:mark	_
+5	be	be	AUX	VB	VerbForm=Inf	6	aux:pass	6:aux:pass	_
+6	defanged	defange	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	xcomp	3:xcomp	_
+7	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+#en_ewt-ud-train.conllu
+# sent_id = weblog-juancole.com_juancole_20040604210986_ENG_20040604_210986-0004
+# text = As the American public gradually wearies of the Iraq crisis, some have begun worrying that the war could blow back on the US by creating the conditions for anti-American terrorism.
+1	As	as	SCONJ	IN	_	6	mark	6:mark	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
+3	American	american	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+4	public	public	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+5	gradually	gradually	ADV	RB	_	6	advmod	6:advmod	_
+6	wearies	weary	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:as	_
+7	of	of	ADP	IN	_	10	case	10:case	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	_
+9	Iraq	Iraq	PROPN	NNP	Number=Sing	10	compound	10:compound	_
+10	crisis	crisis	NOUN	NN	Number=Sing	6	obl	6:obl:of	_
+11	,	,	PUNCT	,	_	14	punct	14:punct	_
+12	some	some	DET	DT	_	14	nsubj	14:nsubj|15:nsubj:xsubj	_
+13	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
+14	begun	begin	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+15	worrying	worry	VERB	VBG	VerbForm=Ger	14	xcomp	14:xcomp	_
+16	that	that	SCONJ	IN	_	20	mark	20:mark	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
+18	war	war	NOUN	NN	Number=Sing	20	nsubj	20:nsubj	_
+19	could	could	AUX	MD	VerbForm=Fin	20	aux	20:aux	_
+20	blow	blow	VERB	VB	VerbForm=Inf	15	ccomp	15:ccomp	_
+21	back	back	ADV	RB	_	20	advmod	20:advmod	_
+22	on	on	ADP	IN	_	24	case	24:case	_
+23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
+24	US	US	PROPN	NNP	Number=Sing	20	obl	20:obl:on	_
+25	by	by	SCONJ	IN	_	26	mark	26:mark	_
+26	creating	create	VERB	VBG	VerbForm=Ger	20	advcl	20:advcl:by	_
+27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	_
+28	conditions	condition	NOUN	NNS	Number=Plur	26	obj	26:obj	_
+29	for	for	ADP	IN	_	31	case	31:case	_
+30	anti-American	anti-american	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
+31	terrorism	terrorism	NOUN	NN	Number=Sing	28	nmod	28:nmod:for	_
+32	.	.	PUNCT	.	_	14	punct	14:punct	_
+
+#en_ewt-ud-train.conllu
+# sent_id = weblog-juancole.com_juancole_20040604210986_ENG_20040604_210986-0008
+# text = The biggest threat Israel faces is not from conventional armies but from the asymmetrical tactics of Palestinian national liberation movements.
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	_
+2	biggest	biggest	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
+3	threat	threat	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|15:nsubj	_
+4	Israel	Israel	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
+5	faces	face	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	3:acl:relcl	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+7	not	not	ADV	RB	_	10	advmod	10:advmod	_
+8	from	from	ADP	IN	_	10	case	10:case	_
+9	conventional	conventional	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
+10	armies	army	NOUN	NNS	Number=Plur	0	root	0:root	_
+11	but	but	CCONJ	CC	_	15	cc	15:cc	_
+12	from	from	ADP	IN	_	15	case	15:case	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
+14	asymmetrical	asymmetrical	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
+15	tactics	tactic	NOUN	NNS	Number=Plur	10	conj	10:conj:but	_
+16	of	of	ADP	IN	_	20	case	20:case	_
+17	Palestinian	palestinian	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
+18	national	national	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
+19	liberation	liberation	NOUN	NN	Number=Sing	20	compound	20:compound	_
+20	movements	movement	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	_
+21	.	.	PUNCT	.	_	10	punct	10:punct	_
+
+#en_ewt-ud-train.conllu 
+# sent_id = email-enronsent17_01-0094
+# text = Talk about a shotgun marriage!
+1	Talk	talk	VERB	VB	VerbForm=Inf	0	root	0:root	_
+2	about	about	ADP	IN	_	5	case	5:case	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
+4	shotgun	shotgun	NOUN	NN	Number=Sing	5	compound	5:compound	_
+5	marriage	marriage	NOUN	NN	Number=Sing	1	obl	1:obl:about	_
+6	!	!	PUNCT	.	_	1	punct	1:punct	_
+
+#en_ewt-ud-train.conllu 
+# sent_id = email-enronsent40_01-0055
+# text = We will meet Dave Forster and his team among others.
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+2	will	will	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
+3	meet	meet	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	Dave	Dave	PROPN	NNP	Number=Sing	3	obj	3:obj	_
+5	Forster	Forster	PROPN	NNP	Number=Sing	4	flat	4:flat	_
+6	and	and	CCONJ	CC	_	8	cc	8:cc	_
+7	his	he	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	8:nmod:poss	_
+8	team	team	NOUN	NN	Number=Sing	4	conj	3:obj|4:conj:and	_
+9	among	among	ADP	IN	_	10	case	10:case	_
+10	others	other	NOUN	NNS	Number=Plur	4	nmod	4:nmod:among	_
+11	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+#en_ewt-ud-train.conllu 
+# sent_id = email-enronsent14_01-0123
+# text = Please indicate below whether or not you plan to attend this meeting and through what medium.
+1	Please	please	INTJ	UH	_	2	discourse	2:discourse	_
+2	indicate	indicate	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
+3	below	below	ADV	RB	_	2	advmod	2:advmod	_
+4	whether	whether	SCONJ	IN	_	8	mark	8:mark	_
+5	or	or	CCONJ	CC	_	4	fixed	4:fixed	_
+6	not	not	ADV	RB	_	4	fixed	4:fixed	_
+7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	8:nsubj|10:nsubj:xsubj|16:nsubj	_
+8	plan	plan	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
+9	to	to	PART	TO	_	10	mark	10:mark	_
+10	attend	attend	VERB	VB	VerbForm=Inf	8	xcomp	8:xcomp	_
+11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	_
+12	meeting	meeting	NOUN	NN	Number=Sing	10	obj	10:obj	_
+13	and	and	CCONJ	CC	_	16	cc	16:cc	_
+14	through	through	ADP	IN	_	16	case	16:case	_
+15	what	what	DET	WDT	PronType=Int	16	det	16:det	_
+16	medium	medium	NOUN	NN	Number=Sing	8	conj	2:ccomp|8:conj:and	_
+17	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+#en_ewt-ud-train.conllu 
+# sent_id = email-enronsent03_01-0143
+# text = We understand that the pipe fitters are also planning to picket the Lake Worth, Florida project as well.
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+2	understand	understand	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	that	that	SCONJ	IN	_	9	mark	9:mark	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
+5	pipe	pipe	NOUN	NN	Number=Sing	6	compound	6:compound	_
+6	fitters	fitter	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj|11:nsubj:xsubj	_
+7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
+8	also	also	ADV	RB	_	9	advmod	9:advmod	_
+9	planning	plan	VERB	VBG	Tense=Pres|VerbForm=Part	2	ccomp	2:ccomp	_
+10	to	to	PART	TO	_	11	mark	11:mark	_
+11	picket	picket	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
+12	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	_
+13	Lake	Lake	PROPN	NNP	Number=Sing	14	compound	14:compound	_
+14	Worth	Worth	PROPN	NNP	Number=Sing	17	compound	17:compound	_
+15	,	,	PUNCT	,	_	14	punct	14:punct	_
+16	Florida	Florida	PROPN	NNP	Number=Sing	14	appos	14:appos	_
+17	project	project	NOUN	NN	Number=Sing	11	obj	11:obj	_
+18	as	as	ADV	RB	_	11	advmod	11:advmod	_
+19	well	well	ADV	RB	Degree=Pos	18	fixed	18:fixed	_
+20	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+#en_ewt-ud-train.conllu 
+# sent_id = email-enronsent05_02-0027
+# text = We look forward to answering your questions and receiving your feedback.
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+2	look	look	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	forward	forward	ADV	RB	_	2	advmod	2:advmod	_
+4	to	to	SCONJ	IN	_	5	mark	5:mark	_
+5	answering	answer	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl:to	_
+6	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+7	questions	question	NOUN	NNS	Number=Plur	5	obj	5:obj	_
+8	and	and	CCONJ	CC	_	9	cc	9:cc	_
+9	receiving	receive	VERB	VBG	VerbForm=Ger	5	conj	2:advcl:to|5:conj:and	_
+10	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	_
+11	feedback	feedback	NOUN	NN	Number=Sing	9	obj	9:obj	_
+12	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+#en_ewt-ud-train.conllu 
+# newdoc id = reviews-135010
+# sent_id = reviews-135010-0001
+# text = The New Italian Kid on the Block
+1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
+2	New	new	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+3	Italian	italian	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+4	Kid	kid	NOUN	NN	Number=Sing	0	root	0:root	_
+5	on	on	ADP	IN	_	7	case	7:case	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
+7	Block	block	NOUN	NN	Number=Sing	4	nmod	4:nmod:on	_
+
+# en_partut-ud-train.conllu
+# sent_id = en_partut-ud-1543
+# text = Many of Balzac's works have been made into or have inspired films, and they are a continuing source of inspiration for writers, filmmakers and critics.
+1	Many	many	PRON	PI	Number=Plur|PronType=Ind	8	nsubj:pass	_	_
+2	of	of	ADP	E	_	5	case	_	_
+3	Balzac	Balzac	PROPN	SP	_	5	nmod	_	_
+4	's	's	PART	PART	_	3	case	_	_
+5	works	work	NOUN	S	Number=Plur	1	nmod	_	_
+6	have	have	AUX	VA	Mood=Ind|Number=Plur|Tense=Pres|VerbForm=Fin	8	aux	_	_
+7	been	be	AUX	VA	Tense=Past|VerbForm=Part	8	aux:pass	_	_
+8	made	make	VERB	V	Tense=Past|VerbForm=Part	0	root	_	_
+9	into	into	ADP	E	_	8	obl	_	_
+10	or	or	CCONJ	CC	_	12	cc	_	_
+11	have	have	AUX	VA	VerbForm=Inf	12	aux	_	_
+12	inspired	inspire	VERB	V	Tense=Past|VerbForm=Part	8	conj	_	_
+13	films	film	NOUN	S	Number=Plur	12	obj	_	_
+14	,	,	PUNCT	FF	_	20	punct	_	_
+15	and	and	CCONJ	CC	_	20	cc	_	_
+16	they	they	PRON	PE	Number=Plur|Person=3|PronType=Prs	20	nsubj	_	_
+17	are	be	AUX	V	Mood=Ind|Number=Plur|Tense=Pres|VerbForm=Fin	20	cop	_	_
+18	a	a	DET	RI	Definite=Ind|Number=Sing|PronType=Art	20	det	_	_
+19	continuing	continue	VERB	V	Number=Sing|Tense=Pres|VerbForm=Part	20	acl	_	_
+20	source	source	NOUN	S	Number=Sing	8	conj	_	_
+21	of	of	ADP	E	_	22	case	_	_
+22	inspiration	inspiration	NOUN	S	Number=Sing	20	nmod	_	_
+23	for	for	ADP	E	_	24	case	_	_
+24	writers	writer	NOUN	S	Number=Plur	20	nmod	_	_
+25	,	,	PUNCT	FF	_	26	punct	_	_
+26	filmmakers	filmmaker	NOUN	S	Number=Plur	24	conj	_	_
+27	and	and	CCONJ	CC	_	28	cc	_	_
+28	critics	critic	NOUN	S	Number=Plur	24	conj	_	_
+29	.	.	PUNCT	FS	_	8	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 397
+# text = He found himself tending toward a jacket and a tie.
+1	He	he	PRON	PERS-P3SG-NOM	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
+2	found	find	VERB	PAST	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+3	himself	he	PRON	RFL-P3SG	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	2	obj	_	_
+4	tending	tend	VERB	ING	Tense=Pres|VerbForm=Part	2	xcomp	_	_
+5	toward	toward	ADP	_	_	7	case	_	_
+6	a	a	DET	IND-SG	Definite=Ind|PronType=Art	7	det	_	_
+7	jacket	jacket	NOUN	SG-NOM	Number=Sing	4	obl	_	_
+8	and	and	CCONJ	_	_	10	cc	_	_
+9	a	a	DET	IND-SG	Definite=Ind|PronType=Art	10	det	_	_
+10	tie	tie	NOUN	SG-NOM	Number=Sing	7	conj	_	_
+11	.	.	PUNCT	Period	_	2	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 381
+# text = By wandering aimlessly, all places became equal, and it no longer mattered where he was.
+1	By	by	ADP	_	_	2	mark	_	_
+2	wandering	wander	VERB	ING	Tense=Pres|VerbForm=Part	7	advcl	_	_
+3	aimlessly	aimless	ADV	_	_	2	advmod	_	_
+4	,	,	PUNCT	Comma	_	2	punct	_	_
+5	all	all	DET	TOT-PL	_	6	det	_	_
+6	places	place	NOUN	PL-NOM	Number=Plur	7	nsubj	_	_
+7	became	become	VERB	PAST	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+8	equal	equal	ADJ	POS	Degree=Pos	7	xcomp	_	_
+9	,	,	PUNCT	Comma	_	7	punct	_	_
+10	and	and	CCONJ	_	_	14	cc	_	_
+11	it	it	PRON	EX-P3SG	_	14	expl	_	_
+12	no	no	ADV	NEG	_	14	advmod	_	_
+13	longer	long	ADV	CMP	Degree=Cmp	12	fixed	_	_
+14	mattered	matter	VERB	PAST	Mood=Ind|Tense=Past|VerbForm=Fin	7	conj	_	_
+15	where	where	ADV	WH	PronType=Int	17	advmod	_	_
+16	he	he	PRON	PERS-P3SG-NOM	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj	_	_
+17	was	be	VERB	PAST	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	14	csubj	_	_
+18	.	.	PUNCT	Period	_	7	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 1713
+# text = Let us make it clear that the collection of clothing for people in third countries who need it can continue.
+1	Let	let	VERB	IMP	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	us	we	PRON	PERS-P1PL-ACC	Case=Acc|Number=Plur|Person=1|PronType=Prs	1	obj	_	_
+3	make	make	VERB	INF	VerbForm=Inf	1	xcomp	_	_
+4	it	it	PRON	PERS-SG	_	3	obj	_	_
+5	clear	clear	ADJ	POS	Degree=Pos	3	xcomp	_	_
+6	that	that	SCONJ	_	_	20	mark	_	_
+7	the	the	DET	DEF	Definite=Def|PronType=Art	8	det	_	_
+8	collection	collection	NOUN	SG-NOM	Number=Sing	20	nsubj	_	_
+9	of	of	ADP	_	_	10	case	_	_
+10	clothing	clothing	NOUN	SG-NOM	Number=Sing	8	nmod	_	_
+11	for	for	ADP	_	_	12	case	_	_
+12	people	people	NOUN	PL-NOM	Number=Plur	10	nmod	_	_
+13	in	in	ADP	_	_	15	case	_	_
+14	third	third	ADJ	ORD	Degree=Pos|NumType=Ord	15	amod	_	_
+15	countries	country	NOUN	PL-NOM	Number=Plur	12	nmod	_	_
+16	who	who	PRON	WH-REL	PronType=Int	17	nsubj	_	_
+17	need	need	VERB	PRES	Mood=Ind|Tense=Pres|VerbForm=Fin	15	acl:relcl	_	_
+18	it	it	PRON	PERS-SG	_	17	obj	_	_
+19	can	can	AUX	PRES-AUX	VerbForm=Fin	20	aux	_	_
+20	continue	continue	VERB	INF	VerbForm=Inf	5	acl	_	_
+21	.	.	PUNCT	Period	_	1	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 1762
+# text = Circumstances have changed in some respects, while in others they have remained the same.
+1	Circumstances	circumstance	NOUN	PL-NOM	Number=Plur	3	nsubj	_	_
+2	have	have	AUX	PRES-AUX	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	changed	change	VERB	PERF	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+4	in	in	ADP	_	_	6	case	_	_
+5	some	some	DET	IND	_	6	det	_	_
+6	respects	respect	NOUN	PL-NOM	Number=Plur	3	obl	_	_
+7	,	,	PUNCT	Comma	_	13	punct	_	_
+8	while	while	SCONJ	_	_	13	mark	_	_
+9	in	in	ADP	_	_	10	case	_	_
+10	others	other	PRON	IND-PL-NOM	Case=Nom	13	obl	_	_
+11	they	they	PRON	PERS-PL-NOM	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	_	_
+12	have	have	AUX	PRES-AUX	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux	_	_
+13	remained	remain	VERB	PERF	Mood=Ind|Tense=Past|VerbForm=Fin	3	advcl	_	_
+14	the	the	DET	DEF	Definite=Def|PronType=Art	15	det	_	_
+15	same	same	ADJ	POS	Degree=Pos	13	xcomp	_	_
+16	.	.	PUNCT	Period	_	3	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 1798
+# text = I hope that the debate on wine-growing will benefit the wine producer, the product and the consumer alike.
+1	I	I	PRON	PERS-P1SG-NOM	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
+2	hope	hope	VERB	PRES	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	that	that	SCONJ	_	_	9	mark	_	_
+4	the	the	DET	DEF	Definite=Def|PronType=Art	5	det	_	_
+5	debate	debate	NOUN	SG-NOM	Number=Sing	9	nsubj	_	_
+6	on	on	ADP	_	_	7	mark	_	_
+7	wine-growing	grow+wine	VERB	ING	Tense=Pres|VerbForm=Part	5	acl	_	_
+8	will	will	AUX	PRES-AUX	VerbForm=Fin	9	aux	_	_
+9	benefit	benefit	VERB	INF	VerbForm=Inf	2	xcomp	_	_
+10	the	the	DET	DEF	Definite=Def|PronType=Art	12	det	_	_
+11	wine	wine	NOUN	SG-NOM	Number=Sing	12	compound	_	_
+12	producer	producer	NOUN	SG-NOM	Number=Sing	9	obj	_	_
+13	,	,	PUNCT	Comma	_	12	punct	_	_
+14	the	the	DET	DEF	Definite=Def|PronType=Art	15	det	_	_
+15	product	product	NOUN	SG-NOM	Number=Sing	12	conj	_	_
+16	and	and	CCONJ	_	_	18	cc	_	_
+17	the	the	DET	DEF	Definite=Def|PronType=Art	18	det	_	_
+18	consumer	consumer	NOUN	SG-NOM	Number=Sing	12	conj	_	_
+19	alike	alike	ADV	_	Case=Nom	9	advmod	_	_
+20	.	.	PUNCT	Period	_	2	punct	_	_
+
+# en_lines-ud-test.conllu
+# sent_id = 3949
+# text = On the rooftop patio of the opulent apartment are tubs of fragrant flowers.
+1	On	on	ADP	_	_	4	case	_	_
+2	the	the	DET	DEF	Definite=Def|PronType=Art	4	det	_	_
+3	rooftop	rooftop	NOUN	SG-NOM	Number=Sing	4	compound	_	_
+4	patio	patio	NOUN	SG-NOM	Number=Sing	10	nmod	_	_
+5	of	of	ADP	_	_	8	case	_	_
+6	the	the	DET	DEF	Definite=Def|PronType=Art	8	det	_	_
+7	opulent	opulent	ADJ	POS	Degree=Pos	8	amod	_	_
+8	apartment	apartment	NOUN	SG-NOM	Number=Sing	4	nmod	_	_
+9	are	be	AUX	PRES	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	_	_
+10	tubs	tub	NOUN	PL-NOM	Number=Plur	0	root	_	_
+11	of	of	ADP	_	_	13	case	_	_
+12	fragrant	fragrant	ADJ	POS	Degree=Pos	13	amod	_	_
+13	flowers	flower	NOUN	PL-NOM	Number=Plur	10	nmod	_	_
+14	.	.	PUNCT	Period	_	10	punct	_	_
+
+# en_lines-ud-test.conllu
+# sent_id = 3959
+# text = In illuminated cases are ancient objects.
+1	In	in	ADP	_	_	3	case	_	_
+2	illuminated	illuminate	ADJ	PASS	Degree=Pos	3	amod	_	_
+3	cases	case	NOUN	PL-NOM	Number=Plur	0	root	_	_
+4	are	be	AUX	PRES	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	_	_
+5	ancient	ancient	ADJ	POS	Degree=Pos	6	amod	_	_
+6	objects	object	NOUN	PL-NOM	Case=Nom	3	nsubj	_	_
+7	.	.	PUNCT	Period	_	3	punct	_	_
+
+# en_lines-ud-test.conllu
+# sent_id = 3981
+# text = I decide to let him enjoy his dinner.
+1	I	I	PRON	PERS-P1SG-NOM	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
+2	decide	decide	VERB	PRES	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	to	to	PART	_	_	4	mark	_	_
+4	let	let	VERB	INF	VerbForm=Inf	2	xcomp	_	_
+5	him	he	PRON	PERS-P3SG-ACC	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	obj	_	_
+6	enjoy	enjoy	VERB	INF	VerbForm=Inf	4	xcomp	_	_
+7	his	he	PRON	P3SG-GEN	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
+8	dinner	dinner	NOUN	SG-NOM	Number=Sing	6	obj	_	_
+9	.	.	PUNCT	Period	_	2	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 1898
+# text = Many countries and regions are worried, and perhaps with reason.
+1	Many	many	ADJ	POS	Degree=Pos	2	amod	_	_
+2	countries	country	NOUN	PL-NOM	Number=Plur	6	nsubj:pass	_	_
+3	and	and	CCONJ	_	_	4	cc	_	_
+4	regions	region	NOUN	PL-NOM	Number=Plur	2	conj	_	_
+5	are	be	AUX	PRES-AUX	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux	_	_
+6	worried	worry	VERB	PASS	Case=Nom	0	root	_	_
+7	,	,	PUNCT	Comma	_	6	punct	_	_
+8	and	and	CCONJ	_	_	11	cc	_	_
+9	perhaps	perhaps	ADV	_	_	11	advmod	_	_
+10	with	with	ADP	_	_	11	case	_	_
+11	reason	reason	NOUN	SG-NOM	Number=Sing	6	conj	_	_
+12	.	.	PUNCT	Period	_	6	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 1915
+# text = They have to make a stronger commitment to rail.
+1	They	they	PRON	PERS-PL-NOM	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	_	_
+2	have	have	AUX	PRES-AUX	Mood=Ind|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	to	to	PART	_	_	4	mark	_	_
+4	make	make	VERB	INF	VerbForm=Inf	0	root	_	_
+5	a	a	DET	IND-SG	Definite=Ind|PronType=Art	7	det	_	_
+6	stronger	strong	ADJ	CMP	Degree=Cmp	7	amod	_	_
+7	commitment	commitment	NOUN	SG-NOM	Number=Sing	4	obj	_	_
+8	to	to	PART	_	_	9	mark	_	_
+9	rail	rail	VERB	INF	Case=Nom	7	acl	_	_
+10	.	.	PUNCT	Period	_	4	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 1955
+# text = you'll be more or less settled by the time she arrives.
+1	you	you	PRON	PERS-P2	_	7	nsubj:pass	_	_
+2	'll	will	AUX	PRES-AUX	VerbForm=Fin	7	aux	_	_
+3	be	be	AUX	INF	VerbForm=Inf	7	aux:pass	_	_
+4	more	very	ADV	CMP	_	7	advmod	_	_
+5	or	or	CCONJ	_	_	6	cc	_	_
+6	less	less	ADV	CMP	_	4	conj	_	_
+7	settled	settle	VERB	PASS	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	_
+8	by	by	ADP	_	_	10	case	_	_
+9	the	the	DET	DEF	Definite=Def|PronType=Art	10	det	_	_
+10	time	time	NOUN	SG-NOM	Number=Sing	7	obl	_	_
+11	she	she	PRON	PERS-SG-NOM	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	12	nsubj	_	_
+12	arrives	arrive	VERB	PRES	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	_	_
+13	.	.	PUNCT	Period	_	7	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 2157
+# text = A furry black band of ants led up a cupboard door to some scrap that had flicked from a plate.
+1	A	a	DET	IND-SG	Definite=Ind|PronType=Art	4	det	_	_
+2	furry	furry	ADJ	POS	Degree=Pos	4	amod	_	_
+3	black	black	ADJ	POS	Degree=Pos	4	amod	_	_
+4	band	band	NOUN	SG-NOM	Number=Sing	7	nsubj	_	_
+5	of	of	ADP	_	_	6	case	_	_
+6	ants	ant	NOUN	PL-NOM	Number=Plur	4	nmod	_	_
+7	led	lead	VERB	PAST	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+8	up	up	ADP	_	_	11	case	_	_
+9	a	a	DET	IND-SG	Definite=Ind|PronType=Art	11	det	_	_
+10	cupboard	cupboard	NOUN	SG-NOM	Number=Sing	11	compound	_	_
+11	door	door	NOUN	SG-NOM	Number=Sing	7	obl	_	_
+12	to	to	ADP	_	_	14	case	_	_
+13	some	some	DET	IND	_	14	det	_	_
+14	scrap	scrap	NOUN	SG-NOM	Number=Sing	7	obl	_	_
+15	that	that	PRON	REL	PronType=Rel	17	nsubj	_	_
+16	had	have	AUX	PAST-AUX	Mood=Ind|Tense=Past|VerbForm=Fin	17	aux	_	_
+17	flicked	flick	VERB	PERF	Tense=Past|VerbForm=Part	14	acl:relcl	_	_
+18	from	from	ADP	_	_	20	case	_	_
+19	a	a	DET	IND-SG	Definite=Ind|PronType=Art	20	det	_	_
+20	plate	plate	NOUN	SG-NOM	Number=Sing	17	obl	_	_
+21	.	.	PUNCT	Period	_	7	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 2171
+# text = Here was the symbolic attainment of something he had believed in, willed and worked for, for a good stretch of his life:
+1	Here	here	ADV	_	PronType=Dem	2	advmod	_	_
+2	was	be	VERB	PAST	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	_
+3	the	the	DET	DEF	Definite=Def|PronType=Art	5	det	_	_
+4	symbolic	symbolic	ADJ	POS	Degree=Pos	5	amod	_	_
+5	attainment	attainment	NOUN	SG-NOM	Number=Sing	2	nsubj	_	_
+6	of	of	ADP	_	_	7	case	_	_
+7	something	something	PRON	IND-SG-NOM	Number=Sing	5	nmod	_	_
+8	he	he	PRON	PERS-P3SG-NOM	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	_
+9	had	have	AUX	PAST-AUX	Mood=Ind|Tense=Past|VerbForm=Fin	10	aux	_	_
+10	believed	believe	VERB	PERF	Mood=Ind|Tense=Past|VerbForm=Fin	7	acl:relcl	_	_
+11	in	in	ADP	_	_	10	obl	_	_
+12	,	,	PUNCT	Comma	_	10	punct	_	_
+13	willed	will	VERB	PERF	Tense=Past|VerbForm=Part	10	conj	_	_
+14	and	and	CCONJ	_	_	15	cc	_	_
+15	worked	work	VERB	PERF	Mood=Ind|Tense=Past|VerbForm=Fin	10	conj	_	_
+16	for	for	ADP	_	_	15	obl	_	_
+17	,	,	PUNCT	Comma	_	16	punct	_	_
+18	for	for	ADP	_	_	21	case	_	_
+19	a	a	DET	IND-SG	Definite=Ind|PronType=Art	21	det	_	_
+20	good	good	ADJ	POS	Degree=Pos	21	amod	_	_
+21	stretch	stretch	NOUN	SG-NOM	Number=Sing	10	obl	_	_
+22	of	of	ADP	_	_	24	case	_	_
+23	his	he	PRON	P3SG-GEN	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	_	_
+24	life	life	NOUN	SG-NOM	Number=Sing	21	nmod	_	_
+25	:	:	PUNCT	Colon	_	2	punct	_	_
+
+# en_lines-ud-train.conllu
+# sent_id = 2245
+# text = A hundred and twenty-two for dinner!
+1	A	a	DET	IND-SG	Definite=Ind|PronType=Art	2	det	_	_
+2	hundred	hundred	NUM	CARD-PL	NumType=Card	0	root	_	_
+3	and	and	CCONJ	_	_	4	cc	_	_
+4	twenty-two	twenty-two	NUM	CARD-PL	_	2	conj	_	_
+5	for	for	ADP	_	_	6	case	_	_
+6	dinner	dinner	NOUN	SG-NOM	Number=Sing	2	nmod	_	_
+7	!	!	PUNCT	ExclMark	_	2	punct	_	_
+

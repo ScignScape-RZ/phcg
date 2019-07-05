@@ -33,6 +33,57 @@ void DygRed_Sentence::report_text(QTextStream& qts)
  qts << rep << "\n";
 }
 
+void DygRed_Sentence::write_edges(QTextStream& qts, QString templat, QString rtemplat)
+{
+ for(word w : udp_sentence_->words)
+ {
+  if(w.id == 0)
+    continue;
+
+  int h = w.head;
+
+  if(h > 0)
+    qts << templat.arg(w.id).arg(h).arg(QString::fromStdString(w.deprel));
+  else if(h == 0)
+    qts << rtemplat.arg(w.id).arg(QString::fromStdString(w.deprel));
+ }
+}
+
+void DygRed_Sentence::join_text(QTextStream& qts, QString sep, QString end, Join_Field_Codes j)
+{
+ //QString result;
+ int max = udp_sentence_->words.size() - 1;
+ for(word w : udp_sentence_->words)
+ {
+  if(w.id == 0)
+    continue;
+  DygRed_Word_Pos& wp = word_poss_[w.id];
+
+  QString text;
+
+  switch (j)
+  {
+  case Join_Field_Codes::Text:
+   text = wp.text();
+   break;
+  case Join_Field_Codes::UPOS:
+   text = QString::fromStdString(w.upostag);
+   break;
+  case Join_Field_Codes::XPOS:
+   text = QString::fromStdString(w.xpostag);
+   break;
+  }
+
+  text.replace("$", "\\$");
+
+  if(w.id == max)
+    qts << text << end;
+  else
+    qts << text << sep;
+ }
+}
+
+
 void DygRed_Sentence::report_text()
 {
  QString rep;
