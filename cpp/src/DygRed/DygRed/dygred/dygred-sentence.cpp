@@ -211,6 +211,120 @@ struct sxprel
  int pos;
 };
 
+void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec)
+{
+ QRegularExpression rx = QRegularExpression("(\\(|\\)|[^()\\s]+|\\s+)");
+ int pos = 0;
+
+ int opc = 0;
+ int cpc = 0;
+
+ QMap<QString, int> counts;
+
+ QStack<int> pos_stack;
+// int current_pos = 0;
+
+ DygRed_SXP_Rel current_ch = {QString(), 0, 0, 0, 0, 0};
+ QStack<DygRed_SXP_Rel> ch_stack;
+
+ while(pos < sxp.length())
+ {
+  QRegularExpressionMatch rxm = rx.match(sxp, pos);
+  if(!rxm.hasMatch())
+   break;
+  QString qs = rxm.captured();
+  pos += qs.length();
+  qs = qs.trimmed();
+  if(!qs.isEmpty())
+  {
+   if(qs == '(')
+   {
+    ++opc;
+    continue;
+   }
+   else if(qs == ')')
+   {
+    ++cpc;
+    continue;
+   }
+   else if(qs.trimmed().isEmpty())
+     continue;
+
+   int which = 0;
+   if(qs.endsWith("->@"))
+   {
+    qs.chop(3);
+    which = ++counts[qs];
+   }
+   else
+   {
+    ++counts[qs];
+   }
+
+   QString cc = current_ch.chief;
+
+   if(opc > 0)
+   {
+    ch_stack.push(current_ch);
+    if(opc > 1)
+    {
+     for(int i = opc; i > 1; --i)
+     {
+      ch_stack.push({qs, which, 0, i, opc, 0});
+     }
+    }
+    current_ch = {qs, which, 0, 1, opc, 1};
+    if(!cc.isEmpty())
+    {
+     qDebug() << QString("\n%1 : %2 (%3-%4)").
+        arg(cc).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
+     qvec.push_back({qs, which, 0, current_ch});
+     //++current_ch.pos;
+    }
+    opc = 0;
+//    current_pos = 0;
+   }
+   else if(cpc > 0)
+   {
+    int unw = current_ch.unw;
+    int max = current_ch.max_unw;
+    for(int i = 0; i < cpc; ++i)
+    {
+     current_ch = ch_stack.pop();
+//     ++unw;
+//     if(unw > max)
+//     {
+//      current_ch = ch_stack.pop();
+//      current_pos = current_ch.pos;
+//      unw = current_ch.unw;
+//      max = current_ch.max_unw;
+//      cc = current_ch.chief;
+//     }
+//     current_ch.unw = unw;
+    }
+    //current_pos = current_ch.pos;
+    unw = current_ch.unw;
+    ++current_ch.pos;
+    cc = current_ch.chief;
+
+//    ++current_pos;
+//    current_ch.pos = current_pos;
+    qDebug() << QString("\n%1 : %2 (%3-%4)").
+       arg(cc).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
+    qvec.push_back({qs, which, 0, current_ch});
+    cpc = 0;
+   }
+   else
+   {
+    qDebug() << QString("\n%1 : %2 (%3-%4)").
+       arg(cc).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
+    qvec.push_back({qs, which, 0, current_ch});
+    ++current_ch.pos;// = current_pos;
+   }
+  }
+ }
+}
+
 void DygRed_Sentence::parse_sxp(QString sxp)
 {
  QRegularExpression rx = QRegularExpression("(\\(|\\)|[^()\\s]+|\\s+)");
@@ -308,6 +422,13 @@ void DygRed_Sentence::parse_sxp(QString sxp)
       current_pos = current_ch.pos;
       unw = current_ch.unw;
       max = current_ch.max_unw;
+
+
+      if(current_ch.ch_id > 0)
+      {
+       cc = QString::fromStdString(udp_sentence_->words[current_ch.ch_id].form);
+      }
+
      }
      ++unw;
     }

@@ -25,6 +25,25 @@ USING_KANS(TextIO)
 
 int main(int argc, char* argv[])
 {
+// QString sent = "(and (is ((The (city s)) ambiance) colonial) (is->@ (the climate) tropical))";
+
+// QString sent = "(and (is (The city) colonial) (xis (the climate) tropical))";
+// QString sent = "(and (is city colonial) (xis (the climate) tropical))";
+// QString sent = "(and (is city colonial) (xis tropical))";
+//
+ QString sent = "(and (is colonial) (xis tropical))";
+ //QString sent = "(and (is colonial) tropical)";
+
+// (and (is (The city) colonial) (xis (the climate) tropical))
+// QString sent = "(is ((The (city 's)) ambiance) colonial)";
+// QString sent = "(is (The city) colonial)";
+// QString sent = "(is ((The city) ambiance) colonial)";
+
+ QVector<DygRed_SXP_Rel_Pair> qvec;
+ DygRed_Sentence::parse_sxp(sent, qvec);
+
+ return 0;
+
  QString root = "&" CONLLU_DIR ;
 // parse_corpus(root, qs);
  DygRed_Corpus dgc(root);

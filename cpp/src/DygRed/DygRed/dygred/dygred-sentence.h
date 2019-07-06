@@ -20,6 +20,24 @@ class DygRed_Word_Group;
 
 class QTextStream;
 
+struct DygRed_SXP_Rel
+{
+ QString chief;
+ int which;
+ int index;
+ int unw;
+ int max_unw;
+ int pos;
+};
+
+struct DygRed_SXP_Rel_Pair
+{
+ QString text;
+ int which;
+ int index;
+ DygRed_SXP_Rel rel;
+};
+
 class DygRed_Sentence
 {
  sentence* udp_sentence_;
@@ -115,6 +133,7 @@ public:
 
  void parse_sxp(QString sxp);
 
+ static void parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec);
 
 // void set_verb_to_subject(int v, int s, int lvl);
 // int get_adj(int n);
