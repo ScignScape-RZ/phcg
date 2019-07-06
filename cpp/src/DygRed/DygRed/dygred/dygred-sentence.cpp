@@ -36,6 +36,24 @@ void DygRed_Sentence::report_text(QTextStream& qts)
  qts << rep << "\n";
 }
 
+void DygRed_Sentence::write_sxp_edges(QTextStream& qts,
+  QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
+  QString templat, QString rtemplat)
+{
+ for(DygRed_SXP_Rel_Pair& pr : sxp_vector_)
+ {
+  QString rel = QString("%1%2").arg(pr.rel.unw).arg(pr.rel.unw);
+
+  qts << templat.arg(pr.text).arg(pr.rel.chief).arg(rel);
+
+//  int i1 = get_id_by_word(pr.text, pr.which);
+//  int i2 = get_id_by_word(pr.rel.chief, pr.rel.which);
+//  pr.index = i1;
+//  pr.rel.index = i2;
+ }
+}
+
+
 void DygRed_Sentence::write_edges(QTextStream& qts, QString templat, QString rtemplat)
 {
  for(word w : udp_sentence_->words)
@@ -49,6 +67,56 @@ void DygRed_Sentence::write_edges(QTextStream& qts, QString templat, QString rte
     qts << templat.arg(w.id).arg(h).arg(QString::fromStdString(w.deprel));
   else if(h == 0)
     qts << rtemplat.arg(w.id).arg(QString::fromStdString(w.deprel));
+ }
+}
+
+void DygRed_Sentence::scan_sxp(const QVector<DygRed_SXP_Rel_Pair>& qvec,
+  QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap)
+{
+ for(const DygRed_SXP_Rel_Pair& pr : qvec)
+ {
+  //const DygRed_SXP_Rel* rel = &pr.rel;
+  QString text = pr.text;
+  if(pr.which > 0)
+    text += QString("->%1").arg(pr.which);
+  qmap[{text, pr.index}].push_back(&pr);
+ }
+}
+
+
+
+void DygRed_Sentence::join_sxp_text(QTextStream& qts,
+  QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
+  QString sep, QString end, Join_Field_Codes j)
+{
+ int i = 0;
+ int max = sxp_texts_.size();
+ for(QPair<QString, int>& pr : sxp_texts_)
+ {
+  ++i;
+  word w = udp_sentence_->words[pr.second];
+
+  QString text;
+
+  switch (j)
+  {
+  case Join_Field_Codes::Text:
+   text = pr.first;
+   break;
+  case Join_Field_Codes::UPOS:
+   text = QString::fromStdString(w.upostag);
+   break;
+  case Join_Field_Codes::XPOS:
+   text = QString::fromStdString(w.xpostag);
+   break;
+  }
+
+  text.replace("$", "\\$");
+
+  if(i == max)
+    qts << text << end;
+  else
+    qts << text << sep;
  }
 }
 
@@ -198,20 +266,24 @@ void DygRed_Sentence::check_comments()
  {
   QString qs = QString::fromStdString(c);
   if(qs.startsWith("#sxp:"))
-    parse_sxp(qs.mid(5).trimmed());
+  {
+   sxp_text_ = qs.mid(5).trimmed();
+   parse_sxp(sxp_text_);
+  }
  }
 }
 
-struct sxprel
-{
- QString hint;
- int ch_id;
- int unw;
- int max_unw;
- int pos;
-};
+//struct sxprel
+//{
+// QString hint;
+// int ch_id;
+// int unw;
+// int max_unw;
+// int pos;
+//};
 
-void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec)
+void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec,
+  QVector<QPair<QString, int>>& sxp_texts)
 {
  QRegularExpression rx = QRegularExpression("(\\(|\\)|[^()\\s]+|\\s+)");
  int pos = 0;
@@ -260,6 +332,8 @@ void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec)
    {
     ++counts[qs];
    }
+
+   sxp_texts.push_back({qs, which});
 
    //QString cc = current_ch.chief;
    if(cpc > 0)
@@ -320,6 +394,25 @@ void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec)
 
 void DygRed_Sentence::parse_sxp(QString sxp)
 {
+ parse_sxp(sxp, sxp_vector_, sxp_texts_);
+ for(DygRed_SXP_Rel_Pair& pr : sxp_vector_)
+ {
+  int i1 = get_id_by_word(pr.text, pr.which);
+  int i2 = get_id_by_word(pr.rel.chief, pr.rel.which);
+  pr.index = i1;
+  pr.rel.index = i2;
+ }
+
+ for(QPair<QString, int>& pr : sxp_texts_)
+ {
+  int id = get_id_by_word(pr.first, pr.second);
+  if(pr.second > 0)
+    pr.first += QString("->%1").arg(pr.second);
+  pr.second = id;
+ }
+}
+
+#ifdef HIDE
  QRegularExpression rx = QRegularExpression("(\\(|\\)|[^()\\s]+|\\s+)");
  int pos = 0;
 
@@ -486,6 +579,7 @@ void DygRed_Sentence::parse_sxp(QString sxp)
 
 
 }
+#endif
 
 void DygRed_Sentence::init_pairs()
 {

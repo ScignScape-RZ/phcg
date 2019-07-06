@@ -50,6 +50,10 @@ class DygRed_Sentence
  QMap<QPair<QString, DygRed_Word_Pos*>, DygRed_Word_Group*> dwg_groups_map_;
  QVector<DygRed_Word_Group*> dwg_groups_;
 
+ QVector<DygRed_SXP_Rel_Pair> sxp_vector_;
+ QVector<QPair<QString, int>> sxp_texts_;
+ QString sxp_text_;
+
  DygRed_Word_Group* get_group(QString k, DygRed_Word_Pos* dgw);
 
 public:
@@ -59,6 +63,11 @@ public:
  };
 
  explicit DygRed_Sentence(sentence* udp_sentence = nullptr);
+
+
+ ACCESSORS__RGET(QVector<DygRed_SXP_Rel_Pair> ,sxp_vector)
+ ACCESSORS(QString ,sxp_text)
+
 
  static void init_callbacks(DygRed_Deprel_Callbacks& cbs);
 
@@ -126,14 +135,24 @@ public:
  void report_text(QTextStream& qts);
 
  void join_text(QTextStream& qts, QString sep, QString end, Join_Field_Codes j = Join_Field_Codes::Text);
+ void join_sxp_text(QTextStream& qts,
+   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
+   QString sep, QString end, Join_Field_Codes j = Join_Field_Codes::Text);
 
  void write_edges(QTextStream& qts, QString templat, QString rtemplat);
+ void write_sxp_edges(QTextStream& qts,
+   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
+   QString templat, QString rtemplat);
 
  void check_comments();
 
  void parse_sxp(QString sxp);
 
- static void parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec);
+ static void scan_sxp(const QVector<DygRed_SXP_Rel_Pair>& qvec,
+   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap);
+
+ static void parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec,
+   QVector<QPair<QString, int>>& sxp_texts);
 
 // void set_verb_to_subject(int v, int s, int lvl);
 // int get_adj(int n);

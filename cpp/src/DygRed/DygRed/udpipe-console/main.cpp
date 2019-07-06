@@ -25,8 +25,7 @@ USING_KANS(TextIO)
 
 int main(int argc, char* argv[])
 {
-//
- QString sent = "(and (is ((The (city 's)) ambiance) colonial) (is->@ (the climate) tropical))";
+// QString sent = "(and (is ((The (city 's)) ambiance) colonial) (is->@ (the climate) tropical))";
 
 // QString sent = "(and (is (The city) colonial) (xis (the climate) tropical))";
 // QString sent = "(and (is city colonial) (xis (the climate) tropical))";
@@ -40,10 +39,10 @@ int main(int argc, char* argv[])
 // QString sent = "(is (The city) colonial)";
 // QString sent = "(is ((The city) ambiance) colonial)";
 
- QVector<DygRed_SXP_Rel_Pair> qvec;
- DygRed_Sentence::parse_sxp(sent, qvec);
+// QVector<DygRed_SXP_Rel_Pair> qvec;
+// DygRed_Sentence::parse_sxp(sent, qvec);
 
- return 0;
+// return 0;
 
  QString root = "&" CONLLU_DIR ;
 // parse_corpus(root, qs);
@@ -60,7 +59,7 @@ int main(int argc, char* argv[])
  dgc.init_sentences();
  dgc.check_comments();
 
- return 0;
+// return 0;
 
  QString latex;
  QTextStream qts(&latex);
@@ -81,8 +80,32 @@ int main(int argc, char* argv[])
 
 //  \depedge{1}{2}{det}
 
-
   qts << "\n\n\\end{dependency}\n";
+
+  QString sx = dgs.sxp_text();
+  if(!sx.isEmpty())
+  {
+   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>> qmap;
+
+   DygRed_Sentence::scan_sxp(dgs.sxp_vector(), qmap);
+
+   qts << "\n" << sx << "\n";
+   qts << "\n\\begin{dependency}\n\\begin{deptext}\n";
+
+   dgs.join_sxp_text(qts, qmap, " \\& ", " \\\\");
+   qts << "\n";
+   dgs.join_sxp_text(qts, qmap, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::UPOS);
+   qts << "\n";
+   dgs.join_sxp_text(qts, qmap, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::XPOS);
+ //  qts << "\n";
+   qts << "\n\\end{deptext}\n\n";
+
+   dgs.write_sxp_edges(qts, qmap, "\\depedge[edge below]{%1}{%2}{%3}\n",
+     "\\deproot[edge below]{%1}{%2}\n");
+   qts << "\n\n\\end{dependency}\n";
+
+  }
+
  }
 
  save_file(dgc.expand_external_file("@/joint/j.tex"), latex);
