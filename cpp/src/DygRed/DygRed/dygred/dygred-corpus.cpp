@@ -18,6 +18,15 @@ DygRed_Corpus::DygRed_Corpus(QString root_folder)
 
 }
 
+
+void DygRed_Corpus::check_comments()
+{
+ for(DygRed_Sentence& dgs : *this)
+ {
+  dgs.check_comments();
+ }
+}
+
 void DygRed_Corpus::init_sentences()
 {
  for(DygRed_Sentence& dgs : *this)

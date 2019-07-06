@@ -31,6 +31,7 @@ public:
  void report_sentence_texts(QTextStream& qts);
 
  void init_sentences();
+ void check_comments();
 
 
 };

@@ -48,6 +48,7 @@ public:
  void init_groups(const DygRed_Deprel_Callbacks& cbs);
 
  QString get_dep_by_word(QString qw, int which = 0);
+ int get_id_by_word(QString qw, int which = 0);
 
  DygRed_Word_Pos* normalize_deps(QMap<QString, QList<DygRed_Word_Pos*>>& m);
 
@@ -109,6 +110,10 @@ public:
  void join_text(QTextStream& qts, QString sep, QString end, Join_Field_Codes j = Join_Field_Codes::Text);
 
  void write_edges(QTextStream& qts, QString templat, QString rtemplat);
+
+ void check_comments();
+
+ void parse_sxp(QString sxp);
 
 
 // void set_verb_to_subject(int v, int s, int lvl);

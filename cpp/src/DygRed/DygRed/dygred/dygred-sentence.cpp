@@ -15,6 +15,9 @@
 
 #include "dygred-word-group.h"
 
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
+#include <QStack>
 
 DygRed_Sentence::DygRed_Sentence(sentence* udp_sentence)
   : udp_sentence_(udp_sentence)
@@ -95,6 +98,23 @@ void DygRed_Sentence::report_text()
  qDebug() << rep;
 }
 
+int DygRed_Sentence::get_id_by_word(QString qw, int which)
+{
+ int count = 0;
+ for(word w : udp_sentence_->words)
+ {
+  if(w.form == qw.toStdString())
+  {
+   if(which == 0)
+     return w.id;
+   ++count;
+   if(count == which)
+     return w.id;
+  }
+ }
+ return 0;
+}
+
 QString DygRed_Sentence::get_dep_by_word(QString qw, int which)
 {
  int count = 0;
@@ -172,6 +192,186 @@ void DygRed_Sentence::resolve_parent_claims()
  }
 }
 
+void DygRed_Sentence::check_comments()
+{
+ for(std::string c : udp_sentence_->comments)
+ {
+  QString qs = QString::fromStdString(c);
+  if(qs.startsWith("#sxp:"))
+    parse_sxp(qs.mid(5).trimmed());
+ }
+}
+
+struct sxprel
+{
+ QString hint;
+ int ch_id;
+ int unw;
+ int max_unw;
+ int pos;
+};
+
+void DygRed_Sentence::parse_sxp(QString sxp)
+{
+ QRegularExpression rx = QRegularExpression("(\\(|\\)|[^()\\s]+|\\s+)");
+ int pos = 0;
+
+ QMap<QString, int> counts;
+
+ QMap<int, sxprel> ws;
+
+ int opc = 0;
+ int cpc = 0;
+
+ QStack<int> pos_stack;
+ int current_pos = 0;
+
+ sxprel current_ch = {0, 0, 0, 0};
+ QStack<sxprel> ch_stack;
+
+ QMap<int, sxprel> w_ch;
+
+ while(pos < sxp.length())
+ {
+  QRegularExpressionMatch rxm = rx.match(sxp, pos);
+  if(!rxm.hasMatch())
+   break;
+  QString qs = rxm.captured();
+  pos += qs.length();
+  qs = qs.trimmed();
+  if(!qs.isEmpty())
+  {
+//   bool is_word = false;
+//   bool is_space = false;
+//   bool is_open_paren = false;
+//   bool is_close_paren = false;
+   if(qs == '(')
+   {
+    ++opc;
+    continue;
+   }
+   else if(qs == ')')
+   {
+    ++cpc;
+    continue;
+   }
+   else if(qs.trimmed().isEmpty())
+     continue;
+
+   int rank = 0;
+   if(qs.endsWith("->@"))
+   {
+    qs.chop(3);
+    rank = ++counts[qs];
+   }
+   else
+   {
+    ++counts[qs];
+   }
+
+   int id = get_id_by_word(qs, rank);
+
+   QString cc;
+   if(current_ch.ch_id > 0)
+   {
+    cc = QString::fromStdString(udp_sentence_->words[current_ch.ch_id].form);
+   }
+
+   if(opc > 0)
+   {
+    if(current_ch.ch_id > 0)
+    {
+     qDebug() << QString("\n%1 : %2 [%3:%4] (%5-%6)").arg(qs).
+        arg(cc).arg(id).arg(current_ch.ch_id).arg(current_ch.unw).arg(current_ch.pos);
+     w_ch[id] = current_ch;
+    }
+    ch_stack.push(current_ch);
+    current_ch = {qs, id, 1, opc, 1};
+
+//(and (is ((The (city s)) ambiance) colonial) (is->@ (the climate) tropical))
+
+//    for(int i = 0; i < opc; ++i)
+//      pos_stack.push(0);
+    opc = 0;
+    current_pos = 0;
+//    ws[id] = {current_pos, {opc, cpc}};
+   }
+   else if(cpc > 0)
+   {
+    int unw = current_ch.unw;
+    int max = current_ch.max_unw;
+    for(int i = 0; i < cpc; ++i)
+    {
+     if(unw == max)
+     {
+      current_ch = ch_stack.pop();
+      current_pos = current_ch.pos;
+      unw = current_ch.unw;
+      max = current_ch.max_unw;
+     }
+     ++unw;
+    }
+    ++current_pos;
+    current_ch.pos = current_pos;
+    qDebug() << QString("\n%1 : %2 [%3:%4] (%5-%6)").arg(qs).
+       arg(cc).arg(id).arg(current_ch.ch_id).arg(current_ch.unw).arg(current_ch.pos);
+    w_ch[id] = current_ch;
+
+//    for(int i = 0; i < cpc; ++i)
+//      current_pos = pos_stack.pop();
+    cpc = 0;
+//    ws[id] = {current_pos, {opc, cpc}};
+   }
+   else
+   {
+    ++current_pos;
+    current_ch.pos = current_pos;
+    qDebug() << QString("\n%1 : %2 [%3:%4] (%5-%6)").arg(qs).
+       arg(cc).arg(id).arg(current_ch.ch_id).arg(current_ch.unw).arg(current_ch.pos);
+    w_ch[id] = current_ch; //.first, {current_ch.second}
+
+//    ws[id] = {current_pos, {opc, cpc}};
+   }
+  }
+ }
+
+ QString summary;
+
+  qDebug() << "\n";
+
+ QMapIterator<int, sxprel> it(w_ch);
+ while (it.hasNext())
+ {
+  it.next();
+  int id = it.key();
+  int ch = it.value().ch_id;
+  int unw = it.value().unw;
+  int pos = it.value().pos;
+  word w = udp_sentence_->words[id];
+  word chw = udp_sentence_->words[ch];
+
+  qDebug() << QString("\n%1 : %2 [%3:%4] (%5-%6)").arg(QString::fromStdString(w.form)).
+    arg(QString::fromStdString(chw.form)).arg(id).arg(ch).arg(unw).arg(pos);
+ }
+
+// for(int id = 1; id <= udp_sentence_->words.size(); ++id)
+// {
+//  if(!ws.contains(id))
+//    return;
+//  int pos = ws[id].first;
+//  int opc = ws[id].second.first;
+//  int cpc = ws[id].second.second;
+
+//  summary += QString(opc, QChar('('));
+//  summary += QString(cpc, QChar(')'));
+//  word w = udp_sentence_->words[id];
+//  summary += QString::fromStdString(w.form);
+// }
+
+// qDebug() << "summary: " << summary;
+
+
+}
 
 void DygRed_Sentence::init_pairs()
 {

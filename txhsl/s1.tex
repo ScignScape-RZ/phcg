@@ -36,40 +36,56 @@
 	
 \end{dependency}
 	
+(and (is ((The (city 's)) ambience) colonial) (is (the climate) tropical))
+
+
+\begin{dependency}
+	\begin{deptext}[column sep=14pt]
+		and \& is \& The \& city \& 's \& ambience \& colonial \& is 
+		\& the \& climate \& tropical \& . \\	 
+	\end{deptext}
+	
+	\depedge{3}{4}{det}
+%	\depedge{4}{5}{nmod:poss}
+	\depedge{5}{4}{case}
+	\depedge{4}{6}{nmod:poss}
+	\depedge{6}{7}{nsub}
+	\depedge{2}{7}{cop}
+
+	\depedge{9}{10}{det}
+	\depedge{10}{11}{nsub}
+	\depedge{8}{11}{cop}
+
+
+	\depedge{11}{7}{conj}
+	\depedge{12}{7}{punc}
+	
+%	\deproot{6}{root}
+%	\depedge{7}{11}{cc}
+%	\depedge{8}{9}{det}
+%	\depedge{9}{11}{nsubj}
+%	\depedge{10}{11}{cop}
+	
+%	\depedge{11}{6}{conj}
+%	\depedge{12}{6}{punc}
+	
+	\depedge[edge below]{2}{1}{11}
+	\depedge[edge below]{8}{1}{12}
+	\depedge[edge below]{5}{3}{11}
+	\depedge[edge below]{5}{4}{11}
+	\depedge[edge below]{3}{2}{11}
+	\depedge[edge below]{6}{3}{21}
+	\depedge[edge below]{7}{2}{12}
+	
+	\deproot{1}{root}
+	\depedge[edge below]{10}{9}{11}
+	\depedge[edge below]{9}{8}{11}
+	\depedge[edge below]{11}{8}{12}
+	
+\end{dependency}
 
 
 
 
-	Page1
-	\newpage
-	
-	Page2
-	\newpage
-	
-	Page3
-	a\\
-	b\\
-	c\\
-	a\\
-	b\\
-	c\\
-	a\\
-	b\\
-	c\\
-	Test label: the \hypertarget{mc:test}{\label{mc:test}} target.
-	XXXX
-	a\\
-	b\\
-	c\\
-	a\\
-	b\\
-	c\\
-	
-	\newpage
-	Page4
-	\hyperlink{mc:test}{go} \pageref{mc:test}
-	
-	\immediate\write\txhslFile{\getpagerefnumber{mc:test}}
-	
 	\closeout\txhslFile
 \end{document}

@@ -38,6 +38,9 @@ int main(int argc, char* argv[])
  result = dgc.detokenize(outfile);
 
  dgc.init_sentences();
+ dgc.check_comments();
+
+ return 0;
 
  QString latex;
  QTextStream qts(&latex);
