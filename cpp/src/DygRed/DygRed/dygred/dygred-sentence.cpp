@@ -261,10 +261,34 @@ void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec)
     ++counts[qs];
    }
 
-   QString cc = current_ch.chief;
-
+   //QString cc = current_ch.chief;
+   if(cpc > 0)
+   {
+    int unw = current_ch.unw;
+    int max = current_ch.max_unw;
+    for(int i = 0; i < cpc; ++i)
+    {
+     current_ch = ch_stack.pop();
+    }
+    //current_pos = current_ch.pos;
+    unw = current_ch.unw;
+    ++current_ch.pos;
+    if(opc == 0)
+    {
+     qDebug() << QString("\n%1 : %2 (%3-%4)").
+        arg(current_ch.chief).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
+     qvec.push_back({qs, which, 0, current_ch});
+     ++current_ch.pos;
+    }
+   }
    if(opc > 0)
    {
+    if(!current_ch.chief.isEmpty())
+    {
+     qDebug() << QString("\n%1 : %2 (%3-%4)").
+        arg(current_ch.chief).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
+     qvec.push_back({qs, which, 0, current_ch});
+    }
     ch_stack.push(current_ch);
     if(opc > 1)
     {
@@ -274,50 +298,19 @@ void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec)
      }
     }
     current_ch = {qs, which, 0, 1, opc, 1};
-    if(!cc.isEmpty())
-    {
-     qDebug() << QString("\n%1 : %2 (%3-%4)").
-        arg(cc).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
-     qvec.push_back({qs, which, 0, current_ch});
-     //++current_ch.pos;
-    }
     opc = 0;
+    cpc = 0;
 //    current_pos = 0;
    }
    else if(cpc > 0)
    {
-    int unw = current_ch.unw;
-    int max = current_ch.max_unw;
-    for(int i = 0; i < cpc; ++i)
-    {
-     current_ch = ch_stack.pop();
-//     ++unw;
-//     if(unw > max)
-//     {
-//      current_ch = ch_stack.pop();
-//      current_pos = current_ch.pos;
-//      unw = current_ch.unw;
-//      max = current_ch.max_unw;
-//      cc = current_ch.chief;
-//     }
-//     current_ch.unw = unw;
-    }
-    //current_pos = current_ch.pos;
-    unw = current_ch.unw;
-    ++current_ch.pos;
-    cc = current_ch.chief;
-
-//    ++current_pos;
-//    current_ch.pos = current_pos;
-    qDebug() << QString("\n%1 : %2 (%3-%4)").
-       arg(cc).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
-    qvec.push_back({qs, which, 0, current_ch});
     cpc = 0;
+    continue;
    }
    else
    {
     qDebug() << QString("\n%1 : %2 (%3-%4)").
-       arg(cc).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
+       arg(current_ch.chief).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
     qvec.push_back({qs, which, 0, current_ch});
     ++current_ch.pos;// = current_pos;
    }

@@ -25,14 +25,15 @@ USING_KANS(TextIO)
 
 int main(int argc, char* argv[])
 {
-// QString sent = "(and (is ((The (city s)) ambiance) colonial) (is->@ (the climate) tropical))";
+//
+ QString sent = "(and (is ((The (city 's)) ambiance) colonial) (is->@ (the climate) tropical))";
 
 // QString sent = "(and (is (The city) colonial) (xis (the climate) tropical))";
 // QString sent = "(and (is city colonial) (xis (the climate) tropical))";
 // QString sent = "(and (is city colonial) (xis tropical))";
 //
- QString sent = "(and (is colonial) (xis tropical))";
- //QString sent = "(and (is colonial) tropical)";
+// QString sent = "(and (is colonial) (xis tropical))";
+ // QString sent = "(and (is colonial) tropical)";
 
 // (and (is (The city) colonial) (xis (the climate) tropical))
 // QString sent = "(is ((The (city 's)) ambiance) colonial)";
