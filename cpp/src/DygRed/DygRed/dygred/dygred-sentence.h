@@ -28,6 +28,7 @@ struct DygRed_SXP_Rel
  int unw;
  int max_unw;
  int pos;
+ int sxp_index;
 };
 
 struct DygRed_SXP_Rel_Pair
@@ -35,6 +36,7 @@ struct DygRed_SXP_Rel_Pair
  QString text;
  int which;
  int index;
+ int sxp_index;
  DygRed_SXP_Rel rel;
 };
 
@@ -142,7 +144,7 @@ public:
  void write_edges(QTextStream& qts, QString templat, QString rtemplat);
  void write_sxp_edges(QTextStream& qts,
    QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
-   QString templat, QString rtemplat);
+   QString templat, QString rtemplat, int root_num = 1);
 
  void check_comments();
 

@@ -38,13 +38,33 @@ void DygRed_Sentence::report_text(QTextStream& qts)
 
 void DygRed_Sentence::write_sxp_edges(QTextStream& qts,
   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
-  QString templat, QString rtemplat)
+  QString templat, QString rtemplat, int root_num)
 {
+// int i = 0;
+// for(QPair<QString, int>& pr : sxp_texts_)
+// {
+//  ++i;
+//  if(i == root_num)
+//  {
+//   qts << rtemplat.arg(i).arg("root");
+//  }
+//  auto it = qmap.find(pr);
+//  if(it != qmap.end())
+//  {
+//   for(const DygRed_SXP_Rel_Pair* rp : *it)
+//   {
+//    QString rel = QString("%1%2").arg(rp->rel.unw).arg(rp->rel.unw);
+//    qts << templat.arg(rp->rel.sxp_index).arg(i).arg(rel);
+//   }
+//  }
+// }
+
+ qts << rtemplat.arg(1).arg("root");
+
  for(DygRed_SXP_Rel_Pair& pr : sxp_vector_)
  {
-  QString rel = QString("%1%2").arg(pr.rel.unw).arg(pr.rel.unw);
-
-  qts << templat.arg(pr.text).arg(pr.rel.chief).arg(rel);
+  QString rel = QString("%1%2").arg(pr.rel.unw).arg(pr.rel.pos);
+  qts << templat.arg(pr.rel.sxp_index).arg(pr.sxp_index).arg(rel);
 
 //  int i1 = get_id_by_word(pr.text, pr.which);
 //  int i2 = get_id_by_word(pr.rel.chief, pr.rel.which);
@@ -76,10 +96,10 @@ void DygRed_Sentence::scan_sxp(const QVector<DygRed_SXP_Rel_Pair>& qvec,
  for(const DygRed_SXP_Rel_Pair& pr : qvec)
  {
   //const DygRed_SXP_Rel* rel = &pr.rel;
-  QString text = pr.text;
-  if(pr.which > 0)
-    text += QString("->%1").arg(pr.which);
-  qmap[{text, pr.index}].push_back(&pr);
+  QString text = pr.rel.chief;
+  if(pr.rel.which > 0)
+    text += QString("->%1").arg(pr.rel.which);
+  qmap[{text, pr.rel.index}].push_back(&pr);
  }
 }
 
@@ -296,7 +316,7 @@ void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec,
  QStack<int> pos_stack;
 // int current_pos = 0;
 
- DygRed_SXP_Rel current_ch = {QString(), 0, 0, 0, 0, 0};
+ DygRed_SXP_Rel current_ch = {QString(), 0, 0, 0, 0, 0, 0};
  QStack<DygRed_SXP_Rel> ch_stack;
 
  while(pos < sxp.length())
@@ -351,7 +371,7 @@ void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec,
     {
      qDebug() << QString("\n%1 : %2 (%3-%4)").
         arg(current_ch.chief).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
-     qvec.push_back({qs, which, 0, current_ch});
+     qvec.push_back({qs, which, 0, sxp_texts.size(), current_ch});
      ++current_ch.pos;
     }
    }
@@ -361,17 +381,17 @@ void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec,
     {
      qDebug() << QString("\n%1 : %2 (%3-%4)").
         arg(current_ch.chief).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
-     qvec.push_back({qs, which, 0, current_ch});
+     qvec.push_back({qs, which, 0, sxp_texts.size(), current_ch});
     }
     ch_stack.push(current_ch);
     if(opc > 1)
     {
      for(int i = opc; i > 1; --i)
      {
-      ch_stack.push({qs, which, 0, i, opc, 0});
+      ch_stack.push({qs, which, 0, i, opc, 0, sxp_texts.size()});
      }
     }
-    current_ch = {qs, which, 0, 1, opc, 1};
+    current_ch = {qs, which, 0, 1, opc, 1, sxp_texts.size()};
     opc = 0;
     cpc = 0;
 //    current_pos = 0;
@@ -385,7 +405,7 @@ void DygRed_Sentence::parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec,
    {
     qDebug() << QString("\n%1 : %2 (%3-%4)").
        arg(current_ch.chief).arg(qs).arg(current_ch.unw).arg(current_ch.pos);
-    qvec.push_back({qs, which, 0, current_ch});
+    qvec.push_back({qs, which, 0, sxp_texts.size(), current_ch});
     ++current_ch.pos;// = current_pos;
    }
   }
