@@ -37,7 +37,6 @@ void DygRed_Sentence::report_text(QTextStream& qts)
 }
 
 void DygRed_Sentence::write_sxp_edges(QTextStream& qts,
-  QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
   QString templat, QString rtemplat, int root_num)
 {
 // int i = 0;
@@ -59,7 +58,7 @@ void DygRed_Sentence::write_sxp_edges(QTextStream& qts,
 //  }
 // }
 
- qts << rtemplat.arg(1).arg("root");
+ qts << rtemplat.arg(root_num).arg("root");
 
  for(DygRed_SXP_Rel_Pair& pr : sxp_vector_)
  {
@@ -90,23 +89,20 @@ void DygRed_Sentence::write_edges(QTextStream& qts, QString templat, QString rte
  }
 }
 
-void DygRed_Sentence::scan_sxp(const QVector<DygRed_SXP_Rel_Pair>& qvec,
-  QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap)
-{
- for(const DygRed_SXP_Rel_Pair& pr : qvec)
- {
-  //const DygRed_SXP_Rel* rel = &pr.rel;
-  QString text = pr.rel.chief;
-  if(pr.rel.which > 0)
-    text += QString("->%1").arg(pr.rel.which);
-  qmap[{text, pr.rel.index}].push_back(&pr);
- }
-}
-
-
+//void DygRed_Sentence::scan_sxp(const QVector<DygRed_SXP_Rel_Pair>& qvec)//,
+////  QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap)
+//{
+//// for(const DygRed_SXP_Rel_Pair& pr : qvec)
+//// {
+////  //const DygRed_SXP_Rel* rel = &pr.rel;
+////  QString text = pr.rel.chief;
+////  if(pr.rel.which > 0)
+////    text += QString("->%1").arg(pr.rel.which);
+////  qmap[{text, pr.rel.index}].push_back(&pr);
+//// }
+//}
 
 void DygRed_Sentence::join_sxp_text(QTextStream& qts,
-  QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
   QString sep, QString end, Join_Field_Codes j)
 {
  int i = 0;
@@ -132,6 +128,7 @@ void DygRed_Sentence::join_sxp_text(QTextStream& qts,
   }
 
   text.replace("$", "\\$");
+  text.replace("->", "{\\arrwhich}");
 
   if(i == max)
     qts << text << end;

@@ -138,20 +138,17 @@ public:
 
  void join_text(QTextStream& qts, QString sep, QString end, Join_Field_Codes j = Join_Field_Codes::Text);
  void join_sxp_text(QTextStream& qts,
-   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
    QString sep, QString end, Join_Field_Codes j = Join_Field_Codes::Text);
 
  void write_edges(QTextStream& qts, QString templat, QString rtemplat);
  void write_sxp_edges(QTextStream& qts,
-   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap,
    QString templat, QString rtemplat, int root_num = 1);
 
  void check_comments();
 
  void parse_sxp(QString sxp);
 
- static void scan_sxp(const QVector<DygRed_SXP_Rel_Pair>& qvec,
-   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>>& qmap);
+// static void scan_sxp(const QVector<DygRed_SXP_Rel_Pair>& qvec);
 
  static void parse_sxp(QString sxp, QVector<DygRed_SXP_Rel_Pair>& qvec,
    QVector<QPair<QString, int>>& sxp_texts);

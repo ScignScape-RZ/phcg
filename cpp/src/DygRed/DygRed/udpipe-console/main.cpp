@@ -85,22 +85,26 @@ int main(int argc, char* argv[])
   QString sx = dgs.sxp_text();
   if(!sx.isEmpty())
   {
-   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>> qmap;
+//   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>> qmap;
+//   DygRed_Sentence::scan_sxp(dgs.sxp_vector() );
 
-   DygRed_Sentence::scan_sxp(dgs.sxp_vector(), qmap);
+   sx.replace("$", "\\$");
+   sx.replace("->", "{\\arrwhich}");
 
    qts << "\n" << sx << "\n";
+
+
    qts << "\n\\begin{dependency}\n\\begin{deptext}\n";
 
-   dgs.join_sxp_text(qts, qmap, " \\& ", " \\\\");
+   dgs.join_sxp_text(qts, " \\& ", " \\\\");
    qts << "\n";
-   dgs.join_sxp_text(qts, qmap, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::UPOS);
+   dgs.join_sxp_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::UPOS);
    qts << "\n";
-   dgs.join_sxp_text(qts, qmap, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::XPOS);
+   dgs.join_sxp_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::XPOS);
  //  qts << "\n";
    qts << "\n\\end{deptext}\n\n";
 
-   dgs.write_sxp_edges(qts, qmap, "\\depedge[edge below]{%1}{%2}{%3}\n",
+   dgs.write_sxp_edges(qts, "\\depedge[edge below]{%1}{%2}{%3}\n",
      "\\deproot[edge below]{%1}{%2}\n");
    qts << "\n\n\\end{dependency}\n";
 
