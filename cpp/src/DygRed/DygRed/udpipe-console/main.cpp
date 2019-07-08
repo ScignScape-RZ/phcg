@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
  //result = dgc.detokenize(outfile);
 
  txc.init_sentences();
- txc.check_comments();
+// txc.check_comments();
  txc.check_write_latex();
 
  return 0;

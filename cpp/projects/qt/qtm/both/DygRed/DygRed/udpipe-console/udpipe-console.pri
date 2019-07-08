@@ -44,5 +44,5 @@ SOURCES += \
 
 
 LIBS += -L$$TARGETSDIR -ludpipe -ldygred -lqring \
-   -lrelae-phaon -ltxh-udp -lds-relae-phaon
+   -lrelae-txh -ltxh-udp -lrtxh-parser
 

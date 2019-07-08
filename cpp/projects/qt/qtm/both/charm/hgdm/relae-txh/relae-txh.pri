@@ -4,17 +4,15 @@
 #     (See accompanying file LICENSE_1_0.txt or copy at
 #           http://www.boost.org/LICENSE_1_0.txt)
 
-PROJECT_NAME = ds-rph-console
+PROJECT_NAME = relae-txh
 
 include(../build-group.pri)
 
 
 INCLUDEPATH += $$SRC_DIR $$SRC_GROUP_DIR $$SRC_ROOT_DIR
 
-
-INCLUDEPATH += $$PHAON_GRAPH_SRC_GROUP_DIR
 INCLUDEPATH += $$RELAE_GRAPH_SRC_GROUP_DIR
-INCLUDEPATH += $$HGDM_SRC_GROUP_DIR/relae-phaon
+
 
 
 CONFIG += no_keywords
@@ -23,23 +21,19 @@ DEFINES += USE_KANS
 
 
 HEADERS += \
-  $$SRC_DIR/grammar/rph-graph-build.h \
-  $$SRC_DIR/grammar/rph-grammar.h \
-  $$SRC_DIR/grammar/rph-parse-context.h \
-  $$SRC_DIR/grammar/rph-parser.h \
-  $$SRC_DIR/rph-document.h \
+  $$SRC_DIR/kernel/relae-txh-dominion.h \
+  $$SRC_DIR/kernel/frame/relae-txh-frame.h \
+  $$SRC_DIR/kernel/query/relae-txh-query.h \
+  $$SRC_DIR/kernel/graph/relae-txh-node.h \
+  $$SRC_DIR/kernel/graph/relae-txh-graph.h \
 
 
 SOURCES += \
-  $$SRC_DIR/grammar/rph-graph-build.cpp \
-  $$SRC_DIR/grammar/rph-grammar.cpp \
-  $$SRC_DIR/grammar/rph-parse-context.cpp \
-  $$SRC_DIR/grammar/rph-parser.cpp \
-  $$SRC_DIR/rph-document.cpp \
-
-
-
-LIBS += -L$$TARGETSDIR -lrelae-phaon
+  $$SRC_DIR/kernel/relae-txh-dominion.cpp \
+  $$SRC_DIR/kernel/frame/relae-txh-frame.cpp \
+  $$SRC_DIR/kernel/query/relae-txh-query.cpp \
+  $$SRC_DIR/kernel/graph/relae-txh-node.cpp \
+  $$SRC_DIR/kernel/graph/relae-txh-graph.cpp \
 
 
 message(choice: $$CPP_ROOT_DIR/targets/$$CHOICE_CODE/$$PROJECT_SET--$$PROJECT_GROUP--$$PROJECT_NAME)

@@ -1,0 +1,47 @@
+
+\begin{dependency}
+\begin{deptext}
+The \& city \& 's \& ambiance \& is \& colonial \& and \& the \& climate \& is \& tropical \& . \\
+DET \& NOUN \& PART \& NOUN \& AUX \& ADJ \& CCONJ \& DET \& NOUN \& AUX \& ADJ \& PUNCT \\
+DT \& NN \& POS \& NN \& VBZ \& JJ \& CC \& DT \& NN \& VBZ \& JJ \& . \\
+\end{deptext}
+
+\depedge{1}{2}{det}
+\depedge{2}{4}{nmod:poss}
+\depedge{3}{2}{case}
+\depedge{4}{6}{nsubj}
+\depedge{5}{6}{cop}
+\deproot{6}{root}
+\depedge{7}{11}{cc}
+\depedge{8}{9}{det}
+\depedge{9}{11}{nsubj}
+\depedge{10}{11}{cop}
+\depedge{11}{6}{conj}
+\depedge{12}{6}{punct}
+
+
+\end{dependency}
+
+(and (is ((The (city 's)) ambiance) colonial) (is{\arrwhich}@ (the climate) tropical))
+
+\begin{dependency}
+\begin{deptext}
+and \& is \& The \& city \& 's \& ambiance \& colonial \& is{\arrwhich}2 \& the \& climate \& tropical \\
+CCONJ \& AUX \& DET \& NOUN \& PART \& NOUN \& ADJ \& AUX \& DET \& NOUN \& ADJ \\
+CC \& VBZ \& DT \& NN \& POS \& NN \& JJ \& VBZ \& DT \& NN \& JJ \\
+\end{deptext}
+
+\deproot[edge below]{1}{root}
+\depedge[edge below]{1}{2}{11}
+\depedge[edge below]{2}{3}{11}
+\depedge[edge below]{3}{4}{11}
+\depedge[edge below]{4}{5}{11}
+\depedge[edge below]{3}{6}{21}
+\depedge[edge below]{2}{7}{12}
+\depedge[edge below]{1}{8}{12}
+\depedge[edge below]{8}{9}{11}
+\depedge[edge below]{9}{10}{11}
+\depedge[edge below]{8}{11}{12}
+
+
+\end{dependency}

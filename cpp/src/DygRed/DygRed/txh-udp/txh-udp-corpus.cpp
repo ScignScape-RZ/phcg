@@ -6,7 +6,6 @@
 
 #include "txh-udp-corpus.h"
 
-//#include "dygred/dygred-deprel-callbacks.h"
 
 #include <QDebug>
 
@@ -15,7 +14,7 @@
 #include "textio.h"
 USING_KANS(TextIO)
 
-#include "ds-relae-phaon/rph-document.h"
+#include "rtxh-parser/rtxh-document.h"
 
 #include "kans.h"
 USING_KANS(HGDMCore)
@@ -54,15 +53,13 @@ void TXH_UDP_Corpus::init_sentences()
  QString f = files_.first();
  QString xf = expand_file(f);
 
- RPH_Document doc(xf);
+ RTXH_Document doc(xf);
 
  doc.parse();
 
- typedef RPH_Graph::hypernode_type hypernode_type;
+ typedef RTXH_Graph::hypernode_type hypernode_type;
 
-// QVector<hypernode_type*> v = doc.graph()->hypernodes();
-
- RPH_Graph& g = *doc.graph();
+ RTXH_Graph& g = *doc.graph();
  const QVector<hypernode_type*>& v = g.hypernodes();
 
  QString udp_text;
@@ -102,25 +99,22 @@ void TXH_UDP_Corpus::init_sentences()
   });
  }
 
- qDebug() << xf;
  save_file(xf + ".conllu", udp_text);
 
-// for(TXH_UDP_Sentence& dgs : *this)
-// {
-//  QMap<QString, QList<TXH_UDP_Word_Pos*>> m;// = new QMap<QString, QList<TXH_UDP_Word_Pos*>> ;
+ QVector<sentence*> sv;
+ QStringList fs {xf + ".conllu"};
 
-//  TXH_UDP_Word_Pos* rvb = dgs.normalize_deps(m);
+ int result = main_detokenize(fs,
+   expand_file(xf + ".out"), &sv);
 
-//  TXH_UDP_Deprel_Callbacks cbs;// = new TXH_UDP_Deprel_Callbacks;
-//  TXH_UDP_Sentence::init_callbacks(cbs);
-
-
-//  dgs.init_pairs();
-//  dgs.init_groups(cbs);
-//  dgs.init_group_reps();
-
-//  dgs.resolve_internal_group_parents();
-// }
+ i = 0;
+ for(sentence* s : sv)
+ {
+  TXH_UDP_Sentence& sent = (*this)[i];
+  ++i;
+  sent.set_udp_sentence(s);
+  sent.check_parse_sxp();
+ }
 }
 
 void TXH_UDP_Corpus::report_sentence_texts(QTextStream& qts)

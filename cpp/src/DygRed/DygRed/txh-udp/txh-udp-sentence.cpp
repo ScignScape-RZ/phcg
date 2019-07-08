@@ -393,6 +393,13 @@ void TXH_UDP_Sentence::parse_sxp(QString sxp, QVector<TXH_UDP_SXP_Rel_Pair>& qve
  }
 }
 
+void TXH_UDP_Sentence::check_parse_sxp()
+{
+ if(!sxp_text_.isEmpty())
+   parse_sxp(sxp_text_);
+}
+
+
 void TXH_UDP_Sentence::parse_sxp(QString sxp)
 {
  parse_sxp(sxp, sxp_vector_, sxp_texts_);

@@ -77,6 +77,7 @@ public:
  ACCESSORS(QString ,latex_out_file)
  ACCESSORS(QString ,corpus_name)
  ACCESSORS(quint16 ,id)
+ ACCESSORS(sentence* ,udp_sentence)
 
  //?static void init_callbacks(TXH_UDP_Deprel_Callbacks& cbs);
 
@@ -150,6 +151,7 @@ public:
  void write_latex(QTextStream& qts);
 
  void parse_sxp(QString sxp);
+ void check_parse_sxp();
 
 // static void scan_sxp(const QVector<TXH_UDP_SXP_Rel_Pair>& qvec);
 

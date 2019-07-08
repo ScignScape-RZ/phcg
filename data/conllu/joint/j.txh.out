@@ -1,24 +1,4 @@
-
-- i=id c=corpus name  u=udp text  s=sxp-text
-  x=tex outfile 
-.
-
-- &type Corpus [8;5;2] 
- :c:1 :u:2 :s:3 :dp:4 :x:5;
-.
-
-
-&type Sentence {5} 
-  :i:1 :c:2 :s:3 :x:4 :u:5 ;
-
-&/
-
-!/ Sentence
-$i: 1 
-$c: en_gum-ud-train.conllu
-$s: 
-$x: 
-$u. # sent_id = GUM_academic_art-19
+# sent_id = GUM_academic_art-19
 # text = Our experience of art develops from the interaction of several cognitive and affective processes; the beginning of which is a visual scan of the artwork.
 # s_type=decl
 1	Our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	_	_
@@ -34,7 +14,7 @@ $u. # sent_id = GUM_academic_art-19
 11	cognitive	cognitive	ADJ	JJ	Degree=Pos	14	amod	_	_
 12	and	and	CCONJ	CC	_	13	cc	_	_
 13	affective	affective	ADJ	JJ	Degree=Pos	11	conj	_	_
-14	processes	process	NOUN	NNS	Number=Plur	8	nmod	_	SpaceAfter=No
+14	processes	process	NOUN	NNS	Number=Plur	8	nmod	_	_
 15	;	;	PUNCT	:	_	23	punct	_	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
 17	beginning	beginning	NOUN	NN	Number=Sing	23	nsubj	_	_
@@ -46,22 +26,14 @@ $u. # sent_id = GUM_academic_art-19
 23	scan	scan	NOUN	NN	Number=Sing	5	parataxis	_	_
 24	of	of	ADP	IN	_	26	case	_	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
-26	artwork	artwork	NOUN	NN	Number=Sing	23	nmod	_	SpaceAfter=No
+26	artwork	artwork	NOUN	NN	Number=Sing	23	nmod	_	_
 27	.	.	PUNCT	.	_	5	punct	_	_
-.
-/!
-<+>
 
-!/ Sentence
-$2: 1 
-$c: en_gum-ud-train.conllu
-$s: (and (is ((The (city 's)) ambiance) colonial) (is->@ (the climate) tropical))
-$x: @/latex/ambiance.tex
-$u. # sent_id = GUM_voyage_merida-20
+# sent_id = GUM_voyage_merida-20
 # text = The city's ambiance is colonial and the climate is tropical.
 # s_type=decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
-2	city	city	NOUN	NN	Number=Sing	4	nmod:poss	_	SpaceAfter=No
+2	city	city	NOUN	NN	Number=Sing	4	nmod:poss	_	_
 3	's	's	PART	POS	_	2	case	_	_
 4	ambiance	ambiance	NOUN	NN	Number=Sing	6	nsubj	_	_
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
@@ -70,11 +42,6 @@ $u. # sent_id = GUM_voyage_merida-20
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
 9	climate	climate	NOUN	NN	Number=Sing	11	nsubj	_	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	_	_
-11	tropical	tropical	ADJ	JJ	Degree=Pos	6	conj	_	SpaceAfter=No
+11	tropical	tropical	ADJ	JJ	Degree=Pos	6	conj	_	_
 12	.	.	PUNCT	.	_	6	punct	_	_
-.
-/!
-<+>
 
-
-/&
