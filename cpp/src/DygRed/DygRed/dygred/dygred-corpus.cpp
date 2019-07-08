@@ -10,6 +10,9 @@
 
 #include <QTextStream>
 
+#include "textio.h"
+USING_KANS(TextIO)
+
 
 DygRed_Corpus::DygRed_Corpus(QString root_folder)
   :  QRing_File_Structure(root_folder)
@@ -24,6 +27,20 @@ void DygRed_Corpus::check_comments()
  for(DygRed_Sentence& dgs : *this)
  {
   dgs.check_comments();
+ }
+}
+
+void DygRed_Corpus::check_write_latex()
+{
+ for(DygRed_Sentence& dgs : *this)
+ {
+  if(dgs.latex_out_file().isEmpty())
+    continue;
+  QString latex;
+  QTextStream qts(&latex);
+  dgs.write_latex(qts);
+  QString f = expand_external_file(dgs.latex_out_file());
+  save_file(f, latex);
  }
 }
 

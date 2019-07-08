@@ -35,6 +35,7 @@
 # text = The city's ambiance is colonial and the climate is tropical.
 # s_type=decl
 #sxp: (and (is ((The (city 's)) ambiance) colonial) (is->@ (the climate) tropical))
+#ltx: @ambiance.tex
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
 2	city	city	NOUN	NN	Number=Sing	4	nmod:poss	_	_
 3	's	's	PART	POS	_	2	case	_	_

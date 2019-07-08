@@ -4,11 +4,11 @@
 //     (See accompanying file LICENSE_1_0.txt or copy at
 //           http://www.boost.org/LICENSE_1_0.txt)
 
-#ifndef DYGRED_CORPUS__H
-#define DYGRED_CORPUS__H
+#ifndef TXH_UDP_CORPUS__H
+#define TXH_UDP_CORPUS__H
 
 
-#include "dygred-sentence.h"
+#include "txh-udp-sentence.h"
 
 #include <QVector>
 
@@ -16,13 +16,13 @@
 
 class QTextStream;
 
-class DygRed_Corpus : public QVector<DygRed_Sentence>,
+class TXH_UDP_Corpus : public QVector<TXH_UDP_Sentence>,
   public QRing_File_Structure
 {
 
 public:
 
- DygRed_Corpus(QString root_folder);
+ TXH_UDP_Corpus(QString root_folder);
 
  int detokenize(QString outfile);
 

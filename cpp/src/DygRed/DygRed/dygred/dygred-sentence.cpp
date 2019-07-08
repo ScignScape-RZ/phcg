@@ -277,6 +277,52 @@ void DygRed_Sentence::resolve_parent_claims()
  }
 }
 
+void DygRed_Sentence::write_latex(QTextStream& qts)
+{
+ qts << "\n\\begin{dependency}\n\\begin{deptext}\n";
+
+ join_text(qts, " \\& ", " \\\\");
+ qts << "\n";
+ join_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::UPOS);
+ qts << "\n";
+ join_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::XPOS);
+ qts << "\n\\end{deptext}\n\n";
+
+ write_edges(qts, "\\depedge{%1}{%2}{%3}\n", "\\deproot{%1}{%2}\n");
+
+//  \depedge{1}{2}{det}
+
+ qts << "\n\n\\end{dependency}\n";
+
+ QString sx = sxp_text_;
+ if(!sx.isEmpty())
+ {
+//   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>> qmap;
+//   DygRed_Sentence::scan_sxp(dgs.sxp_vector() );
+
+  sx.replace("$", "\\$");
+  sx.replace("->", "{\\arrwhich}");
+
+  qts << "\n" << sx << "\n";
+
+
+  qts << "\n\\begin{dependency}\n\\begin{deptext}\n";
+
+  join_sxp_text(qts, " \\& ", " \\\\");
+  qts << "\n";
+  join_sxp_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::UPOS);
+  qts << "\n";
+  join_sxp_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::XPOS);
+//  qts << "\n";
+  qts << "\n\\end{deptext}\n\n";
+
+  write_sxp_edges(qts, "\\depedge[edge below]{%1}{%2}{%3}\n",
+    "\\deproot[edge below]{%1}{%2}\n");
+  qts << "\n\n\\end{dependency}\n";
+
+ }
+}
+
 void DygRed_Sentence::check_comments()
 {
  for(std::string c : udp_sentence_->comments)
@@ -286,6 +332,10 @@ void DygRed_Sentence::check_comments()
   {
    sxp_text_ = qs.mid(5).trimmed();
    parse_sxp(sxp_text_);
+  }
+  if(qs.startsWith("#ltx:"))
+  {
+   latex_out_file_ = qs.mid(5).trimmed();
   }
  }
 }

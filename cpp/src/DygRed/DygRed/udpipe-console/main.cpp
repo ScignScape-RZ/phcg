@@ -13,8 +13,10 @@
 #include "dygred/dygred-sentence.h"
 #include "dygred/dygred-corpus.h"
 #include "dygred/dygred-word-pos.h"
-
 #include "dygred/dygred-deprel-callbacks.h"
+
+#include "txh-udp/txh-udp-corpus.h"
+#include "txh-udp/txh-udp-sentence.h"
 
 #include <QDir>
 
@@ -22,6 +24,34 @@
 
 USING_KANS(TextIO)
 
+
+int main(int argc, char* argv[])
+{
+// (and (is (The city) colonial) (xis (the climate) tropical))
+
+ QString root = "&" CONLLU_DIR ;
+// parse_corpus(root, qs);
+ TXH_UDP_Corpus txc(root);
+
+ int result = 0;
+
+// QStringList infiles{"@/joint/j.conllu"};
+ QString infile = "@/joint/j.txh";
+ QString outfile = "@/joint/j.txt";
+
+ txc.add_file(infile);
+ //result = dgc.detokenize(outfile);
+
+ txc.init_sentences();
+ txc.check_comments();
+ txc.check_write_latex();
+
+ return 0;
+}
+
+
+
+#ifdef HIDE
 
 int main(int argc, char* argv[])
 {
@@ -59,64 +89,20 @@ int main(int argc, char* argv[])
  dgc.init_sentences();
  dgc.check_comments();
 
+ dgc.check_write_latex();
+
 // return 0;
 
- QString latex;
- QTextStream qts(&latex);
-
- for(DygRed_Sentence& dgs : dgc)
- {
-  qts << "\n\\begin{dependency}\n\\begin{deptext}\n";
-
-  dgs.join_text(qts, " \\& ", " \\\\");
-  qts << "\n";
-  dgs.join_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::UPOS);
-  qts << "\n";
-  dgs.join_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::XPOS);
-//  qts << "\n";
-  qts << "\n\\end{deptext}\n\n";
-
-  dgs.write_edges(qts, "\\depedge{%1}{%2}{%3}\n", "\\deproot{%1}{%2}\n");
-
-//  \depedge{1}{2}{det}
-
-  qts << "\n\n\\end{dependency}\n";
-
-  QString sx = dgs.sxp_text();
-  if(!sx.isEmpty())
-  {
-//   QMap<QPair<QString, int>, QVector<const DygRed_SXP_Rel_Pair*>> qmap;
-//   DygRed_Sentence::scan_sxp(dgs.sxp_vector() );
-
-   sx.replace("$", "\\$");
-   sx.replace("->", "{\\arrwhich}");
-
-   qts << "\n" << sx << "\n";
-
-
-   qts << "\n\\begin{dependency}\n\\begin{deptext}\n";
-
-   dgs.join_sxp_text(qts, " \\& ", " \\\\");
-   qts << "\n";
-   dgs.join_sxp_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::UPOS);
-   qts << "\n";
-   dgs.join_sxp_text(qts, " \\& ", " \\\\", DygRed_Sentence::Join_Field_Codes::XPOS);
- //  qts << "\n";
-   qts << "\n\\end{deptext}\n\n";
-
-   dgs.write_sxp_edges(qts, "\\depedge[edge below]{%1}{%2}{%3}\n",
-     "\\deproot[edge below]{%1}{%2}\n");
-   qts << "\n\n\\end{dependency}\n";
-
-  }
-
- }
-
- save_file(dgc.expand_external_file("@/joint/j.tex"), latex);
+// for(DygRed_Sentence& dgs : dgc)
+// {
+// }
+// save_file(dgc.expand_external_file("@/joint/j.tex"), latex);
 
  return 0;
 
 }
+
+#endif // HIDE
 
 #ifdef HIDE
 QString parse_to_outfile(int argc, char* argv[], DygRed_Corpus& dgc, QString model_file)

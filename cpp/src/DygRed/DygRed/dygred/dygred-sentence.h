@@ -56,6 +56,8 @@ class DygRed_Sentence
  QVector<QPair<QString, int>> sxp_texts_;
  QString sxp_text_;
 
+ QString latex_out_file_;
+
  DygRed_Word_Group* get_group(QString k, DygRed_Word_Pos* dgw);
 
 public:
@@ -69,6 +71,7 @@ public:
 
  ACCESSORS__RGET(QVector<DygRed_SXP_Rel_Pair> ,sxp_vector)
  ACCESSORS(QString ,sxp_text)
+ ACCESSORS(QString ,latex_out_file)
 
 
  static void init_callbacks(DygRed_Deprel_Callbacks& cbs);
@@ -145,6 +148,8 @@ public:
    QString templat, QString rtemplat, int root_num = 1);
 
  void check_comments();
+
+ void write_latex(QTextStream& qts);
 
  void parse_sxp(QString sxp);
 
