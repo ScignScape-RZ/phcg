@@ -2,6 +2,9 @@
 \usepackage{fancyhdr,geometry,keyval,ifthen,makeidx,multicol,mparhack,poemscol}
 \usepackage{times}
 
+\newwrite\ntxhFile
+\immediate\openout\ntxhFile=\jobname.ntxh
+
 \newenvironment{minipagestanza}{\begin{stanza}\begin{minipage}{13cm}}{\end{minipage}\end{stanza}}
 
 %\usepackage{caption}
@@ -90,6 +93,7 @@
 
 
 \newcommand{\xtextnote}[2]{%
+\immediate\write\ntxhFile{{#1,\thepage=\unexpanded{#2}}}%
 \textnote{\hypertarget{#1}%
 \protect\raisebox{-6pt}{\protect\parbox{\xtextnotelen}{{\color{lineColor}{%
 \setlength{\rulelen}{\footnoterulelen}%
@@ -106,6 +110,7 @@
 \addtolength{\dxtextnotelen}{-3pt}
 
 \newcommand{\dxtextnote}[2]{%
+\immediate\write\ntxhFile{{#1,\thepage=\unexpanded{#2}}}%
 	\textnote{\hypertarget{#1}%
 		\protect\raisebox{-12pt}{\protect\parbox{\dxtextnotelen}{{\color{lineColor}{%
 						\setlength{\rulelen}{\footnoterulelen}
@@ -117,6 +122,7 @@
 
 
 \newcommand{\sdxtextnote}[3]{%
+\immediate\write\ntxhFile{{#2,\thepage=\unexpanded{#3}}}%
 	\textnote{\hypertarget{#2}%
 		\protect\raisebox{#1}{\protect\parbox{\dxtextnotelen}{{\color{lineColor}{%
 						\setlength{\rulelen}{\footnoterulelen}
