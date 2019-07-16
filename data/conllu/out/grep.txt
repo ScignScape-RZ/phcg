@@ -1,0 +1,926 @@
+ 
+./en_ewt-ud-train.conllu.txt:<root> Al - Zaman : American forces killed Shaikh Abdullah al - Ani , the preacher at the mosque in the town of Qaim , near the Syrian border . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> What irritates me is this sudden false ' solidarity ' between Sunni and Shi'ite clerics , we all know that they would be glad to get at each other s throats when they have the chance , and Shia clerics were describing Fallujan insurgents as ' Ba'athists ' , ' Saddamites ' , ' Wahhabis ' , and ' terrorists ' just a few days ago . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I would be interested in hearing what conclusions you reached and what you found that was most convincing . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> He complained about the " visible lack of progress " and reaching an impasse in talks with both sides . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> By that time , however , he had accumulated enough points in each year to cover six years of service . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> His column appears in The Hill each week . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> They happened in the Philippines which , like Pakistan , is an important and vulnerable node for the business which intelligence agencies and terrorist organizations conduct with each other . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Stretching 750 kilometers from end to end , they reach from near the coast of Myanmar almost to Sumatra in Indonesia . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> It was the young Texan 's job to find out what each county leader needed in the way of campaign supplies and get those supplies to them . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Meanwhile , a decision 's been reached in the trial of Toledo priest Gerald Robinson . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> As with Christian Identity and other hate - related philosophies tied to the Aryan Nations and the neo-Nazi Creativity Movement , Jeffs has preached racism as well . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> No Moslem preacher has ever blown himself up . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Like in the case of organized crime , it is crucial that the forces on the offensive be united and it is crucial to reach the top of the crime pyramid . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> But the norms of politics and diplomacy are childish , in comparison with the level of incitement and total absolute deliberate fabrications , which have reached new heights in the region we are talking about . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> They are surrounded by a second wider circle of direct supporters , planners , commanders , preachers , all of whom make a living , usually a very comfortable living , by serving as terror infrastructure . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Do you search every ambulance after a few suicide murderers use ambulances to reach their targets ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> You may also starve it by preventing new blood from reaching it from other parts of the body , thereby preventing new " supplies " from expanding the tumor . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The Spanish story will surely end up being extremely costly to other European countries , including France , who is now expelling inciting preachers and forbidding veils and including others who sent troops to Iraq . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Aafia never reached the uncle 's house . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The judge , frustrated by the apparent lack of progress , encouraged that the parties reach a negotiated compromise that would permit some limited discovery to proceed ( and the judge has directed that the government to file an Answer to the Complaint ) . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Can you recommend where these companies each fit within the new organization ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Can you recommend where these companies each fit within the new organization ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I see we expect to have separate contracts for each project . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Are we expecting that the portion attributable to each project will be paid as the individual EPC contracts are signed ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> These global standards also should enable Enron to expand its business reach more quickly , with well defined requirements with regard to trading operations . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> This means that messages initiated at Corp and intended for the entire Enron organization will not reach any business units outside the Corp domain . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> No messages will reach the EES organization unless IBM agrees not to use their proprietary message delivery tool , WebSphere , and will use WebLogic instead . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Do we have a sense for how many we can reach , how many we ca n't and where they are ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Are whole offices ( eg Tokyo ) unreachable or is it only those who have home offices ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> " Other Provisions : On each Payment Date , [ ENA ] shall pay [ a fee of ] [ an amount equal to ] USD { 38,000 ? ] , which amount shall be subject to the netting provisions of the [ Master Agreement - how do you refer to the agreement ? ] " 
+ 
+./en_ewt-ud-train.conllu.txt:<root> At some point in the not so distant future , the Houson and London credit departments need to speak in order that each understands the " philosophy " behind credit analysis for the omnibus and master transactions . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> let me know if you have any interest in the Tco - Pool Leach swap for the winter . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I 'll take TCO pool at Index and sale Leach or Pool at Index - $ .04 . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> 1 ) Highlighting that information will only be provided that is related to enovate and 2 ) that each designated representative should sign an appropriate confidentiality agreement . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Activity is picking up dramatically and the fine line is getting further blurred each passing day . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> 1 ) Highlighting that information will only be provided that is related to enovate and 2 ) that each designated representative should sign an appropriate confidentiality agreement . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Activity is picking up dramatically and the fine line is getting further blurred each passing day . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Attached are the fax cover pages for each of the Nylon and Polykron Deemed ISDAs I just sent you . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Having spoken with Dennis Goldmann , I am advised that there are currently 2 Guaranties in place in the sum of $ 8 M each : one by Niagara Mohawk Holdings Inc f / b / o Enron , and one by Enron Inc. f / b / o Niagara Mohawk Energy Marketing . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I am told that our respective credit departments want to raise the credit lines to $ 10 M for each party , but to effect that we will have to modify the existing Guaranties accordingly . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I can be reached at 315-460-3344 . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Any credit concerns can be discussed with Dennis Goldmann , who can be reached at 315-460-3349 . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Susan Scott would like authorization to order an Aeron chair for each of her offices - on 47 and 41 . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Susan Scott would like authorization to order an Aeron chair for each of her offices - on 47 and 41 . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Each calendar month during the term of the Transaction will be a Dispatch Period . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Enron will guarantee delivery by the 20th of each scheduled Dispatch Period and accept supply to the 15th of each scheduled Dispatch Period . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Upon receipt , I shall forward to each of you a copy of the reviews for your respective associate . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Doug Leach 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The letters , six in all , were sent within two hours of each other and represented dozens of power generators . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> ( c ) Are you happy with the draft letter to Beachcrofts I sent you ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> " Time is the best teacher , except for the fact that it kills off its best students " 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Kapor used to be a teacher of Transcendental Meditation of Maharishi Mahesh Yogi . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> There are no other requirements other than we ask that members greet each new member and each new alliance and also feel free to post in any of the forums . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I would like to personally invite each of you to visit our website . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I extend my hand to each of you in true friendship , and honor . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Each of those 10 million have families , friends , neighbors ... and so closer and closer does the We interface with the You . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Emergency teams in the southern US are battling to reach survivors of Hurricane Katrina , the most destructive storm to hit the country in decades . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Walls keeping water out of the bowl - shaped city have been breached , and emergency teams are using helicopters to drop 1,350 kg ( 3,000 lb ) sandbags and concrete barriers into the gaps . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Casinos housed in barges have been hurled onto the beach and beyond . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Also NASA has a large outreach program for education , some people believe this is important . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> With each breath , feel the muscles in your body becoming lighter and lighter , and also your external motor and sensory organs are feeling like they are withdrawing from the world into a special inner quietness . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Picture yourself sitting on a warm , tropical beach basking in the glow of the sun ... . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Imagine yourself sitting on the beach serenely and restfully . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> With each breath , watch your body and ensure that it remains relaxed - at peace . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> China was among 30 nations invited to send a delegate to NASA - sponsored roundtable discussions on Bush 's strategy to reach the moon with astronauts as the first step in the exploration of Mars and other - deep space destinations . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Musk , which is scraped from their genitals once a day for as long as they can surv ive , makes the scent of perfume last a bit longer after each application . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Get six separate pieces of paper and write the following on each piece of paper " PLEASE PUT ME ON YOUR MAILING LIST . " 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Now get 6 U.S. $ 1.00 bills and place ONE inside of EACH of the six pieces of paper so the bill will not be seen through the envelope ( to prevent thievery ) . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Next , place one paper in each of the six envelopes and seal them . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> You now should have six sealed envelopes , each with a piece of paper stating the above phrase , your name and address , and a $ 1.00 bill . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> So , as each post is downloaded and the directions carefully followed , all members will be reimbursed for their participation as a List Developer with one dollar each . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Your name will move up the list geometrically so that when your name reaches the # 1 position you will be receiving thousands of dollars in CASH !!! 
+ 
+./en_ewt-ud-train.conllu.txt:<root> What an opportunity for only $ 6.00 ( $ 1.00 for each of the first six people listed above ) 
+ 
+./en_ewt-ud-train.conllu.txt:<root> They explained that elk in Yellowstone used to browse unmolested on young aspen and willow growing near the banks of streams , a behavior that prevented the saplings from reaching mature stages and increased the possibility of soil erosion . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> " A fine comparison ! " said Sancho ; " though not so new but that I have heard it many and many a time , as well as that other one of the game of CHESS ; how , so long as the game lasts , each piece has its own particular office , and when the game is finished they are all mixed , jumbled up and shaken together , and stowed away in the bag , which is much like ending life in the grave . " 
+ 
+./en_ewt-ud-train.conllu.txt:<root> From then on , the Beatles began to get involved in false religions and to preach them to the world . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Their chauvinisms got to the point that even they themselves hated each other . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The Sunburn can reach Mach 3 at high altitude . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> They would have no problem teaching a hegemonic superpower a lesson if the need arose . " 
+ 
+./en_ewt-ud-train.conllu.txt:<root> 68.4 - Average Number of species added to the Endangered and Threatened Species list each year between 1991 and 2000 . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> $ 6.1 m - Amount the EPA historically valued each human life when conducting economic analyses of proposed regulations . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> $ 3.7 m - Amount the EPA valued each human life when conducting analyses of proposed regulations during the Bush administration . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> 750,000 - Tons of toxic waste the US military , the world 's biggest polluter , generates around the world each year . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> 22,600 - Number of planes carrying unscreened cargo that fly into New York each month . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> 13 - Number of vacation days the average American receives each Year . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> 268 Number of Bush - Cheney fund - raisers who had earned Pioneer status ( by raising $ 100,000 each ) as of March 2004 . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> 187 - Number of Bush - Cheney fund - raisers who had earned Ranger status ( by raising $ 200,000 each ) as of March 2004 . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> scroll down and this website shows each thing you can buy (: 
+ 
+./en_ewt-ud-train.conllu.txt:<root> You need either a filter for each device except the DSL modem , or a whole home filter which filters all the jacks , except the one which the DSL modem connects . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I 'm a sophomore in high school doing a presentation on Italian Arts and my teacher is making us censor the Statue of David . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> An art teacher in the mid-cities area of Dallas / Ft. Worth metro got fired because she took an art class on an approved field trip with parental permission for each student and some hysterical parent discovered that they saw " nudes " in the museum . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> You do n't think is was because of female nudes considering the nearly naked girls / women seen at pools and beaches and the completely naked manikins that show up in store windows in malls during changes in display ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Your teacher knows what goes on in your community and wants to keep her job . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Click colors >>> levels and adjust each channel 's color values . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Once he is more comfy with his surroundings , then you can start handling him and getting to know each other more . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> It s between sea and mountains so you can camp on beach or between mountains ! 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The best thing you can do in Okinawa is to go to a beach . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The main thing people do there is go to the beach . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Sounds like your 2 at least tolerate each other , so there is hope there . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> This way , he can not reach the leash to chew it . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> To some degree you can / should help teach them not to use their teeth and claws inappropriately . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Each provincial government has a website that lists the process for that Province so depending upon where you were born you can google it . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Shows Each night there are a variety of shows . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> How long should I go for to each place ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Beaches and Disney of Florida or the Mid Atlantic cities of Atlanta , Savannah , Charleston . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Does your budget limit you to how long you can stay in each place ? 
+ 
+./en_ewt-ud-train.conllu.txt:<root> extend the time he is out each day , but for the first month , always put him in his room at night , so he feels safe to sleep . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> They should have discussed a bland diet with you , including the frequency of feeding and how much to feed at each sitting . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> They only ' go out in the open ' once they have reached a certain level of seriousness . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> She is friendly when we see each other on campus . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I 've also considered becoming a teacher , but it 's not a job I 'm cut out for . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I 'm studying to be a teacher , so I know that there will definitely be jobs out there when I 'm done . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Try living in Sydney on a teacher 's salary , then compare it to somewhere like Central Otago . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> the next day i let her out of the bedroom so they could check each other out , and the kitten hissed twice within the first 20 minutes of meeting each other and now she no longer hisses and they have been playing ( chasing each other up and down the hall , rolling around on the ground and pawing at each other ) . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I have two cats , and at first they hissed at each other because cats are very territorial , but now they do fight and play . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> When they are just jumping at each other and their tails are wagging that means that they are playing . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Each evening you will get a ' magazine ' called The Navigator which lists all of the activities for the next day . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I am 21 , so yeah we were both kids when we knew each other ! 
+ 
+./en_ewt-ud-train.conllu.txt:<root> He was In his 30s divorced and Had 2 kids .. but we both flirted Horribly with each other .. but neither one of us took the chance and Asked to other on a date . :( 
+ 
+./en_ewt-ud-train.conllu.txt:<root> They are preparing my older son for kindergarten and looks forward to seeing his teacher and friends every day . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The program is well established and we have been extremely satisfied with the teachers , the programs and the director . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The teachers are highly trained and are expert at handling all types of clients . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Marek Dzida the owner and photographer puts whole heart in his business - If you are into old fashion ( Not Digital ) quality photography this is best place in Long Beach as I think not many folks can do affordable traditional photos anymore I know Marek personaly and I will always recommend him 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Employees seemed to be having a good time chatting and laughing with each other , while myself and other customers were completely ignored . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I was not happy with the way they looked , very wavy , uneven edges , and with the exception of 1 , there is a dip in the center of each nail . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I live 10 minutes from Cycle City , but I Drove 50 mile south to Peachstate Powersports in LaGrange , dealt with the owner , Levi , and was well taken care of . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> When you come to ncfa you will see a real instructor that teaches and trains everyday ! 
+ 
+./en_ewt-ud-train.conllu.txt:<root> She 's very reachable and she has always responded quickly to any questions or requests . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I have ate here 3 times since they first opened , and the service has been poor each time , the staff always comes across as somewhat rude and slow . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Dave is a patient and methodical teacher , who has a great ear and sensitivity for his students ' passion and the direction they want their lessons to take . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Also , he loves teaching so much , his price is unbeatable , but that does not change his level of skill . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The Best Breakfast in Solana Beach ! 
+ 
+./en_ewt-ud-train.conllu.txt:<root> It is the hospitality from Tom and staff , that makes it feel like a 5 star hotel in the middle of the beach . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The staff and the Principal are rediculous , they do n't listen to any input , and they make up rediculous rules ( They banned backpacks , because a teacher TRIPPED OVER a student 's ) . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> Each of you should be proud of your massive contributions throughout the year ! 
+ 
+./en_ewt-ud-train.conllu.txt:<root> after finding the car i wanted they took the time to go over each step and making it as painless as possible . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> It was a very trying time for my family and myself yet Mike took the time to greet each and every one one of us . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> The motel is very well maintained , and the managers are so accomodating , it 's kind of like visiting family each year ! ;-) 
+ 
+./en_ewt-ud-train.conllu.txt:<root> She talks to you at each appointment . 
+ 
+./en_ewt-ud-train.conllu.txt:<root> I can tell you we were pleasantly surprised -- BT has taste memory and each time back the food was consistently delicious -- same dishes -- were consistent . 
+ 
+./en_partut-ud-dev.conllu.txt:<root> as far as French planning experts are concerned , for example , the most probable scenario today is that of the entrenchment of regional disparities within each country . 
+ 
+./en_lines-ud-train.conllu.txt:<root> If you move or copy the data source , instead of updating the ConnectionString property of each dependent page , you only need to edit the connection information in the connection file to make the pages point to the right location or database . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Each time you open the page , Access will read the connection file , extract the connection information , and set the ConnectionString property of the page . 
+ 
+./en_lines-ud-train.conllu.txt:<root> 4 Items for the inner field are repeated for each item in the outer field . 
+ 
+./en_lines-ud-train.conllu.txt:<root> You can use style sheets to insure that the XML-based Web pages on your intranet or Website are consistent and present a uniform appearance without having to add HTML to each page . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Each XML document must have a unique root element ( an element encompassing the entire document ) . 
+ 
+./en_lines-ud-train.conllu.txt:<root> For each start tag , there is a corresponding end tag . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Notice that each tag set has both start and end tags and is case sensitive , and that the tag sets are properly nested within each other . 
+ 
+./en_lines-ud-train.conllu.txt:<root> The range of data types , reserved words , and wildcard characters are different in each query mode . 
+ 
+./en_lines-ud-train.conllu.txt:<root> A query that uses wildcard characters in a criteria expression can produce different results under each query mode . 
+ 
+./en_lines-ud-train.conllu.txt:<root> If a query uses an alias that is the same as a base column name and you create a calculated field using the ambiguous name , the query will produce different results under each query mode . 
+ 
+./en_lines-ud-train.conllu.txt:<root> The following table lists the outcome of each view . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Each time he took a walk , he felt as though he were leaving himself behind , and by giving himself up to the movement of the streets , by reducing himself to a seeing eye , he was able to escape the obligation to think , and this , more than anything else , brought him a measure of peace , a salutatory emptiness within . 
+ 
+./en_lines-ud-train.conllu.txt:<root> It seemed to Quinn that Stillman 's body had not been used for a long time and that all its functions had been relearned , so that motion had become a conscious process , each movement broken down into its component submovements , with the result that all flow and spontaneity had been lost . 
+ 
+./en_lines-ud-train.conllu.txt:<root> For two weeks this routine did not vary . The old man would wander through the streets of the neighborhood , advancing slowly , sometimes by the merest of increments , pausing , moving on again , pausing once more , as though each step had to be weighed and measured before it could take its place among the sum total of steps . 
+ 
+./en_lines-ud-train.conllu.txt:<root> No matter how haphazard his journeys seemed to be – and each day his itinerary was different – Stillman never crossed these borders . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Then , reaching into one of his coat pockets , he would remove a red notebook – similar to Quinn 's but smaller – and write in it with great concentration for a minute or two . 
+ 
+./en_lines-ud-train.conllu.txt:<root> This was confirmed by Virginia Stillman , whom Quinn called each night after returning home . 
+ 
+./en_lines-ud-train.conllu.txt:<root> He was Paul Auster now , and with each step he took he tried to fit more comfortably into the strictures of that transformation . 
+ 
+./en_lines-ud-train.conllu.txt:<root> The idea was to hold a mirror up to Don Quixote 's madness to record each of his absurd and ludicrous delusions , so that when he finally read the book himself , he would see the error of his ways . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Quinn walked home the way he had come , lengthening his strides with each new block . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Perhaps to remain a poet in such circumstances is also to reach the heart of politics . 
+ 
+./en_lines-ud-train.conllu.txt:<root> North of Naples they had bad weather and engine trouble , but they reached their harbor and anchored near two Japanese ships . 
+ 
+./en_lines-ud-train.conllu.txt:<root> To get away from the traffic snarl you could climb a nearby mountain and come down to a deserted beach , similar to the beach at Sdot Yam . 
+ 
+./en_lines-ud-train.conllu.txt:<root> The sea-reach of the Thames stretched before us like the beginning of an interminable waterway . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Besides holding our hearts together through long periods of separation , it had the effect of making us tolerant of each other 's yarns – and even convictions . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Only the gloom to the west , brooding over the upper reaches , became more somber every minute , as if angered by the approach of the sun . 
+ 
+./en_lines-ud-train.conllu.txt:<root> The old river in its broad reach rested unruffled at the decline of day , after ages of good service done to the race that peopled its banks , spread out in the tranquil dignity of a waterway leading to the uttermost ends of the earth . 
+ 
+./en_lines-ud-train.conllu.txt:<root> And indeed nothing is easier for a man who has , as the phrase goes , followed the sea with reverence and affection , than to evoke the great spirit of the past upon the lower reaches of the Thames . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Lights of ships moved in the fairway – a great stir of lights going up and going down . And farther west on the upper reaches the place of the monstrous town was still marked ominously on the sky , a brooding gloom in sunshine , a lurid glare under the stars . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Mind , he began again , lifting one arm from the elbow , the palm of the hand outwards , so that , with his legs folded before him , he had the pose of a Buddha preaching in European clothes and without a lotus-flower – Mind , none of us would feel exactly like this . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Flames glided in the river , small green flames , red flames , white flames , pursuing , overtaking , joining , crossing each other – then separating slowly or hastily . 
+ 
+./en_lines-ud-train.conllu.txt:<root> At last we opened a reach . 
+ 
+./en_lines-ud-train.conllu.txt:<root> I could see every rib , the joints of their limbs were like knots in a rope ; each had an iron collar on his neck , and all were connected together with a chain whose bights swung between them , rhythmically clinking . 
+ 
+./en_lines-ud-train.conllu.txt:<root> They beguiled the time by backbiting and intriguing against each other in a foolish kind of way . 
+ 
+./en_lines-ud-train.conllu.txt:<root> They intrigued and slandered and hated each other only on that account , – but as to effectually lifting a little finger – oh , no . By heavens ! 
+ 
+./en_lines-ud-train.conllu.txt:<root> They are no longer allowed to practise their previous activities as doctors , teachers , members of parliament . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Each area has its own way of making wine . 
+ 
+./en_lines-ud-train.conllu.txt:<root> It affects people and it reaches them at different times and on different issues . 
+ 
+./en_lines-ud-train.conllu.txt:<root> We know for certain that those who try to reach the coast of Europe by sea from Morocco often meet a grim fate . 
+ 
+./en_lines-ud-train.conllu.txt:<root> It aims at the heart of the matter , as Agenda 2000 negotiations have reached a critical stage . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Each country should continue to be able to regulate this as it wishes in its area of jurisdiction . 
+ 
+./en_lines-ud-train.conllu.txt:<root> The disembarking passengers were all strangers again , connected not with each other but to the mouthing , smiling faces and waving hands on the airport balcony . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Waiting to be summoned to the customs officers ' booths , the companions of the journey ignored each other . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Or in the icecream tricycles waiting at the base of each section of an amphitheatre of dark faces , the mongrel that ran out and lifted its leg on the presidential dais ? 
+ 
+./en_lines-ud-train.conllu.txt:<root> He attended most of the official occasions ( he and Roly saluted each other with mock surprise when they met in the house , half-dressed in formal dinner clothes every night ) but the real parties took place before and after . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Through each individual the group extended to someone else and drew in , out of the new international character of the little capital , Poles , Ghanaians , Hungarians and Israelis , South African and Rhodesian refugees . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Cheers went up from the people already present who had not been at the ball ; they had decided to dress for once , too , and the two groups of women mingled and exclaimed over each other , everyone began to talk about what the ball was like , champagne came in , a Congolese band whipped up their pace , and the absurd and slightly thrilling mood of the State Ball and the cosy gaiety of the party swept together . 
+ 
+./en_lines-ud-train.conllu.txt:<root> I wonder how much use could be made of a radio classroom in country schools , whether it could n't help considerably to ease the shortage of teachers , here , and maintain some sort of standard where teachers are perhaps not very well qualified . 
+ 
+./en_lines-ud-train.conllu.txt:<root> a double-chinned , handsome dark blonde , the short high nose coming from the magnificent forehead , water-coloured eyes underlined with cuts of fatigue deep into each cheek . 
+ 
+./en_lines-ud-train.conllu.txt:<root> He had only just reached the upstairs landing when the door bell rang and Uncle Vernon 's furious face appeared at the foot of the stairs . 
+ 
+./en_lines-ud-train.conllu.txt:<root> As they stared at each other , Harry heard Dudley 's voice from the hall . 
+ 
+./en_lines-ud-train.conllu.txt:<root> At last , panting , they reached the landing , then carried the trunk through Harry 's room to the open window . 
+ 
+./en_lines-ud-train.conllu.txt:<root> He saw Fred and George look at each other . 
+ 
+./en_lines-ud-train.conllu.txt:<root> The teachers all have favourites , that Hermione Granger – 
+ 
+./en_lines-ud-train.conllu.txt:<root> Two shabby-looking wizards were watching him from the shadow of a doorway , muttering to each other . 
+ 
+./en_lines-ud-train.conllu.txt:<root> The vaults were reached by means of small , goblin-driven carts that sped along miniature train-tracks through the bank 's underground tunnels . 
+ 
+./en_lines-ud-train.conllu.txt:<root> Harry felt even worse when they reached his vault . 
+ 
+./en_lines-ud-train.conllu.txt:<root> They each grabbed a copy of Break with a Banshee , and sneaked up the line to where the rest of the Weasleys were standing with Mr and Mrs Granger . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Like HTML , XML makes use of tags and attributes , but while HTML specifies what each tag and attribute means ( and thus how the data between them will look in a browser ) , XML uses the tags only to delimit pieces of data , and leaves the interpretation of the data completely to the application that reads it . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Specifically , schemas define the rules of an XML data document , including element names and data types , which elements can appear in combination , and which attributes are available for each element . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> A CSS merely allows you to specify the formatting of each XML element without much control over the output . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Each filter you apply is added to the ones you already have in effect . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Conditional filters are independent of each other . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> On the other side of the flag there was a chart of the manual alphabet – LEARN TO SPEAK TO YOUR FRIENDS – that showed the hand positions for each of the twenty-six letters . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Quinn reached into his pocket and gave the man a dollar . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> There were men and women , children and old people , teenagers and babies , rich people and poor people , black men and white women , white men and black women , Orientals and Arabs , men in brown and gray and blue and green , women in red and white and yellow and pink , children in sneakers , children in shoes , children in cowboy boots , fat people and thin people , tall people and short people , each one different from all the others , each one irreducibly himself . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Each time an elderly man approached , he braced himself for it to be Stillman . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> They came and went too quickly for him to indulge in disappointment , but in each old face he seemed to find an augur of what the real Stillman would be like , and he rapidly shifted his expectations with each new face , as if the accumulation of old men was heralding the imminent arrival of Stillman himself . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> He had just the faintest blush , and said modestly , I 've been teaching one of the native women about the station . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Perhaps we are only further complicating a matter which should really have left Parliament as quickly as possible once a decision had been reached . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Thank goodness we have finally reached the last stage before adoption . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> He gazed anxiously from the car as if , despite the telephone call , he were not sure if Bray had been safely received , but once he set eyes on him behaved as if they had seen each other a week ago . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> If I had to take over the English-language services tomorrow , you know what I 'd have to do it with a bunch of Lambala and speakers from the vernacular sections and some refugee school-teachers from South Africa . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Pettigrew was hailed by someone , and Bray and the woman were left facing each other like the dancers ; 
+ 
+./en_lines-ud-dev.conllu.txt:<root> The dancers were falling back round a Polish agriculturalist who was teaching a gangling Englishman and two young Africans an Eastern European peasant dance . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> They said good night to each other in the bright slanting sun and the Bayley children were already out on the grass in their pyjamas , riding bicycles . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> He made a grab for the letters , but Dobby jumped out of reach . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> Yet life at Privet Drive had reached an all-time low . 
+ 
+./en_lines-ud-dev.conllu.txt:<root> They climbed two more flights until they reached a door with peeling paint and a small plaque on it , saying Ronald 's Room . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> For the last few years there have been tensions with Iran ’s nuclear program with word coming this week that a deal was reached through the European Union that meets with the approval of the International Atomic Energy Agency . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> So I may as well just come out with it : It is pretty suspicious , given the Neocon predominance in the CPA and in the upper reaches of the Defense Department that on April 2 AP reported of Muqtada : 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> I.E. the Davis Administration wants to place all direct access advocates in the position of having to justify why each and every party should be the exception to the suspension rather than have a general rule concerning how direct access should work for all parties . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> I do n't have any contact information yet for my new job , but if you want to reach me , you can do so at RobBrnglsn@aol.com or at 713-664-7478 . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> He has also had to pay the £ 15 each up front so woul d be grateful if you could get the cash to him as soon as poss ible . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> It has two parts , both of which are timed for 90 seconds each and the differential between the resulting two scores determines the likelihood of having a learning disability or attention deficit disorder . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> ... Nope and I am proud of it ... because my teacher have nt taught us that yet ... 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> There are several just off their beautiful beach . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> does teacher 's camp in baguio also accomodate even 1 person ?? 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> How many days will speed post take to reach from Delhi to Mumbai ? 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> and around what time they eat each of their meals . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> house boat is a perfect place also beach resorts in trivandrum and The RAVIZ in kollam @ da syd f Ashtamudi Lake in kollam 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> Try Varkala , it s a ammazing and is by the beach . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> 2 ) I would like to say on a island with an a ) all inclusive resort ( if possible ) , and a beach front room 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> Easy registration , helpful staff and fun teachers ! 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> Shuttle available to a private beach area with food / drinks / towels . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> Teachers good Diverse student body ( African - American , Asian , ect. ) equals kids staying here ! 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> Nice teachers good school 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> They are very good teachers and nice people to meet here . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> The lesson was donated by the teacher Adz . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> Great teacher . 
+ 
+./en_ewt-ud-dev.conllu.txt:<root> Sand Hill park was a great beach ... 
+ 
+./en_gum-ud-dev.conllu.txt:<root> In essence , we want to teach our country ’s librarians the ins and outs of DH in order for them to take up their natural role of facilitating and supporting research and ideally become the research partner needed in DH projects . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Identify possible subjects , based on experience , a comparison of existing teaching material related to DH ( e.g. The Programming Historian , the Digital Scholarship Training Programme at the British Library and Columbia University 's Developing Librarian project ) and the TaDiRAH taxonomy of research activities ; 
+ 
+./en_gum-ud-dev.conllu.txt:<root> With these in hand , we will design the curriculum of clinics , based on the method of ' constructive alignment ' ( Biggs et al. , 2011 ) , to make sure that the intended learning objectives and the teaching / learning activities stay aligned . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Our plan is to organize a maximum of 6 clinics , each one full day . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Each day starts with one or more lectures by researchers , that address the conceptual knowledge needed . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> There were two classes of each grade , starting at the sixth and going down to the first . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> The hall ended in a T and we went left through the gym , walked underneath the bleachers and stood next to the side door , waiting for the rain to stop . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> It was dark under the bleachers . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> I thought of bacon and eggs , toast with peach jam out of the jar . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> The space under the bleachers was secret and dark . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> The light from the door made the shadows under the bleachers darker , the long space stretched far away . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> I wondered if anyone ever went back under the bleachers , if there were crickets or mice there . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Whitmore stated to LA Weekly that the alleged crime involved five hard drives each of $ 200 in value . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Mr. Tedeschi also told the court that , over the last five months of her life , " Gloria 's eczema played a devastating role in her overall health and it is asserted by the Crown that both her parents knew this and discussed it with each other . " 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Typical treatments take the dilutions , with ritualised shaking between each step of the dilution , past the level where any molecules of the original substance are likely to remain ; for homeopathic treatments to work , basic well-understood concepts in chemistry and physics would have to be wrong . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Most notable among the city 's facelift projects are the Unification of Archaeological Sites - which connects the city 's classical - era ruins and monuments to each other through a network of pleasant pedestrianized streets - and the restoration of the picturesque neoclassical Thissio and Pláka districts . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> There are many beautiful white sand beaches , mostly tiny and surrounded by large limestone cliffs and wildlife . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> It is forty-eight meters high and there are seven floors , each accessible by a difficult spiral staircase . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> students will typically find jokes about school and teachers humorous . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Using 5 x 700 ml / 23.6 fl oz bottles , pour 300 ml / 10.1 fl oz of vodka into a jug and fill each bottle with skittles . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Then separate the candy and use one flavor for each bottle . 
+ 
+./en_gum-ud-dev.conllu.txt:<root> Each handle of vodka ( 1.75 liters , about a half gallon ) requires a large bag worth of Skittles , so if you plan on doing only one flavor for a flavorful vodka , you 'll have to buy 5 large bags of Skittles . 
+ 
+./en_lines-ud-test.conllu.txt:<root> Each category consists of one point from each data series . 
+ 
+./en_lines-ud-test.conllu.txt:<root> For example , if you move the Salesperson field to the MultiChart area , a chart is created based on data for each salesperson in that field . 
+ 
+./en_lines-ud-test.conllu.txt:<root> Once , when he had been in the luncheonette , they had talked about baseball , and now , each time Quinn came in , they continued to talk about it . 
+ 
+./en_lines-ud-test.conllu.txt:<root> At the baggage carousel I see my youthful Hasid again and we take a final look at each other . 
+ 
+./en_lines-ud-test.conllu.txt:<root> Schneider recalls a great Armenian musician and teacher ( his own teacher ) named Dirian Alexanian , editor of Bach 's Suites for Cello Unaccompanied and the most intolerant perfectionist 
+ 
+./en_lines-ud-test.conllu.txt:<root> Day after day , with the stamp and shuffle of sixty pair of bare feet behind me , each pair under a 60-lb. load . 
+ 
+./en_lines-ud-test.conllu.txt:<root> Through you I urge the Commission and the Council to reach decisions and take urgent action following the meeting on 14 October . 
+ 
+./en_lines-ud-test.conllu.txt:<root> Well , in that case , we 'll probably bump into each other in Great Lakes Road . 
+ 
+./en_lines-ud-test.conllu.txt:<root> I do n't know about this ... but the pale Cockney who was teaching him to take over his job said , That 's okay , chum , it 's our ole friend Mr. Kabata . 
+ 
+./en_lines-ud-test.conllu.txt:<root> And she knows quite well that we 'd never see each other in London either . 
+ 
+./en_lines-ud-test.conllu.txt:<root> Stepping nimbly out of Harry 's reach , he pulled a thick wad of envelopes from the inside of the pillowcase he was wearing . 
+ 
+./en_lines-ud-test.conllu.txt:<root> The new Defense Against the Dark Arts teacher must be a fan – bet it 's a witch . 
+ 
+./en_lines-ud-test.conllu.txt:<root> They could n't use real Quidditch balls , which would have been hard to explain if they had escaped and flown away over the village ; instead they threw apples for each other to catch . 
+ 
+./en_lines-ud-test.conllu.txt:<root> After a quick half-a-dozen bacon sandwiches each , they pulled on their coats and Mrs Weasley took a flowerpot off the kitchen mantelpiece and peered inside . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> He 's not giving 85 % away , he 's giving a number of shares each year that decrease in number at the rate of 5 % a year ( until gone ? ) . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> Following up on your and Ken Lay 's conversation with Gary Cohn , I would like to forward the following proposal , acting for each of Goldman Sachs Capital Markets and J. Aron . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> My assistant Joanne Rozycki has cell , car numbers to reach me . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> The results of the February 26th PVT test conducted on Nville have been discussed with each of you over the last three months . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> And a portion of each package or memorial purchased goes to a charity on their database . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> Although these new rockets are probably more expensive , they will be able to go at a much greater range than it's shuttle cousins , as they can not only break free from the atmosphere but reach the moon as well . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> The new rocket design will differ slightly from it's predecessors , in the fact that the crew and cargo would launch separately from two different rockets each and join up in space later on . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> All you can do is take each section ( individual video ) and edit them together on software . 
+ 
+./en_ewt-ud-test.conllu.txt:<root> THE TEACHING THERE SUCKS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+ 
+./en_ewt-ud-test.conllu.txt:<root> ALL OF THE TEACHERS THERE ARE SO MEAN THEY GET MAD AT YOU FOR NOTHING !!!!!!!!!!!!!!!!!!! 
+ 
+./en_ewt-ud-test.conllu.txt:<root> The waiting staff is really friendly , it s like every one knows each other , the manager is really sweet and the food .. well no complaints from me . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Second , we examined the relative proportions of the two discrimination experience measures across each racial category . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Speakers of Eegimaa use the term Gújjolaay ( meaning Jóola ) to refer to their language when they speak to each other , but Eegimaa to distinguish their Jóola variety from that of other Jóola peoples . 
+ 
+./en_gum-ud-test.conllu.txt:<root> He supported himself during his studies through part-time work as a schoolteacher and as a shorthand reporter in the Danish parliament . 
+ 
+./en_gum-ud-test.conllu.txt:<root> His early work focused primarily on language teaching reform and on phonetics , but he is best known for his later work on syntax and on language development . 
+ 
+./en_gum-ud-test.conllu.txt:<root> “ Each object ’s suspension must weather a class 5 hurricane and the destruction of 80 % of the towers ” — 
+ 
+./en_gum-ud-test.conllu.txt:<root> Of course , we tried to pick the locks , but the spikes and saws and drillheads remained — tantalisingly — out of reach . 
+ 
+./en_gum-ud-test.conllu.txt:<root> We all had our own interests — drawing , electronics , collecting beer caps — that each appeared obscure to anyone else . 
+ 
+./en_gum-ud-test.conllu.txt:<root> It was vaguely uncomfortable , and appeared sufficiently disturbing that we all volunteered each other in turn until , at last , Andy said he was game . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Libertarians share many policy positions with each of the major parties . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Working together with both Republicans and Democrats , we can get the good aspects of each party while rejecting the bad parts of both . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Indeed our weekly poetry project celebrates this diversity of voice : each week a new short poem is chosen and as many readers as wish to record a version , so you get 20 + versions of the same poem , a very interesting audio experience . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Temescal is a neighborhood that lies north-northwest from Downtown , centered along the reach of Telegraph Avenue , at and near 51st Street . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Thais are a polite people and , while remarkably tolerant of foreigners gallivanting on their beaches and with their women , you ll find that you will get more respect if you in turn treat them and their customs with respect . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Except at the beach or at sacred sites normal western dress is acceptable for both men and women , except that you should avoid clothing showing a lot of skin . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Topless sunbathing is common by Western women at many tourist beaches . 
+ 
+./en_gum-ud-test.conllu.txt:<root> At beaches which are primarily Thai visitors however , this is not advised . 
+ 
+./en_gum-ud-test.conllu.txt:<root> It does n't have a beach but boats to one of the nearby coral atolls with superb sandy beaches are easily available . 
+ 
+./en_gum-ud-test.conllu.txt:<root> There are some good beaches and plenty of secluded cove beaches and protected bays with good snorkelling . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Make sure there are holes in the center of the base of each pot to allow for good drainage . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Usually fill each paper cupcake holder with about 1/4 cup of batter . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Try strawberry , apple , banana , apricot , peach etc . 
+ 
+./en_gum-ud-test.conllu.txt:<root> Be sure to keep the feces out of the reach of children and pets . 
+ 
+./en_partut-ud-train.conllu.txt:<root> This License and the rights granted hereunder will terminate automatically upon any breach by You of the terms of this License . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Each time You distribute or publicly digitally perform the Work or a Collective Work , the Licensor offers to the recipient a license to the Work on the same terms and conditions as the license granted to You under this License . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Each time You distribute or publicly digitally perform a Derivative Work , Licensor offers to the recipient a license to the original Work on the same terms and conditions as the license granted to You under this License . 
+ 
+./en_partut-ud-train.conllu.txt:<root> No term or provision of this License shall be deemed waived and no breach consented to unless such waiver or consent shall be in writing and signed by the party to be charged with such waiver or consent . 
+ 
+./en_partut-ud-train.conllu.txt:<root> I am very pleased that agreement has also been reached with the Council on minimum standards regarding examinations , although I would have preferred it if uniform , set standards and modules had been established , so that certificates would be of equal value internationally . 
+ 
+./en_partut-ud-train.conllu.txt:<root> I would also like to thank her for her willingness to enter into dialogue with the other political groups when compromise formulas have needed to be reached in the face of this avalanche of amendments - and perhaps there are more of them than we expected - but which genuinely reflect the importance of the report we are now discussing . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Mr President , Commissioner , as proof that this Parliament has not yet overcome its role as a consultative and subordinate institution , the excellent report by a fellow member of my Group , Elisabeth Schroedter , has not been able to reach plenary sitting because the plans for regional development for the period 2000 - 2006 for Objective 1 regions have been sitting in the Commission 's offices for several months . 
+ 
+./en_partut-ud-train.conllu.txt:<root> I agree that the European Parliament did not have the opportunity - or that it was not given the opportunity , as we had reached the end of the parliamentary term - to discuss the Directives . 
+ 
+./en_partut-ud-train.conllu.txt:<root> As you know , it is up to each State to redistribute part of the total appropriation . 
+ 
+./en_partut-ud-train.conllu.txt:<root> To this end , Europe as a whole , and each Member State individually , will have to make optimum use of all available resources and capacities , including the Structural Funds . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Since each account belongs to one person , we require everyone to use their real name on their account . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Reach over 800 million people where they connect and share . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Reach your target customers . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Reach the right people at the right time . 
+ 
+./en_partut-ud-train.conllu.txt:<root> For each person , you could hide all game stories , see just photos , limit updates to life events and more . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Based on questionnaires to organisers and participants , as well as discussions with stake holders , he reached the following main conclusions [ 6 ] : 
+ 
+./en_partut-ud-train.conllu.txt:<root> - The target groups for the programme have been reached in part with a very high participation by law enforcement officials ; 
+ 
+./en_partut-ud-train.conllu.txt:<root> Based on these statistics / forecasts , the overall level of commitments during the period 2002 - 2005 will reach 80 % of the initial reference amount . 
+ 
+./en_partut-ud-train.conllu.txt:<root> the introduction of flexibility in the number of applications by each Member State and consequent coordination ; 
+ 
+./en_partut-ud-train.conllu.txt:<root> Now , therefore , The General Assembly Proclaims this Universal Declaration of Human Rights as a common standard of achievement for all peoples and all nations , to the end that every individual and every organ of society , keeping this Declaration constantly in mind , shall strive by teaching and education to promote respect for these rights and freedoms and by progressive measures , national and international , to secure their universal and effective recognition and observance , both among the peoples of Member States themselves and among the peoples of territories under their jurisdiction . 
+ 
+./en_partut-ud-train.conllu.txt:<root> ( 1 ) Everyone has the right to freedom of movement and residence within the borders of each State . 
+ 
+./en_partut-ud-train.conllu.txt:<root> this right includes freedom to change his religion or belief , and freedom , either alone or in community with others and in public or private , to manifest his religion or belief in teaching , practice , worship and observance . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Everyone , as a member of society , has the right to social security and is entitled to realization , through national effort and international co - operation and in accordance with the organization and resources of each State , of the economic , social and cultural rights indispensable for his dignity and the free development of his personality . 
+ 
+./en_partut-ud-train.conllu.txt:<root> in the pharmaceutical industry alone , FDI could reach as much as $ 77 billion , with R&D rising to $ 4.2 billion and 44,000 new jobs being created . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Chancellor Angela Merkel must reach out to President Vladimir Putin to ensure that Russia is a partner , not an opponent , in the Ukrainian renaissance . 
+ 
+./en_partut-ud-train.conllu.txt:<root> The codependency construct is rooted in the psychopathology of human relationships whereby two partners , whether out of need or convenience , draw unhealthy support from each other . 
+ 
+./en_partut-ud-train.conllu.txt:<root> CAMBRIDGE – The promise that each generation will be better off than the last is a fundamental tenet of modern society . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Will each future generation continue to enjoy a better quality of life than its immediate predecessor ? 
+ 
+./en_partut-ud-train.conllu.txt:<root> In developing countries that have not yet reached the technological frontier , the answer is almost certainly yes . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Yes , being better connected with each other , through Facebook or Twitter , is valuable . 
+ 
+./en_partut-ud-train.conllu.txt:<root> But how can we compare these innovations with those like the laser , the transistor , the Turing machine , and the mapping of the human genome , each of which has led to a flood of transformative products ? 
+ 
+./en_partut-ud-train.conllu.txt:<root> The consequences of maternal malnutrition are far - reaching , including higher child - mortality rates , more birth defects , increased susceptibility to infection , and specific nutritional deficiencies that can lock a child into a vicious cycle of poor health early in life . 
+ 
+./en_partut-ud-train.conllu.txt:<root> The precise reasons vary from country to country – but many of them stem from entrenched cultural norms that prevent women from reaching their full potential . 
+ 
+./en_partut-ud-train.conllu.txt:<root> In some places , that may mean teaching agricultural extension workers how to make their messages more relevant to female audiences , or encouraging them to visit when women are most likely to be at home . 
+ 
+./en_partut-ud-train.conllu.txt:<root> After all , in a world of solid farmers , useful craftsmen , dissolute aristocrats , and flunkies , demand for manufactured items and flunkies was limited by how much of each aristocrats could use . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Dengue fever is a leading cause of illness and death in the tropics and subtropics , with as many as 100 million people infected each year . 
+ 
+./en_partut-ud-train.conllu.txt:<root> An enthusiastic reader and independent thinker as a child , Balzac had trouble adapting to the teaching style of his grammar school . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Balzac meant the story to bear witness to the treacherous turns of life , its " serpentine motion . 
+ 
+./en_partut-ud-train.conllu.txt:<root> While some of his books never reached a finished state , some of those - such as Les employés ( The Government Clerks , 1841 ) - are nonetheless noted by critics . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Scholars differ on the exact meaning of these words , but most agree that Greene is accusing Shakespeare of reaching above his rank in trying to match university - educated writers such as Christopher Marlowe , Thomas Nashe and Greene himself ( the " university wits " ) . 
+ 
+./en_partut-ud-train.conllu.txt:<root> According to Shakespearean scholar James Shapiro , in Julius Caesar " the various strands of politics , character , inwardness , contemporary events , even Shakespeare 's own reflections on the act of writing , began to infuse each other " . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Where several versions of a play survive , each differs from the other . 
+ 
+./en_partut-ud-train.conllu.txt:<root> Scholars are not certain when each of the 154 sonnets was composed , but evidence suggests that Shakespeare wrote sonnets throughout his career for a private readership . 
+ 
+./en_partut-ud-train.conllu.txt:<root> He reshaped each plot to create several centres of interest and to show as many sides of a narrative to the audience as possible . 
+ 
+./en_pud.conllu.txt:<root> Rather than teaching the scientific method as a separate unit , for example , students learn science content by applying it . 
+ 
+./en_pud.conllu.txt:<root> The company told the BBC it would be the responsibility of each airline brand to decide whether to charge passengers an access fee . 
+ 
+./en_pud.conllu.txt:<root> The RHS collected comments sent in by schoolchildren and teachers involved in the experiment . 
+ 
+./en_pud.conllu.txt:<root> The executives also received so - called " performance pay " for succeeding or surpassing expectations , sharing a pot of $ 1.5 million among them , or an estimated $ 15,000 each on average . 
+ 
+./en_pud.conllu.txt:<root> The federal government proactively reports on aggregate performance pay and bonus levels for each department , but the latest web posting is for 2013 - 2014 — or two years out of date . 
+ 
+./en_pud.conllu.txt:<root> The judge in Duffy 's fraud and breach of trust trial ultimately ruled they were within the Senate 's rules when he cleared Duffy of all charges . 
+ 
+./en_pud.conllu.txt:<root> After North Carolina passed its restrictive voting - rights bill in 2013 , Campbell went around to churches teaching people how to deal with challenges to their registration . 
+ 
+./en_pud.conllu.txt:<root> Each map in the exhibition tells its own story , not all factual . 
+ 
+./en_pud.conllu.txt:<root> Artists reach people at their heart ; it ’s the only time we meet in one place and put our differences aside . 
+ 
+./en_pud.conllu.txt:<root> On this , one diary point in Morocco will be the middle Saturday , when developed countries get to publicly question each other about their plans and ambitions . 
+ 
+./en_pud.conllu.txt:<root> At each station , a red - capped guard presides over the platform and a wheel - tapper walks along the train with a hammer , gently knocking the undercarriage . 
+ 
+./en_pud.conllu.txt:<root> The intervention is potentially the most far - reaching by Beijing since the 1997 handover of Hong Kong from the UK . 
+ 
+./en_pud.conllu.txt:<root> Finally , we must make it easy for people to report suspected breaches and malicious emails . 
+ 
+./en_pud.conllu.txt:<root> This magma tends to be very viscous due to its high silica content , so it often does not reach the surface but cools at depth . 
+ 
+./en_pud.conllu.txt:<root> Each poem narrates only a part of the war . 
+ 
+./en_pud.conllu.txt:<root> Tiberius reportedly regretted his departure and requested to return to Rome several times , but each time Augustus refused his requests . 
+ 
+./en_pud.conllu.txt:<root> Thai auspicious colours of the day are given in the table of weekdays , followed below it by a link to the Buddha images for each day of the week . 
+ 
+./en_pud.conllu.txt:<root> Since Emperor Meiji , it has been customary to have one era per Emperor and to rename each Emperor after his death using the name of the era over which he presided . 
+ 
+./en_pud.conllu.txt:<root> Some Christian scholars criticize Tolle 's teachings , while others praise them . 
+ 
+./en_pud.conllu.txt:<root> Really Really Love You was released in August and reach the top 50 ; " Shaky Ground " , the related single , appeared in September but Geyer was already in the US . 
+ 
+./en_pud.conllu.txt:<root> Concurrently in the mid-1970s , Starlin contributed a cache of stories to the independently published science - fiction anthology Star Reach . 
+ 
+./en_pud.conllu.txt:<root> This time it reached him , but he refused to believe that she no longer wanted to be married to him . 
+ 
+./en_pud.conllu.txt:<root> That is because each and every miracle and each specialized district occupies an entire field . 
+ 
+./en_pud.conllu.txt:<root> Having always been close to the Catholic Union , Tina Anselmi attended particularly to the rights of textile workers and teachers . 
+ 
+./en_pud.conllu.txt:<root> Emphasis , fine irony , blunt innuendos and other well used verbal devices fit into parliamentary oratory , but flicking at each other and slapstick comedy do not . 
+ 
+./en_pud.conllu.txt:<root> In its scope it belongs to the most far - reaching cultures of the time , in which many sites are known . 
+ 
+./en_pud.conllu.txt:<root> The expedition was led by General Joseph Burgoyne who intended to reach Albany . 
+ 
+./en_partut-ud-test.conllu.txt:<root> One twelfth of each annual amount shall be payable to Bulgaria and Romania on the first working day of each month in the corresponding year . 
+ 
+./en_partut-ud-test.conllu.txt:<root> A national of each new Member State shall be appointed to the Commission as from the date of accession . 
+ 
+./en_partut-ud-test.conllu.txt:<root> A national of each new Member State shall be appointed to the Court of Auditors as from the date of accession for a term of office of six years . 
+ 
+./en_partut-ud-test.conllu.txt:<root> A national base area for each producing Member State is hereby established . 
+ 
+./en_partut-ud-test.conllu.txt:<root> This communication shall include information on the legal basis for each measure . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Past studies establish that each of these efforts is strongly and positively influenced through various forms of faculty diversity , including ethnic , racial , and gender diversity . 
+ 
+./en_gum-ud-train.conllu.txt:<root> The attention is the main point made in this study , since it is fundamental to the learning process and be recurring complaint among parents and teachers in schools . 
+ 
+./en_gum-ud-train.conllu.txt:<root> It collects the data based on the observation of the proposed interventions as well as interviews conducted with participating teachers and students to identify their perceptions of digital games ’ contributions to the learning process . 
+ 
+./en_gum-ud-train.conllu.txt:<root> The application allows visualization of the player 's performance and offers the possibility of monitoring by teachers . 
+ 
+./en_gum-ud-train.conllu.txt:<root> The teachers observed changes after the intervention , emphasizing the greater persistence and involvement in school activities , and in some students , improvement in the ability to sustain attention . 
+ 
+./en_gum-ud-train.conllu.txt:<root> But each of them has their perks and perils [ 3 ] . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Since the television series ’ inception , writers at The AV Club have written two critical reviews for each episode : 
+ 
+./en_gum-ud-train.conllu.txt:<root> As a pilot project , the current work takes the content of both comment threads — a corpus of approximately 5,600 comments — and analyzes each thread separately using a qualitative coding method aligned with constructivist grounded theory ( Charmaz , 2006 ) . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Through this analysis , a categorization of themes emerges illustrating tactics for negotiating intertexts and paratexts unique to each group of fans . 
+ 
+./en_gum-ud-train.conllu.txt:<root> His father then asked him to study in medicine , and Daniel agreed under the condition that his father would teach him mathematics privately , which they continued for some time . 
+ 
+./en_gum-ud-train.conllu.txt:<root> While Poisson 's report was made before Galois ' July 14 arrest , it took until October to reach Galois in prison . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Galois ' cousin , Gabriel Demante , when asked if he knew the cause of the duel , mentioned that Galois " found himself in the presence of a supposed uncle and a supposed fiancé , each of whom provoked the duel . " 
+ 
+./en_gum-ud-train.conllu.txt:<root> A brother from Theodorus ’ monastery stayed with Pachomius in Tabennese while traveling and preached of the virtues of the Koinonia upon his return to Sne . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Finally , Pachomius called on him to preach to the brothers despite his youth , and eventually appointed him steward of Tabennese after several new monasteries had been built . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Water burst over the barrels and cans standing under the eaves and gutters , flooding the pathways , carrying away all that was n’t fixed solid and licking at the stairs to the back porch before climbing each step and lapping against the planks we were sitting on , a wooden raft surrounded by angry water and martial beat drum , drum , drumming on the roof above . 
+ 
+./en_gum-ud-train.conllu.txt:<root> We waved and called , and they laughed and played , tantalising , their seaweed locks just out of reach . 
+ 
+./en_gum-ud-train.conllu.txt:<root> “ Is it him ? ” we asked each other , nudging elbows and climbing onto the chairs . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Something grabbed my arm and I swung without thinking , without looking until Pag yelped and ducked out of reach . 
+ 
+./en_gum-ud-train.conllu.txt:<root> " Are you going to be a teacher ? " I asked . 
+ 
+./en_gum-ud-train.conllu.txt:<root> And he is a teacher . " 
+ 
+./en_gum-ud-train.conllu.txt:<root> All the offworlders I had ever met were teachers . 
+ 
+./en_gum-ud-train.conllu.txt:<root> " Ian is old friends with your teacher , from back when they were both with the survey . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Afterwards , each ant was dipped in the solution for a couple of seconds , dried on a cloth and put in the nest . 
+ 
+./en_gum-ud-train.conllu.txt:<root> After exposing the ants to the fungus , we took pictures of each foraging arena three times per day , and counted how many ants were present on each food-source . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Ličen has recently joined the Sport Management Program at Washington State University to develop its sport media and communication research and teaching contents . 
+ 
+./en_gum-ud-train.conllu.txt:<root> And so we can compete against each other all the time within Australia but we really need to be able to ... 
+ 
+./en_gum-ud-train.conllu.txt:<root> When you are going through the headlines , is it just you guys sitting around trying to crack each other up ? 
+ 
+./en_gum-ud-train.conllu.txt:<root> First of all I think maybe they have bad teachers , which is a problem . 
+ 
+./en_gum-ud-train.conllu.txt:<root> You have to have very good teachers in mathematics if you really want to enjoy and to succeed in it . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Mohamed brought the digital clock he made to school on September 14 , and a teacher mistakenly thought it resembled a bomb . 
+ 
+./en_gum-ud-train.conllu.txt:<root> The Twitter attention led to outreach from Google and Mohamed was invited to their Google Science Fair . 
+ 
+./en_gum-ud-train.conllu.txt:<root> As undergoing a pilgrimage to Mecca is a mandatory religious duty for all Muslims who physically and financially can , millions of pilgrims arrive in Mecca each year for the Hajj . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Of the public process , he said , " In the end I 'll have one vote in each referendum just like every other New Zealander on the electoral roll " . 
+ 
+./en_gum-ud-train.conllu.txt:<root> The New Zealand government intends to hold two referendums to reach a verdict on the flag , at an estimated cost of NZ $ 26 million , although a recent poll found only a quarter of citizens favoured changing the flag . 
+ 
+./en_gum-ud-train.conllu.txt:<root> The Church 's website is currently unreachable . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Some individuals reported that when they are able to reach the site , all they get is a message stating , " The word scientology means search for truth ... " . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Each section has a theme . 
+ 
+./en_gum-ud-train.conllu.txt:<root> While USI is holding its exhibit , there are also Warhol Polaroid exhibits at the Tang Teaching Museum and Art Gallery at Skidmore College in Saratoga Springs , New York and an Edward Steichen and Andy Warhol exhibit at the Mary & Leigh Block Museum of Art at Northwestern University in Evanston , Illinois . 
+ 
+./en_gum-ud-train.conllu.txt:<root> University exhibits can reach out and attract large audiences . 
+ 
+./en_gum-ud-train.conllu.txt:<root> For example , the Weatherspoon Art Museum at the University of North Carolina at Greensboro saw attendance levels reach 11,000 visitors when it exhibited its Warhol collection in 2010 , according to curator Elaine Gustafon . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Each collection donated by the Andy Warhol Photographic Legacy Program holds Polaroids of well-known celebrities . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Guests of the lodge can meander around either a short easy walk , or take the longer 2 hr return walk out onto the spectacular beach . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Come and see Manakau , the property of his descendants , located on the eastern corner of Rekohu and blessed with the sun 's first rays as they rise above the sea each day . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Grande Terre : flat and dry with a lot of beaches , some of them very touristic . 
+ 
+./en_gum-ud-train.conllu.txt:<root> St François if you go at the eastern point of Guadeloupe , you will reach La Pointe des Chateaux , a scenery made of sand and rocks which have vaguely the shape of a castle . 
+ 
+./en_gum-ud-train.conllu.txt:<root> St Anne a very nice but also very touristy city and beach ( maybe the tourists primary area of Guadeloupe ) . 
+ 
+./en_gum-ud-train.conllu.txt:<root> You can try Club Med , 0590854950 fax : 0590854959 ( for instance , others resort may propose this formula too ) for a one day all inclusive ( breakfast , buffet , bars , drinks , beach volley , windsurf , boat , gym , dance courses ... ) for about € 46 , so it may be a good deal ( as it costs € 7 one hour of windsurf ) . 
+ 
+./en_gum-ud-train.conllu.txt:<root> From Mérida , it is easy to take day trips to a vast array of destinations : archaeological sites , ecological parks , typical villages , caves , beaches , colonial missions and more . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Fortunately , there is a restaurant in each of the hotels with simple yet delicious cuisine . 
+ 
+./en_gum-ud-train.conllu.txt:<root> The most popular lodging is actually camping on the beaches . 
+ 
+./en_gum-ud-train.conllu.txt:<root> There are several campsites that allow tourists to barbeque on the beach with beautiful mountain views in the background . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Tourists can choose to purchase camping tour packages which include a driver or guide that will show tourists around the beaches as well as provide meals during their stay . 
+ 
+./en_gum-ud-train.conllu.txt:<root> While on the outer coastline , breathtaking natural beaches have pure white sand dunes and palm trees . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Tulsa lies in northeastern Oklahoma , at the convergence of the Great Plains and the Ozark Plateau , and receives an average of 40 inches of precipitation each year , both of which account for its abundant beautiful rolling green terrain . 
+ 
+./en_gum-ud-train.conllu.txt:<root> There is not much snow , just a few inches each year , typically , although in 2007 and again in 2008 there were rather large " ice storms " . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Almost all major intersections are one mile from each other , and exactly in a straight line . 
+ 
+./en_gum-ud-train.conllu.txt:<root> The streets and avenues are planned on a 1 mile by 1 mile grid system , with the main arterials running on each mile . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Alternatively , you can take the M1 all the way to the A64 , but the upper reaches of the M1 around Sheffield and Leeds can get very congested , especially in the rush hours . 
+ 
+./en_gum-ud-train.conllu.txt:<root> It is vital that it is done at the beginning of each ballet session , including before a performance . 
+ 
+./en_gum-ud-train.conllu.txt:<root> There are different styles and types of shoes , so ask your ballet teacher or a salesman at the store for advice , given your intentions for dancing . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Basil comes in many different varieties , each of which have a unique flavor and smell . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Drop one to two seeds into each container . 
+ 
+./en_gum-ud-train.conllu.txt:<root> As the plant matures , pinch off the top two pairs of leaves once a stalk reaches a reasonable height . 
+ 
+./en_gum-ud-train.conllu.txt:<root> You can also push all the buttons as you reach the floor you are getting off at . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Make a dinging noise at each floor . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Every time the elevator reaches a new floor , say “ ding ! ” very loudly . 
+ 
+./en_gum-ud-train.conllu.txt:<root> You can even sing the word “ ding ” on each floor like notes in a scale , getting higher as you reach each new floor . [ 2 ] 
+ 
+./en_gum-ud-train.conllu.txt:<root> Set the correct lid next to each container . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Teach your friends this new language . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Label each box clearly and which room it belongs to . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Then , as you work through your day , check off each of the items on your list . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Each task is then assigned an exact amount of time to complete . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Each score is worth 10 points . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Keepers guard the goal posts at each end and attempt to block chasers ' attempts at scoring . 
+ 
+./en_gum-ud-train.conllu.txt:<root> Each team is composed of : 
+ 
+./en_gum-ud-train.conllu.txt:<root> Once a boil is reached , transfer quinoa to a 8-by-8-inch baking dish . [ 2 ] 

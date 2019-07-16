@@ -1,0 +1,161 @@
+./section2b.ngml:16:`sentenceItem; My colleague Ms. O'Shea would like to interview
+./section2b.ngml:18:`sentenceItem; \label{itm:Jones} I'm sorry, this is his secretary.  Mr. Jones
+./section2b.ngml:37:`sentenceItem; Mr. Jones, were you present at a meeting where
+./section2b.ngml:40:`sentenceItem; After consulting with my lawyers, I decline
+./section2b.ngml:57:`sentenceItem; \label{itm:isJones} Is Jones there?
+./section2b.ngml:58:`sentenceItem; \label{itm:not} He is not available.
+./section4a.ngml:133:`sentenceItem; \label{itm:rhinor} Rhinos in that park are threatened by poachers.
+./section4a.ngml:134:`sentenceItem; Young rhinos are threatened by poachers.
+./section4a.ngml:194:`sentenceItem; Let's find a restaurant that's family-friendly.
+./section4a.ngml:353:`sentenceItem; I got glue for your daughter.
+./section4a.ngml:354:`sentenceItem; I got glue for your coffee mug.
+./section4a.ngml:363:`sentenceItem; We're going to Grandma!
+./section4a.ngml:364:`sentenceItem; Let's go to him right now.
+./section4a.ngml:365:`sentenceItem; Let's go to the lawyers.
+./section4a.ngml:366:`sentenceItem; Let's go to the press.
+./section4a.ngml:431:`sentenceItem; I think he is at school.
+./section4a.ngml:432:`sentenceItem; \label{itm:bt} I believe that he is at school.
+./section2a.ngml:18:`sentenceItem; This wine is a young Syrah.
+./section2a.ngml:19:`sentenceItem; My cousin adopted one of my neighbor's dog's puppies.
+./section2a.ngml:45:`sentenceItem; \label{itm:maj} The majority of students polled were
+./section2a.ngml:47:`sentenceItem; \label{itm:most} Most of the students expressed disappointment
+./section2a.ngml:49:`sentenceItem; \label{itm:many} Many students have protested the tuition increases.
+./section2a.ngml:195:`sentenceItem; Most students oppose the tuition increase.
+./section2a.ngml:196:`sentenceItem; \label{itm:indef} Most students oppose a tuition increase.
+./section2a.ngml:210:`sentenceItem; \label{itm:today} Today the state university system
+./section2a.ngml:213:`sentenceItem; \label{itm:colleges} Colleges all over the country, facing
+./section2a.ngml:322:`sentenceItem; \label{itm:sas} Student after student came out against the tuition hikes.
+./section2a.ngml:323:`sentenceItem; \label{itm:substantial} A substantial number of students
+./section2a.ngml:325:`sentenceItem; \label{itm:mass} The number of students protesting the tuition hikes
+./section2a.ngml:327:`sentenceItem; \label{itm:tipping} Protests against the tuition hikes
+./section2c.ngml:8:`sentenceItem; The Maple Leafs failed to win in overtime for the
+./section2c.ngml:10:`sentenceItem; The Maple Leafs failed for the first time this year
+./section2c.ngml:42:`sentenceItem; The Maple Leafs failed to win two consecutive games
+./section2c.ngml:99:`sentenceItem; \label{itm:coffeetable} There's coffee all over the table.
+./section2c.ngml:100:`sentenceItem; She poured coffee from an ornate beaker.
+./section2c.ngml:101:`sentenceItem; There's too much coffee in the grinder.
+./section2c.ngml:102:`sentenceItem; \label{itm:coffeepot} There's a lot of coffee left in the pot
+./section2c.ngml:114:`sentenceItem; There are coffees all over the far wall at the expresso bar.
+./section2c.ngml:115:`sentenceItem; She poured coffees from an ornate beaker.
+./section2c.ngml:116:`sentenceItem; There are a lot of coffees left on the table
+./section2c.ngml:130:`sentenceItem; \label{itm:borough} New Yorkers live in one of five boroughs.
+./section2c.ngml:131:`sentenceItem; New Yorkers reliably vote for Democratic presidential candidates.
+./section2c.ngml:132:`sentenceItem; \label{itm:commute} New Yorkers constantly complain about how long it takes to commute
+./section2c.ngml:157:`sentenceItem; All New York City residents live in one of five boroughs.
+./section2c.ngml:158:`sentenceItem; The majority of New York voters support Democratic
+./section2c.ngml:160:`sentenceItem; Many New York metro area residents complain about how
+./section2c.ngml:254:`sentenceItem; My favorite band gave a free concert last night.
+./section2c.ngml:256:`sentenceItem; There was some pizza earlier, but it's all gone.
+./section2c.ngml:257:`sentenceItem; There were some slices of pizza earlier, but it's all gone.
+./section2c.ngml:258:`sentenceItem; There were some slices of toast earlier, but there's none left.
+./section2c.ngml:259:`sentenceItem; There was some toast earlier, but they're all gone.
+./section2c.ngml:260:`sentenceItem; That franchise had a core of talented young players, but it
+./section2c.ngml:262:`sentenceItem; That franchise had a cohort of talented players, but they
+./section2c.ngml:264:`sentenceItem; Many star players were drafted by that franchise, but it
+./section2c.ngml:266:`sentenceItem; Many star players were drafted by that franchise, but they
+./section2c.ngml:268:`sentenceItem; Many star players were drafted by that franchise, but they
+./section2c.ngml:270:`sentenceItem; Many star players were drafted by that franchise, but they
+./section2c.ngml:348:`sentenceItem; The band planned a tour, where
+./section2c.ngml:350:`sentenceItem; \label{itm:teamflew} The team flew to
+./section2c.ngml:352:`sentenceItem; \label{itm:theflies} The city's largest theater company
+./section2c.ngml:365:`sentenceItem; The city's largest theater company
+./section2c.ngml:368:`sentenceItem; The city's largest theater company
+./section1.ngml:38:`sentenceItem; \label{itm:almond} Do you have almond milk?
+./section1.ngml:39:`sentenceItem; Can you get MsNBC on your TV?
+./section1.ngml:40:`sentenceItem; \label{itm:needcorkscrew} This isn't a screw-cap bottle: I need a corkscrew.
+./section1.ngml:60:`sentenceItem; I think the window is open, can you close it?
+./section1.ngml:61:`sentenceItem; I see you have almond milk, can I have some?
+./section1.ngml:62:`sentenceItem; If you get MsNBC, can you turn on Rachel Maddow?
+./section1.ngml:63:`sentenceItem; If there is a corkscrew in the house, can you get it?
+./section1.ngml:124:`sentenceItem; I believe you have a reservation for Jones?
+./section1.ngml:125:`sentenceItem; I believe this is the customer service desk?
+./section1.ngml:126:`sentenceItem; I believe we ordered a second basket of garlic bread?
+./section1.ngml:127:`sentenceItem; I believe you can help me find computer
+./section1.ngml:162:`sentenceItem; Do you have any milk?
+./section1.ngml:163:`sentenceItem; Yes, we have almond milk.
+./section1.ngml:164:`sentenceItem; No, we have almond milk.
+./section1.ngml:186:`sentenceItem; \label{itm:put} Can you put some almond milk in my coffee?
+./section1.ngml:187:`sentenceItem; \label{itm:after} Is there milk in this coffee?
+./section1.ngml:220:`sentenceItem; It's not open, but there's still some
+./section1.ngml:222:`sentenceItem; It's not open, but I closed the window in
+./section1.ngml:224:`sentenceItem; I can't %-- it's stuck.
+./section1.ngml:308:`sentenceItem; I believe the kitchen window
+./section1.ngml:310:`sentenceItem; I believe some window
+./section1.ngml:332:`sentenceItem; Grandma wants us to close the window.
+./section1.ngml:333:`sentenceItem; He wants a bottle opener.
+./section1.ngml:341:`sentenceItem; Grandma wants us to eliminate the cold draft.
+./section1.ngml:342:`sentenceItem; He wants something to open that bottle.
+./section1.ngml:372:`sentenceItem; \label{itm:can} Can I have some milk?
+./section1.ngml:373:`sentenceItem; \label{itm:close} Can you close the kitchen window?
+./section3.ngml:101:`sentenceItem; \label{itm:pf} People fed the rescued dogs.
+./section3.ngml:102:`sentenceItem; \label{itm:ve} Vets examined the rescued dogs.
+./section3.ngml:118:`sentenceItem; Every singer performed two songs.
+./section3.ngml:119:`sentenceItem; Everyone performed two songs.
+./section3.ngml:120:`sentenceItem; Everyone sang along to two songs.
+./section3.ngml:121:`sentenceItem; Everyone in the audience sang along to two songs.
+./section3.ngml:152:`sentenceItem; The rescued dogs had been treated by vets in the past
+./section3.ngml:154:`sentenceItem; Every singer performed (the last) two songs
+./section3.ngml:156:`sentenceItem; Everyone in the audience sang along to two songs
+./section3.ngml:340:`sentenceItem; The rescued dogs were treated by an experienced vet.
+./section3.ngml:343:`sentenceItem; The rescued dogs were treated by an experienced vet.
+./section3.ngml:356:`sentenceItem; The rescued dogs were treated by an experienced vet.
+./section3.ngml:358:`sentenceItem; The rescued dogs were treated by an experienced vet.
+./section3.ngml:360:`sentenceItem; The rescued dogs were treated by an experienced vet.
+./section3.ngml:439:`sentenceItem; The trade rescued a star athlete from a losing team.
+./section3.ngml:440:`sentenceItem; New mathematical models rescued her original research from obscurity.
+./section3.ngml:441:`sentenceItem; Discovery of nearby earth-like planets rescued that
+./intro.ngml:39:`sentenceItem; Those dogs are Staffordshires.
+./intro.ngml:40:`sentenceItem; Those dogs are females.
+./intro.ngml:46:`sentenceItem; Those dogs are female Staffordshires.
+./intro.ngml:53:`sentenceItem; The window may be open (it is possible that the window is open).
+./intro.ngml:54:`sentenceItem; I'd like the window closed (I'd prefer to be in a world where 
+./intro.ngml:56:`sentenceItem; If the window is open, can you close it  
+./intro.ngml:141:`sentenceItem; Please close the window?
+./intro.ngml:142:`sentenceItem; I think the window is closed.
+./intro.ngml:143:`sentenceItem; The window is closed.
+./intro.ngml:160:`sentenceItem; Can I have some milk in this coffee?
+./section3c.ngml:51:`sentenceItem; The newspaper you are reading is being sued.
+./section3c.ngml:52:`sentenceItem; Liverpool, an important harbor, built new docks.
+./section3c.ngml:61:`sentenceItem; The newspaper fired the reporter and fell off
+./section3c.ngml:63:`sentenceItem; Liverpool beat Tottenham and built new docks (?).
+./section3c.ngml:85:`sentenceItem; Liverpool wants to sign a left-footed striker.
+./section3c.ngml:86:`sentenceItem; That newspaper plans to fire its editorial staff.
+./section4bak.ngml:133:`sentenceItem; \label{itm:rhinor} Rhinos in that park are threatened by poachers.
+./section4bak.ngml:134:`sentenceItem; Young rhinos are threatened by poachers.
+./section4bak.ngml:344:`sentenceItem; I got glue for your daughter.
+./section4bak.ngml:345:`sentenceItem; I got glue for your coffee mug.
+./section4bak.ngml:355:`sentenceItem; We're going to Grandma!
+./section4bak.ngml:356:`sentenceItem; Let's go to him right now.
+./section4bak.ngml:357:`sentenceItem; Let's go to the lawyers.
+./section4bak.ngml:358:`sentenceItem; Let's go to the press.
+./section4.ngml:8:`sentenceItem; \label{itm:threetimes} Three times, students asked an interesting question.
+./section4.ngml:52:`sentenceItem; \label{itm:threes} Three students asked interesting questions.
+./section4.ngml:82:`sentenceItem; Time after time, tourists (a tourist) walk(s) by this building
+./section4.ngml:85:`sentenceItem; The streets around here are confusing; often people (someone)
+./section4.ngml:88:`sentenceItem; Student after student came with their (his/her)
+./section4.ngml:91:`sentenceItem; Student after student %-- and their (his/her) parents
+./section4b.ngml:79:`sentenceItem; The newspaper you are reading is being sued.
+./section4b.ngml:80:`sentenceItem; Liverpool, an important harbor, built new docks.
+./section4b.ngml:89:`sentenceItem; The newspaper fired the reporter and fell off
+./section4b.ngml:91:`sentenceItem; Liverpool beat Tottenham and built new docks (?).
+./section4b.ngml:113:`sentenceItem; Liverpool wants to sign a left-footed striker.
+./section4b.ngml:114:`sentenceItem; That newspaper plans to fire its editorial staff.
+./section1a.ngml:14:`sentenceItem; \label{itm:store} Remember that wine we tasted on the Niagara 
+./section1a.ngml:17:`sentenceItem; \label{itm:varietal} Remember that wine we tasted on the Niagara 
+./section1a.ngml:140:`sentenceItem; That wine was a Cabernet Franc.
+./section1a.ngml:141:`sentenceItem; Those dogs are my neighbor's.  
+./section1a.ngml:274:`sentenceItem; Those dogs are Staffordshires.
+./section1a.ngml:275:`sentenceItem; What's a Staffordshire?
+./section1a.ngml:276:`sentenceItem; It's a breed of dog.
+./section1a.ngml:442:`sentenceItem; If the kitchen window is closed,
+./section1a.ngml:444:`sentenceItem; If no windows are open,
+./section1a.ngml:446:`sentenceItem; If there is no draft, we can
+./section4new.ngml:176:`sentenceItem; I believe that he is at school.
+./section4new.ngml:178:`sentenceItem; Student after student complained about tuition hikes.
+./section4new.ngml:180:`sentenceItem; Three times, students asked an interesting question.
+./section4c.ngml:51:`sentenceItem; The newspaper you are reading is being sued.
+./section4c.ngml:52:`sentenceItem; Liverpool, an important harbor, built new docks.
+./section4c.ngml:61:`sentenceItem; The newspaper fired the reporter and fell off
+./section4c.ngml:63:`sentenceItem; Liverpool beat Tottenham and built new docks (?).
+./section4c.ngml:85:`sentenceItem; Liverpool wants to sign a left-footed striker.
+./section4c.ngml:86:`sentenceItem; That newspaper plans to fire its editorial staff.

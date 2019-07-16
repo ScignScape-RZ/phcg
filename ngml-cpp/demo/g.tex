@@ -30,9 +30,9 @@
 
 \AddToShipoutPicture{%
 	\AtPageLowerLeft{%
-		\raisebox{3cm}{\hypersetup{
+		\raisebox{1.5cm}{\hypersetup{
 				colorlinks=false}
-			\hspace{16cm}{\textcolor{br!40!black}{\qrcode[height=2cm]{MichaelLesher2019-\thepage}}
+		\hspace{18.75cm}{\textcolor{br!40!black}{\qrcode[height=2cm]{MichaelLesher2019-\thepage}}
 				%\includegraphics[width=5cm]{example-image}
 			}}}}
 			
@@ -116,12 +116,23 @@
 	}}
 
 
+\newcommand{\sdxtextnote}[3]{%
+	\textnote{\hypertarget{#2}%
+		\protect\raisebox{#1}{\protect\parbox{\dxtextnotelen}{{\color{lineColor}{%
+						\setlength{\rulelen}{\footnoterulelen}
+						\setlength{\negrulelen}{\widthof{\citerange:}}
+						\addtolength{\negrulelen}{2.5pt}
+						\addtolength{\rulelen}{-\negrulelen}
+						\rule{\rulelen}{0.1pt}}}\\#3}}
+	}}
+
+
 \usepackage[raiselinks=true,pdftex]{hyperref}
 %\hypersetup{linktocpage}
 
 \usepackage{wasysym}
 
-\geometry{textwidth=6in,textheight=7.8in,headsep=32pt}
+\geometry{textwidth=6in,textheight=8.2in,headsep=32pt}
 \makeverselinenumbers
 \global\includeaccidentalstrue
 \global\includetypescriptstrue
@@ -583,7 +594,10 @@ I gather he thought I meant something else.
 
 
 \begin{stanza}
-The sea is lover to the sand,\verseline
+The sea is lover to the sand,\xmargreftextnote{bot:AmiraHass}\verseline%
+\dxtextnote{bot:AmiraHass}{Amira Hass is an Israeli journalist who has reported 
+for years on the suffering of Palestinians in Gaza and elsewhere in the 
+Occupied Territories.  She is the author of \textit{Drinking the Sea at Gaza}.}
 the sand's the refuse of a stagnant day.\verseline
 All earth's a captive of the sky.
 \end{stanza}
@@ -748,7 +762,8 @@ of the battleship that mauled Beirut for\verseline
 Ronnie the Ripper and his friends...\xmargreftextnote{bot:reagan}\verseline%
 \xtextnote{bot:reagan}{Ronald Reagan}
 {\vrsindent}Sixteen-inch guns!\verseline
-the newspapers kvelled, while\verseline
+the newspapers kvelled, while\xmargreftextnote{bot:kvelled}\verseline%
+\xtextnote{bot:kvelled}{In Yiddish, \textit{to kvell} means to glory in or to gloat over.}
 boys and girls choked on their guts and\verseline
 hearts zipped shut, once and for all,\verseline
 tiny dolls in a body bag. Sailors rocked\verseline
@@ -1172,9 +1187,8 @@ But massacres germinate in a comic school.
 
 \begin{stanza}
 With bagels, \textit{litterateurs} wolf down the crimes\verseline
-the IDF parades in the \textit{New York Times}.\xmargreftextnote{bot:parade}
-\end{stanza}\xtextnote{bot:parade}{The Israel Defense Forces conducted 
-several parades, meant to display its military force, up until 1973.}
+the IDF parades in the \textit{New York Times}.\xmargreftextnote{bot:IDF}
+\end{stanza}\xtextnote{bot:IDF}{Israel Defense Forces}
 \end{poem}
 
 
@@ -1285,7 +1299,11 @@ a great many things! Come, let me help you...thus.
 \end{stanza}
 
 \begin{stanza}
-Didactic: \cq{Why were you seeking Israel's occupation in Gaza?\verseline
+Didactic: \cq{Why were you seeking Israel's occupation in Gaza?\xmargreftextnote{bot:cyrano}\verseline%
+\sdxtextnote{-16pt}{bot:cyrano}{\cq{Didactic}, \cq{Confidential}, etc., parodies a monologue  
+in Edmond Rostand's \textit{Cyrano de Bergerac}, where Cyrano plays with different 
+ways of making fun of his nose by affecting different verbal styles 
+(\cq{\textit{Aggressive:}}, \cq{\textit{Friendly:}}, etc.).}
 After all, we occupy the whole West Bank as well!}
 \end{stanza}
 
@@ -1518,8 +1536,7 @@ now there's one less for the crowd.
 \end{stanza}
 
 \begin{stanza}
-The news in Khan Yunis: a new martyr!\xmargreftextnote{bot:KhanYunis}\verseline%
-\xtextnote{bot:KhanYunis}{Site of a massacre by Israel Defense Forces on November 3, 1956}
+The news in Khan Yunis: a new martyr!\verseline
 In Israel, it's a terrorist \cq{neutralized.}
 \end{stanza}
 
@@ -1638,7 +1655,12 @@ and what they keep out.
 
 \begin{stanza}
 First there's the long one,\verseline
-the razor-tipped, the sinuous, the strong.\verseline
+the razor-tipped, the sinuous, the strong.\xmargreftextnote{bot:walls}\verseline%
+\sdxtextnote{-15pt}{bot:walls}{The \cq{two walls} refers first to the 
+partition wall running through East Jerusalem and much of the West Bank, 
+cutting off the areas Israel intends to annex from the rest of the 
+Occupied Territories; and second to the Western Wall, 
+the only part still standing of the Second Temple complex.}
 We all know what it means,\verseline
 from our grandmothers we've learned\verseline
 about ghettos, of walls that poison
@@ -1727,10 +1749,12 @@ aborting the glow like a horrid moon\verseline
 usurping every civilized room ---\verseline
 the audience is gone\verseline
 from your Laoco\"on.\xmargreftextnote{bot:laocoon}
-\end{stanza}\dxtextnote{bot:laocoon}{Greek and Roman mythological 
-figure during the Trojan war; in several stories, he 
-was attacked by snakes sent by Athena (or another god) 
-in retaliation for his suspicions toward the Trojan Horse.}
+\end{stanza}\sdxtextnote{-15pt}{bot:laocoon}{Greek and Roman mythological 
+figure during the Trojan war; in mythology he 
+is killed by snakes sent by Athena in 
+retaliation for his suspicions toward the Trojan Horse, 
+and his death became a popular theme for artists and 
+sculpture depicting agony and physical struggle.}
 
 \begin{stanza}
 I tell them your Promise is misery,\verseline
@@ -1975,7 +1999,14 @@ In 2014, Israel's activities in the Gaza Strip, West Bank and East Jerusalem res
 \begin{poem}
 
 \begin{stanza}
-Tread lightly, stoic, these needles bleed.\verseline
+Tread lightly, stoic, these needles bleed.\xmargreftextnote{bot:trees}\verseline%
+\sdxtextnote{-21pt}{bot:trees}{The bleeding trees in Dante's 
+\textit{Inferno} contain the souls of suicides.  These damned souls 
+are condemned to silence except when their branches are broken; when 
+Dante snaps off a twig from one of the trees it begins to bleed, 
+exactly as if wounded, and while the blood runs the dead soul is able to speak. 
+As soon as the blood clots and the wound begins to heal, 
+the suffer must fall silent again.}
 Wonder --- if you must --- but ask no question.\verseline
 If the mute corpses shock, it's you that need
 \end{stanza}
@@ -1991,6 +2022,8 @@ and souls that died with them won't rise again,\verseline
 for death's all those who die for death can know.\verseline
 Revenge is their root, blood their only rain.
 \end{stanza}
+
+\vspace{1.5em}
 
 \begin{stanza}
 Mortal, you dare not follow where they go,\verseline
@@ -2009,6 +2042,8 @@ as in death, they threw arms around\verseline
 a hopeless love, so now it cuckolds them\verseline
 in shame, as you in shame invade their wounds.
 \end{stanza}
+
+\vspace{1.5em}
 
 \begin{stanza}
 Who are you to tease out the final flame\verseline
@@ -2404,12 +2439,12 @@ encode bibliographic and page information which can orient
 conformant PDF software in showing the interactive PDF version of each page.
 \item[Embedded Data]
 For users with conformant cross-referencing software, 
-this page has an embedded file in TxHSL (Type Expression and Hypergraph 
+this page has an embedded file in NTXH (Nonconstructive Type Expression and Hypergraph 
 Serialization Language) format.  The contents of this file can 
-also be accessed \openfilelink{txh.pdf}{{\color{logoCyan!60!black}{here}} 
+also be accessed \openfilelink{g.ntxh}{{\color{logoCyan!60!black}{here}} 
 (if your PDF viewer can read embedded files)}.
 \item[Data Description]
-The following TxHSL excerpt indicates 
+The following NTXH excerpt indicates 
 the type interface and sample values of the embedded data.
 \begin{scriptsize}
 \begin{verbatim}
