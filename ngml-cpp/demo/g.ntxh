@@ -1,15 +1,429 @@
-{bot:write,4=Alludes to the wall surrounding and partitioning Gaza from Israel.}
-{bot:AmiraHass,6=Amira Hass is an Israeli journalist who has reported for years on the suffering of Palestinians in Gaza and elsewhere in the Occupied Territories. She is the author of \textit {Drinking the Sea at Gaza}.}
-{bot:beirut,9=The USS New Jersey fired on Beirut in December 1983}
-{bot:reagan,9=Ronald Reagan}
-{bot:kvelled,9=In Yiddish, \textit {to kvell} means to glory in or to gloat over.}
-{bot:hear,9=A play on the liturgical \q {Hear, O Israel: the Lord is our God, the Lord is One} (Sh'ma Yisra'el)}
-{bot:Shuja,10=Historic Gaza City neighborhood, just outside the Old City.}
-{bot:Glorified,11=From the Mourner's Kaddish: \q {Exalted and sanctified be God's name ...}}
-{bot:IDF,18=Israel Defense Forces}
-{bot:cyrano,21=\cq {Didactic}, \cq {Confidential}, etc., parodies a monologue in Edmond Rostand's \textit {Cyrano de Bergerac}, where Cyrano plays with different ways of making fun of his nose by affecting different verbal styles (\cq {\textit {Aggressive:}}, \cq {\textit {Friendly:}}, etc.).}
-{bot:Goebbels,22=Alludes to Nazi-era German minister Joseph Goebbels's talents for public speaking and propaganda.}
-{bot:walls,28=The \cq {two walls} refers first to the partition wall running through East Jerusalem and much of the West Bank, cutting off the areas Israel intends to annex from the rest of the Occupied Territories; and second to the Western Wall, the only part still standing of the Second Temple complex.}
-{bot:laocoon,29=Greek and Roman mythological figure during the Trojan war; in mythology he is killed by snakes sent by Athena in retaliation for his suspicions toward the Trojan Horse, and his death became a popular theme for artists and sculpture depicting agony and physical struggle.}
-{bot:lethe,32=Underworld river in Greek mythology, whose waters caused forgetfulness when consumed.}
-{bot:trees,36=The bleeding trees in Dante's \textit {Inferno} contain the souls of suicides. These damned souls are condemned to silence except when their branches are broken; when Dante snaps off a twig from one of the trees it begins to bleed, exactly as if wounded, and while the blood runs the dead soul is able to speak. As soon as the blood clots and the wound begins to heal, the suffer must fall silent again.}
+- Generated from LaTeX File g.tex 
+{\protect \@day =\day \relax \@month =\month \relax \@year =\year \relax 0/00/00} \protect \protect \c@HOUR =\currenthour \c@HOURXII =\c@HOUR \c@MINUTE =\currentminute \c@TOHOUR =\c@HOURXII \advance \c@TOHOUR by 1\relax \@DT@modctr =\c@TOHOUR \relax \divide \@DT@modctr by 12\relax \multiply \@DT@modctr by 12\relax \advance \c@TOHOUR  by -\@DT@modctr \c@TOMINUTE =\c@MINUTE \advance \c@TOMINUTE by -60\relax \multiply \c@TOMINUTE by -1\relax \c@SECOND =\currentsecond \relax 00:00:00\relax 
+.
+
+- i=id l=label p=page r=rank 
+x=latex content t=title 
+.
+
+&type NoteGroup [8;4;2] 
+:i:1 :l:2 :p:3 :t:4 ;
+
+&type LineNote {5} 
+:i:1 :r:2 :l:3 :p:4 :x:5 ;
+
+&/
+
+
+!/ NoteGroup
+$i: 1
+$l: ctg:Thinking
+$p: 2
+$t: Thinking of Gaza from Thousands of Miles Away
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 2
+$l: ctg:Burlesque
+$p: 4
+$t: Burlesque at the Barrier
+
+!/ LineNote
+$i: 1
+$r: 1
+$l: bot:write
+$p: 4
+$x. Alludes to the wall surrounding and partitioning Gaza from Israel.
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 3
+$l: ctg:Drinking
+$p: 6
+$t: Drinking It
+
+!/ LineNote
+$i: 2
+$r: 1
+$l: bot:AmiraHass
+$p: 6
+$x. Amira Hass is an Israeli journalist who has reported for years on the suffering of Palestinians in Gaza and elsewhere in the Occupied Territories. She is the author of \textit {Drinking the Sea at Gaza}.
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 4
+$l: ctg:Silent
+$p: 7
+$t: Silent Movie
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 5
+$l: ctg:JewishJournal
+$p: 8
+$t: Jewish Journal and Bad Dreams
+
+!/ LineNote
+$i: 3
+$r: 1
+$l: bot:beirut
+$p: 9
+$x. The USS New Jersey fired on Beirut in December 1983
+.
+/!
+<>>
+
+
+!/ LineNote
+$i: 4
+$r: 2
+$l: bot:reagan
+$p: 9
+$x. Ronald Reagan
+.
+/!
+<>>
+
+
+!/ LineNote
+$i: 5
+$r: 3
+$l: bot:kvelled
+$p: 9
+$x. In Yiddish, \textit {to kvell} means to glory in or to gloat over.
+.
+/!
+<>>
+
+
+!/ LineNote
+$i: 6
+$r: 4
+$l: bot:hear
+$p: 9
+$x. A play on the liturgical \q {Hear, O Israel: the Lord is our God, the Lord is One} (Sh'ma Yisra'el)
+.
+/!
+<>>
+
+
+!/ LineNote
+$i: 7
+$r: 5
+$l: bot:Shuja
+$p: 10
+$x. Historic Gaza City neighborhood, just outside the Old City.
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 6
+$l: ctg:Kaddish
+$p: 11
+$t: Kaddish
+
+!/ LineNote
+$i: 8
+$r: 1
+$l: bot:Glorified
+$p: 11
+$x. From the Mourner's Kaddish: \q {Exalted and sanctified be God's name ...}
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 7
+$l: ctg:Oranges
+$p: 13
+$t: Oranges
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 8
+$l: ctg:Lecture
+$p: 15
+$t: Lecture
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 9
+$l: ctg:Three
+$p: 16
+$t: Three Words for the Dead
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 10
+$l: ctg:Clowns
+$p: 18
+$t: Clowns with Swastikas
+
+!/ LineNote
+$i: 9
+$r: 1
+$l: bot:IDF
+$p: 18
+$x. Israel Defense Forces
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 11
+$l: ctg:Dead
+$p: 19
+$t: Dead God, Dying God
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 12
+$l: ctg:AnUntimely
+$p: 20
+$t: An Untimely Man
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 13
+$l: ctg:Cyrano
+$p: 21
+$t: Cyrano de Marianne
+
+!/ LineNote
+$i: 10
+$r: 1
+$l: bot:cyrano
+$p: 21
+$x. \cq {Didactic}, \cq {Confidential}, etc., parodies a monologue in Edmond Rostand's \textit {Cyrano de Bergerac}, where Cyrano plays with different ways of making fun of his nose by affecting different verbal styles (\cq {\textit {Aggressive:}}, \cq {\textit {Friendly:}}, etc.).
+.
+/!
+<>>
+
+
+!/ LineNote
+$i: 11
+$r: 2
+$l: bot:Goebbels
+$p: 22
+$x. Alludes to Nazi-era German minister Joseph Goebbels's talents for public speaking and propaganda.
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 14
+$l: ctg:Drone
+$p: 23
+$t: Drone
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 15
+$l: ctg:TheStorm
+$p: 24
+$t: The Storm Scene
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 16
+$l: ctg:CrimeScene
+$p: 25
+$t: Crime Scene
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 17
+$l: ctg:TheSurvivor
+$p: 26
+$t: The Survivor
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 18
+$l: ctg:TheWalls
+$p: 28
+$t: The Walls
+
+!/ LineNote
+$i: 12
+$r: 1
+$l: bot:walls
+$p: 28
+$x. The \cq {two walls} refers first to the partition wall running through East Jerusalem and much of the West Bank, cutting off the areas Israel intends to annex from the rest of the Occupied Territories; and second to the Western Wall, the only part still standing of the Second Temple complex.
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 19
+$l: ctg:MyDevil
+$p: 29
+$t: My Devil Curses Me
+
+!/ LineNote
+$i: 13
+$r: 1
+$l: bot:laocoon
+$p: 29
+$x. Greek and Roman mythological figure during the Trojan war; in mythology he is killed by snakes sent by Athena in retaliation for his suspicions toward the Trojan Horse, and his death became a popular theme for artists and sculpture depicting agony and physical struggle.
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 20
+$l: ctg:Delirium
+$p: 31
+$t: Delirium
+
+!/ LineNote
+$i: 14
+$r: 1
+$l: bot:lethe
+$p: 32
+$x. Underworld river in Greek mythology, whose waters caused forgetfulness when consumed.
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 21
+$l: ctg:Farewell
+$p: 33
+$t: Farewell
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 22
+$l: ctg:Fanatics
+$p: 34
+$t: Fanatics
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 23
+$l: ctg:Pines
+$p: 36
+$t: Pines in the Suicides' Wood
+
+!/ LineNote
+$i: 15
+$r: 1
+$l: bot:trees
+$p: 36
+$x. The bleeding trees in Dante's \textit {Inferno} contain the souls of suicides. These damned souls are condemned to silence except when their branches are broken; when Dante snaps off a twig from one of the trees it begins to bleed, exactly as if wounded, and while the blood runs the dead soul is able to speak. As soon as the blood clots and the wound begins to heal, the suffer must fall silent again.
+.
+/!
+<>>
+
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 24
+$l: ctg:DeathInPalestine
+$p: 37
+$t: Death in Palestine
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 25
+$l: ctg:WhyItMattered
+$p: 38
+$t: Why It Mattered
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 26
+$l: ctg:MyKaddish
+$p: 40
+$t: My Kaddish
+
+/!
+<+>
+
+!/ NoteGroup
+$i: 27
+$l: ctg:Elegy
+$p: 42
+$t: Elegy for a Child
+
+/!
+<+>
+
+
+/&
+
+

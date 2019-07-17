@@ -91,9 +91,69 @@
 \setlength{\xtextnotelen}{\textwidth}
 %\addtolength{\xtextnotelen}{-4em}
 
+\newcounter{ntxhCounter}
+\newcounter{ntxhGroupCounter}
+\newcounter{ntxhLocalCounter}[ntxhGroupCounter]
+
+\newcommand{\writeNtxhGroupStart}[2]{%
+\stepcounter{ntxhGroupCounter}%
+\immediate\write\ntxhFile{%
+!/ NoteGroup^^J%
+$i: \thentxhGroupCounter^^J%
+$l: #1^^J%
+$p: \thepage^^J%
+$t: #2^^J%
+}}
+
+\newcommand{\writeNtxhGroupEnd}{\immediate\write\ntxhFile{%
+/!^^J%
+<+>^^J%
+}}
+
+
+\newcommand{\ntxhLine}[2]{\stepcounter{ntxhCounter}\stepcounter{ntxhLocalCounter}%
+\immediate\write\ntxhFile{%
+!/ LineNote^^J%
+$i: \thentxhCounter^^J%
+$r: \thentxhLocalCounter^^J%
+$l: #1^^J%
+$p: \thepage^^J%
+$x. \unexpanded{#2}^^J%
+.^^J%
+/!^^J%
+<>>^^J%
+^^J%
+}}
+
+\usepackage[yyyymmdd,hhmmss]{datetime}
+
+\newcommand{\writeNtxhStart}{\immediate\write\ntxhFile{%
+- Generated from LaTeX File \jobname.tex ^^J%
+ \noexpand{\today} \currenttime ^^J%
+.^^J%
+^^J%
+- i=id l=label p=page r=rank ^^J%
+  x=latex content t=title ^^J%
+.^^J%
+^^J%
+&type NoteGroup [8;4;2] ^^J%
+  :i:1 :l:2 :p:3 :t:4 ;^^J%
+^^J%
+&type LineNote {5} ^^J%
+  :i:1 :r:2 :l:3 :p:4 :x:5 ;^^J%
+^^J%
+&/^^J%
+^^J%
+}}
+
+\newcommand{\writeNtxhEnd}{\immediate\write\ntxhFile{%
+^^J%
+/&^^J%
+^^J%
+}}
 
 \newcommand{\xtextnote}[2]{%
-\immediate\write\ntxhFile{{#1,\thepage=\unexpanded{#2}}}%
+\ntxhLine{#1}{#2}%
 \textnote{\hypertarget{#1}%
 \protect\raisebox{-6pt}{\protect\parbox{\xtextnotelen}{{\color{lineColor}{%
 \setlength{\rulelen}{\footnoterulelen}%
@@ -110,7 +170,7 @@
 \addtolength{\dxtextnotelen}{-3pt}
 
 \newcommand{\dxtextnote}[2]{%
-\immediate\write\ntxhFile{{#1,\thepage=\unexpanded{#2}}}%
+\ntxhLine{#1}{#2}%
 	\textnote{\hypertarget{#1}%
 		\protect\raisebox{-12pt}{\protect\parbox{\dxtextnotelen}{{\color{lineColor}{%
 						\setlength{\rulelen}{\footnoterulelen}
@@ -122,7 +182,7 @@
 
 
 \newcommand{\sdxtextnote}[3]{%
-\immediate\write\ntxhFile{{#2,\thepage=\unexpanded{#3}}}%
+\ntxhLine{#2}{#3}%
 	\textnote{\hypertarget{#2}%
 		\protect\raisebox{#1}{\protect\parbox{\dxtextnotelen}{{\color{lineColor}{%
 						\setlength{\rulelen}{\footnoterulelen}
@@ -175,7 +235,7 @@
 \renewcommand{\contentspoemtitlefont}{\fontsize{11}{14}\fontseries{b}\selectfont}
 
 \makeatletter
-\newcommand{\basicpoemtitlear}[3]{%
+\newcommand{\basicpoemtitlear}[3]{{\writeNtxhGroupStart{#1}{#2}}%
 	\set@p@emtitle{#3}{\poemtitlepenalty}{\poemtitlefont}%
 	{\relax}{\nobreak\par\nobreak\afterpoemtitleskip\nobreak}{\z@}%
 	\c@ntentsinfo{#2\hspace{1.5em}\hyperlink{#1}{\rar}}%
@@ -299,6 +359,7 @@ linewidth=2pt]}{\end{mdframed}}
 %\makeindex
 
 \begin{document}
+{\writeNtxhStart}
 \maketextnotes
 
 %\indexingontrue
@@ -497,7 +558,7 @@ their silence my breath will trace.
 \end{stanza}
 
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -590,7 +651,7 @@ and I lose my chance;\verseline
 I gather he thought I meant something else.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -650,7 +711,7 @@ in its dumb mockery, silent mimicry,\verseline
 a mouthing rape that makes a fool of care.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -694,10 +755,10 @@ then, silent, we watched\verseline
 him as he pirouetted down.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 {\poemnewpage}
-\poemtitlear{ctg:Jewish}{Jewish Journal and Bad Dreams}{JEWISH JOURNAL AND BAD DREAMS}
+\poemtitlear{ctg:JewishJournal}{Jewish Journal and Bad Dreams}{JEWISH JOURNAL AND BAD DREAMS}
 \begin{poem}
 
 
@@ -847,7 +908,7 @@ and the two medics, stamping in the dust, roared dark harmonies\verseline
 at an unpictured sun.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -932,7 +993,7 @@ always the end of things slowly rising towards us,\verseline
 always the same echo drying against the tide.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1018,7 +1079,7 @@ and the earth of every beauty\verseline
 dies, forgotten and unseen.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 {\poemnewpage}
 \poemtitlear{ctg:Lecture}{Lecture}{LECTURE}
@@ -1083,7 +1144,7 @@ and an ooze of virtue for the blood spoor in the air.\verseline
 Get moving --- don't be late.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1170,7 +1231,7 @@ those young men, buried \& unspeaking,\verseline
 left me without words, bereft of time.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1195,7 +1256,7 @@ But massacres germinate in a comic school.
 With bagels, \textit{litterateurs} wolf down the crimes\verseline
 the IDF parades in the \textit{New York Times}.\xmargreftextnote{bot:IDF}
 \end{stanza}\xtextnote{bot:IDF}{Israel Defense Forces}
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1245,7 +1306,7 @@ and never goes away,\verseline
 doomed every tomorrow with tomorrow's bomb.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1289,7 +1350,7 @@ a martyrdom to purge the fear\verseline
 of all I choose.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1417,7 +1478,7 @@ and the rotten net shreds in the wind.\verseline
 One might have known.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 
@@ -1466,7 +1527,7 @@ And yet I can't quite believe in soul,\verseline
 knowing I'm spread across some private's bombsight.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 {\poemnewpage}
 \poemtitlear{ctg:TheStorm}{The Storm Scene}{THE STORM SCENE}
@@ -1492,7 +1553,7 @@ betrayed, where am I, was I?...and I turned back, as in its mad\verseline
 despair those vowels drenched every shard of autumn.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1566,7 +1627,7 @@ The car's acrobatic tilt,\verseline
 one wheel still spinning free.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1643,7 +1704,7 @@ Will it help now if I lament ---\verseline
 \& what exclaim for?
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1696,7 +1757,7 @@ going, with my curse of freedom, I\verseline
 who've seen so much future vanishing?
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1796,7 +1857,7 @@ What will you do,\verseline
 blind Jew?
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1885,7 +1946,7 @@ relieved of time,\verseline
 as ignorant as they are poor.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1933,7 +1994,7 @@ and hold you... I'm afraid to voice the final plea\verseline
 that might clutch, vaguely, the darkening scene.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -1993,7 +2054,7 @@ Surviving members of the Fogel family, including a 12-year-old daughter, have pl
 In 2014, Israel's activities in the Gaza Strip, West Bank and East Jerusalem resulted in the deaths of 2,314 Palestinians and 17,125 injuries, compared with 39 deaths and 3,964 injuries in 2013, according to the annual report by the U.N. Office for the Coordination of Humanitarian Affairs.
 \end{minipagestanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -2069,7 +2130,7 @@ to close forever, yet never to forget\verseline
 the grieving that kills, the hopes that hate.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -2129,7 +2190,7 @@ We are the exiles of the land.\verseline
 Over us, the pitch and curse of day.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -2213,7 +2274,7 @@ when the deluge that drowned all good and all bad\verseline
 closed, forever, over his trailing grief.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -2333,7 +2394,7 @@ for the sake of love alone ---
 and let me say, Amen.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 
 {\poemnewpage}
@@ -2381,7 +2442,7 @@ I only know each word falls farther from your side ---\verseline
 thieving my grief, a dull heart's unsacred rite.
 \end{stanza}
 
-\end{poem}
+{\writeNtxhGroupEnd}\end{poem}
 
 \newpage
 \vspace*{1em}
@@ -2491,6 +2552,6 @@ $x: ctg:Burlesque
 %\putexplanatory
 
 %\puttextnotes
-
+{\writeNtxhEnd}
 \end{document}
 
