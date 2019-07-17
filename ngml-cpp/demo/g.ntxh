@@ -1,5 +1,5 @@
 - Generated from LaTeX File g.tex 
-{\protect \@day =\day \relax \@month =\month \relax \@year =\year \relax 0/00/00} \protect \protect \c@HOUR =\currenthour \c@HOURXII =\c@HOUR \c@MINUTE =\currentminute \c@TOHOUR =\c@HOURXII \advance \c@TOHOUR by 1\relax \@DT@modctr =\c@TOHOUR \relax \divide \@DT@modctr by 12\relax \multiply \@DT@modctr by 12\relax \advance \c@TOHOUR  by -\@DT@modctr \c@TOMINUTE =\c@MINUTE \advance \c@TOMINUTE by -60\relax \multiply \c@TOMINUTE by -1\relax \c@SECOND =\currentsecond \relax 00:00:00\relax 
+17/7/2019, 9:55
 .
 
 - i=id l=label p=page r=rank 

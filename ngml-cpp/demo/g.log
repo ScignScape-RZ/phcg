@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  17 JUL 2019 08:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.5.4)  17 JUL 2019 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3941,6 +3941,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+Overfull \hbox (566.63106pt too wide) in paragraph at lines 2535--2535
+ []\OT1/pcr/m/n/8 $x. Amira Hass is an Israeli journalist who has reported for 
+years on the suffering of Palestinians in Gaza and elsewhere in the Occupied Te
+rritories. She is the author of \textit {Drinking the Sea at Gaza}.[] 
+ []
+
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 2545.
 
@@ -4048,7 +4055,7 @@ Package rerunfilecheck Info: File `g.out' has not changed.
 Here is how much of TeX's memory you used:
  31873 strings out of 492649
  606925 string characters out of 6122986
- 770141 words of memory out of 5000000
+ 770150 words of memory out of 5000000
  35051 multiletter control sequences out of 15000+600000
  576527 words of font info for 210 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -4066,7 +4073,7 @@ install/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/nlevisrael/texl/texl
 ive-install/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></home/nlevisrael/texl
 /texlive-install/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/nlevisrael/
 texl/texlive-install/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on g.pdf (46 pages, 254985 bytes).
+Output written on g.pdf (46 pages, 255776 bytes).
 PDF statistics:
  379 PDF objects out of 1000 (max. 8388607)
  318 compressed objects within 4 object streams

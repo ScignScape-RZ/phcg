@@ -129,7 +129,7 @@ $x. \unexpanded{#2}^^J%
 
 \newcommand{\writeNtxhStart}{\immediate\write\ntxhFile{%
 - Generated from LaTeX File \jobname.tex ^^J%
- \noexpand{\today} \currenttime ^^J%
+  \the\day/\the\month/\the\year, \the\currenthour:\the\currentminute ^^J%
 .^^J%
 ^^J%
 - i=id l=label p=page r=rank ^^J%
@@ -2515,27 +2515,27 @@ The following NTXH excerpt indicates
 the type interface and sample values of the embedded data.
 \begin{scriptsize}
 \begin{verbatim}
-&type CiteGroup [8;5;2] 
-:i:1 :t:2 :p:3 :dp:4 :x:5 ;
+&type NoteGroup [8;4;2] 
+:i:1 :l:2 :p:3 :t:4 ;
 
-&type DataCite {6} 
-:i:1 :x:2 :p:3 :dp:4 :ln:5 :t:6 ;
+&type LineNote {5} 
+:i:1 :r:2 :l:3 :p:4 :x:5 ;
 
 &/
-!/ CiteGroup
-!/ DataCite
-$i: 1 
-$x: bot:write
-$p# 6 4
-$ln: 1
-$t. Alludes to the wall surrounding and partitioning Gaza from Israel.
+!/ NoteGroup
+$i: 3
+$l: ctg:Drinking
+$p: 6
+$t: Drinking It
+!/ LineNote
+$i: 2
+$r: 1
+$l: bot:AmiraHass
+$p: 6
+$x. Amira Hass is an Israeli journalist who has reported for years on the suffering of Palestinians in Gaza and elsewhere in the Occupied Territories. She is the author of \textit {Drinking the Sea at Gaza}.
 .
 /!
 <>>
-$i: 1 
-$t: Burlesque at the Barrier 
-$p# 6 4
-$x: ctg:Burlesque 
 /!
 <+>
 /&
