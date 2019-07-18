@@ -1,14 +1,59 @@
 \documentclass{article}
 
-\newwrite\txhslFile
-\immediate\openout\txhslFile=\jobname.txh
+\newwrite\ntxhFile
+\immediate\openout\ntxhFile=\jobname.ntxh
 
 \usepackage{hyperref}
 
 \usepackage{tikz-dependency}
 
-\begin{document}
+\usepackage{float}
 
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{0pt}
+%\fancyfoot[C]{\include{\thepage}}
+
+\usepackage{eso-pic}
+
+\colorlet{copyc}{blue!65!black}
+
+\AddToShipoutPicture{%
+\IfFileExists{p\thepage}{\AtPageLowerLeft{%
+			\hspace*{1.5em}
+			\raisebox{1em}{\input{p\thepage}}
+ %
+			}
+		}{}}
+		%\fi
+	%
+	
+
+
+\newcommand{\writeAUXref}[2]{\immediate\write#1{#2:\getpagerefnumber{#2};\getrefnumber{#2}}}
+
+\usepackage{amsmath}
+
+\begin{document}
+	
+$$
+\begin{matrix}
+	Logicomorphic  & --- & Extra-Linguistic \\
+	\ & X & X \\
+	Intra-Linguistic  & ---   &  Interpretive
+\end{matrix}
+$$
+	
+	{\pagebreak}
+
+	Page 2.
+	
+	{\pagebreak}
+
+
+\begin{figure}[H]
+\caption{A Dependency Graph}
+\label{fig:dep}
 
 \begin{dependency}
 	\begin{deptext}
@@ -85,7 +130,12 @@
 \end{dependency}
 
 
+\end{figure}
+
+See Figure \ref{fig:dep}.
+
+\writeAUXref{\ntxhFile}{fig:dep}
 
 
-	\closeout\txhslFile
+	\closeout\ntxhFile
 \end{document}
